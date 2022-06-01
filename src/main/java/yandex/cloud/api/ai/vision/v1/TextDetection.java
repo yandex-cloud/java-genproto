@@ -70,7 +70,7 @@ public final class TextDetection {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.TextAnnotation}
    */
-  public  static final class TextAnnotation extends
+  public static final class TextAnnotation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.TextAnnotation)
       TextAnnotationOrBuilder {
@@ -81,6 +81,13 @@ public final class TextDetection {
     }
     private TextAnnotation() {
       pages_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextAnnotation();
     }
 
     @java.lang.Override
@@ -108,7 +115,7 @@ public final class TextDetection {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 pages_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Page>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -117,7 +124,7 @@ public final class TextDetection {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -131,7 +138,7 @@ public final class TextDetection {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           pages_ = java.util.Collections.unmodifiableList(pages_);
         }
         this.unknownFields = unknownFields.build();
@@ -161,6 +168,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Page pages = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Page> getPagesList() {
       return pages_;
     }
@@ -172,6 +180,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Page pages = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.PageOrBuilder> 
         getPagesOrBuilderList() {
       return pages_;
@@ -184,6 +193,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Page pages = 1;</code>
      */
+    @java.lang.Override
     public int getPagesCount() {
       return pages_.size();
     }
@@ -195,6 +205,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Page pages = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Page getPages(int index) {
       return pages_.get(index);
     }
@@ -206,6 +217,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Page pages = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.PageOrBuilder getPagesOrBuilder(
         int index) {
       return pages_.get(index);
@@ -256,11 +268,10 @@ public final class TextDetection {
       }
       yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation other = (yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation) obj;
 
-      boolean result = true;
-      result = result && getPagesList()
-          .equals(other.getPagesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPagesList()
+          .equals(other.getPagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -442,7 +453,7 @@ public final class TextDetection {
         yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation result = new yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation(this);
         int from_bitField0_ = bitField0_;
         if (pagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             pages_ = java.util.Collections.unmodifiableList(pages_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -456,35 +467,35 @@ public final class TextDetection {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -557,7 +568,7 @@ public final class TextDetection {
       private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Page> pages_ =
         java.util.Collections.emptyList();
       private void ensurePagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           pages_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Page>(pages_);
           bitField0_ |= 0x00000001;
          }
@@ -876,7 +887,7 @@ public final class TextDetection {
           pagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.TextDetection.Page, yandex.cloud.api.ai.vision.v1.TextDetection.Page.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.PageOrBuilder>(
                   pages_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           pages_ = null;
@@ -886,7 +897,7 @@ public final class TextDetection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -946,6 +957,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>int64 width = 1;</code>
+     * @return The width.
      */
     long getWidth();
 
@@ -955,6 +967,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>int64 height = 2;</code>
+     * @return The height.
      */
     long getHeight();
 
@@ -1049,7 +1062,7 @@ public final class TextDetection {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Page}
    */
-  public  static final class Page extends
+  public static final class Page extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Page)
       PageOrBuilder {
@@ -1059,10 +1072,15 @@ public final class TextDetection {
       super(builder);
     }
     private Page() {
-      width_ = 0L;
-      height_ = 0L;
       blocks_ = java.util.Collections.emptyList();
       entities_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Page();
     }
 
     @java.lang.Override
@@ -1100,25 +1118,25 @@ public final class TextDetection {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 blocks_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Block>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               blocks_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Block.parser(), extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 entities_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Entity>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000002;
               }
               entities_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Entity.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1132,10 +1150,10 @@ public final class TextDetection {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           blocks_ = java.util.Collections.unmodifiableList(blocks_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           entities_ = java.util.Collections.unmodifiableList(entities_);
         }
         this.unknownFields = unknownFields.build();
@@ -1155,7 +1173,6 @@ public final class TextDetection {
               yandex.cloud.api.ai.vision.v1.TextDetection.Page.class, yandex.cloud.api.ai.vision.v1.TextDetection.Page.Builder.class);
     }
 
-    private int bitField0_;
     public static final int WIDTH_FIELD_NUMBER = 1;
     private long width_;
     /**
@@ -1164,7 +1181,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>int64 width = 1;</code>
+     * @return The width.
      */
+    @java.lang.Override
     public long getWidth() {
       return width_;
     }
@@ -1177,7 +1196,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>int64 height = 2;</code>
+     * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -1191,6 +1212,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Block blocks = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Block> getBlocksList() {
       return blocks_;
     }
@@ -1201,6 +1223,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Block blocks = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.BlockOrBuilder> 
         getBlocksOrBuilderList() {
       return blocks_;
@@ -1212,6 +1235,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Block blocks = 3;</code>
      */
+    @java.lang.Override
     public int getBlocksCount() {
       return blocks_.size();
     }
@@ -1222,6 +1246,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Block blocks = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Block getBlocks(int index) {
       return blocks_.get(index);
     }
@@ -1232,6 +1257,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Block blocks = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.BlockOrBuilder getBlocksOrBuilder(
         int index) {
       return blocks_.get(index);
@@ -1246,6 +1272,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> getEntitiesList() {
       return entities_;
     }
@@ -1256,6 +1283,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder> 
         getEntitiesOrBuilderList() {
       return entities_;
@@ -1267,6 +1295,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
      */
+    @java.lang.Override
     public int getEntitiesCount() {
       return entities_.size();
     }
@@ -1277,6 +1306,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Entity getEntities(int index) {
       return entities_.get(index);
     }
@@ -1287,6 +1317,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder getEntitiesOrBuilder(
         int index) {
       return entities_.get(index);
@@ -1358,17 +1389,16 @@ public final class TextDetection {
       }
       yandex.cloud.api.ai.vision.v1.TextDetection.Page other = (yandex.cloud.api.ai.vision.v1.TextDetection.Page) obj;
 
-      boolean result = true;
-      result = result && (getWidth()
-          == other.getWidth());
-      result = result && (getHeight()
-          == other.getHeight());
-      result = result && getBlocksList()
-          .equals(other.getBlocksList());
-      result = result && getEntitiesList()
-          .equals(other.getEntitiesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getWidth()
+          != other.getWidth()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getBlocksList()
+          .equals(other.getBlocksList())) return false;
+      if (!getEntitiesList()
+          .equals(other.getEntitiesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1533,13 +1563,13 @@ public final class TextDetection {
 
         if (blocksBuilder_ == null) {
           blocks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           blocksBuilder_.clear();
         }
         if (entitiesBuilder_ == null) {
           entities_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           entitiesBuilder_.clear();
         }
@@ -1570,63 +1600,61 @@ public final class TextDetection {
       public yandex.cloud.api.ai.vision.v1.TextDetection.Page buildPartial() {
         yandex.cloud.api.ai.vision.v1.TextDetection.Page result = new yandex.cloud.api.ai.vision.v1.TextDetection.Page(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.width_ = width_;
         result.height_ = height_;
         if (blocksBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             blocks_ = java.util.Collections.unmodifiableList(blocks_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.blocks_ = blocks_;
         } else {
           result.blocks_ = blocksBuilder_.build();
         }
         if (entitiesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             entities_ = java.util.Collections.unmodifiableList(entities_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.entities_ = entities_;
         } else {
           result.entities_ = entitiesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1650,7 +1678,7 @@ public final class TextDetection {
           if (!other.blocks_.isEmpty()) {
             if (blocks_.isEmpty()) {
               blocks_ = other.blocks_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureBlocksIsMutable();
               blocks_.addAll(other.blocks_);
@@ -1663,7 +1691,7 @@ public final class TextDetection {
               blocksBuilder_.dispose();
               blocksBuilder_ = null;
               blocks_ = other.blocks_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               blocksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBlocksFieldBuilder() : null;
@@ -1676,7 +1704,7 @@ public final class TextDetection {
           if (!other.entities_.isEmpty()) {
             if (entities_.isEmpty()) {
               entities_ = other.entities_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureEntitiesIsMutable();
               entities_.addAll(other.entities_);
@@ -1689,7 +1717,7 @@ public final class TextDetection {
               entitiesBuilder_.dispose();
               entitiesBuilder_ = null;
               entities_ = other.entities_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
               entitiesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntitiesFieldBuilder() : null;
@@ -1735,7 +1763,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 width = 1;</code>
+       * @return The width.
        */
+      @java.lang.Override
       public long getWidth() {
         return width_;
       }
@@ -1745,6 +1775,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 width = 1;</code>
+       * @param value The width to set.
+       * @return This builder for chaining.
        */
       public Builder setWidth(long value) {
         
@@ -1758,6 +1790,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 width = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearWidth() {
         
@@ -1773,7 +1806,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 height = 2;</code>
+       * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -1783,6 +1818,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 height = 2;</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
        */
       public Builder setHeight(long value) {
         
@@ -1796,6 +1833,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 height = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHeight() {
         
@@ -1807,9 +1845,9 @@ public final class TextDetection {
       private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Block> blocks_ =
         java.util.Collections.emptyList();
       private void ensureBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           blocks_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Block>(blocks_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -2003,7 +2041,7 @@ public final class TextDetection {
       public Builder clearBlocks() {
         if (blocksBuilder_ == null) {
           blocks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           blocksBuilder_.clear();
@@ -2108,7 +2146,7 @@ public final class TextDetection {
           blocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.TextDetection.Block, yandex.cloud.api.ai.vision.v1.TextDetection.Block.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.BlockOrBuilder>(
                   blocks_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           blocks_ = null;
@@ -2119,9 +2157,9 @@ public final class TextDetection {
       private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> entities_ =
         java.util.Collections.emptyList();
       private void ensureEntitiesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           entities_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Entity>(entities_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2315,7 +2353,7 @@ public final class TextDetection {
       public Builder clearEntities() {
         if (entitiesBuilder_ == null) {
           entities_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           entitiesBuilder_.clear();
@@ -2420,7 +2458,7 @@ public final class TextDetection {
           entitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.TextDetection.Entity, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder>(
                   entities_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           entities_ = null;
@@ -2430,7 +2468,7 @@ public final class TextDetection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2490,6 +2528,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2498,6 +2537,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2508,6 +2548,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -2516,6 +2557,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -2523,7 +2565,7 @@ public final class TextDetection {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Entity}
    */
-  public  static final class Entity extends
+  public static final class Entity extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Entity)
       EntityOrBuilder {
@@ -2535,6 +2577,13 @@ public final class TextDetection {
     private Entity() {
       name_ = "";
       text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Entity();
     }
 
     @java.lang.Override
@@ -2550,7 +2599,6 @@ public final class TextDetection {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2574,7 +2622,7 @@ public final class TextDetection {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2613,7 +2661,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2632,7 +2682,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2655,7 +2707,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -2674,7 +2728,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -2703,10 +2759,10 @@ public final class TextDetection {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
       unknownFields.writeTo(output);
@@ -2718,10 +2774,10 @@ public final class TextDetection {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
       }
       size += unknownFields.getSerializedSize();
@@ -2739,13 +2795,12 @@ public final class TextDetection {
       }
       yandex.cloud.api.ai.vision.v1.TextDetection.Entity other = (yandex.cloud.api.ai.vision.v1.TextDetection.Entity) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getText()
-          .equals(other.getText());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2930,35 +2985,35 @@ public final class TextDetection {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3016,6 +3071,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3035,6 +3091,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3055,6 +3112,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3072,6 +3131,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3085,6 +3145,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3105,6 +3167,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -3124,6 +3187,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -3144,6 +3208,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -3161,6 +3227,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -3174,6 +3241,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -3189,7 +3258,7 @@ public final class TextDetection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3249,6 +3318,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -3257,6 +3327,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
      */
     yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox();
     /**
@@ -3315,7 +3386,7 @@ public final class TextDetection {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Block}
    */
-  public  static final class Block extends
+  public static final class Block extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Block)
       BlockOrBuilder {
@@ -3326,6 +3397,13 @@ public final class TextDetection {
     }
     private Block() {
       lines_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Block();
     }
 
     @java.lang.Override
@@ -3366,16 +3444,16 @@ public final class TextDetection {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 lines_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Line>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               lines_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Line.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3389,7 +3467,7 @@ public final class TextDetection {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           lines_ = java.util.Collections.unmodifiableList(lines_);
         }
         this.unknownFields = unknownFields.build();
@@ -3409,7 +3487,6 @@ public final class TextDetection {
               yandex.cloud.api.ai.vision.v1.TextDetection.Block.class, yandex.cloud.api.ai.vision.v1.TextDetection.Block.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BOUNDING_BOX_FIELD_NUMBER = 1;
     private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_;
     /**
@@ -3418,7 +3495,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
      */
+    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -3428,7 +3507,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox() {
       return boundingBox_ == null ? yandex.cloud.api.ai.vision.v1.Primitives.Polygon.getDefaultInstance() : boundingBox_;
     }
@@ -3439,6 +3520,7 @@ public final class TextDetection {
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Primitives.PolygonOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -3452,6 +3534,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Line lines = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Line> getLinesList() {
       return lines_;
     }
@@ -3462,6 +3545,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Line lines = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.LineOrBuilder> 
         getLinesOrBuilderList() {
       return lines_;
@@ -3473,6 +3557,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Line lines = 2;</code>
      */
+    @java.lang.Override
     public int getLinesCount() {
       return lines_.size();
     }
@@ -3483,6 +3568,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Line lines = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Line getLines(int index) {
       return lines_.get(index);
     }
@@ -3493,6 +3579,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Line lines = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.LineOrBuilder getLinesOrBuilder(
         int index) {
       return lines_.get(index);
@@ -3550,16 +3637,15 @@ public final class TextDetection {
       }
       yandex.cloud.api.ai.vision.v1.TextDetection.Block other = (yandex.cloud.api.ai.vision.v1.TextDetection.Block) obj;
 
-      boolean result = true;
-      result = result && (hasBoundingBox() == other.hasBoundingBox());
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
       if (hasBoundingBox()) {
-        result = result && getBoundingBox()
-            .equals(other.getBoundingBox());
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
       }
-      result = result && getLinesList()
-          .equals(other.getLinesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLinesList()
+          .equals(other.getLinesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3719,7 +3805,7 @@ public final class TextDetection {
         }
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           linesBuilder_.clear();
         }
@@ -3750,57 +3836,55 @@ public final class TextDetection {
       public yandex.cloud.api.ai.vision.v1.TextDetection.Block buildPartial() {
         yandex.cloud.api.ai.vision.v1.TextDetection.Block result = new yandex.cloud.api.ai.vision.v1.TextDetection.Block(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (boundingBoxBuilder_ == null) {
           result.boundingBox_ = boundingBox_;
         } else {
           result.boundingBox_ = boundingBoxBuilder_.build();
         }
         if (linesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             lines_ = java.util.Collections.unmodifiableList(lines_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.lines_ = lines_;
         } else {
           result.lines_ = linesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3821,7 +3905,7 @@ public final class TextDetection {
           if (!other.lines_.isEmpty()) {
             if (lines_.isEmpty()) {
               lines_ = other.lines_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLinesIsMutable();
               lines_.addAll(other.lines_);
@@ -3834,7 +3918,7 @@ public final class TextDetection {
               linesBuilder_.dispose();
               linesBuilder_ = null;
               lines_ = other.lines_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               linesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLinesFieldBuilder() : null;
@@ -3873,7 +3957,7 @@ public final class TextDetection {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_ = null;
+      private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.vision.v1.Primitives.Polygon, yandex.cloud.api.ai.vision.v1.Primitives.Polygon.Builder, yandex.cloud.api.ai.vision.v1.Primitives.PolygonOrBuilder> boundingBoxBuilder_;
       /**
@@ -3882,6 +3966,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -3892,6 +3977,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+       * @return The boundingBox.
        */
       public yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -4029,9 +4115,9 @@ public final class TextDetection {
       private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Line> lines_ =
         java.util.Collections.emptyList();
       private void ensureLinesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           lines_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Line>(lines_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4225,7 +4311,7 @@ public final class TextDetection {
       public Builder clearLines() {
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           linesBuilder_.clear();
@@ -4330,7 +4416,7 @@ public final class TextDetection {
           linesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.TextDetection.Line, yandex.cloud.api.ai.vision.v1.TextDetection.Line.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.LineOrBuilder>(
                   lines_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           lines_ = null;
@@ -4340,7 +4426,7 @@ public final class TextDetection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4400,6 +4486,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -4408,6 +4495,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
      */
     yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox();
     /**
@@ -4469,13 +4557,14 @@ public final class TextDetection {
      * </pre>
      *
      * <code>double confidence = 3;</code>
+     * @return The confidence.
      */
     double getConfidence();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Line}
    */
-  public  static final class Line extends
+  public static final class Line extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Line)
       LineOrBuilder {
@@ -4486,7 +4575,13 @@ public final class TextDetection {
     }
     private Line() {
       words_ = java.util.Collections.emptyList();
-      confidence_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Line();
     }
 
     @java.lang.Override
@@ -4527,9 +4622,9 @@ public final class TextDetection {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 words_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Word>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               words_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Word.parser(), extensionRegistry));
@@ -4541,7 +4636,7 @@ public final class TextDetection {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4555,7 +4650,7 @@ public final class TextDetection {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           words_ = java.util.Collections.unmodifiableList(words_);
         }
         this.unknownFields = unknownFields.build();
@@ -4575,7 +4670,6 @@ public final class TextDetection {
               yandex.cloud.api.ai.vision.v1.TextDetection.Line.class, yandex.cloud.api.ai.vision.v1.TextDetection.Line.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BOUNDING_BOX_FIELD_NUMBER = 1;
     private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_;
     /**
@@ -4584,7 +4678,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
      */
+    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -4594,7 +4690,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox() {
       return boundingBox_ == null ? yandex.cloud.api.ai.vision.v1.Primitives.Polygon.getDefaultInstance() : boundingBox_;
     }
@@ -4605,6 +4703,7 @@ public final class TextDetection {
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Primitives.PolygonOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -4618,6 +4717,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word words = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Word> getWordsList() {
       return words_;
     }
@@ -4628,6 +4728,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word words = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.WordOrBuilder> 
         getWordsOrBuilderList() {
       return words_;
@@ -4639,6 +4740,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word words = 2;</code>
      */
+    @java.lang.Override
     public int getWordsCount() {
       return words_.size();
     }
@@ -4649,6 +4751,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word words = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Word getWords(int index) {
       return words_.get(index);
     }
@@ -4659,6 +4762,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word words = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.WordOrBuilder getWordsOrBuilder(
         int index) {
       return words_.get(index);
@@ -4672,7 +4776,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>double confidence = 3;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public double getConfidence() {
       return confidence_;
     }
@@ -4697,7 +4803,7 @@ public final class TextDetection {
       for (int i = 0; i < words_.size(); i++) {
         output.writeMessage(2, words_.get(i));
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         output.writeDouble(3, confidence_);
       }
       unknownFields.writeTo(output);
@@ -4717,7 +4823,7 @@ public final class TextDetection {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, words_.get(i));
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, confidence_);
       }
@@ -4736,20 +4842,18 @@ public final class TextDetection {
       }
       yandex.cloud.api.ai.vision.v1.TextDetection.Line other = (yandex.cloud.api.ai.vision.v1.TextDetection.Line) obj;
 
-      boolean result = true;
-      result = result && (hasBoundingBox() == other.hasBoundingBox());
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
       if (hasBoundingBox()) {
-        result = result && getBoundingBox()
-            .equals(other.getBoundingBox());
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
       }
-      result = result && getWordsList()
-          .equals(other.getWordsList());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getConfidence())
-          == java.lang.Double.doubleToLongBits(
-              other.getConfidence()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getWordsList()
+          .equals(other.getWordsList())) return false;
+      if (java.lang.Double.doubleToLongBits(getConfidence())
+          != java.lang.Double.doubleToLongBits(
+              other.getConfidence())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4912,7 +5016,7 @@ public final class TextDetection {
         }
         if (wordsBuilder_ == null) {
           words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           wordsBuilder_.clear();
         }
@@ -4945,58 +5049,56 @@ public final class TextDetection {
       public yandex.cloud.api.ai.vision.v1.TextDetection.Line buildPartial() {
         yandex.cloud.api.ai.vision.v1.TextDetection.Line result = new yandex.cloud.api.ai.vision.v1.TextDetection.Line(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (boundingBoxBuilder_ == null) {
           result.boundingBox_ = boundingBox_;
         } else {
           result.boundingBox_ = boundingBoxBuilder_.build();
         }
         if (wordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             words_ = java.util.Collections.unmodifiableList(words_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.words_ = words_;
         } else {
           result.words_ = wordsBuilder_.build();
         }
         result.confidence_ = confidence_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5017,7 +5119,7 @@ public final class TextDetection {
           if (!other.words_.isEmpty()) {
             if (words_.isEmpty()) {
               words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureWordsIsMutable();
               words_.addAll(other.words_);
@@ -5030,7 +5132,7 @@ public final class TextDetection {
               wordsBuilder_.dispose();
               wordsBuilder_ = null;
               words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               wordsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getWordsFieldBuilder() : null;
@@ -5072,7 +5174,7 @@ public final class TextDetection {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_ = null;
+      private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.vision.v1.Primitives.Polygon, yandex.cloud.api.ai.vision.v1.Primitives.Polygon.Builder, yandex.cloud.api.ai.vision.v1.Primitives.PolygonOrBuilder> boundingBoxBuilder_;
       /**
@@ -5081,6 +5183,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -5091,6 +5194,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+       * @return The boundingBox.
        */
       public yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -5228,9 +5332,9 @@ public final class TextDetection {
       private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Word> words_ =
         java.util.Collections.emptyList();
       private void ensureWordsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           words_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Word>(words_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -5424,7 +5528,7 @@ public final class TextDetection {
       public Builder clearWords() {
         if (wordsBuilder_ == null) {
           words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           wordsBuilder_.clear();
@@ -5529,7 +5633,7 @@ public final class TextDetection {
           wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.TextDetection.Word, yandex.cloud.api.ai.vision.v1.TextDetection.Word.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.WordOrBuilder>(
                   words_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           words_ = null;
@@ -5544,7 +5648,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 3;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public double getConfidence() {
         return confidence_;
       }
@@ -5554,6 +5660,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 3;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
        */
       public Builder setConfidence(double value) {
         
@@ -5567,6 +5675,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -5577,7 +5686,7 @@ public final class TextDetection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5637,6 +5746,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
      */
     boolean hasBoundingBox();
     /**
@@ -5645,6 +5755,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
      */
     yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox();
     /**
@@ -5662,6 +5773,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -5670,6 +5782,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -5680,6 +5793,7 @@ public final class TextDetection {
      * </pre>
      *
      * <code>double confidence = 3;</code>
+     * @return The confidence.
      */
     double getConfidence();
 
@@ -5733,13 +5847,14 @@ public final class TextDetection {
      * </pre>
      *
      * <code>int64 entity_index = 5;</code>
+     * @return The entityIndex.
      */
     long getEntityIndex();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Word}
    */
-  public  static final class Word extends
+  public static final class Word extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Word)
       WordOrBuilder {
@@ -5750,9 +5865,14 @@ public final class TextDetection {
     }
     private Word() {
       text_ = "";
-      confidence_ = 0D;
       languages_ = java.util.Collections.emptyList();
-      entityIndex_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Word();
     }
 
     @java.lang.Override
@@ -5804,9 +5924,9 @@ public final class TextDetection {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 languages_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               languages_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage.parser(), extensionRegistry));
@@ -5818,7 +5938,7 @@ public final class TextDetection {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5832,7 +5952,7 @@ public final class TextDetection {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           languages_ = java.util.Collections.unmodifiableList(languages_);
         }
         this.unknownFields = unknownFields.build();
@@ -5862,6 +5982,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return The languageCode.
        */
       java.lang.String getLanguageCode();
       /**
@@ -5870,6 +5991,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return The bytes for languageCode.
        */
       com.google.protobuf.ByteString
           getLanguageCodeBytes();
@@ -5880,13 +6002,14 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 2;</code>
+       * @return The confidence.
        */
       double getConfidence();
     }
     /**
      * Protobuf type {@code yandex.cloud.ai.vision.v1.Word.DetectedLanguage}
      */
-    public  static final class DetectedLanguage extends
+    public static final class DetectedLanguage extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Word.DetectedLanguage)
         DetectedLanguageOrBuilder {
@@ -5897,7 +6020,13 @@ public final class TextDetection {
       }
       private DetectedLanguage() {
         languageCode_ = "";
-        confidence_ = 0D;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DetectedLanguage();
       }
 
       @java.lang.Override
@@ -5913,7 +6042,6 @@ public final class TextDetection {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5936,7 +6064,7 @@ public final class TextDetection {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5975,7 +6103,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return The languageCode.
        */
+      @java.lang.Override
       public java.lang.String getLanguageCode() {
         java.lang.Object ref = languageCode_;
         if (ref instanceof java.lang.String) {
@@ -5994,7 +6124,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return The bytes for languageCode.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLanguageCodeBytes() {
         java.lang.Object ref = languageCode_;
@@ -6017,7 +6149,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 2;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public double getConfidence() {
         return confidence_;
       }
@@ -6036,10 +6170,10 @@ public final class TextDetection {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getLanguageCodeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, languageCode_);
         }
-        if (confidence_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
           output.writeDouble(2, confidence_);
         }
         unknownFields.writeTo(output);
@@ -6051,10 +6185,10 @@ public final class TextDetection {
         if (size != -1) return size;
 
         size = 0;
-        if (!getLanguageCodeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, languageCode_);
         }
-        if (confidence_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(2, confidence_);
         }
@@ -6073,15 +6207,13 @@ public final class TextDetection {
         }
         yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage other = (yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage) obj;
 
-        boolean result = true;
-        result = result && getLanguageCode()
-            .equals(other.getLanguageCode());
-        result = result && (
-            java.lang.Double.doubleToLongBits(getConfidence())
-            == java.lang.Double.doubleToLongBits(
-                other.getConfidence()));
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getLanguageCode()
+            .equals(other.getLanguageCode())) return false;
+        if (java.lang.Double.doubleToLongBits(getConfidence())
+            != java.lang.Double.doubleToLongBits(
+                other.getConfidence())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -6267,35 +6399,35 @@ public final class TextDetection {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6352,6 +6484,7 @@ public final class TextDetection {
          * </pre>
          *
          * <code>string language_code = 1;</code>
+         * @return The languageCode.
          */
         public java.lang.String getLanguageCode() {
           java.lang.Object ref = languageCode_;
@@ -6371,6 +6504,7 @@ public final class TextDetection {
          * </pre>
          *
          * <code>string language_code = 1;</code>
+         * @return The bytes for languageCode.
          */
         public com.google.protobuf.ByteString
             getLanguageCodeBytes() {
@@ -6391,6 +6525,8 @@ public final class TextDetection {
          * </pre>
          *
          * <code>string language_code = 1;</code>
+         * @param value The languageCode to set.
+         * @return This builder for chaining.
          */
         public Builder setLanguageCode(
             java.lang.String value) {
@@ -6408,6 +6544,7 @@ public final class TextDetection {
          * </pre>
          *
          * <code>string language_code = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearLanguageCode() {
           
@@ -6421,6 +6558,8 @@ public final class TextDetection {
          * </pre>
          *
          * <code>string language_code = 1;</code>
+         * @param value The bytes for languageCode to set.
+         * @return This builder for chaining.
          */
         public Builder setLanguageCodeBytes(
             com.google.protobuf.ByteString value) {
@@ -6441,7 +6580,9 @@ public final class TextDetection {
          * </pre>
          *
          * <code>double confidence = 2;</code>
+         * @return The confidence.
          */
+        @java.lang.Override
         public double getConfidence() {
           return confidence_;
         }
@@ -6451,6 +6592,8 @@ public final class TextDetection {
          * </pre>
          *
          * <code>double confidence = 2;</code>
+         * @param value The confidence to set.
+         * @return This builder for chaining.
          */
         public Builder setConfidence(double value) {
           
@@ -6464,6 +6607,7 @@ public final class TextDetection {
          * </pre>
          *
          * <code>double confidence = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearConfidence() {
           
@@ -6474,7 +6618,7 @@ public final class TextDetection {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6524,7 +6668,6 @@ public final class TextDetection {
 
     }
 
-    private int bitField0_;
     public static final int BOUNDING_BOX_FIELD_NUMBER = 1;
     private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_;
     /**
@@ -6533,7 +6676,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
      */
+    @java.lang.Override
     public boolean hasBoundingBox() {
       return boundingBox_ != null;
     }
@@ -6543,7 +6688,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox() {
       return boundingBox_ == null ? yandex.cloud.api.ai.vision.v1.Primitives.Polygon.getDefaultInstance() : boundingBox_;
     }
@@ -6554,6 +6701,7 @@ public final class TextDetection {
      *
      * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Primitives.PolygonOrBuilder getBoundingBoxOrBuilder() {
       return getBoundingBox();
     }
@@ -6566,7 +6714,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -6585,7 +6735,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -6608,7 +6760,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>double confidence = 3;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public double getConfidence() {
       return confidence_;
     }
@@ -6622,6 +6776,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word.DetectedLanguage languages = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage> getLanguagesList() {
       return languages_;
     }
@@ -6632,6 +6787,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word.DetectedLanguage languages = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguageOrBuilder> 
         getLanguagesOrBuilderList() {
       return languages_;
@@ -6643,6 +6799,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word.DetectedLanguage languages = 4;</code>
      */
+    @java.lang.Override
     public int getLanguagesCount() {
       return languages_.size();
     }
@@ -6653,6 +6810,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word.DetectedLanguage languages = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage getLanguages(int index) {
       return languages_.get(index);
     }
@@ -6663,6 +6821,7 @@ public final class TextDetection {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Word.DetectedLanguage languages = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguageOrBuilder getLanguagesOrBuilder(
         int index) {
       return languages_.get(index);
@@ -6676,7 +6835,9 @@ public final class TextDetection {
      * </pre>
      *
      * <code>int64 entity_index = 5;</code>
+     * @return The entityIndex.
      */
+    @java.lang.Override
     public long getEntityIndex() {
       return entityIndex_;
     }
@@ -6698,10 +6859,10 @@ public final class TextDetection {
       if (boundingBox_ != null) {
         output.writeMessage(1, getBoundingBox());
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         output.writeDouble(3, confidence_);
       }
       for (int i = 0; i < languages_.size(); i++) {
@@ -6723,10 +6884,10 @@ public final class TextDetection {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBoundingBox());
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, confidence_);
       }
@@ -6753,24 +6914,22 @@ public final class TextDetection {
       }
       yandex.cloud.api.ai.vision.v1.TextDetection.Word other = (yandex.cloud.api.ai.vision.v1.TextDetection.Word) obj;
 
-      boolean result = true;
-      result = result && (hasBoundingBox() == other.hasBoundingBox());
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
       if (hasBoundingBox()) {
-        result = result && getBoundingBox()
-            .equals(other.getBoundingBox());
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
       }
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getConfidence())
-          == java.lang.Double.doubleToLongBits(
-              other.getConfidence()));
-      result = result && getLanguagesList()
-          .equals(other.getLanguagesList());
-      result = result && (getEntityIndex()
-          == other.getEntityIndex());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (java.lang.Double.doubleToLongBits(getConfidence())
+          != java.lang.Double.doubleToLongBits(
+              other.getConfidence())) return false;
+      if (!getLanguagesList()
+          .equals(other.getLanguagesList())) return false;
+      if (getEntityIndex()
+          != other.getEntityIndex()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6942,7 +7101,7 @@ public final class TextDetection {
 
         if (languagesBuilder_ == null) {
           languages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           languagesBuilder_.clear();
         }
@@ -6975,7 +7134,6 @@ public final class TextDetection {
       public yandex.cloud.api.ai.vision.v1.TextDetection.Word buildPartial() {
         yandex.cloud.api.ai.vision.v1.TextDetection.Word result = new yandex.cloud.api.ai.vision.v1.TextDetection.Word(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (boundingBoxBuilder_ == null) {
           result.boundingBox_ = boundingBox_;
         } else {
@@ -6984,51 +7142,50 @@ public final class TextDetection {
         result.text_ = text_;
         result.confidence_ = confidence_;
         if (languagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             languages_ = java.util.Collections.unmodifiableList(languages_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.languages_ = languages_;
         } else {
           result.languages_ = languagesBuilder_.build();
         }
         result.entityIndex_ = entityIndex_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7056,7 +7213,7 @@ public final class TextDetection {
           if (!other.languages_.isEmpty()) {
             if (languages_.isEmpty()) {
               languages_ = other.languages_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLanguagesIsMutable();
               languages_.addAll(other.languages_);
@@ -7069,7 +7226,7 @@ public final class TextDetection {
               languagesBuilder_.dispose();
               languagesBuilder_ = null;
               languages_ = other.languages_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
               languagesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLanguagesFieldBuilder() : null;
@@ -7111,7 +7268,7 @@ public final class TextDetection {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_ = null;
+      private yandex.cloud.api.ai.vision.v1.Primitives.Polygon boundingBox_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.vision.v1.Primitives.Polygon, yandex.cloud.api.ai.vision.v1.Primitives.Polygon.Builder, yandex.cloud.api.ai.vision.v1.Primitives.PolygonOrBuilder> boundingBoxBuilder_;
       /**
@@ -7120,6 +7277,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+       * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
         return boundingBoxBuilder_ != null || boundingBox_ != null;
@@ -7130,6 +7288,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Polygon bounding_box = 1;</code>
+       * @return The boundingBox.
        */
       public yandex.cloud.api.ai.vision.v1.Primitives.Polygon getBoundingBox() {
         if (boundingBoxBuilder_ == null) {
@@ -7271,6 +7430,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -7290,6 +7450,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -7310,6 +7471,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -7327,6 +7490,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -7340,6 +7504,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -7360,7 +7526,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 3;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public double getConfidence() {
         return confidence_;
       }
@@ -7370,6 +7538,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 3;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
        */
       public Builder setConfidence(double value) {
         
@@ -7383,6 +7553,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>double confidence = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -7394,9 +7565,9 @@ public final class TextDetection {
       private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage> languages_ =
         java.util.Collections.emptyList();
       private void ensureLanguagesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           languages_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage>(languages_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -7590,7 +7761,7 @@ public final class TextDetection {
       public Builder clearLanguages() {
         if (languagesBuilder_ == null) {
           languages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           languagesBuilder_.clear();
@@ -7695,7 +7866,7 @@ public final class TextDetection {
           languagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage, yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguageOrBuilder>(
                   languages_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           languages_ = null;
@@ -7710,7 +7881,9 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 entity_index = 5;</code>
+       * @return The entityIndex.
        */
+      @java.lang.Override
       public long getEntityIndex() {
         return entityIndex_;
       }
@@ -7720,6 +7893,8 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 entity_index = 5;</code>
+       * @param value The entityIndex to set.
+       * @return This builder for chaining.
        */
       public Builder setEntityIndex(long value) {
         
@@ -7733,6 +7908,7 @@ public final class TextDetection {
        * </pre>
        *
        * <code>int64 entity_index = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEntityIndex() {
         
@@ -7743,7 +7919,7 @@ public final class TextDetection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7863,19 +8039,11 @@ public final class TextDetection {
       "dex-cloud/go-genproto/yandex/cloud/ai/vi" +
       "sion/v1;visionb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.vision.v1.Primitives.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_vision_v1_TextAnnotation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v1_TextAnnotation_fieldAccessorTable = new

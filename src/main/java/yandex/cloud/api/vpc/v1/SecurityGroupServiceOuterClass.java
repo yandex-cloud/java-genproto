@@ -20,10 +20,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -31,7 +33,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.GetSecurityGroupRequest}
    */
-  public  static final class GetSecurityGroupRequest extends
+  public static final class GetSecurityGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.GetSecurityGroupRequest)
       GetSecurityGroupRequestOrBuilder {
@@ -42,6 +44,13 @@ public final class SecurityGroupServiceOuterClass {
     }
     private GetSecurityGroupRequest() {
       securityGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSecurityGroupRequest();
     }
 
     @java.lang.Override
@@ -57,7 +66,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -75,7 +83,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -110,7 +118,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -125,7 +135,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -154,7 +166,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       unknownFields.writeTo(output);
@@ -166,7 +178,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -184,11 +196,10 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -368,35 +379,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -446,6 +457,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -461,6 +473,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -477,6 +490,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -490,6 +505,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -499,6 +515,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -514,7 +532,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -570,25 +588,30 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
     /**
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -599,6 +622,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -607,6 +631,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -614,7 +639,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSecurityGroupsRequest}
    */
-  public  static final class ListSecurityGroupsRequest extends
+  public static final class ListSecurityGroupsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSecurityGroupsRequest)
       ListSecurityGroupsRequestOrBuilder {
@@ -625,9 +650,15 @@ public final class SecurityGroupServiceOuterClass {
     }
     private ListSecurityGroupsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSecurityGroupsRequest();
     }
 
     @java.lang.Override
@@ -643,7 +674,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -678,7 +708,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -713,7 +743,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -728,7 +760,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -747,7 +781,9 @@ public final class SecurityGroupServiceOuterClass {
     private long pageSize_;
     /**
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -756,7 +792,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -771,7 +809,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -794,7 +834,9 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -813,7 +855,9 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -842,16 +886,16 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -863,17 +907,17 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -891,17 +935,16 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1097,35 +1140,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1186,6 +1229,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1201,6 +1245,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1217,6 +1262,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1230,6 +1277,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1239,6 +1287,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1255,12 +1305,16 @@ public final class SecurityGroupServiceOuterClass {
       private long pageSize_ ;
       /**
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
       /**
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1270,6 +1324,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1281,6 +1336,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1296,6 +1352,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1312,6 +1369,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1325,6 +1384,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1334,6 +1394,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1354,6 +1416,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1373,6 +1436,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1393,6 +1457,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1410,6 +1476,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1423,6 +1490,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1438,7 +1507,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1518,10 +1587,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1529,7 +1600,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSecurityGroupsResponse}
    */
-  public  static final class ListSecurityGroupsResponse extends
+  public static final class ListSecurityGroupsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSecurityGroupsResponse)
       ListSecurityGroupsResponseOrBuilder {
@@ -1541,6 +1612,13 @@ public final class SecurityGroupServiceOuterClass {
     private ListSecurityGroupsResponse() {
       securityGroups_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSecurityGroupsResponse();
     }
 
     @java.lang.Override
@@ -1568,7 +1646,7 @@ public final class SecurityGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 securityGroups_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1583,7 +1661,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1597,7 +1675,7 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = java.util.Collections.unmodifiableList(securityGroups_);
         }
         this.unknownFields = unknownFields.build();
@@ -1617,18 +1695,19 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SECURITY_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> securityGroups_;
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> getSecurityGroupsList() {
       return securityGroups_;
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
         getSecurityGroupsOrBuilderList() {
       return securityGroups_;
@@ -1636,18 +1715,21 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
+    @java.lang.Override
     public int getSecurityGroupsCount() {
       return securityGroups_.size();
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup getSecurityGroups(int index) {
       return securityGroups_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder getSecurityGroupsOrBuilder(
         int index) {
       return securityGroups_.get(index);
@@ -1657,7 +1739,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1672,7 +1756,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1704,7 +1790,7 @@ public final class SecurityGroupServiceOuterClass {
       for (int i = 0; i < securityGroups_.size(); i++) {
         output.writeMessage(1, securityGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1720,7 +1806,7 @@ public final class SecurityGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, securityGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1738,13 +1824,12 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1929,9 +2014,8 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (securityGroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             securityGroups_ = java.util.Collections.unmodifiableList(securityGroups_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1940,42 +2024,41 @@ public final class SecurityGroupServiceOuterClass {
           result.securityGroups_ = securityGroupsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2052,7 +2135,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> securityGroups_ =
         java.util.Collections.emptyList();
       private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup>(securityGroups_);
           bitField0_ |= 0x00000001;
          }
@@ -2281,7 +2364,7 @@ public final class SecurityGroupServiceOuterClass {
           securityGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder>(
                   securityGroups_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           securityGroups_ = null;
@@ -2292,6 +2375,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2307,6 +2391,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2323,6 +2408,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2336,6 +2423,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2345,6 +2433,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2360,7 +2450,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2416,30 +2506,36 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string description = 3;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2480,10 +2576,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -2515,7 +2613,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.CreateSecurityGroupRequest}
    */
-  public  static final class CreateSecurityGroupRequest extends
+  public static final class CreateSecurityGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.CreateSecurityGroupRequest)
       CreateSecurityGroupRequestOrBuilder {
@@ -2530,6 +2628,13 @@ public final class SecurityGroupServiceOuterClass {
       description_ = "";
       networkId_ = "";
       ruleSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSecurityGroupRequest();
     }
 
     @java.lang.Override
@@ -2575,10 +2680,10 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -2594,16 +2699,16 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 ruleSpecs_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               ruleSpecs_.add(
                   input.readMessage(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2617,7 +2722,7 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           ruleSpecs_ = java.util.Collections.unmodifiableList(ruleSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -2649,12 +2754,13 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -2669,7 +2775,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -2688,7 +2796,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2703,7 +2813,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2722,7 +2834,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 3;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2737,7 +2851,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -2782,14 +2898,16 @@ public final class SecurityGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -2797,6 +2915,7 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -2804,11 +2923,12 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2816,10 +2936,11 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -2832,7 +2953,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object networkId_;
     /**
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -2847,7 +2970,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -2867,12 +2992,14 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> getRuleSpecsList() {
       return ruleSpecs_;
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
         getRuleSpecsOrBuilderList() {
       return ruleSpecs_;
@@ -2880,18 +3007,21 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public int getRuleSpecsCount() {
       return ruleSpecs_.size();
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getRuleSpecs(int index) {
       return ruleSpecs_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getRuleSpecsOrBuilder(
         int index) {
       return ruleSpecs_.get(index);
@@ -2911,13 +3041,13 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -2926,7 +3056,7 @@ public final class SecurityGroupServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, networkId_);
       }
       for (int i = 0; i < ruleSpecs_.size(); i++) {
@@ -2941,13 +3071,13 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -2960,7 +3090,7 @@ public final class SecurityGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, networkId_);
       }
       for (int i = 0; i < ruleSpecs_.size(); i++) {
@@ -2982,21 +3112,20 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && getRuleSpecsList()
-          .equals(other.getRuleSpecsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (!getRuleSpecsList()
+          .equals(other.getRuleSpecsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3189,7 +3318,7 @@ public final class SecurityGroupServiceOuterClass {
 
         if (ruleSpecsBuilder_ == null) {
           ruleSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ruleSpecsBuilder_.clear();
         }
@@ -3220,7 +3349,6 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3228,50 +3356,49 @@ public final class SecurityGroupServiceOuterClass {
         result.labels_.makeImmutable();
         result.networkId_ = networkId_;
         if (ruleSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             ruleSpecs_ = java.util.Collections.unmodifiableList(ruleSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.ruleSpecs_ = ruleSpecs_;
         } else {
           result.ruleSpecs_ = ruleSpecsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3307,7 +3434,7 @@ public final class SecurityGroupServiceOuterClass {
           if (!other.ruleSpecs_.isEmpty()) {
             if (ruleSpecs_.isEmpty()) {
               ruleSpecs_ = other.ruleSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureRuleSpecsIsMutable();
               ruleSpecs_.addAll(other.ruleSpecs_);
@@ -3320,7 +3447,7 @@ public final class SecurityGroupServiceOuterClass {
               ruleSpecsBuilder_.dispose();
               ruleSpecsBuilder_ = null;
               ruleSpecs_ = other.ruleSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
               ruleSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRuleSpecsFieldBuilder() : null;
@@ -3362,6 +3489,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3377,6 +3505,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3393,6 +3522,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3406,6 +3537,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3415,6 +3547,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3431,6 +3565,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3446,6 +3581,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3462,6 +3598,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3475,6 +3613,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3484,6 +3623,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3500,6 +3641,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 3;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -3515,6 +3657,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -3531,6 +3674,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3544,6 +3689,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -3553,6 +3699,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3596,14 +3744,16 @@ public final class SecurityGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -3611,6 +3761,7 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -3618,11 +3769,12 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3630,10 +3782,11 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3653,7 +3806,7 @@ public final class SecurityGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3672,8 +3825,11 @@ public final class SecurityGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3692,6 +3848,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object networkId_ = "";
       /**
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -3707,6 +3864,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -3723,6 +3881,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -3736,6 +3896,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -3745,6 +3906,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3761,9 +3924,9 @@ public final class SecurityGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> ruleSpecs_ =
         java.util.Collections.emptyList();
       private void ensureRuleSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           ruleSpecs_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec>(ruleSpecs_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3913,7 +4076,7 @@ public final class SecurityGroupServiceOuterClass {
       public Builder clearRuleSpecs() {
         if (ruleSpecsBuilder_ == null) {
           ruleSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           ruleSpecsBuilder_.clear();
@@ -3990,7 +4153,7 @@ public final class SecurityGroupServiceOuterClass {
           ruleSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder>(
                   ruleSpecs_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           ruleSpecs_ = null;
@@ -4000,7 +4163,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4056,10 +4219,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string description = 1;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 1;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4100,10 +4265,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The direction.
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction getDirection();
 
@@ -4113,6 +4280,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
+     * @return Whether the ports field is set.
      */
     boolean hasPorts();
     /**
@@ -4121,6 +4289,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
+     * @return The ports.
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange getPorts();
     /**
@@ -4134,25 +4303,40 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string protocol_name = 5;</code>
+     * @return Whether the protocolName field is set.
+     */
+    boolean hasProtocolName();
+    /**
+     * <code>string protocol_name = 5;</code>
+     * @return The protocolName.
      */
     java.lang.String getProtocolName();
     /**
      * <code>string protocol_name = 5;</code>
+     * @return The bytes for protocolName.
      */
     com.google.protobuf.ByteString
         getProtocolNameBytes();
 
     /**
      * <code>int64 protocol_number = 6;</code>
+     * @return Whether the protocolNumber field is set.
+     */
+    boolean hasProtocolNumber();
+    /**
+     * <code>int64 protocol_number = 6;</code>
+     * @return The protocolNumber.
      */
     long getProtocolNumber();
 
     /**
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
+     * @return Whether the cidrBlocks field is set.
      */
     boolean hasCidrBlocks();
     /**
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
+     * @return The cidrBlocks.
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks();
     /**
@@ -4162,10 +4346,17 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 8;</code>
+     * @return Whether the securityGroupId field is set.
+     */
+    boolean hasSecurityGroupId();
+    /**
+     * <code>string security_group_id = 8;</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 8;</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -4176,6 +4367,16 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
+     * @return Whether the predefinedTarget field is set.
+     */
+    boolean hasPredefinedTarget();
+    /**
+     * <pre>
+     * string subnet_id = .. ;
+     * </pre>
+     *
+     * <code>string predefined_target = 9;</code>
+     * @return The predefinedTarget.
      */
     java.lang.String getPredefinedTarget();
     /**
@@ -4184,6 +4385,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
+     * @return The bytes for predefinedTarget.
      */
     com.google.protobuf.ByteString
         getPredefinedTargetBytes();
@@ -4195,7 +4397,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.SecurityGroupRuleSpec}
    */
-  public  static final class SecurityGroupRuleSpec extends
+  public static final class SecurityGroupRuleSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.SecurityGroupRuleSpec)
       SecurityGroupRuleSpecOrBuilder {
@@ -4207,6 +4409,13 @@ public final class SecurityGroupServiceOuterClass {
     private SecurityGroupRuleSpec() {
       description_ = "";
       direction_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecurityGroupRuleSpec();
     }
 
     @java.lang.Override
@@ -4240,10 +4449,10 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -4278,8 +4487,8 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 48: {
-              protocolCase_ = 6;
               protocol_ = input.readInt64();
+              protocolCase_ = 6;
               break;
             }
             case 58: {
@@ -4309,7 +4518,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4352,11 +4561,11 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int protocolCase_ = 0;
     private java.lang.Object protocol_;
     public enum ProtocolCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PROTOCOL_NAME(5),
       PROTOCOL_NUMBER(6),
       PROTOCOL_NOT_SET(0);
@@ -4365,6 +4574,8 @@ public final class SecurityGroupServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4394,7 +4605,8 @@ public final class SecurityGroupServiceOuterClass {
     private int targetCase_ = 0;
     private java.lang.Object target_;
     public enum TargetCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CIDR_BLOCKS(7),
       SECURITY_GROUP_ID(8),
       PREDEFINED_TARGET(9),
@@ -4404,6 +4616,8 @@ public final class SecurityGroupServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4435,7 +4649,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 1;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4450,7 +4666,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string description = 1;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4495,14 +4713,16 @@ public final class SecurityGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -4510,6 +4730,7 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -4517,11 +4738,12 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4529,10 +4751,11 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 2;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -4545,14 +4768,16 @@ public final class SecurityGroupServiceOuterClass {
     private int direction_;
     /**
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for direction.
      */
-    public int getDirectionValue() {
+    @java.lang.Override public int getDirectionValue() {
       return direction_;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The direction.
      */
-    public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction getDirection() {
+    @java.lang.Override public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction getDirection() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction result = yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction.valueOf(direction_);
       return result == null ? yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction.UNRECOGNIZED : result;
@@ -4566,7 +4791,9 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
+     * @return Whether the ports field is set.
      */
+    @java.lang.Override
     public boolean hasPorts() {
       return ports_ != null;
     }
@@ -4576,7 +4803,9 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
+     * @return The ports.
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange getPorts() {
       return ports_ == null ? yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange.getDefaultInstance() : ports_;
     }
@@ -4587,6 +4816,7 @@ public final class SecurityGroupServiceOuterClass {
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRangeOrBuilder getPortsOrBuilder() {
       return getPorts();
     }
@@ -4594,6 +4824,14 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PROTOCOL_NAME_FIELD_NUMBER = 5;
     /**
      * <code>string protocol_name = 5;</code>
+     * @return Whether the protocolName field is set.
+     */
+    public boolean hasProtocolName() {
+      return protocolCase_ == 5;
+    }
+    /**
+     * <code>string protocol_name = 5;</code>
+     * @return The protocolName.
      */
     public java.lang.String getProtocolName() {
       java.lang.Object ref = "";
@@ -4614,6 +4852,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string protocol_name = 5;</code>
+     * @return The bytes for protocolName.
      */
     public com.google.protobuf.ByteString
         getProtocolNameBytes() {
@@ -4637,7 +4876,17 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PROTOCOL_NUMBER_FIELD_NUMBER = 6;
     /**
      * <code>int64 protocol_number = 6;</code>
+     * @return Whether the protocolNumber field is set.
      */
+    @java.lang.Override
+    public boolean hasProtocolNumber() {
+      return protocolCase_ == 6;
+    }
+    /**
+     * <code>int64 protocol_number = 6;</code>
+     * @return The protocolNumber.
+     */
+    @java.lang.Override
     public long getProtocolNumber() {
       if (protocolCase_ == 6) {
         return (java.lang.Long) protocol_;
@@ -4648,13 +4897,17 @@ public final class SecurityGroupServiceOuterClass {
     public static final int CIDR_BLOCKS_FIELD_NUMBER = 7;
     /**
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
+     * @return Whether the cidrBlocks field is set.
      */
+    @java.lang.Override
     public boolean hasCidrBlocks() {
       return targetCase_ == 7;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
+     * @return The cidrBlocks.
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks() {
       if (targetCase_ == 7) {
          return (yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks) target_;
@@ -4664,6 +4917,7 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder getCidrBlocksOrBuilder() {
       if (targetCase_ == 7) {
          return (yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks) target_;
@@ -4674,6 +4928,14 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 8;
     /**
      * <code>string security_group_id = 8;</code>
+     * @return Whether the securityGroupId field is set.
+     */
+    public boolean hasSecurityGroupId() {
+      return targetCase_ == 8;
+    }
+    /**
+     * <code>string security_group_id = 8;</code>
+     * @return The securityGroupId.
      */
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = "";
@@ -4694,6 +4956,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 8;</code>
+     * @return The bytes for securityGroupId.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
@@ -4721,6 +4984,18 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
+     * @return Whether the predefinedTarget field is set.
+     */
+    public boolean hasPredefinedTarget() {
+      return targetCase_ == 9;
+    }
+    /**
+     * <pre>
+     * string subnet_id = .. ;
+     * </pre>
+     *
+     * <code>string predefined_target = 9;</code>
+     * @return The predefinedTarget.
      */
     public java.lang.String getPredefinedTarget() {
       java.lang.Object ref = "";
@@ -4745,6 +5020,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
+     * @return The bytes for predefinedTarget.
      */
     public com.google.protobuf.ByteString
         getPredefinedTargetBytes() {
@@ -4779,7 +5055,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4819,7 +5095,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -4873,53 +5149,48 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec) obj;
 
-      boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && direction_ == other.direction_;
-      result = result && (hasPorts() == other.hasPorts());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (direction_ != other.direction_) return false;
+      if (hasPorts() != other.hasPorts()) return false;
       if (hasPorts()) {
-        result = result && getPorts()
-            .equals(other.getPorts());
+        if (!getPorts()
+            .equals(other.getPorts())) return false;
       }
-      result = result && getProtocolCase().equals(
-          other.getProtocolCase());
-      if (!result) return false;
+      if (!getProtocolCase().equals(other.getProtocolCase())) return false;
       switch (protocolCase_) {
         case 5:
-          result = result && getProtocolName()
-              .equals(other.getProtocolName());
+          if (!getProtocolName()
+              .equals(other.getProtocolName())) return false;
           break;
         case 6:
-          result = result && (getProtocolNumber()
-              == other.getProtocolNumber());
+          if (getProtocolNumber()
+              != other.getProtocolNumber()) return false;
           break;
         case 0:
         default:
       }
-      result = result && getTargetCase().equals(
-          other.getTargetCase());
-      if (!result) return false;
+      if (!getTargetCase().equals(other.getTargetCase())) return false;
       switch (targetCase_) {
         case 7:
-          result = result && getCidrBlocks()
-              .equals(other.getCidrBlocks());
+          if (!getCidrBlocks()
+              .equals(other.getCidrBlocks())) return false;
           break;
         case 8:
-          result = result && getSecurityGroupId()
-              .equals(other.getSecurityGroupId());
+          if (!getSecurityGroupId()
+              .equals(other.getSecurityGroupId())) return false;
           break;
         case 9:
-          result = result && getPredefinedTarget()
-              .equals(other.getPredefinedTarget());
+          if (!getPredefinedTarget()
+              .equals(other.getPredefinedTarget())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5167,7 +5438,6 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
@@ -5196,7 +5466,6 @@ public final class SecurityGroupServiceOuterClass {
         if (targetCase_ == 9) {
           result.target_ = target_;
         }
-        result.bitField0_ = to_bitField0_;
         result.protocolCase_ = protocolCase_;
         result.targetCase_ = targetCase_;
         onBuilt();
@@ -5205,35 +5474,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5358,6 +5627,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 1;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5373,6 +5643,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 1;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5389,6 +5660,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 1;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5402,6 +5675,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5411,6 +5685,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 1;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5454,14 +5730,16 @@ public final class SecurityGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -5469,6 +5747,7 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -5476,11 +5755,12 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5488,10 +5768,11 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 2;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -5511,7 +5792,7 @@ public final class SecurityGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -5530,8 +5811,11 @@ public final class SecurityGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -5550,21 +5834,27 @@ public final class SecurityGroupServiceOuterClass {
       private int direction_ = 0;
       /**
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for direction.
        */
-      public int getDirectionValue() {
+      @java.lang.Override public int getDirectionValue() {
         return direction_;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirectionValue(int value) {
+        
         direction_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The direction.
        */
+      @java.lang.Override
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction getDirection() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction result = yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction.valueOf(direction_);
@@ -5572,6 +5862,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirection(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction value) {
         if (value == null) {
@@ -5584,6 +5876,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDirection() {
         
@@ -5592,7 +5885,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange ports_ = null;
+      private yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange ports_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRangeOrBuilder> portsBuilder_;
       /**
@@ -5601,6 +5894,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
+       * @return Whether the ports field is set.
        */
       public boolean hasPorts() {
         return portsBuilder_ != null || ports_ != null;
@@ -5611,6 +5905,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
+       * @return The ports.
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange getPorts() {
         if (portsBuilder_ == null) {
@@ -5747,7 +6042,17 @@ public final class SecurityGroupServiceOuterClass {
 
       /**
        * <code>string protocol_name = 5;</code>
+       * @return Whether the protocolName field is set.
        */
+      @java.lang.Override
+      public boolean hasProtocolName() {
+        return protocolCase_ == 5;
+      }
+      /**
+       * <code>string protocol_name = 5;</code>
+       * @return The protocolName.
+       */
+      @java.lang.Override
       public java.lang.String getProtocolName() {
         java.lang.Object ref = "";
         if (protocolCase_ == 5) {
@@ -5767,7 +6072,9 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string protocol_name = 5;</code>
+       * @return The bytes for protocolName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getProtocolNameBytes() {
         java.lang.Object ref = "";
@@ -5788,6 +6095,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string protocol_name = 5;</code>
+       * @param value The protocolName to set.
+       * @return This builder for chaining.
        */
       public Builder setProtocolName(
           java.lang.String value) {
@@ -5801,6 +6110,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string protocol_name = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProtocolName() {
         if (protocolCase_ == 5) {
@@ -5812,6 +6122,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string protocol_name = 5;</code>
+       * @param value The bytes for protocolName to set.
+       * @return This builder for chaining.
        */
       public Builder setProtocolNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5827,6 +6139,14 @@ public final class SecurityGroupServiceOuterClass {
 
       /**
        * <code>int64 protocol_number = 6;</code>
+       * @return Whether the protocolNumber field is set.
+       */
+      public boolean hasProtocolNumber() {
+        return protocolCase_ == 6;
+      }
+      /**
+       * <code>int64 protocol_number = 6;</code>
+       * @return The protocolNumber.
        */
       public long getProtocolNumber() {
         if (protocolCase_ == 6) {
@@ -5836,6 +6156,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>int64 protocol_number = 6;</code>
+       * @param value The protocolNumber to set.
+       * @return This builder for chaining.
        */
       public Builder setProtocolNumber(long value) {
         protocolCase_ = 6;
@@ -5845,6 +6167,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>int64 protocol_number = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProtocolNumber() {
         if (protocolCase_ == 6) {
@@ -5859,13 +6182,17 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder> cidrBlocksBuilder_;
       /**
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
+       * @return Whether the cidrBlocks field is set.
        */
+      @java.lang.Override
       public boolean hasCidrBlocks() {
         return targetCase_ == 7;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
+       * @return The cidrBlocks.
        */
+      @java.lang.Override
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks() {
         if (cidrBlocksBuilder_ == null) {
           if (targetCase_ == 7) {
@@ -5959,6 +6286,7 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder getCidrBlocksOrBuilder() {
         if ((targetCase_ == 7) && (cidrBlocksBuilder_ != null)) {
           return cidrBlocksBuilder_.getMessageOrBuilder();
@@ -5993,7 +6321,17 @@ public final class SecurityGroupServiceOuterClass {
 
       /**
        * <code>string security_group_id = 8;</code>
+       * @return Whether the securityGroupId field is set.
        */
+      @java.lang.Override
+      public boolean hasSecurityGroupId() {
+        return targetCase_ == 8;
+      }
+      /**
+       * <code>string security_group_id = 8;</code>
+       * @return The securityGroupId.
+       */
+      @java.lang.Override
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = "";
         if (targetCase_ == 8) {
@@ -6013,7 +6351,9 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 8;</code>
+       * @return The bytes for securityGroupId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
         java.lang.Object ref = "";
@@ -6034,6 +6374,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 8;</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -6047,6 +6389,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         if (targetCase_ == 8) {
@@ -6058,6 +6401,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 8;</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6077,7 +6422,21 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
+       * @return Whether the predefinedTarget field is set.
        */
+      @java.lang.Override
+      public boolean hasPredefinedTarget() {
+        return targetCase_ == 9;
+      }
+      /**
+       * <pre>
+       * string subnet_id = .. ;
+       * </pre>
+       *
+       * <code>string predefined_target = 9;</code>
+       * @return The predefinedTarget.
+       */
+      @java.lang.Override
       public java.lang.String getPredefinedTarget() {
         java.lang.Object ref = "";
         if (targetCase_ == 9) {
@@ -6101,7 +6460,9 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
+       * @return The bytes for predefinedTarget.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPredefinedTargetBytes() {
         java.lang.Object ref = "";
@@ -6126,6 +6487,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
+       * @param value The predefinedTarget to set.
+       * @return This builder for chaining.
        */
       public Builder setPredefinedTarget(
           java.lang.String value) {
@@ -6143,6 +6506,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPredefinedTarget() {
         if (targetCase_ == 9) {
@@ -6158,6 +6522,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
+       * @param value The bytes for predefinedTarget to set.
+       * @return This builder for chaining.
        */
       public Builder setPredefinedTargetBytes(
           com.google.protobuf.ByteString value) {
@@ -6173,7 +6539,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6229,10 +6595,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -6240,7 +6608,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.CreateSecurityGroupMetadata}
    */
-  public  static final class CreateSecurityGroupMetadata extends
+  public static final class CreateSecurityGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.CreateSecurityGroupMetadata)
       CreateSecurityGroupMetadataOrBuilder {
@@ -6251,6 +6619,13 @@ public final class SecurityGroupServiceOuterClass {
     }
     private CreateSecurityGroupMetadata() {
       securityGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSecurityGroupMetadata();
     }
 
     @java.lang.Override
@@ -6266,7 +6641,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6284,7 +6658,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6319,7 +6693,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -6334,7 +6710,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -6363,7 +6741,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       unknownFields.writeTo(output);
@@ -6375,7 +6753,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6393,11 +6771,10 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupMetadata other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6577,35 +6954,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6655,6 +7032,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -6670,6 +7048,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -6686,6 +7065,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -6699,6 +7080,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -6708,6 +7090,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6723,7 +7107,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6779,20 +7163,24 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
 
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -6802,20 +7190,24 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string name = 3;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string description = 4;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -6901,7 +7293,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSecurityGroupRequest}
    */
-  public  static final class UpdateSecurityGroupRequest extends
+  public static final class UpdateSecurityGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSecurityGroupRequest)
       UpdateSecurityGroupRequestOrBuilder {
@@ -6915,6 +7307,13 @@ public final class SecurityGroupServiceOuterClass {
       name_ = "";
       description_ = "";
       ruleSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSecurityGroupRequest();
     }
 
     @java.lang.Override
@@ -6973,10 +7372,10 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6986,16 +7385,16 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 ruleSpecs_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               ruleSpecs_.add(
                   input.readMessage(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7009,7 +7408,7 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           ruleSpecs_ = java.util.Collections.unmodifiableList(ruleSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -7041,12 +7440,13 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -7061,7 +7461,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -7080,19 +7482,24 @@ public final class SecurityGroupServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -7101,7 +7508,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 3;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7116,7 +7525,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7135,7 +7546,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 4;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -7150,7 +7563,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -7195,14 +7610,16 @@ public final class SecurityGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -7210,6 +7627,7 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -7217,11 +7635,12 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7229,10 +7648,11 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -7250,6 +7670,7 @@ public final class SecurityGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> getRuleSpecsList() {
       return ruleSpecs_;
     }
@@ -7260,6 +7681,7 @@ public final class SecurityGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
         getRuleSpecsOrBuilderList() {
       return ruleSpecs_;
@@ -7271,6 +7693,7 @@ public final class SecurityGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public int getRuleSpecsCount() {
       return ruleSpecs_.size();
     }
@@ -7281,6 +7704,7 @@ public final class SecurityGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getRuleSpecs(int index) {
       return ruleSpecs_.get(index);
     }
@@ -7291,6 +7715,7 @@ public final class SecurityGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getRuleSpecsOrBuilder(
         int index) {
       return ruleSpecs_.get(index);
@@ -7310,16 +7735,16 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -7340,17 +7765,17 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -7382,24 +7807,23 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getRuleSpecsList()
-          .equals(other.getRuleSpecsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getRuleSpecsList()
+          .equals(other.getRuleSpecsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7598,7 +8022,7 @@ public final class SecurityGroupServiceOuterClass {
         internalGetMutableLabels().clear();
         if (ruleSpecsBuilder_ == null) {
           ruleSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ruleSpecsBuilder_.clear();
         }
@@ -7629,7 +8053,6 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.securityGroupId_ = securityGroupId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -7641,50 +8064,49 @@ public final class SecurityGroupServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (ruleSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             ruleSpecs_ = java.util.Collections.unmodifiableList(ruleSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.ruleSpecs_ = ruleSpecs_;
         } else {
           result.ruleSpecs_ = ruleSpecsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7719,7 +8141,7 @@ public final class SecurityGroupServiceOuterClass {
           if (!other.ruleSpecs_.isEmpty()) {
             if (ruleSpecs_.isEmpty()) {
               ruleSpecs_ = other.ruleSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureRuleSpecsIsMutable();
               ruleSpecs_.addAll(other.ruleSpecs_);
@@ -7732,7 +8154,7 @@ public final class SecurityGroupServiceOuterClass {
               ruleSpecsBuilder_.dispose();
               ruleSpecsBuilder_ = null;
               ruleSpecs_ = other.ruleSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
               ruleSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRuleSpecsFieldBuilder() : null;
@@ -7774,6 +8196,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -7789,6 +8212,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -7805,6 +8229,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -7818,6 +8244,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -7827,6 +8254,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7840,17 +8269,19 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -7960,6 +8391,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 3;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7975,6 +8407,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 3;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7991,6 +8424,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8004,6 +8439,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8013,6 +8449,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8029,6 +8467,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 4;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8044,6 +8483,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8060,6 +8500,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8073,6 +8515,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8082,6 +8525,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8125,14 +8570,16 @@ public final class SecurityGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -8140,6 +8587,7 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -8147,11 +8595,12 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8159,10 +8608,11 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -8182,7 +8632,7 @@ public final class SecurityGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -8201,8 +8651,11 @@ public final class SecurityGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -8221,9 +8674,9 @@ public final class SecurityGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> ruleSpecs_ =
         java.util.Collections.emptyList();
       private void ensureRuleSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           ruleSpecs_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec>(ruleSpecs_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -8417,7 +8870,7 @@ public final class SecurityGroupServiceOuterClass {
       public Builder clearRuleSpecs() {
         if (ruleSpecsBuilder_ == null) {
           ruleSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           ruleSpecsBuilder_.clear();
@@ -8522,7 +8975,7 @@ public final class SecurityGroupServiceOuterClass {
           ruleSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder>(
                   ruleSpecs_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           ruleSpecs_ = null;
@@ -8532,7 +8985,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8588,29 +9041,37 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
 
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @return A list containing the addedRuleIds.
      */
     java.util.List<java.lang.String>
         getAddedRuleIdsList();
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @return The count of addedRuleIds.
      */
     int getAddedRuleIdsCount();
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The addedRuleIds at the given index.
      */
     java.lang.String getAddedRuleIds(int index);
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the addedRuleIds at the given index.
      */
     com.google.protobuf.ByteString
         getAddedRuleIdsBytes(int index);
@@ -8618,7 +9079,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSecurityGroupMetadata}
    */
-  public  static final class UpdateSecurityGroupMetadata extends
+  public static final class UpdateSecurityGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSecurityGroupMetadata)
       UpdateSecurityGroupMetadataOrBuilder {
@@ -8630,6 +9091,13 @@ public final class SecurityGroupServiceOuterClass {
     private UpdateSecurityGroupMetadata() {
       securityGroupId_ = "";
       addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSecurityGroupMetadata();
     }
 
     @java.lang.Override
@@ -8664,15 +9132,15 @@ public final class SecurityGroupServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 addedRuleIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               addedRuleIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8686,7 +9154,7 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           addedRuleIds_ = addedRuleIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8706,12 +9174,13 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -8726,7 +9195,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -8745,6 +9216,7 @@ public final class SecurityGroupServiceOuterClass {
     private com.google.protobuf.LazyStringList addedRuleIds_;
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @return A list containing the addedRuleIds.
      */
     public com.google.protobuf.ProtocolStringList
         getAddedRuleIdsList() {
@@ -8752,18 +9224,23 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @return The count of addedRuleIds.
      */
     public int getAddedRuleIdsCount() {
       return addedRuleIds_.size();
     }
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The addedRuleIds at the given index.
      */
     public java.lang.String getAddedRuleIds(int index) {
       return addedRuleIds_.get(index);
     }
     /**
      * <code>repeated string added_rule_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the addedRuleIds at the given index.
      */
     public com.google.protobuf.ByteString
         getAddedRuleIdsBytes(int index) {
@@ -8784,7 +9261,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       for (int i = 0; i < addedRuleIds_.size(); i++) {
@@ -8799,7 +9276,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       {
@@ -8825,13 +9302,12 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && getAddedRuleIdsList()
-          .equals(other.getAddedRuleIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!getAddedRuleIdsList()
+          .equals(other.getAddedRuleIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8983,7 +9459,7 @@ public final class SecurityGroupServiceOuterClass {
         securityGroupId_ = "";
 
         addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -9011,49 +9487,47 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.securityGroupId_ = securityGroupId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           addedRuleIds_ = addedRuleIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.addedRuleIds_ = addedRuleIds_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9074,7 +9548,7 @@ public final class SecurityGroupServiceOuterClass {
         if (!other.addedRuleIds_.isEmpty()) {
           if (addedRuleIds_.isEmpty()) {
             addedRuleIds_ = other.addedRuleIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAddedRuleIdsIsMutable();
             addedRuleIds_.addAll(other.addedRuleIds_);
@@ -9114,6 +9588,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -9129,6 +9604,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -9145,6 +9621,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -9158,6 +9636,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -9167,6 +9646,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9182,13 +9663,14 @@ public final class SecurityGroupServiceOuterClass {
 
       private com.google.protobuf.LazyStringList addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureAddedRuleIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           addedRuleIds_ = new com.google.protobuf.LazyStringArrayList(addedRuleIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @return A list containing the addedRuleIds.
        */
       public com.google.protobuf.ProtocolStringList
           getAddedRuleIdsList() {
@@ -9196,18 +9678,23 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @return The count of addedRuleIds.
        */
       public int getAddedRuleIdsCount() {
         return addedRuleIds_.size();
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The addedRuleIds at the given index.
        */
       public java.lang.String getAddedRuleIds(int index) {
         return addedRuleIds_.get(index);
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the addedRuleIds at the given index.
        */
       public com.google.protobuf.ByteString
           getAddedRuleIdsBytes(int index) {
@@ -9215,6 +9702,9 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The addedRuleIds to set.
+       * @return This builder for chaining.
        */
       public Builder setAddedRuleIds(
           int index, java.lang.String value) {
@@ -9228,6 +9718,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @param value The addedRuleIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAddedRuleIds(
           java.lang.String value) {
@@ -9241,6 +9733,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @param values The addedRuleIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllAddedRuleIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -9252,15 +9746,18 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddedRuleIds() {
         addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string added_rule_ids = 2;</code>
+       * @param value The bytes of the addedRuleIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAddedRuleIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -9276,7 +9773,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9332,10 +9829,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -9346,6 +9845,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @return A list containing the deletionRuleIds.
      */
     java.util.List<java.lang.String>
         getDeletionRuleIdsList();
@@ -9355,6 +9855,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @return The count of deletionRuleIds.
      */
     int getDeletionRuleIdsCount();
     /**
@@ -9363,6 +9864,8 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The deletionRuleIds at the given index.
      */
     java.lang.String getDeletionRuleIds(int index);
     /**
@@ -9371,6 +9874,8 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deletionRuleIds at the given index.
      */
     com.google.protobuf.ByteString
         getDeletionRuleIdsBytes(int index);
@@ -9402,7 +9907,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSecurityGroupRulesRequest}
    */
-  public  static final class UpdateSecurityGroupRulesRequest extends
+  public static final class UpdateSecurityGroupRulesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSecurityGroupRulesRequest)
       UpdateSecurityGroupRulesRequestOrBuilder {
@@ -9415,6 +9920,13 @@ public final class SecurityGroupServiceOuterClass {
       securityGroupId_ = "";
       deletionRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       additionRuleSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSecurityGroupRulesRequest();
     }
 
     @java.lang.Override
@@ -9449,24 +9961,24 @@ public final class SecurityGroupServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 deletionRuleIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               deletionRuleIds_.add(s);
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 additionRuleSpecs_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               additionRuleSpecs_.add(
                   input.readMessage(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9480,10 +9992,10 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           deletionRuleIds_ = deletionRuleIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           additionRuleSpecs_ = java.util.Collections.unmodifiableList(additionRuleSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -9503,12 +10015,13 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -9523,7 +10036,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -9546,6 +10061,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @return A list containing the deletionRuleIds.
      */
     public com.google.protobuf.ProtocolStringList
         getDeletionRuleIdsList() {
@@ -9557,6 +10073,7 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @return The count of deletionRuleIds.
      */
     public int getDeletionRuleIdsCount() {
       return deletionRuleIds_.size();
@@ -9567,6 +10084,8 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The deletionRuleIds at the given index.
      */
     public java.lang.String getDeletionRuleIds(int index) {
       return deletionRuleIds_.get(index);
@@ -9577,6 +10096,8 @@ public final class SecurityGroupServiceOuterClass {
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deletionRuleIds at the given index.
      */
     public com.google.protobuf.ByteString
         getDeletionRuleIdsBytes(int index) {
@@ -9588,12 +10109,14 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> getAdditionRuleSpecsList() {
       return additionRuleSpecs_;
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
         getAdditionRuleSpecsOrBuilderList() {
       return additionRuleSpecs_;
@@ -9601,18 +10124,21 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
+    @java.lang.Override
     public int getAdditionRuleSpecsCount() {
       return additionRuleSpecs_.size();
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getAdditionRuleSpecs(int index) {
       return additionRuleSpecs_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getAdditionRuleSpecsOrBuilder(
         int index) {
       return additionRuleSpecs_.get(index);
@@ -9632,7 +10158,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       for (int i = 0; i < deletionRuleIds_.size(); i++) {
@@ -9650,7 +10176,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       {
@@ -9680,15 +10206,14 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && getDeletionRuleIdsList()
-          .equals(other.getDeletionRuleIdsList());
-      result = result && getAdditionRuleSpecsList()
-          .equals(other.getAdditionRuleSpecsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!getDeletionRuleIdsList()
+          .equals(other.getDeletionRuleIdsList())) return false;
+      if (!getAdditionRuleSpecsList()
+          .equals(other.getAdditionRuleSpecsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9845,10 +10370,10 @@ public final class SecurityGroupServiceOuterClass {
         securityGroupId_ = "";
 
         deletionRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (additionRuleSpecsBuilder_ == null) {
           additionRuleSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           additionRuleSpecsBuilder_.clear();
         }
@@ -9879,58 +10404,56 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.securityGroupId_ = securityGroupId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           deletionRuleIds_ = deletionRuleIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.deletionRuleIds_ = deletionRuleIds_;
         if (additionRuleSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             additionRuleSpecs_ = java.util.Collections.unmodifiableList(additionRuleSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.additionRuleSpecs_ = additionRuleSpecs_;
         } else {
           result.additionRuleSpecs_ = additionRuleSpecsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9951,7 +10474,7 @@ public final class SecurityGroupServiceOuterClass {
         if (!other.deletionRuleIds_.isEmpty()) {
           if (deletionRuleIds_.isEmpty()) {
             deletionRuleIds_ = other.deletionRuleIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureDeletionRuleIdsIsMutable();
             deletionRuleIds_.addAll(other.deletionRuleIds_);
@@ -9962,7 +10485,7 @@ public final class SecurityGroupServiceOuterClass {
           if (!other.additionRuleSpecs_.isEmpty()) {
             if (additionRuleSpecs_.isEmpty()) {
               additionRuleSpecs_ = other.additionRuleSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureAdditionRuleSpecsIsMutable();
               additionRuleSpecs_.addAll(other.additionRuleSpecs_);
@@ -9975,7 +10498,7 @@ public final class SecurityGroupServiceOuterClass {
               additionRuleSpecsBuilder_.dispose();
               additionRuleSpecsBuilder_ = null;
               additionRuleSpecs_ = other.additionRuleSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               additionRuleSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAdditionRuleSpecsFieldBuilder() : null;
@@ -10017,6 +10540,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -10032,6 +10556,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -10048,6 +10573,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -10061,6 +10588,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -10070,6 +10598,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10085,9 +10615,9 @@ public final class SecurityGroupServiceOuterClass {
 
       private com.google.protobuf.LazyStringList deletionRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureDeletionRuleIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           deletionRuleIds_ = new com.google.protobuf.LazyStringArrayList(deletionRuleIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -10096,6 +10626,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @return A list containing the deletionRuleIds.
        */
       public com.google.protobuf.ProtocolStringList
           getDeletionRuleIdsList() {
@@ -10107,6 +10638,7 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @return The count of deletionRuleIds.
        */
       public int getDeletionRuleIdsCount() {
         return deletionRuleIds_.size();
@@ -10117,6 +10649,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The deletionRuleIds at the given index.
        */
       public java.lang.String getDeletionRuleIds(int index) {
         return deletionRuleIds_.get(index);
@@ -10127,6 +10661,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deletionRuleIds at the given index.
        */
       public com.google.protobuf.ByteString
           getDeletionRuleIdsBytes(int index) {
@@ -10138,6 +10674,9 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The deletionRuleIds to set.
+       * @return This builder for chaining.
        */
       public Builder setDeletionRuleIds(
           int index, java.lang.String value) {
@@ -10155,6 +10694,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @param value The deletionRuleIds to add.
+       * @return This builder for chaining.
        */
       public Builder addDeletionRuleIds(
           java.lang.String value) {
@@ -10172,6 +10713,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @param values The deletionRuleIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDeletionRuleIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -10187,10 +10730,11 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeletionRuleIds() {
         deletionRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10200,6 +10744,8 @@ public final class SecurityGroupServiceOuterClass {
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
+       * @param value The bytes of the deletionRuleIds to add.
+       * @return This builder for chaining.
        */
       public Builder addDeletionRuleIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -10216,9 +10762,9 @@ public final class SecurityGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> additionRuleSpecs_ =
         java.util.Collections.emptyList();
       private void ensureAdditionRuleSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           additionRuleSpecs_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec>(additionRuleSpecs_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -10368,7 +10914,7 @@ public final class SecurityGroupServiceOuterClass {
       public Builder clearAdditionRuleSpecs() {
         if (additionRuleSpecsBuilder_ == null) {
           additionRuleSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           additionRuleSpecsBuilder_.clear();
@@ -10445,7 +10991,7 @@ public final class SecurityGroupServiceOuterClass {
           additionRuleSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder>(
                   additionRuleSpecs_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           additionRuleSpecs_ = null;
@@ -10455,7 +11001,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10511,30 +11057,36 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
 
     /**
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The ruleId.
      */
     java.lang.String getRuleId();
     /**
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for ruleId.
      */
     com.google.protobuf.ByteString
         getRuleIdBytes();
 
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -10544,10 +11096,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string description = 4;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -10589,7 +11143,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSecurityGroupRuleRequest}
    */
-  public  static final class UpdateSecurityGroupRuleRequest extends
+  public static final class UpdateSecurityGroupRuleRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSecurityGroupRuleRequest)
       UpdateSecurityGroupRuleRequestOrBuilder {
@@ -10602,6 +11156,13 @@ public final class SecurityGroupServiceOuterClass {
       securityGroupId_ = "";
       ruleId_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSecurityGroupRuleRequest();
     }
 
     @java.lang.Override
@@ -10660,10 +11221,10 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -10673,7 +11234,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10716,12 +11277,13 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -10736,7 +11298,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -10755,7 +11319,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object ruleId_;
     /**
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The ruleId.
      */
+    @java.lang.Override
     public java.lang.String getRuleId() {
       java.lang.Object ref = ruleId_;
       if (ref instanceof java.lang.String) {
@@ -10770,7 +11336,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for ruleId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRuleIdBytes() {
       java.lang.Object ref = ruleId_;
@@ -10789,19 +11357,24 @@ public final class SecurityGroupServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -10810,7 +11383,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 4;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -10825,7 +11400,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -10870,14 +11447,16 @@ public final class SecurityGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -10885,6 +11464,7 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -10892,11 +11472,12 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10904,10 +11485,11 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -10930,16 +11512,16 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
-      if (!getRuleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ruleId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(3, getUpdateMask());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -10957,17 +11539,17 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
-      if (!getRuleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ruleId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdateMask());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -10995,22 +11577,21 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && getRuleId()
-          .equals(other.getRuleId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!getRuleId()
+          .equals(other.getRuleId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11229,7 +11810,6 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.securityGroupId_ = securityGroupId_;
         result.ruleId_ = ruleId_;
         if (updateMaskBuilder_ == null) {
@@ -11240,42 +11820,41 @@ public final class SecurityGroupServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11339,6 +11918,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -11354,6 +11934,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -11370,6 +11951,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -11383,6 +11966,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -11392,6 +11976,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11408,6 +11994,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object ruleId_ = "";
       /**
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The ruleId.
        */
       public java.lang.String getRuleId() {
         java.lang.Object ref = ruleId_;
@@ -11423,6 +12010,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for ruleId.
        */
       public com.google.protobuf.ByteString
           getRuleIdBytes() {
@@ -11439,6 +12027,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The ruleId to set.
+       * @return This builder for chaining.
        */
       public Builder setRuleId(
           java.lang.String value) {
@@ -11452,6 +12042,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRuleId() {
         
@@ -11461,6 +12052,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for ruleId to set.
+       * @return This builder for chaining.
        */
       public Builder setRuleIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11474,17 +12067,19 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -11594,6 +12189,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 4;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -11609,6 +12205,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -11625,6 +12222,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -11638,6 +12237,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -11647,6 +12247,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -11690,14 +12292,16 @@ public final class SecurityGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -11705,6 +12309,7 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -11712,11 +12317,12 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11724,10 +12330,11 @@ public final class SecurityGroupServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -11747,7 +12354,7 @@ public final class SecurityGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -11766,8 +12373,11 @@ public final class SecurityGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -11785,7 +12395,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11841,20 +12451,24 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
 
     /**
      * <code>string rule_id = 2;</code>
+     * @return The ruleId.
      */
     java.lang.String getRuleId();
     /**
      * <code>string rule_id = 2;</code>
+     * @return The bytes for ruleId.
      */
     com.google.protobuf.ByteString
         getRuleIdBytes();
@@ -11862,7 +12476,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSecurityGroupRuleMetadata}
    */
-  public  static final class UpdateSecurityGroupRuleMetadata extends
+  public static final class UpdateSecurityGroupRuleMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSecurityGroupRuleMetadata)
       UpdateSecurityGroupRuleMetadataOrBuilder {
@@ -11874,6 +12488,13 @@ public final class SecurityGroupServiceOuterClass {
     private UpdateSecurityGroupRuleMetadata() {
       securityGroupId_ = "";
       ruleId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSecurityGroupRuleMetadata();
     }
 
     @java.lang.Override
@@ -11889,7 +12510,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11913,7 +12533,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11948,7 +12568,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -11963,7 +12585,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -11982,7 +12606,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object ruleId_;
     /**
      * <code>string rule_id = 2;</code>
+     * @return The ruleId.
      */
+    @java.lang.Override
     public java.lang.String getRuleId() {
       java.lang.Object ref = ruleId_;
       if (ref instanceof java.lang.String) {
@@ -11997,7 +12623,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string rule_id = 2;</code>
+     * @return The bytes for ruleId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRuleIdBytes() {
       java.lang.Object ref = ruleId_;
@@ -12026,10 +12654,10 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
-      if (!getRuleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ruleId_);
       }
       unknownFields.writeTo(output);
@@ -12041,10 +12669,10 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
-      if (!getRuleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ruleId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12062,13 +12690,12 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleMetadata other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleMetadata) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && getRuleId()
-          .equals(other.getRuleId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!getRuleId()
+          .equals(other.getRuleId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12253,35 +12880,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12335,6 +12962,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -12350,6 +12978,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -12366,6 +12995,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -12379,6 +13010,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -12388,6 +13020,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12404,6 +13038,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object ruleId_ = "";
       /**
        * <code>string rule_id = 2;</code>
+       * @return The ruleId.
        */
       public java.lang.String getRuleId() {
         java.lang.Object ref = ruleId_;
@@ -12419,6 +13054,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2;</code>
+       * @return The bytes for ruleId.
        */
       public com.google.protobuf.ByteString
           getRuleIdBytes() {
@@ -12435,6 +13071,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2;</code>
+       * @param value The ruleId to set.
+       * @return This builder for chaining.
        */
       public Builder setRuleId(
           java.lang.String value) {
@@ -12448,6 +13086,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRuleId() {
         
@@ -12457,6 +13096,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string rule_id = 2;</code>
+       * @param value The bytes for ruleId to set.
+       * @return This builder for chaining.
        */
       public Builder setRuleIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12472,7 +13113,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12528,10 +13169,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -12539,7 +13182,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.DeleteSecurityGroupRequest}
    */
-  public  static final class DeleteSecurityGroupRequest extends
+  public static final class DeleteSecurityGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.DeleteSecurityGroupRequest)
       DeleteSecurityGroupRequestOrBuilder {
@@ -12550,6 +13193,13 @@ public final class SecurityGroupServiceOuterClass {
     }
     private DeleteSecurityGroupRequest() {
       securityGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSecurityGroupRequest();
     }
 
     @java.lang.Override
@@ -12565,7 +13215,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12583,7 +13232,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12618,7 +13267,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -12633,7 +13284,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -12662,7 +13315,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       unknownFields.writeTo(output);
@@ -12674,7 +13327,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12692,11 +13345,10 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12876,35 +13528,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12954,6 +13606,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -12969,6 +13622,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -12985,6 +13639,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -12998,6 +13654,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -13007,6 +13664,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13022,7 +13681,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13078,10 +13737,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -13089,7 +13750,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.DeleteSecurityGroupMetadata}
    */
-  public  static final class DeleteSecurityGroupMetadata extends
+  public static final class DeleteSecurityGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.DeleteSecurityGroupMetadata)
       DeleteSecurityGroupMetadataOrBuilder {
@@ -13100,6 +13761,13 @@ public final class SecurityGroupServiceOuterClass {
     }
     private DeleteSecurityGroupMetadata() {
       securityGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSecurityGroupMetadata();
     }
 
     @java.lang.Override
@@ -13115,7 +13783,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13133,7 +13800,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13168,7 +13835,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -13183,7 +13852,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -13212,7 +13883,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       unknownFields.writeTo(output);
@@ -13224,7 +13895,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -13242,11 +13913,10 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupMetadata other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13426,35 +14096,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13504,6 +14174,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -13519,6 +14190,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -13535,6 +14207,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -13548,6 +14222,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -13557,6 +14232,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13572,7 +14249,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13628,25 +14305,30 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
 
     /**
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
     /**
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -13654,7 +14336,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSecurityGroupOperationsRequest}
    */
-  public  static final class ListSecurityGroupOperationsRequest extends
+  public static final class ListSecurityGroupOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSecurityGroupOperationsRequest)
       ListSecurityGroupOperationsRequestOrBuilder {
@@ -13665,8 +14347,14 @@ public final class SecurityGroupServiceOuterClass {
     }
     private ListSecurityGroupOperationsRequest() {
       securityGroupId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSecurityGroupOperationsRequest();
     }
 
     @java.lang.Override
@@ -13682,7 +14370,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13711,7 +14398,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13746,7 +14433,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -13761,7 +14450,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -13780,7 +14471,9 @@ public final class SecurityGroupServiceOuterClass {
     private long pageSize_;
     /**
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -13789,7 +14482,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -13804,7 +14499,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -13833,13 +14530,13 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -13851,14 +14548,14 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -13876,15 +14573,14 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14075,35 +14771,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14160,6 +14856,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -14175,6 +14872,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -14191,6 +14889,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -14204,6 +14904,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -14213,6 +14914,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14229,12 +14932,16 @@ public final class SecurityGroupServiceOuterClass {
       private long pageSize_ ;
       /**
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
       /**
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -14244,6 +14951,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -14255,6 +14963,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -14270,6 +14979,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -14286,6 +14996,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -14299,6 +15011,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -14308,6 +15021,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -14323,7 +15038,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14403,10 +15118,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -14414,7 +15131,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSecurityGroupOperationsResponse}
    */
-  public  static final class ListSecurityGroupOperationsResponse extends
+  public static final class ListSecurityGroupOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSecurityGroupOperationsResponse)
       ListSecurityGroupOperationsResponseOrBuilder {
@@ -14426,6 +15143,13 @@ public final class SecurityGroupServiceOuterClass {
     private ListSecurityGroupOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSecurityGroupOperationsResponse();
     }
 
     @java.lang.Override
@@ -14453,7 +15177,7 @@ public final class SecurityGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -14468,7 +15192,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14482,7 +15206,7 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -14502,18 +15226,19 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -14521,18 +15246,21 @@ public final class SecurityGroupServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -14542,7 +15270,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -14557,7 +15287,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -14589,7 +15321,7 @@ public final class SecurityGroupServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -14605,7 +15337,7 @@ public final class SecurityGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -14623,13 +15355,12 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14814,9 +15545,8 @@ public final class SecurityGroupServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -14825,42 +15555,41 @@ public final class SecurityGroupServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14937,7 +15666,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -15166,7 +15895,7 @@ public final class SecurityGroupServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -15177,6 +15906,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -15192,6 +15922,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -15208,6 +15939,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -15221,6 +15954,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -15230,6 +15964,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -15245,7 +15981,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15301,20 +16037,24 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
 
     /**
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The destinationFolderId.
      */
     java.lang.String getDestinationFolderId();
     /**
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for destinationFolderId.
      */
     com.google.protobuf.ByteString
         getDestinationFolderIdBytes();
@@ -15322,7 +16062,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.MoveSecurityGroupRequest}
    */
-  public  static final class MoveSecurityGroupRequest extends
+  public static final class MoveSecurityGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.MoveSecurityGroupRequest)
       MoveSecurityGroupRequestOrBuilder {
@@ -15334,6 +16074,13 @@ public final class SecurityGroupServiceOuterClass {
     private MoveSecurityGroupRequest() {
       securityGroupId_ = "";
       destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveSecurityGroupRequest();
     }
 
     @java.lang.Override
@@ -15349,7 +16096,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15373,7 +16119,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15408,7 +16154,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -15423,7 +16171,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -15442,7 +16192,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object destinationFolderId_;
     /**
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The destinationFolderId.
      */
+    @java.lang.Override
     public java.lang.String getDestinationFolderId() {
       java.lang.Object ref = destinationFolderId_;
       if (ref instanceof java.lang.String) {
@@ -15457,7 +16209,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for destinationFolderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDestinationFolderIdBytes() {
       java.lang.Object ref = destinationFolderId_;
@@ -15486,10 +16240,10 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
-      if (!getDestinationFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
       }
       unknownFields.writeTo(output);
@@ -15501,10 +16255,10 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
-      if (!getDestinationFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -15522,13 +16276,12 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && getDestinationFolderId()
-          .equals(other.getDestinationFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15713,35 +16466,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15795,6 +16548,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -15810,6 +16564,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -15826,6 +16581,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -15839,6 +16596,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -15848,6 +16606,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15864,6 +16624,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object destinationFolderId_ = "";
       /**
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The destinationFolderId.
        */
       public java.lang.String getDestinationFolderId() {
         java.lang.Object ref = destinationFolderId_;
@@ -15879,6 +16640,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for destinationFolderId.
        */
       public com.google.protobuf.ByteString
           getDestinationFolderIdBytes() {
@@ -15895,6 +16657,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
        */
       public Builder setDestinationFolderId(
           java.lang.String value) {
@@ -15908,6 +16672,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDestinationFolderId() {
         
@@ -15917,6 +16682,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
        */
       public Builder setDestinationFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15932,7 +16699,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15988,10 +16755,12 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
@@ -15999,7 +16768,7 @@ public final class SecurityGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.MoveSecurityGroupMetadata}
    */
-  public  static final class MoveSecurityGroupMetadata extends
+  public static final class MoveSecurityGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.MoveSecurityGroupMetadata)
       MoveSecurityGroupMetadataOrBuilder {
@@ -16010,6 +16779,13 @@ public final class SecurityGroupServiceOuterClass {
     }
     private MoveSecurityGroupMetadata() {
       securityGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveSecurityGroupMetadata();
     }
 
     @java.lang.Override
@@ -16025,7 +16801,6 @@ public final class SecurityGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16043,7 +16818,7 @@ public final class SecurityGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16078,7 +16853,9 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object securityGroupId_;
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The securityGroupId.
      */
+    @java.lang.Override
     public java.lang.String getSecurityGroupId() {
       java.lang.Object ref = securityGroupId_;
       if (ref instanceof java.lang.String) {
@@ -16093,7 +16870,9 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <code>string security_group_id = 1;</code>
+     * @return The bytes for securityGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityGroupIdBytes() {
       java.lang.Object ref = securityGroupId_;
@@ -16122,7 +16901,7 @@ public final class SecurityGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
       unknownFields.writeTo(output);
@@ -16134,7 +16913,7 @@ public final class SecurityGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecurityGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -16152,11 +16931,10 @@ public final class SecurityGroupServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupMetadata other = (yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getSecurityGroupId()
-          .equals(other.getSecurityGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupId()
+          .equals(other.getSecurityGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16336,35 +17114,35 @@ public final class SecurityGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16414,6 +17192,7 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object securityGroupId_ = "";
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
         java.lang.Object ref = securityGroupId_;
@@ -16429,6 +17208,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdBytes() {
@@ -16445,6 +17225,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupId(
           java.lang.String value) {
@@ -16458,6 +17240,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
         
@@ -16467,6 +17250,8 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <code>string security_group_id = 1;</code>
+       * @param value The bytes for securityGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16482,7 +17267,7 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16765,15 +17550,7 @@ public final class SecurityGroupServiceOuterClass {
       "cloud/go-genproto/yandex/cloud/vpc/v1;vp" +
       "cb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -16782,7 +17559,7 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_vpc_v1_GetSecurityGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_GetSecurityGroupRequest_fieldAccessorTable = new

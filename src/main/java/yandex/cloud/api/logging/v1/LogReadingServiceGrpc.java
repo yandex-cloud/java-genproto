@@ -1,19 +1,6 @@
 package yandex.cloud.api.logging.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/logging/v1/log_reading_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class LogReadingServiceGrpc {
 
   private LogReadingServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class LogReadingServiceGrpc {
     if ((getReadMethod = LogReadingServiceGrpc.getReadMethod) == null) {
       synchronized (LogReadingServiceGrpc.class) {
         if ((getReadMethod = LogReadingServiceGrpc.getReadMethod) == null) {
-          LogReadingServiceGrpc.getReadMethod = getReadMethod = 
+          LogReadingServiceGrpc.getReadMethod = getReadMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest, yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogReadingService", "Read"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Read"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogReadingServiceMethodDescriptorSupplier("Read"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogReadingServiceMethodDescriptorSupplier("Read"))
+              .build();
         }
-     }
-     return getReadMethod;
+      }
+    }
+    return getReadMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LogReadingServiceStub newStub(io.grpc.Channel channel) {
-    return new LogReadingServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogReadingServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogReadingServiceStub>() {
+        @java.lang.Override
+        public LogReadingServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogReadingServiceStub(channel, callOptions);
+        }
+      };
+    return LogReadingServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class LogReadingServiceGrpc {
    */
   public static LogReadingServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LogReadingServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogReadingServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogReadingServiceBlockingStub>() {
+        @java.lang.Override
+        public LogReadingServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogReadingServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LogReadingServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class LogReadingServiceGrpc {
    */
   public static LogReadingServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LogReadingServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogReadingServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogReadingServiceFutureStub>() {
+        @java.lang.Override
+        public LogReadingServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogReadingServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LogReadingServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class LogReadingServiceGrpc {
      */
     public void read(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getReadMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getReadMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest,
                 yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse>(
@@ -120,19 +128,15 @@ public final class LogReadingServiceGrpc {
    * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
    * </pre>
    */
-  public static final class LogReadingServiceStub extends io.grpc.stub.AbstractStub<LogReadingServiceStub> {
-    private LogReadingServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogReadingServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogReadingServiceStub extends io.grpc.stub.AbstractAsyncStub<LogReadingServiceStub> {
+    private LogReadingServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogReadingServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogReadingServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogReadingServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class LogReadingServiceGrpc {
      */
     public void read(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReadMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class LogReadingServiceGrpc {
    * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
    * </pre>
    */
-  public static final class LogReadingServiceBlockingStub extends io.grpc.stub.AbstractStub<LogReadingServiceBlockingStub> {
-    private LogReadingServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogReadingServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogReadingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LogReadingServiceBlockingStub> {
+    private LogReadingServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogReadingServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogReadingServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogReadingServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class LogReadingServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse read(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReadMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class LogReadingServiceGrpc {
    * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
    * </pre>
    */
-  public static final class LogReadingServiceFutureStub extends io.grpc.stub.AbstractStub<LogReadingServiceFutureStub> {
-    private LogReadingServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogReadingServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogReadingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LogReadingServiceFutureStub> {
+    private LogReadingServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogReadingServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogReadingServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogReadingServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class LogReadingServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse> read(
         yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReadMethod(), getCallOptions()), request);
     }
   }

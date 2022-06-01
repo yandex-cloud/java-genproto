@@ -24,6 +24,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>int64 copy_count = 1;</code>
+     * @return The copyCount.
      */
     long getCopyCount();
 
@@ -74,7 +75,7 @@ public final class ImageCopySearch {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation}
    */
-  public  static final class ImageCopySearchAnnotation extends
+  public static final class ImageCopySearchAnnotation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation)
       ImageCopySearchAnnotationOrBuilder {
@@ -84,8 +85,14 @@ public final class ImageCopySearch {
       super(builder);
     }
     private ImageCopySearchAnnotation() {
-      copyCount_ = 0L;
       topResults_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImageCopySearchAnnotation();
     }
 
     @java.lang.Override
@@ -118,16 +125,16 @@ public final class ImageCopySearch {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 topResults_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               topResults_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -141,7 +148,7 @@ public final class ImageCopySearch {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           topResults_ = java.util.Collections.unmodifiableList(topResults_);
         }
         this.unknownFields = unknownFields.build();
@@ -161,7 +168,6 @@ public final class ImageCopySearch {
               yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.class, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COPY_COUNT_FIELD_NUMBER = 1;
     private long copyCount_;
     /**
@@ -170,7 +176,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>int64 copy_count = 1;</code>
+     * @return The copyCount.
      */
+    @java.lang.Override
     public long getCopyCount() {
       return copyCount_;
     }
@@ -184,6 +192,7 @@ public final class ImageCopySearch {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.CopyMatch top_results = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch> getTopResultsList() {
       return topResults_;
     }
@@ -194,6 +203,7 @@ public final class ImageCopySearch {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.CopyMatch top_results = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatchOrBuilder> 
         getTopResultsOrBuilderList() {
       return topResults_;
@@ -205,6 +215,7 @@ public final class ImageCopySearch {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.CopyMatch top_results = 2;</code>
      */
+    @java.lang.Override
     public int getTopResultsCount() {
       return topResults_.size();
     }
@@ -215,6 +226,7 @@ public final class ImageCopySearch {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.CopyMatch top_results = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch getTopResults(int index) {
       return topResults_.get(index);
     }
@@ -225,6 +237,7 @@ public final class ImageCopySearch {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.CopyMatch top_results = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatchOrBuilder getTopResultsOrBuilder(
         int index) {
       return topResults_.get(index);
@@ -282,13 +295,12 @@ public final class ImageCopySearch {
       }
       yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation other = (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) obj;
 
-      boolean result = true;
-      result = result && (getCopyCount()
-          == other.getCopyCount());
-      result = result && getTopResultsList()
-          .equals(other.getTopResultsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getCopyCount()
+          != other.getCopyCount()) return false;
+      if (!getTopResultsList()
+          .equals(other.getTopResultsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -443,7 +455,7 @@ public final class ImageCopySearch {
 
         if (topResultsBuilder_ == null) {
           topResults_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           topResultsBuilder_.clear();
         }
@@ -474,53 +486,51 @@ public final class ImageCopySearch {
       public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation buildPartial() {
         yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation result = new yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.copyCount_ = copyCount_;
         if (topResultsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             topResults_ = java.util.Collections.unmodifiableList(topResults_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.topResults_ = topResults_;
         } else {
           result.topResults_ = topResultsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -541,7 +551,7 @@ public final class ImageCopySearch {
           if (!other.topResults_.isEmpty()) {
             if (topResults_.isEmpty()) {
               topResults_ = other.topResults_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureTopResultsIsMutable();
               topResults_.addAll(other.topResults_);
@@ -554,7 +564,7 @@ public final class ImageCopySearch {
               topResultsBuilder_.dispose();
               topResultsBuilder_ = null;
               topResults_ = other.topResults_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               topResultsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTopResultsFieldBuilder() : null;
@@ -600,7 +610,9 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>int64 copy_count = 1;</code>
+       * @return The copyCount.
        */
+      @java.lang.Override
       public long getCopyCount() {
         return copyCount_;
       }
@@ -610,6 +622,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>int64 copy_count = 1;</code>
+       * @param value The copyCount to set.
+       * @return This builder for chaining.
        */
       public Builder setCopyCount(long value) {
         
@@ -623,6 +637,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>int64 copy_count = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCopyCount() {
         
@@ -634,9 +649,9 @@ public final class ImageCopySearch {
       private java.util.List<yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch> topResults_ =
         java.util.Collections.emptyList();
       private void ensureTopResultsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           topResults_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch>(topResults_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -830,7 +845,7 @@ public final class ImageCopySearch {
       public Builder clearTopResults() {
         if (topResultsBuilder_ == null) {
           topResults_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           topResultsBuilder_.clear();
@@ -935,7 +950,7 @@ public final class ImageCopySearch {
           topResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch, yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch.Builder, yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatchOrBuilder>(
                   topResults_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           topResults_ = null;
@@ -945,7 +960,7 @@ public final class ImageCopySearch {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1005,6 +1020,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string image_url = 1;</code>
+     * @return The imageUrl.
      */
     java.lang.String getImageUrl();
     /**
@@ -1013,6 +1029,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string image_url = 1;</code>
+     * @return The bytes for imageUrl.
      */
     com.google.protobuf.ByteString
         getImageUrlBytes();
@@ -1023,6 +1040,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string page_url = 2;</code>
+     * @return The pageUrl.
      */
     java.lang.String getPageUrl();
     /**
@@ -1031,6 +1049,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string page_url = 2;</code>
+     * @return The bytes for pageUrl.
      */
     com.google.protobuf.ByteString
         getPageUrlBytes();
@@ -1041,6 +1060,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string title = 3;</code>
+     * @return The title.
      */
     java.lang.String getTitle();
     /**
@@ -1049,6 +1069,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string title = 3;</code>
+     * @return The bytes for title.
      */
     com.google.protobuf.ByteString
         getTitleBytes();
@@ -1059,6 +1080,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -1067,6 +1089,7 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -1074,7 +1097,7 @@ public final class ImageCopySearch {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.CopyMatch}
    */
-  public  static final class CopyMatch extends
+  public static final class CopyMatch extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.CopyMatch)
       CopyMatchOrBuilder {
@@ -1091,6 +1114,13 @@ public final class ImageCopySearch {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CopyMatch();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1103,7 +1133,6 @@ public final class ImageCopySearch {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1139,7 +1168,7 @@ public final class ImageCopySearch {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1178,7 +1207,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string image_url = 1;</code>
+     * @return The imageUrl.
      */
+    @java.lang.Override
     public java.lang.String getImageUrl() {
       java.lang.Object ref = imageUrl_;
       if (ref instanceof java.lang.String) {
@@ -1197,7 +1228,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string image_url = 1;</code>
+     * @return The bytes for imageUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageUrlBytes() {
       java.lang.Object ref = imageUrl_;
@@ -1220,7 +1253,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string page_url = 2;</code>
+     * @return The pageUrl.
      */
+    @java.lang.Override
     public java.lang.String getPageUrl() {
       java.lang.Object ref = pageUrl_;
       if (ref instanceof java.lang.String) {
@@ -1239,7 +1274,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string page_url = 2;</code>
+     * @return The bytes for pageUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageUrlBytes() {
       java.lang.Object ref = pageUrl_;
@@ -1262,7 +1299,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string title = 3;</code>
+     * @return The title.
      */
+    @java.lang.Override
     public java.lang.String getTitle() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
@@ -1281,7 +1320,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string title = 3;</code>
+     * @return The bytes for title.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTitleBytes() {
       java.lang.Object ref = title_;
@@ -1304,7 +1345,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1323,7 +1366,9 @@ public final class ImageCopySearch {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1352,16 +1397,16 @@ public final class ImageCopySearch {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageUrl_);
       }
-      if (!getPageUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pageUrl_);
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       unknownFields.writeTo(output);
@@ -1373,16 +1418,16 @@ public final class ImageCopySearch {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageUrl_);
       }
-      if (!getPageUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pageUrl_);
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       size += unknownFields.getSerializedSize();
@@ -1400,17 +1445,16 @@ public final class ImageCopySearch {
       }
       yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch other = (yandex.cloud.api.ai.vision.v1.ImageCopySearch.CopyMatch) obj;
 
-      boolean result = true;
-      result = result && getImageUrl()
-          .equals(other.getImageUrl());
-      result = result && getPageUrl()
-          .equals(other.getPageUrl());
-      result = result && getTitle()
-          .equals(other.getTitle());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageUrl()
+          .equals(other.getImageUrl())) return false;
+      if (!getPageUrl()
+          .equals(other.getPageUrl())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1605,35 +1649,35 @@ public final class ImageCopySearch {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1699,6 +1743,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string image_url = 1;</code>
+       * @return The imageUrl.
        */
       public java.lang.String getImageUrl() {
         java.lang.Object ref = imageUrl_;
@@ -1718,6 +1763,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string image_url = 1;</code>
+       * @return The bytes for imageUrl.
        */
       public com.google.protobuf.ByteString
           getImageUrlBytes() {
@@ -1738,6 +1784,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string image_url = 1;</code>
+       * @param value The imageUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setImageUrl(
           java.lang.String value) {
@@ -1755,6 +1803,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string image_url = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageUrl() {
         
@@ -1768,6 +1817,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string image_url = 1;</code>
+       * @param value The bytes for imageUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setImageUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -1788,6 +1839,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string page_url = 2;</code>
+       * @return The pageUrl.
        */
       public java.lang.String getPageUrl() {
         java.lang.Object ref = pageUrl_;
@@ -1807,6 +1859,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string page_url = 2;</code>
+       * @return The bytes for pageUrl.
        */
       public com.google.protobuf.ByteString
           getPageUrlBytes() {
@@ -1827,6 +1880,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string page_url = 2;</code>
+       * @param value The pageUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setPageUrl(
           java.lang.String value) {
@@ -1844,6 +1899,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string page_url = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageUrl() {
         
@@ -1857,6 +1913,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string page_url = 2;</code>
+       * @param value The bytes for pageUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setPageUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -1877,6 +1935,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string title = 3;</code>
+       * @return The title.
        */
       public java.lang.String getTitle() {
         java.lang.Object ref = title_;
@@ -1896,6 +1955,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string title = 3;</code>
+       * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
           getTitleBytes() {
@@ -1916,6 +1976,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string title = 3;</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
        */
       public Builder setTitle(
           java.lang.String value) {
@@ -1933,6 +1995,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string title = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTitle() {
         
@@ -1946,6 +2009,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string title = 3;</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
@@ -1966,6 +2031,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1985,6 +2051,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2005,6 +2072,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2022,6 +2091,7 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2035,6 +2105,8 @@ public final class ImageCopySearch {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2050,7 +2122,7 @@ public final class ImageCopySearch {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2130,18 +2202,10 @@ public final class ImageCopySearch {
       "ndex-cloud/go-genproto/yandex/cloud/ai/v" +
       "ision/v1;visionb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_vision_v1_ImageCopySearchAnnotation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v1_ImageCopySearchAnnotation_fieldAccessorTable = new

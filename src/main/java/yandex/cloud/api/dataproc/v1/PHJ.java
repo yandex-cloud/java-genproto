@@ -24,6 +24,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -50,6 +53,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -60,6 +64,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return Whether the startedAt field is set.
      */
     boolean hasStartedAt();
     /**
@@ -93,6 +100,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return The startedAt.
      */
     com.google.protobuf.Timestamp getStartedAt();
     /**
@@ -110,6 +118,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return Whether the finishedAt field is set.
      */
     boolean hasFinishedAt();
     /**
@@ -118,6 +127,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return The finishedAt.
      */
     com.google.protobuf.Timestamp getFinishedAt();
     /**
@@ -135,6 +145,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -143,6 +154,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -153,6 +165,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string created_by = 12;</code>
+     * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
@@ -161,6 +174,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string created_by = 12;</code>
+     * @return The bytes for createdBy.
      */
     com.google.protobuf.ByteString
         getCreatedByBytes();
@@ -171,6 +185,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -179,6 +194,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+     * @return The status.
      */
     yandex.cloud.api.dataproc.v1.PHJ.Job.Status getStatus();
 
@@ -188,6 +204,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
+     * @return Whether the mapreduceJob field is set.
      */
     boolean hasMapreduceJob();
     /**
@@ -196,6 +213,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
+     * @return The mapreduceJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob();
     /**
@@ -213,6 +231,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
+     * @return Whether the sparkJob field is set.
      */
     boolean hasSparkJob();
     /**
@@ -221,6 +240,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
+     * @return The sparkJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob();
     /**
@@ -238,6 +258,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
+     * @return Whether the pysparkJob field is set.
      */
     boolean hasPysparkJob();
     /**
@@ -246,6 +267,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
+     * @return The pysparkJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob();
     /**
@@ -263,6 +285,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
+     * @return Whether the hiveJob field is set.
      */
     boolean hasHiveJob();
     /**
@@ -271,6 +294,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
+     * @return The hiveJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob();
     /**
@@ -288,6 +312,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
+     * @return Whether the applicationInfo field is set.
      */
     boolean hasApplicationInfo();
     /**
@@ -296,6 +321,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
+     * @return The applicationInfo.
      */
     yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo getApplicationInfo();
     /**
@@ -316,7 +342,7 @@ public final class PHJ {
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
    */
-  public  static final class Job extends
+  public static final class Job extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.Job)
       JobOrBuilder {
@@ -334,6 +360,13 @@ public final class PHJ {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Job();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -346,7 +379,6 @@ public final class PHJ {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -496,7 +528,7 @@ public final class PHJ {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -666,6 +698,8 @@ public final class PHJ {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -673,6 +707,10 @@ public final class PHJ {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -701,6 +739,10 @@ public final class PHJ {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -738,7 +780,8 @@ public final class PHJ {
     private int jobSpecCase_ = 0;
     private java.lang.Object jobSpec_;
     public enum JobSpecCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MAPREDUCE_JOB(8),
       SPARK_JOB(9),
       PYSPARK_JOB(10),
@@ -749,6 +792,8 @@ public final class PHJ {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -785,7 +830,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -804,7 +851,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -827,7 +876,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -846,7 +897,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -869,7 +922,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -879,7 +934,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -890,6 +947,7 @@ public final class PHJ {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -902,7 +960,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return Whether the startedAt field is set.
      */
+    @java.lang.Override
     public boolean hasStartedAt() {
       return startedAt_ != null;
     }
@@ -912,7 +972,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return The startedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartedAt() {
       return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
@@ -923,6 +985,7 @@ public final class PHJ {
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
       return getStartedAt();
     }
@@ -935,7 +998,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return Whether the finishedAt field is set.
      */
+    @java.lang.Override
     public boolean hasFinishedAt() {
       return finishedAt_ != null;
     }
@@ -945,7 +1010,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return The finishedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getFinishedAt() {
       return finishedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
     }
@@ -956,6 +1023,7 @@ public final class PHJ {
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder() {
       return getFinishedAt();
     }
@@ -968,7 +1036,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -987,7 +1057,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1010,7 +1082,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string created_by = 12;</code>
+     * @return The createdBy.
      */
+    @java.lang.Override
     public java.lang.String getCreatedBy() {
       java.lang.Object ref = createdBy_;
       if (ref instanceof java.lang.String) {
@@ -1029,7 +1103,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string created_by = 12;</code>
+     * @return The bytes for createdBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCreatedByBytes() {
       java.lang.Object ref = createdBy_;
@@ -1052,8 +1128,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1062,8 +1139,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.dataproc.v1.PHJ.Job.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.dataproc.v1.PHJ.Job.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.dataproc.v1.PHJ.Job.Status result = yandex.cloud.api.dataproc.v1.PHJ.Job.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.dataproc.v1.PHJ.Job.Status.UNRECOGNIZED : result;
@@ -1076,7 +1154,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
+     * @return Whether the mapreduceJob field is set.
      */
+    @java.lang.Override
     public boolean hasMapreduceJob() {
       return jobSpecCase_ == 8;
     }
@@ -1086,7 +1166,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
+     * @return The mapreduceJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
       if (jobSpecCase_ == 8) {
          return (yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob) jobSpec_;
@@ -1100,6 +1182,7 @@ public final class PHJ {
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
       if (jobSpecCase_ == 8) {
          return (yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob) jobSpec_;
@@ -1114,7 +1197,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
+     * @return Whether the sparkJob field is set.
      */
+    @java.lang.Override
     public boolean hasSparkJob() {
       return jobSpecCase_ == 9;
     }
@@ -1124,7 +1209,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
+     * @return The sparkJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
       if (jobSpecCase_ == 9) {
          return (yandex.cloud.api.dataproc.v1.PHJ.SparkJob) jobSpec_;
@@ -1138,6 +1225,7 @@ public final class PHJ {
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
       if (jobSpecCase_ == 9) {
          return (yandex.cloud.api.dataproc.v1.PHJ.SparkJob) jobSpec_;
@@ -1152,7 +1240,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
+     * @return Whether the pysparkJob field is set.
      */
+    @java.lang.Override
     public boolean hasPysparkJob() {
       return jobSpecCase_ == 10;
     }
@@ -1162,7 +1252,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
+     * @return The pysparkJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
       if (jobSpecCase_ == 10) {
          return (yandex.cloud.api.dataproc.v1.PHJ.PysparkJob) jobSpec_;
@@ -1176,6 +1268,7 @@ public final class PHJ {
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
       if (jobSpecCase_ == 10) {
          return (yandex.cloud.api.dataproc.v1.PHJ.PysparkJob) jobSpec_;
@@ -1190,7 +1283,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
+     * @return Whether the hiveJob field is set.
      */
+    @java.lang.Override
     public boolean hasHiveJob() {
       return jobSpecCase_ == 11;
     }
@@ -1200,7 +1295,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
+     * @return The hiveJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
       if (jobSpecCase_ == 11) {
          return (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_;
@@ -1214,6 +1311,7 @@ public final class PHJ {
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
       if (jobSpecCase_ == 11) {
          return (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_;
@@ -1229,7 +1327,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
+     * @return Whether the applicationInfo field is set.
      */
+    @java.lang.Override
     public boolean hasApplicationInfo() {
       return applicationInfo_ != null;
     }
@@ -1239,7 +1339,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
+     * @return The applicationInfo.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo getApplicationInfo() {
       return applicationInfo_ == null ? yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo.getDefaultInstance() : applicationInfo_;
     }
@@ -1250,6 +1352,7 @@ public final class PHJ {
      *
      * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfoOrBuilder getApplicationInfoOrBuilder() {
       return getApplicationInfo();
     }
@@ -1268,10 +1371,10 @@ public final class PHJ {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
       if (createdAt_ != null) {
@@ -1283,7 +1386,7 @@ public final class PHJ {
       if (finishedAt_ != null) {
         output.writeMessage(5, getFinishedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
       }
       if (status_ != yandex.cloud.api.dataproc.v1.PHJ.Job.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -1301,7 +1404,7 @@ public final class PHJ {
       if (jobSpecCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_);
       }
-      if (!getCreatedByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, createdBy_);
       }
       if (applicationInfo_ != null) {
@@ -1316,10 +1419,10 @@ public final class PHJ {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
       if (createdAt_ != null) {
@@ -1334,7 +1437,7 @@ public final class PHJ {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getFinishedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
       }
       if (status_ != yandex.cloud.api.dataproc.v1.PHJ.Job.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -1357,7 +1460,7 @@ public final class PHJ {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_);
       }
-      if (!getCreatedByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, createdBy_);
       }
       if (applicationInfo_ != null) {
@@ -1379,61 +1482,58 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.Job other = (yandex.cloud.api.dataproc.v1.PHJ.Job) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasStartedAt() == other.hasStartedAt());
+      if (hasStartedAt() != other.hasStartedAt()) return false;
       if (hasStartedAt()) {
-        result = result && getStartedAt()
-            .equals(other.getStartedAt());
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
       }
-      result = result && (hasFinishedAt() == other.hasFinishedAt());
+      if (hasFinishedAt() != other.hasFinishedAt()) return false;
       if (hasFinishedAt()) {
-        result = result && getFinishedAt()
-            .equals(other.getFinishedAt());
+        if (!getFinishedAt()
+            .equals(other.getFinishedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getCreatedBy()
-          .equals(other.getCreatedBy());
-      result = result && status_ == other.status_;
-      result = result && (hasApplicationInfo() == other.hasApplicationInfo());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getCreatedBy()
+          .equals(other.getCreatedBy())) return false;
+      if (status_ != other.status_) return false;
+      if (hasApplicationInfo() != other.hasApplicationInfo()) return false;
       if (hasApplicationInfo()) {
-        result = result && getApplicationInfo()
-            .equals(other.getApplicationInfo());
+        if (!getApplicationInfo()
+            .equals(other.getApplicationInfo())) return false;
       }
-      result = result && getJobSpecCase().equals(
-          other.getJobSpecCase());
-      if (!result) return false;
+      if (!getJobSpecCase().equals(other.getJobSpecCase())) return false;
       switch (jobSpecCase_) {
         case 8:
-          result = result && getMapreduceJob()
-              .equals(other.getMapreduceJob());
+          if (!getMapreduceJob()
+              .equals(other.getMapreduceJob())) return false;
           break;
         case 9:
-          result = result && getSparkJob()
-              .equals(other.getSparkJob());
+          if (!getSparkJob()
+              .equals(other.getSparkJob())) return false;
           break;
         case 10:
-          result = result && getPysparkJob()
-              .equals(other.getPysparkJob());
+          if (!getPysparkJob()
+              .equals(other.getPysparkJob())) return false;
           break;
         case 11:
-          result = result && getHiveJob()
-              .equals(other.getHiveJob());
+          if (!getHiveJob()
+              .equals(other.getHiveJob())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1748,35 +1848,35 @@ public final class PHJ {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1893,6 +1993,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1912,6 +2013,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1932,6 +2034,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1949,6 +2053,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1962,6 +2067,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1982,6 +2089,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -2001,6 +2109,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -2021,6 +2130,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -2038,6 +2149,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -2051,6 +2163,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2064,7 +2178,7 @@ public final class PHJ {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2073,6 +2187,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2083,6 +2198,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2217,7 +2333,7 @@ public final class PHJ {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp startedAt_ = null;
+      private com.google.protobuf.Timestamp startedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
@@ -2226,6 +2342,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       * @return Whether the startedAt field is set.
        */
       public boolean hasStartedAt() {
         return startedAtBuilder_ != null || startedAt_ != null;
@@ -2236,6 +2353,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       * @return The startedAt.
        */
       public com.google.protobuf.Timestamp getStartedAt() {
         if (startedAtBuilder_ == null) {
@@ -2370,7 +2488,7 @@ public final class PHJ {
         return startedAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp finishedAt_ = null;
+      private com.google.protobuf.Timestamp finishedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
       /**
@@ -2379,6 +2497,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       * @return Whether the finishedAt field is set.
        */
       public boolean hasFinishedAt() {
         return finishedAtBuilder_ != null || finishedAt_ != null;
@@ -2389,6 +2508,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       * @return The finishedAt.
        */
       public com.google.protobuf.Timestamp getFinishedAt() {
         if (finishedAtBuilder_ == null) {
@@ -2530,6 +2650,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string name = 6;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2549,6 +2670,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string name = 6;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2569,6 +2691,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string name = 6;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2586,6 +2710,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string name = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2599,6 +2724,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string name = 6;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2619,6 +2746,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string created_by = 12;</code>
+       * @return The createdBy.
        */
       public java.lang.String getCreatedBy() {
         java.lang.Object ref = createdBy_;
@@ -2638,6 +2766,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string created_by = 12;</code>
+       * @return The bytes for createdBy.
        */
       public com.google.protobuf.ByteString
           getCreatedByBytes() {
@@ -2658,6 +2787,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string created_by = 12;</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
        */
       public Builder setCreatedBy(
           java.lang.String value) {
@@ -2675,6 +2806,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string created_by = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCreatedBy() {
         
@@ -2688,6 +2820,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string created_by = 12;</code>
+       * @param value The bytes for createdBy to set.
+       * @return This builder for chaining.
        */
       public Builder setCreatedByBytes(
           com.google.protobuf.ByteString value) {
@@ -2708,8 +2842,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2718,8 +2853,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2730,7 +2868,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.Job.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.dataproc.v1.PHJ.Job.Status result = yandex.cloud.api.dataproc.v1.PHJ.Job.Status.valueOf(status_);
@@ -2742,6 +2882,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.dataproc.v1.PHJ.Job.Status value) {
         if (value == null) {
@@ -2758,6 +2900,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2774,7 +2917,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
+       * @return Whether the mapreduceJob field is set.
        */
+      @java.lang.Override
       public boolean hasMapreduceJob() {
         return jobSpecCase_ == 8;
       }
@@ -2784,7 +2929,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
+       * @return The mapreduceJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
         if (mapreduceJobBuilder_ == null) {
           if (jobSpecCase_ == 8) {
@@ -2902,6 +3049,7 @@ public final class PHJ {
        *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
         if ((jobSpecCase_ == 8) && (mapreduceJobBuilder_ != null)) {
           return mapreduceJobBuilder_.getMessageOrBuilder();
@@ -2946,7 +3094,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
+       * @return Whether the sparkJob field is set.
        */
+      @java.lang.Override
       public boolean hasSparkJob() {
         return jobSpecCase_ == 9;
       }
@@ -2956,7 +3106,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
+       * @return The sparkJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
         if (sparkJobBuilder_ == null) {
           if (jobSpecCase_ == 9) {
@@ -3074,6 +3226,7 @@ public final class PHJ {
        *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
         if ((jobSpecCase_ == 9) && (sparkJobBuilder_ != null)) {
           return sparkJobBuilder_.getMessageOrBuilder();
@@ -3118,7 +3271,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
+       * @return Whether the pysparkJob field is set.
        */
+      @java.lang.Override
       public boolean hasPysparkJob() {
         return jobSpecCase_ == 10;
       }
@@ -3128,7 +3283,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
+       * @return The pysparkJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
         if (pysparkJobBuilder_ == null) {
           if (jobSpecCase_ == 10) {
@@ -3246,6 +3403,7 @@ public final class PHJ {
        *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
         if ((jobSpecCase_ == 10) && (pysparkJobBuilder_ != null)) {
           return pysparkJobBuilder_.getMessageOrBuilder();
@@ -3290,7 +3448,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
+       * @return Whether the hiveJob field is set.
        */
+      @java.lang.Override
       public boolean hasHiveJob() {
         return jobSpecCase_ == 11;
       }
@@ -3300,7 +3460,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
+       * @return The hiveJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
         if (hiveJobBuilder_ == null) {
           if (jobSpecCase_ == 11) {
@@ -3418,6 +3580,7 @@ public final class PHJ {
        *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
         if ((jobSpecCase_ == 11) && (hiveJobBuilder_ != null)) {
           return hiveJobBuilder_.getMessageOrBuilder();
@@ -3454,7 +3617,7 @@ public final class PHJ {
         return hiveJobBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo applicationInfo_ = null;
+      private yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo applicationInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo, yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo.Builder, yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfoOrBuilder> applicationInfoBuilder_;
       /**
@@ -3463,6 +3626,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
+       * @return Whether the applicationInfo field is set.
        */
       public boolean hasApplicationInfo() {
         return applicationInfoBuilder_ != null || applicationInfo_ != null;
@@ -3473,6 +3637,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ApplicationInfo application_info = 13;</code>
+       * @return The applicationInfo.
        */
       public yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo getApplicationInfo() {
         if (applicationInfoBuilder_ == null) {
@@ -3609,7 +3774,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3669,6 +3834,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -3677,6 +3843,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -3687,6 +3854,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string am_container_id = 2;</code>
+     * @return The amContainerId.
      */
     java.lang.String getAmContainerId();
     /**
@@ -3695,6 +3863,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string am_container_id = 2;</code>
+     * @return The bytes for amContainerId.
      */
     com.google.protobuf.ByteString
         getAmContainerIdBytes();
@@ -3702,7 +3871,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ApplicationAttempt}
    */
-  public  static final class ApplicationAttempt extends
+  public static final class ApplicationAttempt extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ApplicationAttempt)
       ApplicationAttemptOrBuilder {
@@ -3714,6 +3883,13 @@ public final class PHJ {
     private ApplicationAttempt() {
       id_ = "";
       amContainerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApplicationAttempt();
     }
 
     @java.lang.Override
@@ -3729,7 +3905,6 @@ public final class PHJ {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3753,7 +3928,7 @@ public final class PHJ {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3792,7 +3967,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -3811,7 +3988,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3834,7 +4013,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string am_container_id = 2;</code>
+     * @return The amContainerId.
      */
+    @java.lang.Override
     public java.lang.String getAmContainerId() {
       java.lang.Object ref = amContainerId_;
       if (ref instanceof java.lang.String) {
@@ -3853,7 +4034,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string am_container_id = 2;</code>
+     * @return The bytes for amContainerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAmContainerIdBytes() {
       java.lang.Object ref = amContainerId_;
@@ -3882,10 +4065,10 @@ public final class PHJ {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getAmContainerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amContainerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amContainerId_);
       }
       unknownFields.writeTo(output);
@@ -3897,10 +4080,10 @@ public final class PHJ {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getAmContainerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amContainerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amContainerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3918,13 +4101,12 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt other = (yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getAmContainerId()
-          .equals(other.getAmContainerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getAmContainerId()
+          .equals(other.getAmContainerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4109,35 +4291,35 @@ public final class PHJ {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4195,6 +4377,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -4214,6 +4397,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -4234,6 +4418,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -4251,6 +4437,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -4264,6 +4451,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4284,6 +4473,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string am_container_id = 2;</code>
+       * @return The amContainerId.
        */
       public java.lang.String getAmContainerId() {
         java.lang.Object ref = amContainerId_;
@@ -4303,6 +4493,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string am_container_id = 2;</code>
+       * @return The bytes for amContainerId.
        */
       public com.google.protobuf.ByteString
           getAmContainerIdBytes() {
@@ -4323,6 +4514,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string am_container_id = 2;</code>
+       * @param value The amContainerId to set.
+       * @return This builder for chaining.
        */
       public Builder setAmContainerId(
           java.lang.String value) {
@@ -4340,6 +4533,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string am_container_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmContainerId() {
         
@@ -4353,6 +4547,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string am_container_id = 2;</code>
+       * @param value The bytes for amContainerId to set.
+       * @return This builder for chaining.
        */
       public Builder setAmContainerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4368,7 +4564,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4428,6 +4624,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -4436,6 +4633,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -4487,7 +4685,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ApplicationInfo}
    */
-  public  static final class ApplicationInfo extends
+  public static final class ApplicationInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ApplicationInfo)
       ApplicationInfoOrBuilder {
@@ -4499,6 +4697,13 @@ public final class PHJ {
     private ApplicationInfo() {
       id_ = "";
       applicationAttempts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApplicationInfo();
     }
 
     @java.lang.Override
@@ -4532,16 +4737,16 @@ public final class PHJ {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 applicationAttempts_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               applicationAttempts_.add(
                   input.readMessage(yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4555,7 +4760,7 @@ public final class PHJ {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           applicationAttempts_ = java.util.Collections.unmodifiableList(applicationAttempts_);
         }
         this.unknownFields = unknownFields.build();
@@ -4575,7 +4780,6 @@ public final class PHJ {
               yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo.class, yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -4584,7 +4788,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -4603,7 +4809,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -4627,6 +4835,7 @@ public final class PHJ {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.ApplicationAttempt application_attempts = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt> getApplicationAttemptsList() {
       return applicationAttempts_;
     }
@@ -4637,6 +4846,7 @@ public final class PHJ {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.ApplicationAttempt application_attempts = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttemptOrBuilder> 
         getApplicationAttemptsOrBuilderList() {
       return applicationAttempts_;
@@ -4648,6 +4858,7 @@ public final class PHJ {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.ApplicationAttempt application_attempts = 2;</code>
      */
+    @java.lang.Override
     public int getApplicationAttemptsCount() {
       return applicationAttempts_.size();
     }
@@ -4658,6 +4869,7 @@ public final class PHJ {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.ApplicationAttempt application_attempts = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt getApplicationAttempts(int index) {
       return applicationAttempts_.get(index);
     }
@@ -4668,6 +4880,7 @@ public final class PHJ {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.ApplicationAttempt application_attempts = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttemptOrBuilder getApplicationAttemptsOrBuilder(
         int index) {
       return applicationAttempts_.get(index);
@@ -4687,7 +4900,7 @@ public final class PHJ {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       for (int i = 0; i < applicationAttempts_.size(); i++) {
@@ -4702,7 +4915,7 @@ public final class PHJ {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       for (int i = 0; i < applicationAttempts_.size(); i++) {
@@ -4724,13 +4937,12 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo other = (yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getApplicationAttemptsList()
-          .equals(other.getApplicationAttemptsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getApplicationAttemptsList()
+          .equals(other.getApplicationAttemptsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4884,7 +5096,7 @@ public final class PHJ {
 
         if (applicationAttemptsBuilder_ == null) {
           applicationAttempts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           applicationAttemptsBuilder_.clear();
         }
@@ -4915,53 +5127,51 @@ public final class PHJ {
       public yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo result = new yandex.cloud.api.dataproc.v1.PHJ.ApplicationInfo(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         if (applicationAttemptsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             applicationAttempts_ = java.util.Collections.unmodifiableList(applicationAttempts_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.applicationAttempts_ = applicationAttempts_;
         } else {
           result.applicationAttempts_ = applicationAttemptsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4983,7 +5193,7 @@ public final class PHJ {
           if (!other.applicationAttempts_.isEmpty()) {
             if (applicationAttempts_.isEmpty()) {
               applicationAttempts_ = other.applicationAttempts_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureApplicationAttemptsIsMutable();
               applicationAttempts_.addAll(other.applicationAttempts_);
@@ -4996,7 +5206,7 @@ public final class PHJ {
               applicationAttemptsBuilder_.dispose();
               applicationAttemptsBuilder_ = null;
               applicationAttempts_ = other.applicationAttempts_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               applicationAttemptsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getApplicationAttemptsFieldBuilder() : null;
@@ -5042,6 +5252,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -5061,6 +5272,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -5081,6 +5293,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -5098,6 +5312,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -5111,6 +5326,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5127,9 +5344,9 @@ public final class PHJ {
       private java.util.List<yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt> applicationAttempts_ =
         java.util.Collections.emptyList();
       private void ensureApplicationAttemptsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           applicationAttempts_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt>(applicationAttempts_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -5323,7 +5540,7 @@ public final class PHJ {
       public Builder clearApplicationAttempts() {
         if (applicationAttemptsBuilder_ == null) {
           applicationAttempts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           applicationAttemptsBuilder_.clear();
@@ -5428,7 +5645,7 @@ public final class PHJ {
           applicationAttemptsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt, yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttempt.Builder, yandex.cloud.api.dataproc.v1.PHJ.ApplicationAttemptOrBuilder>(
                   applicationAttempts_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           applicationAttempts_ = null;
@@ -5438,7 +5655,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5498,6 +5715,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return A list containing the args.
      */
     java.util.List<java.lang.String>
         getArgsList();
@@ -5507,6 +5725,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return The count of args.
      */
     int getArgsCount();
     /**
@@ -5515,6 +5734,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The args at the given index.
      */
     java.lang.String getArgs(int index);
     /**
@@ -5523,6 +5744,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the args at the given index.
      */
     com.google.protobuf.ByteString
         getArgsBytes(int index);
@@ -5533,6 +5756,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return A list containing the jarFileUris.
      */
     java.util.List<java.lang.String>
         getJarFileUrisList();
@@ -5542,6 +5766,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return The count of jarFileUris.
      */
     int getJarFileUrisCount();
     /**
@@ -5550,6 +5775,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     java.lang.String getJarFileUris(int index);
     /**
@@ -5558,6 +5785,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     com.google.protobuf.ByteString
         getJarFileUrisBytes(int index);
@@ -5569,6 +5798,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return A list containing the fileUris.
      */
     java.util.List<java.lang.String>
         getFileUrisList();
@@ -5579,6 +5809,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return The count of fileUris.
      */
     int getFileUrisCount();
     /**
@@ -5588,6 +5819,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
      */
     java.lang.String getFileUris(int index);
     /**
@@ -5597,6 +5830,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
      */
     com.google.protobuf.ByteString
         getFileUrisBytes(int index);
@@ -5607,6 +5842,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return A list containing the archiveUris.
      */
     java.util.List<java.lang.String>
         getArchiveUrisList();
@@ -5616,6 +5852,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return The count of archiveUris.
      */
     int getArchiveUrisCount();
     /**
@@ -5624,6 +5861,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
      */
     java.lang.String getArchiveUris(int index);
     /**
@@ -5632,6 +5871,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
      */
     com.google.protobuf.ByteString
         getArchiveUrisBytes(int index);
@@ -5696,6 +5937,16 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return Whether the mainJarFileUri field is set.
+     */
+    boolean hasMainJarFileUri();
+    /**
+     * <pre>
+     * HCFS URI of the .jar file containing the driver class.
+     * </pre>
+     *
+     * <code>string main_jar_file_uri = 6;</code>
+     * @return The mainJarFileUri.
      */
     java.lang.String getMainJarFileUri();
     /**
@@ -5704,6 +5955,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return The bytes for mainJarFileUri.
      */
     com.google.protobuf.ByteString
         getMainJarFileUriBytes();
@@ -5714,6 +5966,16 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return Whether the mainClass field is set.
+     */
+    boolean hasMainClass();
+    /**
+     * <pre>
+     * The name of the driver class.
+     * </pre>
+     *
+     * <code>string main_class = 7;</code>
+     * @return The mainClass.
      */
     java.lang.String getMainClass();
     /**
@@ -5722,6 +5984,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return The bytes for mainClass.
      */
     com.google.protobuf.ByteString
         getMainClassBytes();
@@ -5731,7 +5994,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.MapreduceJob}
    */
-  public  static final class MapreduceJob extends
+  public static final class MapreduceJob extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.MapreduceJob)
       MapreduceJobOrBuilder {
@@ -5745,6 +6008,13 @@ public final class PHJ {
       jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MapreduceJob();
     }
 
     @java.lang.Override
@@ -5773,7 +6043,7 @@ public final class PHJ {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 args_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -5782,7 +6052,7 @@ public final class PHJ {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 jarFileUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -5791,7 +6061,7 @@ public final class PHJ {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 fileUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -5800,7 +6070,7 @@ public final class PHJ {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 archiveUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -5808,7 +6078,7 @@ public final class PHJ {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000010;
@@ -5833,7 +6103,7 @@ public final class PHJ {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5847,16 +6117,16 @@ public final class PHJ {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           args_ = args_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           fileUris_ = fileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -5888,11 +6158,11 @@ public final class PHJ {
               yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.class, yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.Builder.class);
     }
 
-    private int bitField0_;
     private int driverCase_ = 0;
     private java.lang.Object driver_;
     public enum DriverCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MAIN_JAR_FILE_URI(6),
       MAIN_CLASS(7),
       DRIVER_NOT_SET(0);
@@ -5901,6 +6171,8 @@ public final class PHJ {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5935,6 +6207,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return A list containing the args.
      */
     public com.google.protobuf.ProtocolStringList
         getArgsList() {
@@ -5946,6 +6219,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return The count of args.
      */
     public int getArgsCount() {
       return args_.size();
@@ -5956,6 +6230,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The args at the given index.
      */
     public java.lang.String getArgs(int index) {
       return args_.get(index);
@@ -5966,6 +6242,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the args at the given index.
      */
     public com.google.protobuf.ByteString
         getArgsBytes(int index) {
@@ -5980,6 +6258,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return A list containing the jarFileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getJarFileUrisList() {
@@ -5991,6 +6270,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return The count of jarFileUris.
      */
     public int getJarFileUrisCount() {
       return jarFileUris_.size();
@@ -6001,6 +6281,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     public java.lang.String getJarFileUris(int index) {
       return jarFileUris_.get(index);
@@ -6011,6 +6293,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getJarFileUrisBytes(int index) {
@@ -6026,6 +6310,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return A list containing the fileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getFileUrisList() {
@@ -6038,6 +6323,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return The count of fileUris.
      */
     public int getFileUrisCount() {
       return fileUris_.size();
@@ -6049,6 +6335,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
      */
     public java.lang.String getFileUris(int index) {
       return fileUris_.get(index);
@@ -6060,6 +6348,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getFileUrisBytes(int index) {
@@ -6074,6 +6364,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return A list containing the archiveUris.
      */
     public com.google.protobuf.ProtocolStringList
         getArchiveUrisList() {
@@ -6085,6 +6376,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return The count of archiveUris.
      */
     public int getArchiveUrisCount() {
       return archiveUris_.size();
@@ -6095,6 +6387,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
      */
     public java.lang.String getArchiveUris(int index) {
       return archiveUris_.get(index);
@@ -6105,6 +6399,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
      */
     public com.google.protobuf.ByteString
         getArchiveUrisBytes(int index) {
@@ -6145,14 +6441,16 @@ public final class PHJ {
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -6164,6 +6462,7 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -6175,11 +6474,12 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6191,10 +6491,11 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -6210,6 +6511,18 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return Whether the mainJarFileUri field is set.
+     */
+    public boolean hasMainJarFileUri() {
+      return driverCase_ == 6;
+    }
+    /**
+     * <pre>
+     * HCFS URI of the .jar file containing the driver class.
+     * </pre>
+     *
+     * <code>string main_jar_file_uri = 6;</code>
+     * @return The mainJarFileUri.
      */
     public java.lang.String getMainJarFileUri() {
       java.lang.Object ref = "";
@@ -6234,6 +6547,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return The bytes for mainJarFileUri.
      */
     public com.google.protobuf.ByteString
         getMainJarFileUriBytes() {
@@ -6261,6 +6575,18 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return Whether the mainClass field is set.
+     */
+    public boolean hasMainClass() {
+      return driverCase_ == 7;
+    }
+    /**
+     * <pre>
+     * The name of the driver class.
+     * </pre>
+     *
+     * <code>string main_class = 7;</code>
+     * @return The mainClass.
      */
     public java.lang.String getMainClass() {
       java.lang.Object ref = "";
@@ -6285,6 +6611,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return The bytes for mainClass.
      */
     public com.google.protobuf.ByteString
         getMainClassBytes() {
@@ -6415,34 +6742,31 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob other = (yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob) obj;
 
-      boolean result = true;
-      result = result && getArgsList()
-          .equals(other.getArgsList());
-      result = result && getJarFileUrisList()
-          .equals(other.getJarFileUrisList());
-      result = result && getFileUrisList()
-          .equals(other.getFileUrisList());
-      result = result && getArchiveUrisList()
-          .equals(other.getArchiveUrisList());
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && getDriverCase().equals(
-          other.getDriverCase());
-      if (!result) return false;
+      if (!getArgsList()
+          .equals(other.getArgsList())) return false;
+      if (!getJarFileUrisList()
+          .equals(other.getJarFileUrisList())) return false;
+      if (!getFileUrisList()
+          .equals(other.getFileUrisList())) return false;
+      if (!getArchiveUrisList()
+          .equals(other.getArchiveUrisList())) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (!getDriverCase().equals(other.getDriverCase())) return false;
       switch (driverCase_) {
         case 6:
-          result = result && getMainJarFileUri()
-              .equals(other.getMainJarFileUri());
+          if (!getMainJarFileUri()
+              .equals(other.getMainJarFileUri())) return false;
           break;
         case 7:
-          result = result && getMainClass()
-              .equals(other.getMainClass());
+          if (!getMainClass()
+              .equals(other.getMainClass())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6677,23 +7001,22 @@ public final class PHJ {
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob result = new yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           args_ = args_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.args_ = args_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.jarFileUris_ = jarFileUris_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           fileUris_ = fileUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.fileUris_ = fileUris_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -6706,7 +7029,6 @@ public final class PHJ {
         if (driverCase_ == 7) {
           result.driver_ = driver_;
         }
-        result.bitField0_ = to_bitField0_;
         result.driverCase_ = driverCase_;
         onBuilt();
         return result;
@@ -6714,35 +7036,35 @@ public final class PHJ {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6862,7 +7184,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArgsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           args_ = new com.google.protobuf.LazyStringArrayList(args_);
           bitField0_ |= 0x00000001;
          }
@@ -6873,6 +7195,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return A list containing the args.
        */
       public com.google.protobuf.ProtocolStringList
           getArgsList() {
@@ -6884,6 +7207,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return The count of args.
        */
       public int getArgsCount() {
         return args_.size();
@@ -6894,6 +7218,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index of the element to return.
+       * @return The args at the given index.
        */
       public java.lang.String getArgs(int index) {
         return args_.get(index);
@@ -6904,6 +7230,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the args at the given index.
        */
       public com.google.protobuf.ByteString
           getArgsBytes(int index) {
@@ -6915,6 +7243,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The args to set.
+       * @return This builder for chaining.
        */
       public Builder setArgs(
           int index, java.lang.String value) {
@@ -6932,6 +7263,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param value The args to add.
+       * @return This builder for chaining.
        */
       public Builder addArgs(
           java.lang.String value) {
@@ -6949,6 +7282,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param values The args to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArgs(
           java.lang.Iterable<java.lang.String> values) {
@@ -6964,6 +7299,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearArgs() {
         args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -6977,6 +7313,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param value The bytes of the args to add.
+       * @return This builder for chaining.
        */
       public Builder addArgsBytes(
           com.google.protobuf.ByteString value) {
@@ -6992,7 +7330,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureJarFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = new com.google.protobuf.LazyStringArrayList(jarFileUris_);
           bitField0_ |= 0x00000002;
          }
@@ -7003,6 +7341,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return A list containing the jarFileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getJarFileUrisList() {
@@ -7014,6 +7353,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return The count of jarFileUris.
        */
       public int getJarFileUrisCount() {
         return jarFileUris_.size();
@@ -7024,6 +7364,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index of the element to return.
+       * @return The jarFileUris at the given index.
        */
       public java.lang.String getJarFileUris(int index) {
         return jarFileUris_.get(index);
@@ -7034,6 +7376,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the jarFileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getJarFileUrisBytes(int index) {
@@ -7045,6 +7389,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The jarFileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setJarFileUris(
           int index, java.lang.String value) {
@@ -7062,6 +7409,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param value The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUris(
           java.lang.String value) {
@@ -7079,6 +7428,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param values The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllJarFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -7094,6 +7445,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearJarFileUris() {
         jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -7107,6 +7459,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param value The bytes of the jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -7122,7 +7476,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           fileUris_ = new com.google.protobuf.LazyStringArrayList(fileUris_);
           bitField0_ |= 0x00000004;
          }
@@ -7134,6 +7488,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return A list containing the fileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getFileUrisList() {
@@ -7146,6 +7501,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return The count of fileUris.
        */
       public int getFileUrisCount() {
         return fileUris_.size();
@@ -7157,6 +7513,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index of the element to return.
+       * @return The fileUris at the given index.
        */
       public java.lang.String getFileUris(int index) {
         return fileUris_.get(index);
@@ -7168,6 +7526,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getFileUrisBytes(int index) {
@@ -7180,6 +7540,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The fileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setFileUris(
           int index, java.lang.String value) {
@@ -7198,6 +7561,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param value The fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addFileUris(
           java.lang.String value) {
@@ -7216,6 +7581,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param values The fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -7232,6 +7599,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFileUris() {
         fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -7246,6 +7614,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param value The bytes of the fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -7261,7 +7631,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArchiveUrisIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = new com.google.protobuf.LazyStringArrayList(archiveUris_);
           bitField0_ |= 0x00000008;
          }
@@ -7272,6 +7642,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return A list containing the archiveUris.
        */
       public com.google.protobuf.ProtocolStringList
           getArchiveUrisList() {
@@ -7283,6 +7654,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return The count of archiveUris.
        */
       public int getArchiveUrisCount() {
         return archiveUris_.size();
@@ -7293,6 +7665,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index of the element to return.
+       * @return The archiveUris at the given index.
        */
       public java.lang.String getArchiveUris(int index) {
         return archiveUris_.get(index);
@@ -7303,6 +7677,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the archiveUris at the given index.
        */
       public com.google.protobuf.ByteString
           getArchiveUrisBytes(int index) {
@@ -7314,6 +7690,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The archiveUris to set.
+       * @return This builder for chaining.
        */
       public Builder setArchiveUris(
           int index, java.lang.String value) {
@@ -7331,6 +7710,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param value The archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addArchiveUris(
           java.lang.String value) {
@@ -7348,6 +7729,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param values The archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArchiveUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -7363,6 +7746,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearArchiveUris() {
         archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -7376,6 +7760,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param value The bytes of the archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addArchiveUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -7423,14 +7809,16 @@ public final class PHJ {
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -7442,6 +7830,7 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -7453,11 +7842,12 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7469,10 +7859,11 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -7496,7 +7887,7 @@ public final class PHJ {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -7519,8 +7910,11 @@ public final class PHJ {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -7546,7 +7940,21 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @return Whether the mainJarFileUri field is set.
        */
+      @java.lang.Override
+      public boolean hasMainJarFileUri() {
+        return driverCase_ == 6;
+      }
+      /**
+       * <pre>
+       * HCFS URI of the .jar file containing the driver class.
+       * </pre>
+       *
+       * <code>string main_jar_file_uri = 6;</code>
+       * @return The mainJarFileUri.
+       */
+      @java.lang.Override
       public java.lang.String getMainJarFileUri() {
         java.lang.Object ref = "";
         if (driverCase_ == 6) {
@@ -7570,7 +7978,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @return The bytes for mainJarFileUri.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMainJarFileUriBytes() {
         java.lang.Object ref = "";
@@ -7595,6 +8005,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @param value The mainJarFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setMainJarFileUri(
           java.lang.String value) {
@@ -7612,6 +8024,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMainJarFileUri() {
         if (driverCase_ == 6) {
@@ -7627,6 +8040,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @param value The bytes for mainJarFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setMainJarFileUriBytes(
           com.google.protobuf.ByteString value) {
@@ -7646,7 +8061,21 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @return Whether the mainClass field is set.
        */
+      @java.lang.Override
+      public boolean hasMainClass() {
+        return driverCase_ == 7;
+      }
+      /**
+       * <pre>
+       * The name of the driver class.
+       * </pre>
+       *
+       * <code>string main_class = 7;</code>
+       * @return The mainClass.
+       */
+      @java.lang.Override
       public java.lang.String getMainClass() {
         java.lang.Object ref = "";
         if (driverCase_ == 7) {
@@ -7670,7 +8099,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @return The bytes for mainClass.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMainClassBytes() {
         java.lang.Object ref = "";
@@ -7695,6 +8126,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @param value The mainClass to set.
+       * @return This builder for chaining.
        */
       public Builder setMainClass(
           java.lang.String value) {
@@ -7712,6 +8145,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMainClass() {
         if (driverCase_ == 7) {
@@ -7727,6 +8161,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @param value The bytes for mainClass to set.
+       * @return This builder for chaining.
        */
       public Builder setMainClassBytes(
           com.google.protobuf.ByteString value) {
@@ -7742,7 +8178,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7802,6 +8238,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return A list containing the args.
      */
     java.util.List<java.lang.String>
         getArgsList();
@@ -7811,6 +8248,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return The count of args.
      */
     int getArgsCount();
     /**
@@ -7819,6 +8257,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The args at the given index.
      */
     java.lang.String getArgs(int index);
     /**
@@ -7827,6 +8267,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the args at the given index.
      */
     com.google.protobuf.ByteString
         getArgsBytes(int index);
@@ -7837,6 +8279,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return A list containing the jarFileUris.
      */
     java.util.List<java.lang.String>
         getJarFileUrisList();
@@ -7846,6 +8289,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return The count of jarFileUris.
      */
     int getJarFileUrisCount();
     /**
@@ -7854,6 +8298,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     java.lang.String getJarFileUris(int index);
     /**
@@ -7862,6 +8308,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     com.google.protobuf.ByteString
         getJarFileUrisBytes(int index);
@@ -7873,6 +8321,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return A list containing the fileUris.
      */
     java.util.List<java.lang.String>
         getFileUrisList();
@@ -7883,6 +8332,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return The count of fileUris.
      */
     int getFileUrisCount();
     /**
@@ -7892,6 +8342,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
      */
     java.lang.String getFileUris(int index);
     /**
@@ -7901,6 +8353,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
      */
     com.google.protobuf.ByteString
         getFileUrisBytes(int index);
@@ -7911,6 +8365,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return A list containing the archiveUris.
      */
     java.util.List<java.lang.String>
         getArchiveUrisList();
@@ -7920,6 +8375,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return The count of archiveUris.
      */
     int getArchiveUrisCount();
     /**
@@ -7928,6 +8384,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
      */
     java.lang.String getArchiveUris(int index);
     /**
@@ -7936,6 +8394,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
      */
     com.google.protobuf.ByteString
         getArchiveUrisBytes(int index);
@@ -8000,6 +8460,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return The mainJarFileUri.
      */
     java.lang.String getMainJarFileUri();
     /**
@@ -8008,6 +8469,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return The bytes for mainJarFileUri.
      */
     com.google.protobuf.ByteString
         getMainJarFileUriBytes();
@@ -8018,6 +8480,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return The mainClass.
      */
     java.lang.String getMainClass();
     /**
@@ -8026,6 +8489,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return The bytes for mainClass.
      */
     com.google.protobuf.ByteString
         getMainClassBytes();
@@ -8036,6 +8500,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return A list containing the packages.
      */
     java.util.List<java.lang.String>
         getPackagesList();
@@ -8045,6 +8510,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return The count of packages.
      */
     int getPackagesCount();
     /**
@@ -8053,6 +8519,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the element to return.
+     * @return The packages at the given index.
      */
     java.lang.String getPackages(int index);
     /**
@@ -8061,6 +8529,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the packages at the given index.
      */
     com.google.protobuf.ByteString
         getPackagesBytes(int index);
@@ -8071,6 +8541,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return A list containing the repositories.
      */
     java.util.List<java.lang.String>
         getRepositoriesList();
@@ -8080,6 +8551,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return The count of repositories.
      */
     int getRepositoriesCount();
     /**
@@ -8088,6 +8560,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the element to return.
+     * @return The repositories at the given index.
      */
     java.lang.String getRepositories(int index);
     /**
@@ -8096,6 +8570,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the repositories at the given index.
      */
     com.google.protobuf.ByteString
         getRepositoriesBytes(int index);
@@ -8106,6 +8582,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return A list containing the excludePackages.
      */
     java.util.List<java.lang.String>
         getExcludePackagesList();
@@ -8115,6 +8592,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return The count of excludePackages.
      */
     int getExcludePackagesCount();
     /**
@@ -8123,6 +8601,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the element to return.
+     * @return The excludePackages at the given index.
      */
     java.lang.String getExcludePackages(int index);
     /**
@@ -8131,6 +8611,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePackages at the given index.
      */
     com.google.protobuf.ByteString
         getExcludePackagesBytes(int index);
@@ -8138,7 +8620,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.SparkJob}
    */
-  public  static final class SparkJob extends
+  public static final class SparkJob extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.SparkJob)
       SparkJobOrBuilder {
@@ -8157,6 +8639,13 @@ public final class PHJ {
       packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SparkJob();
     }
 
     @java.lang.Override
@@ -8185,7 +8674,7 @@ public final class PHJ {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 args_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -8194,7 +8683,7 @@ public final class PHJ {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 jarFileUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -8203,7 +8692,7 @@ public final class PHJ {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 fileUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -8212,7 +8701,7 @@ public final class PHJ {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 archiveUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -8220,7 +8709,7 @@ public final class PHJ {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000010;
@@ -8246,33 +8735,33 @@ public final class PHJ {
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 packages_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000020;
               }
               packages_.add(s);
               break;
             }
             case 74: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 repositories_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000040;
               }
               repositories_.add(s);
               break;
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 excludePackages_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000080;
               }
               excludePackages_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8286,25 +8775,25 @@ public final class PHJ {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           args_ = args_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           fileUris_ = fileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           packages_ = packages_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           repositories_ = repositories_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           excludePackages_ = excludePackages_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8336,7 +8825,6 @@ public final class PHJ {
               yandex.cloud.api.dataproc.v1.PHJ.SparkJob.class, yandex.cloud.api.dataproc.v1.PHJ.SparkJob.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ARGS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList args_;
     /**
@@ -8345,6 +8833,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return A list containing the args.
      */
     public com.google.protobuf.ProtocolStringList
         getArgsList() {
@@ -8356,6 +8845,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return The count of args.
      */
     public int getArgsCount() {
       return args_.size();
@@ -8366,6 +8856,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The args at the given index.
      */
     public java.lang.String getArgs(int index) {
       return args_.get(index);
@@ -8376,6 +8868,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the args at the given index.
      */
     public com.google.protobuf.ByteString
         getArgsBytes(int index) {
@@ -8390,6 +8884,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return A list containing the jarFileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getJarFileUrisList() {
@@ -8401,6 +8896,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return The count of jarFileUris.
      */
     public int getJarFileUrisCount() {
       return jarFileUris_.size();
@@ -8411,6 +8907,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     public java.lang.String getJarFileUris(int index) {
       return jarFileUris_.get(index);
@@ -8421,6 +8919,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getJarFileUrisBytes(int index) {
@@ -8436,6 +8936,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return A list containing the fileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getFileUrisList() {
@@ -8448,6 +8949,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return The count of fileUris.
      */
     public int getFileUrisCount() {
       return fileUris_.size();
@@ -8459,6 +8961,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
      */
     public java.lang.String getFileUris(int index) {
       return fileUris_.get(index);
@@ -8470,6 +8974,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getFileUrisBytes(int index) {
@@ -8484,6 +8990,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return A list containing the archiveUris.
      */
     public com.google.protobuf.ProtocolStringList
         getArchiveUrisList() {
@@ -8495,6 +9002,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return The count of archiveUris.
      */
     public int getArchiveUrisCount() {
       return archiveUris_.size();
@@ -8505,6 +9013,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
      */
     public java.lang.String getArchiveUris(int index) {
       return archiveUris_.get(index);
@@ -8515,6 +9025,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
      */
     public com.google.protobuf.ByteString
         getArchiveUrisBytes(int index) {
@@ -8555,14 +9067,16 @@ public final class PHJ {
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -8574,6 +9088,7 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -8585,11 +9100,12 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8601,10 +9117,11 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -8621,7 +9138,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return The mainJarFileUri.
      */
+    @java.lang.Override
     public java.lang.String getMainJarFileUri() {
       java.lang.Object ref = mainJarFileUri_;
       if (ref instanceof java.lang.String) {
@@ -8640,7 +9159,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
+     * @return The bytes for mainJarFileUri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMainJarFileUriBytes() {
       java.lang.Object ref = mainJarFileUri_;
@@ -8663,7 +9184,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return The mainClass.
      */
+    @java.lang.Override
     public java.lang.String getMainClass() {
       java.lang.Object ref = mainClass_;
       if (ref instanceof java.lang.String) {
@@ -8682,7 +9205,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_class = 7;</code>
+     * @return The bytes for mainClass.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMainClassBytes() {
       java.lang.Object ref = mainClass_;
@@ -8705,6 +9230,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return A list containing the packages.
      */
     public com.google.protobuf.ProtocolStringList
         getPackagesList() {
@@ -8716,6 +9242,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return The count of packages.
      */
     public int getPackagesCount() {
       return packages_.size();
@@ -8726,6 +9253,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the element to return.
+     * @return The packages at the given index.
      */
     public java.lang.String getPackages(int index) {
       return packages_.get(index);
@@ -8736,6 +9265,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the packages at the given index.
      */
     public com.google.protobuf.ByteString
         getPackagesBytes(int index) {
@@ -8750,6 +9281,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return A list containing the repositories.
      */
     public com.google.protobuf.ProtocolStringList
         getRepositoriesList() {
@@ -8761,6 +9293,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return The count of repositories.
      */
     public int getRepositoriesCount() {
       return repositories_.size();
@@ -8771,6 +9304,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the element to return.
+     * @return The repositories at the given index.
      */
     public java.lang.String getRepositories(int index) {
       return repositories_.get(index);
@@ -8781,6 +9316,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the repositories at the given index.
      */
     public com.google.protobuf.ByteString
         getRepositoriesBytes(int index) {
@@ -8795,6 +9332,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return A list containing the excludePackages.
      */
     public com.google.protobuf.ProtocolStringList
         getExcludePackagesList() {
@@ -8806,6 +9344,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return The count of excludePackages.
      */
     public int getExcludePackagesCount() {
       return excludePackages_.size();
@@ -8816,6 +9355,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the element to return.
+     * @return The excludePackages at the given index.
      */
     public java.lang.String getExcludePackages(int index) {
       return excludePackages_.get(index);
@@ -8826,6 +9367,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePackages at the given index.
      */
     public com.google.protobuf.ByteString
         getExcludePackagesBytes(int index) {
@@ -8864,10 +9407,10 @@ public final class PHJ {
           internalGetProperties(),
           PropertiesDefaultEntryHolder.defaultEntry,
           5);
-      if (!getMainJarFileUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainJarFileUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, mainJarFileUri_);
       }
-      if (!getMainClassBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainClass_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, mainClass_);
       }
       for (int i = 0; i < packages_.size(); i++) {
@@ -8930,10 +9473,10 @@ public final class PHJ {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, properties__);
       }
-      if (!getMainJarFileUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainJarFileUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, mainJarFileUri_);
       }
-      if (!getMainClassBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainClass_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, mainClass_);
       }
       {
@@ -8975,29 +9518,28 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.SparkJob other = (yandex.cloud.api.dataproc.v1.PHJ.SparkJob) obj;
 
-      boolean result = true;
-      result = result && getArgsList()
-          .equals(other.getArgsList());
-      result = result && getJarFileUrisList()
-          .equals(other.getJarFileUrisList());
-      result = result && getFileUrisList()
-          .equals(other.getFileUrisList());
-      result = result && getArchiveUrisList()
-          .equals(other.getArchiveUrisList());
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && getMainJarFileUri()
-          .equals(other.getMainJarFileUri());
-      result = result && getMainClass()
-          .equals(other.getMainClass());
-      result = result && getPackagesList()
-          .equals(other.getPackagesList());
-      result = result && getRepositoriesList()
-          .equals(other.getRepositoriesList());
-      result = result && getExcludePackagesList()
-          .equals(other.getExcludePackagesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getArgsList()
+          .equals(other.getArgsList())) return false;
+      if (!getJarFileUrisList()
+          .equals(other.getJarFileUrisList())) return false;
+      if (!getFileUrisList()
+          .equals(other.getFileUrisList())) return false;
+      if (!getArchiveUrisList()
+          .equals(other.getArchiveUrisList())) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (!getMainJarFileUri()
+          .equals(other.getMainJarFileUri())) return false;
+      if (!getMainClass()
+          .equals(other.getMainClass())) return false;
+      if (!getPackagesList()
+          .equals(other.getPackagesList())) return false;
+      if (!getRepositoriesList()
+          .equals(other.getRepositoriesList())) return false;
+      if (!getExcludePackagesList()
+          .equals(other.getExcludePackagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9212,11 +9754,11 @@ public final class PHJ {
         mainClass_ = "";
 
         packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -9244,23 +9786,22 @@ public final class PHJ {
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJ.SparkJob result = new yandex.cloud.api.dataproc.v1.PHJ.SparkJob(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           args_ = args_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.args_ = args_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.jarFileUris_ = jarFileUris_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           fileUris_ = fileUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.fileUris_ = fileUris_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -9269,57 +9810,56 @@ public final class PHJ {
         result.properties_.makeImmutable();
         result.mainJarFileUri_ = mainJarFileUri_;
         result.mainClass_ = mainClass_;
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           packages_ = packages_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.packages_ = packages_;
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           repositories_ = repositories_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.repositories_ = repositories_;
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           excludePackages_ = excludePackages_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.excludePackages_ = excludePackages_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9386,7 +9926,7 @@ public final class PHJ {
         if (!other.packages_.isEmpty()) {
           if (packages_.isEmpty()) {
             packages_ = other.packages_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensurePackagesIsMutable();
             packages_.addAll(other.packages_);
@@ -9396,7 +9936,7 @@ public final class PHJ {
         if (!other.repositories_.isEmpty()) {
           if (repositories_.isEmpty()) {
             repositories_ = other.repositories_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureRepositoriesIsMutable();
             repositories_.addAll(other.repositories_);
@@ -9406,7 +9946,7 @@ public final class PHJ {
         if (!other.excludePackages_.isEmpty()) {
           if (excludePackages_.isEmpty()) {
             excludePackages_ = other.excludePackages_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureExcludePackagesIsMutable();
             excludePackages_.addAll(other.excludePackages_);
@@ -9445,7 +9985,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArgsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           args_ = new com.google.protobuf.LazyStringArrayList(args_);
           bitField0_ |= 0x00000001;
          }
@@ -9456,6 +9996,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return A list containing the args.
        */
       public com.google.protobuf.ProtocolStringList
           getArgsList() {
@@ -9467,6 +10008,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return The count of args.
        */
       public int getArgsCount() {
         return args_.size();
@@ -9477,6 +10019,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index of the element to return.
+       * @return The args at the given index.
        */
       public java.lang.String getArgs(int index) {
         return args_.get(index);
@@ -9487,6 +10031,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the args at the given index.
        */
       public com.google.protobuf.ByteString
           getArgsBytes(int index) {
@@ -9498,6 +10044,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The args to set.
+       * @return This builder for chaining.
        */
       public Builder setArgs(
           int index, java.lang.String value) {
@@ -9515,6 +10064,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param value The args to add.
+       * @return This builder for chaining.
        */
       public Builder addArgs(
           java.lang.String value) {
@@ -9532,6 +10083,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param values The args to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArgs(
           java.lang.Iterable<java.lang.String> values) {
@@ -9547,6 +10100,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearArgs() {
         args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9560,6 +10114,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param value The bytes of the args to add.
+       * @return This builder for chaining.
        */
       public Builder addArgsBytes(
           com.google.protobuf.ByteString value) {
@@ -9575,7 +10131,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureJarFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = new com.google.protobuf.LazyStringArrayList(jarFileUris_);
           bitField0_ |= 0x00000002;
          }
@@ -9586,6 +10142,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return A list containing the jarFileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getJarFileUrisList() {
@@ -9597,6 +10154,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return The count of jarFileUris.
        */
       public int getJarFileUrisCount() {
         return jarFileUris_.size();
@@ -9607,6 +10165,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index of the element to return.
+       * @return The jarFileUris at the given index.
        */
       public java.lang.String getJarFileUris(int index) {
         return jarFileUris_.get(index);
@@ -9617,6 +10177,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the jarFileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getJarFileUrisBytes(int index) {
@@ -9628,6 +10190,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The jarFileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setJarFileUris(
           int index, java.lang.String value) {
@@ -9645,6 +10210,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param value The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUris(
           java.lang.String value) {
@@ -9662,6 +10229,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param values The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllJarFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -9677,6 +10246,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearJarFileUris() {
         jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9690,6 +10260,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param value The bytes of the jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -9705,7 +10277,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           fileUris_ = new com.google.protobuf.LazyStringArrayList(fileUris_);
           bitField0_ |= 0x00000004;
          }
@@ -9717,6 +10289,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return A list containing the fileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getFileUrisList() {
@@ -9729,6 +10302,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return The count of fileUris.
        */
       public int getFileUrisCount() {
         return fileUris_.size();
@@ -9740,6 +10314,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index of the element to return.
+       * @return The fileUris at the given index.
        */
       public java.lang.String getFileUris(int index) {
         return fileUris_.get(index);
@@ -9751,6 +10327,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getFileUrisBytes(int index) {
@@ -9763,6 +10341,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The fileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setFileUris(
           int index, java.lang.String value) {
@@ -9781,6 +10362,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param value The fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addFileUris(
           java.lang.String value) {
@@ -9799,6 +10382,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param values The fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -9815,6 +10400,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFileUris() {
         fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9829,6 +10415,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param value The bytes of the fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -9844,7 +10432,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArchiveUrisIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = new com.google.protobuf.LazyStringArrayList(archiveUris_);
           bitField0_ |= 0x00000008;
          }
@@ -9855,6 +10443,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return A list containing the archiveUris.
        */
       public com.google.protobuf.ProtocolStringList
           getArchiveUrisList() {
@@ -9866,6 +10455,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return The count of archiveUris.
        */
       public int getArchiveUrisCount() {
         return archiveUris_.size();
@@ -9876,6 +10466,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index of the element to return.
+       * @return The archiveUris at the given index.
        */
       public java.lang.String getArchiveUris(int index) {
         return archiveUris_.get(index);
@@ -9886,6 +10478,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the archiveUris at the given index.
        */
       public com.google.protobuf.ByteString
           getArchiveUrisBytes(int index) {
@@ -9897,6 +10491,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The archiveUris to set.
+       * @return This builder for chaining.
        */
       public Builder setArchiveUris(
           int index, java.lang.String value) {
@@ -9914,6 +10511,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param value The archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addArchiveUris(
           java.lang.String value) {
@@ -9931,6 +10530,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param values The archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArchiveUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -9946,6 +10547,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearArchiveUris() {
         archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9959,6 +10561,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param value The bytes of the archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addArchiveUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -10006,14 +10610,16 @@ public final class PHJ {
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -10025,6 +10631,7 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -10036,11 +10643,12 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10052,10 +10660,11 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -10079,7 +10688,7 @@ public final class PHJ {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -10102,8 +10711,11 @@ public final class PHJ {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -10130,6 +10742,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @return The mainJarFileUri.
        */
       public java.lang.String getMainJarFileUri() {
         java.lang.Object ref = mainJarFileUri_;
@@ -10149,6 +10762,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @return The bytes for mainJarFileUri.
        */
       public com.google.protobuf.ByteString
           getMainJarFileUriBytes() {
@@ -10169,6 +10783,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @param value The mainJarFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setMainJarFileUri(
           java.lang.String value) {
@@ -10186,6 +10802,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMainJarFileUri() {
         
@@ -10199,6 +10816,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
+       * @param value The bytes for mainJarFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setMainJarFileUriBytes(
           com.google.protobuf.ByteString value) {
@@ -10219,6 +10838,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @return The mainClass.
        */
       public java.lang.String getMainClass() {
         java.lang.Object ref = mainClass_;
@@ -10238,6 +10858,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @return The bytes for mainClass.
        */
       public com.google.protobuf.ByteString
           getMainClassBytes() {
@@ -10258,6 +10879,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @param value The mainClass to set.
+       * @return This builder for chaining.
        */
       public Builder setMainClass(
           java.lang.String value) {
@@ -10275,6 +10898,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMainClass() {
         
@@ -10288,6 +10912,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_class = 7;</code>
+       * @param value The bytes for mainClass to set.
+       * @return This builder for chaining.
        */
       public Builder setMainClassBytes(
           com.google.protobuf.ByteString value) {
@@ -10303,9 +10929,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePackagesIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           packages_ = new com.google.protobuf.LazyStringArrayList(packages_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000020;
          }
       }
       /**
@@ -10314,6 +10940,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @return A list containing the packages.
        */
       public com.google.protobuf.ProtocolStringList
           getPackagesList() {
@@ -10325,6 +10952,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @return The count of packages.
        */
       public int getPackagesCount() {
         return packages_.size();
@@ -10335,6 +10963,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param index The index of the element to return.
+       * @return The packages at the given index.
        */
       public java.lang.String getPackages(int index) {
         return packages_.get(index);
@@ -10345,6 +10975,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the packages at the given index.
        */
       public com.google.protobuf.ByteString
           getPackagesBytes(int index) {
@@ -10356,6 +10988,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The packages to set.
+       * @return This builder for chaining.
        */
       public Builder setPackages(
           int index, java.lang.String value) {
@@ -10373,6 +11008,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param value The packages to add.
+       * @return This builder for chaining.
        */
       public Builder addPackages(
           java.lang.String value) {
@@ -10390,6 +11027,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param values The packages to add.
+       * @return This builder for chaining.
        */
       public Builder addAllPackages(
           java.lang.Iterable<java.lang.String> values) {
@@ -10405,10 +11044,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPackages() {
         packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -10418,6 +11058,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param value The bytes of the packages to add.
+       * @return This builder for chaining.
        */
       public Builder addPackagesBytes(
           com.google.protobuf.ByteString value) {
@@ -10433,9 +11075,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRepositoriesIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           repositories_ = new com.google.protobuf.LazyStringArrayList(repositories_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000040;
          }
       }
       /**
@@ -10444,6 +11086,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @return A list containing the repositories.
        */
       public com.google.protobuf.ProtocolStringList
           getRepositoriesList() {
@@ -10455,6 +11098,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @return The count of repositories.
        */
       public int getRepositoriesCount() {
         return repositories_.size();
@@ -10465,6 +11109,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param index The index of the element to return.
+       * @return The repositories at the given index.
        */
       public java.lang.String getRepositories(int index) {
         return repositories_.get(index);
@@ -10475,6 +11121,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the repositories at the given index.
        */
       public com.google.protobuf.ByteString
           getRepositoriesBytes(int index) {
@@ -10486,6 +11134,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The repositories to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositories(
           int index, java.lang.String value) {
@@ -10503,6 +11154,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param value The repositories to add.
+       * @return This builder for chaining.
        */
       public Builder addRepositories(
           java.lang.String value) {
@@ -10520,6 +11173,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param values The repositories to add.
+       * @return This builder for chaining.
        */
       public Builder addAllRepositories(
           java.lang.Iterable<java.lang.String> values) {
@@ -10535,10 +11190,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositories() {
         repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -10548,6 +11204,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param value The bytes of the repositories to add.
+       * @return This builder for chaining.
        */
       public Builder addRepositoriesBytes(
           com.google.protobuf.ByteString value) {
@@ -10563,9 +11221,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludePackagesIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           excludePackages_ = new com.google.protobuf.LazyStringArrayList(excludePackages_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000080;
          }
       }
       /**
@@ -10574,6 +11232,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @return A list containing the excludePackages.
        */
       public com.google.protobuf.ProtocolStringList
           getExcludePackagesList() {
@@ -10585,6 +11244,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @return The count of excludePackages.
        */
       public int getExcludePackagesCount() {
         return excludePackages_.size();
@@ -10595,6 +11255,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param index The index of the element to return.
+       * @return The excludePackages at the given index.
        */
       public java.lang.String getExcludePackages(int index) {
         return excludePackages_.get(index);
@@ -10605,6 +11267,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the excludePackages at the given index.
        */
       public com.google.protobuf.ByteString
           getExcludePackagesBytes(int index) {
@@ -10616,6 +11280,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The excludePackages to set.
+       * @return This builder for chaining.
        */
       public Builder setExcludePackages(
           int index, java.lang.String value) {
@@ -10633,6 +11300,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param value The excludePackages to add.
+       * @return This builder for chaining.
        */
       public Builder addExcludePackages(
           java.lang.String value) {
@@ -10650,6 +11319,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param values The excludePackages to add.
+       * @return This builder for chaining.
        */
       public Builder addAllExcludePackages(
           java.lang.Iterable<java.lang.String> values) {
@@ -10665,10 +11336,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearExcludePackages() {
         excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -10678,6 +11350,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param value The bytes of the excludePackages to add.
+       * @return This builder for chaining.
        */
       public Builder addExcludePackagesBytes(
           com.google.protobuf.ByteString value) {
@@ -10693,7 +11367,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10753,6 +11427,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return A list containing the args.
      */
     java.util.List<java.lang.String>
         getArgsList();
@@ -10762,6 +11437,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return The count of args.
      */
     int getArgsCount();
     /**
@@ -10770,6 +11446,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The args at the given index.
      */
     java.lang.String getArgs(int index);
     /**
@@ -10778,6 +11456,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the args at the given index.
      */
     com.google.protobuf.ByteString
         getArgsBytes(int index);
@@ -10788,6 +11468,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return A list containing the jarFileUris.
      */
     java.util.List<java.lang.String>
         getJarFileUrisList();
@@ -10797,6 +11478,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return The count of jarFileUris.
      */
     int getJarFileUrisCount();
     /**
@@ -10805,6 +11487,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     java.lang.String getJarFileUris(int index);
     /**
@@ -10813,6 +11497,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     com.google.protobuf.ByteString
         getJarFileUrisBytes(int index);
@@ -10824,6 +11510,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return A list containing the fileUris.
      */
     java.util.List<java.lang.String>
         getFileUrisList();
@@ -10834,6 +11521,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return The count of fileUris.
      */
     int getFileUrisCount();
     /**
@@ -10843,6 +11531,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
      */
     java.lang.String getFileUris(int index);
     /**
@@ -10852,6 +11542,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
      */
     com.google.protobuf.ByteString
         getFileUrisBytes(int index);
@@ -10862,6 +11554,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return A list containing the archiveUris.
      */
     java.util.List<java.lang.String>
         getArchiveUrisList();
@@ -10871,6 +11564,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return The count of archiveUris.
      */
     int getArchiveUrisCount();
     /**
@@ -10879,6 +11573,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
      */
     java.lang.String getArchiveUris(int index);
     /**
@@ -10887,6 +11583,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
      */
     com.google.protobuf.ByteString
         getArchiveUrisBytes(int index);
@@ -10951,6 +11649,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
+     * @return The mainPythonFileUri.
      */
     java.lang.String getMainPythonFileUri();
     /**
@@ -10959,6 +11658,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
+     * @return The bytes for mainPythonFileUri.
      */
     com.google.protobuf.ByteString
         getMainPythonFileUriBytes();
@@ -10969,6 +11669,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @return A list containing the pythonFileUris.
      */
     java.util.List<java.lang.String>
         getPythonFileUrisList();
@@ -10978,6 +11679,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @return The count of pythonFileUris.
      */
     int getPythonFileUrisCount();
     /**
@@ -10986,6 +11688,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @param index The index of the element to return.
+     * @return The pythonFileUris at the given index.
      */
     java.lang.String getPythonFileUris(int index);
     /**
@@ -10994,6 +11698,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pythonFileUris at the given index.
      */
     com.google.protobuf.ByteString
         getPythonFileUrisBytes(int index);
@@ -11004,6 +11710,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return A list containing the packages.
      */
     java.util.List<java.lang.String>
         getPackagesList();
@@ -11013,6 +11720,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return The count of packages.
      */
     int getPackagesCount();
     /**
@@ -11021,6 +11729,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the element to return.
+     * @return The packages at the given index.
      */
     java.lang.String getPackages(int index);
     /**
@@ -11029,6 +11739,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the packages at the given index.
      */
     com.google.protobuf.ByteString
         getPackagesBytes(int index);
@@ -11039,6 +11751,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return A list containing the repositories.
      */
     java.util.List<java.lang.String>
         getRepositoriesList();
@@ -11048,6 +11761,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return The count of repositories.
      */
     int getRepositoriesCount();
     /**
@@ -11056,6 +11770,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the element to return.
+     * @return The repositories at the given index.
      */
     java.lang.String getRepositories(int index);
     /**
@@ -11064,6 +11780,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the repositories at the given index.
      */
     com.google.protobuf.ByteString
         getRepositoriesBytes(int index);
@@ -11074,6 +11792,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return A list containing the excludePackages.
      */
     java.util.List<java.lang.String>
         getExcludePackagesList();
@@ -11083,6 +11802,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return The count of excludePackages.
      */
     int getExcludePackagesCount();
     /**
@@ -11091,6 +11811,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the element to return.
+     * @return The excludePackages at the given index.
      */
     java.lang.String getExcludePackages(int index);
     /**
@@ -11099,6 +11821,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePackages at the given index.
      */
     com.google.protobuf.ByteString
         getExcludePackagesBytes(int index);
@@ -11106,7 +11830,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.PysparkJob}
    */
-  public  static final class PysparkJob extends
+  public static final class PysparkJob extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.PysparkJob)
       PysparkJobOrBuilder {
@@ -11125,6 +11849,13 @@ public final class PHJ {
       packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PysparkJob();
     }
 
     @java.lang.Override
@@ -11153,7 +11884,7 @@ public final class PHJ {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 args_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -11162,7 +11893,7 @@ public final class PHJ {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 jarFileUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -11171,7 +11902,7 @@ public final class PHJ {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 fileUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -11180,7 +11911,7 @@ public final class PHJ {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 archiveUris_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -11188,7 +11919,7 @@ public final class PHJ {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000010;
@@ -11208,42 +11939,42 @@ public final class PHJ {
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 pythonFileUris_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000020;
               }
               pythonFileUris_.add(s);
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 packages_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000040;
               }
               packages_.add(s);
               break;
             }
             case 74: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 repositories_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000080;
               }
               repositories_.add(s);
               break;
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 excludePackages_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000100;
               }
               excludePackages_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11257,28 +11988,28 @@ public final class PHJ {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           args_ = args_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           fileUris_ = fileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           pythonFileUris_ = pythonFileUris_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           packages_ = packages_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           repositories_ = repositories_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           excludePackages_ = excludePackages_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -11310,7 +12041,6 @@ public final class PHJ {
               yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.class, yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ARGS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList args_;
     /**
@@ -11319,6 +12049,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return A list containing the args.
      */
     public com.google.protobuf.ProtocolStringList
         getArgsList() {
@@ -11330,6 +12061,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @return The count of args.
      */
     public int getArgsCount() {
       return args_.size();
@@ -11340,6 +12072,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The args at the given index.
      */
     public java.lang.String getArgs(int index) {
       return args_.get(index);
@@ -11350,6 +12084,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the args at the given index.
      */
     public com.google.protobuf.ByteString
         getArgsBytes(int index) {
@@ -11364,6 +12100,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return A list containing the jarFileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getJarFileUrisList() {
@@ -11375,6 +12112,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @return The count of jarFileUris.
      */
     public int getJarFileUrisCount() {
       return jarFileUris_.size();
@@ -11385,6 +12123,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     public java.lang.String getJarFileUris(int index) {
       return jarFileUris_.get(index);
@@ -11395,6 +12135,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getJarFileUrisBytes(int index) {
@@ -11410,6 +12152,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return A list containing the fileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getFileUrisList() {
@@ -11422,6 +12165,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @return The count of fileUris.
      */
     public int getFileUrisCount() {
       return fileUris_.size();
@@ -11433,6 +12177,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the element to return.
+     * @return The fileUris at the given index.
      */
     public java.lang.String getFileUris(int index) {
       return fileUris_.get(index);
@@ -11444,6 +12190,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getFileUrisBytes(int index) {
@@ -11458,6 +12206,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return A list containing the archiveUris.
      */
     public com.google.protobuf.ProtocolStringList
         getArchiveUrisList() {
@@ -11469,6 +12218,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @return The count of archiveUris.
      */
     public int getArchiveUrisCount() {
       return archiveUris_.size();
@@ -11479,6 +12229,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The archiveUris at the given index.
      */
     public java.lang.String getArchiveUris(int index) {
       return archiveUris_.get(index);
@@ -11489,6 +12241,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the archiveUris at the given index.
      */
     public com.google.protobuf.ByteString
         getArchiveUrisBytes(int index) {
@@ -11529,14 +12283,16 @@ public final class PHJ {
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -11548,6 +12304,7 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -11559,11 +12316,12 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11575,10 +12333,11 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -11595,7 +12354,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
+     * @return The mainPythonFileUri.
      */
+    @java.lang.Override
     public java.lang.String getMainPythonFileUri() {
       java.lang.Object ref = mainPythonFileUri_;
       if (ref instanceof java.lang.String) {
@@ -11614,7 +12375,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
+     * @return The bytes for mainPythonFileUri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMainPythonFileUriBytes() {
       java.lang.Object ref = mainPythonFileUri_;
@@ -11637,6 +12400,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @return A list containing the pythonFileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getPythonFileUrisList() {
@@ -11648,6 +12412,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @return The count of pythonFileUris.
      */
     public int getPythonFileUrisCount() {
       return pythonFileUris_.size();
@@ -11658,6 +12423,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @param index The index of the element to return.
+     * @return The pythonFileUris at the given index.
      */
     public java.lang.String getPythonFileUris(int index) {
       return pythonFileUris_.get(index);
@@ -11668,6 +12435,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string python_file_uris = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pythonFileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getPythonFileUrisBytes(int index) {
@@ -11682,6 +12451,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return A list containing the packages.
      */
     public com.google.protobuf.ProtocolStringList
         getPackagesList() {
@@ -11693,6 +12463,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @return The count of packages.
      */
     public int getPackagesCount() {
       return packages_.size();
@@ -11703,6 +12474,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the element to return.
+     * @return The packages at the given index.
      */
     public java.lang.String getPackages(int index) {
       return packages_.get(index);
@@ -11713,6 +12486,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string packages = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the packages at the given index.
      */
     public com.google.protobuf.ByteString
         getPackagesBytes(int index) {
@@ -11727,6 +12502,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return A list containing the repositories.
      */
     public com.google.protobuf.ProtocolStringList
         getRepositoriesList() {
@@ -11738,6 +12514,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @return The count of repositories.
      */
     public int getRepositoriesCount() {
       return repositories_.size();
@@ -11748,6 +12525,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the element to return.
+     * @return The repositories at the given index.
      */
     public java.lang.String getRepositories(int index) {
       return repositories_.get(index);
@@ -11758,6 +12537,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string repositories = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the repositories at the given index.
      */
     public com.google.protobuf.ByteString
         getRepositoriesBytes(int index) {
@@ -11772,6 +12553,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return A list containing the excludePackages.
      */
     public com.google.protobuf.ProtocolStringList
         getExcludePackagesList() {
@@ -11783,6 +12565,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @return The count of excludePackages.
      */
     public int getExcludePackagesCount() {
       return excludePackages_.size();
@@ -11793,6 +12576,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the element to return.
+     * @return The excludePackages at the given index.
      */
     public java.lang.String getExcludePackages(int index) {
       return excludePackages_.get(index);
@@ -11803,6 +12588,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string exclude_packages = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludePackages at the given index.
      */
     public com.google.protobuf.ByteString
         getExcludePackagesBytes(int index) {
@@ -11841,7 +12628,7 @@ public final class PHJ {
           internalGetProperties(),
           PropertiesDefaultEntryHolder.defaultEntry,
           5);
-      if (!getMainPythonFileUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainPythonFileUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, mainPythonFileUri_);
       }
       for (int i = 0; i < pythonFileUris_.size(); i++) {
@@ -11907,7 +12694,7 @@ public final class PHJ {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, properties__);
       }
-      if (!getMainPythonFileUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainPythonFileUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, mainPythonFileUri_);
       }
       {
@@ -11957,29 +12744,28 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.PysparkJob other = (yandex.cloud.api.dataproc.v1.PHJ.PysparkJob) obj;
 
-      boolean result = true;
-      result = result && getArgsList()
-          .equals(other.getArgsList());
-      result = result && getJarFileUrisList()
-          .equals(other.getJarFileUrisList());
-      result = result && getFileUrisList()
-          .equals(other.getFileUrisList());
-      result = result && getArchiveUrisList()
-          .equals(other.getArchiveUrisList());
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && getMainPythonFileUri()
-          .equals(other.getMainPythonFileUri());
-      result = result && getPythonFileUrisList()
-          .equals(other.getPythonFileUrisList());
-      result = result && getPackagesList()
-          .equals(other.getPackagesList());
-      result = result && getRepositoriesList()
-          .equals(other.getRepositoriesList());
-      result = result && getExcludePackagesList()
-          .equals(other.getExcludePackagesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getArgsList()
+          .equals(other.getArgsList())) return false;
+      if (!getJarFileUrisList()
+          .equals(other.getJarFileUrisList())) return false;
+      if (!getFileUrisList()
+          .equals(other.getFileUrisList())) return false;
+      if (!getArchiveUrisList()
+          .equals(other.getArchiveUrisList())) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (!getMainPythonFileUri()
+          .equals(other.getMainPythonFileUri())) return false;
+      if (!getPythonFileUrisList()
+          .equals(other.getPythonFileUrisList())) return false;
+      if (!getPackagesList()
+          .equals(other.getPackagesList())) return false;
+      if (!getRepositoriesList()
+          .equals(other.getRepositoriesList())) return false;
+      if (!getExcludePackagesList()
+          .equals(other.getExcludePackagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12194,13 +12980,13 @@ public final class PHJ {
         mainPythonFileUri_ = "";
 
         pythonFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -12228,23 +13014,22 @@ public final class PHJ {
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJ.PysparkJob result = new yandex.cloud.api.dataproc.v1.PHJ.PysparkJob(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           args_ = args_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.args_ = args_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.jarFileUris_ = jarFileUris_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           fileUris_ = fileUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.fileUris_ = fileUris_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -12252,62 +13037,61 @@ public final class PHJ {
         result.properties_ = internalGetProperties();
         result.properties_.makeImmutable();
         result.mainPythonFileUri_ = mainPythonFileUri_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           pythonFileUris_ = pythonFileUris_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.pythonFileUris_ = pythonFileUris_;
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           packages_ = packages_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.packages_ = packages_;
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           repositories_ = repositories_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.repositories_ = repositories_;
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000100) != 0)) {
           excludePackages_ = excludePackages_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.excludePackages_ = excludePackages_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12370,7 +13154,7 @@ public final class PHJ {
         if (!other.pythonFileUris_.isEmpty()) {
           if (pythonFileUris_.isEmpty()) {
             pythonFileUris_ = other.pythonFileUris_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensurePythonFileUrisIsMutable();
             pythonFileUris_.addAll(other.pythonFileUris_);
@@ -12380,7 +13164,7 @@ public final class PHJ {
         if (!other.packages_.isEmpty()) {
           if (packages_.isEmpty()) {
             packages_ = other.packages_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensurePackagesIsMutable();
             packages_.addAll(other.packages_);
@@ -12390,7 +13174,7 @@ public final class PHJ {
         if (!other.repositories_.isEmpty()) {
           if (repositories_.isEmpty()) {
             repositories_ = other.repositories_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureRepositoriesIsMutable();
             repositories_.addAll(other.repositories_);
@@ -12400,7 +13184,7 @@ public final class PHJ {
         if (!other.excludePackages_.isEmpty()) {
           if (excludePackages_.isEmpty()) {
             excludePackages_ = other.excludePackages_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureExcludePackagesIsMutable();
             excludePackages_.addAll(other.excludePackages_);
@@ -12439,7 +13223,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArgsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           args_ = new com.google.protobuf.LazyStringArrayList(args_);
           bitField0_ |= 0x00000001;
          }
@@ -12450,6 +13234,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return A list containing the args.
        */
       public com.google.protobuf.ProtocolStringList
           getArgsList() {
@@ -12461,6 +13246,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return The count of args.
        */
       public int getArgsCount() {
         return args_.size();
@@ -12471,6 +13257,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index of the element to return.
+       * @return The args at the given index.
        */
       public java.lang.String getArgs(int index) {
         return args_.get(index);
@@ -12481,6 +13269,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the args at the given index.
        */
       public com.google.protobuf.ByteString
           getArgsBytes(int index) {
@@ -12492,6 +13282,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The args to set.
+       * @return This builder for chaining.
        */
       public Builder setArgs(
           int index, java.lang.String value) {
@@ -12509,6 +13302,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param value The args to add.
+       * @return This builder for chaining.
        */
       public Builder addArgs(
           java.lang.String value) {
@@ -12526,6 +13321,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param values The args to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArgs(
           java.lang.Iterable<java.lang.String> values) {
@@ -12541,6 +13338,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearArgs() {
         args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -12554,6 +13352,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string args = 1;</code>
+       * @param value The bytes of the args to add.
+       * @return This builder for chaining.
        */
       public Builder addArgsBytes(
           com.google.protobuf.ByteString value) {
@@ -12569,7 +13369,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureJarFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           jarFileUris_ = new com.google.protobuf.LazyStringArrayList(jarFileUris_);
           bitField0_ |= 0x00000002;
          }
@@ -12580,6 +13380,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return A list containing the jarFileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getJarFileUrisList() {
@@ -12591,6 +13392,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return The count of jarFileUris.
        */
       public int getJarFileUrisCount() {
         return jarFileUris_.size();
@@ -12601,6 +13403,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index of the element to return.
+       * @return The jarFileUris at the given index.
        */
       public java.lang.String getJarFileUris(int index) {
         return jarFileUris_.get(index);
@@ -12611,6 +13415,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the jarFileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getJarFileUrisBytes(int index) {
@@ -12622,6 +13428,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The jarFileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setJarFileUris(
           int index, java.lang.String value) {
@@ -12639,6 +13448,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param value The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUris(
           java.lang.String value) {
@@ -12656,6 +13467,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param values The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllJarFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -12671,6 +13484,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearJarFileUris() {
         jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -12684,6 +13498,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
+       * @param value The bytes of the jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -12699,7 +13515,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           fileUris_ = new com.google.protobuf.LazyStringArrayList(fileUris_);
           bitField0_ |= 0x00000004;
          }
@@ -12711,6 +13527,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return A list containing the fileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getFileUrisList() {
@@ -12723,6 +13540,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return The count of fileUris.
        */
       public int getFileUrisCount() {
         return fileUris_.size();
@@ -12734,6 +13552,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index of the element to return.
+       * @return The fileUris at the given index.
        */
       public java.lang.String getFileUris(int index) {
         return fileUris_.get(index);
@@ -12745,6 +13565,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getFileUrisBytes(int index) {
@@ -12757,6 +13579,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The fileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setFileUris(
           int index, java.lang.String value) {
@@ -12775,6 +13600,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param value The fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addFileUris(
           java.lang.String value) {
@@ -12793,6 +13620,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param values The fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -12809,6 +13638,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFileUris() {
         fileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -12823,6 +13653,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
+       * @param value The bytes of the fileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -12838,7 +13670,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArchiveUrisIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           archiveUris_ = new com.google.protobuf.LazyStringArrayList(archiveUris_);
           bitField0_ |= 0x00000008;
          }
@@ -12849,6 +13681,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return A list containing the archiveUris.
        */
       public com.google.protobuf.ProtocolStringList
           getArchiveUrisList() {
@@ -12860,6 +13693,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return The count of archiveUris.
        */
       public int getArchiveUrisCount() {
         return archiveUris_.size();
@@ -12870,6 +13704,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index of the element to return.
+       * @return The archiveUris at the given index.
        */
       public java.lang.String getArchiveUris(int index) {
         return archiveUris_.get(index);
@@ -12880,6 +13716,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the archiveUris at the given index.
        */
       public com.google.protobuf.ByteString
           getArchiveUrisBytes(int index) {
@@ -12891,6 +13729,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The archiveUris to set.
+       * @return This builder for chaining.
        */
       public Builder setArchiveUris(
           int index, java.lang.String value) {
@@ -12908,6 +13749,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param value The archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addArchiveUris(
           java.lang.String value) {
@@ -12925,6 +13768,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param values The archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArchiveUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -12940,6 +13785,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearArchiveUris() {
         archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -12953,6 +13799,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
+       * @param value The bytes of the archiveUris to add.
+       * @return This builder for chaining.
        */
       public Builder addArchiveUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -13000,14 +13848,16 @@ public final class PHJ {
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -13019,6 +13869,7 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -13030,11 +13881,12 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13046,10 +13898,11 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -13073,7 +13926,7 @@ public final class PHJ {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -13096,8 +13949,11 @@ public final class PHJ {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -13124,6 +13980,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
+       * @return The mainPythonFileUri.
        */
       public java.lang.String getMainPythonFileUri() {
         java.lang.Object ref = mainPythonFileUri_;
@@ -13143,6 +14000,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
+       * @return The bytes for mainPythonFileUri.
        */
       public com.google.protobuf.ByteString
           getMainPythonFileUriBytes() {
@@ -13163,6 +14021,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
+       * @param value The mainPythonFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setMainPythonFileUri(
           java.lang.String value) {
@@ -13180,6 +14040,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMainPythonFileUri() {
         
@@ -13193,6 +14054,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
+       * @param value The bytes for mainPythonFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setMainPythonFileUriBytes(
           com.google.protobuf.ByteString value) {
@@ -13208,9 +14071,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList pythonFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePythonFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           pythonFileUris_ = new com.google.protobuf.LazyStringArrayList(pythonFileUris_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
          }
       }
       /**
@@ -13219,6 +14082,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @return A list containing the pythonFileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getPythonFileUrisList() {
@@ -13230,6 +14094,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @return The count of pythonFileUris.
        */
       public int getPythonFileUrisCount() {
         return pythonFileUris_.size();
@@ -13240,6 +14105,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @param index The index of the element to return.
+       * @return The pythonFileUris at the given index.
        */
       public java.lang.String getPythonFileUris(int index) {
         return pythonFileUris_.get(index);
@@ -13250,6 +14117,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the pythonFileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getPythonFileUrisBytes(int index) {
@@ -13261,6 +14130,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The pythonFileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setPythonFileUris(
           int index, java.lang.String value) {
@@ -13278,6 +14150,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @param value The pythonFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addPythonFileUris(
           java.lang.String value) {
@@ -13295,6 +14169,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @param values The pythonFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllPythonFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -13310,10 +14186,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPythonFileUris() {
         pythonFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -13323,6 +14200,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string python_file_uris = 7;</code>
+       * @param value The bytes of the pythonFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addPythonFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -13338,9 +14217,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePackagesIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           packages_ = new com.google.protobuf.LazyStringArrayList(packages_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
          }
       }
       /**
@@ -13349,6 +14228,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @return A list containing the packages.
        */
       public com.google.protobuf.ProtocolStringList
           getPackagesList() {
@@ -13360,6 +14240,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @return The count of packages.
        */
       public int getPackagesCount() {
         return packages_.size();
@@ -13370,6 +14251,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param index The index of the element to return.
+       * @return The packages at the given index.
        */
       public java.lang.String getPackages(int index) {
         return packages_.get(index);
@@ -13380,6 +14263,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the packages at the given index.
        */
       public com.google.protobuf.ByteString
           getPackagesBytes(int index) {
@@ -13391,6 +14276,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The packages to set.
+       * @return This builder for chaining.
        */
       public Builder setPackages(
           int index, java.lang.String value) {
@@ -13408,6 +14296,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param value The packages to add.
+       * @return This builder for chaining.
        */
       public Builder addPackages(
           java.lang.String value) {
@@ -13425,6 +14315,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param values The packages to add.
+       * @return This builder for chaining.
        */
       public Builder addAllPackages(
           java.lang.Iterable<java.lang.String> values) {
@@ -13440,10 +14332,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPackages() {
         packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -13453,6 +14346,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string packages = 8;</code>
+       * @param value The bytes of the packages to add.
+       * @return This builder for chaining.
        */
       public Builder addPackagesBytes(
           com.google.protobuf.ByteString value) {
@@ -13468,9 +14363,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRepositoriesIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           repositories_ = new com.google.protobuf.LazyStringArrayList(repositories_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
          }
       }
       /**
@@ -13479,6 +14374,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @return A list containing the repositories.
        */
       public com.google.protobuf.ProtocolStringList
           getRepositoriesList() {
@@ -13490,6 +14386,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @return The count of repositories.
        */
       public int getRepositoriesCount() {
         return repositories_.size();
@@ -13500,6 +14397,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param index The index of the element to return.
+       * @return The repositories at the given index.
        */
       public java.lang.String getRepositories(int index) {
         return repositories_.get(index);
@@ -13510,6 +14409,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the repositories at the given index.
        */
       public com.google.protobuf.ByteString
           getRepositoriesBytes(int index) {
@@ -13521,6 +14422,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The repositories to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositories(
           int index, java.lang.String value) {
@@ -13538,6 +14442,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param value The repositories to add.
+       * @return This builder for chaining.
        */
       public Builder addRepositories(
           java.lang.String value) {
@@ -13555,6 +14461,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param values The repositories to add.
+       * @return This builder for chaining.
        */
       public Builder addAllRepositories(
           java.lang.Iterable<java.lang.String> values) {
@@ -13570,10 +14478,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositories() {
         repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -13583,6 +14492,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string repositories = 9;</code>
+       * @param value The bytes of the repositories to add.
+       * @return This builder for chaining.
        */
       public Builder addRepositoriesBytes(
           com.google.protobuf.ByteString value) {
@@ -13598,9 +14509,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludePackagesIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           excludePackages_ = new com.google.protobuf.LazyStringArrayList(excludePackages_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000100;
          }
       }
       /**
@@ -13609,6 +14520,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @return A list containing the excludePackages.
        */
       public com.google.protobuf.ProtocolStringList
           getExcludePackagesList() {
@@ -13620,6 +14532,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @return The count of excludePackages.
        */
       public int getExcludePackagesCount() {
         return excludePackages_.size();
@@ -13630,6 +14543,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param index The index of the element to return.
+       * @return The excludePackages at the given index.
        */
       public java.lang.String getExcludePackages(int index) {
         return excludePackages_.get(index);
@@ -13640,6 +14555,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the excludePackages at the given index.
        */
       public com.google.protobuf.ByteString
           getExcludePackagesBytes(int index) {
@@ -13651,6 +14568,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The excludePackages to set.
+       * @return This builder for chaining.
        */
       public Builder setExcludePackages(
           int index, java.lang.String value) {
@@ -13668,6 +14588,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param value The excludePackages to add.
+       * @return This builder for chaining.
        */
       public Builder addExcludePackages(
           java.lang.String value) {
@@ -13685,6 +14607,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param values The excludePackages to add.
+       * @return This builder for chaining.
        */
       public Builder addAllExcludePackages(
           java.lang.Iterable<java.lang.String> values) {
@@ -13700,10 +14624,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearExcludePackages() {
         excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -13713,6 +14638,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string exclude_packages = 10;</code>
+       * @param value The bytes of the excludePackages to add.
+       * @return This builder for chaining.
        */
       public Builder addExcludePackagesBytes(
           com.google.protobuf.ByteString value) {
@@ -13728,7 +14655,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13788,6 +14715,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @return A list containing the queries.
      */
     java.util.List<java.lang.String>
         getQueriesList();
@@ -13797,6 +14725,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @return The count of queries.
      */
     int getQueriesCount();
     /**
@@ -13805,6 +14734,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @param index The index of the element to return.
+     * @return The queries at the given index.
      */
     java.lang.String getQueries(int index);
     /**
@@ -13813,6 +14744,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the queries at the given index.
      */
     com.google.protobuf.ByteString
         getQueriesBytes(int index);
@@ -13820,7 +14753,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.QueryList}
    */
-  public  static final class QueryList extends
+  public static final class QueryList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.QueryList)
       QueryListOrBuilder {
@@ -13831,6 +14764,13 @@ public final class PHJ {
     }
     private QueryList() {
       queries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryList();
     }
 
     @java.lang.Override
@@ -13859,7 +14799,7 @@ public final class PHJ {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 queries_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -13867,7 +14807,7 @@ public final class PHJ {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13881,7 +14821,7 @@ public final class PHJ {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           queries_ = queries_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -13909,6 +14849,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @return A list containing the queries.
      */
     public com.google.protobuf.ProtocolStringList
         getQueriesList() {
@@ -13920,6 +14861,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @return The count of queries.
      */
     public int getQueriesCount() {
       return queries_.size();
@@ -13930,6 +14872,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @param index The index of the element to return.
+     * @return The queries at the given index.
      */
     public java.lang.String getQueries(int index) {
       return queries_.get(index);
@@ -13940,6 +14884,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string queries = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the queries at the given index.
      */
     public com.google.protobuf.ByteString
         getQueriesBytes(int index) {
@@ -13995,11 +14941,10 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.QueryList other = (yandex.cloud.api.dataproc.v1.PHJ.QueryList) obj;
 
-      boolean result = true;
-      result = result && getQueriesList()
-          .equals(other.getQueriesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getQueriesList()
+          .equals(other.getQueriesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14175,7 +15120,7 @@ public final class PHJ {
       public yandex.cloud.api.dataproc.v1.PHJ.QueryList buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJ.QueryList result = new yandex.cloud.api.dataproc.v1.PHJ.QueryList(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           queries_ = queries_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -14186,35 +15131,35 @@ public final class PHJ {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14270,7 +15215,7 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList queries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureQueriesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           queries_ = new com.google.protobuf.LazyStringArrayList(queries_);
           bitField0_ |= 0x00000001;
          }
@@ -14281,6 +15226,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @return A list containing the queries.
        */
       public com.google.protobuf.ProtocolStringList
           getQueriesList() {
@@ -14292,6 +15238,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @return The count of queries.
        */
       public int getQueriesCount() {
         return queries_.size();
@@ -14302,6 +15249,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @param index The index of the element to return.
+       * @return The queries at the given index.
        */
       public java.lang.String getQueries(int index) {
         return queries_.get(index);
@@ -14312,6 +15261,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the queries at the given index.
        */
       public com.google.protobuf.ByteString
           getQueriesBytes(int index) {
@@ -14323,6 +15274,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The queries to set.
+       * @return This builder for chaining.
        */
       public Builder setQueries(
           int index, java.lang.String value) {
@@ -14340,6 +15294,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @param value The queries to add.
+       * @return This builder for chaining.
        */
       public Builder addQueries(
           java.lang.String value) {
@@ -14357,6 +15313,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @param values The queries to add.
+       * @return This builder for chaining.
        */
       public Builder addAllQueries(
           java.lang.Iterable<java.lang.String> values) {
@@ -14372,6 +15330,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQueries() {
         queries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -14385,6 +15344,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string queries = 1;</code>
+       * @param value The bytes of the queries to add.
+       * @return This builder for chaining.
        */
       public Builder addQueriesBytes(
           com.google.protobuf.ByteString value) {
@@ -14400,7 +15361,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14514,6 +15475,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>bool continue_on_failure = 2;</code>
+     * @return The continueOnFailure.
      */
     boolean getContinueOnFailure();
 
@@ -14577,6 +15539,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @return A list containing the jarFileUris.
      */
     java.util.List<java.lang.String>
         getJarFileUrisList();
@@ -14586,6 +15549,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @return The count of jarFileUris.
      */
     int getJarFileUrisCount();
     /**
@@ -14594,6 +15558,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     java.lang.String getJarFileUris(int index);
     /**
@@ -14602,6 +15568,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     com.google.protobuf.ByteString
         getJarFileUrisBytes(int index);
@@ -14612,6 +15580,16 @@ public final class PHJ {
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
+     * @return Whether the queryFileUri field is set.
+     */
+    boolean hasQueryFileUri();
+    /**
+     * <pre>
+     * URI of the script with all the necessary Hive queries.
+     * </pre>
+     *
+     * <code>string query_file_uri = 5;</code>
+     * @return The queryFileUri.
      */
     java.lang.String getQueryFileUri();
     /**
@@ -14620,6 +15598,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
+     * @return The bytes for queryFileUri.
      */
     com.google.protobuf.ByteString
         getQueryFileUriBytes();
@@ -14630,6 +15609,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
+     * @return Whether the queryList field is set.
      */
     boolean hasQueryList();
     /**
@@ -14638,6 +15618,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
+     * @return The queryList.
      */
     yandex.cloud.api.dataproc.v1.PHJ.QueryList getQueryList();
     /**
@@ -14654,7 +15635,7 @@ public final class PHJ {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.HiveJob}
    */
-  public  static final class HiveJob extends
+  public static final class HiveJob extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.HiveJob)
       HiveJobOrBuilder {
@@ -14664,8 +15645,14 @@ public final class PHJ {
       super(builder);
     }
     private HiveJob() {
-      continueOnFailure_ = false;
       jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HiveJob();
     }
 
     @java.lang.Override
@@ -14693,7 +15680,7 @@ public final class PHJ {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
@@ -14711,10 +15698,10 @@ public final class PHJ {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 scriptVariables_ = com.google.protobuf.MapField.newMapField(
                     ScriptVariablesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               scriptVariables__ = input.readMessage(
@@ -14725,9 +15712,9 @@ public final class PHJ {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 jarFileUris_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000004;
               }
               jarFileUris_.add(s);
               break;
@@ -14753,7 +15740,7 @@ public final class PHJ {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14767,7 +15754,7 @@ public final class PHJ {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -14801,11 +15788,11 @@ public final class PHJ {
               yandex.cloud.api.dataproc.v1.PHJ.HiveJob.class, yandex.cloud.api.dataproc.v1.PHJ.HiveJob.Builder.class);
     }
 
-    private int bitField0_;
     private int queryTypeCase_ = 0;
     private java.lang.Object queryType_;
     public enum QueryTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       QUERY_FILE_URI(5),
       QUERY_LIST(6),
       QUERYTYPE_NOT_SET(0);
@@ -14814,6 +15801,8 @@ public final class PHJ {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -14874,14 +15863,16 @@ public final class PHJ {
      * <code>map&lt;string, string&gt; properties = 1;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -14893,6 +15884,7 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -14904,11 +15896,12 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14920,10 +15913,11 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -14940,7 +15934,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>bool continue_on_failure = 2;</code>
+     * @return The continueOnFailure.
      */
+    @java.lang.Override
     public boolean getContinueOnFailure() {
       return continueOnFailure_;
     }
@@ -14979,14 +15975,16 @@ public final class PHJ {
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
      */
 
+    @java.lang.Override
     public boolean containsScriptVariables(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetScriptVariables().getMap().containsKey(key);
     }
     /**
      * Use {@link #getScriptVariablesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getScriptVariables() {
       return getScriptVariablesMap();
@@ -14998,6 +15996,7 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getScriptVariablesMap() {
       return internalGetScriptVariables().getMap();
@@ -15009,11 +16008,12 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getScriptVariablesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetScriptVariables().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15025,10 +16025,11 @@ public final class PHJ {
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getScriptVariablesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetScriptVariables().getMap();
       if (!map.containsKey(key)) {
@@ -15045,6 +16046,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @return A list containing the jarFileUris.
      */
     public com.google.protobuf.ProtocolStringList
         getJarFileUrisList() {
@@ -15056,6 +16058,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @return The count of jarFileUris.
      */
     public int getJarFileUrisCount() {
       return jarFileUris_.size();
@@ -15066,6 +16069,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @param index The index of the element to return.
+     * @return The jarFileUris at the given index.
      */
     public java.lang.String getJarFileUris(int index) {
       return jarFileUris_.get(index);
@@ -15076,6 +16081,8 @@ public final class PHJ {
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the jarFileUris at the given index.
      */
     public com.google.protobuf.ByteString
         getJarFileUrisBytes(int index) {
@@ -15089,6 +16096,18 @@ public final class PHJ {
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
+     * @return Whether the queryFileUri field is set.
+     */
+    public boolean hasQueryFileUri() {
+      return queryTypeCase_ == 5;
+    }
+    /**
+     * <pre>
+     * URI of the script with all the necessary Hive queries.
+     * </pre>
+     *
+     * <code>string query_file_uri = 5;</code>
+     * @return The queryFileUri.
      */
     public java.lang.String getQueryFileUri() {
       java.lang.Object ref = "";
@@ -15113,6 +16132,7 @@ public final class PHJ {
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
+     * @return The bytes for queryFileUri.
      */
     public com.google.protobuf.ByteString
         getQueryFileUriBytes() {
@@ -15140,7 +16160,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
+     * @return Whether the queryList field is set.
      */
+    @java.lang.Override
     public boolean hasQueryList() {
       return queryTypeCase_ == 6;
     }
@@ -15150,7 +16172,9 @@ public final class PHJ {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
+     * @return The queryList.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.QueryList getQueryList() {
       if (queryTypeCase_ == 6) {
          return (yandex.cloud.api.dataproc.v1.PHJ.QueryList) queryType_;
@@ -15164,6 +16188,7 @@ public final class PHJ {
      *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.QueryListOrBuilder getQueryListOrBuilder() {
       if (queryTypeCase_ == 6) {
          return (yandex.cloud.api.dataproc.v1.PHJ.QueryList) queryType_;
@@ -15272,32 +16297,29 @@ public final class PHJ {
       }
       yandex.cloud.api.dataproc.v1.PHJ.HiveJob other = (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) obj;
 
-      boolean result = true;
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && (getContinueOnFailure()
-          == other.getContinueOnFailure());
-      result = result && internalGetScriptVariables().equals(
-          other.internalGetScriptVariables());
-      result = result && getJarFileUrisList()
-          .equals(other.getJarFileUrisList());
-      result = result && getQueryTypeCase().equals(
-          other.getQueryTypeCase());
-      if (!result) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (getContinueOnFailure()
+          != other.getContinueOnFailure()) return false;
+      if (!internalGetScriptVariables().equals(
+          other.internalGetScriptVariables())) return false;
+      if (!getJarFileUrisList()
+          .equals(other.getJarFileUrisList())) return false;
+      if (!getQueryTypeCase().equals(other.getQueryTypeCase())) return false;
       switch (queryTypeCase_) {
         case 5:
-          result = result && getQueryFileUri()
-              .equals(other.getQueryFileUri());
+          if (!getQueryFileUri()
+              .equals(other.getQueryFileUri())) return false;
           break;
         case 6:
-          result = result && getQueryList()
-              .equals(other.getQueryList());
+          if (!getQueryList()
+              .equals(other.getQueryList())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15498,7 +16520,7 @@ public final class PHJ {
 
         internalGetMutableScriptVariables().clear();
         jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         queryTypeCase_ = 0;
         queryType_ = null;
         return this;
@@ -15528,15 +16550,14 @@ public final class PHJ {
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJ.HiveJob result = new yandex.cloud.api.dataproc.v1.PHJ.HiveJob(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.properties_ = internalGetProperties();
         result.properties_.makeImmutable();
         result.continueOnFailure_ = continueOnFailure_;
         result.scriptVariables_ = internalGetScriptVariables();
         result.scriptVariables_.makeImmutable();
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           jarFileUris_ = jarFileUris_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.jarFileUris_ = jarFileUris_;
         if (queryTypeCase_ == 5) {
@@ -15549,7 +16570,6 @@ public final class PHJ {
             result.queryType_ = queryListBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.queryTypeCase_ = queryTypeCase_;
         onBuilt();
         return result;
@@ -15557,35 +16577,35 @@ public final class PHJ {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15609,7 +16629,7 @@ public final class PHJ {
         if (!other.jarFileUris_.isEmpty()) {
           if (jarFileUris_.isEmpty()) {
             jarFileUris_ = other.jarFileUris_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureJarFileUrisIsMutable();
             jarFileUris_.addAll(other.jarFileUris_);
@@ -15710,14 +16730,16 @@ public final class PHJ {
        * <code>map&lt;string, string&gt; properties = 1;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -15729,6 +16751,7 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -15740,11 +16763,12 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15756,10 +16780,11 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -15783,7 +16808,7 @@ public final class PHJ {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -15806,8 +16831,11 @@ public final class PHJ {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -15834,7 +16862,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>bool continue_on_failure = 2;</code>
+       * @return The continueOnFailure.
        */
+      @java.lang.Override
       public boolean getContinueOnFailure() {
         return continueOnFailure_;
       }
@@ -15844,6 +16874,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>bool continue_on_failure = 2;</code>
+       * @param value The continueOnFailure to set.
+       * @return This builder for chaining.
        */
       public Builder setContinueOnFailure(boolean value) {
         
@@ -15857,6 +16889,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>bool continue_on_failure = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContinueOnFailure() {
         
@@ -15899,14 +16932,16 @@ public final class PHJ {
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
        */
 
+      @java.lang.Override
       public boolean containsScriptVariables(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetScriptVariables().getMap().containsKey(key);
       }
       /**
        * Use {@link #getScriptVariablesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getScriptVariables() {
         return getScriptVariablesMap();
@@ -15918,6 +16953,7 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getScriptVariablesMap() {
         return internalGetScriptVariables().getMap();
@@ -15929,11 +16965,12 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getScriptVariablesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetScriptVariables().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15945,10 +16982,11 @@ public final class PHJ {
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getScriptVariablesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetScriptVariables().getMap();
         if (!map.containsKey(key)) {
@@ -15972,7 +17010,7 @@ public final class PHJ {
 
       public Builder removeScriptVariables(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableScriptVariables().getMutableMap()
             .remove(key);
         return this;
@@ -15995,8 +17033,11 @@ public final class PHJ {
       public Builder putScriptVariables(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableScriptVariables().getMutableMap()
             .put(key, value);
         return this;
@@ -16018,9 +17059,9 @@ public final class PHJ {
 
       private com.google.protobuf.LazyStringList jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureJarFileUrisIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           jarFileUris_ = new com.google.protobuf.LazyStringArrayList(jarFileUris_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -16029,6 +17070,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @return A list containing the jarFileUris.
        */
       public com.google.protobuf.ProtocolStringList
           getJarFileUrisList() {
@@ -16040,6 +17082,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @return The count of jarFileUris.
        */
       public int getJarFileUrisCount() {
         return jarFileUris_.size();
@@ -16050,6 +17093,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @param index The index of the element to return.
+       * @return The jarFileUris at the given index.
        */
       public java.lang.String getJarFileUris(int index) {
         return jarFileUris_.get(index);
@@ -16060,6 +17105,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the jarFileUris at the given index.
        */
       public com.google.protobuf.ByteString
           getJarFileUrisBytes(int index) {
@@ -16071,6 +17118,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The jarFileUris to set.
+       * @return This builder for chaining.
        */
       public Builder setJarFileUris(
           int index, java.lang.String value) {
@@ -16088,6 +17138,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @param value The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUris(
           java.lang.String value) {
@@ -16105,6 +17157,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @param values The jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addAllJarFileUris(
           java.lang.Iterable<java.lang.String> values) {
@@ -16120,10 +17174,11 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearJarFileUris() {
         jarFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -16133,6 +17188,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
+       * @param value The bytes of the jarFileUris to add.
+       * @return This builder for chaining.
        */
       public Builder addJarFileUrisBytes(
           com.google.protobuf.ByteString value) {
@@ -16152,7 +17209,21 @@ public final class PHJ {
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
+       * @return Whether the queryFileUri field is set.
        */
+      @java.lang.Override
+      public boolean hasQueryFileUri() {
+        return queryTypeCase_ == 5;
+      }
+      /**
+       * <pre>
+       * URI of the script with all the necessary Hive queries.
+       * </pre>
+       *
+       * <code>string query_file_uri = 5;</code>
+       * @return The queryFileUri.
+       */
+      @java.lang.Override
       public java.lang.String getQueryFileUri() {
         java.lang.Object ref = "";
         if (queryTypeCase_ == 5) {
@@ -16176,7 +17247,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
+       * @return The bytes for queryFileUri.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getQueryFileUriBytes() {
         java.lang.Object ref = "";
@@ -16201,6 +17274,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
+       * @param value The queryFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setQueryFileUri(
           java.lang.String value) {
@@ -16218,6 +17293,7 @@ public final class PHJ {
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQueryFileUri() {
         if (queryTypeCase_ == 5) {
@@ -16233,6 +17309,8 @@ public final class PHJ {
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
+       * @param value The bytes for queryFileUri to set.
+       * @return This builder for chaining.
        */
       public Builder setQueryFileUriBytes(
           com.google.protobuf.ByteString value) {
@@ -16254,7 +17332,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
+       * @return Whether the queryList field is set.
        */
+      @java.lang.Override
       public boolean hasQueryList() {
         return queryTypeCase_ == 6;
       }
@@ -16264,7 +17344,9 @@ public final class PHJ {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
+       * @return The queryList.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.QueryList getQueryList() {
         if (queryListBuilder_ == null) {
           if (queryTypeCase_ == 6) {
@@ -16382,6 +17464,7 @@ public final class PHJ {
        *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.QueryListOrBuilder getQueryListOrBuilder() {
         if ((queryTypeCase_ == 6) && (queryListBuilder_ != null)) {
           return queryListBuilder_.getMessageOrBuilder();
@@ -16420,7 +17503,7 @@ public final class PHJ {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16608,19 +17691,11 @@ public final class PHJ {
       "dex-cloud/go-genproto/yandex/cloud/datap" +
       "roc/v1;dataprocb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_dataproc_v1_Job_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_Job_fieldAccessorTable = new

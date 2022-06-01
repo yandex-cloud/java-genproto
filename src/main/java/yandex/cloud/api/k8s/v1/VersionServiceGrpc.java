@@ -1,19 +1,6 @@
 package yandex.cloud.api.k8s.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/k8s/v1/version_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class VersionServiceGrpc {
 
   private VersionServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class VersionServiceGrpc {
     if ((getListMethod = VersionServiceGrpc.getListMethod) == null) {
       synchronized (VersionServiceGrpc.class) {
         if ((getListMethod = VersionServiceGrpc.getListMethod) == null) {
-          VersionServiceGrpc.getListMethod = getListMethod = 
+          VersionServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.VersionService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new VersionServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VersionServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static VersionServiceStub newStub(io.grpc.Channel channel) {
-    return new VersionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VersionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VersionServiceStub>() {
+        @java.lang.Override
+        public VersionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VersionServiceStub(channel, callOptions);
+        }
+      };
+    return VersionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class VersionServiceGrpc {
    */
   public static VersionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new VersionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VersionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VersionServiceBlockingStub>() {
+        @java.lang.Override
+        public VersionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VersionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return VersionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class VersionServiceGrpc {
    */
   public static VersionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new VersionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VersionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VersionServiceFutureStub>() {
+        @java.lang.Override
+        public VersionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VersionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return VersionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class VersionServiceGrpc {
      */
     public void list(yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest,
                 yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse>(
@@ -120,19 +128,15 @@ public final class VersionServiceGrpc {
    * A set of methods for managing Kubernetes versions.
    * </pre>
    */
-  public static final class VersionServiceStub extends io.grpc.stub.AbstractStub<VersionServiceStub> {
-    private VersionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VersionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VersionServiceStub extends io.grpc.stub.AbstractAsyncStub<VersionServiceStub> {
+    private VersionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VersionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VersionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VersionServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class VersionServiceGrpc {
      */
     public void list(yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class VersionServiceGrpc {
    * A set of methods for managing Kubernetes versions.
    * </pre>
    */
-  public static final class VersionServiceBlockingStub extends io.grpc.stub.AbstractStub<VersionServiceBlockingStub> {
-    private VersionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VersionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VersionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VersionServiceBlockingStub> {
+    private VersionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VersionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VersionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VersionServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class VersionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse list(yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class VersionServiceGrpc {
    * A set of methods for managing Kubernetes versions.
    * </pre>
    */
-  public static final class VersionServiceFutureStub extends io.grpc.stub.AbstractStub<VersionServiceFutureStub> {
-    private VersionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VersionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VersionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VersionServiceFutureStub> {
+    private VersionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VersionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VersionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VersionServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class VersionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse> list(
         yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

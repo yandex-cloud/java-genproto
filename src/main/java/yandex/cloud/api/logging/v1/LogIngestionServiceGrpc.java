@@ -1,19 +1,6 @@
 package yandex.cloud.api.logging.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/logging/v1/log_ingestion_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class LogIngestionServiceGrpc {
 
   private LogIngestionServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class LogIngestionServiceGrpc {
     if ((getWriteMethod = LogIngestionServiceGrpc.getWriteMethod) == null) {
       synchronized (LogIngestionServiceGrpc.class) {
         if ((getWriteMethod = LogIngestionServiceGrpc.getWriteMethod) == null) {
-          LogIngestionServiceGrpc.getWriteMethod = getWriteMethod = 
+          LogIngestionServiceGrpc.getWriteMethod = getWriteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest, yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogIngestionService", "Write"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Write"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogIngestionServiceMethodDescriptorSupplier("Write"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogIngestionServiceMethodDescriptorSupplier("Write"))
+              .build();
         }
-     }
-     return getWriteMethod;
+      }
+    }
+    return getWriteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LogIngestionServiceStub newStub(io.grpc.Channel channel) {
-    return new LogIngestionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogIngestionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogIngestionServiceStub>() {
+        @java.lang.Override
+        public LogIngestionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogIngestionServiceStub(channel, callOptions);
+        }
+      };
+    return LogIngestionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class LogIngestionServiceGrpc {
    */
   public static LogIngestionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LogIngestionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogIngestionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogIngestionServiceBlockingStub>() {
+        @java.lang.Override
+        public LogIngestionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogIngestionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LogIngestionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class LogIngestionServiceGrpc {
    */
   public static LogIngestionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LogIngestionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogIngestionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogIngestionServiceFutureStub>() {
+        @java.lang.Override
+        public LogIngestionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogIngestionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LogIngestionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class LogIngestionServiceGrpc {
      */
     public void write(yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getWriteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWriteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getWriteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest,
                 yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse>(
@@ -120,19 +128,15 @@ public final class LogIngestionServiceGrpc {
    * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
    * </pre>
    */
-  public static final class LogIngestionServiceStub extends io.grpc.stub.AbstractStub<LogIngestionServiceStub> {
-    private LogIngestionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogIngestionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogIngestionServiceStub extends io.grpc.stub.AbstractAsyncStub<LogIngestionServiceStub> {
+    private LogIngestionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogIngestionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogIngestionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogIngestionServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class LogIngestionServiceGrpc {
      */
     public void write(yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getWriteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class LogIngestionServiceGrpc {
    * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
    * </pre>
    */
-  public static final class LogIngestionServiceBlockingStub extends io.grpc.stub.AbstractStub<LogIngestionServiceBlockingStub> {
-    private LogIngestionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogIngestionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogIngestionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LogIngestionServiceBlockingStub> {
+    private LogIngestionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogIngestionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogIngestionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogIngestionServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class LogIngestionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse write(yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getWriteMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class LogIngestionServiceGrpc {
    * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
    * </pre>
    */
-  public static final class LogIngestionServiceFutureStub extends io.grpc.stub.AbstractStub<LogIngestionServiceFutureStub> {
-    private LogIngestionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogIngestionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogIngestionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LogIngestionServiceFutureStub> {
+    private LogIngestionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogIngestionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogIngestionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogIngestionServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class LogIngestionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse> write(
         yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getWriteMethod(), getCallOptions()), request);
     }
   }

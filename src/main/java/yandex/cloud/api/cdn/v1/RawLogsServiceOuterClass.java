@@ -24,6 +24,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -32,6 +33,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -42,6 +44,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
@@ -50,6 +53,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings();
     /**
@@ -64,7 +68,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.ActivateRawLogsRequest}
    */
-  public  static final class ActivateRawLogsRequest extends
+  public static final class ActivateRawLogsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ActivateRawLogsRequest)
       ActivateRawLogsRequestOrBuilder {
@@ -75,6 +79,13 @@ public final class RawLogsServiceOuterClass {
     }
     private ActivateRawLogsRequest() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateRawLogsRequest();
     }
 
     @java.lang.Override
@@ -90,7 +101,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -121,7 +131,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -160,7 +170,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -179,7 +191,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -202,7 +216,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
@@ -212,7 +228,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.getDefaultInstance() : settings_;
     }
@@ -223,6 +241,7 @@ public final class RawLogsServiceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -241,7 +260,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       if (settings_ != null) {
@@ -256,7 +275,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       if (settings_ != null) {
@@ -278,16 +297,15 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && (hasSettings() == other.hasSettings());
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -482,35 +500,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -567,6 +585,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -586,6 +605,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -606,6 +626,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -623,6 +645,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -636,6 +659,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -649,7 +674,7 @@ public final class RawLogsServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_ = null;
+      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.Builder, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder> settingsBuilder_;
       /**
@@ -658,6 +683,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -668,6 +694,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -804,7 +831,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -864,6 +891,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -872,6 +900,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -879,7 +908,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.ActivateRawLogsMetadata}
    */
-  public  static final class ActivateRawLogsMetadata extends
+  public static final class ActivateRawLogsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ActivateRawLogsMetadata)
       ActivateRawLogsMetadataOrBuilder {
@@ -890,6 +919,13 @@ public final class RawLogsServiceOuterClass {
     }
     private ActivateRawLogsMetadata() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateRawLogsMetadata();
     }
 
     @java.lang.Override
@@ -905,7 +941,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -923,7 +958,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -962,7 +997,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -981,7 +1018,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -1010,7 +1049,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -1022,7 +1061,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1040,11 +1079,10 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsMetadata other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsMetadata) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1224,35 +1262,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1306,6 +1344,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -1325,6 +1364,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -1345,6 +1385,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -1362,6 +1404,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -1375,6 +1418,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1390,7 +1435,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1450,6 +1495,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -1458,6 +1504,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The status.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus();
 
@@ -1467,6 +1514,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
@@ -1475,6 +1523,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings();
     /**
@@ -1489,7 +1538,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.ActivateRawLogsResponse}
    */
-  public  static final class ActivateRawLogsResponse extends
+  public static final class ActivateRawLogsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ActivateRawLogsResponse)
       ActivateRawLogsResponseOrBuilder {
@@ -1500,6 +1549,13 @@ public final class RawLogsServiceOuterClass {
     }
     private ActivateRawLogsResponse() {
       status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateRawLogsResponse();
     }
 
     @java.lang.Override
@@ -1515,7 +1571,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1546,7 +1601,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1585,8 +1640,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1595,8 +1651,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus result = yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.valueOf(status_);
       return result == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.UNRECOGNIZED : result;
@@ -1610,7 +1667,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
@@ -1620,7 +1679,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.getDefaultInstance() : settings_;
     }
@@ -1631,6 +1692,7 @@ public final class RawLogsServiceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -1687,15 +1749,14 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsResponse other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsResponse) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && (hasSettings() == other.hasSettings());
+      if (status_ != other.status_) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1890,35 +1951,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1974,8 +2035,9 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -1984,8 +2046,11 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -1996,7 +2061,9 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus result = yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.valueOf(status_);
@@ -2008,6 +2075,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus value) {
         if (value == null) {
@@ -2024,6 +2093,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2032,7 +2102,7 @@ public final class RawLogsServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_ = null;
+      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.Builder, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder> settingsBuilder_;
       /**
@@ -2041,6 +2111,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -2051,6 +2122,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -2187,7 +2259,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2247,6 +2319,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -2255,6 +2328,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -2262,7 +2336,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.DeactivateRawLogsRequest}
    */
-  public  static final class DeactivateRawLogsRequest extends
+  public static final class DeactivateRawLogsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.DeactivateRawLogsRequest)
       DeactivateRawLogsRequestOrBuilder {
@@ -2273,6 +2347,13 @@ public final class RawLogsServiceOuterClass {
     }
     private DeactivateRawLogsRequest() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeactivateRawLogsRequest();
     }
 
     @java.lang.Override
@@ -2288,7 +2369,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2306,7 +2386,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2345,7 +2425,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -2364,7 +2446,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -2393,7 +2477,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -2405,7 +2489,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2423,11 +2507,10 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2607,35 +2690,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2689,6 +2772,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -2708,6 +2792,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -2728,6 +2813,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -2745,6 +2832,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -2758,6 +2846,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2773,7 +2863,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2833,6 +2923,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -2841,6 +2932,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -2848,7 +2940,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.DeactivateRawLogsMetadata}
    */
-  public  static final class DeactivateRawLogsMetadata extends
+  public static final class DeactivateRawLogsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.DeactivateRawLogsMetadata)
       DeactivateRawLogsMetadataOrBuilder {
@@ -2859,6 +2951,13 @@ public final class RawLogsServiceOuterClass {
     }
     private DeactivateRawLogsMetadata() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeactivateRawLogsMetadata();
     }
 
     @java.lang.Override
@@ -2874,7 +2973,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2892,7 +2990,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2931,7 +3029,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -2950,7 +3050,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -2979,7 +3081,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -2991,7 +3093,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3009,11 +3111,10 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsMetadata other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsMetadata) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3193,35 +3294,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3275,6 +3376,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -3294,6 +3396,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -3314,6 +3417,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -3331,6 +3436,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -3344,6 +3450,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3359,7 +3467,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3419,6 +3527,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -3427,6 +3536,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -3434,7 +3544,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.GetRawLogsRequest}
    */
-  public  static final class GetRawLogsRequest extends
+  public static final class GetRawLogsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.GetRawLogsRequest)
       GetRawLogsRequestOrBuilder {
@@ -3445,6 +3555,13 @@ public final class RawLogsServiceOuterClass {
     }
     private GetRawLogsRequest() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRawLogsRequest();
     }
 
     @java.lang.Override
@@ -3460,7 +3577,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3478,7 +3594,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3517,7 +3633,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -3536,7 +3654,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -3565,7 +3685,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -3577,7 +3697,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3595,11 +3715,10 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3779,35 +3898,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3861,6 +3980,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -3880,6 +4000,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -3900,6 +4021,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -3917,6 +4040,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -3930,6 +4054,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3945,7 +4071,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4005,6 +4131,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -4013,6 +4140,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The status.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus();
 
@@ -4022,6 +4150,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
@@ -4030,6 +4159,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings();
     /**
@@ -4044,7 +4174,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.GetRawLogsResponse}
    */
-  public  static final class GetRawLogsResponse extends
+  public static final class GetRawLogsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.GetRawLogsResponse)
       GetRawLogsResponseOrBuilder {
@@ -4055,6 +4185,13 @@ public final class RawLogsServiceOuterClass {
     }
     private GetRawLogsResponse() {
       status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRawLogsResponse();
     }
 
     @java.lang.Override
@@ -4070,7 +4207,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4101,7 +4237,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4140,8 +4276,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -4150,8 +4287,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus result = yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.valueOf(status_);
       return result == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.UNRECOGNIZED : result;
@@ -4165,7 +4303,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
@@ -4175,7 +4315,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.getDefaultInstance() : settings_;
     }
@@ -4186,6 +4328,7 @@ public final class RawLogsServiceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -4242,15 +4385,14 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && (hasSettings() == other.hasSettings());
+      if (status_ != other.status_) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4445,35 +4587,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4529,8 +4671,9 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -4539,8 +4682,11 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -4551,7 +4697,9 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus result = yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.valueOf(status_);
@@ -4563,6 +4711,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus value) {
         if (value == null) {
@@ -4579,6 +4729,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -4587,7 +4738,7 @@ public final class RawLogsServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_ = null;
+      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.Builder, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder> settingsBuilder_;
       /**
@@ -4596,6 +4747,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -4606,6 +4758,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -4742,7 +4895,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4802,6 +4955,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -4810,6 +4964,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -4820,6 +4975,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
@@ -4828,6 +4984,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings();
     /**
@@ -4842,7 +4999,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.UpdateRawLogsRequest}
    */
-  public  static final class UpdateRawLogsRequest extends
+  public static final class UpdateRawLogsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.UpdateRawLogsRequest)
       UpdateRawLogsRequestOrBuilder {
@@ -4853,6 +5010,13 @@ public final class RawLogsServiceOuterClass {
     }
     private UpdateRawLogsRequest() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRawLogsRequest();
     }
 
     @java.lang.Override
@@ -4868,7 +5032,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4899,7 +5062,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4938,7 +5101,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -4957,7 +5122,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -4980,7 +5147,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
@@ -4990,7 +5159,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.getDefaultInstance() : settings_;
     }
@@ -5001,6 +5172,7 @@ public final class RawLogsServiceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -5019,7 +5191,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       if (settings_ != null) {
@@ -5034,7 +5206,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       if (settings_ != null) {
@@ -5056,16 +5228,15 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && (hasSettings() == other.hasSettings());
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5260,35 +5431,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5345,6 +5516,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -5364,6 +5536,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -5384,6 +5557,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -5401,6 +5576,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -5414,6 +5590,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5427,7 +5605,7 @@ public final class RawLogsServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_ = null;
+      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.Builder, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder> settingsBuilder_;
       /**
@@ -5436,6 +5614,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -5446,6 +5625,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -5582,7 +5762,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5642,6 +5822,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -5650,6 +5831,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The status.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus();
 
@@ -5659,6 +5841,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
@@ -5667,6 +5850,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
     yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings();
     /**
@@ -5681,7 +5865,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.UpdateRawLogsResponse}
    */
-  public  static final class UpdateRawLogsResponse extends
+  public static final class UpdateRawLogsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.UpdateRawLogsResponse)
       UpdateRawLogsResponseOrBuilder {
@@ -5692,6 +5876,13 @@ public final class RawLogsServiceOuterClass {
     }
     private UpdateRawLogsResponse() {
       status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRawLogsResponse();
     }
 
     @java.lang.Override
@@ -5707,7 +5898,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5738,7 +5928,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5777,8 +5967,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -5787,8 +5978,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus result = yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.valueOf(status_);
       return result == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.UNRECOGNIZED : result;
@@ -5802,7 +5994,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
@@ -5812,7 +6006,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.getDefaultInstance() : settings_;
     }
@@ -5823,6 +6019,7 @@ public final class RawLogsServiceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -5879,15 +6076,14 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsResponse other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsResponse) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && (hasSettings() == other.hasSettings());
+      if (status_ != other.status_) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6082,35 +6278,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6166,8 +6362,9 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -6176,8 +6373,11 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -6188,7 +6388,9 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus result = yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus.valueOf(status_);
@@ -6200,6 +6402,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.cdn.v1.RawLogs.RawLogsStatus value) {
         if (value == null) {
@@ -6216,6 +6420,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsStatus status = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -6224,7 +6429,7 @@ public final class RawLogsServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_ = null;
+      private yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings.Builder, yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettingsOrBuilder> settingsBuilder_;
       /**
@@ -6233,6 +6438,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -6243,6 +6449,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RawLogsSettings settings = 2;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -6379,7 +6586,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6439,6 +6646,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -6447,6 +6655,7 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -6454,7 +6663,7 @@ public final class RawLogsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.UpdateRawLogsMetadata}
    */
-  public  static final class UpdateRawLogsMetadata extends
+  public static final class UpdateRawLogsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.UpdateRawLogsMetadata)
       UpdateRawLogsMetadataOrBuilder {
@@ -6465,6 +6674,13 @@ public final class RawLogsServiceOuterClass {
     }
     private UpdateRawLogsMetadata() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRawLogsMetadata();
     }
 
     @java.lang.Override
@@ -6480,7 +6696,6 @@ public final class RawLogsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6498,7 +6713,7 @@ public final class RawLogsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6537,7 +6752,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -6556,7 +6773,9 @@ public final class RawLogsServiceOuterClass {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -6585,7 +6804,7 @@ public final class RawLogsServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -6597,7 +6816,7 @@ public final class RawLogsServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6615,11 +6834,10 @@ public final class RawLogsServiceOuterClass {
       }
       yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsMetadata other = (yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsMetadata) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6799,35 +7017,35 @@ public final class RawLogsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6881,6 +7099,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -6900,6 +7119,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -6920,6 +7140,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -6937,6 +7159,7 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -6950,6 +7173,8 @@ public final class RawLogsServiceOuterClass {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6965,7 +7190,7 @@ public final class RawLogsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7124,15 +7349,7 @@ public final class RawLogsServiceOuterClass {
       "cloud/go-genproto/yandex/cloud/cdn/v1;cd" +
       "nb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -7140,7 +7357,7 @@ public final class RawLogsServiceOuterClass {
           yandex.cloud.api.cdn.v1.RawLogs.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_cdn_v1_ActivateRawLogsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_ActivateRawLogsRequest_fieldAccessorTable = new

@@ -25,6 +25,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -34,6 +35,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -45,6 +47,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -54,6 +57,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -61,7 +65,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GetVirtualHostRequest}
    */
-  public  static final class GetVirtualHostRequest extends
+  public static final class GetVirtualHostRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GetVirtualHostRequest)
       GetVirtualHostRequestOrBuilder {
@@ -73,6 +77,13 @@ public final class VirtualHostServiceOuterClass {
     private GetVirtualHostRequest() {
       httpRouterId_ = "";
       virtualHostName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetVirtualHostRequest();
     }
 
     @java.lang.Override
@@ -88,7 +99,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,7 +122,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -152,7 +162,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -172,7 +184,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -196,7 +210,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -216,7 +232,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -245,10 +263,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
       unknownFields.writeTo(output);
@@ -260,10 +278,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
       size += unknownFields.getSerializedSize();
@@ -281,13 +299,12 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -472,35 +489,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -559,6 +576,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -579,6 +597,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -600,6 +619,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -618,6 +639,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -632,6 +654,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -653,6 +677,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -673,6 +698,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -694,6 +720,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -712,6 +740,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -726,6 +755,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -741,7 +772,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -802,6 +833,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -811,6 +843,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -824,6 +857,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -834,6 +868,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -843,6 +878,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -850,7 +886,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListVirtualHostsRequest}
    */
-  public  static final class ListVirtualHostsRequest extends
+  public static final class ListVirtualHostsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListVirtualHostsRequest)
       ListVirtualHostsRequestOrBuilder {
@@ -861,8 +897,14 @@ public final class VirtualHostServiceOuterClass {
     }
     private ListVirtualHostsRequest() {
       httpRouterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVirtualHostsRequest();
     }
 
     @java.lang.Override
@@ -878,7 +920,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -907,7 +948,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -947,7 +988,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -967,7 +1010,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -993,7 +1038,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1007,7 +1054,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1027,7 +1076,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1056,13 +1107,13 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -1074,14 +1125,14 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1099,15 +1150,14 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1298,35 +1348,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1388,6 +1438,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -1408,6 +1459,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -1429,6 +1481,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -1447,6 +1501,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -1461,6 +1516,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1484,7 +1541,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1497,6 +1556,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1513,6 +1574,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1529,6 +1591,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1549,6 +1612,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1570,6 +1634,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1588,6 +1654,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1602,6 +1669,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1617,7 +1686,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1724,6 +1793,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1735,6 +1805,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1742,7 +1813,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListVirtualHostsResponse}
    */
-  public  static final class ListVirtualHostsResponse extends
+  public static final class ListVirtualHostsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListVirtualHostsResponse)
       ListVirtualHostsResponseOrBuilder {
@@ -1754,6 +1825,13 @@ public final class VirtualHostServiceOuterClass {
     private ListVirtualHostsResponse() {
       virtualHosts_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVirtualHostsResponse();
     }
 
     @java.lang.Override
@@ -1781,7 +1859,7 @@ public final class VirtualHostServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 virtualHosts_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1796,7 +1874,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1810,7 +1888,7 @@ public final class VirtualHostServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           virtualHosts_ = java.util.Collections.unmodifiableList(virtualHosts_);
         }
         this.unknownFields = unknownFields.build();
@@ -1830,7 +1908,6 @@ public final class VirtualHostServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VIRTUAL_HOSTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_;
     /**
@@ -1840,6 +1917,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
       return virtualHosts_;
     }
@@ -1850,6 +1928,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
         getVirtualHostsOrBuilderList() {
       return virtualHosts_;
@@ -1861,6 +1940,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
      */
+    @java.lang.Override
     public int getVirtualHostsCount() {
       return virtualHosts_.size();
     }
@@ -1871,6 +1951,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
       return virtualHosts_.get(index);
     }
@@ -1881,6 +1962,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
         int index) {
       return virtualHosts_.get(index);
@@ -1897,7 +1979,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1919,7 +2003,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1951,7 +2037,7 @@ public final class VirtualHostServiceOuterClass {
       for (int i = 0; i < virtualHosts_.size(); i++) {
         output.writeMessage(1, virtualHosts_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1967,7 +2053,7 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, virtualHosts_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1985,13 +2071,12 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse) obj;
 
-      boolean result = true;
-      result = result && getVirtualHostsList()
-          .equals(other.getVirtualHostsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVirtualHostsList()
+          .equals(other.getVirtualHostsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2176,9 +2261,8 @@ public final class VirtualHostServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (virtualHostsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             virtualHosts_ = java.util.Collections.unmodifiableList(virtualHosts_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2187,42 +2271,41 @@ public final class VirtualHostServiceOuterClass {
           result.virtualHosts_ = virtualHostsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2299,7 +2382,7 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_ =
         java.util.Collections.emptyList();
       private void ensureVirtualHostsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           virtualHosts_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>(virtualHosts_);
           bitField0_ |= 0x00000001;
          }
@@ -2600,7 +2683,7 @@ public final class VirtualHostServiceOuterClass {
           virtualHostsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder>(
                   virtualHosts_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           virtualHosts_ = null;
@@ -2618,6 +2701,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2640,6 +2724,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2663,6 +2748,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2683,6 +2770,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2699,6 +2787,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2714,7 +2804,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2775,6 +2865,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -2784,6 +2875,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -2794,6 +2886,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2802,6 +2895,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2818,6 +2912,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @return A list containing the authority.
      */
     java.util.List<java.lang.String>
         getAuthorityList();
@@ -2833,6 +2928,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @return The count of authority.
      */
     int getAuthorityCount();
     /**
@@ -2847,6 +2943,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @param index The index of the element to return.
+     * @return The authority at the given index.
      */
     java.lang.String getAuthority(int index);
     /**
@@ -2861,6 +2959,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authority at the given index.
      */
     com.google.protobuf.ByteString
         getAuthorityBytes(int index);
@@ -3040,7 +3140,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateVirtualHostRequest}
    */
-  public  static final class CreateVirtualHostRequest extends
+  public static final class CreateVirtualHostRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CreateVirtualHostRequest)
       CreateVirtualHostRequestOrBuilder {
@@ -3056,6 +3156,13 @@ public final class VirtualHostServiceOuterClass {
       routes_ = java.util.Collections.emptyList();
       modifyRequestHeaders_ = java.util.Collections.emptyList();
       modifyResponseHeaders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateVirtualHostRequest();
     }
 
     @java.lang.Override
@@ -3096,42 +3203,42 @@ public final class VirtualHostServiceOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 authority_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               authority_.add(s);
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 routes_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000002;
               }
               routes_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.parser(), extensionRegistry));
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 modifyRequestHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000004;
               }
               modifyRequestHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 modifyResponseHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000008;
               }
               modifyResponseHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3145,16 +3252,16 @@ public final class VirtualHostServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           authority_ = authority_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           routes_ = java.util.Collections.unmodifiableList(routes_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           modifyRequestHeaders_ = java.util.Collections.unmodifiableList(modifyRequestHeaders_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           modifyResponseHeaders_ = java.util.Collections.unmodifiableList(modifyResponseHeaders_);
         }
         this.unknownFields = unknownFields.build();
@@ -3174,7 +3281,6 @@ public final class VirtualHostServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
@@ -3184,7 +3290,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -3204,7 +3312,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -3227,7 +3337,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3246,7 +3358,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3275,6 +3389,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @return A list containing the authority.
      */
     public com.google.protobuf.ProtocolStringList
         getAuthorityList() {
@@ -3292,6 +3407,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @return The count of authority.
      */
     public int getAuthorityCount() {
       return authority_.size();
@@ -3308,6 +3424,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @param index The index of the element to return.
+     * @return The authority at the given index.
      */
     public java.lang.String getAuthority(int index) {
       return authority_.get(index);
@@ -3324,6 +3442,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authority at the given index.
      */
     public com.google.protobuf.ByteString
         getAuthorityBytes(int index) {
@@ -3346,6 +3466,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> getRoutesList() {
       return routes_;
     }
@@ -3363,6 +3484,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
         getRoutesOrBuilderList() {
       return routes_;
@@ -3381,6 +3503,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
+    @java.lang.Override
     public int getRoutesCount() {
       return routes_.size();
     }
@@ -3398,6 +3521,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index) {
       return routes_.get(index);
     }
@@ -3415,6 +3539,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
         int index) {
       return routes_.get(index);
@@ -3429,6 +3554,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
       return modifyRequestHeaders_;
     }
@@ -3439,6 +3565,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyRequestHeadersOrBuilderList() {
       return modifyRequestHeaders_;
@@ -3450,6 +3577,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
+    @java.lang.Override
     public int getModifyRequestHeadersCount() {
       return modifyRequestHeaders_.size();
     }
@@ -3460,6 +3588,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
       return modifyRequestHeaders_.get(index);
     }
@@ -3470,6 +3599,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
         int index) {
       return modifyRequestHeaders_.get(index);
@@ -3485,6 +3615,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
       return modifyResponseHeaders_;
     }
@@ -3496,6 +3627,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyResponseHeadersOrBuilderList() {
       return modifyResponseHeaders_;
@@ -3508,6 +3640,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
+    @java.lang.Override
     public int getModifyResponseHeadersCount() {
       return modifyResponseHeaders_.size();
     }
@@ -3519,6 +3652,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
       return modifyResponseHeaders_.get(index);
     }
@@ -3530,6 +3664,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index) {
       return modifyResponseHeaders_.get(index);
@@ -3549,10 +3684,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       for (int i = 0; i < authority_.size(); i++) {
@@ -3576,10 +3711,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       {
@@ -3617,21 +3752,20 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getAuthorityList()
-          .equals(other.getAuthorityList());
-      result = result && getRoutesList()
-          .equals(other.getRoutesList());
-      result = result && getModifyRequestHeadersList()
-          .equals(other.getModifyRequestHeadersList());
-      result = result && getModifyResponseHeadersList()
-          .equals(other.getModifyResponseHeadersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAuthorityList()
+          .equals(other.getAuthorityList())) return false;
+      if (!getRoutesList()
+          .equals(other.getRoutesList())) return false;
+      if (!getModifyRequestHeadersList()
+          .equals(other.getModifyRequestHeadersList())) return false;
+      if (!getModifyResponseHeadersList()
+          .equals(other.getModifyResponseHeadersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3802,22 +3936,22 @@ public final class VirtualHostServiceOuterClass {
         name_ = "";
 
         authority_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           routesBuilder_.clear();
         }
         if (modifyRequestHeadersBuilder_ == null) {
           modifyRequestHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           modifyRequestHeadersBuilder_.clear();
         }
         if (modifyResponseHeadersBuilder_ == null) {
           modifyResponseHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           modifyResponseHeadersBuilder_.clear();
         }
@@ -3848,77 +3982,75 @@ public final class VirtualHostServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.httpRouterId_ = httpRouterId_;
         result.name_ = name_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           authority_ = authority_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.authority_ = authority_;
         if (routesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             routes_ = java.util.Collections.unmodifiableList(routes_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.routes_ = routes_;
         } else {
           result.routes_ = routesBuilder_.build();
         }
         if (modifyRequestHeadersBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             modifyRequestHeaders_ = java.util.Collections.unmodifiableList(modifyRequestHeaders_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.modifyRequestHeaders_ = modifyRequestHeaders_;
         } else {
           result.modifyRequestHeaders_ = modifyRequestHeadersBuilder_.build();
         }
         if (modifyResponseHeadersBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             modifyResponseHeaders_ = java.util.Collections.unmodifiableList(modifyResponseHeaders_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.modifyResponseHeaders_ = modifyResponseHeaders_;
         } else {
           result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3943,7 +4075,7 @@ public final class VirtualHostServiceOuterClass {
         if (!other.authority_.isEmpty()) {
           if (authority_.isEmpty()) {
             authority_ = other.authority_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAuthorityIsMutable();
             authority_.addAll(other.authority_);
@@ -3954,7 +4086,7 @@ public final class VirtualHostServiceOuterClass {
           if (!other.routes_.isEmpty()) {
             if (routes_.isEmpty()) {
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureRoutesIsMutable();
               routes_.addAll(other.routes_);
@@ -3967,7 +4099,7 @@ public final class VirtualHostServiceOuterClass {
               routesBuilder_.dispose();
               routesBuilder_ = null;
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
               routesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRoutesFieldBuilder() : null;
@@ -3980,7 +4112,7 @@ public final class VirtualHostServiceOuterClass {
           if (!other.modifyRequestHeaders_.isEmpty()) {
             if (modifyRequestHeaders_.isEmpty()) {
               modifyRequestHeaders_ = other.modifyRequestHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureModifyRequestHeadersIsMutable();
               modifyRequestHeaders_.addAll(other.modifyRequestHeaders_);
@@ -3993,7 +4125,7 @@ public final class VirtualHostServiceOuterClass {
               modifyRequestHeadersBuilder_.dispose();
               modifyRequestHeadersBuilder_ = null;
               modifyRequestHeaders_ = other.modifyRequestHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000004);
               modifyRequestHeadersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getModifyRequestHeadersFieldBuilder() : null;
@@ -4006,7 +4138,7 @@ public final class VirtualHostServiceOuterClass {
           if (!other.modifyResponseHeaders_.isEmpty()) {
             if (modifyResponseHeaders_.isEmpty()) {
               modifyResponseHeaders_ = other.modifyResponseHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureModifyResponseHeadersIsMutable();
               modifyResponseHeaders_.addAll(other.modifyResponseHeaders_);
@@ -4019,7 +4151,7 @@ public final class VirtualHostServiceOuterClass {
               modifyResponseHeadersBuilder_.dispose();
               modifyResponseHeadersBuilder_ = null;
               modifyResponseHeaders_ = other.modifyResponseHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000008);
               modifyResponseHeadersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getModifyResponseHeadersFieldBuilder() : null;
@@ -4066,6 +4198,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -4086,6 +4219,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -4107,6 +4241,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -4125,6 +4261,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -4139,6 +4276,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4159,6 +4298,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4178,6 +4318,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4198,6 +4339,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4215,6 +4358,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4228,6 +4372,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4243,9 +4389,9 @@ public final class VirtualHostServiceOuterClass {
 
       private com.google.protobuf.LazyStringList authority_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureAuthorityIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           authority_ = new com.google.protobuf.LazyStringArrayList(authority_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -4260,6 +4406,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @return A list containing the authority.
        */
       public com.google.protobuf.ProtocolStringList
           getAuthorityList() {
@@ -4277,6 +4424,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @return The count of authority.
        */
       public int getAuthorityCount() {
         return authority_.size();
@@ -4293,6 +4441,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @param index The index of the element to return.
+       * @return The authority at the given index.
        */
       public java.lang.String getAuthority(int index) {
         return authority_.get(index);
@@ -4309,6 +4459,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the authority at the given index.
        */
       public com.google.protobuf.ByteString
           getAuthorityBytes(int index) {
@@ -4326,6 +4478,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The authority to set.
+       * @return This builder for chaining.
        */
       public Builder setAuthority(
           int index, java.lang.String value) {
@@ -4349,6 +4504,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @param value The authority to add.
+       * @return This builder for chaining.
        */
       public Builder addAuthority(
           java.lang.String value) {
@@ -4372,6 +4529,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @param values The authority to add.
+       * @return This builder for chaining.
        */
       public Builder addAllAuthority(
           java.lang.Iterable<java.lang.String> values) {
@@ -4393,10 +4552,11 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAuthority() {
         authority_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4412,6 +4572,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 3;</code>
+       * @param value The bytes of the authority to add.
+       * @return This builder for chaining.
        */
       public Builder addAuthorityBytes(
           com.google.protobuf.ByteString value) {
@@ -4428,9 +4590,9 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> routes_ =
         java.util.Collections.emptyList();
       private void ensureRoutesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           routes_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route>(routes_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -4701,7 +4863,7 @@ public final class VirtualHostServiceOuterClass {
       public Builder clearRoutes() {
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           routesBuilder_.clear();
@@ -4855,7 +5017,7 @@ public final class VirtualHostServiceOuterClass {
           routesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder>(
                   routes_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           routes_ = null;
@@ -4866,9 +5028,9 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_ =
         java.util.Collections.emptyList();
       private void ensureModifyRequestHeadersIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           modifyRequestHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>(modifyRequestHeaders_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -5062,7 +5224,7 @@ public final class VirtualHostServiceOuterClass {
       public Builder clearModifyRequestHeaders() {
         if (modifyRequestHeadersBuilder_ == null) {
           modifyRequestHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           modifyRequestHeadersBuilder_.clear();
@@ -5167,7 +5329,7 @@ public final class VirtualHostServiceOuterClass {
           modifyRequestHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder>(
                   modifyRequestHeaders_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           modifyRequestHeaders_ = null;
@@ -5178,9 +5340,9 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_ =
         java.util.Collections.emptyList();
       private void ensureModifyResponseHeadersIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           modifyResponseHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>(modifyResponseHeaders_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -5385,7 +5547,7 @@ public final class VirtualHostServiceOuterClass {
       public Builder clearModifyResponseHeaders() {
         if (modifyResponseHeadersBuilder_ == null) {
           modifyResponseHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           modifyResponseHeadersBuilder_.clear();
@@ -5497,7 +5659,7 @@ public final class VirtualHostServiceOuterClass {
           modifyResponseHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder>(
                   modifyResponseHeaders_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           modifyResponseHeaders_ = null;
@@ -5507,7 +5669,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5567,6 +5729,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -5575,6 +5738,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -5585,6 +5749,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -5593,6 +5758,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -5600,7 +5766,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateVirtualHostMetadata}
    */
-  public  static final class CreateVirtualHostMetadata extends
+  public static final class CreateVirtualHostMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CreateVirtualHostMetadata)
       CreateVirtualHostMetadataOrBuilder {
@@ -5612,6 +5778,13 @@ public final class VirtualHostServiceOuterClass {
     private CreateVirtualHostMetadata() {
       httpRouterId_ = "";
       virtualHostName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateVirtualHostMetadata();
     }
 
     @java.lang.Override
@@ -5627,7 +5800,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5651,7 +5823,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5690,7 +5862,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -5709,7 +5883,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -5732,7 +5908,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -5751,7 +5929,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -5780,10 +5960,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
       unknownFields.writeTo(output);
@@ -5795,10 +5975,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
       size += unknownFields.getSerializedSize();
@@ -5816,13 +5996,12 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostMetadata other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6007,35 +6186,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6093,6 +6272,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -6112,6 +6292,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -6132,6 +6313,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -6149,6 +6332,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -6162,6 +6346,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6182,6 +6368,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -6201,6 +6388,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -6221,6 +6409,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -6238,6 +6428,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -6251,6 +6442,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6266,7 +6459,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6327,6 +6520,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -6336,6 +6530,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -6348,6 +6543,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -6358,6 +6554,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -6368,6 +6565,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -6376,6 +6574,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -6400,6 +6599,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @return A list containing the authority.
      */
     java.util.List<java.lang.String>
         getAuthorityList();
@@ -6416,6 +6616,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @return The count of authority.
      */
     int getAuthorityCount();
     /**
@@ -6431,6 +6632,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @param index The index of the element to return.
+     * @return The authority at the given index.
      */
     java.lang.String getAuthority(int index);
     /**
@@ -6446,6 +6649,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authority at the given index.
      */
     com.google.protobuf.ByteString
         getAuthorityBytes(int index);
@@ -6650,7 +6855,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateVirtualHostRequest}
    */
-  public  static final class UpdateVirtualHostRequest extends
+  public static final class UpdateVirtualHostRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateVirtualHostRequest)
       UpdateVirtualHostRequestOrBuilder {
@@ -6666,6 +6871,13 @@ public final class VirtualHostServiceOuterClass {
       routes_ = java.util.Collections.emptyList();
       modifyRequestHeaders_ = java.util.Collections.emptyList();
       modifyResponseHeaders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateVirtualHostRequest();
     }
 
     @java.lang.Override
@@ -6719,42 +6931,42 @@ public final class VirtualHostServiceOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 authority_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               authority_.add(s);
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 routes_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               routes_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.parser(), extensionRegistry));
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 modifyRequestHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000004;
               }
               modifyRequestHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 modifyResponseHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000008;
               }
               modifyResponseHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6768,16 +6980,16 @@ public final class VirtualHostServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           authority_ = authority_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           routes_ = java.util.Collections.unmodifiableList(routes_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           modifyRequestHeaders_ = java.util.Collections.unmodifiableList(modifyRequestHeaders_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           modifyResponseHeaders_ = java.util.Collections.unmodifiableList(modifyResponseHeaders_);
         }
         this.unknownFields = unknownFields.build();
@@ -6797,7 +7009,6 @@ public final class VirtualHostServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
@@ -6807,7 +7018,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -6827,7 +7040,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -6852,7 +7067,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -6873,7 +7090,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -6896,7 +7115,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -6906,7 +7127,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -6917,6 +7140,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -6936,6 +7160,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @return A list containing the authority.
      */
     public com.google.protobuf.ProtocolStringList
         getAuthorityList() {
@@ -6954,6 +7179,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @return The count of authority.
      */
     public int getAuthorityCount() {
       return authority_.size();
@@ -6971,6 +7197,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @param index The index of the element to return.
+     * @return The authority at the given index.
      */
     public java.lang.String getAuthority(int index) {
       return authority_.get(index);
@@ -6988,6 +7216,8 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authority at the given index.
      */
     public com.google.protobuf.ByteString
         getAuthorityBytes(int index) {
@@ -7012,6 +7242,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> getRoutesList() {
       return routes_;
     }
@@ -7031,6 +7262,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
         getRoutesOrBuilderList() {
       return routes_;
@@ -7051,6 +7283,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
+    @java.lang.Override
     public int getRoutesCount() {
       return routes_.size();
     }
@@ -7070,6 +7303,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index) {
       return routes_.get(index);
     }
@@ -7089,6 +7323,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
         int index) {
       return routes_.get(index);
@@ -7105,6 +7340,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
       return modifyRequestHeaders_;
     }
@@ -7117,6 +7353,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyRequestHeadersOrBuilderList() {
       return modifyRequestHeaders_;
@@ -7130,6 +7367,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
+    @java.lang.Override
     public int getModifyRequestHeadersCount() {
       return modifyRequestHeaders_.size();
     }
@@ -7142,6 +7380,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
       return modifyRequestHeaders_.get(index);
     }
@@ -7154,6 +7393,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
         int index) {
       return modifyRequestHeaders_.get(index);
@@ -7170,6 +7410,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
       return modifyResponseHeaders_;
     }
@@ -7182,6 +7423,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyResponseHeadersOrBuilderList() {
       return modifyResponseHeaders_;
@@ -7195,6 +7437,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
+    @java.lang.Override
     public int getModifyResponseHeadersCount() {
       return modifyResponseHeaders_.size();
     }
@@ -7207,6 +7450,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
       return modifyResponseHeaders_.get(index);
     }
@@ -7219,6 +7463,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index) {
       return modifyResponseHeaders_.get(index);
@@ -7238,10 +7483,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
       if (updateMask_ != null) {
@@ -7268,10 +7513,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
       if (updateMask_ != null) {
@@ -7313,26 +7558,25 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getAuthorityList()
-          .equals(other.getAuthorityList());
-      result = result && getRoutesList()
-          .equals(other.getRoutesList());
-      result = result && getModifyRequestHeadersList()
-          .equals(other.getModifyRequestHeadersList());
-      result = result && getModifyResponseHeadersList()
-          .equals(other.getModifyResponseHeadersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAuthorityList()
+          .equals(other.getAuthorityList())) return false;
+      if (!getRoutesList()
+          .equals(other.getRoutesList())) return false;
+      if (!getModifyRequestHeadersList()
+          .equals(other.getModifyRequestHeadersList())) return false;
+      if (!getModifyResponseHeadersList()
+          .equals(other.getModifyResponseHeadersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7513,22 +7757,22 @@ public final class VirtualHostServiceOuterClass {
           updateMaskBuilder_ = null;
         }
         authority_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           routesBuilder_.clear();
         }
         if (modifyRequestHeadersBuilder_ == null) {
           modifyRequestHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           modifyRequestHeadersBuilder_.clear();
         }
         if (modifyResponseHeadersBuilder_ == null) {
           modifyResponseHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           modifyResponseHeadersBuilder_.clear();
         }
@@ -7559,7 +7803,6 @@ public final class VirtualHostServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.httpRouterId_ = httpRouterId_;
         result.virtualHostName_ = virtualHostName_;
         if (updateMaskBuilder_ == null) {
@@ -7567,74 +7810,73 @@ public final class VirtualHostServiceOuterClass {
         } else {
           result.updateMask_ = updateMaskBuilder_.build();
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           authority_ = authority_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.authority_ = authority_;
         if (routesBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             routes_ = java.util.Collections.unmodifiableList(routes_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.routes_ = routes_;
         } else {
           result.routes_ = routesBuilder_.build();
         }
         if (modifyRequestHeadersBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             modifyRequestHeaders_ = java.util.Collections.unmodifiableList(modifyRequestHeaders_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.modifyRequestHeaders_ = modifyRequestHeaders_;
         } else {
           result.modifyRequestHeaders_ = modifyRequestHeadersBuilder_.build();
         }
         if (modifyResponseHeadersBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             modifyResponseHeaders_ = java.util.Collections.unmodifiableList(modifyResponseHeaders_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.modifyResponseHeaders_ = modifyResponseHeaders_;
         } else {
           result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7662,7 +7904,7 @@ public final class VirtualHostServiceOuterClass {
         if (!other.authority_.isEmpty()) {
           if (authority_.isEmpty()) {
             authority_ = other.authority_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAuthorityIsMutable();
             authority_.addAll(other.authority_);
@@ -7673,7 +7915,7 @@ public final class VirtualHostServiceOuterClass {
           if (!other.routes_.isEmpty()) {
             if (routes_.isEmpty()) {
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureRoutesIsMutable();
               routes_.addAll(other.routes_);
@@ -7686,7 +7928,7 @@ public final class VirtualHostServiceOuterClass {
               routesBuilder_.dispose();
               routesBuilder_ = null;
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
               routesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRoutesFieldBuilder() : null;
@@ -7699,7 +7941,7 @@ public final class VirtualHostServiceOuterClass {
           if (!other.modifyRequestHeaders_.isEmpty()) {
             if (modifyRequestHeaders_.isEmpty()) {
               modifyRequestHeaders_ = other.modifyRequestHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureModifyRequestHeadersIsMutable();
               modifyRequestHeaders_.addAll(other.modifyRequestHeaders_);
@@ -7712,7 +7954,7 @@ public final class VirtualHostServiceOuterClass {
               modifyRequestHeadersBuilder_.dispose();
               modifyRequestHeadersBuilder_ = null;
               modifyRequestHeaders_ = other.modifyRequestHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000004);
               modifyRequestHeadersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getModifyRequestHeadersFieldBuilder() : null;
@@ -7725,7 +7967,7 @@ public final class VirtualHostServiceOuterClass {
           if (!other.modifyResponseHeaders_.isEmpty()) {
             if (modifyResponseHeaders_.isEmpty()) {
               modifyResponseHeaders_ = other.modifyResponseHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureModifyResponseHeadersIsMutable();
               modifyResponseHeaders_.addAll(other.modifyResponseHeaders_);
@@ -7738,7 +7980,7 @@ public final class VirtualHostServiceOuterClass {
               modifyResponseHeadersBuilder_.dispose();
               modifyResponseHeadersBuilder_ = null;
               modifyResponseHeaders_ = other.modifyResponseHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000008);
               modifyResponseHeadersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getModifyResponseHeadersFieldBuilder() : null;
@@ -7785,6 +8027,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -7805,6 +8048,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -7826,6 +8070,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -7844,6 +8090,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -7858,6 +8105,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7880,6 +8129,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -7901,6 +8151,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -7923,6 +8174,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -7942,6 +8195,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -7957,6 +8211,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7970,7 +8226,7 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -7979,6 +8235,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -7989,6 +8246,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -8125,9 +8383,9 @@ public final class VirtualHostServiceOuterClass {
 
       private com.google.protobuf.LazyStringList authority_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureAuthorityIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           authority_ = new com.google.protobuf.LazyStringArrayList(authority_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -8143,6 +8401,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @return A list containing the authority.
        */
       public com.google.protobuf.ProtocolStringList
           getAuthorityList() {
@@ -8161,6 +8420,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @return The count of authority.
        */
       public int getAuthorityCount() {
         return authority_.size();
@@ -8178,6 +8438,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @param index The index of the element to return.
+       * @return The authority at the given index.
        */
       public java.lang.String getAuthority(int index) {
         return authority_.get(index);
@@ -8195,6 +8457,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the authority at the given index.
        */
       public com.google.protobuf.ByteString
           getAuthorityBytes(int index) {
@@ -8213,6 +8477,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The authority to set.
+       * @return This builder for chaining.
        */
       public Builder setAuthority(
           int index, java.lang.String value) {
@@ -8237,6 +8504,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @param value The authority to add.
+       * @return This builder for chaining.
        */
       public Builder addAuthority(
           java.lang.String value) {
@@ -8261,6 +8530,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @param values The authority to add.
+       * @return This builder for chaining.
        */
       public Builder addAllAuthority(
           java.lang.Iterable<java.lang.String> values) {
@@ -8283,10 +8554,11 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAuthority() {
         authority_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8303,6 +8575,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
+       * @param value The bytes of the authority to add.
+       * @return This builder for chaining.
        */
       public Builder addAuthorityBytes(
           com.google.protobuf.ByteString value) {
@@ -8319,9 +8593,9 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> routes_ =
         java.util.Collections.emptyList();
       private void ensureRoutesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           routes_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route>(routes_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -8614,7 +8888,7 @@ public final class VirtualHostServiceOuterClass {
       public Builder clearRoutes() {
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           routesBuilder_.clear();
@@ -8782,7 +9056,7 @@ public final class VirtualHostServiceOuterClass {
           routesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder>(
                   routes_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           routes_ = null;
@@ -8793,9 +9067,9 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_ =
         java.util.Collections.emptyList();
       private void ensureModifyRequestHeadersIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           modifyRequestHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>(modifyRequestHeaders_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -9011,7 +9285,7 @@ public final class VirtualHostServiceOuterClass {
       public Builder clearModifyRequestHeaders() {
         if (modifyRequestHeadersBuilder_ == null) {
           modifyRequestHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           modifyRequestHeadersBuilder_.clear();
@@ -9130,7 +9404,7 @@ public final class VirtualHostServiceOuterClass {
           modifyRequestHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder>(
                   modifyRequestHeaders_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           modifyRequestHeaders_ = null;
@@ -9141,9 +9415,9 @@ public final class VirtualHostServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_ =
         java.util.Collections.emptyList();
       private void ensureModifyResponseHeadersIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           modifyResponseHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>(modifyResponseHeaders_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -9359,7 +9633,7 @@ public final class VirtualHostServiceOuterClass {
       public Builder clearModifyResponseHeaders() {
         if (modifyResponseHeadersBuilder_ == null) {
           modifyResponseHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           modifyResponseHeadersBuilder_.clear();
@@ -9478,7 +9752,7 @@ public final class VirtualHostServiceOuterClass {
           modifyResponseHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder>(
                   modifyResponseHeaders_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           modifyResponseHeaders_ = null;
@@ -9488,7 +9762,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9548,6 +9822,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -9556,6 +9831,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -9566,6 +9842,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -9574,6 +9851,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -9581,7 +9859,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateVirtualHostMetadata}
    */
-  public  static final class UpdateVirtualHostMetadata extends
+  public static final class UpdateVirtualHostMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateVirtualHostMetadata)
       UpdateVirtualHostMetadataOrBuilder {
@@ -9593,6 +9871,13 @@ public final class VirtualHostServiceOuterClass {
     private UpdateVirtualHostMetadata() {
       httpRouterId_ = "";
       virtualHostName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateVirtualHostMetadata();
     }
 
     @java.lang.Override
@@ -9608,7 +9893,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9632,7 +9916,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9671,7 +9955,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -9690,7 +9976,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -9713,7 +10001,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -9732,7 +10022,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -9761,10 +10053,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
       unknownFields.writeTo(output);
@@ -9776,10 +10068,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
       size += unknownFields.getSerializedSize();
@@ -9797,13 +10089,12 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostMetadata other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9988,35 +10279,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10074,6 +10365,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -10093,6 +10385,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -10113,6 +10406,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -10130,6 +10425,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -10143,6 +10439,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10163,6 +10461,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -10182,6 +10481,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -10202,6 +10502,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -10219,6 +10521,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -10232,6 +10535,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10247,7 +10552,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10308,6 +10613,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -10317,6 +10623,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -10328,6 +10635,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -10337,6 +10645,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -10344,7 +10653,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DeleteVirtualHostRequest}
    */
-  public  static final class DeleteVirtualHostRequest extends
+  public static final class DeleteVirtualHostRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DeleteVirtualHostRequest)
       DeleteVirtualHostRequestOrBuilder {
@@ -10356,6 +10665,13 @@ public final class VirtualHostServiceOuterClass {
     private DeleteVirtualHostRequest() {
       httpRouterId_ = "";
       virtualHostName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteVirtualHostRequest();
     }
 
     @java.lang.Override
@@ -10371,7 +10687,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10395,7 +10710,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10435,7 +10750,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -10455,7 +10772,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -10479,7 +10798,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -10499,7 +10820,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -10528,10 +10851,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
       unknownFields.writeTo(output);
@@ -10543,10 +10866,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
       size += unknownFields.getSerializedSize();
@@ -10564,13 +10887,12 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10755,35 +11077,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10842,6 +11164,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -10862,6 +11185,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -10883,6 +11207,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -10901,6 +11227,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -10915,6 +11242,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10936,6 +11265,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -10956,6 +11286,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -10977,6 +11308,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -10995,6 +11328,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -11009,6 +11343,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -11024,7 +11360,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11084,6 +11420,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -11092,6 +11429,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -11102,6 +11440,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -11110,6 +11449,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -11117,7 +11457,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DeleteVirtualHostMetadata}
    */
-  public  static final class DeleteVirtualHostMetadata extends
+  public static final class DeleteVirtualHostMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DeleteVirtualHostMetadata)
       DeleteVirtualHostMetadataOrBuilder {
@@ -11129,6 +11469,13 @@ public final class VirtualHostServiceOuterClass {
     private DeleteVirtualHostMetadata() {
       httpRouterId_ = "";
       virtualHostName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteVirtualHostMetadata();
     }
 
     @java.lang.Override
@@ -11144,7 +11491,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11168,7 +11514,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11207,7 +11553,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -11226,7 +11574,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -11249,7 +11599,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -11268,7 +11620,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -11297,10 +11651,10 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
       unknownFields.writeTo(output);
@@ -11312,10 +11666,10 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
       size += unknownFields.getSerializedSize();
@@ -11333,13 +11687,12 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostMetadata other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11524,35 +11877,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11610,6 +11963,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -11629,6 +11983,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -11649,6 +12004,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -11666,6 +12023,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -11679,6 +12037,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11699,6 +12059,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -11718,6 +12079,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -11738,6 +12100,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -11755,6 +12119,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -11768,6 +12133,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -11783,7 +12150,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11844,6 +12211,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -11853,6 +12221,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -11864,6 +12233,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -11873,6 +12243,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -11884,6 +12255,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The routeName.
      */
     java.lang.String getRouteName();
     /**
@@ -11893,6 +12265,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for routeName.
      */
     com.google.protobuf.ByteString
         getRouteNameBytes();
@@ -11900,7 +12273,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RemoveRouteRequest}
    */
-  public  static final class RemoveRouteRequest extends
+  public static final class RemoveRouteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RemoveRouteRequest)
       RemoveRouteRequestOrBuilder {
@@ -11916,6 +12289,13 @@ public final class VirtualHostServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveRouteRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -11928,7 +12308,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11958,7 +12337,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11998,7 +12377,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -12018,7 +12399,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -12042,7 +12425,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -12062,7 +12447,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -12086,7 +12473,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The routeName.
      */
+    @java.lang.Override
     public java.lang.String getRouteName() {
       java.lang.Object ref = routeName_;
       if (ref instanceof java.lang.String) {
@@ -12106,7 +12495,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for routeName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteNameBytes() {
       java.lang.Object ref = routeName_;
@@ -12135,13 +12526,13 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, routeName_);
       }
       unknownFields.writeTo(output);
@@ -12153,13 +12544,13 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, routeName_);
       }
       size += unknownFields.getSerializedSize();
@@ -12177,15 +12568,14 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && getRouteName()
-          .equals(other.getRouteName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!getRouteName()
+          .equals(other.getRouteName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12375,35 +12765,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12466,6 +12856,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -12486,6 +12877,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -12507,6 +12899,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -12525,6 +12919,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -12539,6 +12934,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12560,6 +12957,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -12580,6 +12978,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -12601,6 +13000,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -12619,6 +13020,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -12633,6 +13035,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -12654,6 +13058,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The routeName.
        */
       public java.lang.String getRouteName() {
         java.lang.Object ref = routeName_;
@@ -12674,6 +13079,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for routeName.
        */
       public com.google.protobuf.ByteString
           getRouteNameBytes() {
@@ -12695,6 +13101,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteName(
           java.lang.String value) {
@@ -12713,6 +13121,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteName() {
         
@@ -12727,6 +13136,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteNameBytes(
           com.google.protobuf.ByteString value) {
@@ -12742,7 +13153,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12802,6 +13213,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -12810,6 +13222,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -12820,6 +13233,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -12828,6 +13242,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -12838,6 +13253,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The routeName.
      */
     java.lang.String getRouteName();
     /**
@@ -12846,6 +13262,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The bytes for routeName.
      */
     com.google.protobuf.ByteString
         getRouteNameBytes();
@@ -12853,7 +13270,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RemoveRouteMetadata}
    */
-  public  static final class RemoveRouteMetadata extends
+  public static final class RemoveRouteMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RemoveRouteMetadata)
       RemoveRouteMetadataOrBuilder {
@@ -12869,6 +13286,13 @@ public final class VirtualHostServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveRouteMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -12881,7 +13305,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12911,7 +13334,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12950,7 +13373,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -12969,7 +13394,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -12992,7 +13419,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -13011,7 +13440,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -13034,7 +13465,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The routeName.
      */
+    @java.lang.Override
     public java.lang.String getRouteName() {
       java.lang.Object ref = routeName_;
       if (ref instanceof java.lang.String) {
@@ -13053,7 +13486,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The bytes for routeName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteNameBytes() {
       java.lang.Object ref = routeName_;
@@ -13082,13 +13517,13 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, routeName_);
       }
       unknownFields.writeTo(output);
@@ -13100,13 +13535,13 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, routeName_);
       }
       size += unknownFields.getSerializedSize();
@@ -13124,15 +13559,14 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteMetadata other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && getRouteName()
-          .equals(other.getRouteName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!getRouteName()
+          .equals(other.getRouteName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13322,35 +13756,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13412,6 +13846,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -13431,6 +13866,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -13451,6 +13887,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -13468,6 +13906,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -13481,6 +13920,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13501,6 +13942,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -13520,6 +13962,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -13540,6 +13983,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -13557,6 +14002,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -13570,6 +14016,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -13590,6 +14038,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @return The routeName.
        */
       public java.lang.String getRouteName() {
         java.lang.Object ref = routeName_;
@@ -13609,6 +14058,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @return The bytes for routeName.
        */
       public com.google.protobuf.ByteString
           getRouteNameBytes() {
@@ -13629,6 +14079,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @param value The routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteName(
           java.lang.String value) {
@@ -13646,6 +14098,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteName() {
         
@@ -13659,6 +14112,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @param value The bytes for routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteNameBytes(
           com.google.protobuf.ByteString value) {
@@ -13674,7 +14129,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13735,6 +14190,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -13744,6 +14200,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -13755,6 +14212,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -13764,6 +14222,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -13775,6 +14234,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The routeName.
      */
     java.lang.String getRouteName();
     /**
@@ -13784,6 +14244,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for routeName.
      */
     com.google.protobuf.ByteString
         getRouteNameBytes();
@@ -13794,6 +14255,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -13802,6 +14264,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -13819,6 +14282,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
+     * @return Whether the http field is set.
      */
     boolean hasHttp();
     /**
@@ -13827,6 +14291,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
+     * @return The http.
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp();
     /**
@@ -13844,6 +14309,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
+     * @return Whether the grpc field is set.
      */
     boolean hasGrpc();
     /**
@@ -13852,6 +14318,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
+     * @return The grpc.
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc();
     /**
@@ -13868,7 +14335,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateRouteRequest}
    */
-  public  static final class UpdateRouteRequest extends
+  public static final class UpdateRouteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateRouteRequest)
       UpdateRouteRequestOrBuilder {
@@ -13884,6 +14351,13 @@ public final class VirtualHostServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRouteRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -13896,7 +14370,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13967,7 +14440,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14001,7 +14474,8 @@ public final class VirtualHostServiceOuterClass {
     private int routeCase_ = 0;
     private java.lang.Object route_;
     public enum RouteCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       HTTP(5),
       GRPC(6),
       ROUTE_NOT_SET(0);
@@ -14010,6 +14484,8 @@ public final class VirtualHostServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -14045,7 +14521,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -14065,7 +14543,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -14089,7 +14569,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -14109,7 +14591,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -14133,7 +14617,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The routeName.
      */
+    @java.lang.Override
     public java.lang.String getRouteName() {
       java.lang.Object ref = routeName_;
       if (ref instanceof java.lang.String) {
@@ -14153,7 +14639,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for routeName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteNameBytes() {
       java.lang.Object ref = routeName_;
@@ -14176,7 +14664,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -14186,7 +14676,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -14197,6 +14689,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -14208,7 +14701,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
+     * @return Whether the http field is set.
      */
+    @java.lang.Override
     public boolean hasHttp() {
       return routeCase_ == 5;
     }
@@ -14218,7 +14713,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
+     * @return The http.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp() {
       if (routeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute) route_;
@@ -14232,6 +14729,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder() {
       if (routeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute) route_;
@@ -14246,7 +14744,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
+     * @return Whether the grpc field is set.
      */
+    @java.lang.Override
     public boolean hasGrpc() {
       return routeCase_ == 6;
     }
@@ -14256,7 +14756,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
+     * @return The grpc.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc() {
       if (routeCase_ == 6) {
          return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute) route_;
@@ -14270,6 +14772,7 @@ public final class VirtualHostServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder() {
       if (routeCase_ == 6) {
          return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute) route_;
@@ -14291,13 +14794,13 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, routeName_);
       }
       if (updateMask_ != null) {
@@ -14318,13 +14821,13 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, routeName_);
       }
       if (updateMask_ != null) {
@@ -14354,35 +14857,32 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && getRouteName()
-          .equals(other.getRouteName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!getRouteName()
+          .equals(other.getRouteName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getRouteCase().equals(
-          other.getRouteCase());
-      if (!result) return false;
+      if (!getRouteCase().equals(other.getRouteCase())) return false;
       switch (routeCase_) {
         case 5:
-          result = result && getHttp()
-              .equals(other.getHttp());
+          if (!getHttp()
+              .equals(other.getHttp())) return false;
           break;
         case 6:
-          result = result && getGrpc()
-              .equals(other.getGrpc());
+          if (!getGrpc()
+              .equals(other.getGrpc())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14616,35 +15116,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14738,6 +15238,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -14758,6 +15259,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -14779,6 +15281,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -14797,6 +15301,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -14811,6 +15316,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14832,6 +15339,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -14852,6 +15360,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -14873,6 +15382,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -14891,6 +15402,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -14905,6 +15417,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14926,6 +15440,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The routeName.
        */
       public java.lang.String getRouteName() {
         java.lang.Object ref = routeName_;
@@ -14946,6 +15461,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for routeName.
        */
       public com.google.protobuf.ByteString
           getRouteNameBytes() {
@@ -14967,6 +15483,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteName(
           java.lang.String value) {
@@ -14985,6 +15503,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteName() {
         
@@ -14999,6 +15518,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteNameBytes(
           com.google.protobuf.ByteString value) {
@@ -15012,7 +15533,7 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -15021,6 +15542,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -15031,6 +15553,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -15173,7 +15696,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
+       * @return Whether the http field is set.
        */
+      @java.lang.Override
       public boolean hasHttp() {
         return routeCase_ == 5;
       }
@@ -15183,7 +15708,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
+       * @return The http.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp() {
         if (httpBuilder_ == null) {
           if (routeCase_ == 5) {
@@ -15301,6 +15828,7 @@ public final class VirtualHostServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder() {
         if ((routeCase_ == 5) && (httpBuilder_ != null)) {
           return httpBuilder_.getMessageOrBuilder();
@@ -15345,7 +15873,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
+       * @return Whether the grpc field is set.
        */
+      @java.lang.Override
       public boolean hasGrpc() {
         return routeCase_ == 6;
       }
@@ -15355,7 +15885,9 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
+       * @return The grpc.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc() {
         if (grpcBuilder_ == null) {
           if (routeCase_ == 6) {
@@ -15473,6 +16005,7 @@ public final class VirtualHostServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder() {
         if ((routeCase_ == 6) && (grpcBuilder_ != null)) {
           return grpcBuilder_.getMessageOrBuilder();
@@ -15511,7 +16044,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15571,6 +16104,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -15579,6 +16113,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -15589,6 +16124,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
     java.lang.String getVirtualHostName();
     /**
@@ -15597,6 +16133,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -15607,6 +16144,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The routeName.
      */
     java.lang.String getRouteName();
     /**
@@ -15615,6 +16153,7 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The bytes for routeName.
      */
     com.google.protobuf.ByteString
         getRouteNameBytes();
@@ -15622,7 +16161,7 @@ public final class VirtualHostServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateRouteMetadata}
    */
-  public  static final class UpdateRouteMetadata extends
+  public static final class UpdateRouteMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateRouteMetadata)
       UpdateRouteMetadataOrBuilder {
@@ -15638,6 +16177,13 @@ public final class VirtualHostServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRouteMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -15650,7 +16196,6 @@ public final class VirtualHostServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15680,7 +16225,7 @@ public final class VirtualHostServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15719,7 +16264,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -15738,7 +16285,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -15761,7 +16310,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The virtualHostName.
      */
+    @java.lang.Override
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
       if (ref instanceof java.lang.String) {
@@ -15780,7 +16331,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
+     * @return The bytes for virtualHostName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
       java.lang.Object ref = virtualHostName_;
@@ -15803,7 +16356,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The routeName.
      */
+    @java.lang.Override
     public java.lang.String getRouteName() {
       java.lang.Object ref = routeName_;
       if (ref instanceof java.lang.String) {
@@ -15822,7 +16377,9 @@ public final class VirtualHostServiceOuterClass {
      * </pre>
      *
      * <code>string route_name = 3;</code>
+     * @return The bytes for routeName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteNameBytes() {
       java.lang.Object ref = routeName_;
@@ -15851,13 +16408,13 @@ public final class VirtualHostServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, routeName_);
       }
       unknownFields.writeTo(output);
@@ -15869,13 +16426,13 @@ public final class VirtualHostServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
-      if (!getVirtualHostNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(virtualHostName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, virtualHostName_);
       }
-      if (!getRouteNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, routeName_);
       }
       size += unknownFields.getSerializedSize();
@@ -15893,15 +16450,14 @@ public final class VirtualHostServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteMetadata other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && getVirtualHostName()
-          .equals(other.getVirtualHostName());
-      result = result && getRouteName()
-          .equals(other.getRouteName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!getVirtualHostName()
+          .equals(other.getVirtualHostName())) return false;
+      if (!getRouteName()
+          .equals(other.getRouteName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16091,35 +16647,35 @@ public final class VirtualHostServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16181,6 +16737,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -16200,6 +16757,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -16220,6 +16778,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -16237,6 +16797,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -16250,6 +16811,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16270,6 +16833,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The virtualHostName.
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -16289,6 +16853,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return The bytes for virtualHostName.
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -16309,6 +16874,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -16326,6 +16893,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVirtualHostName() {
         
@@ -16339,6 +16907,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
+       * @param value The bytes for virtualHostName to set.
+       * @return This builder for chaining.
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -16359,6 +16929,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @return The routeName.
        */
       public java.lang.String getRouteName() {
         java.lang.Object ref = routeName_;
@@ -16378,6 +16949,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @return The bytes for routeName.
        */
       public com.google.protobuf.ByteString
           getRouteNameBytes() {
@@ -16398,6 +16970,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @param value The routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteName(
           java.lang.String value) {
@@ -16415,6 +16989,7 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteName() {
         
@@ -16428,6 +17003,8 @@ public final class VirtualHostServiceOuterClass {
        * </pre>
        *
        * <code>string route_name = 3;</code>
+       * @param value The bytes for routeName to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteNameBytes(
           com.google.protobuf.ByteString value) {
@@ -16443,7 +17020,7 @@ public final class VirtualHostServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16673,15 +17250,7 @@ public final class VirtualHostServiceOuterClass {
       "oud/apploadbalancer/v1;apploadbalancerb\006" +
       "proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -16690,7 +17259,7 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_apploadbalancer_v1_GetVirtualHostRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_GetVirtualHostRequest_fieldAccessorTable = new

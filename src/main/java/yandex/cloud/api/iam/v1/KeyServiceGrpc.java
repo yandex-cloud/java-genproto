@@ -1,19 +1,6 @@
 package yandex.cloud.api.iam.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iam/v1/key_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class KeyServiceGrpc {
 
   private KeyServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class KeyServiceGrpc {
     if ((getGetMethod = KeyServiceGrpc.getGetMethod) == null) {
       synchronized (KeyServiceGrpc.class) {
         if ((getGetMethod = KeyServiceGrpc.getGetMethod) == null) {
-          KeyServiceGrpc.getGetMethod = getGetMethod = 
+          KeyServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest, yandex.cloud.api.iam.v1.KeyOuterClass.Key>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.KeyService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyOuterClass.Key.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest,
@@ -76,22 +63,21 @@ public final class KeyServiceGrpc {
     if ((getListMethod = KeyServiceGrpc.getListMethod) == null) {
       synchronized (KeyServiceGrpc.class) {
         if ((getListMethod = KeyServiceGrpc.getListMethod) == null) {
-          KeyServiceGrpc.getListMethod = getListMethod = 
+          KeyServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest, yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.KeyService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest,
@@ -108,22 +94,21 @@ public final class KeyServiceGrpc {
     if ((getCreateMethod = KeyServiceGrpc.getCreateMethod) == null) {
       synchronized (KeyServiceGrpc.class) {
         if ((getCreateMethod = KeyServiceGrpc.getCreateMethod) == null) {
-          KeyServiceGrpc.getCreateMethod = getCreateMethod = 
+          KeyServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest, yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.KeyService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest,
@@ -140,22 +125,21 @@ public final class KeyServiceGrpc {
     if ((getUpdateMethod = KeyServiceGrpc.getUpdateMethod) == null) {
       synchronized (KeyServiceGrpc.class) {
         if ((getUpdateMethod = KeyServiceGrpc.getUpdateMethod) == null) {
-          KeyServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          KeyServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.KeyService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest,
@@ -172,22 +156,21 @@ public final class KeyServiceGrpc {
     if ((getDeleteMethod = KeyServiceGrpc.getDeleteMethod) == null) {
       synchronized (KeyServiceGrpc.class) {
         if ((getDeleteMethod = KeyServiceGrpc.getDeleteMethod) == null) {
-          KeyServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          KeyServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.KeyService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest,
@@ -204,29 +187,35 @@ public final class KeyServiceGrpc {
     if ((getListOperationsMethod = KeyServiceGrpc.getListOperationsMethod) == null) {
       synchronized (KeyServiceGrpc.class) {
         if ((getListOperationsMethod = KeyServiceGrpc.getListOperationsMethod) == null) {
-          KeyServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          KeyServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest, yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.KeyService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static KeyServiceStub newStub(io.grpc.Channel channel) {
-    return new KeyServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeyServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeyServiceStub>() {
+        @java.lang.Override
+        public KeyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeyServiceStub(channel, callOptions);
+        }
+      };
+    return KeyServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class KeyServiceGrpc {
    */
   public static KeyServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new KeyServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeyServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeyServiceBlockingStub>() {
+        @java.lang.Override
+        public KeyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeyServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return KeyServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class KeyServiceGrpc {
    */
   public static KeyServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new KeyServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeyServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeyServiceFutureStub>() {
+        @java.lang.Override
+        public KeyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeyServiceFutureStub(channel, callOptions);
+        }
+      };
+    return KeyServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -260,7 +263,7 @@ public final class KeyServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyOuterClass.Key> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class KeyServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class KeyServiceGrpc {
      */
     public void create(yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +293,7 @@ public final class KeyServiceGrpc {
      */
     public void update(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -300,7 +303,7 @@ public final class KeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -310,49 +313,49 @@ public final class KeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest,
                 yandex.cloud.api.iam.v1.KeyOuterClass.Key>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest,
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest,
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest,
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse>(
@@ -366,19 +369,15 @@ public final class KeyServiceGrpc {
    * A set of methods for managing Key resources.
    * </pre>
    */
-  public static final class KeyServiceStub extends io.grpc.stub.AbstractStub<KeyServiceStub> {
-    private KeyServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeyServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeyServiceStub extends io.grpc.stub.AbstractAsyncStub<KeyServiceStub> {
+    private KeyServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeyServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeyServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeyServiceStub(channel, callOptions);
     }
 
@@ -390,7 +389,7 @@ public final class KeyServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyOuterClass.Key> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -401,7 +400,7 @@ public final class KeyServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -412,7 +411,7 @@ public final class KeyServiceGrpc {
      */
     public void create(yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -423,7 +422,7 @@ public final class KeyServiceGrpc {
      */
     public void update(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -434,7 +433,7 @@ public final class KeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -445,7 +444,7 @@ public final class KeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -455,19 +454,15 @@ public final class KeyServiceGrpc {
    * A set of methods for managing Key resources.
    * </pre>
    */
-  public static final class KeyServiceBlockingStub extends io.grpc.stub.AbstractStub<KeyServiceBlockingStub> {
-    private KeyServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeyServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeyServiceBlockingStub> {
+    private KeyServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeyServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeyServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeyServiceBlockingStub(channel, callOptions);
     }
 
@@ -478,7 +473,7 @@ public final class KeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.KeyOuterClass.Key get(yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -488,7 +483,7 @@ public final class KeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse list(yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -498,7 +493,7 @@ public final class KeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse create(yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -508,7 +503,7 @@ public final class KeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -518,7 +513,7 @@ public final class KeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -528,7 +523,7 @@ public final class KeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse listOperations(yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -538,19 +533,15 @@ public final class KeyServiceGrpc {
    * A set of methods for managing Key resources.
    * </pre>
    */
-  public static final class KeyServiceFutureStub extends io.grpc.stub.AbstractStub<KeyServiceFutureStub> {
-    private KeyServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeyServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeyServiceFutureStub> {
+    private KeyServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeyServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeyServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeyServiceFutureStub(channel, callOptions);
     }
 
@@ -562,7 +553,7 @@ public final class KeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.KeyOuterClass.Key> get(
         yandex.cloud.api.iam.v1.KeyServiceOuterClass.GetKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -573,7 +564,7 @@ public final class KeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysResponse> list(
         yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeysRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -584,7 +575,7 @@ public final class KeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse> create(
         yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -595,7 +586,7 @@ public final class KeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -606,7 +597,7 @@ public final class KeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -617,7 +608,7 @@ public final class KeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsResponse> listOperations(
         yandex.cloud.api.iam.v1.KeyServiceOuterClass.ListKeyOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

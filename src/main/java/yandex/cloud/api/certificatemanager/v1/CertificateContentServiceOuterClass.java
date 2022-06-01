@@ -24,6 +24,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The certificateId.
      */
     java.lang.String getCertificateId();
     /**
@@ -32,6 +33,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The bytes for certificateId.
      */
     com.google.protobuf.ByteString
         getCertificateIdBytes();
@@ -42,6 +44,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @return A list containing the certificateChain.
      */
     java.util.List<java.lang.String>
         getCertificateChainList();
@@ -51,6 +54,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @return The count of certificateChain.
      */
     int getCertificateChainCount();
     /**
@@ -59,6 +63,8 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @param index The index of the element to return.
+     * @return The certificateChain at the given index.
      */
     java.lang.String getCertificateChain(int index);
     /**
@@ -67,6 +73,8 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the certificateChain at the given index.
      */
     com.google.protobuf.ByteString
         getCertificateChainBytes(int index);
@@ -77,6 +85,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string private_key = 4;</code>
+     * @return The privateKey.
      */
     java.lang.String getPrivateKey();
     /**
@@ -85,6 +94,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string private_key = 4;</code>
+     * @return The bytes for privateKey.
      */
     com.google.protobuf.ByteString
         getPrivateKeyBytes();
@@ -92,7 +102,7 @@ public final class CertificateContentServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.GetCertificateContentResponse}
    */
-  public  static final class GetCertificateContentResponse extends
+  public static final class GetCertificateContentResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.GetCertificateContentResponse)
       GetCertificateContentResponseOrBuilder {
@@ -105,6 +115,13 @@ public final class CertificateContentServiceOuterClass {
       certificateId_ = "";
       certificateChain_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       privateKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetCertificateContentResponse();
     }
 
     @java.lang.Override
@@ -139,9 +156,9 @@ public final class CertificateContentServiceOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 certificateChain_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               certificateChain_.add(s);
               break;
@@ -153,7 +170,7 @@ public final class CertificateContentServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -167,7 +184,7 @@ public final class CertificateContentServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           certificateChain_ = certificateChain_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -187,7 +204,6 @@ public final class CertificateContentServiceOuterClass {
               yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse.class, yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CERTIFICATE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object certificateId_;
     /**
@@ -196,7 +212,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The certificateId.
      */
+    @java.lang.Override
     public java.lang.String getCertificateId() {
       java.lang.Object ref = certificateId_;
       if (ref instanceof java.lang.String) {
@@ -215,7 +233,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The bytes for certificateId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateIdBytes() {
       java.lang.Object ref = certificateId_;
@@ -238,6 +258,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @return A list containing the certificateChain.
      */
     public com.google.protobuf.ProtocolStringList
         getCertificateChainList() {
@@ -249,6 +270,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @return The count of certificateChain.
      */
     public int getCertificateChainCount() {
       return certificateChain_.size();
@@ -259,6 +281,8 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @param index The index of the element to return.
+     * @return The certificateChain at the given index.
      */
     public java.lang.String getCertificateChain(int index) {
       return certificateChain_.get(index);
@@ -269,6 +293,8 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>repeated string certificate_chain = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the certificateChain at the given index.
      */
     public com.google.protobuf.ByteString
         getCertificateChainBytes(int index) {
@@ -283,7 +309,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string private_key = 4;</code>
+     * @return The privateKey.
      */
+    @java.lang.Override
     public java.lang.String getPrivateKey() {
       java.lang.Object ref = privateKey_;
       if (ref instanceof java.lang.String) {
@@ -302,7 +330,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string private_key = 4;</code>
+     * @return The bytes for privateKey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPrivateKeyBytes() {
       java.lang.Object ref = privateKey_;
@@ -331,13 +361,13 @@ public final class CertificateContentServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateId_);
       }
       for (int i = 0; i < certificateChain_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, certificateChain_.getRaw(i));
       }
-      if (!getPrivateKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, privateKey_);
       }
       unknownFields.writeTo(output);
@@ -349,7 +379,7 @@ public final class CertificateContentServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateId_);
       }
       {
@@ -360,7 +390,7 @@ public final class CertificateContentServiceOuterClass {
         size += dataSize;
         size += 1 * getCertificateChainList().size();
       }
-      if (!getPrivateKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, privateKey_);
       }
       size += unknownFields.getSerializedSize();
@@ -378,15 +408,14 @@ public final class CertificateContentServiceOuterClass {
       }
       yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse other = (yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse) obj;
 
-      boolean result = true;
-      result = result && getCertificateId()
-          .equals(other.getCertificateId());
-      result = result && getCertificateChainList()
-          .equals(other.getCertificateChainList());
-      result = result && getPrivateKey()
-          .equals(other.getPrivateKey());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCertificateId()
+          .equals(other.getCertificateId())) return false;
+      if (!getCertificateChainList()
+          .equals(other.getCertificateChainList())) return false;
+      if (!getPrivateKey()
+          .equals(other.getPrivateKey())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -540,7 +569,7 @@ public final class CertificateContentServiceOuterClass {
         certificateId_ = "";
 
         certificateChain_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         privateKey_ = "";
 
         return this;
@@ -570,50 +599,48 @@ public final class CertificateContentServiceOuterClass {
       public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse buildPartial() {
         yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse result = new yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.certificateId_ = certificateId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           certificateChain_ = certificateChain_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.certificateChain_ = certificateChain_;
         result.privateKey_ = privateKey_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -634,7 +661,7 @@ public final class CertificateContentServiceOuterClass {
         if (!other.certificateChain_.isEmpty()) {
           if (certificateChain_.isEmpty()) {
             certificateChain_ = other.certificateChain_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCertificateChainIsMutable();
             certificateChain_.addAll(other.certificateChain_);
@@ -682,6 +709,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return The certificateId.
        */
       public java.lang.String getCertificateId() {
         java.lang.Object ref = certificateId_;
@@ -701,6 +729,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return The bytes for certificateId.
        */
       public com.google.protobuf.ByteString
           getCertificateIdBytes() {
@@ -721,6 +750,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @param value The certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateId(
           java.lang.String value) {
@@ -738,6 +769,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateId() {
         
@@ -751,6 +783,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @param value The bytes for certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateIdBytes(
           com.google.protobuf.ByteString value) {
@@ -766,9 +800,9 @@ public final class CertificateContentServiceOuterClass {
 
       private com.google.protobuf.LazyStringList certificateChain_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureCertificateChainIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           certificateChain_ = new com.google.protobuf.LazyStringArrayList(certificateChain_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -777,6 +811,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @return A list containing the certificateChain.
        */
       public com.google.protobuf.ProtocolStringList
           getCertificateChainList() {
@@ -788,6 +823,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @return The count of certificateChain.
        */
       public int getCertificateChainCount() {
         return certificateChain_.size();
@@ -798,6 +834,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @param index The index of the element to return.
+       * @return The certificateChain at the given index.
        */
       public java.lang.String getCertificateChain(int index) {
         return certificateChain_.get(index);
@@ -808,6 +846,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the certificateChain at the given index.
        */
       public com.google.protobuf.ByteString
           getCertificateChainBytes(int index) {
@@ -819,6 +859,9 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The certificateChain to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateChain(
           int index, java.lang.String value) {
@@ -836,6 +879,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @param value The certificateChain to add.
+       * @return This builder for chaining.
        */
       public Builder addCertificateChain(
           java.lang.String value) {
@@ -853,6 +898,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @param values The certificateChain to add.
+       * @return This builder for chaining.
        */
       public Builder addAllCertificateChain(
           java.lang.Iterable<java.lang.String> values) {
@@ -868,10 +915,11 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateChain() {
         certificateChain_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -881,6 +929,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>repeated string certificate_chain = 3;</code>
+       * @param value The bytes of the certificateChain to add.
+       * @return This builder for chaining.
        */
       public Builder addCertificateChainBytes(
           com.google.protobuf.ByteString value) {
@@ -901,6 +951,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string private_key = 4;</code>
+       * @return The privateKey.
        */
       public java.lang.String getPrivateKey() {
         java.lang.Object ref = privateKey_;
@@ -920,6 +971,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string private_key = 4;</code>
+       * @return The bytes for privateKey.
        */
       public com.google.protobuf.ByteString
           getPrivateKeyBytes() {
@@ -940,6 +992,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string private_key = 4;</code>
+       * @param value The privateKey to set.
+       * @return This builder for chaining.
        */
       public Builder setPrivateKey(
           java.lang.String value) {
@@ -957,6 +1011,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string private_key = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPrivateKey() {
         
@@ -970,6 +1025,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string private_key = 4;</code>
+       * @param value The bytes for privateKey to set.
+       * @return This builder for chaining.
        */
       public Builder setPrivateKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -985,7 +1042,7 @@ public final class CertificateContentServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1045,6 +1102,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The certificateId.
      */
     java.lang.String getCertificateId();
     /**
@@ -1053,6 +1111,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The bytes for certificateId.
      */
     com.google.protobuf.ByteString
         getCertificateIdBytes();
@@ -1063,6 +1122,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -1071,6 +1131,7 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -1078,7 +1139,7 @@ public final class CertificateContentServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.GetCertificateContentRequest}
    */
-  public  static final class GetCertificateContentRequest extends
+  public static final class GetCertificateContentRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.GetCertificateContentRequest)
       GetCertificateContentRequestOrBuilder {
@@ -1090,6 +1151,13 @@ public final class CertificateContentServiceOuterClass {
     private GetCertificateContentRequest() {
       certificateId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetCertificateContentRequest();
     }
 
     @java.lang.Override
@@ -1105,7 +1173,6 @@ public final class CertificateContentServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1129,7 +1196,7 @@ public final class CertificateContentServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1168,7 +1235,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The certificateId.
      */
+    @java.lang.Override
     public java.lang.String getCertificateId() {
       java.lang.Object ref = certificateId_;
       if (ref instanceof java.lang.String) {
@@ -1187,7 +1256,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The bytes for certificateId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateIdBytes() {
       java.lang.Object ref = certificateId_;
@@ -1210,7 +1281,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -1229,7 +1302,9 @@ public final class CertificateContentServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -1258,10 +1333,10 @@ public final class CertificateContentServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       unknownFields.writeTo(output);
@@ -1273,10 +1348,10 @@ public final class CertificateContentServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1294,13 +1369,12 @@ public final class CertificateContentServiceOuterClass {
       }
       yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest other = (yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest) obj;
 
-      boolean result = true;
-      result = result && getCertificateId()
-          .equals(other.getCertificateId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCertificateId()
+          .equals(other.getCertificateId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1485,35 +1559,35 @@ public final class CertificateContentServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1571,6 +1645,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return The certificateId.
        */
       public java.lang.String getCertificateId() {
         java.lang.Object ref = certificateId_;
@@ -1590,6 +1665,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return The bytes for certificateId.
        */
       public com.google.protobuf.ByteString
           getCertificateIdBytes() {
@@ -1610,6 +1686,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @param value The certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateId(
           java.lang.String value) {
@@ -1627,6 +1705,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateId() {
         
@@ -1640,6 +1719,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @param value The bytes for certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1660,6 +1741,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -1679,6 +1761,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -1699,6 +1782,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -1716,6 +1801,7 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -1729,6 +1815,8 @@ public final class CertificateContentServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1744,7 +1832,7 @@ public final class CertificateContentServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1832,19 +1920,11 @@ public final class CertificateContentServiceOuterClass {
       "to/yandex/cloud/certificatemanager/v1;ce" +
       "rtificatemanagerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentResponse_fieldAccessorTable = new

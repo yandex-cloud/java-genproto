@@ -24,6 +24,7 @@ public final class Version {
      * </pre>
      *
      * <code>string current_version = 1;</code>
+     * @return The currentVersion.
      */
     java.lang.String getCurrentVersion();
     /**
@@ -32,6 +33,7 @@ public final class Version {
      * </pre>
      *
      * <code>string current_version = 1;</code>
+     * @return The bytes for currentVersion.
      */
     com.google.protobuf.ByteString
         getCurrentVersionBytes();
@@ -44,6 +46,7 @@ public final class Version {
      * </pre>
      *
      * <code>bool new_revision_available = 2;</code>
+     * @return The newRevisionAvailable.
      */
     boolean getNewRevisionAvailable();
 
@@ -54,6 +57,7 @@ public final class Version {
      * </pre>
      *
      * <code>string new_revision_summary = 3;</code>
+     * @return The newRevisionSummary.
      */
     java.lang.String getNewRevisionSummary();
     /**
@@ -63,6 +67,7 @@ public final class Version {
      * </pre>
      *
      * <code>string new_revision_summary = 3;</code>
+     * @return The bytes for newRevisionSummary.
      */
     com.google.protobuf.ByteString
         getNewRevisionSummaryBytes();
@@ -74,13 +79,14 @@ public final class Version {
      * </pre>
      *
      * <code>bool version_deprecated = 4;</code>
+     * @return The versionDeprecated.
      */
     boolean getVersionDeprecated();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.VersionInfo}
    */
-  public  static final class VersionInfo extends
+  public static final class VersionInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.VersionInfo)
       VersionInfoOrBuilder {
@@ -91,9 +97,14 @@ public final class Version {
     }
     private VersionInfo() {
       currentVersion_ = "";
-      newRevisionAvailable_ = false;
       newRevisionSummary_ = "";
-      versionDeprecated_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VersionInfo();
     }
 
     @java.lang.Override
@@ -109,7 +120,6 @@ public final class Version {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -143,7 +153,7 @@ public final class Version {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -182,7 +192,9 @@ public final class Version {
      * </pre>
      *
      * <code>string current_version = 1;</code>
+     * @return The currentVersion.
      */
+    @java.lang.Override
     public java.lang.String getCurrentVersion() {
       java.lang.Object ref = currentVersion_;
       if (ref instanceof java.lang.String) {
@@ -201,7 +213,9 @@ public final class Version {
      * </pre>
      *
      * <code>string current_version = 1;</code>
+     * @return The bytes for currentVersion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCurrentVersionBytes() {
       java.lang.Object ref = currentVersion_;
@@ -226,7 +240,9 @@ public final class Version {
      * </pre>
      *
      * <code>bool new_revision_available = 2;</code>
+     * @return The newRevisionAvailable.
      */
+    @java.lang.Override
     public boolean getNewRevisionAvailable() {
       return newRevisionAvailable_;
     }
@@ -240,7 +256,9 @@ public final class Version {
      * </pre>
      *
      * <code>string new_revision_summary = 3;</code>
+     * @return The newRevisionSummary.
      */
+    @java.lang.Override
     public java.lang.String getNewRevisionSummary() {
       java.lang.Object ref = newRevisionSummary_;
       if (ref instanceof java.lang.String) {
@@ -260,7 +278,9 @@ public final class Version {
      * </pre>
      *
      * <code>string new_revision_summary = 3;</code>
+     * @return The bytes for newRevisionSummary.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNewRevisionSummaryBytes() {
       java.lang.Object ref = newRevisionSummary_;
@@ -284,7 +304,9 @@ public final class Version {
      * </pre>
      *
      * <code>bool version_deprecated = 4;</code>
+     * @return The versionDeprecated.
      */
+    @java.lang.Override
     public boolean getVersionDeprecated() {
       return versionDeprecated_;
     }
@@ -303,13 +325,13 @@ public final class Version {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCurrentVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, currentVersion_);
       }
       if (newRevisionAvailable_ != false) {
         output.writeBool(2, newRevisionAvailable_);
       }
-      if (!getNewRevisionSummaryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newRevisionSummary_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newRevisionSummary_);
       }
       if (versionDeprecated_ != false) {
@@ -324,14 +346,14 @@ public final class Version {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCurrentVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, currentVersion_);
       }
       if (newRevisionAvailable_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, newRevisionAvailable_);
       }
-      if (!getNewRevisionSummaryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newRevisionSummary_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newRevisionSummary_);
       }
       if (versionDeprecated_ != false) {
@@ -353,17 +375,16 @@ public final class Version {
       }
       yandex.cloud.api.k8s.v1.Version.VersionInfo other = (yandex.cloud.api.k8s.v1.Version.VersionInfo) obj;
 
-      boolean result = true;
-      result = result && getCurrentVersion()
-          .equals(other.getCurrentVersion());
-      result = result && (getNewRevisionAvailable()
-          == other.getNewRevisionAvailable());
-      result = result && getNewRevisionSummary()
-          .equals(other.getNewRevisionSummary());
-      result = result && (getVersionDeprecated()
-          == other.getVersionDeprecated());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCurrentVersion()
+          .equals(other.getCurrentVersion())) return false;
+      if (getNewRevisionAvailable()
+          != other.getNewRevisionAvailable()) return false;
+      if (!getNewRevisionSummary()
+          .equals(other.getNewRevisionSummary())) return false;
+      if (getVersionDeprecated()
+          != other.getVersionDeprecated()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -560,35 +581,35 @@ public final class Version {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -652,6 +673,7 @@ public final class Version {
        * </pre>
        *
        * <code>string current_version = 1;</code>
+       * @return The currentVersion.
        */
       public java.lang.String getCurrentVersion() {
         java.lang.Object ref = currentVersion_;
@@ -671,6 +693,7 @@ public final class Version {
        * </pre>
        *
        * <code>string current_version = 1;</code>
+       * @return The bytes for currentVersion.
        */
       public com.google.protobuf.ByteString
           getCurrentVersionBytes() {
@@ -691,6 +714,8 @@ public final class Version {
        * </pre>
        *
        * <code>string current_version = 1;</code>
+       * @param value The currentVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrentVersion(
           java.lang.String value) {
@@ -708,6 +733,7 @@ public final class Version {
        * </pre>
        *
        * <code>string current_version = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCurrentVersion() {
         
@@ -721,6 +747,8 @@ public final class Version {
        * </pre>
        *
        * <code>string current_version = 1;</code>
+       * @param value The bytes for currentVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrentVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -743,7 +771,9 @@ public final class Version {
        * </pre>
        *
        * <code>bool new_revision_available = 2;</code>
+       * @return The newRevisionAvailable.
        */
+      @java.lang.Override
       public boolean getNewRevisionAvailable() {
         return newRevisionAvailable_;
       }
@@ -755,6 +785,8 @@ public final class Version {
        * </pre>
        *
        * <code>bool new_revision_available = 2;</code>
+       * @param value The newRevisionAvailable to set.
+       * @return This builder for chaining.
        */
       public Builder setNewRevisionAvailable(boolean value) {
         
@@ -770,6 +802,7 @@ public final class Version {
        * </pre>
        *
        * <code>bool new_revision_available = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNewRevisionAvailable() {
         
@@ -786,6 +819,7 @@ public final class Version {
        * </pre>
        *
        * <code>string new_revision_summary = 3;</code>
+       * @return The newRevisionSummary.
        */
       public java.lang.String getNewRevisionSummary() {
         java.lang.Object ref = newRevisionSummary_;
@@ -806,6 +840,7 @@ public final class Version {
        * </pre>
        *
        * <code>string new_revision_summary = 3;</code>
+       * @return The bytes for newRevisionSummary.
        */
       public com.google.protobuf.ByteString
           getNewRevisionSummaryBytes() {
@@ -827,6 +862,8 @@ public final class Version {
        * </pre>
        *
        * <code>string new_revision_summary = 3;</code>
+       * @param value The newRevisionSummary to set.
+       * @return This builder for chaining.
        */
       public Builder setNewRevisionSummary(
           java.lang.String value) {
@@ -845,6 +882,7 @@ public final class Version {
        * </pre>
        *
        * <code>string new_revision_summary = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNewRevisionSummary() {
         
@@ -859,6 +897,8 @@ public final class Version {
        * </pre>
        *
        * <code>string new_revision_summary = 3;</code>
+       * @param value The bytes for newRevisionSummary to set.
+       * @return This builder for chaining.
        */
       public Builder setNewRevisionSummaryBytes(
           com.google.protobuf.ByteString value) {
@@ -880,7 +920,9 @@ public final class Version {
        * </pre>
        *
        * <code>bool version_deprecated = 4;</code>
+       * @return The versionDeprecated.
        */
+      @java.lang.Override
       public boolean getVersionDeprecated() {
         return versionDeprecated_;
       }
@@ -891,6 +933,8 @@ public final class Version {
        * </pre>
        *
        * <code>bool version_deprecated = 4;</code>
+       * @param value The versionDeprecated to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionDeprecated(boolean value) {
         
@@ -905,6 +949,7 @@ public final class Version {
        * </pre>
        *
        * <code>bool version_deprecated = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionDeprecated() {
         
@@ -915,7 +960,7 @@ public final class Version {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -975,6 +1020,16 @@ public final class Version {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <pre>
+     * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
@@ -983,6 +1038,7 @@ public final class Version {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
@@ -993,6 +1049,16 @@ public final class Version {
      * </pre>
      *
      * <code>bool latest_revision = 2;</code>
+     * @return Whether the latestRevision field is set.
+     */
+    boolean hasLatestRevision();
+    /**
+     * <pre>
+     * Request update to the latest revision for the current version.
+     * </pre>
+     *
+     * <code>bool latest_revision = 2;</code>
+     * @return The latestRevision.
      */
     boolean getLatestRevision();
 
@@ -1001,7 +1067,7 @@ public final class Version {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.UpdateVersionSpec}
    */
-  public  static final class UpdateVersionSpec extends
+  public static final class UpdateVersionSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.UpdateVersionSpec)
       UpdateVersionSpecOrBuilder {
@@ -1011,6 +1077,13 @@ public final class Version {
       super(builder);
     }
     private UpdateVersionSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateVersionSpec();
     }
 
     @java.lang.Override
@@ -1026,7 +1099,6 @@ public final class Version {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1044,12 +1116,12 @@ public final class Version {
               break;
             }
             case 16: {
-              specifierCase_ = 2;
               specifier_ = input.readBool();
+              specifierCase_ = 2;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1083,7 +1155,8 @@ public final class Version {
     private int specifierCase_ = 0;
     private java.lang.Object specifier_;
     public enum SpecifierCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       VERSION(1),
       LATEST_REVISION(2),
       SPECIFIER_NOT_SET(0);
@@ -1092,6 +1165,8 @@ public final class Version {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1125,6 +1200,18 @@ public final class Version {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return Whether the version field is set.
+     */
+    public boolean hasVersion() {
+      return specifierCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     * @return The version.
      */
     public java.lang.String getVersion() {
       java.lang.Object ref = "";
@@ -1149,6 +1236,7 @@ public final class Version {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The bytes for version.
      */
     public com.google.protobuf.ByteString
         getVersionBytes() {
@@ -1176,7 +1264,21 @@ public final class Version {
      * </pre>
      *
      * <code>bool latest_revision = 2;</code>
+     * @return Whether the latestRevision field is set.
      */
+    @java.lang.Override
+    public boolean hasLatestRevision() {
+      return specifierCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Request update to the latest revision for the current version.
+     * </pre>
+     *
+     * <code>bool latest_revision = 2;</code>
+     * @return The latestRevision.
+     */
+    @java.lang.Override
     public boolean getLatestRevision() {
       if (specifierCase_ == 2) {
         return (java.lang.Boolean) specifier_;
@@ -1237,24 +1339,21 @@ public final class Version {
       }
       yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec other = (yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec) obj;
 
-      boolean result = true;
-      result = result && getSpecifierCase().equals(
-          other.getSpecifierCase());
-      if (!result) return false;
+      if (!getSpecifierCase().equals(other.getSpecifierCase())) return false;
       switch (specifierCase_) {
         case 1:
-          result = result && getVersion()
-              .equals(other.getVersion());
+          if (!getVersion()
+              .equals(other.getVersion())) return false;
           break;
         case 2:
-          result = result && (getLatestRevision()
-              == other.getLatestRevision());
+          if (getLatestRevision()
+              != other.getLatestRevision()) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1451,35 +1550,35 @@ public final class Version {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1558,7 +1657,21 @@ public final class Version {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return Whether the version field is set.
        */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return specifierCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       * @return The version.
+       */
+      @java.lang.Override
       public java.lang.String getVersion() {
         java.lang.Object ref = "";
         if (specifierCase_ == 1) {
@@ -1582,7 +1695,9 @@ public final class Version {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
         java.lang.Object ref = "";
@@ -1607,6 +1722,8 @@ public final class Version {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -1624,6 +1741,7 @@ public final class Version {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         if (specifierCase_ == 1) {
@@ -1639,6 +1757,8 @@ public final class Version {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -1658,6 +1778,18 @@ public final class Version {
        * </pre>
        *
        * <code>bool latest_revision = 2;</code>
+       * @return Whether the latestRevision field is set.
+       */
+      public boolean hasLatestRevision() {
+        return specifierCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Request update to the latest revision for the current version.
+       * </pre>
+       *
+       * <code>bool latest_revision = 2;</code>
+       * @return The latestRevision.
        */
       public boolean getLatestRevision() {
         if (specifierCase_ == 2) {
@@ -1671,6 +1803,8 @@ public final class Version {
        * </pre>
        *
        * <code>bool latest_revision = 2;</code>
+       * @param value The latestRevision to set.
+       * @return This builder for chaining.
        */
       public Builder setLatestRevision(boolean value) {
         specifierCase_ = 2;
@@ -1684,6 +1818,7 @@ public final class Version {
        * </pre>
        *
        * <code>bool latest_revision = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLatestRevision() {
         if (specifierCase_ == 2) {
@@ -1696,7 +1831,7 @@ public final class Version {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1776,19 +1911,11 @@ public final class Version {
       ".api.k8s.v1Z;github.com/yandex-cloud/go-" +
       "genproto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_k8s_v1_VersionInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_VersionInfo_fieldAccessorTable = new

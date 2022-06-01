@@ -24,6 +24,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -39,7 +41,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListAuthProvidersRequest}
    */
-  public  static final class ListAuthProvidersRequest extends
+  public static final class ListAuthProvidersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ListAuthProvidersRequest)
       ListAuthProvidersRequestOrBuilder {
@@ -50,6 +52,13 @@ public final class AuthServiceOuterClass {
     }
     private ListAuthProvidersRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAuthProvidersRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class AuthServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,7 +91,7 @@ public final class AuthServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -122,7 +130,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -141,7 +151,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -170,7 +182,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -182,7 +194,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -200,11 +212,10 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -384,35 +395,35 @@ public final class AuthServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -466,6 +477,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -485,6 +497,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -505,6 +518,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -522,6 +537,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -535,6 +551,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -550,7 +568,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -651,7 +669,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListAuthProvidersResponse}
    */
-  public  static final class ListAuthProvidersResponse extends
+  public static final class ListAuthProvidersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ListAuthProvidersResponse)
       ListAuthProvidersResponseOrBuilder {
@@ -662,6 +680,13 @@ public final class AuthServiceOuterClass {
     }
     private ListAuthProvidersResponse() {
       providers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAuthProvidersResponse();
     }
 
     @java.lang.Override
@@ -689,7 +714,7 @@ public final class AuthServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -698,7 +723,7 @@ public final class AuthServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -712,7 +737,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           providers_ = java.util.Collections.unmodifiableList(providers_);
         }
         this.unknownFields = unknownFields.build();
@@ -741,6 +766,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> getProvidersList() {
       return providers_;
     }
@@ -751,6 +777,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder> 
         getProvidersOrBuilderList() {
       return providers_;
@@ -762,6 +789,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public int getProvidersCount() {
       return providers_.size();
     }
@@ -772,6 +800,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProviders(int index) {
       return providers_.get(index);
     }
@@ -782,6 +811,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder getProvidersOrBuilder(
         int index) {
       return providers_.get(index);
@@ -832,11 +862,10 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse) obj;
 
-      boolean result = true;
-      result = result && getProvidersList()
-          .equals(other.getProvidersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1018,7 +1047,7 @@ public final class AuthServiceOuterClass {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse(this);
         int from_bitField0_ = bitField0_;
         if (providersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             providers_ = java.util.Collections.unmodifiableList(providers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1032,35 +1061,35 @@ public final class AuthServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1133,7 +1162,7 @@ public final class AuthServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> providers_ =
         java.util.Collections.emptyList();
       private void ensureProvidersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>(providers_);
           bitField0_ |= 0x00000001;
          }
@@ -1434,7 +1463,7 @@ public final class AuthServiceOuterClass {
           providersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder>(
                   providers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           providers_ = null;
@@ -1444,7 +1473,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1504,6 +1533,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -1512,6 +1542,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -1522,6 +1553,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -1530,6 +1562,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -1537,7 +1570,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.GetAuthProviderRequest}
    */
-  public  static final class GetAuthProviderRequest extends
+  public static final class GetAuthProviderRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.GetAuthProviderRequest)
       GetAuthProviderRequestOrBuilder {
@@ -1549,6 +1582,13 @@ public final class AuthServiceOuterClass {
     private GetAuthProviderRequest() {
       clusterId_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetAuthProviderRequest();
     }
 
     @java.lang.Override
@@ -1564,7 +1604,6 @@ public final class AuthServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1588,7 +1627,7 @@ public final class AuthServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1627,7 +1666,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -1646,7 +1687,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -1669,7 +1712,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1688,7 +1733,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1717,10 +1764,10 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       unknownFields.writeTo(output);
@@ -1732,10 +1779,10 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -1753,13 +1800,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1944,35 +1990,35 @@ public final class AuthServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2030,6 +2076,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -2049,6 +2096,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -2069,6 +2117,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -2086,6 +2136,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -2099,6 +2150,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2119,6 +2172,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2138,6 +2192,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2158,6 +2213,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2175,6 +2232,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2188,6 +2246,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2203,7 +2263,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2263,6 +2323,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2271,6 +2332,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2322,7 +2384,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.AddAuthProvidersRequest}
    */
-  public  static final class AddAuthProvidersRequest extends
+  public static final class AddAuthProvidersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.AddAuthProvidersRequest)
       AddAuthProvidersRequestOrBuilder {
@@ -2334,6 +2396,13 @@ public final class AuthServiceOuterClass {
     private AddAuthProvidersRequest() {
       clusterId_ = "";
       providers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddAuthProvidersRequest();
     }
 
     @java.lang.Override
@@ -2367,16 +2436,16 @@ public final class AuthServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               providers_.add(
                   input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2390,7 +2459,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           providers_ = java.util.Collections.unmodifiableList(providers_);
         }
         this.unknownFields = unknownFields.build();
@@ -2410,7 +2479,6 @@ public final class AuthServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -2419,7 +2487,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2438,7 +2508,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2462,6 +2534,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> getProvidersList() {
       return providers_;
     }
@@ -2472,6 +2545,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder> 
         getProvidersOrBuilderList() {
       return providers_;
@@ -2483,6 +2557,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public int getProvidersCount() {
       return providers_.size();
     }
@@ -2493,6 +2568,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProviders(int index) {
       return providers_.get(index);
     }
@@ -2503,6 +2579,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder getProvidersOrBuilder(
         int index) {
       return providers_.get(index);
@@ -2522,7 +2599,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       for (int i = 0; i < providers_.size(); i++) {
@@ -2537,7 +2614,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       for (int i = 0; i < providers_.size(); i++) {
@@ -2559,13 +2636,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getProvidersList()
-          .equals(other.getProvidersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2719,7 +2795,7 @@ public final class AuthServiceOuterClass {
 
         if (providersBuilder_ == null) {
           providers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           providersBuilder_.clear();
         }
@@ -2750,53 +2826,51 @@ public final class AuthServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
         if (providersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             providers_ = java.util.Collections.unmodifiableList(providers_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.providers_ = providers_;
         } else {
           result.providers_ = providersBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2818,7 +2892,7 @@ public final class AuthServiceOuterClass {
           if (!other.providers_.isEmpty()) {
             if (providers_.isEmpty()) {
               providers_ = other.providers_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureProvidersIsMutable();
               providers_.addAll(other.providers_);
@@ -2831,7 +2905,7 @@ public final class AuthServiceOuterClass {
               providersBuilder_.dispose();
               providersBuilder_ = null;
               providers_ = other.providers_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               providersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getProvidersFieldBuilder() : null;
@@ -2877,6 +2951,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -2896,6 +2971,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -2916,6 +2992,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -2933,6 +3011,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -2946,6 +3025,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2962,9 +3043,9 @@ public final class AuthServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> providers_ =
         java.util.Collections.emptyList();
       private void ensureProvidersIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>(providers_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -3158,7 +3239,7 @@ public final class AuthServiceOuterClass {
       public Builder clearProviders() {
         if (providersBuilder_ == null) {
           providers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           providersBuilder_.clear();
@@ -3263,7 +3344,7 @@ public final class AuthServiceOuterClass {
           providersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder>(
                   providers_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           providers_ = null;
@@ -3273,7 +3354,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3333,6 +3414,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -3341,6 +3423,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -3392,7 +3475,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.UpdateAuthProvidersRequest}
    */
-  public  static final class UpdateAuthProvidersRequest extends
+  public static final class UpdateAuthProvidersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.UpdateAuthProvidersRequest)
       UpdateAuthProvidersRequestOrBuilder {
@@ -3404,6 +3487,13 @@ public final class AuthServiceOuterClass {
     private UpdateAuthProvidersRequest() {
       clusterId_ = "";
       providers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAuthProvidersRequest();
     }
 
     @java.lang.Override
@@ -3437,16 +3527,16 @@ public final class AuthServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               providers_.add(
                   input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3460,7 +3550,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           providers_ = java.util.Collections.unmodifiableList(providers_);
         }
         this.unknownFields = unknownFields.build();
@@ -3480,7 +3570,6 @@ public final class AuthServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -3489,7 +3578,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3508,7 +3599,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3532,6 +3625,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> getProvidersList() {
       return providers_;
     }
@@ -3542,6 +3636,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder> 
         getProvidersOrBuilderList() {
       return providers_;
@@ -3553,6 +3648,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public int getProvidersCount() {
       return providers_.size();
     }
@@ -3563,6 +3659,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProviders(int index) {
       return providers_.get(index);
     }
@@ -3573,6 +3670,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 2 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder getProvidersOrBuilder(
         int index) {
       return providers_.get(index);
@@ -3592,7 +3690,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       for (int i = 0; i < providers_.size(); i++) {
@@ -3607,7 +3705,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       for (int i = 0; i < providers_.size(); i++) {
@@ -3629,13 +3727,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getProvidersList()
-          .equals(other.getProvidersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3789,7 +3886,7 @@ public final class AuthServiceOuterClass {
 
         if (providersBuilder_ == null) {
           providers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           providersBuilder_.clear();
         }
@@ -3820,53 +3917,51 @@ public final class AuthServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
         if (providersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             providers_ = java.util.Collections.unmodifiableList(providers_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.providers_ = providers_;
         } else {
           result.providers_ = providersBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3888,7 +3983,7 @@ public final class AuthServiceOuterClass {
           if (!other.providers_.isEmpty()) {
             if (providers_.isEmpty()) {
               providers_ = other.providers_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureProvidersIsMutable();
               providers_.addAll(other.providers_);
@@ -3901,7 +3996,7 @@ public final class AuthServiceOuterClass {
               providersBuilder_.dispose();
               providersBuilder_ = null;
               providers_ = other.providers_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               providersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getProvidersFieldBuilder() : null;
@@ -3947,6 +4042,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3966,6 +4062,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3986,6 +4083,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4003,6 +4102,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4016,6 +4116,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4032,9 +4134,9 @@ public final class AuthServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> providers_ =
         java.util.Collections.emptyList();
       private void ensureProvidersIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>(providers_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4228,7 +4330,7 @@ public final class AuthServiceOuterClass {
       public Builder clearProviders() {
         if (providersBuilder_ == null) {
           providers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           providersBuilder_.clear();
@@ -4333,7 +4435,7 @@ public final class AuthServiceOuterClass {
           providersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder>(
                   providers_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           providers_ = null;
@@ -4343,7 +4445,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4403,6 +4505,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4411,6 +4514,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4421,6 +4525,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the providerNames.
      */
     java.util.List<java.lang.String>
         getProviderNamesList();
@@ -4430,6 +4535,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of providerNames.
      */
     int getProviderNamesCount();
     /**
@@ -4438,6 +4544,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The providerNames at the given index.
      */
     java.lang.String getProviderNames(int index);
     /**
@@ -4446,6 +4554,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the providerNames at the given index.
      */
     com.google.protobuf.ByteString
         getProviderNamesBytes(int index);
@@ -4453,7 +4563,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.DeleteAuthProvidersRequest}
    */
-  public  static final class DeleteAuthProvidersRequest extends
+  public static final class DeleteAuthProvidersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.DeleteAuthProvidersRequest)
       DeleteAuthProvidersRequestOrBuilder {
@@ -4465,6 +4575,13 @@ public final class AuthServiceOuterClass {
     private DeleteAuthProvidersRequest() {
       clusterId_ = "";
       providerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAuthProvidersRequest();
     }
 
     @java.lang.Override
@@ -4499,15 +4616,15 @@ public final class AuthServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 providerNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               providerNames_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4521,7 +4638,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           providerNames_ = providerNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4541,7 +4658,6 @@ public final class AuthServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -4550,7 +4666,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4569,7 +4687,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4592,6 +4712,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the providerNames.
      */
     public com.google.protobuf.ProtocolStringList
         getProviderNamesList() {
@@ -4603,6 +4724,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of providerNames.
      */
     public int getProviderNamesCount() {
       return providerNames_.size();
@@ -4613,6 +4735,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The providerNames at the given index.
      */
     public java.lang.String getProviderNames(int index) {
       return providerNames_.get(index);
@@ -4623,6 +4747,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the providerNames at the given index.
      */
     public com.google.protobuf.ByteString
         getProviderNamesBytes(int index) {
@@ -4643,7 +4769,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       for (int i = 0; i < providerNames_.size(); i++) {
@@ -4658,7 +4784,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       {
@@ -4684,13 +4810,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getProviderNamesList()
-          .equals(other.getProviderNamesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getProviderNamesList()
+          .equals(other.getProviderNamesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4842,7 +4967,7 @@ public final class AuthServiceOuterClass {
         clusterId_ = "";
 
         providerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -4870,49 +4995,47 @@ public final class AuthServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           providerNames_ = providerNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.providerNames_ = providerNames_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4933,7 +5056,7 @@ public final class AuthServiceOuterClass {
         if (!other.providerNames_.isEmpty()) {
           if (providerNames_.isEmpty()) {
             providerNames_ = other.providerNames_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureProviderNamesIsMutable();
             providerNames_.addAll(other.providerNames_);
@@ -4977,6 +5100,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4996,6 +5120,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5016,6 +5141,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5033,6 +5160,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5046,6 +5174,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5061,9 +5191,9 @@ public final class AuthServiceOuterClass {
 
       private com.google.protobuf.LazyStringList providerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProviderNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           providerNames_ = new com.google.protobuf.LazyStringArrayList(providerNames_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -5072,6 +5202,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the providerNames.
        */
       public com.google.protobuf.ProtocolStringList
           getProviderNamesList() {
@@ -5083,6 +5214,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of providerNames.
        */
       public int getProviderNamesCount() {
         return providerNames_.size();
@@ -5093,6 +5225,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The providerNames at the given index.
        */
       public java.lang.String getProviderNames(int index) {
         return providerNames_.get(index);
@@ -5103,6 +5237,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the providerNames at the given index.
        */
       public com.google.protobuf.ByteString
           getProviderNamesBytes(int index) {
@@ -5114,6 +5250,9 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The providerNames to set.
+       * @return This builder for chaining.
        */
       public Builder setProviderNames(
           int index, java.lang.String value) {
@@ -5131,6 +5270,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The providerNames to add.
+       * @return This builder for chaining.
        */
       public Builder addProviderNames(
           java.lang.String value) {
@@ -5148,6 +5289,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The providerNames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllProviderNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -5163,10 +5306,11 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearProviderNames() {
         providerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5176,6 +5320,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string provider_names = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the providerNames to add.
+       * @return This builder for chaining.
        */
       public Builder addProviderNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -5191,7 +5337,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5251,6 +5397,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5259,6 +5406,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5269,6 +5417,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5277,6 +5426,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5287,6 +5437,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the provider field is set.
      */
     boolean hasProvider();
     /**
@@ -5295,6 +5446,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The provider.
      */
     yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProvider();
     /**
@@ -5309,7 +5461,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.UpdateAuthProviderRequest}
    */
-  public  static final class UpdateAuthProviderRequest extends
+  public static final class UpdateAuthProviderRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.UpdateAuthProviderRequest)
       UpdateAuthProviderRequestOrBuilder {
@@ -5321,6 +5473,13 @@ public final class AuthServiceOuterClass {
     private UpdateAuthProviderRequest() {
       clusterId_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAuthProviderRequest();
     }
 
     @java.lang.Override
@@ -5336,7 +5495,6 @@ public final class AuthServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5373,7 +5531,7 @@ public final class AuthServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5412,7 +5570,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5431,7 +5591,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5454,7 +5616,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5473,7 +5637,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5496,7 +5662,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the provider field is set.
      */
+    @java.lang.Override
     public boolean hasProvider() {
       return provider_ != null;
     }
@@ -5506,7 +5674,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The provider.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProvider() {
       return provider_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.getDefaultInstance() : provider_;
     }
@@ -5517,6 +5687,7 @@ public final class AuthServiceOuterClass {
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder getProviderOrBuilder() {
       return getProvider();
     }
@@ -5535,10 +5706,10 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (provider_ != null) {
@@ -5553,10 +5724,10 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (provider_ != null) {
@@ -5578,18 +5749,17 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasProvider() == other.hasProvider());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasProvider() != other.hasProvider()) return false;
       if (hasProvider()) {
-        result = result && getProvider()
-            .equals(other.getProvider());
+        if (!getProvider()
+            .equals(other.getProvider())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5789,35 +5959,35 @@ public final class AuthServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5878,6 +6048,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5897,6 +6068,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5917,6 +6089,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5934,6 +6108,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5947,6 +6122,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5967,6 +6144,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5986,6 +6164,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6006,6 +6185,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6023,6 +6204,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6036,6 +6218,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6049,7 +6233,7 @@ public final class AuthServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider provider_ = null;
+      private yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider provider_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder> providerBuilder_;
       /**
@@ -6058,6 +6242,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the provider field is set.
        */
       public boolean hasProvider() {
         return providerBuilder_ != null || provider_ != null;
@@ -6068,6 +6253,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider provider = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The provider.
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProvider() {
         if (providerBuilder_ == null) {
@@ -6204,7 +6390,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6264,6 +6450,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6272,6 +6459,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -6282,6 +6470,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -6290,6 +6479,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6297,7 +6487,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.DeleteAuthProviderRequest}
    */
-  public  static final class DeleteAuthProviderRequest extends
+  public static final class DeleteAuthProviderRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.DeleteAuthProviderRequest)
       DeleteAuthProviderRequestOrBuilder {
@@ -6309,6 +6499,13 @@ public final class AuthServiceOuterClass {
     private DeleteAuthProviderRequest() {
       clusterId_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAuthProviderRequest();
     }
 
     @java.lang.Override
@@ -6324,7 +6521,6 @@ public final class AuthServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6348,7 +6544,7 @@ public final class AuthServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6387,7 +6583,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6406,7 +6604,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6429,7 +6629,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6448,7 +6650,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6477,10 +6681,10 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       unknownFields.writeTo(output);
@@ -6492,10 +6696,10 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -6513,13 +6717,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6704,35 +6907,35 @@ public final class AuthServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6790,6 +6993,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6809,6 +7013,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6829,6 +7034,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6846,6 +7053,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6859,6 +7067,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6879,6 +7089,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6898,6 +7109,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6918,6 +7130,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6935,6 +7149,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6948,6 +7163,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6963,7 +7180,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7023,6 +7240,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7031,6 +7249,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7041,6 +7260,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return A list containing the names.
      */
     java.util.List<java.lang.String>
         getNamesList();
@@ -7050,6 +7270,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return The count of names.
      */
     int getNamesCount();
     /**
@@ -7058,6 +7279,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The names at the given index.
      */
     java.lang.String getNames(int index);
     /**
@@ -7066,6 +7289,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the names at the given index.
      */
     com.google.protobuf.ByteString
         getNamesBytes(int index);
@@ -7073,7 +7298,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.AddAuthProvidersMetadata}
    */
-  public  static final class AddAuthProvidersMetadata extends
+  public static final class AddAuthProvidersMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.AddAuthProvidersMetadata)
       AddAuthProvidersMetadataOrBuilder {
@@ -7085,6 +7310,13 @@ public final class AuthServiceOuterClass {
     private AddAuthProvidersMetadata() {
       clusterId_ = "";
       names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddAuthProvidersMetadata();
     }
 
     @java.lang.Override
@@ -7119,15 +7351,15 @@ public final class AuthServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 names_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               names_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7141,7 +7373,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -7161,7 +7393,6 @@ public final class AuthServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -7170,7 +7401,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -7189,7 +7422,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -7212,6 +7447,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return A list containing the names.
      */
     public com.google.protobuf.ProtocolStringList
         getNamesList() {
@@ -7223,6 +7459,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return The count of names.
      */
     public int getNamesCount() {
       return names_.size();
@@ -7233,6 +7470,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The names at the given index.
      */
     public java.lang.String getNames(int index) {
       return names_.get(index);
@@ -7243,6 +7482,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the names at the given index.
      */
     public com.google.protobuf.ByteString
         getNamesBytes(int index) {
@@ -7263,7 +7504,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       for (int i = 0; i < names_.size(); i++) {
@@ -7278,7 +7519,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       {
@@ -7304,13 +7545,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getNamesList()
-          .equals(other.getNamesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getNamesList()
+          .equals(other.getNamesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7462,7 +7702,7 @@ public final class AuthServiceOuterClass {
         clusterId_ = "";
 
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -7490,49 +7730,47 @@ public final class AuthServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersMetadata(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.names_ = names_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7553,7 +7791,7 @@ public final class AuthServiceOuterClass {
         if (!other.names_.isEmpty()) {
           if (names_.isEmpty()) {
             names_ = other.names_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNamesIsMutable();
             names_.addAll(other.names_);
@@ -7597,6 +7835,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7616,6 +7855,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7636,6 +7876,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7653,6 +7895,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7666,6 +7909,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7681,9 +7926,9 @@ public final class AuthServiceOuterClass {
 
       private com.google.protobuf.LazyStringList names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           names_ = new com.google.protobuf.LazyStringArrayList(names_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -7692,6 +7937,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return A list containing the names.
        */
       public com.google.protobuf.ProtocolStringList
           getNamesList() {
@@ -7703,6 +7949,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return The count of names.
        */
       public int getNamesCount() {
         return names_.size();
@@ -7713,6 +7960,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index of the element to return.
+       * @return The names at the given index.
        */
       public java.lang.String getNames(int index) {
         return names_.get(index);
@@ -7723,6 +7972,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the names at the given index.
        */
       public com.google.protobuf.ByteString
           getNamesBytes(int index) {
@@ -7734,6 +7985,9 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The names to set.
+       * @return This builder for chaining.
        */
       public Builder setNames(
           int index, java.lang.String value) {
@@ -7751,6 +8005,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param value The names to add.
+       * @return This builder for chaining.
        */
       public Builder addNames(
           java.lang.String value) {
@@ -7768,6 +8024,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param values The names to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -7783,10 +8041,11 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNames() {
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7796,6 +8055,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param value The bytes of the names to add.
+       * @return This builder for chaining.
        */
       public Builder addNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -7811,7 +8072,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7871,6 +8132,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7879,6 +8141,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7889,6 +8152,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return A list containing the names.
      */
     java.util.List<java.lang.String>
         getNamesList();
@@ -7898,6 +8162,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return The count of names.
      */
     int getNamesCount();
     /**
@@ -7906,6 +8171,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The names at the given index.
      */
     java.lang.String getNames(int index);
     /**
@@ -7914,6 +8181,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the names at the given index.
      */
     com.google.protobuf.ByteString
         getNamesBytes(int index);
@@ -7921,7 +8190,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.UpdateAuthProvidersMetadata}
    */
-  public  static final class UpdateAuthProvidersMetadata extends
+  public static final class UpdateAuthProvidersMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.UpdateAuthProvidersMetadata)
       UpdateAuthProvidersMetadataOrBuilder {
@@ -7933,6 +8202,13 @@ public final class AuthServiceOuterClass {
     private UpdateAuthProvidersMetadata() {
       clusterId_ = "";
       names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAuthProvidersMetadata();
     }
 
     @java.lang.Override
@@ -7967,15 +8243,15 @@ public final class AuthServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 names_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               names_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7989,7 +8265,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8009,7 +8285,6 @@ public final class AuthServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -8018,7 +8293,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -8037,7 +8314,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -8060,6 +8339,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return A list containing the names.
      */
     public com.google.protobuf.ProtocolStringList
         getNamesList() {
@@ -8071,6 +8351,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return The count of names.
      */
     public int getNamesCount() {
       return names_.size();
@@ -8081,6 +8362,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The names at the given index.
      */
     public java.lang.String getNames(int index) {
       return names_.get(index);
@@ -8091,6 +8374,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the names at the given index.
      */
     public com.google.protobuf.ByteString
         getNamesBytes(int index) {
@@ -8111,7 +8396,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       for (int i = 0; i < names_.size(); i++) {
@@ -8126,7 +8411,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       {
@@ -8152,13 +8437,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getNamesList()
-          .equals(other.getNamesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getNamesList()
+          .equals(other.getNamesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8310,7 +8594,7 @@ public final class AuthServiceOuterClass {
         clusterId_ = "";
 
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -8338,49 +8622,47 @@ public final class AuthServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersMetadata(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.names_ = names_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8401,7 +8683,7 @@ public final class AuthServiceOuterClass {
         if (!other.names_.isEmpty()) {
           if (names_.isEmpty()) {
             names_ = other.names_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNamesIsMutable();
             names_.addAll(other.names_);
@@ -8445,6 +8727,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -8464,6 +8747,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -8484,6 +8768,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -8501,6 +8787,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -8514,6 +8801,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8529,9 +8818,9 @@ public final class AuthServiceOuterClass {
 
       private com.google.protobuf.LazyStringList names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           names_ = new com.google.protobuf.LazyStringArrayList(names_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -8540,6 +8829,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return A list containing the names.
        */
       public com.google.protobuf.ProtocolStringList
           getNamesList() {
@@ -8551,6 +8841,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return The count of names.
        */
       public int getNamesCount() {
         return names_.size();
@@ -8561,6 +8852,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index of the element to return.
+       * @return The names at the given index.
        */
       public java.lang.String getNames(int index) {
         return names_.get(index);
@@ -8571,6 +8864,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the names at the given index.
        */
       public com.google.protobuf.ByteString
           getNamesBytes(int index) {
@@ -8582,6 +8877,9 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The names to set.
+       * @return This builder for chaining.
        */
       public Builder setNames(
           int index, java.lang.String value) {
@@ -8599,6 +8897,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param value The names to add.
+       * @return This builder for chaining.
        */
       public Builder addNames(
           java.lang.String value) {
@@ -8616,6 +8916,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param values The names to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -8631,10 +8933,11 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNames() {
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8644,6 +8947,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param value The bytes of the names to add.
+       * @return This builder for chaining.
        */
       public Builder addNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -8659,7 +8964,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8719,6 +9024,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -8727,6 +9033,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -8737,6 +9044,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return A list containing the names.
      */
     java.util.List<java.lang.String>
         getNamesList();
@@ -8746,6 +9054,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return The count of names.
      */
     int getNamesCount();
     /**
@@ -8754,6 +9063,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The names at the given index.
      */
     java.lang.String getNames(int index);
     /**
@@ -8762,6 +9073,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the names at the given index.
      */
     com.google.protobuf.ByteString
         getNamesBytes(int index);
@@ -8769,7 +9082,7 @@ public final class AuthServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.DeleteAuthProvidersMetadata}
    */
-  public  static final class DeleteAuthProvidersMetadata extends
+  public static final class DeleteAuthProvidersMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.DeleteAuthProvidersMetadata)
       DeleteAuthProvidersMetadataOrBuilder {
@@ -8781,6 +9094,13 @@ public final class AuthServiceOuterClass {
     private DeleteAuthProvidersMetadata() {
       clusterId_ = "";
       names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAuthProvidersMetadata();
     }
 
     @java.lang.Override
@@ -8815,15 +9135,15 @@ public final class AuthServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 names_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               names_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8837,7 +9157,7 @@ public final class AuthServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8857,7 +9177,6 @@ public final class AuthServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -8866,7 +9185,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -8885,7 +9206,9 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -8908,6 +9231,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return A list containing the names.
      */
     public com.google.protobuf.ProtocolStringList
         getNamesList() {
@@ -8919,6 +9243,7 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @return The count of names.
      */
     public int getNamesCount() {
       return names_.size();
@@ -8929,6 +9254,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the element to return.
+     * @return The names at the given index.
      */
     public java.lang.String getNames(int index) {
       return names_.get(index);
@@ -8939,6 +9266,8 @@ public final class AuthServiceOuterClass {
      * </pre>
      *
      * <code>repeated string names = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the names at the given index.
      */
     public com.google.protobuf.ByteString
         getNamesBytes(int index) {
@@ -8959,7 +9288,7 @@ public final class AuthServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       for (int i = 0; i < names_.size(); i++) {
@@ -8974,7 +9303,7 @@ public final class AuthServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       {
@@ -9000,13 +9329,12 @@ public final class AuthServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getNamesList()
-          .equals(other.getNamesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getNamesList()
+          .equals(other.getNamesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9158,7 +9486,7 @@ public final class AuthServiceOuterClass {
         clusterId_ = "";
 
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -9186,49 +9514,47 @@ public final class AuthServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata result = new yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersMetadata(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.names_ = names_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9249,7 +9575,7 @@ public final class AuthServiceOuterClass {
         if (!other.names_.isEmpty()) {
           if (names_.isEmpty()) {
             names_ = other.names_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNamesIsMutable();
             names_.addAll(other.names_);
@@ -9293,6 +9619,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -9312,6 +9639,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -9332,6 +9660,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -9349,6 +9679,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -9362,6 +9693,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9377,9 +9710,9 @@ public final class AuthServiceOuterClass {
 
       private com.google.protobuf.LazyStringList names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           names_ = new com.google.protobuf.LazyStringArrayList(names_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -9388,6 +9721,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return A list containing the names.
        */
       public com.google.protobuf.ProtocolStringList
           getNamesList() {
@@ -9399,6 +9733,7 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return The count of names.
        */
       public int getNamesCount() {
         return names_.size();
@@ -9409,6 +9744,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index of the element to return.
+       * @return The names at the given index.
        */
       public java.lang.String getNames(int index) {
         return names_.get(index);
@@ -9419,6 +9756,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the names at the given index.
        */
       public com.google.protobuf.ByteString
           getNamesBytes(int index) {
@@ -9430,6 +9769,9 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The names to set.
+       * @return This builder for chaining.
        */
       public Builder setNames(
           int index, java.lang.String value) {
@@ -9447,6 +9789,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param value The names to add.
+       * @return This builder for chaining.
        */
       public Builder addNames(
           java.lang.String value) {
@@ -9464,6 +9808,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param values The names to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -9479,10 +9825,11 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNames() {
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9492,6 +9839,8 @@ public final class AuthServiceOuterClass {
        * </pre>
        *
        * <code>repeated string names = 2;</code>
+       * @param value The bytes of the names to add.
+       * @return This builder for chaining.
        */
       public Builder addNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -9507,7 +9856,7 @@ public final class AuthServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9703,15 +10052,7 @@ public final class AuthServiceOuterClass {
       "proto/yandex/cloud/mdb/elasticsearch/v1;" +
       "elasticsearchb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -9719,7 +10060,7 @@ public final class AuthServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.elasticsearch.v1.Auth.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_ListAuthProvidersRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_ListAuthProvidersRequest_fieldAccessorTable = new

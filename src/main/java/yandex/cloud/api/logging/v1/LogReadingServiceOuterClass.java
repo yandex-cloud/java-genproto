@@ -25,6 +25,17 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 1;</code>
+     * @return Whether the pageToken field is set.
+     */
+    boolean hasPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+     * </pre>
+     *
+     * <code>string page_token = 1;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -34,6 +45,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 1;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -45,6 +57,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
+     * @return Whether the criteria field is set.
      */
     boolean hasCriteria();
     /**
@@ -54,6 +67,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
+     * @return The criteria.
      */
     yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria getCriteria();
     /**
@@ -71,7 +85,7 @@ public final class LogReadingServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ReadRequest}
    */
-  public  static final class ReadRequest extends
+  public static final class ReadRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ReadRequest)
       ReadRequestOrBuilder {
@@ -81,6 +95,13 @@ public final class LogReadingServiceOuterClass {
       super(builder);
     }
     private ReadRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReadRequest();
     }
 
     @java.lang.Override
@@ -96,7 +117,6 @@ public final class LogReadingServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -128,7 +148,7 @@ public final class LogReadingServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -162,7 +182,8 @@ public final class LogReadingServiceOuterClass {
     private int selectorCase_ = 0;
     private java.lang.Object selector_;
     public enum SelectorCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PAGE_TOKEN(1),
       CRITERIA(2),
       SELECTOR_NOT_SET(0);
@@ -171,6 +192,8 @@ public final class LogReadingServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -205,6 +228,19 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 1;</code>
+     * @return Whether the pageToken field is set.
+     */
+    public boolean hasPageToken() {
+      return selectorCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+     * </pre>
+     *
+     * <code>string page_token = 1;</code>
+     * @return The pageToken.
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = "";
@@ -230,6 +266,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 1;</code>
+     * @return The bytes for pageToken.
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -258,7 +295,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
+     * @return Whether the criteria field is set.
      */
+    @java.lang.Override
     public boolean hasCriteria() {
       return selectorCase_ == 2;
     }
@@ -269,7 +308,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
+     * @return The criteria.
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria getCriteria() {
       if (selectorCase_ == 2) {
          return (yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria) selector_;
@@ -284,6 +325,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.CriteriaOrBuilder getCriteriaOrBuilder() {
       if (selectorCase_ == 2) {
          return (yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria) selector_;
@@ -342,24 +384,21 @@ public final class LogReadingServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest other = (yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest) obj;
 
-      boolean result = true;
-      result = result && getSelectorCase().equals(
-          other.getSelectorCase());
-      if (!result) return false;
+      if (!getSelectorCase().equals(other.getSelectorCase())) return false;
       switch (selectorCase_) {
         case 1:
-          result = result && getPageToken()
-              .equals(other.getPageToken());
+          if (!getPageToken()
+              .equals(other.getPageToken())) return false;
           break;
         case 2:
-          result = result && getCriteria()
-              .equals(other.getCriteria());
+          if (!getCriteria()
+              .equals(other.getCriteria())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -559,35 +598,35 @@ public final class LogReadingServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -667,7 +706,22 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 1;</code>
+       * @return Whether the pageToken field is set.
        */
+      @java.lang.Override
+      public boolean hasPageToken() {
+        return selectorCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+       * </pre>
+       *
+       * <code>string page_token = 1;</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
       public java.lang.String getPageToken() {
         java.lang.Object ref = "";
         if (selectorCase_ == 1) {
@@ -692,7 +746,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 1;</code>
+       * @return The bytes for pageToken.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
         java.lang.Object ref = "";
@@ -718,6 +774,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 1;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -736,6 +794,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         if (selectorCase_ == 1) {
@@ -752,6 +811,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 1;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -774,7 +835,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
+       * @return Whether the criteria field is set.
        */
+      @java.lang.Override
       public boolean hasCriteria() {
         return selectorCase_ == 2;
       }
@@ -785,7 +848,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
+       * @return The criteria.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria getCriteria() {
         if (criteriaBuilder_ == null) {
           if (selectorCase_ == 2) {
@@ -909,6 +974,7 @@ public final class LogReadingServiceOuterClass {
        *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.CriteriaOrBuilder getCriteriaOrBuilder() {
         if ((selectorCase_ == 2) && (criteriaBuilder_ != null)) {
           return criteriaBuilder_.getMessageOrBuilder();
@@ -948,7 +1014,7 @@ public final class LogReadingServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1008,6 +1074,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -1016,6 +1083,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -1073,6 +1141,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 3;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1084,6 +1153,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 3;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1097,6 +1167,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string previous_page_token = 4;</code>
+     * @return The previousPageToken.
      */
     java.lang.String getPreviousPageToken();
     /**
@@ -1108,6 +1179,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string previous_page_token = 4;</code>
+     * @return The bytes for previousPageToken.
      */
     com.google.protobuf.ByteString
         getPreviousPageTokenBytes();
@@ -1115,7 +1187,7 @@ public final class LogReadingServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ReadResponse}
    */
-  public  static final class ReadResponse extends
+  public static final class ReadResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ReadResponse)
       ReadResponseOrBuilder {
@@ -1129,6 +1201,13 @@ public final class LogReadingServiceOuterClass {
       entries_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
       previousPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReadResponse();
     }
 
     @java.lang.Override
@@ -1162,9 +1241,9 @@ public final class LogReadingServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 entries_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               entries_.add(
                   input.readMessage(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.parser(), extensionRegistry));
@@ -1183,7 +1262,7 @@ public final class LogReadingServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1197,7 +1276,7 @@ public final class LogReadingServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
         }
         this.unknownFields = unknownFields.build();
@@ -1217,7 +1296,6 @@ public final class LogReadingServiceOuterClass {
               yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse.class, yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
@@ -1226,7 +1304,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -1245,7 +1325,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -1269,6 +1351,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry> getEntriesList() {
       return entries_;
     }
@@ -1279,6 +1362,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
@@ -1290,6 +1374,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
+    @java.lang.Override
     public int getEntriesCount() {
       return entries_.size();
     }
@@ -1300,6 +1385,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry getEntries(int index) {
       return entries_.get(index);
     }
@@ -1310,6 +1396,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
@@ -1326,7 +1413,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 3;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1348,7 +1437,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 3;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1374,7 +1465,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string previous_page_token = 4;</code>
+     * @return The previousPageToken.
      */
+    @java.lang.Override
     public java.lang.String getPreviousPageToken() {
       java.lang.Object ref = previousPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1396,7 +1489,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string previous_page_token = 4;</code>
+     * @return The bytes for previousPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPreviousPageTokenBytes() {
       java.lang.Object ref = previousPageToken_;
@@ -1425,16 +1520,16 @@ public final class LogReadingServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       for (int i = 0; i < entries_.size(); i++) {
         output.writeMessage(2, entries_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nextPageToken_);
       }
-      if (!getPreviousPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, previousPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1446,17 +1541,17 @@ public final class LogReadingServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       for (int i = 0; i < entries_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, entries_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nextPageToken_);
       }
-      if (!getPreviousPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, previousPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1474,17 +1569,16 @@ public final class LogReadingServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse other = (yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && getEntriesList()
-          .equals(other.getEntriesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && getPreviousPageToken()
-          .equals(other.getPreviousPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!getPreviousPageToken()
+          .equals(other.getPreviousPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1642,7 +1736,7 @@ public final class LogReadingServiceOuterClass {
 
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           entriesBuilder_.clear();
         }
@@ -1677,12 +1771,11 @@ public final class LogReadingServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse buildPartial() {
         yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse result = new yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.logGroupId_ = logGroupId_;
         if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.entries_ = entries_;
         } else {
@@ -1690,42 +1783,41 @@ public final class LogReadingServiceOuterClass {
         }
         result.nextPageToken_ = nextPageToken_;
         result.previousPageToken_ = previousPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1747,7 +1839,7 @@ public final class LogReadingServiceOuterClass {
           if (!other.entries_.isEmpty()) {
             if (entries_.isEmpty()) {
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureEntriesIsMutable();
               entries_.addAll(other.entries_);
@@ -1760,7 +1852,7 @@ public final class LogReadingServiceOuterClass {
               entriesBuilder_.dispose();
               entriesBuilder_ = null;
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               entriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntriesFieldBuilder() : null;
@@ -1814,6 +1906,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -1833,6 +1926,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -1853,6 +1947,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -1870,6 +1966,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -1883,6 +1980,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1899,9 +1998,9 @@ public final class LogReadingServiceOuterClass {
       private java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           entries_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry>(entries_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -2095,7 +2194,7 @@ public final class LogReadingServiceOuterClass {
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           entriesBuilder_.clear();
@@ -2200,7 +2299,7 @@ public final class LogReadingServiceOuterClass {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder>(
                   entries_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           entries_ = null;
@@ -2218,6 +2317,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 3;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2240,6 +2340,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 3;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2263,6 +2364,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 3;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2283,6 +2386,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2299,6 +2403,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 3;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2322,6 +2428,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string previous_page_token = 4;</code>
+       * @return The previousPageToken.
        */
       public java.lang.String getPreviousPageToken() {
         java.lang.Object ref = previousPageToken_;
@@ -2344,6 +2451,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string previous_page_token = 4;</code>
+       * @return The bytes for previousPageToken.
        */
       public com.google.protobuf.ByteString
           getPreviousPageTokenBytes() {
@@ -2367,6 +2475,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string previous_page_token = 4;</code>
+       * @param value The previousPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPreviousPageToken(
           java.lang.String value) {
@@ -2387,6 +2497,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string previous_page_token = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPreviousPageToken() {
         
@@ -2403,6 +2514,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string previous_page_token = 4;</code>
+       * @param value The bytes for previousPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPreviousPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2418,7 +2531,7 @@ public final class LogReadingServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2479,6 +2592,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -2488,6 +2602,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -2499,6 +2614,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the resourceTypes.
      */
     java.util.List<java.lang.String>
         getResourceTypesList();
@@ -2509,6 +2625,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of resourceTypes.
      */
     int getResourceTypesCount();
     /**
@@ -2518,6 +2635,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The resourceTypes at the given index.
      */
     java.lang.String getResourceTypes(int index);
     /**
@@ -2527,6 +2646,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceTypes at the given index.
      */
     com.google.protobuf.ByteString
         getResourceTypesBytes(int index);
@@ -2538,6 +2659,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the resourceIds.
      */
     java.util.List<java.lang.String>
         getResourceIdsList();
@@ -2548,6 +2670,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of resourceIds.
      */
     int getResourceIdsCount();
     /**
@@ -2557,6 +2680,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The resourceIds at the given index.
      */
     java.lang.String getResourceIds(int index);
     /**
@@ -2566,6 +2691,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceIds at the given index.
      */
     com.google.protobuf.ByteString
         getResourceIdsBytes(int index);
@@ -2576,6 +2703,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp since = 4;</code>
+     * @return Whether the since field is set.
      */
     boolean hasSince();
     /**
@@ -2584,6 +2712,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp since = 4;</code>
+     * @return The since.
      */
     com.google.protobuf.Timestamp getSince();
     /**
@@ -2601,6 +2730,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp until = 5;</code>
+     * @return Whether the until field is set.
      */
     boolean hasUntil();
     /**
@@ -2609,6 +2739,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp until = 5;</code>
+     * @return The until.
      */
     com.google.protobuf.Timestamp getUntil();
     /**
@@ -2627,6 +2758,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @return A list containing the levels.
      */
     java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList();
     /**
@@ -2636,6 +2768,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @return The count of levels.
      */
     int getLevelsCount();
     /**
@@ -2645,6 +2778,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @param index The index of the element to return.
+     * @return The levels at the given index.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index);
     /**
@@ -2654,6 +2789,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @return A list containing the enum numeric values on the wire for levels.
      */
     java.util.List<java.lang.Integer>
     getLevelsValueList();
@@ -2664,6 +2800,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of levels at the given index.
      */
     int getLevelsValue(int index);
 
@@ -2673,6 +2811,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -2681,6 +2820,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -2692,6 +2832,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the streamNames.
      */
     java.util.List<java.lang.String>
         getStreamNamesList();
@@ -2702,6 +2843,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of streamNames.
      */
     int getStreamNamesCount();
     /**
@@ -2711,6 +2853,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The streamNames at the given index.
      */
     java.lang.String getStreamNames(int index);
     /**
@@ -2720,6 +2864,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamNames at the given index.
      */
     com.google.protobuf.ByteString
         getStreamNamesBytes(int index);
@@ -2730,6 +2876,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -2740,6 +2887,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+     * @return The maxResponseSize.
      */
     long getMaxResponseSize();
   }
@@ -2750,7 +2898,7 @@ public final class LogReadingServiceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.logging.v1.Criteria}
    */
-  public  static final class Criteria extends
+  public static final class Criteria extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.Criteria)
       CriteriaOrBuilder {
@@ -2766,8 +2914,13 @@ public final class LogReadingServiceOuterClass {
       levels_ = java.util.Collections.emptyList();
       filter_ = "";
       streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      pageSize_ = 0L;
-      maxResponseSize_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Criteria();
     }
 
     @java.lang.Override
@@ -2802,18 +2955,18 @@ public final class LogReadingServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 resourceTypes_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               resourceTypes_.add(s);
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 resourceIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               resourceIds_.add(s);
               break;
@@ -2846,9 +2999,9 @@ public final class LogReadingServiceOuterClass {
             }
             case 48: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 levels_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000004;
               }
               levels_.add(rawValue);
               break;
@@ -2858,9 +3011,9 @@ public final class LogReadingServiceOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   levels_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000020;
+                  mutable_bitField0_ |= 0x00000004;
                 }
                 levels_.add(rawValue);
               }
@@ -2885,15 +3038,15 @@ public final class LogReadingServiceOuterClass {
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 streamNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000008;
               }
               streamNames_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2907,16 +3060,16 @@ public final class LogReadingServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           resourceTypes_ = resourceTypes_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           resourceIds_ = resourceIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           levels_ = java.util.Collections.unmodifiableList(levels_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           streamNames_ = streamNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -2936,7 +3089,6 @@ public final class LogReadingServiceOuterClass {
               yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria.class, yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
@@ -2946,7 +3098,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -2966,7 +3120,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -2990,6 +3146,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the resourceTypes.
      */
     public com.google.protobuf.ProtocolStringList
         getResourceTypesList() {
@@ -3002,6 +3159,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of resourceTypes.
      */
     public int getResourceTypesCount() {
       return resourceTypes_.size();
@@ -3013,6 +3171,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The resourceTypes at the given index.
      */
     public java.lang.String getResourceTypes(int index) {
       return resourceTypes_.get(index);
@@ -3024,6 +3184,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceTypes at the given index.
      */
     public com.google.protobuf.ByteString
         getResourceTypesBytes(int index) {
@@ -3039,6 +3201,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the resourceIds.
      */
     public com.google.protobuf.ProtocolStringList
         getResourceIdsList() {
@@ -3051,6 +3214,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of resourceIds.
      */
     public int getResourceIdsCount() {
       return resourceIds_.size();
@@ -3062,6 +3226,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The resourceIds at the given index.
      */
     public java.lang.String getResourceIds(int index) {
       return resourceIds_.get(index);
@@ -3073,6 +3239,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceIds at the given index.
      */
     public com.google.protobuf.ByteString
         getResourceIdsBytes(int index) {
@@ -3087,7 +3255,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp since = 4;</code>
+     * @return Whether the since field is set.
      */
+    @java.lang.Override
     public boolean hasSince() {
       return since_ != null;
     }
@@ -3097,7 +3267,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp since = 4;</code>
+     * @return The since.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getSince() {
       return since_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : since_;
     }
@@ -3108,6 +3280,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getSinceOrBuilder() {
       return getSince();
     }
@@ -3120,7 +3293,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp until = 5;</code>
+     * @return Whether the until field is set.
      */
+    @java.lang.Override
     public boolean hasUntil() {
       return until_ != null;
     }
@@ -3130,7 +3305,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp until = 5;</code>
+     * @return The until.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUntil() {
       return until_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : until_;
     }
@@ -3141,6 +3318,7 @@ public final class LogReadingServiceOuterClass {
      *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUntilOrBuilder() {
       return getUntil();
     }
@@ -3164,7 +3342,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @return A list containing the levels.
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level>(levels_, levels_converter_);
@@ -3176,7 +3356,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @return The count of levels.
      */
+    @java.lang.Override
     public int getLevelsCount() {
       return levels_.size();
     }
@@ -3187,7 +3369,10 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @param index The index of the element to return.
+     * @return The levels at the given index.
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index) {
       return levels_converter_.convert(levels_.get(index));
     }
@@ -3198,7 +3383,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @return A list containing the enum numeric values on the wire for levels.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getLevelsValueList() {
       return levels_;
@@ -3210,7 +3397,10 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of levels at the given index.
      */
+    @java.lang.Override
     public int getLevelsValue(int index) {
       return levels_.get(index);
     }
@@ -3224,7 +3414,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -3243,7 +3435,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -3267,6 +3461,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the streamNames.
      */
     public com.google.protobuf.ProtocolStringList
         getStreamNamesList() {
@@ -3279,6 +3474,7 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of streamNames.
      */
     public int getStreamNamesCount() {
       return streamNames_.size();
@@ -3290,6 +3486,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The streamNames at the given index.
      */
     public java.lang.String getStreamNames(int index) {
       return streamNames_.get(index);
@@ -3301,6 +3499,8 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the streamNames at the given index.
      */
     public com.google.protobuf.ByteString
         getStreamNamesBytes(int index) {
@@ -3315,7 +3515,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -3329,7 +3531,9 @@ public final class LogReadingServiceOuterClass {
      * </pre>
      *
      * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+     * @return The maxResponseSize.
      */
+    @java.lang.Override
     public long getMaxResponseSize() {
       return maxResponseSize_;
     }
@@ -3349,7 +3553,7 @@ public final class LogReadingServiceOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       for (int i = 0; i < resourceTypes_.size(); i++) {
@@ -3371,7 +3575,7 @@ public final class LogReadingServiceOuterClass {
       for (int i = 0; i < levels_.size(); i++) {
         output.writeEnumNoTag(levels_.get(i));
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, filter_);
       }
       if (pageSize_ != 0L) {
@@ -3392,7 +3596,7 @@ public final class LogReadingServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       {
@@ -3431,7 +3635,7 @@ public final class LogReadingServiceOuterClass {
             .computeUInt32SizeNoTag(dataSize);
         }levelsMemoizedSerializedSize = dataSize;
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, filter_);
       }
       if (pageSize_ != 0L) {
@@ -3465,34 +3669,33 @@ public final class LogReadingServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria other = (yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && getResourceTypesList()
-          .equals(other.getResourceTypesList());
-      result = result && getResourceIdsList()
-          .equals(other.getResourceIdsList());
-      result = result && (hasSince() == other.hasSince());
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!getResourceTypesList()
+          .equals(other.getResourceTypesList())) return false;
+      if (!getResourceIdsList()
+          .equals(other.getResourceIdsList())) return false;
+      if (hasSince() != other.hasSince()) return false;
       if (hasSince()) {
-        result = result && getSince()
-            .equals(other.getSince());
+        if (!getSince()
+            .equals(other.getSince())) return false;
       }
-      result = result && (hasUntil() == other.hasUntil());
+      if (hasUntil() != other.hasUntil()) return false;
       if (hasUntil()) {
-        result = result && getUntil()
-            .equals(other.getUntil());
+        if (!getUntil()
+            .equals(other.getUntil())) return false;
       }
-      result = result && levels_.equals(other.levels_);
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getStreamNamesList()
-          .equals(other.getStreamNamesList());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && (getMaxResponseSize()
-          == other.getMaxResponseSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!levels_.equals(other.levels_)) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getStreamNamesList()
+          .equals(other.getStreamNamesList())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (getMaxResponseSize()
+          != other.getMaxResponseSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3676,9 +3879,9 @@ public final class LogReadingServiceOuterClass {
         logGroupId_ = "";
 
         resourceTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (sinceBuilder_ == null) {
           since_ = null;
         } else {
@@ -3692,11 +3895,11 @@ public final class LogReadingServiceOuterClass {
           untilBuilder_ = null;
         }
         levels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000004);
         filter_ = "";
 
         streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000008);
         pageSize_ = 0L;
 
         maxResponseSize_ = 0L;
@@ -3728,16 +3931,15 @@ public final class LogReadingServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria buildPartial() {
         yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria result = new yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.logGroupId_ = logGroupId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           resourceTypes_ = resourceTypes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.resourceTypes_ = resourceTypes_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           resourceIds_ = resourceIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.resourceIds_ = resourceIds_;
         if (sinceBuilder_ == null) {
@@ -3750,55 +3952,54 @@ public final class LogReadingServiceOuterClass {
         } else {
           result.until_ = untilBuilder_.build();
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           levels_ = java.util.Collections.unmodifiableList(levels_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.levels_ = levels_;
         result.filter_ = filter_;
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           streamNames_ = streamNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.streamNames_ = streamNames_;
         result.pageSize_ = pageSize_;
         result.maxResponseSize_ = maxResponseSize_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3819,7 +4020,7 @@ public final class LogReadingServiceOuterClass {
         if (!other.resourceTypes_.isEmpty()) {
           if (resourceTypes_.isEmpty()) {
             resourceTypes_ = other.resourceTypes_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureResourceTypesIsMutable();
             resourceTypes_.addAll(other.resourceTypes_);
@@ -3829,7 +4030,7 @@ public final class LogReadingServiceOuterClass {
         if (!other.resourceIds_.isEmpty()) {
           if (resourceIds_.isEmpty()) {
             resourceIds_ = other.resourceIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureResourceIdsIsMutable();
             resourceIds_.addAll(other.resourceIds_);
@@ -3845,7 +4046,7 @@ public final class LogReadingServiceOuterClass {
         if (!other.levels_.isEmpty()) {
           if (levels_.isEmpty()) {
             levels_ = other.levels_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLevelsIsMutable();
             levels_.addAll(other.levels_);
@@ -3859,7 +4060,7 @@ public final class LogReadingServiceOuterClass {
         if (!other.streamNames_.isEmpty()) {
           if (streamNames_.isEmpty()) {
             streamNames_ = other.streamNames_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureStreamNamesIsMutable();
             streamNames_.addAll(other.streamNames_);
@@ -3910,6 +4111,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -3930,6 +4132,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -3951,6 +4154,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -3969,6 +4174,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -3983,6 +4189,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3998,9 +4206,9 @@ public final class LogReadingServiceOuterClass {
 
       private com.google.protobuf.LazyStringList resourceTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureResourceTypesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           resourceTypes_ = new com.google.protobuf.LazyStringArrayList(resourceTypes_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -4010,6 +4218,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the resourceTypes.
        */
       public com.google.protobuf.ProtocolStringList
           getResourceTypesList() {
@@ -4022,6 +4231,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of resourceTypes.
        */
       public int getResourceTypesCount() {
         return resourceTypes_.size();
@@ -4033,6 +4243,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The resourceTypes at the given index.
        */
       public java.lang.String getResourceTypes(int index) {
         return resourceTypes_.get(index);
@@ -4044,6 +4256,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceTypes at the given index.
        */
       public com.google.protobuf.ByteString
           getResourceTypesBytes(int index) {
@@ -4056,6 +4270,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index to set the value at.
+       * @param value The resourceTypes to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceTypes(
           int index, java.lang.String value) {
@@ -4074,6 +4291,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The resourceTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addResourceTypes(
           java.lang.String value) {
@@ -4092,6 +4311,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param values The resourceTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllResourceTypes(
           java.lang.Iterable<java.lang.String> values) {
@@ -4108,10 +4329,11 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceTypes() {
         resourceTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4122,6 +4344,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The bytes of the resourceTypes to add.
+       * @return This builder for chaining.
        */
       public Builder addResourceTypesBytes(
           com.google.protobuf.ByteString value) {
@@ -4137,9 +4361,9 @@ public final class LogReadingServiceOuterClass {
 
       private com.google.protobuf.LazyStringList resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureResourceIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           resourceIds_ = new com.google.protobuf.LazyStringArrayList(resourceIds_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -4149,6 +4373,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the resourceIds.
        */
       public com.google.protobuf.ProtocolStringList
           getResourceIdsList() {
@@ -4161,6 +4386,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of resourceIds.
        */
       public int getResourceIdsCount() {
         return resourceIds_.size();
@@ -4172,6 +4398,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The resourceIds at the given index.
        */
       public java.lang.String getResourceIds(int index) {
         return resourceIds_.get(index);
@@ -4183,6 +4411,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceIds at the given index.
        */
       public com.google.protobuf.ByteString
           getResourceIdsBytes(int index) {
@@ -4195,6 +4425,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index to set the value at.
+       * @param value The resourceIds to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIds(
           int index, java.lang.String value) {
@@ -4213,6 +4446,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The resourceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addResourceIds(
           java.lang.String value) {
@@ -4231,6 +4466,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param values The resourceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllResourceIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -4247,10 +4484,11 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceIds() {
         resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4261,6 +4499,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The bytes of the resourceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addResourceIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4274,7 +4514,7 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp since_ = null;
+      private com.google.protobuf.Timestamp since_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> sinceBuilder_;
       /**
@@ -4283,6 +4523,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp since = 4;</code>
+       * @return Whether the since field is set.
        */
       public boolean hasSince() {
         return sinceBuilder_ != null || since_ != null;
@@ -4293,6 +4534,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp since = 4;</code>
+       * @return The since.
        */
       public com.google.protobuf.Timestamp getSince() {
         if (sinceBuilder_ == null) {
@@ -4427,7 +4669,7 @@ public final class LogReadingServiceOuterClass {
         return sinceBuilder_;
       }
 
-      private com.google.protobuf.Timestamp until_ = null;
+      private com.google.protobuf.Timestamp until_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> untilBuilder_;
       /**
@@ -4436,6 +4678,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp until = 5;</code>
+       * @return Whether the until field is set.
        */
       public boolean hasUntil() {
         return untilBuilder_ != null || until_ != null;
@@ -4446,6 +4689,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp until = 5;</code>
+       * @return The until.
        */
       public com.google.protobuf.Timestamp getUntil() {
         if (untilBuilder_ == null) {
@@ -4583,9 +4827,9 @@ public final class LogReadingServiceOuterClass {
       private java.util.List<java.lang.Integer> levels_ =
         java.util.Collections.emptyList();
       private void ensureLevelsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           levels_ = new java.util.ArrayList<java.lang.Integer>(levels_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000004;
         }
       }
       /**
@@ -4595,6 +4839,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return A list containing the levels.
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -4607,6 +4852,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return The count of levels.
        */
       public int getLevelsCount() {
         return levels_.size();
@@ -4618,6 +4864,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the element to return.
+       * @return The levels at the given index.
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index) {
         return levels_converter_.convert(levels_.get(index));
@@ -4629,6 +4877,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index to set the value at.
+       * @param value The levels to set.
+       * @return This builder for chaining.
        */
       public Builder setLevels(
           int index, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
@@ -4647,6 +4898,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param value The levels to add.
+       * @return This builder for chaining.
        */
       public Builder addLevels(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
         if (value == null) {
@@ -4664,6 +4917,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param values The levels to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLevels(
           java.lang.Iterable<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> values) {
@@ -4681,10 +4936,11 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevels() {
         levels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4695,6 +4951,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return A list containing the enum numeric values on the wire for levels.
        */
       public java.util.List<java.lang.Integer>
       getLevelsValueList() {
@@ -4707,6 +4964,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of levels at the given index.
        */
       public int getLevelsValue(int index) {
         return levels_.get(index);
@@ -4718,6 +4977,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of levels at the given index.
+       * @return This builder for chaining.
        */
       public Builder setLevelsValue(
           int index, int value) {
@@ -4733,6 +4995,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param value The enum numeric value on the wire for levels to add.
+       * @return This builder for chaining.
        */
       public Builder addLevelsValue(int value) {
         ensureLevelsIsMutable();
@@ -4747,6 +5011,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param values The enum numeric values on the wire for levels to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLevelsValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -4765,6 +5031,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -4784,6 +5051,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -4804,6 +5072,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -4821,6 +5091,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -4834,6 +5105,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -4849,9 +5122,9 @@ public final class LogReadingServiceOuterClass {
 
       private com.google.protobuf.LazyStringList streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureStreamNamesIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           streamNames_ = new com.google.protobuf.LazyStringArrayList(streamNames_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -4861,6 +5134,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the streamNames.
        */
       public com.google.protobuf.ProtocolStringList
           getStreamNamesList() {
@@ -4873,6 +5147,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of streamNames.
        */
       public int getStreamNamesCount() {
         return streamNames_.size();
@@ -4884,6 +5159,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The streamNames at the given index.
        */
       public java.lang.String getStreamNames(int index) {
         return streamNames_.get(index);
@@ -4895,6 +5172,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the streamNames at the given index.
        */
       public com.google.protobuf.ByteString
           getStreamNamesBytes(int index) {
@@ -4907,6 +5186,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index to set the value at.
+       * @param value The streamNames to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamNames(
           int index, java.lang.String value) {
@@ -4925,6 +5207,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The streamNames to add.
+       * @return This builder for chaining.
        */
       public Builder addStreamNames(
           java.lang.String value) {
@@ -4943,6 +5227,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param values The streamNames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllStreamNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -4959,10 +5245,11 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStreamNames() {
         streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4973,6 +5260,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The bytes of the streamNames to add.
+       * @return This builder for chaining.
        */
       public Builder addStreamNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -4993,7 +5282,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -5003,6 +5294,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -5016,6 +5309,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -5032,7 +5326,9 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+       * @return The maxResponseSize.
        */
+      @java.lang.Override
       public long getMaxResponseSize() {
         return maxResponseSize_;
       }
@@ -5043,6 +5339,8 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+       * @param value The maxResponseSize to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxResponseSize(long value) {
         
@@ -5057,6 +5355,7 @@ public final class LogReadingServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxResponseSize() {
         
@@ -5067,7 +5366,7 @@ public final class LogReadingServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5171,21 +5470,13 @@ public final class LogReadingServiceOuterClass {
       "ub.com/yandex-cloud/go-genproto/yandex/c" +
       "loud/logging/v1;loggingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_logging_v1_ReadRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_logging_v1_ReadRequest_fieldAccessorTable = new

@@ -25,6 +25,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string uid = 1;</code>
+     * @return The uid.
      */
     java.lang.String getUid();
     /**
@@ -34,6 +35,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string uid = 1;</code>
+     * @return The bytes for uid.
      */
     com.google.protobuf.ByteString
         getUidBytes();
@@ -46,6 +48,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return Whether the resource field is set.
      */
     boolean hasResource();
     /**
@@ -56,6 +59,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return The resource.
      */
     yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource();
     /**
@@ -75,6 +79,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
@@ -83,6 +88,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
@@ -100,6 +106,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
+     * @return Whether the ingestedAt field is set.
      */
     boolean hasIngestedAt();
     /**
@@ -108,6 +115,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
+     * @return The ingestedAt.
      */
     com.google.protobuf.Timestamp getIngestedAt();
     /**
@@ -126,6 +134,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
+     * @return Whether the savedAt field is set.
      */
     boolean hasSavedAt();
     /**
@@ -135,6 +144,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
+     * @return The savedAt.
      */
     com.google.protobuf.Timestamp getSavedAt();
     /**
@@ -154,6 +164,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+     * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
@@ -163,6 +174,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+     * @return The level.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
 
@@ -172,6 +184,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 7;</code>
+     * @return The message.
      */
     java.lang.String getMessage();
     /**
@@ -180,6 +193,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 7;</code>
+     * @return The bytes for message.
      */
     com.google.protobuf.ByteString
         getMessageBytes();
@@ -190,6 +204,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
+     * @return Whether the jsonPayload field is set.
      */
     boolean hasJsonPayload();
     /**
@@ -198,6 +213,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
+     * @return The jsonPayload.
      */
     com.google.protobuf.Struct getJsonPayload();
     /**
@@ -215,6 +231,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The streamName.
      */
     java.lang.String getStreamName();
     /**
@@ -223,6 +240,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The bytes for streamName.
      */
     com.google.protobuf.ByteString
         getStreamNameBytes();
@@ -230,7 +248,7 @@ public final class LogEntryOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogEntry}
    */
-  public  static final class LogEntry extends
+  public static final class LogEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogEntry)
       LogEntryOrBuilder {
@@ -247,6 +265,13 @@ public final class LogEntryOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -259,7 +284,6 @@ public final class LogEntryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -360,7 +384,7 @@ public final class LogEntryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -400,7 +424,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string uid = 1;</code>
+     * @return The uid.
      */
+    @java.lang.Override
     public java.lang.String getUid() {
       java.lang.Object ref = uid_;
       if (ref instanceof java.lang.String) {
@@ -420,7 +446,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string uid = 1;</code>
+     * @return The bytes for uid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUidBytes() {
       java.lang.Object ref = uid_;
@@ -445,7 +473,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return Whether the resource field is set.
      */
+    @java.lang.Override
     public boolean hasResource() {
       return resource_ != null;
     }
@@ -457,7 +487,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return The resource.
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
       return resource_ == null ? yandex.cloud.api.logging.v1.LogResource.LogEntryResource.getDefaultInstance() : resource_;
     }
@@ -470,6 +502,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
@@ -482,7 +515,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return Whether the timestamp field is set.
      */
+    @java.lang.Override
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
@@ -492,7 +527,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return The timestamp.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
@@ -503,6 +540,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       return getTimestamp();
     }
@@ -515,7 +553,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
+     * @return Whether the ingestedAt field is set.
      */
+    @java.lang.Override
     public boolean hasIngestedAt() {
       return ingestedAt_ != null;
     }
@@ -525,7 +565,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
+     * @return The ingestedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getIngestedAt() {
       return ingestedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ingestedAt_;
     }
@@ -536,6 +578,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIngestedAtOrBuilder() {
       return getIngestedAt();
     }
@@ -549,7 +592,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
+     * @return Whether the savedAt field is set.
      */
+    @java.lang.Override
     public boolean hasSavedAt() {
       return savedAt_ != null;
     }
@@ -560,7 +605,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
+     * @return The savedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getSavedAt() {
       return savedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : savedAt_;
     }
@@ -572,6 +619,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getSavedAtOrBuilder() {
       return getSavedAt();
     }
@@ -585,8 +633,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -596,8 +645,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+     * @return The level.
      */
-    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
+    @java.lang.Override public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
       return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
@@ -611,7 +661,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 7;</code>
+     * @return The message.
      */
+    @java.lang.Override
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
@@ -630,7 +682,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 7;</code>
+     * @return The bytes for message.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMessageBytes() {
       java.lang.Object ref = message_;
@@ -653,7 +707,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
+     * @return Whether the jsonPayload field is set.
      */
+    @java.lang.Override
     public boolean hasJsonPayload() {
       return jsonPayload_ != null;
     }
@@ -663,7 +719,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
+     * @return The jsonPayload.
      */
+    @java.lang.Override
     public com.google.protobuf.Struct getJsonPayload() {
       return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
     }
@@ -674,6 +732,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
       return getJsonPayload();
     }
@@ -686,7 +745,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The streamName.
      */
+    @java.lang.Override
     public java.lang.String getStreamName() {
       java.lang.Object ref = streamName_;
       if (ref instanceof java.lang.String) {
@@ -705,7 +766,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The bytes for streamName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStreamNameBytes() {
       java.lang.Object ref = streamName_;
@@ -734,7 +797,7 @@ public final class LogEntryOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
       }
       if (resource_ != null) {
@@ -752,13 +815,13 @@ public final class LogEntryOuterClass {
       if (level_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, level_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, message_);
       }
       if (jsonPayload_ != null) {
         output.writeMessage(8, getJsonPayload());
       }
-      if (!getStreamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, streamName_);
       }
       unknownFields.writeTo(output);
@@ -770,7 +833,7 @@ public final class LogEntryOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
       }
       if (resource_ != null) {
@@ -793,14 +856,14 @@ public final class LogEntryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, level_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, message_);
       }
       if (jsonPayload_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getJsonPayload());
       }
-      if (!getStreamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, streamName_);
       }
       size += unknownFields.getSerializedSize();
@@ -818,41 +881,40 @@ public final class LogEntryOuterClass {
       }
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry other = (yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry) obj;
 
-      boolean result = true;
-      result = result && getUid()
-          .equals(other.getUid());
-      result = result && (hasResource() == other.hasResource());
+      if (!getUid()
+          .equals(other.getUid())) return false;
+      if (hasResource() != other.hasResource()) return false;
       if (hasResource()) {
-        result = result && getResource()
-            .equals(other.getResource());
+        if (!getResource()
+            .equals(other.getResource())) return false;
       }
-      result = result && (hasTimestamp() == other.hasTimestamp());
+      if (hasTimestamp() != other.hasTimestamp()) return false;
       if (hasTimestamp()) {
-        result = result && getTimestamp()
-            .equals(other.getTimestamp());
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
       }
-      result = result && (hasIngestedAt() == other.hasIngestedAt());
+      if (hasIngestedAt() != other.hasIngestedAt()) return false;
       if (hasIngestedAt()) {
-        result = result && getIngestedAt()
-            .equals(other.getIngestedAt());
+        if (!getIngestedAt()
+            .equals(other.getIngestedAt())) return false;
       }
-      result = result && (hasSavedAt() == other.hasSavedAt());
+      if (hasSavedAt() != other.hasSavedAt()) return false;
       if (hasSavedAt()) {
-        result = result && getSavedAt()
-            .equals(other.getSavedAt());
+        if (!getSavedAt()
+            .equals(other.getSavedAt())) return false;
       }
-      result = result && level_ == other.level_;
-      result = result && getMessage()
-          .equals(other.getMessage());
-      result = result && (hasJsonPayload() == other.hasJsonPayload());
+      if (level_ != other.level_) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (hasJsonPayload() != other.hasJsonPayload()) return false;
       if (hasJsonPayload()) {
-        result = result && getJsonPayload()
-            .equals(other.getJsonPayload());
+        if (!getJsonPayload()
+            .equals(other.getJsonPayload())) return false;
       }
-      result = result && getStreamName()
-          .equals(other.getStreamName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStreamName()
+          .equals(other.getStreamName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1122,35 +1184,35 @@ public final class LogEntryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1231,6 +1293,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string uid = 1;</code>
+       * @return The uid.
        */
       public java.lang.String getUid() {
         java.lang.Object ref = uid_;
@@ -1251,6 +1314,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string uid = 1;</code>
+       * @return The bytes for uid.
        */
       public com.google.protobuf.ByteString
           getUidBytes() {
@@ -1272,6 +1336,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string uid = 1;</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
        */
       public Builder setUid(
           java.lang.String value) {
@@ -1290,6 +1356,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string uid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUid() {
         
@@ -1304,6 +1371,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string uid = 1;</code>
+       * @param value The bytes for uid to set.
+       * @return This builder for chaining.
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
@@ -1317,7 +1386,7 @@ public final class LogEntryOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.logging.v1.LogResource.LogEntryResource resource_ = null;
+      private yandex.cloud.api.logging.v1.LogResource.LogEntryResource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogResource.LogEntryResource, yandex.cloud.api.logging.v1.LogResource.LogEntryResource.Builder, yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder> resourceBuilder_;
       /**
@@ -1328,6 +1397,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+       * @return Whether the resource field is set.
        */
       public boolean hasResource() {
         return resourceBuilder_ != null || resource_ != null;
@@ -1340,6 +1410,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+       * @return The resource.
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
         if (resourceBuilder_ == null) {
@@ -1488,7 +1559,7 @@ public final class LogEntryOuterClass {
         return resourceBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timestamp_ = null;
+      private com.google.protobuf.Timestamp timestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
@@ -1497,6 +1568,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
@@ -1507,6 +1579,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * @return The timestamp.
        */
       public com.google.protobuf.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
@@ -1641,7 +1714,7 @@ public final class LogEntryOuterClass {
         return timestampBuilder_;
       }
 
-      private com.google.protobuf.Timestamp ingestedAt_ = null;
+      private com.google.protobuf.Timestamp ingestedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> ingestedAtBuilder_;
       /**
@@ -1650,6 +1723,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
+       * @return Whether the ingestedAt field is set.
        */
       public boolean hasIngestedAt() {
         return ingestedAtBuilder_ != null || ingestedAt_ != null;
@@ -1660,6 +1734,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
+       * @return The ingestedAt.
        */
       public com.google.protobuf.Timestamp getIngestedAt() {
         if (ingestedAtBuilder_ == null) {
@@ -1794,7 +1869,7 @@ public final class LogEntryOuterClass {
         return ingestedAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp savedAt_ = null;
+      private com.google.protobuf.Timestamp savedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> savedAtBuilder_;
       /**
@@ -1804,6 +1879,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
+       * @return Whether the savedAt field is set.
        */
       public boolean hasSavedAt() {
         return savedAtBuilder_ != null || savedAt_ != null;
@@ -1815,6 +1891,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
+       * @return The savedAt.
        */
       public com.google.protobuf.Timestamp getSavedAt() {
         if (savedAtBuilder_ == null) {
@@ -1964,8 +2041,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getLevelValue() {
+      @java.lang.Override public int getLevelValue() {
         return level_;
       }
       /**
@@ -1975,8 +2053,11 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
+        
         level_ = value;
         onChanged();
         return this;
@@ -1988,7 +2069,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+       * @return The level.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
@@ -2001,6 +2084,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
         if (value == null) {
@@ -2018,6 +2103,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevel() {
         
@@ -2033,6 +2119,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 7;</code>
+       * @return The message.
        */
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
@@ -2052,6 +2139,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 7;</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
           getMessageBytes() {
@@ -2072,6 +2160,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 7;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessage(
           java.lang.String value) {
@@ -2089,6 +2179,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMessage() {
         
@@ -2102,6 +2193,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 7;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -2115,7 +2208,7 @@ public final class LogEntryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Struct jsonPayload_ = null;
+      private com.google.protobuf.Struct jsonPayload_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> jsonPayloadBuilder_;
       /**
@@ -2124,6 +2217,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
+       * @return Whether the jsonPayload field is set.
        */
       public boolean hasJsonPayload() {
         return jsonPayloadBuilder_ != null || jsonPayload_ != null;
@@ -2134,6 +2228,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
+       * @return The jsonPayload.
        */
       public com.google.protobuf.Struct getJsonPayload() {
         if (jsonPayloadBuilder_ == null) {
@@ -2275,6 +2370,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return The streamName.
        */
       public java.lang.String getStreamName() {
         java.lang.Object ref = streamName_;
@@ -2294,6 +2390,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return The bytes for streamName.
        */
       public com.google.protobuf.ByteString
           getStreamNameBytes() {
@@ -2314,6 +2411,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @param value The streamName to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamName(
           java.lang.String value) {
@@ -2331,6 +2430,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStreamName() {
         
@@ -2344,6 +2444,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @param value The bytes for streamName to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2359,7 +2461,7 @@ public final class LogEntryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2419,6 +2521,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
@@ -2427,6 +2530,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
@@ -2445,6 +2549,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
@@ -2454,6 +2559,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The level.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
 
@@ -2463,6 +2569,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The message.
      */
     java.lang.String getMessage();
     /**
@@ -2471,6 +2578,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The bytes for message.
      */
     com.google.protobuf.ByteString
         getMessageBytes();
@@ -2481,6 +2589,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return Whether the jsonPayload field is set.
      */
     boolean hasJsonPayload();
     /**
@@ -2489,6 +2598,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The jsonPayload.
      */
     com.google.protobuf.Struct getJsonPayload();
     /**
@@ -2506,6 +2616,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The streamName.
      */
     java.lang.String getStreamName();
     /**
@@ -2514,6 +2625,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The bytes for streamName.
      */
     com.google.protobuf.ByteString
         getStreamNameBytes();
@@ -2521,7 +2633,7 @@ public final class LogEntryOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.IncomingLogEntry}
    */
-  public  static final class IncomingLogEntry extends
+  public static final class IncomingLogEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.IncomingLogEntry)
       IncomingLogEntryOrBuilder {
@@ -2537,6 +2649,13 @@ public final class LogEntryOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IncomingLogEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2549,7 +2668,6 @@ public final class LogEntryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2605,7 +2723,7 @@ public final class LogEntryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2644,7 +2762,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timestamp field is set.
      */
+    @java.lang.Override
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
@@ -2654,7 +2774,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The timestamp.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
@@ -2665,6 +2787,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       return getTimestamp();
     }
@@ -2678,8 +2801,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -2689,8 +2813,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The level.
      */
-    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
+    @java.lang.Override public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
       return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
@@ -2704,7 +2829,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The message.
      */
+    @java.lang.Override
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
@@ -2723,7 +2850,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The bytes for message.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMessageBytes() {
       java.lang.Object ref = message_;
@@ -2746,7 +2875,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return Whether the jsonPayload field is set.
      */
+    @java.lang.Override
     public boolean hasJsonPayload() {
       return jsonPayload_ != null;
     }
@@ -2756,7 +2887,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The jsonPayload.
      */
+    @java.lang.Override
     public com.google.protobuf.Struct getJsonPayload() {
       return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
     }
@@ -2767,6 +2900,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
       return getJsonPayload();
     }
@@ -2779,7 +2913,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The streamName.
      */
+    @java.lang.Override
     public java.lang.String getStreamName() {
       java.lang.Object ref = streamName_;
       if (ref instanceof java.lang.String) {
@@ -2798,7 +2934,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The bytes for streamName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStreamNameBytes() {
       java.lang.Object ref = streamName_;
@@ -2833,13 +2971,13 @@ public final class LogEntryOuterClass {
       if (level_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, level_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, message_);
       }
       if (jsonPayload_ != null) {
         output.writeMessage(4, getJsonPayload());
       }
-      if (!getStreamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, streamName_);
       }
       unknownFields.writeTo(output);
@@ -2859,14 +2997,14 @@ public final class LogEntryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, level_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, message_);
       }
       if (jsonPayload_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJsonPayload());
       }
-      if (!getStreamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, streamName_);
       }
       size += unknownFields.getSerializedSize();
@@ -2884,24 +3022,23 @@ public final class LogEntryOuterClass {
       }
       yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry other = (yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry) obj;
 
-      boolean result = true;
-      result = result && (hasTimestamp() == other.hasTimestamp());
+      if (hasTimestamp() != other.hasTimestamp()) return false;
       if (hasTimestamp()) {
-        result = result && getTimestamp()
-            .equals(other.getTimestamp());
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
       }
-      result = result && level_ == other.level_;
-      result = result && getMessage()
-          .equals(other.getMessage());
-      result = result && (hasJsonPayload() == other.hasJsonPayload());
+      if (level_ != other.level_) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (hasJsonPayload() != other.hasJsonPayload()) return false;
       if (hasJsonPayload()) {
-        result = result && getJsonPayload()
-            .equals(other.getJsonPayload());
+        if (!getJsonPayload()
+            .equals(other.getJsonPayload())) return false;
       }
-      result = result && getStreamName()
-          .equals(other.getStreamName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStreamName()
+          .equals(other.getStreamName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3121,35 +3258,35 @@ public final class LogEntryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3209,7 +3346,7 @@ public final class LogEntryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp timestamp_ = null;
+      private com.google.protobuf.Timestamp timestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
@@ -3218,6 +3355,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
@@ -3228,6 +3366,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The timestamp.
        */
       public com.google.protobuf.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
@@ -3370,8 +3509,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getLevelValue() {
+      @java.lang.Override public int getLevelValue() {
         return level_;
       }
       /**
@@ -3381,8 +3521,11 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
+        
         level_ = value;
         onChanged();
         return this;
@@ -3394,7 +3537,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @return The level.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
@@ -3407,6 +3552,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
         if (value == null) {
@@ -3424,6 +3571,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevel() {
         
@@ -3439,6 +3587,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return The message.
        */
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
@@ -3458,6 +3607,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
           getMessageBytes() {
@@ -3478,6 +3628,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessage(
           java.lang.String value) {
@@ -3495,6 +3647,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMessage() {
         
@@ -3508,6 +3661,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -3521,7 +3676,7 @@ public final class LogEntryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Struct jsonPayload_ = null;
+      private com.google.protobuf.Struct jsonPayload_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> jsonPayloadBuilder_;
       /**
@@ -3530,6 +3685,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return Whether the jsonPayload field is set.
        */
       public boolean hasJsonPayload() {
         return jsonPayloadBuilder_ != null || jsonPayload_ != null;
@@ -3540,6 +3696,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return The jsonPayload.
        */
       public com.google.protobuf.Struct getJsonPayload() {
         if (jsonPayloadBuilder_ == null) {
@@ -3681,6 +3838,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return The streamName.
        */
       public java.lang.String getStreamName() {
         java.lang.Object ref = streamName_;
@@ -3700,6 +3858,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return The bytes for streamName.
        */
       public com.google.protobuf.ByteString
           getStreamNameBytes() {
@@ -3720,6 +3879,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @param value The streamName to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamName(
           java.lang.String value) {
@@ -3737,6 +3898,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStreamName() {
         
@@ -3750,6 +3912,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @param value The bytes for streamName to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3765,7 +3929,7 @@ public final class LogEntryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3827,6 +3991,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
@@ -3837,6 +4002,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The level.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
 
@@ -3848,6 +4014,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return Whether the jsonPayload field is set.
      */
     boolean hasJsonPayload();
     /**
@@ -3858,6 +4025,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The jsonPayload.
      */
     com.google.protobuf.Struct getJsonPayload();
     /**
@@ -3877,6 +4045,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The streamName.
      */
     java.lang.String getStreamName();
     /**
@@ -3885,6 +4054,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The bytes for streamName.
      */
     com.google.protobuf.ByteString
         getStreamNameBytes();
@@ -3892,7 +4062,7 @@ public final class LogEntryOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogEntryDefaults}
    */
-  public  static final class LogEntryDefaults extends
+  public static final class LogEntryDefaults extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogEntryDefaults)
       LogEntryDefaultsOrBuilder {
@@ -3904,6 +4074,13 @@ public final class LogEntryOuterClass {
     private LogEntryDefaults() {
       level_ = 0;
       streamName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogEntryDefaults();
     }
 
     @java.lang.Override
@@ -3919,7 +4096,6 @@ public final class LogEntryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3956,7 +4132,7 @@ public final class LogEntryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3997,8 +4173,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -4009,8 +4186,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     * @return The level.
      */
-    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
+    @java.lang.Override public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
       return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
@@ -4026,7 +4204,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return Whether the jsonPayload field is set.
      */
+    @java.lang.Override
     public boolean hasJsonPayload() {
       return jsonPayload_ != null;
     }
@@ -4038,7 +4218,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * @return The jsonPayload.
      */
+    @java.lang.Override
     public com.google.protobuf.Struct getJsonPayload() {
       return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
     }
@@ -4051,6 +4233,7 @@ public final class LogEntryOuterClass {
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
       return getJsonPayload();
     }
@@ -4063,7 +4246,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The streamName.
      */
+    @java.lang.Override
     public java.lang.String getStreamName() {
       java.lang.Object ref = streamName_;
       if (ref instanceof java.lang.String) {
@@ -4082,7 +4267,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * @return The bytes for streamName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStreamNameBytes() {
       java.lang.Object ref = streamName_;
@@ -4117,7 +4304,7 @@ public final class LogEntryOuterClass {
       if (jsonPayload_ != null) {
         output.writeMessage(4, getJsonPayload());
       }
-      if (!getStreamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, streamName_);
       }
       unknownFields.writeTo(output);
@@ -4137,7 +4324,7 @@ public final class LogEntryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJsonPayload());
       }
-      if (!getStreamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, streamName_);
       }
       size += unknownFields.getSerializedSize();
@@ -4155,17 +4342,16 @@ public final class LogEntryOuterClass {
       }
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults other = (yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults) obj;
 
-      boolean result = true;
-      result = result && level_ == other.level_;
-      result = result && (hasJsonPayload() == other.hasJsonPayload());
+      if (level_ != other.level_) return false;
+      if (hasJsonPayload() != other.hasJsonPayload()) return false;
       if (hasJsonPayload()) {
-        result = result && getJsonPayload()
-            .equals(other.getJsonPayload());
+        if (!getJsonPayload()
+            .equals(other.getJsonPayload())) return false;
       }
-      result = result && getStreamName()
-          .equals(other.getStreamName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStreamName()
+          .equals(other.getStreamName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4365,35 +4551,35 @@ public final class LogEntryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4455,8 +4641,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getLevelValue() {
+      @java.lang.Override public int getLevelValue() {
         return level_;
       }
       /**
@@ -4467,8 +4654,11 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
+        
         level_ = value;
         onChanged();
         return this;
@@ -4481,7 +4671,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @return The level.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
@@ -4495,6 +4687,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
         if (value == null) {
@@ -4513,6 +4707,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevel() {
         
@@ -4521,7 +4716,7 @@ public final class LogEntryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Struct jsonPayload_ = null;
+      private com.google.protobuf.Struct jsonPayload_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> jsonPayloadBuilder_;
       /**
@@ -4532,6 +4727,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return Whether the jsonPayload field is set.
        */
       public boolean hasJsonPayload() {
         return jsonPayloadBuilder_ != null || jsonPayload_ != null;
@@ -4544,6 +4740,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * @return The jsonPayload.
        */
       public com.google.protobuf.Struct getJsonPayload() {
         if (jsonPayloadBuilder_ == null) {
@@ -4699,6 +4896,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return The streamName.
        */
       public java.lang.String getStreamName() {
         java.lang.Object ref = streamName_;
@@ -4718,6 +4916,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return The bytes for streamName.
        */
       public com.google.protobuf.ByteString
           getStreamNameBytes() {
@@ -4738,6 +4937,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @param value The streamName to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamName(
           java.lang.String value) {
@@ -4755,6 +4956,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStreamName() {
         
@@ -4768,6 +4970,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * @param value The bytes for streamName to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4783,7 +4987,7 @@ public final class LogEntryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4843,6 +5047,16 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the logGroupId field is set.
+     */
+    boolean hasLogGroupId();
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -4851,6 +5065,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -4861,6 +5076,16 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the folderId field is set.
+     */
+    boolean hasFolderId();
+    /**
+     * <pre>
+     * Entry should be written to default log group for the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -4869,6 +5094,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -4878,7 +5104,7 @@ public final class LogEntryOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.Destination}
    */
-  public  static final class Destination extends
+  public static final class Destination extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.Destination)
       DestinationOrBuilder {
@@ -4888,6 +5114,13 @@ public final class LogEntryOuterClass {
       super(builder);
     }
     private Destination() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Destination();
     }
 
     @java.lang.Override
@@ -4903,7 +5136,6 @@ public final class LogEntryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4927,7 +5159,7 @@ public final class LogEntryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4961,7 +5193,8 @@ public final class LogEntryOuterClass {
     private int destinationCase_ = 0;
     private java.lang.Object destination_;
     public enum DestinationCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       LOG_GROUP_ID(1),
       FOLDER_ID(2),
       DESTINATION_NOT_SET(0);
@@ -4970,6 +5203,8 @@ public final class LogEntryOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5003,6 +5238,18 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the logGroupId field is set.
+     */
+    public boolean hasLogGroupId() {
+      return destinationCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The logGroupId.
      */
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = "";
@@ -5027,6 +5274,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for logGroupId.
      */
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
@@ -5054,6 +5302,18 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the folderId field is set.
+     */
+    public boolean hasFolderId() {
+      return destinationCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Entry should be written to default log group for the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The folderId.
      */
     public java.lang.String getFolderId() {
       java.lang.Object ref = "";
@@ -5078,6 +5338,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for folderId.
      */
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
@@ -5148,24 +5409,21 @@ public final class LogEntryOuterClass {
       }
       yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination other = (yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination) obj;
 
-      boolean result = true;
-      result = result && getDestinationCase().equals(
-          other.getDestinationCase());
-      if (!result) return false;
+      if (!getDestinationCase().equals(other.getDestinationCase())) return false;
       switch (destinationCase_) {
         case 1:
-          result = result && getLogGroupId()
-              .equals(other.getLogGroupId());
+          if (!getLogGroupId()
+              .equals(other.getLogGroupId())) return false;
           break;
         case 2:
-          result = result && getFolderId()
-              .equals(other.getFolderId());
+          if (!getFolderId()
+              .equals(other.getFolderId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5361,35 +5619,35 @@ public final class LogEntryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5470,7 +5728,21 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return Whether the logGroupId field is set.
        */
+      @java.lang.Override
+      public boolean hasLogGroupId() {
+        return destinationCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The logGroupId.
+       */
+      @java.lang.Override
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = "";
         if (destinationCase_ == 1) {
@@ -5494,7 +5766,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for logGroupId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
         java.lang.Object ref = "";
@@ -5519,6 +5793,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -5536,6 +5812,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         if (destinationCase_ == 1) {
@@ -5551,6 +5828,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5570,7 +5849,21 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return Whether the folderId field is set.
        */
+      @java.lang.Override
+      public boolean hasFolderId() {
+        return destinationCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Entry should be written to default log group for the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
       public java.lang.String getFolderId() {
         java.lang.Object ref = "";
         if (destinationCase_ == 2) {
@@ -5594,7 +5887,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for folderId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
         java.lang.Object ref = "";
@@ -5619,6 +5914,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -5636,6 +5933,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         if (destinationCase_ == 2) {
@@ -5651,6 +5949,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5666,7 +5966,7 @@ public final class LogEntryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5727,6 +6027,7 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
@@ -5736,13 +6037,14 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+     * @return The level.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogLevel}
    */
-  public  static final class LogLevel extends
+  public static final class LogLevel extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogLevel)
       LogLevelOrBuilder {
@@ -5753,6 +6055,13 @@ public final class LogEntryOuterClass {
     }
     private LogLevel() {
       level_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogLevel();
     }
 
     @java.lang.Override
@@ -5768,7 +6077,6 @@ public final class LogEntryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5786,7 +6094,7 @@ public final class LogEntryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5966,6 +6274,8 @@ public final class LogEntryOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5973,6 +6283,10 @@ public final class LogEntryOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Level forNumber(int value) {
         switch (value) {
           case 0: return LEVEL_UNSPECIFIED;
@@ -6000,6 +6314,10 @@ public final class LogEntryOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -6043,8 +6361,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -6054,8 +6373,9 @@ public final class LogEntryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+     * @return The level.
      */
-    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
+    @java.lang.Override public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
       return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
@@ -6106,10 +6426,9 @@ public final class LogEntryOuterClass {
       }
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel other = (yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel) obj;
 
-      boolean result = true;
-      result = result && level_ == other.level_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (level_ != other.level_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6289,35 +6608,35 @@ public final class LogEntryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6371,8 +6690,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getLevelValue() {
+      @java.lang.Override public int getLevelValue() {
         return level_;
       }
       /**
@@ -6382,8 +6702,11 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
+        
         level_ = value;
         onChanged();
         return this;
@@ -6395,7 +6718,9 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+       * @return The level.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
@@ -6408,6 +6733,8 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
         if (value == null) {
@@ -6425,6 +6752,7 @@ public final class LogEntryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLevel() {
         
@@ -6435,7 +6763,7 @@ public final class LogEntryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6558,22 +6886,14 @@ public final class LogEntryOuterClass {
       "om/yandex-cloud/go-genproto/yandex/cloud" +
       "/logging/v1;loggingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.StructProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogResource.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_logging_v1_LogEntry_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_logging_v1_LogEntry_fieldAccessorTable = new

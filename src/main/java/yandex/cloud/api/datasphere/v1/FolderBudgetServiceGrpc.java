@@ -1,19 +1,6 @@
 package yandex.cloud.api.datasphere.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/datasphere/v1/folder_budget_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FolderBudgetServiceGrpc {
 
   private FolderBudgetServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class FolderBudgetServiceGrpc {
     if ((getGetMethod = FolderBudgetServiceGrpc.getGetMethod) == null) {
       synchronized (FolderBudgetServiceGrpc.class) {
         if ((getGetMethod = FolderBudgetServiceGrpc.getGetMethod) == null) {
-          FolderBudgetServiceGrpc.getGetMethod = getGetMethod = 
+          FolderBudgetServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest, yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.FolderBudgetService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderBudgetServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderBudgetServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest,
@@ -76,29 +63,35 @@ public final class FolderBudgetServiceGrpc {
     if ((getSetMethod = FolderBudgetServiceGrpc.getSetMethod) == null) {
       synchronized (FolderBudgetServiceGrpc.class) {
         if ((getSetMethod = FolderBudgetServiceGrpc.getSetMethod) == null) {
-          FolderBudgetServiceGrpc.getSetMethod = getSetMethod = 
+          FolderBudgetServiceGrpc.getSetMethod = getSetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.FolderBudgetService", "Set"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Set"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderBudgetServiceMethodDescriptorSupplier("Set"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderBudgetServiceMethodDescriptorSupplier("Set"))
+              .build();
         }
-     }
-     return getSetMethod;
+      }
+    }
+    return getSetMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FolderBudgetServiceStub newStub(io.grpc.Channel channel) {
-    return new FolderBudgetServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FolderBudgetServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FolderBudgetServiceStub>() {
+        @java.lang.Override
+        public FolderBudgetServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FolderBudgetServiceStub(channel, callOptions);
+        }
+      };
+    return FolderBudgetServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class FolderBudgetServiceGrpc {
    */
   public static FolderBudgetServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FolderBudgetServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FolderBudgetServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FolderBudgetServiceBlockingStub>() {
+        @java.lang.Override
+        public FolderBudgetServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FolderBudgetServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FolderBudgetServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class FolderBudgetServiceGrpc {
    */
   public static FolderBudgetServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FolderBudgetServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FolderBudgetServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FolderBudgetServiceFutureStub>() {
+        @java.lang.Override
+        public FolderBudgetServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FolderBudgetServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FolderBudgetServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -131,7 +138,7 @@ public final class FolderBudgetServiceGrpc {
      */
     public void get(yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -141,21 +148,21 @@ public final class FolderBudgetServiceGrpc {
      */
     public void set(yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest,
                 yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getSetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest,
                 com.google.protobuf.Empty>(
@@ -169,19 +176,15 @@ public final class FolderBudgetServiceGrpc {
    * A set of methods for managing Datasphere folder budgets.
    * </pre>
    */
-  public static final class FolderBudgetServiceStub extends io.grpc.stub.AbstractStub<FolderBudgetServiceStub> {
-    private FolderBudgetServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FolderBudgetServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FolderBudgetServiceStub extends io.grpc.stub.AbstractAsyncStub<FolderBudgetServiceStub> {
+    private FolderBudgetServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FolderBudgetServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FolderBudgetServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FolderBudgetServiceStub(channel, callOptions);
     }
 
@@ -192,7 +195,7 @@ public final class FolderBudgetServiceGrpc {
      */
     public void get(yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -203,7 +206,7 @@ public final class FolderBudgetServiceGrpc {
      */
     public void set(yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -213,19 +216,15 @@ public final class FolderBudgetServiceGrpc {
    * A set of methods for managing Datasphere folder budgets.
    * </pre>
    */
-  public static final class FolderBudgetServiceBlockingStub extends io.grpc.stub.AbstractStub<FolderBudgetServiceBlockingStub> {
-    private FolderBudgetServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FolderBudgetServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FolderBudgetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FolderBudgetServiceBlockingStub> {
+    private FolderBudgetServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FolderBudgetServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FolderBudgetServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FolderBudgetServiceBlockingStub(channel, callOptions);
     }
 
@@ -235,7 +234,7 @@ public final class FolderBudgetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse get(yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -245,7 +244,7 @@ public final class FolderBudgetServiceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty set(yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetMethod(), getCallOptions(), request);
     }
   }
@@ -255,19 +254,15 @@ public final class FolderBudgetServiceGrpc {
    * A set of methods for managing Datasphere folder budgets.
    * </pre>
    */
-  public static final class FolderBudgetServiceFutureStub extends io.grpc.stub.AbstractStub<FolderBudgetServiceFutureStub> {
-    private FolderBudgetServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FolderBudgetServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FolderBudgetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FolderBudgetServiceFutureStub> {
+    private FolderBudgetServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FolderBudgetServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FolderBudgetServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FolderBudgetServiceFutureStub(channel, callOptions);
     }
 
@@ -278,7 +273,7 @@ public final class FolderBudgetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse> get(
         yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -289,7 +284,7 @@ public final class FolderBudgetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> set(
         yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetMethod(), getCallOptions()), request);
     }
   }

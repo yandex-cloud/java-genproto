@@ -26,6 +26,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -36,6 +37,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -46,6 +48,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -54,6 +57,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -64,6 +68,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -72,6 +77,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -82,6 +88,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -90,6 +97,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType();
 
@@ -99,6 +107,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -107,6 +116,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
+     * @return The resources.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources();
     /**
@@ -124,6 +134,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -132,6 +143,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth();
 
@@ -141,6 +153,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -149,6 +162,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -159,6 +173,7 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>bool assign_public_ip = 8;</code>
+     * @return The assignPublicIp.
      */
     boolean getAssignPublicIp();
   }
@@ -169,7 +184,7 @@ public final class HostOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Host}
    */
-  public  static final class Host extends
+  public static final class Host extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.Host)
       HostOrBuilder {
@@ -185,7 +200,13 @@ public final class HostOuterClass {
       type_ = 0;
       health_ = 0;
       subnetId_ = "";
-      assignPublicIp_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Host();
     }
 
     @java.lang.Override
@@ -201,7 +222,6 @@ public final class HostOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -267,7 +287,7 @@ public final class HostOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -381,6 +401,8 @@ public final class HostOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -388,6 +410,10 @@ public final class HostOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -412,6 +438,10 @@ public final class HostOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -545,6 +575,8 @@ public final class HostOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -552,6 +584,10 @@ public final class HostOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -577,6 +613,10 @@ public final class HostOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -621,7 +661,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -642,7 +684,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -665,7 +709,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -684,7 +730,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -707,7 +755,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -726,7 +776,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -749,8 +801,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -759,8 +812,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.UNRECOGNIZED : result;
@@ -774,7 +828,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -784,7 +840,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.Resources.getDefaultInstance() : resources_;
     }
@@ -795,6 +853,7 @@ public final class HostOuterClass {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -807,8 +866,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -817,8 +877,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.UNRECOGNIZED : result;
@@ -832,7 +893,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -851,7 +914,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -874,7 +939,9 @@ public final class HostOuterClass {
      * </pre>
      *
      * <code>bool assign_public_ip = 8;</code>
+     * @return The assignPublicIp.
      */
+    @java.lang.Override
     public boolean getAssignPublicIp() {
       return assignPublicIp_;
     }
@@ -893,13 +960,13 @@ public final class HostOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, zoneId_);
       }
       if (type_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
@@ -911,7 +978,7 @@ public final class HostOuterClass {
       if (health_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.UNKNOWN.getNumber()) {
         output.writeEnum(6, health_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, subnetId_);
       }
       if (assignPublicIp_ != false) {
@@ -926,13 +993,13 @@ public final class HostOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, zoneId_);
       }
       if (type_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
@@ -947,7 +1014,7 @@ public final class HostOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, health_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, subnetId_);
       }
       if (assignPublicIp_ != false) {
@@ -969,26 +1036,25 @@ public final class HostOuterClass {
       }
       yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host other = (yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && type_ == other.type_;
-      result = result && (hasResources() == other.hasResources());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (type_ != other.type_) return false;
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && health_ == other.health_;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (getAssignPublicIp()
-          == other.getAssignPublicIp());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (health_ != other.health_) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (getAssignPublicIp()
+          != other.getAssignPublicIp()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1218,35 +1284,35 @@ public final class HostOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1326,6 +1392,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1347,6 +1414,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1369,6 +1437,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1388,6 +1458,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1403,6 +1474,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1423,6 +1496,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1442,6 +1516,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1462,6 +1537,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1479,6 +1556,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1492,6 +1570,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1512,6 +1592,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -1531,6 +1612,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -1551,6 +1633,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -1568,6 +1652,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -1581,6 +1666,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1601,8 +1688,9 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1611,8 +1699,11 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -1623,7 +1714,9 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.valueOf(type_);
@@ -1635,6 +1728,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type value) {
         if (value == null) {
@@ -1651,6 +1746,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1659,7 +1755,7 @@ public final class HostOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.Resources, yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -1668,6 +1764,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -1678,6 +1775,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -1819,8 +1917,9 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -1829,8 +1928,11 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -1841,7 +1943,9 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.valueOf(health_);
@@ -1853,6 +1957,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health value) {
         if (value == null) {
@@ -1869,6 +1975,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -1884,6 +1991,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -1903,6 +2011,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -1923,6 +2032,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -1940,6 +2051,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -1953,6 +2065,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1973,7 +2087,9 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
+       * @return The assignPublicIp.
        */
+      @java.lang.Override
       public boolean getAssignPublicIp() {
         return assignPublicIp_;
       }
@@ -1983,6 +2099,8 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
+       * @param value The assignPublicIp to set.
+       * @return This builder for chaining.
        */
       public Builder setAssignPublicIp(boolean value) {
         
@@ -1996,6 +2114,7 @@ public final class HostOuterClass {
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAssignPublicIp() {
         
@@ -2006,7 +2125,7 @@ public final class HostOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2089,20 +2208,12 @@ public final class HostOuterClass {
       "ex-cloud/go-genproto/yandex/cloud/mdb/gr" +
       "eenplum/v1;greenplumb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_Host_fieldAccessorTable = new

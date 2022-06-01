@@ -24,6 +24,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -42,6 +44,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
     java.lang.String getExtensionId();
     /**
@@ -50,6 +53,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
     com.google.protobuf.ByteString
         getExtensionIdBytes();
@@ -57,7 +61,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.GetExtensionRequest}
    */
-  public  static final class GetExtensionRequest extends
+  public static final class GetExtensionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.GetExtensionRequest)
       GetExtensionRequestOrBuilder {
@@ -69,6 +73,13 @@ public final class ExtensionServiceOuterClass {
     private GetExtensionRequest() {
       clusterId_ = "";
       extensionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetExtensionRequest();
     }
 
     @java.lang.Override
@@ -84,7 +95,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -108,7 +118,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -147,7 +157,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -166,7 +178,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -189,7 +203,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
+    @java.lang.Override
     public java.lang.String getExtensionId() {
       java.lang.Object ref = extensionId_;
       if (ref instanceof java.lang.String) {
@@ -208,7 +224,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExtensionIdBytes() {
       java.lang.Object ref = extensionId_;
@@ -237,10 +255,10 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extensionId_);
       }
       unknownFields.writeTo(output);
@@ -252,10 +270,10 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extensionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -273,13 +291,12 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getExtensionId()
-          .equals(other.getExtensionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getExtensionId()
+          .equals(other.getExtensionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -464,35 +481,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -550,6 +567,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -569,6 +587,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -589,6 +608,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -606,6 +627,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -619,6 +641,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -639,6 +663,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The extensionId.
        */
       public java.lang.String getExtensionId() {
         java.lang.Object ref = extensionId_;
@@ -658,6 +683,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for extensionId.
        */
       public com.google.protobuf.ByteString
           getExtensionIdBytes() {
@@ -678,6 +704,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionId(
           java.lang.String value) {
@@ -695,6 +723,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExtensionId() {
         
@@ -708,6 +737,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -723,7 +754,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -783,6 +814,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -791,6 +823,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -802,6 +835,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -812,6 +846,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -821,6 +856,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -828,7 +864,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListExtensionsRequest}
    */
-  public  static final class ListExtensionsRequest extends
+  public static final class ListExtensionsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ListExtensionsRequest)
       ListExtensionsRequestOrBuilder {
@@ -839,8 +875,14 @@ public final class ExtensionServiceOuterClass {
     }
     private ListExtensionsRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExtensionsRequest();
     }
 
     @java.lang.Override
@@ -856,7 +898,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -885,7 +926,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -924,7 +965,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -943,7 +986,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -967,7 +1012,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -981,7 +1028,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1001,7 +1050,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1030,13 +1081,13 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -1048,14 +1099,14 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1073,15 +1124,14 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1272,35 +1322,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1361,6 +1411,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1380,6 +1431,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1400,6 +1452,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1417,6 +1471,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1430,6 +1485,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1451,7 +1508,9 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1462,6 +1521,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1476,6 +1537,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1492,6 +1554,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1512,6 +1575,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1533,6 +1597,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1551,6 +1617,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1565,6 +1632,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1580,7 +1649,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1686,6 +1755,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1696,6 +1766,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1703,7 +1774,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListExtensionsResponse}
    */
-  public  static final class ListExtensionsResponse extends
+  public static final class ListExtensionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ListExtensionsResponse)
       ListExtensionsResponseOrBuilder {
@@ -1715,6 +1786,13 @@ public final class ExtensionServiceOuterClass {
     private ListExtensionsResponse() {
       extensions_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExtensionsResponse();
     }
 
     @java.lang.Override
@@ -1742,7 +1820,7 @@ public final class ExtensionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 extensions_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1757,7 +1835,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1771,7 +1849,7 @@ public final class ExtensionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           extensions_ = java.util.Collections.unmodifiableList(extensions_);
         }
         this.unknownFields = unknownFields.build();
@@ -1791,7 +1869,6 @@ public final class ExtensionServiceOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse.class, yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXTENSIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension> extensions_;
     /**
@@ -1801,6 +1878,7 @@ public final class ExtensionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Extension extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension> getExtensionsList() {
       return extensions_;
     }
@@ -1811,6 +1889,7 @@ public final class ExtensionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Extension extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.ExtensionOrBuilder> 
         getExtensionsOrBuilderList() {
       return extensions_;
@@ -1822,6 +1901,7 @@ public final class ExtensionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Extension extensions = 1;</code>
      */
+    @java.lang.Override
     public int getExtensionsCount() {
       return extensions_.size();
     }
@@ -1832,6 +1912,7 @@ public final class ExtensionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Extension extensions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension getExtensions(int index) {
       return extensions_.get(index);
     }
@@ -1842,6 +1923,7 @@ public final class ExtensionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Extension extensions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.ExtensionOrBuilder getExtensionsOrBuilder(
         int index) {
       return extensions_.get(index);
@@ -1857,7 +1939,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1878,7 +1962,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1910,7 +1996,7 @@ public final class ExtensionServiceOuterClass {
       for (int i = 0; i < extensions_.size(); i++) {
         output.writeMessage(1, extensions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1926,7 +2012,7 @@ public final class ExtensionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, extensions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1944,13 +2030,12 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse) obj;
 
-      boolean result = true;
-      result = result && getExtensionsList()
-          .equals(other.getExtensionsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getExtensionsList()
+          .equals(other.getExtensionsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2135,9 +2220,8 @@ public final class ExtensionServiceOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse result = new yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (extensionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             extensions_ = java.util.Collections.unmodifiableList(extensions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2146,42 +2230,41 @@ public final class ExtensionServiceOuterClass {
           result.extensions_ = extensionsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2258,7 +2341,7 @@ public final class ExtensionServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension> extensions_ =
         java.util.Collections.emptyList();
       private void ensureExtensionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           extensions_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension>(extensions_);
           bitField0_ |= 0x00000001;
          }
@@ -2559,7 +2642,7 @@ public final class ExtensionServiceOuterClass {
           extensionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension, yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.ExtensionOrBuilder>(
                   extensions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           extensions_ = null;
@@ -2576,6 +2659,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2597,6 +2681,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2619,6 +2704,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2638,6 +2725,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2653,6 +2741,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2668,7 +2758,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2728,6 +2818,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2736,6 +2827,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2746,6 +2838,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
     java.lang.String getExtensionId();
     /**
@@ -2754,6 +2847,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
     com.google.protobuf.ByteString
         getExtensionIdBytes();
@@ -2761,7 +2855,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.DeleteExtensionRequest}
    */
-  public  static final class DeleteExtensionRequest extends
+  public static final class DeleteExtensionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.DeleteExtensionRequest)
       DeleteExtensionRequestOrBuilder {
@@ -2773,6 +2867,13 @@ public final class ExtensionServiceOuterClass {
     private DeleteExtensionRequest() {
       clusterId_ = "";
       extensionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteExtensionRequest();
     }
 
     @java.lang.Override
@@ -2788,7 +2889,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2812,7 +2912,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2851,7 +2951,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2870,7 +2972,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2893,7 +2997,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
+    @java.lang.Override
     public java.lang.String getExtensionId() {
       java.lang.Object ref = extensionId_;
       if (ref instanceof java.lang.String) {
@@ -2912,7 +3018,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExtensionIdBytes() {
       java.lang.Object ref = extensionId_;
@@ -2941,10 +3049,10 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extensionId_);
       }
       unknownFields.writeTo(output);
@@ -2956,10 +3064,10 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extensionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2977,13 +3085,12 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getExtensionId()
-          .equals(other.getExtensionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getExtensionId()
+          .equals(other.getExtensionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3168,35 +3275,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3254,6 +3361,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3273,6 +3381,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3293,6 +3402,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3310,6 +3421,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3323,6 +3435,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3343,6 +3457,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The extensionId.
        */
       public java.lang.String getExtensionId() {
         java.lang.Object ref = extensionId_;
@@ -3362,6 +3477,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for extensionId.
        */
       public com.google.protobuf.ByteString
           getExtensionIdBytes() {
@@ -3382,6 +3498,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionId(
           java.lang.String value) {
@@ -3399,6 +3517,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExtensionId() {
         
@@ -3412,6 +3531,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3427,7 +3548,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3487,6 +3608,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -3495,6 +3617,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -3505,6 +3628,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
     java.lang.String getExtensionId();
     /**
@@ -3513,6 +3637,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
     com.google.protobuf.ByteString
         getExtensionIdBytes();
@@ -3520,7 +3645,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.DeleteExtensionMetadata}
    */
-  public  static final class DeleteExtensionMetadata extends
+  public static final class DeleteExtensionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.DeleteExtensionMetadata)
       DeleteExtensionMetadataOrBuilder {
@@ -3532,6 +3657,13 @@ public final class ExtensionServiceOuterClass {
     private DeleteExtensionMetadata() {
       clusterId_ = "";
       extensionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteExtensionMetadata();
     }
 
     @java.lang.Override
@@ -3547,7 +3679,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3571,7 +3702,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3610,7 +3741,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3629,7 +3762,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3652,7 +3787,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
+    @java.lang.Override
     public java.lang.String getExtensionId() {
       java.lang.Object ref = extensionId_;
       if (ref instanceof java.lang.String) {
@@ -3671,7 +3808,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExtensionIdBytes() {
       java.lang.Object ref = extensionId_;
@@ -3700,10 +3839,10 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extensionId_);
       }
       unknownFields.writeTo(output);
@@ -3715,10 +3854,10 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extensionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3736,13 +3875,12 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getExtensionId()
-          .equals(other.getExtensionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getExtensionId()
+          .equals(other.getExtensionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3927,35 +4065,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4013,6 +4151,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4032,6 +4171,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4052,6 +4192,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4069,6 +4211,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4082,6 +4225,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4102,6 +4247,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The extensionId.
        */
       public java.lang.String getExtensionId() {
         java.lang.Object ref = extensionId_;
@@ -4121,6 +4267,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for extensionId.
        */
       public com.google.protobuf.ByteString
           getExtensionIdBytes() {
@@ -4141,6 +4288,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionId(
           java.lang.String value) {
@@ -4158,6 +4307,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExtensionId() {
         
@@ -4171,6 +4321,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4186,7 +4338,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4246,6 +4398,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4254,6 +4407,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4264,6 +4418,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
     java.lang.String getExtensionId();
     /**
@@ -4272,6 +4427,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
     com.google.protobuf.ByteString
         getExtensionIdBytes();
@@ -4282,13 +4438,14 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>bool active = 3;</code>
+     * @return The active.
      */
     boolean getActive();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.UpdateExtensionRequest}
    */
-  public  static final class UpdateExtensionRequest extends
+  public static final class UpdateExtensionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.UpdateExtensionRequest)
       UpdateExtensionRequestOrBuilder {
@@ -4300,7 +4457,13 @@ public final class ExtensionServiceOuterClass {
     private UpdateExtensionRequest() {
       clusterId_ = "";
       extensionId_ = "";
-      active_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExtensionRequest();
     }
 
     @java.lang.Override
@@ -4316,7 +4479,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4345,7 +4507,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4384,7 +4546,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4403,7 +4567,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4426,7 +4592,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
+    @java.lang.Override
     public java.lang.String getExtensionId() {
       java.lang.Object ref = extensionId_;
       if (ref instanceof java.lang.String) {
@@ -4445,7 +4613,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExtensionIdBytes() {
       java.lang.Object ref = extensionId_;
@@ -4468,7 +4638,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>bool active = 3;</code>
+     * @return The active.
      */
+    @java.lang.Override
     public boolean getActive() {
       return active_;
     }
@@ -4487,10 +4659,10 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extensionId_);
       }
       if (active_ != false) {
@@ -4505,10 +4677,10 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extensionId_);
       }
       if (active_ != false) {
@@ -4530,15 +4702,14 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getExtensionId()
-          .equals(other.getExtensionId());
-      result = result && (getActive()
-          == other.getActive());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getExtensionId()
+          .equals(other.getExtensionId())) return false;
+      if (getActive()
+          != other.getActive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4729,35 +4900,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4818,6 +4989,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4837,6 +5009,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4857,6 +5030,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4874,6 +5049,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4887,6 +5063,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4907,6 +5085,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The extensionId.
        */
       public java.lang.String getExtensionId() {
         java.lang.Object ref = extensionId_;
@@ -4926,6 +5105,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for extensionId.
        */
       public com.google.protobuf.ByteString
           getExtensionIdBytes() {
@@ -4946,6 +5126,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionId(
           java.lang.String value) {
@@ -4963,6 +5145,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExtensionId() {
         
@@ -4976,6 +5159,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4996,7 +5181,9 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>bool active = 3;</code>
+       * @return The active.
        */
+      @java.lang.Override
       public boolean getActive() {
         return active_;
       }
@@ -5006,6 +5193,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>bool active = 3;</code>
+       * @param value The active to set.
+       * @return This builder for chaining.
        */
       public Builder setActive(boolean value) {
         
@@ -5019,6 +5208,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>bool active = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearActive() {
         
@@ -5029,7 +5219,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5089,6 +5279,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5097,6 +5288,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5107,6 +5299,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
     java.lang.String getExtensionId();
     /**
@@ -5115,6 +5308,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
     com.google.protobuf.ByteString
         getExtensionIdBytes();
@@ -5122,7 +5316,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.UpdateExtensionMetadata}
    */
-  public  static final class UpdateExtensionMetadata extends
+  public static final class UpdateExtensionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.UpdateExtensionMetadata)
       UpdateExtensionMetadataOrBuilder {
@@ -5134,6 +5328,13 @@ public final class ExtensionServiceOuterClass {
     private UpdateExtensionMetadata() {
       clusterId_ = "";
       extensionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExtensionMetadata();
     }
 
     @java.lang.Override
@@ -5149,7 +5350,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5173,7 +5373,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5212,7 +5412,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5231,7 +5433,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5254,7 +5458,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
+    @java.lang.Override
     public java.lang.String getExtensionId() {
       java.lang.Object ref = extensionId_;
       if (ref instanceof java.lang.String) {
@@ -5273,7 +5479,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExtensionIdBytes() {
       java.lang.Object ref = extensionId_;
@@ -5302,10 +5510,10 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extensionId_);
       }
       unknownFields.writeTo(output);
@@ -5317,10 +5525,10 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extensionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5338,13 +5546,12 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getExtensionId()
-          .equals(other.getExtensionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getExtensionId()
+          .equals(other.getExtensionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5529,35 +5736,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5615,6 +5822,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5634,6 +5842,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5654,6 +5863,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5671,6 +5882,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5684,6 +5896,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5704,6 +5918,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The extensionId.
        */
       public java.lang.String getExtensionId() {
         java.lang.Object ref = extensionId_;
@@ -5723,6 +5938,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for extensionId.
        */
       public com.google.protobuf.ByteString
           getExtensionIdBytes() {
@@ -5743,6 +5959,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionId(
           java.lang.String value) {
@@ -5760,6 +5978,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExtensionId() {
         
@@ -5773,6 +5992,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5788,7 +6009,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5848,6 +6069,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5856,6 +6078,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5866,6 +6089,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5874,6 +6098,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5884,6 +6109,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
@@ -5892,6 +6118,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -5902,13 +6129,14 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>bool disabled = 4;</code>
+     * @return The disabled.
      */
     boolean getDisabled();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.CreateExtensionRequest}
    */
-  public  static final class CreateExtensionRequest extends
+  public static final class CreateExtensionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.CreateExtensionRequest)
       CreateExtensionRequestOrBuilder {
@@ -5921,7 +6149,13 @@ public final class ExtensionServiceOuterClass {
       clusterId_ = "";
       name_ = "";
       uri_ = "";
-      disabled_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateExtensionRequest();
     }
 
     @java.lang.Override
@@ -5937,7 +6171,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5972,7 +6205,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6011,7 +6244,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6030,7 +6265,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6053,7 +6290,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6072,7 +6311,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6095,7 +6336,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The uri.
      */
+    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -6114,7 +6357,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for uri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -6137,7 +6382,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>bool disabled = 4;</code>
+     * @return The disabled.
      */
+    @java.lang.Override
     public boolean getDisabled() {
       return disabled_;
     }
@@ -6156,13 +6403,13 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uri_);
       }
       if (disabled_ != false) {
@@ -6177,13 +6424,13 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uri_);
       }
       if (disabled_ != false) {
@@ -6205,17 +6452,16 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && (getDisabled()
-          == other.getDisabled());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6411,35 +6657,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6504,6 +6750,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6523,6 +6770,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6543,6 +6791,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6560,6 +6810,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6573,6 +6824,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6593,6 +6846,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6612,6 +6866,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6632,6 +6887,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6649,6 +6906,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6662,6 +6920,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6682,6 +6942,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The uri.
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -6701,6 +6962,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for uri.
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -6721,6 +6983,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -6738,6 +7002,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         
@@ -6751,6 +7016,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -6771,7 +7038,9 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>bool disabled = 4;</code>
+       * @return The disabled.
        */
+      @java.lang.Override
       public boolean getDisabled() {
         return disabled_;
       }
@@ -6781,6 +7050,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>bool disabled = 4;</code>
+       * @param value The disabled to set.
+       * @return This builder for chaining.
        */
       public Builder setDisabled(boolean value) {
         
@@ -6794,6 +7065,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>bool disabled = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDisabled() {
         
@@ -6804,7 +7076,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6864,6 +7136,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6872,6 +7145,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -6882,6 +7156,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
     java.lang.String getExtensionId();
     /**
@@ -6890,6 +7165,7 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
     com.google.protobuf.ByteString
         getExtensionIdBytes();
@@ -6897,7 +7173,7 @@ public final class ExtensionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.CreateExtensionMetadata}
    */
-  public  static final class CreateExtensionMetadata extends
+  public static final class CreateExtensionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.CreateExtensionMetadata)
       CreateExtensionMetadataOrBuilder {
@@ -6909,6 +7185,13 @@ public final class ExtensionServiceOuterClass {
     private CreateExtensionMetadata() {
       clusterId_ = "";
       extensionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateExtensionMetadata();
     }
 
     @java.lang.Override
@@ -6924,7 +7207,6 @@ public final class ExtensionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6948,7 +7230,7 @@ public final class ExtensionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6987,7 +7269,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -7006,7 +7290,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -7029,7 +7315,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The extensionId.
      */
+    @java.lang.Override
     public java.lang.String getExtensionId() {
       java.lang.Object ref = extensionId_;
       if (ref instanceof java.lang.String) {
@@ -7048,7 +7336,9 @@ public final class ExtensionServiceOuterClass {
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for extensionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExtensionIdBytes() {
       java.lang.Object ref = extensionId_;
@@ -7077,10 +7367,10 @@ public final class ExtensionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extensionId_);
       }
       unknownFields.writeTo(output);
@@ -7092,10 +7382,10 @@ public final class ExtensionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getExtensionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extensionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extensionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7113,13 +7403,12 @@ public final class ExtensionServiceOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getExtensionId()
-          .equals(other.getExtensionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getExtensionId()
+          .equals(other.getExtensionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7304,35 +7593,35 @@ public final class ExtensionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7390,6 +7679,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7409,6 +7699,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7429,6 +7720,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7446,6 +7739,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7459,6 +7753,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7479,6 +7775,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The extensionId.
        */
       public java.lang.String getExtensionId() {
         java.lang.Object ref = extensionId_;
@@ -7498,6 +7795,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for extensionId.
        */
       public com.google.protobuf.ByteString
           getExtensionIdBytes() {
@@ -7518,6 +7816,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionId(
           java.lang.String value) {
@@ -7535,6 +7835,7 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExtensionId() {
         
@@ -7548,6 +7849,8 @@ public final class ExtensionServiceOuterClass {
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for extensionId to set.
+       * @return This builder for chaining.
        */
       public Builder setExtensionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7563,7 +7866,7 @@ public final class ExtensionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7729,15 +8032,7 @@ public final class ExtensionServiceOuterClass {
       "o/yandex/cloud/mdb/elasticsearch/v1;elas" +
       "ticsearchb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -7745,7 +8040,7 @@ public final class ExtensionServiceOuterClass {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_GetExtensionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_GetExtensionRequest_fieldAccessorTable = new

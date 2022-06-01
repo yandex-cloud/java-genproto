@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.clickhouse.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/clickhouse/v1/ml_model_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class MlModelServiceGrpc {
 
   private MlModelServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class MlModelServiceGrpc {
     if ((getGetMethod = MlModelServiceGrpc.getGetMethod) == null) {
       synchronized (MlModelServiceGrpc.class) {
         if ((getGetMethod = MlModelServiceGrpc.getGetMethod) == null) {
-          MlModelServiceGrpc.getGetMethod = getGetMethod = 
+          MlModelServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest, yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.MlModelService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.getDefaultInstance()))
-                  .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest,
@@ -76,22 +63,21 @@ public final class MlModelServiceGrpc {
     if ((getListMethod = MlModelServiceGrpc.getListMethod) == null) {
       synchronized (MlModelServiceGrpc.class) {
         if ((getListMethod = MlModelServiceGrpc.getListMethod) == null) {
-          MlModelServiceGrpc.getListMethod = getListMethod = 
+          MlModelServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest, yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.MlModelService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest,
@@ -108,22 +94,21 @@ public final class MlModelServiceGrpc {
     if ((getCreateMethod = MlModelServiceGrpc.getCreateMethod) == null) {
       synchronized (MlModelServiceGrpc.class) {
         if ((getCreateMethod = MlModelServiceGrpc.getCreateMethod) == null) {
-          MlModelServiceGrpc.getCreateMethod = getCreateMethod = 
+          MlModelServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.MlModelService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest,
@@ -140,22 +125,21 @@ public final class MlModelServiceGrpc {
     if ((getUpdateMethod = MlModelServiceGrpc.getUpdateMethod) == null) {
       synchronized (MlModelServiceGrpc.class) {
         if ((getUpdateMethod = MlModelServiceGrpc.getUpdateMethod) == null) {
-          MlModelServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          MlModelServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.MlModelService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest,
@@ -172,29 +156,35 @@ public final class MlModelServiceGrpc {
     if ((getDeleteMethod = MlModelServiceGrpc.getDeleteMethod) == null) {
       synchronized (MlModelServiceGrpc.class) {
         if ((getDeleteMethod = MlModelServiceGrpc.getDeleteMethod) == null) {
-          MlModelServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          MlModelServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.MlModelService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MlModelServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static MlModelServiceStub newStub(io.grpc.Channel channel) {
-    return new MlModelServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MlModelServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MlModelServiceStub>() {
+        @java.lang.Override
+        public MlModelServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MlModelServiceStub(channel, callOptions);
+        }
+      };
+    return MlModelServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -202,7 +192,14 @@ public final class MlModelServiceGrpc {
    */
   public static MlModelServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new MlModelServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MlModelServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MlModelServiceBlockingStub>() {
+        @java.lang.Override
+        public MlModelServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MlModelServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return MlModelServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -210,7 +207,14 @@ public final class MlModelServiceGrpc {
    */
   public static MlModelServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new MlModelServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MlModelServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MlModelServiceFutureStub>() {
+        @java.lang.Override
+        public MlModelServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MlModelServiceFutureStub(channel, callOptions);
+        }
+      };
+    return MlModelServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -228,7 +232,7 @@ public final class MlModelServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -238,7 +242,7 @@ public final class MlModelServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -248,7 +252,7 @@ public final class MlModelServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -258,7 +262,7 @@ public final class MlModelServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -268,42 +272,42 @@ public final class MlModelServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest,
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest,
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -317,19 +321,15 @@ public final class MlModelServiceGrpc {
    * A set of methods for managing machine learning models.
    * </pre>
    */
-  public static final class MlModelServiceStub extends io.grpc.stub.AbstractStub<MlModelServiceStub> {
-    private MlModelServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MlModelServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MlModelServiceStub extends io.grpc.stub.AbstractAsyncStub<MlModelServiceStub> {
+    private MlModelServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MlModelServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MlModelServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MlModelServiceStub(channel, callOptions);
     }
 
@@ -341,7 +341,7 @@ public final class MlModelServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -352,7 +352,7 @@ public final class MlModelServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -363,7 +363,7 @@ public final class MlModelServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -374,7 +374,7 @@ public final class MlModelServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -385,7 +385,7 @@ public final class MlModelServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -395,19 +395,15 @@ public final class MlModelServiceGrpc {
    * A set of methods for managing machine learning models.
    * </pre>
    */
-  public static final class MlModelServiceBlockingStub extends io.grpc.stub.AbstractStub<MlModelServiceBlockingStub> {
-    private MlModelServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MlModelServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MlModelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MlModelServiceBlockingStub> {
+    private MlModelServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MlModelServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MlModelServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MlModelServiceBlockingStub(channel, callOptions);
     }
 
@@ -418,7 +414,7 @@ public final class MlModelServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel get(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -428,7 +424,7 @@ public final class MlModelServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse list(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -438,7 +434,7 @@ public final class MlModelServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -448,7 +444,7 @@ public final class MlModelServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -458,7 +454,7 @@ public final class MlModelServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
@@ -468,19 +464,15 @@ public final class MlModelServiceGrpc {
    * A set of methods for managing machine learning models.
    * </pre>
    */
-  public static final class MlModelServiceFutureStub extends io.grpc.stub.AbstractStub<MlModelServiceFutureStub> {
-    private MlModelServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MlModelServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MlModelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MlModelServiceFutureStub> {
+    private MlModelServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MlModelServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MlModelServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MlModelServiceFutureStub(channel, callOptions);
     }
 
@@ -492,7 +484,7 @@ public final class MlModelServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> get(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -503,7 +495,7 @@ public final class MlModelServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse> list(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -514,7 +506,7 @@ public final class MlModelServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -525,7 +517,7 @@ public final class MlModelServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -536,7 +528,7 @@ public final class MlModelServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.ai.vision.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ai/vision/v1/vision_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class VisionServiceGrpc {
 
   private VisionServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class VisionServiceGrpc {
     if ((getBatchAnalyzeMethod = VisionServiceGrpc.getBatchAnalyzeMethod) == null) {
       synchronized (VisionServiceGrpc.class) {
         if ((getBatchAnalyzeMethod = VisionServiceGrpc.getBatchAnalyzeMethod) == null) {
-          VisionServiceGrpc.getBatchAnalyzeMethod = getBatchAnalyzeMethod = 
+          VisionServiceGrpc.getBatchAnalyzeMethod = getBatchAnalyzeMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.vision.v1.VisionService", "BatchAnalyze"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchAnalyze"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("BatchAnalyze"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("BatchAnalyze"))
+              .build();
         }
-     }
-     return getBatchAnalyzeMethod;
+      }
+    }
+    return getBatchAnalyzeMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static VisionServiceStub newStub(io.grpc.Channel channel) {
-    return new VisionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VisionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VisionServiceStub>() {
+        @java.lang.Override
+        public VisionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VisionServiceStub(channel, callOptions);
+        }
+      };
+    return VisionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class VisionServiceGrpc {
    */
   public static VisionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new VisionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VisionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VisionServiceBlockingStub>() {
+        @java.lang.Override
+        public VisionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VisionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return VisionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class VisionServiceGrpc {
    */
   public static VisionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new VisionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VisionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VisionServiceFutureStub>() {
+        @java.lang.Override
+        public VisionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VisionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return VisionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class VisionServiceGrpc {
      */
     public void batchAnalyze(yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBatchAnalyzeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchAnalyzeMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getBatchAnalyzeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest,
                 yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse>(
@@ -120,19 +128,15 @@ public final class VisionServiceGrpc {
    * A set of methods for the Yandex Vision service.
    * </pre>
    */
-  public static final class VisionServiceStub extends io.grpc.stub.AbstractStub<VisionServiceStub> {
-    private VisionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VisionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VisionServiceStub extends io.grpc.stub.AbstractAsyncStub<VisionServiceStub> {
+    private VisionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VisionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VisionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VisionServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class VisionServiceGrpc {
      */
     public void batchAnalyze(yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBatchAnalyzeMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class VisionServiceGrpc {
    * A set of methods for the Yandex Vision service.
    * </pre>
    */
-  public static final class VisionServiceBlockingStub extends io.grpc.stub.AbstractStub<VisionServiceBlockingStub> {
-    private VisionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VisionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VisionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VisionServiceBlockingStub> {
+    private VisionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VisionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VisionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VisionServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class VisionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse batchAnalyze(yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBatchAnalyzeMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class VisionServiceGrpc {
    * A set of methods for the Yandex Vision service.
    * </pre>
    */
-  public static final class VisionServiceFutureStub extends io.grpc.stub.AbstractStub<VisionServiceFutureStub> {
-    private VisionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VisionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VisionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VisionServiceFutureStub> {
+    private VisionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VisionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VisionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VisionServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class VisionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse> batchAnalyze(
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBatchAnalyzeMethod(), getCallOptions()), request);
     }
   }

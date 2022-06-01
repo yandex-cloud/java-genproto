@@ -24,6 +24,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resellerId.
      */
     java.lang.String getResellerId();
     /**
@@ -32,6 +33,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resellerId.
      */
     com.google.protobuf.ByteString
         getResellerIdBytes();
@@ -45,6 +47,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -56,6 +59,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -66,6 +70,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -73,7 +78,7 @@ public final class CustomerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.ListCustomersRequest}
    */
-  public  static final class ListCustomersRequest extends
+  public static final class ListCustomersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ListCustomersRequest)
       ListCustomersRequestOrBuilder {
@@ -84,8 +89,14 @@ public final class CustomerServiceOuterClass {
     }
     private ListCustomersRequest() {
       resellerId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListCustomersRequest();
     }
 
     @java.lang.Override
@@ -101,7 +112,6 @@ public final class CustomerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -130,7 +140,7 @@ public final class CustomerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -169,7 +179,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resellerId.
      */
+    @java.lang.Override
     public java.lang.String getResellerId() {
       java.lang.Object ref = resellerId_;
       if (ref instanceof java.lang.String) {
@@ -188,7 +200,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resellerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResellerIdBytes() {
       java.lang.Object ref = resellerId_;
@@ -214,7 +228,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -229,7 +245,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -250,7 +268,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -279,13 +299,13 @@ public final class CustomerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResellerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resellerId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -297,14 +317,14 @@ public final class CustomerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResellerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resellerId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -322,15 +342,14 @@ public final class CustomerServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest) obj;
 
-      boolean result = true;
-      result = result && getResellerId()
-          .equals(other.getResellerId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResellerId()
+          .equals(other.getResellerId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -521,35 +540,35 @@ public final class CustomerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -610,6 +629,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resellerId.
        */
       public java.lang.String getResellerId() {
         java.lang.Object ref = resellerId_;
@@ -629,6 +649,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resellerId.
        */
       public com.google.protobuf.ByteString
           getResellerIdBytes() {
@@ -649,6 +670,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resellerId to set.
+       * @return This builder for chaining.
        */
       public Builder setResellerId(
           java.lang.String value) {
@@ -666,6 +689,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResellerId() {
         
@@ -679,6 +703,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resellerId to set.
+       * @return This builder for chaining.
        */
       public Builder setResellerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -702,7 +728,9 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -715,6 +743,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -731,6 +761,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -748,6 +779,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -769,6 +801,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -791,6 +824,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -810,6 +845,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -825,6 +861,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -840,7 +878,7 @@ public final class CustomerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -949,6 +987,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -962,6 +1001,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -969,7 +1009,7 @@ public final class CustomerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.ListCustomersResponse}
    */
-  public  static final class ListCustomersResponse extends
+  public static final class ListCustomersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ListCustomersResponse)
       ListCustomersResponseOrBuilder {
@@ -981,6 +1021,13 @@ public final class CustomerServiceOuterClass {
     private ListCustomersResponse() {
       customers_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListCustomersResponse();
     }
 
     @java.lang.Override
@@ -1008,7 +1055,7 @@ public final class CustomerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 customers_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.CustomerOuterClass.Customer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1023,7 +1070,7 @@ public final class CustomerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1037,7 +1084,7 @@ public final class CustomerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           customers_ = java.util.Collections.unmodifiableList(customers_);
         }
         this.unknownFields = unknownFields.build();
@@ -1057,7 +1104,6 @@ public final class CustomerServiceOuterClass {
               yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse.class, yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CUSTOMERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.billing.v1.CustomerOuterClass.Customer> customers_;
     /**
@@ -1067,6 +1113,7 @@ public final class CustomerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Customer customers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.CustomerOuterClass.Customer> getCustomersList() {
       return customers_;
     }
@@ -1077,6 +1124,7 @@ public final class CustomerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Customer customers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerOrBuilder> 
         getCustomersOrBuilderList() {
       return customers_;
@@ -1088,6 +1136,7 @@ public final class CustomerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Customer customers = 1;</code>
      */
+    @java.lang.Override
     public int getCustomersCount() {
       return customers_.size();
     }
@@ -1098,6 +1147,7 @@ public final class CustomerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Customer customers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.CustomerOuterClass.Customer getCustomers(int index) {
       return customers_.get(index);
     }
@@ -1108,6 +1158,7 @@ public final class CustomerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Customer customers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerOrBuilder getCustomersOrBuilder(
         int index) {
       return customers_.get(index);
@@ -1126,7 +1177,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1150,7 +1203,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1182,7 +1237,7 @@ public final class CustomerServiceOuterClass {
       for (int i = 0; i < customers_.size(); i++) {
         output.writeMessage(1, customers_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1198,7 +1253,7 @@ public final class CustomerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, customers_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1216,13 +1271,12 @@ public final class CustomerServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse) obj;
 
-      boolean result = true;
-      result = result && getCustomersList()
-          .equals(other.getCustomersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCustomersList()
+          .equals(other.getCustomersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1407,9 +1461,8 @@ public final class CustomerServiceOuterClass {
       public yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse buildPartial() {
         yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse result = new yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (customersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             customers_ = java.util.Collections.unmodifiableList(customers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1418,42 +1471,41 @@ public final class CustomerServiceOuterClass {
           result.customers_ = customersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1530,7 +1582,7 @@ public final class CustomerServiceOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.CustomerOuterClass.Customer> customers_ =
         java.util.Collections.emptyList();
       private void ensureCustomersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           customers_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.CustomerOuterClass.Customer>(customers_);
           bitField0_ |= 0x00000001;
          }
@@ -1831,7 +1883,7 @@ public final class CustomerServiceOuterClass {
           customersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.CustomerOuterClass.Customer, yandex.cloud.api.billing.v1.CustomerOuterClass.Customer.Builder, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerOrBuilder>(
                   customers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           customers_ = null;
@@ -1851,6 +1903,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -1875,6 +1928,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -1900,6 +1954,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -1922,6 +1978,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -1940,6 +1997,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1955,7 +2014,7 @@ public final class CustomerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2015,6 +2074,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resellerId.
      */
     java.lang.String getResellerId();
     /**
@@ -2023,6 +2083,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resellerId.
      */
     com.google.protobuf.ByteString
         getResellerIdBytes();
@@ -2033,6 +2094,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2041,6 +2103,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2051,6 +2114,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The invitationEmail.
      */
     java.lang.String getInvitationEmail();
     /**
@@ -2059,6 +2123,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for invitationEmail.
      */
     com.google.protobuf.ByteString
         getInvitationEmailBytes();
@@ -2069,6 +2134,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the person field is set.
      */
     boolean hasPerson();
     /**
@@ -2077,6 +2143,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The person.
      */
     yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson getPerson();
     /**
@@ -2091,7 +2158,7 @@ public final class CustomerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.InviteCustomerRequest}
    */
-  public  static final class InviteCustomerRequest extends
+  public static final class InviteCustomerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.InviteCustomerRequest)
       InviteCustomerRequestOrBuilder {
@@ -2107,6 +2174,13 @@ public final class CustomerServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InviteCustomerRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2119,7 +2193,6 @@ public final class CustomerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2162,7 +2235,7 @@ public final class CustomerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2201,7 +2274,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resellerId.
      */
+    @java.lang.Override
     public java.lang.String getResellerId() {
       java.lang.Object ref = resellerId_;
       if (ref instanceof java.lang.String) {
@@ -2220,7 +2295,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resellerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResellerIdBytes() {
       java.lang.Object ref = resellerId_;
@@ -2243,7 +2320,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2262,7 +2341,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2285,7 +2366,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The invitationEmail.
      */
+    @java.lang.Override
     public java.lang.String getInvitationEmail() {
       java.lang.Object ref = invitationEmail_;
       if (ref instanceof java.lang.String) {
@@ -2304,7 +2387,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for invitationEmail.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getInvitationEmailBytes() {
       java.lang.Object ref = invitationEmail_;
@@ -2327,7 +2412,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the person field is set.
      */
+    @java.lang.Override
     public boolean hasPerson() {
       return person_ != null;
     }
@@ -2337,7 +2424,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The person.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson getPerson() {
       return person_ == null ? yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.getDefaultInstance() : person_;
     }
@@ -2348,6 +2437,7 @@ public final class CustomerServiceOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder getPersonOrBuilder() {
       return getPerson();
     }
@@ -2366,13 +2456,13 @@ public final class CustomerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResellerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resellerId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getInvitationEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invitationEmail_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, invitationEmail_);
       }
       if (person_ != null) {
@@ -2387,13 +2477,13 @@ public final class CustomerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResellerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resellerId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getInvitationEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invitationEmail_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, invitationEmail_);
       }
       if (person_ != null) {
@@ -2415,20 +2505,19 @@ public final class CustomerServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest) obj;
 
-      boolean result = true;
-      result = result && getResellerId()
-          .equals(other.getResellerId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getInvitationEmail()
-          .equals(other.getInvitationEmail());
-      result = result && (hasPerson() == other.hasPerson());
+      if (!getResellerId()
+          .equals(other.getResellerId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getInvitationEmail()
+          .equals(other.getInvitationEmail())) return false;
+      if (hasPerson() != other.hasPerson()) return false;
       if (hasPerson()) {
-        result = result && getPerson()
-            .equals(other.getPerson());
+        if (!getPerson()
+            .equals(other.getPerson())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2633,35 +2722,35 @@ public final class CustomerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2726,6 +2815,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resellerId.
        */
       public java.lang.String getResellerId() {
         java.lang.Object ref = resellerId_;
@@ -2745,6 +2835,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resellerId.
        */
       public com.google.protobuf.ByteString
           getResellerIdBytes() {
@@ -2765,6 +2856,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resellerId to set.
+       * @return This builder for chaining.
        */
       public Builder setResellerId(
           java.lang.String value) {
@@ -2782,6 +2875,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResellerId() {
         
@@ -2795,6 +2889,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resellerId to set.
+       * @return This builder for chaining.
        */
       public Builder setResellerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2815,6 +2911,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2834,6 +2931,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2854,6 +2952,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2871,6 +2971,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2884,6 +2985,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2904,6 +3007,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The invitationEmail.
        */
       public java.lang.String getInvitationEmail() {
         java.lang.Object ref = invitationEmail_;
@@ -2923,6 +3027,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for invitationEmail.
        */
       public com.google.protobuf.ByteString
           getInvitationEmailBytes() {
@@ -2943,6 +3048,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The invitationEmail to set.
+       * @return This builder for chaining.
        */
       public Builder setInvitationEmail(
           java.lang.String value) {
@@ -2960,6 +3067,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearInvitationEmail() {
         
@@ -2973,6 +3081,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string invitation_email = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for invitationEmail to set.
+       * @return This builder for chaining.
        */
       public Builder setInvitationEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -2986,7 +3096,7 @@ public final class CustomerServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson person_ = null;
+      private yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson person_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder> personBuilder_;
       /**
@@ -2995,6 +3105,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the person field is set.
        */
       public boolean hasPerson() {
         return personBuilder_ != null || person_ != null;
@@ -3005,6 +3116,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.CustomerPerson person = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The person.
        */
       public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson getPerson() {
         if (personBuilder_ == null) {
@@ -3141,7 +3253,7 @@ public final class CustomerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3202,6 +3314,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
@@ -3211,6 +3324,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
@@ -3218,7 +3332,7 @@ public final class CustomerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.ActivateCustomerRequest}
    */
-  public  static final class ActivateCustomerRequest extends
+  public static final class ActivateCustomerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ActivateCustomerRequest)
       ActivateCustomerRequestOrBuilder {
@@ -3229,6 +3343,13 @@ public final class CustomerServiceOuterClass {
     }
     private ActivateCustomerRequest() {
       customerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateCustomerRequest();
     }
 
     @java.lang.Override
@@ -3244,7 +3365,6 @@ public final class CustomerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3262,7 +3382,7 @@ public final class CustomerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3302,7 +3422,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The customerId.
      */
+    @java.lang.Override
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
       if (ref instanceof java.lang.String) {
@@ -3322,7 +3444,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for customerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
       java.lang.Object ref = customerId_;
@@ -3351,7 +3475,7 @@ public final class CustomerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCustomerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerId_);
       }
       unknownFields.writeTo(output);
@@ -3363,7 +3487,7 @@ public final class CustomerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCustomerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3381,11 +3505,10 @@ public final class CustomerServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest) obj;
 
-      boolean result = true;
-      result = result && getCustomerId()
-          .equals(other.getCustomerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCustomerId()
+          .equals(other.getCustomerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3565,35 +3688,35 @@ public final class CustomerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3648,6 +3771,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The customerId.
        */
       public java.lang.String getCustomerId() {
         java.lang.Object ref = customerId_;
@@ -3668,6 +3792,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for customerId.
        */
       public com.google.protobuf.ByteString
           getCustomerIdBytes() {
@@ -3689,6 +3814,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerId(
           java.lang.String value) {
@@ -3707,6 +3834,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
         
@@ -3721,6 +3849,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3736,7 +3866,7 @@ public final class CustomerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3797,6 +3927,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
@@ -3806,6 +3937,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
@@ -3813,7 +3945,7 @@ public final class CustomerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.SuspendCustomerRequest}
    */
-  public  static final class SuspendCustomerRequest extends
+  public static final class SuspendCustomerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.SuspendCustomerRequest)
       SuspendCustomerRequestOrBuilder {
@@ -3824,6 +3956,13 @@ public final class CustomerServiceOuterClass {
     }
     private SuspendCustomerRequest() {
       customerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SuspendCustomerRequest();
     }
 
     @java.lang.Override
@@ -3839,7 +3978,6 @@ public final class CustomerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3857,7 +3995,7 @@ public final class CustomerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3897,7 +4035,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The customerId.
      */
+    @java.lang.Override
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
       if (ref instanceof java.lang.String) {
@@ -3917,7 +4057,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for customerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
       java.lang.Object ref = customerId_;
@@ -3946,7 +4088,7 @@ public final class CustomerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCustomerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerId_);
       }
       unknownFields.writeTo(output);
@@ -3958,7 +4100,7 @@ public final class CustomerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCustomerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3976,11 +4118,10 @@ public final class CustomerServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest) obj;
 
-      boolean result = true;
-      result = result && getCustomerId()
-          .equals(other.getCustomerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCustomerId()
+          .equals(other.getCustomerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4160,35 +4301,35 @@ public final class CustomerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4243,6 +4384,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The customerId.
        */
       public java.lang.String getCustomerId() {
         java.lang.Object ref = customerId_;
@@ -4263,6 +4405,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for customerId.
        */
       public com.google.protobuf.ByteString
           getCustomerIdBytes() {
@@ -4284,6 +4427,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerId(
           java.lang.String value) {
@@ -4302,6 +4447,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
         
@@ -4316,6 +4462,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4331,7 +4479,7 @@ public final class CustomerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4391,6 +4539,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1;</code>
+     * @return The resellerId.
      */
     java.lang.String getResellerId();
     /**
@@ -4399,6 +4548,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1;</code>
+     * @return The bytes for resellerId.
      */
     com.google.protobuf.ByteString
         getResellerIdBytes();
@@ -4409,6 +4559,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 2;</code>
+     * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
@@ -4417,6 +4568,7 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 2;</code>
+     * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
@@ -4424,7 +4576,7 @@ public final class CustomerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.CustomerMetadata}
    */
-  public  static final class CustomerMetadata extends
+  public static final class CustomerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.CustomerMetadata)
       CustomerMetadataOrBuilder {
@@ -4436,6 +4588,13 @@ public final class CustomerServiceOuterClass {
     private CustomerMetadata() {
       resellerId_ = "";
       customerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerMetadata();
     }
 
     @java.lang.Override
@@ -4451,7 +4610,6 @@ public final class CustomerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4475,7 +4633,7 @@ public final class CustomerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4514,7 +4672,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1;</code>
+     * @return The resellerId.
      */
+    @java.lang.Override
     public java.lang.String getResellerId() {
       java.lang.Object ref = resellerId_;
       if (ref instanceof java.lang.String) {
@@ -4533,7 +4693,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string reseller_id = 1;</code>
+     * @return The bytes for resellerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResellerIdBytes() {
       java.lang.Object ref = resellerId_;
@@ -4556,7 +4718,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 2;</code>
+     * @return The customerId.
      */
+    @java.lang.Override
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
       if (ref instanceof java.lang.String) {
@@ -4575,7 +4739,9 @@ public final class CustomerServiceOuterClass {
      * </pre>
      *
      * <code>string customer_id = 2;</code>
+     * @return The bytes for customerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
       java.lang.Object ref = customerId_;
@@ -4604,10 +4770,10 @@ public final class CustomerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResellerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resellerId_);
       }
-      if (!getCustomerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, customerId_);
       }
       unknownFields.writeTo(output);
@@ -4619,10 +4785,10 @@ public final class CustomerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResellerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resellerId_);
       }
-      if (!getCustomerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, customerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4640,13 +4806,12 @@ public final class CustomerServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CustomerMetadata other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CustomerMetadata) obj;
 
-      boolean result = true;
-      result = result && getResellerId()
-          .equals(other.getResellerId());
-      result = result && getCustomerId()
-          .equals(other.getCustomerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResellerId()
+          .equals(other.getResellerId())) return false;
+      if (!getCustomerId()
+          .equals(other.getCustomerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4831,35 +4996,35 @@ public final class CustomerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4917,6 +5082,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1;</code>
+       * @return The resellerId.
        */
       public java.lang.String getResellerId() {
         java.lang.Object ref = resellerId_;
@@ -4936,6 +5102,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1;</code>
+       * @return The bytes for resellerId.
        */
       public com.google.protobuf.ByteString
           getResellerIdBytes() {
@@ -4956,6 +5123,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1;</code>
+       * @param value The resellerId to set.
+       * @return This builder for chaining.
        */
       public Builder setResellerId(
           java.lang.String value) {
@@ -4973,6 +5142,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResellerId() {
         
@@ -4986,6 +5156,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string reseller_id = 1;</code>
+       * @param value The bytes for resellerId to set.
+       * @return This builder for chaining.
        */
       public Builder setResellerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5006,6 +5178,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 2;</code>
+       * @return The customerId.
        */
       public java.lang.String getCustomerId() {
         java.lang.Object ref = customerId_;
@@ -5025,6 +5198,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 2;</code>
+       * @return The bytes for customerId.
        */
       public com.google.protobuf.ByteString
           getCustomerIdBytes() {
@@ -5045,6 +5219,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 2;</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerId(
           java.lang.String value) {
@@ -5062,6 +5238,7 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
         
@@ -5075,6 +5252,8 @@ public final class CustomerServiceOuterClass {
        * </pre>
        *
        * <code>string customer_id = 2;</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
        */
       public Builder setCustomerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5090,7 +5269,7 @@ public final class CustomerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5221,15 +5400,7 @@ public final class CustomerServiceOuterClass {
       ".com/yandex-cloud/go-genproto/yandex/clo" +
       "ud/billing/v1;billingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -5237,7 +5408,7 @@ public final class CustomerServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_ListCustomersRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_ListCustomersRequest_fieldAccessorTable = new

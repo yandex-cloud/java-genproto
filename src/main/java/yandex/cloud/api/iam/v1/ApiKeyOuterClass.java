@@ -24,6 +24,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -50,6 +53,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -60,6 +64,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -93,6 +100,7 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -104,7 +112,7 @@ public final class ApiKeyOuterClass {
    *
    * Protobuf type {@code yandex.cloud.iam.v1.ApiKey}
    */
-  public  static final class ApiKey extends
+  public static final class ApiKey extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.ApiKey)
       ApiKeyOrBuilder {
@@ -120,6 +128,13 @@ public final class ApiKeyOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApiKey();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -132,7 +147,6 @@ public final class ApiKeyOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -175,7 +189,7 @@ public final class ApiKeyOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -214,7 +228,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -233,7 +249,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -256,7 +274,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -275,7 +295,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -298,7 +320,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -308,7 +332,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -319,6 +345,7 @@ public final class ApiKeyOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -331,7 +358,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -350,7 +379,9 @@ public final class ApiKeyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -379,16 +410,16 @@ public final class ApiKeyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceAccountId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       unknownFields.writeTo(output);
@@ -400,17 +431,17 @@ public final class ApiKeyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceAccountId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       size += unknownFields.getSerializedSize();
@@ -428,20 +459,19 @@ public final class ApiKeyOuterClass {
       }
       yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey other = (yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -650,35 +680,35 @@ public final class ApiKeyOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -743,6 +773,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -762,6 +793,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -782,6 +814,8 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -799,6 +833,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -812,6 +847,8 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -832,6 +869,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -851,6 +889,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -871,6 +910,8 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -888,6 +929,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -901,6 +943,8 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -914,7 +958,7 @@ public final class ApiKeyOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -923,6 +967,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -933,6 +978,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1074,6 +1120,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1093,6 +1140,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1113,6 +1161,8 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1130,6 +1180,7 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1143,6 +1194,8 @@ public final class ApiKeyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1158,7 +1211,7 @@ public final class ApiKeyOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1231,19 +1284,11 @@ public final class ApiKeyOuterClass {
       "hub.com/yandex-cloud/go-genproto/yandex/" +
       "cloud/iam/v1;iamb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iam_v1_ApiKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iam_v1_ApiKey_fieldAccessorTable = new

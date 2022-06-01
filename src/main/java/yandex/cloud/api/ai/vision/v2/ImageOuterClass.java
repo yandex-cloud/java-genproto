@@ -24,6 +24,16 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     *        bytes with data
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
@@ -33,6 +43,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+     * @return The enum numeric value on the wire for imageType.
      */
     int getImageTypeValue();
     /**
@@ -41,6 +52,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+     * @return The imageType.
      */
     yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType getImageType();
 
@@ -49,7 +61,7 @@ public final class ImageOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v2.Image}
    */
-  public  static final class Image extends
+  public static final class Image extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v2.Image)
       ImageOrBuilder {
@@ -60,6 +72,13 @@ public final class ImageOuterClass {
     }
     private Image() {
       imageType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Image();
     }
 
     @java.lang.Override
@@ -75,7 +94,6 @@ public final class ImageOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -87,8 +105,8 @@ public final class ImageOuterClass {
               done = true;
               break;
             case 10: {
-              imageSourceCase_ = 1;
               imageSource_ = input.readBytes();
+              imageSourceCase_ = 1;
               break;
             }
             case 16: {
@@ -98,7 +116,7 @@ public final class ImageOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -176,6 +194,8 @@ public final class ImageOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -183,6 +203,10 @@ public final class ImageOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ImageType forNumber(int value) {
         switch (value) {
           case 0: return IMAGE_TYPE_UNSPECIFIED;
@@ -206,6 +230,10 @@ public final class ImageOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -243,7 +271,8 @@ public final class ImageOuterClass {
     private int imageSourceCase_ = 0;
     private java.lang.Object imageSource_;
     public enum ImageSourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONTENT(1),
       IMAGESOURCE_NOT_SET(0);
       private final int value;
@@ -251,6 +280,8 @@ public final class ImageOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -283,7 +314,21 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
      */
+    @java.lang.Override
+    public boolean hasContent() {
+      return imageSourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     *        bytes with data
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return The content.
+     */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       if (imageSourceCase_ == 1) {
         return (com.google.protobuf.ByteString) imageSource_;
@@ -299,8 +344,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+     * @return The enum numeric value on the wire for imageType.
      */
-    public int getImageTypeValue() {
+    @java.lang.Override public int getImageTypeValue() {
       return imageType_;
     }
     /**
@@ -309,8 +355,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+     * @return The imageType.
      */
-    public yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType getImageType() {
+    @java.lang.Override public yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType getImageType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType result = yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType.valueOf(imageType_);
       return result == null ? yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType.UNRECOGNIZED : result;
@@ -370,21 +417,18 @@ public final class ImageOuterClass {
       }
       yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image other = (yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image) obj;
 
-      boolean result = true;
-      result = result && imageType_ == other.imageType_;
-      result = result && getImageSourceCase().equals(
-          other.getImageSourceCase());
-      if (!result) return false;
+      if (imageType_ != other.imageType_) return false;
+      if (!getImageSourceCase().equals(other.getImageSourceCase())) return false;
       switch (imageSourceCase_) {
         case 1:
-          result = result && getContent()
-              .equals(other.getContent());
+          if (!getContent()
+              .equals(other.getContent())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -578,35 +622,35 @@ public final class ImageOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -682,6 +726,18 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return imageSourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       *        bytes with data
+       * </pre>
+       *
+       * <code>bytes content = 1;</code>
+       * @return The content.
        */
       public com.google.protobuf.ByteString getContent() {
         if (imageSourceCase_ == 1) {
@@ -695,6 +751,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -711,6 +769,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         if (imageSourceCase_ == 1) {
@@ -728,8 +787,9 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+       * @return The enum numeric value on the wire for imageType.
        */
-      public int getImageTypeValue() {
+      @java.lang.Override public int getImageTypeValue() {
         return imageType_;
       }
       /**
@@ -738,8 +798,11 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+       * @param value The enum numeric value on the wire for imageType to set.
+       * @return This builder for chaining.
        */
       public Builder setImageTypeValue(int value) {
+        
         imageType_ = value;
         onChanged();
         return this;
@@ -750,7 +813,9 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+       * @return The imageType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType getImageType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType result = yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType.valueOf(imageType_);
@@ -762,6 +827,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+       * @param value The imageType to set.
+       * @return This builder for chaining.
        */
       public Builder setImageType(yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.ImageType value) {
         if (value == null) {
@@ -778,6 +845,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image.ImageType image_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageType() {
         
@@ -788,7 +856,7 @@ public final class ImageOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -862,18 +930,10 @@ public final class ImageOuterClass {
       "yandex-cloud/go-genproto/yandex/cloud/ai" +
       "/vision/v2;visionb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_vision_v2_Image_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v2_Image_fieldAccessorTable = new

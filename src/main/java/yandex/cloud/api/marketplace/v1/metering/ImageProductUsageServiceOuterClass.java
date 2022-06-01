@@ -24,6 +24,7 @@ public final class ImageProductUsageServiceOuterClass {
      * </pre>
      *
      * <code>bool validate_only = 1;</code>
+     * @return The validateOnly.
      */
     boolean getValidateOnly();
 
@@ -33,6 +34,7 @@ public final class ImageProductUsageServiceOuterClass {
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The productId.
      */
     java.lang.String getProductId();
     /**
@@ -41,6 +43,7 @@ public final class ImageProductUsageServiceOuterClass {
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
@@ -92,7 +95,7 @@ public final class ImageProductUsageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.marketplace.v1.metering.WriteImageProductUsageRequest}
    */
-  public  static final class WriteImageProductUsageRequest extends
+  public static final class WriteImageProductUsageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.v1.metering.WriteImageProductUsageRequest)
       WriteImageProductUsageRequestOrBuilder {
@@ -102,9 +105,15 @@ public final class ImageProductUsageServiceOuterClass {
       super(builder);
     }
     private WriteImageProductUsageRequest() {
-      validateOnly_ = false;
       productId_ = "";
       usageRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WriteImageProductUsageRequest();
     }
 
     @java.lang.Override
@@ -143,16 +152,16 @@ public final class ImageProductUsageServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 usageRecords_ = new java.util.ArrayList<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               usageRecords_.add(
                   input.readMessage(yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -166,7 +175,7 @@ public final class ImageProductUsageServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           usageRecords_ = java.util.Collections.unmodifiableList(usageRecords_);
         }
         this.unknownFields = unknownFields.build();
@@ -186,7 +195,6 @@ public final class ImageProductUsageServiceOuterClass {
               yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest.class, yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATE_ONLY_FIELD_NUMBER = 1;
     private boolean validateOnly_;
     /**
@@ -195,7 +203,9 @@ public final class ImageProductUsageServiceOuterClass {
      * </pre>
      *
      * <code>bool validate_only = 1;</code>
+     * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }
@@ -208,7 +218,9 @@ public final class ImageProductUsageServiceOuterClass {
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The productId.
      */
+    @java.lang.Override
     public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (ref instanceof java.lang.String) {
@@ -227,7 +239,9 @@ public final class ImageProductUsageServiceOuterClass {
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for productId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
@@ -251,6 +265,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord> getUsageRecordsList() {
       return usageRecords_;
     }
@@ -261,6 +276,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecordOrBuilder> 
         getUsageRecordsOrBuilderList() {
       return usageRecords_;
@@ -272,6 +288,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
      */
+    @java.lang.Override
     public int getUsageRecordsCount() {
       return usageRecords_.size();
     }
@@ -282,6 +299,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord getUsageRecords(int index) {
       return usageRecords_.get(index);
     }
@@ -292,6 +310,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecordOrBuilder getUsageRecordsOrBuilder(
         int index) {
       return usageRecords_.get(index);
@@ -314,7 +333,7 @@ public final class ImageProductUsageServiceOuterClass {
       if (validateOnly_ != false) {
         output.writeBool(1, validateOnly_);
       }
-      if (!getProductIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productId_);
       }
       for (int i = 0; i < usageRecords_.size(); i++) {
@@ -333,7 +352,7 @@ public final class ImageProductUsageServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, validateOnly_);
       }
-      if (!getProductIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productId_);
       }
       for (int i = 0; i < usageRecords_.size(); i++) {
@@ -355,15 +374,14 @@ public final class ImageProductUsageServiceOuterClass {
       }
       yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest other = (yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest) obj;
 
-      boolean result = true;
-      result = result && (getValidateOnly()
-          == other.getValidateOnly());
-      result = result && getProductId()
-          .equals(other.getProductId());
-      result = result && getUsageRecordsList()
-          .equals(other.getUsageRecordsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getValidateOnly()
+          != other.getValidateOnly()) return false;
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (!getUsageRecordsList()
+          .equals(other.getUsageRecordsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -522,7 +540,7 @@ public final class ImageProductUsageServiceOuterClass {
 
         if (usageRecordsBuilder_ == null) {
           usageRecords_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           usageRecordsBuilder_.clear();
         }
@@ -553,54 +571,52 @@ public final class ImageProductUsageServiceOuterClass {
       public yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest buildPartial() {
         yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest result = new yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.validateOnly_ = validateOnly_;
         result.productId_ = productId_;
         if (usageRecordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             usageRecords_ = java.util.Collections.unmodifiableList(usageRecords_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.usageRecords_ = usageRecords_;
         } else {
           result.usageRecords_ = usageRecordsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -625,7 +641,7 @@ public final class ImageProductUsageServiceOuterClass {
           if (!other.usageRecords_.isEmpty()) {
             if (usageRecords_.isEmpty()) {
               usageRecords_ = other.usageRecords_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureUsageRecordsIsMutable();
               usageRecords_.addAll(other.usageRecords_);
@@ -638,7 +654,7 @@ public final class ImageProductUsageServiceOuterClass {
               usageRecordsBuilder_.dispose();
               usageRecordsBuilder_ = null;
               usageRecords_ = other.usageRecords_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               usageRecordsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getUsageRecordsFieldBuilder() : null;
@@ -684,7 +700,9 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>bool validate_only = 1;</code>
+       * @return The validateOnly.
        */
+      @java.lang.Override
       public boolean getValidateOnly() {
         return validateOnly_;
       }
@@ -694,6 +712,8 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>bool validate_only = 1;</code>
+       * @param value The validateOnly to set.
+       * @return This builder for chaining.
        */
       public Builder setValidateOnly(boolean value) {
         
@@ -707,6 +727,7 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>bool validate_only = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearValidateOnly() {
         
@@ -722,6 +743,7 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The productId.
        */
       public java.lang.String getProductId() {
         java.lang.Object ref = productId_;
@@ -741,6 +763,7 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
           getProductIdBytes() {
@@ -761,6 +784,8 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductId(
           java.lang.String value) {
@@ -778,6 +803,7 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductId() {
         
@@ -791,6 +817,8 @@ public final class ImageProductUsageServiceOuterClass {
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIdBytes(
           com.google.protobuf.ByteString value) {
@@ -807,9 +835,9 @@ public final class ImageProductUsageServiceOuterClass {
       private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord> usageRecords_ =
         java.util.Collections.emptyList();
       private void ensureUsageRecordsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           usageRecords_ = new java.util.ArrayList<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord>(usageRecords_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1003,7 +1031,7 @@ public final class ImageProductUsageServiceOuterClass {
       public Builder clearUsageRecords() {
         if (usageRecordsBuilder_ == null) {
           usageRecords_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           usageRecordsBuilder_.clear();
@@ -1108,7 +1136,7 @@ public final class ImageProductUsageServiceOuterClass {
           usageRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord, yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord.Builder, yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecordOrBuilder>(
                   usageRecords_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           usageRecords_ = null;
@@ -1118,7 +1146,7 @@ public final class ImageProductUsageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1263,7 +1291,7 @@ public final class ImageProductUsageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.marketplace.v1.metering.WriteImageProductUsageResponse}
    */
-  public  static final class WriteImageProductUsageResponse extends
+  public static final class WriteImageProductUsageResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.v1.metering.WriteImageProductUsageResponse)
       WriteImageProductUsageResponseOrBuilder {
@@ -1275,6 +1303,13 @@ public final class ImageProductUsageServiceOuterClass {
     private WriteImageProductUsageResponse() {
       accepted_ = java.util.Collections.emptyList();
       rejected_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WriteImageProductUsageResponse();
     }
 
     @java.lang.Override
@@ -1302,7 +1337,7 @@ public final class ImageProductUsageServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 accepted_ = new java.util.ArrayList<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1311,7 +1346,7 @@ public final class ImageProductUsageServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 rejected_ = new java.util.ArrayList<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -1320,7 +1355,7 @@ public final class ImageProductUsageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1334,10 +1369,10 @@ public final class ImageProductUsageServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           accepted_ = java.util.Collections.unmodifiableList(accepted_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           rejected_ = java.util.Collections.unmodifiableList(rejected_);
         }
         this.unknownFields = unknownFields.build();
@@ -1366,6 +1401,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord> getAcceptedList() {
       return accepted_;
     }
@@ -1376,6 +1412,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecordOrBuilder> 
         getAcceptedOrBuilderList() {
       return accepted_;
@@ -1387,6 +1424,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
      */
+    @java.lang.Override
     public int getAcceptedCount() {
       return accepted_.size();
     }
@@ -1397,6 +1435,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord getAccepted(int index) {
       return accepted_.get(index);
     }
@@ -1407,6 +1446,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecordOrBuilder getAcceptedOrBuilder(
         int index) {
       return accepted_.get(index);
@@ -1421,6 +1461,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord> getRejectedList() {
       return rejected_;
     }
@@ -1431,6 +1472,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecordOrBuilder> 
         getRejectedOrBuilderList() {
       return rejected_;
@@ -1442,6 +1484,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
      */
+    @java.lang.Override
     public int getRejectedCount() {
       return rejected_.size();
     }
@@ -1452,6 +1495,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord getRejected(int index) {
       return rejected_.get(index);
     }
@@ -1462,6 +1506,7 @@ public final class ImageProductUsageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecordOrBuilder getRejectedOrBuilder(
         int index) {
       return rejected_.get(index);
@@ -1519,13 +1564,12 @@ public final class ImageProductUsageServiceOuterClass {
       }
       yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse other = (yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse) obj;
 
-      boolean result = true;
-      result = result && getAcceptedList()
-          .equals(other.getAcceptedList());
-      result = result && getRejectedList()
-          .equals(other.getRejectedList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAcceptedList()
+          .equals(other.getAcceptedList())) return false;
+      if (!getRejectedList()
+          .equals(other.getRejectedList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1718,7 +1762,7 @@ public final class ImageProductUsageServiceOuterClass {
         yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse result = new yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse(this);
         int from_bitField0_ = bitField0_;
         if (acceptedBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             accepted_ = java.util.Collections.unmodifiableList(accepted_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1727,7 +1771,7 @@ public final class ImageProductUsageServiceOuterClass {
           result.accepted_ = acceptedBuilder_.build();
         }
         if (rejectedBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             rejected_ = java.util.Collections.unmodifiableList(rejected_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -1741,35 +1785,35 @@ public final class ImageProductUsageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1868,7 +1912,7 @@ public final class ImageProductUsageServiceOuterClass {
       private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord> accepted_ =
         java.util.Collections.emptyList();
       private void ensureAcceptedIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           accepted_ = new java.util.ArrayList<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord>(accepted_);
           bitField0_ |= 0x00000001;
          }
@@ -2169,7 +2213,7 @@ public final class ImageProductUsageServiceOuterClass {
           acceptedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord, yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord.Builder, yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecordOrBuilder>(
                   accepted_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           accepted_ = null;
@@ -2180,7 +2224,7 @@ public final class ImageProductUsageServiceOuterClass {
       private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord> rejected_ =
         java.util.Collections.emptyList();
       private void ensureRejectedIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           rejected_ = new java.util.ArrayList<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord>(rejected_);
           bitField0_ |= 0x00000002;
          }
@@ -2481,7 +2525,7 @@ public final class ImageProductUsageServiceOuterClass {
           rejectedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord, yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Builder, yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecordOrBuilder>(
                   rejected_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           rejected_ = null;
@@ -2491,7 +2535,7 @@ public final class ImageProductUsageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2586,21 +2630,13 @@ public final class ImageProductUsageServiceOuterClass {
       "cloud/marketplace/v1/metering;meteringb\006" +
       "proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_marketplace_v1_metering_WriteImageProductUsageRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_marketplace_v1_metering_WriteImageProductUsageRequest_fieldAccessorTable = new

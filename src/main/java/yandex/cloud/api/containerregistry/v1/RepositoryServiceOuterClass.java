@@ -25,6 +25,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -34,6 +35,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -41,7 +43,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.GetRepositoryRequest}
    */
-  public  static final class GetRepositoryRequest extends
+  public static final class GetRepositoryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetRepositoryRequest)
       GetRepositoryRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class RepositoryServiceOuterClass {
     }
     private GetRepositoryRequest() {
       repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRepositoryRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = repositoryId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
       java.lang.Object ref = repositoryId_;
@@ -174,7 +186,7 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest) obj;
 
-      boolean result = true;
-      result = result && getRepositoryId()
-          .equals(other.getRepositoryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoryId()
+          .equals(other.getRepositoryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The repositoryId.
        */
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = repositoryId_;
@@ -491,6 +503,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for repositoryId.
        */
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
@@ -512,6 +525,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         
@@ -544,6 +560,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The repositoryName.
      */
     java.lang.String getRepositoryName();
     /**
@@ -629,6 +648,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The bytes for repositoryName.
      */
     com.google.protobuf.ByteString
         getRepositoryNameBytes();
@@ -636,7 +656,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.GetRepositoryByNameRequest}
    */
-  public  static final class GetRepositoryByNameRequest extends
+  public static final class GetRepositoryByNameRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetRepositoryByNameRequest)
       GetRepositoryByNameRequestOrBuilder {
@@ -647,6 +667,13 @@ public final class RepositoryServiceOuterClass {
     }
     private GetRepositoryByNameRequest() {
       repositoryName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRepositoryByNameRequest();
     }
 
     @java.lang.Override
@@ -662,7 +689,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -680,7 +706,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -720,7 +746,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The repositoryName.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryName() {
       java.lang.Object ref = repositoryName_;
       if (ref instanceof java.lang.String) {
@@ -740,7 +768,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The bytes for repositoryName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryNameBytes() {
       java.lang.Object ref = repositoryName_;
@@ -769,7 +799,7 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRepositoryNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryName_);
       }
       unknownFields.writeTo(output);
@@ -781,7 +811,7 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRepositoryNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryName_);
       }
       size += unknownFields.getSerializedSize();
@@ -799,11 +829,10 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest) obj;
 
-      boolean result = true;
-      result = result && getRepositoryName()
-          .equals(other.getRepositoryName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoryName()
+          .equals(other.getRepositoryName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -983,35 +1012,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1066,6 +1095,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @return The repositoryName.
        */
       public java.lang.String getRepositoryName() {
         java.lang.Object ref = repositoryName_;
@@ -1086,6 +1116,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @return The bytes for repositoryName.
        */
       public com.google.protobuf.ByteString
           getRepositoryNameBytes() {
@@ -1107,6 +1138,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @param value The repositoryName to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryName(
           java.lang.String value) {
@@ -1125,6 +1158,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryName() {
         
@@ -1139,6 +1173,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @param value The bytes for repositoryName to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1154,7 +1190,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1215,6 +1251,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -1224,6 +1261,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -1236,6 +1274,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1246,6 +1285,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1260,6 +1300,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -1270,6 +1311,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -1279,6 +1321,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -1293,6 +1336,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -1305,16 +1349,19 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
 
     /**
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
@@ -1322,7 +1369,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListRepositoriesRequest}
    */
-  public  static final class ListRepositoriesRequest extends
+  public static final class ListRepositoriesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListRepositoriesRequest)
       ListRepositoriesRequestOrBuilder {
@@ -1334,10 +1381,16 @@ public final class RepositoryServiceOuterClass {
     private ListRepositoriesRequest() {
       registryId_ = "";
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
       orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRepositoriesRequest();
     }
 
     @java.lang.Override
@@ -1353,7 +1406,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1400,7 +1452,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1440,7 +1492,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -1460,7 +1514,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -1485,7 +1541,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1506,7 +1564,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1533,7 +1593,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1547,7 +1609,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1567,7 +1631,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1594,7 +1660,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -1617,7 +1685,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -1636,7 +1706,9 @@ public final class RepositoryServiceOuterClass {
     private volatile java.lang.Object orderBy_;
     /**
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
+    @java.lang.Override
     public java.lang.String getOrderBy() {
       java.lang.Object ref = orderBy_;
       if (ref instanceof java.lang.String) {
@@ -1651,7 +1723,9 @@ public final class RepositoryServiceOuterClass {
     }
     /**
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrderByBytes() {
       java.lang.Object ref = orderBy_;
@@ -1680,22 +1754,22 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, folderId_);
       }
       unknownFields.writeTo(output);
@@ -1707,23 +1781,23 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1741,21 +1815,20 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getOrderBy()
-          .equals(other.getOrderBy());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1961,35 +2034,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2063,6 +2136,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -2083,6 +2157,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -2104,6 +2179,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -2122,6 +2199,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -2136,6 +2214,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2158,6 +2238,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2179,6 +2260,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2201,6 +2283,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2220,6 +2304,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2235,6 +2320,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2259,7 +2346,9 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2273,6 +2362,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2290,6 +2381,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2306,6 +2398,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2326,6 +2419,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2347,6 +2441,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2365,6 +2461,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2379,6 +2476,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2403,6 +2502,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -2426,6 +2526,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -2450,6 +2551,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -2471,6 +2574,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -2488,6 +2592,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -2504,6 +2610,7 @@ public final class RepositoryServiceOuterClass {
       private java.lang.Object orderBy_ = "";
       /**
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
         java.lang.Object ref = orderBy_;
@@ -2519,6 +2626,7 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
           getOrderByBytes() {
@@ -2535,6 +2643,8 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderBy(
           java.lang.String value) {
@@ -2548,6 +2658,7 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
@@ -2557,6 +2668,8 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
@@ -2572,7 +2685,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2681,6 +2794,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -2694,6 +2808,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -2701,7 +2816,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListRepositoriesResponse}
    */
-  public  static final class ListRepositoriesResponse extends
+  public static final class ListRepositoriesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListRepositoriesResponse)
       ListRepositoriesResponseOrBuilder {
@@ -2713,6 +2828,13 @@ public final class RepositoryServiceOuterClass {
     private ListRepositoriesResponse() {
       repositories_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRepositoriesResponse();
     }
 
     @java.lang.Override
@@ -2740,7 +2862,7 @@ public final class RepositoryServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 repositories_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2755,7 +2877,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2769,7 +2891,7 @@ public final class RepositoryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           repositories_ = java.util.Collections.unmodifiableList(repositories_);
         }
         this.unknownFields = unknownFields.build();
@@ -2789,7 +2911,6 @@ public final class RepositoryServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REPOSITORIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> repositories_;
     /**
@@ -2799,6 +2920,7 @@ public final class RepositoryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Repository repositories = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> getRepositoriesList() {
       return repositories_;
     }
@@ -2809,6 +2931,7 @@ public final class RepositoryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Repository repositories = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.RepositoryOrBuilder> 
         getRepositoriesOrBuilderList() {
       return repositories_;
@@ -2820,6 +2943,7 @@ public final class RepositoryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Repository repositories = 1;</code>
      */
+    @java.lang.Override
     public int getRepositoriesCount() {
       return repositories_.size();
     }
@@ -2830,6 +2954,7 @@ public final class RepositoryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Repository repositories = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository getRepositories(int index) {
       return repositories_.get(index);
     }
@@ -2840,6 +2965,7 @@ public final class RepositoryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Repository repositories = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.RepositoryOrBuilder getRepositoriesOrBuilder(
         int index) {
       return repositories_.get(index);
@@ -2858,7 +2984,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2882,7 +3010,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2914,7 +3044,7 @@ public final class RepositoryServiceOuterClass {
       for (int i = 0; i < repositories_.size(); i++) {
         output.writeMessage(1, repositories_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2930,7 +3060,7 @@ public final class RepositoryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, repositories_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2948,13 +3078,12 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse) obj;
 
-      boolean result = true;
-      result = result && getRepositoriesList()
-          .equals(other.getRepositoriesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoriesList()
+          .equals(other.getRepositoriesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3139,9 +3268,8 @@ public final class RepositoryServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse buildPartial() {
         yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (repositoriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             repositories_ = java.util.Collections.unmodifiableList(repositories_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3150,42 +3278,41 @@ public final class RepositoryServiceOuterClass {
           result.repositories_ = repositoriesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3262,7 +3389,7 @@ public final class RepositoryServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> repositories_ =
         java.util.Collections.emptyList();
       private void ensureRepositoriesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           repositories_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository>(repositories_);
           bitField0_ |= 0x00000001;
          }
@@ -3563,7 +3690,7 @@ public final class RepositoryServiceOuterClass {
           repositoriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository, yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository.Builder, yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.RepositoryOrBuilder>(
                   repositories_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           repositories_ = null;
@@ -3583,6 +3710,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3607,6 +3735,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3632,6 +3761,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -3654,6 +3785,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -3672,6 +3804,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3687,7 +3821,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3748,6 +3882,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3757,6 +3892,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3764,7 +3900,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.UpsertRepositoryRequest}
    */
-  public  static final class UpsertRepositoryRequest extends
+  public static final class UpsertRepositoryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpsertRepositoryRequest)
       UpsertRepositoryRequestOrBuilder {
@@ -3775,6 +3911,13 @@ public final class RepositoryServiceOuterClass {
     }
     private UpsertRepositoryRequest() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpsertRepositoryRequest();
     }
 
     @java.lang.Override
@@ -3790,7 +3933,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3808,7 +3950,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3848,7 +3990,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3868,7 +4012,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3897,7 +4043,7 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -3909,7 +4055,7 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -3927,11 +4073,10 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4111,35 +4256,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4194,6 +4339,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4214,6 +4360,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4235,6 +4382,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4253,6 +4402,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4267,6 +4417,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4282,7 +4434,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4342,6 +4494,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -4350,6 +4503,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -4357,7 +4511,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata}
    */
-  public  static final class UpsertRepositoryMetadata extends
+  public static final class UpsertRepositoryMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata)
       UpsertRepositoryMetadataOrBuilder {
@@ -4368,6 +4522,13 @@ public final class RepositoryServiceOuterClass {
     }
     private UpsertRepositoryMetadata() {
       repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpsertRepositoryMetadata();
     }
 
     @java.lang.Override
@@ -4383,7 +4544,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4401,7 +4561,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4440,7 +4600,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The repositoryId.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = repositoryId_;
       if (ref instanceof java.lang.String) {
@@ -4459,7 +4621,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The bytes for repositoryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
       java.lang.Object ref = repositoryId_;
@@ -4488,7 +4652,7 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
       }
       unknownFields.writeTo(output);
@@ -4500,7 +4664,7 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4518,11 +4682,10 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata) obj;
 
-      boolean result = true;
-      result = result && getRepositoryId()
-          .equals(other.getRepositoryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoryId()
+          .equals(other.getRepositoryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4702,35 +4865,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4784,6 +4947,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @return The repositoryId.
        */
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = repositoryId_;
@@ -4803,6 +4967,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @return The bytes for repositoryId.
        */
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
@@ -4823,6 +4988,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -4840,6 +5007,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         
@@ -4853,6 +5021,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4868,7 +5038,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4928,6 +5098,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -4936,6 +5107,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -4943,7 +5115,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteRepositoryRequest}
    */
-  public  static final class DeleteRepositoryRequest extends
+  public static final class DeleteRepositoryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DeleteRepositoryRequest)
       DeleteRepositoryRequestOrBuilder {
@@ -4954,6 +5126,13 @@ public final class RepositoryServiceOuterClass {
     }
     private DeleteRepositoryRequest() {
       repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRepositoryRequest();
     }
 
     @java.lang.Override
@@ -4969,7 +5148,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4987,7 +5165,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5026,7 +5204,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = repositoryId_;
       if (ref instanceof java.lang.String) {
@@ -5045,7 +5225,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
       java.lang.Object ref = repositoryId_;
@@ -5074,7 +5256,7 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
       }
       unknownFields.writeTo(output);
@@ -5086,7 +5268,7 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5104,11 +5286,10 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest) obj;
 
-      boolean result = true;
-      result = result && getRepositoryId()
-          .equals(other.getRepositoryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoryId()
+          .equals(other.getRepositoryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5288,35 +5469,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5370,6 +5551,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The repositoryId.
        */
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = repositoryId_;
@@ -5389,6 +5571,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for repositoryId.
        */
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
@@ -5409,6 +5592,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -5426,6 +5611,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         
@@ -5439,6 +5625,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5454,7 +5642,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5514,6 +5702,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -5522,6 +5711,7 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -5529,7 +5719,7 @@ public final class RepositoryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata}
    */
-  public  static final class DeleteRepositoryMetadata extends
+  public static final class DeleteRepositoryMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata)
       DeleteRepositoryMetadataOrBuilder {
@@ -5540,6 +5730,13 @@ public final class RepositoryServiceOuterClass {
     }
     private DeleteRepositoryMetadata() {
       repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRepositoryMetadata();
     }
 
     @java.lang.Override
@@ -5555,7 +5752,6 @@ public final class RepositoryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5573,7 +5769,7 @@ public final class RepositoryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5612,7 +5808,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The repositoryId.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = repositoryId_;
       if (ref instanceof java.lang.String) {
@@ -5631,7 +5829,9 @@ public final class RepositoryServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1;</code>
+     * @return The bytes for repositoryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
       java.lang.Object ref = repositoryId_;
@@ -5660,7 +5860,7 @@ public final class RepositoryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
       }
       unknownFields.writeTo(output);
@@ -5672,7 +5872,7 @@ public final class RepositoryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5690,11 +5890,10 @@ public final class RepositoryServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata) obj;
 
-      boolean result = true;
-      result = result && getRepositoryId()
-          .equals(other.getRepositoryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoryId()
+          .equals(other.getRepositoryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5874,35 +6073,35 @@ public final class RepositoryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5956,6 +6155,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @return The repositoryId.
        */
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = repositoryId_;
@@ -5975,6 +6175,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @return The bytes for repositoryId.
        */
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
@@ -5995,6 +6196,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -6012,6 +6215,7 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         
@@ -6025,6 +6229,8 @@ public final class RepositoryServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1;</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6040,7 +6246,7 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6214,15 +6420,7 @@ public final class RepositoryServiceOuterClass {
       "/cloud/containerregistry/v1;containerreg" +
       "istryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -6231,7 +6429,7 @@ public final class RepositoryServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_GetRepositoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_GetRepositoryRequest_fieldAccessorTable = new

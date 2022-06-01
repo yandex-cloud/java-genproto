@@ -20,40 +20,48 @@ public final class EndpointOuterClass {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -94,10 +102,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
+     * @return The settings.
      */
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings();
     /**
@@ -108,7 +118,7 @@ public final class EndpointOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.Endpoint}
    */
-  public  static final class Endpoint extends
+  public static final class Endpoint extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.Endpoint)
       EndpointOrBuilder {
@@ -122,6 +132,13 @@ public final class EndpointOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Endpoint();
     }
 
     @java.lang.Override
@@ -173,10 +190,10 @@ public final class EndpointOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -199,7 +216,7 @@ public final class EndpointOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -242,12 +259,13 @@ public final class EndpointOuterClass {
               yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.class, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -262,7 +280,9 @@ public final class EndpointOuterClass {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -281,7 +301,9 @@ public final class EndpointOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -296,7 +318,9 @@ public final class EndpointOuterClass {
     }
     /**
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -315,7 +339,9 @@ public final class EndpointOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -330,7 +356,9 @@ public final class EndpointOuterClass {
     }
     /**
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -349,7 +377,9 @@ public final class EndpointOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -364,7 +394,9 @@ public final class EndpointOuterClass {
     }
     /**
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -409,14 +441,16 @@ public final class EndpointOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -424,6 +458,7 @@ public final class EndpointOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -431,11 +466,12 @@ public final class EndpointOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -443,10 +479,11 @@ public final class EndpointOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -459,19 +496,24 @@ public final class EndpointOuterClass {
     private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_;
     /**
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.getDefaultInstance() : settings_;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -490,16 +532,16 @@ public final class EndpointOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -520,16 +562,16 @@ public final class EndpointOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -561,24 +603,23 @@ public final class EndpointOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint other = (yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasSettings() == other.hasSettings());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -801,7 +842,6 @@ public final class EndpointOuterClass {
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint buildPartial() {
         yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint result = new yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.name_ = name_;
@@ -813,42 +853,41 @@ public final class EndpointOuterClass {
         } else {
           result.settings_ = settingsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -916,6 +955,7 @@ public final class EndpointOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -931,6 +971,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -947,6 +988,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -960,6 +1003,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -969,6 +1013,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -985,6 +1031,7 @@ public final class EndpointOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1000,6 +1047,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1016,6 +1064,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1029,6 +1079,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1038,6 +1089,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1054,6 +1107,7 @@ public final class EndpointOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1069,6 +1123,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1085,6 +1140,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1098,6 +1155,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1107,6 +1165,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1123,6 +1183,7 @@ public final class EndpointOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1138,6 +1199,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1154,6 +1216,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1167,6 +1231,7 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1176,6 +1241,8 @@ public final class EndpointOuterClass {
       }
       /**
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1219,14 +1286,16 @@ public final class EndpointOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -1234,6 +1303,7 @@ public final class EndpointOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -1241,11 +1311,12 @@ public final class EndpointOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1253,10 +1324,11 @@ public final class EndpointOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -1276,7 +1348,7 @@ public final class EndpointOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -1295,8 +1367,11 @@ public final class EndpointOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -1312,17 +1387,19 @@ public final class EndpointOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_ = null;
+      private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder> settingsBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -1431,7 +1508,7 @@ public final class EndpointOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1487,10 +1564,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
+     * @return Whether the mysqlSource field is set.
      */
     boolean hasMysqlSource();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
+     * @return The mysqlSource.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource getMysqlSource();
     /**
@@ -1500,10 +1579,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
+     * @return Whether the postgresSource field is set.
      */
     boolean hasPostgresSource();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
+     * @return The postgresSource.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource getPostgresSource();
     /**
@@ -1513,10 +1594,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     * @return Whether the mongoSource field is set.
      */
     boolean hasMongoSource();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     * @return The mongoSource.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource getMongoSource();
     /**
@@ -1526,10 +1609,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     * @return Whether the clickhouseSource field is set.
      */
     boolean hasClickhouseSource();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     * @return The clickhouseSource.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource getClickhouseSource();
     /**
@@ -1539,10 +1624,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
+     * @return Whether the mysqlTarget field is set.
      */
     boolean hasMysqlTarget();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
+     * @return The mysqlTarget.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget getMysqlTarget();
     /**
@@ -1552,10 +1639,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
+     * @return Whether the postgresTarget field is set.
      */
     boolean hasPostgresTarget();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
+     * @return The postgresTarget.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget getPostgresTarget();
     /**
@@ -1565,10 +1654,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     * @return Whether the clickhouseTarget field is set.
      */
     boolean hasClickhouseTarget();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     * @return The clickhouseTarget.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget getClickhouseTarget();
     /**
@@ -1578,10 +1669,12 @@ public final class EndpointOuterClass {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     * @return Whether the mongoTarget field is set.
      */
     boolean hasMongoTarget();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     * @return The mongoTarget.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget getMongoTarget();
     /**
@@ -1594,7 +1687,7 @@ public final class EndpointOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.EndpointSettings}
    */
-  public  static final class EndpointSettings extends
+  public static final class EndpointSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.EndpointSettings)
       EndpointSettingsOrBuilder {
@@ -1604,6 +1697,13 @@ public final class EndpointOuterClass {
       super(builder);
     }
     private EndpointSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EndpointSettings();
     }
 
     @java.lang.Override
@@ -1619,7 +1719,6 @@ public final class EndpointOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1743,7 +1842,7 @@ public final class EndpointOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1777,7 +1876,8 @@ public final class EndpointOuterClass {
     private int settingsCase_ = 0;
     private java.lang.Object settings_;
     public enum SettingsCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MYSQL_SOURCE(1),
       POSTGRES_SOURCE(2),
       MONGO_SOURCE(9),
@@ -1792,6 +1892,8 @@ public final class EndpointOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1827,13 +1929,17 @@ public final class EndpointOuterClass {
     public static final int MYSQL_SOURCE_FIELD_NUMBER = 1;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
+     * @return Whether the mysqlSource field is set.
      */
+    @java.lang.Override
     public boolean hasMysqlSource() {
       return settingsCase_ == 1;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
+     * @return The mysqlSource.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource getMysqlSource() {
       if (settingsCase_ == 1) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource) settings_;
@@ -1843,6 +1949,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSourceOrBuilder getMysqlSourceOrBuilder() {
       if (settingsCase_ == 1) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource) settings_;
@@ -1853,13 +1960,17 @@ public final class EndpointOuterClass {
     public static final int POSTGRES_SOURCE_FIELD_NUMBER = 2;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
+     * @return Whether the postgresSource field is set.
      */
+    @java.lang.Override
     public boolean hasPostgresSource() {
       return settingsCase_ == 2;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
+     * @return The postgresSource.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource getPostgresSource() {
       if (settingsCase_ == 2) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_;
@@ -1869,6 +1980,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSourceOrBuilder getPostgresSourceOrBuilder() {
       if (settingsCase_ == 2) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_;
@@ -1879,13 +1991,17 @@ public final class EndpointOuterClass {
     public static final int MONGO_SOURCE_FIELD_NUMBER = 9;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     * @return Whether the mongoSource field is set.
      */
+    @java.lang.Override
     public boolean hasMongoSource() {
       return settingsCase_ == 9;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     * @return The mongoSource.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource getMongoSource() {
       if (settingsCase_ == 9) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_;
@@ -1895,6 +2011,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder getMongoSourceOrBuilder() {
       if (settingsCase_ == 9) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_;
@@ -1905,13 +2022,17 @@ public final class EndpointOuterClass {
     public static final int CLICKHOUSE_SOURCE_FIELD_NUMBER = 16;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     * @return Whether the clickhouseSource field is set.
      */
+    @java.lang.Override
     public boolean hasClickhouseSource() {
       return settingsCase_ == 16;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     * @return The clickhouseSource.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource getClickhouseSource() {
       if (settingsCase_ == 16) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_;
@@ -1921,6 +2042,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder() {
       if (settingsCase_ == 16) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_;
@@ -1931,13 +2053,17 @@ public final class EndpointOuterClass {
     public static final int MYSQL_TARGET_FIELD_NUMBER = 101;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
+     * @return Whether the mysqlTarget field is set.
      */
+    @java.lang.Override
     public boolean hasMysqlTarget() {
       return settingsCase_ == 101;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
+     * @return The mysqlTarget.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget getMysqlTarget() {
       if (settingsCase_ == 101) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget) settings_;
@@ -1947,6 +2073,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTargetOrBuilder getMysqlTargetOrBuilder() {
       if (settingsCase_ == 101) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget) settings_;
@@ -1957,13 +2084,17 @@ public final class EndpointOuterClass {
     public static final int POSTGRES_TARGET_FIELD_NUMBER = 102;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
+     * @return Whether the postgresTarget field is set.
      */
+    @java.lang.Override
     public boolean hasPostgresTarget() {
       return settingsCase_ == 102;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
+     * @return The postgresTarget.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget getPostgresTarget() {
       if (settingsCase_ == 102) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget) settings_;
@@ -1973,6 +2104,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTargetOrBuilder getPostgresTargetOrBuilder() {
       if (settingsCase_ == 102) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget) settings_;
@@ -1983,13 +2115,17 @@ public final class EndpointOuterClass {
     public static final int CLICKHOUSE_TARGET_FIELD_NUMBER = 104;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     * @return Whether the clickhouseTarget field is set.
      */
+    @java.lang.Override
     public boolean hasClickhouseTarget() {
       return settingsCase_ == 104;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     * @return The clickhouseTarget.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget getClickhouseTarget() {
       if (settingsCase_ == 104) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_;
@@ -1999,6 +2135,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder getClickhouseTargetOrBuilder() {
       if (settingsCase_ == 104) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_;
@@ -2009,13 +2146,17 @@ public final class EndpointOuterClass {
     public static final int MONGO_TARGET_FIELD_NUMBER = 111;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     * @return Whether the mongoTarget field is set.
      */
+    @java.lang.Override
     public boolean hasMongoTarget() {
       return settingsCase_ == 111;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     * @return The mongoTarget.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget getMongoTarget() {
       if (settingsCase_ == 111) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_;
@@ -2025,6 +2166,7 @@ public final class EndpointOuterClass {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder getMongoTargetOrBuilder() {
       if (settingsCase_ == 111) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_;
@@ -2126,48 +2268,45 @@ public final class EndpointOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings other = (yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings) obj;
 
-      boolean result = true;
-      result = result && getSettingsCase().equals(
-          other.getSettingsCase());
-      if (!result) return false;
+      if (!getSettingsCase().equals(other.getSettingsCase())) return false;
       switch (settingsCase_) {
         case 1:
-          result = result && getMysqlSource()
-              .equals(other.getMysqlSource());
+          if (!getMysqlSource()
+              .equals(other.getMysqlSource())) return false;
           break;
         case 2:
-          result = result && getPostgresSource()
-              .equals(other.getPostgresSource());
+          if (!getPostgresSource()
+              .equals(other.getPostgresSource())) return false;
           break;
         case 9:
-          result = result && getMongoSource()
-              .equals(other.getMongoSource());
+          if (!getMongoSource()
+              .equals(other.getMongoSource())) return false;
           break;
         case 16:
-          result = result && getClickhouseSource()
-              .equals(other.getClickhouseSource());
+          if (!getClickhouseSource()
+              .equals(other.getClickhouseSource())) return false;
           break;
         case 101:
-          result = result && getMysqlTarget()
-              .equals(other.getMysqlTarget());
+          if (!getMysqlTarget()
+              .equals(other.getMysqlTarget())) return false;
           break;
         case 102:
-          result = result && getPostgresTarget()
-              .equals(other.getPostgresTarget());
+          if (!getPostgresTarget()
+              .equals(other.getPostgresTarget())) return false;
           break;
         case 104:
-          result = result && getClickhouseTarget()
-              .equals(other.getClickhouseTarget());
+          if (!getClickhouseTarget()
+              .equals(other.getClickhouseTarget())) return false;
           break;
         case 111:
-          result = result && getMongoTarget()
-              .equals(other.getMongoTarget());
+          if (!getMongoTarget()
+              .equals(other.getMongoTarget())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2437,35 +2576,35 @@ public final class EndpointOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2564,13 +2703,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSourceOrBuilder> mysqlSourceBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
+       * @return Whether the mysqlSource field is set.
        */
+      @java.lang.Override
       public boolean hasMysqlSource() {
         return settingsCase_ == 1;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
+       * @return The mysqlSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource getMysqlSource() {
         if (mysqlSourceBuilder_ == null) {
           if (settingsCase_ == 1) {
@@ -2664,6 +2807,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlSource mysql_source = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSourceOrBuilder getMysqlSourceOrBuilder() {
         if ((settingsCase_ == 1) && (mysqlSourceBuilder_ != null)) {
           return mysqlSourceBuilder_.getMessageOrBuilder();
@@ -2700,13 +2844,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSourceOrBuilder> postgresSourceBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
+       * @return Whether the postgresSource field is set.
        */
+      @java.lang.Override
       public boolean hasPostgresSource() {
         return settingsCase_ == 2;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
+       * @return The postgresSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource getPostgresSource() {
         if (postgresSourceBuilder_ == null) {
           if (settingsCase_ == 2) {
@@ -2800,6 +2948,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresSource postgres_source = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSourceOrBuilder getPostgresSourceOrBuilder() {
         if ((settingsCase_ == 2) && (postgresSourceBuilder_ != null)) {
           return postgresSourceBuilder_.getMessageOrBuilder();
@@ -2836,13 +2985,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder> mongoSourceBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       * @return Whether the mongoSource field is set.
        */
+      @java.lang.Override
       public boolean hasMongoSource() {
         return settingsCase_ == 9;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       * @return The mongoSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource getMongoSource() {
         if (mongoSourceBuilder_ == null) {
           if (settingsCase_ == 9) {
@@ -2936,6 +3089,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder getMongoSourceOrBuilder() {
         if ((settingsCase_ == 9) && (mongoSourceBuilder_ != null)) {
           return mongoSourceBuilder_.getMessageOrBuilder();
@@ -2972,13 +3126,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder> clickhouseSourceBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       * @return Whether the clickhouseSource field is set.
        */
+      @java.lang.Override
       public boolean hasClickhouseSource() {
         return settingsCase_ == 16;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       * @return The clickhouseSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource getClickhouseSource() {
         if (clickhouseSourceBuilder_ == null) {
           if (settingsCase_ == 16) {
@@ -3072,6 +3230,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder() {
         if ((settingsCase_ == 16) && (clickhouseSourceBuilder_ != null)) {
           return clickhouseSourceBuilder_.getMessageOrBuilder();
@@ -3108,13 +3267,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTargetOrBuilder> mysqlTargetBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
+       * @return Whether the mysqlTarget field is set.
        */
+      @java.lang.Override
       public boolean hasMysqlTarget() {
         return settingsCase_ == 101;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
+       * @return The mysqlTarget.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget getMysqlTarget() {
         if (mysqlTargetBuilder_ == null) {
           if (settingsCase_ == 101) {
@@ -3208,6 +3371,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTargetOrBuilder getMysqlTargetOrBuilder() {
         if ((settingsCase_ == 101) && (mysqlTargetBuilder_ != null)) {
           return mysqlTargetBuilder_.getMessageOrBuilder();
@@ -3244,13 +3408,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTargetOrBuilder> postgresTargetBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
+       * @return Whether the postgresTarget field is set.
        */
+      @java.lang.Override
       public boolean hasPostgresTarget() {
         return settingsCase_ == 102;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
+       * @return The postgresTarget.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget getPostgresTarget() {
         if (postgresTargetBuilder_ == null) {
           if (settingsCase_ == 102) {
@@ -3344,6 +3512,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTargetOrBuilder getPostgresTargetOrBuilder() {
         if ((settingsCase_ == 102) && (postgresTargetBuilder_ != null)) {
           return postgresTargetBuilder_.getMessageOrBuilder();
@@ -3380,13 +3549,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder> clickhouseTargetBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       * @return Whether the clickhouseTarget field is set.
        */
+      @java.lang.Override
       public boolean hasClickhouseTarget() {
         return settingsCase_ == 104;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       * @return The clickhouseTarget.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget getClickhouseTarget() {
         if (clickhouseTargetBuilder_ == null) {
           if (settingsCase_ == 104) {
@@ -3480,6 +3653,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder getClickhouseTargetOrBuilder() {
         if ((settingsCase_ == 104) && (clickhouseTargetBuilder_ != null)) {
           return clickhouseTargetBuilder_.getMessageOrBuilder();
@@ -3516,13 +3690,17 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder> mongoTargetBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       * @return Whether the mongoTarget field is set.
        */
+      @java.lang.Override
       public boolean hasMongoTarget() {
         return settingsCase_ == 111;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       * @return The mongoTarget.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget getMongoTarget() {
         if (mongoTargetBuilder_ == null) {
           if (settingsCase_ == 111) {
@@ -3616,6 +3794,7 @@ public final class EndpointOuterClass {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder getMongoTargetOrBuilder() {
         if ((settingsCase_ == 111) && (mongoTargetBuilder_ != null)) {
           return mongoTargetBuilder_.getMessageOrBuilder();
@@ -3650,7 +3829,7 @@ public final class EndpointOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3760,15 +3939,7 @@ public final class EndpointOuterClass {
       "/yandex-cloud/go-genproto/yandex/cloud/d" +
       "atatransfer/v1;datatransferb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.getDescriptor(),
@@ -3776,7 +3947,7 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_datatransfer_v1_Endpoint_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_Endpoint_fieldAccessorTable = new

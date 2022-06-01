@@ -1,19 +1,6 @@
 package yandex.cloud.api.vpc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/vpc/v1/address_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AddressServiceGrpc {
 
   private AddressServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class AddressServiceGrpc {
     if ((getGetMethod = AddressServiceGrpc.getGetMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getGetMethod = AddressServiceGrpc.getGetMethod) == null) {
-          AddressServiceGrpc.getGetMethod = getGetMethod = 
+          AddressServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest, yandex.cloud.api.vpc.v1.AddressOuterClass.Address>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressOuterClass.Address.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest,
@@ -76,22 +63,21 @@ public final class AddressServiceGrpc {
     if ((getGetByValueMethod = AddressServiceGrpc.getGetByValueMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getGetByValueMethod = AddressServiceGrpc.getGetByValueMethod) == null) {
-          AddressServiceGrpc.getGetByValueMethod = getGetByValueMethod = 
+          AddressServiceGrpc.getGetByValueMethod = getGetByValueMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest, yandex.cloud.api.vpc.v1.AddressOuterClass.Address>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "GetByValue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetByValue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressOuterClass.Address.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("GetByValue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("GetByValue"))
+              .build();
         }
-     }
-     return getGetByValueMethod;
+      }
+    }
+    return getGetByValueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest,
@@ -108,22 +94,21 @@ public final class AddressServiceGrpc {
     if ((getListMethod = AddressServiceGrpc.getListMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getListMethod = AddressServiceGrpc.getListMethod) == null) {
-          AddressServiceGrpc.getListMethod = getListMethod = 
+          AddressServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest,
@@ -140,22 +125,21 @@ public final class AddressServiceGrpc {
     if ((getCreateMethod = AddressServiceGrpc.getCreateMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getCreateMethod = AddressServiceGrpc.getCreateMethod) == null) {
-          AddressServiceGrpc.getCreateMethod = getCreateMethod = 
+          AddressServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest,
@@ -172,22 +156,21 @@ public final class AddressServiceGrpc {
     if ((getUpdateMethod = AddressServiceGrpc.getUpdateMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getUpdateMethod = AddressServiceGrpc.getUpdateMethod) == null) {
-          AddressServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          AddressServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest,
@@ -204,22 +187,21 @@ public final class AddressServiceGrpc {
     if ((getDeleteMethod = AddressServiceGrpc.getDeleteMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getDeleteMethod = AddressServiceGrpc.getDeleteMethod) == null) {
-          AddressServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          AddressServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest,
@@ -236,22 +218,21 @@ public final class AddressServiceGrpc {
     if ((getListOperationsMethod = AddressServiceGrpc.getListOperationsMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getListOperationsMethod = AddressServiceGrpc.getListOperationsMethod) == null) {
-          AddressServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          AddressServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest,
@@ -268,29 +249,35 @@ public final class AddressServiceGrpc {
     if ((getMoveMethod = AddressServiceGrpc.getMoveMethod) == null) {
       synchronized (AddressServiceGrpc.class) {
         if ((getMoveMethod = AddressServiceGrpc.getMoveMethod) == null) {
-          AddressServiceGrpc.getMoveMethod = getMoveMethod = 
+          AddressServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.AddressService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AddressServiceStub newStub(io.grpc.Channel channel) {
-    return new AddressServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AddressServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AddressServiceStub>() {
+        @java.lang.Override
+        public AddressServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AddressServiceStub(channel, callOptions);
+        }
+      };
+    return AddressServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -298,7 +285,14 @@ public final class AddressServiceGrpc {
    */
   public static AddressServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AddressServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AddressServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AddressServiceBlockingStub>() {
+        @java.lang.Override
+        public AddressServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AddressServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AddressServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -306,7 +300,14 @@ public final class AddressServiceGrpc {
    */
   public static AddressServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AddressServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AddressServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AddressServiceFutureStub>() {
+        @java.lang.Override
+        public AddressServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AddressServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AddressServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -324,7 +325,7 @@ public final class AddressServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -335,7 +336,7 @@ public final class AddressServiceGrpc {
      */
     public void getByValue(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetByValueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetByValueMethod(), responseObserver);
     }
 
     /**
@@ -345,7 +346,7 @@ public final class AddressServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -355,7 +356,7 @@ public final class AddressServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -365,7 +366,7 @@ public final class AddressServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -375,7 +376,7 @@ public final class AddressServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -385,7 +386,7 @@ public final class AddressServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -395,63 +396,63 @@ public final class AddressServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest,
                 yandex.cloud.api.vpc.v1.AddressOuterClass.Address>(
                   this, METHODID_GET)))
           .addMethod(
             getGetByValueMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest,
                 yandex.cloud.api.vpc.v1.AddressOuterClass.Address>(
                   this, METHODID_GET_BY_VALUE)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest,
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest,
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -465,19 +466,15 @@ public final class AddressServiceGrpc {
    * A set of methods for managing Address resources.
    * </pre>
    */
-  public static final class AddressServiceStub extends io.grpc.stub.AbstractStub<AddressServiceStub> {
-    private AddressServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AddressServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AddressServiceStub extends io.grpc.stub.AbstractAsyncStub<AddressServiceStub> {
+    private AddressServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AddressServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AddressServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AddressServiceStub(channel, callOptions);
     }
 
@@ -489,7 +486,7 @@ public final class AddressServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -501,7 +498,7 @@ public final class AddressServiceGrpc {
      */
     public void getByValue(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByValueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -512,7 +509,7 @@ public final class AddressServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -523,7 +520,7 @@ public final class AddressServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -534,7 +531,7 @@ public final class AddressServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -545,7 +542,7 @@ public final class AddressServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -556,7 +553,7 @@ public final class AddressServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -567,7 +564,7 @@ public final class AddressServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -577,19 +574,15 @@ public final class AddressServiceGrpc {
    * A set of methods for managing Address resources.
    * </pre>
    */
-  public static final class AddressServiceBlockingStub extends io.grpc.stub.AbstractStub<AddressServiceBlockingStub> {
-    private AddressServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AddressServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AddressServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AddressServiceBlockingStub> {
+    private AddressServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AddressServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AddressServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AddressServiceBlockingStub(channel, callOptions);
     }
 
@@ -600,7 +593,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address get(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -611,7 +604,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address getByValue(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetByValueMethod(), getCallOptions(), request);
     }
 
@@ -621,7 +614,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse list(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -631,7 +624,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -641,7 +634,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -651,7 +644,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -661,7 +654,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse listOperations(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -671,7 +664,7 @@ public final class AddressServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
   }
@@ -681,19 +674,15 @@ public final class AddressServiceGrpc {
    * A set of methods for managing Address resources.
    * </pre>
    */
-  public static final class AddressServiceFutureStub extends io.grpc.stub.AbstractStub<AddressServiceFutureStub> {
-    private AddressServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AddressServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AddressServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AddressServiceFutureStub> {
+    private AddressServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AddressServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AddressServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AddressServiceFutureStub(channel, callOptions);
     }
 
@@ -705,7 +694,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> get(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -717,7 +706,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> getByValue(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetByValueMethod(), getCallOptions()), request);
     }
 
@@ -728,7 +717,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> list(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -739,7 +728,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -750,7 +739,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -761,7 +750,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -772,7 +761,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -783,7 +772,7 @@ public final class AddressServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
   }

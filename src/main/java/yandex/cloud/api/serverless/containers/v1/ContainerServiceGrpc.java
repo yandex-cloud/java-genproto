@@ -1,25 +1,13 @@
 package yandex.cloud.api.serverless.containers.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/serverless/containers/v1/container_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ContainerServiceGrpc {
 
   private ContainerServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class ContainerServiceGrpc {
     if ((getGetMethod = ContainerServiceGrpc.getGetMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getGetMethod = ContainerServiceGrpc.getGetMethod) == null) {
-          ContainerServiceGrpc.getGetMethod = getGetMethod = 
+          ContainerServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest,
@@ -73,22 +60,21 @@ public final class ContainerServiceGrpc {
     if ((getListMethod = ContainerServiceGrpc.getListMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getListMethod = ContainerServiceGrpc.getListMethod) == null) {
-          ContainerServiceGrpc.getListMethod = getListMethod = 
+          ContainerServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest,
@@ -105,22 +91,21 @@ public final class ContainerServiceGrpc {
     if ((getCreateMethod = ContainerServiceGrpc.getCreateMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getCreateMethod = ContainerServiceGrpc.getCreateMethod) == null) {
-          ContainerServiceGrpc.getCreateMethod = getCreateMethod = 
+          ContainerServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest,
@@ -137,22 +122,21 @@ public final class ContainerServiceGrpc {
     if ((getUpdateMethod = ContainerServiceGrpc.getUpdateMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getUpdateMethod = ContainerServiceGrpc.getUpdateMethod) == null) {
-          ContainerServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          ContainerServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest,
@@ -169,22 +153,21 @@ public final class ContainerServiceGrpc {
     if ((getDeleteMethod = ContainerServiceGrpc.getDeleteMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getDeleteMethod = ContainerServiceGrpc.getDeleteMethod) == null) {
-          ContainerServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          ContainerServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest,
@@ -201,22 +184,21 @@ public final class ContainerServiceGrpc {
     if ((getDeployRevisionMethod = ContainerServiceGrpc.getDeployRevisionMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getDeployRevisionMethod = ContainerServiceGrpc.getDeployRevisionMethod) == null) {
-          ContainerServiceGrpc.getDeployRevisionMethod = getDeployRevisionMethod = 
+          ContainerServiceGrpc.getDeployRevisionMethod = getDeployRevisionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "DeployRevision"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeployRevision"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("DeployRevision"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("DeployRevision"))
+              .build();
         }
-     }
-     return getDeployRevisionMethod;
+      }
+    }
+    return getDeployRevisionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest,
@@ -233,22 +215,21 @@ public final class ContainerServiceGrpc {
     if ((getRollbackMethod = ContainerServiceGrpc.getRollbackMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getRollbackMethod = ContainerServiceGrpc.getRollbackMethod) == null) {
-          ContainerServiceGrpc.getRollbackMethod = getRollbackMethod = 
+          ContainerServiceGrpc.getRollbackMethod = getRollbackMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "Rollback"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Rollback"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Rollback"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Rollback"))
+              .build();
         }
-     }
-     return getRollbackMethod;
+      }
+    }
+    return getRollbackMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest,
@@ -265,22 +246,21 @@ public final class ContainerServiceGrpc {
     if ((getGetRevisionMethod = ContainerServiceGrpc.getGetRevisionMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getGetRevisionMethod = ContainerServiceGrpc.getGetRevisionMethod) == null) {
-          ContainerServiceGrpc.getGetRevisionMethod = getGetRevisionMethod = 
+          ContainerServiceGrpc.getGetRevisionMethod = getGetRevisionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "GetRevision"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRevision"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("GetRevision"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("GetRevision"))
+              .build();
         }
-     }
-     return getGetRevisionMethod;
+      }
+    }
+    return getGetRevisionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest,
@@ -297,22 +277,21 @@ public final class ContainerServiceGrpc {
     if ((getListRevisionsMethod = ContainerServiceGrpc.getListRevisionsMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getListRevisionsMethod = ContainerServiceGrpc.getListRevisionsMethod) == null) {
-          ContainerServiceGrpc.getListRevisionsMethod = getListRevisionsMethod = 
+          ContainerServiceGrpc.getListRevisionsMethod = getListRevisionsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "ListRevisions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRevisions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("ListRevisions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("ListRevisions"))
+              .build();
         }
-     }
-     return getListRevisionsMethod;
+      }
+    }
+    return getListRevisionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest,
@@ -329,22 +308,21 @@ public final class ContainerServiceGrpc {
     if ((getListOperationsMethod = ContainerServiceGrpc.getListOperationsMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getListOperationsMethod = ContainerServiceGrpc.getListOperationsMethod) == null) {
-          ContainerServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          ContainerServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -361,22 +339,21 @@ public final class ContainerServiceGrpc {
     if ((getListAccessBindingsMethod = ContainerServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getListAccessBindingsMethod = ContainerServiceGrpc.getListAccessBindingsMethod) == null) {
-          ContainerServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          ContainerServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -393,22 +370,21 @@ public final class ContainerServiceGrpc {
     if ((getSetAccessBindingsMethod = ContainerServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = ContainerServiceGrpc.getSetAccessBindingsMethod) == null) {
-          ContainerServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          ContainerServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -425,29 +401,35 @@ public final class ContainerServiceGrpc {
     if ((getUpdateAccessBindingsMethod = ContainerServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (ContainerServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = ContainerServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          ContainerServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          ContainerServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.containers.v1.ContainerService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ContainerServiceStub newStub(io.grpc.Channel channel) {
-    return new ContainerServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ContainerServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ContainerServiceStub>() {
+        @java.lang.Override
+        public ContainerServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ContainerServiceStub(channel, callOptions);
+        }
+      };
+    return ContainerServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -455,7 +437,14 @@ public final class ContainerServiceGrpc {
    */
   public static ContainerServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ContainerServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ContainerServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ContainerServiceBlockingStub>() {
+        @java.lang.Override
+        public ContainerServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ContainerServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ContainerServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -463,7 +452,14 @@ public final class ContainerServiceGrpc {
    */
   public static ContainerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ContainerServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ContainerServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ContainerServiceFutureStub>() {
+        @java.lang.Override
+        public ContainerServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ContainerServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ContainerServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -474,182 +470,182 @@ public final class ContainerServiceGrpc {
      */
     public void get(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void list(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
      */
     public void create(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     public void update(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void delete(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
      */
     public void deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeployRevisionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeployRevisionMethod(), responseObserver);
     }
 
     /**
      */
     public void rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRollbackMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRollbackMethod(), responseObserver);
     }
 
     /**
      */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetRevisionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRevisionMethod(), responseObserver);
     }
 
     /**
      */
     public void listRevisions(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListRevisionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRevisionsMethod(), responseObserver);
     }
 
     /**
      */
     public void listOperations(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest,
                 yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest,
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getDeployRevisionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DEPLOY_REVISION)))
           .addMethod(
             getRollbackMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ROLLBACK)))
           .addMethod(
             getGetRevisionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest,
                 yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision>(
                   this, METHODID_GET_REVISION)))
           .addMethod(
             getListRevisionsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest,
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse>(
                   this, METHODID_LIST_REVISIONS)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest,
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -660,19 +656,15 @@ public final class ContainerServiceGrpc {
 
   /**
    */
-  public static final class ContainerServiceStub extends io.grpc.stub.AbstractStub<ContainerServiceStub> {
-    private ContainerServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ContainerServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ContainerServiceStub extends io.grpc.stub.AbstractAsyncStub<ContainerServiceStub> {
+    private ContainerServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ContainerServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ContainerServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ContainerServiceStub(channel, callOptions);
     }
 
@@ -680,7 +672,7 @@ public final class ContainerServiceGrpc {
      */
     public void get(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -688,7 +680,7 @@ public final class ContainerServiceGrpc {
      */
     public void list(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -696,7 +688,7 @@ public final class ContainerServiceGrpc {
      */
     public void create(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -704,7 +696,7 @@ public final class ContainerServiceGrpc {
      */
     public void update(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -712,7 +704,7 @@ public final class ContainerServiceGrpc {
      */
     public void delete(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -720,7 +712,7 @@ public final class ContainerServiceGrpc {
      */
     public void deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeployRevisionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -728,7 +720,7 @@ public final class ContainerServiceGrpc {
      */
     public void rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRollbackMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -736,7 +728,7 @@ public final class ContainerServiceGrpc {
      */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetRevisionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -744,7 +736,7 @@ public final class ContainerServiceGrpc {
      */
     public void listRevisions(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRevisionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -752,7 +744,7 @@ public final class ContainerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -760,7 +752,7 @@ public final class ContainerServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -768,7 +760,7 @@ public final class ContainerServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -776,136 +768,128 @@ public final class ContainerServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class ContainerServiceBlockingStub extends io.grpc.stub.AbstractStub<ContainerServiceBlockingStub> {
-    private ContainerServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ContainerServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ContainerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ContainerServiceBlockingStub> {
+    private ContainerServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ContainerServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ContainerServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ContainerServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container get(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse list(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeployRevisionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRollbackMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRevisionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse listRevisions(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRevisionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse listOperations(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class ContainerServiceFutureStub extends io.grpc.stub.AbstractStub<ContainerServiceFutureStub> {
-    private ContainerServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ContainerServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ContainerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ContainerServiceFutureStub> {
+    private ContainerServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ContainerServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ContainerServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ContainerServiceFutureStub(channel, callOptions);
     }
 
@@ -913,7 +897,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> get(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -921,7 +905,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse> list(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -929,7 +913,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -937,7 +921,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -945,7 +929,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -953,7 +937,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deployRevision(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeployRevisionMethod(), getCallOptions()), request);
     }
 
@@ -961,7 +945,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rollback(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRollbackMethod(), getCallOptions()), request);
     }
 
@@ -969,7 +953,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> getRevision(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetRevisionMethod(), getCallOptions()), request);
     }
 
@@ -977,7 +961,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse> listRevisions(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRevisionsMethod(), getCallOptions()), request);
     }
 
@@ -985,7 +969,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse> listOperations(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -993,7 +977,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1001,7 +985,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1009,7 +993,7 @@ public final class ContainerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

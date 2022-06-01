@@ -26,6 +26,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The sourceLanguageCode.
      */
     java.lang.String getSourceLanguageCode();
     /**
@@ -36,6 +37,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The bytes for sourceLanguageCode.
      */
     com.google.protobuf.ByteString
         getSourceLanguageCodeBytes();
@@ -47,6 +49,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The targetLanguageCode.
      */
     java.lang.String getTargetLanguageCode();
     /**
@@ -56,6 +59,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The bytes for targetLanguageCode.
      */
     com.google.protobuf.ByteString
         getTargetLanguageCodeBytes();
@@ -66,6 +70,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+     * @return The enum numeric value on the wire for format.
      */
     int getFormatValue();
     /**
@@ -74,6 +79,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+     * @return The format.
      */
     yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format getFormat();
 
@@ -84,6 +90,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the texts.
      */
     java.util.List<java.lang.String>
         getTextsList();
@@ -94,6 +101,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of texts.
      */
     int getTextsCount();
     /**
@@ -103,6 +111,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The texts at the given index.
      */
     java.lang.String getTexts(int index);
     /**
@@ -112,6 +122,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the texts at the given index.
      */
     com.google.protobuf.ByteString
         getTextsBytes(int index);
@@ -124,6 +136,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -134,6 +147,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -144,6 +158,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The model.
      */
     java.lang.String getModel();
     /**
@@ -152,6 +167,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
@@ -162,6 +178,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
+     * @return Whether the glossaryConfig field is set.
      */
     boolean hasGlossaryConfig();
     /**
@@ -170,6 +187,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
+     * @return The glossaryConfig.
      */
     yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig getGlossaryConfig();
     /**
@@ -187,13 +205,14 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>bool speller = 8;</code>
+     * @return The speller.
      */
     boolean getSpeller();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.TranslateRequest}
    */
-  public  static final class TranslateRequest extends
+  public static final class TranslateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.TranslateRequest)
       TranslateRequestOrBuilder {
@@ -209,7 +228,13 @@ public final class TranslationServiceOuterClass {
       texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       folderId_ = "";
       model_ = "";
-      speller_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TranslateRequest();
     }
 
     @java.lang.Override
@@ -256,9 +281,9 @@ public final class TranslationServiceOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 texts_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               texts_.add(s);
               break;
@@ -294,7 +319,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -308,7 +333,7 @@ public final class TranslationServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           texts_ = texts_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -387,6 +412,8 @@ public final class TranslationServiceOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -394,6 +421,10 @@ public final class TranslationServiceOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Format forNumber(int value) {
         switch (value) {
           case 0: return FORMAT_UNSPECIFIED;
@@ -417,6 +448,10 @@ public final class TranslationServiceOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -451,7 +486,6 @@ public final class TranslationServiceOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.translate.v2.TranslateRequest.Format)
     }
 
-    private int bitField0_;
     public static final int SOURCE_LANGUAGE_CODE_FIELD_NUMBER = 1;
     private volatile java.lang.Object sourceLanguageCode_;
     /**
@@ -462,7 +496,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The sourceLanguageCode.
      */
+    @java.lang.Override
     public java.lang.String getSourceLanguageCode() {
       java.lang.Object ref = sourceLanguageCode_;
       if (ref instanceof java.lang.String) {
@@ -483,7 +519,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The bytes for sourceLanguageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceLanguageCodeBytes() {
       java.lang.Object ref = sourceLanguageCode_;
@@ -507,7 +545,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The targetLanguageCode.
      */
+    @java.lang.Override
     public java.lang.String getTargetLanguageCode() {
       java.lang.Object ref = targetLanguageCode_;
       if (ref instanceof java.lang.String) {
@@ -527,7 +567,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The bytes for targetLanguageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTargetLanguageCodeBytes() {
       java.lang.Object ref = targetLanguageCode_;
@@ -550,8 +592,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+     * @return The enum numeric value on the wire for format.
      */
-    public int getFormatValue() {
+    @java.lang.Override public int getFormatValue() {
       return format_;
     }
     /**
@@ -560,8 +603,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+     * @return The format.
      */
-    public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format getFormat() {
+    @java.lang.Override public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format getFormat() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format result = yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format.valueOf(format_);
       return result == null ? yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format.UNRECOGNIZED : result;
@@ -576,6 +620,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the texts.
      */
     public com.google.protobuf.ProtocolStringList
         getTextsList() {
@@ -588,6 +633,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of texts.
      */
     public int getTextsCount() {
       return texts_.size();
@@ -599,6 +645,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The texts at the given index.
      */
     public java.lang.String getTexts(int index) {
       return texts_.get(index);
@@ -610,6 +658,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the texts at the given index.
      */
     public com.google.protobuf.ByteString
         getTextsBytes(int index) {
@@ -626,7 +676,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -647,7 +699,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -670,7 +724,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The model.
      */
+    @java.lang.Override
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
       if (ref instanceof java.lang.String) {
@@ -689,7 +745,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for model.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
       java.lang.Object ref = model_;
@@ -712,7 +770,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
+     * @return Whether the glossaryConfig field is set.
      */
+    @java.lang.Override
     public boolean hasGlossaryConfig() {
       return glossaryConfig_ != null;
     }
@@ -722,7 +782,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
+     * @return The glossaryConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig getGlossaryConfig() {
       return glossaryConfig_ == null ? yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig.getDefaultInstance() : glossaryConfig_;
     }
@@ -733,6 +795,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfigOrBuilder getGlossaryConfigOrBuilder() {
       return getGlossaryConfig();
     }
@@ -745,7 +808,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>bool speller = 8;</code>
+     * @return The speller.
      */
+    @java.lang.Override
     public boolean getSpeller() {
       return speller_;
     }
@@ -764,10 +829,10 @@ public final class TranslationServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSourceLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceLanguageCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sourceLanguageCode_);
       }
-      if (!getTargetLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetLanguageCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetLanguageCode_);
       }
       if (format_ != yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format.FORMAT_UNSPECIFIED.getNumber()) {
@@ -776,10 +841,10 @@ public final class TranslationServiceOuterClass {
       for (int i = 0; i < texts_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, texts_.getRaw(i));
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, folderId_);
       }
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, model_);
       }
       if (glossaryConfig_ != null) {
@@ -797,10 +862,10 @@ public final class TranslationServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSourceLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceLanguageCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sourceLanguageCode_);
       }
-      if (!getTargetLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetLanguageCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, targetLanguageCode_);
       }
       if (format_ != yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format.FORMAT_UNSPECIFIED.getNumber()) {
@@ -815,10 +880,10 @@ public final class TranslationServiceOuterClass {
         size += dataSize;
         size += 1 * getTextsList().size();
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, folderId_);
       }
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, model_);
       }
       if (glossaryConfig_ != null) {
@@ -844,27 +909,26 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest) obj;
 
-      boolean result = true;
-      result = result && getSourceLanguageCode()
-          .equals(other.getSourceLanguageCode());
-      result = result && getTargetLanguageCode()
-          .equals(other.getTargetLanguageCode());
-      result = result && format_ == other.format_;
-      result = result && getTextsList()
-          .equals(other.getTextsList());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getModel()
-          .equals(other.getModel());
-      result = result && (hasGlossaryConfig() == other.hasGlossaryConfig());
+      if (!getSourceLanguageCode()
+          .equals(other.getSourceLanguageCode())) return false;
+      if (!getTargetLanguageCode()
+          .equals(other.getTargetLanguageCode())) return false;
+      if (format_ != other.format_) return false;
+      if (!getTextsList()
+          .equals(other.getTextsList())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (hasGlossaryConfig() != other.hasGlossaryConfig()) return false;
       if (hasGlossaryConfig()) {
-        result = result && getGlossaryConfig()
-            .equals(other.getGlossaryConfig());
+        if (!getGlossaryConfig()
+            .equals(other.getGlossaryConfig())) return false;
       }
-      result = result && (getSpeller()
-          == other.getSpeller());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSpeller()
+          != other.getSpeller()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1035,7 +1099,7 @@ public final class TranslationServiceOuterClass {
         format_ = 0;
 
         texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         folderId_ = "";
 
         model_ = "";
@@ -1075,13 +1139,12 @@ public final class TranslationServiceOuterClass {
       public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest buildPartial() {
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest result = new yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.sourceLanguageCode_ = sourceLanguageCode_;
         result.targetLanguageCode_ = targetLanguageCode_;
         result.format_ = format_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           texts_ = texts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.texts_ = texts_;
         result.folderId_ = folderId_;
@@ -1092,42 +1155,41 @@ public final class TranslationServiceOuterClass {
           result.glossaryConfig_ = glossaryConfigBuilder_.build();
         }
         result.speller_ = speller_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1155,7 +1217,7 @@ public final class TranslationServiceOuterClass {
         if (!other.texts_.isEmpty()) {
           if (texts_.isEmpty()) {
             texts_ = other.texts_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTextsIsMutable();
             texts_.addAll(other.texts_);
@@ -1215,6 +1277,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The sourceLanguageCode.
        */
       public java.lang.String getSourceLanguageCode() {
         java.lang.Object ref = sourceLanguageCode_;
@@ -1236,6 +1299,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The bytes for sourceLanguageCode.
        */
       public com.google.protobuf.ByteString
           getSourceLanguageCodeBytes() {
@@ -1258,6 +1322,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The sourceLanguageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceLanguageCode(
           java.lang.String value) {
@@ -1277,6 +1343,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceLanguageCode() {
         
@@ -1292,6 +1359,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_language_code = 1 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The bytes for sourceLanguageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1313,6 +1382,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The targetLanguageCode.
        */
       public java.lang.String getTargetLanguageCode() {
         java.lang.Object ref = targetLanguageCode_;
@@ -1333,6 +1403,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The bytes for targetLanguageCode.
        */
       public com.google.protobuf.ByteString
           getTargetLanguageCodeBytes() {
@@ -1354,6 +1425,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The targetLanguageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetLanguageCode(
           java.lang.String value) {
@@ -1372,6 +1445,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetLanguageCode() {
         
@@ -1386,6 +1460,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string target_language_code = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The bytes for targetLanguageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1406,8 +1482,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+       * @return The enum numeric value on the wire for format.
        */
-      public int getFormatValue() {
+      @java.lang.Override public int getFormatValue() {
         return format_;
       }
       /**
@@ -1416,8 +1493,11 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+       * @param value The enum numeric value on the wire for format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatValue(int value) {
+        
         format_ = value;
         onChanged();
         return this;
@@ -1428,7 +1508,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+       * @return The format.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format getFormat() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format result = yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format.valueOf(format_);
@@ -1440,6 +1522,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormat(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.Format value) {
         if (value == null) {
@@ -1456,6 +1540,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateRequest.Format format = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormat() {
         
@@ -1466,9 +1551,9 @@ public final class TranslationServiceOuterClass {
 
       private com.google.protobuf.LazyStringList texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTextsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           texts_ = new com.google.protobuf.LazyStringArrayList(texts_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -1478,6 +1563,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the texts.
        */
       public com.google.protobuf.ProtocolStringList
           getTextsList() {
@@ -1490,6 +1576,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of texts.
        */
       public int getTextsCount() {
         return texts_.size();
@@ -1501,6 +1588,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The texts at the given index.
        */
       public java.lang.String getTexts(int index) {
         return texts_.get(index);
@@ -1512,6 +1601,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the texts at the given index.
        */
       public com.google.protobuf.ByteString
           getTextsBytes(int index) {
@@ -1524,6 +1615,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The texts to set.
+       * @return This builder for chaining.
        */
       public Builder setTexts(
           int index, java.lang.String value) {
@@ -1542,6 +1636,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The texts to add.
+       * @return This builder for chaining.
        */
       public Builder addTexts(
           java.lang.String value) {
@@ -1560,6 +1656,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The texts to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTexts(
           java.lang.Iterable<java.lang.String> values) {
@@ -1576,10 +1674,11 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTexts() {
         texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1590,6 +1689,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string texts = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the texts to add.
+       * @return This builder for chaining.
        */
       public Builder addTextsBytes(
           com.google.protobuf.ByteString value) {
@@ -1612,6 +1713,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1633,6 +1735,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1655,6 +1758,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1674,6 +1779,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1689,6 +1795,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1709,6 +1817,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The model.
        */
       public java.lang.String getModel() {
         java.lang.Object ref = model_;
@@ -1728,6 +1837,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
           getModelBytes() {
@@ -1748,6 +1858,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
        */
       public Builder setModel(
           java.lang.String value) {
@@ -1765,6 +1877,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearModel() {
         
@@ -1778,6 +1891,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string model = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
@@ -1791,7 +1906,7 @@ public final class TranslationServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig glossaryConfig_ = null;
+      private yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig glossaryConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig.Builder, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfigOrBuilder> glossaryConfigBuilder_;
       /**
@@ -1800,6 +1915,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
+       * @return Whether the glossaryConfig field is set.
        */
       public boolean hasGlossaryConfig() {
         return glossaryConfigBuilder_ != null || glossaryConfig_ != null;
@@ -1810,6 +1926,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
+       * @return The glossaryConfig.
        */
       public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig getGlossaryConfig() {
         if (glossaryConfigBuilder_ == null) {
@@ -1951,7 +2068,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>bool speller = 8;</code>
+       * @return The speller.
        */
+      @java.lang.Override
       public boolean getSpeller() {
         return speller_;
       }
@@ -1961,6 +2080,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>bool speller = 8;</code>
+       * @param value The speller to set.
+       * @return This builder for chaining.
        */
       public Builder setSpeller(boolean value) {
         
@@ -1974,6 +2095,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>bool speller = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSpeller() {
         
@@ -1984,7 +2106,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2044,6 +2166,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
+     * @return Whether the glossaryData field is set.
      */
     boolean hasGlossaryData();
     /**
@@ -2052,6 +2175,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
+     * @return The glossaryData.
      */
     yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData getGlossaryData();
     /**
@@ -2068,7 +2192,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.TranslateGlossaryConfig}
    */
-  public  static final class TranslateGlossaryConfig extends
+  public static final class TranslateGlossaryConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.TranslateGlossaryConfig)
       TranslateGlossaryConfigOrBuilder {
@@ -2078,6 +2202,13 @@ public final class TranslationServiceOuterClass {
       super(builder);
     }
     private TranslateGlossaryConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TranslateGlossaryConfig();
     }
 
     @java.lang.Override
@@ -2093,7 +2224,6 @@ public final class TranslationServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2119,7 +2249,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2153,7 +2283,8 @@ public final class TranslationServiceOuterClass {
     private int glossarySourceCase_ = 0;
     private java.lang.Object glossarySource_;
     public enum GlossarySourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       GLOSSARY_DATA(1),
       GLOSSARYSOURCE_NOT_SET(0);
       private final int value;
@@ -2161,6 +2292,8 @@ public final class TranslationServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2193,7 +2326,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
+     * @return Whether the glossaryData field is set.
      */
+    @java.lang.Override
     public boolean hasGlossaryData() {
       return glossarySourceCase_ == 1;
     }
@@ -2203,7 +2338,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
+     * @return The glossaryData.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData getGlossaryData() {
       if (glossarySourceCase_ == 1) {
          return (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData) glossarySource_;
@@ -2217,6 +2354,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryDataOrBuilder getGlossaryDataOrBuilder() {
       if (glossarySourceCase_ == 1) {
          return (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData) glossarySource_;
@@ -2269,20 +2407,17 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfig) obj;
 
-      boolean result = true;
-      result = result && getGlossarySourceCase().equals(
-          other.getGlossarySourceCase());
-      if (!result) return false;
+      if (!getGlossarySourceCase().equals(other.getGlossarySourceCase())) return false;
       switch (glossarySourceCase_) {
         case 1:
-          result = result && getGlossaryData()
-              .equals(other.getGlossaryData());
+          if (!getGlossaryData()
+              .equals(other.getGlossaryData())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2475,35 +2610,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2578,7 +2713,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
+       * @return Whether the glossaryData field is set.
        */
+      @java.lang.Override
       public boolean hasGlossaryData() {
         return glossarySourceCase_ == 1;
       }
@@ -2588,7 +2725,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
+       * @return The glossaryData.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData getGlossaryData() {
         if (glossaryDataBuilder_ == null) {
           if (glossarySourceCase_ == 1) {
@@ -2706,6 +2845,7 @@ public final class TranslationServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.translate.v2.GlossaryData glossary_data = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryDataOrBuilder getGlossaryDataOrBuilder() {
         if ((glossarySourceCase_ == 1) && (glossaryDataBuilder_ != null)) {
           return glossaryDataBuilder_.getMessageOrBuilder();
@@ -2744,7 +2884,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2855,7 +2995,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.GlossaryData}
    */
-  public  static final class GlossaryData extends
+  public static final class GlossaryData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.GlossaryData)
       GlossaryDataOrBuilder {
@@ -2866,6 +3006,13 @@ public final class TranslationServiceOuterClass {
     }
     private GlossaryData() {
       glossaryPairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GlossaryData();
     }
 
     @java.lang.Override
@@ -2893,7 +3040,7 @@ public final class TranslationServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 glossaryPairs_ = new java.util.ArrayList<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2902,7 +3049,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2916,7 +3063,7 @@ public final class TranslationServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           glossaryPairs_ = java.util.Collections.unmodifiableList(glossaryPairs_);
         }
         this.unknownFields = unknownFields.build();
@@ -2947,6 +3094,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.GlossaryPair glossary_pairs = 1 [(.yandex.cloud.size) = "1-50"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair> getGlossaryPairsList() {
       return glossaryPairs_;
     }
@@ -2959,6 +3107,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.GlossaryPair glossary_pairs = 1 [(.yandex.cloud.size) = "1-50"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPairOrBuilder> 
         getGlossaryPairsOrBuilderList() {
       return glossaryPairs_;
@@ -2972,6 +3121,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.GlossaryPair glossary_pairs = 1 [(.yandex.cloud.size) = "1-50"];</code>
      */
+    @java.lang.Override
     public int getGlossaryPairsCount() {
       return glossaryPairs_.size();
     }
@@ -2984,6 +3134,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.GlossaryPair glossary_pairs = 1 [(.yandex.cloud.size) = "1-50"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair getGlossaryPairs(int index) {
       return glossaryPairs_.get(index);
     }
@@ -2996,6 +3147,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.GlossaryPair glossary_pairs = 1 [(.yandex.cloud.size) = "1-50"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPairOrBuilder getGlossaryPairsOrBuilder(
         int index) {
       return glossaryPairs_.get(index);
@@ -3046,11 +3198,10 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData) obj;
 
-      boolean result = true;
-      result = result && getGlossaryPairsList()
-          .equals(other.getGlossaryPairsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getGlossaryPairsList()
+          .equals(other.getGlossaryPairsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3232,7 +3383,7 @@ public final class TranslationServiceOuterClass {
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData result = new yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryData(this);
         int from_bitField0_ = bitField0_;
         if (glossaryPairsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             glossaryPairs_ = java.util.Collections.unmodifiableList(glossaryPairs_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3246,35 +3397,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3347,7 +3498,7 @@ public final class TranslationServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair> glossaryPairs_ =
         java.util.Collections.emptyList();
       private void ensureGlossaryPairsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           glossaryPairs_ = new java.util.ArrayList<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair>(glossaryPairs_);
           bitField0_ |= 0x00000001;
          }
@@ -3684,7 +3835,7 @@ public final class TranslationServiceOuterClass {
           glossaryPairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair.Builder, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPairOrBuilder>(
                   glossaryPairs_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           glossaryPairs_ = null;
@@ -3694,7 +3845,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3754,6 +3905,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The sourceText.
      */
     java.lang.String getSourceText();
     /**
@@ -3762,6 +3914,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for sourceText.
      */
     com.google.protobuf.ByteString
         getSourceTextBytes();
@@ -3772,6 +3925,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The translatedText.
      */
     java.lang.String getTranslatedText();
     /**
@@ -3780,19 +3934,21 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for translatedText.
      */
     com.google.protobuf.ByteString
         getTranslatedTextBytes();
 
     /**
      * <code>bool exact = 3;</code>
+     * @return The exact.
      */
     boolean getExact();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.GlossaryPair}
    */
-  public  static final class GlossaryPair extends
+  public static final class GlossaryPair extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.GlossaryPair)
       GlossaryPairOrBuilder {
@@ -3804,7 +3960,13 @@ public final class TranslationServiceOuterClass {
     private GlossaryPair() {
       sourceText_ = "";
       translatedText_ = "";
-      exact_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GlossaryPair();
     }
 
     @java.lang.Override
@@ -3820,7 +3982,6 @@ public final class TranslationServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3849,7 +4010,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3888,7 +4049,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The sourceText.
      */
+    @java.lang.Override
     public java.lang.String getSourceText() {
       java.lang.Object ref = sourceText_;
       if (ref instanceof java.lang.String) {
@@ -3907,7 +4070,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for sourceText.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceTextBytes() {
       java.lang.Object ref = sourceText_;
@@ -3930,7 +4095,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The translatedText.
      */
+    @java.lang.Override
     public java.lang.String getTranslatedText() {
       java.lang.Object ref = translatedText_;
       if (ref instanceof java.lang.String) {
@@ -3949,7 +4116,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for translatedText.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTranslatedTextBytes() {
       java.lang.Object ref = translatedText_;
@@ -3968,7 +4137,9 @@ public final class TranslationServiceOuterClass {
     private boolean exact_;
     /**
      * <code>bool exact = 3;</code>
+     * @return The exact.
      */
+    @java.lang.Override
     public boolean getExact() {
       return exact_;
     }
@@ -3987,10 +4158,10 @@ public final class TranslationServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSourceTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sourceText_);
       }
-      if (!getTranslatedTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translatedText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, translatedText_);
       }
       if (exact_ != false) {
@@ -4005,10 +4176,10 @@ public final class TranslationServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSourceTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sourceText_);
       }
-      if (!getTranslatedTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translatedText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, translatedText_);
       }
       if (exact_ != false) {
@@ -4030,15 +4201,14 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.GlossaryPair) obj;
 
-      boolean result = true;
-      result = result && getSourceText()
-          .equals(other.getSourceText());
-      result = result && getTranslatedText()
-          .equals(other.getTranslatedText());
-      result = result && (getExact()
-          == other.getExact());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSourceText()
+          .equals(other.getSourceText())) return false;
+      if (!getTranslatedText()
+          .equals(other.getTranslatedText())) return false;
+      if (getExact()
+          != other.getExact()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4229,35 +4399,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4318,6 +4488,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The sourceText.
        */
       public java.lang.String getSourceText() {
         java.lang.Object ref = sourceText_;
@@ -4337,6 +4508,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for sourceText.
        */
       public com.google.protobuf.ByteString
           getSourceTextBytes() {
@@ -4357,6 +4529,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The sourceText to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceText(
           java.lang.String value) {
@@ -4374,6 +4548,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceText() {
         
@@ -4387,6 +4562,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string source_text = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for sourceText to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceTextBytes(
           com.google.protobuf.ByteString value) {
@@ -4407,6 +4584,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The translatedText.
        */
       public java.lang.String getTranslatedText() {
         java.lang.Object ref = translatedText_;
@@ -4426,6 +4604,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for translatedText.
        */
       public com.google.protobuf.ByteString
           getTranslatedTextBytes() {
@@ -4446,6 +4625,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The translatedText to set.
+       * @return This builder for chaining.
        */
       public Builder setTranslatedText(
           java.lang.String value) {
@@ -4463,6 +4644,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTranslatedText() {
         
@@ -4476,6 +4658,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string translated_text = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for translatedText to set.
+       * @return This builder for chaining.
        */
       public Builder setTranslatedTextBytes(
           com.google.protobuf.ByteString value) {
@@ -4492,12 +4676,16 @@ public final class TranslationServiceOuterClass {
       private boolean exact_ ;
       /**
        * <code>bool exact = 3;</code>
+       * @return The exact.
        */
+      @java.lang.Override
       public boolean getExact() {
         return exact_;
       }
       /**
        * <code>bool exact = 3;</code>
+       * @param value The exact to set.
+       * @return This builder for chaining.
        */
       public Builder setExact(boolean value) {
         
@@ -4507,6 +4695,7 @@ public final class TranslationServiceOuterClass {
       }
       /**
        * <code>bool exact = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearExact() {
         
@@ -4517,7 +4706,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4618,7 +4807,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.TranslateResponse}
    */
-  public  static final class TranslateResponse extends
+  public static final class TranslateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.TranslateResponse)
       TranslateResponseOrBuilder {
@@ -4629,6 +4818,13 @@ public final class TranslationServiceOuterClass {
     }
     private TranslateResponse() {
       translations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TranslateResponse();
     }
 
     @java.lang.Override
@@ -4656,7 +4852,7 @@ public final class TranslationServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 translations_ = new java.util.ArrayList<yandex.cloud.api.ai.translate.v2.Translation.TranslatedText>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4665,7 +4861,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4679,7 +4875,7 @@ public final class TranslationServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           translations_ = java.util.Collections.unmodifiableList(translations_);
         }
         this.unknownFields = unknownFields.build();
@@ -4708,6 +4904,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.TranslatedText translations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.translate.v2.Translation.TranslatedText> getTranslationsList() {
       return translations_;
     }
@@ -4718,6 +4915,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.TranslatedText translations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.translate.v2.Translation.TranslatedTextOrBuilder> 
         getTranslationsOrBuilderList() {
       return translations_;
@@ -4729,6 +4927,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.TranslatedText translations = 1;</code>
      */
+    @java.lang.Override
     public int getTranslationsCount() {
       return translations_.size();
     }
@@ -4739,6 +4938,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.TranslatedText translations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.Translation.TranslatedText getTranslations(int index) {
       return translations_.get(index);
     }
@@ -4749,6 +4949,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.TranslatedText translations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.Translation.TranslatedTextOrBuilder getTranslationsOrBuilder(
         int index) {
       return translations_.get(index);
@@ -4799,11 +5000,10 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse) obj;
 
-      boolean result = true;
-      result = result && getTranslationsList()
-          .equals(other.getTranslationsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTranslationsList()
+          .equals(other.getTranslationsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4985,7 +5185,7 @@ public final class TranslationServiceOuterClass {
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse result = new yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse(this);
         int from_bitField0_ = bitField0_;
         if (translationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             translations_ = java.util.Collections.unmodifiableList(translations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4999,35 +5199,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5100,7 +5300,7 @@ public final class TranslationServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.translate.v2.Translation.TranslatedText> translations_ =
         java.util.Collections.emptyList();
       private void ensureTranslationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           translations_ = new java.util.ArrayList<yandex.cloud.api.ai.translate.v2.Translation.TranslatedText>(translations_);
           bitField0_ |= 0x00000001;
          }
@@ -5401,7 +5601,7 @@ public final class TranslationServiceOuterClass {
           translationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.translate.v2.Translation.TranslatedText, yandex.cloud.api.ai.translate.v2.Translation.TranslatedText.Builder, yandex.cloud.api.ai.translate.v2.Translation.TranslatedTextOrBuilder>(
                   translations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           translations_ = null;
@@ -5411,7 +5611,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5471,6 +5671,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -5479,6 +5680,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -5491,6 +5693,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return A list containing the languageCodeHints.
      */
     java.util.List<java.lang.String>
         getLanguageCodeHintsList();
@@ -5502,6 +5705,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The count of languageCodeHints.
      */
     int getLanguageCodeHintsCount();
     /**
@@ -5512,6 +5716,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the element to return.
+     * @return The languageCodeHints at the given index.
      */
     java.lang.String getLanguageCodeHints(int index);
     /**
@@ -5522,6 +5728,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the languageCodeHints at the given index.
      */
     com.google.protobuf.ByteString
         getLanguageCodeHintsBytes(int index);
@@ -5534,6 +5742,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -5544,6 +5753,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -5551,7 +5761,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.DetectLanguageRequest}
    */
-  public  static final class DetectLanguageRequest extends
+  public static final class DetectLanguageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.DetectLanguageRequest)
       DetectLanguageRequestOrBuilder {
@@ -5564,6 +5774,13 @@ public final class TranslationServiceOuterClass {
       text_ = "";
       languageCodeHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DetectLanguageRequest();
     }
 
     @java.lang.Override
@@ -5598,9 +5815,9 @@ public final class TranslationServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 languageCodeHints_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               languageCodeHints_.add(s);
               break;
@@ -5612,7 +5829,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5626,7 +5843,7 @@ public final class TranslationServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           languageCodeHints_ = languageCodeHints_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -5646,7 +5863,6 @@ public final class TranslationServiceOuterClass {
               yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest.class, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TEXT_FIELD_NUMBER = 1;
     private volatile java.lang.Object text_;
     /**
@@ -5655,7 +5871,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -5674,7 +5892,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -5699,6 +5919,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return A list containing the languageCodeHints.
      */
     public com.google.protobuf.ProtocolStringList
         getLanguageCodeHintsList() {
@@ -5712,6 +5933,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The count of languageCodeHints.
      */
     public int getLanguageCodeHintsCount() {
       return languageCodeHints_.size();
@@ -5724,6 +5946,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the element to return.
+     * @return The languageCodeHints at the given index.
      */
     public java.lang.String getLanguageCodeHints(int index) {
       return languageCodeHints_.get(index);
@@ -5736,6 +5960,8 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the languageCodeHints at the given index.
      */
     public com.google.protobuf.ByteString
         getLanguageCodeHintsBytes(int index) {
@@ -5752,7 +5978,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -5773,7 +6001,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -5802,13 +6032,13 @@ public final class TranslationServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
       for (int i = 0; i < languageCodeHints_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, languageCodeHints_.getRaw(i));
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, folderId_);
       }
       unknownFields.writeTo(output);
@@ -5820,7 +6050,7 @@ public final class TranslationServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
       {
@@ -5831,7 +6061,7 @@ public final class TranslationServiceOuterClass {
         size += dataSize;
         size += 1 * getLanguageCodeHintsList().size();
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5849,15 +6079,14 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && getLanguageCodeHintsList()
-          .equals(other.getLanguageCodeHintsList());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getLanguageCodeHintsList()
+          .equals(other.getLanguageCodeHintsList())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6011,7 +6240,7 @@ public final class TranslationServiceOuterClass {
         text_ = "";
 
         languageCodeHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         folderId_ = "";
 
         return this;
@@ -6041,50 +6270,48 @@ public final class TranslationServiceOuterClass {
       public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest buildPartial() {
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest result = new yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.text_ = text_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           languageCodeHints_ = languageCodeHints_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.languageCodeHints_ = languageCodeHints_;
         result.folderId_ = folderId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6105,7 +6332,7 @@ public final class TranslationServiceOuterClass {
         if (!other.languageCodeHints_.isEmpty()) {
           if (languageCodeHints_.isEmpty()) {
             languageCodeHints_ = other.languageCodeHints_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureLanguageCodeHintsIsMutable();
             languageCodeHints_.addAll(other.languageCodeHints_);
@@ -6153,6 +6380,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -6172,6 +6400,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -6192,6 +6421,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -6209,6 +6440,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -6222,6 +6454,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -6237,9 +6471,9 @@ public final class TranslationServiceOuterClass {
 
       private com.google.protobuf.LazyStringList languageCodeHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureLanguageCodeHintsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           languageCodeHints_ = new com.google.protobuf.LazyStringArrayList(languageCodeHints_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -6250,6 +6484,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return A list containing the languageCodeHints.
        */
       public com.google.protobuf.ProtocolStringList
           getLanguageCodeHintsList() {
@@ -6263,6 +6498,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The count of languageCodeHints.
        */
       public int getLanguageCodeHintsCount() {
         return languageCodeHints_.size();
@@ -6275,6 +6511,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param index The index of the element to return.
+       * @return The languageCodeHints at the given index.
        */
       public java.lang.String getLanguageCodeHints(int index) {
         return languageCodeHints_.get(index);
@@ -6287,6 +6525,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the languageCodeHints at the given index.
        */
       public com.google.protobuf.ByteString
           getLanguageCodeHintsBytes(int index) {
@@ -6300,6 +6540,9 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param index The index to set the value at.
+       * @param value The languageCodeHints to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCodeHints(
           int index, java.lang.String value) {
@@ -6319,6 +6562,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The languageCodeHints to add.
+       * @return This builder for chaining.
        */
       public Builder addLanguageCodeHints(
           java.lang.String value) {
@@ -6338,6 +6583,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param values The languageCodeHints to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLanguageCodeHints(
           java.lang.Iterable<java.lang.String> values) {
@@ -6355,10 +6602,11 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLanguageCodeHints() {
         languageCodeHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6370,6 +6618,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_code_hints = 2 [(.yandex.cloud.size) = "&lt;=10", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The bytes of the languageCodeHints to add.
+       * @return This builder for chaining.
        */
       public Builder addLanguageCodeHintsBytes(
           com.google.protobuf.ByteString value) {
@@ -6392,6 +6642,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -6413,6 +6664,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -6435,6 +6687,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -6454,6 +6708,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -6469,6 +6724,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6484,7 +6741,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6545,6 +6802,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 1;</code>
+     * @return The languageCode.
      */
     java.lang.String getLanguageCode();
     /**
@@ -6554,6 +6812,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 1;</code>
+     * @return The bytes for languageCode.
      */
     com.google.protobuf.ByteString
         getLanguageCodeBytes();
@@ -6561,7 +6820,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.DetectLanguageResponse}
    */
-  public  static final class DetectLanguageResponse extends
+  public static final class DetectLanguageResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.DetectLanguageResponse)
       DetectLanguageResponseOrBuilder {
@@ -6572,6 +6831,13 @@ public final class TranslationServiceOuterClass {
     }
     private DetectLanguageResponse() {
       languageCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DetectLanguageResponse();
     }
 
     @java.lang.Override
@@ -6587,7 +6853,6 @@ public final class TranslationServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6605,7 +6870,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6645,7 +6910,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 1;</code>
+     * @return The languageCode.
      */
+    @java.lang.Override
     public java.lang.String getLanguageCode() {
       java.lang.Object ref = languageCode_;
       if (ref instanceof java.lang.String) {
@@ -6665,7 +6932,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 1;</code>
+     * @return The bytes for languageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLanguageCodeBytes() {
       java.lang.Object ref = languageCode_;
@@ -6694,7 +6963,7 @@ public final class TranslationServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, languageCode_);
       }
       unknownFields.writeTo(output);
@@ -6706,7 +6975,7 @@ public final class TranslationServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, languageCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -6724,11 +6993,10 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse) obj;
 
-      boolean result = true;
-      result = result && getLanguageCode()
-          .equals(other.getLanguageCode());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLanguageCode()
+          .equals(other.getLanguageCode())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6908,35 +7176,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6991,6 +7259,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return The languageCode.
        */
       public java.lang.String getLanguageCode() {
         java.lang.Object ref = languageCode_;
@@ -7011,6 +7280,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return The bytes for languageCode.
        */
       public com.google.protobuf.ByteString
           getLanguageCodeBytes() {
@@ -7032,6 +7302,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @param value The languageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCode(
           java.lang.String value) {
@@ -7050,6 +7322,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLanguageCode() {
         
@@ -7064,6 +7337,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 1;</code>
+       * @param value The bytes for languageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -7079,7 +7354,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7141,6 +7416,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -7151,6 +7427,7 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -7158,7 +7435,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.ListLanguagesRequest}
    */
-  public  static final class ListLanguagesRequest extends
+  public static final class ListLanguagesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.ListLanguagesRequest)
       ListLanguagesRequestOrBuilder {
@@ -7169,6 +7446,13 @@ public final class TranslationServiceOuterClass {
     }
     private ListLanguagesRequest() {
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLanguagesRequest();
     }
 
     @java.lang.Override
@@ -7184,7 +7468,6 @@ public final class TranslationServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7202,7 +7485,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7243,7 +7526,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -7264,7 +7549,9 @@ public final class TranslationServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -7293,7 +7580,7 @@ public final class TranslationServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       unknownFields.writeTo(output);
@@ -7305,7 +7592,7 @@ public final class TranslationServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7323,11 +7610,10 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7507,35 +7793,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7591,6 +7877,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -7612,6 +7899,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -7634,6 +7922,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -7653,6 +7943,7 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -7668,6 +7959,8 @@ public final class TranslationServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7683,7 +7976,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7784,7 +8077,7 @@ public final class TranslationServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.ListLanguagesResponse}
    */
-  public  static final class ListLanguagesResponse extends
+  public static final class ListLanguagesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.ListLanguagesResponse)
       ListLanguagesResponseOrBuilder {
@@ -7795,6 +8088,13 @@ public final class TranslationServiceOuterClass {
     }
     private ListLanguagesResponse() {
       languages_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLanguagesResponse();
     }
 
     @java.lang.Override
@@ -7822,7 +8122,7 @@ public final class TranslationServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 languages_ = new java.util.ArrayList<yandex.cloud.api.ai.translate.v2.Translation.Language>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -7831,7 +8131,7 @@ public final class TranslationServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7845,7 +8145,7 @@ public final class TranslationServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           languages_ = java.util.Collections.unmodifiableList(languages_);
         }
         this.unknownFields = unknownFields.build();
@@ -7874,6 +8174,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.Language languages = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.translate.v2.Translation.Language> getLanguagesList() {
       return languages_;
     }
@@ -7884,6 +8185,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.Language languages = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.translate.v2.Translation.LanguageOrBuilder> 
         getLanguagesOrBuilderList() {
       return languages_;
@@ -7895,6 +8197,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.Language languages = 1;</code>
      */
+    @java.lang.Override
     public int getLanguagesCount() {
       return languages_.size();
     }
@@ -7905,6 +8208,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.Language languages = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.Translation.Language getLanguages(int index) {
       return languages_.get(index);
     }
@@ -7915,6 +8219,7 @@ public final class TranslationServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.translate.v2.Language languages = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.translate.v2.Translation.LanguageOrBuilder getLanguagesOrBuilder(
         int index) {
       return languages_.get(index);
@@ -7965,11 +8270,10 @@ public final class TranslationServiceOuterClass {
       }
       yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse other = (yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse) obj;
 
-      boolean result = true;
-      result = result && getLanguagesList()
-          .equals(other.getLanguagesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLanguagesList()
+          .equals(other.getLanguagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8151,7 +8455,7 @@ public final class TranslationServiceOuterClass {
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse result = new yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse(this);
         int from_bitField0_ = bitField0_;
         if (languagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             languages_ = java.util.Collections.unmodifiableList(languages_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -8165,35 +8469,35 @@ public final class TranslationServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8266,7 +8570,7 @@ public final class TranslationServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.translate.v2.Translation.Language> languages_ =
         java.util.Collections.emptyList();
       private void ensureLanguagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           languages_ = new java.util.ArrayList<yandex.cloud.api.ai.translate.v2.Translation.Language>(languages_);
           bitField0_ |= 0x00000001;
          }
@@ -8567,7 +8871,7 @@ public final class TranslationServiceOuterClass {
           languagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.translate.v2.Translation.Language, yandex.cloud.api.ai.translate.v2.Translation.Language.Builder, yandex.cloud.api.ai.translate.v2.Translation.LanguageOrBuilder>(
                   languages_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           languages_ = null;
@@ -8577,7 +8881,7 @@ public final class TranslationServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8731,21 +9035,13 @@ public final class TranslationServiceOuterClass {
       "x/cloud/ai/translate/v2;translateb\006proto" +
       "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.ai.translate.v2.Translation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_translate_v2_TranslateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_translate_v2_TranslateRequest_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.mysql.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -22,8 +9,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/mysql/v1/backup_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class BackupServiceGrpc {
 
   private BackupServiceGrpc() {}
@@ -45,22 +33,21 @@ public final class BackupServiceGrpc {
     if ((getGetMethod = BackupServiceGrpc.getGetMethod) == null) {
       synchronized (BackupServiceGrpc.class) {
         if ((getGetMethod = BackupServiceGrpc.getGetMethod) == null) {
-          BackupServiceGrpc.getGetMethod = getGetMethod = 
+          BackupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest, yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.mysql.v1.BackupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest,
@@ -77,29 +64,35 @@ public final class BackupServiceGrpc {
     if ((getListMethod = BackupServiceGrpc.getListMethod) == null) {
       synchronized (BackupServiceGrpc.class) {
         if ((getListMethod = BackupServiceGrpc.getListMethod) == null) {
-          BackupServiceGrpc.getListMethod = getListMethod = 
+          BackupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest, yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.mysql.v1.BackupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BackupServiceStub newStub(io.grpc.Channel channel) {
-    return new BackupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BackupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BackupServiceStub>() {
+        @java.lang.Override
+        public BackupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BackupServiceStub(channel, callOptions);
+        }
+      };
+    return BackupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -107,7 +100,14 @@ public final class BackupServiceGrpc {
    */
   public static BackupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BackupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BackupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BackupServiceBlockingStub>() {
+        @java.lang.Override
+        public BackupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BackupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BackupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -115,7 +115,14 @@ public final class BackupServiceGrpc {
    */
   public static BackupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BackupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BackupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BackupServiceFutureStub>() {
+        @java.lang.Override
+        public BackupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BackupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BackupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -133,7 +140,7 @@ public final class BackupServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -144,21 +151,21 @@ public final class BackupServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest,
                 yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest,
                 yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse>(
@@ -173,19 +180,15 @@ public final class BackupServiceGrpc {
    * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
-  public static final class BackupServiceStub extends io.grpc.stub.AbstractStub<BackupServiceStub> {
-    private BackupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BackupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BackupServiceStub extends io.grpc.stub.AbstractAsyncStub<BackupServiceStub> {
+    private BackupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BackupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BackupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BackupServiceStub(channel, callOptions);
     }
 
@@ -196,7 +199,7 @@ public final class BackupServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -208,7 +211,7 @@ public final class BackupServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -219,19 +222,15 @@ public final class BackupServiceGrpc {
    * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
-  public static final class BackupServiceBlockingStub extends io.grpc.stub.AbstractStub<BackupServiceBlockingStub> {
-    private BackupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BackupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BackupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BackupServiceBlockingStub> {
+    private BackupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BackupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BackupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BackupServiceBlockingStub(channel, callOptions);
     }
 
@@ -241,7 +240,7 @@ public final class BackupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup get(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -252,7 +251,7 @@ public final class BackupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse list(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -263,19 +262,15 @@ public final class BackupServiceGrpc {
    * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
-  public static final class BackupServiceFutureStub extends io.grpc.stub.AbstractStub<BackupServiceFutureStub> {
-    private BackupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BackupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BackupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BackupServiceFutureStub> {
+    private BackupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BackupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BackupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BackupServiceFutureStub(channel, callOptions);
     }
 
@@ -286,7 +281,7 @@ public final class BackupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup> get(
         yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -298,7 +293,7 @@ public final class BackupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse> list(
         yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

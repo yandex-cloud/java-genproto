@@ -25,6 +25,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -34,6 +35,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -44,6 +46,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -52,16 +55,19 @@ public final class PSC {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -76,6 +82,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -85,6 +92,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -95,6 +103,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -103,6 +112,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -172,6 +182,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+     * @return The enum numeric value on the wire for environment.
      */
     int getEnvironmentValue();
     /**
@@ -180,6 +191,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+     * @return The environment.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment getEnvironment();
 
@@ -233,6 +245,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
+     * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
@@ -241,6 +254,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
+     * @return The config.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig getConfig();
     /**
@@ -258,6 +272,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -266,6 +281,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -276,6 +292,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -284,6 +301,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health getHealth();
 
@@ -293,6 +311,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -301,6 +320,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+     * @return The status.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status getStatus();
 
@@ -310,6 +330,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @return A list containing the securityGroupIds.
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
@@ -319,6 +340,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @return The count of securityGroupIds.
      */
     int getSecurityGroupIdsCount();
     /**
@@ -327,6 +349,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
@@ -335,6 +359,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
@@ -345,6 +371,7 @@ public final class PSC {
      * </pre>
      *
      * <code>bool deletion_protection = 14;</code>
+     * @return The deletionProtection.
      */
     boolean getDeletionProtection();
 
@@ -354,6 +381,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
+     * @return The sqlcollation.
      */
     java.lang.String getSqlcollation();
     /**
@@ -362,6 +390,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
+     * @return The bytes for sqlcollation.
      */
     com.google.protobuf.ByteString
         getSqlcollationBytes();
@@ -372,6 +401,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @return A list containing the hostGroupIds.
      */
     java.util.List<java.lang.String>
         getHostGroupIdsList();
@@ -381,6 +411,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @return The count of hostGroupIds.
      */
     int getHostGroupIdsCount();
     /**
@@ -389,6 +420,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @param index The index of the element to return.
+     * @return The hostGroupIds at the given index.
      */
     java.lang.String getHostGroupIds(int index);
     /**
@@ -397,6 +430,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hostGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
@@ -407,6 +442,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -415,6 +451,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -427,7 +464,7 @@ public final class PSC {
    *
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Cluster}
    */
-  public  static final class Cluster extends
+  public static final class Cluster extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Cluster)
       ClusterOrBuilder {
@@ -447,10 +484,16 @@ public final class PSC {
       health_ = 0;
       status_ = 0;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      deletionProtection_ = false;
       sqlcollation_ = "";
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Cluster();
     }
 
     @java.lang.Override
@@ -515,10 +558,10 @@ public final class PSC {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -534,9 +577,9 @@ public final class PSC {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 monitoring_ = new java.util.ArrayList<yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000002;
               }
               monitoring_.add(
                   input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring.parser(), extensionRegistry));
@@ -575,9 +618,9 @@ public final class PSC {
             }
             case 106: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00001000;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroupIds_.add(s);
               break;
@@ -595,9 +638,9 @@ public final class PSC {
             }
             case 130: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00008000;
+                mutable_bitField0_ |= 0x00000008;
               }
               hostGroupIds_.add(s);
               break;
@@ -609,7 +652,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -623,13 +666,13 @@ public final class PSC {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
         }
-        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -724,6 +767,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -731,6 +776,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Environment forNumber(int value) {
         switch (value) {
           case 0: return ENVIRONMENT_UNSPECIFIED;
@@ -754,6 +803,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -871,6 +924,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -878,6 +933,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -902,6 +961,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1083,6 +1146,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1090,6 +1155,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNKNOWN;
@@ -1118,6 +1187,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1152,7 +1225,6 @@ public final class PSC {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.sqlserver.v1.Cluster.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -1162,7 +1234,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1182,7 +1256,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1205,7 +1281,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1224,7 +1302,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1243,19 +1323,24 @@ public final class PSC {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -1269,7 +1354,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1289,7 +1376,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1312,7 +1401,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1331,7 +1422,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1381,14 +1474,16 @@ public final class PSC {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -1401,6 +1496,7 @@ public final class PSC {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -1413,11 +1509,12 @@ public final class PSC {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1430,10 +1527,11 @@ public final class PSC {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1450,8 +1548,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+     * @return The enum numeric value on the wire for environment.
      */
-    public int getEnvironmentValue() {
+    @java.lang.Override public int getEnvironmentValue() {
       return environment_;
     }
     /**
@@ -1460,8 +1559,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+     * @return The environment.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment getEnvironment() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment getEnvironment() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment.valueOf(environment_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment.UNRECOGNIZED : result;
@@ -1476,6 +1576,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring> getMonitoringList() {
       return monitoring_;
     }
@@ -1486,6 +1587,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.sqlserver.v1.PSC.MonitoringOrBuilder> 
         getMonitoringOrBuilderList() {
       return monitoring_;
@@ -1497,6 +1599,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public int getMonitoringCount() {
       return monitoring_.size();
     }
@@ -1507,6 +1610,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring getMonitoring(int index) {
       return monitoring_.get(index);
     }
@@ -1517,6 +1621,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.MonitoringOrBuilder getMonitoringOrBuilder(
         int index) {
       return monitoring_.get(index);
@@ -1530,7 +1635,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
+     * @return Whether the config field is set.
      */
+    @java.lang.Override
     public boolean hasConfig() {
       return config_ != null;
     }
@@ -1540,7 +1647,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
+     * @return The config.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig getConfig() {
       return config_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.getDefaultInstance() : config_;
     }
@@ -1551,6 +1660,7 @@ public final class PSC {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfigOrBuilder getConfigOrBuilder() {
       return getConfig();
     }
@@ -1563,7 +1673,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -1582,7 +1694,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -1605,8 +1719,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -1615,8 +1730,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health.UNRECOGNIZED : result;
@@ -1630,8 +1746,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1640,8 +1757,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status.UNRECOGNIZED : result;
@@ -1655,6 +1773,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @return A list containing the securityGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupIdsList() {
@@ -1666,6 +1785,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @return The count of securityGroupIds.
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
@@ -1676,6 +1796,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
@@ -1686,6 +1808,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index) {
@@ -1700,7 +1824,9 @@ public final class PSC {
      * </pre>
      *
      * <code>bool deletion_protection = 14;</code>
+     * @return The deletionProtection.
      */
+    @java.lang.Override
     public boolean getDeletionProtection() {
       return deletionProtection_;
     }
@@ -1713,7 +1839,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
+     * @return The sqlcollation.
      */
+    @java.lang.Override
     public java.lang.String getSqlcollation() {
       java.lang.Object ref = sqlcollation_;
       if (ref instanceof java.lang.String) {
@@ -1732,7 +1860,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
+     * @return The bytes for sqlcollation.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSqlcollationBytes() {
       java.lang.Object ref = sqlcollation_;
@@ -1755,6 +1885,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @return A list containing the hostGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getHostGroupIdsList() {
@@ -1766,6 +1897,7 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @return The count of hostGroupIds.
      */
     public int getHostGroupIdsCount() {
       return hostGroupIds_.size();
@@ -1776,6 +1908,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @param index The index of the element to return.
+     * @return The hostGroupIds at the given index.
      */
     public java.lang.String getHostGroupIds(int index) {
       return hostGroupIds_.get(index);
@@ -1786,6 +1920,8 @@ public final class PSC {
      * </pre>
      *
      * <code>repeated string host_group_ids = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hostGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index) {
@@ -1800,7 +1936,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -1819,7 +1957,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -1848,19 +1988,19 @@ public final class PSC {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1878,7 +2018,7 @@ public final class PSC {
       if (config_ != null) {
         output.writeMessage(9, getConfig());
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, networkId_);
       }
       if (health_ != yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health.HEALTH_UNKNOWN.getNumber()) {
@@ -1893,13 +2033,13 @@ public final class PSC {
       if (deletionProtection_ != false) {
         output.writeBool(14, deletionProtection_);
       }
-      if (!getSqlcollationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sqlcollation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, sqlcollation_);
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, hostGroupIds_.getRaw(i));
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, serviceAccountId_);
       }
       unknownFields.writeTo(output);
@@ -1911,20 +2051,20 @@ public final class PSC {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1949,7 +2089,7 @@ public final class PSC {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getConfig());
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, networkId_);
       }
       if (health_ != yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health.HEALTH_UNKNOWN.getNumber()) {
@@ -1972,7 +2112,7 @@ public final class PSC {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, deletionProtection_);
       }
-      if (!getSqlcollationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sqlcollation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, sqlcollation_);
       }
       {
@@ -1983,7 +2123,7 @@ public final class PSC {
         size += dataSize;
         size += 2 * getHostGroupIdsList().size();
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, serviceAccountId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2001,46 +2141,45 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && environment_ == other.environment_;
-      result = result && getMonitoringList()
-          .equals(other.getMonitoringList());
-      result = result && (hasConfig() == other.hasConfig());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (environment_ != other.environment_) return false;
+      if (!getMonitoringList()
+          .equals(other.getMonitoringList())) return false;
+      if (hasConfig() != other.hasConfig()) return false;
       if (hasConfig()) {
-        result = result && getConfig()
-            .equals(other.getConfig());
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
       }
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && health_ == other.health_;
-      result = result && status_ == other.status_;
-      result = result && getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList());
-      result = result && (getDeletionProtection()
-          == other.getDeletionProtection());
-      result = result && getSqlcollation()
-          .equals(other.getSqlcollation());
-      result = result && getHostGroupIdsList()
-          .equals(other.getHostGroupIdsList());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (health_ != other.health_) return false;
+      if (status_ != other.status_) return false;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
+      if (!getSqlcollation()
+          .equals(other.getSqlcollation())) return false;
+      if (!getHostGroupIdsList()
+          .equals(other.getHostGroupIdsList())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2277,7 +2416,7 @@ public final class PSC {
 
         if (monitoringBuilder_ == null) {
           monitoring_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           monitoringBuilder_.clear();
         }
@@ -2294,13 +2433,13 @@ public final class PSC {
         status_ = 0;
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         deletionProtection_ = false;
 
         sqlcollation_ = "";
 
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00000008);
         serviceAccountId_ = "";
 
         return this;
@@ -2330,7 +2469,6 @@ public final class PSC {
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster buildPartial() {
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster result = new yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -2344,9 +2482,9 @@ public final class PSC {
         result.labels_.makeImmutable();
         result.environment_ = environment_;
         if (monitoringBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.monitoring_ = monitoring_;
         } else {
@@ -2360,55 +2498,54 @@ public final class PSC {
         result.networkId_ = networkId_;
         result.health_ = health_;
         result.status_ = status_;
-        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
         result.sqlcollation_ = sqlcollation_;
-        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.hostGroupIds_ = hostGroupIds_;
         result.serviceAccountId_ = serviceAccountId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2450,7 +2587,7 @@ public final class PSC {
           if (!other.monitoring_.isEmpty()) {
             if (monitoring_.isEmpty()) {
               monitoring_ = other.monitoring_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureMonitoringIsMutable();
               monitoring_.addAll(other.monitoring_);
@@ -2463,7 +2600,7 @@ public final class PSC {
               monitoringBuilder_.dispose();
               monitoringBuilder_ = null;
               monitoring_ = other.monitoring_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
               monitoringBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getMonitoringFieldBuilder() : null;
@@ -2488,7 +2625,7 @@ public final class PSC {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -2505,7 +2642,7 @@ public final class PSC {
         if (!other.hostGroupIds_.isEmpty()) {
           if (hostGroupIds_.isEmpty()) {
             hostGroupIds_ = other.hostGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureHostGroupIdsIsMutable();
             hostGroupIds_.addAll(other.hostGroupIds_);
@@ -2554,6 +2691,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2574,6 +2712,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2595,6 +2734,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2613,6 +2754,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2627,6 +2769,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2647,6 +2791,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2666,6 +2811,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2686,6 +2832,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2703,6 +2851,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2716,6 +2865,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2729,17 +2880,19 @@ public final class PSC {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2854,6 +3007,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2874,6 +3028,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2895,6 +3050,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2913,6 +3070,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2927,6 +3085,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2947,6 +3107,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2966,6 +3127,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2986,6 +3148,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3003,6 +3167,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -3016,6 +3181,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3064,14 +3231,16 @@ public final class PSC {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -3084,6 +3253,7 @@ public final class PSC {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -3096,11 +3266,12 @@ public final class PSC {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3113,10 +3284,11 @@ public final class PSC {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3141,7 +3313,7 @@ public final class PSC {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3165,8 +3337,11 @@ public final class PSC {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3194,8 +3369,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+       * @return The enum numeric value on the wire for environment.
        */
-      public int getEnvironmentValue() {
+      @java.lang.Override public int getEnvironmentValue() {
         return environment_;
       }
       /**
@@ -3204,8 +3380,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+       * @param value The enum numeric value on the wire for environment to set.
+       * @return This builder for chaining.
        */
       public Builder setEnvironmentValue(int value) {
+        
         environment_ = value;
         onChanged();
         return this;
@@ -3216,7 +3395,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+       * @return The environment.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment getEnvironment() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment.valueOf(environment_);
@@ -3228,6 +3409,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+       * @param value The environment to set.
+       * @return This builder for chaining.
        */
       public Builder setEnvironment(yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Environment value) {
         if (value == null) {
@@ -3244,6 +3427,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Environment environment = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEnvironment() {
         
@@ -3255,9 +3439,9 @@ public final class PSC {
       private java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring> monitoring_ =
         java.util.Collections.emptyList();
       private void ensureMonitoringIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           monitoring_ = new java.util.ArrayList<yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring>(monitoring_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3451,7 +3635,7 @@ public final class PSC {
       public Builder clearMonitoring() {
         if (monitoringBuilder_ == null) {
           monitoring_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           monitoringBuilder_.clear();
@@ -3556,7 +3740,7 @@ public final class PSC {
           monitoringBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring, yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.MonitoringOrBuilder>(
                   monitoring_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           monitoring_ = null;
@@ -3564,7 +3748,7 @@ public final class PSC {
         return monitoringBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig config_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig config_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig, yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfigOrBuilder> configBuilder_;
       /**
@@ -3573,6 +3757,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
+       * @return Whether the config field is set.
        */
       public boolean hasConfig() {
         return configBuilder_ != null || config_ != null;
@@ -3583,6 +3768,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig config = 9;</code>
+       * @return The config.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig getConfig() {
         if (configBuilder_ == null) {
@@ -3724,6 +3910,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -3743,6 +3930,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -3763,6 +3951,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -3780,6 +3970,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -3793,6 +3984,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3813,8 +4006,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -3823,8 +4017,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -3835,7 +4032,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health.valueOf(health_);
@@ -3847,6 +4046,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Health value) {
         if (value == null) {
@@ -3863,6 +4064,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Health health = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -3878,8 +4080,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3888,8 +4091,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3900,7 +4106,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status.valueOf(status_);
@@ -3912,6 +4120,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.mdb.sqlserver.v1.PSC.Cluster.Status value) {
         if (value == null) {
@@ -3928,6 +4138,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Cluster.Status status = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3938,9 +4149,9 @@ public final class PSC {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -3949,6 +4160,7 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @return A list containing the securityGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupIdsList() {
@@ -3960,6 +4172,7 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @return The count of securityGroupIds.
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
@@ -3970,6 +4183,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
@@ -3980,6 +4195,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdsBytes(int index) {
@@ -3991,6 +4208,9 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIds(
           int index, java.lang.String value) {
@@ -4008,6 +4228,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIds(
           java.lang.String value) {
@@ -4025,6 +4247,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -4040,10 +4264,11 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4053,6 +4278,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4073,7 +4300,9 @@ public final class PSC {
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
+       * @return The deletionProtection.
        */
+      @java.lang.Override
       public boolean getDeletionProtection() {
         return deletionProtection_;
       }
@@ -4083,6 +4312,8 @@ public final class PSC {
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
        */
       public Builder setDeletionProtection(boolean value) {
         
@@ -4096,6 +4327,7 @@ public final class PSC {
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeletionProtection() {
         
@@ -4111,6 +4343,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
+       * @return The sqlcollation.
        */
       public java.lang.String getSqlcollation() {
         java.lang.Object ref = sqlcollation_;
@@ -4130,6 +4363,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
+       * @return The bytes for sqlcollation.
        */
       public com.google.protobuf.ByteString
           getSqlcollationBytes() {
@@ -4150,6 +4384,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
+       * @param value The sqlcollation to set.
+       * @return This builder for chaining.
        */
       public Builder setSqlcollation(
           java.lang.String value) {
@@ -4167,6 +4403,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSqlcollation() {
         
@@ -4180,6 +4417,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
+       * @param value The bytes for sqlcollation to set.
+       * @return This builder for chaining.
        */
       public Builder setSqlcollationBytes(
           com.google.protobuf.ByteString value) {
@@ -4195,9 +4434,9 @@ public final class PSC {
 
       private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureHostGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -4206,6 +4445,7 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @return A list containing the hostGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getHostGroupIdsList() {
@@ -4217,6 +4457,7 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @return The count of hostGroupIds.
        */
       public int getHostGroupIdsCount() {
         return hostGroupIds_.size();
@@ -4227,6 +4468,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @param index The index of the element to return.
+       * @return The hostGroupIds at the given index.
        */
       public java.lang.String getHostGroupIds(int index) {
         return hostGroupIds_.get(index);
@@ -4237,6 +4480,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the hostGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getHostGroupIdsBytes(int index) {
@@ -4248,6 +4493,9 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @param index The index to set the value at.
+       * @param value The hostGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setHostGroupIds(
           int index, java.lang.String value) {
@@ -4265,6 +4513,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @param value The hostGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addHostGroupIds(
           java.lang.String value) {
@@ -4282,6 +4532,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @param values The hostGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllHostGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -4297,10 +4549,11 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHostGroupIds() {
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4310,6 +4563,8 @@ public final class PSC {
        * </pre>
        *
        * <code>repeated string host_group_ids = 16;</code>
+       * @param value The bytes of the hostGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addHostGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4330,6 +4585,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -4349,6 +4605,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -4369,6 +4626,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -4386,6 +4645,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -4399,6 +4659,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4414,7 +4676,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4474,6 +4736,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4482,6 +4745,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4492,6 +4756,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4500,6 +4765,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4510,6 +4776,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The link.
      */
     java.lang.String getLink();
     /**
@@ -4518,6 +4785,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The bytes for link.
      */
     com.google.protobuf.ByteString
         getLinkBytes();
@@ -4525,7 +4793,7 @@ public final class PSC {
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Monitoring}
    */
-  public  static final class Monitoring extends
+  public static final class Monitoring extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Monitoring)
       MonitoringOrBuilder {
@@ -4541,6 +4809,13 @@ public final class PSC {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Monitoring();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4553,7 +4828,6 @@ public final class PSC {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4583,7 +4857,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4622,7 +4896,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4641,7 +4917,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4664,7 +4942,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4683,7 +4963,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4706,7 +4988,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The link.
      */
+    @java.lang.Override
     public java.lang.String getLink() {
       java.lang.Object ref = link_;
       if (ref instanceof java.lang.String) {
@@ -4725,7 +5009,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The bytes for link.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLinkBytes() {
       java.lang.Object ref = link_;
@@ -4754,13 +5040,13 @@ public final class PSC {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, link_);
       }
       unknownFields.writeTo(output);
@@ -4772,13 +5058,13 @@ public final class PSC {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, link_);
       }
       size += unknownFields.getSerializedSize();
@@ -4796,15 +5082,14 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Monitoring) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getLink()
-          .equals(other.getLink());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getLink()
+          .equals(other.getLink())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4994,35 +5279,35 @@ public final class PSC {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5084,6 +5369,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5103,6 +5389,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5123,6 +5410,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5140,6 +5429,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5153,6 +5443,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5173,6 +5465,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5192,6 +5485,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5212,6 +5506,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5229,6 +5525,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5242,6 +5539,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5262,6 +5561,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @return The link.
        */
       public java.lang.String getLink() {
         java.lang.Object ref = link_;
@@ -5281,6 +5581,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @return The bytes for link.
        */
       public com.google.protobuf.ByteString
           getLinkBytes() {
@@ -5301,6 +5602,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @param value The link to set.
+       * @return This builder for chaining.
        */
       public Builder setLink(
           java.lang.String value) {
@@ -5318,6 +5621,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLink() {
         
@@ -5331,6 +5635,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @param value The bytes for link to set.
+       * @return This builder for chaining.
        */
       public Builder setLinkBytes(
           com.google.protobuf.ByteString value) {
@@ -5346,7 +5652,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5406,6 +5712,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
@@ -5414,6 +5721,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
@@ -5423,7 +5731,8 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 standard edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
+     * @return Whether the sqlserverConfig2016sp2std field is set.
      */
     boolean hasSqlserverConfig2016Sp2Std();
     /**
@@ -5431,7 +5740,8 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 standard edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
+     * @return The sqlserverConfig2016sp2std.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std getSqlserverConfig2016Sp2Std();
     /**
@@ -5439,7 +5749,7 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 standard edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2stdOrBuilder getSqlserverConfig2016Sp2StdOrBuilder();
 
@@ -5448,7 +5758,8 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 enterprise edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * @return Whether the sqlserverConfig2016sp2ent field is set.
      */
     boolean hasSqlserverConfig2016Sp2Ent();
     /**
@@ -5456,7 +5767,8 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 enterprise edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * @return The sqlserverConfig2016sp2ent.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent getSqlserverConfig2016Sp2Ent();
     /**
@@ -5464,7 +5776,7 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 enterprise edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2entOrBuilder getSqlserverConfig2016Sp2EntOrBuilder();
 
@@ -5474,6 +5786,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -5482,6 +5795,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
+     * @return The resources.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources getResources();
     /**
@@ -5499,6 +5813,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
+     * @return Whether the backupWindowStart field is set.
      */
     boolean hasBackupWindowStart();
     /**
@@ -5507,6 +5822,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
+     * @return The backupWindowStart.
      */
     com.google.type.TimeOfDay getBackupWindowStart();
     /**
@@ -5524,6 +5840,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     * @return Whether the access field is set.
      */
     boolean hasAccess();
     /**
@@ -5532,6 +5849,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     * @return The access.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess();
     /**
@@ -5548,7 +5866,7 @@ public final class PSC {
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.ClusterConfig}
    */
-  public  static final class ClusterConfig extends
+  public static final class ClusterConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.ClusterConfig)
       ClusterConfigOrBuilder {
@@ -5559,6 +5877,13 @@ public final class PSC {
     }
     private ClusterConfig() {
       version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClusterConfig();
     }
 
     @java.lang.Override
@@ -5574,7 +5899,6 @@ public final class PSC {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5659,7 +5983,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5693,7 +6017,8 @@ public final class PSC {
     private int sqlserverConfigCase_ = 0;
     private java.lang.Object sqlserverConfig_;
     public enum SqlserverConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SQLSERVER_CONFIG_2016SP2STD(2),
       SQLSERVER_CONFIG_2016SP2ENT(5),
       SQLSERVERCONFIG_NOT_SET(0);
@@ -5702,6 +6027,8 @@ public final class PSC {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5736,7 +6063,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -5755,7 +6084,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -5776,8 +6107,10 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 standard edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
+     * @return Whether the sqlserverConfig2016sp2std field is set.
      */
+    @java.lang.Override
     public boolean hasSqlserverConfig2016Sp2Std() {
       return sqlserverConfigCase_ == 2;
     }
@@ -5786,8 +6119,10 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 standard edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
+     * @return The sqlserverConfig2016sp2std.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std getSqlserverConfig2016Sp2Std() {
       if (sqlserverConfigCase_ == 2) {
          return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std) sqlserverConfig_;
@@ -5799,8 +6134,9 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 standard edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2stdOrBuilder getSqlserverConfig2016Sp2StdOrBuilder() {
       if (sqlserverConfigCase_ == 2) {
          return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std) sqlserverConfig_;
@@ -5814,8 +6150,10 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 enterprise edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * @return Whether the sqlserverConfig2016sp2ent field is set.
      */
+    @java.lang.Override
     public boolean hasSqlserverConfig2016Sp2Ent() {
       return sqlserverConfigCase_ == 5;
     }
@@ -5824,8 +6162,10 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 enterprise edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * @return The sqlserverConfig2016sp2ent.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent getSqlserverConfig2016Sp2Ent() {
       if (sqlserverConfigCase_ == 5) {
          return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent) sqlserverConfig_;
@@ -5837,8 +6177,9 @@ public final class PSC {
      * Configuration of the SQL Server 2016sp2 enterprise edition instance.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2entOrBuilder getSqlserverConfig2016Sp2EntOrBuilder() {
       if (sqlserverConfigCase_ == 5) {
          return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent) sqlserverConfig_;
@@ -5854,7 +6195,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -5864,7 +6207,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources.getDefaultInstance() : resources_;
     }
@@ -5875,6 +6220,7 @@ public final class PSC {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -5887,7 +6233,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
+     * @return Whether the backupWindowStart field is set.
      */
+    @java.lang.Override
     public boolean hasBackupWindowStart() {
       return backupWindowStart_ != null;
     }
@@ -5897,7 +6245,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
+     * @return The backupWindowStart.
      */
+    @java.lang.Override
     public com.google.type.TimeOfDay getBackupWindowStart() {
       return backupWindowStart_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : backupWindowStart_;
     }
@@ -5908,6 +6258,7 @@ public final class PSC {
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
      */
+    @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getBackupWindowStartOrBuilder() {
       return getBackupWindowStart();
     }
@@ -5920,7 +6271,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     * @return Whether the access field is set.
      */
+    @java.lang.Override
     public boolean hasAccess() {
       return access_ != null;
     }
@@ -5930,7 +6283,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     * @return The access.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess() {
       return access_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
     }
@@ -5941,6 +6296,7 @@ public final class PSC {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
       return getAccess();
     }
@@ -5959,7 +6315,7 @@ public final class PSC {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
       }
       if (sqlserverConfigCase_ == 2) {
@@ -5986,7 +6342,7 @@ public final class PSC {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
       }
       if (sqlserverConfigCase_ == 2) {
@@ -6024,41 +6380,38 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig) obj;
 
-      boolean result = true;
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && (hasResources() == other.hasResources());
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && (hasBackupWindowStart() == other.hasBackupWindowStart());
+      if (hasBackupWindowStart() != other.hasBackupWindowStart()) return false;
       if (hasBackupWindowStart()) {
-        result = result && getBackupWindowStart()
-            .equals(other.getBackupWindowStart());
+        if (!getBackupWindowStart()
+            .equals(other.getBackupWindowStart())) return false;
       }
-      result = result && (hasAccess() == other.hasAccess());
+      if (hasAccess() != other.hasAccess()) return false;
       if (hasAccess()) {
-        result = result && getAccess()
-            .equals(other.getAccess());
+        if (!getAccess()
+            .equals(other.getAccess())) return false;
       }
-      result = result && getSqlserverConfigCase().equals(
-          other.getSqlserverConfigCase());
-      if (!result) return false;
+      if (!getSqlserverConfigCase().equals(other.getSqlserverConfigCase())) return false;
       switch (sqlserverConfigCase_) {
         case 2:
-          result = result && getSqlserverConfig2016Sp2Std()
-              .equals(other.getSqlserverConfig2016Sp2Std());
+          if (!getSqlserverConfig2016Sp2Std()
+              .equals(other.getSqlserverConfig2016Sp2Std())) return false;
           break;
         case 5:
-          result = result && getSqlserverConfig2016Sp2Ent()
-              .equals(other.getSqlserverConfig2016Sp2Ent());
+          if (!getSqlserverConfig2016Sp2Ent()
+              .equals(other.getSqlserverConfig2016Sp2Ent())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6312,35 +6665,35 @@ public final class PSC {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6431,6 +6784,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -6450,6 +6804,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -6470,6 +6825,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -6487,6 +6844,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -6500,6 +6858,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -6520,8 +6880,10 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
+       * @return Whether the sqlserverConfig2016sp2std field is set.
        */
+      @java.lang.Override
       public boolean hasSqlserverConfig2016Sp2Std() {
         return sqlserverConfigCase_ == 2;
       }
@@ -6530,8 +6892,10 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
+       * @return The sqlserverConfig2016sp2std.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std getSqlserverConfig2016Sp2Std() {
         if (sqlserverConfig2016Sp2StdBuilder_ == null) {
           if (sqlserverConfigCase_ == 2) {
@@ -6550,7 +6914,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
       public Builder setSqlserverConfig2016Sp2Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std value) {
         if (sqlserverConfig2016Sp2StdBuilder_ == null) {
@@ -6570,7 +6934,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
       public Builder setSqlserverConfig2016Sp2Std(
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std.Builder builderForValue) {
@@ -6588,7 +6952,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
       public Builder mergeSqlserverConfig2016Sp2Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std value) {
         if (sqlserverConfig2016Sp2StdBuilder_ == null) {
@@ -6614,7 +6978,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
       public Builder clearSqlserverConfig2016Sp2Std() {
         if (sqlserverConfig2016Sp2StdBuilder_ == null) {
@@ -6637,7 +7001,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std.Builder getSqlserverConfig2016Sp2StdBuilder() {
         return getSqlserverConfig2016Sp2StdFieldBuilder().getBuilder();
@@ -6647,8 +7011,9 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2stdOrBuilder getSqlserverConfig2016Sp2StdOrBuilder() {
         if ((sqlserverConfigCase_ == 2) && (sqlserverConfig2016Sp2StdBuilder_ != null)) {
           return sqlserverConfig2016Sp2StdBuilder_.getMessageOrBuilder();
@@ -6664,7 +7029,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 standard edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2[json_name = "sqlserverConfig_2016sp2std"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std sqlserver_config_2016sp2std = 2 [json_name = "sqlserverConfig_2016sp2std"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2stdOrBuilder> 
@@ -6692,8 +7057,10 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * @return Whether the sqlserverConfig2016sp2ent field is set.
        */
+      @java.lang.Override
       public boolean hasSqlserverConfig2016Sp2Ent() {
         return sqlserverConfigCase_ == 5;
       }
@@ -6702,8 +7069,10 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * @return The sqlserverConfig2016sp2ent.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent getSqlserverConfig2016Sp2Ent() {
         if (sqlserverConfig2016Sp2EntBuilder_ == null) {
           if (sqlserverConfigCase_ == 5) {
@@ -6722,7 +7091,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
       public Builder setSqlserverConfig2016Sp2Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent value) {
         if (sqlserverConfig2016Sp2EntBuilder_ == null) {
@@ -6742,7 +7111,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
       public Builder setSqlserverConfig2016Sp2Ent(
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent.Builder builderForValue) {
@@ -6760,7 +7129,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
       public Builder mergeSqlserverConfig2016Sp2Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent value) {
         if (sqlserverConfig2016Sp2EntBuilder_ == null) {
@@ -6786,7 +7155,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
       public Builder clearSqlserverConfig2016Sp2Ent() {
         if (sqlserverConfig2016Sp2EntBuilder_ == null) {
@@ -6809,7 +7178,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent.Builder getSqlserverConfig2016Sp2EntBuilder() {
         return getSqlserverConfig2016Sp2EntFieldBuilder().getBuilder();
@@ -6819,8 +7188,9 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2entOrBuilder getSqlserverConfig2016Sp2EntOrBuilder() {
         if ((sqlserverConfigCase_ == 5) && (sqlserverConfig2016Sp2EntBuilder_ != null)) {
           return sqlserverConfig2016Sp2EntBuilder_.getMessageOrBuilder();
@@ -6836,7 +7206,7 @@ public final class PSC {
        * Configuration of the SQL Server 2016sp2 enterprise edition instance.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5[json_name = "sqlserverConfig_2016sp2ent"];</code>
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent sqlserver_config_2016sp2ent = 5 [json_name = "sqlserverConfig_2016sp2ent"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2entOrBuilder> 
@@ -6857,7 +7227,7 @@ public final class PSC {
         return sqlserverConfig2016Sp2EntBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources, yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -6866,6 +7236,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -6876,6 +7247,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -7010,7 +7382,7 @@ public final class PSC {
         return resourcesBuilder_;
       }
 
-      private com.google.type.TimeOfDay backupWindowStart_ = null;
+      private com.google.type.TimeOfDay backupWindowStart_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> backupWindowStartBuilder_;
       /**
@@ -7019,6 +7391,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
+       * @return Whether the backupWindowStart field is set.
        */
       public boolean hasBackupWindowStart() {
         return backupWindowStartBuilder_ != null || backupWindowStart_ != null;
@@ -7029,6 +7402,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
+       * @return The backupWindowStart.
        */
       public com.google.type.TimeOfDay getBackupWindowStart() {
         if (backupWindowStartBuilder_ == null) {
@@ -7163,7 +7537,7 @@ public final class PSC {
         return backupWindowStartBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> accessBuilder_;
       /**
@@ -7172,6 +7546,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       * @return Whether the access field is set.
        */
       public boolean hasAccess() {
         return accessBuilder_ != null || access_ != null;
@@ -7182,6 +7557,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       * @return The access.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess() {
         if (accessBuilder_ == null) {
@@ -7318,7 +7694,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7381,6 +7757,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7392,6 +7769,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7403,6 +7781,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7412,6 +7791,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7422,6 +7802,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -7430,6 +7811,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -7440,6 +7822,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -7448,6 +7831,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
+     * @return The resources.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources getResources();
     /**
@@ -7465,6 +7849,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+     * @return The enum numeric value on the wire for role.
      */
     int getRoleValue();
     /**
@@ -7473,6 +7858,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+     * @return The role.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role getRole();
 
@@ -7482,6 +7868,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -7490,6 +7877,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health getHealth();
 
@@ -7543,6 +7931,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -7551,6 +7940,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -7561,13 +7951,14 @@ public final class PSC {
      * </pre>
      *
      * <code>bool assign_public_ip = 9;</code>
+     * @return The assignPublicIp.
      */
     boolean getAssignPublicIp();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Host}
    */
-  public  static final class Host extends
+  public static final class Host extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Host)
       HostOrBuilder {
@@ -7584,7 +7975,13 @@ public final class PSC {
       health_ = 0;
       services_ = java.util.Collections.emptyList();
       subnetId_ = "";
-      assignPublicIp_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Host();
     }
 
     @java.lang.Override
@@ -7655,9 +8052,9 @@ public final class PSC {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 services_ = new java.util.ArrayList<yandex.cloud.api.mdb.sqlserver.v1.PSC.Service>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               services_.add(
                   input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.parser(), extensionRegistry));
@@ -7675,7 +8072,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7689,7 +8086,7 @@ public final class PSC {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           services_ = java.util.Collections.unmodifiableList(services_);
         }
         this.unknownFields = unknownFields.build();
@@ -7776,6 +8173,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -7783,6 +8182,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Role forNumber(int value) {
         switch (value) {
           case 0: return ROLE_UNKNOWN;
@@ -7806,6 +8209,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -7923,6 +8330,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -7930,6 +8339,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -7954,6 +8367,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -7988,7 +8405,6 @@ public final class PSC {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.sqlserver.v1.Host.Health)
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -8000,7 +8416,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8022,7 +8440,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8046,7 +8466,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -8066,7 +8488,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -8089,7 +8513,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -8108,7 +8534,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -8131,7 +8559,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -8141,7 +8571,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources.getDefaultInstance() : resources_;
     }
@@ -8152,6 +8584,7 @@ public final class PSC {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -8164,8 +8597,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+     * @return The enum numeric value on the wire for role.
      */
-    public int getRoleValue() {
+    @java.lang.Override public int getRoleValue() {
       return role_;
     }
     /**
@@ -8174,8 +8608,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+     * @return The role.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role getRole() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role getRole() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role.valueOf(role_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role.UNRECOGNIZED : result;
@@ -8189,8 +8624,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -8199,8 +8635,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health.UNRECOGNIZED : result;
@@ -8215,6 +8652,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSC.Service> getServicesList() {
       return services_;
     }
@@ -8225,6 +8663,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.sqlserver.v1.PSC.ServiceOrBuilder> 
         getServicesOrBuilderList() {
       return services_;
@@ -8236,6 +8675,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public int getServicesCount() {
       return services_.size();
     }
@@ -8246,6 +8686,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service getServices(int index) {
       return services_.get(index);
     }
@@ -8256,6 +8697,7 @@ public final class PSC {
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ServiceOrBuilder getServicesOrBuilder(
         int index) {
       return services_.get(index);
@@ -8269,7 +8711,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -8288,7 +8732,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -8311,7 +8757,9 @@ public final class PSC {
      * </pre>
      *
      * <code>bool assign_public_ip = 9;</code>
+     * @return The assignPublicIp.
      */
+    @java.lang.Override
     public boolean getAssignPublicIp() {
       return assignPublicIp_;
     }
@@ -8330,13 +8778,13 @@ public final class PSC {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, zoneId_);
       }
       if (resources_ != null) {
@@ -8351,7 +8799,7 @@ public final class PSC {
       for (int i = 0; i < services_.size(); i++) {
         output.writeMessage(7, services_.get(i));
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, subnetId_);
       }
       if (assignPublicIp_ != false) {
@@ -8366,13 +8814,13 @@ public final class PSC {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, zoneId_);
       }
       if (resources_ != null) {
@@ -8391,7 +8839,7 @@ public final class PSC {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, services_.get(i));
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, subnetId_);
       }
       if (assignPublicIp_ != false) {
@@ -8413,28 +8861,27 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Host other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Host) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && (hasResources() == other.hasResources());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && role_ == other.role_;
-      result = result && health_ == other.health_;
-      result = result && getServicesList()
-          .equals(other.getServicesList());
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (getAssignPublicIp()
-          == other.getAssignPublicIp());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (role_ != other.role_) return false;
+      if (health_ != other.health_) return false;
+      if (!getServicesList()
+          .equals(other.getServicesList())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (getAssignPublicIp()
+          != other.getAssignPublicIp()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8619,7 +9066,7 @@ public final class PSC {
 
         if (servicesBuilder_ == null) {
           services_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           servicesBuilder_.clear();
         }
@@ -8654,7 +9101,6 @@ public final class PSC {
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host buildPartial() {
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Host result = new yandex.cloud.api.mdb.sqlserver.v1.PSC.Host(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.clusterId_ = clusterId_;
         result.zoneId_ = zoneId_;
@@ -8666,9 +9112,9 @@ public final class PSC {
         result.role_ = role_;
         result.health_ = health_;
         if (servicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             services_ = java.util.Collections.unmodifiableList(services_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.services_ = services_;
         } else {
@@ -8676,42 +9122,41 @@ public final class PSC {
         }
         result.subnetId_ = subnetId_;
         result.assignPublicIp_ = assignPublicIp_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8750,7 +9195,7 @@ public final class PSC {
           if (!other.services_.isEmpty()) {
             if (services_.isEmpty()) {
               services_ = other.services_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureServicesIsMutable();
               services_.addAll(other.services_);
@@ -8763,7 +9208,7 @@ public final class PSC {
               servicesBuilder_.dispose();
               servicesBuilder_ = null;
               services_ = other.services_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
               servicesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getServicesFieldBuilder() : null;
@@ -8819,6 +9264,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8841,6 +9287,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8864,6 +9311,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8884,6 +9333,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8900,6 +9350,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8921,6 +9373,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -8941,6 +9394,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -8962,6 +9416,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -8980,6 +9436,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -8994,6 +9451,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9014,6 +9473,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -9033,6 +9493,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -9053,6 +9514,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -9070,6 +9533,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -9083,6 +9547,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9096,7 +9562,7 @@ public final class PSC {
         return this;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources, yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -9105,6 +9571,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -9115,6 +9582,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Resources resources = 4;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -9256,8 +9724,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+       * @return The enum numeric value on the wire for role.
        */
-      public int getRoleValue() {
+      @java.lang.Override public int getRoleValue() {
         return role_;
       }
       /**
@@ -9266,8 +9735,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+       * @param value The enum numeric value on the wire for role to set.
+       * @return This builder for chaining.
        */
       public Builder setRoleValue(int value) {
+        
         role_ = value;
         onChanged();
         return this;
@@ -9278,7 +9750,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+       * @return The role.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role getRole() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role.valueOf(role_);
@@ -9290,6 +9764,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
        */
       public Builder setRole(yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Role value) {
         if (value == null) {
@@ -9306,6 +9782,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Role role = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRole() {
         
@@ -9321,8 +9798,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -9331,8 +9809,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -9343,7 +9824,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health.valueOf(health_);
@@ -9355,6 +9838,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.sqlserver.v1.PSC.Host.Health value) {
         if (value == null) {
@@ -9371,6 +9856,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Host.Health health = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -9382,9 +9868,9 @@ public final class PSC {
       private java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSC.Service> services_ =
         java.util.Collections.emptyList();
       private void ensureServicesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           services_ = new java.util.ArrayList<yandex.cloud.api.mdb.sqlserver.v1.PSC.Service>(services_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -9578,7 +10064,7 @@ public final class PSC {
       public Builder clearServices() {
         if (servicesBuilder_ == null) {
           services_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           servicesBuilder_.clear();
@@ -9683,7 +10169,7 @@ public final class PSC {
           servicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.sqlserver.v1.PSC.Service, yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.ServiceOrBuilder>(
                   services_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           services_ = null;
@@ -9698,6 +10184,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -9717,6 +10204,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -9737,6 +10225,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -9754,6 +10244,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -9767,6 +10258,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9787,7 +10280,9 @@ public final class PSC {
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
+       * @return The assignPublicIp.
        */
+      @java.lang.Override
       public boolean getAssignPublicIp() {
         return assignPublicIp_;
       }
@@ -9797,6 +10292,8 @@ public final class PSC {
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
+       * @param value The assignPublicIp to set.
+       * @return This builder for chaining.
        */
       public Builder setAssignPublicIp(boolean value) {
         
@@ -9810,6 +10307,7 @@ public final class PSC {
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAssignPublicIp() {
         
@@ -9820,7 +10318,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9880,6 +10378,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -9888,6 +10387,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type getType();
 
@@ -9897,6 +10397,7 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -9905,13 +10406,14 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health getHealth();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Service}
    */
-  public  static final class Service extends
+  public static final class Service extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Service)
       ServiceOrBuilder {
@@ -9923,6 +10425,13 @@ public final class PSC {
     private Service() {
       type_ = 0;
       health_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Service();
     }
 
     @java.lang.Override
@@ -9938,7 +10447,6 @@ public final class PSC {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9962,7 +10470,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10036,6 +10544,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10043,6 +10553,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -10065,6 +10579,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -10166,6 +10684,8 @@ public final class PSC {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10173,6 +10693,10 @@ public final class PSC {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -10196,6 +10720,10 @@ public final class PSC {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -10238,8 +10766,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -10248,8 +10777,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type.UNRECOGNIZED : result;
@@ -10263,8 +10793,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -10273,8 +10804,9 @@ public final class PSC {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health.UNRECOGNIZED : result;
@@ -10332,11 +10864,10 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Service other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Service) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && health_ == other.health_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (health_ != other.health_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10521,35 +11052,35 @@ public final class PSC {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10605,8 +11136,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -10615,8 +11147,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -10627,7 +11162,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type.valueOf(type_);
@@ -10639,6 +11176,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Type value) {
         if (value == null) {
@@ -10655,6 +11194,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Type type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -10670,8 +11210,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -10680,8 +11221,11 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -10692,7 +11236,9 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health result = yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health.valueOf(health_);
@@ -10704,6 +11250,8 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.sqlserver.v1.PSC.Service.Health value) {
         if (value == null) {
@@ -10720,6 +11268,7 @@ public final class PSC {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Service.Health health = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -10730,7 +11279,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10791,6 +11340,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
@@ -10800,6 +11350,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
     com.google.protobuf.ByteString
         getResourcePresetIdBytes();
@@ -10810,6 +11361,7 @@ public final class PSC {
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
+     * @return The diskSize.
      */
     long getDiskSize();
 
@@ -10823,6 +11375,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The diskTypeId.
      */
     java.lang.String getDiskTypeId();
     /**
@@ -10835,6 +11388,7 @@ public final class PSC {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The bytes for diskTypeId.
      */
     com.google.protobuf.ByteString
         getDiskTypeIdBytes();
@@ -10842,7 +11396,7 @@ public final class PSC {
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Resources}
    */
-  public  static final class Resources extends
+  public static final class Resources extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Resources)
       ResourcesOrBuilder {
@@ -10853,8 +11407,14 @@ public final class PSC {
     }
     private Resources() {
       resourcePresetId_ = "";
-      diskSize_ = 0L;
       diskTypeId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Resources();
     }
 
     @java.lang.Override
@@ -10870,7 +11430,6 @@ public final class PSC {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10899,7 +11458,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10939,7 +11498,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
+    @java.lang.Override
     public java.lang.String getResourcePresetId() {
       java.lang.Object ref = resourcePresetId_;
       if (ref instanceof java.lang.String) {
@@ -10959,7 +11520,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourcePresetIdBytes() {
       java.lang.Object ref = resourcePresetId_;
@@ -10982,7 +11545,9 @@ public final class PSC {
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
+     * @return The diskSize.
      */
+    @java.lang.Override
     public long getDiskSize() {
       return diskSize_;
     }
@@ -10999,7 +11564,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The diskTypeId.
      */
+    @java.lang.Override
     public java.lang.String getDiskTypeId() {
       java.lang.Object ref = diskTypeId_;
       if (ref instanceof java.lang.String) {
@@ -11022,7 +11589,9 @@ public final class PSC {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The bytes for diskTypeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskTypeIdBytes() {
       java.lang.Object ref = diskTypeId_;
@@ -11051,13 +11620,13 @@ public final class PSC {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
       }
       if (diskSize_ != 0L) {
         output.writeInt64(2, diskSize_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, diskTypeId_);
       }
       unknownFields.writeTo(output);
@@ -11069,14 +11638,14 @@ public final class PSC {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
       }
       if (diskSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, diskSize_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, diskTypeId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11094,15 +11663,14 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources) obj;
 
-      boolean result = true;
-      result = result && getResourcePresetId()
-          .equals(other.getResourcePresetId());
-      result = result && (getDiskSize()
-          == other.getDiskSize());
-      result = result && getDiskTypeId()
-          .equals(other.getDiskTypeId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcePresetId()
+          .equals(other.getResourcePresetId())) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (!getDiskTypeId()
+          .equals(other.getDiskTypeId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11293,35 +11861,35 @@ public final class PSC {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11383,6 +11951,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The resourcePresetId.
        */
       public java.lang.String getResourcePresetId() {
         java.lang.Object ref = resourcePresetId_;
@@ -11403,6 +11972,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The bytes for resourcePresetId.
        */
       public com.google.protobuf.ByteString
           getResourcePresetIdBytes() {
@@ -11424,6 +11994,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetId(
           java.lang.String value) {
@@ -11442,6 +12014,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourcePresetId() {
         
@@ -11456,6 +12029,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The bytes for resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11476,7 +12051,9 @@ public final class PSC {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @return The diskSize.
        */
+      @java.lang.Override
       public long getDiskSize() {
         return diskSize_;
       }
@@ -11486,6 +12063,8 @@ public final class PSC {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskSize(long value) {
         
@@ -11499,6 +12078,7 @@ public final class PSC {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskSize() {
         
@@ -11518,6 +12098,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return The diskTypeId.
        */
       public java.lang.String getDiskTypeId() {
         java.lang.Object ref = diskTypeId_;
@@ -11541,6 +12122,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return The bytes for diskTypeId.
        */
       public com.google.protobuf.ByteString
           getDiskTypeIdBytes() {
@@ -11565,6 +12147,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @param value The diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeId(
           java.lang.String value) {
@@ -11586,6 +12170,7 @@ public final class PSC {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskTypeId() {
         
@@ -11603,6 +12188,8 @@ public final class PSC {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @param value The bytes for diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11618,7 +12205,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11678,6 +12265,7 @@ public final class PSC {
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
+     * @return The dataLens.
      */
     boolean getDataLens();
 
@@ -11687,13 +12275,14 @@ public final class PSC {
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
+     * @return The webSql.
      */
     boolean getWebSql();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Access}
    */
-  public  static final class Access extends
+  public static final class Access extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Access)
       AccessOrBuilder {
@@ -11703,8 +12292,13 @@ public final class PSC {
       super(builder);
     }
     private Access() {
-      dataLens_ = false;
-      webSql_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Access();
     }
 
     @java.lang.Override
@@ -11720,7 +12314,6 @@ public final class PSC {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11742,7 +12335,7 @@ public final class PSC {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11781,7 +12374,9 @@ public final class PSC {
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
+     * @return The dataLens.
      */
+    @java.lang.Override
     public boolean getDataLens() {
       return dataLens_;
     }
@@ -11794,7 +12389,9 @@ public final class PSC {
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
+     * @return The webSql.
      */
+    @java.lang.Override
     public boolean getWebSql() {
       return webSql_;
     }
@@ -11851,13 +12448,12 @@ public final class PSC {
       }
       yandex.cloud.api.mdb.sqlserver.v1.PSC.Access other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Access) obj;
 
-      boolean result = true;
-      result = result && (getDataLens()
-          == other.getDataLens());
-      result = result && (getWebSql()
-          == other.getWebSql());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDataLens()
+          != other.getDataLens()) return false;
+      if (getWebSql()
+          != other.getWebSql()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12044,35 +12640,35 @@ public final class PSC {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12128,7 +12724,9 @@ public final class PSC {
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
+       * @return The dataLens.
        */
+      @java.lang.Override
       public boolean getDataLens() {
         return dataLens_;
       }
@@ -12138,6 +12736,8 @@ public final class PSC {
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
+       * @param value The dataLens to set.
+       * @return This builder for chaining.
        */
       public Builder setDataLens(boolean value) {
         
@@ -12151,6 +12751,7 @@ public final class PSC {
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataLens() {
         
@@ -12166,7 +12767,9 @@ public final class PSC {
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
+       * @return The webSql.
        */
+      @java.lang.Override
       public boolean getWebSql() {
         return webSql_;
       }
@@ -12176,6 +12779,8 @@ public final class PSC {
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
+       * @param value The webSql to set.
+       * @return This builder for chaining.
        */
       public Builder setWebSql(boolean value) {
         
@@ -12189,6 +12794,7 @@ public final class PSC {
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearWebSql() {
         
@@ -12199,7 +12805,7 @@ public final class PSC {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12366,21 +12972,13 @@ public final class PSC {
       "b.com/yandex-cloud/go-genproto/yandex/cl" +
       "oud/mdb/sqlserver/v1;sqlserverb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_fieldAccessorTable = new

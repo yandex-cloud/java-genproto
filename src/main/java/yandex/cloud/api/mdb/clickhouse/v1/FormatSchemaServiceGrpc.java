@@ -1,25 +1,13 @@
 package yandex.cloud.api.mdb.clickhouse.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/clickhouse/v1/format_schema_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FormatSchemaServiceGrpc {
 
   private FormatSchemaServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class FormatSchemaServiceGrpc {
     if ((getGetMethod = FormatSchemaServiceGrpc.getGetMethod) == null) {
       synchronized (FormatSchemaServiceGrpc.class) {
         if ((getGetMethod = FormatSchemaServiceGrpc.getGetMethod) == null) {
-          FormatSchemaServiceGrpc.getGetMethod = getGetMethod = 
+          FormatSchemaServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.FormatSchemaService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.getDefaultInstance()))
-                  .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest,
@@ -73,22 +60,21 @@ public final class FormatSchemaServiceGrpc {
     if ((getListMethod = FormatSchemaServiceGrpc.getListMethod) == null) {
       synchronized (FormatSchemaServiceGrpc.class) {
         if ((getListMethod = FormatSchemaServiceGrpc.getListMethod) == null) {
-          FormatSchemaServiceGrpc.getListMethod = getListMethod = 
+          FormatSchemaServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.FormatSchemaService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest,
@@ -105,22 +91,21 @@ public final class FormatSchemaServiceGrpc {
     if ((getCreateMethod = FormatSchemaServiceGrpc.getCreateMethod) == null) {
       synchronized (FormatSchemaServiceGrpc.class) {
         if ((getCreateMethod = FormatSchemaServiceGrpc.getCreateMethod) == null) {
-          FormatSchemaServiceGrpc.getCreateMethod = getCreateMethod = 
+          FormatSchemaServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.FormatSchemaService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest,
@@ -137,22 +122,21 @@ public final class FormatSchemaServiceGrpc {
     if ((getUpdateMethod = FormatSchemaServiceGrpc.getUpdateMethod) == null) {
       synchronized (FormatSchemaServiceGrpc.class) {
         if ((getUpdateMethod = FormatSchemaServiceGrpc.getUpdateMethod) == null) {
-          FormatSchemaServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          FormatSchemaServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.FormatSchemaService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest,
@@ -169,29 +153,35 @@ public final class FormatSchemaServiceGrpc {
     if ((getDeleteMethod = FormatSchemaServiceGrpc.getDeleteMethod) == null) {
       synchronized (FormatSchemaServiceGrpc.class) {
         if ((getDeleteMethod = FormatSchemaServiceGrpc.getDeleteMethod) == null) {
-          FormatSchemaServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          FormatSchemaServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.clickhouse.v1.FormatSchemaService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FormatSchemaServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FormatSchemaServiceStub newStub(io.grpc.Channel channel) {
-    return new FormatSchemaServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FormatSchemaServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FormatSchemaServiceStub>() {
+        @java.lang.Override
+        public FormatSchemaServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FormatSchemaServiceStub(channel, callOptions);
+        }
+      };
+    return FormatSchemaServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -199,7 +189,14 @@ public final class FormatSchemaServiceGrpc {
    */
   public static FormatSchemaServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FormatSchemaServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FormatSchemaServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FormatSchemaServiceBlockingStub>() {
+        @java.lang.Override
+        public FormatSchemaServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FormatSchemaServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FormatSchemaServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -207,7 +204,14 @@ public final class FormatSchemaServiceGrpc {
    */
   public static FormatSchemaServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FormatSchemaServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FormatSchemaServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FormatSchemaServiceFutureStub>() {
+        @java.lang.Override
+        public FormatSchemaServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FormatSchemaServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FormatSchemaServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -218,70 +222,70 @@ public final class FormatSchemaServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest,
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest,
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -292,19 +296,15 @@ public final class FormatSchemaServiceGrpc {
 
   /**
    */
-  public static final class FormatSchemaServiceStub extends io.grpc.stub.AbstractStub<FormatSchemaServiceStub> {
-    private FormatSchemaServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FormatSchemaServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FormatSchemaServiceStub extends io.grpc.stub.AbstractAsyncStub<FormatSchemaServiceStub> {
+    private FormatSchemaServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FormatSchemaServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FormatSchemaServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FormatSchemaServiceStub(channel, callOptions);
     }
 
@@ -312,7 +312,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -320,7 +320,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -328,7 +328,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -336,7 +336,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -344,80 +344,72 @@ public final class FormatSchemaServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class FormatSchemaServiceBlockingStub extends io.grpc.stub.AbstractStub<FormatSchemaServiceBlockingStub> {
-    private FormatSchemaServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FormatSchemaServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FormatSchemaServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FormatSchemaServiceBlockingStub> {
+    private FormatSchemaServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FormatSchemaServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FormatSchemaServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FormatSchemaServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema get(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse list(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class FormatSchemaServiceFutureStub extends io.grpc.stub.AbstractStub<FormatSchemaServiceFutureStub> {
-    private FormatSchemaServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FormatSchemaServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FormatSchemaServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FormatSchemaServiceFutureStub> {
+    private FormatSchemaServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FormatSchemaServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FormatSchemaServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FormatSchemaServiceFutureStub(channel, callOptions);
     }
 
@@ -425,7 +417,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> get(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -433,7 +425,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse> list(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -441,7 +433,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -449,7 +441,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -457,7 +449,7 @@ public final class FormatSchemaServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

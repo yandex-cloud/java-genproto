@@ -1,19 +1,6 @@
 package yandex.cloud.api.datasphere.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/datasphere/v1/app_token_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AppTokenServiceGrpc {
 
   private AppTokenServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class AppTokenServiceGrpc {
     if ((getValidateMethod = AppTokenServiceGrpc.getValidateMethod) == null) {
       synchronized (AppTokenServiceGrpc.class) {
         if ((getValidateMethod = AppTokenServiceGrpc.getValidateMethod) == null) {
-          AppTokenServiceGrpc.getValidateMethod = getValidateMethod = 
+          AppTokenServiceGrpc.getValidateMethod = getValidateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.AppTokenService", "Validate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Validate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new AppTokenServiceMethodDescriptorSupplier("Validate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AppTokenServiceMethodDescriptorSupplier("Validate"))
+              .build();
         }
-     }
-     return getValidateMethod;
+      }
+    }
+    return getValidateMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AppTokenServiceStub newStub(io.grpc.Channel channel) {
-    return new AppTokenServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AppTokenServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppTokenServiceStub>() {
+        @java.lang.Override
+        public AppTokenServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppTokenServiceStub(channel, callOptions);
+        }
+      };
+    return AppTokenServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class AppTokenServiceGrpc {
    */
   public static AppTokenServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AppTokenServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AppTokenServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppTokenServiceBlockingStub>() {
+        @java.lang.Override
+        public AppTokenServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppTokenServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AppTokenServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class AppTokenServiceGrpc {
    */
   public static AppTokenServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AppTokenServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AppTokenServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppTokenServiceFutureStub>() {
+        @java.lang.Override
+        public AppTokenServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppTokenServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AppTokenServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class AppTokenServiceGrpc {
      */
     public void validate(yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getValidateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getValidateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest,
                 com.google.protobuf.Empty>(
@@ -120,19 +128,15 @@ public final class AppTokenServiceGrpc {
    * A set of methods for managing app tokens.
    * </pre>
    */
-  public static final class AppTokenServiceStub extends io.grpc.stub.AbstractStub<AppTokenServiceStub> {
-    private AppTokenServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AppTokenServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AppTokenServiceStub extends io.grpc.stub.AbstractAsyncStub<AppTokenServiceStub> {
+    private AppTokenServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AppTokenServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AppTokenServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AppTokenServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class AppTokenServiceGrpc {
      */
     public void validate(yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getValidateMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class AppTokenServiceGrpc {
    * A set of methods for managing app tokens.
    * </pre>
    */
-  public static final class AppTokenServiceBlockingStub extends io.grpc.stub.AbstractStub<AppTokenServiceBlockingStub> {
-    private AppTokenServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AppTokenServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AppTokenServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AppTokenServiceBlockingStub> {
+    private AppTokenServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AppTokenServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AppTokenServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AppTokenServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class AppTokenServiceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty validate(yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getValidateMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class AppTokenServiceGrpc {
    * A set of methods for managing app tokens.
    * </pre>
    */
-  public static final class AppTokenServiceFutureStub extends io.grpc.stub.AbstractStub<AppTokenServiceFutureStub> {
-    private AppTokenServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AppTokenServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AppTokenServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AppTokenServiceFutureStub> {
+    private AppTokenServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AppTokenServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AppTokenServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AppTokenServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class AppTokenServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> validate(
         yandex.cloud.api.datasphere.v1.AppTokenServiceOuterClass.AppTokenValidateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getValidateMethod(), getCallOptions()), request);
     }
   }

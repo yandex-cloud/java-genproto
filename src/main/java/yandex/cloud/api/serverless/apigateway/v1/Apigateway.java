@@ -24,6 +24,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -60,6 +64,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -93,6 +100,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -103,6 +111,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -111,6 +120,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -175,6 +185,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -183,6 +194,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+     * @return The status.
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status getStatus();
 
@@ -192,6 +204,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 9;</code>
+     * @return The domain.
      */
     java.lang.String getDomain();
     /**
@@ -200,6 +213,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 9;</code>
+     * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
         getDomainBytes();
@@ -210,6 +224,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string log_group_id = 10;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -218,6 +233,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string log_group_id = 10;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -272,6 +288,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
+     * @return Whether the connectivity field is set.
      */
     boolean hasConnectivity();
     /**
@@ -280,6 +297,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
+     * @return The connectivity.
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity();
     /**
@@ -294,7 +312,7 @@ public final class Apigateway {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ApiGateway}
    */
-  public  static final class ApiGateway extends
+  public static final class ApiGateway extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.ApiGateway)
       ApiGatewayOrBuilder {
@@ -312,6 +330,13 @@ public final class Apigateway {
       domain_ = "";
       logGroupId_ = "";
       attachedDomains_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApiGateway();
     }
 
     @java.lang.Override
@@ -376,10 +401,10 @@ public final class Apigateway {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -407,9 +432,9 @@ public final class Apigateway {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 attachedDomains_ = new java.util.ArrayList<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain>();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000002;
               }
               attachedDomains_.add(
                   input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.parser(), extensionRegistry));
@@ -429,7 +454,7 @@ public final class Apigateway {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -443,7 +468,7 @@ public final class Apigateway {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           attachedDomains_ = java.util.Collections.unmodifiableList(attachedDomains_);
         }
         this.unknownFields = unknownFields.build();
@@ -582,6 +607,8 @@ public final class Apigateway {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -589,6 +616,10 @@ public final class Apigateway {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -615,6 +646,10 @@ public final class Apigateway {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -649,7 +684,6 @@ public final class Apigateway {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.serverless.apigateway.v1.ApiGateway.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -658,7 +692,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -677,7 +713,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -700,7 +738,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -719,7 +759,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -742,7 +784,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -752,7 +796,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -763,6 +809,7 @@ public final class Apigateway {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -775,7 +822,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -794,7 +843,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -817,7 +868,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -836,7 +889,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -885,14 +940,16 @@ public final class Apigateway {
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -904,6 +961,7 @@ public final class Apigateway {
      *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -915,11 +973,12 @@ public final class Apigateway {
      *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -931,10 +990,11 @@ public final class Apigateway {
      *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -951,8 +1011,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -961,8 +1022,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status result = yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status.UNRECOGNIZED : result;
@@ -976,7 +1038,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 9;</code>
+     * @return The domain.
      */
+    @java.lang.Override
     public java.lang.String getDomain() {
       java.lang.Object ref = domain_;
       if (ref instanceof java.lang.String) {
@@ -995,7 +1059,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 9;</code>
+     * @return The bytes for domain.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainBytes() {
       java.lang.Object ref = domain_;
@@ -1018,7 +1084,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string log_group_id = 10;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -1037,7 +1105,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string log_group_id = 10;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -1061,6 +1131,7 @@ public final class Apigateway {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> getAttachedDomainsList() {
       return attachedDomains_;
     }
@@ -1071,6 +1142,7 @@ public final class Apigateway {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder> 
         getAttachedDomainsOrBuilderList() {
       return attachedDomains_;
@@ -1082,6 +1154,7 @@ public final class Apigateway {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
      */
+    @java.lang.Override
     public int getAttachedDomainsCount() {
       return attachedDomains_.size();
     }
@@ -1092,6 +1165,7 @@ public final class Apigateway {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getAttachedDomains(int index) {
       return attachedDomains_.get(index);
     }
@@ -1102,6 +1176,7 @@ public final class Apigateway {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder getAttachedDomainsOrBuilder(
         int index) {
       return attachedDomains_.get(index);
@@ -1115,7 +1190,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
+     * @return Whether the connectivity field is set.
      */
+    @java.lang.Override
     public boolean hasConnectivity() {
       return connectivity_ != null;
     }
@@ -1125,7 +1202,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
+     * @return The connectivity.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
       return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
     }
@@ -1136,6 +1215,7 @@ public final class Apigateway {
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
       return getConnectivity();
     }
@@ -1154,19 +1234,19 @@ public final class Apigateway {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1178,10 +1258,10 @@ public final class Apigateway {
       if (status_ != yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, status_);
       }
-      if (!getDomainBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, domain_);
       }
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, logGroupId_);
       }
       for (int i = 0; i < attachedDomains_.size(); i++) {
@@ -1199,20 +1279,20 @@ public final class Apigateway {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1229,10 +1309,10 @@ public final class Apigateway {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, status_);
       }
-      if (!getDomainBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, domain_);
       }
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, logGroupId_);
       }
       for (int i = 0; i < attachedDomains_.size(); i++) {
@@ -1258,36 +1338,35 @@ public final class Apigateway {
       }
       yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway other = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && status_ == other.status_;
-      result = result && getDomain()
-          .equals(other.getDomain());
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && getAttachedDomainsList()
-          .equals(other.getAttachedDomainsList());
-      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (status_ != other.status_) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!getAttachedDomainsList()
+          .equals(other.getAttachedDomainsList())) return false;
+      if (hasConnectivity() != other.hasConnectivity()) return false;
       if (hasConnectivity()) {
-        result = result && getConnectivity()
-            .equals(other.getConnectivity());
+        if (!getConnectivity()
+            .equals(other.getConnectivity())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1506,7 +1585,7 @@ public final class Apigateway {
 
         if (attachedDomainsBuilder_ == null) {
           attachedDomains_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           attachedDomainsBuilder_.clear();
         }
@@ -1543,7 +1622,6 @@ public final class Apigateway {
       public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway result = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1559,9 +1637,9 @@ public final class Apigateway {
         result.domain_ = domain_;
         result.logGroupId_ = logGroupId_;
         if (attachedDomainsBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             attachedDomains_ = java.util.Collections.unmodifiableList(attachedDomains_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.attachedDomains_ = attachedDomains_;
         } else {
@@ -1572,42 +1650,41 @@ public final class Apigateway {
         } else {
           result.connectivity_ = connectivityBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1657,7 +1734,7 @@ public final class Apigateway {
           if (!other.attachedDomains_.isEmpty()) {
             if (attachedDomains_.isEmpty()) {
               attachedDomains_ = other.attachedDomains_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureAttachedDomainsIsMutable();
               attachedDomains_.addAll(other.attachedDomains_);
@@ -1670,7 +1747,7 @@ public final class Apigateway {
               attachedDomainsBuilder_.dispose();
               attachedDomainsBuilder_ = null;
               attachedDomains_ = other.attachedDomains_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000002);
               attachedDomainsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAttachedDomainsFieldBuilder() : null;
@@ -1719,6 +1796,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1738,6 +1816,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1758,6 +1837,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1775,6 +1856,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1788,6 +1870,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1808,6 +1892,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1827,6 +1912,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1847,6 +1933,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1864,6 +1952,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1877,6 +1966,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1890,7 +1981,7 @@ public final class Apigateway {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1899,6 +1990,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1909,6 +2001,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2050,6 +2143,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2069,6 +2163,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2089,6 +2184,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2106,6 +2203,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2119,6 +2217,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2139,6 +2239,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2158,6 +2259,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2178,6 +2280,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2195,6 +2299,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2208,6 +2313,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2255,14 +2362,16 @@ public final class Apigateway {
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2274,6 +2383,7 @@ public final class Apigateway {
        *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2285,11 +2395,12 @@ public final class Apigateway {
        *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2301,10 +2412,11 @@ public final class Apigateway {
        *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2328,7 +2440,7 @@ public final class Apigateway {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2351,8 +2463,11 @@ public final class Apigateway {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2379,8 +2494,9 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2389,8 +2505,11 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2401,7 +2520,9 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status result = yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status.valueOf(status_);
@@ -2413,6 +2534,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Status value) {
         if (value == null) {
@@ -2429,6 +2552,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.ApiGateway.Status status = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2444,6 +2568,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 9;</code>
+       * @return The domain.
        */
       public java.lang.String getDomain() {
         java.lang.Object ref = domain_;
@@ -2463,6 +2588,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 9;</code>
+       * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
           getDomainBytes() {
@@ -2483,6 +2609,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 9;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
        */
       public Builder setDomain(
           java.lang.String value) {
@@ -2500,6 +2628,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomain() {
         
@@ -2513,6 +2642,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 9;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainBytes(
           com.google.protobuf.ByteString value) {
@@ -2533,6 +2664,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string log_group_id = 10;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -2552,6 +2684,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string log_group_id = 10;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -2572,6 +2705,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string log_group_id = 10;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -2589,6 +2724,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string log_group_id = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -2602,6 +2738,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string log_group_id = 10;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2618,9 +2756,9 @@ public final class Apigateway {
       private java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> attachedDomains_ =
         java.util.Collections.emptyList();
       private void ensureAttachedDomainsIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           attachedDomains_ = new java.util.ArrayList<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain>(attachedDomains_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2814,7 +2952,7 @@ public final class Apigateway {
       public Builder clearAttachedDomains() {
         if (attachedDomainsBuilder_ == null) {
           attachedDomains_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           attachedDomainsBuilder_.clear();
@@ -2919,7 +3057,7 @@ public final class Apigateway {
           attachedDomainsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder>(
                   attachedDomains_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           attachedDomains_ = null;
@@ -2927,7 +3065,7 @@ public final class Apigateway {
         return attachedDomainsBuilder_;
       }
 
-      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_ = null;
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> connectivityBuilder_;
       /**
@@ -2936,6 +3074,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
+       * @return Whether the connectivity field is set.
        */
       public boolean hasConnectivity() {
         return connectivityBuilder_ != null || connectivity_ != null;
@@ -2946,6 +3085,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 12;</code>
+       * @return The connectivity.
        */
       public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
         if (connectivityBuilder_ == null) {
@@ -3082,7 +3222,7 @@ public final class Apigateway {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3142,6 +3282,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain_id = 1;</code>
+     * @return The domainId.
      */
     java.lang.String getDomainId();
     /**
@@ -3150,6 +3291,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain_id = 1;</code>
+     * @return The bytes for domainId.
      */
     com.google.protobuf.ByteString
         getDomainIdBytes();
@@ -3160,6 +3302,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The certificateId.
      */
     java.lang.String getCertificateId();
     /**
@@ -3168,6 +3311,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The bytes for certificateId.
      */
     com.google.protobuf.ByteString
         getCertificateIdBytes();
@@ -3178,6 +3322,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>bool enabled = 3;</code>
+     * @return The enabled.
      */
     boolean getEnabled();
 
@@ -3187,6 +3332,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 5;</code>
+     * @return The domain.
      */
     java.lang.String getDomain();
     /**
@@ -3195,6 +3341,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 5;</code>
+     * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
         getDomainBytes();
@@ -3202,7 +3349,7 @@ public final class Apigateway {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AttachedDomain}
    */
-  public  static final class AttachedDomain extends
+  public static final class AttachedDomain extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.AttachedDomain)
       AttachedDomainOrBuilder {
@@ -3214,8 +3361,14 @@ public final class Apigateway {
     private AttachedDomain() {
       domainId_ = "";
       certificateId_ = "";
-      enabled_ = false;
       domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AttachedDomain();
     }
 
     @java.lang.Override
@@ -3231,7 +3384,6 @@ public final class Apigateway {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3266,7 +3418,7 @@ public final class Apigateway {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3305,7 +3457,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain_id = 1;</code>
+     * @return The domainId.
      */
+    @java.lang.Override
     public java.lang.String getDomainId() {
       java.lang.Object ref = domainId_;
       if (ref instanceof java.lang.String) {
@@ -3324,7 +3478,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain_id = 1;</code>
+     * @return The bytes for domainId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainIdBytes() {
       java.lang.Object ref = domainId_;
@@ -3347,7 +3503,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The certificateId.
      */
+    @java.lang.Override
     public java.lang.String getCertificateId() {
       java.lang.Object ref = certificateId_;
       if (ref instanceof java.lang.String) {
@@ -3366,7 +3524,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The bytes for certificateId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateIdBytes() {
       java.lang.Object ref = certificateId_;
@@ -3389,7 +3549,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>bool enabled = 3;</code>
+     * @return The enabled.
      */
+    @java.lang.Override
     public boolean getEnabled() {
       return enabled_;
     }
@@ -3402,7 +3564,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 5;</code>
+     * @return The domain.
      */
+    @java.lang.Override
     public java.lang.String getDomain() {
       java.lang.Object ref = domain_;
       if (ref instanceof java.lang.String) {
@@ -3421,7 +3585,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string domain = 5;</code>
+     * @return The bytes for domain.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainBytes() {
       java.lang.Object ref = domain_;
@@ -3450,16 +3616,16 @@ public final class Apigateway {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domainId_);
       }
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, certificateId_);
       }
       if (enabled_ != false) {
         output.writeBool(3, enabled_);
       }
-      if (!getDomainBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, domain_);
       }
       unknownFields.writeTo(output);
@@ -3471,17 +3637,17 @@ public final class Apigateway {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domainId_);
       }
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, certificateId_);
       }
       if (enabled_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, enabled_);
       }
-      if (!getDomainBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, domain_);
       }
       size += unknownFields.getSerializedSize();
@@ -3499,17 +3665,16 @@ public final class Apigateway {
       }
       yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain other = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain) obj;
 
-      boolean result = true;
-      result = result && getDomainId()
-          .equals(other.getDomainId());
-      result = result && getCertificateId()
-          .equals(other.getCertificateId());
-      result = result && (getEnabled()
-          == other.getEnabled());
-      result = result && getDomain()
-          .equals(other.getDomain());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDomainId()
+          .equals(other.getDomainId())) return false;
+      if (!getCertificateId()
+          .equals(other.getCertificateId())) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3705,35 +3870,35 @@ public final class Apigateway {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3798,6 +3963,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain_id = 1;</code>
+       * @return The domainId.
        */
       public java.lang.String getDomainId() {
         java.lang.Object ref = domainId_;
@@ -3817,6 +3983,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain_id = 1;</code>
+       * @return The bytes for domainId.
        */
       public com.google.protobuf.ByteString
           getDomainIdBytes() {
@@ -3837,6 +4004,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain_id = 1;</code>
+       * @param value The domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainId(
           java.lang.String value) {
@@ -3854,6 +4023,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainId() {
         
@@ -3867,6 +4037,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain_id = 1;</code>
+       * @param value The bytes for domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3887,6 +4059,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @return The certificateId.
        */
       public java.lang.String getCertificateId() {
         java.lang.Object ref = certificateId_;
@@ -3906,6 +4079,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @return The bytes for certificateId.
        */
       public com.google.protobuf.ByteString
           getCertificateIdBytes() {
@@ -3926,6 +4100,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @param value The certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateId(
           java.lang.String value) {
@@ -3943,6 +4119,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateId() {
         
@@ -3956,6 +4133,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @param value The bytes for certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3976,7 +4155,9 @@ public final class Apigateway {
        * </pre>
        *
        * <code>bool enabled = 3;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -3986,6 +4167,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>bool enabled = 3;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
        */
       public Builder setEnabled(boolean value) {
         
@@ -3999,6 +4182,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>bool enabled = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEnabled() {
         
@@ -4014,6 +4198,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 5;</code>
+       * @return The domain.
        */
       public java.lang.String getDomain() {
         java.lang.Object ref = domain_;
@@ -4033,6 +4218,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 5;</code>
+       * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
           getDomainBytes() {
@@ -4053,6 +4239,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 5;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
        */
       public Builder setDomain(
           java.lang.String value) {
@@ -4070,6 +4258,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomain() {
         
@@ -4083,6 +4272,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string domain = 5;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainBytes(
           com.google.protobuf.ByteString value) {
@@ -4098,7 +4289,7 @@ public final class Apigateway {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4159,6 +4350,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string network_id = 1;</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -4168,6 +4360,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string network_id = 1;</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -4179,6 +4372,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @return A list containing the subnetId.
      */
     java.util.List<java.lang.String>
         getSubnetIdList();
@@ -4189,6 +4383,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @return The count of subnetId.
      */
     int getSubnetIdCount();
     /**
@@ -4198,6 +4393,8 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @param index The index of the element to return.
+     * @return The subnetId at the given index.
      */
     java.lang.String getSubnetId(int index);
     /**
@@ -4207,6 +4404,8 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetId at the given index.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes(int index);
@@ -4218,7 +4417,7 @@ public final class Apigateway {
    *
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.Connectivity}
    */
-  public  static final class Connectivity extends
+  public static final class Connectivity extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.Connectivity)
       ConnectivityOrBuilder {
@@ -4230,6 +4429,13 @@ public final class Apigateway {
     private Connectivity() {
       networkId_ = "";
       subnetId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Connectivity();
     }
 
     @java.lang.Override
@@ -4264,15 +4470,15 @@ public final class Apigateway {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 subnetId_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               subnetId_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4286,7 +4492,7 @@ public final class Apigateway {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           subnetId_ = subnetId_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4306,7 +4512,6 @@ public final class Apigateway {
               yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NETWORK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object networkId_;
     /**
@@ -4316,7 +4521,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string network_id = 1;</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -4336,7 +4543,9 @@ public final class Apigateway {
      * </pre>
      *
      * <code>string network_id = 1;</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -4360,6 +4569,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @return A list containing the subnetId.
      */
     public com.google.protobuf.ProtocolStringList
         getSubnetIdList() {
@@ -4372,6 +4582,7 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @return The count of subnetId.
      */
     public int getSubnetIdCount() {
       return subnetId_.size();
@@ -4383,6 +4594,8 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @param index The index of the element to return.
+     * @return The subnetId at the given index.
      */
     public java.lang.String getSubnetId(int index) {
       return subnetId_.get(index);
@@ -4394,6 +4607,8 @@ public final class Apigateway {
      * </pre>
      *
      * <code>repeated string subnet_id = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetId at the given index.
      */
     public com.google.protobuf.ByteString
         getSubnetIdBytes(int index) {
@@ -4414,7 +4629,7 @@ public final class Apigateway {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, networkId_);
       }
       for (int i = 0; i < subnetId_.size(); i++) {
@@ -4429,7 +4644,7 @@ public final class Apigateway {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, networkId_);
       }
       {
@@ -4455,13 +4670,12 @@ public final class Apigateway {
       }
       yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity other = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity) obj;
 
-      boolean result = true;
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && getSubnetIdList()
-          .equals(other.getSubnetIdList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (!getSubnetIdList()
+          .equals(other.getSubnetIdList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4617,7 +4831,7 @@ public final class Apigateway {
         networkId_ = "";
 
         subnetId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -4645,49 +4859,47 @@ public final class Apigateway {
       public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity result = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.networkId_ = networkId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           subnetId_ = subnetId_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.subnetId_ = subnetId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4708,7 +4920,7 @@ public final class Apigateway {
         if (!other.subnetId_.isEmpty()) {
           if (subnetId_.isEmpty()) {
             subnetId_ = other.subnetId_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSubnetIdIsMutable();
             subnetId_.addAll(other.subnetId_);
@@ -4753,6 +4965,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string network_id = 1;</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -4773,6 +4986,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string network_id = 1;</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -4794,6 +5008,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string network_id = 1;</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -4812,6 +5028,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string network_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -4826,6 +5043,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>string network_id = 1;</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4841,9 +5060,9 @@ public final class Apigateway {
 
       private com.google.protobuf.LazyStringList subnetId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSubnetIdIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           subnetId_ = new com.google.protobuf.LazyStringArrayList(subnetId_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -4853,6 +5072,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @return A list containing the subnetId.
        */
       public com.google.protobuf.ProtocolStringList
           getSubnetIdList() {
@@ -4865,6 +5085,7 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @return The count of subnetId.
        */
       public int getSubnetIdCount() {
         return subnetId_.size();
@@ -4876,6 +5097,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @param index The index of the element to return.
+       * @return The subnetId at the given index.
        */
       public java.lang.String getSubnetId(int index) {
         return subnetId_.get(index);
@@ -4887,6 +5110,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the subnetId at the given index.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes(int index) {
@@ -4899,6 +5124,9 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           int index, java.lang.String value) {
@@ -4917,6 +5145,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @param value The subnetId to add.
+       * @return This builder for chaining.
        */
       public Builder addSubnetId(
           java.lang.String value) {
@@ -4935,6 +5165,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @param values The subnetId to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSubnetId(
           java.lang.Iterable<java.lang.String> values) {
@@ -4951,10 +5183,11 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         subnetId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4965,6 +5198,8 @@ public final class Apigateway {
        * </pre>
        *
        * <code>repeated string subnet_id = 2;</code>
+       * @param value The bytes of the subnetId to add.
+       * @return This builder for chaining.
        */
       public Builder addSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4980,7 +5215,7 @@ public final class Apigateway {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5086,19 +5321,11 @@ public final class Apigateway {
       "ndex-cloud/go-genproto/yandex/cloud/serv" +
       "erless/apigateway/v1;apigatewayb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_fieldAccessorTable = new

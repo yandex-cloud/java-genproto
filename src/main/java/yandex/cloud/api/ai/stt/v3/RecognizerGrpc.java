@@ -1,19 +1,6 @@
 package yandex.cloud.api.ai.stt.v3;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ai/stt/v3/stt_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RecognizerGrpc {
 
   private RecognizerGrpc() {}
@@ -44,29 +32,35 @@ public final class RecognizerGrpc {
     if ((getRecognizeStreamingMethod = RecognizerGrpc.getRecognizeStreamingMethod) == null) {
       synchronized (RecognizerGrpc.class) {
         if ((getRecognizeStreamingMethod = RecognizerGrpc.getRecognizeStreamingMethod) == null) {
-          RecognizerGrpc.getRecognizeStreamingMethod = getRecognizeStreamingMethod = 
+          RecognizerGrpc.getRecognizeStreamingMethod = getRecognizeStreamingMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest, yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "speechkit.stt.v3.Recognizer", "RecognizeStreaming"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RecognizeStreaming"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RecognizerMethodDescriptorSupplier("RecognizeStreaming"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RecognizerMethodDescriptorSupplier("RecognizeStreaming"))
+              .build();
         }
-     }
-     return getRecognizeStreamingMethod;
+      }
+    }
+    return getRecognizeStreamingMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RecognizerStub newStub(io.grpc.Channel channel) {
-    return new RecognizerStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RecognizerStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecognizerStub>() {
+        @java.lang.Override
+        public RecognizerStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecognizerStub(channel, callOptions);
+        }
+      };
+    return RecognizerStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class RecognizerGrpc {
    */
   public static RecognizerBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RecognizerBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RecognizerBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecognizerBlockingStub>() {
+        @java.lang.Override
+        public RecognizerBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecognizerBlockingStub(channel, callOptions);
+        }
+      };
+    return RecognizerBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class RecognizerGrpc {
    */
   public static RecognizerFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RecognizerFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RecognizerFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecognizerFutureStub>() {
+        @java.lang.Override
+        public RecognizerFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecognizerFutureStub(channel, callOptions);
+        }
+      };
+    return RecognizerFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class RecognizerGrpc {
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest> recognizeStreaming(
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getRecognizeStreamingMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getRecognizeStreamingMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getRecognizeStreamingMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest,
                 yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse>(
@@ -120,19 +128,15 @@ public final class RecognizerGrpc {
    * A set of methods for voice recognition.
    * </pre>
    */
-  public static final class RecognizerStub extends io.grpc.stub.AbstractStub<RecognizerStub> {
-    private RecognizerStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RecognizerStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RecognizerStub extends io.grpc.stub.AbstractAsyncStub<RecognizerStub> {
+    private RecognizerStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RecognizerStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RecognizerStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RecognizerStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class RecognizerGrpc {
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest> recognizeStreaming(
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getRecognizeStreamingMethod(), getCallOptions()), responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class RecognizerGrpc {
    * A set of methods for voice recognition.
    * </pre>
    */
-  public static final class RecognizerBlockingStub extends io.grpc.stub.AbstractStub<RecognizerBlockingStub> {
-    private RecognizerBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RecognizerBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RecognizerBlockingStub extends io.grpc.stub.AbstractBlockingStub<RecognizerBlockingStub> {
+    private RecognizerBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RecognizerBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RecognizerBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RecognizerBlockingStub(channel, callOptions);
     }
   }
@@ -175,19 +175,15 @@ public final class RecognizerGrpc {
    * A set of methods for voice recognition.
    * </pre>
    */
-  public static final class RecognizerFutureStub extends io.grpc.stub.AbstractStub<RecognizerFutureStub> {
-    private RecognizerFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RecognizerFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RecognizerFutureStub extends io.grpc.stub.AbstractFutureStub<RecognizerFutureStub> {
+    private RecognizerFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RecognizerFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RecognizerFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RecognizerFutureStub(channel, callOptions);
     }
   }

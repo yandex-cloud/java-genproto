@@ -24,6 +24,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,6 +33,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -43,6 +45,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return Whether the tasksMax field is set.
      */
     boolean hasTasksMax();
     /**
@@ -52,6 +55,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return The tasksMax.
      */
     com.google.protobuf.Int64Value getTasksMax();
     /**
@@ -129,6 +133,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return Whether the connectorConfigMirrormaker field is set.
      */
     boolean hasConnectorConfigMirrormaker();
     /**
@@ -137,6 +142,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return The connectorConfigMirrormaker.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker();
     /**
@@ -157,7 +163,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorSpec}
    */
-  public  static final class ConnectorSpec extends
+  public static final class ConnectorSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConnectorSpec)
       ConnectorSpecOrBuilder {
@@ -168,6 +174,13 @@ public final class ConnectorOuterClass {
     }
     private ConnectorSpec() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectorSpec();
     }
 
     @java.lang.Override
@@ -214,10 +227,10 @@ public final class ConnectorOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               properties__ = input.readMessage(
@@ -241,7 +254,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -284,11 +297,11 @@ public final class ConnectorOuterClass {
               yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int connectorConfigCase_ = 0;
     private java.lang.Object connectorConfig_;
     public enum ConnectorConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTOR_CONFIG_MIRRORMAKER(10),
       CONNECTORCONFIG_NOT_SET(0);
       private final int value;
@@ -296,6 +309,8 @@ public final class ConnectorOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -329,7 +344,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -348,7 +365,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -372,7 +391,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return Whether the tasksMax field is set.
      */
+    @java.lang.Override
     public boolean hasTasksMax() {
       return tasksMax_ != null;
     }
@@ -383,7 +404,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return The tasksMax.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTasksMax() {
       return tasksMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tasksMax_;
     }
@@ -395,6 +418,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTasksMaxOrBuilder() {
       return getTasksMax();
     }
@@ -434,14 +458,16 @@ public final class ConnectorOuterClass {
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -454,6 +480,7 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -466,11 +493,12 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -483,10 +511,11 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -502,7 +531,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return Whether the connectorConfigMirrormaker field is set.
      */
+    @java.lang.Override
     public boolean hasConnectorConfigMirrormaker() {
       return connectorConfigCase_ == 10;
     }
@@ -512,7 +543,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return The connectorConfigMirrormaker.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker() {
       if (connectorConfigCase_ == 10) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
@@ -526,6 +559,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder() {
       if (connectorConfigCase_ == 10) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
@@ -547,7 +581,7 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (tasksMax_ != null) {
@@ -571,7 +605,7 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (tasksMax_ != null) {
@@ -607,29 +641,26 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasTasksMax() == other.hasTasksMax());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasTasksMax() != other.hasTasksMax()) return false;
       if (hasTasksMax()) {
-        result = result && getTasksMax()
-            .equals(other.getTasksMax());
+        if (!getTasksMax()
+            .equals(other.getTasksMax())) return false;
       }
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && getConnectorConfigCase().equals(
-          other.getConnectorConfigCase());
-      if (!result) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (!getConnectorConfigCase().equals(other.getConnectorConfigCase())) return false;
       switch (connectorConfigCase_) {
         case 10:
-          result = result && getConnectorConfigMirrormaker()
-              .equals(other.getConnectorConfigMirrormaker());
+          if (!getConnectorConfigMirrormaker()
+              .equals(other.getConnectorConfigMirrormaker())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -854,7 +885,6 @@ public final class ConnectorOuterClass {
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (tasksMaxBuilder_ == null) {
           result.tasksMax_ = tasksMax_;
@@ -870,7 +900,6 @@ public final class ConnectorOuterClass {
             result.connectorConfig_ = connectorConfigMirrormakerBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.connectorConfigCase_ = connectorConfigCase_;
         onBuilt();
         return result;
@@ -878,35 +907,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -990,6 +1019,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1009,6 +1039,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1029,6 +1060,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1046,6 +1079,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1059,6 +1093,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1072,7 +1108,7 @@ public final class ConnectorOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value tasksMax_ = null;
+      private com.google.protobuf.Int64Value tasksMax_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
       /**
@@ -1082,6 +1118,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+       * @return Whether the tasksMax field is set.
        */
       public boolean hasTasksMax() {
         return tasksMaxBuilder_ != null || tasksMax_ != null;
@@ -1093,6 +1130,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+       * @return The tasksMax.
        */
       public com.google.protobuf.Int64Value getTasksMax() {
         if (tasksMaxBuilder_ == null) {
@@ -1269,14 +1307,16 @@ public final class ConnectorOuterClass {
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -1289,6 +1329,7 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -1301,11 +1342,12 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1318,10 +1360,11 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -1346,7 +1389,7 @@ public final class ConnectorOuterClass {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -1370,8 +1413,11 @@ public final class ConnectorOuterClass {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -1400,7 +1446,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       * @return Whether the connectorConfigMirrormaker field is set.
        */
+      @java.lang.Override
       public boolean hasConnectorConfigMirrormaker() {
         return connectorConfigCase_ == 10;
       }
@@ -1410,7 +1458,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       * @return The connectorConfigMirrormaker.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker() {
         if (connectorConfigMirrormakerBuilder_ == null) {
           if (connectorConfigCase_ == 10) {
@@ -1528,6 +1578,7 @@ public final class ConnectorOuterClass {
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder() {
         if ((connectorConfigCase_ == 10) && (connectorConfigMirrormakerBuilder_ != null)) {
           return connectorConfigMirrormakerBuilder_.getMessageOrBuilder();
@@ -1566,7 +1617,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1626,6 +1677,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     * @return Whether the tasksMax field is set.
      */
     boolean hasTasksMax();
     /**
@@ -1634,6 +1686,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     * @return The tasksMax.
      */
     com.google.protobuf.Int64Value getTasksMax();
     /**
@@ -1715,6 +1768,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return Whether the connectorConfigMirrormaker field is set.
      */
     boolean hasConnectorConfigMirrormaker();
     /**
@@ -1723,6 +1777,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return The connectorConfigMirrormaker.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker();
     /**
@@ -1743,7 +1798,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec}
    */
-  public  static final class UpdateConnectorSpec extends
+  public static final class UpdateConnectorSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec)
       UpdateConnectorSpecOrBuilder {
@@ -1753,6 +1808,13 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private UpdateConnectorSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateConnectorSpec();
     }
 
     @java.lang.Override
@@ -1793,10 +1855,10 @@ public final class ConnectorOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               properties__ = input.readMessage(
@@ -1820,7 +1882,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1863,11 +1925,11 @@ public final class ConnectorOuterClass {
               yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int connectorConfigCase_ = 0;
     private java.lang.Object connectorConfig_;
     public enum ConnectorConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTOR_CONFIG_MIRRORMAKER(10),
       CONNECTORCONFIG_NOT_SET(0);
       private final int value;
@@ -1875,6 +1937,8 @@ public final class ConnectorOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1908,7 +1972,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     * @return Whether the tasksMax field is set.
      */
+    @java.lang.Override
     public boolean hasTasksMax() {
       return tasksMax_ != null;
     }
@@ -1918,7 +1984,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     * @return The tasksMax.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTasksMax() {
       return tasksMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tasksMax_;
     }
@@ -1929,6 +1997,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTasksMaxOrBuilder() {
       return getTasksMax();
     }
@@ -1969,14 +2038,16 @@ public final class ConnectorOuterClass {
      * <code>map&lt;string, string&gt; properties = 2;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -1990,6 +2061,7 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -2003,11 +2075,12 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2021,10 +2094,11 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -2040,7 +2114,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return Whether the connectorConfigMirrormaker field is set.
      */
+    @java.lang.Override
     public boolean hasConnectorConfigMirrormaker() {
       return connectorConfigCase_ == 10;
     }
@@ -2050,7 +2126,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     * @return The connectorConfigMirrormaker.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker() {
       if (connectorConfigCase_ == 10) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
@@ -2064,6 +2142,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder() {
       if (connectorConfigCase_ == 10) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
@@ -2139,27 +2218,24 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec) obj;
 
-      boolean result = true;
-      result = result && (hasTasksMax() == other.hasTasksMax());
+      if (hasTasksMax() != other.hasTasksMax()) return false;
       if (hasTasksMax()) {
-        result = result && getTasksMax()
-            .equals(other.getTasksMax());
+        if (!getTasksMax()
+            .equals(other.getTasksMax())) return false;
       }
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && getConnectorConfigCase().equals(
-          other.getConnectorConfigCase());
-      if (!result) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (!getConnectorConfigCase().equals(other.getConnectorConfigCase())) return false;
       switch (connectorConfigCase_) {
         case 10:
-          result = result && getConnectorConfigMirrormaker()
-              .equals(other.getConnectorConfigMirrormaker());
+          if (!getConnectorConfigMirrormaker()
+              .equals(other.getConnectorConfigMirrormaker())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2380,7 +2456,6 @@ public final class ConnectorOuterClass {
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (tasksMaxBuilder_ == null) {
           result.tasksMax_ = tasksMax_;
         } else {
@@ -2395,7 +2470,6 @@ public final class ConnectorOuterClass {
             result.connectorConfig_ = connectorConfigMirrormakerBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.connectorConfigCase_ = connectorConfigCase_;
         onBuilt();
         return result;
@@ -2403,35 +2477,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2504,7 +2578,7 @@ public final class ConnectorOuterClass {
 
       private int bitField0_;
 
-      private com.google.protobuf.Int64Value tasksMax_ = null;
+      private com.google.protobuf.Int64Value tasksMax_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
       /**
@@ -2513,6 +2587,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       * @return Whether the tasksMax field is set.
        */
       public boolean hasTasksMax() {
         return tasksMaxBuilder_ != null || tasksMax_ != null;
@@ -2523,6 +2598,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       * @return The tasksMax.
        */
       public com.google.protobuf.Int64Value getTasksMax() {
         if (tasksMaxBuilder_ == null) {
@@ -2693,14 +2769,16 @@ public final class ConnectorOuterClass {
        * <code>map&lt;string, string&gt; properties = 2;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -2714,6 +2792,7 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -2727,11 +2806,12 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2745,10 +2825,11 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -2774,7 +2855,7 @@ public final class ConnectorOuterClass {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -2799,8 +2880,11 @@ public final class ConnectorOuterClass {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -2830,7 +2914,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       * @return Whether the connectorConfigMirrormaker field is set.
        */
+      @java.lang.Override
       public boolean hasConnectorConfigMirrormaker() {
         return connectorConfigCase_ == 10;
       }
@@ -2840,7 +2926,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       * @return The connectorConfigMirrormaker.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker() {
         if (connectorConfigMirrormakerBuilder_ == null) {
           if (connectorConfigCase_ == 10) {
@@ -2958,6 +3046,7 @@ public final class ConnectorOuterClass {
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder() {
         if ((connectorConfigCase_ == 10) && (connectorConfigMirrormakerBuilder_ != null)) {
           return connectorConfigMirrormakerBuilder_.getMessageOrBuilder();
@@ -2996,7 +3085,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3056,6 +3145,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
+     * @return Whether the sourceCluster field is set.
      */
     boolean hasSourceCluster();
     /**
@@ -3064,6 +3154,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
+     * @return The sourceCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getSourceCluster();
     /**
@@ -3081,6 +3172,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
+     * @return Whether the targetCluster field is set.
      */
     boolean hasTargetCluster();
     /**
@@ -3089,6 +3181,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
+     * @return The targetCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getTargetCluster();
     /**
@@ -3106,6 +3199,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The topics.
      */
     java.lang.String getTopics();
     /**
@@ -3114,6 +3208,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The bytes for topics.
      */
     com.google.protobuf.ByteString
         getTopicsBytes();
@@ -3124,6 +3219,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return Whether the replicationFactor field is set.
      */
     boolean hasReplicationFactor();
     /**
@@ -3132,6 +3228,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return The replicationFactor.
      */
     com.google.protobuf.Int64Value getReplicationFactor();
     /**
@@ -3151,7 +3248,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec}
    */
-  public  static final class ConnectorConfigMirrorMakerSpec extends
+  public static final class ConnectorConfigMirrorMakerSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec)
       ConnectorConfigMirrorMakerSpecOrBuilder {
@@ -3162,6 +3259,13 @@ public final class ConnectorOuterClass {
     }
     private ConnectorConfigMirrorMakerSpec() {
       topics_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectorConfigMirrorMakerSpec();
     }
 
     @java.lang.Override
@@ -3177,7 +3281,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3234,7 +3337,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3273,7 +3376,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
+     * @return Whether the sourceCluster field is set.
      */
+    @java.lang.Override
     public boolean hasSourceCluster() {
       return sourceCluster_ != null;
     }
@@ -3283,7 +3388,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
+     * @return The sourceCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getSourceCluster() {
       return sourceCluster_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.getDefaultInstance() : sourceCluster_;
     }
@@ -3294,6 +3401,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpecOrBuilder getSourceClusterOrBuilder() {
       return getSourceCluster();
     }
@@ -3306,7 +3414,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
+     * @return Whether the targetCluster field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCluster() {
       return targetCluster_ != null;
     }
@@ -3316,7 +3426,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
+     * @return The targetCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getTargetCluster() {
       return targetCluster_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.getDefaultInstance() : targetCluster_;
     }
@@ -3327,6 +3439,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpecOrBuilder getTargetClusterOrBuilder() {
       return getTargetCluster();
     }
@@ -3339,7 +3452,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The topics.
      */
+    @java.lang.Override
     public java.lang.String getTopics() {
       java.lang.Object ref = topics_;
       if (ref instanceof java.lang.String) {
@@ -3358,7 +3473,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The bytes for topics.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicsBytes() {
       java.lang.Object ref = topics_;
@@ -3381,7 +3498,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return Whether the replicationFactor field is set.
      */
+    @java.lang.Override
     public boolean hasReplicationFactor() {
       return replicationFactor_ != null;
     }
@@ -3391,7 +3510,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return The replicationFactor.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReplicationFactor() {
       return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
     }
@@ -3402,6 +3523,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
       return getReplicationFactor();
     }
@@ -3426,7 +3548,7 @@ public final class ConnectorOuterClass {
       if (targetCluster_ != null) {
         output.writeMessage(2, getTargetCluster());
       }
-      if (!getTopicsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topics_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, topics_);
       }
       if (replicationFactor_ != null) {
@@ -3449,7 +3571,7 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTargetCluster());
       }
-      if (!getTopicsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topics_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, topics_);
       }
       if (replicationFactor_ != null) {
@@ -3471,26 +3593,25 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) obj;
 
-      boolean result = true;
-      result = result && (hasSourceCluster() == other.hasSourceCluster());
+      if (hasSourceCluster() != other.hasSourceCluster()) return false;
       if (hasSourceCluster()) {
-        result = result && getSourceCluster()
-            .equals(other.getSourceCluster());
+        if (!getSourceCluster()
+            .equals(other.getSourceCluster())) return false;
       }
-      result = result && (hasTargetCluster() == other.hasTargetCluster());
+      if (hasTargetCluster() != other.hasTargetCluster()) return false;
       if (hasTargetCluster()) {
-        result = result && getTargetCluster()
-            .equals(other.getTargetCluster());
+        if (!getTargetCluster()
+            .equals(other.getTargetCluster())) return false;
       }
-      result = result && getTopics()
-          .equals(other.getTopics());
-      result = result && (hasReplicationFactor() == other.hasReplicationFactor());
+      if (!getTopics()
+          .equals(other.getTopics())) return false;
+      if (hasReplicationFactor() != other.hasReplicationFactor()) return false;
       if (hasReplicationFactor()) {
-        result = result && getReplicationFactor()
-            .equals(other.getReplicationFactor());
+        if (!getReplicationFactor()
+            .equals(other.getReplicationFactor())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3720,35 +3841,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3804,7 +3925,7 @@ public final class ConnectorOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec sourceCluster_ = null;
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec sourceCluster_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpecOrBuilder> sourceClusterBuilder_;
       /**
@@ -3813,6 +3934,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
+       * @return Whether the sourceCluster field is set.
        */
       public boolean hasSourceCluster() {
         return sourceClusterBuilder_ != null || sourceCluster_ != null;
@@ -3823,6 +3945,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
+       * @return The sourceCluster.
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getSourceCluster() {
         if (sourceClusterBuilder_ == null) {
@@ -3957,7 +4080,7 @@ public final class ConnectorOuterClass {
         return sourceClusterBuilder_;
       }
 
-      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec targetCluster_ = null;
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec targetCluster_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpecOrBuilder> targetClusterBuilder_;
       /**
@@ -3966,6 +4089,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
+       * @return Whether the targetCluster field is set.
        */
       public boolean hasTargetCluster() {
         return targetClusterBuilder_ != null || targetCluster_ != null;
@@ -3976,6 +4100,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
+       * @return The targetCluster.
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getTargetCluster() {
         if (targetClusterBuilder_ == null) {
@@ -4117,6 +4242,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @return The topics.
        */
       public java.lang.String getTopics() {
         java.lang.Object ref = topics_;
@@ -4136,6 +4262,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @return The bytes for topics.
        */
       public com.google.protobuf.ByteString
           getTopicsBytes() {
@@ -4156,6 +4283,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @param value The topics to set.
+       * @return This builder for chaining.
        */
       public Builder setTopics(
           java.lang.String value) {
@@ -4173,6 +4302,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTopics() {
         
@@ -4186,6 +4316,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @param value The bytes for topics to set.
+       * @return This builder for chaining.
        */
       public Builder setTopicsBytes(
           com.google.protobuf.ByteString value) {
@@ -4199,7 +4331,7 @@ public final class ConnectorOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value replicationFactor_ = null;
+      private com.google.protobuf.Int64Value replicationFactor_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationFactorBuilder_;
       /**
@@ -4208,6 +4340,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       * @return Whether the replicationFactor field is set.
        */
       public boolean hasReplicationFactor() {
         return replicationFactorBuilder_ != null || replicationFactor_ != null;
@@ -4218,6 +4351,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       * @return The replicationFactor.
        */
       public com.google.protobuf.Int64Value getReplicationFactor() {
         if (replicationFactorBuilder_ == null) {
@@ -4354,7 +4488,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4415,6 +4549,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The alias.
      */
     java.lang.String getAlias();
     /**
@@ -4424,6 +4559,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The bytes for alias.
      */
     com.google.protobuf.ByteString
         getAliasBytes();
@@ -4436,6 +4572,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
+     * @return Whether the thisCluster field is set.
      */
     boolean hasThisCluster();
     /**
@@ -4446,6 +4583,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
+     * @return The thisCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec getThisCluster();
     /**
@@ -4467,6 +4605,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
+     * @return Whether the externalCluster field is set.
      */
     boolean hasExternalCluster();
     /**
@@ -4477,6 +4616,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
+     * @return The externalCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec getExternalCluster();
     /**
@@ -4502,7 +4642,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec}
    */
-  public  static final class ClusterConnectionSpec extends
+  public static final class ClusterConnectionSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec)
       ClusterConnectionSpecOrBuilder {
@@ -4513,6 +4653,13 @@ public final class ConnectorOuterClass {
     }
     private ClusterConnectionSpec() {
       alias_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClusterConnectionSpec();
     }
 
     @java.lang.Override
@@ -4528,7 +4675,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4574,7 +4720,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4608,7 +4754,8 @@ public final class ConnectorOuterClass {
     private int clusterConnectionCase_ = 0;
     private java.lang.Object clusterConnection_;
     public enum ClusterConnectionCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       THIS_CLUSTER(2),
       EXTERNAL_CLUSTER(3),
       CLUSTERCONNECTION_NOT_SET(0);
@@ -4617,6 +4764,8 @@ public final class ConnectorOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4652,7 +4801,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -4672,7 +4823,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -4696,7 +4849,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
+     * @return Whether the thisCluster field is set.
      */
+    @java.lang.Override
     public boolean hasThisCluster() {
       return clusterConnectionCase_ == 2;
     }
@@ -4708,7 +4863,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
+     * @return The thisCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec getThisCluster() {
       if (clusterConnectionCase_ == 2) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec) clusterConnection_;
@@ -4724,6 +4881,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpecOrBuilder getThisClusterOrBuilder() {
       if (clusterConnectionCase_ == 2) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec) clusterConnection_;
@@ -4740,7 +4898,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
+     * @return Whether the externalCluster field is set.
      */
+    @java.lang.Override
     public boolean hasExternalCluster() {
       return clusterConnectionCase_ == 3;
     }
@@ -4752,7 +4912,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
+     * @return The externalCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec getExternalCluster() {
       if (clusterConnectionCase_ == 3) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec) clusterConnection_;
@@ -4768,6 +4930,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpecOrBuilder getExternalClusterOrBuilder() {
       if (clusterConnectionCase_ == 3) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec) clusterConnection_;
@@ -4789,7 +4952,7 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAliasBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alias_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, alias_);
       }
       if (clusterConnectionCase_ == 2) {
@@ -4807,7 +4970,7 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAliasBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alias_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, alias_);
       }
       if (clusterConnectionCase_ == 2) {
@@ -4833,26 +4996,23 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec) obj;
 
-      boolean result = true;
-      result = result && getAlias()
-          .equals(other.getAlias());
-      result = result && getClusterConnectionCase().equals(
-          other.getClusterConnectionCase());
-      if (!result) return false;
+      if (!getAlias()
+          .equals(other.getAlias())) return false;
+      if (!getClusterConnectionCase().equals(other.getClusterConnectionCase())) return false;
       switch (clusterConnectionCase_) {
         case 2:
-          result = result && getThisCluster()
-              .equals(other.getThisCluster());
+          if (!getThisCluster()
+              .equals(other.getThisCluster())) return false;
           break;
         case 3:
-          result = result && getExternalCluster()
-              .equals(other.getExternalCluster());
+          if (!getExternalCluster()
+              .equals(other.getExternalCluster())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5068,35 +5228,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5179,6 +5339,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @return The alias.
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -5199,6 +5360,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @return The bytes for alias.
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -5220,6 +5382,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @param value The alias to set.
+       * @return This builder for chaining.
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -5238,6 +5402,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlias() {
         
@@ -5252,6 +5417,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @param value The bytes for alias to set.
+       * @return This builder for chaining.
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -5275,7 +5442,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
+       * @return Whether the thisCluster field is set.
        */
+      @java.lang.Override
       public boolean hasThisCluster() {
         return clusterConnectionCase_ == 2;
       }
@@ -5287,7 +5456,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
+       * @return The thisCluster.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec getThisCluster() {
         if (thisClusterBuilder_ == null) {
           if (clusterConnectionCase_ == 2) {
@@ -5417,6 +5588,7 @@ public final class ConnectorOuterClass {
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpecOrBuilder getThisClusterOrBuilder() {
         if ((clusterConnectionCase_ == 2) && (thisClusterBuilder_ != null)) {
           return thisClusterBuilder_.getMessageOrBuilder();
@@ -5465,7 +5637,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
+       * @return Whether the externalCluster field is set.
        */
+      @java.lang.Override
       public boolean hasExternalCluster() {
         return clusterConnectionCase_ == 3;
       }
@@ -5477,7 +5651,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
+       * @return The externalCluster.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec getExternalCluster() {
         if (externalClusterBuilder_ == null) {
           if (clusterConnectionCase_ == 3) {
@@ -5607,6 +5783,7 @@ public final class ConnectorOuterClass {
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpecOrBuilder getExternalClusterOrBuilder() {
         if ((clusterConnectionCase_ == 3) && (externalClusterBuilder_ != null)) {
           return externalClusterBuilder_.getMessageOrBuilder();
@@ -5647,7 +5824,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5711,7 +5888,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ThisClusterSpec}
    */
-  public  static final class ThisClusterSpec extends
+  public static final class ThisClusterSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ThisClusterSpec)
       ThisClusterSpecOrBuilder {
@@ -5721,6 +5898,13 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private ThisClusterSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ThisClusterSpec();
     }
 
     @java.lang.Override
@@ -5747,7 +5931,7 @@ public final class ConnectorOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5816,9 +6000,8 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6000,35 +6183,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6073,7 +6256,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6134,6 +6317,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bootstrapServers.
      */
     java.lang.String getBootstrapServers();
     /**
@@ -6143,6 +6327,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bytes for bootstrapServers.
      */
     com.google.protobuf.ByteString
         getBootstrapServersBytes();
@@ -6154,6 +6339,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The saslUsername.
      */
     java.lang.String getSaslUsername();
     /**
@@ -6163,6 +6349,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The bytes for saslUsername.
      */
     com.google.protobuf.ByteString
         getSaslUsernameBytes();
@@ -6174,6 +6361,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
+     * @return The saslPassword.
      */
     java.lang.String getSaslPassword();
     /**
@@ -6183,6 +6371,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
+     * @return The bytes for saslPassword.
      */
     com.google.protobuf.ByteString
         getSaslPasswordBytes();
@@ -6194,6 +6383,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The saslMechanism.
      */
     java.lang.String getSaslMechanism();
     /**
@@ -6203,6 +6393,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The bytes for saslMechanism.
      */
     com.google.protobuf.ByteString
         getSaslMechanismBytes();
@@ -6215,6 +6406,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The securityProtocol.
      */
     java.lang.String getSecurityProtocol();
     /**
@@ -6225,6 +6417,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The bytes for securityProtocol.
      */
     com.google.protobuf.ByteString
         getSecurityProtocolBytes();
@@ -6236,6 +6429,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string ssl_truststore_certificates = 6;</code>
+     * @return The sslTruststoreCertificates.
      */
     java.lang.String getSslTruststoreCertificates();
     /**
@@ -6245,6 +6439,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string ssl_truststore_certificates = 6;</code>
+     * @return The bytes for sslTruststoreCertificates.
      */
     com.google.protobuf.ByteString
         getSslTruststoreCertificatesBytes();
@@ -6259,7 +6454,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec}
    */
-  public  static final class ExternalClusterConnectionSpec extends
+  public static final class ExternalClusterConnectionSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec)
       ExternalClusterConnectionSpecOrBuilder {
@@ -6278,6 +6473,13 @@ public final class ConnectorOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalClusterConnectionSpec();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6290,7 +6492,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6338,7 +6539,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6378,7 +6579,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bootstrapServers.
      */
+    @java.lang.Override
     public java.lang.String getBootstrapServers() {
       java.lang.Object ref = bootstrapServers_;
       if (ref instanceof java.lang.String) {
@@ -6398,7 +6601,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bytes for bootstrapServers.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBootstrapServersBytes() {
       java.lang.Object ref = bootstrapServers_;
@@ -6422,7 +6627,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The saslUsername.
      */
+    @java.lang.Override
     public java.lang.String getSaslUsername() {
       java.lang.Object ref = saslUsername_;
       if (ref instanceof java.lang.String) {
@@ -6442,7 +6649,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The bytes for saslUsername.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSaslUsernameBytes() {
       java.lang.Object ref = saslUsername_;
@@ -6466,7 +6675,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
+     * @return The saslPassword.
      */
+    @java.lang.Override
     public java.lang.String getSaslPassword() {
       java.lang.Object ref = saslPassword_;
       if (ref instanceof java.lang.String) {
@@ -6486,7 +6697,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
+     * @return The bytes for saslPassword.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSaslPasswordBytes() {
       java.lang.Object ref = saslPassword_;
@@ -6510,7 +6723,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The saslMechanism.
      */
+    @java.lang.Override
     public java.lang.String getSaslMechanism() {
       java.lang.Object ref = saslMechanism_;
       if (ref instanceof java.lang.String) {
@@ -6530,7 +6745,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The bytes for saslMechanism.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSaslMechanismBytes() {
       java.lang.Object ref = saslMechanism_;
@@ -6555,7 +6772,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The securityProtocol.
      */
+    @java.lang.Override
     public java.lang.String getSecurityProtocol() {
       java.lang.Object ref = securityProtocol_;
       if (ref instanceof java.lang.String) {
@@ -6576,7 +6795,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The bytes for securityProtocol.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityProtocolBytes() {
       java.lang.Object ref = securityProtocol_;
@@ -6600,7 +6821,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string ssl_truststore_certificates = 6;</code>
+     * @return The sslTruststoreCertificates.
      */
+    @java.lang.Override
     public java.lang.String getSslTruststoreCertificates() {
       java.lang.Object ref = sslTruststoreCertificates_;
       if (ref instanceof java.lang.String) {
@@ -6620,7 +6843,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string ssl_truststore_certificates = 6;</code>
+     * @return The bytes for sslTruststoreCertificates.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSslTruststoreCertificatesBytes() {
       java.lang.Object ref = sslTruststoreCertificates_;
@@ -6649,22 +6874,22 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBootstrapServersBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bootstrapServers_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bootstrapServers_);
       }
-      if (!getSaslUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, saslUsername_);
       }
-      if (!getSaslPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslPassword_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, saslPassword_);
       }
-      if (!getSaslMechanismBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslMechanism_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, saslMechanism_);
       }
-      if (!getSecurityProtocolBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityProtocol_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityProtocol_);
       }
-      if (!getSslTruststoreCertificatesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sslTruststoreCertificates_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sslTruststoreCertificates_);
       }
       unknownFields.writeTo(output);
@@ -6676,22 +6901,22 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBootstrapServersBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bootstrapServers_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bootstrapServers_);
       }
-      if (!getSaslUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, saslUsername_);
       }
-      if (!getSaslPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslPassword_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, saslPassword_);
       }
-      if (!getSaslMechanismBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslMechanism_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, saslMechanism_);
       }
-      if (!getSecurityProtocolBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityProtocol_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, securityProtocol_);
       }
-      if (!getSslTruststoreCertificatesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sslTruststoreCertificates_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sslTruststoreCertificates_);
       }
       size += unknownFields.getSerializedSize();
@@ -6709,21 +6934,20 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec) obj;
 
-      boolean result = true;
-      result = result && getBootstrapServers()
-          .equals(other.getBootstrapServers());
-      result = result && getSaslUsername()
-          .equals(other.getSaslUsername());
-      result = result && getSaslPassword()
-          .equals(other.getSaslPassword());
-      result = result && getSaslMechanism()
-          .equals(other.getSaslMechanism());
-      result = result && getSecurityProtocol()
-          .equals(other.getSecurityProtocol());
-      result = result && getSslTruststoreCertificates()
-          .equals(other.getSslTruststoreCertificates());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBootstrapServers()
+          .equals(other.getBootstrapServers())) return false;
+      if (!getSaslUsername()
+          .equals(other.getSaslUsername())) return false;
+      if (!getSaslPassword()
+          .equals(other.getSaslPassword())) return false;
+      if (!getSaslMechanism()
+          .equals(other.getSaslMechanism())) return false;
+      if (!getSecurityProtocol()
+          .equals(other.getSecurityProtocol())) return false;
+      if (!getSslTruststoreCertificates()
+          .equals(other.getSslTruststoreCertificates())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6935,35 +7159,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7038,6 +7262,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @return The bootstrapServers.
        */
       public java.lang.String getBootstrapServers() {
         java.lang.Object ref = bootstrapServers_;
@@ -7058,6 +7283,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @return The bytes for bootstrapServers.
        */
       public com.google.protobuf.ByteString
           getBootstrapServersBytes() {
@@ -7079,6 +7305,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @param value The bootstrapServers to set.
+       * @return This builder for chaining.
        */
       public Builder setBootstrapServers(
           java.lang.String value) {
@@ -7097,6 +7325,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBootstrapServers() {
         
@@ -7111,6 +7340,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @param value The bytes for bootstrapServers to set.
+       * @return This builder for chaining.
        */
       public Builder setBootstrapServersBytes(
           com.google.protobuf.ByteString value) {
@@ -7132,6 +7363,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @return The saslUsername.
        */
       public java.lang.String getSaslUsername() {
         java.lang.Object ref = saslUsername_;
@@ -7152,6 +7384,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @return The bytes for saslUsername.
        */
       public com.google.protobuf.ByteString
           getSaslUsernameBytes() {
@@ -7173,6 +7406,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @param value The saslUsername to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslUsername(
           java.lang.String value) {
@@ -7191,6 +7426,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSaslUsername() {
         
@@ -7205,6 +7441,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @param value The bytes for saslUsername to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslUsernameBytes(
           com.google.protobuf.ByteString value) {
@@ -7226,6 +7464,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
+       * @return The saslPassword.
        */
       public java.lang.String getSaslPassword() {
         java.lang.Object ref = saslPassword_;
@@ -7246,6 +7485,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
+       * @return The bytes for saslPassword.
        */
       public com.google.protobuf.ByteString
           getSaslPasswordBytes() {
@@ -7267,6 +7507,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
+       * @param value The saslPassword to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslPassword(
           java.lang.String value) {
@@ -7285,6 +7527,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSaslPassword() {
         
@@ -7299,6 +7542,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
+       * @param value The bytes for saslPassword to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -7320,6 +7565,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @return The saslMechanism.
        */
       public java.lang.String getSaslMechanism() {
         java.lang.Object ref = saslMechanism_;
@@ -7340,6 +7586,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @return The bytes for saslMechanism.
        */
       public com.google.protobuf.ByteString
           getSaslMechanismBytes() {
@@ -7361,6 +7608,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @param value The saslMechanism to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslMechanism(
           java.lang.String value) {
@@ -7379,6 +7628,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSaslMechanism() {
         
@@ -7393,6 +7643,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @param value The bytes for saslMechanism to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslMechanismBytes(
           com.google.protobuf.ByteString value) {
@@ -7415,6 +7667,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @return The securityProtocol.
        */
       public java.lang.String getSecurityProtocol() {
         java.lang.Object ref = securityProtocol_;
@@ -7436,6 +7689,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @return The bytes for securityProtocol.
        */
       public com.google.protobuf.ByteString
           getSecurityProtocolBytes() {
@@ -7458,6 +7712,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @param value The securityProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityProtocol(
           java.lang.String value) {
@@ -7477,6 +7733,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityProtocol() {
         
@@ -7492,6 +7749,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @param value The bytes for securityProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityProtocolBytes(
           com.google.protobuf.ByteString value) {
@@ -7513,6 +7772,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string ssl_truststore_certificates = 6;</code>
+       * @return The sslTruststoreCertificates.
        */
       public java.lang.String getSslTruststoreCertificates() {
         java.lang.Object ref = sslTruststoreCertificates_;
@@ -7533,6 +7793,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string ssl_truststore_certificates = 6;</code>
+       * @return The bytes for sslTruststoreCertificates.
        */
       public com.google.protobuf.ByteString
           getSslTruststoreCertificatesBytes() {
@@ -7554,6 +7815,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string ssl_truststore_certificates = 6;</code>
+       * @param value The sslTruststoreCertificates to set.
+       * @return This builder for chaining.
        */
       public Builder setSslTruststoreCertificates(
           java.lang.String value) {
@@ -7572,6 +7835,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string ssl_truststore_certificates = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSslTruststoreCertificates() {
         
@@ -7586,6 +7850,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string ssl_truststore_certificates = 6;</code>
+       * @param value The bytes for sslTruststoreCertificates to set.
+       * @return This builder for chaining.
        */
       public Builder setSslTruststoreCertificatesBytes(
           com.google.protobuf.ByteString value) {
@@ -7601,7 +7867,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7661,6 +7927,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7669,6 +7936,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7679,6 +7947,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return Whether the tasksMax field is set.
      */
     boolean hasTasksMax();
     /**
@@ -7687,6 +7956,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return The tasksMax.
      */
     com.google.protobuf.Int64Value getTasksMax();
     /**
@@ -7763,6 +8033,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -7771,6 +8042,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health getHealth();
 
@@ -7780,6 +8052,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -7788,6 +8061,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+     * @return The status.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status getStatus();
 
@@ -7797,6 +8071,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7805,16 +8080,19 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
+     * @return Whether the connectorConfigMirrormaker field is set.
      */
     boolean hasConnectorConfigMirrormaker();
     /**
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
+     * @return The connectorConfigMirrormaker.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker getConnectorConfigMirrormaker();
     /**
@@ -7831,7 +8109,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Connector}
    */
-  public  static final class Connector extends
+  public static final class Connector extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.Connector)
       ConnectorOrBuilder {
@@ -7845,6 +8123,13 @@ public final class ConnectorOuterClass {
       health_ = 0;
       status_ = 0;
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Connector();
     }
 
     @java.lang.Override
@@ -7891,10 +8176,10 @@ public final class ConnectorOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 properties_ = com.google.protobuf.MapField.newMapField(
                     PropertiesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               properties__ = input.readMessage(
@@ -7936,7 +8221,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8046,6 +8331,8 @@ public final class ConnectorOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8053,6 +8340,10 @@ public final class ConnectorOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -8076,6 +8367,10 @@ public final class ConnectorOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8193,6 +8488,8 @@ public final class ConnectorOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8200,6 +8497,10 @@ public final class ConnectorOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNKNOWN;
@@ -8224,6 +8525,10 @@ public final class ConnectorOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8258,11 +8563,11 @@ public final class ConnectorOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.Connector.Status)
     }
 
-    private int bitField0_;
     private int connectorConfigCase_ = 0;
     private java.lang.Object connectorConfig_;
     public enum ConnectorConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTOR_CONFIG_MIRRORMAKER(10),
       CONNECTORCONFIG_NOT_SET(0);
       private final int value;
@@ -8270,6 +8575,8 @@ public final class ConnectorOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8303,7 +8610,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8322,7 +8631,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8345,7 +8656,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return Whether the tasksMax field is set.
      */
+    @java.lang.Override
     public boolean hasTasksMax() {
       return tasksMax_ != null;
     }
@@ -8355,7 +8668,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+     * @return The tasksMax.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTasksMax() {
       return tasksMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tasksMax_;
     }
@@ -8366,6 +8681,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTasksMaxOrBuilder() {
       return getTasksMax();
     }
@@ -8405,14 +8721,16 @@ public final class ConnectorOuterClass {
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
 
+    @java.lang.Override
     public boolean containsProperties(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetProperties().getMap().containsKey(key);
     }
     /**
      * Use {@link #getPropertiesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getProperties() {
       return getPropertiesMap();
@@ -8425,6 +8743,7 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
       return internalGetProperties().getMap();
@@ -8437,11 +8756,12 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8454,10 +8774,11 @@ public final class ConnectorOuterClass {
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getPropertiesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetProperties().getMap();
       if (!map.containsKey(key)) {
@@ -8474,8 +8795,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -8484,8 +8806,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health result = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health.UNRECOGNIZED : result;
@@ -8499,8 +8822,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -8509,8 +8833,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status result = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status.UNRECOGNIZED : result;
@@ -8524,7 +8849,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -8543,7 +8870,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -8561,13 +8890,17 @@ public final class ConnectorOuterClass {
     public static final int CONNECTOR_CONFIG_MIRRORMAKER_FIELD_NUMBER = 10;
     /**
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
+     * @return Whether the connectorConfigMirrormaker field is set.
      */
+    @java.lang.Override
     public boolean hasConnectorConfigMirrormaker() {
       return connectorConfigCase_ == 10;
     }
     /**
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
+     * @return The connectorConfigMirrormaker.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker getConnectorConfigMirrormaker() {
       if (connectorConfigCase_ == 10) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker) connectorConfig_;
@@ -8577,6 +8910,7 @@ public final class ConnectorOuterClass {
     /**
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerOrBuilder getConnectorConfigMirrormakerOrBuilder() {
       if (connectorConfigCase_ == 10) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker) connectorConfig_;
@@ -8598,7 +8932,7 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (tasksMax_ != null) {
@@ -8616,7 +8950,7 @@ public final class ConnectorOuterClass {
       if (status_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status.STATUS_UNKNOWN.getNumber()) {
         output.writeEnum(5, status_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clusterId_);
       }
       if (connectorConfigCase_ == 10) {
@@ -8631,7 +8965,7 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (tasksMax_ != null) {
@@ -8656,7 +8990,7 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, status_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clusterId_);
       }
       if (connectorConfigCase_ == 10) {
@@ -8678,33 +9012,30 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasTasksMax() == other.hasTasksMax());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasTasksMax() != other.hasTasksMax()) return false;
       if (hasTasksMax()) {
-        result = result && getTasksMax()
-            .equals(other.getTasksMax());
+        if (!getTasksMax()
+            .equals(other.getTasksMax())) return false;
       }
-      result = result && internalGetProperties().equals(
-          other.internalGetProperties());
-      result = result && health_ == other.health_;
-      result = result && status_ == other.status_;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getConnectorConfigCase().equals(
-          other.getConnectorConfigCase());
-      if (!result) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (health_ != other.health_) return false;
+      if (status_ != other.status_) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getConnectorConfigCase().equals(other.getConnectorConfigCase())) return false;
       switch (connectorConfigCase_) {
         case 10:
-          result = result && getConnectorConfigMirrormaker()
-              .equals(other.getConnectorConfigMirrormaker());
+          if (!getConnectorConfigMirrormaker()
+              .equals(other.getConnectorConfigMirrormaker())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8941,7 +9272,6 @@ public final class ConnectorOuterClass {
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (tasksMaxBuilder_ == null) {
           result.tasksMax_ = tasksMax_;
@@ -8960,7 +9290,6 @@ public final class ConnectorOuterClass {
             result.connectorConfig_ = connectorConfigMirrormakerBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.connectorConfigCase_ = connectorConfigCase_;
         onBuilt();
         return result;
@@ -8968,35 +9297,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9090,6 +9419,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9109,6 +9439,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9129,6 +9460,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9146,6 +9479,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9159,6 +9493,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9172,7 +9508,7 @@ public final class ConnectorOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value tasksMax_ = null;
+      private com.google.protobuf.Int64Value tasksMax_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
       /**
@@ -9181,6 +9517,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+       * @return Whether the tasksMax field is set.
        */
       public boolean hasTasksMax() {
         return tasksMaxBuilder_ != null || tasksMax_ != null;
@@ -9191,6 +9528,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
+       * @return The tasksMax.
        */
       public com.google.protobuf.Int64Value getTasksMax() {
         if (tasksMaxBuilder_ == null) {
@@ -9360,14 +9698,16 @@ public final class ConnectorOuterClass {
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
 
+      @java.lang.Override
       public boolean containsProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetProperties().getMap().containsKey(key);
       }
       /**
        * Use {@link #getPropertiesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getProperties() {
         return getPropertiesMap();
@@ -9380,6 +9720,7 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
         return internalGetProperties().getMap();
@@ -9392,11 +9733,12 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -9409,10 +9751,11 @@ public final class ConnectorOuterClass {
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getPropertiesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetProperties().getMap();
         if (!map.containsKey(key)) {
@@ -9437,7 +9780,7 @@ public final class ConnectorOuterClass {
 
       public Builder removeProperties(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableProperties().getMutableMap()
             .remove(key);
         return this;
@@ -9461,8 +9804,11 @@ public final class ConnectorOuterClass {
       public Builder putProperties(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableProperties().getMutableMap()
             .put(key, value);
         return this;
@@ -9490,8 +9836,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -9500,8 +9847,11 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -9512,7 +9862,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health result = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health.valueOf(health_);
@@ -9524,6 +9876,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Health value) {
         if (value == null) {
@@ -9540,6 +9894,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Health health = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -9555,8 +9910,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -9565,8 +9921,11 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -9577,7 +9936,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status result = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status.valueOf(status_);
@@ -9589,6 +9950,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.Status value) {
         if (value == null) {
@@ -9605,6 +9968,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Connector.Status status = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -9620,6 +9984,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -9639,6 +10004,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -9659,6 +10025,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -9676,6 +10044,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -9689,6 +10058,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9706,13 +10077,17 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerOrBuilder> connectorConfigMirrormakerBuilder_;
       /**
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
+       * @return Whether the connectorConfigMirrormaker field is set.
        */
+      @java.lang.Override
       public boolean hasConnectorConfigMirrormaker() {
         return connectorConfigCase_ == 10;
       }
       /**
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
+       * @return The connectorConfigMirrormaker.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker getConnectorConfigMirrormaker() {
         if (connectorConfigMirrormakerBuilder_ == null) {
           if (connectorConfigCase_ == 10) {
@@ -9806,6 +10181,7 @@ public final class ConnectorOuterClass {
       /**
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerOrBuilder getConnectorConfigMirrormakerOrBuilder() {
         if ((connectorConfigCase_ == 10) && (connectorConfigMirrormakerBuilder_ != null)) {
           return connectorConfigMirrormakerBuilder_.getMessageOrBuilder();
@@ -9840,7 +10216,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9901,6 +10277,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
+     * @return Whether the sourceCluster field is set.
      */
     boolean hasSourceCluster();
     /**
@@ -9910,6 +10287,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
+     * @return The sourceCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getSourceCluster();
     /**
@@ -9929,6 +10307,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
+     * @return Whether the targetCluster field is set.
      */
     boolean hasTargetCluster();
     /**
@@ -9938,6 +10317,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
+     * @return The targetCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getTargetCluster();
     /**
@@ -9956,6 +10336,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The topics.
      */
     java.lang.String getTopics();
     /**
@@ -9964,6 +10345,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The bytes for topics.
      */
     com.google.protobuf.ByteString
         getTopicsBytes();
@@ -9974,6 +10356,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return Whether the replicationFactor field is set.
      */
     boolean hasReplicationFactor();
     /**
@@ -9982,6 +10365,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return The replicationFactor.
      */
     com.google.protobuf.Int64Value getReplicationFactor();
     /**
@@ -10001,7 +10385,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker}
    */
-  public  static final class ConnectorConfigMirrorMaker extends
+  public static final class ConnectorConfigMirrorMaker extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker)
       ConnectorConfigMirrorMakerOrBuilder {
@@ -10012,6 +10396,13 @@ public final class ConnectorOuterClass {
     }
     private ConnectorConfigMirrorMaker() {
       topics_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectorConfigMirrorMaker();
     }
 
     @java.lang.Override
@@ -10027,7 +10418,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10084,7 +10474,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10124,7 +10514,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
+     * @return Whether the sourceCluster field is set.
      */
+    @java.lang.Override
     public boolean hasSourceCluster() {
       return sourceCluster_ != null;
     }
@@ -10135,7 +10527,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
+     * @return The sourceCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getSourceCluster() {
       return sourceCluster_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.getDefaultInstance() : sourceCluster_;
     }
@@ -10147,6 +10541,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionOrBuilder getSourceClusterOrBuilder() {
       return getSourceCluster();
     }
@@ -10160,7 +10555,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
+     * @return Whether the targetCluster field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCluster() {
       return targetCluster_ != null;
     }
@@ -10171,7 +10568,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
+     * @return The targetCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getTargetCluster() {
       return targetCluster_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.getDefaultInstance() : targetCluster_;
     }
@@ -10183,6 +10582,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionOrBuilder getTargetClusterOrBuilder() {
       return getTargetCluster();
     }
@@ -10195,7 +10595,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The topics.
      */
+    @java.lang.Override
     public java.lang.String getTopics() {
       java.lang.Object ref = topics_;
       if (ref instanceof java.lang.String) {
@@ -10214,7 +10616,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string topics = 3;</code>
+     * @return The bytes for topics.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicsBytes() {
       java.lang.Object ref = topics_;
@@ -10237,7 +10641,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return Whether the replicationFactor field is set.
      */
+    @java.lang.Override
     public boolean hasReplicationFactor() {
       return replicationFactor_ != null;
     }
@@ -10247,7 +10653,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return The replicationFactor.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReplicationFactor() {
       return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
     }
@@ -10258,6 +10666,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
       return getReplicationFactor();
     }
@@ -10282,7 +10691,7 @@ public final class ConnectorOuterClass {
       if (targetCluster_ != null) {
         output.writeMessage(2, getTargetCluster());
       }
-      if (!getTopicsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topics_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, topics_);
       }
       if (replicationFactor_ != null) {
@@ -10305,7 +10714,7 @@ public final class ConnectorOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTargetCluster());
       }
-      if (!getTopicsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topics_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, topics_);
       }
       if (replicationFactor_ != null) {
@@ -10327,26 +10736,25 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker) obj;
 
-      boolean result = true;
-      result = result && (hasSourceCluster() == other.hasSourceCluster());
+      if (hasSourceCluster() != other.hasSourceCluster()) return false;
       if (hasSourceCluster()) {
-        result = result && getSourceCluster()
-            .equals(other.getSourceCluster());
+        if (!getSourceCluster()
+            .equals(other.getSourceCluster())) return false;
       }
-      result = result && (hasTargetCluster() == other.hasTargetCluster());
+      if (hasTargetCluster() != other.hasTargetCluster()) return false;
       if (hasTargetCluster()) {
-        result = result && getTargetCluster()
-            .equals(other.getTargetCluster());
+        if (!getTargetCluster()
+            .equals(other.getTargetCluster())) return false;
       }
-      result = result && getTopics()
-          .equals(other.getTopics());
-      result = result && (hasReplicationFactor() == other.hasReplicationFactor());
+      if (!getTopics()
+          .equals(other.getTopics())) return false;
+      if (hasReplicationFactor() != other.hasReplicationFactor()) return false;
       if (hasReplicationFactor()) {
-        result = result && getReplicationFactor()
-            .equals(other.getReplicationFactor());
+        if (!getReplicationFactor()
+            .equals(other.getReplicationFactor())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10576,35 +10984,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10660,7 +11068,7 @@ public final class ConnectorOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection sourceCluster_ = null;
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection sourceCluster_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionOrBuilder> sourceClusterBuilder_;
       /**
@@ -10670,6 +11078,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
+       * @return Whether the sourceCluster field is set.
        */
       public boolean hasSourceCluster() {
         return sourceClusterBuilder_ != null || sourceCluster_ != null;
@@ -10681,6 +11090,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
+       * @return The sourceCluster.
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getSourceCluster() {
         if (sourceClusterBuilder_ == null) {
@@ -10822,7 +11232,7 @@ public final class ConnectorOuterClass {
         return sourceClusterBuilder_;
       }
 
-      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection targetCluster_ = null;
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection targetCluster_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionOrBuilder> targetClusterBuilder_;
       /**
@@ -10832,6 +11242,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
+       * @return Whether the targetCluster field is set.
        */
       public boolean hasTargetCluster() {
         return targetClusterBuilder_ != null || targetCluster_ != null;
@@ -10843,6 +11254,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
+       * @return The targetCluster.
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getTargetCluster() {
         if (targetClusterBuilder_ == null) {
@@ -10991,6 +11403,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @return The topics.
        */
       public java.lang.String getTopics() {
         java.lang.Object ref = topics_;
@@ -11010,6 +11423,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @return The bytes for topics.
        */
       public com.google.protobuf.ByteString
           getTopicsBytes() {
@@ -11030,6 +11444,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @param value The topics to set.
+       * @return This builder for chaining.
        */
       public Builder setTopics(
           java.lang.String value) {
@@ -11047,6 +11463,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTopics() {
         
@@ -11060,6 +11477,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string topics = 3;</code>
+       * @param value The bytes for topics to set.
+       * @return This builder for chaining.
        */
       public Builder setTopicsBytes(
           com.google.protobuf.ByteString value) {
@@ -11073,7 +11492,7 @@ public final class ConnectorOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value replicationFactor_ = null;
+      private com.google.protobuf.Int64Value replicationFactor_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationFactorBuilder_;
       /**
@@ -11082,6 +11501,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       * @return Whether the replicationFactor field is set.
        */
       public boolean hasReplicationFactor() {
         return replicationFactorBuilder_ != null || replicationFactor_ != null;
@@ -11092,6 +11512,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       * @return The replicationFactor.
        */
       public com.google.protobuf.Int64Value getReplicationFactor() {
         if (replicationFactorBuilder_ == null) {
@@ -11228,7 +11649,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11289,6 +11710,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The alias.
      */
     java.lang.String getAlias();
     /**
@@ -11298,6 +11720,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The bytes for alias.
      */
     com.google.protobuf.ByteString
         getAliasBytes();
@@ -11310,6 +11733,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
+     * @return Whether the thisCluster field is set.
      */
     boolean hasThisCluster();
     /**
@@ -11320,6 +11744,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
+     * @return The thisCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster getThisCluster();
     /**
@@ -11341,6 +11766,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
+     * @return Whether the externalCluster field is set.
      */
     boolean hasExternalCluster();
     /**
@@ -11351,6 +11777,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
+     * @return The externalCluster.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection getExternalCluster();
     /**
@@ -11377,7 +11804,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ClusterConnection}
    */
-  public  static final class ClusterConnection extends
+  public static final class ClusterConnection extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ClusterConnection)
       ClusterConnectionOrBuilder {
@@ -11388,6 +11815,13 @@ public final class ConnectorOuterClass {
     }
     private ClusterConnection() {
       alias_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClusterConnection();
     }
 
     @java.lang.Override
@@ -11403,7 +11837,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11449,7 +11882,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11483,7 +11916,8 @@ public final class ConnectorOuterClass {
     private int clusterConnectionCase_ = 0;
     private java.lang.Object clusterConnection_;
     public enum ClusterConnectionCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       THIS_CLUSTER(2),
       EXTERNAL_CLUSTER(3),
       CLUSTERCONNECTION_NOT_SET(0);
@@ -11492,6 +11926,8 @@ public final class ConnectorOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -11527,7 +11963,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -11547,7 +11985,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string alias = 1;</code>
+     * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -11571,7 +12011,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
+     * @return Whether the thisCluster field is set.
      */
+    @java.lang.Override
     public boolean hasThisCluster() {
       return clusterConnectionCase_ == 2;
     }
@@ -11583,7 +12025,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
+     * @return The thisCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster getThisCluster() {
       if (clusterConnectionCase_ == 2) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster) clusterConnection_;
@@ -11599,6 +12043,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterOrBuilder getThisClusterOrBuilder() {
       if (clusterConnectionCase_ == 2) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster) clusterConnection_;
@@ -11615,7 +12060,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
+     * @return Whether the externalCluster field is set.
      */
+    @java.lang.Override
     public boolean hasExternalCluster() {
       return clusterConnectionCase_ == 3;
     }
@@ -11627,7 +12074,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
+     * @return The externalCluster.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection getExternalCluster() {
       if (clusterConnectionCase_ == 3) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection) clusterConnection_;
@@ -11643,6 +12092,7 @@ public final class ConnectorOuterClass {
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionOrBuilder getExternalClusterOrBuilder() {
       if (clusterConnectionCase_ == 3) {
          return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection) clusterConnection_;
@@ -11664,7 +12114,7 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAliasBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alias_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, alias_);
       }
       if (clusterConnectionCase_ == 2) {
@@ -11682,7 +12132,7 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAliasBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alias_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, alias_);
       }
       if (clusterConnectionCase_ == 2) {
@@ -11708,26 +12158,23 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection) obj;
 
-      boolean result = true;
-      result = result && getAlias()
-          .equals(other.getAlias());
-      result = result && getClusterConnectionCase().equals(
-          other.getClusterConnectionCase());
-      if (!result) return false;
+      if (!getAlias()
+          .equals(other.getAlias())) return false;
+      if (!getClusterConnectionCase().equals(other.getClusterConnectionCase())) return false;
       switch (clusterConnectionCase_) {
         case 2:
-          result = result && getThisCluster()
-              .equals(other.getThisCluster());
+          if (!getThisCluster()
+              .equals(other.getThisCluster())) return false;
           break;
         case 3:
-          result = result && getExternalCluster()
-              .equals(other.getExternalCluster());
+          if (!getExternalCluster()
+              .equals(other.getExternalCluster())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11944,35 +12391,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12055,6 +12502,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @return The alias.
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -12075,6 +12523,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @return The bytes for alias.
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -12096,6 +12545,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @param value The alias to set.
+       * @return This builder for chaining.
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -12114,6 +12565,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlias() {
         
@@ -12128,6 +12580,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string alias = 1;</code>
+       * @param value The bytes for alias to set.
+       * @return This builder for chaining.
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -12151,7 +12605,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
+       * @return Whether the thisCluster field is set.
        */
+      @java.lang.Override
       public boolean hasThisCluster() {
         return clusterConnectionCase_ == 2;
       }
@@ -12163,7 +12619,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
+       * @return The thisCluster.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster getThisCluster() {
         if (thisClusterBuilder_ == null) {
           if (clusterConnectionCase_ == 2) {
@@ -12293,6 +12751,7 @@ public final class ConnectorOuterClass {
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterOrBuilder getThisClusterOrBuilder() {
         if ((clusterConnectionCase_ == 2) && (thisClusterBuilder_ != null)) {
           return thisClusterBuilder_.getMessageOrBuilder();
@@ -12341,7 +12800,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
+       * @return Whether the externalCluster field is set.
        */
+      @java.lang.Override
       public boolean hasExternalCluster() {
         return clusterConnectionCase_ == 3;
       }
@@ -12353,7 +12814,9 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
+       * @return The externalCluster.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection getExternalCluster() {
         if (externalClusterBuilder_ == null) {
           if (clusterConnectionCase_ == 3) {
@@ -12483,6 +12946,7 @@ public final class ConnectorOuterClass {
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionOrBuilder getExternalClusterOrBuilder() {
         if ((clusterConnectionCase_ == 3) && (externalClusterBuilder_ != null)) {
           return externalClusterBuilder_.getMessageOrBuilder();
@@ -12523,7 +12987,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12585,7 +13049,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ThisCluster}
    */
-  public  static final class ThisCluster extends
+  public static final class ThisCluster extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ThisCluster)
       ThisClusterOrBuilder {
@@ -12595,6 +13059,13 @@ public final class ConnectorOuterClass {
       super(builder);
     }
     private ThisCluster() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ThisCluster();
     }
 
     @java.lang.Override
@@ -12621,7 +13092,7 @@ public final class ConnectorOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12690,9 +13161,8 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12872,35 +13342,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12945,7 +13415,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13006,6 +13476,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bootstrapServers.
      */
     java.lang.String getBootstrapServers();
     /**
@@ -13015,6 +13486,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bytes for bootstrapServers.
      */
     com.google.protobuf.ByteString
         getBootstrapServersBytes();
@@ -13026,6 +13498,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The saslUsername.
      */
     java.lang.String getSaslUsername();
     /**
@@ -13035,6 +13508,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The bytes for saslUsername.
      */
     com.google.protobuf.ByteString
         getSaslUsernameBytes();
@@ -13046,6 +13520,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The saslMechanism.
      */
     java.lang.String getSaslMechanism();
     /**
@@ -13055,6 +13530,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The bytes for saslMechanism.
      */
     com.google.protobuf.ByteString
         getSaslMechanismBytes();
@@ -13067,6 +13543,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The securityProtocol.
      */
     java.lang.String getSecurityProtocol();
     /**
@@ -13077,6 +13554,7 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The bytes for securityProtocol.
      */
     com.google.protobuf.ByteString
         getSecurityProtocolBytes();
@@ -13091,7 +13569,7 @@ public final class ConnectorOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalClusterConnection}
    */
-  public  static final class ExternalClusterConnection extends
+  public static final class ExternalClusterConnection extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ExternalClusterConnection)
       ExternalClusterConnectionOrBuilder {
@@ -13108,6 +13586,13 @@ public final class ConnectorOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalClusterConnection();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -13120,7 +13605,6 @@ public final class ConnectorOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13156,7 +13640,7 @@ public final class ConnectorOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13196,7 +13680,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bootstrapServers.
      */
+    @java.lang.Override
     public java.lang.String getBootstrapServers() {
       java.lang.Object ref = bootstrapServers_;
       if (ref instanceof java.lang.String) {
@@ -13216,7 +13702,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
+     * @return The bytes for bootstrapServers.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBootstrapServersBytes() {
       java.lang.Object ref = bootstrapServers_;
@@ -13240,7 +13728,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The saslUsername.
      */
+    @java.lang.Override
     public java.lang.String getSaslUsername() {
       java.lang.Object ref = saslUsername_;
       if (ref instanceof java.lang.String) {
@@ -13260,7 +13750,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
+     * @return The bytes for saslUsername.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSaslUsernameBytes() {
       java.lang.Object ref = saslUsername_;
@@ -13284,7 +13776,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The saslMechanism.
      */
+    @java.lang.Override
     public java.lang.String getSaslMechanism() {
       java.lang.Object ref = saslMechanism_;
       if (ref instanceof java.lang.String) {
@@ -13304,7 +13798,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
+     * @return The bytes for saslMechanism.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSaslMechanismBytes() {
       java.lang.Object ref = saslMechanism_;
@@ -13329,7 +13825,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The securityProtocol.
      */
+    @java.lang.Override
     public java.lang.String getSecurityProtocol() {
       java.lang.Object ref = securityProtocol_;
       if (ref instanceof java.lang.String) {
@@ -13350,7 +13848,9 @@ public final class ConnectorOuterClass {
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
+     * @return The bytes for securityProtocol.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecurityProtocolBytes() {
       java.lang.Object ref = securityProtocol_;
@@ -13379,16 +13879,16 @@ public final class ConnectorOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBootstrapServersBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bootstrapServers_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bootstrapServers_);
       }
-      if (!getSaslUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, saslUsername_);
       }
-      if (!getSaslMechanismBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslMechanism_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, saslMechanism_);
       }
-      if (!getSecurityProtocolBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityProtocol_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityProtocol_);
       }
       unknownFields.writeTo(output);
@@ -13400,16 +13900,16 @@ public final class ConnectorOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBootstrapServersBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bootstrapServers_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bootstrapServers_);
       }
-      if (!getSaslUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, saslUsername_);
       }
-      if (!getSaslMechanismBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslMechanism_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, saslMechanism_);
       }
-      if (!getSecurityProtocolBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityProtocol_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, securityProtocol_);
       }
       size += unknownFields.getSerializedSize();
@@ -13427,17 +13927,16 @@ public final class ConnectorOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection) obj;
 
-      boolean result = true;
-      result = result && getBootstrapServers()
-          .equals(other.getBootstrapServers());
-      result = result && getSaslUsername()
-          .equals(other.getSaslUsername());
-      result = result && getSaslMechanism()
-          .equals(other.getSaslMechanism());
-      result = result && getSecurityProtocol()
-          .equals(other.getSecurityProtocol());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBootstrapServers()
+          .equals(other.getBootstrapServers())) return false;
+      if (!getSaslUsername()
+          .equals(other.getSaslUsername())) return false;
+      if (!getSaslMechanism()
+          .equals(other.getSaslMechanism())) return false;
+      if (!getSecurityProtocol()
+          .equals(other.getSecurityProtocol())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13639,35 +14138,35 @@ public final class ConnectorOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13734,6 +14233,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @return The bootstrapServers.
        */
       public java.lang.String getBootstrapServers() {
         java.lang.Object ref = bootstrapServers_;
@@ -13754,6 +14254,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @return The bytes for bootstrapServers.
        */
       public com.google.protobuf.ByteString
           getBootstrapServersBytes() {
@@ -13775,6 +14276,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @param value The bootstrapServers to set.
+       * @return This builder for chaining.
        */
       public Builder setBootstrapServers(
           java.lang.String value) {
@@ -13793,6 +14296,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBootstrapServers() {
         
@@ -13807,6 +14311,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
+       * @param value The bytes for bootstrapServers to set.
+       * @return This builder for chaining.
        */
       public Builder setBootstrapServersBytes(
           com.google.protobuf.ByteString value) {
@@ -13828,6 +14334,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @return The saslUsername.
        */
       public java.lang.String getSaslUsername() {
         java.lang.Object ref = saslUsername_;
@@ -13848,6 +14355,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @return The bytes for saslUsername.
        */
       public com.google.protobuf.ByteString
           getSaslUsernameBytes() {
@@ -13869,6 +14377,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @param value The saslUsername to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslUsername(
           java.lang.String value) {
@@ -13887,6 +14397,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSaslUsername() {
         
@@ -13901,6 +14412,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
+       * @param value The bytes for saslUsername to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslUsernameBytes(
           com.google.protobuf.ByteString value) {
@@ -13922,6 +14435,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @return The saslMechanism.
        */
       public java.lang.String getSaslMechanism() {
         java.lang.Object ref = saslMechanism_;
@@ -13942,6 +14456,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @return The bytes for saslMechanism.
        */
       public com.google.protobuf.ByteString
           getSaslMechanismBytes() {
@@ -13963,6 +14478,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @param value The saslMechanism to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslMechanism(
           java.lang.String value) {
@@ -13981,6 +14498,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSaslMechanism() {
         
@@ -13995,6 +14513,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
+       * @param value The bytes for saslMechanism to set.
+       * @return This builder for chaining.
        */
       public Builder setSaslMechanismBytes(
           com.google.protobuf.ByteString value) {
@@ -14017,6 +14537,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @return The securityProtocol.
        */
       public java.lang.String getSecurityProtocol() {
         java.lang.Object ref = securityProtocol_;
@@ -14038,6 +14559,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @return The bytes for securityProtocol.
        */
       public com.google.protobuf.ByteString
           getSecurityProtocolBytes() {
@@ -14060,6 +14582,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @param value The securityProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityProtocol(
           java.lang.String value) {
@@ -14079,6 +14603,7 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityProtocol() {
         
@@ -14094,6 +14619,8 @@ public final class ConnectorOuterClass {
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
+       * @param value The bytes for securityProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityProtocolBytes(
           com.google.protobuf.ByteString value) {
@@ -14109,7 +14636,7 @@ public final class ConnectorOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14308,19 +14835,11 @@ public final class ConnectorOuterClass {
       "oto/yandex/cloud/mdb/kafka/v1;kafkab\006pro" +
       "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_fieldAccessorTable = new

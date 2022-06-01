@@ -28,6 +28,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * @return Whether the maxClauseCount field is set.
      */
     boolean hasMaxClauseCount();
     /**
@@ -40,6 +41,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * @return The maxClauseCount.
      */
     com.google.protobuf.Int64Value getMaxClauseCount();
     /**
@@ -65,6 +67,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string fielddata_cache_size = 4;</code>
+     * @return The fielddataCacheSize.
      */
     java.lang.String getFielddataCacheSize();
     /**
@@ -77,6 +80,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string fielddata_cache_size = 4;</code>
+     * @return The bytes for fielddataCacheSize.
      */
     com.google.protobuf.ByteString
         getFielddataCacheSizeBytes();
@@ -89,6 +93,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_remote_whitelist = 6;</code>
+     * @return The reindexRemoteWhitelist.
      */
     java.lang.String getReindexRemoteWhitelist();
     /**
@@ -99,6 +104,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_remote_whitelist = 6;</code>
+     * @return The bytes for reindexRemoteWhitelist.
      */
     com.google.protobuf.ByteString
         getReindexRemoteWhitelistBytes();
@@ -110,6 +116,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_ssl_ca_path = 7;</code>
+     * @return The reindexSslCaPath.
      */
     java.lang.String getReindexSslCaPath();
     /**
@@ -119,6 +126,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_ssl_ca_path = 7;</code>
+     * @return The bytes for reindexSslCaPath.
      */
     com.google.protobuf.ByteString
         getReindexSslCaPathBytes();
@@ -132,7 +140,7 @@ public final class Elasticsearch {
    *
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7}
    */
-  public  static final class ElasticsearchConfig7 extends
+  public static final class ElasticsearchConfig7 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7)
       ElasticsearchConfig7OrBuilder {
@@ -148,6 +156,13 @@ public final class Elasticsearch {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ElasticsearchConfig7();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -160,7 +175,6 @@ public final class Elasticsearch {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -203,7 +217,7 @@ public final class Elasticsearch {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -246,7 +260,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * @return Whether the maxClauseCount field is set.
      */
+    @java.lang.Override
     public boolean hasMaxClauseCount() {
       return maxClauseCount_ != null;
     }
@@ -260,7 +276,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * @return The maxClauseCount.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxClauseCount() {
       return maxClauseCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxClauseCount_;
     }
@@ -275,6 +293,7 @@ public final class Elasticsearch {
      *
      * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxClauseCountOrBuilder() {
       return getMaxClauseCount();
     }
@@ -291,7 +310,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string fielddata_cache_size = 4;</code>
+     * @return The fielddataCacheSize.
      */
+    @java.lang.Override
     public java.lang.String getFielddataCacheSize() {
       java.lang.Object ref = fielddataCacheSize_;
       if (ref instanceof java.lang.String) {
@@ -314,7 +335,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string fielddata_cache_size = 4;</code>
+     * @return The bytes for fielddataCacheSize.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFielddataCacheSizeBytes() {
       java.lang.Object ref = fielddataCacheSize_;
@@ -339,7 +362,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_remote_whitelist = 6;</code>
+     * @return The reindexRemoteWhitelist.
      */
+    @java.lang.Override
     public java.lang.String getReindexRemoteWhitelist() {
       java.lang.Object ref = reindexRemoteWhitelist_;
       if (ref instanceof java.lang.String) {
@@ -360,7 +385,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_remote_whitelist = 6;</code>
+     * @return The bytes for reindexRemoteWhitelist.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getReindexRemoteWhitelistBytes() {
       java.lang.Object ref = reindexRemoteWhitelist_;
@@ -384,7 +411,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_ssl_ca_path = 7;</code>
+     * @return The reindexSslCaPath.
      */
+    @java.lang.Override
     public java.lang.String getReindexSslCaPath() {
       java.lang.Object ref = reindexSslCaPath_;
       if (ref instanceof java.lang.String) {
@@ -404,7 +433,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>string reindex_ssl_ca_path = 7;</code>
+     * @return The bytes for reindexSslCaPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getReindexSslCaPathBytes() {
       java.lang.Object ref = reindexSslCaPath_;
@@ -436,13 +467,13 @@ public final class Elasticsearch {
       if (maxClauseCount_ != null) {
         output.writeMessage(3, getMaxClauseCount());
       }
-      if (!getFielddataCacheSizeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fielddataCacheSize_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fielddataCacheSize_);
       }
-      if (!getReindexRemoteWhitelistBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexRemoteWhitelist_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reindexRemoteWhitelist_);
       }
-      if (!getReindexSslCaPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexSslCaPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, reindexSslCaPath_);
       }
       unknownFields.writeTo(output);
@@ -458,13 +489,13 @@ public final class Elasticsearch {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMaxClauseCount());
       }
-      if (!getFielddataCacheSizeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fielddataCacheSize_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fielddataCacheSize_);
       }
-      if (!getReindexRemoteWhitelistBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexRemoteWhitelist_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reindexRemoteWhitelist_);
       }
-      if (!getReindexSslCaPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexSslCaPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, reindexSslCaPath_);
       }
       size += unknownFields.getSerializedSize();
@@ -482,20 +513,19 @@ public final class Elasticsearch {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 other = (yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7) obj;
 
-      boolean result = true;
-      result = result && (hasMaxClauseCount() == other.hasMaxClauseCount());
+      if (hasMaxClauseCount() != other.hasMaxClauseCount()) return false;
       if (hasMaxClauseCount()) {
-        result = result && getMaxClauseCount()
-            .equals(other.getMaxClauseCount());
+        if (!getMaxClauseCount()
+            .equals(other.getMaxClauseCount())) return false;
       }
-      result = result && getFielddataCacheSize()
-          .equals(other.getFielddataCacheSize());
-      result = result && getReindexRemoteWhitelist()
-          .equals(other.getReindexRemoteWhitelist());
-      result = result && getReindexSslCaPath()
-          .equals(other.getReindexSslCaPath());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFielddataCacheSize()
+          .equals(other.getFielddataCacheSize())) return false;
+      if (!getReindexRemoteWhitelist()
+          .equals(other.getReindexRemoteWhitelist())) return false;
+      if (!getReindexSslCaPath()
+          .equals(other.getReindexSslCaPath())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -706,35 +736,35 @@ public final class Elasticsearch {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -792,7 +822,7 @@ public final class Elasticsearch {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxClauseCount_ = null;
+      private com.google.protobuf.Int64Value maxClauseCount_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxClauseCountBuilder_;
       /**
@@ -805,6 +835,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * @return Whether the maxClauseCount field is set.
        */
       public boolean hasMaxClauseCount() {
         return maxClauseCountBuilder_ != null || maxClauseCount_ != null;
@@ -819,6 +850,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * @return The maxClauseCount.
        */
       public com.google.protobuf.Int64Value getMaxClauseCount() {
         if (maxClauseCountBuilder_ == null) {
@@ -992,6 +1024,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string fielddata_cache_size = 4;</code>
+       * @return The fielddataCacheSize.
        */
       public java.lang.String getFielddataCacheSize() {
         java.lang.Object ref = fielddataCacheSize_;
@@ -1015,6 +1048,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string fielddata_cache_size = 4;</code>
+       * @return The bytes for fielddataCacheSize.
        */
       public com.google.protobuf.ByteString
           getFielddataCacheSizeBytes() {
@@ -1039,6 +1073,8 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string fielddata_cache_size = 4;</code>
+       * @param value The fielddataCacheSize to set.
+       * @return This builder for chaining.
        */
       public Builder setFielddataCacheSize(
           java.lang.String value) {
@@ -1060,6 +1096,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string fielddata_cache_size = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFielddataCacheSize() {
         
@@ -1077,6 +1114,8 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string fielddata_cache_size = 4;</code>
+       * @param value The bytes for fielddataCacheSize to set.
+       * @return This builder for chaining.
        */
       public Builder setFielddataCacheSizeBytes(
           com.google.protobuf.ByteString value) {
@@ -1099,6 +1138,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_remote_whitelist = 6;</code>
+       * @return The reindexRemoteWhitelist.
        */
       public java.lang.String getReindexRemoteWhitelist() {
         java.lang.Object ref = reindexRemoteWhitelist_;
@@ -1120,6 +1160,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_remote_whitelist = 6;</code>
+       * @return The bytes for reindexRemoteWhitelist.
        */
       public com.google.protobuf.ByteString
           getReindexRemoteWhitelistBytes() {
@@ -1142,6 +1183,8 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_remote_whitelist = 6;</code>
+       * @param value The reindexRemoteWhitelist to set.
+       * @return This builder for chaining.
        */
       public Builder setReindexRemoteWhitelist(
           java.lang.String value) {
@@ -1161,6 +1204,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_remote_whitelist = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReindexRemoteWhitelist() {
         
@@ -1176,6 +1220,8 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_remote_whitelist = 6;</code>
+       * @param value The bytes for reindexRemoteWhitelist to set.
+       * @return This builder for chaining.
        */
       public Builder setReindexRemoteWhitelistBytes(
           com.google.protobuf.ByteString value) {
@@ -1197,6 +1243,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_ssl_ca_path = 7;</code>
+       * @return The reindexSslCaPath.
        */
       public java.lang.String getReindexSslCaPath() {
         java.lang.Object ref = reindexSslCaPath_;
@@ -1217,6 +1264,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_ssl_ca_path = 7;</code>
+       * @return The bytes for reindexSslCaPath.
        */
       public com.google.protobuf.ByteString
           getReindexSslCaPathBytes() {
@@ -1238,6 +1286,8 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_ssl_ca_path = 7;</code>
+       * @param value The reindexSslCaPath to set.
+       * @return This builder for chaining.
        */
       public Builder setReindexSslCaPath(
           java.lang.String value) {
@@ -1256,6 +1306,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_ssl_ca_path = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReindexSslCaPath() {
         
@@ -1270,6 +1321,8 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>string reindex_ssl_ca_path = 7;</code>
+       * @param value The bytes for reindexSslCaPath to set.
+       * @return This builder for chaining.
        */
       public Builder setReindexSslCaPathBytes(
           com.google.protobuf.ByteString value) {
@@ -1285,7 +1338,7 @@ public final class Elasticsearch {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1345,6 +1398,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -1353,6 +1407,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getEffectiveConfig();
     /**
@@ -1370,6 +1425,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -1378,6 +1434,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getUserConfig();
     /**
@@ -1395,6 +1452,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -1403,6 +1461,7 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getDefaultConfig();
     /**
@@ -1421,7 +1480,7 @@ public final class Elasticsearch {
    *
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfigSet7}
    */
-  public  static final class ElasticsearchConfigSet7 extends
+  public static final class ElasticsearchConfigSet7 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfigSet7)
       ElasticsearchConfigSet7OrBuilder {
@@ -1431,6 +1490,13 @@ public final class Elasticsearch {
       super(builder);
     }
     private ElasticsearchConfigSet7() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ElasticsearchConfigSet7();
     }
 
     @java.lang.Override
@@ -1446,7 +1512,6 @@ public final class Elasticsearch {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1497,7 +1562,7 @@ public final class Elasticsearch {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1536,7 +1601,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -1546,7 +1613,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7.getDefaultInstance() : effectiveConfig_;
     }
@@ -1557,6 +1626,7 @@ public final class Elasticsearch {
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7OrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -1569,7 +1639,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -1579,7 +1651,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7.getDefaultInstance() : userConfig_;
     }
@@ -1590,6 +1664,7 @@ public final class Elasticsearch {
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7OrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -1602,7 +1677,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -1612,7 +1689,9 @@ public final class Elasticsearch {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7.getDefaultInstance() : defaultConfig_;
     }
@@ -1623,6 +1702,7 @@ public final class Elasticsearch {
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7OrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -1686,24 +1766,23 @@ public final class Elasticsearch {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfigSet7 other = (yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfigSet7) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1927,35 +2006,35 @@ public final class Elasticsearch {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2007,7 +2086,7 @@ public final class Elasticsearch {
         return this;
       }
 
-      private yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7, yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7.Builder, yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7OrBuilder> effectiveConfigBuilder_;
       /**
@@ -2016,6 +2095,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -2026,6 +2106,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -2160,7 +2241,7 @@ public final class Elasticsearch {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 userConfig_ = null;
+      private yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7, yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7.Builder, yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7OrBuilder> userConfigBuilder_;
       /**
@@ -2169,6 +2250,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -2179,6 +2261,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -2313,7 +2396,7 @@ public final class Elasticsearch {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 defaultConfig_ = null;
+      private yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7, yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7.Builder, yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7OrBuilder> defaultConfigBuilder_;
       /**
@@ -2322,6 +2405,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -2332,6 +2416,7 @@ public final class Elasticsearch {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.config.ElasticsearchConfig7 default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.ElasticsearchConfig7 getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -2468,7 +2553,7 @@ public final class Elasticsearch {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2558,20 +2643,12 @@ public final class Elasticsearch {
       "oto/yandex/cloud/mdb/elasticsearch/v1/co" +
       "nfig;elasticsearchb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_config_ElasticsearchConfig7_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_config_ElasticsearchConfig7_fieldAccessorTable = new

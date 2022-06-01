@@ -1,25 +1,13 @@
 package yandex.cloud.api.mdb.elasticsearch.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/elasticsearch/v1/extension_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ExtensionServiceGrpc {
 
   private ExtensionServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class ExtensionServiceGrpc {
     if ((getGetMethod = ExtensionServiceGrpc.getGetMethod) == null) {
       synchronized (ExtensionServiceGrpc.class) {
         if ((getGetMethod = ExtensionServiceGrpc.getGetMethod) == null) {
-          ExtensionServiceGrpc.getGetMethod = getGetMethod = 
+          ExtensionServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest, yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ExtensionService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest,
@@ -73,22 +60,21 @@ public final class ExtensionServiceGrpc {
     if ((getListMethod = ExtensionServiceGrpc.getListMethod) == null) {
       synchronized (ExtensionServiceGrpc.class) {
         if ((getListMethod = ExtensionServiceGrpc.getListMethod) == null) {
-          ExtensionServiceGrpc.getListMethod = getListMethod = 
+          ExtensionServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ExtensionService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest,
@@ -105,22 +91,21 @@ public final class ExtensionServiceGrpc {
     if ((getCreateMethod = ExtensionServiceGrpc.getCreateMethod) == null) {
       synchronized (ExtensionServiceGrpc.class) {
         if ((getCreateMethod = ExtensionServiceGrpc.getCreateMethod) == null) {
-          ExtensionServiceGrpc.getCreateMethod = getCreateMethod = 
+          ExtensionServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ExtensionService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest,
@@ -137,22 +122,21 @@ public final class ExtensionServiceGrpc {
     if ((getUpdateMethod = ExtensionServiceGrpc.getUpdateMethod) == null) {
       synchronized (ExtensionServiceGrpc.class) {
         if ((getUpdateMethod = ExtensionServiceGrpc.getUpdateMethod) == null) {
-          ExtensionServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          ExtensionServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ExtensionService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest,
@@ -169,29 +153,35 @@ public final class ExtensionServiceGrpc {
     if ((getDeleteMethod = ExtensionServiceGrpc.getDeleteMethod) == null) {
       synchronized (ExtensionServiceGrpc.class) {
         if ((getDeleteMethod = ExtensionServiceGrpc.getDeleteMethod) == null) {
-          ExtensionServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          ExtensionServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ExtensionService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ExtensionServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ExtensionServiceStub newStub(io.grpc.Channel channel) {
-    return new ExtensionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionServiceStub>() {
+        @java.lang.Override
+        public ExtensionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionServiceStub(channel, callOptions);
+        }
+      };
+    return ExtensionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -199,7 +189,14 @@ public final class ExtensionServiceGrpc {
    */
   public static ExtensionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ExtensionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionServiceBlockingStub>() {
+        @java.lang.Override
+        public ExtensionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ExtensionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -207,7 +204,14 @@ public final class ExtensionServiceGrpc {
    */
   public static ExtensionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ExtensionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionServiceFutureStub>() {
+        @java.lang.Override
+        public ExtensionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ExtensionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -221,7 +225,7 @@ public final class ExtensionServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -231,7 +235,7 @@ public final class ExtensionServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -241,7 +245,7 @@ public final class ExtensionServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -251,7 +255,7 @@ public final class ExtensionServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -261,42 +265,42 @@ public final class ExtensionServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -307,19 +311,15 @@ public final class ExtensionServiceGrpc {
 
   /**
    */
-  public static final class ExtensionServiceStub extends io.grpc.stub.AbstractStub<ExtensionServiceStub> {
-    private ExtensionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExtensionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExtensionServiceStub extends io.grpc.stub.AbstractAsyncStub<ExtensionServiceStub> {
+    private ExtensionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExtensionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExtensionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExtensionServiceStub(channel, callOptions);
     }
 
@@ -330,7 +330,7 @@ public final class ExtensionServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -341,7 +341,7 @@ public final class ExtensionServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -352,7 +352,7 @@ public final class ExtensionServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -363,7 +363,7 @@ public final class ExtensionServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -374,26 +374,22 @@ public final class ExtensionServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class ExtensionServiceBlockingStub extends io.grpc.stub.AbstractStub<ExtensionServiceBlockingStub> {
-    private ExtensionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExtensionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExtensionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExtensionServiceBlockingStub> {
+    private ExtensionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExtensionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExtensionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExtensionServiceBlockingStub(channel, callOptions);
     }
 
@@ -403,7 +399,7 @@ public final class ExtensionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension get(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -413,7 +409,7 @@ public final class ExtensionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse list(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -423,7 +419,7 @@ public final class ExtensionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -433,7 +429,7 @@ public final class ExtensionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -443,26 +439,22 @@ public final class ExtensionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class ExtensionServiceFutureStub extends io.grpc.stub.AbstractStub<ExtensionServiceFutureStub> {
-    private ExtensionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ExtensionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ExtensionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExtensionServiceFutureStub> {
+    private ExtensionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ExtensionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ExtensionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ExtensionServiceFutureStub(channel, callOptions);
     }
 
@@ -473,7 +465,7 @@ public final class ExtensionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension> get(
         yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.GetExtensionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -484,7 +476,7 @@ public final class ExtensionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsResponse> list(
         yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.ListExtensionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -495,7 +487,7 @@ public final class ExtensionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.CreateExtensionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -506,7 +498,7 @@ public final class ExtensionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.UpdateExtensionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -517,7 +509,7 @@ public final class ExtensionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.elasticsearch.v1.ExtensionServiceOuterClass.DeleteExtensionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

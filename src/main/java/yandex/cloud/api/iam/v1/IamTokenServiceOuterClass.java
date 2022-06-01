@@ -25,6 +25,17 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string yandex_passport_oauth_token = 1;</code>
+     * @return Whether the yandexPassportOauthToken field is set.
+     */
+    boolean hasYandexPassportOauthToken();
+    /**
+     * <pre>
+     * OAuth token for a Yandex account.
+     * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
+     * </pre>
+     *
+     * <code>string yandex_passport_oauth_token = 1;</code>
+     * @return The yandexPassportOauthToken.
      */
     java.lang.String getYandexPassportOauthToken();
     /**
@@ -34,6 +45,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string yandex_passport_oauth_token = 1;</code>
+     * @return The bytes for yandexPassportOauthToken.
      */
     com.google.protobuf.ByteString
         getYandexPassportOauthTokenBytes();
@@ -45,6 +57,17 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string jwt = 2;</code>
+     * @return Whether the jwt field is set.
+     */
+    boolean hasJwt();
+    /**
+     * <pre>
+     * JSON Web Token (JWT) for a service account.
+     * For more information, see [Get IAM token for a service account](/docs/iam/operations/iam-token/create-for-sa).
+     * </pre>
+     *
+     * <code>string jwt = 2;</code>
+     * @return The jwt.
      */
     java.lang.String getJwt();
     /**
@@ -54,6 +77,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string jwt = 2;</code>
+     * @return The bytes for jwt.
      */
     com.google.protobuf.ByteString
         getJwtBytes();
@@ -63,7 +87,7 @@ public final class IamTokenServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.CreateIamTokenRequest}
    */
-  public  static final class CreateIamTokenRequest extends
+  public static final class CreateIamTokenRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.CreateIamTokenRequest)
       CreateIamTokenRequestOrBuilder {
@@ -73,6 +97,13 @@ public final class IamTokenServiceOuterClass {
       super(builder);
     }
     private CreateIamTokenRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateIamTokenRequest();
     }
 
     @java.lang.Override
@@ -88,7 +119,6 @@ public final class IamTokenServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,7 +142,7 @@ public final class IamTokenServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -146,7 +176,8 @@ public final class IamTokenServiceOuterClass {
     private int identityCase_ = 0;
     private java.lang.Object identity_;
     public enum IdentityCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       YANDEX_PASSPORT_OAUTH_TOKEN(1),
       JWT(2),
       IDENTITY_NOT_SET(0);
@@ -155,6 +186,8 @@ public final class IamTokenServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -189,6 +222,19 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string yandex_passport_oauth_token = 1;</code>
+     * @return Whether the yandexPassportOauthToken field is set.
+     */
+    public boolean hasYandexPassportOauthToken() {
+      return identityCase_ == 1;
+    }
+    /**
+     * <pre>
+     * OAuth token for a Yandex account.
+     * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
+     * </pre>
+     *
+     * <code>string yandex_passport_oauth_token = 1;</code>
+     * @return The yandexPassportOauthToken.
      */
     public java.lang.String getYandexPassportOauthToken() {
       java.lang.Object ref = "";
@@ -214,6 +260,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string yandex_passport_oauth_token = 1;</code>
+     * @return The bytes for yandexPassportOauthToken.
      */
     public com.google.protobuf.ByteString
         getYandexPassportOauthTokenBytes() {
@@ -242,6 +289,19 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string jwt = 2;</code>
+     * @return Whether the jwt field is set.
+     */
+    public boolean hasJwt() {
+      return identityCase_ == 2;
+    }
+    /**
+     * <pre>
+     * JSON Web Token (JWT) for a service account.
+     * For more information, see [Get IAM token for a service account](/docs/iam/operations/iam-token/create-for-sa).
+     * </pre>
+     *
+     * <code>string jwt = 2;</code>
+     * @return The jwt.
      */
     public java.lang.String getJwt() {
       java.lang.Object ref = "";
@@ -267,6 +327,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string jwt = 2;</code>
+     * @return The bytes for jwt.
      */
     public com.google.protobuf.ByteString
         getJwtBytes() {
@@ -337,24 +398,21 @@ public final class IamTokenServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest other = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest) obj;
 
-      boolean result = true;
-      result = result && getIdentityCase().equals(
-          other.getIdentityCase());
-      if (!result) return false;
+      if (!getIdentityCase().equals(other.getIdentityCase())) return false;
       switch (identityCase_) {
         case 1:
-          result = result && getYandexPassportOauthToken()
-              .equals(other.getYandexPassportOauthToken());
+          if (!getYandexPassportOauthToken()
+              .equals(other.getYandexPassportOauthToken())) return false;
           break;
         case 2:
-          result = result && getJwt()
-              .equals(other.getJwt());
+          if (!getJwt()
+              .equals(other.getJwt())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -550,35 +608,35 @@ public final class IamTokenServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -660,7 +718,22 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string yandex_passport_oauth_token = 1;</code>
+       * @return Whether the yandexPassportOauthToken field is set.
        */
+      @java.lang.Override
+      public boolean hasYandexPassportOauthToken() {
+        return identityCase_ == 1;
+      }
+      /**
+       * <pre>
+       * OAuth token for a Yandex account.
+       * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
+       * </pre>
+       *
+       * <code>string yandex_passport_oauth_token = 1;</code>
+       * @return The yandexPassportOauthToken.
+       */
+      @java.lang.Override
       public java.lang.String getYandexPassportOauthToken() {
         java.lang.Object ref = "";
         if (identityCase_ == 1) {
@@ -685,7 +758,9 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string yandex_passport_oauth_token = 1;</code>
+       * @return The bytes for yandexPassportOauthToken.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getYandexPassportOauthTokenBytes() {
         java.lang.Object ref = "";
@@ -711,6 +786,8 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string yandex_passport_oauth_token = 1;</code>
+       * @param value The yandexPassportOauthToken to set.
+       * @return This builder for chaining.
        */
       public Builder setYandexPassportOauthToken(
           java.lang.String value) {
@@ -729,6 +806,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string yandex_passport_oauth_token = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearYandexPassportOauthToken() {
         if (identityCase_ == 1) {
@@ -745,6 +823,8 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string yandex_passport_oauth_token = 1;</code>
+       * @param value The bytes for yandexPassportOauthToken to set.
+       * @return This builder for chaining.
        */
       public Builder setYandexPassportOauthTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -765,7 +845,22 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string jwt = 2;</code>
+       * @return Whether the jwt field is set.
        */
+      @java.lang.Override
+      public boolean hasJwt() {
+        return identityCase_ == 2;
+      }
+      /**
+       * <pre>
+       * JSON Web Token (JWT) for a service account.
+       * For more information, see [Get IAM token for a service account](/docs/iam/operations/iam-token/create-for-sa).
+       * </pre>
+       *
+       * <code>string jwt = 2;</code>
+       * @return The jwt.
+       */
+      @java.lang.Override
       public java.lang.String getJwt() {
         java.lang.Object ref = "";
         if (identityCase_ == 2) {
@@ -790,7 +885,9 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string jwt = 2;</code>
+       * @return The bytes for jwt.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getJwtBytes() {
         java.lang.Object ref = "";
@@ -816,6 +913,8 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string jwt = 2;</code>
+       * @param value The jwt to set.
+       * @return This builder for chaining.
        */
       public Builder setJwt(
           java.lang.String value) {
@@ -834,6 +933,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string jwt = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearJwt() {
         if (identityCase_ == 2) {
@@ -850,6 +950,8 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string jwt = 2;</code>
+       * @param value The bytes for jwt to set.
+       * @return This builder for chaining.
        */
       public Builder setJwtBytes(
           com.google.protobuf.ByteString value) {
@@ -865,7 +967,7 @@ public final class IamTokenServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -927,6 +1029,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string iam_token = 1;</code>
+     * @return The iamToken.
      */
     java.lang.String getIamToken();
     /**
@@ -937,6 +1040,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string iam_token = 1;</code>
+     * @return The bytes for iamToken.
      */
     com.google.protobuf.ByteString
         getIamTokenBytes();
@@ -947,6 +1051,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp expires_at = 2;</code>
+     * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
@@ -955,6 +1060,7 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp expires_at = 2;</code>
+     * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
@@ -969,7 +1075,7 @@ public final class IamTokenServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.CreateIamTokenResponse}
    */
-  public  static final class CreateIamTokenResponse extends
+  public static final class CreateIamTokenResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.CreateIamTokenResponse)
       CreateIamTokenResponseOrBuilder {
@@ -980,6 +1086,13 @@ public final class IamTokenServiceOuterClass {
     }
     private CreateIamTokenResponse() {
       iamToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateIamTokenResponse();
     }
 
     @java.lang.Override
@@ -995,7 +1108,6 @@ public final class IamTokenServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1026,7 +1138,7 @@ public final class IamTokenServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1067,7 +1179,9 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string iam_token = 1;</code>
+     * @return The iamToken.
      */
+    @java.lang.Override
     public java.lang.String getIamToken() {
       java.lang.Object ref = iamToken_;
       if (ref instanceof java.lang.String) {
@@ -1088,7 +1202,9 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>string iam_token = 1;</code>
+     * @return The bytes for iamToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIamTokenBytes() {
       java.lang.Object ref = iamToken_;
@@ -1111,7 +1227,9 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp expires_at = 2;</code>
+     * @return Whether the expiresAt field is set.
      */
+    @java.lang.Override
     public boolean hasExpiresAt() {
       return expiresAt_ != null;
     }
@@ -1121,7 +1239,9 @@ public final class IamTokenServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp expires_at = 2;</code>
+     * @return The expiresAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getExpiresAt() {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
@@ -1132,6 +1252,7 @@ public final class IamTokenServiceOuterClass {
      *
      * <code>.google.protobuf.Timestamp expires_at = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
       return getExpiresAt();
     }
@@ -1150,7 +1271,7 @@ public final class IamTokenServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIamTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iamToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iamToken_);
       }
       if (expiresAt_ != null) {
@@ -1165,7 +1286,7 @@ public final class IamTokenServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIamTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iamToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iamToken_);
       }
       if (expiresAt_ != null) {
@@ -1187,16 +1308,15 @@ public final class IamTokenServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse other = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse) obj;
 
-      boolean result = true;
-      result = result && getIamToken()
-          .equals(other.getIamToken());
-      result = result && (hasExpiresAt() == other.hasExpiresAt());
+      if (!getIamToken()
+          .equals(other.getIamToken())) return false;
+      if (hasExpiresAt() != other.hasExpiresAt()) return false;
       if (hasExpiresAt()) {
-        result = result && getExpiresAt()
-            .equals(other.getExpiresAt());
+        if (!getExpiresAt()
+            .equals(other.getExpiresAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1391,35 +1511,35 @@ public final class IamTokenServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1478,6 +1598,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string iam_token = 1;</code>
+       * @return The iamToken.
        */
       public java.lang.String getIamToken() {
         java.lang.Object ref = iamToken_;
@@ -1499,6 +1620,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string iam_token = 1;</code>
+       * @return The bytes for iamToken.
        */
       public com.google.protobuf.ByteString
           getIamTokenBytes() {
@@ -1521,6 +1643,8 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string iam_token = 1;</code>
+       * @param value The iamToken to set.
+       * @return This builder for chaining.
        */
       public Builder setIamToken(
           java.lang.String value) {
@@ -1540,6 +1664,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string iam_token = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIamToken() {
         
@@ -1555,6 +1680,8 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>string iam_token = 1;</code>
+       * @param value The bytes for iamToken to set.
+       * @return This builder for chaining.
        */
       public Builder setIamTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1568,7 +1695,7 @@ public final class IamTokenServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp expiresAt_ = null;
+      private com.google.protobuf.Timestamp expiresAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
@@ -1577,6 +1704,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp expires_at = 2;</code>
+       * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
         return expiresAtBuilder_ != null || expiresAt_ != null;
@@ -1587,6 +1715,7 @@ public final class IamTokenServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp expires_at = 2;</code>
+       * @return The expiresAt.
        */
       public com.google.protobuf.Timestamp getExpiresAt() {
         if (expiresAtBuilder_ == null) {
@@ -1723,7 +1852,7 @@ public final class IamTokenServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1779,10 +1908,12 @@ public final class IamTokenServiceOuterClass {
 
     /**
      * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
      * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -1790,7 +1921,7 @@ public final class IamTokenServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.CreateIamTokenForServiceAccountRequest}
    */
-  public  static final class CreateIamTokenForServiceAccountRequest extends
+  public static final class CreateIamTokenForServiceAccountRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.CreateIamTokenForServiceAccountRequest)
       CreateIamTokenForServiceAccountRequestOrBuilder {
@@ -1801,6 +1932,13 @@ public final class IamTokenServiceOuterClass {
     }
     private CreateIamTokenForServiceAccountRequest() {
       serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateIamTokenForServiceAccountRequest();
     }
 
     @java.lang.Override
@@ -1816,7 +1954,6 @@ public final class IamTokenServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1834,7 +1971,7 @@ public final class IamTokenServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1869,7 +2006,9 @@ public final class IamTokenServiceOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -1884,7 +2023,9 @@ public final class IamTokenServiceOuterClass {
     }
     /**
      * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -1913,7 +2054,7 @@ public final class IamTokenServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceAccountId_);
       }
       unknownFields.writeTo(output);
@@ -1925,7 +2066,7 @@ public final class IamTokenServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceAccountId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1943,11 +2084,10 @@ public final class IamTokenServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest other = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest) obj;
 
-      boolean result = true;
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2127,35 +2267,35 @@ public final class IamTokenServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2205,6 +2345,7 @@ public final class IamTokenServiceOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -2220,6 +2361,7 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -2236,6 +2378,8 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -2249,6 +2393,7 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -2258,6 +2403,8 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <code>string service_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2273,7 +2420,7 @@ public final class IamTokenServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2370,21 +2517,13 @@ public final class IamTokenServiceOuterClass {
       ".com/yandex-cloud/go-genproto/yandex/clo" +
       "ud/iam/v1;iamb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iam_v1_CreateIamTokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iam_v1_CreateIamTokenRequest_fieldAccessorTable = new

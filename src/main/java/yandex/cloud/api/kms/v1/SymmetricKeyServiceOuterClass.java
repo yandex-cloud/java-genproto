@@ -24,6 +24,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -32,6 +33,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -42,6 +44,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -50,6 +53,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -60,6 +64,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -68,6 +73,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -137,6 +143,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+     * @return The enum numeric value on the wire for defaultAlgorithm.
      */
     int getDefaultAlgorithmValue();
     /**
@@ -145,6 +152,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+     * @return The defaultAlgorithm.
      */
     yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm();
 
@@ -155,6 +163,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 6;</code>
+     * @return Whether the rotationPeriod field is set.
      */
     boolean hasRotationPeriod();
     /**
@@ -164,6 +173,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 6;</code>
+     * @return The rotationPeriod.
      */
     com.google.protobuf.Duration getRotationPeriod();
     /**
@@ -182,13 +192,14 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 7;</code>
+     * @return The deletionProtection.
      */
     boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.CreateSymmetricKeyRequest}
    */
-  public  static final class CreateSymmetricKeyRequest extends
+  public static final class CreateSymmetricKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.CreateSymmetricKeyRequest)
       CreateSymmetricKeyRequestOrBuilder {
@@ -202,7 +213,13 @@ public final class SymmetricKeyServiceOuterClass {
       name_ = "";
       description_ = "";
       defaultAlgorithm_ = 0;
-      deletionProtection_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSymmetricKeyRequest();
     }
 
     @java.lang.Override
@@ -248,10 +265,10 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -285,7 +302,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -328,7 +345,6 @@ public final class SymmetricKeyServiceOuterClass {
               yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest.class, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -337,7 +353,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -356,7 +374,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -379,7 +399,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -398,7 +420,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -421,7 +445,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -440,7 +466,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -490,14 +518,16 @@ public final class SymmetricKeyServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -510,6 +540,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -522,11 +553,12 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -539,10 +571,11 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -559,8 +592,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+     * @return The enum numeric value on the wire for defaultAlgorithm.
      */
-    public int getDefaultAlgorithmValue() {
+    @java.lang.Override public int getDefaultAlgorithmValue() {
       return defaultAlgorithm_;
     }
     /**
@@ -569,8 +603,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+     * @return The defaultAlgorithm.
      */
-    public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm() {
+    @java.lang.Override public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm result = yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm.valueOf(defaultAlgorithm_);
       return result == null ? yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm.UNRECOGNIZED : result;
@@ -585,7 +620,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 6;</code>
+     * @return Whether the rotationPeriod field is set.
      */
+    @java.lang.Override
     public boolean hasRotationPeriod() {
       return rotationPeriod_ != null;
     }
@@ -596,7 +633,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 6;</code>
+     * @return The rotationPeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getRotationPeriod() {
       return rotationPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : rotationPeriod_;
     }
@@ -608,6 +647,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>.google.protobuf.Duration rotation_period = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getRotationPeriodOrBuilder() {
       return getRotationPeriod();
     }
@@ -620,7 +660,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 7;</code>
+     * @return The deletionProtection.
      */
+    @java.lang.Override
     public boolean getDeletionProtection() {
       return deletionProtection_;
     }
@@ -639,13 +681,13 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -672,13 +714,13 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -718,25 +760,24 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && defaultAlgorithm_ == other.defaultAlgorithm_;
-      result = result && (hasRotationPeriod() == other.hasRotationPeriod());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (defaultAlgorithm_ != other.defaultAlgorithm_) return false;
+      if (hasRotationPeriod() != other.hasRotationPeriod()) return false;
       if (hasRotationPeriod()) {
-        result = result && getRotationPeriod()
-            .equals(other.getRotationPeriod());
+        if (!getRotationPeriod()
+            .equals(other.getRotationPeriod())) return false;
       }
-      result = result && (getDeletionProtection()
-          == other.getDeletionProtection());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -964,7 +1005,6 @@ public final class SymmetricKeyServiceOuterClass {
       public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest buildPartial() {
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest result = new yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -977,42 +1017,41 @@ public final class SymmetricKeyServiceOuterClass {
           result.rotationPeriod_ = rotationPeriodBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1086,6 +1125,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1105,6 +1145,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1125,6 +1166,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1142,6 +1185,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1155,6 +1199,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1175,6 +1221,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1194,6 +1241,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1214,6 +1262,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1231,6 +1281,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1244,6 +1295,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1264,6 +1317,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1283,6 +1337,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1303,6 +1358,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1320,6 +1377,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1333,6 +1391,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1381,14 +1441,16 @@ public final class SymmetricKeyServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -1401,6 +1463,7 @@ public final class SymmetricKeyServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -1413,11 +1476,12 @@ public final class SymmetricKeyServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1430,10 +1494,11 @@ public final class SymmetricKeyServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -1458,7 +1523,7 @@ public final class SymmetricKeyServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -1482,8 +1547,11 @@ public final class SymmetricKeyServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -1511,8 +1579,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+       * @return The enum numeric value on the wire for defaultAlgorithm.
        */
-      public int getDefaultAlgorithmValue() {
+      @java.lang.Override public int getDefaultAlgorithmValue() {
         return defaultAlgorithm_;
       }
       /**
@@ -1521,8 +1590,11 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+       * @param value The enum numeric value on the wire for defaultAlgorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultAlgorithmValue(int value) {
+        
         defaultAlgorithm_ = value;
         onChanged();
         return this;
@@ -1533,7 +1605,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+       * @return The defaultAlgorithm.
        */
+      @java.lang.Override
       public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm result = yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm.valueOf(defaultAlgorithm_);
@@ -1545,6 +1619,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+       * @param value The defaultAlgorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultAlgorithm(yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm value) {
         if (value == null) {
@@ -1561,6 +1637,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultAlgorithm() {
         
@@ -1569,7 +1646,7 @@ public final class SymmetricKeyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration rotationPeriod_ = null;
+      private com.google.protobuf.Duration rotationPeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> rotationPeriodBuilder_;
       /**
@@ -1579,6 +1656,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration rotation_period = 6;</code>
+       * @return Whether the rotationPeriod field is set.
        */
       public boolean hasRotationPeriod() {
         return rotationPeriodBuilder_ != null || rotationPeriod_ != null;
@@ -1590,6 +1668,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration rotation_period = 6;</code>
+       * @return The rotationPeriod.
        */
       public com.google.protobuf.Duration getRotationPeriod() {
         if (rotationPeriodBuilder_ == null) {
@@ -1738,7 +1817,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 7;</code>
+       * @return The deletionProtection.
        */
+      @java.lang.Override
       public boolean getDeletionProtection() {
         return deletionProtection_;
       }
@@ -1748,6 +1829,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 7;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
        */
       public Builder setDeletionProtection(boolean value) {
         
@@ -1761,6 +1844,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeletionProtection() {
         
@@ -1771,7 +1855,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1831,6 +1915,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -1839,6 +1924,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -1849,6 +1935,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string primary_version_id = 2;</code>
+     * @return The primaryVersionId.
      */
     java.lang.String getPrimaryVersionId();
     /**
@@ -1857,6 +1944,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string primary_version_id = 2;</code>
+     * @return The bytes for primaryVersionId.
      */
     com.google.protobuf.ByteString
         getPrimaryVersionIdBytes();
@@ -1864,7 +1952,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.CreateSymmetricKeyMetadata}
    */
-  public  static final class CreateSymmetricKeyMetadata extends
+  public static final class CreateSymmetricKeyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.CreateSymmetricKeyMetadata)
       CreateSymmetricKeyMetadataOrBuilder {
@@ -1876,6 +1964,13 @@ public final class SymmetricKeyServiceOuterClass {
     private CreateSymmetricKeyMetadata() {
       keyId_ = "";
       primaryVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSymmetricKeyMetadata();
     }
 
     @java.lang.Override
@@ -1891,7 +1986,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1915,7 +2009,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1954,7 +2048,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -1973,7 +2069,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -1996,7 +2094,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string primary_version_id = 2;</code>
+     * @return The primaryVersionId.
      */
+    @java.lang.Override
     public java.lang.String getPrimaryVersionId() {
       java.lang.Object ref = primaryVersionId_;
       if (ref instanceof java.lang.String) {
@@ -2015,7 +2115,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string primary_version_id = 2;</code>
+     * @return The bytes for primaryVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPrimaryVersionIdBytes() {
       java.lang.Object ref = primaryVersionId_;
@@ -2044,10 +2146,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getPrimaryVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primaryVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, primaryVersionId_);
       }
       unknownFields.writeTo(output);
@@ -2059,10 +2161,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getPrimaryVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primaryVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, primaryVersionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2080,13 +2182,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getPrimaryVersionId()
-          .equals(other.getPrimaryVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getPrimaryVersionId()
+          .equals(other.getPrimaryVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2271,35 +2372,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2357,6 +2458,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -2376,6 +2478,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -2396,6 +2499,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -2413,6 +2518,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -2426,6 +2532,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2446,6 +2554,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string primary_version_id = 2;</code>
+       * @return The primaryVersionId.
        */
       public java.lang.String getPrimaryVersionId() {
         java.lang.Object ref = primaryVersionId_;
@@ -2465,6 +2574,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string primary_version_id = 2;</code>
+       * @return The bytes for primaryVersionId.
        */
       public com.google.protobuf.ByteString
           getPrimaryVersionIdBytes() {
@@ -2485,6 +2595,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string primary_version_id = 2;</code>
+       * @param value The primaryVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setPrimaryVersionId(
           java.lang.String value) {
@@ -2502,6 +2614,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string primary_version_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPrimaryVersionId() {
         
@@ -2515,6 +2628,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string primary_version_id = 2;</code>
+       * @param value The bytes for primaryVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setPrimaryVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2530,7 +2645,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2591,6 +2706,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -2600,6 +2716,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -2607,7 +2724,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.GetSymmetricKeyRequest}
    */
-  public  static final class GetSymmetricKeyRequest extends
+  public static final class GetSymmetricKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.GetSymmetricKeyRequest)
       GetSymmetricKeyRequestOrBuilder {
@@ -2618,6 +2735,13 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private GetSymmetricKeyRequest() {
       keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSymmetricKeyRequest();
     }
 
     @java.lang.Override
@@ -2633,7 +2757,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2651,7 +2774,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2691,7 +2814,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -2711,7 +2836,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -2740,7 +2867,7 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       unknownFields.writeTo(output);
@@ -2752,7 +2879,7 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2770,11 +2897,10 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2954,35 +3080,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3037,6 +3163,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -3057,6 +3184,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -3078,6 +3206,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -3096,6 +3226,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -3110,6 +3241,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3125,7 +3258,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3185,6 +3318,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -3193,6 +3327,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -3206,6 +3341,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -3216,6 +3352,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -3225,6 +3362,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -3232,7 +3370,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ListSymmetricKeysRequest}
    */
-  public  static final class ListSymmetricKeysRequest extends
+  public static final class ListSymmetricKeysRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ListSymmetricKeysRequest)
       ListSymmetricKeysRequestOrBuilder {
@@ -3243,8 +3381,14 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private ListSymmetricKeysRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSymmetricKeysRequest();
     }
 
     @java.lang.Override
@@ -3260,7 +3404,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3289,7 +3432,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3328,7 +3471,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3347,7 +3492,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3373,7 +3520,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -3387,7 +3536,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -3407,7 +3558,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -3436,13 +3589,13 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -3454,14 +3607,14 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -3479,15 +3632,14 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3678,35 +3830,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3767,6 +3919,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3786,6 +3939,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3806,6 +3960,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3823,6 +3979,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3836,6 +3993,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3859,7 +4018,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -3872,6 +4033,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -3888,6 +4051,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -3904,6 +4068,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -3924,6 +4089,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -3945,6 +4111,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -3963,6 +4131,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -3977,6 +4146,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3992,7 +4163,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4100,6 +4271,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -4112,6 +4284,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -4119,7 +4292,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ListSymmetricKeysResponse}
    */
-  public  static final class ListSymmetricKeysResponse extends
+  public static final class ListSymmetricKeysResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ListSymmetricKeysResponse)
       ListSymmetricKeysResponseOrBuilder {
@@ -4131,6 +4304,13 @@ public final class SymmetricKeyServiceOuterClass {
     private ListSymmetricKeysResponse() {
       keys_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSymmetricKeysResponse();
     }
 
     @java.lang.Override
@@ -4158,7 +4338,7 @@ public final class SymmetricKeyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 keys_ = new java.util.ArrayList<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4173,7 +4353,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4187,7 +4367,7 @@ public final class SymmetricKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           keys_ = java.util.Collections.unmodifiableList(keys_);
         }
         this.unknownFields = unknownFields.build();
@@ -4207,7 +4387,6 @@ public final class SymmetricKeyServiceOuterClass {
               yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse.class, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEYS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey> keys_;
     /**
@@ -4217,6 +4396,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKey keys = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey> getKeysList() {
       return keys_;
     }
@@ -4227,6 +4407,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKey keys = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyOrBuilder> 
         getKeysOrBuilderList() {
       return keys_;
@@ -4238,6 +4419,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKey keys = 1;</code>
      */
+    @java.lang.Override
     public int getKeysCount() {
       return keys_.size();
     }
@@ -4248,6 +4430,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKey keys = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey getKeys(int index) {
       return keys_.get(index);
     }
@@ -4258,6 +4441,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKey keys = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyOrBuilder getKeysOrBuilder(
         int index) {
       return keys_.get(index);
@@ -4275,7 +4459,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -4298,7 +4484,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -4330,7 +4518,7 @@ public final class SymmetricKeyServiceOuterClass {
       for (int i = 0; i < keys_.size(); i++) {
         output.writeMessage(1, keys_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -4346,7 +4534,7 @@ public final class SymmetricKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, keys_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -4364,13 +4552,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse) obj;
 
-      boolean result = true;
-      result = result && getKeysList()
-          .equals(other.getKeysList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeysList()
+          .equals(other.getKeysList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4555,9 +4742,8 @@ public final class SymmetricKeyServiceOuterClass {
       public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse buildPartial() {
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse result = new yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (keysBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             keys_ = java.util.Collections.unmodifiableList(keys_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4566,42 +4752,41 @@ public final class SymmetricKeyServiceOuterClass {
           result.keys_ = keysBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4678,7 +4863,7 @@ public final class SymmetricKeyServiceOuterClass {
       private java.util.List<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey> keys_ =
         java.util.Collections.emptyList();
       private void ensureKeysIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           keys_ = new java.util.ArrayList<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey>(keys_);
           bitField0_ |= 0x00000001;
          }
@@ -4979,7 +5164,7 @@ public final class SymmetricKeyServiceOuterClass {
           keysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey, yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Builder, yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyOrBuilder>(
                   keys_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           keys_ = null;
@@ -4998,6 +5183,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -5021,6 +5207,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -5045,6 +5232,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -5066,6 +5255,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -5083,6 +5273,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -5098,7 +5290,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5158,6 +5350,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -5166,6 +5359,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -5179,6 +5373,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -5189,6 +5384,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -5198,6 +5394,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -5205,7 +5402,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ListSymmetricKeyVersionsRequest}
    */
-  public  static final class ListSymmetricKeyVersionsRequest extends
+  public static final class ListSymmetricKeyVersionsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ListSymmetricKeyVersionsRequest)
       ListSymmetricKeyVersionsRequestOrBuilder {
@@ -5216,8 +5413,14 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private ListSymmetricKeyVersionsRequest() {
       keyId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSymmetricKeyVersionsRequest();
     }
 
     @java.lang.Override
@@ -5233,7 +5436,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5262,7 +5464,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5301,7 +5503,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -5320,7 +5524,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -5346,7 +5552,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -5360,7 +5568,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -5380,7 +5590,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -5409,13 +5621,13 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -5427,14 +5639,14 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -5452,15 +5664,14 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5651,35 +5862,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5740,6 +5951,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -5759,6 +5971,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -5779,6 +5992,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -5796,6 +6011,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -5809,6 +6025,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5832,7 +6050,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -5845,6 +6065,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -5861,6 +6083,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -5877,6 +6100,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -5897,6 +6121,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -5918,6 +6143,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -5936,6 +6163,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -5950,6 +6178,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -5965,7 +6195,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6073,6 +6303,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -6085,6 +6316,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -6092,7 +6324,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ListSymmetricKeyVersionsResponse}
    */
-  public  static final class ListSymmetricKeyVersionsResponse extends
+  public static final class ListSymmetricKeyVersionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ListSymmetricKeyVersionsResponse)
       ListSymmetricKeyVersionsResponseOrBuilder {
@@ -6104,6 +6336,13 @@ public final class SymmetricKeyServiceOuterClass {
     private ListSymmetricKeyVersionsResponse() {
       keyVersions_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSymmetricKeyVersionsResponse();
     }
 
     @java.lang.Override
@@ -6131,7 +6370,7 @@ public final class SymmetricKeyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 keyVersions_ = new java.util.ArrayList<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6146,7 +6385,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6160,7 +6399,7 @@ public final class SymmetricKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           keyVersions_ = java.util.Collections.unmodifiableList(keyVersions_);
         }
         this.unknownFields = unknownFields.build();
@@ -6180,7 +6419,6 @@ public final class SymmetricKeyServiceOuterClass {
               yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse.class, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEY_VERSIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion> keyVersions_;
     /**
@@ -6190,6 +6428,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKeyVersion key_versions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion> getKeyVersionsList() {
       return keyVersions_;
     }
@@ -6200,6 +6439,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKeyVersion key_versions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersionOrBuilder> 
         getKeyVersionsOrBuilderList() {
       return keyVersions_;
@@ -6211,6 +6451,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKeyVersion key_versions = 1;</code>
      */
+    @java.lang.Override
     public int getKeyVersionsCount() {
       return keyVersions_.size();
     }
@@ -6221,6 +6462,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKeyVersion key_versions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion getKeyVersions(int index) {
       return keyVersions_.get(index);
     }
@@ -6231,6 +6473,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.kms.v1.SymmetricKeyVersion key_versions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersionOrBuilder getKeyVersionsOrBuilder(
         int index) {
       return keyVersions_.get(index);
@@ -6248,7 +6491,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -6271,7 +6516,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -6303,7 +6550,7 @@ public final class SymmetricKeyServiceOuterClass {
       for (int i = 0; i < keyVersions_.size(); i++) {
         output.writeMessage(1, keyVersions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -6319,7 +6566,7 @@ public final class SymmetricKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, keyVersions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -6337,13 +6584,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse) obj;
 
-      boolean result = true;
-      result = result && getKeyVersionsList()
-          .equals(other.getKeyVersionsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyVersionsList()
+          .equals(other.getKeyVersionsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6528,9 +6774,8 @@ public final class SymmetricKeyServiceOuterClass {
       public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse buildPartial() {
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse result = new yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (keyVersionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             keyVersions_ = java.util.Collections.unmodifiableList(keyVersions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6539,42 +6784,41 @@ public final class SymmetricKeyServiceOuterClass {
           result.keyVersions_ = keyVersionsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6651,7 +6895,7 @@ public final class SymmetricKeyServiceOuterClass {
       private java.util.List<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion> keyVersions_ =
         java.util.Collections.emptyList();
       private void ensureKeyVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           keyVersions_ = new java.util.ArrayList<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion>(keyVersions_);
           bitField0_ |= 0x00000001;
          }
@@ -6952,7 +7196,7 @@ public final class SymmetricKeyServiceOuterClass {
           keyVersionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion, yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersion.Builder, yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKeyVersionOrBuilder>(
                   keyVersions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           keyVersions_ = null;
@@ -6971,6 +7215,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -6994,6 +7239,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -7018,6 +7264,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -7039,6 +7287,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -7056,6 +7305,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -7071,7 +7322,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7132,6 +7383,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -7141,6 +7393,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -7151,6 +7404,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -7159,6 +7413,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -7176,6 +7431,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7184,6 +7440,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7194,6 +7451,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -7202,6 +7460,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -7213,6 +7472,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -7222,6 +7482,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+     * @return The status.
      */
     yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status getStatus();
 
@@ -7285,6 +7546,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+     * @return The enum numeric value on the wire for defaultAlgorithm.
      */
     int getDefaultAlgorithmValue();
     /**
@@ -7293,6 +7555,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+     * @return The defaultAlgorithm.
      */
     yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm();
 
@@ -7302,6 +7565,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 8;</code>
+     * @return Whether the rotationPeriod field is set.
      */
     boolean hasRotationPeriod();
     /**
@@ -7310,6 +7574,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 8;</code>
+     * @return The rotationPeriod.
      */
     com.google.protobuf.Duration getRotationPeriod();
     /**
@@ -7327,13 +7592,14 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 9;</code>
+     * @return The deletionProtection.
      */
     boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.UpdateSymmetricKeyRequest}
    */
-  public  static final class UpdateSymmetricKeyRequest extends
+  public static final class UpdateSymmetricKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.UpdateSymmetricKeyRequest)
       UpdateSymmetricKeyRequestOrBuilder {
@@ -7348,7 +7614,13 @@ public final class SymmetricKeyServiceOuterClass {
       description_ = "";
       status_ = 0;
       defaultAlgorithm_ = 0;
-      deletionProtection_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSymmetricKeyRequest();
     }
 
     @java.lang.Override
@@ -7413,10 +7685,10 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -7450,7 +7722,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7493,7 +7765,6 @@ public final class SymmetricKeyServiceOuterClass {
               yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest.class, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object keyId_;
     /**
@@ -7503,7 +7774,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -7523,7 +7796,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -7546,7 +7821,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -7556,7 +7833,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -7567,6 +7846,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -7579,7 +7859,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7598,7 +7880,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7621,7 +7905,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -7640,7 +7926,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -7664,8 +7952,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -7675,8 +7964,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status result = yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status.UNRECOGNIZED : result;
@@ -7716,14 +8006,16 @@ public final class SymmetricKeyServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -7735,6 +8027,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -7746,11 +8039,12 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7762,10 +8056,11 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -7782,8 +8077,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+     * @return The enum numeric value on the wire for defaultAlgorithm.
      */
-    public int getDefaultAlgorithmValue() {
+    @java.lang.Override public int getDefaultAlgorithmValue() {
       return defaultAlgorithm_;
     }
     /**
@@ -7792,8 +8088,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+     * @return The defaultAlgorithm.
      */
-    public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm() {
+    @java.lang.Override public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm result = yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm.valueOf(defaultAlgorithm_);
       return result == null ? yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm.UNRECOGNIZED : result;
@@ -7807,7 +8104,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 8;</code>
+     * @return Whether the rotationPeriod field is set.
      */
+    @java.lang.Override
     public boolean hasRotationPeriod() {
       return rotationPeriod_ != null;
     }
@@ -7817,7 +8116,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration rotation_period = 8;</code>
+     * @return The rotationPeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getRotationPeriod() {
       return rotationPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : rotationPeriod_;
     }
@@ -7828,6 +8129,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>.google.protobuf.Duration rotation_period = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getRotationPeriodOrBuilder() {
       return getRotationPeriod();
     }
@@ -7840,7 +8142,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 9;</code>
+     * @return The deletionProtection.
      */
+    @java.lang.Override
     public boolean getDeletionProtection() {
       return deletionProtection_;
     }
@@ -7859,16 +8163,16 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       if (status_ != yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -7898,17 +8202,17 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       if (status_ != yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -7952,31 +8256,30 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && status_ == other.status_;
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && defaultAlgorithm_ == other.defaultAlgorithm_;
-      result = result && (hasRotationPeriod() == other.hasRotationPeriod());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (defaultAlgorithm_ != other.defaultAlgorithm_) return false;
+      if (hasRotationPeriod() != other.hasRotationPeriod()) return false;
       if (hasRotationPeriod()) {
-        result = result && getRotationPeriod()
-            .equals(other.getRotationPeriod());
+        if (!getRotationPeriod()
+            .equals(other.getRotationPeriod())) return false;
       }
-      result = result && (getDeletionProtection()
-          == other.getDeletionProtection());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8218,7 +8521,6 @@ public final class SymmetricKeyServiceOuterClass {
       public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest buildPartial() {
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest result = new yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.keyId_ = keyId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -8237,42 +8539,41 @@ public final class SymmetricKeyServiceOuterClass {
           result.rotationPeriod_ = rotationPeriodBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8353,6 +8654,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -8373,6 +8675,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -8394,6 +8697,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -8412,6 +8717,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -8426,6 +8732,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8439,7 +8747,7 @@ public final class SymmetricKeyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -8448,6 +8756,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -8458,6 +8767,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -8599,6 +8909,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8618,6 +8929,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8638,6 +8950,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8655,6 +8969,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8668,6 +8983,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8688,6 +9005,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8707,6 +9025,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8727,6 +9046,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8744,6 +9065,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8757,6 +9079,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8778,8 +9102,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -8789,8 +9114,11 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -8802,7 +9130,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status result = yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status.valueOf(status_);
@@ -8815,6 +9145,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.Status value) {
         if (value == null) {
@@ -8832,6 +9164,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricKey.Status status = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -8874,14 +9207,16 @@ public final class SymmetricKeyServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -8893,6 +9228,7 @@ public final class SymmetricKeyServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -8904,11 +9240,12 @@ public final class SymmetricKeyServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8920,10 +9257,11 @@ public final class SymmetricKeyServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -8947,7 +9285,7 @@ public final class SymmetricKeyServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -8970,8 +9308,11 @@ public final class SymmetricKeyServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -8998,8 +9339,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+       * @return The enum numeric value on the wire for defaultAlgorithm.
        */
-      public int getDefaultAlgorithmValue() {
+      @java.lang.Override public int getDefaultAlgorithmValue() {
         return defaultAlgorithm_;
       }
       /**
@@ -9008,8 +9350,11 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+       * @param value The enum numeric value on the wire for defaultAlgorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultAlgorithmValue(int value) {
+        
         defaultAlgorithm_ = value;
         onChanged();
         return this;
@@ -9020,7 +9365,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+       * @return The defaultAlgorithm.
        */
+      @java.lang.Override
       public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm getDefaultAlgorithm() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm result = yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm.valueOf(defaultAlgorithm_);
@@ -9032,6 +9379,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+       * @param value The defaultAlgorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultAlgorithm(yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricAlgorithm value) {
         if (value == null) {
@@ -9048,6 +9397,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.kms.v1.SymmetricAlgorithm default_algorithm = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultAlgorithm() {
         
@@ -9056,7 +9406,7 @@ public final class SymmetricKeyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration rotationPeriod_ = null;
+      private com.google.protobuf.Duration rotationPeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> rotationPeriodBuilder_;
       /**
@@ -9065,6 +9415,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration rotation_period = 8;</code>
+       * @return Whether the rotationPeriod field is set.
        */
       public boolean hasRotationPeriod() {
         return rotationPeriodBuilder_ != null || rotationPeriod_ != null;
@@ -9075,6 +9426,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration rotation_period = 8;</code>
+       * @return The rotationPeriod.
        */
       public com.google.protobuf.Duration getRotationPeriod() {
         if (rotationPeriodBuilder_ == null) {
@@ -9216,7 +9568,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 9;</code>
+       * @return The deletionProtection.
        */
+      @java.lang.Override
       public boolean getDeletionProtection() {
         return deletionProtection_;
       }
@@ -9226,6 +9580,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 9;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
        */
       public Builder setDeletionProtection(boolean value) {
         
@@ -9239,6 +9595,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeletionProtection() {
         
@@ -9249,7 +9606,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9309,6 +9666,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -9317,6 +9675,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -9324,7 +9683,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.UpdateSymmetricKeyMetadata}
    */
-  public  static final class UpdateSymmetricKeyMetadata extends
+  public static final class UpdateSymmetricKeyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.UpdateSymmetricKeyMetadata)
       UpdateSymmetricKeyMetadataOrBuilder {
@@ -9335,6 +9694,13 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private UpdateSymmetricKeyMetadata() {
       keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSymmetricKeyMetadata();
     }
 
     @java.lang.Override
@@ -9350,7 +9716,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9368,7 +9733,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9407,7 +9772,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -9426,7 +9793,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -9455,7 +9824,7 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       unknownFields.writeTo(output);
@@ -9467,7 +9836,7 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9485,11 +9854,10 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9669,35 +10037,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9751,6 +10119,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -9770,6 +10139,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -9790,6 +10160,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -9807,6 +10179,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -9820,6 +10193,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9835,7 +10210,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9895,6 +10270,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -9903,6 +10279,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -9910,7 +10287,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.DeleteSymmetricKeyRequest}
    */
-  public  static final class DeleteSymmetricKeyRequest extends
+  public static final class DeleteSymmetricKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.DeleteSymmetricKeyRequest)
       DeleteSymmetricKeyRequestOrBuilder {
@@ -9921,6 +10298,13 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private DeleteSymmetricKeyRequest() {
       keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSymmetricKeyRequest();
     }
 
     @java.lang.Override
@@ -9936,7 +10320,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9954,7 +10337,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9993,7 +10376,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -10012,7 +10397,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -10041,7 +10428,7 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       unknownFields.writeTo(output);
@@ -10053,7 +10440,7 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10071,11 +10458,10 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10255,35 +10641,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10337,6 +10723,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -10356,6 +10743,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -10376,6 +10764,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -10393,6 +10783,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -10406,6 +10797,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10421,7 +10814,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10481,6 +10874,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -10489,6 +10883,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -10496,7 +10891,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.DeleteSymmetricKeyMetadata}
    */
-  public  static final class DeleteSymmetricKeyMetadata extends
+  public static final class DeleteSymmetricKeyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.DeleteSymmetricKeyMetadata)
       DeleteSymmetricKeyMetadataOrBuilder {
@@ -10507,6 +10902,13 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private DeleteSymmetricKeyMetadata() {
       keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSymmetricKeyMetadata();
     }
 
     @java.lang.Override
@@ -10522,7 +10924,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10540,7 +10941,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10579,7 +10980,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -10598,7 +11001,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -10627,7 +11032,7 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       unknownFields.writeTo(output);
@@ -10639,7 +11044,7 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10657,11 +11062,10 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10841,35 +11245,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10923,6 +11327,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -10942,6 +11347,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -10962,6 +11368,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -10979,6 +11387,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -10992,6 +11401,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11007,7 +11418,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11067,6 +11478,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -11075,6 +11487,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -11085,6 +11498,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -11093,6 +11507,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -11100,7 +11515,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.SetPrimarySymmetricKeyVersionRequest}
    */
-  public  static final class SetPrimarySymmetricKeyVersionRequest extends
+  public static final class SetPrimarySymmetricKeyVersionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.SetPrimarySymmetricKeyVersionRequest)
       SetPrimarySymmetricKeyVersionRequestOrBuilder {
@@ -11112,6 +11527,13 @@ public final class SymmetricKeyServiceOuterClass {
     private SetPrimarySymmetricKeyVersionRequest() {
       keyId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetPrimarySymmetricKeyVersionRequest();
     }
 
     @java.lang.Override
@@ -11127,7 +11549,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11151,7 +11572,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11190,7 +11611,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -11209,7 +11632,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -11232,7 +11657,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -11251,7 +11678,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -11280,10 +11709,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       unknownFields.writeTo(output);
@@ -11295,10 +11724,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11316,13 +11745,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11507,35 +11935,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11593,6 +12021,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -11612,6 +12041,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -11632,6 +12062,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -11649,6 +12081,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -11662,6 +12095,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11682,6 +12117,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -11701,6 +12137,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -11721,6 +12158,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -11738,6 +12177,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -11751,6 +12191,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11766,7 +12208,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11826,6 +12268,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -11834,6 +12277,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -11844,6 +12288,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -11852,6 +12297,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -11859,7 +12305,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.SetPrimarySymmetricKeyVersionMetadata}
    */
-  public  static final class SetPrimarySymmetricKeyVersionMetadata extends
+  public static final class SetPrimarySymmetricKeyVersionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.SetPrimarySymmetricKeyVersionMetadata)
       SetPrimarySymmetricKeyVersionMetadataOrBuilder {
@@ -11871,6 +12317,13 @@ public final class SymmetricKeyServiceOuterClass {
     private SetPrimarySymmetricKeyVersionMetadata() {
       keyId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetPrimarySymmetricKeyVersionMetadata();
     }
 
     @java.lang.Override
@@ -11886,7 +12339,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11910,7 +12362,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11949,7 +12401,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -11968,7 +12422,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -11991,7 +12447,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -12010,7 +12468,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -12039,10 +12499,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       unknownFields.writeTo(output);
@@ -12054,10 +12514,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12075,13 +12535,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12266,35 +12725,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12352,6 +12811,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -12371,6 +12831,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -12391,6 +12852,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -12408,6 +12871,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -12421,6 +12885,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12441,6 +12907,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -12460,6 +12927,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -12480,6 +12948,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -12497,6 +12967,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -12510,6 +12981,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12525,7 +12998,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12585,6 +13058,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -12593,6 +13067,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -12600,7 +13075,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.RotateSymmetricKeyRequest}
    */
-  public  static final class RotateSymmetricKeyRequest extends
+  public static final class RotateSymmetricKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.RotateSymmetricKeyRequest)
       RotateSymmetricKeyRequestOrBuilder {
@@ -12611,6 +13086,13 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private RotateSymmetricKeyRequest() {
       keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RotateSymmetricKeyRequest();
     }
 
     @java.lang.Override
@@ -12626,7 +13108,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12644,7 +13125,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12683,7 +13164,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -12702,7 +13185,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -12731,7 +13216,7 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       unknownFields.writeTo(output);
@@ -12743,7 +13228,7 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12761,11 +13246,10 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12945,35 +13429,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13027,6 +13511,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -13046,6 +13531,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -13066,6 +13552,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -13083,6 +13571,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -13096,6 +13585,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13111,7 +13602,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13171,6 +13662,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -13179,6 +13671,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -13189,6 +13682,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string new_primary_version_id = 2;</code>
+     * @return The newPrimaryVersionId.
      */
     java.lang.String getNewPrimaryVersionId();
     /**
@@ -13197,6 +13691,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string new_primary_version_id = 2;</code>
+     * @return The bytes for newPrimaryVersionId.
      */
     com.google.protobuf.ByteString
         getNewPrimaryVersionIdBytes();
@@ -13204,7 +13699,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.RotateSymmetricKeyMetadata}
    */
-  public  static final class RotateSymmetricKeyMetadata extends
+  public static final class RotateSymmetricKeyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.RotateSymmetricKeyMetadata)
       RotateSymmetricKeyMetadataOrBuilder {
@@ -13216,6 +13711,13 @@ public final class SymmetricKeyServiceOuterClass {
     private RotateSymmetricKeyMetadata() {
       keyId_ = "";
       newPrimaryVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RotateSymmetricKeyMetadata();
     }
 
     @java.lang.Override
@@ -13231,7 +13733,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13255,7 +13756,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13294,7 +13795,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -13313,7 +13816,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -13336,7 +13841,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string new_primary_version_id = 2;</code>
+     * @return The newPrimaryVersionId.
      */
+    @java.lang.Override
     public java.lang.String getNewPrimaryVersionId() {
       java.lang.Object ref = newPrimaryVersionId_;
       if (ref instanceof java.lang.String) {
@@ -13355,7 +13862,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string new_primary_version_id = 2;</code>
+     * @return The bytes for newPrimaryVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNewPrimaryVersionIdBytes() {
       java.lang.Object ref = newPrimaryVersionId_;
@@ -13384,10 +13893,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getNewPrimaryVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newPrimaryVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newPrimaryVersionId_);
       }
       unknownFields.writeTo(output);
@@ -13399,10 +13908,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getNewPrimaryVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newPrimaryVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newPrimaryVersionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -13420,13 +13929,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getNewPrimaryVersionId()
-          .equals(other.getNewPrimaryVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getNewPrimaryVersionId()
+          .equals(other.getNewPrimaryVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13611,35 +14119,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13697,6 +14205,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -13716,6 +14225,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -13736,6 +14246,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -13753,6 +14265,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -13766,6 +14279,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13786,6 +14301,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string new_primary_version_id = 2;</code>
+       * @return The newPrimaryVersionId.
        */
       public java.lang.String getNewPrimaryVersionId() {
         java.lang.Object ref = newPrimaryVersionId_;
@@ -13805,6 +14321,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string new_primary_version_id = 2;</code>
+       * @return The bytes for newPrimaryVersionId.
        */
       public com.google.protobuf.ByteString
           getNewPrimaryVersionIdBytes() {
@@ -13825,6 +14342,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string new_primary_version_id = 2;</code>
+       * @param value The newPrimaryVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setNewPrimaryVersionId(
           java.lang.String value) {
@@ -13842,6 +14361,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string new_primary_version_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNewPrimaryVersionId() {
         
@@ -13855,6 +14375,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string new_primary_version_id = 2;</code>
+       * @param value The bytes for newPrimaryVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setNewPrimaryVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13870,7 +14392,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13930,6 +14452,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -13938,6 +14461,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -13948,6 +14472,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -13956,6 +14481,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -13967,6 +14493,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration pending_period = 3;</code>
+     * @return Whether the pendingPeriod field is set.
      */
     boolean hasPendingPeriod();
     /**
@@ -13976,6 +14503,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration pending_period = 3;</code>
+     * @return The pendingPeriod.
      */
     com.google.protobuf.Duration getPendingPeriod();
     /**
@@ -13991,7 +14519,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ScheduleSymmetricKeyVersionDestructionRequest}
    */
-  public  static final class ScheduleSymmetricKeyVersionDestructionRequest extends
+  public static final class ScheduleSymmetricKeyVersionDestructionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ScheduleSymmetricKeyVersionDestructionRequest)
       ScheduleSymmetricKeyVersionDestructionRequestOrBuilder {
@@ -14003,6 +14531,13 @@ public final class SymmetricKeyServiceOuterClass {
     private ScheduleSymmetricKeyVersionDestructionRequest() {
       keyId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScheduleSymmetricKeyVersionDestructionRequest();
     }
 
     @java.lang.Override
@@ -14018,7 +14553,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14055,7 +14589,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14094,7 +14628,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -14113,7 +14649,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -14136,7 +14674,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -14155,7 +14695,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -14179,7 +14721,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration pending_period = 3;</code>
+     * @return Whether the pendingPeriod field is set.
      */
+    @java.lang.Override
     public boolean hasPendingPeriod() {
       return pendingPeriod_ != null;
     }
@@ -14190,7 +14734,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration pending_period = 3;</code>
+     * @return The pendingPeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getPendingPeriod() {
       return pendingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : pendingPeriod_;
     }
@@ -14202,6 +14748,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>.google.protobuf.Duration pending_period = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getPendingPeriodOrBuilder() {
       return getPendingPeriod();
     }
@@ -14220,10 +14767,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       if (pendingPeriod_ != null) {
@@ -14238,10 +14785,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       if (pendingPeriod_ != null) {
@@ -14263,18 +14810,17 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && (hasPendingPeriod() == other.hasPendingPeriod());
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (hasPendingPeriod() != other.hasPendingPeriod()) return false;
       if (hasPendingPeriod()) {
-        result = result && getPendingPeriod()
-            .equals(other.getPendingPeriod());
+        if (!getPendingPeriod()
+            .equals(other.getPendingPeriod())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14474,35 +15020,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14563,6 +15109,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -14582,6 +15129,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -14602,6 +15150,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -14619,6 +15169,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -14632,6 +15183,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14652,6 +15205,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -14671,6 +15225,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -14691,6 +15246,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -14708,6 +15265,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -14721,6 +15279,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14734,7 +15294,7 @@ public final class SymmetricKeyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration pendingPeriod_ = null;
+      private com.google.protobuf.Duration pendingPeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> pendingPeriodBuilder_;
       /**
@@ -14744,6 +15304,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration pending_period = 3;</code>
+       * @return Whether the pendingPeriod field is set.
        */
       public boolean hasPendingPeriod() {
         return pendingPeriodBuilder_ != null || pendingPeriod_ != null;
@@ -14755,6 +15316,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration pending_period = 3;</code>
+       * @return The pendingPeriod.
        */
       public com.google.protobuf.Duration getPendingPeriod() {
         if (pendingPeriodBuilder_ == null) {
@@ -14898,7 +15460,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14958,6 +15520,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -14966,6 +15529,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -14976,6 +15540,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -14984,6 +15549,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -14994,6 +15560,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
+     * @return Whether the destroyAt field is set.
      */
     boolean hasDestroyAt();
     /**
@@ -15002,6 +15569,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
+     * @return The destroyAt.
      */
     com.google.protobuf.Timestamp getDestroyAt();
     /**
@@ -15016,7 +15584,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ScheduleSymmetricKeyVersionDestructionMetadata}
    */
-  public  static final class ScheduleSymmetricKeyVersionDestructionMetadata extends
+  public static final class ScheduleSymmetricKeyVersionDestructionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ScheduleSymmetricKeyVersionDestructionMetadata)
       ScheduleSymmetricKeyVersionDestructionMetadataOrBuilder {
@@ -15028,6 +15596,13 @@ public final class SymmetricKeyServiceOuterClass {
     private ScheduleSymmetricKeyVersionDestructionMetadata() {
       keyId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScheduleSymmetricKeyVersionDestructionMetadata();
     }
 
     @java.lang.Override
@@ -15043,7 +15618,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15080,7 +15654,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15119,7 +15693,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -15138,7 +15714,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -15161,7 +15739,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -15180,7 +15760,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -15203,7 +15785,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
+     * @return Whether the destroyAt field is set.
      */
+    @java.lang.Override
     public boolean hasDestroyAt() {
       return destroyAt_ != null;
     }
@@ -15213,7 +15797,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
+     * @return The destroyAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getDestroyAt() {
       return destroyAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : destroyAt_;
     }
@@ -15224,6 +15810,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getDestroyAtOrBuilder() {
       return getDestroyAt();
     }
@@ -15242,10 +15829,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       if (destroyAt_ != null) {
@@ -15260,10 +15847,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       if (destroyAt_ != null) {
@@ -15285,18 +15872,17 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && (hasDestroyAt() == other.hasDestroyAt());
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (hasDestroyAt() != other.hasDestroyAt()) return false;
       if (hasDestroyAt()) {
-        result = result && getDestroyAt()
-            .equals(other.getDestroyAt());
+        if (!getDestroyAt()
+            .equals(other.getDestroyAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15496,35 +16082,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15585,6 +16171,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -15604,6 +16191,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -15624,6 +16212,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -15641,6 +16231,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -15654,6 +16245,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15674,6 +16267,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -15693,6 +16287,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -15713,6 +16308,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -15730,6 +16327,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -15743,6 +16341,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15756,7 +16356,7 @@ public final class SymmetricKeyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp destroyAt_ = null;
+      private com.google.protobuf.Timestamp destroyAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> destroyAtBuilder_;
       /**
@@ -15765,6 +16365,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
+       * @return Whether the destroyAt field is set.
        */
       public boolean hasDestroyAt() {
         return destroyAtBuilder_ != null || destroyAt_ != null;
@@ -15775,6 +16376,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp destroy_at = 3;</code>
+       * @return The destroyAt.
        */
       public com.google.protobuf.Timestamp getDestroyAt() {
         if (destroyAtBuilder_ == null) {
@@ -15911,7 +16513,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15971,6 +16573,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -15979,6 +16582,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -15989,6 +16593,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -15997,6 +16602,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -16004,7 +16610,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.CancelSymmetricKeyVersionDestructionRequest}
    */
-  public  static final class CancelSymmetricKeyVersionDestructionRequest extends
+  public static final class CancelSymmetricKeyVersionDestructionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.CancelSymmetricKeyVersionDestructionRequest)
       CancelSymmetricKeyVersionDestructionRequestOrBuilder {
@@ -16016,6 +16622,13 @@ public final class SymmetricKeyServiceOuterClass {
     private CancelSymmetricKeyVersionDestructionRequest() {
       keyId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelSymmetricKeyVersionDestructionRequest();
     }
 
     @java.lang.Override
@@ -16031,7 +16644,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16055,7 +16667,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16094,7 +16706,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -16113,7 +16727,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -16136,7 +16752,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -16155,7 +16773,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -16184,10 +16804,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       unknownFields.writeTo(output);
@@ -16199,10 +16819,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -16220,13 +16840,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16411,35 +17030,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16497,6 +17116,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -16516,6 +17136,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -16536,6 +17157,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -16553,6 +17176,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -16566,6 +17190,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16586,6 +17212,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -16605,6 +17232,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -16625,6 +17253,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -16642,6 +17272,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -16655,6 +17286,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16670,7 +17303,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16730,6 +17363,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -16738,6 +17372,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -16748,6 +17383,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -16756,6 +17392,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -16763,7 +17400,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.CancelSymmetricKeyVersionDestructionMetadata}
    */
-  public  static final class CancelSymmetricKeyVersionDestructionMetadata extends
+  public static final class CancelSymmetricKeyVersionDestructionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.CancelSymmetricKeyVersionDestructionMetadata)
       CancelSymmetricKeyVersionDestructionMetadataOrBuilder {
@@ -16775,6 +17412,13 @@ public final class SymmetricKeyServiceOuterClass {
     private CancelSymmetricKeyVersionDestructionMetadata() {
       keyId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelSymmetricKeyVersionDestructionMetadata();
     }
 
     @java.lang.Override
@@ -16790,7 +17434,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16814,7 +17457,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16853,7 +17496,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -16872,7 +17517,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1;</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -16895,7 +17542,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -16914,7 +17563,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2;</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -16943,10 +17594,10 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       unknownFields.writeTo(output);
@@ -16958,10 +17609,10 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -16979,13 +17630,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionMetadata other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionMetadata) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17170,35 +17820,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17256,6 +17906,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -17275,6 +17926,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -17295,6 +17947,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -17312,6 +17966,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -17325,6 +17980,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1;</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17345,6 +18002,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -17364,6 +18022,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -17384,6 +18043,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -17401,6 +18062,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -17414,6 +18076,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17429,7 +18093,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17490,6 +18154,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
     java.lang.String getKeyId();
     /**
@@ -17499,6 +18164,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
     com.google.protobuf.ByteString
         getKeyIdBytes();
@@ -17512,6 +18178,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -17522,6 +18189,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -17531,6 +18199,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -17538,7 +18207,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ListSymmetricKeyOperationsRequest}
    */
-  public  static final class ListSymmetricKeyOperationsRequest extends
+  public static final class ListSymmetricKeyOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ListSymmetricKeyOperationsRequest)
       ListSymmetricKeyOperationsRequestOrBuilder {
@@ -17549,8 +18218,14 @@ public final class SymmetricKeyServiceOuterClass {
     }
     private ListSymmetricKeyOperationsRequest() {
       keyId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSymmetricKeyOperationsRequest();
     }
 
     @java.lang.Override
@@ -17566,7 +18241,6 @@ public final class SymmetricKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17595,7 +18269,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17635,7 +18309,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The keyId.
      */
+    @java.lang.Override
     public java.lang.String getKeyId() {
       java.lang.Object ref = keyId_;
       if (ref instanceof java.lang.String) {
@@ -17655,7 +18331,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for keyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyIdBytes() {
       java.lang.Object ref = keyId_;
@@ -17681,7 +18359,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -17695,7 +18375,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -17715,7 +18397,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -17744,13 +18428,13 @@ public final class SymmetricKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -17762,14 +18446,14 @@ public final class SymmetricKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -17787,15 +18471,14 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17986,35 +18669,35 @@ public final class SymmetricKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18076,6 +18759,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The keyId.
        */
       public java.lang.String getKeyId() {
         java.lang.Object ref = keyId_;
@@ -18096,6 +18780,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for keyId.
        */
       public com.google.protobuf.ByteString
           getKeyIdBytes() {
@@ -18117,6 +18802,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyId(
           java.lang.String value) {
@@ -18135,6 +18822,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyId() {
         
@@ -18149,6 +18837,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18172,7 +18862,9 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -18185,6 +18877,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -18201,6 +18895,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -18217,6 +18912,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -18237,6 +18933,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -18258,6 +18955,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -18276,6 +18975,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -18290,6 +18990,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -18305,7 +19007,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18412,6 +19114,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -18423,6 +19126,7 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -18430,7 +19134,7 @@ public final class SymmetricKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.ListSymmetricKeyOperationsResponse}
    */
-  public  static final class ListSymmetricKeyOperationsResponse extends
+  public static final class ListSymmetricKeyOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.kms.v1.ListSymmetricKeyOperationsResponse)
       ListSymmetricKeyOperationsResponseOrBuilder {
@@ -18442,6 +19146,13 @@ public final class SymmetricKeyServiceOuterClass {
     private ListSymmetricKeyOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSymmetricKeyOperationsResponse();
     }
 
     @java.lang.Override
@@ -18469,7 +19180,7 @@ public final class SymmetricKeyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -18484,7 +19195,7 @@ public final class SymmetricKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18498,7 +19209,7 @@ public final class SymmetricKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -18518,7 +19229,6 @@ public final class SymmetricKeyServiceOuterClass {
               yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse.class, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -18528,6 +19238,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -18538,6 +19249,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -18549,6 +19261,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -18559,6 +19272,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -18569,6 +19283,7 @@ public final class SymmetricKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -18585,7 +19300,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -18607,7 +19324,9 @@ public final class SymmetricKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -18639,7 +19358,7 @@ public final class SymmetricKeyServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -18655,7 +19374,7 @@ public final class SymmetricKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -18673,13 +19392,12 @@ public final class SymmetricKeyServiceOuterClass {
       }
       yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse other = (yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18864,9 +19582,8 @@ public final class SymmetricKeyServiceOuterClass {
       public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse buildPartial() {
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse result = new yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -18875,42 +19592,41 @@ public final class SymmetricKeyServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18987,7 +19703,7 @@ public final class SymmetricKeyServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -19288,7 +20004,7 @@ public final class SymmetricKeyServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -19306,6 +20022,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -19328,6 +20045,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -19351,6 +20069,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -19371,6 +20091,7 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -19387,6 +20108,8 @@ public final class SymmetricKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -19402,7 +20125,7 @@ public final class SymmetricKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19728,15 +20451,7 @@ public final class SymmetricKeyServiceOuterClass {
       "go-genproto/yandex/cloud/kms/v1;kmsb\006pro" +
       "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -19748,7 +20463,7 @@ public final class SymmetricKeyServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_fieldAccessorTable = new

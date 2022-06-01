@@ -24,6 +24,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -43,6 +45,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
     java.lang.String getSubclusterId();
     /**
@@ -52,6 +55,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
     com.google.protobuf.ByteString
         getSubclusterIdBytes();
@@ -59,7 +63,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.GetSubclusterRequest}
    */
-  public  static final class GetSubclusterRequest extends
+  public static final class GetSubclusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.GetSubclusterRequest)
       GetSubclusterRequestOrBuilder {
@@ -71,6 +75,13 @@ public final class SubclusterServiceOuterClass {
     private GetSubclusterRequest() {
       clusterId_ = "";
       subclusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSubclusterRequest();
     }
 
     @java.lang.Override
@@ -86,7 +97,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -110,7 +120,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -149,7 +159,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -168,7 +180,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -192,7 +206,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
+    @java.lang.Override
     public java.lang.String getSubclusterId() {
       java.lang.Object ref = subclusterId_;
       if (ref instanceof java.lang.String) {
@@ -212,7 +228,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubclusterIdBytes() {
       java.lang.Object ref = subclusterId_;
@@ -241,10 +259,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subclusterId_);
       }
       unknownFields.writeTo(output);
@@ -256,10 +274,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subclusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -277,13 +295,12 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getSubclusterId()
-          .equals(other.getSubclusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getSubclusterId()
+          .equals(other.getSubclusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -468,35 +485,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -554,6 +571,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -573,6 +591,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -593,6 +612,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -610,6 +631,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -623,6 +645,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -644,6 +668,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subclusterId.
        */
       public java.lang.String getSubclusterId() {
         java.lang.Object ref = subclusterId_;
@@ -664,6 +689,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subclusterId.
        */
       public com.google.protobuf.ByteString
           getSubclusterIdBytes() {
@@ -685,6 +711,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterId(
           java.lang.String value) {
@@ -703,6 +731,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubclusterId() {
         
@@ -717,6 +746,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -732,7 +763,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -792,6 +823,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -800,6 +832,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -813,6 +846,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -823,6 +857,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -832,6 +867,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -847,6 +883,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -860,6 +897,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -867,7 +905,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ListSubclustersRequest}
    */
-  public  static final class ListSubclustersRequest extends
+  public static final class ListSubclustersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ListSubclustersRequest)
       ListSubclustersRequestOrBuilder {
@@ -878,9 +916,15 @@ public final class SubclusterServiceOuterClass {
     }
     private ListSubclustersRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSubclustersRequest();
     }
 
     @java.lang.Override
@@ -896,7 +940,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -931,7 +974,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -970,7 +1013,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -989,7 +1034,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -1015,7 +1062,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1029,7 +1078,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1049,7 +1100,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1077,7 +1130,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -1101,7 +1156,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -1130,16 +1187,16 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -1151,17 +1208,17 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1179,17 +1236,16 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1385,35 +1441,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1478,6 +1534,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1497,6 +1554,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1517,6 +1575,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1534,6 +1594,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1547,6 +1608,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1570,7 +1633,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1583,6 +1648,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1599,6 +1666,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1615,6 +1683,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1635,6 +1704,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1656,6 +1726,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1674,6 +1746,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1688,6 +1761,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1713,6 +1788,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1737,6 +1813,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1762,6 +1839,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1784,6 +1863,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1802,6 +1882,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1817,7 +1899,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1924,6 +2006,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1935,6 +2018,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1942,7 +2026,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ListSubclustersResponse}
    */
-  public  static final class ListSubclustersResponse extends
+  public static final class ListSubclustersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ListSubclustersResponse)
       ListSubclustersResponseOrBuilder {
@@ -1954,6 +2038,13 @@ public final class SubclusterServiceOuterClass {
     private ListSubclustersResponse() {
       subclusters_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSubclustersResponse();
     }
 
     @java.lang.Override
@@ -1981,7 +2072,7 @@ public final class SubclusterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 subclusters_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1996,7 +2087,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2010,7 +2101,7 @@ public final class SubclusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           subclusters_ = java.util.Collections.unmodifiableList(subclusters_);
         }
         this.unknownFields = unknownFields.build();
@@ -2030,7 +2121,6 @@ public final class SubclusterServiceOuterClass {
               yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse.class, yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBCLUSTERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> subclusters_;
     /**
@@ -2040,6 +2130,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> getSubclustersList() {
       return subclusters_;
     }
@@ -2050,6 +2141,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.v1.SubclusterOuterClass.SubclusterOrBuilder> 
         getSubclustersOrBuilderList() {
       return subclusters_;
@@ -2061,6 +2153,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
      */
+    @java.lang.Override
     public int getSubclustersCount() {
       return subclusters_.size();
     }
@@ -2071,6 +2164,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster getSubclusters(int index) {
       return subclusters_.get(index);
     }
@@ -2081,6 +2175,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.SubclusterOrBuilder getSubclustersOrBuilder(
         int index) {
       return subclusters_.get(index);
@@ -2097,7 +2192,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2119,7 +2216,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2151,7 +2250,7 @@ public final class SubclusterServiceOuterClass {
       for (int i = 0; i < subclusters_.size(); i++) {
         output.writeMessage(1, subclusters_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2167,7 +2266,7 @@ public final class SubclusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subclusters_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2185,13 +2284,12 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse) obj;
 
-      boolean result = true;
-      result = result && getSubclustersList()
-          .equals(other.getSubclustersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubclustersList()
+          .equals(other.getSubclustersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2376,9 +2474,8 @@ public final class SubclusterServiceOuterClass {
       public yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse buildPartial() {
         yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse result = new yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (subclustersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             subclusters_ = java.util.Collections.unmodifiableList(subclusters_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2387,42 +2484,41 @@ public final class SubclusterServiceOuterClass {
           result.subclusters_ = subclustersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2499,7 +2595,7 @@ public final class SubclusterServiceOuterClass {
       private java.util.List<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> subclusters_ =
         java.util.Collections.emptyList();
       private void ensureSubclustersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           subclusters_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster>(subclusters_);
           bitField0_ |= 0x00000001;
          }
@@ -2800,7 +2896,7 @@ public final class SubclusterServiceOuterClass {
           subclustersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster.Builder, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.SubclusterOrBuilder>(
                   subclusters_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           subclusters_ = null;
@@ -2818,6 +2914,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2840,6 +2937,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2863,6 +2961,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2883,6 +2983,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2899,6 +3000,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2914,7 +3017,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2975,6 +3078,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2984,6 +3088,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2995,6 +3100,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3004,6 +3110,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3014,6 +3121,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for role.
      */
     int getRoleValue();
     /**
@@ -3022,6 +3130,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The role.
      */
     yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role getRole();
 
@@ -3031,6 +3140,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -3039,6 +3149,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The resources.
      */
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
@@ -3056,6 +3167,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -3064,6 +3176,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -3074,6 +3187,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return The hostsCount.
      */
     long getHostsCount();
 
@@ -3083,6 +3197,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
+     * @return Whether the autoscalingConfig field is set.
      */
     boolean hasAutoscalingConfig();
     /**
@@ -3091,6 +3206,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
+     * @return The autoscalingConfig.
      */
     yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig();
     /**
@@ -3105,7 +3221,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.CreateSubclusterRequest}
    */
-  public  static final class CreateSubclusterRequest extends
+  public static final class CreateSubclusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.CreateSubclusterRequest)
       CreateSubclusterRequestOrBuilder {
@@ -3119,7 +3235,13 @@ public final class SubclusterServiceOuterClass {
       name_ = "";
       role_ = 0;
       subnetId_ = "";
-      hostsCount_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSubclusterRequest();
     }
 
     @java.lang.Override
@@ -3135,7 +3257,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3202,7 +3323,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3242,7 +3363,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3262,7 +3385,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3286,7 +3411,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3306,7 +3433,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3329,8 +3458,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for role.
      */
-    public int getRoleValue() {
+    @java.lang.Override public int getRoleValue() {
       return role_;
     }
     /**
@@ -3339,8 +3469,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The role.
      */
-    public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role getRole() {
+    @java.lang.Override public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role getRole() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role result = yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role.valueOf(role_);
       return result == null ? yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role.UNRECOGNIZED : result;
@@ -3354,7 +3485,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -3364,7 +3497,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.Common.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.dataproc.v1.Common.Resources.getDefaultInstance() : resources_;
     }
@@ -3375,6 +3510,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -3387,7 +3523,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -3406,7 +3544,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -3429,7 +3569,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return The hostsCount.
      */
+    @java.lang.Override
     public long getHostsCount() {
       return hostsCount_;
     }
@@ -3442,7 +3584,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
+     * @return Whether the autoscalingConfig field is set.
      */
+    @java.lang.Override
     public boolean hasAutoscalingConfig() {
       return autoscalingConfig_ != null;
     }
@@ -3452,7 +3596,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
+     * @return The autoscalingConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig() {
       return autoscalingConfig_ == null ? yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance() : autoscalingConfig_;
     }
@@ -3463,6 +3609,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder getAutoscalingConfigOrBuilder() {
       return getAutoscalingConfig();
     }
@@ -3481,10 +3628,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (role_ != yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role.ROLE_UNSPECIFIED.getNumber()) {
@@ -3493,7 +3640,7 @@ public final class SubclusterServiceOuterClass {
       if (resources_ != null) {
         output.writeMessage(4, getResources());
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, subnetId_);
       }
       if (hostsCount_ != 0L) {
@@ -3511,10 +3658,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (role_ != yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role.ROLE_UNSPECIFIED.getNumber()) {
@@ -3525,7 +3672,7 @@ public final class SubclusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getResources());
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, subnetId_);
       }
       if (hostsCount_ != 0L) {
@@ -3551,28 +3698,27 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && role_ == other.role_;
-      result = result && (hasResources() == other.hasResources());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (role_ != other.role_) return false;
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (getHostsCount()
-          == other.getHostsCount());
-      result = result && (hasAutoscalingConfig() == other.hasAutoscalingConfig());
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (getHostsCount()
+          != other.getHostsCount()) return false;
+      if (hasAutoscalingConfig() != other.hasAutoscalingConfig()) return false;
       if (hasAutoscalingConfig()) {
-        result = result && getAutoscalingConfig()
-            .equals(other.getAutoscalingConfig());
+        if (!getAutoscalingConfig()
+            .equals(other.getAutoscalingConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3803,35 +3949,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3906,6 +4052,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3926,6 +4073,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3947,6 +4095,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3965,6 +4115,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3979,6 +4130,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4000,6 +4153,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4020,6 +4174,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4041,6 +4196,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4059,6 +4216,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4073,6 +4231,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4093,8 +4253,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for role.
        */
-      public int getRoleValue() {
+      @java.lang.Override public int getRoleValue() {
         return role_;
       }
       /**
@@ -4103,8 +4264,11 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for role to set.
+       * @return This builder for chaining.
        */
       public Builder setRoleValue(int value) {
+        
         role_ = value;
         onChanged();
         return this;
@@ -4115,7 +4279,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The role.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role getRole() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role result = yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role.valueOf(role_);
@@ -4127,6 +4293,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
        */
       public Builder setRole(yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Role value) {
         if (value == null) {
@@ -4143,6 +4311,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRole() {
         
@@ -4151,7 +4320,7 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.v1.Common.Resources resources_ = null;
+      private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -4160,6 +4329,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -4170,6 +4340,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The resources.
        */
       public yandex.cloud.api.dataproc.v1.Common.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -4311,6 +4482,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -4330,6 +4502,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -4350,6 +4523,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -4367,6 +4542,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -4380,6 +4556,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4400,7 +4578,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The hostsCount.
        */
+      @java.lang.Override
       public long getHostsCount() {
         return hostsCount_;
       }
@@ -4410,6 +4590,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+       * @param value The hostsCount to set.
+       * @return This builder for chaining.
        */
       public Builder setHostsCount(long value) {
         
@@ -4423,6 +4605,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHostsCount() {
         
@@ -4431,7 +4614,7 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_ = null;
+      private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder> autoscalingConfigBuilder_;
       /**
@@ -4440,6 +4623,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
+       * @return Whether the autoscalingConfig field is set.
        */
       public boolean hasAutoscalingConfig() {
         return autoscalingConfigBuilder_ != null || autoscalingConfig_ != null;
@@ -4450,6 +4634,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 7;</code>
+       * @return The autoscalingConfig.
        */
       public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig() {
         if (autoscalingConfigBuilder_ == null) {
@@ -4586,7 +4771,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4646,6 +4831,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4654,6 +4840,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4664,6 +4851,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
     java.lang.String getSubclusterId();
     /**
@@ -4672,6 +4860,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
     com.google.protobuf.ByteString
         getSubclusterIdBytes();
@@ -4679,7 +4868,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.CreateSubclusterMetadata}
    */
-  public  static final class CreateSubclusterMetadata extends
+  public static final class CreateSubclusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.CreateSubclusterMetadata)
       CreateSubclusterMetadataOrBuilder {
@@ -4691,6 +4880,13 @@ public final class SubclusterServiceOuterClass {
     private CreateSubclusterMetadata() {
       clusterId_ = "";
       subclusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSubclusterMetadata();
     }
 
     @java.lang.Override
@@ -4706,7 +4902,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4730,7 +4925,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4769,7 +4964,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4788,7 +4985,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4811,7 +5010,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
+    @java.lang.Override
     public java.lang.String getSubclusterId() {
       java.lang.Object ref = subclusterId_;
       if (ref instanceof java.lang.String) {
@@ -4830,7 +5031,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubclusterIdBytes() {
       java.lang.Object ref = subclusterId_;
@@ -4859,10 +5062,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subclusterId_);
       }
       unknownFields.writeTo(output);
@@ -4874,10 +5077,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subclusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4895,13 +5098,12 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterMetadata other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getSubclusterId()
-          .equals(other.getSubclusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getSubclusterId()
+          .equals(other.getSubclusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5086,35 +5288,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5172,6 +5374,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5191,6 +5394,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5211,6 +5415,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5228,6 +5434,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5241,6 +5448,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5261,6 +5470,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subclusterId.
        */
       public java.lang.String getSubclusterId() {
         java.lang.Object ref = subclusterId_;
@@ -5280,6 +5490,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subclusterId.
        */
       public com.google.protobuf.ByteString
           getSubclusterIdBytes() {
@@ -5300,6 +5511,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterId(
           java.lang.String value) {
@@ -5317,6 +5530,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubclusterId() {
         
@@ -5330,6 +5544,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5345,7 +5561,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5406,6 +5622,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5415,6 +5632,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5426,6 +5644,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
     java.lang.String getSubclusterId();
     /**
@@ -5435,6 +5654,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
     com.google.protobuf.ByteString
         getSubclusterIdBytes();
@@ -5445,6 +5665,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5453,6 +5674,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5470,6 +5692,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -5478,6 +5701,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
+     * @return The resources.
      */
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
@@ -5495,6 +5719,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5503,6 +5728,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5513,6 +5739,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return The hostsCount.
      */
     long getHostsCount();
 
@@ -5522,6 +5749,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return The decommissionTimeout.
      */
     long getDecommissionTimeout();
 
@@ -5531,6 +5759,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
+     * @return Whether the autoscalingConfig field is set.
      */
     boolean hasAutoscalingConfig();
     /**
@@ -5539,6 +5768,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
+     * @return The autoscalingConfig.
      */
     yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig();
     /**
@@ -5553,7 +5783,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.UpdateSubclusterRequest}
    */
-  public  static final class UpdateSubclusterRequest extends
+  public static final class UpdateSubclusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.UpdateSubclusterRequest)
       UpdateSubclusterRequestOrBuilder {
@@ -5566,8 +5796,13 @@ public final class SubclusterServiceOuterClass {
       clusterId_ = "";
       subclusterId_ = "";
       name_ = "";
-      hostsCount_ = 0L;
-      decommissionTimeout_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSubclusterRequest();
     }
 
     @java.lang.Override
@@ -5583,7 +5818,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5662,7 +5896,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5702,7 +5936,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5722,7 +5958,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5746,7 +5984,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
+    @java.lang.Override
     public java.lang.String getSubclusterId() {
       java.lang.Object ref = subclusterId_;
       if (ref instanceof java.lang.String) {
@@ -5766,7 +6006,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubclusterIdBytes() {
       java.lang.Object ref = subclusterId_;
@@ -5789,7 +6031,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5799,7 +6043,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5810,6 +6056,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5822,7 +6069,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -5832,7 +6081,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.Common.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.dataproc.v1.Common.Resources.getDefaultInstance() : resources_;
     }
@@ -5843,6 +6094,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -5855,7 +6107,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5874,7 +6128,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5897,7 +6153,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+     * @return The hostsCount.
      */
+    @java.lang.Override
     public long getHostsCount() {
       return hostsCount_;
     }
@@ -5910,7 +6168,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return The decommissionTimeout.
      */
+    @java.lang.Override
     public long getDecommissionTimeout() {
       return decommissionTimeout_;
     }
@@ -5923,7 +6183,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
+     * @return Whether the autoscalingConfig field is set.
      */
+    @java.lang.Override
     public boolean hasAutoscalingConfig() {
       return autoscalingConfig_ != null;
     }
@@ -5933,7 +6195,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
+     * @return The autoscalingConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig() {
       return autoscalingConfig_ == null ? yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance() : autoscalingConfig_;
     }
@@ -5944,6 +6208,7 @@ public final class SubclusterServiceOuterClass {
      *
      * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder getAutoscalingConfigOrBuilder() {
       return getAutoscalingConfig();
     }
@@ -5962,10 +6227,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subclusterId_);
       }
       if (updateMask_ != null) {
@@ -5974,7 +6239,7 @@ public final class SubclusterServiceOuterClass {
       if (resources_ != null) {
         output.writeMessage(4, getResources());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
       }
       if (hostsCount_ != 0L) {
@@ -5995,10 +6260,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subclusterId_);
       }
       if (updateMask_ != null) {
@@ -6009,7 +6274,7 @@ public final class SubclusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getResources());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
       }
       if (hostsCount_ != 0L) {
@@ -6039,34 +6304,33 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getSubclusterId()
-          .equals(other.getSubclusterId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getSubclusterId()
+          .equals(other.getSubclusterId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && (hasResources() == other.hasResources());
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getHostsCount()
-          == other.getHostsCount());
-      result = result && (getDecommissionTimeout()
-          == other.getDecommissionTimeout());
-      result = result && (hasAutoscalingConfig() == other.hasAutoscalingConfig());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getHostsCount()
+          != other.getHostsCount()) return false;
+      if (getDecommissionTimeout()
+          != other.getDecommissionTimeout()) return false;
+      if (hasAutoscalingConfig() != other.hasAutoscalingConfig()) return false;
       if (hasAutoscalingConfig()) {
-        result = result && getAutoscalingConfig()
-            .equals(other.getAutoscalingConfig());
+        if (!getAutoscalingConfig()
+            .equals(other.getAutoscalingConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6313,35 +6577,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6419,6 +6683,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6439,6 +6704,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6460,6 +6726,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6478,6 +6746,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6492,6 +6761,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6513,6 +6784,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subclusterId.
        */
       public java.lang.String getSubclusterId() {
         java.lang.Object ref = subclusterId_;
@@ -6533,6 +6805,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subclusterId.
        */
       public com.google.protobuf.ByteString
           getSubclusterIdBytes() {
@@ -6554,6 +6827,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterId(
           java.lang.String value) {
@@ -6572,6 +6847,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubclusterId() {
         
@@ -6586,6 +6862,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6599,7 +6877,7 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6608,6 +6886,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6618,6 +6897,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6752,7 +7032,7 @@ public final class SubclusterServiceOuterClass {
         return updateMaskBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.v1.Common.Resources resources_ = null;
+      private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -6761,6 +7041,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -6771,6 +7052,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.dataproc.v1.Common.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -6912,6 +7194,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6931,6 +7214,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6951,6 +7235,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6968,6 +7254,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6981,6 +7268,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7001,7 +7290,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The hostsCount.
        */
+      @java.lang.Override
       public long getHostsCount() {
         return hostsCount_;
       }
@@ -7011,6 +7302,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+       * @param value The hostsCount to set.
+       * @return This builder for chaining.
        */
       public Builder setHostsCount(long value) {
         
@@ -7024,6 +7317,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHostsCount() {
         
@@ -7039,7 +7333,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @return The decommissionTimeout.
        */
+      @java.lang.Override
       public long getDecommissionTimeout() {
         return decommissionTimeout_;
       }
@@ -7049,6 +7345,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @param value The decommissionTimeout to set.
+       * @return This builder for chaining.
        */
       public Builder setDecommissionTimeout(long value) {
         
@@ -7062,6 +7360,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDecommissionTimeout() {
         
@@ -7070,7 +7369,7 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_ = null;
+      private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder> autoscalingConfigBuilder_;
       /**
@@ -7079,6 +7378,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
+       * @return Whether the autoscalingConfig field is set.
        */
       public boolean hasAutoscalingConfig() {
         return autoscalingConfigBuilder_ != null || autoscalingConfig_ != null;
@@ -7089,6 +7389,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 8;</code>
+       * @return The autoscalingConfig.
        */
       public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig() {
         if (autoscalingConfigBuilder_ == null) {
@@ -7225,7 +7526,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7285,6 +7586,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7293,6 +7595,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7303,6 +7606,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
     java.lang.String getSubclusterId();
     /**
@@ -7311,6 +7615,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
     com.google.protobuf.ByteString
         getSubclusterIdBytes();
@@ -7318,7 +7623,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.UpdateSubclusterMetadata}
    */
-  public  static final class UpdateSubclusterMetadata extends
+  public static final class UpdateSubclusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.UpdateSubclusterMetadata)
       UpdateSubclusterMetadataOrBuilder {
@@ -7330,6 +7635,13 @@ public final class SubclusterServiceOuterClass {
     private UpdateSubclusterMetadata() {
       clusterId_ = "";
       subclusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSubclusterMetadata();
     }
 
     @java.lang.Override
@@ -7345,7 +7657,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7369,7 +7680,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7408,7 +7719,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -7427,7 +7740,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -7450,7 +7765,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
+    @java.lang.Override
     public java.lang.String getSubclusterId() {
       java.lang.Object ref = subclusterId_;
       if (ref instanceof java.lang.String) {
@@ -7469,7 +7786,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubclusterIdBytes() {
       java.lang.Object ref = subclusterId_;
@@ -7498,10 +7817,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subclusterId_);
       }
       unknownFields.writeTo(output);
@@ -7513,10 +7832,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subclusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7534,13 +7853,12 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterMetadata other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getSubclusterId()
-          .equals(other.getSubclusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getSubclusterId()
+          .equals(other.getSubclusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7725,35 +8043,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7811,6 +8129,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7830,6 +8149,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7850,6 +8170,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7867,6 +8189,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7880,6 +8203,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7900,6 +8225,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subclusterId.
        */
       public java.lang.String getSubclusterId() {
         java.lang.Object ref = subclusterId_;
@@ -7919,6 +8245,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subclusterId.
        */
       public com.google.protobuf.ByteString
           getSubclusterIdBytes() {
@@ -7939,6 +8266,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterId(
           java.lang.String value) {
@@ -7956,6 +8285,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubclusterId() {
         
@@ -7969,6 +8299,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7984,7 +8316,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8045,6 +8377,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -8054,6 +8387,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -8064,6 +8398,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
     java.lang.String getSubclusterId();
     /**
@@ -8072,6 +8407,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
     com.google.protobuf.ByteString
         getSubclusterIdBytes();
@@ -8082,13 +8418,14 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 decommission_timeout = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return The decommissionTimeout.
      */
     long getDecommissionTimeout();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.DeleteSubclusterRequest}
    */
-  public  static final class DeleteSubclusterRequest extends
+  public static final class DeleteSubclusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.DeleteSubclusterRequest)
       DeleteSubclusterRequestOrBuilder {
@@ -8100,7 +8437,13 @@ public final class SubclusterServiceOuterClass {
     private DeleteSubclusterRequest() {
       clusterId_ = "";
       subclusterId_ = "";
-      decommissionTimeout_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSubclusterRequest();
     }
 
     @java.lang.Override
@@ -8116,7 +8459,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8145,7 +8487,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8185,7 +8527,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -8205,7 +8549,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -8228,7 +8574,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
+    @java.lang.Override
     public java.lang.String getSubclusterId() {
       java.lang.Object ref = subclusterId_;
       if (ref instanceof java.lang.String) {
@@ -8247,7 +8595,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubclusterIdBytes() {
       java.lang.Object ref = subclusterId_;
@@ -8270,7 +8620,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 decommission_timeout = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return The decommissionTimeout.
      */
+    @java.lang.Override
     public long getDecommissionTimeout() {
       return decommissionTimeout_;
     }
@@ -8289,10 +8641,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subclusterId_);
       }
       if (decommissionTimeout_ != 0L) {
@@ -8307,10 +8659,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subclusterId_);
       }
       if (decommissionTimeout_ != 0L) {
@@ -8332,15 +8684,14 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getSubclusterId()
-          .equals(other.getSubclusterId());
-      result = result && (getDecommissionTimeout()
-          == other.getDecommissionTimeout());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getSubclusterId()
+          .equals(other.getSubclusterId())) return false;
+      if (getDecommissionTimeout()
+          != other.getDecommissionTimeout()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8531,35 +8882,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8621,6 +8972,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -8641,6 +8993,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -8662,6 +9015,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -8680,6 +9035,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -8694,6 +9050,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8714,6 +9072,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subclusterId.
        */
       public java.lang.String getSubclusterId() {
         java.lang.Object ref = subclusterId_;
@@ -8733,6 +9092,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subclusterId.
        */
       public com.google.protobuf.ByteString
           getSubclusterIdBytes() {
@@ -8753,6 +9113,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterId(
           java.lang.String value) {
@@ -8770,6 +9132,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubclusterId() {
         
@@ -8783,6 +9146,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8803,7 +9168,9 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 decommission_timeout = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @return The decommissionTimeout.
        */
+      @java.lang.Override
       public long getDecommissionTimeout() {
         return decommissionTimeout_;
       }
@@ -8813,6 +9180,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 decommission_timeout = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @param value The decommissionTimeout to set.
+       * @return This builder for chaining.
        */
       public Builder setDecommissionTimeout(long value) {
         
@@ -8826,6 +9195,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 decommission_timeout = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDecommissionTimeout() {
         
@@ -8836,7 +9206,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8896,6 +9266,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -8904,6 +9275,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -8914,6 +9286,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
     java.lang.String getSubclusterId();
     /**
@@ -8922,6 +9295,7 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
     com.google.protobuf.ByteString
         getSubclusterIdBytes();
@@ -8929,7 +9303,7 @@ public final class SubclusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.DeleteSubclusterMetadata}
    */
-  public  static final class DeleteSubclusterMetadata extends
+  public static final class DeleteSubclusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.DeleteSubclusterMetadata)
       DeleteSubclusterMetadataOrBuilder {
@@ -8941,6 +9315,13 @@ public final class SubclusterServiceOuterClass {
     private DeleteSubclusterMetadata() {
       clusterId_ = "";
       subclusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSubclusterMetadata();
     }
 
     @java.lang.Override
@@ -8956,7 +9337,6 @@ public final class SubclusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8980,7 +9360,7 @@ public final class SubclusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9019,7 +9399,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -9038,7 +9420,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -9061,7 +9445,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subclusterId.
      */
+    @java.lang.Override
     public java.lang.String getSubclusterId() {
       java.lang.Object ref = subclusterId_;
       if (ref instanceof java.lang.String) {
@@ -9080,7 +9466,9 @@ public final class SubclusterServiceOuterClass {
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subclusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubclusterIdBytes() {
       java.lang.Object ref = subclusterId_;
@@ -9109,10 +9497,10 @@ public final class SubclusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subclusterId_);
       }
       unknownFields.writeTo(output);
@@ -9124,10 +9512,10 @@ public final class SubclusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getSubclusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subclusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subclusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9145,13 +9533,12 @@ public final class SubclusterServiceOuterClass {
       }
       yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterMetadata other = (yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getSubclusterId()
-          .equals(other.getSubclusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getSubclusterId()
+          .equals(other.getSubclusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9336,35 +9723,35 @@ public final class SubclusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9422,6 +9809,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -9441,6 +9829,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -9461,6 +9850,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -9478,6 +9869,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -9491,6 +9883,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9511,6 +9905,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subclusterId.
        */
       public java.lang.String getSubclusterId() {
         java.lang.Object ref = subclusterId_;
@@ -9530,6 +9925,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subclusterId.
        */
       public com.google.protobuf.ByteString
           getSubclusterIdBytes() {
@@ -9550,6 +9946,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterId(
           java.lang.String value) {
@@ -9567,6 +9965,7 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubclusterId() {
         
@@ -9580,6 +9979,8 @@ public final class SubclusterServiceOuterClass {
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subclusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubclusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9595,7 +9996,7 @@ public final class SubclusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9775,15 +10176,7 @@ public final class SubclusterServiceOuterClass {
       "proto/yandex/cloud/dataproc/v1;dataprocb" +
       "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -9793,7 +10186,7 @@ public final class SubclusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.SubclusterOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_dataproc_v1_GetSubclusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_GetSubclusterRequest_fieldAccessorTable = new

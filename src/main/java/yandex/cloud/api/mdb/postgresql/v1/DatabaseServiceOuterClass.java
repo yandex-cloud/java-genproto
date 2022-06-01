@@ -25,6 +25,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -34,6 +35,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -45,6 +47,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -54,6 +57,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -61,7 +65,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.GetDatabaseRequest}
    */
-  public  static final class GetDatabaseRequest extends
+  public static final class GetDatabaseRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.GetDatabaseRequest)
       GetDatabaseRequestOrBuilder {
@@ -73,6 +77,13 @@ public final class DatabaseServiceOuterClass {
     private GetDatabaseRequest() {
       clusterId_ = "";
       databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDatabaseRequest();
     }
 
     @java.lang.Override
@@ -88,7 +99,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,7 +122,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -152,7 +162,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -172,7 +184,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -196,7 +210,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -216,7 +232,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -245,10 +263,10 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
       }
       unknownFields.writeTo(output);
@@ -260,10 +278,10 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
       }
       size += unknownFields.getSerializedSize();
@@ -281,13 +299,12 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -472,35 +489,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -559,6 +576,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -579,6 +597,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -600,6 +619,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -618,6 +639,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -632,6 +654,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -653,6 +677,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -673,6 +698,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -694,6 +720,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -712,6 +740,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -726,6 +755,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -741,7 +772,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -802,6 +833,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -811,12 +843,14 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -827,6 +861,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -836,6 +871,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -843,7 +879,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.ListDatabasesRequest}
    */
-  public  static final class ListDatabasesRequest extends
+  public static final class ListDatabasesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.ListDatabasesRequest)
       ListDatabasesRequestOrBuilder {
@@ -854,8 +890,14 @@ public final class DatabaseServiceOuterClass {
     }
     private ListDatabasesRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDatabasesRequest();
     }
 
     @java.lang.Override
@@ -871,7 +913,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -900,7 +941,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -940,7 +981,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -960,7 +1003,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -979,7 +1024,9 @@ public final class DatabaseServiceOuterClass {
     private long pageSize_;
     /**
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -993,7 +1040,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1013,7 +1062,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1042,13 +1093,13 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -1060,14 +1111,14 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1085,15 +1136,14 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1284,35 +1334,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1374,6 +1424,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1394,6 +1445,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1415,6 +1467,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1433,6 +1487,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1447,6 +1502,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1463,12 +1520,16 @@ public final class DatabaseServiceOuterClass {
       private long pageSize_ ;
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1478,6 +1539,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1494,6 +1556,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1514,6 +1577,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1535,6 +1599,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1553,6 +1619,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1567,6 +1634,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1582,7 +1651,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1689,6 +1758,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1700,6 +1770,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1707,7 +1778,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.ListDatabasesResponse}
    */
-  public  static final class ListDatabasesResponse extends
+  public static final class ListDatabasesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.ListDatabasesResponse)
       ListDatabasesResponseOrBuilder {
@@ -1719,6 +1790,13 @@ public final class DatabaseServiceOuterClass {
     private ListDatabasesResponse() {
       databases_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDatabasesResponse();
     }
 
     @java.lang.Override
@@ -1746,7 +1824,7 @@ public final class DatabaseServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 databases_ = new java.util.ArrayList<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1761,7 +1839,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1775,7 +1853,7 @@ public final class DatabaseServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           databases_ = java.util.Collections.unmodifiableList(databases_);
         }
         this.unknownFields = unknownFields.build();
@@ -1795,7 +1873,6 @@ public final class DatabaseServiceOuterClass {
               yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse.class, yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATABASES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database> databases_;
     /**
@@ -1805,6 +1882,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Database databases = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database> getDatabasesList() {
       return databases_;
     }
@@ -1815,6 +1893,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Database databases = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseOrBuilder> 
         getDatabasesOrBuilderList() {
       return databases_;
@@ -1826,6 +1905,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Database databases = 1;</code>
      */
+    @java.lang.Override
     public int getDatabasesCount() {
       return databases_.size();
     }
@@ -1836,6 +1916,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Database databases = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database getDatabases(int index) {
       return databases_.get(index);
     }
@@ -1846,6 +1927,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Database databases = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseOrBuilder getDatabasesOrBuilder(
         int index) {
       return databases_.get(index);
@@ -1862,7 +1944,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1884,7 +1968,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1916,7 +2002,7 @@ public final class DatabaseServiceOuterClass {
       for (int i = 0; i < databases_.size(); i++) {
         output.writeMessage(1, databases_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1932,7 +2018,7 @@ public final class DatabaseServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, databases_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1950,13 +2036,12 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse) obj;
 
-      boolean result = true;
-      result = result && getDatabasesList()
-          .equals(other.getDatabasesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDatabasesList()
+          .equals(other.getDatabasesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2141,9 +2226,8 @@ public final class DatabaseServiceOuterClass {
       public yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse buildPartial() {
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse result = new yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (databasesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             databases_ = java.util.Collections.unmodifiableList(databases_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2152,42 +2236,41 @@ public final class DatabaseServiceOuterClass {
           result.databases_ = databasesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2264,7 +2347,7 @@ public final class DatabaseServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database> databases_ =
         java.util.Collections.emptyList();
       private void ensureDatabasesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           databases_ = new java.util.ArrayList<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database>(databases_);
           bitField0_ |= 0x00000001;
          }
@@ -2565,7 +2648,7 @@ public final class DatabaseServiceOuterClass {
           databasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database.Builder, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseOrBuilder>(
                   databases_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           databases_ = null;
@@ -2583,6 +2666,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2605,6 +2689,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2628,6 +2713,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2648,6 +2735,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2664,6 +2752,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2679,7 +2769,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2740,6 +2830,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2749,6 +2840,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2759,6 +2851,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the databaseSpec field is set.
      */
     boolean hasDatabaseSpec();
     /**
@@ -2767,6 +2860,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The databaseSpec.
      */
     yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec getDatabaseSpec();
     /**
@@ -2781,7 +2875,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.CreateDatabaseRequest}
    */
-  public  static final class CreateDatabaseRequest extends
+  public static final class CreateDatabaseRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.CreateDatabaseRequest)
       CreateDatabaseRequestOrBuilder {
@@ -2792,6 +2886,13 @@ public final class DatabaseServiceOuterClass {
     }
     private CreateDatabaseRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDatabaseRequest();
     }
 
     @java.lang.Override
@@ -2807,7 +2908,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2838,7 +2938,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2878,7 +2978,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2898,7 +3000,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2921,7 +3025,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the databaseSpec field is set.
      */
+    @java.lang.Override
     public boolean hasDatabaseSpec() {
       return databaseSpec_ != null;
     }
@@ -2931,7 +3037,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The databaseSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec getDatabaseSpec() {
       return databaseSpec_ == null ? yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec.getDefaultInstance() : databaseSpec_;
     }
@@ -2942,6 +3050,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpecOrBuilder getDatabaseSpecOrBuilder() {
       return getDatabaseSpec();
     }
@@ -2960,7 +3069,7 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (databaseSpec_ != null) {
@@ -2975,7 +3084,7 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (databaseSpec_ != null) {
@@ -2997,16 +3106,15 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (hasDatabaseSpec() == other.hasDatabaseSpec());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasDatabaseSpec() != other.hasDatabaseSpec()) return false;
       if (hasDatabaseSpec()) {
-        result = result && getDatabaseSpec()
-            .equals(other.getDatabaseSpec());
+        if (!getDatabaseSpec()
+            .equals(other.getDatabaseSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3201,35 +3309,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3287,6 +3395,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3307,6 +3416,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3328,6 +3438,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3346,6 +3458,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3360,6 +3473,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3373,7 +3488,7 @@ public final class DatabaseServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec databaseSpec_ = null;
+      private yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec databaseSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec.Builder, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpecOrBuilder> databaseSpecBuilder_;
       /**
@@ -3382,6 +3497,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the databaseSpec field is set.
        */
       public boolean hasDatabaseSpec() {
         return databaseSpecBuilder_ != null || databaseSpec_ != null;
@@ -3392,6 +3508,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The databaseSpec.
        */
       public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.DatabaseSpec getDatabaseSpec() {
         if (databaseSpecBuilder_ == null) {
@@ -3528,7 +3645,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3588,6 +3705,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -3596,6 +3714,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -3606,6 +3725,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -3614,6 +3734,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -3621,7 +3742,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.CreateDatabaseMetadata}
    */
-  public  static final class CreateDatabaseMetadata extends
+  public static final class CreateDatabaseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.CreateDatabaseMetadata)
       CreateDatabaseMetadataOrBuilder {
@@ -3633,6 +3754,13 @@ public final class DatabaseServiceOuterClass {
     private CreateDatabaseMetadata() {
       clusterId_ = "";
       databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDatabaseMetadata();
     }
 
     @java.lang.Override
@@ -3648,7 +3776,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3672,7 +3799,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3711,7 +3838,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3730,7 +3859,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3753,7 +3884,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -3772,7 +3905,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -3801,10 +3936,10 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
       }
       unknownFields.writeTo(output);
@@ -3816,10 +3951,10 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
       }
       size += unknownFields.getSerializedSize();
@@ -3837,13 +3972,12 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseMetadata other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4028,35 +4162,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4114,6 +4248,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4133,6 +4268,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4153,6 +4289,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4170,6 +4308,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4183,6 +4322,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4203,6 +4344,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -4222,6 +4364,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -4242,6 +4385,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -4259,6 +4404,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -4272,6 +4418,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4287,7 +4435,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4348,6 +4496,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4357,6 +4506,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4368,6 +4518,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -4377,6 +4528,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -4387,6 +4539,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4395,6 +4548,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4463,7 +4617,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UpdateDatabaseRequest}
    */
-  public  static final class UpdateDatabaseRequest extends
+  public static final class UpdateDatabaseRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.UpdateDatabaseRequest)
       UpdateDatabaseRequestOrBuilder {
@@ -4476,6 +4630,13 @@ public final class DatabaseServiceOuterClass {
       clusterId_ = "";
       databaseName_ = "";
       extensions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDatabaseRequest();
     }
 
     @java.lang.Override
@@ -4528,16 +4689,16 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 extensions_ = new java.util.ArrayList<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               extensions_.add(
                   input.readMessage(yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4551,7 +4712,7 @@ public final class DatabaseServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           extensions_ = java.util.Collections.unmodifiableList(extensions_);
         }
         this.unknownFields = unknownFields.build();
@@ -4571,7 +4732,6 @@ public final class DatabaseServiceOuterClass {
               yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.class, yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -4581,7 +4741,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4601,7 +4763,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4625,7 +4789,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -4645,7 +4811,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -4668,7 +4836,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -4678,7 +4848,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -4689,6 +4861,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4704,6 +4877,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Extension extensions = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension> getExtensionsList() {
       return extensions_;
     }
@@ -4716,6 +4890,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Extension extensions = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.ExtensionOrBuilder> 
         getExtensionsOrBuilderList() {
       return extensions_;
@@ -4729,6 +4904,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Extension extensions = 4;</code>
      */
+    @java.lang.Override
     public int getExtensionsCount() {
       return extensions_.size();
     }
@@ -4741,6 +4917,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Extension extensions = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension getExtensions(int index) {
       return extensions_.get(index);
     }
@@ -4753,6 +4930,7 @@ public final class DatabaseServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Extension extensions = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.ExtensionOrBuilder getExtensionsOrBuilder(
         int index) {
       return extensions_.get(index);
@@ -4772,10 +4950,10 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
       }
       if (updateMask_ != null) {
@@ -4793,10 +4971,10 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
       }
       if (updateMask_ != null) {
@@ -4822,20 +5000,19 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getExtensionsList()
-          .equals(other.getExtensionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getExtensionsList()
+          .equals(other.getExtensionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5003,7 +5180,7 @@ public final class DatabaseServiceOuterClass {
         }
         if (extensionsBuilder_ == null) {
           extensions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           extensionsBuilder_.clear();
         }
@@ -5034,7 +5211,6 @@ public final class DatabaseServiceOuterClass {
       public yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest buildPartial() {
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest result = new yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
         result.databaseName_ = databaseName_;
         if (updateMaskBuilder_ == null) {
@@ -5043,50 +5219,49 @@ public final class DatabaseServiceOuterClass {
           result.updateMask_ = updateMaskBuilder_.build();
         }
         if (extensionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             extensions_ = java.util.Collections.unmodifiableList(extensions_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.extensions_ = extensions_;
         } else {
           result.extensions_ = extensionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5115,7 +5290,7 @@ public final class DatabaseServiceOuterClass {
           if (!other.extensions_.isEmpty()) {
             if (extensions_.isEmpty()) {
               extensions_ = other.extensions_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureExtensionsIsMutable();
               extensions_.addAll(other.extensions_);
@@ -5128,7 +5303,7 @@ public final class DatabaseServiceOuterClass {
               extensionsBuilder_.dispose();
               extensionsBuilder_ = null;
               extensions_ = other.extensions_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
               extensionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getExtensionsFieldBuilder() : null;
@@ -5175,6 +5350,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5195,6 +5371,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5216,6 +5393,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5234,6 +5413,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5248,6 +5428,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5269,6 +5451,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -5289,6 +5472,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -5310,6 +5494,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -5328,6 +5514,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -5342,6 +5529,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5355,7 +5544,7 @@ public final class DatabaseServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -5364,6 +5553,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -5374,6 +5564,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5511,9 +5702,9 @@ public final class DatabaseServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension> extensions_ =
         java.util.Collections.emptyList();
       private void ensureExtensionsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           extensions_ = new java.util.ArrayList<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension>(extensions_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -5729,7 +5920,7 @@ public final class DatabaseServiceOuterClass {
       public Builder clearExtensions() {
         if (extensionsBuilder_ == null) {
           extensions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           extensionsBuilder_.clear();
@@ -5848,7 +6039,7 @@ public final class DatabaseServiceOuterClass {
           extensionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension.Builder, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.ExtensionOrBuilder>(
                   extensions_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           extensions_ = null;
@@ -5858,7 +6049,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5918,6 +6109,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5926,6 +6118,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5936,6 +6129,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -5944,6 +6138,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -5951,7 +6146,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UpdateDatabaseMetadata}
    */
-  public  static final class UpdateDatabaseMetadata extends
+  public static final class UpdateDatabaseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.UpdateDatabaseMetadata)
       UpdateDatabaseMetadataOrBuilder {
@@ -5963,6 +6158,13 @@ public final class DatabaseServiceOuterClass {
     private UpdateDatabaseMetadata() {
       clusterId_ = "";
       databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDatabaseMetadata();
     }
 
     @java.lang.Override
@@ -5978,7 +6180,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6002,7 +6203,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6041,7 +6242,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6060,7 +6263,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6083,7 +6288,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -6102,7 +6309,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -6131,10 +6340,10 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
       }
       unknownFields.writeTo(output);
@@ -6146,10 +6355,10 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
       }
       size += unknownFields.getSerializedSize();
@@ -6167,13 +6376,12 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6358,35 +6566,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6444,6 +6652,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6463,6 +6672,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6483,6 +6693,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6500,6 +6712,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6513,6 +6726,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6533,6 +6748,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -6552,6 +6768,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -6572,6 +6789,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -6589,6 +6808,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -6602,6 +6822,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6617,7 +6839,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6678,6 +6900,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6687,6 +6910,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -6698,6 +6922,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -6707,6 +6932,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -6714,7 +6940,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DeleteDatabaseRequest}
    */
-  public  static final class DeleteDatabaseRequest extends
+  public static final class DeleteDatabaseRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.DeleteDatabaseRequest)
       DeleteDatabaseRequestOrBuilder {
@@ -6726,6 +6952,13 @@ public final class DatabaseServiceOuterClass {
     private DeleteDatabaseRequest() {
       clusterId_ = "";
       databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDatabaseRequest();
     }
 
     @java.lang.Override
@@ -6741,7 +6974,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6765,7 +6997,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6805,7 +7037,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6825,7 +7059,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6849,7 +7085,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -6869,7 +7107,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -6898,10 +7138,10 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
       }
       unknownFields.writeTo(output);
@@ -6913,10 +7153,10 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
       }
       size += unknownFields.getSerializedSize();
@@ -6934,13 +7174,12 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7125,35 +7364,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7212,6 +7451,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7232,6 +7472,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7253,6 +7494,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7271,6 +7514,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7285,6 +7529,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7306,6 +7552,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -7326,6 +7573,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -7347,6 +7595,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -7365,6 +7615,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -7379,6 +7630,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7394,7 +7647,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7454,6 +7707,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7462,6 +7716,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7472,6 +7727,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -7480,6 +7736,7 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -7487,7 +7744,7 @@ public final class DatabaseServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DeleteDatabaseMetadata}
    */
-  public  static final class DeleteDatabaseMetadata extends
+  public static final class DeleteDatabaseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.DeleteDatabaseMetadata)
       DeleteDatabaseMetadataOrBuilder {
@@ -7499,6 +7756,13 @@ public final class DatabaseServiceOuterClass {
     private DeleteDatabaseMetadata() {
       clusterId_ = "";
       databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDatabaseMetadata();
     }
 
     @java.lang.Override
@@ -7514,7 +7778,6 @@ public final class DatabaseServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7538,7 +7801,7 @@ public final class DatabaseServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7577,7 +7840,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -7596,7 +7861,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -7619,7 +7886,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -7638,7 +7907,9 @@ public final class DatabaseServiceOuterClass {
      * </pre>
      *
      * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -7667,10 +7938,10 @@ public final class DatabaseServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
       }
       unknownFields.writeTo(output);
@@ -7682,10 +7953,10 @@ public final class DatabaseServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
       }
       size += unknownFields.getSerializedSize();
@@ -7703,13 +7974,12 @@ public final class DatabaseServiceOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseMetadata other = (yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7894,35 +8164,35 @@ public final class DatabaseServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7980,6 +8250,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7999,6 +8270,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -8019,6 +8291,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -8036,6 +8310,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -8049,6 +8324,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8069,6 +8346,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -8088,6 +8366,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -8108,6 +8387,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -8125,6 +8406,7 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -8138,6 +8420,8 @@ public final class DatabaseServiceOuterClass {
        * </pre>
        *
        * <code>string database_name = 2;</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8153,7 +8437,7 @@ public final class DatabaseServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8321,15 +8605,7 @@ public final class DatabaseServiceOuterClass {
       "genproto/yandex/cloud/mdb/postgresql/v1;" +
       "postgresqlb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -8338,7 +8614,7 @@ public final class DatabaseServiceOuterClass {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_postgresql_v1_GetDatabaseRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_GetDatabaseRequest_fieldAccessorTable = new

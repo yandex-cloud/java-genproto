@@ -24,6 +24,7 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 cores = 2;</code>
+     * @return The cores.
      */
     long getCores();
 
@@ -51,6 +54,7 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 memory = 3;</code>
+     * @return The memory.
      */
     long getMemory();
 
@@ -60,6 +64,7 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 disks = 4;</code>
+     * @return The disks.
      */
     long getDisks();
 
@@ -69,6 +74,7 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 disk_size = 5;</code>
+     * @return The diskSize.
      */
     long getDiskSize();
   }
@@ -81,7 +87,7 @@ public final class HostTypeOuterClass {
    *
    * Protobuf type {@code yandex.cloud.compute.v1.HostType}
    */
-  public  static final class HostType extends
+  public static final class HostType extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.HostType)
       HostTypeOrBuilder {
@@ -92,10 +98,13 @@ public final class HostTypeOuterClass {
     }
     private HostType() {
       id_ = "";
-      cores_ = 0L;
-      memory_ = 0L;
-      disks_ = 0L;
-      diskSize_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HostType();
     }
 
     @java.lang.Override
@@ -111,7 +120,6 @@ public final class HostTypeOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -149,7 +157,7 @@ public final class HostTypeOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -188,7 +196,9 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -207,7 +217,9 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -230,7 +242,9 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 cores = 2;</code>
+     * @return The cores.
      */
+    @java.lang.Override
     public long getCores() {
       return cores_;
     }
@@ -243,7 +257,9 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 memory = 3;</code>
+     * @return The memory.
      */
+    @java.lang.Override
     public long getMemory() {
       return memory_;
     }
@@ -256,7 +272,9 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 disks = 4;</code>
+     * @return The disks.
      */
+    @java.lang.Override
     public long getDisks() {
       return disks_;
     }
@@ -269,7 +287,9 @@ public final class HostTypeOuterClass {
      * </pre>
      *
      * <code>int64 disk_size = 5;</code>
+     * @return The diskSize.
      */
+    @java.lang.Override
     public long getDiskSize() {
       return diskSize_;
     }
@@ -288,7 +308,7 @@ public final class HostTypeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (cores_ != 0L) {
@@ -312,7 +332,7 @@ public final class HostTypeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (cores_ != 0L) {
@@ -346,19 +366,18 @@ public final class HostTypeOuterClass {
       }
       yandex.cloud.api.compute.v1.HostTypeOuterClass.HostType other = (yandex.cloud.api.compute.v1.HostTypeOuterClass.HostType) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (getCores()
-          == other.getCores());
-      result = result && (getMemory()
-          == other.getMemory());
-      result = result && (getDisks()
-          == other.getDisks());
-      result = result && (getDiskSize()
-          == other.getDiskSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getCores()
+          != other.getCores()) return false;
+      if (getMemory()
+          != other.getMemory()) return false;
+      if (getDisks()
+          != other.getDisks()) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -568,35 +587,35 @@ public final class HostTypeOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -662,6 +681,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -681,6 +701,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -701,6 +722,8 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -718,6 +741,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -731,6 +755,8 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -751,7 +777,9 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 cores = 2;</code>
+       * @return The cores.
        */
+      @java.lang.Override
       public long getCores() {
         return cores_;
       }
@@ -761,6 +789,8 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 cores = 2;</code>
+       * @param value The cores to set.
+       * @return This builder for chaining.
        */
       public Builder setCores(long value) {
         
@@ -774,6 +804,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 cores = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCores() {
         
@@ -789,7 +820,9 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 memory = 3;</code>
+       * @return The memory.
        */
+      @java.lang.Override
       public long getMemory() {
         return memory_;
       }
@@ -799,6 +832,8 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 memory = 3;</code>
+       * @param value The memory to set.
+       * @return This builder for chaining.
        */
       public Builder setMemory(long value) {
         
@@ -812,6 +847,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 memory = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMemory() {
         
@@ -827,7 +863,9 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 disks = 4;</code>
+       * @return The disks.
        */
+      @java.lang.Override
       public long getDisks() {
         return disks_;
       }
@@ -837,6 +875,8 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 disks = 4;</code>
+       * @param value The disks to set.
+       * @return This builder for chaining.
        */
       public Builder setDisks(long value) {
         
@@ -850,6 +890,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 disks = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDisks() {
         
@@ -865,7 +906,9 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 5;</code>
+       * @return The diskSize.
        */
+      @java.lang.Override
       public long getDiskSize() {
         return diskSize_;
       }
@@ -875,6 +918,8 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 5;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskSize(long value) {
         
@@ -888,6 +933,7 @@ public final class HostTypeOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskSize() {
         
@@ -898,7 +944,7 @@ public final class HostTypeOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -970,18 +1016,10 @@ public final class HostTypeOuterClass {
       "andex-cloud/go-genproto/yandex/cloud/com" +
       "pute/v1;computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_HostType_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_HostType_fieldAccessorTable = new

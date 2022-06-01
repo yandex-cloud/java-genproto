@@ -24,6 +24,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,16 +53,19 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -73,6 +79,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -81,6 +88,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -91,6 +99,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -99,6 +108,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -163,6 +173,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>int64 storage_size = 7;</code>
+     * @return The storageSize.
      */
     long getStorageSize();
 
@@ -172,6 +183,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>int64 disk_size = 8;</code>
+     * @return The diskSize.
      */
     long getDiskSize();
 
@@ -186,6 +198,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @return A list containing the productIds.
      */
     java.util.List<java.lang.String>
         getProductIdsList();
@@ -200,6 +213,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @return The count of productIds.
      */
     int getProductIdsCount();
     /**
@@ -213,6 +227,8 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @param index The index of the element to return.
+     * @return The productIds at the given index.
      */
     java.lang.String getProductIds(int index);
     /**
@@ -226,6 +242,8 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the productIds at the given index.
      */
     com.google.protobuf.ByteString
         getProductIdsBytes(int index);
@@ -236,6 +254,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -244,6 +263,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+     * @return The status.
      */
     yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status getStatus();
 
@@ -253,6 +273,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string source_disk_id = 11;</code>
+     * @return The sourceDiskId.
      */
     java.lang.String getSourceDiskId();
     /**
@@ -261,6 +282,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string source_disk_id = 11;</code>
+     * @return The bytes for sourceDiskId.
      */
     com.google.protobuf.ByteString
         getSourceDiskIdBytes();
@@ -272,7 +294,7 @@ public final class SnapshotOuterClass {
    *
    * Protobuf type {@code yandex.cloud.compute.v1.Snapshot}
    */
-  public  static final class Snapshot extends
+  public static final class Snapshot extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.Snapshot)
       SnapshotOrBuilder {
@@ -286,11 +308,16 @@ public final class SnapshotOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
-      storageSize_ = 0L;
-      diskSize_ = 0L;
       productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       status_ = 0;
       sourceDiskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Snapshot();
     }
 
     @java.lang.Override
@@ -355,10 +382,10 @@ public final class SnapshotOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -379,9 +406,9 @@ public final class SnapshotOuterClass {
             }
             case 74: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 productIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000002;
               }
               productIds_.add(s);
               break;
@@ -399,7 +426,7 @@ public final class SnapshotOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -413,7 +440,7 @@ public final class SnapshotOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           productIds_ = productIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -536,6 +563,8 @@ public final class SnapshotOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -543,6 +572,10 @@ public final class SnapshotOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -568,6 +601,10 @@ public final class SnapshotOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -602,7 +639,6 @@ public final class SnapshotOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.Snapshot.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -611,7 +647,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -630,7 +668,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -653,7 +693,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -672,7 +714,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -691,19 +735,24 @@ public final class SnapshotOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -716,7 +765,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -735,7 +786,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -758,7 +811,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -777,7 +832,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -826,14 +883,16 @@ public final class SnapshotOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -845,6 +904,7 @@ public final class SnapshotOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -856,11 +916,12 @@ public final class SnapshotOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -872,10 +933,11 @@ public final class SnapshotOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -892,7 +954,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>int64 storage_size = 7;</code>
+     * @return The storageSize.
      */
+    @java.lang.Override
     public long getStorageSize() {
       return storageSize_;
     }
@@ -905,7 +969,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>int64 disk_size = 8;</code>
+     * @return The diskSize.
      */
+    @java.lang.Override
     public long getDiskSize() {
       return diskSize_;
     }
@@ -923,6 +989,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @return A list containing the productIds.
      */
     public com.google.protobuf.ProtocolStringList
         getProductIdsList() {
@@ -939,6 +1006,7 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @return The count of productIds.
      */
     public int getProductIdsCount() {
       return productIds_.size();
@@ -954,6 +1022,8 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @param index The index of the element to return.
+     * @return The productIds at the given index.
      */
     public java.lang.String getProductIds(int index) {
       return productIds_.get(index);
@@ -969,6 +1039,8 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the productIds at the given index.
      */
     public com.google.protobuf.ByteString
         getProductIdsBytes(int index) {
@@ -983,8 +1055,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -993,8 +1066,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status result = yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status.UNRECOGNIZED : result;
@@ -1008,7 +1082,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string source_disk_id = 11;</code>
+     * @return The sourceDiskId.
      */
+    @java.lang.Override
     public java.lang.String getSourceDiskId() {
       java.lang.Object ref = sourceDiskId_;
       if (ref instanceof java.lang.String) {
@@ -1027,7 +1103,9 @@ public final class SnapshotOuterClass {
      * </pre>
      *
      * <code>string source_disk_id = 11;</code>
+     * @return The bytes for sourceDiskId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceDiskIdBytes() {
       java.lang.Object ref = sourceDiskId_;
@@ -1056,19 +1134,19 @@ public final class SnapshotOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1089,7 +1167,7 @@ public final class SnapshotOuterClass {
       if (status_ != yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(10, status_);
       }
-      if (!getSourceDiskIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceDiskId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, sourceDiskId_);
       }
       unknownFields.writeTo(output);
@@ -1101,20 +1179,20 @@ public final class SnapshotOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1147,7 +1225,7 @@ public final class SnapshotOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, status_);
       }
-      if (!getSourceDiskIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceDiskId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, sourceDiskId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1165,33 +1243,32 @@ public final class SnapshotOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot other = (yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (getStorageSize()
-          == other.getStorageSize());
-      result = result && (getDiskSize()
-          == other.getDiskSize());
-      result = result && getProductIdsList()
-          .equals(other.getProductIdsList());
-      result = result && status_ == other.status_;
-      result = result && getSourceDiskId()
-          .equals(other.getSourceDiskId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (getStorageSize()
+          != other.getStorageSize()) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (!getProductIdsList()
+          .equals(other.getProductIdsList())) return false;
+      if (status_ != other.status_) return false;
+      if (!getSourceDiskId()
+          .equals(other.getSourceDiskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1410,7 +1487,7 @@ public final class SnapshotOuterClass {
         diskSize_ = 0L;
 
         productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0;
 
         sourceDiskId_ = "";
@@ -1442,7 +1519,6 @@ public final class SnapshotOuterClass {
       public yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot buildPartial() {
         yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot result = new yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1456,49 +1532,48 @@ public final class SnapshotOuterClass {
         result.labels_.makeImmutable();
         result.storageSize_ = storageSize_;
         result.diskSize_ = diskSize_;
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           productIds_ = productIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.productIds_ = productIds_;
         result.status_ = status_;
         result.sourceDiskId_ = sourceDiskId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1542,7 +1617,7 @@ public final class SnapshotOuterClass {
         if (!other.productIds_.isEmpty()) {
           if (productIds_.isEmpty()) {
             productIds_ = other.productIds_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureProductIdsIsMutable();
             productIds_.addAll(other.productIds_);
@@ -1593,6 +1668,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1612,6 +1688,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1632,6 +1709,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1649,6 +1728,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1662,6 +1742,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1682,6 +1764,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1701,6 +1784,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1721,6 +1805,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1738,6 +1824,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1751,6 +1838,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1764,17 +1853,19 @@ public final class SnapshotOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1888,6 +1979,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1907,6 +1999,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1927,6 +2020,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1944,6 +2039,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1957,6 +2053,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1977,6 +2075,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1996,6 +2095,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2016,6 +2116,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2033,6 +2135,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2046,6 +2149,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2093,14 +2198,16 @@ public final class SnapshotOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2112,6 +2219,7 @@ public final class SnapshotOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2123,11 +2231,12 @@ public final class SnapshotOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2139,10 +2248,11 @@ public final class SnapshotOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2166,7 +2276,7 @@ public final class SnapshotOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2189,8 +2299,11 @@ public final class SnapshotOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2217,7 +2330,9 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>int64 storage_size = 7;</code>
+       * @return The storageSize.
        */
+      @java.lang.Override
       public long getStorageSize() {
         return storageSize_;
       }
@@ -2227,6 +2342,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>int64 storage_size = 7;</code>
+       * @param value The storageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setStorageSize(long value) {
         
@@ -2240,6 +2357,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>int64 storage_size = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStorageSize() {
         
@@ -2255,7 +2373,9 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 8;</code>
+       * @return The diskSize.
        */
+      @java.lang.Override
       public long getDiskSize() {
         return diskSize_;
       }
@@ -2265,6 +2385,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 8;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskSize(long value) {
         
@@ -2278,6 +2400,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskSize() {
         
@@ -2288,9 +2411,9 @@ public final class SnapshotOuterClass {
 
       private com.google.protobuf.LazyStringList productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProductIdsIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           productIds_ = new com.google.protobuf.LazyStringArrayList(productIds_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -2304,6 +2427,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @return A list containing the productIds.
        */
       public com.google.protobuf.ProtocolStringList
           getProductIdsList() {
@@ -2320,6 +2444,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @return The count of productIds.
        */
       public int getProductIdsCount() {
         return productIds_.size();
@@ -2335,6 +2460,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @param index The index of the element to return.
+       * @return The productIds at the given index.
        */
       public java.lang.String getProductIds(int index) {
         return productIds_.get(index);
@@ -2350,6 +2477,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the productIds at the given index.
        */
       public com.google.protobuf.ByteString
           getProductIdsBytes(int index) {
@@ -2366,6 +2495,9 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The productIds to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIds(
           int index, java.lang.String value) {
@@ -2388,6 +2520,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @param value The productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addProductIds(
           java.lang.String value) {
@@ -2410,6 +2544,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @param values The productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllProductIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -2430,10 +2566,11 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductIds() {
         productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2448,6 +2585,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 9;</code>
+       * @param value The bytes of the productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addProductIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -2468,8 +2607,9 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2478,8 +2618,11 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2490,7 +2633,9 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status result = yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status.valueOf(status_);
@@ -2502,6 +2647,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Status value) {
         if (value == null) {
@@ -2518,6 +2665,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Snapshot.Status status = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2533,6 +2681,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string source_disk_id = 11;</code>
+       * @return The sourceDiskId.
        */
       public java.lang.String getSourceDiskId() {
         java.lang.Object ref = sourceDiskId_;
@@ -2552,6 +2701,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string source_disk_id = 11;</code>
+       * @return The bytes for sourceDiskId.
        */
       public com.google.protobuf.ByteString
           getSourceDiskIdBytes() {
@@ -2572,6 +2722,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string source_disk_id = 11;</code>
+       * @param value The sourceDiskId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceDiskId(
           java.lang.String value) {
@@ -2589,6 +2741,7 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string source_disk_id = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceDiskId() {
         
@@ -2602,6 +2755,8 @@ public final class SnapshotOuterClass {
        * </pre>
        *
        * <code>string source_disk_id = 11;</code>
+       * @param value The bytes for sourceDiskId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceDiskIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2617,7 +2772,7 @@ public final class SnapshotOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2704,19 +2859,11 @@ public final class SnapshotOuterClass {
       "ub.com/yandex-cloud/go-genproto/yandex/c" +
       "loud/compute/v1;computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_Snapshot_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Snapshot_fieldAccessorTable = new

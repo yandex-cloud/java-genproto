@@ -1,19 +1,6 @@
 package yandex.cloud.api.iot.devices.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iot/devices/v1/registry_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RegistryServiceGrpc {
 
   private RegistryServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class RegistryServiceGrpc {
     if ((getGetMethod = RegistryServiceGrpc.getGetMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getGetMethod = RegistryServiceGrpc.getGetMethod) == null) {
-          RegistryServiceGrpc.getGetMethod = getGetMethod = 
+          RegistryServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest,
@@ -76,22 +63,21 @@ public final class RegistryServiceGrpc {
     if ((getGetByNameMethod = RegistryServiceGrpc.getGetByNameMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getGetByNameMethod = RegistryServiceGrpc.getGetByNameMethod) == null) {
-          RegistryServiceGrpc.getGetByNameMethod = getGetByNameMethod = 
+          RegistryServiceGrpc.getGetByNameMethod = getGetByNameMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "GetByName"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetByName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("GetByName"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("GetByName"))
+              .build();
         }
-     }
-     return getGetByNameMethod;
+      }
+    }
+    return getGetByNameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest,
@@ -108,22 +94,21 @@ public final class RegistryServiceGrpc {
     if ((getListMethod = RegistryServiceGrpc.getListMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getListMethod = RegistryServiceGrpc.getListMethod) == null) {
-          RegistryServiceGrpc.getListMethod = getListMethod = 
+          RegistryServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest,
@@ -140,22 +125,21 @@ public final class RegistryServiceGrpc {
     if ((getCreateMethod = RegistryServiceGrpc.getCreateMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getCreateMethod = RegistryServiceGrpc.getCreateMethod) == null) {
-          RegistryServiceGrpc.getCreateMethod = getCreateMethod = 
+          RegistryServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest,
@@ -172,22 +156,21 @@ public final class RegistryServiceGrpc {
     if ((getUpdateMethod = RegistryServiceGrpc.getUpdateMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getUpdateMethod = RegistryServiceGrpc.getUpdateMethod) == null) {
-          RegistryServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          RegistryServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest,
@@ -204,22 +187,21 @@ public final class RegistryServiceGrpc {
     if ((getDeleteMethod = RegistryServiceGrpc.getDeleteMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getDeleteMethod = RegistryServiceGrpc.getDeleteMethod) == null) {
-          RegistryServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          RegistryServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest,
@@ -236,22 +218,21 @@ public final class RegistryServiceGrpc {
     if ((getListCertificatesMethod = RegistryServiceGrpc.getListCertificatesMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getListCertificatesMethod = RegistryServiceGrpc.getListCertificatesMethod) == null) {
-          RegistryServiceGrpc.getListCertificatesMethod = getListCertificatesMethod = 
+          RegistryServiceGrpc.getListCertificatesMethod = getListCertificatesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "ListCertificates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCertificates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListCertificates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListCertificates"))
+              .build();
         }
-     }
-     return getListCertificatesMethod;
+      }
+    }
+    return getListCertificatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest,
@@ -268,22 +249,21 @@ public final class RegistryServiceGrpc {
     if ((getAddCertificateMethod = RegistryServiceGrpc.getAddCertificateMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getAddCertificateMethod = RegistryServiceGrpc.getAddCertificateMethod) == null) {
-          RegistryServiceGrpc.getAddCertificateMethod = getAddCertificateMethod = 
+          RegistryServiceGrpc.getAddCertificateMethod = getAddCertificateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "AddCertificate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddCertificate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("AddCertificate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("AddCertificate"))
+              .build();
         }
-     }
-     return getAddCertificateMethod;
+      }
+    }
+    return getAddCertificateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest,
@@ -300,22 +280,21 @@ public final class RegistryServiceGrpc {
     if ((getDeleteCertificateMethod = RegistryServiceGrpc.getDeleteCertificateMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getDeleteCertificateMethod = RegistryServiceGrpc.getDeleteCertificateMethod) == null) {
-          RegistryServiceGrpc.getDeleteCertificateMethod = getDeleteCertificateMethod = 
+          RegistryServiceGrpc.getDeleteCertificateMethod = getDeleteCertificateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "DeleteCertificate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCertificate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("DeleteCertificate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("DeleteCertificate"))
+              .build();
         }
-     }
-     return getDeleteCertificateMethod;
+      }
+    }
+    return getDeleteCertificateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest,
@@ -332,22 +311,21 @@ public final class RegistryServiceGrpc {
     if ((getListPasswordsMethod = RegistryServiceGrpc.getListPasswordsMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getListPasswordsMethod = RegistryServiceGrpc.getListPasswordsMethod) == null) {
-          RegistryServiceGrpc.getListPasswordsMethod = getListPasswordsMethod = 
+          RegistryServiceGrpc.getListPasswordsMethod = getListPasswordsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "ListPasswords"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPasswords"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListPasswords"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListPasswords"))
+              .build();
         }
-     }
-     return getListPasswordsMethod;
+      }
+    }
+    return getListPasswordsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest,
@@ -364,22 +342,21 @@ public final class RegistryServiceGrpc {
     if ((getAddPasswordMethod = RegistryServiceGrpc.getAddPasswordMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getAddPasswordMethod = RegistryServiceGrpc.getAddPasswordMethod) == null) {
-          RegistryServiceGrpc.getAddPasswordMethod = getAddPasswordMethod = 
+          RegistryServiceGrpc.getAddPasswordMethod = getAddPasswordMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "AddPassword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("AddPassword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("AddPassword"))
+              .build();
         }
-     }
-     return getAddPasswordMethod;
+      }
+    }
+    return getAddPasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest,
@@ -396,22 +373,21 @@ public final class RegistryServiceGrpc {
     if ((getDeletePasswordMethod = RegistryServiceGrpc.getDeletePasswordMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getDeletePasswordMethod = RegistryServiceGrpc.getDeletePasswordMethod) == null) {
-          RegistryServiceGrpc.getDeletePasswordMethod = getDeletePasswordMethod = 
+          RegistryServiceGrpc.getDeletePasswordMethod = getDeletePasswordMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "DeletePassword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("DeletePassword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("DeletePassword"))
+              .build();
         }
-     }
-     return getDeletePasswordMethod;
+      }
+    }
+    return getDeletePasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest,
@@ -428,22 +404,21 @@ public final class RegistryServiceGrpc {
     if ((getListDeviceTopicAliasesMethod = RegistryServiceGrpc.getListDeviceTopicAliasesMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getListDeviceTopicAliasesMethod = RegistryServiceGrpc.getListDeviceTopicAliasesMethod) == null) {
-          RegistryServiceGrpc.getListDeviceTopicAliasesMethod = getListDeviceTopicAliasesMethod = 
+          RegistryServiceGrpc.getListDeviceTopicAliasesMethod = getListDeviceTopicAliasesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "ListDeviceTopicAliases"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDeviceTopicAliases"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListDeviceTopicAliases"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListDeviceTopicAliases"))
+              .build();
         }
-     }
-     return getListDeviceTopicAliasesMethod;
+      }
+    }
+    return getListDeviceTopicAliasesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest,
@@ -460,29 +435,35 @@ public final class RegistryServiceGrpc {
     if ((getListOperationsMethod = RegistryServiceGrpc.getListOperationsMethod) == null) {
       synchronized (RegistryServiceGrpc.class) {
         if ((getListOperationsMethod = RegistryServiceGrpc.getListOperationsMethod) == null) {
-          RegistryServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          RegistryServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.RegistryService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RegistryServiceStub newStub(io.grpc.Channel channel) {
-    return new RegistryServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RegistryServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RegistryServiceStub>() {
+        @java.lang.Override
+        public RegistryServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RegistryServiceStub(channel, callOptions);
+        }
+      };
+    return RegistryServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -490,7 +471,14 @@ public final class RegistryServiceGrpc {
    */
   public static RegistryServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RegistryServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RegistryServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RegistryServiceBlockingStub>() {
+        @java.lang.Override
+        public RegistryServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RegistryServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RegistryServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -498,7 +486,14 @@ public final class RegistryServiceGrpc {
    */
   public static RegistryServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RegistryServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RegistryServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RegistryServiceFutureStub>() {
+        @java.lang.Override
+        public RegistryServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RegistryServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RegistryServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -516,14 +511,14 @@ public final class RegistryServiceGrpc {
      */
     public void get(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void getByName(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
     }
 
     /**
@@ -533,7 +528,7 @@ public final class RegistryServiceGrpc {
      */
     public void list(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -543,7 +538,7 @@ public final class RegistryServiceGrpc {
      */
     public void create(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -553,7 +548,7 @@ public final class RegistryServiceGrpc {
      */
     public void update(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -563,7 +558,7 @@ public final class RegistryServiceGrpc {
      */
     public void delete(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -573,7 +568,7 @@ public final class RegistryServiceGrpc {
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCertificatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCertificatesMethod(), responseObserver);
     }
 
     /**
@@ -583,7 +578,7 @@ public final class RegistryServiceGrpc {
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddCertificateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddCertificateMethod(), responseObserver);
     }
 
     /**
@@ -593,7 +588,7 @@ public final class RegistryServiceGrpc {
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteCertificateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCertificateMethod(), responseObserver);
     }
 
     /**
@@ -603,7 +598,7 @@ public final class RegistryServiceGrpc {
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPasswordsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPasswordsMethod(), responseObserver);
     }
 
     /**
@@ -613,7 +608,7 @@ public final class RegistryServiceGrpc {
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddPasswordMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddPasswordMethod(), responseObserver);
     }
 
     /**
@@ -623,7 +618,7 @@ public final class RegistryServiceGrpc {
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePasswordMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePasswordMethod(), responseObserver);
     }
 
     /**
@@ -633,7 +628,7 @@ public final class RegistryServiceGrpc {
      */
     public void listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListDeviceTopicAliasesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDeviceTopicAliasesMethod(), responseObserver);
     }
 
     /**
@@ -643,105 +638,105 @@ public final class RegistryServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>(
                   this, METHODID_GET)))
           .addMethod(
             getGetByNameMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>(
                   this, METHODID_GET_BY_NAME)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListCertificatesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse>(
                   this, METHODID_LIST_CERTIFICATES)))
           .addMethod(
             getAddCertificateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_CERTIFICATE)))
           .addMethod(
             getDeleteCertificateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_CERTIFICATE)))
           .addMethod(
             getListPasswordsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse>(
                   this, METHODID_LIST_PASSWORDS)))
           .addMethod(
             getAddPasswordMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_PASSWORD)))
           .addMethod(
             getDeletePasswordMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_PASSWORD)))
           .addMethod(
             getListDeviceTopicAliasesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse>(
                   this, METHODID_LIST_DEVICE_TOPIC_ALIASES)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse>(
@@ -755,19 +750,15 @@ public final class RegistryServiceGrpc {
    * A set of methods for managing registry.
    * </pre>
    */
-  public static final class RegistryServiceStub extends io.grpc.stub.AbstractStub<RegistryServiceStub> {
-    private RegistryServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RegistryServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RegistryServiceStub extends io.grpc.stub.AbstractAsyncStub<RegistryServiceStub> {
+    private RegistryServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RegistryServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RegistryServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RegistryServiceStub(channel, callOptions);
     }
 
@@ -779,7 +770,7 @@ public final class RegistryServiceGrpc {
      */
     public void get(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -787,7 +778,7 @@ public final class RegistryServiceGrpc {
      */
     public void getByName(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -798,7 +789,7 @@ public final class RegistryServiceGrpc {
      */
     public void list(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -809,7 +800,7 @@ public final class RegistryServiceGrpc {
      */
     public void create(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -820,7 +811,7 @@ public final class RegistryServiceGrpc {
      */
     public void update(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -831,7 +822,7 @@ public final class RegistryServiceGrpc {
      */
     public void delete(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -842,7 +833,7 @@ public final class RegistryServiceGrpc {
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCertificatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -853,7 +844,7 @@ public final class RegistryServiceGrpc {
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddCertificateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -864,7 +855,7 @@ public final class RegistryServiceGrpc {
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCertificateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -875,7 +866,7 @@ public final class RegistryServiceGrpc {
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPasswordsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -886,7 +877,7 @@ public final class RegistryServiceGrpc {
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -897,7 +888,7 @@ public final class RegistryServiceGrpc {
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -908,7 +899,7 @@ public final class RegistryServiceGrpc {
      */
     public void listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDeviceTopicAliasesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -919,7 +910,7 @@ public final class RegistryServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -929,19 +920,15 @@ public final class RegistryServiceGrpc {
    * A set of methods for managing registry.
    * </pre>
    */
-  public static final class RegistryServiceBlockingStub extends io.grpc.stub.AbstractStub<RegistryServiceBlockingStub> {
-    private RegistryServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RegistryServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RegistryServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RegistryServiceBlockingStub> {
+    private RegistryServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RegistryServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RegistryServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RegistryServiceBlockingStub(channel, callOptions);
     }
 
@@ -952,14 +939,14 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry get(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry getByName(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetByNameMethod(), getCallOptions(), request);
     }
 
@@ -969,7 +956,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse list(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -979,7 +966,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -989,7 +976,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -999,7 +986,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -1009,7 +996,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse listCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCertificatesMethod(), getCallOptions(), request);
     }
 
@@ -1019,7 +1006,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddCertificateMethod(), getCallOptions(), request);
     }
 
@@ -1029,7 +1016,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCertificateMethod(), getCallOptions(), request);
     }
 
@@ -1039,7 +1026,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse listPasswords(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPasswordsMethod(), getCallOptions(), request);
     }
 
@@ -1049,7 +1036,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addPassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddPasswordMethod(), getCallOptions(), request);
     }
 
@@ -1059,7 +1046,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deletePassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePasswordMethod(), getCallOptions(), request);
     }
 
@@ -1069,7 +1056,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDeviceTopicAliasesMethod(), getCallOptions(), request);
     }
 
@@ -1079,7 +1066,7 @@ public final class RegistryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -1089,19 +1076,15 @@ public final class RegistryServiceGrpc {
    * A set of methods for managing registry.
    * </pre>
    */
-  public static final class RegistryServiceFutureStub extends io.grpc.stub.AbstractStub<RegistryServiceFutureStub> {
-    private RegistryServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RegistryServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RegistryServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RegistryServiceFutureStub> {
+    private RegistryServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RegistryServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RegistryServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RegistryServiceFutureStub(channel, callOptions);
     }
 
@@ -1113,7 +1096,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> get(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1121,7 +1104,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getByName(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetByNameMethod(), getCallOptions()), request);
     }
 
@@ -1132,7 +1115,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> list(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1143,7 +1126,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1154,7 +1137,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1165,7 +1148,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1176,7 +1159,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse> listCertificates(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCertificatesMethod(), getCallOptions()), request);
     }
 
@@ -1187,7 +1170,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addCertificate(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddCertificateMethod(), getCallOptions()), request);
     }
 
@@ -1198,7 +1181,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteCertificate(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCertificateMethod(), getCallOptions()), request);
     }
 
@@ -1209,7 +1192,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse> listPasswords(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPasswordsMethod(), getCallOptions()), request);
     }
 
@@ -1220,7 +1203,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addPassword(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddPasswordMethod(), getCallOptions()), request);
     }
 
@@ -1231,7 +1214,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deletePassword(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePasswordMethod(), getCallOptions()), request);
     }
 
@@ -1242,7 +1225,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse> listDeviceTopicAliases(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDeviceTopicAliasesMethod(), getCallOptions()), request);
     }
 
@@ -1253,7 +1236,7 @@ public final class RegistryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> listOperations(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

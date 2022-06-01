@@ -1,19 +1,6 @@
 package yandex.cloud.api.apploadbalancer.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/apploadbalancer/v1/http_router_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class HttpRouterServiceGrpc {
 
   private HttpRouterServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class HttpRouterServiceGrpc {
     if ((getGetMethod = HttpRouterServiceGrpc.getGetMethod) == null) {
       synchronized (HttpRouterServiceGrpc.class) {
         if ((getGetMethod = HttpRouterServiceGrpc.getGetMethod) == null) {
-          HttpRouterServiceGrpc.getGetMethod = getGetMethod = 
+          HttpRouterServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest, yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.HttpRouterService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.getDefaultInstance()))
-                  .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest,
@@ -76,22 +63,21 @@ public final class HttpRouterServiceGrpc {
     if ((getListMethod = HttpRouterServiceGrpc.getListMethod) == null) {
       synchronized (HttpRouterServiceGrpc.class) {
         if ((getListMethod = HttpRouterServiceGrpc.getListMethod) == null) {
-          HttpRouterServiceGrpc.getListMethod = getListMethod = 
+          HttpRouterServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest, yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.HttpRouterService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest,
@@ -108,22 +94,21 @@ public final class HttpRouterServiceGrpc {
     if ((getCreateMethod = HttpRouterServiceGrpc.getCreateMethod) == null) {
       synchronized (HttpRouterServiceGrpc.class) {
         if ((getCreateMethod = HttpRouterServiceGrpc.getCreateMethod) == null) {
-          HttpRouterServiceGrpc.getCreateMethod = getCreateMethod = 
+          HttpRouterServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.HttpRouterService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest,
@@ -140,22 +125,21 @@ public final class HttpRouterServiceGrpc {
     if ((getUpdateMethod = HttpRouterServiceGrpc.getUpdateMethod) == null) {
       synchronized (HttpRouterServiceGrpc.class) {
         if ((getUpdateMethod = HttpRouterServiceGrpc.getUpdateMethod) == null) {
-          HttpRouterServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          HttpRouterServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.HttpRouterService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest,
@@ -172,22 +156,21 @@ public final class HttpRouterServiceGrpc {
     if ((getDeleteMethod = HttpRouterServiceGrpc.getDeleteMethod) == null) {
       synchronized (HttpRouterServiceGrpc.class) {
         if ((getDeleteMethod = HttpRouterServiceGrpc.getDeleteMethod) == null) {
-          HttpRouterServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          HttpRouterServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.HttpRouterService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest,
@@ -204,29 +187,35 @@ public final class HttpRouterServiceGrpc {
     if ((getListOperationsMethod = HttpRouterServiceGrpc.getListOperationsMethod) == null) {
       synchronized (HttpRouterServiceGrpc.class) {
         if ((getListOperationsMethod = HttpRouterServiceGrpc.getListOperationsMethod) == null) {
-          HttpRouterServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          HttpRouterServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest, yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.HttpRouterService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HttpRouterServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static HttpRouterServiceStub newStub(io.grpc.Channel channel) {
-    return new HttpRouterServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HttpRouterServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HttpRouterServiceStub>() {
+        @java.lang.Override
+        public HttpRouterServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HttpRouterServiceStub(channel, callOptions);
+        }
+      };
+    return HttpRouterServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class HttpRouterServiceGrpc {
    */
   public static HttpRouterServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new HttpRouterServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HttpRouterServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HttpRouterServiceBlockingStub>() {
+        @java.lang.Override
+        public HttpRouterServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HttpRouterServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return HttpRouterServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class HttpRouterServiceGrpc {
    */
   public static HttpRouterServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new HttpRouterServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HttpRouterServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HttpRouterServiceFutureStub>() {
+        @java.lang.Override
+        public HttpRouterServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HttpRouterServiceFutureStub(channel, callOptions);
+        }
+      };
+    return HttpRouterServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -260,7 +263,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +293,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -300,7 +303,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -310,49 +313,49 @@ public final class HttpRouterServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest,
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest,
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest,
                 yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse>(
@@ -366,19 +369,15 @@ public final class HttpRouterServiceGrpc {
    * A set of methods for managing HTTP routers.
    * </pre>
    */
-  public static final class HttpRouterServiceStub extends io.grpc.stub.AbstractStub<HttpRouterServiceStub> {
-    private HttpRouterServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HttpRouterServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HttpRouterServiceStub extends io.grpc.stub.AbstractAsyncStub<HttpRouterServiceStub> {
+    private HttpRouterServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HttpRouterServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HttpRouterServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HttpRouterServiceStub(channel, callOptions);
     }
 
@@ -390,7 +389,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -401,7 +400,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -412,7 +411,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -423,7 +422,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -434,7 +433,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -445,7 +444,7 @@ public final class HttpRouterServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -455,19 +454,15 @@ public final class HttpRouterServiceGrpc {
    * A set of methods for managing HTTP routers.
    * </pre>
    */
-  public static final class HttpRouterServiceBlockingStub extends io.grpc.stub.AbstractStub<HttpRouterServiceBlockingStub> {
-    private HttpRouterServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HttpRouterServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HttpRouterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<HttpRouterServiceBlockingStub> {
+    private HttpRouterServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HttpRouterServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HttpRouterServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HttpRouterServiceBlockingStub(channel, callOptions);
     }
 
@@ -478,7 +473,7 @@ public final class HttpRouterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter get(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -488,7 +483,7 @@ public final class HttpRouterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse list(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -498,7 +493,7 @@ public final class HttpRouterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -508,7 +503,7 @@ public final class HttpRouterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -518,7 +513,7 @@ public final class HttpRouterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -528,7 +523,7 @@ public final class HttpRouterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -538,19 +533,15 @@ public final class HttpRouterServiceGrpc {
    * A set of methods for managing HTTP routers.
    * </pre>
    */
-  public static final class HttpRouterServiceFutureStub extends io.grpc.stub.AbstractStub<HttpRouterServiceFutureStub> {
-    private HttpRouterServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HttpRouterServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HttpRouterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<HttpRouterServiceFutureStub> {
+    private HttpRouterServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HttpRouterServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HttpRouterServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HttpRouterServiceFutureStub(channel, callOptions);
     }
 
@@ -562,7 +553,7 @@ public final class HttpRouterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> get(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -573,7 +564,7 @@ public final class HttpRouterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse> list(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -584,7 +575,7 @@ public final class HttpRouterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -595,7 +586,7 @@ public final class HttpRouterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -606,7 +597,7 @@ public final class HttpRouterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -617,7 +608,7 @@ public final class HttpRouterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse> listOperations(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

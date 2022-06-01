@@ -89,6 +89,8 @@ public final class BudgetOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -96,6 +98,10 @@ public final class BudgetOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static BudgetStatus forNumber(int value) {
       switch (value) {
         case 0: return BUDGET_STATUS_UNSPECIFIED;
@@ -120,6 +126,10 @@ public final class BudgetOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -229,6 +239,8 @@ public final class BudgetOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -236,6 +248,10 @@ public final class BudgetOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static ResetPeriodType forNumber(int value) {
       switch (value) {
         case 0: return RESET_PERIOD_TYPE_UNSPECIFIED;
@@ -260,6 +276,10 @@ public final class BudgetOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -357,6 +377,8 @@ public final class BudgetOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -364,6 +386,10 @@ public final class BudgetOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static ThresholdType forNumber(int value) {
       switch (value) {
         case 0: return THRESHOLD_TYPE_UNSPECIFIED;
@@ -387,6 +413,10 @@ public final class BudgetOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -431,6 +461,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -439,6 +470,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -449,6 +481,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -457,6 +490,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -467,6 +501,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -475,6 +510,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -492,6 +528,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 4;</code>
+     * @return The billingAccountId.
      */
     java.lang.String getBillingAccountId();
     /**
@@ -500,6 +537,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 4;</code>
+     * @return The bytes for billingAccountId.
      */
     com.google.protobuf.ByteString
         getBillingAccountIdBytes();
@@ -510,6 +548,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -518,6 +557,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+     * @return The status.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus getStatus();
 
@@ -527,6 +567,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
+     * @return Whether the costBudget field is set.
      */
     boolean hasCostBudget();
     /**
@@ -535,6 +576,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
+     * @return The costBudget.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec getCostBudget();
     /**
@@ -552,6 +594,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
+     * @return Whether the expenseBudget field is set.
      */
     boolean hasExpenseBudget();
     /**
@@ -560,6 +603,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
+     * @return The expenseBudget.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec getExpenseBudget();
     /**
@@ -577,6 +621,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
+     * @return Whether the balanceBudget field is set.
      */
     boolean hasBalanceBudget();
     /**
@@ -585,6 +630,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
+     * @return The balanceBudget.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec getBalanceBudget();
     /**
@@ -605,7 +651,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.Budget}
    */
-  public  static final class Budget extends
+  public static final class Budget extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.Budget)
       BudgetOrBuilder {
@@ -622,6 +668,13 @@ public final class BudgetOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Budget();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -634,7 +687,6 @@ public final class BudgetOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -725,7 +777,7 @@ public final class BudgetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -759,7 +811,8 @@ public final class BudgetOuterClass {
     private int budgetSpecCase_ = 0;
     private java.lang.Object budgetSpec_;
     public enum BudgetSpecCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       COST_BUDGET(6),
       EXPENSE_BUDGET(7),
       BALANCE_BUDGET(8),
@@ -769,6 +822,8 @@ public final class BudgetOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -804,7 +859,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -823,7 +880,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -846,7 +905,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -865,7 +926,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -888,7 +951,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -898,7 +963,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -909,6 +976,7 @@ public final class BudgetOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -921,7 +989,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 4;</code>
+     * @return The billingAccountId.
      */
+    @java.lang.Override
     public java.lang.String getBillingAccountId() {
       java.lang.Object ref = billingAccountId_;
       if (ref instanceof java.lang.String) {
@@ -940,7 +1010,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 4;</code>
+     * @return The bytes for billingAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBillingAccountIdBytes() {
       java.lang.Object ref = billingAccountId_;
@@ -963,8 +1035,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -973,8 +1046,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus getStatus() {
+    @java.lang.Override public yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus result = yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus.valueOf(status_);
       return result == null ? yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus.UNRECOGNIZED : result;
@@ -987,7 +1061,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
+     * @return Whether the costBudget field is set.
      */
+    @java.lang.Override
     public boolean hasCostBudget() {
       return budgetSpecCase_ == 6;
     }
@@ -997,7 +1073,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
+     * @return The costBudget.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec getCostBudget() {
       if (budgetSpecCase_ == 6) {
          return (yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec) budgetSpec_;
@@ -1011,6 +1089,7 @@ public final class BudgetOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpecOrBuilder getCostBudgetOrBuilder() {
       if (budgetSpecCase_ == 6) {
          return (yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec) budgetSpec_;
@@ -1025,7 +1104,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
+     * @return Whether the expenseBudget field is set.
      */
+    @java.lang.Override
     public boolean hasExpenseBudget() {
       return budgetSpecCase_ == 7;
     }
@@ -1035,7 +1116,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
+     * @return The expenseBudget.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec getExpenseBudget() {
       if (budgetSpecCase_ == 7) {
          return (yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec) budgetSpec_;
@@ -1049,6 +1132,7 @@ public final class BudgetOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpecOrBuilder getExpenseBudgetOrBuilder() {
       if (budgetSpecCase_ == 7) {
          return (yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec) budgetSpec_;
@@ -1063,7 +1147,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
+     * @return Whether the balanceBudget field is set.
      */
+    @java.lang.Override
     public boolean hasBalanceBudget() {
       return budgetSpecCase_ == 8;
     }
@@ -1073,7 +1159,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
+     * @return The balanceBudget.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec getBalanceBudget() {
       if (budgetSpecCase_ == 8) {
          return (yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec) budgetSpec_;
@@ -1087,6 +1175,7 @@ public final class BudgetOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpecOrBuilder getBalanceBudgetOrBuilder() {
       if (budgetSpecCase_ == 8) {
          return (yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec) budgetSpec_;
@@ -1108,16 +1197,16 @@ public final class BudgetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getBillingAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingAccountId_);
       }
       if (status_ != yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus.BUDGET_STATUS_UNSPECIFIED.getNumber()) {
@@ -1141,17 +1230,17 @@ public final class BudgetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getBillingAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingAccountId_);
       }
       if (status_ != yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus.BUDGET_STATUS_UNSPECIFIED.getNumber()) {
@@ -1185,40 +1274,37 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.Budget other = (yandex.cloud.api.billing.v1.BudgetOuterClass.Budget) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getBillingAccountId()
-          .equals(other.getBillingAccountId());
-      result = result && status_ == other.status_;
-      result = result && getBudgetSpecCase().equals(
-          other.getBudgetSpecCase());
-      if (!result) return false;
+      if (!getBillingAccountId()
+          .equals(other.getBillingAccountId())) return false;
+      if (status_ != other.status_) return false;
+      if (!getBudgetSpecCase().equals(other.getBudgetSpecCase())) return false;
       switch (budgetSpecCase_) {
         case 6:
-          result = result && getCostBudget()
-              .equals(other.getCostBudget());
+          if (!getCostBudget()
+              .equals(other.getCostBudget())) return false;
           break;
         case 7:
-          result = result && getExpenseBudget()
-              .equals(other.getExpenseBudget());
+          if (!getExpenseBudget()
+              .equals(other.getExpenseBudget())) return false;
           break;
         case 8:
-          result = result && getBalanceBudget()
-              .equals(other.getBalanceBudget());
+          if (!getBalanceBudget()
+              .equals(other.getBalanceBudget())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1472,35 +1558,35 @@ public final class BudgetOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1600,6 +1686,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1619,6 +1706,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1639,6 +1727,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1656,6 +1746,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1669,6 +1760,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1689,6 +1782,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1708,6 +1802,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1728,6 +1823,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1745,6 +1842,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1758,6 +1856,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1771,7 +1871,7 @@ public final class BudgetOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1780,6 +1880,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1790,6 +1891,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1931,6 +2033,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 4;</code>
+       * @return The billingAccountId.
        */
       public java.lang.String getBillingAccountId() {
         java.lang.Object ref = billingAccountId_;
@@ -1950,6 +2053,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 4;</code>
+       * @return The bytes for billingAccountId.
        */
       public com.google.protobuf.ByteString
           getBillingAccountIdBytes() {
@@ -1970,6 +2074,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 4;</code>
+       * @param value The billingAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setBillingAccountId(
           java.lang.String value) {
@@ -1987,6 +2093,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBillingAccountId() {
         
@@ -2000,6 +2107,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 4;</code>
+       * @param value The bytes for billingAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setBillingAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2020,8 +2129,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2030,8 +2140,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2042,7 +2155,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus result = yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus.valueOf(status_);
@@ -2054,6 +2169,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.billing.v1.BudgetOuterClass.BudgetStatus value) {
         if (value == null) {
@@ -2070,6 +2187,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BudgetStatus status = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2086,7 +2204,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
+       * @return Whether the costBudget field is set.
        */
+      @java.lang.Override
       public boolean hasCostBudget() {
         return budgetSpecCase_ == 6;
       }
@@ -2096,7 +2216,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
+       * @return The costBudget.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec getCostBudget() {
         if (costBudgetBuilder_ == null) {
           if (budgetSpecCase_ == 6) {
@@ -2214,6 +2336,7 @@ public final class BudgetOuterClass {
        *
        * <code>.yandex.cloud.billing.v1.CostBudgetSpec cost_budget = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpecOrBuilder getCostBudgetOrBuilder() {
         if ((budgetSpecCase_ == 6) && (costBudgetBuilder_ != null)) {
           return costBudgetBuilder_.getMessageOrBuilder();
@@ -2258,7 +2381,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
+       * @return Whether the expenseBudget field is set.
        */
+      @java.lang.Override
       public boolean hasExpenseBudget() {
         return budgetSpecCase_ == 7;
       }
@@ -2268,7 +2393,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
+       * @return The expenseBudget.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec getExpenseBudget() {
         if (expenseBudgetBuilder_ == null) {
           if (budgetSpecCase_ == 7) {
@@ -2386,6 +2513,7 @@ public final class BudgetOuterClass {
        *
        * <code>.yandex.cloud.billing.v1.ExpenseBudgetSpec expense_budget = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpecOrBuilder getExpenseBudgetOrBuilder() {
         if ((budgetSpecCase_ == 7) && (expenseBudgetBuilder_ != null)) {
           return expenseBudgetBuilder_.getMessageOrBuilder();
@@ -2430,7 +2558,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
+       * @return Whether the balanceBudget field is set.
        */
+      @java.lang.Override
       public boolean hasBalanceBudget() {
         return budgetSpecCase_ == 8;
       }
@@ -2440,7 +2570,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
+       * @return The balanceBudget.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec getBalanceBudget() {
         if (balanceBudgetBuilder_ == null) {
           if (budgetSpecCase_ == 8) {
@@ -2558,6 +2690,7 @@ public final class BudgetOuterClass {
        *
        * <code>.yandex.cloud.billing.v1.BalanceBudgetSpec balance_budget = 8;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpecOrBuilder getBalanceBudgetOrBuilder() {
         if ((budgetSpecCase_ == 8) && (balanceBudgetBuilder_ != null)) {
           return balanceBudgetBuilder_.getMessageOrBuilder();
@@ -2596,7 +2729,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2656,6 +2789,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The amount.
      */
     java.lang.String getAmount();
     /**
@@ -2664,6 +2798,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
         getAmountBytes();
@@ -2675,6 +2810,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
         getNotificationUserAccountIdsList();
@@ -2685,6 +2821,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
     /**
@@ -2694,6 +2831,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     java.lang.String getNotificationUserAccountIds(int index);
     /**
@@ -2703,6 +2842,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index);
@@ -2762,6 +2903,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return Whether the filter field is set.
      */
     boolean hasFilter();
     /**
@@ -2770,6 +2912,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return The filter.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter getFilter();
     /**
@@ -2788,6 +2931,17 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return Whether the resetPeriod field is set.
+     */
+    boolean hasResetPeriod();
+    /**
+     * <pre>
+     * Periodic start type that resets budget after specified period is finished.
+     * First time budget is calculated in the current period, i.e. current month, quarter or year.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The enum numeric value on the wire for resetPeriod.
      */
     int getResetPeriodValue();
     /**
@@ -2797,6 +2951,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The resetPeriod.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType getResetPeriod();
 
@@ -2807,6 +2962,17 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return Whether the startDate field is set.
+     */
+    boolean hasStartDate();
+    /**
+     * <pre>
+     * Custom start date of the budget.
+     * Must be the first day of a month and must be formatted like YYYY-MM-DD.
+     * </pre>
+     *
+     * <code>string start_date = 6;</code>
+     * @return The startDate.
      */
     java.lang.String getStartDate();
     /**
@@ -2816,6 +2982,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return The bytes for startDate.
      */
     com.google.protobuf.ByteString
         getStartDateBytes();
@@ -2827,6 +2994,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The endDate.
      */
     java.lang.String getEndDate();
     /**
@@ -2836,6 +3004,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The bytes for endDate.
      */
     com.google.protobuf.ByteString
         getEndDateBytes();
@@ -2849,7 +3018,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.CostBudgetSpec}
    */
-  public  static final class CostBudgetSpec extends
+  public static final class CostBudgetSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.CostBudgetSpec)
       CostBudgetSpecOrBuilder {
@@ -2863,6 +3032,13 @@ public final class BudgetOuterClass {
       notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       thresholdRules_ = java.util.Collections.emptyList();
       endDate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CostBudgetSpec();
     }
 
     @java.lang.Override
@@ -2897,17 +3073,17 @@ public final class BudgetOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               notificationUserAccountIds_.add(s);
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 thresholdRules_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               thresholdRules_.add(
                   input.readMessage(yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.parser(), extensionRegistry));
@@ -2945,7 +3121,7 @@ public final class BudgetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2959,10 +3135,10 @@ public final class BudgetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           thresholdRules_ = java.util.Collections.unmodifiableList(thresholdRules_);
         }
         this.unknownFields = unknownFields.build();
@@ -2982,11 +3158,11 @@ public final class BudgetOuterClass {
               yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec.class, yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int startTypeCase_ = 0;
     private java.lang.Object startType_;
     public enum StartTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RESET_PERIOD(5),
       START_DATE(6),
       STARTTYPE_NOT_SET(0);
@@ -2995,6 +3171,8 @@ public final class BudgetOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3029,7 +3207,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public java.lang.String getAmount() {
       java.lang.Object ref = amount_;
       if (ref instanceof java.lang.String) {
@@ -3048,7 +3228,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The bytes for amount.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAmountBytes() {
       java.lang.Object ref = amount_;
@@ -3072,6 +3254,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
         getNotificationUserAccountIdsList() {
@@ -3084,6 +3267,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
       return notificationUserAccountIds_.size();
@@ -3095,6 +3279,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     public java.lang.String getNotificationUserAccountIds(int index) {
       return notificationUserAccountIds_.get(index);
@@ -3106,6 +3292,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     public com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index) {
@@ -3122,6 +3310,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule> getThresholdRulesList() {
       return thresholdRules_;
     }
@@ -3133,6 +3322,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder> 
         getThresholdRulesOrBuilderList() {
       return thresholdRules_;
@@ -3145,6 +3335,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public int getThresholdRulesCount() {
       return thresholdRules_.size();
     }
@@ -3156,6 +3347,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule getThresholdRules(int index) {
       return thresholdRules_.get(index);
     }
@@ -3167,6 +3359,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder getThresholdRulesOrBuilder(
         int index) {
       return thresholdRules_.get(index);
@@ -3180,7 +3373,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return Whether the filter field is set.
      */
+    @java.lang.Override
     public boolean hasFilter() {
       return filter_ != null;
     }
@@ -3190,7 +3385,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter getFilter() {
       return filter_ == null ? yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter.getDefaultInstance() : filter_;
     }
@@ -3201,6 +3398,7 @@ public final class BudgetOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilterOrBuilder getFilterOrBuilder() {
       return getFilter();
     }
@@ -3213,6 +3411,19 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return Whether the resetPeriod field is set.
+     */
+    public boolean hasResetPeriod() {
+      return startTypeCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Periodic start type that resets budget after specified period is finished.
+     * First time budget is calculated in the current period, i.e. current month, quarter or year.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The enum numeric value on the wire for resetPeriod.
      */
     public int getResetPeriodValue() {
       if (startTypeCase_ == 5) {
@@ -3227,6 +3438,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The resetPeriod.
      */
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType getResetPeriod() {
       if (startTypeCase_ == 5) {
@@ -3246,6 +3458,19 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return Whether the startDate field is set.
+     */
+    public boolean hasStartDate() {
+      return startTypeCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Custom start date of the budget.
+     * Must be the first day of a month and must be formatted like YYYY-MM-DD.
+     * </pre>
+     *
+     * <code>string start_date = 6;</code>
+     * @return The startDate.
      */
     public java.lang.String getStartDate() {
       java.lang.Object ref = "";
@@ -3271,6 +3496,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return The bytes for startDate.
      */
     public com.google.protobuf.ByteString
         getStartDateBytes() {
@@ -3300,7 +3526,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The endDate.
      */
+    @java.lang.Override
     public java.lang.String getEndDate() {
       java.lang.Object ref = endDate_;
       if (ref instanceof java.lang.String) {
@@ -3320,7 +3548,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The bytes for endDate.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEndDateBytes() {
       java.lang.Object ref = endDate_;
@@ -3349,7 +3579,7 @@ public final class BudgetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
       }
       for (int i = 0; i < notificationUserAccountIds_.size(); i++) {
@@ -3367,7 +3597,7 @@ public final class BudgetOuterClass {
       if (startTypeCase_ == 6) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, startType_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, endDate_);
       }
       unknownFields.writeTo(output);
@@ -3379,7 +3609,7 @@ public final class BudgetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
       }
       {
@@ -3405,7 +3635,7 @@ public final class BudgetOuterClass {
       if (startTypeCase_ == 6) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, startType_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, endDate_);
       }
       size += unknownFields.getSerializedSize();
@@ -3423,37 +3653,34 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec other = (yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec) obj;
 
-      boolean result = true;
-      result = result && getAmount()
-          .equals(other.getAmount());
-      result = result && getNotificationUserAccountIdsList()
-          .equals(other.getNotificationUserAccountIdsList());
-      result = result && getThresholdRulesList()
-          .equals(other.getThresholdRulesList());
-      result = result && (hasFilter() == other.hasFilter());
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getNotificationUserAccountIdsList()
+          .equals(other.getNotificationUserAccountIdsList())) return false;
+      if (!getThresholdRulesList()
+          .equals(other.getThresholdRulesList())) return false;
+      if (hasFilter() != other.hasFilter()) return false;
       if (hasFilter()) {
-        result = result && getFilter()
-            .equals(other.getFilter());
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
       }
-      result = result && getEndDate()
-          .equals(other.getEndDate());
-      result = result && getStartTypeCase().equals(
-          other.getStartTypeCase());
-      if (!result) return false;
+      if (!getEndDate()
+          .equals(other.getEndDate())) return false;
+      if (!getStartTypeCase().equals(other.getStartTypeCase())) return false;
       switch (startTypeCase_) {
         case 5:
-          result = result && getResetPeriodValue()
-              == other.getResetPeriodValue();
+          if (getResetPeriodValue()
+              != other.getResetPeriodValue()) return false;
           break;
         case 6:
-          result = result && getStartDate()
-              .equals(other.getStartDate());
+          if (!getStartDate()
+              .equals(other.getStartDate())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3632,10 +3859,10 @@ public final class BudgetOuterClass {
         amount_ = "";
 
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (thresholdRulesBuilder_ == null) {
           thresholdRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           thresholdRulesBuilder_.clear();
         }
@@ -3676,17 +3903,16 @@ public final class BudgetOuterClass {
       public yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec buildPartial() {
         yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec result = new yandex.cloud.api.billing.v1.BudgetOuterClass.CostBudgetSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.amount_ = amount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.notificationUserAccountIds_ = notificationUserAccountIds_;
         if (thresholdRulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             thresholdRules_ = java.util.Collections.unmodifiableList(thresholdRules_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.thresholdRules_ = thresholdRules_;
         } else {
@@ -3704,7 +3930,6 @@ public final class BudgetOuterClass {
           result.startType_ = startType_;
         }
         result.endDate_ = endDate_;
-        result.bitField0_ = to_bitField0_;
         result.startTypeCase_ = startTypeCase_;
         onBuilt();
         return result;
@@ -3712,35 +3937,35 @@ public final class BudgetOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3761,7 +3986,7 @@ public final class BudgetOuterClass {
         if (!other.notificationUserAccountIds_.isEmpty()) {
           if (notificationUserAccountIds_.isEmpty()) {
             notificationUserAccountIds_ = other.notificationUserAccountIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNotificationUserAccountIdsIsMutable();
             notificationUserAccountIds_.addAll(other.notificationUserAccountIds_);
@@ -3772,7 +3997,7 @@ public final class BudgetOuterClass {
           if (!other.thresholdRules_.isEmpty()) {
             if (thresholdRules_.isEmpty()) {
               thresholdRules_ = other.thresholdRules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureThresholdRulesIsMutable();
               thresholdRules_.addAll(other.thresholdRules_);
@@ -3785,7 +4010,7 @@ public final class BudgetOuterClass {
               thresholdRulesBuilder_.dispose();
               thresholdRulesBuilder_ = null;
               thresholdRules_ = other.thresholdRules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               thresholdRulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getThresholdRulesFieldBuilder() : null;
@@ -3868,6 +4093,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return The amount.
        */
       public java.lang.String getAmount() {
         java.lang.Object ref = amount_;
@@ -3887,6 +4113,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
           getAmountBytes() {
@@ -3907,6 +4134,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(
           java.lang.String value) {
@@ -3924,6 +4153,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -3937,6 +4167,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmountBytes(
           com.google.protobuf.ByteString value) {
@@ -3952,9 +4184,9 @@ public final class BudgetOuterClass {
 
       private com.google.protobuf.LazyStringList notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNotificationUserAccountIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList(notificationUserAccountIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -3964,6 +4196,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
           getNotificationUserAccountIdsList() {
@@ -3976,6 +4209,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
         return notificationUserAccountIds_.size();
@@ -3987,6 +4221,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The notificationUserAccountIds at the given index.
        */
       public java.lang.String getNotificationUserAccountIds(int index) {
         return notificationUserAccountIds_.get(index);
@@ -3998,6 +4234,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the notificationUserAccountIds at the given index.
        */
       public com.google.protobuf.ByteString
           getNotificationUserAccountIdsBytes(int index) {
@@ -4010,6 +4248,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The notificationUserAccountIds to set.
+       * @return This builder for chaining.
        */
       public Builder setNotificationUserAccountIds(
           int index, java.lang.String value) {
@@ -4028,6 +4269,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param value The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIds(
           java.lang.String value) {
@@ -4046,6 +4289,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param values The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNotificationUserAccountIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -4062,10 +4307,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4076,6 +4322,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param value The bytes of the notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4092,9 +4340,9 @@ public final class BudgetOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule> thresholdRules_ =
         java.util.Collections.emptyList();
       private void ensureThresholdRulesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           thresholdRules_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule>(thresholdRules_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -4299,7 +4547,7 @@ public final class BudgetOuterClass {
       public Builder clearThresholdRules() {
         if (thresholdRulesBuilder_ == null) {
           thresholdRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           thresholdRulesBuilder_.clear();
@@ -4411,7 +4659,7 @@ public final class BudgetOuterClass {
           thresholdRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.Builder, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder>(
                   thresholdRules_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           thresholdRules_ = null;
@@ -4419,7 +4667,7 @@ public final class BudgetOuterClass {
         return thresholdRulesBuilder_;
       }
 
-      private yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter filter_ = null;
+      private yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter filter_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter, yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter.Builder, yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilterOrBuilder> filterBuilder_;
       /**
@@ -4428,6 +4676,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+       * @return Whether the filter field is set.
        */
       public boolean hasFilter() {
         return filterBuilder_ != null || filter_ != null;
@@ -4438,6 +4687,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+       * @return The filter.
        */
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter getFilter() {
         if (filterBuilder_ == null) {
@@ -4579,7 +4829,22 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return Whether the resetPeriod field is set.
        */
+      @java.lang.Override
+      public boolean hasResetPeriod() {
+        return startTypeCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Periodic start type that resets budget after specified period is finished.
+       * First time budget is calculated in the current period, i.e. current month, quarter or year.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return The enum numeric value on the wire for resetPeriod.
+       */
+      @java.lang.Override
       public int getResetPeriodValue() {
         if (startTypeCase_ == 5) {
           return ((java.lang.Integer) startType_).intValue();
@@ -4593,6 +4858,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @param value The enum numeric value on the wire for resetPeriod to set.
+       * @return This builder for chaining.
        */
       public Builder setResetPeriodValue(int value) {
         startTypeCase_ = 5;
@@ -4607,7 +4874,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return The resetPeriod.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType getResetPeriod() {
         if (startTypeCase_ == 5) {
           @SuppressWarnings("deprecation")
@@ -4624,6 +4893,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @param value The resetPeriod to set.
+       * @return This builder for chaining.
        */
       public Builder setResetPeriod(yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType value) {
         if (value == null) {
@@ -4641,6 +4912,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResetPeriod() {
         if (startTypeCase_ == 5) {
@@ -4658,7 +4930,22 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @return Whether the startDate field is set.
        */
+      @java.lang.Override
+      public boolean hasStartDate() {
+        return startTypeCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Custom start date of the budget.
+       * Must be the first day of a month and must be formatted like YYYY-MM-DD.
+       * </pre>
+       *
+       * <code>string start_date = 6;</code>
+       * @return The startDate.
+       */
+      @java.lang.Override
       public java.lang.String getStartDate() {
         java.lang.Object ref = "";
         if (startTypeCase_ == 6) {
@@ -4683,7 +4970,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @return The bytes for startDate.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getStartDateBytes() {
         java.lang.Object ref = "";
@@ -4709,6 +4998,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @param value The startDate to set.
+       * @return This builder for chaining.
        */
       public Builder setStartDate(
           java.lang.String value) {
@@ -4727,6 +5018,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartDate() {
         if (startTypeCase_ == 6) {
@@ -4743,6 +5035,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @param value The bytes for startDate to set.
+       * @return This builder for chaining.
        */
       public Builder setStartDateBytes(
           com.google.protobuf.ByteString value) {
@@ -4764,6 +5058,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @return The endDate.
        */
       public java.lang.String getEndDate() {
         java.lang.Object ref = endDate_;
@@ -4784,6 +5079,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @return The bytes for endDate.
        */
       public com.google.protobuf.ByteString
           getEndDateBytes() {
@@ -4805,6 +5101,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @param value The endDate to set.
+       * @return This builder for chaining.
        */
       public Builder setEndDate(
           java.lang.String value) {
@@ -4823,6 +5121,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndDate() {
         
@@ -4837,6 +5136,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @param value The bytes for endDate to set.
+       * @return This builder for chaining.
        */
       public Builder setEndDateBytes(
           com.google.protobuf.ByteString value) {
@@ -4852,7 +5153,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4912,6 +5213,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The amount.
      */
     java.lang.String getAmount();
     /**
@@ -4920,6 +5222,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
         getAmountBytes();
@@ -4931,6 +5234,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
         getNotificationUserAccountIdsList();
@@ -4941,6 +5245,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
     /**
@@ -4950,6 +5255,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     java.lang.String getNotificationUserAccountIds(int index);
     /**
@@ -4959,6 +5266,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index);
@@ -5018,6 +5327,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return Whether the filter field is set.
      */
     boolean hasFilter();
     /**
@@ -5026,6 +5336,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return The filter.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter getFilter();
     /**
@@ -5044,6 +5355,17 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return Whether the resetPeriod field is set.
+     */
+    boolean hasResetPeriod();
+    /**
+     * <pre>
+     * Periodic start type that resets budget after specified period is finished.
+     * First time budget is calculated in the current period, i.e. current month, quarter or year.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The enum numeric value on the wire for resetPeriod.
      */
     int getResetPeriodValue();
     /**
@@ -5053,6 +5375,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The resetPeriod.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType getResetPeriod();
 
@@ -5063,6 +5386,17 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return Whether the startDate field is set.
+     */
+    boolean hasStartDate();
+    /**
+     * <pre>
+     * Custom start date of the budget.
+     * Must be the first day of a month and must be formatted like YYYY-MM-DD.
+     * </pre>
+     *
+     * <code>string start_date = 6;</code>
+     * @return The startDate.
      */
     java.lang.String getStartDate();
     /**
@@ -5072,6 +5406,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return The bytes for startDate.
      */
     com.google.protobuf.ByteString
         getStartDateBytes();
@@ -5083,6 +5418,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The endDate.
      */
     java.lang.String getEndDate();
     /**
@@ -5092,6 +5428,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The bytes for endDate.
      */
     com.google.protobuf.ByteString
         getEndDateBytes();
@@ -5105,7 +5442,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.ExpenseBudgetSpec}
    */
-  public  static final class ExpenseBudgetSpec extends
+  public static final class ExpenseBudgetSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ExpenseBudgetSpec)
       ExpenseBudgetSpecOrBuilder {
@@ -5119,6 +5456,13 @@ public final class BudgetOuterClass {
       notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       thresholdRules_ = java.util.Collections.emptyList();
       endDate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExpenseBudgetSpec();
     }
 
     @java.lang.Override
@@ -5153,17 +5497,17 @@ public final class BudgetOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               notificationUserAccountIds_.add(s);
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 thresholdRules_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               thresholdRules_.add(
                   input.readMessage(yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.parser(), extensionRegistry));
@@ -5201,7 +5545,7 @@ public final class BudgetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5215,10 +5559,10 @@ public final class BudgetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           thresholdRules_ = java.util.Collections.unmodifiableList(thresholdRules_);
         }
         this.unknownFields = unknownFields.build();
@@ -5238,11 +5582,11 @@ public final class BudgetOuterClass {
               yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec.class, yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int startTypeCase_ = 0;
     private java.lang.Object startType_;
     public enum StartTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RESET_PERIOD(5),
       START_DATE(6),
       STARTTYPE_NOT_SET(0);
@@ -5251,6 +5595,8 @@ public final class BudgetOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5285,7 +5631,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public java.lang.String getAmount() {
       java.lang.Object ref = amount_;
       if (ref instanceof java.lang.String) {
@@ -5304,7 +5652,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The bytes for amount.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAmountBytes() {
       java.lang.Object ref = amount_;
@@ -5328,6 +5678,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
         getNotificationUserAccountIdsList() {
@@ -5340,6 +5691,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
       return notificationUserAccountIds_.size();
@@ -5351,6 +5703,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     public java.lang.String getNotificationUserAccountIds(int index) {
       return notificationUserAccountIds_.get(index);
@@ -5362,6 +5716,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     public com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index) {
@@ -5378,6 +5734,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule> getThresholdRulesList() {
       return thresholdRules_;
     }
@@ -5389,6 +5746,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder> 
         getThresholdRulesOrBuilderList() {
       return thresholdRules_;
@@ -5401,6 +5759,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public int getThresholdRulesCount() {
       return thresholdRules_.size();
     }
@@ -5412,6 +5771,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule getThresholdRules(int index) {
       return thresholdRules_.get(index);
     }
@@ -5423,6 +5783,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder getThresholdRulesOrBuilder(
         int index) {
       return thresholdRules_.get(index);
@@ -5436,7 +5797,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return Whether the filter field is set.
      */
+    @java.lang.Override
     public boolean hasFilter() {
       return filter_ != null;
     }
@@ -5446,7 +5809,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter getFilter() {
       return filter_ == null ? yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter.getDefaultInstance() : filter_;
     }
@@ -5457,6 +5822,7 @@ public final class BudgetOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilterOrBuilder getFilterOrBuilder() {
       return getFilter();
     }
@@ -5469,6 +5835,19 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return Whether the resetPeriod field is set.
+     */
+    public boolean hasResetPeriod() {
+      return startTypeCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Periodic start type that resets budget after specified period is finished.
+     * First time budget is calculated in the current period, i.e. current month, quarter or year.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The enum numeric value on the wire for resetPeriod.
      */
     public int getResetPeriodValue() {
       if (startTypeCase_ == 5) {
@@ -5483,6 +5862,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+     * @return The resetPeriod.
      */
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType getResetPeriod() {
       if (startTypeCase_ == 5) {
@@ -5502,6 +5882,19 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return Whether the startDate field is set.
+     */
+    public boolean hasStartDate() {
+      return startTypeCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Custom start date of the budget.
+     * Must be the first day of a month and must be formatted like YYYY-MM-DD.
+     * </pre>
+     *
+     * <code>string start_date = 6;</code>
+     * @return The startDate.
      */
     public java.lang.String getStartDate() {
       java.lang.Object ref = "";
@@ -5527,6 +5920,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 6;</code>
+     * @return The bytes for startDate.
      */
     public com.google.protobuf.ByteString
         getStartDateBytes() {
@@ -5556,7 +5950,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The endDate.
      */
+    @java.lang.Override
     public java.lang.String getEndDate() {
       java.lang.Object ref = endDate_;
       if (ref instanceof java.lang.String) {
@@ -5576,7 +5972,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 7;</code>
+     * @return The bytes for endDate.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEndDateBytes() {
       java.lang.Object ref = endDate_;
@@ -5605,7 +6003,7 @@ public final class BudgetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
       }
       for (int i = 0; i < notificationUserAccountIds_.size(); i++) {
@@ -5623,7 +6021,7 @@ public final class BudgetOuterClass {
       if (startTypeCase_ == 6) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, startType_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, endDate_);
       }
       unknownFields.writeTo(output);
@@ -5635,7 +6033,7 @@ public final class BudgetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
       }
       {
@@ -5661,7 +6059,7 @@ public final class BudgetOuterClass {
       if (startTypeCase_ == 6) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, startType_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, endDate_);
       }
       size += unknownFields.getSerializedSize();
@@ -5679,37 +6077,34 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec other = (yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec) obj;
 
-      boolean result = true;
-      result = result && getAmount()
-          .equals(other.getAmount());
-      result = result && getNotificationUserAccountIdsList()
-          .equals(other.getNotificationUserAccountIdsList());
-      result = result && getThresholdRulesList()
-          .equals(other.getThresholdRulesList());
-      result = result && (hasFilter() == other.hasFilter());
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getNotificationUserAccountIdsList()
+          .equals(other.getNotificationUserAccountIdsList())) return false;
+      if (!getThresholdRulesList()
+          .equals(other.getThresholdRulesList())) return false;
+      if (hasFilter() != other.hasFilter()) return false;
       if (hasFilter()) {
-        result = result && getFilter()
-            .equals(other.getFilter());
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
       }
-      result = result && getEndDate()
-          .equals(other.getEndDate());
-      result = result && getStartTypeCase().equals(
-          other.getStartTypeCase());
-      if (!result) return false;
+      if (!getEndDate()
+          .equals(other.getEndDate())) return false;
+      if (!getStartTypeCase().equals(other.getStartTypeCase())) return false;
       switch (startTypeCase_) {
         case 5:
-          result = result && getResetPeriodValue()
-              == other.getResetPeriodValue();
+          if (getResetPeriodValue()
+              != other.getResetPeriodValue()) return false;
           break;
         case 6:
-          result = result && getStartDate()
-              .equals(other.getStartDate());
+          if (!getStartDate()
+              .equals(other.getStartDate())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5888,10 +6283,10 @@ public final class BudgetOuterClass {
         amount_ = "";
 
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (thresholdRulesBuilder_ == null) {
           thresholdRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           thresholdRulesBuilder_.clear();
         }
@@ -5932,17 +6327,16 @@ public final class BudgetOuterClass {
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec buildPartial() {
         yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec result = new yandex.cloud.api.billing.v1.BudgetOuterClass.ExpenseBudgetSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.amount_ = amount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.notificationUserAccountIds_ = notificationUserAccountIds_;
         if (thresholdRulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             thresholdRules_ = java.util.Collections.unmodifiableList(thresholdRules_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.thresholdRules_ = thresholdRules_;
         } else {
@@ -5960,7 +6354,6 @@ public final class BudgetOuterClass {
           result.startType_ = startType_;
         }
         result.endDate_ = endDate_;
-        result.bitField0_ = to_bitField0_;
         result.startTypeCase_ = startTypeCase_;
         onBuilt();
         return result;
@@ -5968,35 +6361,35 @@ public final class BudgetOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6017,7 +6410,7 @@ public final class BudgetOuterClass {
         if (!other.notificationUserAccountIds_.isEmpty()) {
           if (notificationUserAccountIds_.isEmpty()) {
             notificationUserAccountIds_ = other.notificationUserAccountIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNotificationUserAccountIdsIsMutable();
             notificationUserAccountIds_.addAll(other.notificationUserAccountIds_);
@@ -6028,7 +6421,7 @@ public final class BudgetOuterClass {
           if (!other.thresholdRules_.isEmpty()) {
             if (thresholdRules_.isEmpty()) {
               thresholdRules_ = other.thresholdRules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureThresholdRulesIsMutable();
               thresholdRules_.addAll(other.thresholdRules_);
@@ -6041,7 +6434,7 @@ public final class BudgetOuterClass {
               thresholdRulesBuilder_.dispose();
               thresholdRulesBuilder_ = null;
               thresholdRules_ = other.thresholdRules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               thresholdRulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getThresholdRulesFieldBuilder() : null;
@@ -6124,6 +6517,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return The amount.
        */
       public java.lang.String getAmount() {
         java.lang.Object ref = amount_;
@@ -6143,6 +6537,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
           getAmountBytes() {
@@ -6163,6 +6558,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(
           java.lang.String value) {
@@ -6180,6 +6577,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -6193,6 +6591,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmountBytes(
           com.google.protobuf.ByteString value) {
@@ -6208,9 +6608,9 @@ public final class BudgetOuterClass {
 
       private com.google.protobuf.LazyStringList notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNotificationUserAccountIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList(notificationUserAccountIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -6220,6 +6620,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
           getNotificationUserAccountIdsList() {
@@ -6232,6 +6633,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
         return notificationUserAccountIds_.size();
@@ -6243,6 +6645,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The notificationUserAccountIds at the given index.
        */
       public java.lang.String getNotificationUserAccountIds(int index) {
         return notificationUserAccountIds_.get(index);
@@ -6254,6 +6658,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the notificationUserAccountIds at the given index.
        */
       public com.google.protobuf.ByteString
           getNotificationUserAccountIdsBytes(int index) {
@@ -6266,6 +6672,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The notificationUserAccountIds to set.
+       * @return This builder for chaining.
        */
       public Builder setNotificationUserAccountIds(
           int index, java.lang.String value) {
@@ -6284,6 +6693,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param value The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIds(
           java.lang.String value) {
@@ -6302,6 +6713,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param values The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNotificationUserAccountIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -6318,10 +6731,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6332,6 +6746,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param value The bytes of the notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -6348,9 +6764,9 @@ public final class BudgetOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule> thresholdRules_ =
         java.util.Collections.emptyList();
       private void ensureThresholdRulesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           thresholdRules_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule>(thresholdRules_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -6555,7 +6971,7 @@ public final class BudgetOuterClass {
       public Builder clearThresholdRules() {
         if (thresholdRulesBuilder_ == null) {
           thresholdRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           thresholdRulesBuilder_.clear();
@@ -6667,7 +7083,7 @@ public final class BudgetOuterClass {
           thresholdRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.Builder, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder>(
                   thresholdRules_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           thresholdRules_ = null;
@@ -6675,7 +7091,7 @@ public final class BudgetOuterClass {
         return thresholdRulesBuilder_;
       }
 
-      private yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter filter_ = null;
+      private yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter filter_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter, yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter.Builder, yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilterOrBuilder> filterBuilder_;
       /**
@@ -6684,6 +7100,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+       * @return Whether the filter field is set.
        */
       public boolean hasFilter() {
         return filterBuilder_ != null || filter_ != null;
@@ -6694,6 +7111,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ConsumptionFilter filter = 4;</code>
+       * @return The filter.
        */
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter getFilter() {
         if (filterBuilder_ == null) {
@@ -6835,7 +7253,22 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return Whether the resetPeriod field is set.
        */
+      @java.lang.Override
+      public boolean hasResetPeriod() {
+        return startTypeCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Periodic start type that resets budget after specified period is finished.
+       * First time budget is calculated in the current period, i.e. current month, quarter or year.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return The enum numeric value on the wire for resetPeriod.
+       */
+      @java.lang.Override
       public int getResetPeriodValue() {
         if (startTypeCase_ == 5) {
           return ((java.lang.Integer) startType_).intValue();
@@ -6849,6 +7282,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @param value The enum numeric value on the wire for resetPeriod to set.
+       * @return This builder for chaining.
        */
       public Builder setResetPeriodValue(int value) {
         startTypeCase_ = 5;
@@ -6863,7 +7298,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return The resetPeriod.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType getResetPeriod() {
         if (startTypeCase_ == 5) {
           @SuppressWarnings("deprecation")
@@ -6880,6 +7317,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @param value The resetPeriod to set.
+       * @return This builder for chaining.
        */
       public Builder setResetPeriod(yandex.cloud.api.billing.v1.BudgetOuterClass.ResetPeriodType value) {
         if (value == null) {
@@ -6897,6 +7336,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ResetPeriodType reset_period = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResetPeriod() {
         if (startTypeCase_ == 5) {
@@ -6914,7 +7354,22 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @return Whether the startDate field is set.
        */
+      @java.lang.Override
+      public boolean hasStartDate() {
+        return startTypeCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Custom start date of the budget.
+       * Must be the first day of a month and must be formatted like YYYY-MM-DD.
+       * </pre>
+       *
+       * <code>string start_date = 6;</code>
+       * @return The startDate.
+       */
+      @java.lang.Override
       public java.lang.String getStartDate() {
         java.lang.Object ref = "";
         if (startTypeCase_ == 6) {
@@ -6939,7 +7394,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @return The bytes for startDate.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getStartDateBytes() {
         java.lang.Object ref = "";
@@ -6965,6 +7422,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @param value The startDate to set.
+       * @return This builder for chaining.
        */
       public Builder setStartDate(
           java.lang.String value) {
@@ -6983,6 +7442,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartDate() {
         if (startTypeCase_ == 6) {
@@ -6999,6 +7459,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 6;</code>
+       * @param value The bytes for startDate to set.
+       * @return This builder for chaining.
        */
       public Builder setStartDateBytes(
           com.google.protobuf.ByteString value) {
@@ -7020,6 +7482,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @return The endDate.
        */
       public java.lang.String getEndDate() {
         java.lang.Object ref = endDate_;
@@ -7040,6 +7503,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @return The bytes for endDate.
        */
       public com.google.protobuf.ByteString
           getEndDateBytes() {
@@ -7061,6 +7525,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @param value The endDate to set.
+       * @return This builder for chaining.
        */
       public Builder setEndDate(
           java.lang.String value) {
@@ -7079,6 +7545,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndDate() {
         
@@ -7093,6 +7560,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 7;</code>
+       * @param value The bytes for endDate to set.
+       * @return This builder for chaining.
        */
       public Builder setEndDateBytes(
           com.google.protobuf.ByteString value) {
@@ -7108,7 +7577,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7168,6 +7637,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The amount.
      */
     java.lang.String getAmount();
     /**
@@ -7176,6 +7646,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
         getAmountBytes();
@@ -7187,6 +7658,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
         getNotificationUserAccountIdsList();
@@ -7197,6 +7669,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
     /**
@@ -7206,6 +7679,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     java.lang.String getNotificationUserAccountIds(int index);
     /**
@@ -7215,6 +7690,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index);
@@ -7275,6 +7752,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 4;</code>
+     * @return The startDate.
      */
     java.lang.String getStartDate();
     /**
@@ -7284,6 +7762,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 4;</code>
+     * @return The bytes for startDate.
      */
     com.google.protobuf.ByteString
         getStartDateBytes();
@@ -7295,6 +7774,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 5;</code>
+     * @return The endDate.
      */
     java.lang.String getEndDate();
     /**
@@ -7304,6 +7784,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 5;</code>
+     * @return The bytes for endDate.
      */
     com.google.protobuf.ByteString
         getEndDateBytes();
@@ -7315,7 +7796,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.BalanceBudgetSpec}
    */
-  public  static final class BalanceBudgetSpec extends
+  public static final class BalanceBudgetSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.BalanceBudgetSpec)
       BalanceBudgetSpecOrBuilder {
@@ -7330,6 +7811,13 @@ public final class BudgetOuterClass {
       thresholdRules_ = java.util.Collections.emptyList();
       startDate_ = "";
       endDate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BalanceBudgetSpec();
     }
 
     @java.lang.Override
@@ -7364,17 +7852,17 @@ public final class BudgetOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               notificationUserAccountIds_.add(s);
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 thresholdRules_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               thresholdRules_.add(
                   input.readMessage(yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.parser(), extensionRegistry));
@@ -7393,7 +7881,7 @@ public final class BudgetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7407,10 +7895,10 @@ public final class BudgetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           thresholdRules_ = java.util.Collections.unmodifiableList(thresholdRules_);
         }
         this.unknownFields = unknownFields.build();
@@ -7430,7 +7918,6 @@ public final class BudgetOuterClass {
               yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec.class, yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private volatile java.lang.Object amount_;
     /**
@@ -7439,7 +7926,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public java.lang.String getAmount() {
       java.lang.Object ref = amount_;
       if (ref instanceof java.lang.String) {
@@ -7458,7 +7947,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 1;</code>
+     * @return The bytes for amount.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAmountBytes() {
       java.lang.Object ref = amount_;
@@ -7482,6 +7973,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
         getNotificationUserAccountIdsList() {
@@ -7494,6 +7986,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
       return notificationUserAccountIds_.size();
@@ -7505,6 +7998,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     public java.lang.String getNotificationUserAccountIds(int index) {
       return notificationUserAccountIds_.get(index);
@@ -7516,6 +8011,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     public com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index) {
@@ -7532,6 +8029,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule> getThresholdRulesList() {
       return thresholdRules_;
     }
@@ -7543,6 +8041,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder> 
         getThresholdRulesOrBuilderList() {
       return thresholdRules_;
@@ -7555,6 +8054,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public int getThresholdRulesCount() {
       return thresholdRules_.size();
     }
@@ -7566,6 +8066,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule getThresholdRules(int index) {
       return thresholdRules_.get(index);
     }
@@ -7577,6 +8078,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.ThresholdRule threshold_rules = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder getThresholdRulesOrBuilder(
         int index) {
       return thresholdRules_.get(index);
@@ -7591,7 +8093,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 4;</code>
+     * @return The startDate.
      */
+    @java.lang.Override
     public java.lang.String getStartDate() {
       java.lang.Object ref = startDate_;
       if (ref instanceof java.lang.String) {
@@ -7611,7 +8115,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string start_date = 4;</code>
+     * @return The bytes for startDate.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStartDateBytes() {
       java.lang.Object ref = startDate_;
@@ -7635,7 +8141,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 5;</code>
+     * @return The endDate.
      */
+    @java.lang.Override
     public java.lang.String getEndDate() {
       java.lang.Object ref = endDate_;
       if (ref instanceof java.lang.String) {
@@ -7655,7 +8163,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string end_date = 5;</code>
+     * @return The bytes for endDate.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEndDateBytes() {
       java.lang.Object ref = endDate_;
@@ -7684,7 +8194,7 @@ public final class BudgetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
       }
       for (int i = 0; i < notificationUserAccountIds_.size(); i++) {
@@ -7693,10 +8203,10 @@ public final class BudgetOuterClass {
       for (int i = 0; i < thresholdRules_.size(); i++) {
         output.writeMessage(3, thresholdRules_.get(i));
       }
-      if (!getStartDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, startDate_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, endDate_);
       }
       unknownFields.writeTo(output);
@@ -7708,7 +8218,7 @@ public final class BudgetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
       }
       {
@@ -7723,10 +8233,10 @@ public final class BudgetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, thresholdRules_.get(i));
       }
-      if (!getStartDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, startDate_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, endDate_);
       }
       size += unknownFields.getSerializedSize();
@@ -7744,19 +8254,18 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec other = (yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec) obj;
 
-      boolean result = true;
-      result = result && getAmount()
-          .equals(other.getAmount());
-      result = result && getNotificationUserAccountIdsList()
-          .equals(other.getNotificationUserAccountIdsList());
-      result = result && getThresholdRulesList()
-          .equals(other.getThresholdRulesList());
-      result = result && getStartDate()
-          .equals(other.getStartDate());
-      result = result && getEndDate()
-          .equals(other.getEndDate());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getNotificationUserAccountIdsList()
+          .equals(other.getNotificationUserAccountIdsList())) return false;
+      if (!getThresholdRulesList()
+          .equals(other.getThresholdRulesList())) return false;
+      if (!getStartDate()
+          .equals(other.getStartDate())) return false;
+      if (!getEndDate()
+          .equals(other.getEndDate())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7921,10 +8430,10 @@ public final class BudgetOuterClass {
         amount_ = "";
 
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (thresholdRulesBuilder_ == null) {
           thresholdRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           thresholdRulesBuilder_.clear();
         }
@@ -7959,17 +8468,16 @@ public final class BudgetOuterClass {
       public yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec buildPartial() {
         yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec result = new yandex.cloud.api.billing.v1.BudgetOuterClass.BalanceBudgetSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.amount_ = amount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.notificationUserAccountIds_ = notificationUserAccountIds_;
         if (thresholdRulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             thresholdRules_ = java.util.Collections.unmodifiableList(thresholdRules_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.thresholdRules_ = thresholdRules_;
         } else {
@@ -7977,42 +8485,41 @@ public final class BudgetOuterClass {
         }
         result.startDate_ = startDate_;
         result.endDate_ = endDate_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8033,7 +8540,7 @@ public final class BudgetOuterClass {
         if (!other.notificationUserAccountIds_.isEmpty()) {
           if (notificationUserAccountIds_.isEmpty()) {
             notificationUserAccountIds_ = other.notificationUserAccountIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNotificationUserAccountIdsIsMutable();
             notificationUserAccountIds_.addAll(other.notificationUserAccountIds_);
@@ -8044,7 +8551,7 @@ public final class BudgetOuterClass {
           if (!other.thresholdRules_.isEmpty()) {
             if (thresholdRules_.isEmpty()) {
               thresholdRules_ = other.thresholdRules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureThresholdRulesIsMutable();
               thresholdRules_.addAll(other.thresholdRules_);
@@ -8057,7 +8564,7 @@ public final class BudgetOuterClass {
               thresholdRulesBuilder_.dispose();
               thresholdRulesBuilder_ = null;
               thresholdRules_ = other.thresholdRules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               thresholdRulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getThresholdRulesFieldBuilder() : null;
@@ -8111,6 +8618,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return The amount.
        */
       public java.lang.String getAmount() {
         java.lang.Object ref = amount_;
@@ -8130,6 +8638,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
           getAmountBytes() {
@@ -8150,6 +8659,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(
           java.lang.String value) {
@@ -8167,6 +8678,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -8180,6 +8692,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 1;</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmountBytes(
           com.google.protobuf.ByteString value) {
@@ -8195,9 +8709,9 @@ public final class BudgetOuterClass {
 
       private com.google.protobuf.LazyStringList notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNotificationUserAccountIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList(notificationUserAccountIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -8207,6 +8721,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
           getNotificationUserAccountIdsList() {
@@ -8219,6 +8734,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
         return notificationUserAccountIds_.size();
@@ -8230,6 +8746,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The notificationUserAccountIds at the given index.
        */
       public java.lang.String getNotificationUserAccountIds(int index) {
         return notificationUserAccountIds_.get(index);
@@ -8241,6 +8759,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the notificationUserAccountIds at the given index.
        */
       public com.google.protobuf.ByteString
           getNotificationUserAccountIdsBytes(int index) {
@@ -8253,6 +8773,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The notificationUserAccountIds to set.
+       * @return This builder for chaining.
        */
       public Builder setNotificationUserAccountIds(
           int index, java.lang.String value) {
@@ -8271,6 +8794,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param value The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIds(
           java.lang.String value) {
@@ -8289,6 +8814,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param values The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNotificationUserAccountIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -8305,10 +8832,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8319,6 +8847,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 2;</code>
+       * @param value The bytes of the notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -8335,9 +8865,9 @@ public final class BudgetOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule> thresholdRules_ =
         java.util.Collections.emptyList();
       private void ensureThresholdRulesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           thresholdRules_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule>(thresholdRules_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -8542,7 +9072,7 @@ public final class BudgetOuterClass {
       public Builder clearThresholdRules() {
         if (thresholdRulesBuilder_ == null) {
           thresholdRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           thresholdRulesBuilder_.clear();
@@ -8654,7 +9184,7 @@ public final class BudgetOuterClass {
           thresholdRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.Builder, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRuleOrBuilder>(
                   thresholdRules_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           thresholdRules_ = null;
@@ -8670,6 +9200,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 4;</code>
+       * @return The startDate.
        */
       public java.lang.String getStartDate() {
         java.lang.Object ref = startDate_;
@@ -8690,6 +9221,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 4;</code>
+       * @return The bytes for startDate.
        */
       public com.google.protobuf.ByteString
           getStartDateBytes() {
@@ -8711,6 +9243,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 4;</code>
+       * @param value The startDate to set.
+       * @return This builder for chaining.
        */
       public Builder setStartDate(
           java.lang.String value) {
@@ -8729,6 +9263,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartDate() {
         
@@ -8743,6 +9278,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string start_date = 4;</code>
+       * @param value The bytes for startDate to set.
+       * @return This builder for chaining.
        */
       public Builder setStartDateBytes(
           com.google.protobuf.ByteString value) {
@@ -8764,6 +9301,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 5;</code>
+       * @return The endDate.
        */
       public java.lang.String getEndDate() {
         java.lang.Object ref = endDate_;
@@ -8784,6 +9322,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 5;</code>
+       * @return The bytes for endDate.
        */
       public com.google.protobuf.ByteString
           getEndDateBytes() {
@@ -8805,6 +9344,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 5;</code>
+       * @param value The endDate to set.
+       * @return This builder for chaining.
        */
       public Builder setEndDate(
           java.lang.String value) {
@@ -8823,6 +9364,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndDate() {
         
@@ -8837,6 +9379,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string end_date = 5;</code>
+       * @param value The bytes for endDate to set.
+       * @return This builder for chaining.
        */
       public Builder setEndDateBytes(
           com.google.protobuf.ByteString value) {
@@ -8852,7 +9396,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8914,6 +9458,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @return A list containing the serviceIds.
      */
     java.util.List<java.lang.String>
         getServiceIdsList();
@@ -8925,6 +9470,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @return The count of serviceIds.
      */
     int getServiceIdsCount();
     /**
@@ -8935,6 +9481,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The serviceIds at the given index.
      */
     java.lang.String getServiceIds(int index);
     /**
@@ -8945,6 +9493,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the serviceIds at the given index.
      */
     com.google.protobuf.ByteString
         getServiceIdsBytes(int index);
@@ -9010,7 +9560,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.ConsumptionFilter}
    */
-  public  static final class ConsumptionFilter extends
+  public static final class ConsumptionFilter extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ConsumptionFilter)
       ConsumptionFilterOrBuilder {
@@ -9022,6 +9572,13 @@ public final class BudgetOuterClass {
     private ConsumptionFilter() {
       serviceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       cloudFoldersFilters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConsumptionFilter();
     }
 
     @java.lang.Override
@@ -9050,7 +9607,7 @@ public final class BudgetOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 serviceIds_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -9058,7 +9615,7 @@ public final class BudgetOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 cloudFoldersFilters_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -9067,7 +9624,7 @@ public final class BudgetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9081,10 +9638,10 @@ public final class BudgetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           serviceIds_ = serviceIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           cloudFoldersFilters_ = java.util.Collections.unmodifiableList(cloudFoldersFilters_);
         }
         this.unknownFields = unknownFields.build();
@@ -9114,6 +9671,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @return A list containing the serviceIds.
      */
     public com.google.protobuf.ProtocolStringList
         getServiceIdsList() {
@@ -9127,6 +9685,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @return The count of serviceIds.
      */
     public int getServiceIdsCount() {
       return serviceIds_.size();
@@ -9139,6 +9698,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The serviceIds at the given index.
      */
     public java.lang.String getServiceIds(int index) {
       return serviceIds_.get(index);
@@ -9151,6 +9712,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string service_ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the serviceIds at the given index.
      */
     public com.google.protobuf.ByteString
         getServiceIdsBytes(int index) {
@@ -9168,6 +9731,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.CloudFoldersConsumptionFilter cloud_folders_filters = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter> getCloudFoldersFiltersList() {
       return cloudFoldersFilters_;
     }
@@ -9180,6 +9744,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.CloudFoldersConsumptionFilter cloud_folders_filters = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilterOrBuilder> 
         getCloudFoldersFiltersOrBuilderList() {
       return cloudFoldersFilters_;
@@ -9193,6 +9758,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.CloudFoldersConsumptionFilter cloud_folders_filters = 2;</code>
      */
+    @java.lang.Override
     public int getCloudFoldersFiltersCount() {
       return cloudFoldersFilters_.size();
     }
@@ -9205,6 +9771,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.CloudFoldersConsumptionFilter cloud_folders_filters = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter getCloudFoldersFilters(int index) {
       return cloudFoldersFilters_.get(index);
     }
@@ -9217,6 +9784,7 @@ public final class BudgetOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.CloudFoldersConsumptionFilter cloud_folders_filters = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilterOrBuilder getCloudFoldersFiltersOrBuilder(
         int index) {
       return cloudFoldersFilters_.get(index);
@@ -9278,13 +9846,12 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter other = (yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter) obj;
 
-      boolean result = true;
-      result = result && getServiceIdsList()
-          .equals(other.getServiceIdsList());
-      result = result && getCloudFoldersFiltersList()
-          .equals(other.getCloudFoldersFiltersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getServiceIdsList()
+          .equals(other.getServiceIdsList())) return false;
+      if (!getCloudFoldersFiltersList()
+          .equals(other.getCloudFoldersFiltersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9475,13 +10042,13 @@ public final class BudgetOuterClass {
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter buildPartial() {
         yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter result = new yandex.cloud.api.billing.v1.BudgetOuterClass.ConsumptionFilter(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           serviceIds_ = serviceIds_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.serviceIds_ = serviceIds_;
         if (cloudFoldersFiltersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             cloudFoldersFilters_ = java.util.Collections.unmodifiableList(cloudFoldersFilters_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -9495,35 +10062,35 @@ public final class BudgetOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9605,7 +10172,7 @@ public final class BudgetOuterClass {
 
       private com.google.protobuf.LazyStringList serviceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureServiceIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           serviceIds_ = new com.google.protobuf.LazyStringArrayList(serviceIds_);
           bitField0_ |= 0x00000001;
          }
@@ -9618,6 +10185,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @return A list containing the serviceIds.
        */
       public com.google.protobuf.ProtocolStringList
           getServiceIdsList() {
@@ -9631,6 +10199,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @return The count of serviceIds.
        */
       public int getServiceIdsCount() {
         return serviceIds_.size();
@@ -9643,6 +10212,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The serviceIds at the given index.
        */
       public java.lang.String getServiceIds(int index) {
         return serviceIds_.get(index);
@@ -9655,6 +10226,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the serviceIds at the given index.
        */
       public com.google.protobuf.ByteString
           getServiceIdsBytes(int index) {
@@ -9668,6 +10241,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The serviceIds to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceIds(
           int index, java.lang.String value) {
@@ -9687,6 +10263,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @param value The serviceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addServiceIds(
           java.lang.String value) {
@@ -9706,6 +10284,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @param values The serviceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllServiceIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -9723,6 +10303,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceIds() {
         serviceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9738,6 +10319,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string service_ids = 1;</code>
+       * @param value The bytes of the serviceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addServiceIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -9754,7 +10337,7 @@ public final class BudgetOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter> cloudFoldersFilters_ =
         java.util.Collections.emptyList();
       private void ensureCloudFoldersFiltersIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           cloudFoldersFilters_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter>(cloudFoldersFilters_);
           bitField0_ |= 0x00000002;
          }
@@ -10091,7 +10674,7 @@ public final class BudgetOuterClass {
           cloudFoldersFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter, yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter.Builder, yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilterOrBuilder>(
                   cloudFoldersFilters_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           cloudFoldersFilters_ = null;
@@ -10101,7 +10684,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10162,6 +10745,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 1;</code>
+     * @return The cloudId.
      */
     java.lang.String getCloudId();
     /**
@@ -10171,6 +10755,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 1;</code>
+     * @return The bytes for cloudId.
      */
     com.google.protobuf.ByteString
         getCloudIdBytes();
@@ -10183,6 +10768,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @return A list containing the folderIds.
      */
     java.util.List<java.lang.String>
         getFolderIdsList();
@@ -10194,6 +10780,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @return The count of folderIds.
      */
     int getFolderIdsCount();
     /**
@@ -10204,6 +10791,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The folderIds at the given index.
      */
     java.lang.String getFolderIds(int index);
     /**
@@ -10214,6 +10803,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the folderIds at the given index.
      */
     com.google.protobuf.ByteString
         getFolderIdsBytes(int index);
@@ -10225,7 +10816,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.CloudFoldersConsumptionFilter}
    */
-  public  static final class CloudFoldersConsumptionFilter extends
+  public static final class CloudFoldersConsumptionFilter extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.CloudFoldersConsumptionFilter)
       CloudFoldersConsumptionFilterOrBuilder {
@@ -10237,6 +10828,13 @@ public final class BudgetOuterClass {
     private CloudFoldersConsumptionFilter() {
       cloudId_ = "";
       folderIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CloudFoldersConsumptionFilter();
     }
 
     @java.lang.Override
@@ -10271,15 +10869,15 @@ public final class BudgetOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 folderIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               folderIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10293,7 +10891,7 @@ public final class BudgetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           folderIds_ = folderIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -10313,7 +10911,6 @@ public final class BudgetOuterClass {
               yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter.class, yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLOUD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object cloudId_;
     /**
@@ -10323,7 +10920,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 1;</code>
+     * @return The cloudId.
      */
+    @java.lang.Override
     public java.lang.String getCloudId() {
       java.lang.Object ref = cloudId_;
       if (ref instanceof java.lang.String) {
@@ -10343,7 +10942,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 1;</code>
+     * @return The bytes for cloudId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCloudIdBytes() {
       java.lang.Object ref = cloudId_;
@@ -10368,6 +10969,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @return A list containing the folderIds.
      */
     public com.google.protobuf.ProtocolStringList
         getFolderIdsList() {
@@ -10381,6 +10983,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @return The count of folderIds.
      */
     public int getFolderIdsCount() {
       return folderIds_.size();
@@ -10393,6 +10996,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The folderIds at the given index.
      */
     public java.lang.String getFolderIds(int index) {
       return folderIds_.get(index);
@@ -10405,6 +11010,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string folder_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the folderIds at the given index.
      */
     public com.google.protobuf.ByteString
         getFolderIdsBytes(int index) {
@@ -10425,7 +11032,7 @@ public final class BudgetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCloudIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cloudId_);
       }
       for (int i = 0; i < folderIds_.size(); i++) {
@@ -10440,7 +11047,7 @@ public final class BudgetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCloudIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cloudId_);
       }
       {
@@ -10466,13 +11073,12 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter other = (yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter) obj;
 
-      boolean result = true;
-      result = result && getCloudId()
-          .equals(other.getCloudId());
-      result = result && getFolderIdsList()
-          .equals(other.getFolderIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCloudId()
+          .equals(other.getCloudId())) return false;
+      if (!getFolderIdsList()
+          .equals(other.getFolderIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10628,7 +11234,7 @@ public final class BudgetOuterClass {
         cloudId_ = "";
 
         folderIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -10656,49 +11262,47 @@ public final class BudgetOuterClass {
       public yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter buildPartial() {
         yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter result = new yandex.cloud.api.billing.v1.BudgetOuterClass.CloudFoldersConsumptionFilter(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.cloudId_ = cloudId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           folderIds_ = folderIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.folderIds_ = folderIds_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10719,7 +11323,7 @@ public final class BudgetOuterClass {
         if (!other.folderIds_.isEmpty()) {
           if (folderIds_.isEmpty()) {
             folderIds_ = other.folderIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFolderIdsIsMutable();
             folderIds_.addAll(other.folderIds_);
@@ -10764,6 +11368,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 1;</code>
+       * @return The cloudId.
        */
       public java.lang.String getCloudId() {
         java.lang.Object ref = cloudId_;
@@ -10784,6 +11389,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 1;</code>
+       * @return The bytes for cloudId.
        */
       public com.google.protobuf.ByteString
           getCloudIdBytes() {
@@ -10805,6 +11411,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 1;</code>
+       * @param value The cloudId to set.
+       * @return This builder for chaining.
        */
       public Builder setCloudId(
           java.lang.String value) {
@@ -10823,6 +11431,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCloudId() {
         
@@ -10837,6 +11446,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 1;</code>
+       * @param value The bytes for cloudId to set.
+       * @return This builder for chaining.
        */
       public Builder setCloudIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10852,9 +11463,9 @@ public final class BudgetOuterClass {
 
       private com.google.protobuf.LazyStringList folderIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFolderIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           folderIds_ = new com.google.protobuf.LazyStringArrayList(folderIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -10865,6 +11476,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @return A list containing the folderIds.
        */
       public com.google.protobuf.ProtocolStringList
           getFolderIdsList() {
@@ -10878,6 +11490,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @return The count of folderIds.
        */
       public int getFolderIdsCount() {
         return folderIds_.size();
@@ -10890,6 +11503,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The folderIds at the given index.
        */
       public java.lang.String getFolderIds(int index) {
         return folderIds_.get(index);
@@ -10902,6 +11517,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the folderIds at the given index.
        */
       public com.google.protobuf.ByteString
           getFolderIdsBytes(int index) {
@@ -10915,6 +11532,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The folderIds to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIds(
           int index, java.lang.String value) {
@@ -10934,6 +11554,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @param value The folderIds to add.
+       * @return This builder for chaining.
        */
       public Builder addFolderIds(
           java.lang.String value) {
@@ -10953,6 +11575,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @param values The folderIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllFolderIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -10970,10 +11594,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderIds() {
         folderIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10985,6 +11610,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string folder_ids = 2;</code>
+       * @param value The bytes of the folderIds to add.
+       * @return This builder for chaining.
        */
       public Builder addFolderIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -11000,7 +11627,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11060,6 +11687,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -11068,6 +11696,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType getType();
 
@@ -11079,6 +11708,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 2;</code>
+     * @return The amount.
      */
     java.lang.String getAmount();
     /**
@@ -11089,6 +11719,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 2;</code>
+     * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
         getAmountBytes();
@@ -11100,6 +11731,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
         getNotificationUserAccountIdsList();
@@ -11110,6 +11742,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
     /**
@@ -11119,6 +11752,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     java.lang.String getNotificationUserAccountIds(int index);
     /**
@@ -11128,6 +11763,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index);
@@ -11139,7 +11776,7 @@ public final class BudgetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.ThresholdRule}
    */
-  public  static final class ThresholdRule extends
+  public static final class ThresholdRule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ThresholdRule)
       ThresholdRuleOrBuilder {
@@ -11152,6 +11789,13 @@ public final class BudgetOuterClass {
       type_ = 0;
       amount_ = "";
       notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ThresholdRule();
     }
 
     @java.lang.Override
@@ -11192,15 +11836,15 @@ public final class BudgetOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               notificationUserAccountIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11214,7 +11858,7 @@ public final class BudgetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -11234,7 +11878,6 @@ public final class BudgetOuterClass {
               yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.class, yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
@@ -11243,8 +11886,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -11253,8 +11897,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType getType() {
+    @java.lang.Override public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType result = yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType.valueOf(type_);
       return result == null ? yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType.UNRECOGNIZED : result;
@@ -11270,7 +11915,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 2;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public java.lang.String getAmount() {
       java.lang.Object ref = amount_;
       if (ref instanceof java.lang.String) {
@@ -11291,7 +11938,9 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>string amount = 2;</code>
+     * @return The bytes for amount.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAmountBytes() {
       java.lang.Object ref = amount_;
@@ -11315,6 +11964,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
         getNotificationUserAccountIdsList() {
@@ -11327,6 +11977,7 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
       return notificationUserAccountIds_.size();
@@ -11338,6 +11989,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The notificationUserAccountIds at the given index.
      */
     public java.lang.String getNotificationUserAccountIds(int index) {
       return notificationUserAccountIds_.get(index);
@@ -11349,6 +12002,8 @@ public final class BudgetOuterClass {
      * </pre>
      *
      * <code>repeated string notification_user_account_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationUserAccountIds at the given index.
      */
     public com.google.protobuf.ByteString
         getNotificationUserAccountIdsBytes(int index) {
@@ -11372,7 +12027,7 @@ public final class BudgetOuterClass {
       if (type_ != yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType.THRESHOLD_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
       }
       for (int i = 0; i < notificationUserAccountIds_.size(); i++) {
@@ -11391,7 +12046,7 @@ public final class BudgetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (!getAmountBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
       }
       {
@@ -11417,14 +12072,13 @@ public final class BudgetOuterClass {
       }
       yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule other = (yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && getAmount()
-          .equals(other.getAmount());
-      result = result && getNotificationUserAccountIdsList()
-          .equals(other.getNotificationUserAccountIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getNotificationUserAccountIdsList()
+          .equals(other.getNotificationUserAccountIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11584,7 +12238,7 @@ public final class BudgetOuterClass {
         amount_ = "";
 
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -11612,50 +12266,48 @@ public final class BudgetOuterClass {
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule buildPartial() {
         yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule result = new yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdRule(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.type_ = type_;
         result.amount_ = amount_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = notificationUserAccountIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.notificationUserAccountIds_ = notificationUserAccountIds_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11679,7 +12331,7 @@ public final class BudgetOuterClass {
         if (!other.notificationUserAccountIds_.isEmpty()) {
           if (notificationUserAccountIds_.isEmpty()) {
             notificationUserAccountIds_ = other.notificationUserAccountIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNotificationUserAccountIdsIsMutable();
             notificationUserAccountIds_.addAll(other.notificationUserAccountIds_);
@@ -11723,8 +12375,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -11733,8 +12386,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -11745,7 +12401,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType result = yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType.valueOf(type_);
@@ -11757,6 +12415,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType value) {
         if (value == null) {
@@ -11773,6 +12433,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -11790,6 +12451,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 2;</code>
+       * @return The amount.
        */
       public java.lang.String getAmount() {
         java.lang.Object ref = amount_;
@@ -11811,6 +12473,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 2;</code>
+       * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
           getAmountBytes() {
@@ -11833,6 +12496,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(
           java.lang.String value) {
@@ -11852,6 +12517,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -11867,6 +12533,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>string amount = 2;</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmountBytes(
           com.google.protobuf.ByteString value) {
@@ -11882,9 +12550,9 @@ public final class BudgetOuterClass {
 
       private com.google.protobuf.LazyStringList notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNotificationUserAccountIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           notificationUserAccountIds_ = new com.google.protobuf.LazyStringArrayList(notificationUserAccountIds_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -11894,6 +12562,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
           getNotificationUserAccountIdsList() {
@@ -11906,6 +12575,7 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
         return notificationUserAccountIds_.size();
@@ -11917,6 +12587,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @param index The index of the element to return.
+       * @return The notificationUserAccountIds at the given index.
        */
       public java.lang.String getNotificationUserAccountIds(int index) {
         return notificationUserAccountIds_.get(index);
@@ -11928,6 +12600,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the notificationUserAccountIds at the given index.
        */
       public com.google.protobuf.ByteString
           getNotificationUserAccountIdsBytes(int index) {
@@ -11940,6 +12614,9 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The notificationUserAccountIds to set.
+       * @return This builder for chaining.
        */
       public Builder setNotificationUserAccountIds(
           int index, java.lang.String value) {
@@ -11958,6 +12635,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @param value The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIds(
           java.lang.String value) {
@@ -11976,6 +12655,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @param values The notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNotificationUserAccountIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -11992,10 +12673,11 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
         notificationUserAccountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -12006,6 +12688,8 @@ public final class BudgetOuterClass {
        * </pre>
        *
        * <code>repeated string notification_user_account_ids = 3;</code>
+       * @param value The bytes of the notificationUserAccountIds to add.
+       * @return This builder for chaining.
        */
       public Builder addNotificationUserAccountIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -12021,7 +12705,7 @@ public final class BudgetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12168,20 +12852,12 @@ public final class BudgetOuterClass {
       "to/yandex/cloud/billing/v1;billingb\006prot" +
       "o3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_Budget_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_Budget_fieldAccessorTable = new

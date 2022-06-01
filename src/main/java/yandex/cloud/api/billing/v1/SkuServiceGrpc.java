@@ -1,19 +1,6 @@
 package yandex.cloud.api.billing.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/billing/v1/sku_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SkuServiceGrpc {
 
   private SkuServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class SkuServiceGrpc {
     if ((getGetMethod = SkuServiceGrpc.getGetMethod) == null) {
       synchronized (SkuServiceGrpc.class) {
         if ((getGetMethod = SkuServiceGrpc.getGetMethod) == null) {
-          SkuServiceGrpc.getGetMethod = getGetMethod = 
+          SkuServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest, yandex.cloud.api.billing.v1.SkuOuterClass.Sku>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.SkuService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.SkuOuterClass.Sku.getDefaultInstance()))
-                  .setSchemaDescriptor(new SkuServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SkuServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest,
@@ -76,29 +63,35 @@ public final class SkuServiceGrpc {
     if ((getListMethod = SkuServiceGrpc.getListMethod) == null) {
       synchronized (SkuServiceGrpc.class) {
         if ((getListMethod = SkuServiceGrpc.getListMethod) == null) {
-          SkuServiceGrpc.getListMethod = getListMethod = 
+          SkuServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest, yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.SkuService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SkuServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SkuServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SkuServiceStub newStub(io.grpc.Channel channel) {
-    return new SkuServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SkuServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SkuServiceStub>() {
+        @java.lang.Override
+        public SkuServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SkuServiceStub(channel, callOptions);
+        }
+      };
+    return SkuServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class SkuServiceGrpc {
    */
   public static SkuServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SkuServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SkuServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SkuServiceBlockingStub>() {
+        @java.lang.Override
+        public SkuServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SkuServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SkuServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class SkuServiceGrpc {
    */
   public static SkuServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SkuServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SkuServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SkuServiceFutureStub>() {
+        @java.lang.Override
+        public SkuServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SkuServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SkuServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -131,7 +138,7 @@ public final class SkuServiceGrpc {
      */
     public void get(yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.SkuOuterClass.Sku> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -141,21 +148,21 @@ public final class SkuServiceGrpc {
      */
     public void list(yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest,
                 yandex.cloud.api.billing.v1.SkuOuterClass.Sku>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest,
                 yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse>(
@@ -169,19 +176,15 @@ public final class SkuServiceGrpc {
    * A set of methods for managing Sku resources.
    * </pre>
    */
-  public static final class SkuServiceStub extends io.grpc.stub.AbstractStub<SkuServiceStub> {
-    private SkuServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SkuServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SkuServiceStub extends io.grpc.stub.AbstractAsyncStub<SkuServiceStub> {
+    private SkuServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SkuServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SkuServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SkuServiceStub(channel, callOptions);
     }
 
@@ -192,7 +195,7 @@ public final class SkuServiceGrpc {
      */
     public void get(yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.SkuOuterClass.Sku> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -203,7 +206,7 @@ public final class SkuServiceGrpc {
      */
     public void list(yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -213,19 +216,15 @@ public final class SkuServiceGrpc {
    * A set of methods for managing Sku resources.
    * </pre>
    */
-  public static final class SkuServiceBlockingStub extends io.grpc.stub.AbstractStub<SkuServiceBlockingStub> {
-    private SkuServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SkuServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SkuServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SkuServiceBlockingStub> {
+    private SkuServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SkuServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SkuServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SkuServiceBlockingStub(channel, callOptions);
     }
 
@@ -235,7 +234,7 @@ public final class SkuServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.billing.v1.SkuOuterClass.Sku get(yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -245,7 +244,7 @@ public final class SkuServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse list(yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -255,19 +254,15 @@ public final class SkuServiceGrpc {
    * A set of methods for managing Sku resources.
    * </pre>
    */
-  public static final class SkuServiceFutureStub extends io.grpc.stub.AbstractStub<SkuServiceFutureStub> {
-    private SkuServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SkuServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SkuServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SkuServiceFutureStub> {
+    private SkuServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SkuServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SkuServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SkuServiceFutureStub(channel, callOptions);
     }
 
@@ -278,7 +273,7 @@ public final class SkuServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.billing.v1.SkuOuterClass.Sku> get(
         yandex.cloud.api.billing.v1.SkuServiceOuterClass.GetSkuRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -289,7 +284,7 @@ public final class SkuServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusResponse> list(
         yandex.cloud.api.billing.v1.SkuServiceOuterClass.ListSkusRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

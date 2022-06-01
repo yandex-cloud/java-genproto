@@ -24,6 +24,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -43,6 +45,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string type = 2;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -52,6 +55,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -64,7 +68,7 @@ public final class BillableObjectOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.BillableObject}
    */
-  public  static final class BillableObject extends
+  public static final class BillableObject extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.BillableObject)
       BillableObjectOrBuilder {
@@ -76,6 +80,13 @@ public final class BillableObjectOuterClass {
     private BillableObject() {
       id_ = "";
       type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BillableObject();
     }
 
     @java.lang.Override
@@ -91,7 +102,6 @@ public final class BillableObjectOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -115,7 +125,7 @@ public final class BillableObjectOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -154,7 +164,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -173,7 +185,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -197,7 +211,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -217,7 +233,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -246,10 +264,10 @@ public final class BillableObjectOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
       unknownFields.writeTo(output);
@@ -261,10 +279,10 @@ public final class BillableObjectOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
       size += unknownFields.getSerializedSize();
@@ -282,13 +300,12 @@ public final class BillableObjectOuterClass {
       }
       yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject other = (yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -478,35 +495,35 @@ public final class BillableObjectOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -564,6 +581,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -583,6 +601,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -603,6 +622,8 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -620,6 +641,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -633,6 +655,8 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -654,6 +678,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -674,6 +699,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -695,6 +721,8 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -713,6 +741,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -727,6 +756,8 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -742,7 +773,7 @@ public final class BillableObjectOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -802,6 +833,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 1;</code>
+     * @return Whether the effectiveTime field is set.
      */
     boolean hasEffectiveTime();
     /**
@@ -810,6 +842,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 1;</code>
+     * @return The effectiveTime.
      */
     com.google.protobuf.Timestamp getEffectiveTime();
     /**
@@ -827,6 +860,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
+     * @return Whether the billableObject field is set.
      */
     boolean hasBillableObject();
     /**
@@ -835,6 +869,7 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
+     * @return The billableObject.
      */
     yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject getBillableObject();
     /**
@@ -853,7 +888,7 @@ public final class BillableObjectOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.BillableObjectBinding}
    */
-  public  static final class BillableObjectBinding extends
+  public static final class BillableObjectBinding extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.BillableObjectBinding)
       BillableObjectBindingOrBuilder {
@@ -863,6 +898,13 @@ public final class BillableObjectOuterClass {
       super(builder);
     }
     private BillableObjectBinding() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BillableObjectBinding();
     }
 
     @java.lang.Override
@@ -878,7 +920,6 @@ public final class BillableObjectOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -916,7 +957,7 @@ public final class BillableObjectOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -955,7 +996,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 1;</code>
+     * @return Whether the effectiveTime field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveTime() {
       return effectiveTime_ != null;
     }
@@ -965,7 +1008,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 1;</code>
+     * @return The effectiveTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getEffectiveTime() {
       return effectiveTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTime_;
     }
@@ -976,6 +1021,7 @@ public final class BillableObjectOuterClass {
      *
      * <code>.google.protobuf.Timestamp effective_time = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEffectiveTimeOrBuilder() {
       return getEffectiveTime();
     }
@@ -988,7 +1034,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
+     * @return Whether the billableObject field is set.
      */
+    @java.lang.Override
     public boolean hasBillableObject() {
       return billableObject_ != null;
     }
@@ -998,7 +1046,9 @@ public final class BillableObjectOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
+     * @return The billableObject.
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject getBillableObject() {
       return billableObject_ == null ? yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject.getDefaultInstance() : billableObject_;
     }
@@ -1009,6 +1059,7 @@ public final class BillableObjectOuterClass {
      *
      * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObjectOrBuilder getBillableObjectOrBuilder() {
       return getBillableObject();
     }
@@ -1065,19 +1116,18 @@ public final class BillableObjectOuterClass {
       }
       yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObjectBinding other = (yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObjectBinding) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveTime() == other.hasEffectiveTime());
+      if (hasEffectiveTime() != other.hasEffectiveTime()) return false;
       if (hasEffectiveTime()) {
-        result = result && getEffectiveTime()
-            .equals(other.getEffectiveTime());
+        if (!getEffectiveTime()
+            .equals(other.getEffectiveTime())) return false;
       }
-      result = result && (hasBillableObject() == other.hasBillableObject());
+      if (hasBillableObject() != other.hasBillableObject()) return false;
       if (hasBillableObject()) {
-        result = result && getBillableObject()
-            .equals(other.getBillableObject());
+        if (!getBillableObject()
+            .equals(other.getBillableObject())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1286,35 +1336,35 @@ public final class BillableObjectOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1363,7 +1413,7 @@ public final class BillableObjectOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp effectiveTime_ = null;
+      private com.google.protobuf.Timestamp effectiveTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveTimeBuilder_;
       /**
@@ -1372,6 +1422,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_time = 1;</code>
+       * @return Whether the effectiveTime field is set.
        */
       public boolean hasEffectiveTime() {
         return effectiveTimeBuilder_ != null || effectiveTime_ != null;
@@ -1382,6 +1433,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_time = 1;</code>
+       * @return The effectiveTime.
        */
       public com.google.protobuf.Timestamp getEffectiveTime() {
         if (effectiveTimeBuilder_ == null) {
@@ -1516,7 +1568,7 @@ public final class BillableObjectOuterClass {
         return effectiveTimeBuilder_;
       }
 
-      private yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject billableObject_ = null;
+      private yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject billableObject_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject, yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject.Builder, yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObjectOrBuilder> billableObjectBuilder_;
       /**
@@ -1525,6 +1577,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
+       * @return Whether the billableObject field is set.
        */
       public boolean hasBillableObject() {
         return billableObjectBuilder_ != null || billableObject_ != null;
@@ -1535,6 +1588,7 @@ public final class BillableObjectOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.BillableObject billable_object = 2;</code>
+       * @return The billableObject.
        */
       public yandex.cloud.api.billing.v1.BillableObjectOuterClass.BillableObject getBillableObject() {
         if (billableObjectBuilder_ == null) {
@@ -1671,7 +1725,7 @@ public final class BillableObjectOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1752,19 +1806,11 @@ public final class BillableObjectOuterClass {
       "o/yandex/cloud/billing/v1;billingb\006proto" +
       "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_BillableObject_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_BillableObject_fieldAccessorTable = new

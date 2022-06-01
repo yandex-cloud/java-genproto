@@ -25,6 +25,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return Whether the maxDegreeOfParallelism field is set.
      */
     boolean hasMaxDegreeOfParallelism();
     /**
@@ -34,6 +35,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The maxDegreeOfParallelism.
      */
     com.google.protobuf.Int64Value getMaxDegreeOfParallelism();
     /**
@@ -54,6 +56,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return Whether the costThresholdForParallelism field is set.
      */
     boolean hasCostThresholdForParallelism();
     /**
@@ -64,6 +67,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return The costThresholdForParallelism.
      */
     com.google.protobuf.Int64Value getCostThresholdForParallelism();
     /**
@@ -89,6 +93,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return Whether the auditLevel field is set.
      */
     boolean hasAuditLevel();
     /**
@@ -103,6 +108,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return The auditLevel.
      */
     com.google.protobuf.Int64Value getAuditLevel();
     /**
@@ -129,6 +135,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the fillFactorPercent field is set.
      */
     boolean hasFillFactorPercent();
     /**
@@ -140,6 +147,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The fillFactorPercent.
      */
     com.google.protobuf.Int64Value getFillFactorPercent();
     /**
@@ -162,6 +170,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return Whether the optimizeForAdHocWorkloads field is set.
      */
     boolean hasOptimizeForAdHocWorkloads();
     /**
@@ -172,6 +181,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return The optimizeForAdHocWorkloads.
      */
     com.google.protobuf.BoolValue getOptimizeForAdHocWorkloads();
     /**
@@ -194,7 +204,7 @@ public final class Sqlserver2016Sp2 {
    *
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std}
    */
-  public  static final class SQLServerConfig2016sp2std extends
+  public static final class SQLServerConfig2016sp2std extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std)
       SQLServerConfig2016sp2stdOrBuilder {
@@ -204,6 +214,13 @@ public final class Sqlserver2016Sp2 {
       super(builder);
     }
     private SQLServerConfig2016sp2std() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SQLServerConfig2016sp2std();
     }
 
     @java.lang.Override
@@ -219,7 +236,6 @@ public final class Sqlserver2016Sp2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -296,7 +312,7 @@ public final class Sqlserver2016Sp2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -336,7 +352,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return Whether the maxDegreeOfParallelism field is set.
      */
+    @java.lang.Override
     public boolean hasMaxDegreeOfParallelism() {
       return maxDegreeOfParallelism_ != null;
     }
@@ -347,7 +365,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The maxDegreeOfParallelism.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxDegreeOfParallelism() {
       return maxDegreeOfParallelism_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxDegreeOfParallelism_;
     }
@@ -359,6 +379,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxDegreeOfParallelismOrBuilder() {
       return getMaxDegreeOfParallelism();
     }
@@ -373,7 +394,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return Whether the costThresholdForParallelism field is set.
      */
+    @java.lang.Override
     public boolean hasCostThresholdForParallelism() {
       return costThresholdForParallelism_ != null;
     }
@@ -385,7 +408,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return The costThresholdForParallelism.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getCostThresholdForParallelism() {
       return costThresholdForParallelism_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costThresholdForParallelism_;
     }
@@ -398,6 +423,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getCostThresholdForParallelismOrBuilder() {
       return getCostThresholdForParallelism();
     }
@@ -416,7 +442,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return Whether the auditLevel field is set.
      */
+    @java.lang.Override
     public boolean hasAuditLevel() {
       return auditLevel_ != null;
     }
@@ -432,7 +460,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return The auditLevel.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getAuditLevel() {
       return auditLevel_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : auditLevel_;
     }
@@ -449,6 +479,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getAuditLevelOrBuilder() {
       return getAuditLevel();
     }
@@ -464,7 +495,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the fillFactorPercent field is set.
      */
+    @java.lang.Override
     public boolean hasFillFactorPercent() {
       return fillFactorPercent_ != null;
     }
@@ -477,7 +510,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The fillFactorPercent.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFillFactorPercent() {
       return fillFactorPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fillFactorPercent_;
     }
@@ -491,6 +526,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFillFactorPercentOrBuilder() {
       return getFillFactorPercent();
     }
@@ -505,7 +541,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return Whether the optimizeForAdHocWorkloads field is set.
      */
+    @java.lang.Override
     public boolean hasOptimizeForAdHocWorkloads() {
       return optimizeForAdHocWorkloads_ != null;
     }
@@ -517,7 +555,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return The optimizeForAdHocWorkloads.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getOptimizeForAdHocWorkloads() {
       return optimizeForAdHocWorkloads_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : optimizeForAdHocWorkloads_;
     }
@@ -530,6 +570,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getOptimizeForAdHocWorkloadsOrBuilder() {
       return getOptimizeForAdHocWorkloads();
     }
@@ -607,34 +648,33 @@ public final class Sqlserver2016Sp2 {
       }
       yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std other = (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std) obj;
 
-      boolean result = true;
-      result = result && (hasMaxDegreeOfParallelism() == other.hasMaxDegreeOfParallelism());
+      if (hasMaxDegreeOfParallelism() != other.hasMaxDegreeOfParallelism()) return false;
       if (hasMaxDegreeOfParallelism()) {
-        result = result && getMaxDegreeOfParallelism()
-            .equals(other.getMaxDegreeOfParallelism());
+        if (!getMaxDegreeOfParallelism()
+            .equals(other.getMaxDegreeOfParallelism())) return false;
       }
-      result = result && (hasCostThresholdForParallelism() == other.hasCostThresholdForParallelism());
+      if (hasCostThresholdForParallelism() != other.hasCostThresholdForParallelism()) return false;
       if (hasCostThresholdForParallelism()) {
-        result = result && getCostThresholdForParallelism()
-            .equals(other.getCostThresholdForParallelism());
+        if (!getCostThresholdForParallelism()
+            .equals(other.getCostThresholdForParallelism())) return false;
       }
-      result = result && (hasAuditLevel() == other.hasAuditLevel());
+      if (hasAuditLevel() != other.hasAuditLevel()) return false;
       if (hasAuditLevel()) {
-        result = result && getAuditLevel()
-            .equals(other.getAuditLevel());
+        if (!getAuditLevel()
+            .equals(other.getAuditLevel())) return false;
       }
-      result = result && (hasFillFactorPercent() == other.hasFillFactorPercent());
+      if (hasFillFactorPercent() != other.hasFillFactorPercent()) return false;
       if (hasFillFactorPercent()) {
-        result = result && getFillFactorPercent()
-            .equals(other.getFillFactorPercent());
+        if (!getFillFactorPercent()
+            .equals(other.getFillFactorPercent())) return false;
       }
-      result = result && (hasOptimizeForAdHocWorkloads() == other.hasOptimizeForAdHocWorkloads());
+      if (hasOptimizeForAdHocWorkloads() != other.hasOptimizeForAdHocWorkloads()) return false;
       if (hasOptimizeForAdHocWorkloads()) {
-        result = result && getOptimizeForAdHocWorkloads()
-            .equals(other.getOptimizeForAdHocWorkloads());
+        if (!getOptimizeForAdHocWorkloads()
+            .equals(other.getOptimizeForAdHocWorkloads())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -890,35 +930,35 @@ public final class Sqlserver2016Sp2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -976,7 +1016,7 @@ public final class Sqlserver2016Sp2 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxDegreeOfParallelism_ = null;
+      private com.google.protobuf.Int64Value maxDegreeOfParallelism_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxDegreeOfParallelismBuilder_;
       /**
@@ -986,6 +1026,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return Whether the maxDegreeOfParallelism field is set.
        */
       public boolean hasMaxDegreeOfParallelism() {
         return maxDegreeOfParallelismBuilder_ != null || maxDegreeOfParallelism_ != null;
@@ -997,6 +1038,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return The maxDegreeOfParallelism.
        */
       public com.google.protobuf.Int64Value getMaxDegreeOfParallelism() {
         if (maxDegreeOfParallelismBuilder_ == null) {
@@ -1138,7 +1180,7 @@ public final class Sqlserver2016Sp2 {
         return maxDegreeOfParallelismBuilder_;
       }
 
-      private com.google.protobuf.Int64Value costThresholdForParallelism_ = null;
+      private com.google.protobuf.Int64Value costThresholdForParallelism_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> costThresholdForParallelismBuilder_;
       /**
@@ -1149,6 +1191,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+       * @return Whether the costThresholdForParallelism field is set.
        */
       public boolean hasCostThresholdForParallelism() {
         return costThresholdForParallelismBuilder_ != null || costThresholdForParallelism_ != null;
@@ -1161,6 +1204,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+       * @return The costThresholdForParallelism.
        */
       public com.google.protobuf.Int64Value getCostThresholdForParallelism() {
         if (costThresholdForParallelismBuilder_ == null) {
@@ -1309,7 +1353,7 @@ public final class Sqlserver2016Sp2 {
         return costThresholdForParallelismBuilder_;
       }
 
-      private com.google.protobuf.Int64Value auditLevel_ = null;
+      private com.google.protobuf.Int64Value auditLevel_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> auditLevelBuilder_;
       /**
@@ -1324,6 +1368,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+       * @return Whether the auditLevel field is set.
        */
       public boolean hasAuditLevel() {
         return auditLevelBuilder_ != null || auditLevel_ != null;
@@ -1340,6 +1385,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+       * @return The auditLevel.
        */
       public com.google.protobuf.Int64Value getAuditLevel() {
         if (auditLevelBuilder_ == null) {
@@ -1516,7 +1562,7 @@ public final class Sqlserver2016Sp2 {
         return auditLevelBuilder_;
       }
 
-      private com.google.protobuf.Int64Value fillFactorPercent_ = null;
+      private com.google.protobuf.Int64Value fillFactorPercent_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fillFactorPercentBuilder_;
       /**
@@ -1528,6 +1574,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the fillFactorPercent field is set.
        */
       public boolean hasFillFactorPercent() {
         return fillFactorPercentBuilder_ != null || fillFactorPercent_ != null;
@@ -1541,6 +1588,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return The fillFactorPercent.
        */
       public com.google.protobuf.Int64Value getFillFactorPercent() {
         if (fillFactorPercentBuilder_ == null) {
@@ -1696,7 +1744,7 @@ public final class Sqlserver2016Sp2 {
         return fillFactorPercentBuilder_;
       }
 
-      private com.google.protobuf.BoolValue optimizeForAdHocWorkloads_ = null;
+      private com.google.protobuf.BoolValue optimizeForAdHocWorkloads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> optimizeForAdHocWorkloadsBuilder_;
       /**
@@ -1707,6 +1755,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+       * @return Whether the optimizeForAdHocWorkloads field is set.
        */
       public boolean hasOptimizeForAdHocWorkloads() {
         return optimizeForAdHocWorkloadsBuilder_ != null || optimizeForAdHocWorkloads_ != null;
@@ -1719,6 +1768,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+       * @return The optimizeForAdHocWorkloads.
        */
       public com.google.protobuf.BoolValue getOptimizeForAdHocWorkloads() {
         if (optimizeForAdHocWorkloadsBuilder_ == null) {
@@ -1869,7 +1919,7 @@ public final class Sqlserver2016Sp2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1929,6 +1979,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -1937,6 +1988,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getEffectiveConfig();
     /**
@@ -1954,6 +2006,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -1962,6 +2015,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getUserConfig();
     /**
@@ -1979,6 +2033,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -1987,6 +2042,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getDefaultConfig();
     /**
@@ -2001,7 +2057,7 @@ public final class Sqlserver2016Sp2 {
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std}
    */
-  public  static final class SQLServerConfigSet2016sp2std extends
+  public static final class SQLServerConfigSet2016sp2std extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2std)
       SQLServerConfigSet2016sp2stdOrBuilder {
@@ -2011,6 +2067,13 @@ public final class Sqlserver2016Sp2 {
       super(builder);
     }
     private SQLServerConfigSet2016sp2std() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SQLServerConfigSet2016sp2std();
     }
 
     @java.lang.Override
@@ -2026,7 +2089,6 @@ public final class Sqlserver2016Sp2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2077,7 +2139,7 @@ public final class Sqlserver2016Sp2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2116,7 +2178,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -2126,7 +2190,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std.getDefaultInstance() : effectiveConfig_;
     }
@@ -2137,6 +2203,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2stdOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -2149,7 +2216,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -2159,7 +2228,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std.getDefaultInstance() : userConfig_;
     }
@@ -2170,6 +2241,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2stdOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -2182,7 +2254,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -2192,7 +2266,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std.getDefaultInstance() : defaultConfig_;
     }
@@ -2203,6 +2279,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2stdOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -2266,24 +2343,23 @@ public final class Sqlserver2016Sp2 {
       }
       yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std other = (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2std) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2503,35 +2579,35 @@ public final class Sqlserver2016Sp2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2583,7 +2659,7 @@ public final class Sqlserver2016Sp2 {
         return this;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2stdOrBuilder> effectiveConfigBuilder_;
       /**
@@ -2592,6 +2668,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -2602,6 +2679,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -2736,7 +2814,7 @@ public final class Sqlserver2016Sp2 {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std userConfig_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2stdOrBuilder> userConfigBuilder_;
       /**
@@ -2745,6 +2823,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -2755,6 +2834,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -2889,7 +2969,7 @@ public final class Sqlserver2016Sp2 {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std defaultConfig_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2stdOrBuilder> defaultConfigBuilder_;
       /**
@@ -2898,6 +2978,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -2908,6 +2989,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2std default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2std getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -3044,7 +3126,7 @@ public final class Sqlserver2016Sp2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3105,6 +3187,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return Whether the maxDegreeOfParallelism field is set.
      */
     boolean hasMaxDegreeOfParallelism();
     /**
@@ -3114,6 +3197,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The maxDegreeOfParallelism.
      */
     com.google.protobuf.Int64Value getMaxDegreeOfParallelism();
     /**
@@ -3134,6 +3218,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return Whether the costThresholdForParallelism field is set.
      */
     boolean hasCostThresholdForParallelism();
     /**
@@ -3144,6 +3229,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return The costThresholdForParallelism.
      */
     com.google.protobuf.Int64Value getCostThresholdForParallelism();
     /**
@@ -3169,6 +3255,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return Whether the auditLevel field is set.
      */
     boolean hasAuditLevel();
     /**
@@ -3183,6 +3270,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return The auditLevel.
      */
     com.google.protobuf.Int64Value getAuditLevel();
     /**
@@ -3209,6 +3297,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the fillFactorPercent field is set.
      */
     boolean hasFillFactorPercent();
     /**
@@ -3220,6 +3309,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The fillFactorPercent.
      */
     com.google.protobuf.Int64Value getFillFactorPercent();
     /**
@@ -3242,6 +3332,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return Whether the optimizeForAdHocWorkloads field is set.
      */
     boolean hasOptimizeForAdHocWorkloads();
     /**
@@ -3252,6 +3343,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return The optimizeForAdHocWorkloads.
      */
     com.google.protobuf.BoolValue getOptimizeForAdHocWorkloads();
     /**
@@ -3274,7 +3366,7 @@ public final class Sqlserver2016Sp2 {
    *
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent}
    */
-  public  static final class SQLServerConfig2016sp2ent extends
+  public static final class SQLServerConfig2016sp2ent extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent)
       SQLServerConfig2016sp2entOrBuilder {
@@ -3284,6 +3376,13 @@ public final class Sqlserver2016Sp2 {
       super(builder);
     }
     private SQLServerConfig2016sp2ent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SQLServerConfig2016sp2ent();
     }
 
     @java.lang.Override
@@ -3299,7 +3398,6 @@ public final class Sqlserver2016Sp2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3376,7 +3474,7 @@ public final class Sqlserver2016Sp2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3416,7 +3514,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return Whether the maxDegreeOfParallelism field is set.
      */
+    @java.lang.Override
     public boolean hasMaxDegreeOfParallelism() {
       return maxDegreeOfParallelism_ != null;
     }
@@ -3427,7 +3527,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The maxDegreeOfParallelism.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxDegreeOfParallelism() {
       return maxDegreeOfParallelism_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxDegreeOfParallelism_;
     }
@@ -3439,6 +3541,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxDegreeOfParallelismOrBuilder() {
       return getMaxDegreeOfParallelism();
     }
@@ -3453,7 +3556,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return Whether the costThresholdForParallelism field is set.
      */
+    @java.lang.Override
     public boolean hasCostThresholdForParallelism() {
       return costThresholdForParallelism_ != null;
     }
@@ -3465,7 +3570,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+     * @return The costThresholdForParallelism.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getCostThresholdForParallelism() {
       return costThresholdForParallelism_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costThresholdForParallelism_;
     }
@@ -3478,6 +3585,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getCostThresholdForParallelismOrBuilder() {
       return getCostThresholdForParallelism();
     }
@@ -3496,7 +3604,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return Whether the auditLevel field is set.
      */
+    @java.lang.Override
     public boolean hasAuditLevel() {
       return auditLevel_ != null;
     }
@@ -3512,7 +3622,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+     * @return The auditLevel.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getAuditLevel() {
       return auditLevel_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : auditLevel_;
     }
@@ -3529,6 +3641,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getAuditLevelOrBuilder() {
       return getAuditLevel();
     }
@@ -3544,7 +3657,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the fillFactorPercent field is set.
      */
+    @java.lang.Override
     public boolean hasFillFactorPercent() {
       return fillFactorPercent_ != null;
     }
@@ -3557,7 +3672,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The fillFactorPercent.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFillFactorPercent() {
       return fillFactorPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fillFactorPercent_;
     }
@@ -3571,6 +3688,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFillFactorPercentOrBuilder() {
       return getFillFactorPercent();
     }
@@ -3585,7 +3703,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return Whether the optimizeForAdHocWorkloads field is set.
      */
+    @java.lang.Override
     public boolean hasOptimizeForAdHocWorkloads() {
       return optimizeForAdHocWorkloads_ != null;
     }
@@ -3597,7 +3717,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+     * @return The optimizeForAdHocWorkloads.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getOptimizeForAdHocWorkloads() {
       return optimizeForAdHocWorkloads_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : optimizeForAdHocWorkloads_;
     }
@@ -3610,6 +3732,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getOptimizeForAdHocWorkloadsOrBuilder() {
       return getOptimizeForAdHocWorkloads();
     }
@@ -3687,34 +3810,33 @@ public final class Sqlserver2016Sp2 {
       }
       yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent other = (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent) obj;
 
-      boolean result = true;
-      result = result && (hasMaxDegreeOfParallelism() == other.hasMaxDegreeOfParallelism());
+      if (hasMaxDegreeOfParallelism() != other.hasMaxDegreeOfParallelism()) return false;
       if (hasMaxDegreeOfParallelism()) {
-        result = result && getMaxDegreeOfParallelism()
-            .equals(other.getMaxDegreeOfParallelism());
+        if (!getMaxDegreeOfParallelism()
+            .equals(other.getMaxDegreeOfParallelism())) return false;
       }
-      result = result && (hasCostThresholdForParallelism() == other.hasCostThresholdForParallelism());
+      if (hasCostThresholdForParallelism() != other.hasCostThresholdForParallelism()) return false;
       if (hasCostThresholdForParallelism()) {
-        result = result && getCostThresholdForParallelism()
-            .equals(other.getCostThresholdForParallelism());
+        if (!getCostThresholdForParallelism()
+            .equals(other.getCostThresholdForParallelism())) return false;
       }
-      result = result && (hasAuditLevel() == other.hasAuditLevel());
+      if (hasAuditLevel() != other.hasAuditLevel()) return false;
       if (hasAuditLevel()) {
-        result = result && getAuditLevel()
-            .equals(other.getAuditLevel());
+        if (!getAuditLevel()
+            .equals(other.getAuditLevel())) return false;
       }
-      result = result && (hasFillFactorPercent() == other.hasFillFactorPercent());
+      if (hasFillFactorPercent() != other.hasFillFactorPercent()) return false;
       if (hasFillFactorPercent()) {
-        result = result && getFillFactorPercent()
-            .equals(other.getFillFactorPercent());
+        if (!getFillFactorPercent()
+            .equals(other.getFillFactorPercent())) return false;
       }
-      result = result && (hasOptimizeForAdHocWorkloads() == other.hasOptimizeForAdHocWorkloads());
+      if (hasOptimizeForAdHocWorkloads() != other.hasOptimizeForAdHocWorkloads()) return false;
       if (hasOptimizeForAdHocWorkloads()) {
-        result = result && getOptimizeForAdHocWorkloads()
-            .equals(other.getOptimizeForAdHocWorkloads());
+        if (!getOptimizeForAdHocWorkloads()
+            .equals(other.getOptimizeForAdHocWorkloads())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3970,35 +4092,35 @@ public final class Sqlserver2016Sp2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4056,7 +4178,7 @@ public final class Sqlserver2016Sp2 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxDegreeOfParallelism_ = null;
+      private com.google.protobuf.Int64Value maxDegreeOfParallelism_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxDegreeOfParallelismBuilder_;
       /**
@@ -4066,6 +4188,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return Whether the maxDegreeOfParallelism field is set.
        */
       public boolean hasMaxDegreeOfParallelism() {
         return maxDegreeOfParallelismBuilder_ != null || maxDegreeOfParallelism_ != null;
@@ -4077,6 +4200,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_degree_of_parallelism = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return The maxDegreeOfParallelism.
        */
       public com.google.protobuf.Int64Value getMaxDegreeOfParallelism() {
         if (maxDegreeOfParallelismBuilder_ == null) {
@@ -4218,7 +4342,7 @@ public final class Sqlserver2016Sp2 {
         return maxDegreeOfParallelismBuilder_;
       }
 
-      private com.google.protobuf.Int64Value costThresholdForParallelism_ = null;
+      private com.google.protobuf.Int64Value costThresholdForParallelism_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> costThresholdForParallelismBuilder_;
       /**
@@ -4229,6 +4353,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+       * @return Whether the costThresholdForParallelism field is set.
        */
       public boolean hasCostThresholdForParallelism() {
         return costThresholdForParallelismBuilder_ != null || costThresholdForParallelism_ != null;
@@ -4241,6 +4366,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value cost_threshold_for_parallelism = 2 [(.yandex.cloud.value) = "5-32767"];</code>
+       * @return The costThresholdForParallelism.
        */
       public com.google.protobuf.Int64Value getCostThresholdForParallelism() {
         if (costThresholdForParallelismBuilder_ == null) {
@@ -4389,7 +4515,7 @@ public final class Sqlserver2016Sp2 {
         return costThresholdForParallelismBuilder_;
       }
 
-      private com.google.protobuf.Int64Value auditLevel_ = null;
+      private com.google.protobuf.Int64Value auditLevel_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> auditLevelBuilder_;
       /**
@@ -4404,6 +4530,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+       * @return Whether the auditLevel field is set.
        */
       public boolean hasAuditLevel() {
         return auditLevelBuilder_ != null || auditLevel_ != null;
@@ -4420,6 +4547,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value audit_level = 3 [(.yandex.cloud.value) = "0-3"];</code>
+       * @return The auditLevel.
        */
       public com.google.protobuf.Int64Value getAuditLevel() {
         if (auditLevelBuilder_ == null) {
@@ -4596,7 +4724,7 @@ public final class Sqlserver2016Sp2 {
         return auditLevelBuilder_;
       }
 
-      private com.google.protobuf.Int64Value fillFactorPercent_ = null;
+      private com.google.protobuf.Int64Value fillFactorPercent_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fillFactorPercentBuilder_;
       /**
@@ -4608,6 +4736,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the fillFactorPercent field is set.
        */
       public boolean hasFillFactorPercent() {
         return fillFactorPercentBuilder_ != null || fillFactorPercent_ != null;
@@ -4621,6 +4750,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value fill_factor_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return The fillFactorPercent.
        */
       public com.google.protobuf.Int64Value getFillFactorPercent() {
         if (fillFactorPercentBuilder_ == null) {
@@ -4776,7 +4906,7 @@ public final class Sqlserver2016Sp2 {
         return fillFactorPercentBuilder_;
       }
 
-      private com.google.protobuf.BoolValue optimizeForAdHocWorkloads_ = null;
+      private com.google.protobuf.BoolValue optimizeForAdHocWorkloads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> optimizeForAdHocWorkloadsBuilder_;
       /**
@@ -4787,6 +4917,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+       * @return Whether the optimizeForAdHocWorkloads field is set.
        */
       public boolean hasOptimizeForAdHocWorkloads() {
         return optimizeForAdHocWorkloadsBuilder_ != null || optimizeForAdHocWorkloads_ != null;
@@ -4799,6 +4930,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue optimize_for_ad_hoc_workloads = 5;</code>
+       * @return The optimizeForAdHocWorkloads.
        */
       public com.google.protobuf.BoolValue getOptimizeForAdHocWorkloads() {
         if (optimizeForAdHocWorkloadsBuilder_ == null) {
@@ -4949,7 +5081,7 @@ public final class Sqlserver2016Sp2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5009,6 +5141,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -5017,6 +5150,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getEffectiveConfig();
     /**
@@ -5034,6 +5168,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -5042,6 +5177,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getUserConfig();
     /**
@@ -5059,6 +5195,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -5067,6 +5204,7 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getDefaultConfig();
     /**
@@ -5081,7 +5219,7 @@ public final class Sqlserver2016Sp2 {
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent}
    */
-  public  static final class SQLServerConfigSet2016sp2ent extends
+  public static final class SQLServerConfigSet2016sp2ent extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2016sp2ent)
       SQLServerConfigSet2016sp2entOrBuilder {
@@ -5091,6 +5229,13 @@ public final class Sqlserver2016Sp2 {
       super(builder);
     }
     private SQLServerConfigSet2016sp2ent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SQLServerConfigSet2016sp2ent();
     }
 
     @java.lang.Override
@@ -5106,7 +5251,6 @@ public final class Sqlserver2016Sp2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5157,7 +5301,7 @@ public final class Sqlserver2016Sp2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5196,7 +5340,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -5206,7 +5352,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.getDefaultInstance() : effectiveConfig_;
     }
@@ -5217,6 +5365,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2entOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -5229,7 +5378,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -5239,7 +5390,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.getDefaultInstance() : userConfig_;
     }
@@ -5250,6 +5403,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2entOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -5262,7 +5416,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -5272,7 +5428,9 @@ public final class Sqlserver2016Sp2 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.getDefaultInstance() : defaultConfig_;
     }
@@ -5283,6 +5441,7 @@ public final class Sqlserver2016Sp2 {
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2entOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -5346,24 +5505,23 @@ public final class Sqlserver2016Sp2 {
       }
       yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent other = (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5583,35 +5741,35 @@ public final class Sqlserver2016Sp2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5663,7 +5821,7 @@ public final class Sqlserver2016Sp2 {
         return this;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2entOrBuilder> effectiveConfigBuilder_;
       /**
@@ -5672,6 +5830,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -5682,6 +5841,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -5816,7 +5976,7 @@ public final class Sqlserver2016Sp2 {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent userConfig_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2entOrBuilder> userConfigBuilder_;
       /**
@@ -5825,6 +5985,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -5835,6 +5996,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -5969,7 +6131,7 @@ public final class Sqlserver2016Sp2 {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent defaultConfig_ = null;
+      private yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2entOrBuilder> defaultConfigBuilder_;
       /**
@@ -5978,6 +6140,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -5988,6 +6151,7 @@ public final class Sqlserver2016Sp2 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2016sp2ent default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -6124,7 +6288,7 @@ public final class Sqlserver2016Sp2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6246,20 +6410,12 @@ public final class Sqlserver2016Sp2 {
       "oto/yandex/cloud/mdb/sqlserver/v1/config" +
       ";sqlserverb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_sqlserver_v1_config_SQLServerConfig2016sp2std_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_config_SQLServerConfig2016sp2std_fieldAccessorTable = new

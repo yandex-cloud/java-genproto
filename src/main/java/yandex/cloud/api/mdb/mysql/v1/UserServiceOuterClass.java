@@ -25,6 +25,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -34,6 +35,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -45,6 +47,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -54,6 +57,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -61,7 +65,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.GetUserRequest}
    */
-  public  static final class GetUserRequest extends
+  public static final class GetUserRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.GetUserRequest)
       GetUserRequestOrBuilder {
@@ -73,6 +77,13 @@ public final class UserServiceOuterClass {
     private GetUserRequest() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetUserRequest();
     }
 
     @java.lang.Override
@@ -88,7 +99,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,7 +122,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -152,7 +162,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -172,7 +184,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -196,7 +210,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -216,7 +232,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -245,10 +263,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -260,10 +278,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -281,13 +299,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GetUserRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GetUserRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -472,35 +489,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -559,6 +576,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -579,6 +597,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -600,6 +619,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -618,6 +639,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -632,6 +654,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -653,6 +677,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -673,6 +698,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -694,6 +720,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -712,6 +740,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -726,6 +755,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -741,7 +772,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -802,6 +833,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -811,6 +843,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -822,6 +855,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -832,6 +866,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -841,6 +876,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -848,7 +884,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.ListUsersRequest}
    */
-  public  static final class ListUsersRequest extends
+  public static final class ListUsersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.ListUsersRequest)
       ListUsersRequestOrBuilder {
@@ -859,8 +895,14 @@ public final class UserServiceOuterClass {
     }
     private ListUsersRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListUsersRequest();
     }
 
     @java.lang.Override
@@ -876,7 +918,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -905,7 +946,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -945,7 +986,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -965,7 +1008,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -989,7 +1034,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1003,7 +1050,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1023,7 +1072,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1052,13 +1103,13 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -1070,14 +1121,14 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1095,15 +1146,14 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1294,35 +1344,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1384,6 +1434,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1404,6 +1455,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1425,6 +1477,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1443,6 +1497,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1457,6 +1512,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1478,7 +1535,9 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1489,6 +1548,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1503,6 +1564,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1519,6 +1581,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1539,6 +1602,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1560,6 +1624,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1578,6 +1644,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1592,6 +1659,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1607,7 +1676,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1713,6 +1782,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1723,6 +1793,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1730,7 +1801,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.ListUsersResponse}
    */
-  public  static final class ListUsersResponse extends
+  public static final class ListUsersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.ListUsersResponse)
       ListUsersResponseOrBuilder {
@@ -1742,6 +1813,13 @@ public final class UserServiceOuterClass {
     private ListUsersResponse() {
       users_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListUsersResponse();
     }
 
     @java.lang.Override
@@ -1769,7 +1847,7 @@ public final class UserServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 users_ = new java.util.ArrayList<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1784,7 +1862,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1798,7 +1876,7 @@ public final class UserServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           users_ = java.util.Collections.unmodifiableList(users_);
         }
         this.unknownFields = unknownFields.build();
@@ -1818,7 +1896,6 @@ public final class UserServiceOuterClass {
               yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse.class, yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int USERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User> users_;
     /**
@@ -1828,6 +1905,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.User users = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User> getUsersList() {
       return users_;
     }
@@ -1838,6 +1916,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.User users = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserOrBuilder> 
         getUsersOrBuilderList() {
       return users_;
@@ -1849,6 +1928,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.User users = 1;</code>
      */
+    @java.lang.Override
     public int getUsersCount() {
       return users_.size();
     }
@@ -1859,6 +1939,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.User users = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User getUsers(int index) {
       return users_.get(index);
     }
@@ -1869,6 +1950,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.User users = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserOrBuilder getUsersOrBuilder(
         int index) {
       return users_.get(index);
@@ -1884,7 +1966,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1905,7 +1989,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1937,7 +2023,7 @@ public final class UserServiceOuterClass {
       for (int i = 0; i < users_.size(); i++) {
         output.writeMessage(1, users_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1953,7 +2039,7 @@ public final class UserServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, users_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1971,13 +2057,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse) obj;
 
-      boolean result = true;
-      result = result && getUsersList()
-          .equals(other.getUsersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUsersList()
+          .equals(other.getUsersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2162,9 +2247,8 @@ public final class UserServiceOuterClass {
       public yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse buildPartial() {
         yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse result = new yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (usersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             users_ = java.util.Collections.unmodifiableList(users_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2173,42 +2257,41 @@ public final class UserServiceOuterClass {
           result.users_ = usersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2285,7 +2368,7 @@ public final class UserServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User> users_ =
         java.util.Collections.emptyList();
       private void ensureUsersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           users_ = new java.util.ArrayList<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User>(users_);
           bitField0_ |= 0x00000001;
          }
@@ -2586,7 +2669,7 @@ public final class UserServiceOuterClass {
           usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserOrBuilder>(
                   users_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           users_ = null;
@@ -2603,6 +2686,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2624,6 +2708,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2646,6 +2731,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2665,6 +2752,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2680,6 +2768,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2695,7 +2785,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2756,6 +2846,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2765,6 +2856,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2775,6 +2867,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the userSpec field is set.
      */
     boolean hasUserSpec();
     /**
@@ -2783,6 +2876,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The userSpec.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec getUserSpec();
     /**
@@ -2797,7 +2891,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.CreateUserRequest}
    */
-  public  static final class CreateUserRequest extends
+  public static final class CreateUserRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.CreateUserRequest)
       CreateUserRequestOrBuilder {
@@ -2808,6 +2902,13 @@ public final class UserServiceOuterClass {
     }
     private CreateUserRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateUserRequest();
     }
 
     @java.lang.Override
@@ -2823,7 +2924,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2854,7 +2954,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2894,7 +2994,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2914,7 +3016,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2937,7 +3041,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the userSpec field is set.
      */
+    @java.lang.Override
     public boolean hasUserSpec() {
       return userSpec_ != null;
     }
@@ -2947,7 +3053,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The userSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec getUserSpec() {
       return userSpec_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec.getDefaultInstance() : userSpec_;
     }
@@ -2958,6 +3066,7 @@ public final class UserServiceOuterClass {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpecOrBuilder getUserSpecOrBuilder() {
       return getUserSpec();
     }
@@ -2976,7 +3085,7 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (userSpec_ != null) {
@@ -2991,7 +3100,7 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (userSpec_ != null) {
@@ -3013,16 +3122,15 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (hasUserSpec() == other.hasUserSpec());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasUserSpec() != other.hasUserSpec()) return false;
       if (hasUserSpec()) {
-        result = result && getUserSpec()
-            .equals(other.getUserSpec());
+        if (!getUserSpec()
+            .equals(other.getUserSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3217,35 +3325,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3303,6 +3411,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3323,6 +3432,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3344,6 +3454,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3362,6 +3474,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3376,6 +3489,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3389,7 +3504,7 @@ public final class UserServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec userSpec_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec userSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpecOrBuilder> userSpecBuilder_;
       /**
@@ -3398,6 +3513,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the userSpec field is set.
        */
       public boolean hasUserSpec() {
         return userSpecBuilder_ != null || userSpec_ != null;
@@ -3408,6 +3524,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.UserSpec user_spec = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The userSpec.
        */
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec getUserSpec() {
         if (userSpecBuilder_ == null) {
@@ -3544,7 +3661,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3604,6 +3721,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -3612,6 +3730,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -3622,6 +3741,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -3630,6 +3750,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -3637,7 +3758,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.CreateUserMetadata}
    */
-  public  static final class CreateUserMetadata extends
+  public static final class CreateUserMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.CreateUserMetadata)
       CreateUserMetadataOrBuilder {
@@ -3649,6 +3770,13 @@ public final class UserServiceOuterClass {
     private CreateUserMetadata() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateUserMetadata();
     }
 
     @java.lang.Override
@@ -3664,7 +3792,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3688,7 +3815,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3727,7 +3854,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3746,7 +3875,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3769,7 +3900,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -3788,7 +3921,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -3817,10 +3952,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -3832,10 +3967,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -3853,13 +3988,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserMetadata other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4044,35 +4178,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4130,6 +4264,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4149,6 +4284,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4169,6 +4305,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4186,6 +4324,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4199,6 +4338,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4219,6 +4360,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -4238,6 +4380,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -4258,6 +4401,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -4275,6 +4420,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -4288,6 +4434,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4303,7 +4451,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4364,6 +4512,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4373,6 +4522,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4384,6 +4534,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -4393,6 +4544,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -4403,6 +4555,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4411,6 +4564,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4428,6 +4582,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -4436,6 +4591,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -4490,6 +4646,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @return A list containing the globalPermissions.
      */
     java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> getGlobalPermissionsList();
     /**
@@ -4498,6 +4655,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @return The count of globalPermissions.
      */
     int getGlobalPermissionsCount();
     /**
@@ -4506,6 +4664,8 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @param index The index of the element to return.
+     * @return The globalPermissions at the given index.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions(int index);
     /**
@@ -4514,6 +4674,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @return A list containing the enum numeric values on the wire for globalPermissions.
      */
     java.util.List<java.lang.Integer>
     getGlobalPermissionsValueList();
@@ -4523,6 +4684,8 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of globalPermissions at the given index.
      */
     int getGlobalPermissionsValue(int index);
 
@@ -4532,6 +4695,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
+     * @return Whether the connectionLimits field is set.
      */
     boolean hasConnectionLimits();
     /**
@@ -4540,6 +4704,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
+     * @return The connectionLimits.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits();
     /**
@@ -4557,6 +4722,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+     * @return The enum numeric value on the wire for authenticationPlugin.
      */
     int getAuthenticationPluginValue();
     /**
@@ -4565,13 +4731,14 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+     * @return The authenticationPlugin.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateUserRequest}
    */
-  public  static final class UpdateUserRequest extends
+  public static final class UpdateUserRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.UpdateUserRequest)
       UpdateUserRequestOrBuilder {
@@ -4587,6 +4754,13 @@ public final class UserServiceOuterClass {
       permissions_ = java.util.Collections.emptyList();
       globalPermissions_ = java.util.Collections.emptyList();
       authenticationPlugin_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateUserRequest();
     }
 
     @java.lang.Override
@@ -4645,9 +4819,9 @@ public final class UserServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 permissions_ = new java.util.ArrayList<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               permissions_.add(
                   input.readMessage(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.parser(), extensionRegistry));
@@ -4655,9 +4829,9 @@ public final class UserServiceOuterClass {
             }
             case 48: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 globalPermissions_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               globalPermissions_.add(rawValue);
               break;
@@ -4667,9 +4841,9 @@ public final class UserServiceOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   globalPermissions_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000020;
+                  mutable_bitField0_ |= 0x00000002;
                 }
                 globalPermissions_.add(rawValue);
               }
@@ -4696,7 +4870,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4710,10 +4884,10 @@ public final class UserServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           globalPermissions_ = java.util.Collections.unmodifiableList(globalPermissions_);
         }
         this.unknownFields = unknownFields.build();
@@ -4733,7 +4907,6 @@ public final class UserServiceOuterClass {
               yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest.class, yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -4743,7 +4916,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4763,7 +4938,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4787,7 +4964,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -4807,7 +4986,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -4830,7 +5011,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -4840,7 +5023,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -4851,6 +5036,7 @@ public final class UserServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4863,7 +5049,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -4882,7 +5070,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -4906,6 +5096,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission> getPermissionsList() {
       return permissions_;
     }
@@ -4916,6 +5107,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder> 
         getPermissionsOrBuilderList() {
       return permissions_;
@@ -4927,6 +5119,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 5;</code>
      */
+    @java.lang.Override
     public int getPermissionsCount() {
       return permissions_.size();
     }
@@ -4937,6 +5130,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermissions(int index) {
       return permissions_.get(index);
     }
@@ -4947,6 +5141,7 @@ public final class UserServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder getPermissionsOrBuilder(
         int index) {
       return permissions_.get(index);
@@ -4970,7 +5165,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @return A list containing the globalPermissions.
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> getGlobalPermissionsList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission>(globalPermissions_, globalPermissions_converter_);
@@ -4981,7 +5178,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @return The count of globalPermissions.
      */
+    @java.lang.Override
     public int getGlobalPermissionsCount() {
       return globalPermissions_.size();
     }
@@ -4991,7 +5190,10 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @param index The index of the element to return.
+     * @return The globalPermissions at the given index.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions(int index) {
       return globalPermissions_converter_.convert(globalPermissions_.get(index));
     }
@@ -5001,7 +5203,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @return A list containing the enum numeric values on the wire for globalPermissions.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getGlobalPermissionsValueList() {
       return globalPermissions_;
@@ -5012,7 +5216,10 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of globalPermissions at the given index.
      */
+    @java.lang.Override
     public int getGlobalPermissionsValue(int index) {
       return globalPermissions_.get(index);
     }
@@ -5026,7 +5233,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
+     * @return Whether the connectionLimits field is set.
      */
+    @java.lang.Override
     public boolean hasConnectionLimits() {
       return connectionLimits_ != null;
     }
@@ -5036,7 +5245,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
+     * @return The connectionLimits.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits() {
       return connectionLimits_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
     }
@@ -5047,6 +5258,7 @@ public final class UserServiceOuterClass {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder() {
       return getConnectionLimits();
     }
@@ -5059,8 +5271,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+     * @return The enum numeric value on the wire for authenticationPlugin.
      */
-    public int getAuthenticationPluginValue() {
+    @java.lang.Override public int getAuthenticationPluginValue() {
       return authenticationPlugin_;
     }
     /**
@@ -5069,8 +5282,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+     * @return The authenticationPlugin.
      */
-    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.valueOf(authenticationPlugin_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
@@ -5091,16 +5305,16 @@ public final class UserServiceOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       if (updateMask_ != null) {
         output.writeMessage(3, getUpdateMask());
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, password_);
       }
       for (int i = 0; i < permissions_.size(); i++) {
@@ -5128,17 +5342,17 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdateMask());
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, password_);
       }
       for (int i = 0; i < permissions_.size(); i++) {
@@ -5180,29 +5394,28 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && getPermissionsList()
-          .equals(other.getPermissionsList());
-      result = result && globalPermissions_.equals(other.globalPermissions_);
-      result = result && (hasConnectionLimits() == other.hasConnectionLimits());
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
+      if (!globalPermissions_.equals(other.globalPermissions_)) return false;
+      if (hasConnectionLimits() != other.hasConnectionLimits()) return false;
       if (hasConnectionLimits()) {
-        result = result && getConnectionLimits()
-            .equals(other.getConnectionLimits());
+        if (!getConnectionLimits()
+            .equals(other.getConnectionLimits())) return false;
       }
-      result = result && authenticationPlugin_ == other.authenticationPlugin_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (authenticationPlugin_ != other.authenticationPlugin_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5384,12 +5597,12 @@ public final class UserServiceOuterClass {
 
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           permissionsBuilder_.clear();
         }
         globalPermissions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (connectionLimitsBuilder_ == null) {
           connectionLimits_ = null;
         } else {
@@ -5425,7 +5638,6 @@ public final class UserServiceOuterClass {
       public yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest buildPartial() {
         yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest result = new yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
         result.userName_ = userName_;
         if (updateMaskBuilder_ == null) {
@@ -5435,17 +5647,17 @@ public final class UserServiceOuterClass {
         }
         result.password_ = password_;
         if (permissionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             permissions_ = java.util.Collections.unmodifiableList(permissions_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.permissions_ = permissions_;
         } else {
           result.permissions_ = permissionsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           globalPermissions_ = java.util.Collections.unmodifiableList(globalPermissions_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.globalPermissions_ = globalPermissions_;
         if (connectionLimitsBuilder_ == null) {
@@ -5454,42 +5666,41 @@ public final class UserServiceOuterClass {
           result.connectionLimits_ = connectionLimitsBuilder_.build();
         }
         result.authenticationPlugin_ = authenticationPlugin_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5522,7 +5733,7 @@ public final class UserServiceOuterClass {
           if (!other.permissions_.isEmpty()) {
             if (permissions_.isEmpty()) {
               permissions_ = other.permissions_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensurePermissionsIsMutable();
               permissions_.addAll(other.permissions_);
@@ -5535,7 +5746,7 @@ public final class UserServiceOuterClass {
               permissionsBuilder_.dispose();
               permissionsBuilder_ = null;
               permissions_ = other.permissions_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               permissionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPermissionsFieldBuilder() : null;
@@ -5547,7 +5758,7 @@ public final class UserServiceOuterClass {
         if (!other.globalPermissions_.isEmpty()) {
           if (globalPermissions_.isEmpty()) {
             globalPermissions_ = other.globalPermissions_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureGlobalPermissionsIsMutable();
             globalPermissions_.addAll(other.globalPermissions_);
@@ -5598,6 +5809,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5618,6 +5830,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5639,6 +5852,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5657,6 +5872,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5671,6 +5887,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5692,6 +5910,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -5712,6 +5931,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -5733,6 +5953,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -5751,6 +5973,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -5765,6 +5988,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5778,7 +6003,7 @@ public final class UserServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -5787,6 +6012,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -5797,6 +6023,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5938,6 +6165,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -5957,6 +6185,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -5977,6 +6206,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -5994,6 +6225,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -6007,6 +6239,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "8-128"];</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -6023,9 +6257,9 @@ public final class UserServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission> permissions_ =
         java.util.Collections.emptyList();
       private void ensurePermissionsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           permissions_ = new java.util.ArrayList<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission>(permissions_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -6219,7 +6453,7 @@ public final class UserServiceOuterClass {
       public Builder clearPermissions() {
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           permissionsBuilder_.clear();
@@ -6324,7 +6558,7 @@ public final class UserServiceOuterClass {
           permissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder>(
                   permissions_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           permissions_ = null;
@@ -6335,9 +6569,9 @@ public final class UserServiceOuterClass {
       private java.util.List<java.lang.Integer> globalPermissions_ =
         java.util.Collections.emptyList();
       private void ensureGlobalPermissionsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           globalPermissions_ = new java.util.ArrayList<java.lang.Integer>(globalPermissions_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
         }
       }
       /**
@@ -6346,6 +6580,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @return A list containing the globalPermissions.
        */
       public java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> getGlobalPermissionsList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -6357,6 +6592,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @return The count of globalPermissions.
        */
       public int getGlobalPermissionsCount() {
         return globalPermissions_.size();
@@ -6367,6 +6603,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param index The index of the element to return.
+       * @return The globalPermissions at the given index.
        */
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions(int index) {
         return globalPermissions_converter_.convert(globalPermissions_.get(index));
@@ -6377,6 +6615,9 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The globalPermissions to set.
+       * @return This builder for chaining.
        */
       public Builder setGlobalPermissions(
           int index, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission value) {
@@ -6394,6 +6635,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param value The globalPermissions to add.
+       * @return This builder for chaining.
        */
       public Builder addGlobalPermissions(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission value) {
         if (value == null) {
@@ -6410,6 +6653,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param values The globalPermissions to add.
+       * @return This builder for chaining.
        */
       public Builder addAllGlobalPermissions(
           java.lang.Iterable<? extends yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> values) {
@@ -6426,10 +6671,11 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGlobalPermissions() {
         globalPermissions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6439,6 +6685,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @return A list containing the enum numeric values on the wire for globalPermissions.
        */
       public java.util.List<java.lang.Integer>
       getGlobalPermissionsValueList() {
@@ -6450,6 +6697,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of globalPermissions at the given index.
        */
       public int getGlobalPermissionsValue(int index) {
         return globalPermissions_.get(index);
@@ -6460,6 +6709,9 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of globalPermissions at the given index.
+       * @return This builder for chaining.
        */
       public Builder setGlobalPermissionsValue(
           int index, int value) {
@@ -6474,6 +6726,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param value The enum numeric value on the wire for globalPermissions to add.
+       * @return This builder for chaining.
        */
       public Builder addGlobalPermissionsValue(int value) {
         ensureGlobalPermissionsIsMutable();
@@ -6487,6 +6741,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 6;</code>
+       * @param values The enum numeric values on the wire for globalPermissions to add.
+       * @return This builder for chaining.
        */
       public Builder addAllGlobalPermissionsValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -6498,7 +6754,7 @@ public final class UserServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits connectionLimits_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits connectionLimits_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder> connectionLimitsBuilder_;
       /**
@@ -6507,6 +6763,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
+       * @return Whether the connectionLimits field is set.
        */
       public boolean hasConnectionLimits() {
         return connectionLimitsBuilder_ != null || connectionLimits_ != null;
@@ -6517,6 +6774,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 7;</code>
+       * @return The connectionLimits.
        */
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits() {
         if (connectionLimitsBuilder_ == null) {
@@ -6658,8 +6916,9 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+       * @return The enum numeric value on the wire for authenticationPlugin.
        */
-      public int getAuthenticationPluginValue() {
+      @java.lang.Override public int getAuthenticationPluginValue() {
         return authenticationPlugin_;
       }
       /**
@@ -6668,8 +6927,11 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+       * @param value The enum numeric value on the wire for authenticationPlugin to set.
+       * @return This builder for chaining.
        */
       public Builder setAuthenticationPluginValue(int value) {
+        
         authenticationPlugin_ = value;
         onChanged();
         return this;
@@ -6680,7 +6942,9 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+       * @return The authenticationPlugin.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.valueOf(authenticationPlugin_);
@@ -6692,6 +6956,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+       * @param value The authenticationPlugin to set.
+       * @return This builder for chaining.
        */
       public Builder setAuthenticationPlugin(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin value) {
         if (value == null) {
@@ -6708,6 +6974,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAuthenticationPlugin() {
         
@@ -6718,7 +6985,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6778,6 +7045,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6786,6 +7054,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -6796,6 +7065,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -6804,6 +7074,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -6811,7 +7082,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateUserMetadata}
    */
-  public  static final class UpdateUserMetadata extends
+  public static final class UpdateUserMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.UpdateUserMetadata)
       UpdateUserMetadataOrBuilder {
@@ -6823,6 +7094,13 @@ public final class UserServiceOuterClass {
     private UpdateUserMetadata() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateUserMetadata();
     }
 
     @java.lang.Override
@@ -6838,7 +7116,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6862,7 +7139,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6901,7 +7178,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6920,7 +7199,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6943,7 +7224,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -6962,7 +7245,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -6991,10 +7276,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -7006,10 +7291,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -7027,13 +7312,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserMetadata other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7218,35 +7502,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7304,6 +7588,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7323,6 +7608,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7343,6 +7629,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7360,6 +7648,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7373,6 +7662,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7393,6 +7684,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -7412,6 +7704,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -7432,6 +7725,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -7449,6 +7744,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -7462,6 +7758,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7477,7 +7775,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7538,6 +7836,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7547,6 +7846,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7558,6 +7858,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -7567,6 +7868,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -7574,7 +7876,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.DeleteUserRequest}
    */
-  public  static final class DeleteUserRequest extends
+  public static final class DeleteUserRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.DeleteUserRequest)
       DeleteUserRequestOrBuilder {
@@ -7586,6 +7888,13 @@ public final class UserServiceOuterClass {
     private DeleteUserRequest() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteUserRequest();
     }
 
     @java.lang.Override
@@ -7601,7 +7910,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7625,7 +7933,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7665,7 +7973,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -7685,7 +7995,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -7709,7 +8021,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -7729,7 +8043,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -7758,10 +8074,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -7773,10 +8089,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -7794,13 +8110,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7985,35 +8300,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8072,6 +8387,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -8092,6 +8408,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -8113,6 +8430,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -8131,6 +8450,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -8145,6 +8465,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8166,6 +8488,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -8186,6 +8509,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -8207,6 +8531,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -8225,6 +8551,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -8239,6 +8566,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8254,7 +8583,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8314,6 +8643,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -8322,6 +8652,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -8332,6 +8663,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -8340,6 +8672,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -8347,7 +8680,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.DeleteUserMetadata}
    */
-  public  static final class DeleteUserMetadata extends
+  public static final class DeleteUserMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.DeleteUserMetadata)
       DeleteUserMetadataOrBuilder {
@@ -8359,6 +8692,13 @@ public final class UserServiceOuterClass {
     private DeleteUserMetadata() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteUserMetadata();
     }
 
     @java.lang.Override
@@ -8374,7 +8714,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8398,7 +8737,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8437,7 +8776,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -8456,7 +8797,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -8479,7 +8822,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -8498,7 +8843,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -8527,10 +8874,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -8542,10 +8889,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -8563,13 +8910,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserMetadata other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8754,35 +9100,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8840,6 +9186,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -8859,6 +9206,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -8879,6 +9227,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -8896,6 +9246,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -8909,6 +9260,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8929,6 +9282,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -8948,6 +9302,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -8968,6 +9323,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -8985,6 +9342,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -8998,6 +9356,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9013,7 +9373,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9074,6 +9434,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -9083,6 +9444,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -9094,6 +9456,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -9103,6 +9466,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -9113,6 +9477,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the permission field is set.
      */
     boolean hasPermission();
     /**
@@ -9121,6 +9486,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The permission.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermission();
     /**
@@ -9135,7 +9501,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.GrantUserPermissionRequest}
    */
-  public  static final class GrantUserPermissionRequest extends
+  public static final class GrantUserPermissionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.GrantUserPermissionRequest)
       GrantUserPermissionRequestOrBuilder {
@@ -9147,6 +9513,13 @@ public final class UserServiceOuterClass {
     private GrantUserPermissionRequest() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GrantUserPermissionRequest();
     }
 
     @java.lang.Override
@@ -9162,7 +9535,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9199,7 +9571,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9239,7 +9611,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -9259,7 +9633,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -9283,7 +9659,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -9303,7 +9681,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -9326,7 +9706,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the permission field is set.
      */
+    @java.lang.Override
     public boolean hasPermission() {
       return permission_ != null;
     }
@@ -9336,7 +9718,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The permission.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermission() {
       return permission_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.getDefaultInstance() : permission_;
     }
@@ -9347,6 +9731,7 @@ public final class UserServiceOuterClass {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder getPermissionOrBuilder() {
       return getPermission();
     }
@@ -9365,10 +9750,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       if (permission_ != null) {
@@ -9383,10 +9768,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       if (permission_ != null) {
@@ -9408,18 +9793,17 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && (hasPermission() == other.hasPermission());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (hasPermission() != other.hasPermission()) return false;
       if (hasPermission()) {
-        result = result && getPermission()
-            .equals(other.getPermission());
+        if (!getPermission()
+            .equals(other.getPermission())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9619,35 +10003,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9709,6 +10093,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -9729,6 +10114,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -9750,6 +10136,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -9768,6 +10156,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -9782,6 +10171,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9803,6 +10194,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -9823,6 +10215,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -9844,6 +10237,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -9862,6 +10257,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -9876,6 +10272,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9889,7 +10287,7 @@ public final class UserServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission permission_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission permission_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder> permissionBuilder_;
       /**
@@ -9898,6 +10296,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the permission field is set.
        */
       public boolean hasPermission() {
         return permissionBuilder_ != null || permission_ != null;
@@ -9908,6 +10307,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The permission.
        */
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermission() {
         if (permissionBuilder_ == null) {
@@ -10044,7 +10444,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10104,6 +10504,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -10112,6 +10513,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -10122,6 +10524,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -10130,6 +10533,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -10137,7 +10541,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.GrantUserPermissionMetadata}
    */
-  public  static final class GrantUserPermissionMetadata extends
+  public static final class GrantUserPermissionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.GrantUserPermissionMetadata)
       GrantUserPermissionMetadataOrBuilder {
@@ -10149,6 +10553,13 @@ public final class UserServiceOuterClass {
     private GrantUserPermissionMetadata() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GrantUserPermissionMetadata();
     }
 
     @java.lang.Override
@@ -10164,7 +10575,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10188,7 +10598,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10227,7 +10637,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -10246,7 +10658,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -10269,7 +10683,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -10288,7 +10704,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -10317,10 +10735,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -10332,10 +10750,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -10353,13 +10771,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionMetadata other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10544,35 +10961,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10630,6 +11047,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -10649,6 +11067,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -10669,6 +11088,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -10686,6 +11107,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -10699,6 +11121,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10719,6 +11143,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -10738,6 +11163,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -10758,6 +11184,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -10775,6 +11203,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -10788,6 +11217,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10803,7 +11234,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10864,6 +11295,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -10873,6 +11305,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -10884,6 +11317,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -10893,6 +11327,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -10903,6 +11338,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the permission field is set.
      */
     boolean hasPermission();
     /**
@@ -10911,6 +11347,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The permission.
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermission();
     /**
@@ -10925,7 +11362,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RevokeUserPermissionRequest}
    */
-  public  static final class RevokeUserPermissionRequest extends
+  public static final class RevokeUserPermissionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.RevokeUserPermissionRequest)
       RevokeUserPermissionRequestOrBuilder {
@@ -10937,6 +11374,13 @@ public final class UserServiceOuterClass {
     private RevokeUserPermissionRequest() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RevokeUserPermissionRequest();
     }
 
     @java.lang.Override
@@ -10952,7 +11396,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10989,7 +11432,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11029,7 +11472,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -11049,7 +11494,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -11073,7 +11520,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -11093,7 +11542,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -11116,7 +11567,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the permission field is set.
      */
+    @java.lang.Override
     public boolean hasPermission() {
       return permission_ != null;
     }
@@ -11126,7 +11579,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The permission.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermission() {
       return permission_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.getDefaultInstance() : permission_;
     }
@@ -11137,6 +11592,7 @@ public final class UserServiceOuterClass {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder getPermissionOrBuilder() {
       return getPermission();
     }
@@ -11155,10 +11611,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       if (permission_ != null) {
@@ -11173,10 +11629,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       if (permission_ != null) {
@@ -11198,18 +11654,17 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionRequest other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && (hasPermission() == other.hasPermission());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (hasPermission() != other.hasPermission()) return false;
       if (hasPermission()) {
-        result = result && getPermission()
-            .equals(other.getPermission());
+        if (!getPermission()
+            .equals(other.getPermission())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11409,35 +11864,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11499,6 +11954,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -11519,6 +11975,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -11540,6 +11997,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -11558,6 +12017,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -11572,6 +12032,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11593,6 +12055,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -11613,6 +12076,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -11634,6 +12098,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -11652,6 +12118,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -11666,6 +12133,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -11679,7 +12148,7 @@ public final class UserServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission permission_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission permission_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder> permissionBuilder_;
       /**
@@ -11688,6 +12157,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the permission field is set.
        */
       public boolean hasPermission() {
         return permissionBuilder_ != null || permission_ != null;
@@ -11698,6 +12168,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Permission permission = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The permission.
        */
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermission() {
         if (permissionBuilder_ == null) {
@@ -11834,7 +12305,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11894,6 +12365,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -11902,6 +12374,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -11912,6 +12385,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
     java.lang.String getUserName();
     /**
@@ -11920,6 +12394,7 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -11927,7 +12402,7 @@ public final class UserServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RevokeUserPermissionMetadata}
    */
-  public  static final class RevokeUserPermissionMetadata extends
+  public static final class RevokeUserPermissionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.RevokeUserPermissionMetadata)
       RevokeUserPermissionMetadataOrBuilder {
@@ -11939,6 +12414,13 @@ public final class UserServiceOuterClass {
     private RevokeUserPermissionMetadata() {
       clusterId_ = "";
       userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RevokeUserPermissionMetadata();
     }
 
     @java.lang.Override
@@ -11954,7 +12436,6 @@ public final class UserServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11978,7 +12459,7 @@ public final class UserServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12017,7 +12498,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -12036,7 +12519,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -12059,7 +12544,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The userName.
      */
+    @java.lang.Override
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
       if (ref instanceof java.lang.String) {
@@ -12078,7 +12565,9 @@ public final class UserServiceOuterClass {
      * </pre>
      *
      * <code>string user_name = 2;</code>
+     * @return The bytes for userName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
       java.lang.Object ref = userName_;
@@ -12107,10 +12596,10 @@ public final class UserServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
       }
       unknownFields.writeTo(output);
@@ -12122,10 +12611,10 @@ public final class UserServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getUserNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
       }
       size += unknownFields.getSerializedSize();
@@ -12143,13 +12632,12 @@ public final class UserServiceOuterClass {
       }
       yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionMetadata other = (yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getUserName()
-          .equals(other.getUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getUserName()
+          .equals(other.getUserName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12334,35 +12822,35 @@ public final class UserServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12420,6 +12908,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -12439,6 +12928,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -12459,6 +12949,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -12476,6 +12968,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -12489,6 +12982,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12509,6 +13004,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The userName.
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -12528,6 +13024,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -12548,6 +13045,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -12565,6 +13064,7 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserName() {
         
@@ -12578,6 +13078,8 @@ public final class UserServiceOuterClass {
        * </pre>
        *
        * <code>string user_name = 2;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -12593,7 +13095,7 @@ public final class UserServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12805,15 +13307,7 @@ public final class UserServiceOuterClass {
       "to/yandex/cloud/mdb/mysql/v1;mysqlb\006prot" +
       "o3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -12822,7 +13316,7 @@ public final class UserServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.UserOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_mysql_v1_GetUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_GetUserRequest_fieldAccessorTable = new

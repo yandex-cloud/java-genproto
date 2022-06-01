@@ -1,19 +1,6 @@
 package yandex.cloud.api.lockbox.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/lockbox/v1/payload_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class PayloadServiceGrpc {
 
   private PayloadServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class PayloadServiceGrpc {
     if ((getGetMethod = PayloadServiceGrpc.getGetMethod) == null) {
       synchronized (PayloadServiceGrpc.class) {
         if ((getGetMethod = PayloadServiceGrpc.getGetMethod) == null) {
-          PayloadServiceGrpc.getGetMethod = getGetMethod = 
+          PayloadServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest, yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.lockbox.v1.PayloadService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.getDefaultInstance()))
-                  .setSchemaDescriptor(new PayloadServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PayloadServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static PayloadServiceStub newStub(io.grpc.Channel channel) {
-    return new PayloadServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PayloadServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PayloadServiceStub>() {
+        @java.lang.Override
+        public PayloadServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PayloadServiceStub(channel, callOptions);
+        }
+      };
+    return PayloadServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class PayloadServiceGrpc {
    */
   public static PayloadServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PayloadServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PayloadServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PayloadServiceBlockingStub>() {
+        @java.lang.Override
+        public PayloadServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PayloadServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return PayloadServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class PayloadServiceGrpc {
    */
   public static PayloadServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PayloadServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PayloadServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PayloadServiceFutureStub>() {
+        @java.lang.Override
+        public PayloadServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PayloadServiceFutureStub(channel, callOptions);
+        }
+      };
+    return PayloadServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -100,14 +108,14 @@ public final class PayloadServiceGrpc {
      */
     public void get(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest,
                 yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload>(
@@ -121,19 +129,15 @@ public final class PayloadServiceGrpc {
    * Set of methods to access payload of secrets.
    * </pre>
    */
-  public static final class PayloadServiceStub extends io.grpc.stub.AbstractStub<PayloadServiceStub> {
-    private PayloadServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PayloadServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PayloadServiceStub extends io.grpc.stub.AbstractAsyncStub<PayloadServiceStub> {
+    private PayloadServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PayloadServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PayloadServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PayloadServiceStub(channel, callOptions);
     }
 
@@ -145,7 +149,7 @@ public final class PayloadServiceGrpc {
      */
     public void get(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -155,19 +159,15 @@ public final class PayloadServiceGrpc {
    * Set of methods to access payload of secrets.
    * </pre>
    */
-  public static final class PayloadServiceBlockingStub extends io.grpc.stub.AbstractStub<PayloadServiceBlockingStub> {
-    private PayloadServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PayloadServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PayloadServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PayloadServiceBlockingStub> {
+    private PayloadServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PayloadServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PayloadServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PayloadServiceBlockingStub(channel, callOptions);
     }
 
@@ -178,7 +178,7 @@ public final class PayloadServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload get(yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
   }
@@ -188,19 +188,15 @@ public final class PayloadServiceGrpc {
    * Set of methods to access payload of secrets.
    * </pre>
    */
-  public static final class PayloadServiceFutureStub extends io.grpc.stub.AbstractStub<PayloadServiceFutureStub> {
-    private PayloadServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PayloadServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PayloadServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PayloadServiceFutureStub> {
+    private PayloadServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PayloadServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PayloadServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PayloadServiceFutureStub(channel, callOptions);
     }
 
@@ -212,7 +208,7 @@ public final class PayloadServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload> get(
         yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
   }

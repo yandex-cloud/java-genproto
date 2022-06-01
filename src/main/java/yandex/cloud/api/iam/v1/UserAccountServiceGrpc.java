@@ -1,19 +1,6 @@
 package yandex.cloud.api.iam.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iam/v1/user_account_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class UserAccountServiceGrpc {
 
   private UserAccountServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class UserAccountServiceGrpc {
     if ((getGetMethod = UserAccountServiceGrpc.getGetMethod) == null) {
       synchronized (UserAccountServiceGrpc.class) {
         if ((getGetMethod = UserAccountServiceGrpc.getGetMethod) == null) {
-          UserAccountServiceGrpc.getGetMethod = getGetMethod = 
+          UserAccountServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest, yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.UserAccountService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserAccountServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserAccountServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UserAccountServiceStub newStub(io.grpc.Channel channel) {
-    return new UserAccountServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserAccountServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserAccountServiceStub>() {
+        @java.lang.Override
+        public UserAccountServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserAccountServiceStub(channel, callOptions);
+        }
+      };
+    return UserAccountServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class UserAccountServiceGrpc {
    */
   public static UserAccountServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UserAccountServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserAccountServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserAccountServiceBlockingStub>() {
+        @java.lang.Override
+        public UserAccountServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserAccountServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return UserAccountServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class UserAccountServiceGrpc {
    */
   public static UserAccountServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UserAccountServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserAccountServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserAccountServiceFutureStub>() {
+        @java.lang.Override
+        public UserAccountServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserAccountServiceFutureStub(channel, callOptions);
+        }
+      };
+    return UserAccountServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class UserAccountServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest,
                 yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount>(
@@ -120,19 +128,15 @@ public final class UserAccountServiceGrpc {
    * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
-  public static final class UserAccountServiceStub extends io.grpc.stub.AbstractStub<UserAccountServiceStub> {
-    private UserAccountServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserAccountServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserAccountServiceStub extends io.grpc.stub.AbstractAsyncStub<UserAccountServiceStub> {
+    private UserAccountServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserAccountServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserAccountServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserAccountServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class UserAccountServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class UserAccountServiceGrpc {
    * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
-  public static final class UserAccountServiceBlockingStub extends io.grpc.stub.AbstractStub<UserAccountServiceBlockingStub> {
-    private UserAccountServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserAccountServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserAccountServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserAccountServiceBlockingStub> {
+    private UserAccountServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserAccountServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserAccountServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserAccountServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class UserAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount get(yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class UserAccountServiceGrpc {
    * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
-  public static final class UserAccountServiceFutureStub extends io.grpc.stub.AbstractStub<UserAccountServiceFutureStub> {
-    private UserAccountServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserAccountServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserAccountServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserAccountServiceFutureStub> {
+    private UserAccountServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserAccountServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserAccountServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserAccountServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class UserAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount> get(
         yandex.cloud.api.iam.v1.UserAccountServiceOuterClass.GetUserAccountRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.datasphere.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/datasphere/v1/project_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ProjectServiceGrpc {
 
   private ProjectServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ProjectServiceGrpc {
     if ((getCreateMethod = ProjectServiceGrpc.getCreateMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getCreateMethod = ProjectServiceGrpc.getCreateMethod) == null) {
-          ProjectServiceGrpc.getCreateMethod = getCreateMethod = 
+          ProjectServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest,
@@ -76,22 +63,21 @@ public final class ProjectServiceGrpc {
     if ((getUpdateMethod = ProjectServiceGrpc.getUpdateMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getUpdateMethod = ProjectServiceGrpc.getUpdateMethod) == null) {
-          ProjectServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          ProjectServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest,
@@ -108,22 +94,21 @@ public final class ProjectServiceGrpc {
     if ((getDeleteMethod = ProjectServiceGrpc.getDeleteMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getDeleteMethod = ProjectServiceGrpc.getDeleteMethod) == null) {
-          ProjectServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          ProjectServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest,
@@ -140,22 +125,21 @@ public final class ProjectServiceGrpc {
     if ((getOpenMethod = ProjectServiceGrpc.getOpenMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getOpenMethod = ProjectServiceGrpc.getOpenMethod) == null) {
-          ProjectServiceGrpc.getOpenMethod = getOpenMethod = 
+          ProjectServiceGrpc.getOpenMethod = getOpenMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "Open"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Open"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Open"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Open"))
+              .build();
         }
-     }
-     return getOpenMethod;
+      }
+    }
+    return getOpenMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest,
@@ -172,22 +156,21 @@ public final class ProjectServiceGrpc {
     if ((getGetMethod = ProjectServiceGrpc.getGetMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getGetMethod = ProjectServiceGrpc.getGetMethod) == null) {
-          ProjectServiceGrpc.getGetMethod = getGetMethod = 
+          ProjectServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest,
@@ -204,22 +187,21 @@ public final class ProjectServiceGrpc {
     if ((getListMethod = ProjectServiceGrpc.getListMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getListMethod = ProjectServiceGrpc.getListMethod) == null) {
-          ProjectServiceGrpc.getListMethod = getListMethod = 
+          ProjectServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest,
@@ -236,22 +218,21 @@ public final class ProjectServiceGrpc {
     if ((getGetUnitBalanceMethod = ProjectServiceGrpc.getGetUnitBalanceMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getGetUnitBalanceMethod = ProjectServiceGrpc.getGetUnitBalanceMethod) == null) {
-          ProjectServiceGrpc.getGetUnitBalanceMethod = getGetUnitBalanceMethod = 
+          ProjectServiceGrpc.getGetUnitBalanceMethod = getGetUnitBalanceMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "GetUnitBalance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUnitBalance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetUnitBalance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetUnitBalance"))
+              .build();
         }
-     }
-     return getGetUnitBalanceMethod;
+      }
+    }
+    return getGetUnitBalanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest,
@@ -268,22 +249,21 @@ public final class ProjectServiceGrpc {
     if ((getSetUnitBalanceMethod = ProjectServiceGrpc.getSetUnitBalanceMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getSetUnitBalanceMethod = ProjectServiceGrpc.getSetUnitBalanceMethod) == null) {
-          ProjectServiceGrpc.getSetUnitBalanceMethod = getSetUnitBalanceMethod = 
+          ProjectServiceGrpc.getSetUnitBalanceMethod = getSetUnitBalanceMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "SetUnitBalance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetUnitBalance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("SetUnitBalance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("SetUnitBalance"))
+              .build();
         }
-     }
-     return getSetUnitBalanceMethod;
+      }
+    }
+    return getSetUnitBalanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest,
@@ -300,22 +280,21 @@ public final class ProjectServiceGrpc {
     if ((getExecuteMethod = ProjectServiceGrpc.getExecuteMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getExecuteMethod = ProjectServiceGrpc.getExecuteMethod) == null) {
-          ProjectServiceGrpc.getExecuteMethod = getExecuteMethod = 
+          ProjectServiceGrpc.getExecuteMethod = getExecuteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "Execute"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Execute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Execute"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("Execute"))
+              .build();
         }
-     }
-     return getExecuteMethod;
+      }
+    }
+    return getExecuteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest,
@@ -332,22 +311,21 @@ public final class ProjectServiceGrpc {
     if ((getGetCellOutputsMethod = ProjectServiceGrpc.getGetCellOutputsMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getGetCellOutputsMethod = ProjectServiceGrpc.getGetCellOutputsMethod) == null) {
-          ProjectServiceGrpc.getGetCellOutputsMethod = getGetCellOutputsMethod = 
+          ProjectServiceGrpc.getGetCellOutputsMethod = getGetCellOutputsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "GetCellOutputs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCellOutputs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetCellOutputs"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetCellOutputs"))
+              .build();
         }
-     }
-     return getGetCellOutputsMethod;
+      }
+    }
+    return getGetCellOutputsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest,
@@ -364,22 +342,21 @@ public final class ProjectServiceGrpc {
     if ((getGetStateVariablesMethod = ProjectServiceGrpc.getGetStateVariablesMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getGetStateVariablesMethod = ProjectServiceGrpc.getGetStateVariablesMethod) == null) {
-          ProjectServiceGrpc.getGetStateVariablesMethod = getGetStateVariablesMethod = 
+          ProjectServiceGrpc.getGetStateVariablesMethod = getGetStateVariablesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "GetStateVariables"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStateVariables"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetStateVariables"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetStateVariables"))
+              .build();
         }
-     }
-     return getGetStateVariablesMethod;
+      }
+    }
+    return getGetStateVariablesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest,
@@ -396,29 +373,35 @@ public final class ProjectServiceGrpc {
     if ((getGetNotebookMetadataMethod = ProjectServiceGrpc.getGetNotebookMetadataMethod) == null) {
       synchronized (ProjectServiceGrpc.class) {
         if ((getGetNotebookMetadataMethod = ProjectServiceGrpc.getGetNotebookMetadataMethod) == null) {
-          ProjectServiceGrpc.getGetNotebookMetadataMethod = getGetNotebookMetadataMethod = 
+          ProjectServiceGrpc.getGetNotebookMetadataMethod = getGetNotebookMetadataMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectService", "GetNotebookMetadata"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNotebookMetadata"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetNotebookMetadata"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetNotebookMetadata"))
+              .build();
         }
-     }
-     return getGetNotebookMetadataMethod;
+      }
+    }
+    return getGetNotebookMetadataMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ProjectServiceStub newStub(io.grpc.Channel channel) {
-    return new ProjectServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProjectServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProjectServiceStub>() {
+        @java.lang.Override
+        public ProjectServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProjectServiceStub(channel, callOptions);
+        }
+      };
+    return ProjectServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -426,7 +409,14 @@ public final class ProjectServiceGrpc {
    */
   public static ProjectServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ProjectServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProjectServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProjectServiceBlockingStub>() {
+        @java.lang.Override
+        public ProjectServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProjectServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ProjectServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -434,7 +424,14 @@ public final class ProjectServiceGrpc {
    */
   public static ProjectServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ProjectServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProjectServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProjectServiceFutureStub>() {
+        @java.lang.Override
+        public ProjectServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProjectServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ProjectServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -451,7 +448,7 @@ public final class ProjectServiceGrpc {
      */
     public void create(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -461,7 +458,7 @@ public final class ProjectServiceGrpc {
      */
     public void update(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -471,7 +468,7 @@ public final class ProjectServiceGrpc {
      */
     public void delete(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -481,7 +478,7 @@ public final class ProjectServiceGrpc {
      */
     public void open(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getOpenMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOpenMethod(), responseObserver);
     }
 
     /**
@@ -491,7 +488,7 @@ public final class ProjectServiceGrpc {
      */
     public void get(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -501,7 +498,7 @@ public final class ProjectServiceGrpc {
      */
     public void list(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -511,7 +508,7 @@ public final class ProjectServiceGrpc {
      */
     public void getUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetUnitBalanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUnitBalanceMethod(), responseObserver);
     }
 
     /**
@@ -521,7 +518,7 @@ public final class ProjectServiceGrpc {
      */
     public void setUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetUnitBalanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetUnitBalanceMethod(), responseObserver);
     }
 
     /**
@@ -531,7 +528,7 @@ public final class ProjectServiceGrpc {
      */
     public void execute(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getExecuteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExecuteMethod(), responseObserver);
     }
 
     /**
@@ -541,7 +538,7 @@ public final class ProjectServiceGrpc {
      */
     public void getCellOutputs(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCellOutputsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCellOutputsMethod(), responseObserver);
     }
 
     /**
@@ -551,7 +548,7 @@ public final class ProjectServiceGrpc {
      */
     public void getStateVariables(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetStateVariablesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStateVariablesMethod(), responseObserver);
     }
 
     /**
@@ -561,91 +558,91 @@ public final class ProjectServiceGrpc {
      */
     public void getNotebookMetadata(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetNotebookMetadataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNotebookMetadataMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getOpenMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_OPEN)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest,
                 yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest,
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getGetUnitBalanceMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest,
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse>(
                   this, METHODID_GET_UNIT_BALANCE)))
           .addMethod(
             getSetUnitBalanceMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_SET_UNIT_BALANCE)))
           .addMethod(
             getExecuteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_EXECUTE)))
           .addMethod(
             getGetCellOutputsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest,
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse>(
                   this, METHODID_GET_CELL_OUTPUTS)))
           .addMethod(
             getGetStateVariablesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest,
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse>(
                   this, METHODID_GET_STATE_VARIABLES)))
           .addMethod(
             getGetNotebookMetadataMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest,
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse>(
@@ -659,19 +656,15 @@ public final class ProjectServiceGrpc {
    * A set of methods for managing Project resources.
    * </pre>
    */
-  public static final class ProjectServiceStub extends io.grpc.stub.AbstractStub<ProjectServiceStub> {
-    private ProjectServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProjectServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProjectServiceStub extends io.grpc.stub.AbstractAsyncStub<ProjectServiceStub> {
+    private ProjectServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProjectServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProjectServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProjectServiceStub(channel, callOptions);
     }
 
@@ -682,7 +675,7 @@ public final class ProjectServiceGrpc {
      */
     public void create(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -693,7 +686,7 @@ public final class ProjectServiceGrpc {
      */
     public void update(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -704,7 +697,7 @@ public final class ProjectServiceGrpc {
      */
     public void delete(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -715,7 +708,7 @@ public final class ProjectServiceGrpc {
      */
     public void open(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getOpenMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -726,7 +719,7 @@ public final class ProjectServiceGrpc {
      */
     public void get(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -737,7 +730,7 @@ public final class ProjectServiceGrpc {
      */
     public void list(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -748,7 +741,7 @@ public final class ProjectServiceGrpc {
      */
     public void getUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUnitBalanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -759,7 +752,7 @@ public final class ProjectServiceGrpc {
      */
     public void setUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetUnitBalanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -770,7 +763,7 @@ public final class ProjectServiceGrpc {
      */
     public void execute(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExecuteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -781,7 +774,7 @@ public final class ProjectServiceGrpc {
      */
     public void getCellOutputs(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCellOutputsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -792,7 +785,7 @@ public final class ProjectServiceGrpc {
      */
     public void getStateVariables(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetStateVariablesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -803,7 +796,7 @@ public final class ProjectServiceGrpc {
      */
     public void getNotebookMetadata(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetNotebookMetadataMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -813,19 +806,15 @@ public final class ProjectServiceGrpc {
    * A set of methods for managing Project resources.
    * </pre>
    */
-  public static final class ProjectServiceBlockingStub extends io.grpc.stub.AbstractStub<ProjectServiceBlockingStub> {
-    private ProjectServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProjectServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProjectServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProjectServiceBlockingStub> {
+    private ProjectServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProjectServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProjectServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProjectServiceBlockingStub(channel, callOptions);
     }
 
@@ -835,7 +824,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -845,7 +834,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -855,7 +844,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -865,7 +854,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation open(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getOpenMethod(), getCallOptions(), request);
     }
 
@@ -875,7 +864,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project get(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -885,7 +874,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse list(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -895,7 +884,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse getUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUnitBalanceMethod(), getCallOptions(), request);
     }
 
@@ -905,7 +894,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty setUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetUnitBalanceMethod(), getCallOptions(), request);
     }
 
@@ -915,7 +904,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation execute(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExecuteMethod(), getCallOptions(), request);
     }
 
@@ -925,7 +914,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse getCellOutputs(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCellOutputsMethod(), getCallOptions(), request);
     }
 
@@ -935,7 +924,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse getStateVariables(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetStateVariablesMethod(), getCallOptions(), request);
     }
 
@@ -945,7 +934,7 @@ public final class ProjectServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse getNotebookMetadata(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetNotebookMetadataMethod(), getCallOptions(), request);
     }
   }
@@ -955,19 +944,15 @@ public final class ProjectServiceGrpc {
    * A set of methods for managing Project resources.
    * </pre>
    */
-  public static final class ProjectServiceFutureStub extends io.grpc.stub.AbstractStub<ProjectServiceFutureStub> {
-    private ProjectServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProjectServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProjectServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProjectServiceFutureStub> {
+    private ProjectServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProjectServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProjectServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProjectServiceFutureStub(channel, callOptions);
     }
 
@@ -978,7 +963,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CreateProjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -989,7 +974,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.UpdateProjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1000,7 +985,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.DeleteProjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1011,7 +996,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> open(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.OpenProjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getOpenMethod(), getCallOptions()), request);
     }
 
@@ -1022,7 +1007,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project> get(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetProjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1033,7 +1018,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse> list(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1044,7 +1029,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> getUnitBalance(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUnitBalanceMethod(), getCallOptions()), request);
     }
 
@@ -1055,7 +1040,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> setUnitBalance(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetUnitBalanceMethod(), getCallOptions()), request);
     }
 
@@ -1066,7 +1051,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> execute(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExecuteMethod(), getCallOptions()), request);
     }
 
@@ -1077,7 +1062,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse> getCellOutputs(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCellOutputsMethod(), getCallOptions()), request);
     }
 
@@ -1088,7 +1073,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse> getStateVariables(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetStateVariablesMethod(), getCallOptions()), request);
     }
 
@@ -1099,7 +1084,7 @@ public final class ProjectServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse> getNotebookMetadata(
         yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetNotebookMetadataMethod(), getCallOptions()), request);
     }
   }

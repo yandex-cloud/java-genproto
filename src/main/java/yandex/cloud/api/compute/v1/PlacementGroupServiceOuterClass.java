@@ -25,6 +25,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -34,6 +35,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -41,7 +43,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.GetPlacementGroupRequest}
    */
-  public  static final class GetPlacementGroupRequest extends
+  public static final class GetPlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GetPlacementGroupRequest)
       GetPlacementGroupRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class PlacementGroupServiceOuterClass {
     }
     private GetPlacementGroupRequest() {
       placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -174,7 +186,7 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -491,6 +503,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -512,6 +525,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -544,6 +560,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -653,6 +674,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -663,6 +685,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -674,6 +697,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -683,6 +707,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -690,7 +715,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupsRequest}
    */
-  public  static final class ListPlacementGroupsRequest extends
+  public static final class ListPlacementGroupsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListPlacementGroupsRequest)
       ListPlacementGroupsRequestOrBuilder {
@@ -701,9 +726,15 @@ public final class PlacementGroupServiceOuterClass {
     }
     private ListPlacementGroupsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPlacementGroupsRequest();
     }
 
     @java.lang.Override
@@ -719,7 +750,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -754,7 +784,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -794,7 +824,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -814,7 +846,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -840,7 +874,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -855,7 +891,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -876,7 +914,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -900,7 +940,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -920,7 +962,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -949,16 +993,16 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -970,17 +1014,17 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -998,17 +1042,16 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1204,35 +1247,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1298,6 +1341,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1318,6 +1362,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1339,6 +1384,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1357,6 +1404,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1371,6 +1419,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1394,7 +1444,9 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1407,6 +1459,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1423,6 +1477,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1440,6 +1495,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1461,6 +1517,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1483,6 +1540,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1502,6 +1561,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1517,6 +1577,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1538,6 +1600,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1558,6 +1621,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1579,6 +1643,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1597,6 +1663,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1611,6 +1678,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1626,7 +1695,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1733,6 +1802,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1744,6 +1814,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1751,7 +1822,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupsResponse}
    */
-  public  static final class ListPlacementGroupsResponse extends
+  public static final class ListPlacementGroupsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListPlacementGroupsResponse)
       ListPlacementGroupsResponseOrBuilder {
@@ -1763,6 +1834,13 @@ public final class PlacementGroupServiceOuterClass {
     private ListPlacementGroupsResponse() {
       placementGroups_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPlacementGroupsResponse();
     }
 
     @java.lang.Override
@@ -1790,7 +1868,7 @@ public final class PlacementGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 placementGroups_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1805,7 +1883,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1819,7 +1897,7 @@ public final class PlacementGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           placementGroups_ = java.util.Collections.unmodifiableList(placementGroups_);
         }
         this.unknownFields = unknownFields.build();
@@ -1839,7 +1917,6 @@ public final class PlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse.class, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PLACEMENT_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> placementGroups_;
     /**
@@ -1849,6 +1926,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> getPlacementGroupsList() {
       return placementGroups_;
     }
@@ -1859,6 +1937,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroupOrBuilder> 
         getPlacementGroupsOrBuilderList() {
       return placementGroups_;
@@ -1870,6 +1949,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
      */
+    @java.lang.Override
     public int getPlacementGroupsCount() {
       return placementGroups_.size();
     }
@@ -1880,6 +1960,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup getPlacementGroups(int index) {
       return placementGroups_.get(index);
     }
@@ -1890,6 +1971,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroupOrBuilder getPlacementGroupsOrBuilder(
         int index) {
       return placementGroups_.get(index);
@@ -1906,7 +1988,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1928,7 +2012,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1960,7 +2046,7 @@ public final class PlacementGroupServiceOuterClass {
       for (int i = 0; i < placementGroups_.size(); i++) {
         output.writeMessage(1, placementGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1976,7 +2062,7 @@ public final class PlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, placementGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1994,13 +2080,12 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupsList()
-          .equals(other.getPlacementGroupsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupsList()
+          .equals(other.getPlacementGroupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2185,9 +2270,8 @@ public final class PlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse buildPartial() {
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse result = new yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (placementGroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             placementGroups_ = java.util.Collections.unmodifiableList(placementGroups_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2196,42 +2280,41 @@ public final class PlacementGroupServiceOuterClass {
           result.placementGroups_ = placementGroupsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2308,7 +2391,7 @@ public final class PlacementGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> placementGroups_ =
         java.util.Collections.emptyList();
       private void ensurePlacementGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           placementGroups_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup>(placementGroups_);
           bitField0_ |= 0x00000001;
          }
@@ -2609,7 +2692,7 @@ public final class PlacementGroupServiceOuterClass {
           placementGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup.Builder, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroupOrBuilder>(
                   placementGroups_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           placementGroups_ = null;
@@ -2627,6 +2710,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2649,6 +2733,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2672,6 +2757,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2692,6 +2779,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2708,6 +2796,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2723,7 +2813,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2784,6 +2874,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2793,6 +2884,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2803,6 +2895,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2811,6 +2904,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2821,6 +2915,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2829,6 +2924,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2893,6 +2989,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
+     * @return Whether the spreadPlacementStrategy field is set.
      */
     boolean hasSpreadPlacementStrategy();
     /**
@@ -2901,6 +2998,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
+     * @return The spreadPlacementStrategy.
      */
     yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy getSpreadPlacementStrategy();
     /**
@@ -2917,7 +3015,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreatePlacementGroupRequest}
    */
-  public  static final class CreatePlacementGroupRequest extends
+  public static final class CreatePlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreatePlacementGroupRequest)
       CreatePlacementGroupRequestOrBuilder {
@@ -2930,6 +3028,13 @@ public final class PlacementGroupServiceOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreatePlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -2975,10 +3080,10 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3002,7 +3107,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3045,11 +3150,11 @@ public final class PlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest.class, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int placementStrategyCase_ = 0;
     private java.lang.Object placementStrategy_;
     public enum PlacementStrategyCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SPREAD_PLACEMENT_STRATEGY(5),
       PLACEMENTSTRATEGY_NOT_SET(0);
       private final int value;
@@ -3057,6 +3162,8 @@ public final class PlacementGroupServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3091,7 +3198,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3111,7 +3220,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3134,7 +3245,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3153,7 +3266,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3176,7 +3291,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3195,7 +3312,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3244,14 +3363,16 @@ public final class PlacementGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3263,6 +3384,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3274,11 +3396,12 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3290,10 +3413,11 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3309,7 +3433,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
+     * @return Whether the spreadPlacementStrategy field is set.
      */
+    @java.lang.Override
     public boolean hasSpreadPlacementStrategy() {
       return placementStrategyCase_ == 5;
     }
@@ -3319,7 +3445,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
+     * @return The spreadPlacementStrategy.
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy getSpreadPlacementStrategy() {
       if (placementStrategyCase_ == 5) {
          return (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy) placementStrategy_;
@@ -3333,6 +3461,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategyOrBuilder getSpreadPlacementStrategyOrBuilder() {
       if (placementStrategyCase_ == 5) {
          return (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy) placementStrategy_;
@@ -3354,13 +3483,13 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3381,13 +3510,13 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3419,28 +3548,25 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getPlacementStrategyCase().equals(
-          other.getPlacementStrategyCase());
-      if (!result) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getPlacementStrategyCase().equals(other.getPlacementStrategyCase())) return false;
       switch (placementStrategyCase_) {
         case 5:
-          result = result && getSpreadPlacementStrategy()
-              .equals(other.getSpreadPlacementStrategy());
+          if (!getSpreadPlacementStrategy()
+              .equals(other.getSpreadPlacementStrategy())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3659,7 +3785,6 @@ public final class PlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest buildPartial() {
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest result = new yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3672,7 +3797,6 @@ public final class PlacementGroupServiceOuterClass {
             result.placementStrategy_ = spreadPlacementStrategyBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.placementStrategyCase_ = placementStrategyCase_;
         onBuilt();
         return result;
@@ -3680,35 +3804,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3798,6 +3922,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3818,6 +3943,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3839,6 +3965,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3857,6 +3985,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3871,6 +4000,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3891,6 +4022,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3910,6 +4042,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3930,6 +4063,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3947,6 +4082,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3960,6 +4096,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3980,6 +4118,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -3999,6 +4138,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4019,6 +4159,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4036,6 +4178,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4049,6 +4192,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4096,14 +4241,16 @@ public final class PlacementGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4115,6 +4262,7 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4126,11 +4274,12 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4142,10 +4291,11 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4169,7 +4319,7 @@ public final class PlacementGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4192,8 +4342,11 @@ public final class PlacementGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4221,7 +4374,9 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
+       * @return Whether the spreadPlacementStrategy field is set.
        */
+      @java.lang.Override
       public boolean hasSpreadPlacementStrategy() {
         return placementStrategyCase_ == 5;
       }
@@ -4231,7 +4386,9 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
+       * @return The spreadPlacementStrategy.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy getSpreadPlacementStrategy() {
         if (spreadPlacementStrategyBuilder_ == null) {
           if (placementStrategyCase_ == 5) {
@@ -4349,6 +4506,7 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategyOrBuilder getSpreadPlacementStrategyOrBuilder() {
         if ((placementStrategyCase_ == 5) && (spreadPlacementStrategyBuilder_ != null)) {
           return spreadPlacementStrategyBuilder_.getMessageOrBuilder();
@@ -4387,7 +4545,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4447,6 +4605,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -4455,6 +4614,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -4462,7 +4622,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreatePlacementGroupMetadata}
    */
-  public  static final class CreatePlacementGroupMetadata extends
+  public static final class CreatePlacementGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreatePlacementGroupMetadata)
       CreatePlacementGroupMetadataOrBuilder {
@@ -4473,6 +4633,13 @@ public final class PlacementGroupServiceOuterClass {
     }
     private CreatePlacementGroupMetadata() {
       placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreatePlacementGroupMetadata();
     }
 
     @java.lang.Override
@@ -4488,7 +4655,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4506,7 +4672,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4545,7 +4711,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -4564,7 +4732,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -4593,7 +4763,7 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -4605,7 +4775,7 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4623,11 +4793,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupMetadata other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4807,35 +4976,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4889,6 +5058,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -4908,6 +5078,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -4928,6 +5099,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -4945,6 +5118,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -4958,6 +5132,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4973,7 +5149,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5034,6 +5210,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -5043,6 +5220,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -5053,6 +5231,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5061,6 +5240,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5078,6 +5258,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5086,6 +5267,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5096,6 +5278,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5104,6 +5287,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5170,7 +5354,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdatePlacementGroupRequest}
    */
-  public  static final class UpdatePlacementGroupRequest extends
+  public static final class UpdatePlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdatePlacementGroupRequest)
       UpdatePlacementGroupRequestOrBuilder {
@@ -5183,6 +5367,13 @@ public final class PlacementGroupServiceOuterClass {
       placementGroupId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -5241,10 +5432,10 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -5254,7 +5445,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5297,7 +5488,6 @@ public final class PlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest.class, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PLACEMENT_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object placementGroupId_;
     /**
@@ -5307,7 +5497,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -5327,7 +5519,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -5350,7 +5544,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5360,7 +5556,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5371,6 +5569,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5383,7 +5582,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5402,7 +5603,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5425,7 +5628,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5444,7 +5649,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5494,14 +5701,16 @@ public final class PlacementGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -5514,6 +5723,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -5526,11 +5736,12 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5543,10 +5754,11 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -5569,16 +5781,16 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -5596,17 +5808,17 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -5634,22 +5846,21 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5868,7 +6079,6 @@ public final class PlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest buildPartial() {
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest result = new yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.placementGroupId_ = placementGroupId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5879,42 +6089,41 @@ public final class PlacementGroupServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5983,6 +6192,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -6003,6 +6213,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -6024,6 +6235,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -6042,6 +6255,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -6056,6 +6270,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6069,7 +6285,7 @@ public final class PlacementGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6078,6 +6294,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6088,6 +6305,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6229,6 +6447,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6248,6 +6467,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6268,6 +6488,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6285,6 +6507,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6298,6 +6521,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6318,6 +6543,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6337,6 +6563,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6357,6 +6584,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6374,6 +6603,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6387,6 +6617,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6435,14 +6667,16 @@ public final class PlacementGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -6455,6 +6689,7 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -6467,11 +6702,12 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6484,10 +6720,11 @@ public final class PlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -6512,7 +6749,7 @@ public final class PlacementGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -6536,8 +6773,11 @@ public final class PlacementGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -6560,7 +6800,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6620,6 +6860,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -6628,6 +6869,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -6635,7 +6877,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdatePlacementGroupMetadata}
    */
-  public  static final class UpdatePlacementGroupMetadata extends
+  public static final class UpdatePlacementGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdatePlacementGroupMetadata)
       UpdatePlacementGroupMetadataOrBuilder {
@@ -6646,6 +6888,13 @@ public final class PlacementGroupServiceOuterClass {
     }
     private UpdatePlacementGroupMetadata() {
       placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePlacementGroupMetadata();
     }
 
     @java.lang.Override
@@ -6661,7 +6910,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6679,7 +6927,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6718,7 +6966,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -6737,7 +6987,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -6766,7 +7018,7 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -6778,7 +7030,7 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6796,11 +7048,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupMetadata other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6980,35 +7231,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7062,6 +7313,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -7081,6 +7333,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -7101,6 +7354,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -7118,6 +7373,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -7131,6 +7387,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7146,7 +7404,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7207,6 +7465,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -7216,6 +7475,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -7223,7 +7483,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeletePlacementGroupRequest}
    */
-  public  static final class DeletePlacementGroupRequest extends
+  public static final class DeletePlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeletePlacementGroupRequest)
       DeletePlacementGroupRequestOrBuilder {
@@ -7234,6 +7494,13 @@ public final class PlacementGroupServiceOuterClass {
     }
     private DeletePlacementGroupRequest() {
       placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeletePlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -7249,7 +7516,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7267,7 +7533,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7307,7 +7573,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -7327,7 +7595,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -7356,7 +7626,7 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -7368,7 +7638,7 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7386,11 +7656,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7570,35 +7839,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7653,6 +7922,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -7673,6 +7943,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -7694,6 +7965,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -7712,6 +7985,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -7726,6 +8000,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7741,7 +8017,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7801,6 +8077,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -7809,6 +8086,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -7816,7 +8094,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeletePlacementGroupMetadata}
    */
-  public  static final class DeletePlacementGroupMetadata extends
+  public static final class DeletePlacementGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeletePlacementGroupMetadata)
       DeletePlacementGroupMetadataOrBuilder {
@@ -7827,6 +8105,13 @@ public final class PlacementGroupServiceOuterClass {
     }
     private DeletePlacementGroupMetadata() {
       placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeletePlacementGroupMetadata();
     }
 
     @java.lang.Override
@@ -7842,7 +8127,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7860,7 +8144,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7899,7 +8183,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -7918,7 +8204,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -7947,7 +8235,7 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -7959,7 +8247,7 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7977,11 +8265,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupMetadata other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8161,35 +8448,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8243,6 +8530,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -8262,6 +8550,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -8282,6 +8571,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -8299,6 +8590,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -8312,6 +8604,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8327,7 +8621,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8388,6 +8682,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -8397,6 +8692,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -8410,6 +8706,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -8421,6 +8718,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -8431,6 +8729,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -8438,7 +8737,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupInstancesRequest}
    */
-  public  static final class ListPlacementGroupInstancesRequest extends
+  public static final class ListPlacementGroupInstancesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListPlacementGroupInstancesRequest)
       ListPlacementGroupInstancesRequestOrBuilder {
@@ -8449,8 +8748,14 @@ public final class PlacementGroupServiceOuterClass {
     }
     private ListPlacementGroupInstancesRequest() {
       placementGroupId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPlacementGroupInstancesRequest();
     }
 
     @java.lang.Override
@@ -8466,7 +8771,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8495,7 +8799,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8535,7 +8839,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -8555,7 +8861,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -8581,7 +8889,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -8596,7 +8906,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -8617,7 +8929,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -8646,13 +8960,13 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -8664,14 +8978,14 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -8689,15 +9003,14 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8888,35 +9201,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8978,6 +9291,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -8998,6 +9312,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -9019,6 +9334,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -9037,6 +9354,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -9051,6 +9369,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9074,7 +9394,9 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -9087,6 +9409,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -9103,6 +9427,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -9120,6 +9445,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -9141,6 +9467,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -9163,6 +9490,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -9182,6 +9511,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -9197,6 +9527,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -9212,7 +9544,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9321,6 +9653,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -9334,6 +9667,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -9341,7 +9675,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupInstancesResponse}
    */
-  public  static final class ListPlacementGroupInstancesResponse extends
+  public static final class ListPlacementGroupInstancesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListPlacementGroupInstancesResponse)
       ListPlacementGroupInstancesResponseOrBuilder {
@@ -9353,6 +9687,13 @@ public final class PlacementGroupServiceOuterClass {
     private ListPlacementGroupInstancesResponse() {
       instances_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPlacementGroupInstancesResponse();
     }
 
     @java.lang.Override
@@ -9380,7 +9721,7 @@ public final class PlacementGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 instances_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -9395,7 +9736,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9409,7 +9750,7 @@ public final class PlacementGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           instances_ = java.util.Collections.unmodifiableList(instances_);
         }
         this.unknownFields = unknownFields.build();
@@ -9429,7 +9770,6 @@ public final class PlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse.class, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INSTANCES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> instances_;
     /**
@@ -9439,6 +9779,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> getInstancesList() {
       return instances_;
     }
@@ -9449,6 +9790,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder> 
         getInstancesOrBuilderList() {
       return instances_;
@@ -9460,6 +9802,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
      */
+    @java.lang.Override
     public int getInstancesCount() {
       return instances_.size();
     }
@@ -9470,6 +9813,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.InstanceOuterClass.Instance getInstances(int index) {
       return instances_.get(index);
     }
@@ -9480,6 +9824,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Instance instances = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder getInstancesOrBuilder(
         int index) {
       return instances_.get(index);
@@ -9498,7 +9843,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -9522,7 +9869,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -9554,7 +9903,7 @@ public final class PlacementGroupServiceOuterClass {
       for (int i = 0; i < instances_.size(); i++) {
         output.writeMessage(1, instances_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -9570,7 +9919,7 @@ public final class PlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, instances_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -9588,13 +9937,12 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse) obj;
 
-      boolean result = true;
-      result = result && getInstancesList()
-          .equals(other.getInstancesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getInstancesList()
+          .equals(other.getInstancesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9779,9 +10127,8 @@ public final class PlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse buildPartial() {
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse result = new yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (instancesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             instances_ = java.util.Collections.unmodifiableList(instances_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -9790,42 +10137,41 @@ public final class PlacementGroupServiceOuterClass {
           result.instances_ = instancesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9902,7 +10248,7 @@ public final class PlacementGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance> instances_ =
         java.util.Collections.emptyList();
       private void ensureInstancesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           instances_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.Instance>(instances_);
           bitField0_ |= 0x00000001;
          }
@@ -10203,7 +10549,7 @@ public final class PlacementGroupServiceOuterClass {
           instancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.InstanceOuterClass.Instance, yandex.cloud.api.compute.v1.InstanceOuterClass.Instance.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.InstanceOrBuilder>(
                   instances_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           instances_ = null;
@@ -10223,6 +10569,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -10247,6 +10594,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -10272,6 +10620,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -10294,6 +10644,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -10312,6 +10663,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -10327,7 +10680,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10388,6 +10741,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -10397,6 +10751,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -10409,6 +10764,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -10419,6 +10775,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -10428,6 +10785,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -10435,7 +10793,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupOperationsRequest}
    */
-  public  static final class ListPlacementGroupOperationsRequest extends
+  public static final class ListPlacementGroupOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListPlacementGroupOperationsRequest)
       ListPlacementGroupOperationsRequestOrBuilder {
@@ -10446,8 +10804,14 @@ public final class PlacementGroupServiceOuterClass {
     }
     private ListPlacementGroupOperationsRequest() {
       placementGroupId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPlacementGroupOperationsRequest();
     }
 
     @java.lang.Override
@@ -10463,7 +10827,6 @@ public final class PlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10492,7 +10855,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10532,7 +10895,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -10552,7 +10917,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -10577,7 +10944,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -10591,7 +10960,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -10611,7 +10982,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -10640,13 +11013,13 @@ public final class PlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -10658,14 +11031,14 @@ public final class PlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -10683,15 +11056,14 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10882,35 +11254,35 @@ public final class PlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10972,6 +11344,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -10992,6 +11365,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -11013,6 +11387,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -11031,6 +11407,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -11045,6 +11422,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11067,7 +11446,9 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -11079,6 +11460,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -11094,6 +11477,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -11110,6 +11494,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -11130,6 +11515,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -11151,6 +11537,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -11169,6 +11557,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -11183,6 +11572,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -11198,7 +11589,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11305,6 +11696,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -11316,6 +11708,7 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -11323,7 +11716,7 @@ public final class PlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupOperationsResponse}
    */
-  public  static final class ListPlacementGroupOperationsResponse extends
+  public static final class ListPlacementGroupOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListPlacementGroupOperationsResponse)
       ListPlacementGroupOperationsResponseOrBuilder {
@@ -11335,6 +11728,13 @@ public final class PlacementGroupServiceOuterClass {
     private ListPlacementGroupOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPlacementGroupOperationsResponse();
     }
 
     @java.lang.Override
@@ -11362,7 +11762,7 @@ public final class PlacementGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -11377,7 +11777,7 @@ public final class PlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11391,7 +11791,7 @@ public final class PlacementGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -11411,7 +11811,6 @@ public final class PlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse.class, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -11421,6 +11820,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -11431,6 +11831,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -11442,6 +11843,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -11452,6 +11854,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -11462,6 +11865,7 @@ public final class PlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -11478,7 +11882,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -11500,7 +11906,9 @@ public final class PlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -11532,7 +11940,7 @@ public final class PlacementGroupServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -11548,7 +11956,7 @@ public final class PlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -11566,13 +11974,12 @@ public final class PlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse other = (yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11757,9 +12164,8 @@ public final class PlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse buildPartial() {
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse result = new yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -11768,42 +12174,41 @@ public final class PlacementGroupServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11880,7 +12285,7 @@ public final class PlacementGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -12181,7 +12586,7 @@ public final class PlacementGroupServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -12199,6 +12604,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -12221,6 +12627,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -12244,6 +12651,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -12264,6 +12673,7 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -12280,6 +12690,8 @@ public final class PlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12295,7 +12707,7 @@ public final class PlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12515,15 +12927,7 @@ public final class PlacementGroupServiceOuterClass {
       "thub.com/yandex-cloud/go-genproto/yandex" +
       "/cloud/compute/v1;computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -12533,7 +12937,7 @@ public final class PlacementGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.PlacementGroupOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_GetPlacementGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_GetPlacementGroupRequest_fieldAccessorTable = new

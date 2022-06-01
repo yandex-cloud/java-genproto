@@ -24,6 +24,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -32,6 +33,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -43,6 +45,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
+     * @return The detectedLanguageCode.
      */
     java.lang.String getDetectedLanguageCode();
     /**
@@ -52,6 +55,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
+     * @return The bytes for detectedLanguageCode.
      */
     com.google.protobuf.ByteString
         getDetectedLanguageCodeBytes();
@@ -59,7 +63,7 @@ public final class Translation {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.TranslatedText}
    */
-  public  static final class TranslatedText extends
+  public static final class TranslatedText extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.TranslatedText)
       TranslatedTextOrBuilder {
@@ -71,6 +75,13 @@ public final class Translation {
     private TranslatedText() {
       text_ = "";
       detectedLanguageCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TranslatedText();
     }
 
     @java.lang.Override
@@ -86,7 +97,6 @@ public final class Translation {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -110,7 +120,7 @@ public final class Translation {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -149,7 +159,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -168,7 +180,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -192,7 +206,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
+     * @return The detectedLanguageCode.
      */
+    @java.lang.Override
     public java.lang.String getDetectedLanguageCode() {
       java.lang.Object ref = detectedLanguageCode_;
       if (ref instanceof java.lang.String) {
@@ -212,7 +228,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string detected_language_code = 2;</code>
+     * @return The bytes for detectedLanguageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDetectedLanguageCodeBytes() {
       java.lang.Object ref = detectedLanguageCode_;
@@ -241,10 +259,10 @@ public final class Translation {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
-      if (!getDetectedLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(detectedLanguageCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, detectedLanguageCode_);
       }
       unknownFields.writeTo(output);
@@ -256,10 +274,10 @@ public final class Translation {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
-      if (!getDetectedLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(detectedLanguageCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, detectedLanguageCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -277,13 +295,12 @@ public final class Translation {
       }
       yandex.cloud.api.ai.translate.v2.Translation.TranslatedText other = (yandex.cloud.api.ai.translate.v2.Translation.TranslatedText) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && getDetectedLanguageCode()
-          .equals(other.getDetectedLanguageCode());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getDetectedLanguageCode()
+          .equals(other.getDetectedLanguageCode())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -468,35 +485,35 @@ public final class Translation {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -554,6 +571,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -573,6 +591,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -593,6 +612,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -610,6 +631,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -623,6 +645,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -644,6 +668,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
+       * @return The detectedLanguageCode.
        */
       public java.lang.String getDetectedLanguageCode() {
         java.lang.Object ref = detectedLanguageCode_;
@@ -664,6 +689,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
+       * @return The bytes for detectedLanguageCode.
        */
       public com.google.protobuf.ByteString
           getDetectedLanguageCodeBytes() {
@@ -685,6 +711,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
+       * @param value The detectedLanguageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setDetectedLanguageCode(
           java.lang.String value) {
@@ -703,6 +731,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDetectedLanguageCode() {
         
@@ -717,6 +746,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string detected_language_code = 2;</code>
+       * @param value The bytes for detectedLanguageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setDetectedLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -732,7 +763,7 @@ public final class Translation {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -793,6 +824,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string code = 1;</code>
+     * @return The code.
      */
     java.lang.String getCode();
     /**
@@ -802,6 +834,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string code = 1;</code>
+     * @return The bytes for code.
      */
     com.google.protobuf.ByteString
         getCodeBytes();
@@ -812,6 +845,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -820,6 +854,7 @@ public final class Translation {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -827,7 +862,7 @@ public final class Translation {
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.Language}
    */
-  public  static final class Language extends
+  public static final class Language extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.translate.v2.Language)
       LanguageOrBuilder {
@@ -839,6 +874,13 @@ public final class Translation {
     private Language() {
       code_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Language();
     }
 
     @java.lang.Override
@@ -854,7 +896,6 @@ public final class Translation {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -878,7 +919,7 @@ public final class Translation {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -918,7 +959,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string code = 1;</code>
+     * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -938,7 +981,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string code = 1;</code>
+     * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodeBytes() {
       java.lang.Object ref = code_;
@@ -961,7 +1006,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -980,7 +1027,9 @@ public final class Translation {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1009,10 +1058,10 @@ public final class Translation {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       unknownFields.writeTo(output);
@@ -1024,10 +1073,10 @@ public final class Translation {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -1045,13 +1094,12 @@ public final class Translation {
       }
       yandex.cloud.api.ai.translate.v2.Translation.Language other = (yandex.cloud.api.ai.translate.v2.Translation.Language) obj;
 
-      boolean result = true;
-      result = result && getCode()
-          .equals(other.getCode());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1236,35 +1284,35 @@ public final class Translation {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1323,6 +1371,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string code = 1;</code>
+       * @return The code.
        */
       public java.lang.String getCode() {
         java.lang.Object ref = code_;
@@ -1343,6 +1392,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string code = 1;</code>
+       * @return The bytes for code.
        */
       public com.google.protobuf.ByteString
           getCodeBytes() {
@@ -1364,6 +1414,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string code = 1;</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
        */
       public Builder setCode(
           java.lang.String value) {
@@ -1382,6 +1434,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string code = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCode() {
         
@@ -1396,6 +1449,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string code = 1;</code>
+       * @param value The bytes for code to set.
+       * @return This builder for chaining.
        */
       public Builder setCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1416,6 +1471,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1435,6 +1491,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1455,6 +1512,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1472,6 +1531,7 @@ public final class Translation {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1485,6 +1545,8 @@ public final class Translation {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1500,7 +1562,7 @@ public final class Translation {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1578,18 +1640,10 @@ public final class Translation {
       "oud/go-genproto/yandex/cloud/ai/translat" +
       "e/v2;translateb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_translate_v2_TranslatedText_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_translate_v2_TranslatedText_fieldAccessorTable = new

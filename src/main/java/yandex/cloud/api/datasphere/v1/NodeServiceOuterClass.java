@@ -24,6 +24,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -32,6 +33,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -42,6 +44,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string node_id = 2;</code>
+     * @return The nodeId.
      */
     java.lang.String getNodeId();
     /**
@@ -50,6 +53,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string node_id = 2;</code>
+     * @return The bytes for nodeId.
      */
     com.google.protobuf.ByteString
         getNodeIdBytes();
@@ -60,6 +64,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
+     * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
@@ -68,6 +73,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
+     * @return The input.
      */
     com.google.protobuf.Struct getInput();
     /**
@@ -82,7 +88,7 @@ public final class NodeServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.NodeExecutionRequest}
    */
-  public  static final class NodeExecutionRequest extends
+  public static final class NodeExecutionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.NodeExecutionRequest)
       NodeExecutionRequestOrBuilder {
@@ -94,6 +100,13 @@ public final class NodeServiceOuterClass {
     private NodeExecutionRequest() {
       folderId_ = "";
       nodeId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeExecutionRequest();
     }
 
     @java.lang.Override
@@ -109,7 +122,6 @@ public final class NodeServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -146,7 +158,7 @@ public final class NodeServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -185,7 +197,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -204,7 +218,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -227,7 +243,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string node_id = 2;</code>
+     * @return The nodeId.
      */
+    @java.lang.Override
     public java.lang.String getNodeId() {
       java.lang.Object ref = nodeId_;
       if (ref instanceof java.lang.String) {
@@ -246,7 +264,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>string node_id = 2;</code>
+     * @return The bytes for nodeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNodeIdBytes() {
       java.lang.Object ref = nodeId_;
@@ -269,7 +289,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
+     * @return Whether the input field is set.
      */
+    @java.lang.Override
     public boolean hasInput() {
       return input_ != null;
     }
@@ -279,7 +301,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
+     * @return The input.
      */
+    @java.lang.Override
     public com.google.protobuf.Struct getInput() {
       return input_ == null ? com.google.protobuf.Struct.getDefaultInstance() : input_;
     }
@@ -290,6 +314,7 @@ public final class NodeServiceOuterClass {
      *
      * <code>.google.protobuf.Struct input = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StructOrBuilder getInputOrBuilder() {
       return getInput();
     }
@@ -308,10 +333,10 @@ public final class NodeServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNodeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nodeId_);
       }
       if (input_ != null) {
@@ -326,10 +351,10 @@ public final class NodeServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNodeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nodeId_);
       }
       if (input_ != null) {
@@ -351,18 +376,17 @@ public final class NodeServiceOuterClass {
       }
       yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest other = (yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getNodeId()
-          .equals(other.getNodeId());
-      result = result && (hasInput() == other.hasInput());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getNodeId()
+          .equals(other.getNodeId())) return false;
+      if (hasInput() != other.hasInput()) return false;
       if (hasInput()) {
-        result = result && getInput()
-            .equals(other.getInput());
+        if (!getInput()
+            .equals(other.getInput())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -562,35 +586,35 @@ public final class NodeServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -651,6 +675,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -670,6 +695,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -690,6 +716,8 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -707,6 +735,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -720,6 +749,8 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -740,6 +771,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string node_id = 2;</code>
+       * @return The nodeId.
        */
       public java.lang.String getNodeId() {
         java.lang.Object ref = nodeId_;
@@ -759,6 +791,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string node_id = 2;</code>
+       * @return The bytes for nodeId.
        */
       public com.google.protobuf.ByteString
           getNodeIdBytes() {
@@ -779,6 +812,8 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string node_id = 2;</code>
+       * @param value The nodeId to set.
+       * @return This builder for chaining.
        */
       public Builder setNodeId(
           java.lang.String value) {
@@ -796,6 +831,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string node_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNodeId() {
         
@@ -809,6 +845,8 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>string node_id = 2;</code>
+       * @param value The bytes for nodeId to set.
+       * @return This builder for chaining.
        */
       public Builder setNodeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -822,7 +860,7 @@ public final class NodeServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Struct input_ = null;
+      private com.google.protobuf.Struct input_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> inputBuilder_;
       /**
@@ -831,6 +869,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
+       * @return Whether the input field is set.
        */
       public boolean hasInput() {
         return inputBuilder_ != null || input_ != null;
@@ -841,6 +880,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
+       * @return The input.
        */
       public com.google.protobuf.Struct getInput() {
         if (inputBuilder_ == null) {
@@ -977,7 +1017,7 @@ public final class NodeServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1037,6 +1077,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
+     * @return Whether the output field is set.
      */
     boolean hasOutput();
     /**
@@ -1045,6 +1086,7 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
+     * @return The output.
      */
     com.google.protobuf.Struct getOutput();
     /**
@@ -1059,7 +1101,7 @@ public final class NodeServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.NodeExecutionResponse}
    */
-  public  static final class NodeExecutionResponse extends
+  public static final class NodeExecutionResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.NodeExecutionResponse)
       NodeExecutionResponseOrBuilder {
@@ -1069,6 +1111,13 @@ public final class NodeServiceOuterClass {
       super(builder);
     }
     private NodeExecutionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeExecutionResponse();
     }
 
     @java.lang.Override
@@ -1084,7 +1133,6 @@ public final class NodeServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1109,7 +1157,7 @@ public final class NodeServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1148,7 +1196,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
+     * @return Whether the output field is set.
      */
+    @java.lang.Override
     public boolean hasOutput() {
       return output_ != null;
     }
@@ -1158,7 +1208,9 @@ public final class NodeServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
+     * @return The output.
      */
+    @java.lang.Override
     public com.google.protobuf.Struct getOutput() {
       return output_ == null ? com.google.protobuf.Struct.getDefaultInstance() : output_;
     }
@@ -1169,6 +1221,7 @@ public final class NodeServiceOuterClass {
      *
      * <code>.google.protobuf.Struct output = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StructOrBuilder getOutputOrBuilder() {
       return getOutput();
     }
@@ -1218,14 +1271,13 @@ public final class NodeServiceOuterClass {
       }
       yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse other = (yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse) obj;
 
-      boolean result = true;
-      result = result && (hasOutput() == other.hasOutput());
+      if (hasOutput() != other.hasOutput()) return false;
       if (hasOutput()) {
-        result = result && getOutput()
-            .equals(other.getOutput());
+        if (!getOutput()
+            .equals(other.getOutput())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1415,35 +1467,35 @@ public final class NodeServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1489,7 +1541,7 @@ public final class NodeServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Struct output_ = null;
+      private com.google.protobuf.Struct output_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> outputBuilder_;
       /**
@@ -1498,6 +1550,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
+       * @return Whether the output field is set.
        */
       public boolean hasOutput() {
         return outputBuilder_ != null || output_ != null;
@@ -1508,6 +1561,7 @@ public final class NodeServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
+       * @return The output.
        */
       public com.google.protobuf.Struct getOutput() {
         if (outputBuilder_ == null) {
@@ -1644,7 +1698,7 @@ public final class NodeServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1729,20 +1783,12 @@ public final class NodeServiceOuterClass {
       "hub.com/yandex-cloud/go-genproto/yandex/" +
       "cloud/datasphere/v1;datasphereb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_datasphere_v1_NodeExecutionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datasphere_v1_NodeExecutionRequest_fieldAccessorTable = new

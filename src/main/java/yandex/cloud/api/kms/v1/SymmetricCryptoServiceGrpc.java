@@ -1,19 +1,6 @@
 package yandex.cloud.api.kms.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/kms/v1/symmetric_crypto_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SymmetricCryptoServiceGrpc {
 
   private SymmetricCryptoServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class SymmetricCryptoServiceGrpc {
     if ((getEncryptMethod = SymmetricCryptoServiceGrpc.getEncryptMethod) == null) {
       synchronized (SymmetricCryptoServiceGrpc.class) {
         if ((getEncryptMethod = SymmetricCryptoServiceGrpc.getEncryptMethod) == null) {
-          SymmetricCryptoServiceGrpc.getEncryptMethod = getEncryptMethod = 
+          SymmetricCryptoServiceGrpc.getEncryptMethod = getEncryptMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest, yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricCryptoService", "Encrypt"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Encrypt"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("Encrypt"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("Encrypt"))
+              .build();
         }
-     }
-     return getEncryptMethod;
+      }
+    }
+    return getEncryptMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest,
@@ -76,22 +63,21 @@ public final class SymmetricCryptoServiceGrpc {
     if ((getDecryptMethod = SymmetricCryptoServiceGrpc.getDecryptMethod) == null) {
       synchronized (SymmetricCryptoServiceGrpc.class) {
         if ((getDecryptMethod = SymmetricCryptoServiceGrpc.getDecryptMethod) == null) {
-          SymmetricCryptoServiceGrpc.getDecryptMethod = getDecryptMethod = 
+          SymmetricCryptoServiceGrpc.getDecryptMethod = getDecryptMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest, yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricCryptoService", "Decrypt"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Decrypt"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("Decrypt"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("Decrypt"))
+              .build();
         }
-     }
-     return getDecryptMethod;
+      }
+    }
+    return getDecryptMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest,
@@ -108,22 +94,21 @@ public final class SymmetricCryptoServiceGrpc {
     if ((getReEncryptMethod = SymmetricCryptoServiceGrpc.getReEncryptMethod) == null) {
       synchronized (SymmetricCryptoServiceGrpc.class) {
         if ((getReEncryptMethod = SymmetricCryptoServiceGrpc.getReEncryptMethod) == null) {
-          SymmetricCryptoServiceGrpc.getReEncryptMethod = getReEncryptMethod = 
+          SymmetricCryptoServiceGrpc.getReEncryptMethod = getReEncryptMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest, yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricCryptoService", "ReEncrypt"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReEncrypt"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("ReEncrypt"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("ReEncrypt"))
+              .build();
         }
-     }
-     return getReEncryptMethod;
+      }
+    }
+    return getReEncryptMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest,
@@ -140,29 +125,35 @@ public final class SymmetricCryptoServiceGrpc {
     if ((getGenerateDataKeyMethod = SymmetricCryptoServiceGrpc.getGenerateDataKeyMethod) == null) {
       synchronized (SymmetricCryptoServiceGrpc.class) {
         if ((getGenerateDataKeyMethod = SymmetricCryptoServiceGrpc.getGenerateDataKeyMethod) == null) {
-          SymmetricCryptoServiceGrpc.getGenerateDataKeyMethod = getGenerateDataKeyMethod = 
+          SymmetricCryptoServiceGrpc.getGenerateDataKeyMethod = getGenerateDataKeyMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest, yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricCryptoService", "GenerateDataKey"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateDataKey"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("GenerateDataKey"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricCryptoServiceMethodDescriptorSupplier("GenerateDataKey"))
+              .build();
         }
-     }
-     return getGenerateDataKeyMethod;
+      }
+    }
+    return getGenerateDataKeyMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SymmetricCryptoServiceStub newStub(io.grpc.Channel channel) {
-    return new SymmetricCryptoServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SymmetricCryptoServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SymmetricCryptoServiceStub>() {
+        @java.lang.Override
+        public SymmetricCryptoServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SymmetricCryptoServiceStub(channel, callOptions);
+        }
+      };
+    return SymmetricCryptoServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -170,7 +161,14 @@ public final class SymmetricCryptoServiceGrpc {
    */
   public static SymmetricCryptoServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SymmetricCryptoServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SymmetricCryptoServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SymmetricCryptoServiceBlockingStub>() {
+        @java.lang.Override
+        public SymmetricCryptoServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SymmetricCryptoServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SymmetricCryptoServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -178,7 +176,14 @@ public final class SymmetricCryptoServiceGrpc {
    */
   public static SymmetricCryptoServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SymmetricCryptoServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SymmetricCryptoServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SymmetricCryptoServiceFutureStub>() {
+        @java.lang.Override
+        public SymmetricCryptoServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SymmetricCryptoServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SymmetricCryptoServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -195,7 +200,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void encrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getEncryptMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEncryptMethod(), responseObserver);
     }
 
     /**
@@ -205,7 +210,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void decrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDecryptMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDecryptMethod(), responseObserver);
     }
 
     /**
@@ -215,7 +220,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void reEncrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getReEncryptMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReEncryptMethod(), responseObserver);
     }
 
     /**
@@ -226,35 +231,35 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void generateDataKey(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGenerateDataKeyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateDataKeyMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getEncryptMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest,
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse>(
                   this, METHODID_ENCRYPT)))
           .addMethod(
             getDecryptMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest,
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse>(
                   this, METHODID_DECRYPT)))
           .addMethod(
             getReEncryptMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest,
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse>(
                   this, METHODID_RE_ENCRYPT)))
           .addMethod(
             getGenerateDataKeyMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest,
                 yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse>(
@@ -268,19 +273,15 @@ public final class SymmetricCryptoServiceGrpc {
    * Set of methods that perform symmetric encryption and decryption.
    * </pre>
    */
-  public static final class SymmetricCryptoServiceStub extends io.grpc.stub.AbstractStub<SymmetricCryptoServiceStub> {
-    private SymmetricCryptoServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SymmetricCryptoServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SymmetricCryptoServiceStub extends io.grpc.stub.AbstractAsyncStub<SymmetricCryptoServiceStub> {
+    private SymmetricCryptoServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SymmetricCryptoServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SymmetricCryptoServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SymmetricCryptoServiceStub(channel, callOptions);
     }
 
@@ -291,7 +292,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void encrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEncryptMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -302,7 +303,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void decrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDecryptMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -313,7 +314,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void reEncrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReEncryptMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -325,7 +326,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public void generateDataKey(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateDataKeyMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -335,19 +336,15 @@ public final class SymmetricCryptoServiceGrpc {
    * Set of methods that perform symmetric encryption and decryption.
    * </pre>
    */
-  public static final class SymmetricCryptoServiceBlockingStub extends io.grpc.stub.AbstractStub<SymmetricCryptoServiceBlockingStub> {
-    private SymmetricCryptoServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SymmetricCryptoServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SymmetricCryptoServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SymmetricCryptoServiceBlockingStub> {
+    private SymmetricCryptoServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SymmetricCryptoServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SymmetricCryptoServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SymmetricCryptoServiceBlockingStub(channel, callOptions);
     }
 
@@ -357,7 +354,7 @@ public final class SymmetricCryptoServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse encrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEncryptMethod(), getCallOptions(), request);
     }
 
@@ -367,7 +364,7 @@ public final class SymmetricCryptoServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse decrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDecryptMethod(), getCallOptions(), request);
     }
 
@@ -377,7 +374,7 @@ public final class SymmetricCryptoServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse reEncrypt(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReEncryptMethod(), getCallOptions(), request);
     }
 
@@ -388,7 +385,7 @@ public final class SymmetricCryptoServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse generateDataKey(yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateDataKeyMethod(), getCallOptions(), request);
     }
   }
@@ -398,19 +395,15 @@ public final class SymmetricCryptoServiceGrpc {
    * Set of methods that perform symmetric encryption and decryption.
    * </pre>
    */
-  public static final class SymmetricCryptoServiceFutureStub extends io.grpc.stub.AbstractStub<SymmetricCryptoServiceFutureStub> {
-    private SymmetricCryptoServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SymmetricCryptoServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SymmetricCryptoServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SymmetricCryptoServiceFutureStub> {
+    private SymmetricCryptoServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SymmetricCryptoServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SymmetricCryptoServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SymmetricCryptoServiceFutureStub(channel, callOptions);
     }
 
@@ -421,7 +414,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptResponse> encrypt(
         yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricEncryptRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEncryptMethod(), getCallOptions()), request);
     }
 
@@ -432,7 +425,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptResponse> decrypt(
         yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricDecryptRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDecryptMethod(), getCallOptions()), request);
     }
 
@@ -443,7 +436,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptResponse> reEncrypt(
         yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.SymmetricReEncryptRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReEncryptMethod(), getCallOptions()), request);
     }
 
@@ -455,7 +448,7 @@ public final class SymmetricCryptoServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyResponse> generateDataKey(
         yandex.cloud.api.kms.v1.SymmetricCryptoServiceOuterClass.GenerateDataKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateDataKeyMethod(), getCallOptions()), request);
     }
   }

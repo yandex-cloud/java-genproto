@@ -1,25 +1,13 @@
 package yandex.cloud.api.ai.vision.v2;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ai/vision/v2/image_classifier_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ImageClassifierServiceGrpc {
 
   private ImageClassifierServiceGrpc() {}
@@ -41,29 +29,35 @@ public final class ImageClassifierServiceGrpc {
     if ((getAnnotateMethod = ImageClassifierServiceGrpc.getAnnotateMethod) == null) {
       synchronized (ImageClassifierServiceGrpc.class) {
         if ((getAnnotateMethod = ImageClassifierServiceGrpc.getAnnotateMethod) == null) {
-          ImageClassifierServiceGrpc.getAnnotateMethod = getAnnotateMethod = 
+          ImageClassifierServiceGrpc.getAnnotateMethod = getAnnotateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest, yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.vision.v2.ImageClassifierService", "Annotate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Annotate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageClassifierServiceMethodDescriptorSupplier("Annotate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageClassifierServiceMethodDescriptorSupplier("Annotate"))
+              .build();
         }
-     }
-     return getAnnotateMethod;
+      }
+    }
+    return getAnnotateMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ImageClassifierServiceStub newStub(io.grpc.Channel channel) {
-    return new ImageClassifierServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageClassifierServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageClassifierServiceStub>() {
+        @java.lang.Override
+        public ImageClassifierServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageClassifierServiceStub(channel, callOptions);
+        }
+      };
+    return ImageClassifierServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -71,7 +65,14 @@ public final class ImageClassifierServiceGrpc {
    */
   public static ImageClassifierServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ImageClassifierServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageClassifierServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageClassifierServiceBlockingStub>() {
+        @java.lang.Override
+        public ImageClassifierServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageClassifierServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ImageClassifierServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -79,7 +80,14 @@ public final class ImageClassifierServiceGrpc {
    */
   public static ImageClassifierServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ImageClassifierServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageClassifierServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageClassifierServiceFutureStub>() {
+        @java.lang.Override
+        public ImageClassifierServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageClassifierServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ImageClassifierServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -90,14 +98,14 @@ public final class ImageClassifierServiceGrpc {
      */
     public void annotate(yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAnnotateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAnnotateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getAnnotateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest,
                 yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse>(
@@ -108,19 +116,15 @@ public final class ImageClassifierServiceGrpc {
 
   /**
    */
-  public static final class ImageClassifierServiceStub extends io.grpc.stub.AbstractStub<ImageClassifierServiceStub> {
-    private ImageClassifierServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageClassifierServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageClassifierServiceStub extends io.grpc.stub.AbstractAsyncStub<ImageClassifierServiceStub> {
+    private ImageClassifierServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageClassifierServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageClassifierServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageClassifierServiceStub(channel, callOptions);
     }
 
@@ -128,52 +132,44 @@ public final class ImageClassifierServiceGrpc {
      */
     public void annotate(yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAnnotateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class ImageClassifierServiceBlockingStub extends io.grpc.stub.AbstractStub<ImageClassifierServiceBlockingStub> {
-    private ImageClassifierServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageClassifierServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageClassifierServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ImageClassifierServiceBlockingStub> {
+    private ImageClassifierServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageClassifierServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageClassifierServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageClassifierServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse annotate(yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAnnotateMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class ImageClassifierServiceFutureStub extends io.grpc.stub.AbstractStub<ImageClassifierServiceFutureStub> {
-    private ImageClassifierServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageClassifierServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageClassifierServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ImageClassifierServiceFutureStub> {
+    private ImageClassifierServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageClassifierServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageClassifierServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageClassifierServiceFutureStub(channel, callOptions);
     }
 
@@ -181,7 +177,7 @@ public final class ImageClassifierServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse> annotate(
         yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAnnotateMethod(), getCallOptions()), request);
     }
   }

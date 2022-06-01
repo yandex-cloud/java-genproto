@@ -24,6 +24,7 @@ public final class Quota {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,24 +33,27 @@ public final class Quota {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>int64 limit = 3;</code>
+     * @return The limit.
      */
     long getLimit();
 
     /**
      * <code>double usage = 4;</code>
+     * @return The usage.
      */
     double getUsage();
   }
   /**
    * Protobuf type {@code yandex.cloud.quota.QuotaMetric}
    */
-  public  static final class QuotaMetric extends
+  public static final class QuotaMetric extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.quota.QuotaMetric)
       QuotaMetricOrBuilder {
@@ -60,8 +64,13 @@ public final class Quota {
     }
     private QuotaMetric() {
       name_ = "";
-      limit_ = 0L;
-      usage_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuotaMetric();
     }
 
     @java.lang.Override
@@ -77,7 +86,6 @@ public final class Quota {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -105,7 +113,7 @@ public final class Quota {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -144,7 +152,9 @@ public final class Quota {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -163,7 +173,9 @@ public final class Quota {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -182,7 +194,9 @@ public final class Quota {
     private long limit_;
     /**
      * <code>int64 limit = 3;</code>
+     * @return The limit.
      */
+    @java.lang.Override
     public long getLimit() {
       return limit_;
     }
@@ -191,7 +205,9 @@ public final class Quota {
     private double usage_;
     /**
      * <code>double usage = 4;</code>
+     * @return The usage.
      */
+    @java.lang.Override
     public double getUsage() {
       return usage_;
     }
@@ -210,13 +226,13 @@ public final class Quota {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (limit_ != 0L) {
         output.writeInt64(3, limit_);
       }
-      if (usage_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
         output.writeDouble(4, usage_);
       }
       unknownFields.writeTo(output);
@@ -228,14 +244,14 @@ public final class Quota {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (limit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, limit_);
       }
-      if (usage_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, usage_);
       }
@@ -254,17 +270,15 @@ public final class Quota {
       }
       yandex.cloud.api.quota.Quota.QuotaMetric other = (yandex.cloud.api.quota.Quota.QuotaMetric) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getLimit()
-          == other.getLimit());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getUsage())
-          == java.lang.Double.doubleToLongBits(
-              other.getUsage()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (java.lang.Double.doubleToLongBits(getUsage())
+          != java.lang.Double.doubleToLongBits(
+              other.getUsage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -456,35 +470,35 @@ public final class Quota {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -544,6 +558,7 @@ public final class Quota {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -563,6 +578,7 @@ public final class Quota {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -583,6 +599,8 @@ public final class Quota {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -600,6 +618,7 @@ public final class Quota {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -613,6 +632,8 @@ public final class Quota {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -629,12 +650,16 @@ public final class Quota {
       private long limit_ ;
       /**
        * <code>int64 limit = 3;</code>
+       * @return The limit.
        */
+      @java.lang.Override
       public long getLimit() {
         return limit_;
       }
       /**
        * <code>int64 limit = 3;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
        */
       public Builder setLimit(long value) {
         
@@ -644,6 +669,7 @@ public final class Quota {
       }
       /**
        * <code>int64 limit = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLimit() {
         
@@ -655,12 +681,16 @@ public final class Quota {
       private double usage_ ;
       /**
        * <code>double usage = 4;</code>
+       * @return The usage.
        */
+      @java.lang.Override
       public double getUsage() {
         return usage_;
       }
       /**
        * <code>double usage = 4;</code>
+       * @param value The usage to set.
+       * @return This builder for chaining.
        */
       public Builder setUsage(double value) {
         
@@ -670,6 +700,7 @@ public final class Quota {
       }
       /**
        * <code>double usage = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUsage() {
         
@@ -680,7 +711,7 @@ public final class Quota {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -736,23 +767,26 @@ public final class Quota {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>int64 limit = 2;</code>
+     * @return The limit.
      */
     long getLimit();
   }
   /**
    * Protobuf type {@code yandex.cloud.quota.MetricLimit}
    */
-  public  static final class MetricLimit extends
+  public static final class MetricLimit extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.quota.MetricLimit)
       MetricLimitOrBuilder {
@@ -763,7 +797,13 @@ public final class Quota {
     }
     private MetricLimit() {
       name_ = "";
-      limit_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MetricLimit();
     }
 
     @java.lang.Override
@@ -779,7 +819,6 @@ public final class Quota {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -802,7 +841,7 @@ public final class Quota {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -837,7 +876,9 @@ public final class Quota {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -852,7 +893,9 @@ public final class Quota {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -871,7 +914,9 @@ public final class Quota {
     private long limit_;
     /**
      * <code>int64 limit = 2;</code>
+     * @return The limit.
      */
+    @java.lang.Override
     public long getLimit() {
       return limit_;
     }
@@ -890,7 +935,7 @@ public final class Quota {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (limit_ != 0L) {
@@ -905,7 +950,7 @@ public final class Quota {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (limit_ != 0L) {
@@ -927,13 +972,12 @@ public final class Quota {
       }
       yandex.cloud.api.quota.Quota.MetricLimit other = (yandex.cloud.api.quota.Quota.MetricLimit) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getLimit()
-          == other.getLimit());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1119,35 +1163,35 @@ public final class Quota {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1200,6 +1244,7 @@ public final class Quota {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1215,6 +1260,7 @@ public final class Quota {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1231,6 +1277,8 @@ public final class Quota {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1244,6 +1292,7 @@ public final class Quota {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1253,6 +1302,8 @@ public final class Quota {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1269,12 +1320,16 @@ public final class Quota {
       private long limit_ ;
       /**
        * <code>int64 limit = 2;</code>
+       * @return The limit.
        */
+      @java.lang.Override
       public long getLimit() {
         return limit_;
       }
       /**
        * <code>int64 limit = 2;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
        */
       public Builder setLimit(long value) {
         
@@ -1284,6 +1339,7 @@ public final class Quota {
       }
       /**
        * <code>int64 limit = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLimit() {
         
@@ -1294,7 +1350,7 @@ public final class Quota {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1375,7 +1431,7 @@ public final class Quota {
   /**
    * Protobuf type {@code yandex.cloud.quota.QuotaFailure}
    */
-  public  static final class QuotaFailure extends
+  public static final class QuotaFailure extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.quota.QuotaFailure)
       QuotaFailureOrBuilder {
@@ -1386,6 +1442,13 @@ public final class Quota {
     }
     private QuotaFailure() {
       violations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuotaFailure();
     }
 
     @java.lang.Override
@@ -1413,7 +1476,7 @@ public final class Quota {
               done = true;
               break;
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 violations_ = new java.util.ArrayList<yandex.cloud.api.quota.Quota.QuotaFailure.Violation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1422,7 +1485,7 @@ public final class Quota {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1436,7 +1499,7 @@ public final class Quota {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           violations_ = java.util.Collections.unmodifiableList(violations_);
         }
         this.unknownFields = unknownFields.build();
@@ -1462,10 +1525,12 @@ public final class Quota {
 
       /**
        * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
+       * @return Whether the metric field is set.
        */
       boolean hasMetric();
       /**
        * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
+       * @return The metric.
        */
       yandex.cloud.api.quota.Quota.QuotaMetric getMetric();
       /**
@@ -1479,13 +1544,14 @@ public final class Quota {
        * </pre>
        *
        * <code>int64 required = 2;</code>
+       * @return The required.
        */
       long getRequired();
     }
     /**
      * Protobuf type {@code yandex.cloud.quota.QuotaFailure.Violation}
      */
-    public  static final class Violation extends
+    public static final class Violation extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.quota.QuotaFailure.Violation)
         ViolationOrBuilder {
@@ -1495,7 +1561,13 @@ public final class Quota {
         super(builder);
       }
       private Violation() {
-        required_ = 0L;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Violation();
       }
 
       @java.lang.Override
@@ -1511,7 +1583,6 @@ public final class Quota {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1541,7 +1612,7 @@ public final class Quota {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1576,19 +1647,24 @@ public final class Quota {
       private yandex.cloud.api.quota.Quota.QuotaMetric metric_;
       /**
        * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
+       * @return Whether the metric field is set.
        */
+      @java.lang.Override
       public boolean hasMetric() {
         return metric_ != null;
       }
       /**
        * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
+       * @return The metric.
        */
+      @java.lang.Override
       public yandex.cloud.api.quota.Quota.QuotaMetric getMetric() {
         return metric_ == null ? yandex.cloud.api.quota.Quota.QuotaMetric.getDefaultInstance() : metric_;
       }
       /**
        * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.quota.Quota.QuotaMetricOrBuilder getMetricOrBuilder() {
         return getMetric();
       }
@@ -1601,7 +1677,9 @@ public final class Quota {
        * </pre>
        *
        * <code>int64 required = 2;</code>
+       * @return The required.
        */
+      @java.lang.Override
       public long getRequired() {
         return required_;
       }
@@ -1658,16 +1736,15 @@ public final class Quota {
         }
         yandex.cloud.api.quota.Quota.QuotaFailure.Violation other = (yandex.cloud.api.quota.Quota.QuotaFailure.Violation) obj;
 
-        boolean result = true;
-        result = result && (hasMetric() == other.hasMetric());
+        if (hasMetric() != other.hasMetric()) return false;
         if (hasMetric()) {
-          result = result && getMetric()
-              .equals(other.getMetric());
+          if (!getMetric()
+              .equals(other.getMetric())) return false;
         }
-        result = result && (getRequired()
-            == other.getRequired());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getRequired()
+            != other.getRequired()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1863,35 +1940,35 @@ public final class Quota {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1940,17 +2017,19 @@ public final class Quota {
           return this;
         }
 
-        private yandex.cloud.api.quota.Quota.QuotaMetric metric_ = null;
+        private yandex.cloud.api.quota.Quota.QuotaMetric metric_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.quota.Quota.QuotaMetric, yandex.cloud.api.quota.Quota.QuotaMetric.Builder, yandex.cloud.api.quota.Quota.QuotaMetricOrBuilder> metricBuilder_;
         /**
          * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
+         * @return Whether the metric field is set.
          */
         public boolean hasMetric() {
           return metricBuilder_ != null || metric_ != null;
         }
         /**
          * <code>.yandex.cloud.quota.QuotaMetric metric = 1;</code>
+         * @return The metric.
          */
         public yandex.cloud.api.quota.Quota.QuotaMetric getMetric() {
           if (metricBuilder_ == null) {
@@ -2064,7 +2143,9 @@ public final class Quota {
          * </pre>
          *
          * <code>int64 required = 2;</code>
+         * @return The required.
          */
+        @java.lang.Override
         public long getRequired() {
           return required_;
         }
@@ -2074,6 +2155,8 @@ public final class Quota {
          * </pre>
          *
          * <code>int64 required = 2;</code>
+         * @param value The required to set.
+         * @return This builder for chaining.
          */
         public Builder setRequired(long value) {
           
@@ -2087,6 +2170,7 @@ public final class Quota {
          * </pre>
          *
          * <code>int64 required = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearRequired() {
           
@@ -2097,7 +2181,7 @@ public final class Quota {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -2152,12 +2236,14 @@ public final class Quota {
     /**
      * <code>repeated .yandex.cloud.quota.QuotaFailure.Violation violations = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.quota.Quota.QuotaFailure.Violation> getViolationsList() {
       return violations_;
     }
     /**
      * <code>repeated .yandex.cloud.quota.QuotaFailure.Violation violations = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.quota.Quota.QuotaFailure.ViolationOrBuilder> 
         getViolationsOrBuilderList() {
       return violations_;
@@ -2165,18 +2251,21 @@ public final class Quota {
     /**
      * <code>repeated .yandex.cloud.quota.QuotaFailure.Violation violations = 2;</code>
      */
+    @java.lang.Override
     public int getViolationsCount() {
       return violations_.size();
     }
     /**
      * <code>repeated .yandex.cloud.quota.QuotaFailure.Violation violations = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.quota.Quota.QuotaFailure.Violation getViolations(int index) {
       return violations_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.quota.QuotaFailure.Violation violations = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.quota.Quota.QuotaFailure.ViolationOrBuilder getViolationsOrBuilder(
         int index) {
       return violations_.get(index);
@@ -2227,11 +2316,10 @@ public final class Quota {
       }
       yandex.cloud.api.quota.Quota.QuotaFailure other = (yandex.cloud.api.quota.Quota.QuotaFailure) obj;
 
-      boolean result = true;
-      result = result && getViolationsList()
-          .equals(other.getViolationsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getViolationsList()
+          .equals(other.getViolationsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2413,7 +2501,7 @@ public final class Quota {
         yandex.cloud.api.quota.Quota.QuotaFailure result = new yandex.cloud.api.quota.Quota.QuotaFailure(this);
         int from_bitField0_ = bitField0_;
         if (violationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             violations_ = java.util.Collections.unmodifiableList(violations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2427,35 +2515,35 @@ public final class Quota {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2528,7 +2616,7 @@ public final class Quota {
       private java.util.List<yandex.cloud.api.quota.Quota.QuotaFailure.Violation> violations_ =
         java.util.Collections.emptyList();
       private void ensureViolationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           violations_ = new java.util.ArrayList<yandex.cloud.api.quota.Quota.QuotaFailure.Violation>(violations_);
           bitField0_ |= 0x00000001;
          }
@@ -2757,7 +2845,7 @@ public final class Quota {
           violationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.quota.Quota.QuotaFailure.Violation, yandex.cloud.api.quota.Quota.QuotaFailure.Violation.Builder, yandex.cloud.api.quota.Quota.QuotaFailure.ViolationOrBuilder>(
                   violations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           violations_ = null;
@@ -2767,7 +2855,7 @@ public final class Quota {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2858,18 +2946,10 @@ public final class Quota {
       "x-cloud/go-genproto/yandex/cloud/quota;q" +
       "uotab\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_quota_QuotaMetric_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_quota_QuotaMetric_fieldAccessorTable = new

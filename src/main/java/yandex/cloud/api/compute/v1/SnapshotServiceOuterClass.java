@@ -25,6 +25,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -34,6 +35,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -41,7 +43,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.GetSnapshotRequest}
    */
-  public  static final class GetSnapshotRequest extends
+  public static final class GetSnapshotRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GetSnapshotRequest)
       GetSnapshotRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class SnapshotServiceOuterClass {
     }
     private GetSnapshotRequest() {
       snapshotId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSnapshotRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -174,7 +186,7 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -491,6 +503,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -512,6 +525,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -544,6 +560,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -652,6 +673,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -661,6 +683,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -675,6 +698,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -687,6 +711,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -694,7 +719,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListSnapshotsRequest}
    */
-  public  static final class ListSnapshotsRequest extends
+  public static final class ListSnapshotsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListSnapshotsRequest)
       ListSnapshotsRequestOrBuilder {
@@ -705,9 +730,15 @@ public final class SnapshotServiceOuterClass {
     }
     private ListSnapshotsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSnapshotsRequest();
     }
 
     @java.lang.Override
@@ -723,7 +754,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -758,7 +788,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -798,7 +828,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -818,7 +850,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -844,7 +878,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -858,7 +894,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -878,7 +916,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -905,7 +945,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -928,7 +970,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -957,16 +1001,16 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -978,17 +1022,17 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1006,17 +1050,16 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1212,35 +1255,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1306,6 +1349,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1326,6 +1370,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1347,6 +1392,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1365,6 +1412,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1379,6 +1427,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1402,7 +1452,9 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1415,6 +1467,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1431,6 +1485,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1447,6 +1502,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1467,6 +1523,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1488,6 +1545,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1506,6 +1565,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1520,6 +1580,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1544,6 +1606,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1567,6 +1630,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1591,6 +1655,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1612,6 +1678,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1629,6 +1696,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1644,7 +1713,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1753,6 +1822,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1766,6 +1836,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1773,7 +1844,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListSnapshotsResponse}
    */
-  public  static final class ListSnapshotsResponse extends
+  public static final class ListSnapshotsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListSnapshotsResponse)
       ListSnapshotsResponseOrBuilder {
@@ -1785,6 +1856,13 @@ public final class SnapshotServiceOuterClass {
     private ListSnapshotsResponse() {
       snapshots_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSnapshotsResponse();
     }
 
     @java.lang.Override
@@ -1812,7 +1890,7 @@ public final class SnapshotServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 snapshots_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1827,7 +1905,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1841,7 +1919,7 @@ public final class SnapshotServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           snapshots_ = java.util.Collections.unmodifiableList(snapshots_);
         }
         this.unknownFields = unknownFields.build();
@@ -1861,7 +1939,6 @@ public final class SnapshotServiceOuterClass {
               yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse.class, yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SNAPSHOTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> snapshots_;
     /**
@@ -1871,6 +1948,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> getSnapshotsList() {
       return snapshots_;
     }
@@ -1881,6 +1959,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.SnapshotOuterClass.SnapshotOrBuilder> 
         getSnapshotsOrBuilderList() {
       return snapshots_;
@@ -1892,6 +1971,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
      */
+    @java.lang.Override
     public int getSnapshotsCount() {
       return snapshots_.size();
     }
@@ -1902,6 +1982,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot getSnapshots(int index) {
       return snapshots_.get(index);
     }
@@ -1912,6 +1993,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.SnapshotOuterClass.SnapshotOrBuilder getSnapshotsOrBuilder(
         int index) {
       return snapshots_.get(index);
@@ -1930,7 +2012,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1954,7 +2038,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1986,7 +2072,7 @@ public final class SnapshotServiceOuterClass {
       for (int i = 0; i < snapshots_.size(); i++) {
         output.writeMessage(1, snapshots_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2002,7 +2088,7 @@ public final class SnapshotServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, snapshots_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2020,13 +2106,12 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse) obj;
 
-      boolean result = true;
-      result = result && getSnapshotsList()
-          .equals(other.getSnapshotsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotsList()
+          .equals(other.getSnapshotsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2211,9 +2296,8 @@ public final class SnapshotServiceOuterClass {
       public yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse buildPartial() {
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse result = new yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (snapshotsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             snapshots_ = java.util.Collections.unmodifiableList(snapshots_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2222,42 +2306,41 @@ public final class SnapshotServiceOuterClass {
           result.snapshots_ = snapshotsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2334,7 +2417,7 @@ public final class SnapshotServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> snapshots_ =
         java.util.Collections.emptyList();
       private void ensureSnapshotsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           snapshots_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot>(snapshots_);
           bitField0_ |= 0x00000001;
          }
@@ -2635,7 +2718,7 @@ public final class SnapshotServiceOuterClass {
           snapshotsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot, yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.Builder, yandex.cloud.api.compute.v1.SnapshotOuterClass.SnapshotOrBuilder>(
                   snapshots_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           snapshots_ = null;
@@ -2655,6 +2738,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2679,6 +2763,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2704,6 +2789,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2726,6 +2813,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2744,6 +2832,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2759,7 +2849,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2820,6 +2910,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2829,6 +2920,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2840,6 +2932,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskId.
      */
     java.lang.String getDiskId();
     /**
@@ -2849,6 +2942,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskId.
      */
     com.google.protobuf.ByteString
         getDiskIdBytes();
@@ -2859,6 +2953,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2867,6 +2962,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2877,6 +2973,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2885,6 +2982,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2946,7 +3044,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateSnapshotRequest}
    */
-  public  static final class CreateSnapshotRequest extends
+  public static final class CreateSnapshotRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateSnapshotRequest)
       CreateSnapshotRequestOrBuilder {
@@ -2960,6 +3058,13 @@ public final class SnapshotServiceOuterClass {
       diskId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSnapshotRequest();
     }
 
     @java.lang.Override
@@ -3011,10 +3116,10 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3024,7 +3129,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3067,7 +3172,6 @@ public final class SnapshotServiceOuterClass {
               yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest.class, yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -3077,7 +3181,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3097,7 +3203,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3121,7 +3229,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskId.
      */
+    @java.lang.Override
     public java.lang.String getDiskId() {
       java.lang.Object ref = diskId_;
       if (ref instanceof java.lang.String) {
@@ -3141,7 +3251,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskIdBytes() {
       java.lang.Object ref = diskId_;
@@ -3164,7 +3276,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3183,7 +3297,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3206,7 +3322,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3225,7 +3343,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3274,14 +3394,16 @@ public final class SnapshotServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3293,6 +3415,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3304,11 +3427,12 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3320,10 +3444,11 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3346,16 +3471,16 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getDiskIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, diskId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3373,16 +3498,16 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getDiskIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, diskId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3410,19 +3535,18 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getDiskId()
-          .equals(other.getDiskId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getDiskId()
+          .equals(other.getDiskId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3635,49 +3759,47 @@ public final class SnapshotServiceOuterClass {
       public yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest buildPartial() {
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest result = new yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.diskId_ = diskId_;
         result.name_ = name_;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3747,6 +3869,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3767,6 +3890,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3788,6 +3912,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3806,6 +3932,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3820,6 +3947,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3841,6 +3970,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskId.
        */
       public java.lang.String getDiskId() {
         java.lang.Object ref = diskId_;
@@ -3861,6 +3991,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskId.
        */
       public com.google.protobuf.ByteString
           getDiskIdBytes() {
@@ -3882,6 +4013,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskId(
           java.lang.String value) {
@@ -3900,6 +4033,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskId() {
         
@@ -3914,6 +4048,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3934,6 +4070,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3953,6 +4090,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3973,6 +4111,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3990,6 +4130,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4003,6 +4144,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4023,6 +4166,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4042,6 +4186,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4062,6 +4207,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4079,6 +4226,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4092,6 +4240,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4139,14 +4289,16 @@ public final class SnapshotServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4158,6 +4310,7 @@ public final class SnapshotServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4169,11 +4322,12 @@ public final class SnapshotServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4185,10 +4339,11 @@ public final class SnapshotServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4212,7 +4367,7 @@ public final class SnapshotServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4235,8 +4390,11 @@ public final class SnapshotServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4258,7 +4416,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4318,6 +4476,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -4326,6 +4485,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -4336,6 +4496,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2;</code>
+     * @return The diskId.
      */
     java.lang.String getDiskId();
     /**
@@ -4344,6 +4505,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2;</code>
+     * @return The bytes for diskId.
      */
     com.google.protobuf.ByteString
         getDiskIdBytes();
@@ -4351,7 +4513,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateSnapshotMetadata}
    */
-  public  static final class CreateSnapshotMetadata extends
+  public static final class CreateSnapshotMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateSnapshotMetadata)
       CreateSnapshotMetadataOrBuilder {
@@ -4363,6 +4525,13 @@ public final class SnapshotServiceOuterClass {
     private CreateSnapshotMetadata() {
       snapshotId_ = "";
       diskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSnapshotMetadata();
     }
 
     @java.lang.Override
@@ -4378,7 +4547,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4402,7 +4570,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4441,7 +4609,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -4460,7 +4630,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -4483,7 +4655,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2;</code>
+     * @return The diskId.
      */
+    @java.lang.Override
     public java.lang.String getDiskId() {
       java.lang.Object ref = diskId_;
       if (ref instanceof java.lang.String) {
@@ -4502,7 +4676,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 2;</code>
+     * @return The bytes for diskId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskIdBytes() {
       java.lang.Object ref = diskId_;
@@ -4531,10 +4707,10 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
-      if (!getDiskIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, diskId_);
       }
       unknownFields.writeTo(output);
@@ -4546,10 +4722,10 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
-      if (!getDiskIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, diskId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4567,13 +4743,12 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotMetadata other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotMetadata) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && getDiskId()
-          .equals(other.getDiskId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (!getDiskId()
+          .equals(other.getDiskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4758,35 +4933,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4844,6 +5019,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -4863,6 +5039,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -4883,6 +5060,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -4900,6 +5079,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -4913,6 +5093,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4933,6 +5115,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2;</code>
+       * @return The diskId.
        */
       public java.lang.String getDiskId() {
         java.lang.Object ref = diskId_;
@@ -4952,6 +5135,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2;</code>
+       * @return The bytes for diskId.
        */
       public com.google.protobuf.ByteString
           getDiskIdBytes() {
@@ -4972,6 +5156,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2;</code>
+       * @param value The diskId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskId(
           java.lang.String value) {
@@ -4989,6 +5175,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskId() {
         
@@ -5002,6 +5189,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 2;</code>
+       * @param value The bytes for diskId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5017,7 +5206,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5078,6 +5267,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -5087,6 +5277,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -5097,6 +5288,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5105,6 +5297,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5122,6 +5315,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5130,6 +5324,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5140,6 +5335,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5148,6 +5344,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5214,7 +5411,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateSnapshotRequest}
    */
-  public  static final class UpdateSnapshotRequest extends
+  public static final class UpdateSnapshotRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateSnapshotRequest)
       UpdateSnapshotRequestOrBuilder {
@@ -5227,6 +5424,13 @@ public final class SnapshotServiceOuterClass {
       snapshotId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSnapshotRequest();
     }
 
     @java.lang.Override
@@ -5285,10 +5489,10 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -5298,7 +5502,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5341,7 +5545,6 @@ public final class SnapshotServiceOuterClass {
               yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest.class, yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SNAPSHOT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotId_;
     /**
@@ -5351,7 +5554,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -5371,7 +5576,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -5394,7 +5601,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5404,7 +5613,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5415,6 +5626,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5427,7 +5639,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5446,7 +5660,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5469,7 +5685,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5488,7 +5706,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5538,14 +5758,16 @@ public final class SnapshotServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -5558,6 +5780,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -5570,11 +5793,12 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5587,10 +5811,11 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -5613,16 +5838,16 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -5640,17 +5865,17 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -5678,22 +5903,21 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5912,7 +6136,6 @@ public final class SnapshotServiceOuterClass {
       public yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest buildPartial() {
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest result = new yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.snapshotId_ = snapshotId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5923,42 +6146,41 @@ public final class SnapshotServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6027,6 +6249,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -6047,6 +6270,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -6068,6 +6292,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -6086,6 +6312,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -6100,6 +6327,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6113,7 +6342,7 @@ public final class SnapshotServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6122,6 +6351,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6132,6 +6362,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6273,6 +6504,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6292,6 +6524,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6312,6 +6545,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6329,6 +6564,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6342,6 +6578,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6362,6 +6600,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6381,6 +6620,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6401,6 +6641,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6418,6 +6660,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6431,6 +6674,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6479,14 +6724,16 @@ public final class SnapshotServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -6499,6 +6746,7 @@ public final class SnapshotServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -6511,11 +6759,12 @@ public final class SnapshotServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6528,10 +6777,11 @@ public final class SnapshotServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -6556,7 +6806,7 @@ public final class SnapshotServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -6580,8 +6830,11 @@ public final class SnapshotServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -6604,7 +6857,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6664,6 +6917,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -6672,6 +6926,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -6679,7 +6934,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateSnapshotMetadata}
    */
-  public  static final class UpdateSnapshotMetadata extends
+  public static final class UpdateSnapshotMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateSnapshotMetadata)
       UpdateSnapshotMetadataOrBuilder {
@@ -6690,6 +6945,13 @@ public final class SnapshotServiceOuterClass {
     }
     private UpdateSnapshotMetadata() {
       snapshotId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSnapshotMetadata();
     }
 
     @java.lang.Override
@@ -6705,7 +6967,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6723,7 +6984,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6762,7 +7023,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -6781,7 +7044,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -6810,7 +7075,7 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
       unknownFields.writeTo(output);
@@ -6822,7 +7087,7 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6840,11 +7105,10 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotMetadata other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotMetadata) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7024,35 +7288,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7106,6 +7370,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -7125,6 +7390,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -7145,6 +7411,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -7162,6 +7430,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -7175,6 +7444,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7190,7 +7461,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7251,6 +7522,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -7260,6 +7532,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -7267,7 +7540,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteSnapshotRequest}
    */
-  public  static final class DeleteSnapshotRequest extends
+  public static final class DeleteSnapshotRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteSnapshotRequest)
       DeleteSnapshotRequestOrBuilder {
@@ -7278,6 +7551,13 @@ public final class SnapshotServiceOuterClass {
     }
     private DeleteSnapshotRequest() {
       snapshotId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSnapshotRequest();
     }
 
     @java.lang.Override
@@ -7293,7 +7573,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7311,7 +7590,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7351,7 +7630,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -7371,7 +7652,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -7400,7 +7683,7 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
       unknownFields.writeTo(output);
@@ -7412,7 +7695,7 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7430,11 +7713,10 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7614,35 +7896,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7697,6 +7979,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -7717,6 +8000,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -7738,6 +8022,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -7756,6 +8042,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -7770,6 +8057,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7785,7 +8074,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7845,6 +8134,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -7853,6 +8143,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -7860,7 +8151,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteSnapshotMetadata}
    */
-  public  static final class DeleteSnapshotMetadata extends
+  public static final class DeleteSnapshotMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteSnapshotMetadata)
       DeleteSnapshotMetadataOrBuilder {
@@ -7871,6 +8162,13 @@ public final class SnapshotServiceOuterClass {
     }
     private DeleteSnapshotMetadata() {
       snapshotId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSnapshotMetadata();
     }
 
     @java.lang.Override
@@ -7886,7 +8184,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7904,7 +8201,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7943,7 +8240,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -7962,7 +8261,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1;</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -7991,7 +8292,7 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
       unknownFields.writeTo(output);
@@ -8003,7 +8304,7 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8021,11 +8322,10 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotMetadata other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotMetadata) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8205,35 +8505,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8287,6 +8587,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -8306,6 +8607,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -8326,6 +8628,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -8343,6 +8647,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -8356,6 +8661,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1;</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8371,7 +8678,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8431,6 +8738,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -8439,6 +8747,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -8451,6 +8760,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -8461,6 +8771,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -8470,6 +8781,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -8477,7 +8789,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListSnapshotOperationsRequest}
    */
-  public  static final class ListSnapshotOperationsRequest extends
+  public static final class ListSnapshotOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListSnapshotOperationsRequest)
       ListSnapshotOperationsRequestOrBuilder {
@@ -8488,8 +8800,14 @@ public final class SnapshotServiceOuterClass {
     }
     private ListSnapshotOperationsRequest() {
       snapshotId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSnapshotOperationsRequest();
     }
 
     @java.lang.Override
@@ -8505,7 +8823,6 @@ public final class SnapshotServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8534,7 +8851,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8573,7 +8890,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
+    @java.lang.Override
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = snapshotId_;
       if (ref instanceof java.lang.String) {
@@ -8592,7 +8911,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
       java.lang.Object ref = snapshotId_;
@@ -8617,7 +8938,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -8631,7 +8954,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -8651,7 +8976,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -8680,13 +9007,13 @@ public final class SnapshotServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, snapshotId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -8698,14 +9025,14 @@ public final class SnapshotServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSnapshotIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(snapshotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, snapshotId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -8723,15 +9050,14 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getSnapshotId()
-          .equals(other.getSnapshotId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapshotId()
+          .equals(other.getSnapshotId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8922,35 +9248,35 @@ public final class SnapshotServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9011,6 +9337,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The snapshotId.
        */
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = snapshotId_;
@@ -9030,6 +9357,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for snapshotId.
        */
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
@@ -9050,6 +9378,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -9067,6 +9397,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         
@@ -9080,6 +9411,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9102,7 +9435,9 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -9114,6 +9449,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -9129,6 +9466,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -9145,6 +9483,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -9165,6 +9504,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -9186,6 +9526,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -9204,6 +9546,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -9218,6 +9561,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -9233,7 +9578,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9340,6 +9685,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -9351,6 +9697,7 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -9358,7 +9705,7 @@ public final class SnapshotServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListSnapshotOperationsResponse}
    */
-  public  static final class ListSnapshotOperationsResponse extends
+  public static final class ListSnapshotOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListSnapshotOperationsResponse)
       ListSnapshotOperationsResponseOrBuilder {
@@ -9370,6 +9717,13 @@ public final class SnapshotServiceOuterClass {
     private ListSnapshotOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSnapshotOperationsResponse();
     }
 
     @java.lang.Override
@@ -9397,7 +9751,7 @@ public final class SnapshotServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -9412,7 +9766,7 @@ public final class SnapshotServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9426,7 +9780,7 @@ public final class SnapshotServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -9446,7 +9800,6 @@ public final class SnapshotServiceOuterClass {
               yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse.class, yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -9456,6 +9809,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -9466,6 +9820,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -9477,6 +9832,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -9487,6 +9843,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -9497,6 +9854,7 @@ public final class SnapshotServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -9513,7 +9871,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -9535,7 +9895,9 @@ public final class SnapshotServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -9567,7 +9929,7 @@ public final class SnapshotServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -9583,7 +9945,7 @@ public final class SnapshotServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -9601,13 +9963,12 @@ public final class SnapshotServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse other = (yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9792,9 +10153,8 @@ public final class SnapshotServiceOuterClass {
       public yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse buildPartial() {
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse result = new yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -9803,42 +10163,41 @@ public final class SnapshotServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9915,7 +10274,7 @@ public final class SnapshotServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -10216,7 +10575,7 @@ public final class SnapshotServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -10234,6 +10593,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -10256,6 +10616,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -10279,6 +10640,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -10299,6 +10662,7 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -10315,6 +10679,8 @@ public final class SnapshotServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -10330,7 +10696,7 @@ public final class SnapshotServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10529,15 +10895,7 @@ public final class SnapshotServiceOuterClass {
       "loud/go-genproto/yandex/cloud/compute/v1" +
       ";computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -10546,7 +10904,7 @@ public final class SnapshotServiceOuterClass {
           yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_GetSnapshotRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_GetSnapshotRequest_fieldAccessorTable = new

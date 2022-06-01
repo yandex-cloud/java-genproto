@@ -1,19 +1,6 @@
 package yandex.cloud.api.apploadbalancer.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/apploadbalancer/v1/virtual_host_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class VirtualHostServiceGrpc {
 
   private VirtualHostServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class VirtualHostServiceGrpc {
     if ((getGetMethod = VirtualHostServiceGrpc.getGetMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getGetMethod = VirtualHostServiceGrpc.getGetMethod) == null) {
-          VirtualHostServiceGrpc.getGetMethod = getGetMethod = 
+          VirtualHostServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest,
@@ -76,22 +63,21 @@ public final class VirtualHostServiceGrpc {
     if ((getListMethod = VirtualHostServiceGrpc.getListMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getListMethod = VirtualHostServiceGrpc.getListMethod) == null) {
-          VirtualHostServiceGrpc.getListMethod = getListMethod = 
+          VirtualHostServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest, yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest,
@@ -108,22 +94,21 @@ public final class VirtualHostServiceGrpc {
     if ((getCreateMethod = VirtualHostServiceGrpc.getCreateMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getCreateMethod = VirtualHostServiceGrpc.getCreateMethod) == null) {
-          VirtualHostServiceGrpc.getCreateMethod = getCreateMethod = 
+          VirtualHostServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest,
@@ -140,22 +125,21 @@ public final class VirtualHostServiceGrpc {
     if ((getUpdateMethod = VirtualHostServiceGrpc.getUpdateMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getUpdateMethod = VirtualHostServiceGrpc.getUpdateMethod) == null) {
-          VirtualHostServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          VirtualHostServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest,
@@ -172,22 +156,21 @@ public final class VirtualHostServiceGrpc {
     if ((getDeleteMethod = VirtualHostServiceGrpc.getDeleteMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getDeleteMethod = VirtualHostServiceGrpc.getDeleteMethod) == null) {
-          VirtualHostServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          VirtualHostServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest,
@@ -204,22 +187,21 @@ public final class VirtualHostServiceGrpc {
     if ((getRemoveRouteMethod = VirtualHostServiceGrpc.getRemoveRouteMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getRemoveRouteMethod = VirtualHostServiceGrpc.getRemoveRouteMethod) == null) {
-          VirtualHostServiceGrpc.getRemoveRouteMethod = getRemoveRouteMethod = 
+          VirtualHostServiceGrpc.getRemoveRouteMethod = getRemoveRouteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "RemoveRoute"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveRoute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("RemoveRoute"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("RemoveRoute"))
+              .build();
         }
-     }
-     return getRemoveRouteMethod;
+      }
+    }
+    return getRemoveRouteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest,
@@ -236,29 +218,35 @@ public final class VirtualHostServiceGrpc {
     if ((getUpdateRouteMethod = VirtualHostServiceGrpc.getUpdateRouteMethod) == null) {
       synchronized (VirtualHostServiceGrpc.class) {
         if ((getUpdateRouteMethod = VirtualHostServiceGrpc.getUpdateRouteMethod) == null) {
-          VirtualHostServiceGrpc.getUpdateRouteMethod = getUpdateRouteMethod = 
+          VirtualHostServiceGrpc.getUpdateRouteMethod = getUpdateRouteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.VirtualHostService", "UpdateRoute"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRoute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("UpdateRoute"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VirtualHostServiceMethodDescriptorSupplier("UpdateRoute"))
+              .build();
         }
-     }
-     return getUpdateRouteMethod;
+      }
+    }
+    return getUpdateRouteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static VirtualHostServiceStub newStub(io.grpc.Channel channel) {
-    return new VirtualHostServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VirtualHostServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VirtualHostServiceStub>() {
+        @java.lang.Override
+        public VirtualHostServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VirtualHostServiceStub(channel, callOptions);
+        }
+      };
+    return VirtualHostServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class VirtualHostServiceGrpc {
    */
   public static VirtualHostServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new VirtualHostServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VirtualHostServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VirtualHostServiceBlockingStub>() {
+        @java.lang.Override
+        public VirtualHostServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VirtualHostServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return VirtualHostServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class VirtualHostServiceGrpc {
    */
   public static VirtualHostServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new VirtualHostServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VirtualHostServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VirtualHostServiceFutureStub>() {
+        @java.lang.Override
+        public VirtualHostServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VirtualHostServiceFutureStub(channel, callOptions);
+        }
+      };
+    return VirtualHostServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -312,7 +314,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -322,7 +324,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -332,7 +334,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -342,7 +344,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void removeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveRouteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveRouteMethod(), responseObserver);
     }
 
     /**
@@ -352,56 +354,56 @@ public final class VirtualHostServiceGrpc {
      */
     public void updateRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateRouteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRouteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest,
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest,
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getRemoveRouteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_ROUTE)))
           .addMethod(
             getUpdateRouteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -415,19 +417,15 @@ public final class VirtualHostServiceGrpc {
    * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
-  public static final class VirtualHostServiceStub extends io.grpc.stub.AbstractStub<VirtualHostServiceStub> {
-    private VirtualHostServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VirtualHostServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VirtualHostServiceStub extends io.grpc.stub.AbstractAsyncStub<VirtualHostServiceStub> {
+    private VirtualHostServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VirtualHostServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VirtualHostServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VirtualHostServiceStub(channel, callOptions);
     }
 
@@ -439,7 +437,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -450,7 +448,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -461,7 +459,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -472,7 +470,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -483,7 +481,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -494,7 +492,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void removeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveRouteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -505,7 +503,7 @@ public final class VirtualHostServiceGrpc {
      */
     public void updateRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateRouteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -515,19 +513,15 @@ public final class VirtualHostServiceGrpc {
    * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
-  public static final class VirtualHostServiceBlockingStub extends io.grpc.stub.AbstractStub<VirtualHostServiceBlockingStub> {
-    private VirtualHostServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VirtualHostServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VirtualHostServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VirtualHostServiceBlockingStub> {
+    private VirtualHostServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VirtualHostServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VirtualHostServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VirtualHostServiceBlockingStub(channel, callOptions);
     }
 
@@ -538,7 +532,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost get(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -548,7 +542,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse list(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -558,7 +552,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -568,7 +562,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -578,7 +572,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -588,7 +582,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveRouteMethod(), getCallOptions(), request);
     }
 
@@ -598,7 +592,7 @@ public final class VirtualHostServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateRouteMethod(), getCallOptions(), request);
     }
   }
@@ -608,19 +602,15 @@ public final class VirtualHostServiceGrpc {
    * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
-  public static final class VirtualHostServiceFutureStub extends io.grpc.stub.AbstractStub<VirtualHostServiceFutureStub> {
-    private VirtualHostServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VirtualHostServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VirtualHostServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VirtualHostServiceFutureStub> {
+    private VirtualHostServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VirtualHostServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VirtualHostServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VirtualHostServiceFutureStub(channel, callOptions);
     }
 
@@ -632,7 +622,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> get(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -643,7 +633,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse> list(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -654,7 +644,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -665,7 +655,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -676,7 +666,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.DeleteVirtualHostRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -687,7 +677,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeRoute(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveRouteMethod(), getCallOptions()), request);
     }
 
@@ -698,7 +688,7 @@ public final class VirtualHostServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRoute(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateRouteMethod(), getCallOptions()), request);
     }
   }

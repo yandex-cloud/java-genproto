@@ -1,19 +1,6 @@
 package yandex.cloud.api.ai.tts.v3;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ai/tts/v3/tts_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SynthesizerGrpc {
 
   private SynthesizerGrpc() {}
@@ -44,29 +32,35 @@ public final class SynthesizerGrpc {
     if ((getUtteranceSynthesisMethod = SynthesizerGrpc.getUtteranceSynthesisMethod) == null) {
       synchronized (SynthesizerGrpc.class) {
         if ((getUtteranceSynthesisMethod = SynthesizerGrpc.getUtteranceSynthesisMethod) == null) {
-          SynthesizerGrpc.getUtteranceSynthesisMethod = getUtteranceSynthesisMethod = 
+          SynthesizerGrpc.getUtteranceSynthesisMethod = getUtteranceSynthesisMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest, yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "speechkit.tts.v3.Synthesizer", "UtteranceSynthesis"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UtteranceSynthesis"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SynthesizerMethodDescriptorSupplier("UtteranceSynthesis"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SynthesizerMethodDescriptorSupplier("UtteranceSynthesis"))
+              .build();
         }
-     }
-     return getUtteranceSynthesisMethod;
+      }
+    }
+    return getUtteranceSynthesisMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SynthesizerStub newStub(io.grpc.Channel channel) {
-    return new SynthesizerStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SynthesizerStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SynthesizerStub>() {
+        @java.lang.Override
+        public SynthesizerStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SynthesizerStub(channel, callOptions);
+        }
+      };
+    return SynthesizerStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class SynthesizerGrpc {
    */
   public static SynthesizerBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SynthesizerBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SynthesizerBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SynthesizerBlockingStub>() {
+        @java.lang.Override
+        public SynthesizerBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SynthesizerBlockingStub(channel, callOptions);
+        }
+      };
+    return SynthesizerBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class SynthesizerGrpc {
    */
   public static SynthesizerFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SynthesizerFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SynthesizerFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SynthesizerFutureStub>() {
+        @java.lang.Override
+        public SynthesizerFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SynthesizerFutureStub(channel, callOptions);
+        }
+      };
+    return SynthesizerFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class SynthesizerGrpc {
      */
     public void utteranceSynthesis(yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUtteranceSynthesisMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUtteranceSynthesisMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getUtteranceSynthesisMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest,
                 yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse>(
@@ -120,19 +128,15 @@ public final class SynthesizerGrpc {
    * A set of methods for voice synthesis.
    * </pre>
    */
-  public static final class SynthesizerStub extends io.grpc.stub.AbstractStub<SynthesizerStub> {
-    private SynthesizerStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SynthesizerStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SynthesizerStub extends io.grpc.stub.AbstractAsyncStub<SynthesizerStub> {
+    private SynthesizerStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SynthesizerStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SynthesizerStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SynthesizerStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class SynthesizerGrpc {
      */
     public void utteranceSynthesis(yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getUtteranceSynthesisMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class SynthesizerGrpc {
    * A set of methods for voice synthesis.
    * </pre>
    */
-  public static final class SynthesizerBlockingStub extends io.grpc.stub.AbstractStub<SynthesizerBlockingStub> {
-    private SynthesizerBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SynthesizerBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SynthesizerBlockingStub extends io.grpc.stub.AbstractBlockingStub<SynthesizerBlockingStub> {
+    private SynthesizerBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SynthesizerBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SynthesizerBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SynthesizerBlockingStub(channel, callOptions);
     }
 
@@ -176,7 +176,7 @@ public final class SynthesizerGrpc {
      */
     public java.util.Iterator<yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse> utteranceSynthesis(
         yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getUtteranceSynthesisMethod(), getCallOptions(), request);
     }
   }
@@ -186,19 +186,15 @@ public final class SynthesizerGrpc {
    * A set of methods for voice synthesis.
    * </pre>
    */
-  public static final class SynthesizerFutureStub extends io.grpc.stub.AbstractStub<SynthesizerFutureStub> {
-    private SynthesizerFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SynthesizerFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SynthesizerFutureStub extends io.grpc.stub.AbstractFutureStub<SynthesizerFutureStub> {
+    private SynthesizerFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SynthesizerFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SynthesizerFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SynthesizerFutureStub(channel, callOptions);
     }
   }

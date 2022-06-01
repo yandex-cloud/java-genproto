@@ -1,19 +1,6 @@
 package yandex.cloud.api.iam.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iam/v1/role_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RoleServiceGrpc {
 
   private RoleServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class RoleServiceGrpc {
     if ((getGetMethod = RoleServiceGrpc.getGetMethod) == null) {
       synchronized (RoleServiceGrpc.class) {
         if ((getGetMethod = RoleServiceGrpc.getGetMethod) == null) {
-          RoleServiceGrpc.getGetMethod = getGetMethod = 
+          RoleServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest, yandex.cloud.api.iam.v1.RoleOuterClass.Role>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.RoleService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.RoleOuterClass.Role.getDefaultInstance()))
-                  .setSchemaDescriptor(new RoleServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RoleServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest,
@@ -76,29 +63,35 @@ public final class RoleServiceGrpc {
     if ((getListMethod = RoleServiceGrpc.getListMethod) == null) {
       synchronized (RoleServiceGrpc.class) {
         if ((getListMethod = RoleServiceGrpc.getListMethod) == null) {
-          RoleServiceGrpc.getListMethod = getListMethod = 
+          RoleServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest, yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.RoleService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RoleServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RoleServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RoleServiceStub newStub(io.grpc.Channel channel) {
-    return new RoleServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleServiceStub>() {
+        @java.lang.Override
+        public RoleServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleServiceStub(channel, callOptions);
+        }
+      };
+    return RoleServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class RoleServiceGrpc {
    */
   public static RoleServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RoleServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleServiceBlockingStub>() {
+        @java.lang.Override
+        public RoleServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RoleServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class RoleServiceGrpc {
    */
   public static RoleServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RoleServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleServiceFutureStub>() {
+        @java.lang.Override
+        public RoleServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RoleServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -132,7 +139,7 @@ public final class RoleServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.RoleOuterClass.Role> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -142,21 +149,21 @@ public final class RoleServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest,
                 yandex.cloud.api.iam.v1.RoleOuterClass.Role>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest,
                 yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse>(
@@ -170,19 +177,15 @@ public final class RoleServiceGrpc {
    * A set of methods for managing Role resources.
    * </pre>
    */
-  public static final class RoleServiceStub extends io.grpc.stub.AbstractStub<RoleServiceStub> {
-    private RoleServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleServiceStub extends io.grpc.stub.AbstractAsyncStub<RoleServiceStub> {
+    private RoleServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleServiceStub(channel, callOptions);
     }
 
@@ -194,7 +197,7 @@ public final class RoleServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.RoleOuterClass.Role> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -205,7 +208,7 @@ public final class RoleServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -215,19 +218,15 @@ public final class RoleServiceGrpc {
    * A set of methods for managing Role resources.
    * </pre>
    */
-  public static final class RoleServiceBlockingStub extends io.grpc.stub.AbstractStub<RoleServiceBlockingStub> {
-    private RoleServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RoleServiceBlockingStub> {
+    private RoleServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleServiceBlockingStub(channel, callOptions);
     }
 
@@ -238,7 +237,7 @@ public final class RoleServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.RoleOuterClass.Role get(yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -248,7 +247,7 @@ public final class RoleServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse list(yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -258,19 +257,15 @@ public final class RoleServiceGrpc {
    * A set of methods for managing Role resources.
    * </pre>
    */
-  public static final class RoleServiceFutureStub extends io.grpc.stub.AbstractStub<RoleServiceFutureStub> {
-    private RoleServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RoleServiceFutureStub> {
+    private RoleServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleServiceFutureStub(channel, callOptions);
     }
 
@@ -282,7 +277,7 @@ public final class RoleServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.RoleOuterClass.Role> get(
         yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -293,7 +288,7 @@ public final class RoleServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesResponse> list(
         yandex.cloud.api.iam.v1.RoleServiceOuterClass.ListRolesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

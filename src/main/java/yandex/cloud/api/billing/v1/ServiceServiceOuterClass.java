@@ -25,6 +25,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -34,6 +35,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -41,7 +43,7 @@ public final class ServiceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.GetServiceRequest}
    */
-  public  static final class GetServiceRequest extends
+  public static final class GetServiceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.GetServiceRequest)
       GetServiceRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class ServiceServiceOuterClass {
     }
     private GetServiceRequest() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetServiceRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class ServiceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class ServiceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -174,7 +186,7 @@ public final class ServiceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class ServiceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class ServiceServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.ServiceServiceOuterClass.GetServiceRequest other = (yandex.cloud.api.billing.v1.ServiceServiceOuterClass.GetServiceRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class ServiceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -491,6 +503,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -512,6 +525,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -544,6 +560,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class ServiceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -623,6 +641,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -635,6 +654,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -648,6 +668,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -659,6 +680,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -669,6 +691,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -676,7 +699,7 @@ public final class ServiceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.ListServicesRequest}
    */
-  public  static final class ListServicesRequest extends
+  public static final class ListServicesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ListServicesRequest)
       ListServicesRequestOrBuilder {
@@ -687,8 +710,14 @@ public final class ServiceServiceOuterClass {
     }
     private ListServicesRequest() {
       filter_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListServicesRequest();
     }
 
     @java.lang.Override
@@ -704,7 +733,6 @@ public final class ServiceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -733,7 +761,7 @@ public final class ServiceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -776,7 +804,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -799,7 +829,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -825,7 +857,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -840,7 +874,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -861,7 +897,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -890,13 +928,13 @@ public final class ServiceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filter_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -908,14 +946,14 @@ public final class ServiceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filter_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -933,15 +971,14 @@ public final class ServiceServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesRequest other = (yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesRequest) obj;
 
-      boolean result = true;
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1132,35 +1169,35 @@ public final class ServiceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1225,6 +1262,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1248,6 +1286,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1272,6 +1311,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1293,6 +1334,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1310,6 +1352,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1333,7 +1377,9 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1346,6 +1392,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1362,6 +1410,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1379,6 +1428,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1400,6 +1450,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1422,6 +1473,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1441,6 +1494,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1456,6 +1510,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1471,7 +1527,7 @@ public final class ServiceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1580,6 +1636,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1593,6 +1650,7 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1600,7 +1658,7 @@ public final class ServiceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.billing.v1.ListServicesResponse}
    */
-  public  static final class ListServicesResponse extends
+  public static final class ListServicesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.ListServicesResponse)
       ListServicesResponseOrBuilder {
@@ -1612,6 +1670,13 @@ public final class ServiceServiceOuterClass {
     private ListServicesResponse() {
       services_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListServicesResponse();
     }
 
     @java.lang.Override
@@ -1639,7 +1704,7 @@ public final class ServiceServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 services_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.ServiceOuterClass.Service>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1654,7 +1719,7 @@ public final class ServiceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1668,7 +1733,7 @@ public final class ServiceServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           services_ = java.util.Collections.unmodifiableList(services_);
         }
         this.unknownFields = unknownFields.build();
@@ -1688,7 +1753,6 @@ public final class ServiceServiceOuterClass {
               yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse.class, yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SERVICES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.billing.v1.ServiceOuterClass.Service> services_;
     /**
@@ -1698,6 +1762,7 @@ public final class ServiceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Service services = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.ServiceOuterClass.Service> getServicesList() {
       return services_;
     }
@@ -1708,6 +1773,7 @@ public final class ServiceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Service services = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.ServiceOuterClass.ServiceOrBuilder> 
         getServicesOrBuilderList() {
       return services_;
@@ -1719,6 +1785,7 @@ public final class ServiceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Service services = 1;</code>
      */
+    @java.lang.Override
     public int getServicesCount() {
       return services_.size();
     }
@@ -1729,6 +1796,7 @@ public final class ServiceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Service services = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.ServiceOuterClass.Service getServices(int index) {
       return services_.get(index);
     }
@@ -1739,6 +1807,7 @@ public final class ServiceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Service services = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.ServiceOuterClass.ServiceOrBuilder getServicesOrBuilder(
         int index) {
       return services_.get(index);
@@ -1757,7 +1826,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1781,7 +1852,9 @@ public final class ServiceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1813,7 +1886,7 @@ public final class ServiceServiceOuterClass {
       for (int i = 0; i < services_.size(); i++) {
         output.writeMessage(1, services_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1829,7 +1902,7 @@ public final class ServiceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, services_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1847,13 +1920,12 @@ public final class ServiceServiceOuterClass {
       }
       yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse other = (yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse) obj;
 
-      boolean result = true;
-      result = result && getServicesList()
-          .equals(other.getServicesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getServicesList()
+          .equals(other.getServicesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2038,9 +2110,8 @@ public final class ServiceServiceOuterClass {
       public yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse buildPartial() {
         yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse result = new yandex.cloud.api.billing.v1.ServiceServiceOuterClass.ListServicesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (servicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             services_ = java.util.Collections.unmodifiableList(services_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2049,42 +2120,41 @@ public final class ServiceServiceOuterClass {
           result.services_ = servicesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2161,7 +2231,7 @@ public final class ServiceServiceOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.ServiceOuterClass.Service> services_ =
         java.util.Collections.emptyList();
       private void ensureServicesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           services_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.ServiceOuterClass.Service>(services_);
           bitField0_ |= 0x00000001;
          }
@@ -2462,7 +2532,7 @@ public final class ServiceServiceOuterClass {
           servicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.ServiceOuterClass.Service, yandex.cloud.api.billing.v1.ServiceOuterClass.Service.Builder, yandex.cloud.api.billing.v1.ServiceOuterClass.ServiceOrBuilder>(
                   services_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           services_ = null;
@@ -2482,6 +2552,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2506,6 +2577,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2531,6 +2603,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2553,6 +2627,7 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2571,6 +2646,8 @@ public final class ServiceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2586,7 +2663,7 @@ public final class ServiceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2682,21 +2759,13 @@ public final class ServiceServiceOuterClass {
       "/go-genproto/yandex/cloud/billing/v1;bil" +
       "lingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.billing.v1.ServiceOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_GetServiceRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_GetServiceRequest_fieldAccessorTable = new

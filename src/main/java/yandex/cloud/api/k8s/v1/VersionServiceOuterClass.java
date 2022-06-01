@@ -21,7 +21,7 @@ public final class VersionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListVersionsRequest}
    */
-  public  static final class ListVersionsRequest extends
+  public static final class ListVersionsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListVersionsRequest)
       ListVersionsRequestOrBuilder {
@@ -31,6 +31,13 @@ public final class VersionServiceOuterClass {
       super(builder);
     }
     private ListVersionsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVersionsRequest();
     }
 
     @java.lang.Override
@@ -57,7 +64,7 @@ public final class VersionServiceOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -126,9 +133,8 @@ public final class VersionServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest other = (yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsRequest) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -303,35 +309,35 @@ public final class VersionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -376,7 +382,7 @@ public final class VersionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -477,7 +483,7 @@ public final class VersionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListVersionsResponse}
    */
-  public  static final class ListVersionsResponse extends
+  public static final class ListVersionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListVersionsResponse)
       ListVersionsResponseOrBuilder {
@@ -488,6 +494,13 @@ public final class VersionServiceOuterClass {
     }
     private ListVersionsResponse() {
       availableVersions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVersionsResponse();
     }
 
     @java.lang.Override
@@ -515,7 +528,7 @@ public final class VersionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 availableVersions_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -524,7 +537,7 @@ public final class VersionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -538,7 +551,7 @@ public final class VersionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           availableVersions_ = java.util.Collections.unmodifiableList(availableVersions_);
         }
         this.unknownFields = unknownFields.build();
@@ -567,6 +580,7 @@ public final class VersionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions> getAvailableVersionsList() {
       return availableVersions_;
     }
@@ -577,6 +591,7 @@ public final class VersionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder> 
         getAvailableVersionsOrBuilderList() {
       return availableVersions_;
@@ -588,6 +603,7 @@ public final class VersionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
+    @java.lang.Override
     public int getAvailableVersionsCount() {
       return availableVersions_.size();
     }
@@ -598,6 +614,7 @@ public final class VersionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions getAvailableVersions(int index) {
       return availableVersions_.get(index);
     }
@@ -608,6 +625,7 @@ public final class VersionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder getAvailableVersionsOrBuilder(
         int index) {
       return availableVersions_.get(index);
@@ -658,11 +676,10 @@ public final class VersionServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse other = (yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse) obj;
 
-      boolean result = true;
-      result = result && getAvailableVersionsList()
-          .equals(other.getAvailableVersionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAvailableVersionsList()
+          .equals(other.getAvailableVersionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -844,7 +861,7 @@ public final class VersionServiceOuterClass {
         yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse result = new yandex.cloud.api.k8s.v1.VersionServiceOuterClass.ListVersionsResponse(this);
         int from_bitField0_ = bitField0_;
         if (availableVersionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             availableVersions_ = java.util.Collections.unmodifiableList(availableVersions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -858,35 +875,35 @@ public final class VersionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -959,7 +976,7 @@ public final class VersionServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions> availableVersions_ =
         java.util.Collections.emptyList();
       private void ensureAvailableVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           availableVersions_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions>(availableVersions_);
           bitField0_ |= 0x00000001;
          }
@@ -1260,7 +1277,7 @@ public final class VersionServiceOuterClass {
           availableVersionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder>(
                   availableVersions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           availableVersions_ = null;
@@ -1270,7 +1287,7 @@ public final class VersionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1330,6 +1347,7 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+     * @return The enum numeric value on the wire for releaseChannel.
      */
     int getReleaseChannelValue();
     /**
@@ -1338,6 +1356,7 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+     * @return The releaseChannel.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
 
@@ -1347,6 +1366,7 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @return A list containing the versions.
      */
     java.util.List<java.lang.String>
         getVersionsList();
@@ -1356,6 +1376,7 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @return The count of versions.
      */
     int getVersionsCount();
     /**
@@ -1364,6 +1385,8 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @param index The index of the element to return.
+     * @return The versions at the given index.
      */
     java.lang.String getVersions(int index);
     /**
@@ -1372,6 +1395,8 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the versions at the given index.
      */
     com.google.protobuf.ByteString
         getVersionsBytes(int index);
@@ -1379,7 +1404,7 @@ public final class VersionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.AvailableVersions}
    */
-  public  static final class AvailableVersions extends
+  public static final class AvailableVersions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.AvailableVersions)
       AvailableVersionsOrBuilder {
@@ -1391,6 +1416,13 @@ public final class VersionServiceOuterClass {
     private AvailableVersions() {
       releaseChannel_ = 0;
       versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AvailableVersions();
     }
 
     @java.lang.Override
@@ -1425,15 +1457,15 @@ public final class VersionServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 versions_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               versions_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1447,7 +1479,7 @@ public final class VersionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           versions_ = versions_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -1467,7 +1499,6 @@ public final class VersionServiceOuterClass {
               yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.class, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RELEASE_CHANNEL_FIELD_NUMBER = 1;
     private int releaseChannel_;
     /**
@@ -1476,8 +1507,9 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+     * @return The enum numeric value on the wire for releaseChannel.
      */
-    public int getReleaseChannelValue() {
+    @java.lang.Override public int getReleaseChannelValue() {
       return releaseChannel_;
     }
     /**
@@ -1486,8 +1518,9 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+     * @return The releaseChannel.
      */
-    public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
+    @java.lang.Override public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel result = yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.valueOf(releaseChannel_);
       return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
@@ -1501,6 +1534,7 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @return A list containing the versions.
      */
     public com.google.protobuf.ProtocolStringList
         getVersionsList() {
@@ -1512,6 +1546,7 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @return The count of versions.
      */
     public int getVersionsCount() {
       return versions_.size();
@@ -1522,6 +1557,8 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @param index The index of the element to return.
+     * @return The versions at the given index.
      */
     public java.lang.String getVersions(int index) {
       return versions_.get(index);
@@ -1532,6 +1569,8 @@ public final class VersionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string versions = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the versions at the given index.
      */
     public com.google.protobuf.ByteString
         getVersionsBytes(int index) {
@@ -1594,12 +1633,11 @@ public final class VersionServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions other = (yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions) obj;
 
-      boolean result = true;
-      result = result && releaseChannel_ == other.releaseChannel_;
-      result = result && getVersionsList()
-          .equals(other.getVersionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (releaseChannel_ != other.releaseChannel_) return false;
+      if (!getVersionsList()
+          .equals(other.getVersionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1751,7 +1789,7 @@ public final class VersionServiceOuterClass {
         releaseChannel_ = 0;
 
         versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1779,49 +1817,47 @@ public final class VersionServiceOuterClass {
       public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions buildPartial() {
         yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions result = new yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.releaseChannel_ = releaseChannel_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           versions_ = versions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.versions_ = versions_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1841,7 +1877,7 @@ public final class VersionServiceOuterClass {
         if (!other.versions_.isEmpty()) {
           if (versions_.isEmpty()) {
             versions_ = other.versions_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureVersionsIsMutable();
             versions_.addAll(other.versions_);
@@ -1885,8 +1921,9 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+       * @return The enum numeric value on the wire for releaseChannel.
        */
-      public int getReleaseChannelValue() {
+      @java.lang.Override public int getReleaseChannelValue() {
         return releaseChannel_;
       }
       /**
@@ -1895,8 +1932,11 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+       * @param value The enum numeric value on the wire for releaseChannel to set.
+       * @return This builder for chaining.
        */
       public Builder setReleaseChannelValue(int value) {
+        
         releaseChannel_ = value;
         onChanged();
         return this;
@@ -1907,7 +1947,9 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+       * @return The releaseChannel.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel result = yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.valueOf(releaseChannel_);
@@ -1919,6 +1961,8 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+       * @param value The releaseChannel to set.
+       * @return This builder for chaining.
        */
       public Builder setReleaseChannel(yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel value) {
         if (value == null) {
@@ -1935,6 +1979,7 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReleaseChannel() {
         
@@ -1945,9 +1990,9 @@ public final class VersionServiceOuterClass {
 
       private com.google.protobuf.LazyStringList versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           versions_ = new com.google.protobuf.LazyStringArrayList(versions_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -1956,6 +2001,7 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @return A list containing the versions.
        */
       public com.google.protobuf.ProtocolStringList
           getVersionsList() {
@@ -1967,6 +2013,7 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @return The count of versions.
        */
       public int getVersionsCount() {
         return versions_.size();
@@ -1977,6 +2024,8 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @param index The index of the element to return.
+       * @return The versions at the given index.
        */
       public java.lang.String getVersions(int index) {
         return versions_.get(index);
@@ -1987,6 +2036,8 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the versions at the given index.
        */
       public com.google.protobuf.ByteString
           getVersionsBytes(int index) {
@@ -1998,6 +2049,9 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The versions to set.
+       * @return This builder for chaining.
        */
       public Builder setVersions(
           int index, java.lang.String value) {
@@ -2015,6 +2069,8 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @param value The versions to add.
+       * @return This builder for chaining.
        */
       public Builder addVersions(
           java.lang.String value) {
@@ -2032,6 +2088,8 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @param values The versions to add.
+       * @return This builder for chaining.
        */
       public Builder addAllVersions(
           java.lang.Iterable<java.lang.String> values) {
@@ -2047,10 +2105,11 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersions() {
         versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2060,6 +2119,8 @@ public final class VersionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string versions = 2;</code>
+       * @param value The bytes of the versions to add.
+       * @return This builder for chaining.
        */
       public Builder addVersionsBytes(
           com.google.protobuf.ByteString value) {
@@ -2075,7 +2136,7 @@ public final class VersionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2165,20 +2226,12 @@ public final class VersionServiceOuterClass {
       "k8s.v1Z;github.com/yandex-cloud/go-genpr" +
       "oto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.k8s.v1.ClusterOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_k8s_v1_ListVersionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_ListVersionsRequest_fieldAccessorTable = new

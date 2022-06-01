@@ -77,6 +77,8 @@ public final class SkuOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -84,6 +86,10 @@ public final class SkuOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static PricingVersionType forNumber(int value) {
       switch (value) {
         case 0: return PRICING_VERSION_TYPE_UNSPECIFIED;
@@ -107,6 +113,10 @@ public final class SkuOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -151,6 +161,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -159,6 +170,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -169,6 +181,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -177,6 +190,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -187,6 +201,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -195,6 +210,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -205,6 +221,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string service_id = 4;</code>
+     * @return The serviceId.
      */
     java.lang.String getServiceId();
     /**
@@ -213,6 +230,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string service_id = 4;</code>
+     * @return The bytes for serviceId.
      */
     com.google.protobuf.ByteString
         getServiceIdBytes();
@@ -223,6 +241,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string pricing_unit = 5;</code>
+     * @return The pricingUnit.
      */
     java.lang.String getPricingUnit();
     /**
@@ -231,6 +250,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string pricing_unit = 5;</code>
+     * @return The bytes for pricingUnit.
      */
     com.google.protobuf.ByteString
         getPricingUnitBytes();
@@ -286,7 +306,7 @@ public final class SkuOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.Sku}
    */
-  public  static final class Sku extends
+  public static final class Sku extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.Sku)
       SkuOrBuilder {
@@ -302,6 +322,13 @@ public final class SkuOuterClass {
       serviceId_ = "";
       pricingUnit_ = "";
       pricingVersions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Sku();
     }
 
     @java.lang.Override
@@ -359,16 +386,16 @@ public final class SkuOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 pricingVersions_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               pricingVersions_.add(
                   input.readMessage(yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -382,7 +409,7 @@ public final class SkuOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           pricingVersions_ = java.util.Collections.unmodifiableList(pricingVersions_);
         }
         this.unknownFields = unknownFields.build();
@@ -402,7 +429,6 @@ public final class SkuOuterClass {
               yandex.cloud.api.billing.v1.SkuOuterClass.Sku.class, yandex.cloud.api.billing.v1.SkuOuterClass.Sku.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -411,7 +437,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -430,7 +458,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -453,7 +483,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -472,7 +504,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -495,7 +529,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -514,7 +550,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -537,7 +575,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string service_id = 4;</code>
+     * @return The serviceId.
      */
+    @java.lang.Override
     public java.lang.String getServiceId() {
       java.lang.Object ref = serviceId_;
       if (ref instanceof java.lang.String) {
@@ -556,7 +596,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string service_id = 4;</code>
+     * @return The bytes for serviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceIdBytes() {
       java.lang.Object ref = serviceId_;
@@ -579,7 +621,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string pricing_unit = 5;</code>
+     * @return The pricingUnit.
      */
+    @java.lang.Override
     public java.lang.String getPricingUnit() {
       java.lang.Object ref = pricingUnit_;
       if (ref instanceof java.lang.String) {
@@ -598,7 +642,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string pricing_unit = 5;</code>
+     * @return The bytes for pricingUnit.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPricingUnitBytes() {
       java.lang.Object ref = pricingUnit_;
@@ -622,6 +668,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingVersion pricing_versions = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion> getPricingVersionsList() {
       return pricingVersions_;
     }
@@ -632,6 +679,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingVersion pricing_versions = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionOrBuilder> 
         getPricingVersionsOrBuilderList() {
       return pricingVersions_;
@@ -643,6 +691,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingVersion pricing_versions = 6;</code>
      */
+    @java.lang.Override
     public int getPricingVersionsCount() {
       return pricingVersions_.size();
     }
@@ -653,6 +702,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingVersion pricing_versions = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion getPricingVersions(int index) {
       return pricingVersions_.get(index);
     }
@@ -663,6 +713,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingVersion pricing_versions = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionOrBuilder getPricingVersionsOrBuilder(
         int index) {
       return pricingVersions_.get(index);
@@ -682,19 +733,19 @@ public final class SkuOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
-      if (!getServiceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceId_);
       }
-      if (!getPricingUnitBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pricingUnit_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pricingUnit_);
       }
       for (int i = 0; i < pricingVersions_.size(); i++) {
@@ -709,19 +760,19 @@ public final class SkuOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
-      if (!getServiceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceId_);
       }
-      if (!getPricingUnitBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pricingUnit_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pricingUnit_);
       }
       for (int i = 0; i < pricingVersions_.size(); i++) {
@@ -743,21 +794,20 @@ public final class SkuOuterClass {
       }
       yandex.cloud.api.billing.v1.SkuOuterClass.Sku other = (yandex.cloud.api.billing.v1.SkuOuterClass.Sku) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getServiceId()
-          .equals(other.getServiceId());
-      result = result && getPricingUnit()
-          .equals(other.getPricingUnit());
-      result = result && getPricingVersionsList()
-          .equals(other.getPricingVersionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getServiceId()
+          .equals(other.getServiceId())) return false;
+      if (!getPricingUnit()
+          .equals(other.getPricingUnit())) return false;
+      if (!getPricingVersionsList()
+          .equals(other.getPricingVersionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -931,7 +981,7 @@ public final class SkuOuterClass {
 
         if (pricingVersionsBuilder_ == null) {
           pricingVersions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           pricingVersionsBuilder_.clear();
         }
@@ -962,57 +1012,55 @@ public final class SkuOuterClass {
       public yandex.cloud.api.billing.v1.SkuOuterClass.Sku buildPartial() {
         yandex.cloud.api.billing.v1.SkuOuterClass.Sku result = new yandex.cloud.api.billing.v1.SkuOuterClass.Sku(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.name_ = name_;
         result.description_ = description_;
         result.serviceId_ = serviceId_;
         result.pricingUnit_ = pricingUnit_;
         if (pricingVersionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             pricingVersions_ = java.util.Collections.unmodifiableList(pricingVersions_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.pricingVersions_ = pricingVersions_;
         } else {
           result.pricingVersions_ = pricingVersionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1050,7 +1098,7 @@ public final class SkuOuterClass {
           if (!other.pricingVersions_.isEmpty()) {
             if (pricingVersions_.isEmpty()) {
               pricingVersions_ = other.pricingVersions_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensurePricingVersionsIsMutable();
               pricingVersions_.addAll(other.pricingVersions_);
@@ -1063,7 +1111,7 @@ public final class SkuOuterClass {
               pricingVersionsBuilder_.dispose();
               pricingVersionsBuilder_ = null;
               pricingVersions_ = other.pricingVersions_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               pricingVersionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPricingVersionsFieldBuilder() : null;
@@ -1109,6 +1157,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1128,6 +1177,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1148,6 +1198,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1165,6 +1217,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1178,6 +1231,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1198,6 +1253,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1217,6 +1273,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1237,6 +1294,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1254,6 +1313,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1267,6 +1327,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1287,6 +1349,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1306,6 +1369,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1326,6 +1390,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1343,6 +1409,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1356,6 +1423,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1376,6 +1445,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string service_id = 4;</code>
+       * @return The serviceId.
        */
       public java.lang.String getServiceId() {
         java.lang.Object ref = serviceId_;
@@ -1395,6 +1465,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string service_id = 4;</code>
+       * @return The bytes for serviceId.
        */
       public com.google.protobuf.ByteString
           getServiceIdBytes() {
@@ -1415,6 +1486,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string service_id = 4;</code>
+       * @param value The serviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceId(
           java.lang.String value) {
@@ -1432,6 +1505,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string service_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceId() {
         
@@ -1445,6 +1519,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string service_id = 4;</code>
+       * @param value The bytes for serviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1465,6 +1541,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string pricing_unit = 5;</code>
+       * @return The pricingUnit.
        */
       public java.lang.String getPricingUnit() {
         java.lang.Object ref = pricingUnit_;
@@ -1484,6 +1561,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string pricing_unit = 5;</code>
+       * @return The bytes for pricingUnit.
        */
       public com.google.protobuf.ByteString
           getPricingUnitBytes() {
@@ -1504,6 +1582,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string pricing_unit = 5;</code>
+       * @param value The pricingUnit to set.
+       * @return This builder for chaining.
        */
       public Builder setPricingUnit(
           java.lang.String value) {
@@ -1521,6 +1601,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string pricing_unit = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPricingUnit() {
         
@@ -1534,6 +1615,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string pricing_unit = 5;</code>
+       * @param value The bytes for pricingUnit to set.
+       * @return This builder for chaining.
        */
       public Builder setPricingUnitBytes(
           com.google.protobuf.ByteString value) {
@@ -1550,9 +1633,9 @@ public final class SkuOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion> pricingVersions_ =
         java.util.Collections.emptyList();
       private void ensurePricingVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           pricingVersions_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion>(pricingVersions_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1746,7 +1829,7 @@ public final class SkuOuterClass {
       public Builder clearPricingVersions() {
         if (pricingVersionsBuilder_ == null) {
           pricingVersions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           pricingVersionsBuilder_.clear();
@@ -1851,7 +1934,7 @@ public final class SkuOuterClass {
           pricingVersionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion, yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion.Builder, yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionOrBuilder>(
                   pricingVersions_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           pricingVersions_ = null;
@@ -1861,7 +1944,7 @@ public final class SkuOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1921,6 +2004,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -1929,6 +2013,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType getType();
 
@@ -1939,6 +2024,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 2;</code>
+     * @return Whether the effectiveTime field is set.
      */
     boolean hasEffectiveTime();
     /**
@@ -1948,6 +2034,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 2;</code>
+     * @return The effectiveTime.
      */
     com.google.protobuf.Timestamp getEffectiveTime();
     /**
@@ -2012,7 +2099,7 @@ public final class SkuOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.PricingVersion}
    */
-  public  static final class PricingVersion extends
+  public static final class PricingVersion extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.PricingVersion)
       PricingVersionOrBuilder {
@@ -2024,6 +2111,13 @@ public final class SkuOuterClass {
     private PricingVersion() {
       type_ = 0;
       pricingExpressions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PricingVersion();
     }
 
     @java.lang.Override
@@ -2070,16 +2164,16 @@ public final class SkuOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 pricingExpressions_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               pricingExpressions_.add(
                   input.readMessage(yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2093,7 +2187,7 @@ public final class SkuOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           pricingExpressions_ = java.util.Collections.unmodifiableList(pricingExpressions_);
         }
         this.unknownFields = unknownFields.build();
@@ -2113,7 +2207,6 @@ public final class SkuOuterClass {
               yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion.class, yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
@@ -2122,8 +2215,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -2132,8 +2226,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType getType() {
+    @java.lang.Override public yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType result = yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType.valueOf(type_);
       return result == null ? yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType.UNRECOGNIZED : result;
@@ -2148,7 +2243,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 2;</code>
+     * @return Whether the effectiveTime field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveTime() {
       return effectiveTime_ != null;
     }
@@ -2159,7 +2256,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_time = 2;</code>
+     * @return The effectiveTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getEffectiveTime() {
       return effectiveTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTime_;
     }
@@ -2171,6 +2270,7 @@ public final class SkuOuterClass {
      *
      * <code>.google.protobuf.Timestamp effective_time = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEffectiveTimeOrBuilder() {
       return getEffectiveTime();
     }
@@ -2184,6 +2284,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingExpression pricing_expressions = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression> getPricingExpressionsList() {
       return pricingExpressions_;
     }
@@ -2194,6 +2295,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingExpression pricing_expressions = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpressionOrBuilder> 
         getPricingExpressionsOrBuilderList() {
       return pricingExpressions_;
@@ -2205,6 +2307,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingExpression pricing_expressions = 3;</code>
      */
+    @java.lang.Override
     public int getPricingExpressionsCount() {
       return pricingExpressions_.size();
     }
@@ -2215,6 +2318,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingExpression pricing_expressions = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression getPricingExpressions(int index) {
       return pricingExpressions_.get(index);
     }
@@ -2225,6 +2329,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.PricingExpression pricing_expressions = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpressionOrBuilder getPricingExpressionsOrBuilder(
         int index) {
       return pricingExpressions_.get(index);
@@ -2289,17 +2394,16 @@ public final class SkuOuterClass {
       }
       yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion other = (yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (hasEffectiveTime() == other.hasEffectiveTime());
+      if (type_ != other.type_) return false;
+      if (hasEffectiveTime() != other.hasEffectiveTime()) return false;
       if (hasEffectiveTime()) {
-        result = result && getEffectiveTime()
-            .equals(other.getEffectiveTime());
+        if (!getEffectiveTime()
+            .equals(other.getEffectiveTime())) return false;
       }
-      result = result && getPricingExpressionsList()
-          .equals(other.getPricingExpressionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPricingExpressionsList()
+          .equals(other.getPricingExpressionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2468,7 +2572,7 @@ public final class SkuOuterClass {
         }
         if (pricingExpressionsBuilder_ == null) {
           pricingExpressions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           pricingExpressionsBuilder_.clear();
         }
@@ -2499,7 +2603,6 @@ public final class SkuOuterClass {
       public yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion buildPartial() {
         yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion result = new yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersion(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.type_ = type_;
         if (effectiveTimeBuilder_ == null) {
           result.effectiveTime_ = effectiveTime_;
@@ -2507,50 +2610,49 @@ public final class SkuOuterClass {
           result.effectiveTime_ = effectiveTimeBuilder_.build();
         }
         if (pricingExpressionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             pricingExpressions_ = java.util.Collections.unmodifiableList(pricingExpressions_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.pricingExpressions_ = pricingExpressions_;
         } else {
           result.pricingExpressions_ = pricingExpressionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2574,7 +2676,7 @@ public final class SkuOuterClass {
           if (!other.pricingExpressions_.isEmpty()) {
             if (pricingExpressions_.isEmpty()) {
               pricingExpressions_ = other.pricingExpressions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensurePricingExpressionsIsMutable();
               pricingExpressions_.addAll(other.pricingExpressions_);
@@ -2587,7 +2689,7 @@ public final class SkuOuterClass {
               pricingExpressionsBuilder_.dispose();
               pricingExpressionsBuilder_ = null;
               pricingExpressions_ = other.pricingExpressions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               pricingExpressionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPricingExpressionsFieldBuilder() : null;
@@ -2633,8 +2735,9 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -2643,8 +2746,11 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -2655,7 +2761,9 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType result = yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType.valueOf(type_);
@@ -2667,6 +2775,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.billing.v1.SkuOuterClass.PricingVersionType value) {
         if (value == null) {
@@ -2683,6 +2793,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.billing.v1.PricingVersionType type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -2691,7 +2802,7 @@ public final class SkuOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp effectiveTime_ = null;
+      private com.google.protobuf.Timestamp effectiveTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveTimeBuilder_;
       /**
@@ -2701,6 +2812,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_time = 2;</code>
+       * @return Whether the effectiveTime field is set.
        */
       public boolean hasEffectiveTime() {
         return effectiveTimeBuilder_ != null || effectiveTime_ != null;
@@ -2712,6 +2824,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_time = 2;</code>
+       * @return The effectiveTime.
        */
       public com.google.protobuf.Timestamp getEffectiveTime() {
         if (effectiveTimeBuilder_ == null) {
@@ -2856,9 +2969,9 @@ public final class SkuOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression> pricingExpressions_ =
         java.util.Collections.emptyList();
       private void ensurePricingExpressionsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           pricingExpressions_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression>(pricingExpressions_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -3052,7 +3165,7 @@ public final class SkuOuterClass {
       public Builder clearPricingExpressions() {
         if (pricingExpressionsBuilder_ == null) {
           pricingExpressions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           pricingExpressionsBuilder_.clear();
@@ -3157,7 +3270,7 @@ public final class SkuOuterClass {
           pricingExpressionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression, yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression.Builder, yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpressionOrBuilder>(
                   pricingExpressions_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           pricingExpressions_ = null;
@@ -3167,7 +3280,7 @@ public final class SkuOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3273,7 +3386,7 @@ public final class SkuOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.PricingExpression}
    */
-  public  static final class PricingExpression extends
+  public static final class PricingExpression extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.PricingExpression)
       PricingExpressionOrBuilder {
@@ -3284,6 +3397,13 @@ public final class SkuOuterClass {
     }
     private PricingExpression() {
       rates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PricingExpression();
     }
 
     @java.lang.Override
@@ -3311,7 +3431,7 @@ public final class SkuOuterClass {
               done = true;
               break;
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 rates_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.SkuOuterClass.Rate>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3320,7 +3440,7 @@ public final class SkuOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3334,7 +3454,7 @@ public final class SkuOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           rates_ = java.util.Collections.unmodifiableList(rates_);
         }
         this.unknownFields = unknownFields.build();
@@ -3363,6 +3483,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Rate rates = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.billing.v1.SkuOuterClass.Rate> getRatesList() {
       return rates_;
     }
@@ -3373,6 +3494,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Rate rates = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.billing.v1.SkuOuterClass.RateOrBuilder> 
         getRatesOrBuilderList() {
       return rates_;
@@ -3384,6 +3506,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Rate rates = 2;</code>
      */
+    @java.lang.Override
     public int getRatesCount() {
       return rates_.size();
     }
@@ -3394,6 +3517,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Rate rates = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.SkuOuterClass.Rate getRates(int index) {
       return rates_.get(index);
     }
@@ -3404,6 +3528,7 @@ public final class SkuOuterClass {
      *
      * <code>repeated .yandex.cloud.billing.v1.Rate rates = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.billing.v1.SkuOuterClass.RateOrBuilder getRatesOrBuilder(
         int index) {
       return rates_.get(index);
@@ -3454,11 +3579,10 @@ public final class SkuOuterClass {
       }
       yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression other = (yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression) obj;
 
-      boolean result = true;
-      result = result && getRatesList()
-          .equals(other.getRatesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRatesList()
+          .equals(other.getRatesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3645,7 +3769,7 @@ public final class SkuOuterClass {
         yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression result = new yandex.cloud.api.billing.v1.SkuOuterClass.PricingExpression(this);
         int from_bitField0_ = bitField0_;
         if (ratesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             rates_ = java.util.Collections.unmodifiableList(rates_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3659,35 +3783,35 @@ public final class SkuOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3760,7 +3884,7 @@ public final class SkuOuterClass {
       private java.util.List<yandex.cloud.api.billing.v1.SkuOuterClass.Rate> rates_ =
         java.util.Collections.emptyList();
       private void ensureRatesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           rates_ = new java.util.ArrayList<yandex.cloud.api.billing.v1.SkuOuterClass.Rate>(rates_);
           bitField0_ |= 0x00000001;
          }
@@ -4061,7 +4185,7 @@ public final class SkuOuterClass {
           ratesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.billing.v1.SkuOuterClass.Rate, yandex.cloud.api.billing.v1.SkuOuterClass.Rate.Builder, yandex.cloud.api.billing.v1.SkuOuterClass.RateOrBuilder>(
                   rates_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           rates_ = null;
@@ -4071,7 +4195,7 @@ public final class SkuOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4131,6 +4255,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string start_pricing_quantity = 1;</code>
+     * @return The startPricingQuantity.
      */
     java.lang.String getStartPricingQuantity();
     /**
@@ -4139,6 +4264,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string start_pricing_quantity = 1;</code>
+     * @return The bytes for startPricingQuantity.
      */
     com.google.protobuf.ByteString
         getStartPricingQuantityBytes();
@@ -4149,6 +4275,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string unit_price = 2;</code>
+     * @return The unitPrice.
      */
     java.lang.String getUnitPrice();
     /**
@@ -4157,6 +4284,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string unit_price = 2;</code>
+     * @return The bytes for unitPrice.
      */
     com.google.protobuf.ByteString
         getUnitPriceBytes();
@@ -4171,6 +4299,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string currency = 3;</code>
+     * @return The currency.
      */
     java.lang.String getCurrency();
     /**
@@ -4183,6 +4312,7 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string currency = 3;</code>
+     * @return The bytes for currency.
      */
     com.google.protobuf.ByteString
         getCurrencyBytes();
@@ -4195,7 +4325,7 @@ public final class SkuOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.Rate}
    */
-  public  static final class Rate extends
+  public static final class Rate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.Rate)
       RateOrBuilder {
@@ -4211,6 +4341,13 @@ public final class SkuOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Rate();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4223,7 +4360,6 @@ public final class SkuOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4253,7 +4389,7 @@ public final class SkuOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4292,7 +4428,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string start_pricing_quantity = 1;</code>
+     * @return The startPricingQuantity.
      */
+    @java.lang.Override
     public java.lang.String getStartPricingQuantity() {
       java.lang.Object ref = startPricingQuantity_;
       if (ref instanceof java.lang.String) {
@@ -4311,7 +4449,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string start_pricing_quantity = 1;</code>
+     * @return The bytes for startPricingQuantity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStartPricingQuantityBytes() {
       java.lang.Object ref = startPricingQuantity_;
@@ -4334,7 +4474,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string unit_price = 2;</code>
+     * @return The unitPrice.
      */
+    @java.lang.Override
     public java.lang.String getUnitPrice() {
       java.lang.Object ref = unitPrice_;
       if (ref instanceof java.lang.String) {
@@ -4353,7 +4495,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string unit_price = 2;</code>
+     * @return The bytes for unitPrice.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUnitPriceBytes() {
       java.lang.Object ref = unitPrice_;
@@ -4380,7 +4524,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string currency = 3;</code>
+     * @return The currency.
      */
+    @java.lang.Override
     public java.lang.String getCurrency() {
       java.lang.Object ref = currency_;
       if (ref instanceof java.lang.String) {
@@ -4403,7 +4549,9 @@ public final class SkuOuterClass {
      * </pre>
      *
      * <code>string currency = 3;</code>
+     * @return The bytes for currency.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCurrencyBytes() {
       java.lang.Object ref = currency_;
@@ -4432,13 +4580,13 @@ public final class SkuOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getStartPricingQuantityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startPricingQuantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, startPricingQuantity_);
       }
-      if (!getUnitPriceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPrice_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, unitPrice_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, currency_);
       }
       unknownFields.writeTo(output);
@@ -4450,13 +4598,13 @@ public final class SkuOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getStartPricingQuantityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startPricingQuantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, startPricingQuantity_);
       }
-      if (!getUnitPriceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPrice_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, unitPrice_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, currency_);
       }
       size += unknownFields.getSerializedSize();
@@ -4474,15 +4622,14 @@ public final class SkuOuterClass {
       }
       yandex.cloud.api.billing.v1.SkuOuterClass.Rate other = (yandex.cloud.api.billing.v1.SkuOuterClass.Rate) obj;
 
-      boolean result = true;
-      result = result && getStartPricingQuantity()
-          .equals(other.getStartPricingQuantity());
-      result = result && getUnitPrice()
-          .equals(other.getUnitPrice());
-      result = result && getCurrency()
-          .equals(other.getCurrency());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStartPricingQuantity()
+          .equals(other.getStartPricingQuantity())) return false;
+      if (!getUnitPrice()
+          .equals(other.getUnitPrice())) return false;
+      if (!getCurrency()
+          .equals(other.getCurrency())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4677,35 +4824,35 @@ public final class SkuOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4767,6 +4914,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string start_pricing_quantity = 1;</code>
+       * @return The startPricingQuantity.
        */
       public java.lang.String getStartPricingQuantity() {
         java.lang.Object ref = startPricingQuantity_;
@@ -4786,6 +4934,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string start_pricing_quantity = 1;</code>
+       * @return The bytes for startPricingQuantity.
        */
       public com.google.protobuf.ByteString
           getStartPricingQuantityBytes() {
@@ -4806,6 +4955,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string start_pricing_quantity = 1;</code>
+       * @param value The startPricingQuantity to set.
+       * @return This builder for chaining.
        */
       public Builder setStartPricingQuantity(
           java.lang.String value) {
@@ -4823,6 +4974,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string start_pricing_quantity = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartPricingQuantity() {
         
@@ -4836,6 +4988,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string start_pricing_quantity = 1;</code>
+       * @param value The bytes for startPricingQuantity to set.
+       * @return This builder for chaining.
        */
       public Builder setStartPricingQuantityBytes(
           com.google.protobuf.ByteString value) {
@@ -4856,6 +5010,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string unit_price = 2;</code>
+       * @return The unitPrice.
        */
       public java.lang.String getUnitPrice() {
         java.lang.Object ref = unitPrice_;
@@ -4875,6 +5030,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string unit_price = 2;</code>
+       * @return The bytes for unitPrice.
        */
       public com.google.protobuf.ByteString
           getUnitPriceBytes() {
@@ -4895,6 +5051,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string unit_price = 2;</code>
+       * @param value The unitPrice to set.
+       * @return This builder for chaining.
        */
       public Builder setUnitPrice(
           java.lang.String value) {
@@ -4912,6 +5070,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string unit_price = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUnitPrice() {
         
@@ -4925,6 +5084,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string unit_price = 2;</code>
+       * @param value The bytes for unitPrice to set.
+       * @return This builder for chaining.
        */
       public Builder setUnitPriceBytes(
           com.google.protobuf.ByteString value) {
@@ -4949,6 +5110,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string currency = 3;</code>
+       * @return The currency.
        */
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
@@ -4972,6 +5134,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string currency = 3;</code>
+       * @return The bytes for currency.
        */
       public com.google.protobuf.ByteString
           getCurrencyBytes() {
@@ -4996,6 +5159,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string currency = 3;</code>
+       * @param value The currency to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrency(
           java.lang.String value) {
@@ -5017,6 +5182,7 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string currency = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCurrency() {
         
@@ -5034,6 +5200,8 @@ public final class SkuOuterClass {
        * </pre>
        *
        * <code>string currency = 3;</code>
+       * @param value The bytes for currency to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrencyBytes(
           com.google.protobuf.ByteString value) {
@@ -5049,7 +5217,7 @@ public final class SkuOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5150,19 +5318,11 @@ public final class SkuOuterClass {
       "go-genproto/yandex/cloud/billing/v1;bill" +
       "ingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_Sku_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_Sku_fieldAccessorTable = new

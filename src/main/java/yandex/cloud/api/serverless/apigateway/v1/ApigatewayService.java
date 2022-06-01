@@ -25,6 +25,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -34,6 +35,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -41,7 +43,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.GetApiGatewayRequest}
    */
-  public  static final class GetApiGatewayRequest extends
+  public static final class GetApiGatewayRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.GetApiGatewayRequest)
       GetApiGatewayRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class ApigatewayService {
     }
     private GetApiGatewayRequest() {
       apiGatewayId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetApiGatewayRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -174,7 +186,7 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetApiGatewayRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetApiGatewayRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -491,6 +503,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -512,6 +525,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -544,6 +560,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -652,6 +673,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -661,6 +683,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -676,6 +699,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -689,6 +713,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -696,7 +721,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ListApiGatewayRequest}
    */
-  public  static final class ListApiGatewayRequest extends
+  public static final class ListApiGatewayRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.ListApiGatewayRequest)
       ListApiGatewayRequestOrBuilder {
@@ -707,9 +732,15 @@ public final class ApigatewayService {
     }
     private ListApiGatewayRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListApiGatewayRequest();
     }
 
     @java.lang.Override
@@ -725,7 +756,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -760,7 +790,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -800,7 +830,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -820,7 +852,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -846,7 +880,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -860,7 +896,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -880,7 +918,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -908,7 +948,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -932,7 +974,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -961,16 +1005,16 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -982,17 +1026,17 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1010,17 +1054,16 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1216,35 +1259,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1310,6 +1353,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1330,6 +1374,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1351,6 +1396,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1369,6 +1416,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1383,6 +1431,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1406,7 +1456,9 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1419,6 +1471,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1435,6 +1489,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1451,6 +1506,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1471,6 +1527,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1492,6 +1549,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1510,6 +1569,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1524,6 +1584,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1549,6 +1611,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1573,6 +1636,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1598,6 +1662,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1620,6 +1686,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1638,6 +1705,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1653,7 +1722,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1760,6 +1829,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1771,6 +1841,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1778,7 +1849,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ListApiGatewayResponse}
    */
-  public  static final class ListApiGatewayResponse extends
+  public static final class ListApiGatewayResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.ListApiGatewayResponse)
       ListApiGatewayResponseOrBuilder {
@@ -1790,6 +1861,13 @@ public final class ApigatewayService {
     private ListApiGatewayResponse() {
       apiGateways_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListApiGatewayResponse();
     }
 
     @java.lang.Override
@@ -1817,7 +1895,7 @@ public final class ApigatewayService {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 apiGateways_ = new java.util.ArrayList<yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1832,7 +1910,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1846,7 +1924,7 @@ public final class ApigatewayService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           apiGateways_ = java.util.Collections.unmodifiableList(apiGateways_);
         }
         this.unknownFields = unknownFields.build();
@@ -1866,7 +1944,6 @@ public final class ApigatewayService {
               yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int API_GATEWAYS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway> apiGateways_;
     /**
@@ -1876,6 +1953,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.ApiGateway api_gateways = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway> getApiGatewaysList() {
       return apiGateways_;
     }
@@ -1886,6 +1964,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.ApiGateway api_gateways = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGatewayOrBuilder> 
         getApiGatewaysOrBuilderList() {
       return apiGateways_;
@@ -1897,6 +1976,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.ApiGateway api_gateways = 1;</code>
      */
+    @java.lang.Override
     public int getApiGatewaysCount() {
       return apiGateways_.size();
     }
@@ -1907,6 +1987,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.ApiGateway api_gateways = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway getApiGateways(int index) {
       return apiGateways_.get(index);
     }
@@ -1917,6 +1998,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.serverless.apigateway.v1.ApiGateway api_gateways = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGatewayOrBuilder getApiGatewaysOrBuilder(
         int index) {
       return apiGateways_.get(index);
@@ -1933,7 +2015,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1955,7 +2039,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1987,7 +2073,7 @@ public final class ApigatewayService {
       for (int i = 0; i < apiGateways_.size(); i++) {
         output.writeMessage(1, apiGateways_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2003,7 +2089,7 @@ public final class ApigatewayService {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, apiGateways_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2021,13 +2107,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse) obj;
 
-      boolean result = true;
-      result = result && getApiGatewaysList()
-          .equals(other.getApiGatewaysList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewaysList()
+          .equals(other.getApiGatewaysList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2212,9 +2297,8 @@ public final class ApigatewayService {
       public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListApiGatewayResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (apiGatewaysBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             apiGateways_ = java.util.Collections.unmodifiableList(apiGateways_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2223,42 +2307,41 @@ public final class ApigatewayService {
           result.apiGateways_ = apiGatewaysBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2335,7 +2418,7 @@ public final class ApigatewayService {
       private java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway> apiGateways_ =
         java.util.Collections.emptyList();
       private void ensureApiGatewaysIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           apiGateways_ = new java.util.ArrayList<yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway>(apiGateways_);
           bitField0_ |= 0x00000001;
          }
@@ -2636,7 +2719,7 @@ public final class ApigatewayService {
           apiGatewaysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGateway.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ApiGatewayOrBuilder>(
                   apiGateways_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           apiGateways_ = null;
@@ -2654,6 +2737,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2676,6 +2760,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2699,6 +2784,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2719,6 +2806,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2735,6 +2823,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2750,7 +2840,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2811,6 +2901,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2820,6 +2911,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2831,6 +2923,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2840,6 +2933,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2850,6 +2944,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2858,6 +2953,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2922,6 +3018,16 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 5;</code>
+     * @return Whether the openapiSpec field is set.
+     */
+    boolean hasOpenapiSpec();
+    /**
+     * <pre>
+     * The text of specification, JSON or YAML.
+     * </pre>
+     *
+     * <code>string openapi_spec = 5;</code>
+     * @return The openapiSpec.
      */
     java.lang.String getOpenapiSpec();
     /**
@@ -2930,6 +3036,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 5;</code>
+     * @return The bytes for openapiSpec.
      */
     com.google.protobuf.ByteString
         getOpenapiSpecBytes();
@@ -2940,6 +3047,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     * @return Whether the connectivity field is set.
      */
     boolean hasConnectivity();
     /**
@@ -2948,6 +3056,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     * @return The connectivity.
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity();
     /**
@@ -2964,7 +3073,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.CreateApiGatewayRequest}
    */
-  public  static final class CreateApiGatewayRequest extends
+  public static final class CreateApiGatewayRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.CreateApiGatewayRequest)
       CreateApiGatewayRequestOrBuilder {
@@ -2977,6 +3086,13 @@ public final class ApigatewayService {
       folderId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateApiGatewayRequest();
     }
 
     @java.lang.Override
@@ -3022,10 +3138,10 @@ public final class ApigatewayService {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3054,7 +3170,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3097,11 +3213,11 @@ public final class ApigatewayService {
               yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int specCase_ = 0;
     private java.lang.Object spec_;
     public enum SpecCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       OPENAPI_SPEC(5),
       SPEC_NOT_SET(0);
       private final int value;
@@ -3109,6 +3225,8 @@ public final class ApigatewayService {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3143,7 +3261,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3163,7 +3283,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3187,7 +3309,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3207,7 +3331,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3230,7 +3356,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3249,7 +3377,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3298,14 +3428,16 @@ public final class ApigatewayService {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3317,6 +3449,7 @@ public final class ApigatewayService {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3328,11 +3461,12 @@ public final class ApigatewayService {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3344,10 +3478,11 @@ public final class ApigatewayService {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3363,6 +3498,18 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 5;</code>
+     * @return Whether the openapiSpec field is set.
+     */
+    public boolean hasOpenapiSpec() {
+      return specCase_ == 5;
+    }
+    /**
+     * <pre>
+     * The text of specification, JSON or YAML.
+     * </pre>
+     *
+     * <code>string openapi_spec = 5;</code>
+     * @return The openapiSpec.
      */
     public java.lang.String getOpenapiSpec() {
       java.lang.Object ref = "";
@@ -3387,6 +3534,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 5;</code>
+     * @return The bytes for openapiSpec.
      */
     public com.google.protobuf.ByteString
         getOpenapiSpecBytes() {
@@ -3415,7 +3563,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     * @return Whether the connectivity field is set.
      */
+    @java.lang.Override
     public boolean hasConnectivity() {
       return connectivity_ != null;
     }
@@ -3425,7 +3575,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     * @return The connectivity.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
       return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
     }
@@ -3436,6 +3588,7 @@ public final class ApigatewayService {
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
       return getConnectivity();
     }
@@ -3454,13 +3607,13 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3484,13 +3637,13 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3525,33 +3678,30 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasConnectivity() != other.hasConnectivity()) return false;
       if (hasConnectivity()) {
-        result = result && getConnectivity()
-            .equals(other.getConnectivity());
+        if (!getConnectivity()
+            .equals(other.getConnectivity())) return false;
       }
-      result = result && getSpecCase().equals(
-          other.getSpecCase());
-      if (!result) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
         case 5:
-          result = result && getOpenapiSpec()
-              .equals(other.getOpenapiSpec());
+          if (!getOpenapiSpec()
+              .equals(other.getOpenapiSpec())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3780,7 +3930,6 @@ public final class ApigatewayService {
       public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3794,7 +3943,6 @@ public final class ApigatewayService {
         } else {
           result.connectivity_ = connectivityBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.specCase_ = specCase_;
         onBuilt();
         return result;
@@ -3802,35 +3950,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3925,6 +4073,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3945,6 +4094,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3966,6 +4116,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3984,6 +4136,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3998,6 +4151,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4019,6 +4174,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4039,6 +4195,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4060,6 +4217,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4078,6 +4237,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4092,6 +4252,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4112,6 +4274,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4131,6 +4294,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4151,6 +4315,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4168,6 +4334,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4181,6 +4348,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4228,14 +4397,16 @@ public final class ApigatewayService {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4247,6 +4418,7 @@ public final class ApigatewayService {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4258,11 +4430,12 @@ public final class ApigatewayService {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4274,10 +4447,11 @@ public final class ApigatewayService {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4301,7 +4475,7 @@ public final class ApigatewayService {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4324,8 +4498,11 @@ public final class ApigatewayService {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4351,7 +4528,21 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 5;</code>
+       * @return Whether the openapiSpec field is set.
        */
+      @java.lang.Override
+      public boolean hasOpenapiSpec() {
+        return specCase_ == 5;
+      }
+      /**
+       * <pre>
+       * The text of specification, JSON or YAML.
+       * </pre>
+       *
+       * <code>string openapi_spec = 5;</code>
+       * @return The openapiSpec.
+       */
+      @java.lang.Override
       public java.lang.String getOpenapiSpec() {
         java.lang.Object ref = "";
         if (specCase_ == 5) {
@@ -4375,7 +4566,9 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 5;</code>
+       * @return The bytes for openapiSpec.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOpenapiSpecBytes() {
         java.lang.Object ref = "";
@@ -4400,6 +4593,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 5;</code>
+       * @param value The openapiSpec to set.
+       * @return This builder for chaining.
        */
       public Builder setOpenapiSpec(
           java.lang.String value) {
@@ -4417,6 +4612,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOpenapiSpec() {
         if (specCase_ == 5) {
@@ -4432,6 +4628,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 5;</code>
+       * @param value The bytes for openapiSpec to set.
+       * @return This builder for chaining.
        */
       public Builder setOpenapiSpecBytes(
           com.google.protobuf.ByteString value) {
@@ -4445,7 +4643,7 @@ public final class ApigatewayService {
         return this;
       }
 
-      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_ = null;
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> connectivityBuilder_;
       /**
@@ -4454,6 +4652,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       * @return Whether the connectivity field is set.
        */
       public boolean hasConnectivity() {
         return connectivityBuilder_ != null || connectivity_ != null;
@@ -4464,6 +4663,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       * @return The connectivity.
        */
       public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
         if (connectivityBuilder_ == null) {
@@ -4600,7 +4800,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4661,6 +4861,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -4670,6 +4871,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -4680,6 +4882,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4688,6 +4891,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4706,6 +4910,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4715,6 +4920,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4725,6 +4931,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4733,6 +4940,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4807,6 +5015,16 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 6;</code>
+     * @return Whether the openapiSpec field is set.
+     */
+    boolean hasOpenapiSpec();
+    /**
+     * <pre>
+     * The text of specification, JSON or YAML.
+     * </pre>
+     *
+     * <code>string openapi_spec = 6;</code>
+     * @return The openapiSpec.
      */
     java.lang.String getOpenapiSpec();
     /**
@@ -4815,6 +5033,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 6;</code>
+     * @return The bytes for openapiSpec.
      */
     com.google.protobuf.ByteString
         getOpenapiSpecBytes();
@@ -4825,6 +5044,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     * @return Whether the connectivity field is set.
      */
     boolean hasConnectivity();
     /**
@@ -4833,6 +5053,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     * @return The connectivity.
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity();
     /**
@@ -4849,7 +5070,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.UpdateApiGatewayRequest}
    */
-  public  static final class UpdateApiGatewayRequest extends
+  public static final class UpdateApiGatewayRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.UpdateApiGatewayRequest)
       UpdateApiGatewayRequestOrBuilder {
@@ -4862,6 +5083,13 @@ public final class ApigatewayService {
       apiGatewayId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateApiGatewayRequest();
     }
 
     @java.lang.Override
@@ -4920,10 +5148,10 @@ public final class ApigatewayService {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -4952,7 +5180,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4995,11 +5223,11 @@ public final class ApigatewayService {
               yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int specCase_ = 0;
     private java.lang.Object spec_;
     public enum SpecCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       OPENAPI_SPEC(6),
       SPEC_NOT_SET(0);
       private final int value;
@@ -5007,6 +5235,8 @@ public final class ApigatewayService {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5041,7 +5271,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -5061,7 +5293,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -5084,7 +5318,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5094,7 +5330,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5105,6 +5343,7 @@ public final class ApigatewayService {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5118,7 +5357,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5138,7 +5379,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5161,7 +5404,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5180,7 +5425,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5231,14 +5478,16 @@ public final class ApigatewayService {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -5252,6 +5501,7 @@ public final class ApigatewayService {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -5265,11 +5515,12 @@ public final class ApigatewayService {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5283,10 +5534,11 @@ public final class ApigatewayService {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -5302,6 +5554,18 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 6;</code>
+     * @return Whether the openapiSpec field is set.
+     */
+    public boolean hasOpenapiSpec() {
+      return specCase_ == 6;
+    }
+    /**
+     * <pre>
+     * The text of specification, JSON or YAML.
+     * </pre>
+     *
+     * <code>string openapi_spec = 6;</code>
+     * @return The openapiSpec.
      */
     public java.lang.String getOpenapiSpec() {
       java.lang.Object ref = "";
@@ -5326,6 +5590,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 6;</code>
+     * @return The bytes for openapiSpec.
      */
     public com.google.protobuf.ByteString
         getOpenapiSpecBytes() {
@@ -5354,7 +5619,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     * @return Whether the connectivity field is set.
      */
+    @java.lang.Override
     public boolean hasConnectivity() {
       return connectivity_ != null;
     }
@@ -5364,7 +5631,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     * @return The connectivity.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
       return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
     }
@@ -5375,6 +5644,7 @@ public final class ApigatewayService {
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
       return getConnectivity();
     }
@@ -5393,16 +5663,16 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -5426,17 +5696,17 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -5471,38 +5741,35 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasConnectivity() != other.hasConnectivity()) return false;
       if (hasConnectivity()) {
-        result = result && getConnectivity()
-            .equals(other.getConnectivity());
+        if (!getConnectivity()
+            .equals(other.getConnectivity())) return false;
       }
-      result = result && getSpecCase().equals(
-          other.getSpecCase());
-      if (!result) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
         case 6:
-          result = result && getOpenapiSpec()
-              .equals(other.getOpenapiSpec());
+          if (!getOpenapiSpec()
+              .equals(other.getOpenapiSpec())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5741,7 +6008,6 @@ public final class ApigatewayService {
       public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.apiGatewayId_ = apiGatewayId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5760,7 +6026,6 @@ public final class ApigatewayService {
         } else {
           result.connectivity_ = connectivityBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.specCase_ = specCase_;
         onBuilt();
         return result;
@@ -5768,35 +6033,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5894,6 +6159,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -5914,6 +6180,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -5935,6 +6202,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -5953,6 +6222,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -5967,6 +6237,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5980,7 +6252,7 @@ public final class ApigatewayService {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -5989,6 +6261,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -5999,6 +6272,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6141,6 +6415,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6161,6 +6436,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6182,6 +6458,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6200,6 +6478,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6214,6 +6493,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6234,6 +6515,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6253,6 +6535,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6273,6 +6556,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6290,6 +6575,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6303,6 +6589,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6352,14 +6640,16 @@ public final class ApigatewayService {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -6373,6 +6663,7 @@ public final class ApigatewayService {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -6386,11 +6677,12 @@ public final class ApigatewayService {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6404,10 +6696,11 @@ public final class ApigatewayService {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -6433,7 +6726,7 @@ public final class ApigatewayService {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -6458,8 +6751,11 @@ public final class ApigatewayService {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -6487,7 +6783,21 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 6;</code>
+       * @return Whether the openapiSpec field is set.
        */
+      @java.lang.Override
+      public boolean hasOpenapiSpec() {
+        return specCase_ == 6;
+      }
+      /**
+       * <pre>
+       * The text of specification, JSON or YAML.
+       * </pre>
+       *
+       * <code>string openapi_spec = 6;</code>
+       * @return The openapiSpec.
+       */
+      @java.lang.Override
       public java.lang.String getOpenapiSpec() {
         java.lang.Object ref = "";
         if (specCase_ == 6) {
@@ -6511,7 +6821,9 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 6;</code>
+       * @return The bytes for openapiSpec.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOpenapiSpecBytes() {
         java.lang.Object ref = "";
@@ -6536,6 +6848,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 6;</code>
+       * @param value The openapiSpec to set.
+       * @return This builder for chaining.
        */
       public Builder setOpenapiSpec(
           java.lang.String value) {
@@ -6553,6 +6867,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOpenapiSpec() {
         if (specCase_ == 6) {
@@ -6568,6 +6883,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 6;</code>
+       * @param value The bytes for openapiSpec to set.
+       * @return This builder for chaining.
        */
       public Builder setOpenapiSpecBytes(
           com.google.protobuf.ByteString value) {
@@ -6581,7 +6898,7 @@ public final class ApigatewayService {
         return this;
       }
 
-      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_ = null;
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> connectivityBuilder_;
       /**
@@ -6590,6 +6907,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       * @return Whether the connectivity field is set.
        */
       public boolean hasConnectivity() {
         return connectivityBuilder_ != null || connectivity_ != null;
@@ -6600,6 +6918,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       * @return The connectivity.
        */
       public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
         if (connectivityBuilder_ == null) {
@@ -6736,7 +7055,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6797,6 +7116,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -6806,6 +7126,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -6813,7 +7134,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.DeleteApiGatewayRequest}
    */
-  public  static final class DeleteApiGatewayRequest extends
+  public static final class DeleteApiGatewayRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.DeleteApiGatewayRequest)
       DeleteApiGatewayRequestOrBuilder {
@@ -6824,6 +7145,13 @@ public final class ApigatewayService {
     }
     private DeleteApiGatewayRequest() {
       apiGatewayId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteApiGatewayRequest();
     }
 
     @java.lang.Override
@@ -6839,7 +7167,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6857,7 +7184,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6897,7 +7224,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -6917,7 +7246,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -6946,7 +7277,7 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       unknownFields.writeTo(output);
@@ -6958,7 +7289,7 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6976,11 +7307,10 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7160,35 +7490,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7243,6 +7573,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -7263,6 +7594,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -7284,6 +7616,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -7302,6 +7636,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -7316,6 +7651,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7331,7 +7668,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7391,6 +7728,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -7399,6 +7737,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -7409,6 +7748,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The domainId.
      */
     java.lang.String getDomainId();
     /**
@@ -7417,6 +7757,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for domainId.
      */
     com.google.protobuf.ByteString
         getDomainIdBytes();
@@ -7424,7 +7765,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainRequest}
    */
-  public  static final class AddDomainRequest extends
+  public static final class AddDomainRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.AddDomainRequest)
       AddDomainRequestOrBuilder {
@@ -7436,6 +7777,13 @@ public final class ApigatewayService {
     private AddDomainRequest() {
       apiGatewayId_ = "";
       domainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDomainRequest();
     }
 
     @java.lang.Override
@@ -7451,7 +7799,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7475,7 +7822,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7514,7 +7861,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -7533,7 +7882,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -7556,7 +7907,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The domainId.
      */
+    @java.lang.Override
     public java.lang.String getDomainId() {
       java.lang.Object ref = domainId_;
       if (ref instanceof java.lang.String) {
@@ -7575,7 +7928,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for domainId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainIdBytes() {
       java.lang.Object ref = domainId_;
@@ -7604,10 +7959,10 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
       }
       unknownFields.writeTo(output);
@@ -7619,10 +7974,10 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7640,13 +7995,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && getDomainId()
-          .equals(other.getDomainId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!getDomainId()
+          .equals(other.getDomainId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7831,35 +8185,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7917,6 +8271,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -7936,6 +8291,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -7956,6 +8312,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -7973,6 +8331,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -7986,6 +8345,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8006,6 +8367,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The domainId.
        */
       public java.lang.String getDomainId() {
         java.lang.Object ref = domainId_;
@@ -8025,6 +8387,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for domainId.
        */
       public com.google.protobuf.ByteString
           getDomainIdBytes() {
@@ -8045,6 +8408,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainId(
           java.lang.String value) {
@@ -8062,6 +8427,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainId() {
         
@@ -8075,6 +8441,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8090,7 +8458,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8150,6 +8518,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -8158,6 +8527,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -8168,6 +8538,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The domainId.
      */
     java.lang.String getDomainId();
     /**
@@ -8176,6 +8547,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for domainId.
      */
     com.google.protobuf.ByteString
         getDomainIdBytes();
@@ -8183,7 +8555,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest}
    */
-  public  static final class RemoveDomainRequest extends
+  public static final class RemoveDomainRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest)
       RemoveDomainRequestOrBuilder {
@@ -8195,6 +8567,13 @@ public final class ApigatewayService {
     private RemoveDomainRequest() {
       apiGatewayId_ = "";
       domainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveDomainRequest();
     }
 
     @java.lang.Override
@@ -8210,7 +8589,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8234,7 +8612,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8273,7 +8651,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -8292,7 +8672,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -8315,7 +8697,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The domainId.
      */
+    @java.lang.Override
     public java.lang.String getDomainId() {
       java.lang.Object ref = domainId_;
       if (ref instanceof java.lang.String) {
@@ -8334,7 +8718,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for domainId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainIdBytes() {
       java.lang.Object ref = domainId_;
@@ -8363,10 +8749,10 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
       }
       unknownFields.writeTo(output);
@@ -8378,10 +8764,10 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8399,13 +8785,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && getDomainId()
-          .equals(other.getDomainId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!getDomainId()
+          .equals(other.getDomainId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8590,35 +8975,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8676,6 +9061,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -8695,6 +9081,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -8715,6 +9102,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -8732,6 +9121,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -8745,6 +9135,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8765,6 +9157,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The domainId.
        */
       public java.lang.String getDomainId() {
         java.lang.Object ref = domainId_;
@@ -8784,6 +9177,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for domainId.
        */
       public com.google.protobuf.ByteString
           getDomainIdBytes() {
@@ -8804,6 +9198,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainId(
           java.lang.String value) {
@@ -8821,6 +9217,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainId() {
         
@@ -8834,6 +9231,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8849,7 +9248,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8909,6 +9308,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -8917,6 +9317,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -8924,7 +9325,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.CreateApiGatewayMetadata}
    */
-  public  static final class CreateApiGatewayMetadata extends
+  public static final class CreateApiGatewayMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.CreateApiGatewayMetadata)
       CreateApiGatewayMetadataOrBuilder {
@@ -8935,6 +9336,13 @@ public final class ApigatewayService {
     }
     private CreateApiGatewayMetadata() {
       apiGatewayId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateApiGatewayMetadata();
     }
 
     @java.lang.Override
@@ -8950,7 +9358,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8968,7 +9375,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9007,7 +9414,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -9026,7 +9435,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -9055,7 +9466,7 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       unknownFields.writeTo(output);
@@ -9067,7 +9478,7 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9085,11 +9496,10 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayMetadata) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9269,35 +9679,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9351,6 +9761,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -9370,6 +9781,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -9390,6 +9802,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -9407,6 +9821,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -9420,6 +9835,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9435,7 +9852,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9495,6 +9912,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -9503,6 +9921,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -9510,7 +9929,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.UpdateApiGatewayMetadata}
    */
-  public  static final class UpdateApiGatewayMetadata extends
+  public static final class UpdateApiGatewayMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.UpdateApiGatewayMetadata)
       UpdateApiGatewayMetadataOrBuilder {
@@ -9521,6 +9940,13 @@ public final class ApigatewayService {
     }
     private UpdateApiGatewayMetadata() {
       apiGatewayId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateApiGatewayMetadata();
     }
 
     @java.lang.Override
@@ -9536,7 +9962,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9554,7 +9979,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9593,7 +10018,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -9612,7 +10039,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -9641,7 +10070,7 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       unknownFields.writeTo(output);
@@ -9653,7 +10082,7 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9671,11 +10100,10 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayMetadata) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9855,35 +10283,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9937,6 +10365,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -9956,6 +10385,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -9976,6 +10406,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -9993,6 +10425,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -10006,6 +10439,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10021,7 +10456,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10081,6 +10516,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -10089,6 +10525,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -10096,7 +10533,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.DeleteApiGatewayMetadata}
    */
-  public  static final class DeleteApiGatewayMetadata extends
+  public static final class DeleteApiGatewayMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.DeleteApiGatewayMetadata)
       DeleteApiGatewayMetadataOrBuilder {
@@ -10107,6 +10544,13 @@ public final class ApigatewayService {
     }
     private DeleteApiGatewayMetadata() {
       apiGatewayId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteApiGatewayMetadata();
     }
 
     @java.lang.Override
@@ -10122,7 +10566,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10140,7 +10583,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10179,7 +10622,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -10198,7 +10643,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -10227,7 +10674,7 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       unknownFields.writeTo(output);
@@ -10239,7 +10686,7 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10257,11 +10704,10 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayMetadata) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10441,35 +10887,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10523,6 +10969,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -10542,6 +10989,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -10562,6 +11010,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -10579,6 +11029,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -10592,6 +11043,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10607,7 +11060,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10667,6 +11120,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -10675,6 +11129,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -10685,6 +11140,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The domainId.
      */
     java.lang.String getDomainId();
     /**
@@ -10693,6 +11149,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The bytes for domainId.
      */
     com.google.protobuf.ByteString
         getDomainIdBytes();
@@ -10700,7 +11157,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainMetadata}
    */
-  public  static final class AddDomainMetadata extends
+  public static final class AddDomainMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.AddDomainMetadata)
       AddDomainMetadataOrBuilder {
@@ -10712,6 +11169,13 @@ public final class ApigatewayService {
     private AddDomainMetadata() {
       apiGatewayId_ = "";
       domainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDomainMetadata();
     }
 
     @java.lang.Override
@@ -10727,7 +11191,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10751,7 +11214,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10790,7 +11253,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -10809,7 +11274,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -10832,7 +11299,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The domainId.
      */
+    @java.lang.Override
     public java.lang.String getDomainId() {
       java.lang.Object ref = domainId_;
       if (ref instanceof java.lang.String) {
@@ -10851,7 +11320,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The bytes for domainId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainIdBytes() {
       java.lang.Object ref = domainId_;
@@ -10880,10 +11351,10 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
       }
       unknownFields.writeTo(output);
@@ -10895,10 +11366,10 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10916,13 +11387,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && getDomainId()
-          .equals(other.getDomainId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!getDomainId()
+          .equals(other.getDomainId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11107,35 +11577,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11193,6 +11663,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -11212,6 +11683,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -11232,6 +11704,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -11249,6 +11723,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -11262,6 +11737,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11282,6 +11759,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @return The domainId.
        */
       public java.lang.String getDomainId() {
         java.lang.Object ref = domainId_;
@@ -11301,6 +11779,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @return The bytes for domainId.
        */
       public com.google.protobuf.ByteString
           getDomainIdBytes() {
@@ -11321,6 +11800,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @param value The domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainId(
           java.lang.String value) {
@@ -11338,6 +11819,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainId() {
         
@@ -11351,6 +11833,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @param value The bytes for domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11366,7 +11850,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11426,6 +11910,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -11434,6 +11919,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -11444,6 +11930,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The domainId.
      */
     java.lang.String getDomainId();
     /**
@@ -11452,6 +11939,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The bytes for domainId.
      */
     com.google.protobuf.ByteString
         getDomainIdBytes();
@@ -11459,7 +11947,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata}
    */
-  public  static final class RemoveDomainMetadata extends
+  public static final class RemoveDomainMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata)
       RemoveDomainMetadataOrBuilder {
@@ -11471,6 +11959,13 @@ public final class ApigatewayService {
     private RemoveDomainMetadata() {
       apiGatewayId_ = "";
       domainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveDomainMetadata();
     }
 
     @java.lang.Override
@@ -11486,7 +11981,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11510,7 +12004,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11549,7 +12043,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -11568,7 +12064,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -11591,7 +12089,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The domainId.
      */
+    @java.lang.Override
     public java.lang.String getDomainId() {
       java.lang.Object ref = domainId_;
       if (ref instanceof java.lang.String) {
@@ -11610,7 +12110,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string domain_id = 2;</code>
+     * @return The bytes for domainId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainIdBytes() {
       java.lang.Object ref = domainId_;
@@ -11639,10 +12141,10 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
       }
       unknownFields.writeTo(output);
@@ -11654,10 +12156,10 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
-      if (!getDomainIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11675,13 +12177,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && getDomainId()
-          .equals(other.getDomainId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!getDomainId()
+          .equals(other.getDomainId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11866,35 +12367,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11952,6 +12453,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -11971,6 +12473,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -11991,6 +12494,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -12008,6 +12513,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -12021,6 +12527,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12041,6 +12549,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @return The domainId.
        */
       public java.lang.String getDomainId() {
         java.lang.Object ref = domainId_;
@@ -12060,6 +12569,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @return The bytes for domainId.
        */
       public com.google.protobuf.ByteString
           getDomainIdBytes() {
@@ -12080,6 +12590,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @param value The domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainId(
           java.lang.String value) {
@@ -12097,6 +12609,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainId() {
         
@@ -12110,6 +12623,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string domain_id = 2;</code>
+       * @param value The bytes for domainId to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12125,7 +12640,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12185,6 +12700,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -12193,6 +12709,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -12206,6 +12723,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -12216,6 +12734,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -12225,6 +12744,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -12240,6 +12760,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -12253,6 +12774,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -12260,7 +12782,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ListOperationsRequest}
    */
-  public  static final class ListOperationsRequest extends
+  public static final class ListOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.ListOperationsRequest)
       ListOperationsRequestOrBuilder {
@@ -12271,9 +12793,15 @@ public final class ApigatewayService {
     }
     private ListOperationsRequest() {
       apiGatewayId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOperationsRequest();
     }
 
     @java.lang.Override
@@ -12289,7 +12817,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12324,7 +12851,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12363,7 +12890,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -12382,7 +12911,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -12408,7 +12939,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -12422,7 +12955,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -12442,7 +12977,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -12470,7 +13007,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -12494,7 +13033,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -12523,16 +13064,16 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -12544,17 +13085,17 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -12572,17 +13113,16 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12778,35 +13318,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12871,6 +13411,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -12890,6 +13431,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -12910,6 +13452,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -12927,6 +13471,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -12940,6 +13485,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12963,7 +13510,9 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -12976,6 +13525,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -12992,6 +13543,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -13008,6 +13560,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -13028,6 +13581,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -13049,6 +13603,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -13067,6 +13623,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -13081,6 +13638,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -13106,6 +13665,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -13130,6 +13690,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -13155,6 +13716,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -13177,6 +13740,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -13195,6 +13759,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -13210,7 +13776,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13317,6 +13883,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -13328,6 +13895,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -13335,7 +13903,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ListOperationsResponse}
    */
-  public  static final class ListOperationsResponse extends
+  public static final class ListOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.ListOperationsResponse)
       ListOperationsResponseOrBuilder {
@@ -13347,6 +13915,13 @@ public final class ApigatewayService {
     private ListOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOperationsResponse();
     }
 
     @java.lang.Override
@@ -13374,7 +13949,7 @@ public final class ApigatewayService {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -13389,7 +13964,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13403,7 +13978,7 @@ public final class ApigatewayService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -13423,7 +13998,6 @@ public final class ApigatewayService {
               yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -13433,6 +14007,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -13443,6 +14018,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -13454,6 +14030,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -13464,6 +14041,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -13474,6 +14052,7 @@ public final class ApigatewayService {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -13490,7 +14069,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -13512,7 +14093,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -13544,7 +14127,7 @@ public final class ApigatewayService {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -13560,7 +14143,7 @@ public final class ApigatewayService {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -13578,13 +14161,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13769,9 +14351,8 @@ public final class ApigatewayService {
       public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ListOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -13780,42 +14361,41 @@ public final class ApigatewayService {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13892,7 +14472,7 @@ public final class ApigatewayService {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -14193,7 +14773,7 @@ public final class ApigatewayService {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -14211,6 +14791,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -14233,6 +14814,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -14256,6 +14838,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -14276,6 +14860,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -14292,6 +14877,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -14307,7 +14894,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14367,6 +14954,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -14375,6 +14963,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -14385,6 +14974,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+     * @return The enum numeric value on the wire for format.
      */
     int getFormatValue();
     /**
@@ -14393,13 +14983,14 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+     * @return The format.
      */
     yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format getFormat();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest}
    */
-  public  static final class GetOpenapiSpecRequest extends
+  public static final class GetOpenapiSpecRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest)
       GetOpenapiSpecRequestOrBuilder {
@@ -14411,6 +15002,13 @@ public final class ApigatewayService {
     private GetOpenapiSpecRequest() {
       apiGatewayId_ = "";
       format_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetOpenapiSpecRequest();
     }
 
     @java.lang.Override
@@ -14426,7 +15024,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14450,7 +15047,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14524,6 +15121,8 @@ public final class ApigatewayService {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -14531,6 +15130,10 @@ public final class ApigatewayService {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Format forNumber(int value) {
         switch (value) {
           case 0: return FORMAT_UNSPECIFIED;
@@ -14554,6 +15157,10 @@ public final class ApigatewayService {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -14596,7 +15203,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -14615,7 +15224,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -14638,8 +15249,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+     * @return The enum numeric value on the wire for format.
      */
-    public int getFormatValue() {
+    @java.lang.Override public int getFormatValue() {
       return format_;
     }
     /**
@@ -14648,8 +15260,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+     * @return The format.
      */
-    public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format getFormat() {
+    @java.lang.Override public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format getFormat() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format result = yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format.valueOf(format_);
       return result == null ? yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format.UNRECOGNIZED : result;
@@ -14669,7 +15282,7 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
       if (format_ != yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format.FORMAT_UNSPECIFIED.getNumber()) {
@@ -14684,7 +15297,7 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
       if (format_ != yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format.FORMAT_UNSPECIFIED.getNumber()) {
@@ -14706,12 +15319,11 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && format_ == other.format_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (format_ != other.format_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14896,35 +15508,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14981,6 +15593,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -15000,6 +15613,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -15020,6 +15634,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -15037,6 +15653,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -15050,6 +15667,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15070,8 +15689,9 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+       * @return The enum numeric value on the wire for format.
        */
-      public int getFormatValue() {
+      @java.lang.Override public int getFormatValue() {
         return format_;
       }
       /**
@@ -15080,8 +15700,11 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+       * @param value The enum numeric value on the wire for format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatValue(int value) {
+        
         format_ = value;
         onChanged();
         return this;
@@ -15092,7 +15715,9 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+       * @return The format.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format getFormat() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format result = yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format.valueOf(format_);
@@ -15104,6 +15729,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormat(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest.Format value) {
         if (value == null) {
@@ -15120,6 +15747,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecRequest.Format format = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormat() {
         
@@ -15130,7 +15758,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15190,6 +15818,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
     java.lang.String getApiGatewayId();
     /**
@@ -15198,6 +15827,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
     com.google.protobuf.ByteString
         getApiGatewayIdBytes();
@@ -15208,6 +15838,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 2;</code>
+     * @return The openapiSpec.
      */
     java.lang.String getOpenapiSpec();
     /**
@@ -15216,6 +15847,7 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 2;</code>
+     * @return The bytes for openapiSpec.
      */
     com.google.protobuf.ByteString
         getOpenapiSpecBytes();
@@ -15223,7 +15855,7 @@ public final class ApigatewayService {
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecResponse}
    */
-  public  static final class GetOpenapiSpecResponse extends
+  public static final class GetOpenapiSpecResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.GetOpenapiSpecResponse)
       GetOpenapiSpecResponseOrBuilder {
@@ -15235,6 +15867,13 @@ public final class ApigatewayService {
     private GetOpenapiSpecResponse() {
       apiGatewayId_ = "";
       openapiSpec_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetOpenapiSpecResponse();
     }
 
     @java.lang.Override
@@ -15250,7 +15889,6 @@ public final class ApigatewayService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15274,7 +15912,7 @@ public final class ApigatewayService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15313,7 +15951,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The apiGatewayId.
      */
+    @java.lang.Override
     public java.lang.String getApiGatewayId() {
       java.lang.Object ref = apiGatewayId_;
       if (ref instanceof java.lang.String) {
@@ -15332,7 +15972,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string api_gateway_id = 1;</code>
+     * @return The bytes for apiGatewayId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getApiGatewayIdBytes() {
       java.lang.Object ref = apiGatewayId_;
@@ -15355,7 +15997,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 2;</code>
+     * @return The openapiSpec.
      */
+    @java.lang.Override
     public java.lang.String getOpenapiSpec() {
       java.lang.Object ref = openapiSpec_;
       if (ref instanceof java.lang.String) {
@@ -15374,7 +16018,9 @@ public final class ApigatewayService {
      * </pre>
      *
      * <code>string openapi_spec = 2;</code>
+     * @return The bytes for openapiSpec.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOpenapiSpecBytes() {
       java.lang.Object ref = openapiSpec_;
@@ -15403,10 +16049,10 @@ public final class ApigatewayService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
-      if (!getOpenapiSpecBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiSpec_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, openapiSpec_);
       }
       unknownFields.writeTo(output);
@@ -15418,10 +16064,10 @@ public final class ApigatewayService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getApiGatewayIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
       }
-      if (!getOpenapiSpecBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiSpec_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, openapiSpec_);
       }
       size += unknownFields.getSerializedSize();
@@ -15439,13 +16085,12 @@ public final class ApigatewayService {
       }
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecResponse other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecResponse) obj;
 
-      boolean result = true;
-      result = result && getApiGatewayId()
-          .equals(other.getApiGatewayId());
-      result = result && getOpenapiSpec()
-          .equals(other.getOpenapiSpec());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getApiGatewayId()
+          .equals(other.getApiGatewayId())) return false;
+      if (!getOpenapiSpec()
+          .equals(other.getOpenapiSpec())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15630,35 +16275,35 @@ public final class ApigatewayService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15716,6 +16361,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The apiGatewayId.
        */
       public java.lang.String getApiGatewayId() {
         java.lang.Object ref = apiGatewayId_;
@@ -15735,6 +16381,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return The bytes for apiGatewayId.
        */
       public com.google.protobuf.ByteString
           getApiGatewayIdBytes() {
@@ -15755,6 +16402,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayId(
           java.lang.String value) {
@@ -15772,6 +16421,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearApiGatewayId() {
         
@@ -15785,6 +16435,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string api_gateway_id = 1;</code>
+       * @param value The bytes for apiGatewayId to set.
+       * @return This builder for chaining.
        */
       public Builder setApiGatewayIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15805,6 +16457,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 2;</code>
+       * @return The openapiSpec.
        */
       public java.lang.String getOpenapiSpec() {
         java.lang.Object ref = openapiSpec_;
@@ -15824,6 +16477,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 2;</code>
+       * @return The bytes for openapiSpec.
        */
       public com.google.protobuf.ByteString
           getOpenapiSpecBytes() {
@@ -15844,6 +16498,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 2;</code>
+       * @param value The openapiSpec to set.
+       * @return This builder for chaining.
        */
       public Builder setOpenapiSpec(
           java.lang.String value) {
@@ -15861,6 +16517,7 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOpenapiSpec() {
         
@@ -15874,6 +16531,8 @@ public final class ApigatewayService {
        * </pre>
        *
        * <code>string openapi_spec = 2;</code>
+       * @param value The bytes for openapiSpec to set.
+       * @return This builder for chaining.
        */
       public Builder setOpenapiSpecBytes(
           com.google.protobuf.ByteString value) {
@@ -15889,7 +16548,7 @@ public final class ApigatewayService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16177,15 +16836,7 @@ public final class ApigatewayService {
       "-genproto/yandex/cloud/serverless/apigat" +
       "eway/v1;apigatewayb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -16195,7 +16846,7 @@ public final class ApigatewayService {
           yandex.cloud.api.serverless.apigateway.v1.Apigateway.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_serverless_apigateway_v1_GetApiGatewayRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_GetApiGatewayRequest_fieldAccessorTable = new

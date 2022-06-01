@@ -1,19 +1,6 @@
 package yandex.cloud.api.apploadbalancer.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/apploadbalancer/v1/target_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class TargetGroupServiceGrpc {
 
   private TargetGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class TargetGroupServiceGrpc {
     if ((getGetMethod = TargetGroupServiceGrpc.getGetMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getGetMethod = TargetGroupServiceGrpc.getGetMethod) == null) {
-          TargetGroupServiceGrpc.getGetMethod = getGetMethod = 
+          TargetGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest,
@@ -76,22 +63,21 @@ public final class TargetGroupServiceGrpc {
     if ((getListMethod = TargetGroupServiceGrpc.getListMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getListMethod = TargetGroupServiceGrpc.getListMethod) == null) {
-          TargetGroupServiceGrpc.getListMethod = getListMethod = 
+          TargetGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest, yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest,
@@ -108,22 +94,21 @@ public final class TargetGroupServiceGrpc {
     if ((getCreateMethod = TargetGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getCreateMethod = TargetGroupServiceGrpc.getCreateMethod) == null) {
-          TargetGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          TargetGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest,
@@ -140,22 +125,21 @@ public final class TargetGroupServiceGrpc {
     if ((getUpdateMethod = TargetGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getUpdateMethod = TargetGroupServiceGrpc.getUpdateMethod) == null) {
-          TargetGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          TargetGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest,
@@ -172,22 +156,21 @@ public final class TargetGroupServiceGrpc {
     if ((getDeleteMethod = TargetGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getDeleteMethod = TargetGroupServiceGrpc.getDeleteMethod) == null) {
-          TargetGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          TargetGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest,
@@ -204,22 +187,21 @@ public final class TargetGroupServiceGrpc {
     if ((getAddTargetsMethod = TargetGroupServiceGrpc.getAddTargetsMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getAddTargetsMethod = TargetGroupServiceGrpc.getAddTargetsMethod) == null) {
-          TargetGroupServiceGrpc.getAddTargetsMethod = getAddTargetsMethod = 
+          TargetGroupServiceGrpc.getAddTargetsMethod = getAddTargetsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "AddTargets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddTargets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("AddTargets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("AddTargets"))
+              .build();
         }
-     }
-     return getAddTargetsMethod;
+      }
+    }
+    return getAddTargetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest,
@@ -236,22 +218,21 @@ public final class TargetGroupServiceGrpc {
     if ((getRemoveTargetsMethod = TargetGroupServiceGrpc.getRemoveTargetsMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getRemoveTargetsMethod = TargetGroupServiceGrpc.getRemoveTargetsMethod) == null) {
-          TargetGroupServiceGrpc.getRemoveTargetsMethod = getRemoveTargetsMethod = 
+          TargetGroupServiceGrpc.getRemoveTargetsMethod = getRemoveTargetsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "RemoveTargets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTargets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("RemoveTargets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("RemoveTargets"))
+              .build();
         }
-     }
-     return getRemoveTargetsMethod;
+      }
+    }
+    return getRemoveTargetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest,
@@ -268,29 +249,35 @@ public final class TargetGroupServiceGrpc {
     if ((getListOperationsMethod = TargetGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (TargetGroupServiceGrpc.class) {
         if ((getListOperationsMethod = TargetGroupServiceGrpc.getListOperationsMethod) == null) {
-          TargetGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          TargetGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest, yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.TargetGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TargetGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TargetGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new TargetGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TargetGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TargetGroupServiceStub>() {
+        @java.lang.Override
+        public TargetGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TargetGroupServiceStub(channel, callOptions);
+        }
+      };
+    return TargetGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -298,7 +285,14 @@ public final class TargetGroupServiceGrpc {
    */
   public static TargetGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TargetGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TargetGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TargetGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public TargetGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TargetGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return TargetGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -306,7 +300,14 @@ public final class TargetGroupServiceGrpc {
    */
   public static TargetGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TargetGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TargetGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TargetGroupServiceFutureStub>() {
+        @java.lang.Override
+        public TargetGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TargetGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return TargetGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -324,7 +325,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -334,7 +335,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -344,7 +345,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -354,7 +355,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -364,7 +365,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -374,7 +375,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddTargetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddTargetsMethod(), responseObserver);
     }
 
     /**
@@ -384,7 +385,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void removeTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveTargetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTargetsMethod(), responseObserver);
     }
 
     /**
@@ -394,63 +395,63 @@ public final class TargetGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest,
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest,
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getAddTargetsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_TARGETS)))
           .addMethod(
             getRemoveTargetsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_TARGETS)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest,
                 yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse>(
@@ -464,19 +465,15 @@ public final class TargetGroupServiceGrpc {
    * A set of methods for managing target groups.
    * </pre>
    */
-  public static final class TargetGroupServiceStub extends io.grpc.stub.AbstractStub<TargetGroupServiceStub> {
-    private TargetGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TargetGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TargetGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<TargetGroupServiceStub> {
+    private TargetGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TargetGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TargetGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TargetGroupServiceStub(channel, callOptions);
     }
 
@@ -488,7 +485,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -499,7 +496,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -510,7 +507,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -521,7 +518,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -532,7 +529,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -543,7 +540,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddTargetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -554,7 +551,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void removeTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveTargetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -565,7 +562,7 @@ public final class TargetGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -575,19 +572,15 @@ public final class TargetGroupServiceGrpc {
    * A set of methods for managing target groups.
    * </pre>
    */
-  public static final class TargetGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<TargetGroupServiceBlockingStub> {
-    private TargetGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TargetGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TargetGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TargetGroupServiceBlockingStub> {
+    private TargetGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TargetGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TargetGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TargetGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -598,7 +591,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup get(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -608,7 +601,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse list(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -618,7 +611,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -628,7 +621,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -638,7 +631,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -648,7 +641,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddTargetsMethod(), getCallOptions(), request);
     }
 
@@ -658,7 +651,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveTargetsMethod(), getCallOptions(), request);
     }
 
@@ -668,7 +661,7 @@ public final class TargetGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -678,19 +671,15 @@ public final class TargetGroupServiceGrpc {
    * A set of methods for managing target groups.
    * </pre>
    */
-  public static final class TargetGroupServiceFutureStub extends io.grpc.stub.AbstractStub<TargetGroupServiceFutureStub> {
-    private TargetGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TargetGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TargetGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TargetGroupServiceFutureStub> {
+    private TargetGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TargetGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TargetGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TargetGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -702,7 +691,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> get(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -713,7 +702,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse> list(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -724,7 +713,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -735,7 +724,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -746,7 +735,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -757,7 +746,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addTargets(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddTargetsMethod(), getCallOptions()), request);
     }
 
@@ -768,7 +757,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeTargets(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveTargetsMethod(), getCallOptions()), request);
     }
 
@@ -779,7 +768,7 @@ public final class TargetGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsResponse> listOperations(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

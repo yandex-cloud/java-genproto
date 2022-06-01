@@ -1,19 +1,6 @@
 package yandex.cloud.api.organizationmanager.v1.saml;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/organizationmanager/v1/saml/certificate_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class CertificateServiceGrpc {
 
   private CertificateServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class CertificateServiceGrpc {
     if ((getGetMethod = CertificateServiceGrpc.getGetMethod) == null) {
       synchronized (CertificateServiceGrpc.class) {
         if ((getGetMethod = CertificateServiceGrpc.getGetMethod) == null) {
-          CertificateServiceGrpc.getGetMethod = getGetMethod = 
+          CertificateServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest, yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.CertificateService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest,
@@ -76,22 +63,21 @@ public final class CertificateServiceGrpc {
     if ((getListMethod = CertificateServiceGrpc.getListMethod) == null) {
       synchronized (CertificateServiceGrpc.class) {
         if ((getListMethod = CertificateServiceGrpc.getListMethod) == null) {
-          CertificateServiceGrpc.getListMethod = getListMethod = 
+          CertificateServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest, yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.CertificateService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest,
@@ -108,22 +94,21 @@ public final class CertificateServiceGrpc {
     if ((getCreateMethod = CertificateServiceGrpc.getCreateMethod) == null) {
       synchronized (CertificateServiceGrpc.class) {
         if ((getCreateMethod = CertificateServiceGrpc.getCreateMethod) == null) {
-          CertificateServiceGrpc.getCreateMethod = getCreateMethod = 
+          CertificateServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.CertificateService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest,
@@ -140,22 +125,21 @@ public final class CertificateServiceGrpc {
     if ((getUpdateMethod = CertificateServiceGrpc.getUpdateMethod) == null) {
       synchronized (CertificateServiceGrpc.class) {
         if ((getUpdateMethod = CertificateServiceGrpc.getUpdateMethod) == null) {
-          CertificateServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          CertificateServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.CertificateService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest,
@@ -172,22 +156,21 @@ public final class CertificateServiceGrpc {
     if ((getDeleteMethod = CertificateServiceGrpc.getDeleteMethod) == null) {
       synchronized (CertificateServiceGrpc.class) {
         if ((getDeleteMethod = CertificateServiceGrpc.getDeleteMethod) == null) {
-          CertificateServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          CertificateServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.CertificateService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest,
@@ -204,29 +187,35 @@ public final class CertificateServiceGrpc {
     if ((getListOperationsMethod = CertificateServiceGrpc.getListOperationsMethod) == null) {
       synchronized (CertificateServiceGrpc.class) {
         if ((getListOperationsMethod = CertificateServiceGrpc.getListOperationsMethod) == null) {
-          CertificateServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          CertificateServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest, yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.CertificateService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CertificateServiceStub newStub(io.grpc.Channel channel) {
-    return new CertificateServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificateServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificateServiceStub>() {
+        @java.lang.Override
+        public CertificateServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificateServiceStub(channel, callOptions);
+        }
+      };
+    return CertificateServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class CertificateServiceGrpc {
    */
   public static CertificateServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CertificateServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificateServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificateServiceBlockingStub>() {
+        @java.lang.Override
+        public CertificateServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificateServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CertificateServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class CertificateServiceGrpc {
    */
   public static CertificateServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CertificateServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificateServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificateServiceFutureStub>() {
+        @java.lang.Override
+        public CertificateServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificateServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CertificateServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -260,7 +263,7 @@ public final class CertificateServiceGrpc {
      */
     public void get(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class CertificateServiceGrpc {
      */
     public void list(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class CertificateServiceGrpc {
      */
     public void create(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +293,7 @@ public final class CertificateServiceGrpc {
      */
     public void update(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -300,7 +303,7 @@ public final class CertificateServiceGrpc {
      */
     public void delete(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -310,49 +313,49 @@ public final class CertificateServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse>(
@@ -366,19 +369,15 @@ public final class CertificateServiceGrpc {
    * A set of methods for managing certificates.
    * </pre>
    */
-  public static final class CertificateServiceStub extends io.grpc.stub.AbstractStub<CertificateServiceStub> {
-    private CertificateServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificateServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificateServiceStub extends io.grpc.stub.AbstractAsyncStub<CertificateServiceStub> {
+    private CertificateServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificateServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificateServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificateServiceStub(channel, callOptions);
     }
 
@@ -390,7 +389,7 @@ public final class CertificateServiceGrpc {
      */
     public void get(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -401,7 +400,7 @@ public final class CertificateServiceGrpc {
      */
     public void list(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -412,7 +411,7 @@ public final class CertificateServiceGrpc {
      */
     public void create(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -423,7 +422,7 @@ public final class CertificateServiceGrpc {
      */
     public void update(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -434,7 +433,7 @@ public final class CertificateServiceGrpc {
      */
     public void delete(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -445,7 +444,7 @@ public final class CertificateServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -455,19 +454,15 @@ public final class CertificateServiceGrpc {
    * A set of methods for managing certificates.
    * </pre>
    */
-  public static final class CertificateServiceBlockingStub extends io.grpc.stub.AbstractStub<CertificateServiceBlockingStub> {
-    private CertificateServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificateServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificateServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CertificateServiceBlockingStub> {
+    private CertificateServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificateServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificateServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificateServiceBlockingStub(channel, callOptions);
     }
 
@@ -478,7 +473,7 @@ public final class CertificateServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate get(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -488,7 +483,7 @@ public final class CertificateServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse list(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -498,7 +493,7 @@ public final class CertificateServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -508,7 +503,7 @@ public final class CertificateServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -518,7 +513,7 @@ public final class CertificateServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -528,7 +523,7 @@ public final class CertificateServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse listOperations(yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -538,19 +533,15 @@ public final class CertificateServiceGrpc {
    * A set of methods for managing certificates.
    * </pre>
    */
-  public static final class CertificateServiceFutureStub extends io.grpc.stub.AbstractStub<CertificateServiceFutureStub> {
-    private CertificateServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificateServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificateServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CertificateServiceFutureStub> {
+    private CertificateServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificateServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificateServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificateServiceFutureStub(channel, callOptions);
     }
 
@@ -562,7 +553,7 @@ public final class CertificateServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.CertificateOuterClass.Certificate> get(
         yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.GetCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -573,7 +564,7 @@ public final class CertificateServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesResponse> list(
         yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificatesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -584,7 +575,7 @@ public final class CertificateServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.CreateCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -595,7 +586,7 @@ public final class CertificateServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.UpdateCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -606,7 +597,7 @@ public final class CertificateServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.DeleteCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -617,7 +608,7 @@ public final class CertificateServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsResponse> listOperations(
         yandex.cloud.api.organizationmanager.v1.saml.CertificateServiceOuterClass.ListCertificateOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

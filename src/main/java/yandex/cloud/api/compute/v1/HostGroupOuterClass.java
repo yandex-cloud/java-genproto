@@ -73,6 +73,8 @@ public final class HostGroupOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -80,6 +82,10 @@ public final class HostGroupOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MaintenancePolicy forNumber(int value) {
       switch (value) {
         case 0: return MAINTENANCE_POLICY_UNSPECIFIED;
@@ -103,6 +109,10 @@ public final class HostGroupOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -147,6 +157,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -155,6 +166,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -165,6 +177,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -173,6 +186,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -183,6 +197,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -191,6 +206,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -208,6 +224,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -216,6 +233,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -226,6 +244,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -234,6 +253,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -298,6 +318,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string zone_id = 7;</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -306,6 +327,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string zone_id = 7;</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -316,6 +338,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -324,6 +347,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+     * @return The status.
      */
     yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status getStatus();
 
@@ -333,6 +357,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string type_id = 9;</code>
+     * @return The typeId.
      */
     java.lang.String getTypeId();
     /**
@@ -341,6 +366,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string type_id = 9;</code>
+     * @return The bytes for typeId.
      */
     com.google.protobuf.ByteString
         getTypeIdBytes();
@@ -351,6 +377,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+     * @return The enum numeric value on the wire for maintenancePolicy.
      */
     int getMaintenancePolicyValue();
     /**
@@ -359,6 +386,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+     * @return The maintenancePolicy.
      */
     yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy();
 
@@ -368,6 +396,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
+     * @return Whether the scalePolicy field is set.
      */
     boolean hasScalePolicy();
     /**
@@ -376,6 +405,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
+     * @return The scalePolicy.
      */
     yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy getScalePolicy();
     /**
@@ -394,7 +424,7 @@ public final class HostGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.compute.v1.HostGroup}
    */
-  public  static final class HostGroup extends
+  public static final class HostGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.HostGroup)
       HostGroupOrBuilder {
@@ -412,6 +442,13 @@ public final class HostGroupOuterClass {
       status_ = 0;
       typeId_ = "";
       maintenancePolicy_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HostGroup();
     }
 
     @java.lang.Override
@@ -476,10 +513,10 @@ public final class HostGroupOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -526,7 +563,7 @@ public final class HostGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -628,6 +665,8 @@ public final class HostGroupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -635,6 +674,10 @@ public final class HostGroupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -660,6 +703,10 @@ public final class HostGroupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -694,7 +741,6 @@ public final class HostGroupOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.HostGroup.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -703,7 +749,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -722,7 +770,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -745,7 +795,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -764,7 +816,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -787,7 +841,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -797,7 +853,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -808,6 +866,7 @@ public final class HostGroupOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -820,7 +879,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -839,7 +900,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -862,7 +925,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -881,7 +946,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -930,14 +997,16 @@ public final class HostGroupOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -949,6 +1018,7 @@ public final class HostGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -960,11 +1030,12 @@ public final class HostGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -976,10 +1047,11 @@ public final class HostGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -996,7 +1068,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string zone_id = 7;</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -1015,7 +1089,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string zone_id = 7;</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -1038,8 +1114,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1048,8 +1125,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status result = yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status.UNRECOGNIZED : result;
@@ -1063,7 +1141,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string type_id = 9;</code>
+     * @return The typeId.
      */
+    @java.lang.Override
     public java.lang.String getTypeId() {
       java.lang.Object ref = typeId_;
       if (ref instanceof java.lang.String) {
@@ -1082,7 +1162,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string type_id = 9;</code>
+     * @return The bytes for typeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeIdBytes() {
       java.lang.Object ref = typeId_;
@@ -1105,8 +1187,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+     * @return The enum numeric value on the wire for maintenancePolicy.
      */
-    public int getMaintenancePolicyValue() {
+    @java.lang.Override public int getMaintenancePolicyValue() {
       return maintenancePolicy_;
     }
     /**
@@ -1115,8 +1198,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+     * @return The maintenancePolicy.
      */
-    public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
       return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
@@ -1130,7 +1214,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
+     * @return Whether the scalePolicy field is set.
      */
+    @java.lang.Override
     public boolean hasScalePolicy() {
       return scalePolicy_ != null;
     }
@@ -1140,7 +1226,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
+     * @return The scalePolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy getScalePolicy() {
       return scalePolicy_ == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.getDefaultInstance() : scalePolicy_;
     }
@@ -1151,6 +1239,7 @@ public final class HostGroupOuterClass {
      *
      * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicyOrBuilder getScalePolicyOrBuilder() {
       return getScalePolicy();
     }
@@ -1169,19 +1258,19 @@ public final class HostGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1190,13 +1279,13 @@ public final class HostGroupOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, zoneId_);
       }
       if (status_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, status_);
       }
-      if (!getTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, typeId_);
       }
       if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
@@ -1214,20 +1303,20 @@ public final class HostGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1240,14 +1329,14 @@ public final class HostGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, zoneId_);
       }
       if (status_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, status_);
       }
-      if (!getTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, typeId_);
       }
       if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
@@ -1273,35 +1362,34 @@ public final class HostGroupOuterClass {
       }
       yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup other = (yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && status_ == other.status_;
-      result = result && getTypeId()
-          .equals(other.getTypeId());
-      result = result && maintenancePolicy_ == other.maintenancePolicy_;
-      result = result && (hasScalePolicy() == other.hasScalePolicy());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (status_ != other.status_) return false;
+      if (!getTypeId()
+          .equals(other.getTypeId())) return false;
+      if (maintenancePolicy_ != other.maintenancePolicy_) return false;
+      if (hasScalePolicy() != other.hasScalePolicy()) return false;
       if (hasScalePolicy()) {
-        result = result && getScalePolicy()
-            .equals(other.getScalePolicy());
+        if (!getScalePolicy()
+            .equals(other.getScalePolicy())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1554,7 +1642,6 @@ public final class HostGroupOuterClass {
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup buildPartial() {
         yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup result = new yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1575,42 +1662,41 @@ public final class HostGroupOuterClass {
         } else {
           result.scalePolicy_ = scalePolicyBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1699,6 +1785,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1718,6 +1805,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1738,6 +1826,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1755,6 +1845,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1768,6 +1859,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1788,6 +1881,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1807,6 +1901,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1827,6 +1922,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1844,6 +1941,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1857,6 +1955,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1870,7 +1970,7 @@ public final class HostGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1879,6 +1979,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1889,6 +1990,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2030,6 +2132,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2049,6 +2152,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2069,6 +2173,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2086,6 +2192,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2099,6 +2206,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2119,6 +2228,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2138,6 +2248,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2158,6 +2269,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2175,6 +2288,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2188,6 +2302,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2235,14 +2351,16 @@ public final class HostGroupOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2254,6 +2372,7 @@ public final class HostGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2265,11 +2384,12 @@ public final class HostGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2281,10 +2401,11 @@ public final class HostGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2308,7 +2429,7 @@ public final class HostGroupOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2331,8 +2452,11 @@ public final class HostGroupOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2359,6 +2483,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string zone_id = 7;</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -2378,6 +2503,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string zone_id = 7;</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -2398,6 +2524,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string zone_id = 7;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -2415,6 +2543,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string zone_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -2428,6 +2557,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string zone_id = 7;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2448,8 +2579,9 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2458,8 +2590,11 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2470,7 +2605,9 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status result = yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status.valueOf(status_);
@@ -2482,6 +2619,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.Status value) {
         if (value == null) {
@@ -2498,6 +2637,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2513,6 +2653,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string type_id = 9;</code>
+       * @return The typeId.
        */
       public java.lang.String getTypeId() {
         java.lang.Object ref = typeId_;
@@ -2532,6 +2673,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string type_id = 9;</code>
+       * @return The bytes for typeId.
        */
       public com.google.protobuf.ByteString
           getTypeIdBytes() {
@@ -2552,6 +2694,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string type_id = 9;</code>
+       * @param value The typeId to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeId(
           java.lang.String value) {
@@ -2569,6 +2713,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string type_id = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTypeId() {
         
@@ -2582,6 +2727,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string type_id = 9;</code>
+       * @param value The bytes for typeId to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2602,8 +2749,9 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+       * @return The enum numeric value on the wire for maintenancePolicy.
        */
-      public int getMaintenancePolicyValue() {
+      @java.lang.Override public int getMaintenancePolicyValue() {
         return maintenancePolicy_;
       }
       /**
@@ -2612,8 +2760,11 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+       * @param value The enum numeric value on the wire for maintenancePolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setMaintenancePolicyValue(int value) {
+        
         maintenancePolicy_ = value;
         onChanged();
         return this;
@@ -2624,7 +2775,9 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+       * @return The maintenancePolicy.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
@@ -2636,6 +2789,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+       * @param value The maintenancePolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy value) {
         if (value == null) {
@@ -2652,6 +2807,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaintenancePolicy() {
         
@@ -2660,7 +2816,7 @@ public final class HostGroupOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy scalePolicy_ = null;
+      private yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy scalePolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy, yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.Builder, yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicyOrBuilder> scalePolicyBuilder_;
       /**
@@ -2669,6 +2825,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
+       * @return Whether the scalePolicy field is set.
        */
       public boolean hasScalePolicy() {
         return scalePolicyBuilder_ != null || scalePolicy_ != null;
@@ -2679,6 +2836,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.ScalePolicy scale_policy = 11;</code>
+       * @return The scalePolicy.
        */
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy getScalePolicy() {
         if (scalePolicyBuilder_ == null) {
@@ -2815,7 +2973,7 @@ public final class HostGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2875,6 +3033,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -2883,6 +3042,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -2893,6 +3053,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -2901,6 +3062,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+     * @return The status.
      */
     yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status getStatus();
 
@@ -2910,6 +3072,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string server_id = 3;</code>
+     * @return The serverId.
      */
     java.lang.String getServerId();
     /**
@@ -2918,6 +3081,7 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string server_id = 3;</code>
+     * @return The bytes for serverId.
      */
     com.google.protobuf.ByteString
         getServerIdBytes();
@@ -2929,7 +3093,7 @@ public final class HostGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.compute.v1.Host}
    */
-  public  static final class Host extends
+  public static final class Host extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.Host)
       HostOrBuilder {
@@ -2945,6 +3109,13 @@ public final class HostGroupOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Host();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2957,7 +3128,6 @@ public final class HostGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2987,7 +3157,7 @@ public final class HostGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3061,6 +3231,8 @@ public final class HostGroupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3068,6 +3240,10 @@ public final class HostGroupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -3091,6 +3267,10 @@ public final class HostGroupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3133,7 +3313,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -3152,7 +3334,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3175,8 +3359,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3185,8 +3370,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status result = yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status.UNRECOGNIZED : result;
@@ -3200,7 +3386,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string server_id = 3;</code>
+     * @return The serverId.
      */
+    @java.lang.Override
     public java.lang.String getServerId() {
       java.lang.Object ref = serverId_;
       if (ref instanceof java.lang.String) {
@@ -3219,7 +3407,9 @@ public final class HostGroupOuterClass {
      * </pre>
      *
      * <code>string server_id = 3;</code>
+     * @return The bytes for serverId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServerIdBytes() {
       java.lang.Object ref = serverId_;
@@ -3248,13 +3438,13 @@ public final class HostGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (status_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, status_);
       }
-      if (!getServerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverId_);
       }
       unknownFields.writeTo(output);
@@ -3266,14 +3456,14 @@ public final class HostGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (status_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
       }
-      if (!getServerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3291,14 +3481,13 @@ public final class HostGroupOuterClass {
       }
       yandex.cloud.api.compute.v1.HostGroupOuterClass.Host other = (yandex.cloud.api.compute.v1.HostGroupOuterClass.Host) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && status_ == other.status_;
-      result = result && getServerId()
-          .equals(other.getServerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (status_ != other.status_) return false;
+      if (!getServerId()
+          .equals(other.getServerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3492,35 +3681,35 @@ public final class HostGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3581,6 +3770,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -3600,6 +3790,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -3620,6 +3811,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -3637,6 +3830,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -3650,6 +3844,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3670,8 +3866,9 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3680,8 +3877,11 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3692,7 +3892,9 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status result = yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status.valueOf(status_);
@@ -3704,6 +3906,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.compute.v1.HostGroupOuterClass.Host.Status value) {
         if (value == null) {
@@ -3720,6 +3924,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Host.Status status = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3735,6 +3940,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string server_id = 3;</code>
+       * @return The serverId.
        */
       public java.lang.String getServerId() {
         java.lang.Object ref = serverId_;
@@ -3754,6 +3960,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string server_id = 3;</code>
+       * @return The bytes for serverId.
        */
       public com.google.protobuf.ByteString
           getServerIdBytes() {
@@ -3774,6 +3981,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string server_id = 3;</code>
+       * @param value The serverId to set.
+       * @return This builder for chaining.
        */
       public Builder setServerId(
           java.lang.String value) {
@@ -3791,6 +4000,7 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string server_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServerId() {
         
@@ -3804,6 +4014,8 @@ public final class HostGroupOuterClass {
        * </pre>
        *
        * <code>string server_id = 3;</code>
+       * @param value The bytes for serverId to set.
+       * @return This builder for chaining.
        */
       public Builder setServerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3819,7 +4031,7 @@ public final class HostGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3875,10 +4087,12 @@ public final class HostGroupOuterClass {
 
     /**
      * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
+     * @return Whether the fixedScale field is set.
      */
     boolean hasFixedScale();
     /**
      * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
+     * @return The fixedScale.
      */
     yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale getFixedScale();
     /**
@@ -3891,7 +4105,7 @@ public final class HostGroupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ScalePolicy}
    */
-  public  static final class ScalePolicy extends
+  public static final class ScalePolicy extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ScalePolicy)
       ScalePolicyOrBuilder {
@@ -3901,6 +4115,13 @@ public final class HostGroupOuterClass {
       super(builder);
     }
     private ScalePolicy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScalePolicy();
     }
 
     @java.lang.Override
@@ -3916,7 +4137,6 @@ public final class HostGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3942,7 +4162,7 @@ public final class HostGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3979,13 +4199,14 @@ public final class HostGroupOuterClass {
 
       /**
        * <code>int64 size = 1;</code>
+       * @return The size.
        */
       long getSize();
     }
     /**
      * Protobuf type {@code yandex.cloud.compute.v1.ScalePolicy.FixedScale}
      */
-    public  static final class FixedScale extends
+    public static final class FixedScale extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ScalePolicy.FixedScale)
         FixedScaleOrBuilder {
@@ -3995,7 +4216,13 @@ public final class HostGroupOuterClass {
         super(builder);
       }
       private FixedScale() {
-        size_ = 0L;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FixedScale();
       }
 
       @java.lang.Override
@@ -4011,7 +4238,6 @@ public final class HostGroupOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -4028,7 +4254,7 @@ public final class HostGroupOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4063,7 +4289,9 @@ public final class HostGroupOuterClass {
       private long size_;
       /**
        * <code>int64 size = 1;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -4113,11 +4341,10 @@ public final class HostGroupOuterClass {
         }
         yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale other = (yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale) obj;
 
-        boolean result = true;
-        result = result && (getSize()
-            == other.getSize());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getSize()
+            != other.getSize()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4298,35 +4525,35 @@ public final class HostGroupOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4375,12 +4602,16 @@ public final class HostGroupOuterClass {
         private long size_ ;
         /**
          * <code>int64 size = 1;</code>
+         * @return The size.
          */
+        @java.lang.Override
         public long getSize() {
           return size_;
         }
         /**
          * <code>int64 size = 1;</code>
+         * @param value The size to set.
+         * @return This builder for chaining.
          */
         public Builder setSize(long value) {
           
@@ -4390,6 +4621,7 @@ public final class HostGroupOuterClass {
         }
         /**
          * <code>int64 size = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSize() {
           
@@ -4400,7 +4632,7 @@ public final class HostGroupOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -4453,7 +4685,8 @@ public final class HostGroupOuterClass {
     private int scaleTypeCase_ = 0;
     private java.lang.Object scaleType_;
     public enum ScaleTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       FIXED_SCALE(1),
       SCALETYPE_NOT_SET(0);
       private final int value;
@@ -4461,6 +4694,8 @@ public final class HostGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4489,13 +4724,17 @@ public final class HostGroupOuterClass {
     public static final int FIXED_SCALE_FIELD_NUMBER = 1;
     /**
      * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
+     * @return Whether the fixedScale field is set.
      */
+    @java.lang.Override
     public boolean hasFixedScale() {
       return scaleTypeCase_ == 1;
     }
     /**
      * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
+     * @return The fixedScale.
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale getFixedScale() {
       if (scaleTypeCase_ == 1) {
          return (yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale) scaleType_;
@@ -4505,6 +4744,7 @@ public final class HostGroupOuterClass {
     /**
      * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScaleOrBuilder getFixedScaleOrBuilder() {
       if (scaleTypeCase_ == 1) {
          return (yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale) scaleType_;
@@ -4557,20 +4797,17 @@ public final class HostGroupOuterClass {
       }
       yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy other = (yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy) obj;
 
-      boolean result = true;
-      result = result && getScaleTypeCase().equals(
-          other.getScaleTypeCase());
-      if (!result) return false;
+      if (!getScaleTypeCase().equals(other.getScaleTypeCase())) return false;
       switch (scaleTypeCase_) {
         case 1:
-          result = result && getFixedScale()
-              .equals(other.getFixedScale());
+          if (!getFixedScale()
+              .equals(other.getFixedScale())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4763,35 +5000,35 @@ public final class HostGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4862,13 +5099,17 @@ public final class HostGroupOuterClass {
           yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale, yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale.Builder, yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScaleOrBuilder> fixedScaleBuilder_;
       /**
        * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
+       * @return Whether the fixedScale field is set.
        */
+      @java.lang.Override
       public boolean hasFixedScale() {
         return scaleTypeCase_ == 1;
       }
       /**
        * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
+       * @return The fixedScale.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScale getFixedScale() {
         if (fixedScaleBuilder_ == null) {
           if (scaleTypeCase_ == 1) {
@@ -4962,6 +5203,7 @@ public final class HostGroupOuterClass {
       /**
        * <code>.yandex.cloud.compute.v1.ScalePolicy.FixedScale fixed_scale = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.HostGroupOuterClass.ScalePolicy.FixedScaleOrBuilder getFixedScaleOrBuilder() {
         if ((scaleTypeCase_ == 1) && (fixedScaleBuilder_ != null)) {
           return fixedScaleBuilder_.getMessageOrBuilder();
@@ -4996,7 +5238,7 @@ public final class HostGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5109,19 +5351,11 @@ public final class HostGroupOuterClass {
       "ZCgithub.com/yandex-cloud/go-genproto/ya" +
       "ndex/cloud/compute/v1;computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_HostGroup_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_HostGroup_fieldAccessorTable = new

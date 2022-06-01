@@ -1,25 +1,13 @@
 package yandex.cloud.api.ydb.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ydb/v1/storage_type_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class StorageTypeServiceGrpc {
 
   private StorageTypeServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class StorageTypeServiceGrpc {
     if ((getGetMethod = StorageTypeServiceGrpc.getGetMethod) == null) {
       synchronized (StorageTypeServiceGrpc.class) {
         if ((getGetMethod = StorageTypeServiceGrpc.getGetMethod) == null) {
-          StorageTypeServiceGrpc.getGetMethod = getGetMethod = 
+          StorageTypeServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest, yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ydb.v1.StorageTypeService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType.getDefaultInstance()))
-                  .setSchemaDescriptor(new StorageTypeServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new StorageTypeServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest,
@@ -73,29 +60,35 @@ public final class StorageTypeServiceGrpc {
     if ((getListMethod = StorageTypeServiceGrpc.getListMethod) == null) {
       synchronized (StorageTypeServiceGrpc.class) {
         if ((getListMethod = StorageTypeServiceGrpc.getListMethod) == null) {
-          StorageTypeServiceGrpc.getListMethod = getListMethod = 
+          StorageTypeServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest, yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ydb.v1.StorageTypeService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new StorageTypeServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new StorageTypeServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static StorageTypeServiceStub newStub(io.grpc.Channel channel) {
-    return new StorageTypeServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<StorageTypeServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<StorageTypeServiceStub>() {
+        @java.lang.Override
+        public StorageTypeServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new StorageTypeServiceStub(channel, callOptions);
+        }
+      };
+    return StorageTypeServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +96,14 @@ public final class StorageTypeServiceGrpc {
    */
   public static StorageTypeServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new StorageTypeServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<StorageTypeServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<StorageTypeServiceBlockingStub>() {
+        @java.lang.Override
+        public StorageTypeServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new StorageTypeServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return StorageTypeServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +111,14 @@ public final class StorageTypeServiceGrpc {
    */
   public static StorageTypeServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new StorageTypeServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<StorageTypeServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<StorageTypeServiceFutureStub>() {
+        @java.lang.Override
+        public StorageTypeServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new StorageTypeServiceFutureStub(channel, callOptions);
+        }
+      };
+    return StorageTypeServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +132,7 @@ public final class StorageTypeServiceGrpc {
      */
     public void get(yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -135,21 +142,21 @@ public final class StorageTypeServiceGrpc {
      */
     public void list(yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest,
                 yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest,
                 yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse>(
@@ -160,19 +167,15 @@ public final class StorageTypeServiceGrpc {
 
   /**
    */
-  public static final class StorageTypeServiceStub extends io.grpc.stub.AbstractStub<StorageTypeServiceStub> {
-    private StorageTypeServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private StorageTypeServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class StorageTypeServiceStub extends io.grpc.stub.AbstractAsyncStub<StorageTypeServiceStub> {
+    private StorageTypeServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected StorageTypeServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected StorageTypeServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StorageTypeServiceStub(channel, callOptions);
     }
 
@@ -183,7 +186,7 @@ public final class StorageTypeServiceGrpc {
      */
     public void get(yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -194,26 +197,22 @@ public final class StorageTypeServiceGrpc {
      */
     public void list(yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class StorageTypeServiceBlockingStub extends io.grpc.stub.AbstractStub<StorageTypeServiceBlockingStub> {
-    private StorageTypeServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private StorageTypeServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class StorageTypeServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StorageTypeServiceBlockingStub> {
+    private StorageTypeServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected StorageTypeServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected StorageTypeServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StorageTypeServiceBlockingStub(channel, callOptions);
     }
 
@@ -223,7 +222,7 @@ public final class StorageTypeServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType get(yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -233,26 +232,22 @@ public final class StorageTypeServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse list(yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class StorageTypeServiceFutureStub extends io.grpc.stub.AbstractStub<StorageTypeServiceFutureStub> {
-    private StorageTypeServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private StorageTypeServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class StorageTypeServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StorageTypeServiceFutureStub> {
+    private StorageTypeServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected StorageTypeServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected StorageTypeServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StorageTypeServiceFutureStub(channel, callOptions);
     }
 
@@ -263,7 +258,7 @@ public final class StorageTypeServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType> get(
         yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.GetStorageTypeRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -274,7 +269,7 @@ public final class StorageTypeServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesResponse> list(
         yandex.cloud.api.ydb.v1.StorageTypeServiceOuterClass.ListStorageTypesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.cdn.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/cdn/v1/origin_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class OriginGroupServiceGrpc {
 
   private OriginGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class OriginGroupServiceGrpc {
     if ((getGetMethod = OriginGroupServiceGrpc.getGetMethod) == null) {
       synchronized (OriginGroupServiceGrpc.class) {
         if ((getGetMethod = OriginGroupServiceGrpc.getGetMethod) == null) {
-          OriginGroupServiceGrpc.getGetMethod = getGetMethod = 
+          OriginGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest, yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.OriginGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest,
@@ -76,22 +63,21 @@ public final class OriginGroupServiceGrpc {
     if ((getListMethod = OriginGroupServiceGrpc.getListMethod) == null) {
       synchronized (OriginGroupServiceGrpc.class) {
         if ((getListMethod = OriginGroupServiceGrpc.getListMethod) == null) {
-          OriginGroupServiceGrpc.getListMethod = getListMethod = 
+          OriginGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest, yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.OriginGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest,
@@ -108,22 +94,21 @@ public final class OriginGroupServiceGrpc {
     if ((getCreateMethod = OriginGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (OriginGroupServiceGrpc.class) {
         if ((getCreateMethod = OriginGroupServiceGrpc.getCreateMethod) == null) {
-          OriginGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          OriginGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.OriginGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest,
@@ -140,22 +125,21 @@ public final class OriginGroupServiceGrpc {
     if ((getUpdateMethod = OriginGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (OriginGroupServiceGrpc.class) {
         if ((getUpdateMethod = OriginGroupServiceGrpc.getUpdateMethod) == null) {
-          OriginGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          OriginGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.OriginGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest,
@@ -172,29 +156,35 @@ public final class OriginGroupServiceGrpc {
     if ((getDeleteMethod = OriginGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (OriginGroupServiceGrpc.class) {
         if ((getDeleteMethod = OriginGroupServiceGrpc.getDeleteMethod) == null) {
-          OriginGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          OriginGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.OriginGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OriginGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OriginGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new OriginGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OriginGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OriginGroupServiceStub>() {
+        @java.lang.Override
+        public OriginGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OriginGroupServiceStub(channel, callOptions);
+        }
+      };
+    return OriginGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -202,7 +192,14 @@ public final class OriginGroupServiceGrpc {
    */
   public static OriginGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new OriginGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OriginGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OriginGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public OriginGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OriginGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return OriginGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -210,7 +207,14 @@ public final class OriginGroupServiceGrpc {
    */
   public static OriginGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new OriginGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OriginGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OriginGroupServiceFutureStub>() {
+        @java.lang.Override
+        public OriginGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OriginGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return OriginGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -227,7 +231,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -237,7 +241,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -247,7 +251,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -259,7 +263,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -269,42 +273,42 @@ public final class OriginGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest,
                 yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest,
                 yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -318,19 +322,15 @@ public final class OriginGroupServiceGrpc {
    * Origin Groups management service.
    * </pre>
    */
-  public static final class OriginGroupServiceStub extends io.grpc.stub.AbstractStub<OriginGroupServiceStub> {
-    private OriginGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OriginGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OriginGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<OriginGroupServiceStub> {
+    private OriginGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OriginGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OriginGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OriginGroupServiceStub(channel, callOptions);
     }
 
@@ -341,7 +341,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -352,7 +352,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -363,7 +363,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -376,7 +376,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -387,7 +387,7 @@ public final class OriginGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -397,19 +397,15 @@ public final class OriginGroupServiceGrpc {
    * Origin Groups management service.
    * </pre>
    */
-  public static final class OriginGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<OriginGroupServiceBlockingStub> {
-    private OriginGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OriginGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OriginGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OriginGroupServiceBlockingStub> {
+    private OriginGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OriginGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OriginGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OriginGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -419,7 +415,7 @@ public final class OriginGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup get(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -429,7 +425,7 @@ public final class OriginGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse list(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -439,7 +435,7 @@ public final class OriginGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -451,7 +447,7 @@ public final class OriginGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -461,7 +457,7 @@ public final class OriginGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
@@ -471,19 +467,15 @@ public final class OriginGroupServiceGrpc {
    * Origin Groups management service.
    * </pre>
    */
-  public static final class OriginGroupServiceFutureStub extends io.grpc.stub.AbstractStub<OriginGroupServiceFutureStub> {
-    private OriginGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OriginGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OriginGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OriginGroupServiceFutureStub> {
+    private OriginGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OriginGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OriginGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OriginGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -494,7 +486,7 @@ public final class OriginGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.OriginGroupOuterClass.OriginGroup> get(
         yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.GetOriginGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -505,7 +497,7 @@ public final class OriginGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsResponse> list(
         yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.ListOriginGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -516,7 +508,7 @@ public final class OriginGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.CreateOriginGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -529,7 +521,7 @@ public final class OriginGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -540,7 +532,7 @@ public final class OriginGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.DeleteOriginGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

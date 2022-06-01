@@ -24,6 +24,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,16 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string user_account_id = 2;</code>
+     * @return Whether the userAccountId field is set.
+     */
+    boolean hasUserAccountId();
+    /**
+     * <pre>
+     * ID of the user account that the Key resource belongs to.
+     * </pre>
+     *
+     * <code>string user_account_id = 2;</code>
+     * @return The userAccountId.
      */
     java.lang.String getUserAccountId();
     /**
@@ -50,6 +62,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string user_account_id = 2;</code>
+     * @return The bytes for userAccountId.
      */
     com.google.protobuf.ByteString
         getUserAccountIdBytes();
@@ -60,6 +73,16 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return Whether the serviceAccountId field is set.
+     */
+    boolean hasServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account that the Key resource belongs to.
+     * </pre>
+     *
+     * <code>string service_account_id = 3;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -68,6 +91,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -78,6 +102,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -86,6 +111,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -103,6 +129,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -111,6 +138,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -121,6 +149,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+     * @return The enum numeric value on the wire for keyAlgorithm.
      */
     int getKeyAlgorithmValue();
     /**
@@ -129,6 +158,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+     * @return The keyAlgorithm.
      */
     yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm getKeyAlgorithm();
 
@@ -138,6 +168,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string public_key = 7;</code>
+     * @return The publicKey.
      */
     java.lang.String getPublicKey();
     /**
@@ -146,6 +177,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string public_key = 7;</code>
+     * @return The bytes for publicKey.
      */
     com.google.protobuf.ByteString
         getPublicKeyBytes();
@@ -159,7 +191,7 @@ public final class KeyOuterClass {
    *
    * Protobuf type {@code yandex.cloud.iam.v1.Key}
    */
-  public  static final class Key extends
+  public static final class Key extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.Key)
       KeyOrBuilder {
@@ -176,6 +208,13 @@ public final class KeyOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Key();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -188,7 +227,6 @@ public final class KeyOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -249,7 +287,7 @@ public final class KeyOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -339,6 +377,8 @@ public final class KeyOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -346,6 +386,10 @@ public final class KeyOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Algorithm forNumber(int value) {
         switch (value) {
           case 0: return ALGORITHM_UNSPECIFIED;
@@ -369,6 +413,10 @@ public final class KeyOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -406,7 +454,8 @@ public final class KeyOuterClass {
     private int subjectCase_ = 0;
     private java.lang.Object subject_;
     public enum SubjectCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       USER_ACCOUNT_ID(2),
       SERVICE_ACCOUNT_ID(3),
       SUBJECT_NOT_SET(0);
@@ -415,6 +464,8 @@ public final class KeyOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -449,7 +500,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -468,7 +521,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -490,6 +545,18 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string user_account_id = 2;</code>
+     * @return Whether the userAccountId field is set.
+     */
+    public boolean hasUserAccountId() {
+      return subjectCase_ == 2;
+    }
+    /**
+     * <pre>
+     * ID of the user account that the Key resource belongs to.
+     * </pre>
+     *
+     * <code>string user_account_id = 2;</code>
+     * @return The userAccountId.
      */
     public java.lang.String getUserAccountId() {
       java.lang.Object ref = "";
@@ -514,6 +581,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string user_account_id = 2;</code>
+     * @return The bytes for userAccountId.
      */
     public com.google.protobuf.ByteString
         getUserAccountIdBytes() {
@@ -541,6 +609,18 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return Whether the serviceAccountId field is set.
+     */
+    public boolean hasServiceAccountId() {
+      return subjectCase_ == 3;
+    }
+    /**
+     * <pre>
+     * ID of the service account that the Key resource belongs to.
+     * </pre>
+     *
+     * <code>string service_account_id = 3;</code>
+     * @return The serviceAccountId.
      */
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = "";
@@ -565,6 +645,7 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The bytes for serviceAccountId.
      */
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
@@ -593,7 +674,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -603,7 +686,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -614,6 +699,7 @@ public final class KeyOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -626,7 +712,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -645,7 +733,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -668,8 +758,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+     * @return The enum numeric value on the wire for keyAlgorithm.
      */
-    public int getKeyAlgorithmValue() {
+    @java.lang.Override public int getKeyAlgorithmValue() {
       return keyAlgorithm_;
     }
     /**
@@ -678,8 +769,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+     * @return The keyAlgorithm.
      */
-    public yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm getKeyAlgorithm() {
+    @java.lang.Override public yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm getKeyAlgorithm() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm result = yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm.valueOf(keyAlgorithm_);
       return result == null ? yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm.UNRECOGNIZED : result;
@@ -693,7 +785,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string public_key = 7;</code>
+     * @return The publicKey.
      */
+    @java.lang.Override
     public java.lang.String getPublicKey() {
       java.lang.Object ref = publicKey_;
       if (ref instanceof java.lang.String) {
@@ -712,7 +806,9 @@ public final class KeyOuterClass {
      * </pre>
      *
      * <code>string public_key = 7;</code>
+     * @return The bytes for publicKey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPublicKeyBytes() {
       java.lang.Object ref = publicKey_;
@@ -741,7 +837,7 @@ public final class KeyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (subjectCase_ == 2) {
@@ -753,13 +849,13 @@ public final class KeyOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(4, getCreatedAt());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       if (keyAlgorithm_ != yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm.ALGORITHM_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, keyAlgorithm_);
       }
-      if (!getPublicKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, publicKey_);
       }
       unknownFields.writeTo(output);
@@ -771,7 +867,7 @@ public final class KeyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (subjectCase_ == 2) {
@@ -784,14 +880,14 @@ public final class KeyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCreatedAt());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       if (keyAlgorithm_ != yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm.ALGORITHM_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, keyAlgorithm_);
       }
-      if (!getPublicKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, publicKey_);
       }
       size += unknownFields.getSerializedSize();
@@ -809,36 +905,33 @@ public final class KeyOuterClass {
       }
       yandex.cloud.api.iam.v1.KeyOuterClass.Key other = (yandex.cloud.api.iam.v1.KeyOuterClass.Key) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && keyAlgorithm_ == other.keyAlgorithm_;
-      result = result && getPublicKey()
-          .equals(other.getPublicKey());
-      result = result && getSubjectCase().equals(
-          other.getSubjectCase());
-      if (!result) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (keyAlgorithm_ != other.keyAlgorithm_) return false;
+      if (!getPublicKey()
+          .equals(other.getPublicKey())) return false;
+      if (!getSubjectCase().equals(other.getSubjectCase())) return false;
       switch (subjectCase_) {
         case 2:
-          result = result && getUserAccountId()
-              .equals(other.getUserAccountId());
+          if (!getUserAccountId()
+              .equals(other.getUserAccountId())) return false;
           break;
         case 3:
-          result = result && getServiceAccountId()
-              .equals(other.getServiceAccountId());
+          if (!getServiceAccountId()
+              .equals(other.getServiceAccountId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1073,35 +1166,35 @@ public final class KeyOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1201,6 +1294,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1220,6 +1314,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1240,6 +1335,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1257,6 +1354,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1270,6 +1368,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1289,7 +1389,21 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string user_account_id = 2;</code>
+       * @return Whether the userAccountId field is set.
        */
+      @java.lang.Override
+      public boolean hasUserAccountId() {
+        return subjectCase_ == 2;
+      }
+      /**
+       * <pre>
+       * ID of the user account that the Key resource belongs to.
+       * </pre>
+       *
+       * <code>string user_account_id = 2;</code>
+       * @return The userAccountId.
+       */
+      @java.lang.Override
       public java.lang.String getUserAccountId() {
         java.lang.Object ref = "";
         if (subjectCase_ == 2) {
@@ -1313,7 +1427,9 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string user_account_id = 2;</code>
+       * @return The bytes for userAccountId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUserAccountIdBytes() {
         java.lang.Object ref = "";
@@ -1338,6 +1454,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string user_account_id = 2;</code>
+       * @param value The userAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setUserAccountId(
           java.lang.String value) {
@@ -1355,6 +1473,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string user_account_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserAccountId() {
         if (subjectCase_ == 2) {
@@ -1370,6 +1489,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string user_account_id = 2;</code>
+       * @param value The bytes for userAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setUserAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1389,7 +1510,21 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return Whether the serviceAccountId field is set.
        */
+      @java.lang.Override
+      public boolean hasServiceAccountId() {
+        return subjectCase_ == 3;
+      }
+      /**
+       * <pre>
+       * ID of the service account that the Key resource belongs to.
+       * </pre>
+       *
+       * <code>string service_account_id = 3;</code>
+       * @return The serviceAccountId.
+       */
+      @java.lang.Override
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = "";
         if (subjectCase_ == 3) {
@@ -1413,7 +1548,9 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return The bytes for serviceAccountId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
         java.lang.Object ref = "";
@@ -1438,6 +1575,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -1455,6 +1594,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         if (subjectCase_ == 3) {
@@ -1470,6 +1610,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1483,7 +1625,7 @@ public final class KeyOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1492,6 +1634,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1502,6 +1645,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1643,6 +1787,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1662,6 +1807,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1682,6 +1828,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1699,6 +1847,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1712,6 +1861,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1732,8 +1883,9 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+       * @return The enum numeric value on the wire for keyAlgorithm.
        */
-      public int getKeyAlgorithmValue() {
+      @java.lang.Override public int getKeyAlgorithmValue() {
         return keyAlgorithm_;
       }
       /**
@@ -1742,8 +1894,11 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+       * @param value The enum numeric value on the wire for keyAlgorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyAlgorithmValue(int value) {
+        
         keyAlgorithm_ = value;
         onChanged();
         return this;
@@ -1754,7 +1909,9 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+       * @return The keyAlgorithm.
        */
+      @java.lang.Override
       public yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm getKeyAlgorithm() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm result = yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm.valueOf(keyAlgorithm_);
@@ -1766,6 +1923,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+       * @param value The keyAlgorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyAlgorithm(yandex.cloud.api.iam.v1.KeyOuterClass.Key.Algorithm value) {
         if (value == null) {
@@ -1782,6 +1941,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.Key.Algorithm key_algorithm = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKeyAlgorithm() {
         
@@ -1797,6 +1957,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string public_key = 7;</code>
+       * @return The publicKey.
        */
       public java.lang.String getPublicKey() {
         java.lang.Object ref = publicKey_;
@@ -1816,6 +1977,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string public_key = 7;</code>
+       * @return The bytes for publicKey.
        */
       public com.google.protobuf.ByteString
           getPublicKeyBytes() {
@@ -1836,6 +1998,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string public_key = 7;</code>
+       * @param value The publicKey to set.
+       * @return This builder for chaining.
        */
       public Builder setPublicKey(
           java.lang.String value) {
@@ -1853,6 +2017,7 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string public_key = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPublicKey() {
         
@@ -1866,6 +2031,8 @@ public final class KeyOuterClass {
        * </pre>
        *
        * <code>string public_key = 7;</code>
+       * @param value The bytes for publicKey to set.
+       * @return This builder for chaining.
        */
       public Builder setPublicKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -1881,7 +2048,7 @@ public final class KeyOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1959,19 +2126,11 @@ public final class KeyOuterClass {
       "d/go-genproto/yandex/cloud/iam/v1;iamb\006p" +
       "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iam_v1_Key_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iam_v1_Key_fieldAccessorTable = new

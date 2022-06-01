@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.postgresql.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/postgresql/v1/database_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DatabaseServiceGrpc {
 
   private DatabaseServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class DatabaseServiceGrpc {
     if ((getGetMethod = DatabaseServiceGrpc.getGetMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getGetMethod = DatabaseServiceGrpc.getGetMethod) == null) {
-          DatabaseServiceGrpc.getGetMethod = getGetMethod = 
+          DatabaseServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest, yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.postgresql.v1.DatabaseService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest,
@@ -76,22 +63,21 @@ public final class DatabaseServiceGrpc {
     if ((getListMethod = DatabaseServiceGrpc.getListMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getListMethod = DatabaseServiceGrpc.getListMethod) == null) {
-          DatabaseServiceGrpc.getListMethod = getListMethod = 
+          DatabaseServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest, yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.postgresql.v1.DatabaseService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest,
@@ -108,22 +94,21 @@ public final class DatabaseServiceGrpc {
     if ((getCreateMethod = DatabaseServiceGrpc.getCreateMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getCreateMethod = DatabaseServiceGrpc.getCreateMethod) == null) {
-          DatabaseServiceGrpc.getCreateMethod = getCreateMethod = 
+          DatabaseServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.postgresql.v1.DatabaseService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest,
@@ -140,22 +125,21 @@ public final class DatabaseServiceGrpc {
     if ((getUpdateMethod = DatabaseServiceGrpc.getUpdateMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getUpdateMethod = DatabaseServiceGrpc.getUpdateMethod) == null) {
-          DatabaseServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          DatabaseServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.postgresql.v1.DatabaseService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest,
@@ -172,29 +156,35 @@ public final class DatabaseServiceGrpc {
     if ((getDeleteMethod = DatabaseServiceGrpc.getDeleteMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getDeleteMethod = DatabaseServiceGrpc.getDeleteMethod) == null) {
-          DatabaseServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          DatabaseServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.postgresql.v1.DatabaseService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DatabaseServiceStub newStub(io.grpc.Channel channel) {
-    return new DatabaseServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceStub>() {
+        @java.lang.Override
+        public DatabaseServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatabaseServiceStub(channel, callOptions);
+        }
+      };
+    return DatabaseServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -202,7 +192,14 @@ public final class DatabaseServiceGrpc {
    */
   public static DatabaseServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DatabaseServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceBlockingStub>() {
+        @java.lang.Override
+        public DatabaseServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatabaseServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DatabaseServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -210,7 +207,14 @@ public final class DatabaseServiceGrpc {
    */
   public static DatabaseServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DatabaseServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceFutureStub>() {
+        @java.lang.Override
+        public DatabaseServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatabaseServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DatabaseServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -228,7 +232,7 @@ public final class DatabaseServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -238,7 +242,7 @@ public final class DatabaseServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -248,7 +252,7 @@ public final class DatabaseServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -258,7 +262,7 @@ public final class DatabaseServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -268,42 +272,42 @@ public final class DatabaseServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest,
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest,
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -317,19 +321,15 @@ public final class DatabaseServiceGrpc {
    * A set of methods for managing PostgreSQL Database resources.
    * </pre>
    */
-  public static final class DatabaseServiceStub extends io.grpc.stub.AbstractStub<DatabaseServiceStub> {
-    private DatabaseServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DatabaseServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DatabaseServiceStub extends io.grpc.stub.AbstractAsyncStub<DatabaseServiceStub> {
+    private DatabaseServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DatabaseServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DatabaseServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DatabaseServiceStub(channel, callOptions);
     }
 
@@ -341,7 +341,7 @@ public final class DatabaseServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -352,7 +352,7 @@ public final class DatabaseServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -363,7 +363,7 @@ public final class DatabaseServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -374,7 +374,7 @@ public final class DatabaseServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -385,7 +385,7 @@ public final class DatabaseServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -395,19 +395,15 @@ public final class DatabaseServiceGrpc {
    * A set of methods for managing PostgreSQL Database resources.
    * </pre>
    */
-  public static final class DatabaseServiceBlockingStub extends io.grpc.stub.AbstractStub<DatabaseServiceBlockingStub> {
-    private DatabaseServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DatabaseServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DatabaseServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DatabaseServiceBlockingStub> {
+    private DatabaseServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DatabaseServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DatabaseServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DatabaseServiceBlockingStub(channel, callOptions);
     }
 
@@ -418,7 +414,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database get(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -428,7 +424,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse list(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -438,7 +434,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -448,7 +444,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -458,7 +454,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
@@ -468,19 +464,15 @@ public final class DatabaseServiceGrpc {
    * A set of methods for managing PostgreSQL Database resources.
    * </pre>
    */
-  public static final class DatabaseServiceFutureStub extends io.grpc.stub.AbstractStub<DatabaseServiceFutureStub> {
-    private DatabaseServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DatabaseServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DatabaseServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DatabaseServiceFutureStub> {
+    private DatabaseServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DatabaseServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DatabaseServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DatabaseServiceFutureStub(channel, callOptions);
     }
 
@@ -492,7 +484,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Database> get(
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -503,7 +495,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesResponse> list(
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -514,7 +506,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -525,7 +517,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -536,7 +528,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/zone_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ZoneServiceGrpc {
 
   private ZoneServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ZoneServiceGrpc {
     if ((getGetMethod = ZoneServiceGrpc.getGetMethod) == null) {
       synchronized (ZoneServiceGrpc.class) {
         if ((getGetMethod = ZoneServiceGrpc.getGetMethod) == null) {
-          ZoneServiceGrpc.getGetMethod = getGetMethod = 
+          ZoneServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest, yandex.cloud.api.compute.v1.ZoneOuterClass.Zone>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ZoneService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ZoneOuterClass.Zone.getDefaultInstance()))
-                  .setSchemaDescriptor(new ZoneServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ZoneServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest,
@@ -76,29 +63,35 @@ public final class ZoneServiceGrpc {
     if ((getListMethod = ZoneServiceGrpc.getListMethod) == null) {
       synchronized (ZoneServiceGrpc.class) {
         if ((getListMethod = ZoneServiceGrpc.getListMethod) == null) {
-          ZoneServiceGrpc.getListMethod = getListMethod = 
+          ZoneServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest, yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ZoneService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ZoneServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ZoneServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ZoneServiceStub newStub(io.grpc.Channel channel) {
-    return new ZoneServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ZoneServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ZoneServiceStub>() {
+        @java.lang.Override
+        public ZoneServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ZoneServiceStub(channel, callOptions);
+        }
+      };
+    return ZoneServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class ZoneServiceGrpc {
    */
   public static ZoneServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ZoneServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ZoneServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ZoneServiceBlockingStub>() {
+        @java.lang.Override
+        public ZoneServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ZoneServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ZoneServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class ZoneServiceGrpc {
    */
   public static ZoneServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ZoneServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ZoneServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ZoneServiceFutureStub>() {
+        @java.lang.Override
+        public ZoneServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ZoneServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ZoneServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -132,7 +139,7 @@ public final class ZoneServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ZoneOuterClass.Zone> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -142,21 +149,21 @@ public final class ZoneServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest,
                 yandex.cloud.api.compute.v1.ZoneOuterClass.Zone>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest,
                 yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse>(
@@ -170,19 +177,15 @@ public final class ZoneServiceGrpc {
    * A set of methods to retrieve information about availability zones.
    * </pre>
    */
-  public static final class ZoneServiceStub extends io.grpc.stub.AbstractStub<ZoneServiceStub> {
-    private ZoneServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ZoneServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ZoneServiceStub extends io.grpc.stub.AbstractAsyncStub<ZoneServiceStub> {
+    private ZoneServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ZoneServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ZoneServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ZoneServiceStub(channel, callOptions);
     }
 
@@ -194,7 +197,7 @@ public final class ZoneServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ZoneOuterClass.Zone> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -205,7 +208,7 @@ public final class ZoneServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -215,19 +218,15 @@ public final class ZoneServiceGrpc {
    * A set of methods to retrieve information about availability zones.
    * </pre>
    */
-  public static final class ZoneServiceBlockingStub extends io.grpc.stub.AbstractStub<ZoneServiceBlockingStub> {
-    private ZoneServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ZoneServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ZoneServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ZoneServiceBlockingStub> {
+    private ZoneServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ZoneServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ZoneServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ZoneServiceBlockingStub(channel, callOptions);
     }
 
@@ -238,7 +237,7 @@ public final class ZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.ZoneOuterClass.Zone get(yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -248,7 +247,7 @@ public final class ZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse list(yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -258,19 +257,15 @@ public final class ZoneServiceGrpc {
    * A set of methods to retrieve information about availability zones.
    * </pre>
    */
-  public static final class ZoneServiceFutureStub extends io.grpc.stub.AbstractStub<ZoneServiceFutureStub> {
-    private ZoneServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ZoneServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ZoneServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ZoneServiceFutureStub> {
+    private ZoneServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ZoneServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ZoneServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ZoneServiceFutureStub(channel, callOptions);
     }
 
@@ -282,7 +277,7 @@ public final class ZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ZoneOuterClass.Zone> get(
         yandex.cloud.api.compute.v1.ZoneServiceOuterClass.GetZoneRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -293,7 +288,7 @@ public final class ZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesResponse> list(
         yandex.cloud.api.compute.v1.ZoneServiceOuterClass.ListZonesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

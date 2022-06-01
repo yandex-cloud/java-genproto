@@ -24,6 +24,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,6 +33,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -42,6 +44,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -50,6 +53,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -60,6 +64,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 3;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -68,6 +73,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 3;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -78,6 +84,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>int64 version = 4;</code>
+     * @return The version.
      */
     long getVersion();
 
@@ -87,13 +94,14 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>bool active = 5;</code>
+     * @return The active.
      */
     boolean getActive();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.Extension}
    */
-  public  static final class Extension extends
+  public static final class Extension extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.Extension)
       ExtensionOrBuilder {
@@ -106,8 +114,13 @@ public final class ExtensionOuterClass {
       name_ = "";
       id_ = "";
       clusterId_ = "";
-      version_ = 0L;
-      active_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Extension();
     }
 
     @java.lang.Override
@@ -123,7 +136,6 @@ public final class ExtensionOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -163,7 +175,7 @@ public final class ExtensionOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -202,7 +214,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -221,7 +235,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -244,7 +260,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -263,7 +281,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -286,7 +306,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 3;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -305,7 +327,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 3;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -328,7 +352,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>int64 version = 4;</code>
+     * @return The version.
      */
+    @java.lang.Override
     public long getVersion() {
       return version_;
     }
@@ -341,7 +367,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>bool active = 5;</code>
+     * @return The active.
      */
+    @java.lang.Override
     public boolean getActive() {
       return active_;
     }
@@ -360,13 +388,13 @@ public final class ExtensionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterId_);
       }
       if (version_ != 0L) {
@@ -384,13 +412,13 @@ public final class ExtensionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterId_);
       }
       if (version_ != 0L) {
@@ -416,19 +444,18 @@ public final class ExtensionOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.Extension) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getVersion()
-          == other.getVersion());
-      result = result && (getActive()
-          == other.getActive());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (getActive()
+          != other.getActive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -630,35 +657,35 @@ public final class ExtensionOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -726,6 +753,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -745,6 +773,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -765,6 +794,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -782,6 +813,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -795,6 +827,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -815,6 +849,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -834,6 +869,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -854,6 +890,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -871,6 +909,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -884,6 +923,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -904,6 +945,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 3;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -923,6 +965,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 3;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -943,6 +986,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 3;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -960,6 +1005,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -973,6 +1019,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 3;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -993,7 +1041,9 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>int64 version = 4;</code>
+       * @return The version.
        */
+      @java.lang.Override
       public long getVersion() {
         return version_;
       }
@@ -1003,6 +1053,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>int64 version = 4;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(long value) {
         
@@ -1016,6 +1068,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>int64 version = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -1031,7 +1084,9 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>bool active = 5;</code>
+       * @return The active.
        */
+      @java.lang.Override
       public boolean getActive() {
         return active_;
       }
@@ -1041,6 +1096,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>bool active = 5;</code>
+       * @param value The active to set.
+       * @return This builder for chaining.
        */
       public Builder setActive(boolean value) {
         
@@ -1054,6 +1111,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>bool active = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearActive() {
         
@@ -1064,7 +1122,7 @@ public final class ExtensionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1124,6 +1182,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -1132,6 +1191,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -1142,6 +1202,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string uri = 2;</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
@@ -1150,6 +1211,7 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string uri = 2;</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -1160,13 +1222,14 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>bool disabled = 3;</code>
+     * @return The disabled.
      */
     boolean getDisabled();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ExtensionSpec}
    */
-  public  static final class ExtensionSpec extends
+  public static final class ExtensionSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ExtensionSpec)
       ExtensionSpecOrBuilder {
@@ -1178,7 +1241,13 @@ public final class ExtensionOuterClass {
     private ExtensionSpec() {
       name_ = "";
       uri_ = "";
-      disabled_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExtensionSpec();
     }
 
     @java.lang.Override
@@ -1194,7 +1263,6 @@ public final class ExtensionOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1223,7 +1291,7 @@ public final class ExtensionOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1262,7 +1330,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1281,7 +1351,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1304,7 +1376,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string uri = 2;</code>
+     * @return The uri.
      */
+    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -1323,7 +1397,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>string uri = 2;</code>
+     * @return The bytes for uri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -1346,7 +1422,9 @@ public final class ExtensionOuterClass {
      * </pre>
      *
      * <code>bool disabled = 3;</code>
+     * @return The disabled.
      */
+    @java.lang.Override
     public boolean getDisabled() {
       return disabled_;
     }
@@ -1365,10 +1443,10 @@ public final class ExtensionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uri_);
       }
       if (disabled_ != false) {
@@ -1383,10 +1461,10 @@ public final class ExtensionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uri_);
       }
       if (disabled_ != false) {
@@ -1408,15 +1486,14 @@ public final class ExtensionOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.ExtensionSpec other = (yandex.cloud.api.mdb.elasticsearch.v1.ExtensionOuterClass.ExtensionSpec) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && (getDisabled()
-          == other.getDisabled());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1607,35 +1684,35 @@ public final class ExtensionOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1696,6 +1773,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1715,6 +1793,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1735,6 +1814,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1752,6 +1833,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1765,6 +1847,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1785,6 +1869,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string uri = 2;</code>
+       * @return The uri.
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -1804,6 +1889,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string uri = 2;</code>
+       * @return The bytes for uri.
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -1824,6 +1910,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string uri = 2;</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -1841,6 +1929,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string uri = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         
@@ -1854,6 +1943,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>string uri = 2;</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -1874,7 +1965,9 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>bool disabled = 3;</code>
+       * @return The disabled.
        */
+      @java.lang.Override
       public boolean getDisabled() {
         return disabled_;
       }
@@ -1884,6 +1977,8 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>bool disabled = 3;</code>
+       * @param value The disabled to set.
+       * @return This builder for chaining.
        */
       public Builder setDisabled(boolean value) {
         
@@ -1897,6 +1992,7 @@ public final class ExtensionOuterClass {
        * </pre>
        *
        * <code>bool disabled = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDisabled() {
         
@@ -1907,7 +2003,7 @@ public final class ExtensionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1988,19 +2084,11 @@ public final class ExtensionOuterClass {
       "oto/yandex/cloud/mdb/elasticsearch/v1;el" +
       "asticsearchb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Extension_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Extension_fieldAccessorTable = new

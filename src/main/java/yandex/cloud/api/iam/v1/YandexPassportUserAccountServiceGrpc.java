@@ -1,19 +1,6 @@
 package yandex.cloud.api.iam.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iam/v1/yandex_passport_user_account_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class YandexPassportUserAccountServiceGrpc {
 
   private YandexPassportUserAccountServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class YandexPassportUserAccountServiceGrpc {
     if ((getGetByLoginMethod = YandexPassportUserAccountServiceGrpc.getGetByLoginMethod) == null) {
       synchronized (YandexPassportUserAccountServiceGrpc.class) {
         if ((getGetByLoginMethod = YandexPassportUserAccountServiceGrpc.getGetByLoginMethod) == null) {
-          YandexPassportUserAccountServiceGrpc.getGetByLoginMethod = getGetByLoginMethod = 
+          YandexPassportUserAccountServiceGrpc.getGetByLoginMethod = getGetByLoginMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest, yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.YandexPassportUserAccountService", "GetByLogin"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetByLogin"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount.getDefaultInstance()))
-                  .setSchemaDescriptor(new YandexPassportUserAccountServiceMethodDescriptorSupplier("GetByLogin"))
-                  .build();
-          }
+              .setSchemaDescriptor(new YandexPassportUserAccountServiceMethodDescriptorSupplier("GetByLogin"))
+              .build();
         }
-     }
-     return getGetByLoginMethod;
+      }
+    }
+    return getGetByLoginMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static YandexPassportUserAccountServiceStub newStub(io.grpc.Channel channel) {
-    return new YandexPassportUserAccountServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<YandexPassportUserAccountServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<YandexPassportUserAccountServiceStub>() {
+        @java.lang.Override
+        public YandexPassportUserAccountServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new YandexPassportUserAccountServiceStub(channel, callOptions);
+        }
+      };
+    return YandexPassportUserAccountServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class YandexPassportUserAccountServiceGrpc {
    */
   public static YandexPassportUserAccountServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new YandexPassportUserAccountServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<YandexPassportUserAccountServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<YandexPassportUserAccountServiceBlockingStub>() {
+        @java.lang.Override
+        public YandexPassportUserAccountServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new YandexPassportUserAccountServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return YandexPassportUserAccountServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class YandexPassportUserAccountServiceGrpc {
    */
   public static YandexPassportUserAccountServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new YandexPassportUserAccountServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<YandexPassportUserAccountServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<YandexPassportUserAccountServiceFutureStub>() {
+        @java.lang.Override
+        public YandexPassportUserAccountServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new YandexPassportUserAccountServiceFutureStub(channel, callOptions);
+        }
+      };
+    return YandexPassportUserAccountServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class YandexPassportUserAccountServiceGrpc {
      */
     public void getByLogin(yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetByLoginMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetByLoginMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetByLoginMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest,
                 yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount>(
@@ -120,19 +128,15 @@ public final class YandexPassportUserAccountServiceGrpc {
    * A set of methods for managing YandexPassportUserAccount resources.
    * </pre>
    */
-  public static final class YandexPassportUserAccountServiceStub extends io.grpc.stub.AbstractStub<YandexPassportUserAccountServiceStub> {
-    private YandexPassportUserAccountServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private YandexPassportUserAccountServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class YandexPassportUserAccountServiceStub extends io.grpc.stub.AbstractAsyncStub<YandexPassportUserAccountServiceStub> {
+    private YandexPassportUserAccountServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected YandexPassportUserAccountServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected YandexPassportUserAccountServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new YandexPassportUserAccountServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class YandexPassportUserAccountServiceGrpc {
      */
     public void getByLogin(yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByLoginMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class YandexPassportUserAccountServiceGrpc {
    * A set of methods for managing YandexPassportUserAccount resources.
    * </pre>
    */
-  public static final class YandexPassportUserAccountServiceBlockingStub extends io.grpc.stub.AbstractStub<YandexPassportUserAccountServiceBlockingStub> {
-    private YandexPassportUserAccountServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private YandexPassportUserAccountServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class YandexPassportUserAccountServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<YandexPassportUserAccountServiceBlockingStub> {
+    private YandexPassportUserAccountServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected YandexPassportUserAccountServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected YandexPassportUserAccountServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new YandexPassportUserAccountServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class YandexPassportUserAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount getByLogin(yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetByLoginMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class YandexPassportUserAccountServiceGrpc {
    * A set of methods for managing YandexPassportUserAccount resources.
    * </pre>
    */
-  public static final class YandexPassportUserAccountServiceFutureStub extends io.grpc.stub.AbstractStub<YandexPassportUserAccountServiceFutureStub> {
-    private YandexPassportUserAccountServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private YandexPassportUserAccountServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class YandexPassportUserAccountServiceFutureStub extends io.grpc.stub.AbstractFutureStub<YandexPassportUserAccountServiceFutureStub> {
+    private YandexPassportUserAccountServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected YandexPassportUserAccountServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected YandexPassportUserAccountServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new YandexPassportUserAccountServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class YandexPassportUserAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.UserAccountOuterClass.UserAccount> getByLogin(
         yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetByLoginMethod(), getCallOptions()), request);
     }
   }

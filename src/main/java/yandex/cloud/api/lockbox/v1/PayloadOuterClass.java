@@ -24,6 +24,7 @@ public final class PayloadOuterClass {
      * </pre>
      *
      * <code>string version_id = 1;</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -32,6 +33,7 @@ public final class PayloadOuterClass {
      * </pre>
      *
      * <code>string version_id = 1;</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -87,7 +89,7 @@ public final class PayloadOuterClass {
    *
    * Protobuf type {@code yandex.cloud.lockbox.v1.Payload}
    */
-  public  static final class Payload extends
+  public static final class Payload extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.Payload)
       PayloadOrBuilder {
@@ -99,6 +101,13 @@ public final class PayloadOuterClass {
     private Payload() {
       versionId_ = "";
       entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Payload();
     }
 
     @java.lang.Override
@@ -132,16 +141,16 @@ public final class PayloadOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 entries_ = new java.util.ArrayList<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               entries_.add(
                   input.readMessage(yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -155,7 +164,7 @@ public final class PayloadOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
         }
         this.unknownFields = unknownFields.build();
@@ -185,6 +194,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string key = 1;</code>
+       * @return The key.
        */
       java.lang.String getKey();
       /**
@@ -193,6 +203,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string key = 1;</code>
+       * @return The bytes for key.
        */
       com.google.protobuf.ByteString
           getKeyBytes();
@@ -203,6 +214,16 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string text_value = 2;</code>
+       * @return Whether the textValue field is set.
+       */
+      boolean hasTextValue();
+      /**
+       * <pre>
+       * Text value.
+       * </pre>
+       *
+       * <code>string text_value = 2;</code>
+       * @return The textValue.
        */
       java.lang.String getTextValue();
       /**
@@ -211,6 +232,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string text_value = 2;</code>
+       * @return The bytes for textValue.
        */
       com.google.protobuf.ByteString
           getTextValueBytes();
@@ -221,6 +243,16 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>bytes binary_value = 3;</code>
+       * @return Whether the binaryValue field is set.
+       */
+      boolean hasBinaryValue();
+      /**
+       * <pre>
+       * Binary value.
+       * </pre>
+       *
+       * <code>bytes binary_value = 3;</code>
+       * @return The binaryValue.
        */
       com.google.protobuf.ByteString getBinaryValue();
 
@@ -229,7 +261,7 @@ public final class PayloadOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.lockbox.v1.Payload.Entry}
      */
-    public  static final class Entry extends
+    public static final class Entry extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.Payload.Entry)
         EntryOrBuilder {
@@ -240,6 +272,13 @@ public final class PayloadOuterClass {
       }
       private Entry() {
         key_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Entry();
       }
 
       @java.lang.Override
@@ -255,7 +294,6 @@ public final class PayloadOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -279,12 +317,12 @@ public final class PayloadOuterClass {
                 break;
               }
               case 26: {
-                valueCase_ = 3;
                 value_ = input.readBytes();
+                valueCase_ = 3;
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -318,7 +356,8 @@ public final class PayloadOuterClass {
       private int valueCase_ = 0;
       private java.lang.Object value_;
       public enum ValueCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         TEXT_VALUE(2),
         BINARY_VALUE(3),
         VALUE_NOT_SET(0);
@@ -327,6 +366,8 @@ public final class PayloadOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -361,7 +402,9 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string key = 1;</code>
+       * @return The key.
        */
+      @java.lang.Override
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
         if (ref instanceof java.lang.String) {
@@ -380,7 +423,9 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string key = 1;</code>
+       * @return The bytes for key.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getKeyBytes() {
         java.lang.Object ref = key_;
@@ -402,6 +447,18 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string text_value = 2;</code>
+       * @return Whether the textValue field is set.
+       */
+      public boolean hasTextValue() {
+        return valueCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Text value.
+       * </pre>
+       *
+       * <code>string text_value = 2;</code>
+       * @return The textValue.
        */
       public java.lang.String getTextValue() {
         java.lang.Object ref = "";
@@ -426,6 +483,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string text_value = 2;</code>
+       * @return The bytes for textValue.
        */
       public com.google.protobuf.ByteString
           getTextValueBytes() {
@@ -453,7 +511,21 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>bytes binary_value = 3;</code>
+       * @return Whether the binaryValue field is set.
        */
+      @java.lang.Override
+      public boolean hasBinaryValue() {
+        return valueCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Binary value.
+       * </pre>
+       *
+       * <code>bytes binary_value = 3;</code>
+       * @return The binaryValue.
+       */
+      @java.lang.Override
       public com.google.protobuf.ByteString getBinaryValue() {
         if (valueCase_ == 3) {
           return (com.google.protobuf.ByteString) value_;
@@ -475,7 +547,7 @@ public final class PayloadOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
         }
         if (valueCase_ == 2) {
@@ -494,7 +566,7 @@ public final class PayloadOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getKeyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
         }
         if (valueCase_ == 2) {
@@ -520,26 +592,23 @@ public final class PayloadOuterClass {
         }
         yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry other = (yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry) obj;
 
-        boolean result = true;
-        result = result && getKey()
-            .equals(other.getKey());
-        result = result && getValueCase().equals(
-            other.getValueCase());
-        if (!result) return false;
+        if (!getKey()
+            .equals(other.getKey())) return false;
+        if (!getValueCase().equals(other.getValueCase())) return false;
         switch (valueCase_) {
           case 2:
-            result = result && getTextValue()
-                .equals(other.getTextValue());
+            if (!getTextValue()
+                .equals(other.getTextValue())) return false;
             break;
           case 3:
-            result = result && getBinaryValue()
-                .equals(other.getBinaryValue());
+            if (!getBinaryValue()
+                .equals(other.getBinaryValue())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -740,35 +809,35 @@ public final class PayloadOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -852,6 +921,7 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * @return The key.
          */
         public java.lang.String getKey() {
           java.lang.Object ref = key_;
@@ -871,6 +941,7 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * @return The bytes for key.
          */
         public com.google.protobuf.ByteString
             getKeyBytes() {
@@ -891,6 +962,8 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * @param value The key to set.
+         * @return This builder for chaining.
          */
         public Builder setKey(
             java.lang.String value) {
@@ -908,6 +981,7 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearKey() {
           
@@ -921,6 +995,8 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * @param value The bytes for key to set.
+         * @return This builder for chaining.
          */
         public Builder setKeyBytes(
             com.google.protobuf.ByteString value) {
@@ -940,7 +1016,21 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string text_value = 2;</code>
+         * @return Whether the textValue field is set.
          */
+        @java.lang.Override
+        public boolean hasTextValue() {
+          return valueCase_ == 2;
+        }
+        /**
+         * <pre>
+         * Text value.
+         * </pre>
+         *
+         * <code>string text_value = 2;</code>
+         * @return The textValue.
+         */
+        @java.lang.Override
         public java.lang.String getTextValue() {
           java.lang.Object ref = "";
           if (valueCase_ == 2) {
@@ -964,7 +1054,9 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string text_value = 2;</code>
+         * @return The bytes for textValue.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getTextValueBytes() {
           java.lang.Object ref = "";
@@ -989,6 +1081,8 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string text_value = 2;</code>
+         * @param value The textValue to set.
+         * @return This builder for chaining.
          */
         public Builder setTextValue(
             java.lang.String value) {
@@ -1006,6 +1100,7 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string text_value = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTextValue() {
           if (valueCase_ == 2) {
@@ -1021,6 +1116,8 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>string text_value = 2;</code>
+         * @param value The bytes for textValue to set.
+         * @return This builder for chaining.
          */
         public Builder setTextValueBytes(
             com.google.protobuf.ByteString value) {
@@ -1040,6 +1137,18 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>bytes binary_value = 3;</code>
+         * @return Whether the binaryValue field is set.
+         */
+        public boolean hasBinaryValue() {
+          return valueCase_ == 3;
+        }
+        /**
+         * <pre>
+         * Binary value.
+         * </pre>
+         *
+         * <code>bytes binary_value = 3;</code>
+         * @return The binaryValue.
          */
         public com.google.protobuf.ByteString getBinaryValue() {
           if (valueCase_ == 3) {
@@ -1053,6 +1162,8 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>bytes binary_value = 3;</code>
+         * @param value The binaryValue to set.
+         * @return This builder for chaining.
          */
         public Builder setBinaryValue(com.google.protobuf.ByteString value) {
           if (value == null) {
@@ -1069,6 +1180,7 @@ public final class PayloadOuterClass {
          * </pre>
          *
          * <code>bytes binary_value = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearBinaryValue() {
           if (valueCase_ == 3) {
@@ -1081,7 +1193,7 @@ public final class PayloadOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1131,7 +1243,6 @@ public final class PayloadOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object versionId_;
     /**
@@ -1140,7 +1251,9 @@ public final class PayloadOuterClass {
      * </pre>
      *
      * <code>string version_id = 1;</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -1159,7 +1272,9 @@ public final class PayloadOuterClass {
      * </pre>
      *
      * <code>string version_id = 1;</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -1183,6 +1298,7 @@ public final class PayloadOuterClass {
      *
      * <code>repeated .yandex.cloud.lockbox.v1.Payload.Entry entries = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry> getEntriesList() {
       return entries_;
     }
@@ -1193,6 +1309,7 @@ public final class PayloadOuterClass {
      *
      * <code>repeated .yandex.cloud.lockbox.v1.Payload.Entry entries = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.EntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
@@ -1204,6 +1321,7 @@ public final class PayloadOuterClass {
      *
      * <code>repeated .yandex.cloud.lockbox.v1.Payload.Entry entries = 2;</code>
      */
+    @java.lang.Override
     public int getEntriesCount() {
       return entries_.size();
     }
@@ -1214,6 +1332,7 @@ public final class PayloadOuterClass {
      *
      * <code>repeated .yandex.cloud.lockbox.v1.Payload.Entry entries = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry getEntries(int index) {
       return entries_.get(index);
     }
@@ -1224,6 +1343,7 @@ public final class PayloadOuterClass {
      *
      * <code>repeated .yandex.cloud.lockbox.v1.Payload.Entry entries = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.EntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
@@ -1243,7 +1363,7 @@ public final class PayloadOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionId_);
       }
       for (int i = 0; i < entries_.size(); i++) {
@@ -1258,7 +1378,7 @@ public final class PayloadOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionId_);
       }
       for (int i = 0; i < entries_.size(); i++) {
@@ -1280,13 +1400,12 @@ public final class PayloadOuterClass {
       }
       yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload other = (yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload) obj;
 
-      boolean result = true;
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && getEntriesList()
-          .equals(other.getEntriesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1444,7 +1563,7 @@ public final class PayloadOuterClass {
 
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           entriesBuilder_.clear();
         }
@@ -1475,53 +1594,51 @@ public final class PayloadOuterClass {
       public yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload buildPartial() {
         yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload result = new yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.versionId_ = versionId_;
         if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.entries_ = entries_;
         } else {
           result.entries_ = entriesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1543,7 +1660,7 @@ public final class PayloadOuterClass {
           if (!other.entries_.isEmpty()) {
             if (entries_.isEmpty()) {
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureEntriesIsMutable();
               entries_.addAll(other.entries_);
@@ -1556,7 +1673,7 @@ public final class PayloadOuterClass {
               entriesBuilder_.dispose();
               entriesBuilder_ = null;
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               entriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntriesFieldBuilder() : null;
@@ -1602,6 +1719,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string version_id = 1;</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -1621,6 +1739,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string version_id = 1;</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -1641,6 +1760,8 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string version_id = 1;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -1658,6 +1779,7 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string version_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -1671,6 +1793,8 @@ public final class PayloadOuterClass {
        * </pre>
        *
        * <code>string version_id = 1;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1687,9 +1811,9 @@ public final class PayloadOuterClass {
       private java.util.List<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           entries_ = new java.util.ArrayList<yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry>(entries_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1883,7 +2007,7 @@ public final class PayloadOuterClass {
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           entriesBuilder_.clear();
@@ -1988,7 +2112,7 @@ public final class PayloadOuterClass {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry, yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.Entry.Builder, yandex.cloud.api.lockbox.v1.PayloadOuterClass.Payload.EntryOrBuilder>(
                   entries_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           entries_ = null;
@@ -1998,7 +2122,7 @@ public final class PayloadOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2077,18 +2201,10 @@ public final class PayloadOuterClass {
       "-cloud/go-genproto/yandex/cloud/lockbox/" +
       "v1;lockboxb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_lockbox_v1_Payload_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_Payload_fieldAccessorTable = new

@@ -25,6 +25,7 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the destination field is set.
      */
     boolean hasDestination();
     /**
@@ -34,6 +35,7 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The destination.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination getDestination();
     /**
@@ -52,6 +54,7 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return Whether the resource field is set.
      */
     boolean hasResource();
     /**
@@ -60,6 +63,7 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return The resource.
      */
     yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource();
     /**
@@ -122,6 +126,7 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     * @return Whether the defaults field is set.
      */
     boolean hasDefaults();
     /**
@@ -131,6 +136,7 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     * @return The defaults.
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaults();
     /**
@@ -146,7 +152,7 @@ public final class LogIngestionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.WriteRequest}
    */
-  public  static final class WriteRequest extends
+  public static final class WriteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.WriteRequest)
       WriteRequestOrBuilder {
@@ -157,6 +163,13 @@ public final class LogIngestionServiceOuterClass {
     }
     private WriteRequest() {
       entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WriteRequest();
     }
 
     @java.lang.Override
@@ -210,9 +223,9 @@ public final class LogIngestionServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 entries_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               entries_.add(
                   input.readMessage(yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.parser(), extensionRegistry));
@@ -232,7 +245,7 @@ public final class LogIngestionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -246,7 +259,7 @@ public final class LogIngestionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
         }
         this.unknownFields = unknownFields.build();
@@ -266,7 +279,6 @@ public final class LogIngestionServiceOuterClass {
               yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest.class, yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DESTINATION_FIELD_NUMBER = 1;
     private yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination destination_;
     /**
@@ -276,7 +288,9 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the destination field is set.
      */
+    @java.lang.Override
     public boolean hasDestination() {
       return destination_ != null;
     }
@@ -287,7 +301,9 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The destination.
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination getDestination() {
       return destination_ == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination.getDefaultInstance() : destination_;
     }
@@ -299,6 +315,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.DestinationOrBuilder getDestinationOrBuilder() {
       return getDestination();
     }
@@ -311,7 +328,9 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return Whether the resource field is set.
      */
+    @java.lang.Override
     public boolean hasResource() {
       return resource_ != null;
     }
@@ -321,7 +340,9 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+     * @return The resource.
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
       return resource_ == null ? yandex.cloud.api.logging.v1.LogResource.LogEntryResource.getDefaultInstance() : resource_;
     }
@@ -332,6 +353,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
@@ -345,6 +367,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> getEntriesList() {
       return entries_;
     }
@@ -355,6 +378,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
@@ -366,6 +390,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
+    @java.lang.Override
     public int getEntriesCount() {
       return entries_.size();
     }
@@ -376,6 +401,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index) {
       return entries_.get(index);
     }
@@ -386,6 +412,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
@@ -400,7 +427,9 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     * @return Whether the defaults field is set.
      */
+    @java.lang.Override
     public boolean hasDefaults() {
       return defaults_ != null;
     }
@@ -411,7 +440,9 @@ public final class LogIngestionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     * @return The defaults.
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaults() {
       return defaults_ == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.getDefaultInstance() : defaults_;
     }
@@ -423,6 +454,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder getDefaultsOrBuilder() {
       return getDefaults();
     }
@@ -493,26 +525,25 @@ public final class LogIngestionServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest other = (yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest) obj;
 
-      boolean result = true;
-      result = result && (hasDestination() == other.hasDestination());
+      if (hasDestination() != other.hasDestination()) return false;
       if (hasDestination()) {
-        result = result && getDestination()
-            .equals(other.getDestination());
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
       }
-      result = result && (hasResource() == other.hasResource());
+      if (hasResource() != other.hasResource()) return false;
       if (hasResource()) {
-        result = result && getResource()
-            .equals(other.getResource());
+        if (!getResource()
+            .equals(other.getResource())) return false;
       }
-      result = result && getEntriesList()
-          .equals(other.getEntriesList());
-      result = result && (hasDefaults() == other.hasDefaults());
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (hasDefaults() != other.hasDefaults()) return false;
       if (hasDefaults()) {
-        result = result && getDefaults()
-            .equals(other.getDefaults());
+        if (!getDefaults()
+            .equals(other.getDefaults())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -686,7 +717,7 @@ public final class LogIngestionServiceOuterClass {
         }
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           entriesBuilder_.clear();
         }
@@ -723,7 +754,6 @@ public final class LogIngestionServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest buildPartial() {
         yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest result = new yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (destinationBuilder_ == null) {
           result.destination_ = destination_;
         } else {
@@ -735,9 +765,9 @@ public final class LogIngestionServiceOuterClass {
           result.resource_ = resourceBuilder_.build();
         }
         if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.entries_ = entries_;
         } else {
@@ -748,42 +778,41 @@ public final class LogIngestionServiceOuterClass {
         } else {
           result.defaults_ = defaultsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -807,7 +836,7 @@ public final class LogIngestionServiceOuterClass {
           if (!other.entries_.isEmpty()) {
             if (entries_.isEmpty()) {
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureEntriesIsMutable();
               entries_.addAll(other.entries_);
@@ -820,7 +849,7 @@ public final class LogIngestionServiceOuterClass {
               entriesBuilder_.dispose();
               entriesBuilder_ = null;
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               entriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntriesFieldBuilder() : null;
@@ -862,7 +891,7 @@ public final class LogIngestionServiceOuterClass {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination destination_ = null;
+      private yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination destination_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination, yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.DestinationOrBuilder> destinationBuilder_;
       /**
@@ -872,6 +901,7 @@ public final class LogIngestionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the destination field is set.
        */
       public boolean hasDestination() {
         return destinationBuilder_ != null || destination_ != null;
@@ -883,6 +913,7 @@ public final class LogIngestionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The destination.
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination getDestination() {
         if (destinationBuilder_ == null) {
@@ -1024,7 +1055,7 @@ public final class LogIngestionServiceOuterClass {
         return destinationBuilder_;
       }
 
-      private yandex.cloud.api.logging.v1.LogResource.LogEntryResource resource_ = null;
+      private yandex.cloud.api.logging.v1.LogResource.LogEntryResource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogResource.LogEntryResource, yandex.cloud.api.logging.v1.LogResource.LogEntryResource.Builder, yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder> resourceBuilder_;
       /**
@@ -1033,6 +1064,7 @@ public final class LogIngestionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+       * @return Whether the resource field is set.
        */
       public boolean hasResource() {
         return resourceBuilder_ != null || resource_ != null;
@@ -1043,6 +1075,7 @@ public final class LogIngestionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
+       * @return The resource.
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
         if (resourceBuilder_ == null) {
@@ -1180,9 +1213,9 @@ public final class LogIngestionServiceOuterClass {
       private java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           entries_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry>(entries_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1376,7 +1409,7 @@ public final class LogIngestionServiceOuterClass {
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           entriesBuilder_.clear();
@@ -1481,7 +1514,7 @@ public final class LogIngestionServiceOuterClass {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder>(
                   entries_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           entries_ = null;
@@ -1489,7 +1522,7 @@ public final class LogIngestionServiceOuterClass {
         return entriesBuilder_;
       }
 
-      private yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults defaults_ = null;
+      private yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults defaults_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder> defaultsBuilder_;
       /**
@@ -1499,6 +1532,7 @@ public final class LogIngestionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       * @return Whether the defaults field is set.
        */
       public boolean hasDefaults() {
         return defaultsBuilder_ != null || defaults_ != null;
@@ -1510,6 +1544,7 @@ public final class LogIngestionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       * @return The defaults.
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaults() {
         if (defaultsBuilder_ == null) {
@@ -1653,7 +1688,7 @@ public final class LogIngestionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1769,7 +1804,7 @@ public final class LogIngestionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.WriteResponse}
    */
-  public  static final class WriteResponse extends
+  public static final class WriteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.WriteResponse)
       WriteResponseOrBuilder {
@@ -1779,6 +1814,13 @@ public final class LogIngestionServiceOuterClass {
       super(builder);
     }
     private WriteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WriteResponse();
     }
 
     @java.lang.Override
@@ -1806,7 +1848,7 @@ public final class LogIngestionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 errors_ = com.google.protobuf.MapField.newMapField(
                     ErrorsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
@@ -1819,7 +1861,7 @@ public final class LogIngestionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1897,6 +1939,7 @@ public final class LogIngestionServiceOuterClass {
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
+    @java.lang.Override
     public boolean containsErrors(
         long key) {
       
@@ -1905,6 +1948,7 @@ public final class LogIngestionServiceOuterClass {
     /**
      * Use {@link #getErrorsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.Long, com.google.rpc.Status> getErrors() {
       return getErrorsMap();
@@ -1917,6 +1961,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.Long, com.google.rpc.Status> getErrorsMap() {
       return internalGetErrors().getMap();
@@ -1929,6 +1974,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
+    @java.lang.Override
 
     public com.google.rpc.Status getErrorsOrDefault(
         long key,
@@ -1946,6 +1992,7 @@ public final class LogIngestionServiceOuterClass {
      *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
+    @java.lang.Override
 
     public com.google.rpc.Status getErrorsOrThrow(
         long key) {
@@ -2012,11 +2059,10 @@ public final class LogIngestionServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse other = (yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse) obj;
 
-      boolean result = true;
-      result = result && internalGetErrors().equals(
-          other.internalGetErrors());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetErrors().equals(
+          other.internalGetErrors())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2221,35 +2267,35 @@ public final class LogIngestionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2330,6 +2376,7 @@ public final class LogIngestionServiceOuterClass {
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 
+      @java.lang.Override
       public boolean containsErrors(
           long key) {
         
@@ -2338,6 +2385,7 @@ public final class LogIngestionServiceOuterClass {
       /**
        * Use {@link #getErrorsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.Long, com.google.rpc.Status> getErrors() {
         return getErrorsMap();
@@ -2350,6 +2398,7 @@ public final class LogIngestionServiceOuterClass {
        *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.Long, com.google.rpc.Status> getErrorsMap() {
         return internalGetErrors().getMap();
@@ -2362,6 +2411,7 @@ public final class LogIngestionServiceOuterClass {
        *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
+      @java.lang.Override
 
       public com.google.rpc.Status getErrorsOrDefault(
           long key,
@@ -2379,6 +2429,7 @@ public final class LogIngestionServiceOuterClass {
        *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
+      @java.lang.Override
 
       public com.google.rpc.Status getErrorsOrThrow(
           long key) {
@@ -2432,7 +2483,10 @@ public final class LogIngestionServiceOuterClass {
           long key,
           com.google.rpc.Status value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableErrors().getMutableMap()
             .put(key, value);
         return this;
@@ -2455,7 +2509,7 @@ public final class LogIngestionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2552,22 +2606,14 @@ public final class LogIngestionServiceOuterClass {
       "m/yandex-cloud/go-genproto/yandex/cloud/" +
       "logging/v1;loggingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.rpc.StatusProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
           yandex.cloud.api.logging.v1.LogResource.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_logging_v1_WriteRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_logging_v1_WriteRequest_fieldAccessorTable = new

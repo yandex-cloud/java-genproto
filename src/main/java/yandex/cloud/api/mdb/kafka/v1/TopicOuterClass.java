@@ -24,6 +24,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,6 +33,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -43,6 +45,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -52,6 +55,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -62,6 +66,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 3;</code>
+     * @return Whether the partitions field is set.
      */
     boolean hasPartitions();
     /**
@@ -70,6 +75,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 3;</code>
+     * @return The partitions.
      */
     com.google.protobuf.Int64Value getPartitions();
     /**
@@ -87,6 +93,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return Whether the replicationFactor field is set.
      */
     boolean hasReplicationFactor();
     /**
@@ -95,6 +102,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return The replicationFactor.
      */
     com.google.protobuf.Int64Value getReplicationFactor();
     /**
@@ -107,41 +115,47 @@ public final class TopicOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
+     * @return Whether the topicConfig21 field is set.
      */
     boolean hasTopicConfig21();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
+     * @return The topicConfig21.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
+     * @return Whether the topicConfig26 field is set.
      */
     boolean hasTopicConfig26();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
+     * @return The topicConfig26.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
+     * @return Whether the topicConfig28 field is set.
      */
     boolean hasTopicConfig28();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
+     * @return The topicConfig28.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder();
 
@@ -155,7 +169,7 @@ public final class TopicOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Topic}
    */
-  public  static final class Topic extends
+  public static final class Topic extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.Topic)
       TopicOrBuilder {
@@ -167,6 +181,13 @@ public final class TopicOuterClass {
     private Topic() {
       name_ = "";
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Topic();
     }
 
     @java.lang.Override
@@ -182,7 +203,6 @@ public final class TopicOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -274,7 +294,7 @@ public final class TopicOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -308,7 +328,8 @@ public final class TopicOuterClass {
     private int topicConfigCase_ = 0;
     private java.lang.Object topicConfig_;
     public enum TopicConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TOPIC_CONFIG_2_1(5),
       TOPIC_CONFIG_2_6(6),
       TOPIC_CONFIG_2_8(7),
@@ -318,6 +339,8 @@ public final class TopicOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -353,7 +376,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -372,7 +397,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -396,7 +423,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -416,7 +445,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -439,7 +470,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 3;</code>
+     * @return Whether the partitions field is set.
      */
+    @java.lang.Override
     public boolean hasPartitions() {
       return partitions_ != null;
     }
@@ -449,7 +482,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 3;</code>
+     * @return The partitions.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getPartitions() {
       return partitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partitions_;
     }
@@ -460,6 +495,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value partitions = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPartitionsOrBuilder() {
       return getPartitions();
     }
@@ -472,7 +508,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return Whether the replicationFactor field is set.
      */
+    @java.lang.Override
     public boolean hasReplicationFactor() {
       return replicationFactor_ != null;
     }
@@ -482,7 +520,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     * @return The replicationFactor.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReplicationFactor() {
       return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
     }
@@ -493,20 +533,25 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
       return getReplicationFactor();
     }
 
     public static final int TOPIC_CONFIG_2_1_FIELD_NUMBER = 5;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
+     * @return Whether the topicConfig21 field is set.
      */
+    @java.lang.Override
     public boolean hasTopicConfig21() {
       return topicConfigCase_ == 5;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
+     * @return The topicConfig21.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21() {
       if (topicConfigCase_ == 5) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1) topicConfig_;
@@ -514,8 +559,9 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder() {
       if (topicConfigCase_ == 5) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1) topicConfig_;
@@ -525,14 +571,18 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_6_FIELD_NUMBER = 6;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
+     * @return Whether the topicConfig26 field is set.
      */
+    @java.lang.Override
     public boolean hasTopicConfig26() {
       return topicConfigCase_ == 6;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
+     * @return The topicConfig26.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26() {
       if (topicConfigCase_ == 6) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6) topicConfig_;
@@ -540,8 +590,9 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder() {
       if (topicConfigCase_ == 6) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6) topicConfig_;
@@ -551,14 +602,18 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_8_FIELD_NUMBER = 7;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
+     * @return Whether the topicConfig28 field is set.
      */
+    @java.lang.Override
     public boolean hasTopicConfig28() {
       return topicConfigCase_ == 7;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
+     * @return The topicConfig28.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28() {
       if (topicConfigCase_ == 7) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8) topicConfig_;
@@ -566,8 +621,9 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder() {
       if (topicConfigCase_ == 7) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8) topicConfig_;
@@ -589,10 +645,10 @@ public final class TopicOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
       if (partitions_ != null) {
@@ -619,10 +675,10 @@ public final class TopicOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
       if (partitions_ != null) {
@@ -660,42 +716,39 @@ public final class TopicOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic other = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (hasPartitions() == other.hasPartitions());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasPartitions() != other.hasPartitions()) return false;
       if (hasPartitions()) {
-        result = result && getPartitions()
-            .equals(other.getPartitions());
+        if (!getPartitions()
+            .equals(other.getPartitions())) return false;
       }
-      result = result && (hasReplicationFactor() == other.hasReplicationFactor());
+      if (hasReplicationFactor() != other.hasReplicationFactor()) return false;
       if (hasReplicationFactor()) {
-        result = result && getReplicationFactor()
-            .equals(other.getReplicationFactor());
+        if (!getReplicationFactor()
+            .equals(other.getReplicationFactor())) return false;
       }
-      result = result && getTopicConfigCase().equals(
-          other.getTopicConfigCase());
-      if (!result) return false;
+      if (!getTopicConfigCase().equals(other.getTopicConfigCase())) return false;
       switch (topicConfigCase_) {
         case 5:
-          result = result && getTopicConfig21()
-              .equals(other.getTopicConfig21());
+          if (!getTopicConfig21()
+              .equals(other.getTopicConfig21())) return false;
           break;
         case 6:
-          result = result && getTopicConfig26()
-              .equals(other.getTopicConfig26());
+          if (!getTopicConfig26()
+              .equals(other.getTopicConfig26())) return false;
           break;
         case 7:
-          result = result && getTopicConfig28()
-              .equals(other.getTopicConfig28());
+          if (!getTopicConfig28()
+              .equals(other.getTopicConfig28())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -955,35 +1008,35 @@ public final class TopicOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1079,6 +1132,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1098,6 +1152,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1118,6 +1173,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1135,6 +1192,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1148,6 +1206,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1169,6 +1229,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1189,6 +1250,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1210,6 +1272,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1228,6 +1292,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1242,6 +1307,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1255,7 +1322,7 @@ public final class TopicOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value partitions_ = null;
+      private com.google.protobuf.Int64Value partitions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partitionsBuilder_;
       /**
@@ -1264,6 +1331,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value partitions = 3;</code>
+       * @return Whether the partitions field is set.
        */
       public boolean hasPartitions() {
         return partitionsBuilder_ != null || partitions_ != null;
@@ -1274,6 +1342,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value partitions = 3;</code>
+       * @return The partitions.
        */
       public com.google.protobuf.Int64Value getPartitions() {
         if (partitionsBuilder_ == null) {
@@ -1408,7 +1477,7 @@ public final class TopicOuterClass {
         return partitionsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value replicationFactor_ = null;
+      private com.google.protobuf.Int64Value replicationFactor_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationFactorBuilder_;
       /**
@@ -1417,6 +1486,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       * @return Whether the replicationFactor field is set.
        */
       public boolean hasReplicationFactor() {
         return replicationFactorBuilder_ != null || replicationFactor_ != null;
@@ -1427,6 +1497,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       * @return The replicationFactor.
        */
       public com.google.protobuf.Int64Value getReplicationFactor() {
         if (replicationFactorBuilder_ == null) {
@@ -1564,14 +1635,18 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder> topicConfig21Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
+       * @return Whether the topicConfig21 field is set.
        */
+      @java.lang.Override
       public boolean hasTopicConfig21() {
         return topicConfigCase_ == 5;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
+       * @return The topicConfig21.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21() {
         if (topicConfig21Builder_ == null) {
           if (topicConfigCase_ == 5) {
@@ -1586,7 +1661,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder setTopicConfig21(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 value) {
         if (topicConfig21Builder_ == null) {
@@ -1602,7 +1677,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder setTopicConfig21(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder builderForValue) {
@@ -1616,7 +1691,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder mergeTopicConfig21(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 value) {
         if (topicConfig21Builder_ == null) {
@@ -1638,7 +1713,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder clearTopicConfig21() {
         if (topicConfig21Builder_ == null) {
@@ -1657,14 +1732,15 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder getTopicConfig21Builder() {
         return getTopicConfig21FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder() {
         if ((topicConfigCase_ == 5) && (topicConfig21Builder_ != null)) {
           return topicConfig21Builder_.getMessageOrBuilder();
@@ -1676,7 +1752,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 5 [json_name = "topicConfig_2_1"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder> 
@@ -1700,14 +1776,18 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder> topicConfig26Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
+       * @return Whether the topicConfig26 field is set.
        */
+      @java.lang.Override
       public boolean hasTopicConfig26() {
         return topicConfigCase_ == 6;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
+       * @return The topicConfig26.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26() {
         if (topicConfig26Builder_ == null) {
           if (topicConfigCase_ == 6) {
@@ -1722,7 +1802,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder setTopicConfig26(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 value) {
         if (topicConfig26Builder_ == null) {
@@ -1738,7 +1818,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder setTopicConfig26(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder builderForValue) {
@@ -1752,7 +1832,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder mergeTopicConfig26(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 value) {
         if (topicConfig26Builder_ == null) {
@@ -1774,7 +1854,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder clearTopicConfig26() {
         if (topicConfig26Builder_ == null) {
@@ -1793,14 +1873,15 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder getTopicConfig26Builder() {
         return getTopicConfig26FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder() {
         if ((topicConfigCase_ == 6) && (topicConfig26Builder_ != null)) {
           return topicConfig26Builder_.getMessageOrBuilder();
@@ -1812,7 +1893,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 6 [json_name = "topicConfig_2_6"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder> 
@@ -1836,14 +1917,18 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder> topicConfig28Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
+       * @return Whether the topicConfig28 field is set.
        */
+      @java.lang.Override
       public boolean hasTopicConfig28() {
         return topicConfigCase_ == 7;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
+       * @return The topicConfig28.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28() {
         if (topicConfig28Builder_ == null) {
           if (topicConfigCase_ == 7) {
@@ -1858,7 +1943,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
         if (topicConfig28Builder_ == null) {
@@ -1874,7 +1959,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder builderForValue) {
@@ -1888,7 +1973,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder mergeTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
         if (topicConfig28Builder_ == null) {
@@ -1910,7 +1995,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder clearTopicConfig28() {
         if (topicConfig28Builder_ == null) {
@@ -1929,14 +2014,15 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder getTopicConfig28Builder() {
         return getTopicConfig28FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder() {
         if ((topicConfigCase_ == 7) && (topicConfig28Builder_ != null)) {
           return topicConfig28Builder_.getMessageOrBuilder();
@@ -1948,7 +2034,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder> 
@@ -1971,7 +2057,7 @@ public final class TopicOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2031,6 +2117,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2039,6 +2126,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2049,6 +2137,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 2;</code>
+     * @return Whether the partitions field is set.
      */
     boolean hasPartitions();
     /**
@@ -2057,6 +2146,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 2;</code>
+     * @return The partitions.
      */
     com.google.protobuf.Int64Value getPartitions();
     /**
@@ -2074,6 +2164,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
+     * @return Whether the replicationFactor field is set.
      */
     boolean hasReplicationFactor();
     /**
@@ -2082,6 +2173,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
+     * @return The replicationFactor.
      */
     com.google.protobuf.Int64Value getReplicationFactor();
     /**
@@ -2094,41 +2186,47 @@ public final class TopicOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
+     * @return Whether the topicConfig21 field is set.
      */
     boolean hasTopicConfig21();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
+     * @return The topicConfig21.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
+     * @return Whether the topicConfig26 field is set.
      */
     boolean hasTopicConfig26();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
+     * @return The topicConfig26.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
+     * @return Whether the topicConfig28 field is set.
      */
     boolean hasTopicConfig28();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
+     * @return The topicConfig28.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder();
 
@@ -2137,7 +2235,7 @@ public final class TopicOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicSpec}
    */
-  public  static final class TopicSpec extends
+  public static final class TopicSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.TopicSpec)
       TopicSpecOrBuilder {
@@ -2148,6 +2246,13 @@ public final class TopicOuterClass {
     }
     private TopicSpec() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TopicSpec();
     }
 
     @java.lang.Override
@@ -2163,7 +2268,6 @@ public final class TopicOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2249,7 +2353,7 @@ public final class TopicOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2283,7 +2387,8 @@ public final class TopicOuterClass {
     private int topicConfigCase_ = 0;
     private java.lang.Object topicConfig_;
     public enum TopicConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TOPIC_CONFIG_2_1(4),
       TOPIC_CONFIG_2_6(5),
       TOPIC_CONFIG_2_8(6),
@@ -2293,6 +2398,8 @@ public final class TopicOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2328,7 +2435,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2347,7 +2456,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2370,7 +2481,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 2;</code>
+     * @return Whether the partitions field is set.
      */
+    @java.lang.Override
     public boolean hasPartitions() {
       return partitions_ != null;
     }
@@ -2380,7 +2493,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value partitions = 2;</code>
+     * @return The partitions.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getPartitions() {
       return partitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partitions_;
     }
@@ -2391,6 +2506,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value partitions = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPartitionsOrBuilder() {
       return getPartitions();
     }
@@ -2403,7 +2519,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
+     * @return Whether the replicationFactor field is set.
      */
+    @java.lang.Override
     public boolean hasReplicationFactor() {
       return replicationFactor_ != null;
     }
@@ -2413,7 +2531,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
+     * @return The replicationFactor.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReplicationFactor() {
       return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
     }
@@ -2424,20 +2544,25 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
       return getReplicationFactor();
     }
 
     public static final int TOPIC_CONFIG_2_1_FIELD_NUMBER = 4;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
+     * @return Whether the topicConfig21 field is set.
      */
+    @java.lang.Override
     public boolean hasTopicConfig21() {
       return topicConfigCase_ == 4;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
+     * @return The topicConfig21.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21() {
       if (topicConfigCase_ == 4) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1) topicConfig_;
@@ -2445,8 +2570,9 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder() {
       if (topicConfigCase_ == 4) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1) topicConfig_;
@@ -2456,14 +2582,18 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_6_FIELD_NUMBER = 5;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
+     * @return Whether the topicConfig26 field is set.
      */
+    @java.lang.Override
     public boolean hasTopicConfig26() {
       return topicConfigCase_ == 5;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
+     * @return The topicConfig26.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26() {
       if (topicConfigCase_ == 5) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6) topicConfig_;
@@ -2471,8 +2601,9 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder() {
       if (topicConfigCase_ == 5) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6) topicConfig_;
@@ -2482,14 +2613,18 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_8_FIELD_NUMBER = 6;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
+     * @return Whether the topicConfig28 field is set.
      */
+    @java.lang.Override
     public boolean hasTopicConfig28() {
       return topicConfigCase_ == 6;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
+     * @return The topicConfig28.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28() {
       if (topicConfigCase_ == 6) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8) topicConfig_;
@@ -2497,8 +2632,9 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder() {
       if (topicConfigCase_ == 6) {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8) topicConfig_;
@@ -2520,7 +2656,7 @@ public final class TopicOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (partitions_ != null) {
@@ -2547,7 +2683,7 @@ public final class TopicOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (partitions_ != null) {
@@ -2585,40 +2721,37 @@ public final class TopicOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicSpec other = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicSpec) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasPartitions() == other.hasPartitions());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasPartitions() != other.hasPartitions()) return false;
       if (hasPartitions()) {
-        result = result && getPartitions()
-            .equals(other.getPartitions());
+        if (!getPartitions()
+            .equals(other.getPartitions())) return false;
       }
-      result = result && (hasReplicationFactor() == other.hasReplicationFactor());
+      if (hasReplicationFactor() != other.hasReplicationFactor()) return false;
       if (hasReplicationFactor()) {
-        result = result && getReplicationFactor()
-            .equals(other.getReplicationFactor());
+        if (!getReplicationFactor()
+            .equals(other.getReplicationFactor())) return false;
       }
-      result = result && getTopicConfigCase().equals(
-          other.getTopicConfigCase());
-      if (!result) return false;
+      if (!getTopicConfigCase().equals(other.getTopicConfigCase())) return false;
       switch (topicConfigCase_) {
         case 4:
-          result = result && getTopicConfig21()
-              .equals(other.getTopicConfig21());
+          if (!getTopicConfig21()
+              .equals(other.getTopicConfig21())) return false;
           break;
         case 5:
-          result = result && getTopicConfig26()
-              .equals(other.getTopicConfig26());
+          if (!getTopicConfig26()
+              .equals(other.getTopicConfig26())) return false;
           break;
         case 6:
-          result = result && getTopicConfig28()
-              .equals(other.getTopicConfig28());
+          if (!getTopicConfig28()
+              .equals(other.getTopicConfig28())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2868,35 +3001,35 @@ public final class TopicOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2988,6 +3121,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3007,6 +3141,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3027,6 +3162,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3044,6 +3181,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3057,6 +3195,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3070,7 +3210,7 @@ public final class TopicOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value partitions_ = null;
+      private com.google.protobuf.Int64Value partitions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partitionsBuilder_;
       /**
@@ -3079,6 +3219,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value partitions = 2;</code>
+       * @return Whether the partitions field is set.
        */
       public boolean hasPartitions() {
         return partitionsBuilder_ != null || partitions_ != null;
@@ -3089,6 +3230,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value partitions = 2;</code>
+       * @return The partitions.
        */
       public com.google.protobuf.Int64Value getPartitions() {
         if (partitionsBuilder_ == null) {
@@ -3223,7 +3365,7 @@ public final class TopicOuterClass {
         return partitionsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value replicationFactor_ = null;
+      private com.google.protobuf.Int64Value replicationFactor_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationFactorBuilder_;
       /**
@@ -3232,6 +3374,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
+       * @return Whether the replicationFactor field is set.
        */
       public boolean hasReplicationFactor() {
         return replicationFactorBuilder_ != null || replicationFactor_ != null;
@@ -3242,6 +3385,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_factor = 3;</code>
+       * @return The replicationFactor.
        */
       public com.google.protobuf.Int64Value getReplicationFactor() {
         if (replicationFactorBuilder_ == null) {
@@ -3379,14 +3523,18 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder> topicConfig21Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
+       * @return Whether the topicConfig21 field is set.
        */
+      @java.lang.Override
       public boolean hasTopicConfig21() {
         return topicConfigCase_ == 4;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
+       * @return The topicConfig21.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21() {
         if (topicConfig21Builder_ == null) {
           if (topicConfigCase_ == 4) {
@@ -3401,7 +3549,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder setTopicConfig21(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 value) {
         if (topicConfig21Builder_ == null) {
@@ -3417,7 +3565,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder setTopicConfig21(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder builderForValue) {
@@ -3431,7 +3579,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder mergeTopicConfig21(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 value) {
         if (topicConfig21Builder_ == null) {
@@ -3453,7 +3601,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
       public Builder clearTopicConfig21() {
         if (topicConfig21Builder_ == null) {
@@ -3472,14 +3620,15 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder getTopicConfig21Builder() {
         return getTopicConfig21FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder() {
         if ((topicConfigCase_ == 4) && (topicConfig21Builder_ != null)) {
           return topicConfig21Builder_.getMessageOrBuilder();
@@ -3491,7 +3640,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4 [json_name = "topicConfig_2_1"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder> 
@@ -3515,14 +3664,18 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder> topicConfig26Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
+       * @return Whether the topicConfig26 field is set.
        */
+      @java.lang.Override
       public boolean hasTopicConfig26() {
         return topicConfigCase_ == 5;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
+       * @return The topicConfig26.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26() {
         if (topicConfig26Builder_ == null) {
           if (topicConfigCase_ == 5) {
@@ -3537,7 +3690,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder setTopicConfig26(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 value) {
         if (topicConfig26Builder_ == null) {
@@ -3553,7 +3706,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder setTopicConfig26(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder builderForValue) {
@@ -3567,7 +3720,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder mergeTopicConfig26(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 value) {
         if (topicConfig26Builder_ == null) {
@@ -3589,7 +3742,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
       public Builder clearTopicConfig26() {
         if (topicConfig26Builder_ == null) {
@@ -3608,14 +3761,15 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder getTopicConfig26Builder() {
         return getTopicConfig26FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder() {
         if ((topicConfigCase_ == 5) && (topicConfig26Builder_ != null)) {
           return topicConfig26Builder_.getMessageOrBuilder();
@@ -3627,7 +3781,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5 [json_name = "topicConfig_2_6"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder> 
@@ -3651,14 +3805,18 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder> topicConfig28Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
+       * @return Whether the topicConfig28 field is set.
        */
+      @java.lang.Override
       public boolean hasTopicConfig28() {
         return topicConfigCase_ == 6;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
+       * @return The topicConfig28.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28() {
         if (topicConfig28Builder_ == null) {
           if (topicConfigCase_ == 6) {
@@ -3673,7 +3831,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
         if (topicConfig28Builder_ == null) {
@@ -3689,7 +3847,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder builderForValue) {
@@ -3703,7 +3861,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder mergeTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
         if (topicConfig28Builder_ == null) {
@@ -3725,7 +3883,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder clearTopicConfig28() {
         if (topicConfig28Builder_ == null) {
@@ -3744,14 +3902,15 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder getTopicConfig28Builder() {
         return getTopicConfig28FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder() {
         if ((topicConfigCase_ == 6) && (topicConfig28Builder_ != null)) {
           return topicConfig28Builder_.getMessageOrBuilder();
@@ -3763,7 +3922,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6[json_name = "topicConfig_2_8"];</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder> 
@@ -3786,7 +3945,7 @@ public final class TopicOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3846,6 +4005,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
     int getCleanupPolicyValue();
     /**
@@ -3854,6 +4014,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy getCleanupPolicy();
 
@@ -3863,6 +4024,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
      */
     int getCompressionTypeValue();
     /**
@@ -3871,6 +4033,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
      */
     yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType();
 
@@ -3880,6 +4043,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
      */
     boolean hasDeleteRetentionMs();
     /**
@@ -3888,6 +4052,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
      */
     com.google.protobuf.Int64Value getDeleteRetentionMs();
     /**
@@ -3905,6 +4070,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
      */
     boolean hasFileDeleteDelayMs();
     /**
@@ -3913,6 +4079,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
      */
     com.google.protobuf.Int64Value getFileDeleteDelayMs();
     /**
@@ -3931,6 +4098,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
      */
     boolean hasFlushMessages();
     /**
@@ -3940,6 +4108,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
      */
     com.google.protobuf.Int64Value getFlushMessages();
     /**
@@ -3959,6 +4128,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
      */
     boolean hasFlushMs();
     /**
@@ -3968,6 +4138,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
      */
     com.google.protobuf.Int64Value getFlushMs();
     /**
@@ -3986,6 +4157,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
      */
     boolean hasMinCompactionLagMs();
     /**
@@ -3994,6 +4166,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
      */
     com.google.protobuf.Int64Value getMinCompactionLagMs();
     /**
@@ -4013,6 +4186,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
      */
     boolean hasRetentionBytes();
     /**
@@ -4023,6 +4197,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
      */
     com.google.protobuf.Int64Value getRetentionBytes();
     /**
@@ -4043,6 +4218,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
      */
     boolean hasRetentionMs();
     /**
@@ -4052,6 +4228,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
      */
     com.google.protobuf.Int64Value getRetentionMs();
     /**
@@ -4070,6 +4247,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
      */
     boolean hasMaxMessageBytes();
     /**
@@ -4078,6 +4256,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
      */
     com.google.protobuf.Int64Value getMaxMessageBytes();
     /**
@@ -4096,6 +4275,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
      */
     boolean hasMinInsyncReplicas();
     /**
@@ -4105,6 +4285,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
      */
     com.google.protobuf.Int64Value getMinInsyncReplicas();
     /**
@@ -4125,6 +4306,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
      */
     boolean hasSegmentBytes();
     /**
@@ -4135,6 +4317,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
      */
     com.google.protobuf.Int64Value getSegmentBytes();
     /**
@@ -4155,6 +4338,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
      */
     boolean hasPreallocate();
     /**
@@ -4164,6 +4348,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
      */
     com.google.protobuf.BoolValue getPreallocate();
     /**
@@ -4183,7 +4368,7 @@ public final class TopicOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig2_1}
    */
-  public  static final class TopicConfig2_1 extends
+  public static final class TopicConfig2_1 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.TopicConfig2_1)
       TopicConfig2_1OrBuilder {
@@ -4195,6 +4380,13 @@ public final class TopicOuterClass {
     private TopicConfig2_1() {
       cleanupPolicy_ = 0;
       compressionType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TopicConfig2_1();
     }
 
     @java.lang.Override
@@ -4210,7 +4402,6 @@ public final class TopicOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4377,7 +4568,7 @@ public final class TopicOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4483,6 +4674,8 @@ public final class TopicOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4490,6 +4683,10 @@ public final class TopicOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static CleanupPolicy forNumber(int value) {
         switch (value) {
           case 0: return CLEANUP_POLICY_UNSPECIFIED;
@@ -4514,6 +4711,10 @@ public final class TopicOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -4556,8 +4757,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
-    public int getCleanupPolicyValue() {
+    @java.lang.Override public int getCleanupPolicyValue() {
       return cleanupPolicy_;
     }
     /**
@@ -4566,8 +4768,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
      */
-    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy getCleanupPolicy() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy getCleanupPolicy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy.valueOf(cleanupPolicy_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy.UNRECOGNIZED : result;
@@ -4581,8 +4784,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
      */
-    public int getCompressionTypeValue() {
+    @java.lang.Override public int getCompressionTypeValue() {
       return compressionType_;
     }
     /**
@@ -4591,8 +4795,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
      */
-    public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
@@ -4606,7 +4811,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
      */
+    @java.lang.Override
     public boolean hasDeleteRetentionMs() {
       return deleteRetentionMs_ != null;
     }
@@ -4616,7 +4823,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getDeleteRetentionMs() {
       return deleteRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : deleteRetentionMs_;
     }
@@ -4627,6 +4836,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDeleteRetentionMsOrBuilder() {
       return getDeleteRetentionMs();
     }
@@ -4639,7 +4849,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
      */
+    @java.lang.Override
     public boolean hasFileDeleteDelayMs() {
       return fileDeleteDelayMs_ != null;
     }
@@ -4649,7 +4861,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
       return fileDeleteDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileDeleteDelayMs_;
     }
@@ -4660,6 +4874,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFileDeleteDelayMsOrBuilder() {
       return getFileDeleteDelayMs();
     }
@@ -4673,7 +4888,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
      */
+    @java.lang.Override
     public boolean hasFlushMessages() {
       return flushMessages_ != null;
     }
@@ -4684,7 +4901,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFlushMessages() {
       return flushMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMessages_;
     }
@@ -4696,6 +4915,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFlushMessagesOrBuilder() {
       return getFlushMessages();
     }
@@ -4709,7 +4929,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
      */
+    @java.lang.Override
     public boolean hasFlushMs() {
       return flushMs_ != null;
     }
@@ -4720,7 +4942,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFlushMs() {
       return flushMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMs_;
     }
@@ -4732,6 +4956,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFlushMsOrBuilder() {
       return getFlushMs();
     }
@@ -4744,7 +4969,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
      */
+    @java.lang.Override
     public boolean hasMinCompactionLagMs() {
       return minCompactionLagMs_ != null;
     }
@@ -4754,7 +4981,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinCompactionLagMs() {
       return minCompactionLagMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompactionLagMs_;
     }
@@ -4765,6 +4994,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinCompactionLagMsOrBuilder() {
       return getMinCompactionLagMs();
     }
@@ -4779,7 +5009,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionBytes() {
       return retentionBytes_ != null;
     }
@@ -4791,7 +5023,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRetentionBytes() {
       return retentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionBytes_;
     }
@@ -4804,6 +5038,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRetentionBytesOrBuilder() {
       return getRetentionBytes();
     }
@@ -4817,7 +5052,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionMs() {
       return retentionMs_ != null;
     }
@@ -4828,7 +5065,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRetentionMs() {
       return retentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionMs_;
     }
@@ -4840,6 +5079,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder() {
       return getRetentionMs();
     }
@@ -4852,7 +5092,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMaxMessageBytes() {
       return maxMessageBytes_ != null;
     }
@@ -4862,7 +5104,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxMessageBytes() {
       return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
     }
@@ -4873,6 +5117,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
       return getMaxMessageBytes();
     }
@@ -4886,7 +5131,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
      */
+    @java.lang.Override
     public boolean hasMinInsyncReplicas() {
       return minInsyncReplicas_ != null;
     }
@@ -4897,7 +5144,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinInsyncReplicas() {
       return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
     }
@@ -4909,6 +5158,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
       return getMinInsyncReplicas();
     }
@@ -4923,7 +5173,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
      */
+    @java.lang.Override
     public boolean hasSegmentBytes() {
       return segmentBytes_ != null;
     }
@@ -4935,7 +5187,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSegmentBytes() {
       return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
     }
@@ -4948,6 +5202,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
       return getSegmentBytes();
     }
@@ -4961,7 +5216,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
      */
+    @java.lang.Override
     public boolean hasPreallocate() {
       return preallocate_ != null;
     }
@@ -4972,7 +5229,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
@@ -4984,6 +5243,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
     }
@@ -5117,66 +5377,65 @@ public final class TopicOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 other = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1) obj;
 
-      boolean result = true;
-      result = result && cleanupPolicy_ == other.cleanupPolicy_;
-      result = result && compressionType_ == other.compressionType_;
-      result = result && (hasDeleteRetentionMs() == other.hasDeleteRetentionMs());
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (compressionType_ != other.compressionType_) return false;
+      if (hasDeleteRetentionMs() != other.hasDeleteRetentionMs()) return false;
       if (hasDeleteRetentionMs()) {
-        result = result && getDeleteRetentionMs()
-            .equals(other.getDeleteRetentionMs());
+        if (!getDeleteRetentionMs()
+            .equals(other.getDeleteRetentionMs())) return false;
       }
-      result = result && (hasFileDeleteDelayMs() == other.hasFileDeleteDelayMs());
+      if (hasFileDeleteDelayMs() != other.hasFileDeleteDelayMs()) return false;
       if (hasFileDeleteDelayMs()) {
-        result = result && getFileDeleteDelayMs()
-            .equals(other.getFileDeleteDelayMs());
+        if (!getFileDeleteDelayMs()
+            .equals(other.getFileDeleteDelayMs())) return false;
       }
-      result = result && (hasFlushMessages() == other.hasFlushMessages());
+      if (hasFlushMessages() != other.hasFlushMessages()) return false;
       if (hasFlushMessages()) {
-        result = result && getFlushMessages()
-            .equals(other.getFlushMessages());
+        if (!getFlushMessages()
+            .equals(other.getFlushMessages())) return false;
       }
-      result = result && (hasFlushMs() == other.hasFlushMs());
+      if (hasFlushMs() != other.hasFlushMs()) return false;
       if (hasFlushMs()) {
-        result = result && getFlushMs()
-            .equals(other.getFlushMs());
+        if (!getFlushMs()
+            .equals(other.getFlushMs())) return false;
       }
-      result = result && (hasMinCompactionLagMs() == other.hasMinCompactionLagMs());
+      if (hasMinCompactionLagMs() != other.hasMinCompactionLagMs()) return false;
       if (hasMinCompactionLagMs()) {
-        result = result && getMinCompactionLagMs()
-            .equals(other.getMinCompactionLagMs());
+        if (!getMinCompactionLagMs()
+            .equals(other.getMinCompactionLagMs())) return false;
       }
-      result = result && (hasRetentionBytes() == other.hasRetentionBytes());
+      if (hasRetentionBytes() != other.hasRetentionBytes()) return false;
       if (hasRetentionBytes()) {
-        result = result && getRetentionBytes()
-            .equals(other.getRetentionBytes());
+        if (!getRetentionBytes()
+            .equals(other.getRetentionBytes())) return false;
       }
-      result = result && (hasRetentionMs() == other.hasRetentionMs());
+      if (hasRetentionMs() != other.hasRetentionMs()) return false;
       if (hasRetentionMs()) {
-        result = result && getRetentionMs()
-            .equals(other.getRetentionMs());
+        if (!getRetentionMs()
+            .equals(other.getRetentionMs())) return false;
       }
-      result = result && (hasMaxMessageBytes() == other.hasMaxMessageBytes());
+      if (hasMaxMessageBytes() != other.hasMaxMessageBytes()) return false;
       if (hasMaxMessageBytes()) {
-        result = result && getMaxMessageBytes()
-            .equals(other.getMaxMessageBytes());
+        if (!getMaxMessageBytes()
+            .equals(other.getMaxMessageBytes())) return false;
       }
-      result = result && (hasMinInsyncReplicas() == other.hasMinInsyncReplicas());
+      if (hasMinInsyncReplicas() != other.hasMinInsyncReplicas()) return false;
       if (hasMinInsyncReplicas()) {
-        result = result && getMinInsyncReplicas()
-            .equals(other.getMinInsyncReplicas());
+        if (!getMinInsyncReplicas()
+            .equals(other.getMinInsyncReplicas())) return false;
       }
-      result = result && (hasSegmentBytes() == other.hasSegmentBytes());
+      if (hasSegmentBytes() != other.hasSegmentBytes()) return false;
       if (hasSegmentBytes()) {
-        result = result && getSegmentBytes()
-            .equals(other.getSegmentBytes());
+        if (!getSegmentBytes()
+            .equals(other.getSegmentBytes())) return false;
       }
-      result = result && (hasPreallocate() == other.hasPreallocate());
+      if (hasPreallocate() != other.hasPreallocate()) return false;
       if (hasPreallocate()) {
-        result = result && getPreallocate()
-            .equals(other.getPreallocate());
+        if (!getPreallocate()
+            .equals(other.getPreallocate())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5530,35 +5789,35 @@ public final class TopicOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5647,8 +5906,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
        */
-      public int getCleanupPolicyValue() {
+      @java.lang.Override public int getCleanupPolicyValue() {
         return cleanupPolicy_;
       }
       /**
@@ -5657,8 +5917,11 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicyValue(int value) {
+        
         cleanupPolicy_ = value;
         onChanged();
         return this;
@@ -5669,7 +5932,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The cleanupPolicy.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy getCleanupPolicy() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy.valueOf(cleanupPolicy_);
@@ -5681,6 +5946,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicy(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.CleanupPolicy value) {
         if (value == null) {
@@ -5697,6 +5964,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1.CleanupPolicy cleanup_policy = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCleanupPolicy() {
         
@@ -5712,8 +5980,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The enum numeric value on the wire for compressionType.
        */
-      public int getCompressionTypeValue() {
+      @java.lang.Override public int getCompressionTypeValue() {
         return compressionType_;
       }
       /**
@@ -5722,8 +5991,11 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The enum numeric value on the wire for compressionType to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressionTypeValue(int value) {
+        
         compressionType_ = value;
         onChanged();
         return this;
@@ -5734,7 +6006,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The compressionType.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
@@ -5746,6 +6020,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The compressionType to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressionType(yandex.cloud.api.mdb.kafka.v1.Common.CompressionType value) {
         if (value == null) {
@@ -5762,6 +6038,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCompressionType() {
         
@@ -5770,7 +6047,7 @@ public final class TopicOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value deleteRetentionMs_ = null;
+      private com.google.protobuf.Int64Value deleteRetentionMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> deleteRetentionMsBuilder_;
       /**
@@ -5779,6 +6056,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return Whether the deleteRetentionMs field is set.
        */
       public boolean hasDeleteRetentionMs() {
         return deleteRetentionMsBuilder_ != null || deleteRetentionMs_ != null;
@@ -5789,6 +6067,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return The deleteRetentionMs.
        */
       public com.google.protobuf.Int64Value getDeleteRetentionMs() {
         if (deleteRetentionMsBuilder_ == null) {
@@ -5923,7 +6202,7 @@ public final class TopicOuterClass {
         return deleteRetentionMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value fileDeleteDelayMs_ = null;
+      private com.google.protobuf.Int64Value fileDeleteDelayMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fileDeleteDelayMsBuilder_;
       /**
@@ -5932,6 +6211,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return Whether the fileDeleteDelayMs field is set.
        */
       public boolean hasFileDeleteDelayMs() {
         return fileDeleteDelayMsBuilder_ != null || fileDeleteDelayMs_ != null;
@@ -5942,6 +6222,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return The fileDeleteDelayMs.
        */
       public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
         if (fileDeleteDelayMsBuilder_ == null) {
@@ -6076,7 +6357,7 @@ public final class TopicOuterClass {
         return fileDeleteDelayMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value flushMessages_ = null;
+      private com.google.protobuf.Int64Value flushMessages_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMessagesBuilder_;
       /**
@@ -6086,6 +6367,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return Whether the flushMessages field is set.
        */
       public boolean hasFlushMessages() {
         return flushMessagesBuilder_ != null || flushMessages_ != null;
@@ -6097,6 +6379,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return The flushMessages.
        */
       public com.google.protobuf.Int64Value getFlushMessages() {
         if (flushMessagesBuilder_ == null) {
@@ -6238,7 +6521,7 @@ public final class TopicOuterClass {
         return flushMessagesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value flushMs_ = null;
+      private com.google.protobuf.Int64Value flushMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMsBuilder_;
       /**
@@ -6248,6 +6531,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return Whether the flushMs field is set.
        */
       public boolean hasFlushMs() {
         return flushMsBuilder_ != null || flushMs_ != null;
@@ -6259,6 +6543,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return The flushMs.
        */
       public com.google.protobuf.Int64Value getFlushMs() {
         if (flushMsBuilder_ == null) {
@@ -6400,7 +6685,7 @@ public final class TopicOuterClass {
         return flushMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minCompactionLagMs_ = null;
+      private com.google.protobuf.Int64Value minCompactionLagMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCompactionLagMsBuilder_;
       /**
@@ -6409,6 +6694,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return Whether the minCompactionLagMs field is set.
        */
       public boolean hasMinCompactionLagMs() {
         return minCompactionLagMsBuilder_ != null || minCompactionLagMs_ != null;
@@ -6419,6 +6705,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return The minCompactionLagMs.
        */
       public com.google.protobuf.Int64Value getMinCompactionLagMs() {
         if (minCompactionLagMsBuilder_ == null) {
@@ -6553,7 +6840,7 @@ public final class TopicOuterClass {
         return minCompactionLagMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value retentionBytes_ = null;
+      private com.google.protobuf.Int64Value retentionBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionBytesBuilder_;
       /**
@@ -6564,6 +6851,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return Whether the retentionBytes field is set.
        */
       public boolean hasRetentionBytes() {
         return retentionBytesBuilder_ != null || retentionBytes_ != null;
@@ -6576,6 +6864,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return The retentionBytes.
        */
       public com.google.protobuf.Int64Value getRetentionBytes() {
         if (retentionBytesBuilder_ == null) {
@@ -6724,7 +7013,7 @@ public final class TopicOuterClass {
         return retentionBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value retentionMs_ = null;
+      private com.google.protobuf.Int64Value retentionMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionMsBuilder_;
       /**
@@ -6734,6 +7023,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return Whether the retentionMs field is set.
        */
       public boolean hasRetentionMs() {
         return retentionMsBuilder_ != null || retentionMs_ != null;
@@ -6745,6 +7035,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return The retentionMs.
        */
       public com.google.protobuf.Int64Value getRetentionMs() {
         if (retentionMsBuilder_ == null) {
@@ -6886,7 +7177,7 @@ public final class TopicOuterClass {
         return retentionMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxMessageBytes_ = null;
+      private com.google.protobuf.Int64Value maxMessageBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMessageBytesBuilder_;
       /**
@@ -6895,6 +7186,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return Whether the maxMessageBytes field is set.
        */
       public boolean hasMaxMessageBytes() {
         return maxMessageBytesBuilder_ != null || maxMessageBytes_ != null;
@@ -6905,6 +7197,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return The maxMessageBytes.
        */
       public com.google.protobuf.Int64Value getMaxMessageBytes() {
         if (maxMessageBytesBuilder_ == null) {
@@ -7039,7 +7332,7 @@ public final class TopicOuterClass {
         return maxMessageBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minInsyncReplicas_ = null;
+      private com.google.protobuf.Int64Value minInsyncReplicas_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsyncReplicasBuilder_;
       /**
@@ -7049,6 +7342,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return Whether the minInsyncReplicas field is set.
        */
       public boolean hasMinInsyncReplicas() {
         return minInsyncReplicasBuilder_ != null || minInsyncReplicas_ != null;
@@ -7060,6 +7354,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return The minInsyncReplicas.
        */
       public com.google.protobuf.Int64Value getMinInsyncReplicas() {
         if (minInsyncReplicasBuilder_ == null) {
@@ -7201,7 +7496,7 @@ public final class TopicOuterClass {
         return minInsyncReplicasBuilder_;
       }
 
-      private com.google.protobuf.Int64Value segmentBytes_ = null;
+      private com.google.protobuf.Int64Value segmentBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> segmentBytesBuilder_;
       /**
@@ -7212,6 +7507,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return Whether the segmentBytes field is set.
        */
       public boolean hasSegmentBytes() {
         return segmentBytesBuilder_ != null || segmentBytes_ != null;
@@ -7224,6 +7520,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return The segmentBytes.
        */
       public com.google.protobuf.Int64Value getSegmentBytes() {
         if (segmentBytesBuilder_ == null) {
@@ -7372,7 +7669,7 @@ public final class TopicOuterClass {
         return segmentBytesBuilder_;
       }
 
-      private com.google.protobuf.BoolValue preallocate_ = null;
+      private com.google.protobuf.BoolValue preallocate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preallocateBuilder_;
       /**
@@ -7382,6 +7679,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return Whether the preallocate field is set.
        */
       public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
@@ -7393,6 +7691,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return The preallocate.
        */
       public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
@@ -7536,7 +7835,7 @@ public final class TopicOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7596,6 +7895,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
     int getCleanupPolicyValue();
     /**
@@ -7604,6 +7904,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy getCleanupPolicy();
 
@@ -7613,6 +7914,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
      */
     int getCompressionTypeValue();
     /**
@@ -7621,6 +7923,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
      */
     yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType();
 
@@ -7630,6 +7933,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
      */
     boolean hasDeleteRetentionMs();
     /**
@@ -7638,6 +7942,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
      */
     com.google.protobuf.Int64Value getDeleteRetentionMs();
     /**
@@ -7655,6 +7960,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
      */
     boolean hasFileDeleteDelayMs();
     /**
@@ -7663,6 +7969,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
      */
     com.google.protobuf.Int64Value getFileDeleteDelayMs();
     /**
@@ -7681,6 +7988,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
      */
     boolean hasFlushMessages();
     /**
@@ -7690,6 +7998,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
      */
     com.google.protobuf.Int64Value getFlushMessages();
     /**
@@ -7709,6 +8018,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
      */
     boolean hasFlushMs();
     /**
@@ -7718,6 +8028,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
      */
     com.google.protobuf.Int64Value getFlushMs();
     /**
@@ -7736,6 +8047,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
      */
     boolean hasMinCompactionLagMs();
     /**
@@ -7744,6 +8056,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
      */
     com.google.protobuf.Int64Value getMinCompactionLagMs();
     /**
@@ -7763,6 +8076,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
      */
     boolean hasRetentionBytes();
     /**
@@ -7773,6 +8087,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
      */
     com.google.protobuf.Int64Value getRetentionBytes();
     /**
@@ -7793,6 +8108,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
      */
     boolean hasRetentionMs();
     /**
@@ -7802,6 +8118,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
      */
     com.google.protobuf.Int64Value getRetentionMs();
     /**
@@ -7820,6 +8137,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
      */
     boolean hasMaxMessageBytes();
     /**
@@ -7828,6 +8146,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
      */
     com.google.protobuf.Int64Value getMaxMessageBytes();
     /**
@@ -7846,6 +8165,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
      */
     boolean hasMinInsyncReplicas();
     /**
@@ -7855,6 +8175,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
      */
     com.google.protobuf.Int64Value getMinInsyncReplicas();
     /**
@@ -7875,6 +8196,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
      */
     boolean hasSegmentBytes();
     /**
@@ -7885,6 +8207,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
      */
     com.google.protobuf.Int64Value getSegmentBytes();
     /**
@@ -7905,6 +8228,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
      */
     boolean hasPreallocate();
     /**
@@ -7914,6 +8238,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
      */
     com.google.protobuf.BoolValue getPreallocate();
     /**
@@ -7933,7 +8258,7 @@ public final class TopicOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig2_6}
    */
-  public  static final class TopicConfig2_6 extends
+  public static final class TopicConfig2_6 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.TopicConfig2_6)
       TopicConfig2_6OrBuilder {
@@ -7945,6 +8270,13 @@ public final class TopicOuterClass {
     private TopicConfig2_6() {
       cleanupPolicy_ = 0;
       compressionType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TopicConfig2_6();
     }
 
     @java.lang.Override
@@ -7960,7 +8292,6 @@ public final class TopicOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8127,7 +8458,7 @@ public final class TopicOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8233,6 +8564,8 @@ public final class TopicOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8240,6 +8573,10 @@ public final class TopicOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static CleanupPolicy forNumber(int value) {
         switch (value) {
           case 0: return CLEANUP_POLICY_UNSPECIFIED;
@@ -8264,6 +8601,10 @@ public final class TopicOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8306,8 +8647,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
-    public int getCleanupPolicyValue() {
+    @java.lang.Override public int getCleanupPolicyValue() {
       return cleanupPolicy_;
     }
     /**
@@ -8316,8 +8658,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
      */
-    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy getCleanupPolicy() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy getCleanupPolicy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy.valueOf(cleanupPolicy_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy.UNRECOGNIZED : result;
@@ -8331,8 +8674,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
      */
-    public int getCompressionTypeValue() {
+    @java.lang.Override public int getCompressionTypeValue() {
       return compressionType_;
     }
     /**
@@ -8341,8 +8685,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
      */
-    public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
@@ -8356,7 +8701,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
      */
+    @java.lang.Override
     public boolean hasDeleteRetentionMs() {
       return deleteRetentionMs_ != null;
     }
@@ -8366,7 +8713,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getDeleteRetentionMs() {
       return deleteRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : deleteRetentionMs_;
     }
@@ -8377,6 +8726,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDeleteRetentionMsOrBuilder() {
       return getDeleteRetentionMs();
     }
@@ -8389,7 +8739,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
      */
+    @java.lang.Override
     public boolean hasFileDeleteDelayMs() {
       return fileDeleteDelayMs_ != null;
     }
@@ -8399,7 +8751,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
       return fileDeleteDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileDeleteDelayMs_;
     }
@@ -8410,6 +8764,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFileDeleteDelayMsOrBuilder() {
       return getFileDeleteDelayMs();
     }
@@ -8423,7 +8778,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
      */
+    @java.lang.Override
     public boolean hasFlushMessages() {
       return flushMessages_ != null;
     }
@@ -8434,7 +8791,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFlushMessages() {
       return flushMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMessages_;
     }
@@ -8446,6 +8805,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFlushMessagesOrBuilder() {
       return getFlushMessages();
     }
@@ -8459,7 +8819,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
      */
+    @java.lang.Override
     public boolean hasFlushMs() {
       return flushMs_ != null;
     }
@@ -8470,7 +8832,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFlushMs() {
       return flushMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMs_;
     }
@@ -8482,6 +8846,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFlushMsOrBuilder() {
       return getFlushMs();
     }
@@ -8494,7 +8859,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
      */
+    @java.lang.Override
     public boolean hasMinCompactionLagMs() {
       return minCompactionLagMs_ != null;
     }
@@ -8504,7 +8871,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinCompactionLagMs() {
       return minCompactionLagMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompactionLagMs_;
     }
@@ -8515,6 +8884,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinCompactionLagMsOrBuilder() {
       return getMinCompactionLagMs();
     }
@@ -8529,7 +8899,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionBytes() {
       return retentionBytes_ != null;
     }
@@ -8541,7 +8913,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRetentionBytes() {
       return retentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionBytes_;
     }
@@ -8554,6 +8928,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRetentionBytesOrBuilder() {
       return getRetentionBytes();
     }
@@ -8567,7 +8942,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionMs() {
       return retentionMs_ != null;
     }
@@ -8578,7 +8955,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRetentionMs() {
       return retentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionMs_;
     }
@@ -8590,6 +8969,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder() {
       return getRetentionMs();
     }
@@ -8602,7 +8982,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMaxMessageBytes() {
       return maxMessageBytes_ != null;
     }
@@ -8612,7 +8994,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxMessageBytes() {
       return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
     }
@@ -8623,6 +9007,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
       return getMaxMessageBytes();
     }
@@ -8636,7 +9021,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
      */
+    @java.lang.Override
     public boolean hasMinInsyncReplicas() {
       return minInsyncReplicas_ != null;
     }
@@ -8647,7 +9034,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinInsyncReplicas() {
       return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
     }
@@ -8659,6 +9048,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
       return getMinInsyncReplicas();
     }
@@ -8673,7 +9063,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
      */
+    @java.lang.Override
     public boolean hasSegmentBytes() {
       return segmentBytes_ != null;
     }
@@ -8685,7 +9077,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSegmentBytes() {
       return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
     }
@@ -8698,6 +9092,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
       return getSegmentBytes();
     }
@@ -8711,7 +9106,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
      */
+    @java.lang.Override
     public boolean hasPreallocate() {
       return preallocate_ != null;
     }
@@ -8722,7 +9119,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
@@ -8734,6 +9133,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
     }
@@ -8867,66 +9267,65 @@ public final class TopicOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 other = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6) obj;
 
-      boolean result = true;
-      result = result && cleanupPolicy_ == other.cleanupPolicy_;
-      result = result && compressionType_ == other.compressionType_;
-      result = result && (hasDeleteRetentionMs() == other.hasDeleteRetentionMs());
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (compressionType_ != other.compressionType_) return false;
+      if (hasDeleteRetentionMs() != other.hasDeleteRetentionMs()) return false;
       if (hasDeleteRetentionMs()) {
-        result = result && getDeleteRetentionMs()
-            .equals(other.getDeleteRetentionMs());
+        if (!getDeleteRetentionMs()
+            .equals(other.getDeleteRetentionMs())) return false;
       }
-      result = result && (hasFileDeleteDelayMs() == other.hasFileDeleteDelayMs());
+      if (hasFileDeleteDelayMs() != other.hasFileDeleteDelayMs()) return false;
       if (hasFileDeleteDelayMs()) {
-        result = result && getFileDeleteDelayMs()
-            .equals(other.getFileDeleteDelayMs());
+        if (!getFileDeleteDelayMs()
+            .equals(other.getFileDeleteDelayMs())) return false;
       }
-      result = result && (hasFlushMessages() == other.hasFlushMessages());
+      if (hasFlushMessages() != other.hasFlushMessages()) return false;
       if (hasFlushMessages()) {
-        result = result && getFlushMessages()
-            .equals(other.getFlushMessages());
+        if (!getFlushMessages()
+            .equals(other.getFlushMessages())) return false;
       }
-      result = result && (hasFlushMs() == other.hasFlushMs());
+      if (hasFlushMs() != other.hasFlushMs()) return false;
       if (hasFlushMs()) {
-        result = result && getFlushMs()
-            .equals(other.getFlushMs());
+        if (!getFlushMs()
+            .equals(other.getFlushMs())) return false;
       }
-      result = result && (hasMinCompactionLagMs() == other.hasMinCompactionLagMs());
+      if (hasMinCompactionLagMs() != other.hasMinCompactionLagMs()) return false;
       if (hasMinCompactionLagMs()) {
-        result = result && getMinCompactionLagMs()
-            .equals(other.getMinCompactionLagMs());
+        if (!getMinCompactionLagMs()
+            .equals(other.getMinCompactionLagMs())) return false;
       }
-      result = result && (hasRetentionBytes() == other.hasRetentionBytes());
+      if (hasRetentionBytes() != other.hasRetentionBytes()) return false;
       if (hasRetentionBytes()) {
-        result = result && getRetentionBytes()
-            .equals(other.getRetentionBytes());
+        if (!getRetentionBytes()
+            .equals(other.getRetentionBytes())) return false;
       }
-      result = result && (hasRetentionMs() == other.hasRetentionMs());
+      if (hasRetentionMs() != other.hasRetentionMs()) return false;
       if (hasRetentionMs()) {
-        result = result && getRetentionMs()
-            .equals(other.getRetentionMs());
+        if (!getRetentionMs()
+            .equals(other.getRetentionMs())) return false;
       }
-      result = result && (hasMaxMessageBytes() == other.hasMaxMessageBytes());
+      if (hasMaxMessageBytes() != other.hasMaxMessageBytes()) return false;
       if (hasMaxMessageBytes()) {
-        result = result && getMaxMessageBytes()
-            .equals(other.getMaxMessageBytes());
+        if (!getMaxMessageBytes()
+            .equals(other.getMaxMessageBytes())) return false;
       }
-      result = result && (hasMinInsyncReplicas() == other.hasMinInsyncReplicas());
+      if (hasMinInsyncReplicas() != other.hasMinInsyncReplicas()) return false;
       if (hasMinInsyncReplicas()) {
-        result = result && getMinInsyncReplicas()
-            .equals(other.getMinInsyncReplicas());
+        if (!getMinInsyncReplicas()
+            .equals(other.getMinInsyncReplicas())) return false;
       }
-      result = result && (hasSegmentBytes() == other.hasSegmentBytes());
+      if (hasSegmentBytes() != other.hasSegmentBytes()) return false;
       if (hasSegmentBytes()) {
-        result = result && getSegmentBytes()
-            .equals(other.getSegmentBytes());
+        if (!getSegmentBytes()
+            .equals(other.getSegmentBytes())) return false;
       }
-      result = result && (hasPreallocate() == other.hasPreallocate());
+      if (hasPreallocate() != other.hasPreallocate()) return false;
       if (hasPreallocate()) {
-        result = result && getPreallocate()
-            .equals(other.getPreallocate());
+        if (!getPreallocate()
+            .equals(other.getPreallocate())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9280,35 +9679,35 @@ public final class TopicOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9397,8 +9796,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
        */
-      public int getCleanupPolicyValue() {
+      @java.lang.Override public int getCleanupPolicyValue() {
         return cleanupPolicy_;
       }
       /**
@@ -9407,8 +9807,11 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicyValue(int value) {
+        
         cleanupPolicy_ = value;
         onChanged();
         return this;
@@ -9419,7 +9822,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The cleanupPolicy.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy getCleanupPolicy() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy.valueOf(cleanupPolicy_);
@@ -9431,6 +9836,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicy(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.CleanupPolicy value) {
         if (value == null) {
@@ -9447,6 +9854,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6.CleanupPolicy cleanup_policy = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCleanupPolicy() {
         
@@ -9462,8 +9870,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The enum numeric value on the wire for compressionType.
        */
-      public int getCompressionTypeValue() {
+      @java.lang.Override public int getCompressionTypeValue() {
         return compressionType_;
       }
       /**
@@ -9472,8 +9881,11 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The enum numeric value on the wire for compressionType to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressionTypeValue(int value) {
+        
         compressionType_ = value;
         onChanged();
         return this;
@@ -9484,7 +9896,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The compressionType.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
@@ -9496,6 +9910,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The compressionType to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressionType(yandex.cloud.api.mdb.kafka.v1.Common.CompressionType value) {
         if (value == null) {
@@ -9512,6 +9928,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCompressionType() {
         
@@ -9520,7 +9937,7 @@ public final class TopicOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value deleteRetentionMs_ = null;
+      private com.google.protobuf.Int64Value deleteRetentionMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> deleteRetentionMsBuilder_;
       /**
@@ -9529,6 +9946,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return Whether the deleteRetentionMs field is set.
        */
       public boolean hasDeleteRetentionMs() {
         return deleteRetentionMsBuilder_ != null || deleteRetentionMs_ != null;
@@ -9539,6 +9957,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return The deleteRetentionMs.
        */
       public com.google.protobuf.Int64Value getDeleteRetentionMs() {
         if (deleteRetentionMsBuilder_ == null) {
@@ -9673,7 +10092,7 @@ public final class TopicOuterClass {
         return deleteRetentionMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value fileDeleteDelayMs_ = null;
+      private com.google.protobuf.Int64Value fileDeleteDelayMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fileDeleteDelayMsBuilder_;
       /**
@@ -9682,6 +10101,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return Whether the fileDeleteDelayMs field is set.
        */
       public boolean hasFileDeleteDelayMs() {
         return fileDeleteDelayMsBuilder_ != null || fileDeleteDelayMs_ != null;
@@ -9692,6 +10112,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return The fileDeleteDelayMs.
        */
       public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
         if (fileDeleteDelayMsBuilder_ == null) {
@@ -9826,7 +10247,7 @@ public final class TopicOuterClass {
         return fileDeleteDelayMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value flushMessages_ = null;
+      private com.google.protobuf.Int64Value flushMessages_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMessagesBuilder_;
       /**
@@ -9836,6 +10257,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return Whether the flushMessages field is set.
        */
       public boolean hasFlushMessages() {
         return flushMessagesBuilder_ != null || flushMessages_ != null;
@@ -9847,6 +10269,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return The flushMessages.
        */
       public com.google.protobuf.Int64Value getFlushMessages() {
         if (flushMessagesBuilder_ == null) {
@@ -9988,7 +10411,7 @@ public final class TopicOuterClass {
         return flushMessagesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value flushMs_ = null;
+      private com.google.protobuf.Int64Value flushMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMsBuilder_;
       /**
@@ -9998,6 +10421,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return Whether the flushMs field is set.
        */
       public boolean hasFlushMs() {
         return flushMsBuilder_ != null || flushMs_ != null;
@@ -10009,6 +10433,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return The flushMs.
        */
       public com.google.protobuf.Int64Value getFlushMs() {
         if (flushMsBuilder_ == null) {
@@ -10150,7 +10575,7 @@ public final class TopicOuterClass {
         return flushMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minCompactionLagMs_ = null;
+      private com.google.protobuf.Int64Value minCompactionLagMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCompactionLagMsBuilder_;
       /**
@@ -10159,6 +10584,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return Whether the minCompactionLagMs field is set.
        */
       public boolean hasMinCompactionLagMs() {
         return minCompactionLagMsBuilder_ != null || minCompactionLagMs_ != null;
@@ -10169,6 +10595,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return The minCompactionLagMs.
        */
       public com.google.protobuf.Int64Value getMinCompactionLagMs() {
         if (minCompactionLagMsBuilder_ == null) {
@@ -10303,7 +10730,7 @@ public final class TopicOuterClass {
         return minCompactionLagMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value retentionBytes_ = null;
+      private com.google.protobuf.Int64Value retentionBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionBytesBuilder_;
       /**
@@ -10314,6 +10741,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return Whether the retentionBytes field is set.
        */
       public boolean hasRetentionBytes() {
         return retentionBytesBuilder_ != null || retentionBytes_ != null;
@@ -10326,6 +10754,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return The retentionBytes.
        */
       public com.google.protobuf.Int64Value getRetentionBytes() {
         if (retentionBytesBuilder_ == null) {
@@ -10474,7 +10903,7 @@ public final class TopicOuterClass {
         return retentionBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value retentionMs_ = null;
+      private com.google.protobuf.Int64Value retentionMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionMsBuilder_;
       /**
@@ -10484,6 +10913,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return Whether the retentionMs field is set.
        */
       public boolean hasRetentionMs() {
         return retentionMsBuilder_ != null || retentionMs_ != null;
@@ -10495,6 +10925,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return The retentionMs.
        */
       public com.google.protobuf.Int64Value getRetentionMs() {
         if (retentionMsBuilder_ == null) {
@@ -10636,7 +11067,7 @@ public final class TopicOuterClass {
         return retentionMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxMessageBytes_ = null;
+      private com.google.protobuf.Int64Value maxMessageBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMessageBytesBuilder_;
       /**
@@ -10645,6 +11076,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return Whether the maxMessageBytes field is set.
        */
       public boolean hasMaxMessageBytes() {
         return maxMessageBytesBuilder_ != null || maxMessageBytes_ != null;
@@ -10655,6 +11087,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return The maxMessageBytes.
        */
       public com.google.protobuf.Int64Value getMaxMessageBytes() {
         if (maxMessageBytesBuilder_ == null) {
@@ -10789,7 +11222,7 @@ public final class TopicOuterClass {
         return maxMessageBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minInsyncReplicas_ = null;
+      private com.google.protobuf.Int64Value minInsyncReplicas_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsyncReplicasBuilder_;
       /**
@@ -10799,6 +11232,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return Whether the minInsyncReplicas field is set.
        */
       public boolean hasMinInsyncReplicas() {
         return minInsyncReplicasBuilder_ != null || minInsyncReplicas_ != null;
@@ -10810,6 +11244,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return The minInsyncReplicas.
        */
       public com.google.protobuf.Int64Value getMinInsyncReplicas() {
         if (minInsyncReplicasBuilder_ == null) {
@@ -10951,7 +11386,7 @@ public final class TopicOuterClass {
         return minInsyncReplicasBuilder_;
       }
 
-      private com.google.protobuf.Int64Value segmentBytes_ = null;
+      private com.google.protobuf.Int64Value segmentBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> segmentBytesBuilder_;
       /**
@@ -10962,6 +11397,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return Whether the segmentBytes field is set.
        */
       public boolean hasSegmentBytes() {
         return segmentBytesBuilder_ != null || segmentBytes_ != null;
@@ -10974,6 +11410,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return The segmentBytes.
        */
       public com.google.protobuf.Int64Value getSegmentBytes() {
         if (segmentBytesBuilder_ == null) {
@@ -11122,7 +11559,7 @@ public final class TopicOuterClass {
         return segmentBytesBuilder_;
       }
 
-      private com.google.protobuf.BoolValue preallocate_ = null;
+      private com.google.protobuf.BoolValue preallocate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preallocateBuilder_;
       /**
@@ -11132,6 +11569,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return Whether the preallocate field is set.
        */
       public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
@@ -11143,6 +11581,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return The preallocate.
        */
       public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
@@ -11286,7 +11725,7 @@ public final class TopicOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11346,6 +11785,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
     int getCleanupPolicyValue();
     /**
@@ -11354,6 +11794,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy getCleanupPolicy();
 
@@ -11363,6 +11804,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
      */
     int getCompressionTypeValue();
     /**
@@ -11371,6 +11813,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
      */
     yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType();
 
@@ -11380,6 +11823,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
      */
     boolean hasDeleteRetentionMs();
     /**
@@ -11388,6 +11832,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
      */
     com.google.protobuf.Int64Value getDeleteRetentionMs();
     /**
@@ -11405,6 +11850,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
      */
     boolean hasFileDeleteDelayMs();
     /**
@@ -11413,6 +11859,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
      */
     com.google.protobuf.Int64Value getFileDeleteDelayMs();
     /**
@@ -11431,6 +11878,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
      */
     boolean hasFlushMessages();
     /**
@@ -11440,6 +11888,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
      */
     com.google.protobuf.Int64Value getFlushMessages();
     /**
@@ -11459,6 +11908,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
      */
     boolean hasFlushMs();
     /**
@@ -11468,6 +11918,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
      */
     com.google.protobuf.Int64Value getFlushMs();
     /**
@@ -11486,6 +11937,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
      */
     boolean hasMinCompactionLagMs();
     /**
@@ -11494,6 +11946,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
      */
     com.google.protobuf.Int64Value getMinCompactionLagMs();
     /**
@@ -11513,6 +11966,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
      */
     boolean hasRetentionBytes();
     /**
@@ -11523,6 +11977,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
      */
     com.google.protobuf.Int64Value getRetentionBytes();
     /**
@@ -11543,6 +11998,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
      */
     boolean hasRetentionMs();
     /**
@@ -11552,6 +12008,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
      */
     com.google.protobuf.Int64Value getRetentionMs();
     /**
@@ -11570,6 +12027,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
      */
     boolean hasMaxMessageBytes();
     /**
@@ -11578,6 +12036,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
      */
     com.google.protobuf.Int64Value getMaxMessageBytes();
     /**
@@ -11596,6 +12055,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
      */
     boolean hasMinInsyncReplicas();
     /**
@@ -11605,6 +12065,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
      */
     com.google.protobuf.Int64Value getMinInsyncReplicas();
     /**
@@ -11625,6 +12086,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
      */
     boolean hasSegmentBytes();
     /**
@@ -11635,6 +12097,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
      */
     com.google.protobuf.Int64Value getSegmentBytes();
     /**
@@ -11655,6 +12118,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
      */
     boolean hasPreallocate();
     /**
@@ -11664,6 +12128,7 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
      */
     com.google.protobuf.BoolValue getPreallocate();
     /**
@@ -11683,7 +12148,7 @@ public final class TopicOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig2_8}
    */
-  public  static final class TopicConfig2_8 extends
+  public static final class TopicConfig2_8 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.TopicConfig2_8)
       TopicConfig2_8OrBuilder {
@@ -11695,6 +12160,13 @@ public final class TopicOuterClass {
     private TopicConfig2_8() {
       cleanupPolicy_ = 0;
       compressionType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TopicConfig2_8();
     }
 
     @java.lang.Override
@@ -11710,7 +12182,6 @@ public final class TopicOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11877,7 +12348,7 @@ public final class TopicOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11983,6 +12454,8 @@ public final class TopicOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -11990,6 +12463,10 @@ public final class TopicOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static CleanupPolicy forNumber(int value) {
         switch (value) {
           case 0: return CLEANUP_POLICY_UNSPECIFIED;
@@ -12014,6 +12491,10 @@ public final class TopicOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -12056,8 +12537,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
-    public int getCleanupPolicyValue() {
+    @java.lang.Override public int getCleanupPolicyValue() {
       return cleanupPolicy_;
     }
     /**
@@ -12066,8 +12548,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
      */
-    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy getCleanupPolicy() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy getCleanupPolicy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy.valueOf(cleanupPolicy_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy.UNRECOGNIZED : result;
@@ -12081,8 +12564,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
      */
-    public int getCompressionTypeValue() {
+    @java.lang.Override public int getCompressionTypeValue() {
       return compressionType_;
     }
     /**
@@ -12091,8 +12575,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
      */
-    public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
       return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
@@ -12106,7 +12591,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
      */
+    @java.lang.Override
     public boolean hasDeleteRetentionMs() {
       return deleteRetentionMs_ != null;
     }
@@ -12116,7 +12603,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getDeleteRetentionMs() {
       return deleteRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : deleteRetentionMs_;
     }
@@ -12127,6 +12616,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDeleteRetentionMsOrBuilder() {
       return getDeleteRetentionMs();
     }
@@ -12139,7 +12629,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
      */
+    @java.lang.Override
     public boolean hasFileDeleteDelayMs() {
       return fileDeleteDelayMs_ != null;
     }
@@ -12149,7 +12641,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
       return fileDeleteDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileDeleteDelayMs_;
     }
@@ -12160,6 +12654,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFileDeleteDelayMsOrBuilder() {
       return getFileDeleteDelayMs();
     }
@@ -12173,7 +12668,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
      */
+    @java.lang.Override
     public boolean hasFlushMessages() {
       return flushMessages_ != null;
     }
@@ -12184,7 +12681,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFlushMessages() {
       return flushMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMessages_;
     }
@@ -12196,6 +12695,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFlushMessagesOrBuilder() {
       return getFlushMessages();
     }
@@ -12209,7 +12709,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
      */
+    @java.lang.Override
     public boolean hasFlushMs() {
       return flushMs_ != null;
     }
@@ -12220,7 +12722,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFlushMs() {
       return flushMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMs_;
     }
@@ -12232,6 +12736,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFlushMsOrBuilder() {
       return getFlushMs();
     }
@@ -12244,7 +12749,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
      */
+    @java.lang.Override
     public boolean hasMinCompactionLagMs() {
       return minCompactionLagMs_ != null;
     }
@@ -12254,7 +12761,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinCompactionLagMs() {
       return minCompactionLagMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompactionLagMs_;
     }
@@ -12265,6 +12774,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinCompactionLagMsOrBuilder() {
       return getMinCompactionLagMs();
     }
@@ -12279,7 +12789,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionBytes() {
       return retentionBytes_ != null;
     }
@@ -12291,7 +12803,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRetentionBytes() {
       return retentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionBytes_;
     }
@@ -12304,6 +12818,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRetentionBytesOrBuilder() {
       return getRetentionBytes();
     }
@@ -12317,7 +12832,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionMs() {
       return retentionMs_ != null;
     }
@@ -12328,7 +12845,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRetentionMs() {
       return retentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionMs_;
     }
@@ -12340,6 +12859,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder() {
       return getRetentionMs();
     }
@@ -12352,7 +12872,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMaxMessageBytes() {
       return maxMessageBytes_ != null;
     }
@@ -12362,7 +12884,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxMessageBytes() {
       return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
     }
@@ -12373,6 +12897,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
       return getMaxMessageBytes();
     }
@@ -12386,7 +12911,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
      */
+    @java.lang.Override
     public boolean hasMinInsyncReplicas() {
       return minInsyncReplicas_ != null;
     }
@@ -12397,7 +12924,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinInsyncReplicas() {
       return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
     }
@@ -12409,6 +12938,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
       return getMinInsyncReplicas();
     }
@@ -12423,7 +12953,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
      */
+    @java.lang.Override
     public boolean hasSegmentBytes() {
       return segmentBytes_ != null;
     }
@@ -12435,7 +12967,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSegmentBytes() {
       return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
     }
@@ -12448,6 +12982,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
       return getSegmentBytes();
     }
@@ -12461,7 +12996,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
      */
+    @java.lang.Override
     public boolean hasPreallocate() {
       return preallocate_ != null;
     }
@@ -12472,7 +13009,9 @@ public final class TopicOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
@@ -12484,6 +13023,7 @@ public final class TopicOuterClass {
      *
      * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
     }
@@ -12617,66 +13157,65 @@ public final class TopicOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 other = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8) obj;
 
-      boolean result = true;
-      result = result && cleanupPolicy_ == other.cleanupPolicy_;
-      result = result && compressionType_ == other.compressionType_;
-      result = result && (hasDeleteRetentionMs() == other.hasDeleteRetentionMs());
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (compressionType_ != other.compressionType_) return false;
+      if (hasDeleteRetentionMs() != other.hasDeleteRetentionMs()) return false;
       if (hasDeleteRetentionMs()) {
-        result = result && getDeleteRetentionMs()
-            .equals(other.getDeleteRetentionMs());
+        if (!getDeleteRetentionMs()
+            .equals(other.getDeleteRetentionMs())) return false;
       }
-      result = result && (hasFileDeleteDelayMs() == other.hasFileDeleteDelayMs());
+      if (hasFileDeleteDelayMs() != other.hasFileDeleteDelayMs()) return false;
       if (hasFileDeleteDelayMs()) {
-        result = result && getFileDeleteDelayMs()
-            .equals(other.getFileDeleteDelayMs());
+        if (!getFileDeleteDelayMs()
+            .equals(other.getFileDeleteDelayMs())) return false;
       }
-      result = result && (hasFlushMessages() == other.hasFlushMessages());
+      if (hasFlushMessages() != other.hasFlushMessages()) return false;
       if (hasFlushMessages()) {
-        result = result && getFlushMessages()
-            .equals(other.getFlushMessages());
+        if (!getFlushMessages()
+            .equals(other.getFlushMessages())) return false;
       }
-      result = result && (hasFlushMs() == other.hasFlushMs());
+      if (hasFlushMs() != other.hasFlushMs()) return false;
       if (hasFlushMs()) {
-        result = result && getFlushMs()
-            .equals(other.getFlushMs());
+        if (!getFlushMs()
+            .equals(other.getFlushMs())) return false;
       }
-      result = result && (hasMinCompactionLagMs() == other.hasMinCompactionLagMs());
+      if (hasMinCompactionLagMs() != other.hasMinCompactionLagMs()) return false;
       if (hasMinCompactionLagMs()) {
-        result = result && getMinCompactionLagMs()
-            .equals(other.getMinCompactionLagMs());
+        if (!getMinCompactionLagMs()
+            .equals(other.getMinCompactionLagMs())) return false;
       }
-      result = result && (hasRetentionBytes() == other.hasRetentionBytes());
+      if (hasRetentionBytes() != other.hasRetentionBytes()) return false;
       if (hasRetentionBytes()) {
-        result = result && getRetentionBytes()
-            .equals(other.getRetentionBytes());
+        if (!getRetentionBytes()
+            .equals(other.getRetentionBytes())) return false;
       }
-      result = result && (hasRetentionMs() == other.hasRetentionMs());
+      if (hasRetentionMs() != other.hasRetentionMs()) return false;
       if (hasRetentionMs()) {
-        result = result && getRetentionMs()
-            .equals(other.getRetentionMs());
+        if (!getRetentionMs()
+            .equals(other.getRetentionMs())) return false;
       }
-      result = result && (hasMaxMessageBytes() == other.hasMaxMessageBytes());
+      if (hasMaxMessageBytes() != other.hasMaxMessageBytes()) return false;
       if (hasMaxMessageBytes()) {
-        result = result && getMaxMessageBytes()
-            .equals(other.getMaxMessageBytes());
+        if (!getMaxMessageBytes()
+            .equals(other.getMaxMessageBytes())) return false;
       }
-      result = result && (hasMinInsyncReplicas() == other.hasMinInsyncReplicas());
+      if (hasMinInsyncReplicas() != other.hasMinInsyncReplicas()) return false;
       if (hasMinInsyncReplicas()) {
-        result = result && getMinInsyncReplicas()
-            .equals(other.getMinInsyncReplicas());
+        if (!getMinInsyncReplicas()
+            .equals(other.getMinInsyncReplicas())) return false;
       }
-      result = result && (hasSegmentBytes() == other.hasSegmentBytes());
+      if (hasSegmentBytes() != other.hasSegmentBytes()) return false;
       if (hasSegmentBytes()) {
-        result = result && getSegmentBytes()
-            .equals(other.getSegmentBytes());
+        if (!getSegmentBytes()
+            .equals(other.getSegmentBytes())) return false;
       }
-      result = result && (hasPreallocate() == other.hasPreallocate());
+      if (hasPreallocate() != other.hasPreallocate()) return false;
       if (hasPreallocate()) {
-        result = result && getPreallocate()
-            .equals(other.getPreallocate());
+        if (!getPreallocate()
+            .equals(other.getPreallocate())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13030,35 +13569,35 @@ public final class TopicOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13147,8 +13686,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
        */
-      public int getCleanupPolicyValue() {
+      @java.lang.Override public int getCleanupPolicyValue() {
         return cleanupPolicy_;
       }
       /**
@@ -13157,8 +13697,11 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicyValue(int value) {
+        
         cleanupPolicy_ = value;
         onChanged();
         return this;
@@ -13169,7 +13712,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The cleanupPolicy.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy getCleanupPolicy() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy.valueOf(cleanupPolicy_);
@@ -13181,6 +13726,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicy(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.CleanupPolicy value) {
         if (value == null) {
@@ -13197,6 +13744,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8.CleanupPolicy cleanup_policy = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCleanupPolicy() {
         
@@ -13212,8 +13760,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The enum numeric value on the wire for compressionType.
        */
-      public int getCompressionTypeValue() {
+      @java.lang.Override public int getCompressionTypeValue() {
         return compressionType_;
       }
       /**
@@ -13222,8 +13771,11 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The enum numeric value on the wire for compressionType to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressionTypeValue(int value) {
+        
         compressionType_ = value;
         onChanged();
         return this;
@@ -13234,7 +13786,9 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The compressionType.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
@@ -13246,6 +13800,8 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The compressionType to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressionType(yandex.cloud.api.mdb.kafka.v1.Common.CompressionType value) {
         if (value == null) {
@@ -13262,6 +13818,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCompressionType() {
         
@@ -13270,7 +13827,7 @@ public final class TopicOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value deleteRetentionMs_ = null;
+      private com.google.protobuf.Int64Value deleteRetentionMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> deleteRetentionMsBuilder_;
       /**
@@ -13279,6 +13836,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return Whether the deleteRetentionMs field is set.
        */
       public boolean hasDeleteRetentionMs() {
         return deleteRetentionMsBuilder_ != null || deleteRetentionMs_ != null;
@@ -13289,6 +13847,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return The deleteRetentionMs.
        */
       public com.google.protobuf.Int64Value getDeleteRetentionMs() {
         if (deleteRetentionMsBuilder_ == null) {
@@ -13423,7 +13982,7 @@ public final class TopicOuterClass {
         return deleteRetentionMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value fileDeleteDelayMs_ = null;
+      private com.google.protobuf.Int64Value fileDeleteDelayMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fileDeleteDelayMsBuilder_;
       /**
@@ -13432,6 +13991,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return Whether the fileDeleteDelayMs field is set.
        */
       public boolean hasFileDeleteDelayMs() {
         return fileDeleteDelayMsBuilder_ != null || fileDeleteDelayMs_ != null;
@@ -13442,6 +14002,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return The fileDeleteDelayMs.
        */
       public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
         if (fileDeleteDelayMsBuilder_ == null) {
@@ -13576,7 +14137,7 @@ public final class TopicOuterClass {
         return fileDeleteDelayMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value flushMessages_ = null;
+      private com.google.protobuf.Int64Value flushMessages_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMessagesBuilder_;
       /**
@@ -13586,6 +14147,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return Whether the flushMessages field is set.
        */
       public boolean hasFlushMessages() {
         return flushMessagesBuilder_ != null || flushMessages_ != null;
@@ -13597,6 +14159,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return The flushMessages.
        */
       public com.google.protobuf.Int64Value getFlushMessages() {
         if (flushMessagesBuilder_ == null) {
@@ -13738,7 +14301,7 @@ public final class TopicOuterClass {
         return flushMessagesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value flushMs_ = null;
+      private com.google.protobuf.Int64Value flushMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMsBuilder_;
       /**
@@ -13748,6 +14311,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return Whether the flushMs field is set.
        */
       public boolean hasFlushMs() {
         return flushMsBuilder_ != null || flushMs_ != null;
@@ -13759,6 +14323,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return The flushMs.
        */
       public com.google.protobuf.Int64Value getFlushMs() {
         if (flushMsBuilder_ == null) {
@@ -13900,7 +14465,7 @@ public final class TopicOuterClass {
         return flushMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minCompactionLagMs_ = null;
+      private com.google.protobuf.Int64Value minCompactionLagMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCompactionLagMsBuilder_;
       /**
@@ -13909,6 +14474,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return Whether the minCompactionLagMs field is set.
        */
       public boolean hasMinCompactionLagMs() {
         return minCompactionLagMsBuilder_ != null || minCompactionLagMs_ != null;
@@ -13919,6 +14485,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return The minCompactionLagMs.
        */
       public com.google.protobuf.Int64Value getMinCompactionLagMs() {
         if (minCompactionLagMsBuilder_ == null) {
@@ -14053,7 +14620,7 @@ public final class TopicOuterClass {
         return minCompactionLagMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value retentionBytes_ = null;
+      private com.google.protobuf.Int64Value retentionBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionBytesBuilder_;
       /**
@@ -14064,6 +14631,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return Whether the retentionBytes field is set.
        */
       public boolean hasRetentionBytes() {
         return retentionBytesBuilder_ != null || retentionBytes_ != null;
@@ -14076,6 +14644,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return The retentionBytes.
        */
       public com.google.protobuf.Int64Value getRetentionBytes() {
         if (retentionBytesBuilder_ == null) {
@@ -14224,7 +14793,7 @@ public final class TopicOuterClass {
         return retentionBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value retentionMs_ = null;
+      private com.google.protobuf.Int64Value retentionMs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionMsBuilder_;
       /**
@@ -14234,6 +14803,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return Whether the retentionMs field is set.
        */
       public boolean hasRetentionMs() {
         return retentionMsBuilder_ != null || retentionMs_ != null;
@@ -14245,6 +14815,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return The retentionMs.
        */
       public com.google.protobuf.Int64Value getRetentionMs() {
         if (retentionMsBuilder_ == null) {
@@ -14386,7 +14957,7 @@ public final class TopicOuterClass {
         return retentionMsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxMessageBytes_ = null;
+      private com.google.protobuf.Int64Value maxMessageBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMessageBytesBuilder_;
       /**
@@ -14395,6 +14966,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return Whether the maxMessageBytes field is set.
        */
       public boolean hasMaxMessageBytes() {
         return maxMessageBytesBuilder_ != null || maxMessageBytes_ != null;
@@ -14405,6 +14977,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return The maxMessageBytes.
        */
       public com.google.protobuf.Int64Value getMaxMessageBytes() {
         if (maxMessageBytesBuilder_ == null) {
@@ -14539,7 +15112,7 @@ public final class TopicOuterClass {
         return maxMessageBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minInsyncReplicas_ = null;
+      private com.google.protobuf.Int64Value minInsyncReplicas_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsyncReplicasBuilder_;
       /**
@@ -14549,6 +15122,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return Whether the minInsyncReplicas field is set.
        */
       public boolean hasMinInsyncReplicas() {
         return minInsyncReplicasBuilder_ != null || minInsyncReplicas_ != null;
@@ -14560,6 +15134,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return The minInsyncReplicas.
        */
       public com.google.protobuf.Int64Value getMinInsyncReplicas() {
         if (minInsyncReplicasBuilder_ == null) {
@@ -14701,7 +15276,7 @@ public final class TopicOuterClass {
         return minInsyncReplicasBuilder_;
       }
 
-      private com.google.protobuf.Int64Value segmentBytes_ = null;
+      private com.google.protobuf.Int64Value segmentBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> segmentBytesBuilder_;
       /**
@@ -14712,6 +15287,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return Whether the segmentBytes field is set.
        */
       public boolean hasSegmentBytes() {
         return segmentBytesBuilder_ != null || segmentBytes_ != null;
@@ -14724,6 +15300,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return The segmentBytes.
        */
       public com.google.protobuf.Int64Value getSegmentBytes() {
         if (segmentBytesBuilder_ == null) {
@@ -14872,7 +15449,7 @@ public final class TopicOuterClass {
         return segmentBytesBuilder_;
       }
 
-      private com.google.protobuf.BoolValue preallocate_ = null;
+      private com.google.protobuf.BoolValue preallocate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preallocateBuilder_;
       /**
@@ -14882,6 +15459,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return Whether the preallocate field is set.
        */
       public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
@@ -14893,6 +15471,7 @@ public final class TopicOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return The preallocate.
        */
       public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
@@ -15036,7 +15615,7 @@ public final class TopicOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15217,20 +15796,12 @@ public final class TopicOuterClass {
       "/yandex-cloud/go-genproto/yandex/cloud/m" +
       "db/kafka/v1;kafkab\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_kafka_v1_Topic_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_Topic_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.iot.devices.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iot/devices/v1/device_data_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DeviceDataServiceGrpc {
 
   private DeviceDataServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class DeviceDataServiceGrpc {
     if ((getPublishMethod = DeviceDataServiceGrpc.getPublishMethod) == null) {
       synchronized (DeviceDataServiceGrpc.class) {
         if ((getPublishMethod = DeviceDataServiceGrpc.getPublishMethod) == null) {
-          DeviceDataServiceGrpc.getPublishMethod = getPublishMethod = 
+          DeviceDataServiceGrpc.getPublishMethod = getPublishMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest, yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceDataService", "Publish"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Publish"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceDataServiceMethodDescriptorSupplier("Publish"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceDataServiceMethodDescriptorSupplier("Publish"))
+              .build();
         }
-     }
-     return getPublishMethod;
+      }
+    }
+    return getPublishMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DeviceDataServiceStub newStub(io.grpc.Channel channel) {
-    return new DeviceDataServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceDataServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceDataServiceStub>() {
+        @java.lang.Override
+        public DeviceDataServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceDataServiceStub(channel, callOptions);
+        }
+      };
+    return DeviceDataServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class DeviceDataServiceGrpc {
    */
   public static DeviceDataServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DeviceDataServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceDataServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceDataServiceBlockingStub>() {
+        @java.lang.Override
+        public DeviceDataServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceDataServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DeviceDataServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class DeviceDataServiceGrpc {
    */
   public static DeviceDataServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DeviceDataServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceDataServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceDataServiceFutureStub>() {
+        @java.lang.Override
+        public DeviceDataServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceDataServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DeviceDataServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class DeviceDataServiceGrpc {
      */
     public void publish(yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getPublishMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getPublishMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse>(
@@ -120,19 +128,15 @@ public final class DeviceDataServiceGrpc {
    * A set of methods to work with IoT Core messages on behalf of device
    * </pre>
    */
-  public static final class DeviceDataServiceStub extends io.grpc.stub.AbstractStub<DeviceDataServiceStub> {
-    private DeviceDataServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceDataServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceDataServiceStub extends io.grpc.stub.AbstractAsyncStub<DeviceDataServiceStub> {
+    private DeviceDataServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceDataServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceDataServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceDataServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class DeviceDataServiceGrpc {
      */
     public void publish(yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPublishMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class DeviceDataServiceGrpc {
    * A set of methods to work with IoT Core messages on behalf of device
    * </pre>
    */
-  public static final class DeviceDataServiceBlockingStub extends io.grpc.stub.AbstractStub<DeviceDataServiceBlockingStub> {
-    private DeviceDataServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceDataServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceDataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DeviceDataServiceBlockingStub> {
+    private DeviceDataServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceDataServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceDataServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceDataServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class DeviceDataServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse publish(yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPublishMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class DeviceDataServiceGrpc {
    * A set of methods to work with IoT Core messages on behalf of device
    * </pre>
    */
-  public static final class DeviceDataServiceFutureStub extends io.grpc.stub.AbstractStub<DeviceDataServiceFutureStub> {
-    private DeviceDataServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceDataServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceDataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DeviceDataServiceFutureStub> {
+    private DeviceDataServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceDataServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceDataServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceDataServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class DeviceDataServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataResponse> publish(
         yandex.cloud.api.iot.devices.v1.DeviceDataServiceOuterClass.PublishDeviceDataRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPublishMethod(), getCallOptions()), request);
     }
   }

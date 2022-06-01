@@ -1,19 +1,6 @@
 package yandex.cloud.api.k8s.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/k8s/v1/node_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class NodeGroupServiceGrpc {
 
   private NodeGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class NodeGroupServiceGrpc {
     if ((getGetMethod = NodeGroupServiceGrpc.getGetMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getGetMethod = NodeGroupServiceGrpc.getGetMethod) == null) {
-          NodeGroupServiceGrpc.getGetMethod = getGetMethod = 
+          NodeGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest,
@@ -76,22 +63,21 @@ public final class NodeGroupServiceGrpc {
     if ((getListMethod = NodeGroupServiceGrpc.getListMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getListMethod = NodeGroupServiceGrpc.getListMethod) == null) {
-          NodeGroupServiceGrpc.getListMethod = getListMethod = 
+          NodeGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest, yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest,
@@ -108,22 +94,21 @@ public final class NodeGroupServiceGrpc {
     if ((getCreateMethod = NodeGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getCreateMethod = NodeGroupServiceGrpc.getCreateMethod) == null) {
-          NodeGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          NodeGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest,
@@ -140,22 +125,21 @@ public final class NodeGroupServiceGrpc {
     if ((getUpdateMethod = NodeGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getUpdateMethod = NodeGroupServiceGrpc.getUpdateMethod) == null) {
-          NodeGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          NodeGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest,
@@ -172,22 +156,21 @@ public final class NodeGroupServiceGrpc {
     if ((getDeleteMethod = NodeGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getDeleteMethod = NodeGroupServiceGrpc.getDeleteMethod) == null) {
-          NodeGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          NodeGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest,
@@ -204,22 +187,21 @@ public final class NodeGroupServiceGrpc {
     if ((getListOperationsMethod = NodeGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getListOperationsMethod = NodeGroupServiceGrpc.getListOperationsMethod) == null) {
-          NodeGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          NodeGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest, yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest,
@@ -236,29 +218,35 @@ public final class NodeGroupServiceGrpc {
     if ((getListNodesMethod = NodeGroupServiceGrpc.getListNodesMethod) == null) {
       synchronized (NodeGroupServiceGrpc.class) {
         if ((getListNodesMethod = NodeGroupServiceGrpc.getListNodesMethod) == null) {
-          NodeGroupServiceGrpc.getListNodesMethod = getListNodesMethod = 
+          NodeGroupServiceGrpc.getListNodesMethod = getListNodesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest, yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.k8s.v1.NodeGroupService", "ListNodes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNodes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("ListNodes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeGroupServiceMethodDescriptorSupplier("ListNodes"))
+              .build();
         }
-     }
-     return getListNodesMethod;
+      }
+    }
+    return getListNodesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static NodeGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new NodeGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodeGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodeGroupServiceStub>() {
+        @java.lang.Override
+        public NodeGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodeGroupServiceStub(channel, callOptions);
+        }
+      };
+    return NodeGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class NodeGroupServiceGrpc {
    */
   public static NodeGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new NodeGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodeGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodeGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public NodeGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodeGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return NodeGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class NodeGroupServiceGrpc {
    */
   public static NodeGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new NodeGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodeGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodeGroupServiceFutureStub>() {
+        @java.lang.Override
+        public NodeGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodeGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return NodeGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -312,7 +314,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -322,7 +324,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -332,7 +334,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -342,7 +344,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -352,56 +354,56 @@ public final class NodeGroupServiceGrpc {
      */
     public void listNodes(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListNodesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNodesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest,
                 yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest,
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest,
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListNodesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest,
                 yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse>(
@@ -415,19 +417,15 @@ public final class NodeGroupServiceGrpc {
    * A set of methods for managing node groups.
    * </pre>
    */
-  public static final class NodeGroupServiceStub extends io.grpc.stub.AbstractStub<NodeGroupServiceStub> {
-    private NodeGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodeGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodeGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<NodeGroupServiceStub> {
+    private NodeGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodeGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodeGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodeGroupServiceStub(channel, callOptions);
     }
 
@@ -439,7 +437,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -450,7 +448,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -461,7 +459,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -472,7 +470,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -483,7 +481,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -494,7 +492,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -505,7 +503,7 @@ public final class NodeGroupServiceGrpc {
      */
     public void listNodes(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListNodesMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -515,19 +513,15 @@ public final class NodeGroupServiceGrpc {
    * A set of methods for managing node groups.
    * </pre>
    */
-  public static final class NodeGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<NodeGroupServiceBlockingStub> {
-    private NodeGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodeGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodeGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<NodeGroupServiceBlockingStub> {
+    private NodeGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodeGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodeGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodeGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -538,7 +532,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup get(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -548,7 +542,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse list(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -558,7 +552,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -568,7 +562,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -578,7 +572,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -588,7 +582,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse listOperations(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -598,7 +592,7 @@ public final class NodeGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse listNodes(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListNodesMethod(), getCallOptions(), request);
     }
   }
@@ -608,19 +602,15 @@ public final class NodeGroupServiceGrpc {
    * A set of methods for managing node groups.
    * </pre>
    */
-  public static final class NodeGroupServiceFutureStub extends io.grpc.stub.AbstractStub<NodeGroupServiceFutureStub> {
-    private NodeGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodeGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodeGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<NodeGroupServiceFutureStub> {
+    private NodeGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodeGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodeGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodeGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -632,7 +622,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup> get(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.GetNodeGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -643,7 +633,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsResponse> list(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -654,7 +644,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.CreateNodeGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -665,7 +655,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.UpdateNodeGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -676,7 +666,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.DeleteNodeGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -687,7 +677,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsResponse> listOperations(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -698,7 +688,7 @@ public final class NodeGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesResponse> listNodes(
         yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.ListNodeGroupNodesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListNodesMethod(), getCallOptions()), request);
     }
   }

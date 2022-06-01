@@ -24,6 +24,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The uuid.
      */
     java.lang.String getUuid();
     /**
@@ -32,6 +33,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The bytes for uuid.
      */
     com.google.protobuf.ByteString
         getUuidBytes();
@@ -42,6 +44,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The skuId.
      */
     java.lang.String getSkuId();
     /**
@@ -50,6 +53,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for skuId.
      */
     com.google.protobuf.ByteString
         getSkuIdBytes();
@@ -60,6 +64,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The quantity.
      */
     long getQuantity();
 
@@ -69,6 +74,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
@@ -77,6 +83,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
@@ -91,7 +98,7 @@ public final class UsageRecordOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.marketplace.v1.metering.UsageRecord}
    */
-  public  static final class UsageRecord extends
+  public static final class UsageRecord extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.v1.metering.UsageRecord)
       UsageRecordOrBuilder {
@@ -103,7 +110,13 @@ public final class UsageRecordOuterClass {
     private UsageRecord() {
       uuid_ = "";
       skuId_ = "";
-      quantity_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UsageRecord();
     }
 
     @java.lang.Override
@@ -119,7 +132,6 @@ public final class UsageRecordOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -161,7 +173,7 @@ public final class UsageRecordOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -200,7 +212,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The uuid.
      */
+    @java.lang.Override
     public java.lang.String getUuid() {
       java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
@@ -219,7 +233,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The bytes for uuid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
       java.lang.Object ref = uuid_;
@@ -242,7 +258,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The skuId.
      */
+    @java.lang.Override
     public java.lang.String getSkuId() {
       java.lang.Object ref = skuId_;
       if (ref instanceof java.lang.String) {
@@ -261,7 +279,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for skuId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSkuIdBytes() {
       java.lang.Object ref = skuId_;
@@ -284,7 +304,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The quantity.
      */
+    @java.lang.Override
     public long getQuantity() {
       return quantity_;
     }
@@ -297,7 +319,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timestamp field is set.
      */
+    @java.lang.Override
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
@@ -307,7 +331,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The timestamp.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
@@ -318,6 +344,7 @@ public final class UsageRecordOuterClass {
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       return getTimestamp();
     }
@@ -336,10 +363,10 @@ public final class UsageRecordOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
       }
-      if (!getSkuIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skuId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, skuId_);
       }
       if (quantity_ != 0L) {
@@ -357,10 +384,10 @@ public final class UsageRecordOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
       }
-      if (!getSkuIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skuId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, skuId_);
       }
       if (quantity_ != 0L) {
@@ -386,20 +413,19 @@ public final class UsageRecordOuterClass {
       }
       yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord other = (yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && getSkuId()
-          .equals(other.getSkuId());
-      result = result && (getQuantity()
-          == other.getQuantity());
-      result = result && (hasTimestamp() == other.hasTimestamp());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getSkuId()
+          .equals(other.getSkuId())) return false;
+      if (getQuantity()
+          != other.getQuantity()) return false;
+      if (hasTimestamp() != other.hasTimestamp()) return false;
       if (hasTimestamp()) {
-        result = result && getTimestamp()
-            .equals(other.getTimestamp());
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -605,35 +631,35 @@ public final class UsageRecordOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -697,6 +723,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @return The uuid.
        */
       public java.lang.String getUuid() {
         java.lang.Object ref = uuid_;
@@ -716,6 +743,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @return The bytes for uuid.
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
@@ -736,6 +764,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuid(
           java.lang.String value) {
@@ -753,6 +783,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUuid() {
         
@@ -766,6 +797,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @param value The bytes for uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -786,6 +819,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The skuId.
        */
       public java.lang.String getSkuId() {
         java.lang.Object ref = skuId_;
@@ -805,6 +839,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for skuId.
        */
       public com.google.protobuf.ByteString
           getSkuIdBytes() {
@@ -825,6 +860,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The skuId to set.
+       * @return This builder for chaining.
        */
       public Builder setSkuId(
           java.lang.String value) {
@@ -842,6 +879,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSkuId() {
         
@@ -855,6 +893,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for skuId to set.
+       * @return This builder for chaining.
        */
       public Builder setSkuIdBytes(
           com.google.protobuf.ByteString value) {
@@ -875,7 +915,9 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The quantity.
        */
+      @java.lang.Override
       public long getQuantity() {
         return quantity_;
       }
@@ -885,6 +927,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @param value The quantity to set.
+       * @return This builder for chaining.
        */
       public Builder setQuantity(long value) {
         
@@ -898,6 +942,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearQuantity() {
         
@@ -906,7 +951,7 @@ public final class UsageRecordOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp timestamp_ = null;
+      private com.google.protobuf.Timestamp timestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
@@ -915,6 +960,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
@@ -925,6 +971,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The timestamp.
        */
       public com.google.protobuf.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
@@ -1061,7 +1108,7 @@ public final class UsageRecordOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1121,6 +1168,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The uuid.
      */
     java.lang.String getUuid();
     /**
@@ -1129,6 +1177,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The bytes for uuid.
      */
     com.google.protobuf.ByteString
         getUuidBytes();
@@ -1136,7 +1185,7 @@ public final class UsageRecordOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord}
    */
-  public  static final class AcceptedUsageRecord extends
+  public static final class AcceptedUsageRecord extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord)
       AcceptedUsageRecordOrBuilder {
@@ -1147,6 +1196,13 @@ public final class UsageRecordOuterClass {
     }
     private AcceptedUsageRecord() {
       uuid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AcceptedUsageRecord();
     }
 
     @java.lang.Override
@@ -1162,7 +1218,6 @@ public final class UsageRecordOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1180,7 +1235,7 @@ public final class UsageRecordOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1219,7 +1274,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The uuid.
      */
+    @java.lang.Override
     public java.lang.String getUuid() {
       java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
@@ -1238,7 +1295,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The bytes for uuid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
       java.lang.Object ref = uuid_;
@@ -1267,7 +1326,7 @@ public final class UsageRecordOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
       }
       unknownFields.writeTo(output);
@@ -1279,7 +1338,7 @@ public final class UsageRecordOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
       }
       size += unknownFields.getSerializedSize();
@@ -1297,11 +1356,10 @@ public final class UsageRecordOuterClass {
       }
       yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord other = (yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1481,35 +1539,35 @@ public final class UsageRecordOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1563,6 +1621,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return The uuid.
        */
       public java.lang.String getUuid() {
         java.lang.Object ref = uuid_;
@@ -1582,6 +1641,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return The bytes for uuid.
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
@@ -1602,6 +1662,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuid(
           java.lang.String value) {
@@ -1619,6 +1681,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUuid() {
         
@@ -1632,6 +1695,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @param value The bytes for uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -1647,7 +1712,7 @@ public final class UsageRecordOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1707,6 +1772,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The uuid.
      */
     java.lang.String getUuid();
     /**
@@ -1715,6 +1781,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The bytes for uuid.
      */
     com.google.protobuf.ByteString
         getUuidBytes();
@@ -1725,6 +1792,7 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+     * @return The enum numeric value on the wire for reason.
      */
     int getReasonValue();
     /**
@@ -1733,13 +1801,14 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+     * @return The reason.
      */
     yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason getReason();
   }
   /**
    * Protobuf type {@code yandex.cloud.marketplace.v1.metering.RejectedUsageRecord}
    */
-  public  static final class RejectedUsageRecord extends
+  public static final class RejectedUsageRecord extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.v1.metering.RejectedUsageRecord)
       RejectedUsageRecordOrBuilder {
@@ -1751,6 +1820,13 @@ public final class UsageRecordOuterClass {
     private RejectedUsageRecord() {
       uuid_ = "";
       reason_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RejectedUsageRecord();
     }
 
     @java.lang.Override
@@ -1766,7 +1842,6 @@ public final class UsageRecordOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1790,7 +1865,7 @@ public final class UsageRecordOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1904,6 +1979,8 @@ public final class UsageRecordOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1911,6 +1988,10 @@ public final class UsageRecordOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Reason forNumber(int value) {
         switch (value) {
           case 0: return REASON_UNSPECIFIED;
@@ -1939,6 +2020,10 @@ public final class UsageRecordOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1981,7 +2066,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The uuid.
      */
+    @java.lang.Override
     public java.lang.String getUuid() {
       java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
@@ -2000,7 +2087,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The bytes for uuid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
       java.lang.Object ref = uuid_;
@@ -2023,8 +2112,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+     * @return The enum numeric value on the wire for reason.
      */
-    public int getReasonValue() {
+    @java.lang.Override public int getReasonValue() {
       return reason_;
     }
     /**
@@ -2033,8 +2123,9 @@ public final class UsageRecordOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+     * @return The reason.
      */
-    public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason getReason() {
+    @java.lang.Override public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason getReason() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason result = yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason.valueOf(reason_);
       return result == null ? yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason.UNRECOGNIZED : result;
@@ -2054,7 +2145,7 @@ public final class UsageRecordOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
       }
       if (reason_ != yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason.REASON_UNSPECIFIED.getNumber()) {
@@ -2069,7 +2160,7 @@ public final class UsageRecordOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
       }
       if (reason_ != yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason.REASON_UNSPECIFIED.getNumber()) {
@@ -2091,12 +2182,11 @@ public final class UsageRecordOuterClass {
       }
       yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord other = (yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && reason_ == other.reason_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (reason_ != other.reason_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2281,35 +2371,35 @@ public final class UsageRecordOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2366,6 +2456,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return The uuid.
        */
       public java.lang.String getUuid() {
         java.lang.Object ref = uuid_;
@@ -2385,6 +2476,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return The bytes for uuid.
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
@@ -2405,6 +2497,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuid(
           java.lang.String value) {
@@ -2422,6 +2516,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUuid() {
         
@@ -2435,6 +2530,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @param value The bytes for uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -2455,8 +2552,9 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+       * @return The enum numeric value on the wire for reason.
        */
-      public int getReasonValue() {
+      @java.lang.Override public int getReasonValue() {
         return reason_;
       }
       /**
@@ -2465,8 +2563,11 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+       * @param value The enum numeric value on the wire for reason to set.
+       * @return This builder for chaining.
        */
       public Builder setReasonValue(int value) {
+        
         reason_ = value;
         onChanged();
         return this;
@@ -2477,7 +2578,9 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+       * @return The reason.
        */
+      @java.lang.Override
       public yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason getReason() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason result = yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason.valueOf(reason_);
@@ -2489,6 +2592,8 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
        */
       public Builder setReason(yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord.Reason value) {
         if (value == null) {
@@ -2505,6 +2610,7 @@ public final class UsageRecordOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReason() {
         
@@ -2515,7 +2621,7 @@ public final class UsageRecordOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2610,20 +2716,12 @@ public final class UsageRecordOuterClass {
       "andex/cloud/marketplace/v1/metering;mete" +
       "ringb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_marketplace_v1_metering_UsageRecord_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_marketplace_v1_metering_UsageRecord_fieldAccessorTable = new

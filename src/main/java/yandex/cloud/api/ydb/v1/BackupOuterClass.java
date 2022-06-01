@@ -20,10 +20,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
+     * @return Whether the dailyBackupSchedule field is set.
      */
     boolean hasDailyBackupSchedule();
     /**
      * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
+     * @return The dailyBackupSchedule.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule getDailyBackupSchedule();
     /**
@@ -33,10 +35,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
+     * @return Whether the weeklyBackupSchedule field is set.
      */
     boolean hasWeeklyBackupSchedule();
     /**
      * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
+     * @return The weeklyBackupSchedule.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule getWeeklyBackupSchedule();
     /**
@@ -46,10 +50,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     * @return Whether the recurringBackupSchedule field is set.
      */
     boolean hasRecurringBackupSchedule();
     /**
      * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     * @return The recurringBackupSchedule.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getRecurringBackupSchedule();
     /**
@@ -64,6 +70,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
+     * @return Whether the nextExecuteTime field is set.
      */
     boolean hasNextExecuteTime();
     /**
@@ -73,6 +80,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
+     * @return The nextExecuteTime.
      */
     com.google.protobuf.Timestamp getNextExecuteTime();
     /**
@@ -90,7 +98,7 @@ public final class BackupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.BackupSchedule}
    */
-  public  static final class BackupSchedule extends
+  public static final class BackupSchedule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.BackupSchedule)
       BackupScheduleOrBuilder {
@@ -100,6 +108,13 @@ public final class BackupOuterClass {
       super(builder);
     }
     private BackupSchedule() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackupSchedule();
     }
 
     @java.lang.Override
@@ -115,7 +130,6 @@ public final class BackupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -182,7 +196,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -216,7 +230,8 @@ public final class BackupOuterClass {
     private int policyCase_ = 0;
     private java.lang.Object policy_;
     public enum PolicyCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DAILY_BACKUP_SCHEDULE(1),
       WEEKLY_BACKUP_SCHEDULE(2),
       RECURRING_BACKUP_SCHEDULE(4),
@@ -226,6 +241,8 @@ public final class BackupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -256,13 +273,17 @@ public final class BackupOuterClass {
     public static final int DAILY_BACKUP_SCHEDULE_FIELD_NUMBER = 1;
     /**
      * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
+     * @return Whether the dailyBackupSchedule field is set.
      */
+    @java.lang.Override
     public boolean hasDailyBackupSchedule() {
       return policyCase_ == 1;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
+     * @return The dailyBackupSchedule.
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule getDailyBackupSchedule() {
       if (policyCase_ == 1) {
          return (yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule) policy_;
@@ -272,6 +293,7 @@ public final class BackupOuterClass {
     /**
      * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupScheduleOrBuilder getDailyBackupScheduleOrBuilder() {
       if (policyCase_ == 1) {
          return (yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule) policy_;
@@ -282,13 +304,17 @@ public final class BackupOuterClass {
     public static final int WEEKLY_BACKUP_SCHEDULE_FIELD_NUMBER = 2;
     /**
      * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
+     * @return Whether the weeklyBackupSchedule field is set.
      */
+    @java.lang.Override
     public boolean hasWeeklyBackupSchedule() {
       return policyCase_ == 2;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
+     * @return The weeklyBackupSchedule.
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule getWeeklyBackupSchedule() {
       if (policyCase_ == 2) {
          return (yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule) policy_;
@@ -298,6 +324,7 @@ public final class BackupOuterClass {
     /**
      * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupScheduleOrBuilder getWeeklyBackupScheduleOrBuilder() {
       if (policyCase_ == 2) {
          return (yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule) policy_;
@@ -308,13 +335,17 @@ public final class BackupOuterClass {
     public static final int RECURRING_BACKUP_SCHEDULE_FIELD_NUMBER = 4;
     /**
      * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     * @return Whether the recurringBackupSchedule field is set.
      */
+    @java.lang.Override
     public boolean hasRecurringBackupSchedule() {
       return policyCase_ == 4;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     * @return The recurringBackupSchedule.
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getRecurringBackupSchedule() {
       if (policyCase_ == 4) {
          return (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_;
@@ -324,6 +355,7 @@ public final class BackupOuterClass {
     /**
      * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder getRecurringBackupScheduleOrBuilder() {
       if (policyCase_ == 4) {
          return (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_;
@@ -340,7 +372,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
+     * @return Whether the nextExecuteTime field is set.
      */
+    @java.lang.Override
     public boolean hasNextExecuteTime() {
       return nextExecuteTime_ != null;
     }
@@ -351,7 +385,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
+     * @return The nextExecuteTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getNextExecuteTime() {
       return nextExecuteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : nextExecuteTime_;
     }
@@ -363,6 +399,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getNextExecuteTimeOrBuilder() {
       return getNextExecuteTime();
     }
@@ -433,33 +470,30 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule other = (yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule) obj;
 
-      boolean result = true;
-      result = result && (hasNextExecuteTime() == other.hasNextExecuteTime());
+      if (hasNextExecuteTime() != other.hasNextExecuteTime()) return false;
       if (hasNextExecuteTime()) {
-        result = result && getNextExecuteTime()
-            .equals(other.getNextExecuteTime());
+        if (!getNextExecuteTime()
+            .equals(other.getNextExecuteTime())) return false;
       }
-      result = result && getPolicyCase().equals(
-          other.getPolicyCase());
-      if (!result) return false;
+      if (!getPolicyCase().equals(other.getPolicyCase())) return false;
       switch (policyCase_) {
         case 1:
-          result = result && getDailyBackupSchedule()
-              .equals(other.getDailyBackupSchedule());
+          if (!getDailyBackupSchedule()
+              .equals(other.getDailyBackupSchedule())) return false;
           break;
         case 2:
-          result = result && getWeeklyBackupSchedule()
-              .equals(other.getWeeklyBackupSchedule());
+          if (!getWeeklyBackupSchedule()
+              .equals(other.getWeeklyBackupSchedule())) return false;
           break;
         case 4:
-          result = result && getRecurringBackupSchedule()
-              .equals(other.getRecurringBackupSchedule());
+          if (!getRecurringBackupSchedule()
+              .equals(other.getRecurringBackupSchedule())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -689,35 +723,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -799,13 +833,17 @@ public final class BackupOuterClass {
           yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupScheduleOrBuilder> dailyBackupScheduleBuilder_;
       /**
        * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
+       * @return Whether the dailyBackupSchedule field is set.
        */
+      @java.lang.Override
       public boolean hasDailyBackupSchedule() {
         return policyCase_ == 1;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
+       * @return The dailyBackupSchedule.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule getDailyBackupSchedule() {
         if (dailyBackupScheduleBuilder_ == null) {
           if (policyCase_ == 1) {
@@ -899,6 +937,7 @@ public final class BackupOuterClass {
       /**
        * <code>.yandex.cloud.ydb.v1.DailyBackupSchedule daily_backup_schedule = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupScheduleOrBuilder getDailyBackupScheduleOrBuilder() {
         if ((policyCase_ == 1) && (dailyBackupScheduleBuilder_ != null)) {
           return dailyBackupScheduleBuilder_.getMessageOrBuilder();
@@ -935,13 +974,17 @@ public final class BackupOuterClass {
           yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupScheduleOrBuilder> weeklyBackupScheduleBuilder_;
       /**
        * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
+       * @return Whether the weeklyBackupSchedule field is set.
        */
+      @java.lang.Override
       public boolean hasWeeklyBackupSchedule() {
         return policyCase_ == 2;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
+       * @return The weeklyBackupSchedule.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule getWeeklyBackupSchedule() {
         if (weeklyBackupScheduleBuilder_ == null) {
           if (policyCase_ == 2) {
@@ -1035,6 +1078,7 @@ public final class BackupOuterClass {
       /**
        * <code>.yandex.cloud.ydb.v1.WeeklyBackupSchedule weekly_backup_schedule = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupScheduleOrBuilder getWeeklyBackupScheduleOrBuilder() {
         if ((policyCase_ == 2) && (weeklyBackupScheduleBuilder_ != null)) {
           return weeklyBackupScheduleBuilder_.getMessageOrBuilder();
@@ -1071,13 +1115,17 @@ public final class BackupOuterClass {
           yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder> recurringBackupScheduleBuilder_;
       /**
        * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       * @return Whether the recurringBackupSchedule field is set.
        */
+      @java.lang.Override
       public boolean hasRecurringBackupSchedule() {
         return policyCase_ == 4;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       * @return The recurringBackupSchedule.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getRecurringBackupSchedule() {
         if (recurringBackupScheduleBuilder_ == null) {
           if (policyCase_ == 4) {
@@ -1171,6 +1219,7 @@ public final class BackupOuterClass {
       /**
        * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder getRecurringBackupScheduleOrBuilder() {
         if ((policyCase_ == 4) && (recurringBackupScheduleBuilder_ != null)) {
           return recurringBackupScheduleBuilder_.getMessageOrBuilder();
@@ -1203,7 +1252,7 @@ public final class BackupOuterClass {
         return recurringBackupScheduleBuilder_;
       }
 
-      private com.google.protobuf.Timestamp nextExecuteTime_ = null;
+      private com.google.protobuf.Timestamp nextExecuteTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> nextExecuteTimeBuilder_;
       /**
@@ -1213,6 +1262,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
+       * @return Whether the nextExecuteTime field is set.
        */
       public boolean hasNextExecuteTime() {
         return nextExecuteTimeBuilder_ != null || nextExecuteTime_ != null;
@@ -1224,6 +1274,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp next_execute_time = 3;</code>
+       * @return The nextExecuteTime.
        */
       public com.google.protobuf.Timestamp getNextExecuteTime() {
         if (nextExecuteTimeBuilder_ == null) {
@@ -1367,7 +1418,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1427,6 +1478,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
@@ -1435,6 +1487,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
@@ -1454,6 +1507,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The recurrence.
      */
     java.lang.String getRecurrence();
     /**
@@ -1464,6 +1518,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for recurrence.
      */
     com.google.protobuf.ByteString
         getRecurrenceBytes();
@@ -1471,7 +1526,7 @@ public final class BackupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.RecurringBackupSchedule}
    */
-  public  static final class RecurringBackupSchedule extends
+  public static final class RecurringBackupSchedule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.RecurringBackupSchedule)
       RecurringBackupScheduleOrBuilder {
@@ -1482,6 +1537,13 @@ public final class BackupOuterClass {
     }
     private RecurringBackupSchedule() {
       recurrence_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecurringBackupSchedule();
     }
 
     @java.lang.Override
@@ -1497,7 +1559,6 @@ public final class BackupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1528,7 +1589,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1567,7 +1628,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the startTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
@@ -1577,7 +1640,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartTime() {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
@@ -1588,6 +1653,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -1602,7 +1668,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The recurrence.
      */
+    @java.lang.Override
     public java.lang.String getRecurrence() {
       java.lang.Object ref = recurrence_;
       if (ref instanceof java.lang.String) {
@@ -1623,7 +1691,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for recurrence.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRecurrenceBytes() {
       java.lang.Object ref = recurrence_;
@@ -1655,7 +1725,7 @@ public final class BackupOuterClass {
       if (startTime_ != null) {
         output.writeMessage(1, getStartTime());
       }
-      if (!getRecurrenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recurrence_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recurrence_);
       }
       unknownFields.writeTo(output);
@@ -1671,7 +1741,7 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStartTime());
       }
-      if (!getRecurrenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recurrence_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recurrence_);
       }
       size += unknownFields.getSerializedSize();
@@ -1689,16 +1759,15 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule other = (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) obj;
 
-      boolean result = true;
-      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
-        result = result && getStartTime()
-            .equals(other.getStartTime());
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
       }
-      result = result && getRecurrence()
-          .equals(other.getRecurrence());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRecurrence()
+          .equals(other.getRecurrence())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1893,35 +1962,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1971,7 +2040,7 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp startTime_ = null;
+      private com.google.protobuf.Timestamp startTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
@@ -1980,6 +2049,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
@@ -1990,6 +2060,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The startTime.
        */
       public com.google.protobuf.Timestamp getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -2133,6 +2204,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The recurrence.
        */
       public java.lang.String getRecurrence() {
         java.lang.Object ref = recurrence_;
@@ -2154,6 +2226,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for recurrence.
        */
       public com.google.protobuf.ByteString
           getRecurrenceBytes() {
@@ -2176,6 +2249,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The recurrence to set.
+       * @return This builder for chaining.
        */
       public Builder setRecurrence(
           java.lang.String value) {
@@ -2195,6 +2270,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRecurrence() {
         
@@ -2210,6 +2286,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for recurrence to set.
+       * @return This builder for chaining.
        */
       public Builder setRecurrenceBytes(
           com.google.protobuf.ByteString value) {
@@ -2225,7 +2303,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2281,32 +2359,41 @@ public final class BackupOuterClass {
 
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the days.
      */
     java.util.List<com.google.type.DayOfWeek> getDaysList();
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return The count of days.
      */
     int getDaysCount();
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the element to return.
+     * @return The days at the given index.
      */
     com.google.type.DayOfWeek getDays(int index);
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the enum numeric values on the wire for days.
      */
     java.util.List<java.lang.Integer>
     getDaysValueList();
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of days at the given index.
      */
     int getDaysValue(int index);
 
     /**
      * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the executeTime field is set.
      */
     boolean hasExecuteTime();
     /**
      * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The executeTime.
      */
     com.google.type.TimeOfDay getExecuteTime();
     /**
@@ -2317,7 +2404,7 @@ public final class BackupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule}
    */
-  public  static final class DaysOfWeekBackupSchedule extends
+  public static final class DaysOfWeekBackupSchedule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule)
       DaysOfWeekBackupScheduleOrBuilder {
@@ -2328,6 +2415,13 @@ public final class BackupOuterClass {
     }
     private DaysOfWeekBackupSchedule() {
       days_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DaysOfWeekBackupSchedule();
     }
 
     @java.lang.Override
@@ -2356,7 +2450,7 @@ public final class BackupOuterClass {
               break;
             case 8: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 days_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2368,7 +2462,7 @@ public final class BackupOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   days_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -2391,7 +2485,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2405,7 +2499,7 @@ public final class BackupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           days_ = java.util.Collections.unmodifiableList(days_);
         }
         this.unknownFields = unknownFields.build();
@@ -2425,7 +2519,6 @@ public final class BackupOuterClass {
               yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule.class, yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DAYS_FIELD_NUMBER = 1;
     private java.util.List<java.lang.Integer> days_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
@@ -2440,33 +2533,45 @@ public final class BackupOuterClass {
             };
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the days.
      */
+    @java.lang.Override
     public java.util.List<com.google.type.DayOfWeek> getDaysList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, com.google.type.DayOfWeek>(days_, days_converter_);
     }
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return The count of days.
      */
+    @java.lang.Override
     public int getDaysCount() {
       return days_.size();
     }
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the element to return.
+     * @return The days at the given index.
      */
+    @java.lang.Override
     public com.google.type.DayOfWeek getDays(int index) {
       return days_converter_.convert(days_.get(index));
     }
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the enum numeric values on the wire for days.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getDaysValueList() {
       return days_;
     }
     /**
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of days at the given index.
      */
+    @java.lang.Override
     public int getDaysValue(int index) {
       return days_.get(index);
     }
@@ -2476,19 +2581,24 @@ public final class BackupOuterClass {
     private com.google.type.TimeOfDay executeTime_;
     /**
      * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the executeTime field is set.
      */
+    @java.lang.Override
     public boolean hasExecuteTime() {
       return executeTime_ != null;
     }
     /**
      * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The executeTime.
      */
+    @java.lang.Override
     public com.google.type.TimeOfDay getExecuteTime() {
       return executeTime_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : executeTime_;
     }
     /**
      * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getExecuteTimeOrBuilder() {
       return getExecuteTime();
     }
@@ -2558,15 +2668,14 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule other = (yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule) obj;
 
-      boolean result = true;
-      result = result && days_.equals(other.days_);
-      result = result && (hasExecuteTime() == other.hasExecuteTime());
+      if (!days_.equals(other.days_)) return false;
+      if (hasExecuteTime() != other.hasExecuteTime()) return false;
       if (hasExecuteTime()) {
-        result = result && getExecuteTime()
-            .equals(other.getExecuteTime());
+        if (!getExecuteTime()
+            .equals(other.getExecuteTime())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2752,8 +2861,7 @@ public final class BackupOuterClass {
       public yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule buildPartial() {
         yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule result = new yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           days_ = java.util.Collections.unmodifiableList(days_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -2763,42 +2871,41 @@ public final class BackupOuterClass {
         } else {
           result.executeTime_ = executeTimeBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2858,13 +2965,14 @@ public final class BackupOuterClass {
       private java.util.List<java.lang.Integer> days_ =
         java.util.Collections.emptyList();
       private void ensureDaysIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           days_ = new java.util.ArrayList<java.lang.Integer>(days_);
           bitField0_ |= 0x00000001;
         }
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return A list containing the days.
        */
       public java.util.List<com.google.type.DayOfWeek> getDaysList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -2872,18 +2980,24 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return The count of days.
        */
       public int getDaysCount() {
         return days_.size();
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index of the element to return.
+       * @return The days at the given index.
        */
       public com.google.type.DayOfWeek getDays(int index) {
         return days_converter_.convert(days_.get(index));
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index to set the value at.
+       * @param value The days to set.
+       * @return This builder for chaining.
        */
       public Builder setDays(
           int index, com.google.type.DayOfWeek value) {
@@ -2897,6 +3011,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param value The days to add.
+       * @return This builder for chaining.
        */
       public Builder addDays(com.google.type.DayOfWeek value) {
         if (value == null) {
@@ -2909,6 +3025,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param values The days to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDays(
           java.lang.Iterable<? extends com.google.type.DayOfWeek> values) {
@@ -2921,6 +3039,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDays() {
         days_ = java.util.Collections.emptyList();
@@ -2930,6 +3049,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return A list containing the enum numeric values on the wire for days.
        */
       public java.util.List<java.lang.Integer>
       getDaysValueList() {
@@ -2937,12 +3057,17 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of days at the given index.
        */
       public int getDaysValue(int index) {
         return days_.get(index);
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of days at the given index.
+       * @return This builder for chaining.
        */
       public Builder setDaysValue(
           int index, int value) {
@@ -2953,6 +3078,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param value The enum numeric value on the wire for days to add.
+       * @return This builder for chaining.
        */
       public Builder addDaysValue(int value) {
         ensureDaysIsMutable();
@@ -2962,6 +3089,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param values The enum numeric values on the wire for days to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDaysValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -2973,17 +3102,19 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.type.TimeOfDay executeTime_ = null;
+      private com.google.type.TimeOfDay executeTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> executeTimeBuilder_;
       /**
        * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the executeTime field is set.
        */
       public boolean hasExecuteTime() {
         return executeTimeBuilder_ != null || executeTime_ != null;
       }
       /**
        * <code>.google.type.TimeOfDay execute_time = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The executeTime.
        */
       public com.google.type.TimeOfDay getExecuteTime() {
         if (executeTimeBuilder_ == null) {
@@ -3092,7 +3223,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3173,7 +3304,7 @@ public final class BackupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.WeeklyBackupSchedule}
    */
-  public  static final class WeeklyBackupSchedule extends
+  public static final class WeeklyBackupSchedule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.WeeklyBackupSchedule)
       WeeklyBackupScheduleOrBuilder {
@@ -3184,6 +3315,13 @@ public final class BackupOuterClass {
     }
     private WeeklyBackupSchedule() {
       daysOfWeek_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WeeklyBackupSchedule();
     }
 
     @java.lang.Override
@@ -3211,7 +3349,7 @@ public final class BackupOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 daysOfWeek_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3220,7 +3358,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3234,7 +3372,7 @@ public final class BackupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           daysOfWeek_ = java.util.Collections.unmodifiableList(daysOfWeek_);
         }
         this.unknownFields = unknownFields.build();
@@ -3259,12 +3397,14 @@ public final class BackupOuterClass {
     /**
      * <code>repeated .yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule> getDaysOfWeekList() {
       return daysOfWeek_;
     }
     /**
      * <code>repeated .yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupScheduleOrBuilder> 
         getDaysOfWeekOrBuilderList() {
       return daysOfWeek_;
@@ -3272,18 +3412,21 @@ public final class BackupOuterClass {
     /**
      * <code>repeated .yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public int getDaysOfWeekCount() {
       return daysOfWeek_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule getDaysOfWeek(int index) {
       return daysOfWeek_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ydb.v1.DaysOfWeekBackupSchedule days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupScheduleOrBuilder getDaysOfWeekOrBuilder(
         int index) {
       return daysOfWeek_.get(index);
@@ -3334,11 +3477,10 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule other = (yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule) obj;
 
-      boolean result = true;
-      result = result && getDaysOfWeekList()
-          .equals(other.getDaysOfWeekList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDaysOfWeekList()
+          .equals(other.getDaysOfWeekList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3520,7 +3662,7 @@ public final class BackupOuterClass {
         yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule result = new yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule(this);
         int from_bitField0_ = bitField0_;
         if (daysOfWeekBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             daysOfWeek_ = java.util.Collections.unmodifiableList(daysOfWeek_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3534,35 +3676,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3635,7 +3777,7 @@ public final class BackupOuterClass {
       private java.util.List<yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule> daysOfWeek_ =
         java.util.Collections.emptyList();
       private void ensureDaysOfWeekIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           daysOfWeek_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule>(daysOfWeek_);
           bitField0_ |= 0x00000001;
          }
@@ -3864,7 +4006,7 @@ public final class BackupOuterClass {
           daysOfWeekBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.DaysOfWeekBackupScheduleOrBuilder>(
                   daysOfWeek_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           daysOfWeek_ = null;
@@ -3874,7 +4016,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3930,10 +4072,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the executeTime field is set.
      */
     boolean hasExecuteTime();
     /**
      * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The executeTime.
      */
     com.google.type.TimeOfDay getExecuteTime();
     /**
@@ -3944,7 +4088,7 @@ public final class BackupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.DailyBackupSchedule}
    */
-  public  static final class DailyBackupSchedule extends
+  public static final class DailyBackupSchedule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.DailyBackupSchedule)
       DailyBackupScheduleOrBuilder {
@@ -3954,6 +4098,13 @@ public final class BackupOuterClass {
       super(builder);
     }
     private DailyBackupSchedule() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DailyBackupSchedule();
     }
 
     @java.lang.Override
@@ -3969,7 +4120,6 @@ public final class BackupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3994,7 +4144,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4029,19 +4179,24 @@ public final class BackupOuterClass {
     private com.google.type.TimeOfDay executeTime_;
     /**
      * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the executeTime field is set.
      */
+    @java.lang.Override
     public boolean hasExecuteTime() {
       return executeTime_ != null;
     }
     /**
      * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The executeTime.
      */
+    @java.lang.Override
     public com.google.type.TimeOfDay getExecuteTime() {
       return executeTime_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : executeTime_;
     }
     /**
      * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getExecuteTimeOrBuilder() {
       return getExecuteTime();
     }
@@ -4091,14 +4246,13 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule other = (yandex.cloud.api.ydb.v1.BackupOuterClass.DailyBackupSchedule) obj;
 
-      boolean result = true;
-      result = result && (hasExecuteTime() == other.hasExecuteTime());
+      if (hasExecuteTime() != other.hasExecuteTime()) return false;
       if (hasExecuteTime()) {
-        result = result && getExecuteTime()
-            .equals(other.getExecuteTime());
+        if (!getExecuteTime()
+            .equals(other.getExecuteTime())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4288,35 +4442,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4362,17 +4516,19 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.type.TimeOfDay executeTime_ = null;
+      private com.google.type.TimeOfDay executeTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> executeTimeBuilder_;
       /**
        * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the executeTime field is set.
        */
       public boolean hasExecuteTime() {
         return executeTimeBuilder_ != null || executeTime_ != null;
       }
       /**
        * <code>.google.type.TimeOfDay execute_time = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The executeTime.
        */
       public com.google.type.TimeOfDay getExecuteTime() {
         if (executeTimeBuilder_ == null) {
@@ -4481,7 +4637,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4541,6 +4697,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4549,6 +4706,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4559,6 +4717,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4567,6 +4726,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4577,6 +4737,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
+     * @return Whether the backupSchedule field is set.
      */
     boolean hasBackupSchedule();
     /**
@@ -4585,6 +4746,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
+     * @return The backupSchedule.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule getBackupSchedule();
     /**
@@ -4602,6 +4764,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
+     * @return Whether the backupTimeToLive field is set.
      */
     boolean hasBackupTimeToLive();
     /**
@@ -4610,6 +4773,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
+     * @return The backupTimeToLive.
      */
     com.google.protobuf.Duration getBackupTimeToLive();
     /**
@@ -4629,6 +4793,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return A list containing the sourcePaths.
      */
     java.util.List<java.lang.String>
         getSourcePathsList();
@@ -4640,6 +4805,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return The count of sourcePaths.
      */
     int getSourcePathsCount();
     /**
@@ -4650,6 +4816,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The sourcePaths at the given index.
      */
     java.lang.String getSourcePaths(int index);
     /**
@@ -4660,6 +4828,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourcePaths at the given index.
      */
     com.google.protobuf.ByteString
         getSourcePathsBytes(int index);
@@ -4672,6 +4842,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return A list containing the sourcePathsToExclude.
      */
     java.util.List<java.lang.String>
         getSourcePathsToExcludeList();
@@ -4683,6 +4854,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return The count of sourcePathsToExclude.
      */
     int getSourcePathsToExcludeCount();
     /**
@@ -4693,6 +4865,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The sourcePathsToExclude at the given index.
      */
     java.lang.String getSourcePathsToExclude(int index);
     /**
@@ -4703,32 +4877,38 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourcePathsToExclude at the given index.
      */
     com.google.protobuf.ByteString
         getSourcePathsToExcludeBytes(int index);
 
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+     * @return The type.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type getType();
 
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     * @return The enum numeric value on the wire for storageClass.
      */
     int getStorageClassValue();
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     * @return The storageClass.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.BackupSettings}
    */
-  public  static final class BackupSettings extends
+  public static final class BackupSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.BackupSettings)
       BackupSettingsOrBuilder {
@@ -4744,6 +4924,13 @@ public final class BackupOuterClass {
       sourcePathsToExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       type_ = 0;
       storageClass_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackupSettings();
     }
 
     @java.lang.Override
@@ -4810,18 +4997,18 @@ public final class BackupOuterClass {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sourcePaths_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               sourcePaths_.add(s);
               break;
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 sourcePathsToExclude_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               sourcePathsToExclude_.add(s);
               break;
@@ -4839,7 +5026,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4853,10 +5040,10 @@ public final class BackupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sourcePaths_ = sourcePaths_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           sourcePathsToExclude_ = sourcePathsToExclude_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4919,6 +5106,8 @@ public final class BackupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4926,6 +5115,10 @@ public final class BackupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -4949,6 +5142,10 @@ public final class BackupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -5074,6 +5271,8 @@ public final class BackupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5081,6 +5280,10 @@ public final class BackupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static StorageClass forNumber(int value) {
         switch (value) {
           case 0: return STORAGE_CLASS_UNSPECIFIED;
@@ -5110,6 +5313,10 @@ public final class BackupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -5144,7 +5351,6 @@ public final class BackupOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.ydb.v1.BackupSettings.StorageClass)
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -5153,7 +5359,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5172,7 +5380,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5195,7 +5405,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5214,7 +5426,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5237,7 +5451,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
+     * @return Whether the backupSchedule field is set.
      */
+    @java.lang.Override
     public boolean hasBackupSchedule() {
       return backupSchedule_ != null;
     }
@@ -5247,7 +5463,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
+     * @return The backupSchedule.
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule getBackupSchedule() {
       return backupSchedule_ == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule.getDefaultInstance() : backupSchedule_;
     }
@@ -5258,6 +5476,7 @@ public final class BackupOuterClass {
      *
      * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupScheduleOrBuilder getBackupScheduleOrBuilder() {
       return getBackupSchedule();
     }
@@ -5270,7 +5489,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
+     * @return Whether the backupTimeToLive field is set.
      */
+    @java.lang.Override
     public boolean hasBackupTimeToLive() {
       return backupTimeToLive_ != null;
     }
@@ -5280,7 +5501,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
+     * @return The backupTimeToLive.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getBackupTimeToLive() {
       return backupTimeToLive_ == null ? com.google.protobuf.Duration.getDefaultInstance() : backupTimeToLive_;
     }
@@ -5291,6 +5514,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getBackupTimeToLiveOrBuilder() {
       return getBackupTimeToLive();
     }
@@ -5305,6 +5529,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return A list containing the sourcePaths.
      */
     public com.google.protobuf.ProtocolStringList
         getSourcePathsList() {
@@ -5318,6 +5543,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return The count of sourcePaths.
      */
     public int getSourcePathsCount() {
       return sourcePaths_.size();
@@ -5330,6 +5556,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The sourcePaths at the given index.
      */
     public java.lang.String getSourcePaths(int index) {
       return sourcePaths_.get(index);
@@ -5342,6 +5570,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourcePaths at the given index.
      */
     public com.google.protobuf.ByteString
         getSourcePathsBytes(int index) {
@@ -5358,6 +5588,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return A list containing the sourcePathsToExclude.
      */
     public com.google.protobuf.ProtocolStringList
         getSourcePathsToExcludeList() {
@@ -5371,6 +5602,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @return The count of sourcePathsToExclude.
      */
     public int getSourcePathsToExcludeCount() {
       return sourcePathsToExclude_.size();
@@ -5383,6 +5615,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The sourcePathsToExclude at the given index.
      */
     public java.lang.String getSourcePathsToExclude(int index) {
       return sourcePathsToExclude_.get(index);
@@ -5395,6 +5629,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sourcePathsToExclude at the given index.
      */
     public com.google.protobuf.ByteString
         getSourcePathsToExcludeBytes(int index) {
@@ -5405,14 +5641,16 @@ public final class BackupOuterClass {
     private int type_;
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type getType() {
+    @java.lang.Override public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type result = yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type.UNRECOGNIZED : result;
@@ -5422,14 +5660,16 @@ public final class BackupOuterClass {
     private int storageClass_;
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     * @return The enum numeric value on the wire for storageClass.
      */
-    public int getStorageClassValue() {
+    @java.lang.Override public int getStorageClassValue() {
       return storageClass_;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     * @return The storageClass.
      */
-    public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass() {
+    @java.lang.Override public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass result = yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.valueOf(storageClass_);
       return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.UNRECOGNIZED : result;
@@ -5449,10 +5689,10 @@ public final class BackupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       if (backupSchedule_ != null) {
@@ -5482,10 +5722,10 @@ public final class BackupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       if (backupSchedule_ != null) {
@@ -5535,29 +5775,28 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings other = (yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasBackupSchedule() == other.hasBackupSchedule());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasBackupSchedule() != other.hasBackupSchedule()) return false;
       if (hasBackupSchedule()) {
-        result = result && getBackupSchedule()
-            .equals(other.getBackupSchedule());
+        if (!getBackupSchedule()
+            .equals(other.getBackupSchedule())) return false;
       }
-      result = result && (hasBackupTimeToLive() == other.hasBackupTimeToLive());
+      if (hasBackupTimeToLive() != other.hasBackupTimeToLive()) return false;
       if (hasBackupTimeToLive()) {
-        result = result && getBackupTimeToLive()
-            .equals(other.getBackupTimeToLive());
+        if (!getBackupTimeToLive()
+            .equals(other.getBackupTimeToLive())) return false;
       }
-      result = result && getSourcePathsList()
-          .equals(other.getSourcePathsList());
-      result = result && getSourcePathsToExcludeList()
-          .equals(other.getSourcePathsToExcludeList());
-      result = result && type_ == other.type_;
-      result = result && storageClass_ == other.storageClass_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSourcePathsList()
+          .equals(other.getSourcePathsList())) return false;
+      if (!getSourcePathsToExcludeList()
+          .equals(other.getSourcePathsToExcludeList())) return false;
+      if (type_ != other.type_) return false;
+      if (storageClass_ != other.storageClass_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5741,9 +5980,9 @@ public final class BackupOuterClass {
           backupTimeToLiveBuilder_ = null;
         }
         sourcePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         sourcePathsToExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         type_ = 0;
 
         storageClass_ = 0;
@@ -5775,7 +6014,6 @@ public final class BackupOuterClass {
       public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings buildPartial() {
         yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings result = new yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.description_ = description_;
         if (backupScheduleBuilder_ == null) {
@@ -5788,54 +6026,53 @@ public final class BackupOuterClass {
         } else {
           result.backupTimeToLive_ = backupTimeToLiveBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           sourcePaths_ = sourcePaths_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sourcePaths_ = sourcePaths_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           sourcePathsToExclude_ = sourcePathsToExclude_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.sourcePathsToExclude_ = sourcePathsToExclude_;
         result.type_ = type_;
         result.storageClass_ = storageClass_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5866,7 +6103,7 @@ public final class BackupOuterClass {
         if (!other.sourcePaths_.isEmpty()) {
           if (sourcePaths_.isEmpty()) {
             sourcePaths_ = other.sourcePaths_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSourcePathsIsMutable();
             sourcePaths_.addAll(other.sourcePaths_);
@@ -5876,7 +6113,7 @@ public final class BackupOuterClass {
         if (!other.sourcePathsToExclude_.isEmpty()) {
           if (sourcePathsToExclude_.isEmpty()) {
             sourcePathsToExclude_ = other.sourcePathsToExclude_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSourcePathsToExcludeIsMutable();
             sourcePathsToExclude_.addAll(other.sourcePathsToExclude_);
@@ -5926,6 +6163,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5945,6 +6183,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5965,6 +6204,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5982,6 +6223,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5995,6 +6237,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6015,6 +6259,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6034,6 +6279,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6054,6 +6300,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6071,6 +6319,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6084,6 +6333,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6097,7 +6348,7 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule backupSchedule_ = null;
+      private yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule backupSchedule_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.BackupScheduleOrBuilder> backupScheduleBuilder_;
       /**
@@ -6106,6 +6357,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
+       * @return Whether the backupSchedule field is set.
        */
       public boolean hasBackupSchedule() {
         return backupScheduleBuilder_ != null || backupSchedule_ != null;
@@ -6116,6 +6368,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ydb.v1.BackupSchedule backup_schedule = 3;</code>
+       * @return The backupSchedule.
        */
       public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule getBackupSchedule() {
         if (backupScheduleBuilder_ == null) {
@@ -6250,7 +6503,7 @@ public final class BackupOuterClass {
         return backupScheduleBuilder_;
       }
 
-      private com.google.protobuf.Duration backupTimeToLive_ = null;
+      private com.google.protobuf.Duration backupTimeToLive_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> backupTimeToLiveBuilder_;
       /**
@@ -6259,6 +6512,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
+       * @return Whether the backupTimeToLive field is set.
        */
       public boolean hasBackupTimeToLive() {
         return backupTimeToLiveBuilder_ != null || backupTimeToLive_ != null;
@@ -6269,6 +6523,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration backup_time_to_live = 4;</code>
+       * @return The backupTimeToLive.
        */
       public com.google.protobuf.Duration getBackupTimeToLive() {
         if (backupTimeToLiveBuilder_ == null) {
@@ -6405,9 +6660,9 @@ public final class BackupOuterClass {
 
       private com.google.protobuf.LazyStringList sourcePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSourcePathsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           sourcePaths_ = new com.google.protobuf.LazyStringArrayList(sourcePaths_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -6418,6 +6673,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @return A list containing the sourcePaths.
        */
       public com.google.protobuf.ProtocolStringList
           getSourcePathsList() {
@@ -6431,6 +6687,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @return The count of sourcePaths.
        */
       public int getSourcePathsCount() {
         return sourcePaths_.size();
@@ -6443,6 +6700,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param index The index of the element to return.
+       * @return The sourcePaths at the given index.
        */
       public java.lang.String getSourcePaths(int index) {
         return sourcePaths_.get(index);
@@ -6455,6 +6714,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sourcePaths at the given index.
        */
       public com.google.protobuf.ByteString
           getSourcePathsBytes(int index) {
@@ -6468,6 +6729,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param index The index to set the value at.
+       * @param value The sourcePaths to set.
+       * @return This builder for chaining.
        */
       public Builder setSourcePaths(
           int index, java.lang.String value) {
@@ -6487,6 +6751,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param value The sourcePaths to add.
+       * @return This builder for chaining.
        */
       public Builder addSourcePaths(
           java.lang.String value) {
@@ -6506,6 +6772,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param values The sourcePaths to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSourcePaths(
           java.lang.Iterable<java.lang.String> values) {
@@ -6523,10 +6791,11 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourcePaths() {
         sourcePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6538,6 +6807,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths = 5 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param value The bytes of the sourcePaths to add.
+       * @return This builder for chaining.
        */
       public Builder addSourcePathsBytes(
           com.google.protobuf.ByteString value) {
@@ -6553,9 +6824,9 @@ public final class BackupOuterClass {
 
       private com.google.protobuf.LazyStringList sourcePathsToExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSourcePathsToExcludeIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           sourcePathsToExclude_ = new com.google.protobuf.LazyStringArrayList(sourcePathsToExclude_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -6566,6 +6837,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @return A list containing the sourcePathsToExclude.
        */
       public com.google.protobuf.ProtocolStringList
           getSourcePathsToExcludeList() {
@@ -6579,6 +6851,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @return The count of sourcePathsToExclude.
        */
       public int getSourcePathsToExcludeCount() {
         return sourcePathsToExclude_.size();
@@ -6591,6 +6864,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param index The index of the element to return.
+       * @return The sourcePathsToExclude at the given index.
        */
       public java.lang.String getSourcePathsToExclude(int index) {
         return sourcePathsToExclude_.get(index);
@@ -6603,6 +6878,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sourcePathsToExclude at the given index.
        */
       public com.google.protobuf.ByteString
           getSourcePathsToExcludeBytes(int index) {
@@ -6616,6 +6893,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param index The index to set the value at.
+       * @param value The sourcePathsToExclude to set.
+       * @return This builder for chaining.
        */
       public Builder setSourcePathsToExclude(
           int index, java.lang.String value) {
@@ -6635,6 +6915,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param value The sourcePathsToExclude to add.
+       * @return This builder for chaining.
        */
       public Builder addSourcePathsToExclude(
           java.lang.String value) {
@@ -6654,6 +6936,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param values The sourcePathsToExclude to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSourcePathsToExclude(
           java.lang.Iterable<java.lang.String> values) {
@@ -6671,10 +6955,11 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourcePathsToExclude() {
         sourcePathsToExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6686,6 +6971,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string source_paths_to_exclude = 6 [(.yandex.cloud.size) = "&lt;=256"];</code>
+       * @param value The bytes of the sourcePathsToExclude to add.
+       * @return This builder for chaining.
        */
       public Builder addSourcePathsToExcludeBytes(
           com.google.protobuf.ByteString value) {
@@ -6702,21 +6989,27 @@ public final class BackupOuterClass {
       private int type_ = 0;
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type result = yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type.valueOf(type_);
@@ -6724,6 +7017,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type value) {
         if (value == null) {
@@ -6736,6 +7031,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -6747,21 +7043,27 @@ public final class BackupOuterClass {
       private int storageClass_ = 0;
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       * @return The enum numeric value on the wire for storageClass.
        */
-      public int getStorageClassValue() {
+      @java.lang.Override public int getStorageClassValue() {
         return storageClass_;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       * @param value The enum numeric value on the wire for storageClass to set.
+       * @return This builder for chaining.
        */
       public Builder setStorageClassValue(int value) {
+        
         storageClass_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       * @return The storageClass.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass result = yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.valueOf(storageClass_);
@@ -6769,6 +7071,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       * @param value The storageClass to set.
+       * @return This builder for chaining.
        */
       public Builder setStorageClass(yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass value) {
         if (value == null) {
@@ -6781,6 +7085,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStorageClass() {
         
@@ -6791,7 +7096,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6872,7 +7177,7 @@ public final class BackupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.BackupConfig}
    */
-  public  static final class BackupConfig extends
+  public static final class BackupConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.BackupConfig)
       BackupConfigOrBuilder {
@@ -6883,6 +7188,13 @@ public final class BackupOuterClass {
     }
     private BackupConfig() {
       backupSettings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackupConfig();
     }
 
     @java.lang.Override
@@ -6910,7 +7222,7 @@ public final class BackupOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 backupSettings_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6919,7 +7231,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6933,7 +7245,7 @@ public final class BackupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           backupSettings_ = java.util.Collections.unmodifiableList(backupSettings_);
         }
         this.unknownFields = unknownFields.build();
@@ -6958,12 +7270,14 @@ public final class BackupOuterClass {
     /**
      * <code>repeated .yandex.cloud.ydb.v1.BackupSettings backup_settings = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings> getBackupSettingsList() {
       return backupSettings_;
     }
     /**
      * <code>repeated .yandex.cloud.ydb.v1.BackupSettings backup_settings = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettingsOrBuilder> 
         getBackupSettingsOrBuilderList() {
       return backupSettings_;
@@ -6971,18 +7285,21 @@ public final class BackupOuterClass {
     /**
      * <code>repeated .yandex.cloud.ydb.v1.BackupSettings backup_settings = 1;</code>
      */
+    @java.lang.Override
     public int getBackupSettingsCount() {
       return backupSettings_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ydb.v1.BackupSettings backup_settings = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings getBackupSettings(int index) {
       return backupSettings_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ydb.v1.BackupSettings backup_settings = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettingsOrBuilder getBackupSettingsOrBuilder(
         int index) {
       return backupSettings_.get(index);
@@ -7033,11 +7350,10 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.BackupConfig other = (yandex.cloud.api.ydb.v1.BackupOuterClass.BackupConfig) obj;
 
-      boolean result = true;
-      result = result && getBackupSettingsList()
-          .equals(other.getBackupSettingsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBackupSettingsList()
+          .equals(other.getBackupSettingsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7219,7 +7535,7 @@ public final class BackupOuterClass {
         yandex.cloud.api.ydb.v1.BackupOuterClass.BackupConfig result = new yandex.cloud.api.ydb.v1.BackupOuterClass.BackupConfig(this);
         int from_bitField0_ = bitField0_;
         if (backupSettingsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             backupSettings_ = java.util.Collections.unmodifiableList(backupSettings_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -7233,35 +7549,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7334,7 +7650,7 @@ public final class BackupOuterClass {
       private java.util.List<yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings> backupSettings_ =
         java.util.Collections.emptyList();
       private void ensureBackupSettingsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           backupSettings_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings>(backupSettings_);
           bitField0_ |= 0x00000001;
          }
@@ -7563,7 +7879,7 @@ public final class BackupOuterClass {
           backupSettingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings, yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettingsOrBuilder>(
                   backupSettings_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           backupSettings_ = null;
@@ -7573,7 +7889,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7629,10 +7945,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -7643,6 +7961,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7651,26 +7970,31 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string folder_id = 3;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
      * <code>string folder_id = 3;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>string database_id = 4;</code>
+     * @return The databaseId.
      */
     java.lang.String getDatabaseId();
     /**
      * <code>string database_id = 4;</code>
+     * @return The bytes for databaseId.
      */
     com.google.protobuf.ByteString
         getDatabaseIdBytes();
@@ -7681,6 +8005,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -7689,16 +8014,19 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -7712,6 +8040,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * @return Whether the startedAt field is set.
      */
     boolean hasStartedAt();
     /**
@@ -7720,6 +8049,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * @return The startedAt.
      */
     com.google.protobuf.Timestamp getStartedAt();
     /**
@@ -7737,6 +8067,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp completed_at = 8;</code>
+     * @return Whether the completedAt field is set.
      */
     boolean hasCompletedAt();
     /**
@@ -7745,6 +8076,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp completed_at = 8;</code>
+     * @return The completedAt.
      */
     com.google.protobuf.Timestamp getCompletedAt();
     /**
@@ -7758,10 +8090,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+     * @return The status.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status getStatus();
 
@@ -7771,6 +8105,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
+     * @return Whether the backupSettings field is set.
      */
     boolean hasBackupSettings();
     /**
@@ -7779,6 +8114,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
+     * @return The backupSettings.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings getBackupSettings();
     /**
@@ -7792,10 +8128,12 @@ public final class BackupOuterClass {
 
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+     * @return The type.
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type getType();
 
@@ -7805,13 +8143,14 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 size = 12;</code>
+     * @return The size.
      */
     long getSize();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.Backup}
    */
-  public  static final class Backup extends
+  public static final class Backup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.Backup)
       BackupOrBuilder {
@@ -7828,7 +8167,13 @@ public final class BackupOuterClass {
       description_ = "";
       status_ = 0;
       type_ = 0;
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Backup();
     }
 
     @java.lang.Override
@@ -7844,7 +8189,6 @@ public final class BackupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7955,7 +8299,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8049,6 +8393,8 @@ public final class BackupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8056,6 +8402,10 @@ public final class BackupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -8081,6 +8431,10 @@ public final class BackupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8166,6 +8520,8 @@ public final class BackupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8173,6 +8529,10 @@ public final class BackupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -8196,6 +8556,10 @@ public final class BackupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8234,7 +8598,9 @@ public final class BackupOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -8249,7 +8615,9 @@ public final class BackupOuterClass {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -8272,7 +8640,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8291,7 +8661,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8310,7 +8682,9 @@ public final class BackupOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <code>string folder_id = 3;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -8325,7 +8699,9 @@ public final class BackupOuterClass {
     }
     /**
      * <code>string folder_id = 3;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -8344,7 +8720,9 @@ public final class BackupOuterClass {
     private volatile java.lang.Object databaseId_;
     /**
      * <code>string database_id = 4;</code>
+     * @return The databaseId.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseId() {
       java.lang.Object ref = databaseId_;
       if (ref instanceof java.lang.String) {
@@ -8359,7 +8737,9 @@ public final class BackupOuterClass {
     }
     /**
      * <code>string database_id = 4;</code>
+     * @return The bytes for databaseId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseIdBytes() {
       java.lang.Object ref = databaseId_;
@@ -8382,7 +8762,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -8401,7 +8783,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -8420,19 +8804,24 @@ public final class BackupOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -8445,7 +8834,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * @return Whether the startedAt field is set.
      */
+    @java.lang.Override
     public boolean hasStartedAt() {
       return startedAt_ != null;
     }
@@ -8455,7 +8846,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * @return The startedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartedAt() {
       return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
@@ -8466,6 +8859,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp started_at = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
       return getStartedAt();
     }
@@ -8478,7 +8872,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp completed_at = 8;</code>
+     * @return Whether the completedAt field is set.
      */
+    @java.lang.Override
     public boolean hasCompletedAt() {
       return completedAt_ != null;
     }
@@ -8488,7 +8884,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp completed_at = 8;</code>
+     * @return The completedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCompletedAt() {
       return completedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
     }
@@ -8499,6 +8897,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp completed_at = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder() {
       return getCompletedAt();
     }
@@ -8507,14 +8906,16 @@ public final class BackupOuterClass {
     private int status_;
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status result = yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status.UNRECOGNIZED : result;
@@ -8528,7 +8929,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
+     * @return Whether the backupSettings field is set.
      */
+    @java.lang.Override
     public boolean hasBackupSettings() {
       return backupSettings_ != null;
     }
@@ -8538,7 +8941,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
+     * @return The backupSettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings getBackupSettings() {
       return backupSettings_ == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.getDefaultInstance() : backupSettings_;
     }
@@ -8549,6 +8954,7 @@ public final class BackupOuterClass {
      *
      * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettingsOrBuilder getBackupSettingsOrBuilder() {
       return getBackupSettings();
     }
@@ -8557,14 +8963,16 @@ public final class BackupOuterClass {
     private int type_;
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type getType() {
+    @java.lang.Override public yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type result = yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type.UNRECOGNIZED : result;
@@ -8578,7 +8986,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 size = 12;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -8597,19 +9007,19 @@ public final class BackupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, folderId_);
       }
-      if (!getDatabaseIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, databaseId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       if (createdAt_ != null) {
@@ -8642,19 +9052,19 @@ public final class BackupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, folderId_);
       }
-      if (!getDatabaseIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, databaseId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       if (createdAt_ != null) {
@@ -8700,43 +9110,42 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.ydb.v1.BackupOuterClass.Backup other = (yandex.cloud.api.ydb.v1.BackupOuterClass.Backup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getDatabaseId()
-          .equals(other.getDatabaseId());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getDatabaseId()
+          .equals(other.getDatabaseId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasStartedAt() == other.hasStartedAt());
+      if (hasStartedAt() != other.hasStartedAt()) return false;
       if (hasStartedAt()) {
-        result = result && getStartedAt()
-            .equals(other.getStartedAt());
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
       }
-      result = result && (hasCompletedAt() == other.hasCompletedAt());
+      if (hasCompletedAt() != other.hasCompletedAt()) return false;
       if (hasCompletedAt()) {
-        result = result && getCompletedAt()
-            .equals(other.getCompletedAt());
+        if (!getCompletedAt()
+            .equals(other.getCompletedAt())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && (hasBackupSettings() == other.hasBackupSettings());
+      if (status_ != other.status_) return false;
+      if (hasBackupSettings() != other.hasBackupSettings()) return false;
       if (hasBackupSettings()) {
-        result = result && getBackupSettings()
-            .equals(other.getBackupSettings());
+        if (!getBackupSettings()
+            .equals(other.getBackupSettings())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && (getSize()
-          == other.getSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9012,35 +9421,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9127,6 +9536,7 @@ public final class BackupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -9142,6 +9552,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -9158,6 +9569,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -9171,6 +9584,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -9180,6 +9594,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9200,6 +9616,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9219,6 +9636,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9239,6 +9657,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9256,6 +9676,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9269,6 +9690,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9285,6 +9708,7 @@ public final class BackupOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <code>string folder_id = 3;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -9300,6 +9724,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string folder_id = 3;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -9316,6 +9741,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string folder_id = 3;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -9329,6 +9756,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string folder_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -9338,6 +9766,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string folder_id = 3;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9354,6 +9784,7 @@ public final class BackupOuterClass {
       private java.lang.Object databaseId_ = "";
       /**
        * <code>string database_id = 4;</code>
+       * @return The databaseId.
        */
       public java.lang.String getDatabaseId() {
         java.lang.Object ref = databaseId_;
@@ -9369,6 +9800,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string database_id = 4;</code>
+       * @return The bytes for databaseId.
        */
       public com.google.protobuf.ByteString
           getDatabaseIdBytes() {
@@ -9385,6 +9817,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string database_id = 4;</code>
+       * @param value The databaseId to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseId(
           java.lang.String value) {
@@ -9398,6 +9832,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string database_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseId() {
         
@@ -9407,6 +9842,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>string database_id = 4;</code>
+       * @param value The bytes for databaseId to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9427,6 +9864,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -9446,6 +9884,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -9466,6 +9905,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -9483,6 +9924,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -9496,6 +9938,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -9509,17 +9953,19 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -9626,7 +10072,7 @@ public final class BackupOuterClass {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp startedAt_ = null;
+      private com.google.protobuf.Timestamp startedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
@@ -9635,6 +10081,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * @return Whether the startedAt field is set.
        */
       public boolean hasStartedAt() {
         return startedAtBuilder_ != null || startedAt_ != null;
@@ -9645,6 +10092,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * @return The startedAt.
        */
       public com.google.protobuf.Timestamp getStartedAt() {
         if (startedAtBuilder_ == null) {
@@ -9779,7 +10227,7 @@ public final class BackupOuterClass {
         return startedAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp completedAt_ = null;
+      private com.google.protobuf.Timestamp completedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> completedAtBuilder_;
       /**
@@ -9788,6 +10236,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp completed_at = 8;</code>
+       * @return Whether the completedAt field is set.
        */
       public boolean hasCompletedAt() {
         return completedAtBuilder_ != null || completedAt_ != null;
@@ -9798,6 +10247,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp completed_at = 8;</code>
+       * @return The completedAt.
        */
       public com.google.protobuf.Timestamp getCompletedAt() {
         if (completedAtBuilder_ == null) {
@@ -9935,21 +10385,27 @@ public final class BackupOuterClass {
       private int status_ = 0;
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status result = yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status.valueOf(status_);
@@ -9957,6 +10413,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Status value) {
         if (value == null) {
@@ -9969,6 +10427,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Status status = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -9977,7 +10436,7 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings backupSettings_ = null;
+      private yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings backupSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings, yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettingsOrBuilder> backupSettingsBuilder_;
       /**
@@ -9986,6 +10445,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
+       * @return Whether the backupSettings field is set.
        */
       public boolean hasBackupSettings() {
         return backupSettingsBuilder_ != null || backupSettings_ != null;
@@ -9996,6 +10456,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ydb.v1.BackupSettings backup_settings = 10;</code>
+       * @return The backupSettings.
        */
       public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings getBackupSettings() {
         if (backupSettingsBuilder_ == null) {
@@ -10133,21 +10594,27 @@ public final class BackupOuterClass {
       private int type_ = 0;
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type result = yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type.valueOf(type_);
@@ -10155,6 +10622,8 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.ydb.v1.BackupOuterClass.Backup.Type value) {
         if (value == null) {
@@ -10167,6 +10636,7 @@ public final class BackupOuterClass {
       }
       /**
        * <code>.yandex.cloud.ydb.v1.Backup.Type type = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -10182,7 +10652,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size = 12;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -10192,6 +10664,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size = 12;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -10205,6 +10679,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -10215,7 +10690,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10373,15 +10848,7 @@ public final class BackupOuterClass {
       "i.ydb.v1Z;github.com/yandex-cloud/go-gen" +
       "proto/yandex/cloud/ydb/v1;ydbb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -10389,7 +10856,7 @@ public final class BackupOuterClass {
           com.google.type.TimeOfDayProto.getDescriptor(),
           com.google.type.DayOfWeekProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_ydb_v1_BackupSchedule_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_BackupSchedule_fieldAccessorTable = new

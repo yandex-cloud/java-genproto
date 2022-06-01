@@ -1,19 +1,6 @@
 package yandex.cloud.api.serverless.functions.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/serverless/functions/v1/function_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FunctionServiceGrpc {
 
   private FunctionServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class FunctionServiceGrpc {
     if ((getGetMethod = FunctionServiceGrpc.getGetMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getGetMethod = FunctionServiceGrpc.getGetMethod) == null) {
-          FunctionServiceGrpc.getGetMethod = getGetMethod = 
+          FunctionServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest,
@@ -76,22 +63,21 @@ public final class FunctionServiceGrpc {
     if ((getListMethod = FunctionServiceGrpc.getListMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListMethod = FunctionServiceGrpc.getListMethod) == null) {
-          FunctionServiceGrpc.getListMethod = getListMethod = 
+          FunctionServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest,
@@ -108,22 +94,21 @@ public final class FunctionServiceGrpc {
     if ((getCreateMethod = FunctionServiceGrpc.getCreateMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getCreateMethod = FunctionServiceGrpc.getCreateMethod) == null) {
-          FunctionServiceGrpc.getCreateMethod = getCreateMethod = 
+          FunctionServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest,
@@ -140,22 +125,21 @@ public final class FunctionServiceGrpc {
     if ((getUpdateMethod = FunctionServiceGrpc.getUpdateMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getUpdateMethod = FunctionServiceGrpc.getUpdateMethod) == null) {
-          FunctionServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          FunctionServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest,
@@ -172,22 +156,21 @@ public final class FunctionServiceGrpc {
     if ((getDeleteMethod = FunctionServiceGrpc.getDeleteMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getDeleteMethod = FunctionServiceGrpc.getDeleteMethod) == null) {
-          FunctionServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          FunctionServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest,
@@ -204,22 +187,21 @@ public final class FunctionServiceGrpc {
     if ((getGetVersionMethod = FunctionServiceGrpc.getGetVersionMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getGetVersionMethod = FunctionServiceGrpc.getGetVersionMethod) == null) {
-          FunctionServiceGrpc.getGetVersionMethod = getGetVersionMethod = 
+          FunctionServiceGrpc.getGetVersionMethod = getGetVersionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "GetVersion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVersion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("GetVersion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("GetVersion"))
+              .build();
         }
-     }
-     return getGetVersionMethod;
+      }
+    }
+    return getGetVersionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest,
@@ -236,22 +218,21 @@ public final class FunctionServiceGrpc {
     if ((getGetVersionByTagMethod = FunctionServiceGrpc.getGetVersionByTagMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getGetVersionByTagMethod = FunctionServiceGrpc.getGetVersionByTagMethod) == null) {
-          FunctionServiceGrpc.getGetVersionByTagMethod = getGetVersionByTagMethod = 
+          FunctionServiceGrpc.getGetVersionByTagMethod = getGetVersionByTagMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "GetVersionByTag"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVersionByTag"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("GetVersionByTag"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("GetVersionByTag"))
+              .build();
         }
-     }
-     return getGetVersionByTagMethod;
+      }
+    }
+    return getGetVersionByTagMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest,
@@ -268,22 +249,21 @@ public final class FunctionServiceGrpc {
     if ((getListVersionsMethod = FunctionServiceGrpc.getListVersionsMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListVersionsMethod = FunctionServiceGrpc.getListVersionsMethod) == null) {
-          FunctionServiceGrpc.getListVersionsMethod = getListVersionsMethod = 
+          FunctionServiceGrpc.getListVersionsMethod = getListVersionsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListVersions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVersions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListVersions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListVersions"))
+              .build();
         }
-     }
-     return getListVersionsMethod;
+      }
+    }
+    return getListVersionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest,
@@ -300,22 +280,21 @@ public final class FunctionServiceGrpc {
     if ((getSetTagMethod = FunctionServiceGrpc.getSetTagMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getSetTagMethod = FunctionServiceGrpc.getSetTagMethod) == null) {
-          FunctionServiceGrpc.getSetTagMethod = getSetTagMethod = 
+          FunctionServiceGrpc.getSetTagMethod = getSetTagMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "SetTag"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetTag"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetTag"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetTag"))
+              .build();
         }
-     }
-     return getSetTagMethod;
+      }
+    }
+    return getSetTagMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest,
@@ -332,22 +311,21 @@ public final class FunctionServiceGrpc {
     if ((getRemoveTagMethod = FunctionServiceGrpc.getRemoveTagMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getRemoveTagMethod = FunctionServiceGrpc.getRemoveTagMethod) == null) {
-          FunctionServiceGrpc.getRemoveTagMethod = getRemoveTagMethod = 
+          FunctionServiceGrpc.getRemoveTagMethod = getRemoveTagMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "RemoveTag"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTag"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("RemoveTag"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("RemoveTag"))
+              .build();
         }
-     }
-     return getRemoveTagMethod;
+      }
+    }
+    return getRemoveTagMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest,
@@ -364,22 +342,21 @@ public final class FunctionServiceGrpc {
     if ((getListTagHistoryMethod = FunctionServiceGrpc.getListTagHistoryMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListTagHistoryMethod = FunctionServiceGrpc.getListTagHistoryMethod) == null) {
-          FunctionServiceGrpc.getListTagHistoryMethod = getListTagHistoryMethod = 
+          FunctionServiceGrpc.getListTagHistoryMethod = getListTagHistoryMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListTagHistory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTagHistory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListTagHistory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListTagHistory"))
+              .build();
         }
-     }
-     return getListTagHistoryMethod;
+      }
+    }
+    return getListTagHistoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest,
@@ -396,22 +373,21 @@ public final class FunctionServiceGrpc {
     if ((getCreateVersionMethod = FunctionServiceGrpc.getCreateVersionMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getCreateVersionMethod = FunctionServiceGrpc.getCreateVersionMethod) == null) {
-          FunctionServiceGrpc.getCreateVersionMethod = getCreateVersionMethod = 
+          FunctionServiceGrpc.getCreateVersionMethod = getCreateVersionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "CreateVersion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateVersion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("CreateVersion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("CreateVersion"))
+              .build();
         }
-     }
-     return getCreateVersionMethod;
+      }
+    }
+    return getCreateVersionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest,
@@ -428,22 +404,21 @@ public final class FunctionServiceGrpc {
     if ((getListRuntimesMethod = FunctionServiceGrpc.getListRuntimesMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListRuntimesMethod = FunctionServiceGrpc.getListRuntimesMethod) == null) {
-          FunctionServiceGrpc.getListRuntimesMethod = getListRuntimesMethod = 
+          FunctionServiceGrpc.getListRuntimesMethod = getListRuntimesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListRuntimes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRuntimes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListRuntimes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListRuntimes"))
+              .build();
         }
-     }
-     return getListRuntimesMethod;
+      }
+    }
+    return getListRuntimesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest,
@@ -460,22 +435,21 @@ public final class FunctionServiceGrpc {
     if ((getListOperationsMethod = FunctionServiceGrpc.getListOperationsMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListOperationsMethod = FunctionServiceGrpc.getListOperationsMethod) == null) {
-          FunctionServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          FunctionServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -492,22 +466,21 @@ public final class FunctionServiceGrpc {
     if ((getListAccessBindingsMethod = FunctionServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListAccessBindingsMethod = FunctionServiceGrpc.getListAccessBindingsMethod) == null) {
-          FunctionServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          FunctionServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -524,22 +497,21 @@ public final class FunctionServiceGrpc {
     if ((getSetAccessBindingsMethod = FunctionServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = FunctionServiceGrpc.getSetAccessBindingsMethod) == null) {
-          FunctionServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          FunctionServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -556,22 +528,21 @@ public final class FunctionServiceGrpc {
     if ((getUpdateAccessBindingsMethod = FunctionServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = FunctionServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          FunctionServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          FunctionServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest,
@@ -588,22 +559,21 @@ public final class FunctionServiceGrpc {
     if ((getListScalingPoliciesMethod = FunctionServiceGrpc.getListScalingPoliciesMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getListScalingPoliciesMethod = FunctionServiceGrpc.getListScalingPoliciesMethod) == null) {
-          FunctionServiceGrpc.getListScalingPoliciesMethod = getListScalingPoliciesMethod = 
+          FunctionServiceGrpc.getListScalingPoliciesMethod = getListScalingPoliciesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListScalingPolicies"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScalingPolicies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListScalingPolicies"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListScalingPolicies"))
+              .build();
         }
-     }
-     return getListScalingPoliciesMethod;
+      }
+    }
+    return getListScalingPoliciesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest,
@@ -620,22 +590,21 @@ public final class FunctionServiceGrpc {
     if ((getSetScalingPolicyMethod = FunctionServiceGrpc.getSetScalingPolicyMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getSetScalingPolicyMethod = FunctionServiceGrpc.getSetScalingPolicyMethod) == null) {
-          FunctionServiceGrpc.getSetScalingPolicyMethod = getSetScalingPolicyMethod = 
+          FunctionServiceGrpc.getSetScalingPolicyMethod = getSetScalingPolicyMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "SetScalingPolicy"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetScalingPolicy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetScalingPolicy"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetScalingPolicy"))
+              .build();
         }
-     }
-     return getSetScalingPolicyMethod;
+      }
+    }
+    return getSetScalingPolicyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest,
@@ -652,29 +621,35 @@ public final class FunctionServiceGrpc {
     if ((getRemoveScalingPolicyMethod = FunctionServiceGrpc.getRemoveScalingPolicyMethod) == null) {
       synchronized (FunctionServiceGrpc.class) {
         if ((getRemoveScalingPolicyMethod = FunctionServiceGrpc.getRemoveScalingPolicyMethod) == null) {
-          FunctionServiceGrpc.getRemoveScalingPolicyMethod = getRemoveScalingPolicyMethod = 
+          FunctionServiceGrpc.getRemoveScalingPolicyMethod = getRemoveScalingPolicyMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.functions.v1.FunctionService", "RemoveScalingPolicy"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveScalingPolicy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("RemoveScalingPolicy"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("RemoveScalingPolicy"))
+              .build();
         }
-     }
-     return getRemoveScalingPolicyMethod;
+      }
+    }
+    return getRemoveScalingPolicyMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FunctionServiceStub newStub(io.grpc.Channel channel) {
-    return new FunctionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FunctionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FunctionServiceStub>() {
+        @java.lang.Override
+        public FunctionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FunctionServiceStub(channel, callOptions);
+        }
+      };
+    return FunctionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -682,7 +657,14 @@ public final class FunctionServiceGrpc {
    */
   public static FunctionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FunctionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FunctionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FunctionServiceBlockingStub>() {
+        @java.lang.Override
+        public FunctionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FunctionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FunctionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -690,7 +672,14 @@ public final class FunctionServiceGrpc {
    */
   public static FunctionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FunctionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FunctionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FunctionServiceFutureStub>() {
+        @java.lang.Override
+        public FunctionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FunctionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FunctionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -708,7 +697,7 @@ public final class FunctionServiceGrpc {
      */
     public void get(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -718,7 +707,7 @@ public final class FunctionServiceGrpc {
      */
     public void list(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -728,7 +717,7 @@ public final class FunctionServiceGrpc {
      */
     public void create(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -738,7 +727,7 @@ public final class FunctionServiceGrpc {
      */
     public void update(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -748,7 +737,7 @@ public final class FunctionServiceGrpc {
      */
     public void delete(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -759,7 +748,7 @@ public final class FunctionServiceGrpc {
      */
     public void getVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetVersionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVersionMethod(), responseObserver);
     }
 
     /**
@@ -770,7 +759,7 @@ public final class FunctionServiceGrpc {
      */
     public void getVersionByTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetVersionByTagMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVersionByTagMethod(), responseObserver);
     }
 
     /**
@@ -781,7 +770,7 @@ public final class FunctionServiceGrpc {
      */
     public void listVersions(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
     }
 
     /**
@@ -791,7 +780,7 @@ public final class FunctionServiceGrpc {
      */
     public void setTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetTagMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetTagMethod(), responseObserver);
     }
 
     /**
@@ -801,7 +790,7 @@ public final class FunctionServiceGrpc {
      */
     public void removeTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveTagMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTagMethod(), responseObserver);
     }
 
     /**
@@ -811,7 +800,7 @@ public final class FunctionServiceGrpc {
      */
     public void listTagHistory(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTagHistoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTagHistoryMethod(), responseObserver);
     }
 
     /**
@@ -821,7 +810,7 @@ public final class FunctionServiceGrpc {
      */
     public void createVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateVersionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateVersionMethod(), responseObserver);
     }
 
     /**
@@ -831,7 +820,7 @@ public final class FunctionServiceGrpc {
      */
     public void listRuntimes(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListRuntimesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRuntimesMethod(), responseObserver);
     }
 
     /**
@@ -841,7 +830,7 @@ public final class FunctionServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -851,7 +840,7 @@ public final class FunctionServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -861,7 +850,7 @@ public final class FunctionServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -871,7 +860,7 @@ public final class FunctionServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -881,7 +870,7 @@ public final class FunctionServiceGrpc {
      */
     public void listScalingPolicies(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListScalingPoliciesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScalingPoliciesMethod(), responseObserver);
     }
 
     /**
@@ -891,7 +880,7 @@ public final class FunctionServiceGrpc {
      */
     public void setScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetScalingPolicyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetScalingPolicyMethod(), responseObserver);
     }
 
     /**
@@ -901,147 +890,147 @@ public final class FunctionServiceGrpc {
      */
     public void removeScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveScalingPolicyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveScalingPolicyMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getGetVersionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version>(
                   this, METHODID_GET_VERSION)))
           .addMethod(
             getGetVersionByTagMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version>(
                   this, METHODID_GET_VERSION_BY_TAG)))
           .addMethod(
             getListVersionsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse>(
                   this, METHODID_LIST_VERSIONS)))
           .addMethod(
             getSetTagMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_TAG)))
           .addMethod(
             getRemoveTagMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_TAG)))
           .addMethod(
             getListTagHistoryMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse>(
                   this, METHODID_LIST_TAG_HISTORY)))
           .addMethod(
             getCreateVersionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE_VERSION)))
           .addMethod(
             getListRuntimesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse>(
                   this, METHODID_LIST_RUNTIMES)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
           .addMethod(
             getListScalingPoliciesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse>(
                   this, METHODID_LIST_SCALING_POLICIES)))
           .addMethod(
             getSetScalingPolicyMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_SCALING_POLICY)))
           .addMethod(
             getRemoveScalingPolicyMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -1055,19 +1044,15 @@ public final class FunctionServiceGrpc {
    * A set of methods for managing serverless functions.
    * </pre>
    */
-  public static final class FunctionServiceStub extends io.grpc.stub.AbstractStub<FunctionServiceStub> {
-    private FunctionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FunctionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FunctionServiceStub extends io.grpc.stub.AbstractAsyncStub<FunctionServiceStub> {
+    private FunctionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FunctionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FunctionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FunctionServiceStub(channel, callOptions);
     }
 
@@ -1079,7 +1064,7 @@ public final class FunctionServiceGrpc {
      */
     public void get(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1090,7 +1075,7 @@ public final class FunctionServiceGrpc {
      */
     public void list(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1101,7 +1086,7 @@ public final class FunctionServiceGrpc {
      */
     public void create(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1112,7 +1097,7 @@ public final class FunctionServiceGrpc {
      */
     public void update(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1123,7 +1108,7 @@ public final class FunctionServiceGrpc {
      */
     public void delete(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1135,7 +1120,7 @@ public final class FunctionServiceGrpc {
      */
     public void getVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetVersionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1147,7 +1132,7 @@ public final class FunctionServiceGrpc {
      */
     public void getVersionByTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetVersionByTagMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1159,7 +1144,7 @@ public final class FunctionServiceGrpc {
      */
     public void listVersions(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1170,7 +1155,7 @@ public final class FunctionServiceGrpc {
      */
     public void setTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetTagMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1181,7 +1166,7 @@ public final class FunctionServiceGrpc {
      */
     public void removeTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveTagMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1192,7 +1177,7 @@ public final class FunctionServiceGrpc {
      */
     public void listTagHistory(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTagHistoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1203,7 +1188,7 @@ public final class FunctionServiceGrpc {
      */
     public void createVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateVersionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1214,7 +1199,7 @@ public final class FunctionServiceGrpc {
      */
     public void listRuntimes(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRuntimesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1225,7 +1210,7 @@ public final class FunctionServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1236,7 +1221,7 @@ public final class FunctionServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1247,7 +1232,7 @@ public final class FunctionServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1258,7 +1243,7 @@ public final class FunctionServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1269,7 +1254,7 @@ public final class FunctionServiceGrpc {
      */
     public void listScalingPolicies(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListScalingPoliciesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1280,7 +1265,7 @@ public final class FunctionServiceGrpc {
      */
     public void setScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetScalingPolicyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1291,7 +1276,7 @@ public final class FunctionServiceGrpc {
      */
     public void removeScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveScalingPolicyMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -1301,19 +1286,15 @@ public final class FunctionServiceGrpc {
    * A set of methods for managing serverless functions.
    * </pre>
    */
-  public static final class FunctionServiceBlockingStub extends io.grpc.stub.AbstractStub<FunctionServiceBlockingStub> {
-    private FunctionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FunctionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FunctionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FunctionServiceBlockingStub> {
+    private FunctionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FunctionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FunctionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FunctionServiceBlockingStub(channel, callOptions);
     }
 
@@ -1324,7 +1305,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function get(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -1334,7 +1315,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse list(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -1344,7 +1325,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -1354,7 +1335,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -1364,7 +1345,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -1375,7 +1356,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetVersionMethod(), getCallOptions(), request);
     }
 
@@ -1386,7 +1367,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersionByTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetVersionByTagMethod(), getCallOptions(), request);
     }
 
@@ -1397,7 +1378,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse listVersions(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListVersionsMethod(), getCallOptions(), request);
     }
 
@@ -1407,7 +1388,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetTagMethod(), getCallOptions(), request);
     }
 
@@ -1417,7 +1398,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveTagMethod(), getCallOptions(), request);
     }
 
@@ -1427,7 +1408,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse listTagHistory(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTagHistoryMethod(), getCallOptions(), request);
     }
 
@@ -1437,7 +1418,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation createVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateVersionMethod(), getCallOptions(), request);
     }
 
@@ -1447,7 +1428,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse listRuntimes(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRuntimesMethod(), getCallOptions(), request);
     }
 
@@ -1457,7 +1438,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse listOperations(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -1467,7 +1448,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1477,7 +1458,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1487,7 +1468,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1497,7 +1478,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse listScalingPolicies(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListScalingPoliciesMethod(), getCallOptions(), request);
     }
 
@@ -1507,7 +1488,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetScalingPolicyMethod(), getCallOptions(), request);
     }
 
@@ -1517,7 +1498,7 @@ public final class FunctionServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveScalingPolicyMethod(), getCallOptions(), request);
     }
   }
@@ -1527,19 +1508,15 @@ public final class FunctionServiceGrpc {
    * A set of methods for managing serverless functions.
    * </pre>
    */
-  public static final class FunctionServiceFutureStub extends io.grpc.stub.AbstractStub<FunctionServiceFutureStub> {
-    private FunctionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FunctionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FunctionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FunctionServiceFutureStub> {
+    private FunctionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FunctionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FunctionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FunctionServiceFutureStub(channel, callOptions);
     }
 
@@ -1551,7 +1528,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> get(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1562,7 +1539,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse> list(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1573,7 +1550,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1584,7 +1561,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1595,7 +1572,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1607,7 +1584,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersion(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetVersionMethod(), getCallOptions()), request);
     }
 
@@ -1619,7 +1596,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersionByTag(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetVersionByTagMethod(), getCallOptions()), request);
     }
 
@@ -1631,7 +1608,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> listVersions(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request);
     }
 
@@ -1642,7 +1619,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setTag(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetTagMethod(), getCallOptions()), request);
     }
 
@@ -1653,7 +1630,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeTag(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveTagMethod(), getCallOptions()), request);
     }
 
@@ -1664,7 +1641,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse> listTagHistory(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTagHistoryMethod(), getCallOptions()), request);
     }
 
@@ -1675,7 +1652,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> createVersion(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateVersionMethod(), getCallOptions()), request);
     }
 
@@ -1686,7 +1663,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse> listRuntimes(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRuntimesMethod(), getCallOptions()), request);
     }
 
@@ -1697,7 +1674,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse> listOperations(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -1708,7 +1685,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1719,7 +1696,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1730,7 +1707,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1741,7 +1718,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> listScalingPolicies(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListScalingPoliciesMethod(), getCallOptions()), request);
     }
 
@@ -1752,7 +1729,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setScalingPolicy(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetScalingPolicyMethod(), getCallOptions()), request);
     }
 
@@ -1763,7 +1740,7 @@ public final class FunctionServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeScalingPolicy(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveScalingPolicyMethod(), getCallOptions()), request);
     }
   }

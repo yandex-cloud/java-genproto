@@ -77,6 +77,8 @@ public final class CertificateOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -84,6 +86,10 @@ public final class CertificateOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CertificateType forNumber(int value) {
       switch (value) {
         case 0: return CERTIFICATE_TYPE_UNSPECIFIED;
@@ -107,6 +113,10 @@ public final class CertificateOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -204,6 +214,8 @@ public final class CertificateOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -211,6 +223,10 @@ public final class CertificateOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static ChallengeType forNumber(int value) {
       switch (value) {
         case 0: return CHALLENGE_TYPE_UNSPECIFIED;
@@ -234,6 +250,10 @@ public final class CertificateOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -278,6 +298,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -286,6 +307,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -296,6 +318,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -304,6 +327,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -314,6 +338,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -322,6 +347,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -340,6 +366,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -349,6 +376,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -359,6 +387,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -367,6 +396,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -431,6 +461,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -439,6 +470,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+     * @return The type.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType getType();
 
@@ -448,6 +480,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @return A list containing the domains.
      */
     java.util.List<java.lang.String>
         getDomainsList();
@@ -457,6 +490,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @return The count of domains.
      */
     int getDomainsCount();
     /**
@@ -465,6 +499,8 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @param index The index of the element to return.
+     * @return The domains at the given index.
      */
     java.lang.String getDomains(int index);
     /**
@@ -473,6 +509,8 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the domains at the given index.
      */
     com.google.protobuf.ByteString
         getDomainsBytes(int index);
@@ -483,6 +521,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -491,6 +530,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+     * @return The status.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status getStatus();
 
@@ -500,6 +540,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string issuer = 10;</code>
+     * @return The issuer.
      */
     java.lang.String getIssuer();
     /**
@@ -508,6 +549,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string issuer = 10;</code>
+     * @return The bytes for issuer.
      */
     com.google.protobuf.ByteString
         getIssuerBytes();
@@ -518,6 +560,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string subject = 11;</code>
+     * @return The subject.
      */
     java.lang.String getSubject();
     /**
@@ -526,6 +569,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string subject = 11;</code>
+     * @return The bytes for subject.
      */
     com.google.protobuf.ByteString
         getSubjectBytes();
@@ -536,6 +580,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string serial = 12;</code>
+     * @return The serial.
      */
     java.lang.String getSerial();
     /**
@@ -544,6 +589,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string serial = 12;</code>
+     * @return The bytes for serial.
      */
     com.google.protobuf.ByteString
         getSerialBytes();
@@ -554,6 +600,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
@@ -562,6 +609,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -579,6 +627,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
+     * @return Whether the issuedAt field is set.
      */
     boolean hasIssuedAt();
     /**
@@ -587,6 +636,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
+     * @return The issuedAt.
      */
     com.google.protobuf.Timestamp getIssuedAt();
     /**
@@ -604,6 +654,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_after = 15;</code>
+     * @return Whether the notAfter field is set.
      */
     boolean hasNotAfter();
     /**
@@ -612,6 +663,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_after = 15;</code>
+     * @return The notAfter.
      */
     com.google.protobuf.Timestamp getNotAfter();
     /**
@@ -629,6 +681,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_before = 16;</code>
+     * @return Whether the notBefore field is set.
      */
     boolean hasNotBefore();
     /**
@@ -637,6 +690,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_before = 16;</code>
+     * @return The notBefore.
      */
     com.google.protobuf.Timestamp getNotBefore();
     /**
@@ -699,7 +753,7 @@ public final class CertificateOuterClass {
    *
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.Certificate}
    */
-  public  static final class Certificate extends
+  public static final class Certificate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.Certificate)
       CertificateOrBuilder {
@@ -720,6 +774,13 @@ public final class CertificateOuterClass {
       subject_ = "";
       serial_ = "";
       challenges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Certificate();
     }
 
     @java.lang.Override
@@ -784,10 +845,10 @@ public final class CertificateOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -804,9 +865,9 @@ public final class CertificateOuterClass {
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 domains_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000002;
               }
               domains_.add(s);
               break;
@@ -888,16 +949,16 @@ public final class CertificateOuterClass {
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 challenges_ = new java.util.ArrayList<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge>();
-                mutable_bitField0_ |= 0x00010000;
+                mutable_bitField0_ |= 0x00000004;
               }
               challenges_.add(
                   input.readMessage(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -911,10 +972,10 @@ public final class CertificateOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           domains_ = domains_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           challenges_ = java.util.Collections.unmodifiableList(challenges_);
         }
         this.unknownFields = unknownFields.build();
@@ -1069,6 +1130,8 @@ public final class CertificateOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1076,6 +1139,10 @@ public final class CertificateOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -1103,6 +1170,10 @@ public final class CertificateOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1137,7 +1208,6 @@ public final class CertificateOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.certificatemanager.v1.Certificate.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -1146,7 +1216,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1165,7 +1237,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1188,7 +1262,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1207,7 +1283,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1230,7 +1308,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -1240,7 +1320,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -1251,6 +1333,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -1264,7 +1347,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1284,7 +1369,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1307,7 +1394,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1326,7 +1415,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1375,14 +1466,16 @@ public final class CertificateOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -1394,6 +1487,7 @@ public final class CertificateOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -1405,11 +1499,12 @@ public final class CertificateOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1421,10 +1516,11 @@ public final class CertificateOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1441,8 +1537,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1451,8 +1548,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType getType() {
+    @java.lang.Override public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType.valueOf(type_);
       return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType.UNRECOGNIZED : result;
@@ -1466,6 +1564,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @return A list containing the domains.
      */
     public com.google.protobuf.ProtocolStringList
         getDomainsList() {
@@ -1477,6 +1576,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @return The count of domains.
      */
     public int getDomainsCount() {
       return domains_.size();
@@ -1487,6 +1587,8 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @param index The index of the element to return.
+     * @return The domains at the given index.
      */
     public java.lang.String getDomains(int index) {
       return domains_.get(index);
@@ -1497,6 +1599,8 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>repeated string domains = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the domains at the given index.
      */
     public com.google.protobuf.ByteString
         getDomainsBytes(int index) {
@@ -1511,8 +1615,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1521,8 +1626,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status.UNRECOGNIZED : result;
@@ -1536,7 +1642,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string issuer = 10;</code>
+     * @return The issuer.
      */
+    @java.lang.Override
     public java.lang.String getIssuer() {
       java.lang.Object ref = issuer_;
       if (ref instanceof java.lang.String) {
@@ -1555,7 +1663,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string issuer = 10;</code>
+     * @return The bytes for issuer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIssuerBytes() {
       java.lang.Object ref = issuer_;
@@ -1578,7 +1688,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string subject = 11;</code>
+     * @return The subject.
      */
+    @java.lang.Override
     public java.lang.String getSubject() {
       java.lang.Object ref = subject_;
       if (ref instanceof java.lang.String) {
@@ -1597,7 +1709,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string subject = 11;</code>
+     * @return The bytes for subject.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubjectBytes() {
       java.lang.Object ref = subject_;
@@ -1620,7 +1734,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string serial = 12;</code>
+     * @return The serial.
      */
+    @java.lang.Override
     public java.lang.String getSerial() {
       java.lang.Object ref = serial_;
       if (ref instanceof java.lang.String) {
@@ -1639,7 +1755,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string serial = 12;</code>
+     * @return The bytes for serial.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSerialBytes() {
       java.lang.Object ref = serial_;
@@ -1662,7 +1780,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
@@ -1672,7 +1792,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
@@ -1683,6 +1805,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
@@ -1695,7 +1818,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
+     * @return Whether the issuedAt field is set.
      */
+    @java.lang.Override
     public boolean hasIssuedAt() {
       return issuedAt_ != null;
     }
@@ -1705,7 +1830,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
+     * @return The issuedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getIssuedAt() {
       return issuedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issuedAt_;
     }
@@ -1716,6 +1843,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssuedAtOrBuilder() {
       return getIssuedAt();
     }
@@ -1728,7 +1856,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_after = 15;</code>
+     * @return Whether the notAfter field is set.
      */
+    @java.lang.Override
     public boolean hasNotAfter() {
       return notAfter_ != null;
     }
@@ -1738,7 +1868,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_after = 15;</code>
+     * @return The notAfter.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getNotAfter() {
       return notAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : notAfter_;
     }
@@ -1749,6 +1881,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp not_after = 15;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getNotAfterOrBuilder() {
       return getNotAfter();
     }
@@ -1761,7 +1894,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_before = 16;</code>
+     * @return Whether the notBefore field is set.
      */
+    @java.lang.Override
     public boolean hasNotBefore() {
       return notBefore_ != null;
     }
@@ -1771,7 +1906,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp not_before = 16;</code>
+     * @return The notBefore.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getNotBefore() {
       return notBefore_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : notBefore_;
     }
@@ -1782,6 +1919,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp not_before = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getNotBeforeOrBuilder() {
       return getNotBefore();
     }
@@ -1795,6 +1933,7 @@ public final class CertificateOuterClass {
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge> getChallengesList() {
       return challenges_;
     }
@@ -1805,6 +1944,7 @@ public final class CertificateOuterClass {
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeOrBuilder> 
         getChallengesOrBuilderList() {
       return challenges_;
@@ -1816,6 +1956,7 @@ public final class CertificateOuterClass {
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
      */
+    @java.lang.Override
     public int getChallengesCount() {
       return challenges_.size();
     }
@@ -1826,6 +1967,7 @@ public final class CertificateOuterClass {
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge getChallenges(int index) {
       return challenges_.get(index);
     }
@@ -1836,6 +1978,7 @@ public final class CertificateOuterClass {
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeOrBuilder getChallengesOrBuilder(
         int index) {
       return challenges_.get(index);
@@ -1855,19 +1998,19 @@ public final class CertificateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1885,13 +2028,13 @@ public final class CertificateOuterClass {
       if (status_ != yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, status_);
       }
-      if (!getIssuerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, issuer_);
       }
-      if (!getSubjectBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, subject_);
       }
-      if (!getSerialBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serial_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, serial_);
       }
       if (updatedAt_ != null) {
@@ -1918,20 +2061,20 @@ public final class CertificateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1960,13 +2103,13 @@ public final class CertificateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, status_);
       }
-      if (!getIssuerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, issuer_);
       }
-      if (!getSubjectBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, subject_);
       }
-      if (!getSerialBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serial_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, serial_);
       }
       if (updatedAt_ != null) {
@@ -2004,56 +2147,55 @@ public final class CertificateOuterClass {
       }
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate other = (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && type_ == other.type_;
-      result = result && getDomainsList()
-          .equals(other.getDomainsList());
-      result = result && status_ == other.status_;
-      result = result && getIssuer()
-          .equals(other.getIssuer());
-      result = result && getSubject()
-          .equals(other.getSubject());
-      result = result && getSerial()
-          .equals(other.getSerial());
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (type_ != other.type_) return false;
+      if (!getDomainsList()
+          .equals(other.getDomainsList())) return false;
+      if (status_ != other.status_) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
+      if (!getSerial()
+          .equals(other.getSerial())) return false;
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && (hasIssuedAt() == other.hasIssuedAt());
+      if (hasIssuedAt() != other.hasIssuedAt()) return false;
       if (hasIssuedAt()) {
-        result = result && getIssuedAt()
-            .equals(other.getIssuedAt());
+        if (!getIssuedAt()
+            .equals(other.getIssuedAt())) return false;
       }
-      result = result && (hasNotAfter() == other.hasNotAfter());
+      if (hasNotAfter() != other.hasNotAfter()) return false;
       if (hasNotAfter()) {
-        result = result && getNotAfter()
-            .equals(other.getNotAfter());
+        if (!getNotAfter()
+            .equals(other.getNotAfter())) return false;
       }
-      result = result && (hasNotBefore() == other.hasNotBefore());
+      if (hasNotBefore() != other.hasNotBefore()) return false;
       if (hasNotBefore()) {
-        result = result && getNotBefore()
-            .equals(other.getNotBefore());
+        if (!getNotBefore()
+            .equals(other.getNotBefore())) return false;
       }
-      result = result && getChallengesList()
-          .equals(other.getChallengesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getChallengesList()
+          .equals(other.getChallengesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2291,7 +2433,7 @@ public final class CertificateOuterClass {
         type_ = 0;
 
         domains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0;
 
         issuer_ = "";
@@ -2326,7 +2468,7 @@ public final class CertificateOuterClass {
         }
         if (challengesBuilder_ == null) {
           challenges_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           challengesBuilder_.clear();
         }
@@ -2357,7 +2499,6 @@ public final class CertificateOuterClass {
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate buildPartial() {
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate result = new yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -2370,9 +2511,9 @@ public final class CertificateOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.type_ = type_;
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           domains_ = domains_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.domains_ = domains_;
         result.status_ = status_;
@@ -2400,50 +2541,49 @@ public final class CertificateOuterClass {
           result.notBefore_ = notBeforeBuilder_.build();
         }
         if (challengesBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             challenges_ = java.util.Collections.unmodifiableList(challenges_);
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.challenges_ = challenges_;
         } else {
           result.challenges_ = challengesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2484,7 +2624,7 @@ public final class CertificateOuterClass {
         if (!other.domains_.isEmpty()) {
           if (domains_.isEmpty()) {
             domains_ = other.domains_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureDomainsIsMutable();
             domains_.addAll(other.domains_);
@@ -2522,7 +2662,7 @@ public final class CertificateOuterClass {
           if (!other.challenges_.isEmpty()) {
             if (challenges_.isEmpty()) {
               challenges_ = other.challenges_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureChallengesIsMutable();
               challenges_.addAll(other.challenges_);
@@ -2535,7 +2675,7 @@ public final class CertificateOuterClass {
               challengesBuilder_.dispose();
               challengesBuilder_ = null;
               challenges_ = other.challenges_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00000004);
               challengesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getChallengesFieldBuilder() : null;
@@ -2581,6 +2721,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2600,6 +2741,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2620,6 +2762,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2637,6 +2781,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2650,6 +2795,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2670,6 +2817,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2689,6 +2837,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2709,6 +2858,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2726,6 +2877,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2739,6 +2891,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2752,7 +2906,7 @@ public final class CertificateOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2761,6 +2915,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2771,6 +2926,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2913,6 +3069,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2933,6 +3090,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2954,6 +3112,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2972,6 +3132,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2986,6 +3147,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3006,6 +3169,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -3025,6 +3189,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -3045,6 +3210,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3062,6 +3229,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -3075,6 +3243,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3122,14 +3292,16 @@ public final class CertificateOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -3141,6 +3313,7 @@ public final class CertificateOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -3152,11 +3325,12 @@ public final class CertificateOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3168,10 +3342,11 @@ public final class CertificateOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3195,7 +3370,7 @@ public final class CertificateOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3218,8 +3393,11 @@ public final class CertificateOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3246,8 +3424,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -3256,8 +3435,11 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -3268,7 +3450,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType.valueOf(type_);
@@ -3280,6 +3464,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.CertificateType value) {
         if (value == null) {
@@ -3296,6 +3482,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateType type = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3306,9 +3493,9 @@ public final class CertificateOuterClass {
 
       private com.google.protobuf.LazyStringList domains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureDomainsIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           domains_ = new com.google.protobuf.LazyStringArrayList(domains_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -3317,6 +3504,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @return A list containing the domains.
        */
       public com.google.protobuf.ProtocolStringList
           getDomainsList() {
@@ -3328,6 +3516,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @return The count of domains.
        */
       public int getDomainsCount() {
         return domains_.size();
@@ -3338,6 +3527,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @param index The index of the element to return.
+       * @return The domains at the given index.
        */
       public java.lang.String getDomains(int index) {
         return domains_.get(index);
@@ -3348,6 +3539,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the domains at the given index.
        */
       public com.google.protobuf.ByteString
           getDomainsBytes(int index) {
@@ -3359,6 +3552,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The domains to set.
+       * @return This builder for chaining.
        */
       public Builder setDomains(
           int index, java.lang.String value) {
@@ -3376,6 +3572,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @param value The domains to add.
+       * @return This builder for chaining.
        */
       public Builder addDomains(
           java.lang.String value) {
@@ -3393,6 +3591,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @param values The domains to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDomains(
           java.lang.Iterable<java.lang.String> values) {
@@ -3408,10 +3608,11 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomains() {
         domains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3421,6 +3622,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>repeated string domains = 8;</code>
+       * @param value The bytes of the domains to add.
+       * @return This builder for chaining.
        */
       public Builder addDomainsBytes(
           com.google.protobuf.ByteString value) {
@@ -3441,8 +3644,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3451,8 +3655,11 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3463,7 +3670,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status.valueOf(status_);
@@ -3475,6 +3684,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate.Status value) {
         if (value == null) {
@@ -3491,6 +3702,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Certificate.Status status = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3506,6 +3718,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string issuer = 10;</code>
+       * @return The issuer.
        */
       public java.lang.String getIssuer() {
         java.lang.Object ref = issuer_;
@@ -3525,6 +3738,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string issuer = 10;</code>
+       * @return The bytes for issuer.
        */
       public com.google.protobuf.ByteString
           getIssuerBytes() {
@@ -3545,6 +3759,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string issuer = 10;</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
        */
       public Builder setIssuer(
           java.lang.String value) {
@@ -3562,6 +3778,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string issuer = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIssuer() {
         
@@ -3575,6 +3792,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string issuer = 10;</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
        */
       public Builder setIssuerBytes(
           com.google.protobuf.ByteString value) {
@@ -3595,6 +3814,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string subject = 11;</code>
+       * @return The subject.
        */
       public java.lang.String getSubject() {
         java.lang.Object ref = subject_;
@@ -3614,6 +3834,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string subject = 11;</code>
+       * @return The bytes for subject.
        */
       public com.google.protobuf.ByteString
           getSubjectBytes() {
@@ -3634,6 +3855,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string subject = 11;</code>
+       * @param value The subject to set.
+       * @return This builder for chaining.
        */
       public Builder setSubject(
           java.lang.String value) {
@@ -3651,6 +3874,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string subject = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubject() {
         
@@ -3664,6 +3888,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string subject = 11;</code>
+       * @param value The bytes for subject to set.
+       * @return This builder for chaining.
        */
       public Builder setSubjectBytes(
           com.google.protobuf.ByteString value) {
@@ -3684,6 +3910,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string serial = 12;</code>
+       * @return The serial.
        */
       public java.lang.String getSerial() {
         java.lang.Object ref = serial_;
@@ -3703,6 +3930,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string serial = 12;</code>
+       * @return The bytes for serial.
        */
       public com.google.protobuf.ByteString
           getSerialBytes() {
@@ -3723,6 +3951,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string serial = 12;</code>
+       * @param value The serial to set.
+       * @return This builder for chaining.
        */
       public Builder setSerial(
           java.lang.String value) {
@@ -3740,6 +3970,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string serial = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSerial() {
         
@@ -3753,6 +3984,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string serial = 12;</code>
+       * @param value The bytes for serial to set.
+       * @return This builder for chaining.
        */
       public Builder setSerialBytes(
           com.google.protobuf.ByteString value) {
@@ -3766,7 +3999,7 @@ public final class CertificateOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
@@ -3775,6 +4008,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
@@ -3785,6 +4019,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -3919,7 +4154,7 @@ public final class CertificateOuterClass {
         return updatedAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp issuedAt_ = null;
+      private com.google.protobuf.Timestamp issuedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issuedAtBuilder_;
       /**
@@ -3928,6 +4163,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
+       * @return Whether the issuedAt field is set.
        */
       public boolean hasIssuedAt() {
         return issuedAtBuilder_ != null || issuedAt_ != null;
@@ -3938,6 +4174,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
+       * @return The issuedAt.
        */
       public com.google.protobuf.Timestamp getIssuedAt() {
         if (issuedAtBuilder_ == null) {
@@ -4072,7 +4309,7 @@ public final class CertificateOuterClass {
         return issuedAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp notAfter_ = null;
+      private com.google.protobuf.Timestamp notAfter_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> notAfterBuilder_;
       /**
@@ -4081,6 +4318,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp not_after = 15;</code>
+       * @return Whether the notAfter field is set.
        */
       public boolean hasNotAfter() {
         return notAfterBuilder_ != null || notAfter_ != null;
@@ -4091,6 +4329,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp not_after = 15;</code>
+       * @return The notAfter.
        */
       public com.google.protobuf.Timestamp getNotAfter() {
         if (notAfterBuilder_ == null) {
@@ -4225,7 +4464,7 @@ public final class CertificateOuterClass {
         return notAfterBuilder_;
       }
 
-      private com.google.protobuf.Timestamp notBefore_ = null;
+      private com.google.protobuf.Timestamp notBefore_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> notBeforeBuilder_;
       /**
@@ -4234,6 +4473,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp not_before = 16;</code>
+       * @return Whether the notBefore field is set.
        */
       public boolean hasNotBefore() {
         return notBeforeBuilder_ != null || notBefore_ != null;
@@ -4244,6 +4484,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp not_before = 16;</code>
+       * @return The notBefore.
        */
       public com.google.protobuf.Timestamp getNotBefore() {
         if (notBeforeBuilder_ == null) {
@@ -4381,9 +4622,9 @@ public final class CertificateOuterClass {
       private java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge> challenges_ =
         java.util.Collections.emptyList();
       private void ensureChallengesIsMutable() {
-        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           challenges_ = new java.util.ArrayList<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge>(challenges_);
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -4577,7 +4818,7 @@ public final class CertificateOuterClass {
       public Builder clearChallenges() {
         if (challengesBuilder_ == null) {
           challenges_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           challengesBuilder_.clear();
@@ -4682,7 +4923,7 @@ public final class CertificateOuterClass {
           challengesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Builder, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeOrBuilder>(
                   challenges_,
-                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           challenges_ = null;
@@ -4692,7 +4933,7 @@ public final class CertificateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4752,6 +4993,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string domain = 1;</code>
+     * @return The domain.
      */
     java.lang.String getDomain();
     /**
@@ -4760,6 +5002,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string domain = 1;</code>
+     * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
         getDomainBytes();
@@ -4770,6 +5013,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -4778,6 +5022,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+     * @return The type.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType getType();
 
@@ -4787,6 +5032,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -4795,6 +5041,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -4812,6 +5059,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
@@ -4820,6 +5068,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -4837,6 +5086,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -4845,6 +5095,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+     * @return The status.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status getStatus();
 
@@ -4854,6 +5105,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string message = 6;</code>
+     * @return The message.
      */
     java.lang.String getMessage();
     /**
@@ -4862,6 +5114,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string message = 6;</code>
+     * @return The bytes for message.
      */
     com.google.protobuf.ByteString
         getMessageBytes();
@@ -4872,6 +5125,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string error = 7;</code>
+     * @return The error.
      */
     java.lang.String getError();
     /**
@@ -4880,6 +5134,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string error = 7;</code>
+     * @return The bytes for error.
      */
     com.google.protobuf.ByteString
         getErrorBytes();
@@ -4890,6 +5145,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
+     * @return Whether the dnsChallenge field is set.
      */
     boolean hasDnsChallenge();
     /**
@@ -4898,6 +5154,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
+     * @return The dnsChallenge.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord getDnsChallenge();
     /**
@@ -4915,6 +5172,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
+     * @return Whether the httpChallenge field is set.
      */
     boolean hasHttpChallenge();
     /**
@@ -4923,6 +5181,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
+     * @return The httpChallenge.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile getHttpChallenge();
     /**
@@ -4943,7 +5202,7 @@ public final class CertificateOuterClass {
    *
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.Challenge}
    */
-  public  static final class Challenge extends
+  public static final class Challenge extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.Challenge)
       ChallengeOrBuilder {
@@ -4961,6 +5220,13 @@ public final class CertificateOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Challenge();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4973,7 +5239,6 @@ public final class CertificateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5069,7 +5334,7 @@ public final class CertificateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5191,6 +5456,8 @@ public final class CertificateOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5198,6 +5465,10 @@ public final class CertificateOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -5223,6 +5494,10 @@ public final class CertificateOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -5267,6 +5542,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       java.lang.String getName();
       /**
@@ -5275,6 +5551,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
@@ -5285,6 +5562,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return The type.
        */
       java.lang.String getType();
       /**
@@ -5293,6 +5571,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       com.google.protobuf.ByteString
           getTypeBytes();
@@ -5303,6 +5582,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string value = 3;</code>
+       * @return The value.
        */
       java.lang.String getValue();
       /**
@@ -5311,6 +5591,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string value = 3;</code>
+       * @return The bytes for value.
        */
       com.google.protobuf.ByteString
           getValueBytes();
@@ -5318,7 +5599,7 @@ public final class CertificateOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.certificatemanager.v1.Challenge.DnsRecord}
      */
-    public  static final class DnsRecord extends
+    public static final class DnsRecord extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.Challenge.DnsRecord)
         DnsRecordOrBuilder {
@@ -5334,6 +5615,13 @@ public final class CertificateOuterClass {
       }
 
       @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DnsRecord();
+      }
+
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
@@ -5346,7 +5634,6 @@ public final class CertificateOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5376,7 +5663,7 @@ public final class CertificateOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5415,7 +5702,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
@@ -5434,7 +5723,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
@@ -5457,7 +5748,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public java.lang.String getType() {
         java.lang.Object ref = type_;
         if (ref instanceof java.lang.String) {
@@ -5476,7 +5769,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTypeBytes() {
         java.lang.Object ref = type_;
@@ -5499,7 +5794,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string value = 3;</code>
+       * @return The value.
        */
+      @java.lang.Override
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -5518,7 +5815,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string value = 3;</code>
+       * @return The bytes for value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getValueBytes() {
         java.lang.Object ref = value_;
@@ -5547,13 +5846,13 @@ public final class CertificateOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
-        if (!getTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
         }
         unknownFields.writeTo(output);
@@ -5565,13 +5864,13 @@ public final class CertificateOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
-        if (!getTypeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
         }
         size += unknownFields.getSerializedSize();
@@ -5589,15 +5888,14 @@ public final class CertificateOuterClass {
         }
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord other = (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord) obj;
 
-        boolean result = true;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && getType()
-            .equals(other.getType());
-        result = result && getValue()
-            .equals(other.getValue());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getType()
+            .equals(other.getType())) return false;
+        if (!getValue()
+            .equals(other.getValue())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5787,35 +6085,35 @@ public final class CertificateOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5877,6 +6175,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * @return The name.
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -5896,6 +6195,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -5916,6 +6216,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
          */
         public Builder setName(
             java.lang.String value) {
@@ -5933,6 +6235,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearName() {
           
@@ -5946,6 +6249,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
@@ -5966,6 +6271,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string type = 2;</code>
+         * @return The type.
          */
         public java.lang.String getType() {
           java.lang.Object ref = type_;
@@ -5985,6 +6291,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string type = 2;</code>
+         * @return The bytes for type.
          */
         public com.google.protobuf.ByteString
             getTypeBytes() {
@@ -6005,6 +6312,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string type = 2;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
          */
         public Builder setType(
             java.lang.String value) {
@@ -6022,6 +6331,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string type = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearType() {
           
@@ -6035,6 +6345,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string type = 2;</code>
+         * @param value The bytes for type to set.
+         * @return This builder for chaining.
          */
         public Builder setTypeBytes(
             com.google.protobuf.ByteString value) {
@@ -6055,6 +6367,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * @return The value.
          */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
@@ -6074,6 +6387,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * @return The bytes for value.
          */
         public com.google.protobuf.ByteString
             getValueBytes() {
@@ -6094,6 +6408,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
          */
         public Builder setValue(
             java.lang.String value) {
@@ -6111,6 +6427,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearValue() {
           
@@ -6124,6 +6441,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
          */
         public Builder setValueBytes(
             com.google.protobuf.ByteString value) {
@@ -6139,7 +6458,7 @@ public final class CertificateOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6199,6 +6518,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string url = 1;</code>
+       * @return The url.
        */
       java.lang.String getUrl();
       /**
@@ -6207,6 +6527,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string url = 1;</code>
+       * @return The bytes for url.
        */
       com.google.protobuf.ByteString
           getUrlBytes();
@@ -6217,6 +6538,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string content = 2;</code>
+       * @return The content.
        */
       java.lang.String getContent();
       /**
@@ -6225,6 +6547,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string content = 2;</code>
+       * @return The bytes for content.
        */
       com.google.protobuf.ByteString
           getContentBytes();
@@ -6232,7 +6555,7 @@ public final class CertificateOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.certificatemanager.v1.Challenge.HttpFile}
      */
-    public  static final class HttpFile extends
+    public static final class HttpFile extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.Challenge.HttpFile)
         HttpFileOrBuilder {
@@ -6244,6 +6567,13 @@ public final class CertificateOuterClass {
       private HttpFile() {
         url_ = "";
         content_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HttpFile();
       }
 
       @java.lang.Override
@@ -6259,7 +6589,6 @@ public final class CertificateOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -6283,7 +6612,7 @@ public final class CertificateOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6322,7 +6651,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string url = 1;</code>
+       * @return The url.
        */
+      @java.lang.Override
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
         if (ref instanceof java.lang.String) {
@@ -6341,7 +6672,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string url = 1;</code>
+       * @return The bytes for url.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUrlBytes() {
         java.lang.Object ref = url_;
@@ -6364,7 +6697,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string content = 2;</code>
+       * @return The content.
        */
+      @java.lang.Override
       public java.lang.String getContent() {
         java.lang.Object ref = content_;
         if (ref instanceof java.lang.String) {
@@ -6383,7 +6718,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string content = 2;</code>
+       * @return The bytes for content.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getContentBytes() {
         java.lang.Object ref = content_;
@@ -6412,10 +6749,10 @@ public final class CertificateOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getUrlBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
         }
-        if (!getContentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
         }
         unknownFields.writeTo(output);
@@ -6427,10 +6764,10 @@ public final class CertificateOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getUrlBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
         }
-        if (!getContentBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
         }
         size += unknownFields.getSerializedSize();
@@ -6448,13 +6785,12 @@ public final class CertificateOuterClass {
         }
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile other = (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile) obj;
 
-        boolean result = true;
-        result = result && getUrl()
-            .equals(other.getUrl());
-        result = result && getContent()
-            .equals(other.getContent());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getUrl()
+            .equals(other.getUrl())) return false;
+        if (!getContent()
+            .equals(other.getContent())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -6639,35 +6975,35 @@ public final class CertificateOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6725,6 +7061,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string url = 1;</code>
+         * @return The url.
          */
         public java.lang.String getUrl() {
           java.lang.Object ref = url_;
@@ -6744,6 +7081,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string url = 1;</code>
+         * @return The bytes for url.
          */
         public com.google.protobuf.ByteString
             getUrlBytes() {
@@ -6764,6 +7102,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string url = 1;</code>
+         * @param value The url to set.
+         * @return This builder for chaining.
          */
         public Builder setUrl(
             java.lang.String value) {
@@ -6781,6 +7121,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string url = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearUrl() {
           
@@ -6794,6 +7135,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string url = 1;</code>
+         * @param value The bytes for url to set.
+         * @return This builder for chaining.
          */
         public Builder setUrlBytes(
             com.google.protobuf.ByteString value) {
@@ -6814,6 +7157,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string content = 2;</code>
+         * @return The content.
          */
         public java.lang.String getContent() {
           java.lang.Object ref = content_;
@@ -6833,6 +7177,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string content = 2;</code>
+         * @return The bytes for content.
          */
         public com.google.protobuf.ByteString
             getContentBytes() {
@@ -6853,6 +7198,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string content = 2;</code>
+         * @param value The content to set.
+         * @return This builder for chaining.
          */
         public Builder setContent(
             java.lang.String value) {
@@ -6870,6 +7217,7 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string content = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearContent() {
           
@@ -6883,6 +7231,8 @@ public final class CertificateOuterClass {
          * </pre>
          *
          * <code>string content = 2;</code>
+         * @param value The bytes for content to set.
+         * @return This builder for chaining.
          */
         public Builder setContentBytes(
             com.google.protobuf.ByteString value) {
@@ -6898,7 +7248,7 @@ public final class CertificateOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6951,7 +7301,8 @@ public final class CertificateOuterClass {
     private int challengeCase_ = 0;
     private java.lang.Object challenge_;
     public enum ChallengeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DNS_CHALLENGE(8),
       HTTP_CHALLENGE(9),
       CHALLENGE_NOT_SET(0);
@@ -6960,6 +7311,8 @@ public final class CertificateOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -6994,7 +7347,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string domain = 1;</code>
+     * @return The domain.
      */
+    @java.lang.Override
     public java.lang.String getDomain() {
       java.lang.Object ref = domain_;
       if (ref instanceof java.lang.String) {
@@ -7013,7 +7368,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string domain = 1;</code>
+     * @return The bytes for domain.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainBytes() {
       java.lang.Object ref = domain_;
@@ -7036,8 +7393,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -7046,8 +7404,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType getType() {
+    @java.lang.Override public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.valueOf(type_);
       return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.UNRECOGNIZED : result;
@@ -7061,7 +7420,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -7071,7 +7432,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -7082,6 +7445,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -7094,7 +7458,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
@@ -7104,7 +7470,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
@@ -7115,6 +7483,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
@@ -7127,8 +7496,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -7137,8 +7507,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status.UNRECOGNIZED : result;
@@ -7152,7 +7523,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string message = 6;</code>
+     * @return The message.
      */
+    @java.lang.Override
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
@@ -7171,7 +7544,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string message = 6;</code>
+     * @return The bytes for message.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMessageBytes() {
       java.lang.Object ref = message_;
@@ -7194,7 +7569,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string error = 7;</code>
+     * @return The error.
      */
+    @java.lang.Override
     public java.lang.String getError() {
       java.lang.Object ref = error_;
       if (ref instanceof java.lang.String) {
@@ -7213,7 +7590,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string error = 7;</code>
+     * @return The bytes for error.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getErrorBytes() {
       java.lang.Object ref = error_;
@@ -7235,7 +7614,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
+     * @return Whether the dnsChallenge field is set.
      */
+    @java.lang.Override
     public boolean hasDnsChallenge() {
       return challengeCase_ == 8;
     }
@@ -7245,7 +7626,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
+     * @return The dnsChallenge.
      */
+    @java.lang.Override
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord getDnsChallenge() {
       if (challengeCase_ == 8) {
          return (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord) challenge_;
@@ -7259,6 +7642,7 @@ public final class CertificateOuterClass {
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecordOrBuilder getDnsChallengeOrBuilder() {
       if (challengeCase_ == 8) {
          return (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord) challenge_;
@@ -7273,7 +7657,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
+     * @return Whether the httpChallenge field is set.
      */
+    @java.lang.Override
     public boolean hasHttpChallenge() {
       return challengeCase_ == 9;
     }
@@ -7283,7 +7669,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
+     * @return The httpChallenge.
      */
+    @java.lang.Override
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile getHttpChallenge() {
       if (challengeCase_ == 9) {
          return (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile) challenge_;
@@ -7297,6 +7685,7 @@ public final class CertificateOuterClass {
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFileOrBuilder getHttpChallengeOrBuilder() {
       if (challengeCase_ == 9) {
          return (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile) challenge_;
@@ -7318,7 +7707,7 @@ public final class CertificateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDomainBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
       }
       if (type_ != yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
@@ -7333,10 +7722,10 @@ public final class CertificateOuterClass {
       if (status_ != yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, status_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, message_);
       }
-      if (!getErrorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, error_);
       }
       if (challengeCase_ == 8) {
@@ -7354,7 +7743,7 @@ public final class CertificateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDomainBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
       }
       if (type_ != yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
@@ -7373,10 +7762,10 @@ public final class CertificateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, status_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, message_);
       }
-      if (!getErrorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, error_);
       }
       if (challengeCase_ == 8) {
@@ -7402,42 +7791,39 @@ public final class CertificateOuterClass {
       }
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge other = (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge) obj;
 
-      boolean result = true;
-      result = result && getDomain()
-          .equals(other.getDomain());
-      result = result && type_ == other.type_;
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (type_ != other.type_) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && getMessage()
-          .equals(other.getMessage());
-      result = result && getError()
-          .equals(other.getError());
-      result = result && getChallengeCase().equals(
-          other.getChallengeCase());
-      if (!result) return false;
+      if (status_ != other.status_) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getChallengeCase().equals(other.getChallengeCase())) return false;
       switch (challengeCase_) {
         case 8:
-          result = result && getDnsChallenge()
-              .equals(other.getDnsChallenge());
+          if (!getDnsChallenge()
+              .equals(other.getDnsChallenge())) return false;
           break;
         case 9:
-          result = result && getHttpChallenge()
-              .equals(other.getHttpChallenge());
+          if (!getHttpChallenge()
+              .equals(other.getHttpChallenge())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7700,35 +8086,35 @@ public final class CertificateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7830,6 +8216,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string domain = 1;</code>
+       * @return The domain.
        */
       public java.lang.String getDomain() {
         java.lang.Object ref = domain_;
@@ -7849,6 +8236,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string domain = 1;</code>
+       * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
           getDomainBytes() {
@@ -7869,6 +8257,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string domain = 1;</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
        */
       public Builder setDomain(
           java.lang.String value) {
@@ -7886,6 +8276,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string domain = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomain() {
         
@@ -7899,6 +8290,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string domain = 1;</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainBytes(
           com.google.protobuf.ByteString value) {
@@ -7919,8 +8312,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -7929,8 +8323,11 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -7941,7 +8338,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.valueOf(type_);
@@ -7953,6 +8352,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType value) {
         if (value == null) {
@@ -7969,6 +8370,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.ChallengeType type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -7977,7 +8379,7 @@ public final class CertificateOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -7986,6 +8388,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -7996,6 +8399,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -8130,7 +8534,7 @@ public final class CertificateOuterClass {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
@@ -8139,6 +8543,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
@@ -8149,6 +8554,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -8290,8 +8696,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -8300,8 +8707,11 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -8312,7 +8722,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status result = yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status.valueOf(status_);
@@ -8324,6 +8736,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.Status value) {
         if (value == null) {
@@ -8340,6 +8754,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.Status status = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -8355,6 +8770,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string message = 6;</code>
+       * @return The message.
        */
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
@@ -8374,6 +8790,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string message = 6;</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
           getMessageBytes() {
@@ -8394,6 +8811,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string message = 6;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessage(
           java.lang.String value) {
@@ -8411,6 +8830,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string message = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMessage() {
         
@@ -8424,6 +8844,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string message = 6;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -8444,6 +8866,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string error = 7;</code>
+       * @return The error.
        */
       public java.lang.String getError() {
         java.lang.Object ref = error_;
@@ -8463,6 +8886,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string error = 7;</code>
+       * @return The bytes for error.
        */
       public com.google.protobuf.ByteString
           getErrorBytes() {
@@ -8483,6 +8907,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string error = 7;</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
        */
       public Builder setError(
           java.lang.String value) {
@@ -8500,6 +8926,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string error = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearError() {
         
@@ -8513,6 +8940,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string error = 7;</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
        */
       public Builder setErrorBytes(
           com.google.protobuf.ByteString value) {
@@ -8534,7 +8963,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
+       * @return Whether the dnsChallenge field is set.
        */
+      @java.lang.Override
       public boolean hasDnsChallenge() {
         return challengeCase_ == 8;
       }
@@ -8544,7 +8975,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
+       * @return The dnsChallenge.
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord getDnsChallenge() {
         if (dnsChallengeBuilder_ == null) {
           if (challengeCase_ == 8) {
@@ -8662,6 +9095,7 @@ public final class CertificateOuterClass {
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecordOrBuilder getDnsChallengeOrBuilder() {
         if ((challengeCase_ == 8) && (dnsChallengeBuilder_ != null)) {
           return dnsChallengeBuilder_.getMessageOrBuilder();
@@ -8706,7 +9140,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
+       * @return Whether the httpChallenge field is set.
        */
+      @java.lang.Override
       public boolean hasHttpChallenge() {
         return challengeCase_ == 9;
       }
@@ -8716,7 +9152,9 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
+       * @return The httpChallenge.
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile getHttpChallenge() {
         if (httpChallengeBuilder_ == null) {
           if (challengeCase_ == 9) {
@@ -8834,6 +9272,7 @@ public final class CertificateOuterClass {
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFileOrBuilder getHttpChallengeOrBuilder() {
         if ((challengeCase_ == 9) && (httpChallengeBuilder_ != null)) {
           return httpChallengeBuilder_.getMessageOrBuilder();
@@ -8872,7 +9311,7 @@ public final class CertificateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8932,6 +9371,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -8940,6 +9380,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -8950,6 +9391,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The certificateId.
      */
     java.lang.String getCertificateId();
     /**
@@ -8958,6 +9400,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The bytes for certificateId.
      */
     com.google.protobuf.ByteString
         getCertificateIdBytes();
@@ -8968,6 +9411,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -8976,6 +9420,7 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -8994,7 +9439,7 @@ public final class CertificateOuterClass {
    *
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.Version}
    */
-  public  static final class Version extends
+  public static final class Version extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.Version)
       VersionOrBuilder {
@@ -9006,6 +9451,13 @@ public final class CertificateOuterClass {
     private Version() {
       id_ = "";
       certificateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Version();
     }
 
     @java.lang.Override
@@ -9021,7 +9473,6 @@ public final class CertificateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9058,7 +9509,7 @@ public final class CertificateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9097,7 +9548,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -9116,7 +9569,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -9139,7 +9594,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The certificateId.
      */
+    @java.lang.Override
     public java.lang.String getCertificateId() {
       java.lang.Object ref = certificateId_;
       if (ref instanceof java.lang.String) {
@@ -9158,7 +9615,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 2;</code>
+     * @return The bytes for certificateId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateIdBytes() {
       java.lang.Object ref = certificateId_;
@@ -9181,7 +9640,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -9191,7 +9652,9 @@ public final class CertificateOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -9202,6 +9665,7 @@ public final class CertificateOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -9220,10 +9684,10 @@ public final class CertificateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, certificateId_);
       }
       if (createdAt_ != null) {
@@ -9238,10 +9702,10 @@ public final class CertificateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, certificateId_);
       }
       if (createdAt_ != null) {
@@ -9263,18 +9727,17 @@ public final class CertificateOuterClass {
       }
       yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version other = (yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getCertificateId()
-          .equals(other.getCertificateId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getCertificateId()
+          .equals(other.getCertificateId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9478,35 +9941,35 @@ public final class CertificateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9567,6 +10030,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -9586,6 +10050,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -9606,6 +10071,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -9623,6 +10090,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -9636,6 +10104,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9656,6 +10126,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @return The certificateId.
        */
       public java.lang.String getCertificateId() {
         java.lang.Object ref = certificateId_;
@@ -9675,6 +10146,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @return The bytes for certificateId.
        */
       public com.google.protobuf.ByteString
           getCertificateIdBytes() {
@@ -9695,6 +10167,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @param value The certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateId(
           java.lang.String value) {
@@ -9712,6 +10186,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateId() {
         
@@ -9725,6 +10200,8 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 2;</code>
+       * @param value The bytes for certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9738,7 +10215,7 @@ public final class CertificateOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -9747,6 +10224,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -9757,6 +10235,7 @@ public final class CertificateOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -9893,7 +10372,7 @@ public final class CertificateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10034,19 +10513,11 @@ public final class CertificateOuterClass {
       "catemanager/v1;certificatemanagerb\006proto" +
       "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_certificatemanager_v1_Certificate_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_certificatemanager_v1_Certificate_fieldAccessorTable = new

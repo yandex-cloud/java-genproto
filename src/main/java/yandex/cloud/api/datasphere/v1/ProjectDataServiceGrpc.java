@@ -1,19 +1,6 @@
 package yandex.cloud.api.datasphere.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/datasphere/v1/project_data_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ProjectDataServiceGrpc {
 
   private ProjectDataServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ProjectDataServiceGrpc {
     if ((getUploadFileMethod = ProjectDataServiceGrpc.getUploadFileMethod) == null) {
       synchronized (ProjectDataServiceGrpc.class) {
         if ((getUploadFileMethod = ProjectDataServiceGrpc.getUploadFileMethod) == null) {
-          ProjectDataServiceGrpc.getUploadFileMethod = getUploadFileMethod = 
+          ProjectDataServiceGrpc.getUploadFileMethod = getUploadFileMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileRequest, yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectDataService", "UploadFile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadFile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectDataServiceMethodDescriptorSupplier("UploadFile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectDataServiceMethodDescriptorSupplier("UploadFile"))
+              .build();
         }
-     }
-     return getUploadFileMethod;
+      }
+    }
+    return getUploadFileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest,
@@ -76,29 +63,35 @@ public final class ProjectDataServiceGrpc {
     if ((getDownloadFileMethod = ProjectDataServiceGrpc.getDownloadFileMethod) == null) {
       synchronized (ProjectDataServiceGrpc.class) {
         if ((getDownloadFileMethod = ProjectDataServiceGrpc.getDownloadFileMethod) == null) {
-          ProjectDataServiceGrpc.getDownloadFileMethod = getDownloadFileMethod = 
+          ProjectDataServiceGrpc.getDownloadFileMethod = getDownloadFileMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest, yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.ProjectDataService", "DownloadFile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadFile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProjectDataServiceMethodDescriptorSupplier("DownloadFile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProjectDataServiceMethodDescriptorSupplier("DownloadFile"))
+              .build();
         }
-     }
-     return getDownloadFileMethod;
+      }
+    }
+    return getDownloadFileMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ProjectDataServiceStub newStub(io.grpc.Channel channel) {
-    return new ProjectDataServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProjectDataServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProjectDataServiceStub>() {
+        @java.lang.Override
+        public ProjectDataServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProjectDataServiceStub(channel, callOptions);
+        }
+      };
+    return ProjectDataServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class ProjectDataServiceGrpc {
    */
   public static ProjectDataServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ProjectDataServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProjectDataServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProjectDataServiceBlockingStub>() {
+        @java.lang.Override
+        public ProjectDataServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProjectDataServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ProjectDataServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class ProjectDataServiceGrpc {
    */
   public static ProjectDataServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ProjectDataServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProjectDataServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProjectDataServiceFutureStub>() {
+        @java.lang.Override
+        public ProjectDataServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProjectDataServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ProjectDataServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -131,7 +138,7 @@ public final class ProjectDataServiceGrpc {
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileRequest> uploadFile(
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getUploadFileMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUploadFileMethod(), responseObserver);
     }
 
     /**
@@ -141,21 +148,21 @@ public final class ProjectDataServiceGrpc {
      */
     public void downloadFile(yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDownloadFileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadFileMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getUploadFileMethod(),
-            asyncClientStreamingCall(
+            io.grpc.stub.ServerCalls.asyncClientStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileRequest,
                 yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileResponse>(
                   this, METHODID_UPLOAD_FILE)))
           .addMethod(
             getDownloadFileMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest,
                 yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileResponse>(
@@ -169,19 +176,15 @@ public final class ProjectDataServiceGrpc {
    * A set of methods for managing data of the Project resource.
    * </pre>
    */
-  public static final class ProjectDataServiceStub extends io.grpc.stub.AbstractStub<ProjectDataServiceStub> {
-    private ProjectDataServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProjectDataServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProjectDataServiceStub extends io.grpc.stub.AbstractAsyncStub<ProjectDataServiceStub> {
+    private ProjectDataServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProjectDataServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProjectDataServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProjectDataServiceStub(channel, callOptions);
     }
 
@@ -192,7 +195,7 @@ public final class ProjectDataServiceGrpc {
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileRequest> uploadFile(
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.UploadFileResponse> responseObserver) {
-      return asyncClientStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getUploadFileMethod(), getCallOptions()), responseObserver);
     }
 
@@ -203,7 +206,7 @@ public final class ProjectDataServiceGrpc {
      */
     public void downloadFile(yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getDownloadFileMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -213,19 +216,15 @@ public final class ProjectDataServiceGrpc {
    * A set of methods for managing data of the Project resource.
    * </pre>
    */
-  public static final class ProjectDataServiceBlockingStub extends io.grpc.stub.AbstractStub<ProjectDataServiceBlockingStub> {
-    private ProjectDataServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProjectDataServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProjectDataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProjectDataServiceBlockingStub> {
+    private ProjectDataServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProjectDataServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProjectDataServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProjectDataServiceBlockingStub(channel, callOptions);
     }
 
@@ -236,7 +235,7 @@ public final class ProjectDataServiceGrpc {
      */
     public java.util.Iterator<yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileResponse> downloadFile(
         yandex.cloud.api.datasphere.v1.ProjectDataServiceOuterClass.DownloadFileRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getDownloadFileMethod(), getCallOptions(), request);
     }
   }
@@ -246,19 +245,15 @@ public final class ProjectDataServiceGrpc {
    * A set of methods for managing data of the Project resource.
    * </pre>
    */
-  public static final class ProjectDataServiceFutureStub extends io.grpc.stub.AbstractStub<ProjectDataServiceFutureStub> {
-    private ProjectDataServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProjectDataServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProjectDataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProjectDataServiceFutureStub> {
+    private ProjectDataServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProjectDataServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProjectDataServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProjectDataServiceFutureStub(channel, callOptions);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.operation;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/operation/operation_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class OperationServiceGrpc {
 
   private OperationServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class OperationServiceGrpc {
     if ((getGetMethod = OperationServiceGrpc.getGetMethod) == null) {
       synchronized (OperationServiceGrpc.class) {
         if ((getGetMethod = OperationServiceGrpc.getGetMethod) == null) {
-          OperationServiceGrpc.getGetMethod = getGetMethod = 
+          OperationServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.operation.OperationService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new OperationServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OperationServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest,
@@ -76,29 +63,35 @@ public final class OperationServiceGrpc {
     if ((getCancelMethod = OperationServiceGrpc.getCancelMethod) == null) {
       synchronized (OperationServiceGrpc.class) {
         if ((getCancelMethod = OperationServiceGrpc.getCancelMethod) == null) {
-          OperationServiceGrpc.getCancelMethod = getCancelMethod = 
+          OperationServiceGrpc.getCancelMethod = getCancelMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.operation.OperationService", "Cancel"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Cancel"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new OperationServiceMethodDescriptorSupplier("Cancel"))
-                  .build();
-          }
+              .setSchemaDescriptor(new OperationServiceMethodDescriptorSupplier("Cancel"))
+              .build();
         }
-     }
-     return getCancelMethod;
+      }
+    }
+    return getCancelMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OperationServiceStub newStub(io.grpc.Channel channel) {
-    return new OperationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OperationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OperationServiceStub>() {
+        @java.lang.Override
+        public OperationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OperationServiceStub(channel, callOptions);
+        }
+      };
+    return OperationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class OperationServiceGrpc {
    */
   public static OperationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new OperationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OperationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OperationServiceBlockingStub>() {
+        @java.lang.Override
+        public OperationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OperationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return OperationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class OperationServiceGrpc {
    */
   public static OperationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new OperationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OperationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OperationServiceFutureStub>() {
+        @java.lang.Override
+        public OperationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OperationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return OperationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -131,7 +138,7 @@ public final class OperationServiceGrpc {
      */
     public void get(yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -142,21 +149,21 @@ public final class OperationServiceGrpc {
      */
     public void cancel(yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCancelMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_GET)))
           .addMethod(
             getCancelMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -170,19 +177,15 @@ public final class OperationServiceGrpc {
    * A set of methods for managing operations for asynchronous API requests.
    * </pre>
    */
-  public static final class OperationServiceStub extends io.grpc.stub.AbstractStub<OperationServiceStub> {
-    private OperationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OperationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OperationServiceStub extends io.grpc.stub.AbstractAsyncStub<OperationServiceStub> {
+    private OperationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OperationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OperationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OperationServiceStub(channel, callOptions);
     }
 
@@ -193,7 +196,7 @@ public final class OperationServiceGrpc {
      */
     public void get(yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -205,7 +208,7 @@ public final class OperationServiceGrpc {
      */
     public void cancel(yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCancelMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -215,19 +218,15 @@ public final class OperationServiceGrpc {
    * A set of methods for managing operations for asynchronous API requests.
    * </pre>
    */
-  public static final class OperationServiceBlockingStub extends io.grpc.stub.AbstractStub<OperationServiceBlockingStub> {
-    private OperationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OperationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OperationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OperationServiceBlockingStub> {
+    private OperationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OperationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OperationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OperationServiceBlockingStub(channel, callOptions);
     }
 
@@ -237,7 +236,7 @@ public final class OperationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation get(yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -248,7 +247,7 @@ public final class OperationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation cancel(yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCancelMethod(), getCallOptions(), request);
     }
   }
@@ -258,19 +257,15 @@ public final class OperationServiceGrpc {
    * A set of methods for managing operations for asynchronous API requests.
    * </pre>
    */
-  public static final class OperationServiceFutureStub extends io.grpc.stub.AbstractStub<OperationServiceFutureStub> {
-    private OperationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OperationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OperationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OperationServiceFutureStub> {
+    private OperationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OperationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OperationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OperationServiceFutureStub(channel, callOptions);
     }
 
@@ -281,7 +276,7 @@ public final class OperationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> get(
         yandex.cloud.api.operation.OperationServiceOuterClass.GetOperationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -293,7 +288,7 @@ public final class OperationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancel(
         yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCancelMethod(), getCallOptions()), request);
     }
   }

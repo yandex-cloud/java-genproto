@@ -25,6 +25,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -34,6 +35,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -41,7 +43,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.GetRegistryRequest}
    */
-  public  static final class GetRegistryRequest extends
+  public static final class GetRegistryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.GetRegistryRequest)
       GetRegistryRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class RegistryServiceOuterClass {
     }
     private GetRegistryRequest() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRegistryRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -174,7 +186,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -491,6 +503,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -512,6 +525,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -544,6 +560,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -640,6 +660,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryName.
      */
     java.lang.String getRegistryName();
     /**
@@ -649,6 +670,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryName.
      */
     com.google.protobuf.ByteString
         getRegistryNameBytes();
@@ -656,7 +678,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.GetByNameRegistryRequest}
    */
-  public  static final class GetByNameRegistryRequest extends
+  public static final class GetByNameRegistryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.GetByNameRegistryRequest)
       GetByNameRegistryRequestOrBuilder {
@@ -668,6 +690,13 @@ public final class RegistryServiceOuterClass {
     private GetByNameRegistryRequest() {
       folderId_ = "";
       registryName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetByNameRegistryRequest();
     }
 
     @java.lang.Override
@@ -683,7 +712,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -707,7 +735,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -747,7 +775,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -767,7 +797,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -791,7 +823,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryName.
      */
+    @java.lang.Override
     public java.lang.String getRegistryName() {
       java.lang.Object ref = registryName_;
       if (ref instanceof java.lang.String) {
@@ -811,7 +845,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryNameBytes() {
       java.lang.Object ref = registryName_;
@@ -840,10 +876,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getRegistryNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, registryName_);
       }
       unknownFields.writeTo(output);
@@ -855,10 +891,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getRegistryNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, registryName_);
       }
       size += unknownFields.getSerializedSize();
@@ -876,13 +912,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getRegistryName()
-          .equals(other.getRegistryName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getRegistryName()
+          .equals(other.getRegistryName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1067,35 +1102,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1154,6 +1189,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1174,6 +1210,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1195,6 +1232,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1213,6 +1252,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1227,6 +1267,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1248,6 +1290,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryName.
        */
       public java.lang.String getRegistryName() {
         java.lang.Object ref = registryName_;
@@ -1268,6 +1311,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryName.
        */
       public com.google.protobuf.ByteString
           getRegistryNameBytes() {
@@ -1289,6 +1333,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryName to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryName(
           java.lang.String value) {
@@ -1307,6 +1353,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryName() {
         
@@ -1321,6 +1368,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryName to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1336,7 +1385,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1397,6 +1446,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1406,6 +1456,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1419,6 +1470,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -1429,6 +1481,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -1438,6 +1491,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -1445,7 +1499,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistriesRequest}
    */
-  public  static final class ListRegistriesRequest extends
+  public static final class ListRegistriesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistriesRequest)
       ListRegistriesRequestOrBuilder {
@@ -1456,8 +1510,14 @@ public final class RegistryServiceOuterClass {
     }
     private ListRegistriesRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistriesRequest();
     }
 
     @java.lang.Override
@@ -1473,7 +1533,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1502,7 +1561,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1542,7 +1601,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1562,7 +1623,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1588,7 +1651,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1602,7 +1667,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1622,7 +1689,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1651,13 +1720,13 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -1669,14 +1738,14 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1694,15 +1763,14 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1893,35 +1961,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1983,6 +2051,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2003,6 +2072,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2024,6 +2094,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2042,6 +2114,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2056,6 +2129,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2079,7 +2154,9 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2092,6 +2169,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2108,6 +2187,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2124,6 +2204,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2144,6 +2225,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2165,6 +2247,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2183,6 +2267,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2197,6 +2282,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2212,7 +2299,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2319,6 +2406,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -2330,6 +2418,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -2337,7 +2426,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistriesResponse}
    */
-  public  static final class ListRegistriesResponse extends
+  public static final class ListRegistriesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistriesResponse)
       ListRegistriesResponseOrBuilder {
@@ -2349,6 +2438,13 @@ public final class RegistryServiceOuterClass {
     private ListRegistriesResponse() {
       registries_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistriesResponse();
     }
 
     @java.lang.Override
@@ -2376,7 +2472,7 @@ public final class RegistryServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 registries_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2391,7 +2487,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2405,7 +2501,7 @@ public final class RegistryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           registries_ = java.util.Collections.unmodifiableList(registries_);
         }
         this.unknownFields = unknownFields.build();
@@ -2425,7 +2521,6 @@ public final class RegistryServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REGISTRIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> registries_;
     /**
@@ -2435,6 +2530,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getRegistriesList() {
       return registries_;
     }
@@ -2445,6 +2541,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder> 
         getRegistriesOrBuilderList() {
       return registries_;
@@ -2456,6 +2553,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
+    @java.lang.Override
     public int getRegistriesCount() {
       return registries_.size();
     }
@@ -2466,6 +2564,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry getRegistries(int index) {
       return registries_.get(index);
     }
@@ -2476,6 +2575,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
         int index) {
       return registries_.get(index);
@@ -2492,7 +2592,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2514,7 +2616,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2546,7 +2650,7 @@ public final class RegistryServiceOuterClass {
       for (int i = 0; i < registries_.size(); i++) {
         output.writeMessage(1, registries_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2562,7 +2666,7 @@ public final class RegistryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, registries_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2580,13 +2684,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse) obj;
 
-      boolean result = true;
-      result = result && getRegistriesList()
-          .equals(other.getRegistriesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistriesList()
+          .equals(other.getRegistriesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2771,9 +2874,8 @@ public final class RegistryServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse buildPartial() {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (registriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             registries_ = java.util.Collections.unmodifiableList(registries_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2782,42 +2884,41 @@ public final class RegistryServiceOuterClass {
           result.registries_ = registriesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2894,7 +2995,7 @@ public final class RegistryServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> registries_ =
         java.util.Collections.emptyList();
       private void ensureRegistriesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           registries_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>(registries_);
           bitField0_ |= 0x00000001;
          }
@@ -3195,7 +3296,7 @@ public final class RegistryServiceOuterClass {
           registriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder>(
                   registries_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           registries_ = null;
@@ -3213,6 +3314,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3235,6 +3337,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3258,6 +3361,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -3278,6 +3383,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -3294,6 +3400,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3309,7 +3417,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3370,6 +3478,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -3379,6 +3488,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -3389,6 +3499,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3397,6 +3508,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3407,6 +3519,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -3415,6 +3528,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -3524,6 +3638,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -3533,6 +3648,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -3540,7 +3656,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateRegistryRequest}
    */
-  public  static final class CreateRegistryRequest extends
+  public static final class CreateRegistryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.CreateRegistryRequest)
       CreateRegistryRequestOrBuilder {
@@ -3555,6 +3671,13 @@ public final class RegistryServiceOuterClass {
       description_ = "";
       certificates_ = java.util.Collections.emptyList();
       password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateRegistryRequest();
     }
 
     @java.lang.Override
@@ -3600,10 +3723,10 @@ public final class RegistryServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3613,9 +3736,9 @@ public final class RegistryServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               certificates_.add(
                   input.readMessage(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.parser(), extensionRegistry));
@@ -3628,7 +3751,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3642,7 +3765,7 @@ public final class RegistryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           certificates_ = java.util.Collections.unmodifiableList(certificates_);
         }
         this.unknownFields = unknownFields.build();
@@ -3684,6 +3807,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The certificateData.
        */
       java.lang.String getCertificateData();
       /**
@@ -3692,6 +3816,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The bytes for certificateData.
        */
       com.google.protobuf.ByteString
           getCertificateDataBytes();
@@ -3703,7 +3828,7 @@ public final class RegistryServiceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate}
      */
-    public  static final class Certificate extends
+    public static final class Certificate extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate)
         CertificateOrBuilder {
@@ -3714,6 +3839,13 @@ public final class RegistryServiceOuterClass {
       }
       private Certificate() {
         certificateData_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Certificate();
       }
 
       @java.lang.Override
@@ -3729,7 +3861,6 @@ public final class RegistryServiceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -3747,7 +3878,7 @@ public final class RegistryServiceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -3786,7 +3917,9 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The certificateData.
        */
+      @java.lang.Override
       public java.lang.String getCertificateData() {
         java.lang.Object ref = certificateData_;
         if (ref instanceof java.lang.String) {
@@ -3805,7 +3938,9 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The bytes for certificateData.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCertificateDataBytes() {
         java.lang.Object ref = certificateData_;
@@ -3834,7 +3969,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getCertificateDataBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateData_);
         }
         unknownFields.writeTo(output);
@@ -3846,7 +3981,7 @@ public final class RegistryServiceOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getCertificateDataBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateData_);
         }
         size += unknownFields.getSerializedSize();
@@ -3864,11 +3999,10 @@ public final class RegistryServiceOuterClass {
         }
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate) obj;
 
-        boolean result = true;
-        result = result && getCertificateData()
-            .equals(other.getCertificateData());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getCertificateData()
+            .equals(other.getCertificateData())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4052,35 +4186,35 @@ public final class RegistryServiceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4134,6 +4268,7 @@ public final class RegistryServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @return The certificateData.
          */
         public java.lang.String getCertificateData() {
           java.lang.Object ref = certificateData_;
@@ -4153,6 +4288,7 @@ public final class RegistryServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @return The bytes for certificateData.
          */
         public com.google.protobuf.ByteString
             getCertificateDataBytes() {
@@ -4173,6 +4309,8 @@ public final class RegistryServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @param value The certificateData to set.
+         * @return This builder for chaining.
          */
         public Builder setCertificateData(
             java.lang.String value) {
@@ -4190,6 +4328,7 @@ public final class RegistryServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearCertificateData() {
           
@@ -4203,6 +4342,8 @@ public final class RegistryServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @param value The bytes for certificateData to set.
+         * @return This builder for chaining.
          */
         public Builder setCertificateDataBytes(
             com.google.protobuf.ByteString value) {
@@ -4218,7 +4359,7 @@ public final class RegistryServiceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -4268,7 +4409,6 @@ public final class RegistryServiceOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -4278,7 +4418,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -4298,7 +4440,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -4321,7 +4465,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4340,7 +4486,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4363,7 +4511,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4382,7 +4532,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4431,14 +4583,16 @@ public final class RegistryServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -4450,6 +4604,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -4461,11 +4616,12 @@ public final class RegistryServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4477,10 +4633,11 @@ public final class RegistryServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -4498,6 +4655,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate> getCertificatesList() {
       return certificates_;
     }
@@ -4508,6 +4666,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder> 
         getCertificatesOrBuilderList() {
       return certificates_;
@@ -4519,6 +4678,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
+    @java.lang.Override
     public int getCertificatesCount() {
       return certificates_.size();
     }
@@ -4529,6 +4689,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate getCertificates(int index) {
       return certificates_.get(index);
     }
@@ -4539,6 +4700,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder getCertificatesOrBuilder(
         int index) {
       return certificates_.get(index);
@@ -4553,7 +4715,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -4573,7 +4737,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -4602,13 +4768,13 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4620,7 +4786,7 @@ public final class RegistryServiceOuterClass {
       for (int i = 0; i < certificates_.size(); i++) {
         output.writeMessage(5, certificates_.get(i));
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
       }
       unknownFields.writeTo(output);
@@ -4632,13 +4798,13 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -4655,7 +4821,7 @@ public final class RegistryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, certificates_.get(i));
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
       }
       size += unknownFields.getSerializedSize();
@@ -4673,21 +4839,20 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getCertificatesList()
-          .equals(other.getCertificatesList());
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getCertificatesList()
+          .equals(other.getCertificatesList())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4878,7 +5043,7 @@ public final class RegistryServiceOuterClass {
         internalGetMutableLabels().clear();
         if (certificatesBuilder_ == null) {
           certificates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           certificatesBuilder_.clear();
         }
@@ -4911,58 +5076,56 @@ public final class RegistryServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest buildPartial() {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (certificatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             certificates_ = java.util.Collections.unmodifiableList(certificates_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.certificates_ = certificates_;
         } else {
           result.certificates_ = certificatesBuilder_.build();
         }
         result.password_ = password_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4994,7 +5157,7 @@ public final class RegistryServiceOuterClass {
           if (!other.certificates_.isEmpty()) {
             if (certificates_.isEmpty()) {
               certificates_ = other.certificates_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureCertificatesIsMutable();
               certificates_.addAll(other.certificates_);
@@ -5007,7 +5170,7 @@ public final class RegistryServiceOuterClass {
               certificatesBuilder_.dispose();
               certificatesBuilder_ = null;
               certificates_ = other.certificates_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
               certificatesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCertificatesFieldBuilder() : null;
@@ -5058,6 +5221,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -5078,6 +5242,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -5099,6 +5264,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -5117,6 +5284,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -5131,6 +5299,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5151,6 +5321,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5170,6 +5341,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5190,6 +5362,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5207,6 +5381,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5220,6 +5395,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5240,6 +5417,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5259,6 +5437,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5279,6 +5458,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5296,6 +5477,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5309,6 +5491,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5356,14 +5540,16 @@ public final class RegistryServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -5375,6 +5561,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -5386,11 +5573,12 @@ public final class RegistryServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5402,10 +5590,11 @@ public final class RegistryServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -5429,7 +5618,7 @@ public final class RegistryServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -5452,8 +5641,11 @@ public final class RegistryServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -5476,9 +5668,9 @@ public final class RegistryServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate> certificates_ =
         java.util.Collections.emptyList();
       private void ensureCertificatesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate>(certificates_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -5672,7 +5864,7 @@ public final class RegistryServiceOuterClass {
       public Builder clearCertificates() {
         if (certificatesBuilder_ == null) {
           certificates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           certificatesBuilder_.clear();
@@ -5777,7 +5969,7 @@ public final class RegistryServiceOuterClass {
           certificatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.Builder, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder>(
                   certificates_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           certificates_ = null;
@@ -5793,6 +5985,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -5813,6 +6006,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -5834,6 +6028,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -5852,6 +6048,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -5866,6 +6063,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -5881,7 +6080,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5941,6 +6140,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -5949,6 +6149,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -5956,7 +6157,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateRegistryMetadata}
    */
-  public  static final class CreateRegistryMetadata extends
+  public static final class CreateRegistryMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.CreateRegistryMetadata)
       CreateRegistryMetadataOrBuilder {
@@ -5967,6 +6168,13 @@ public final class RegistryServiceOuterClass {
     }
     private CreateRegistryMetadata() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateRegistryMetadata();
     }
 
     @java.lang.Override
@@ -5982,7 +6190,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6000,7 +6207,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6039,7 +6246,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -6058,7 +6267,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -6087,7 +6298,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -6099,7 +6310,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6117,11 +6328,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6301,35 +6511,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6383,6 +6593,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -6402,6 +6613,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -6422,6 +6634,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -6439,6 +6653,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -6452,6 +6667,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6467,7 +6684,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6528,6 +6745,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -6537,6 +6755,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -6547,6 +6766,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -6555,6 +6775,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -6572,6 +6793,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -6580,6 +6802,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6590,6 +6813,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -6598,6 +6822,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -6664,7 +6889,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.UpdateRegistryRequest}
    */
-  public  static final class UpdateRegistryRequest extends
+  public static final class UpdateRegistryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.UpdateRegistryRequest)
       UpdateRegistryRequestOrBuilder {
@@ -6677,6 +6902,13 @@ public final class RegistryServiceOuterClass {
       registryId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRegistryRequest();
     }
 
     @java.lang.Override
@@ -6735,10 +6967,10 @@ public final class RegistryServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6748,7 +6980,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6791,7 +7023,6 @@ public final class RegistryServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
@@ -6801,7 +7032,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -6821,7 +7054,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -6844,7 +7079,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -6854,7 +7091,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -6865,6 +7104,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -6877,7 +7117,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6896,7 +7138,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6919,7 +7163,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -6938,7 +7184,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -6988,14 +7236,16 @@ public final class RegistryServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -7008,6 +7258,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -7020,11 +7271,12 @@ public final class RegistryServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7037,10 +7289,11 @@ public final class RegistryServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -7063,16 +7316,16 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -7090,17 +7343,17 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -7128,22 +7381,21 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7362,7 +7614,6 @@ public final class RegistryServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest buildPartial() {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.registryId_ = registryId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -7373,42 +7624,41 @@ public final class RegistryServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7477,6 +7727,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -7497,6 +7748,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -7518,6 +7770,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -7536,6 +7790,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -7550,6 +7805,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7563,7 +7820,7 @@ public final class RegistryServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -7572,6 +7829,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -7582,6 +7840,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -7723,6 +7982,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7742,6 +8002,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7762,6 +8023,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7779,6 +8042,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7792,6 +8056,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7812,6 +8078,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -7831,6 +8098,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -7851,6 +8119,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -7868,6 +8138,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -7881,6 +8152,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -7929,14 +8202,16 @@ public final class RegistryServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -7949,6 +8224,7 @@ public final class RegistryServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -7961,11 +8237,12 @@ public final class RegistryServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7978,10 +8255,11 @@ public final class RegistryServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -8006,7 +8284,7 @@ public final class RegistryServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -8030,8 +8308,11 @@ public final class RegistryServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -8054,7 +8335,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8114,6 +8395,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -8122,6 +8404,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -8129,7 +8412,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.UpdateRegistryMetadata}
    */
-  public  static final class UpdateRegistryMetadata extends
+  public static final class UpdateRegistryMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.UpdateRegistryMetadata)
       UpdateRegistryMetadataOrBuilder {
@@ -8140,6 +8423,13 @@ public final class RegistryServiceOuterClass {
     }
     private UpdateRegistryMetadata() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRegistryMetadata();
     }
 
     @java.lang.Override
@@ -8155,7 +8445,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8173,7 +8462,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8212,7 +8501,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -8231,7 +8522,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -8260,7 +8553,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -8272,7 +8565,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8290,11 +8583,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8474,35 +8766,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8556,6 +8848,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -8575,6 +8868,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -8595,6 +8889,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -8612,6 +8908,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -8625,6 +8922,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8640,7 +8939,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8701,6 +9000,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -8710,6 +9010,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -8717,7 +9018,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteRegistryRequest}
    */
-  public  static final class DeleteRegistryRequest extends
+  public static final class DeleteRegistryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteRegistryRequest)
       DeleteRegistryRequestOrBuilder {
@@ -8728,6 +9029,13 @@ public final class RegistryServiceOuterClass {
     }
     private DeleteRegistryRequest() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRegistryRequest();
     }
 
     @java.lang.Override
@@ -8743,7 +9051,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8761,7 +9068,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8801,7 +9108,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -8821,7 +9130,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -8850,7 +9161,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -8862,7 +9173,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8880,11 +9191,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9064,35 +9374,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9147,6 +9457,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -9167,6 +9478,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -9188,6 +9500,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -9206,6 +9520,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -9220,6 +9535,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9235,7 +9552,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9295,6 +9612,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -9303,6 +9621,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -9310,7 +9629,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteRegistryMetadata}
    */
-  public  static final class DeleteRegistryMetadata extends
+  public static final class DeleteRegistryMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteRegistryMetadata)
       DeleteRegistryMetadataOrBuilder {
@@ -9321,6 +9640,13 @@ public final class RegistryServiceOuterClass {
     }
     private DeleteRegistryMetadata() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRegistryMetadata();
     }
 
     @java.lang.Override
@@ -9336,7 +9662,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9354,7 +9679,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9393,7 +9718,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -9412,7 +9739,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -9441,7 +9770,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -9453,7 +9782,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9471,11 +9800,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9655,35 +9983,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9737,6 +10065,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -9756,6 +10085,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -9776,6 +10106,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -9793,6 +10125,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -9806,6 +10139,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9821,7 +10156,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9881,6 +10216,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -9889,6 +10225,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -9896,7 +10233,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistryCertificatesRequest}
    */
-  public  static final class ListRegistryCertificatesRequest extends
+  public static final class ListRegistryCertificatesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistryCertificatesRequest)
       ListRegistryCertificatesRequestOrBuilder {
@@ -9907,6 +10244,13 @@ public final class RegistryServiceOuterClass {
     }
     private ListRegistryCertificatesRequest() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistryCertificatesRequest();
     }
 
     @java.lang.Override
@@ -9922,7 +10266,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9940,7 +10283,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9979,7 +10322,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -9998,7 +10343,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -10027,7 +10374,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -10039,7 +10386,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10057,11 +10404,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10241,35 +10587,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10323,6 +10669,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -10342,6 +10689,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -10362,6 +10710,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -10379,6 +10729,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -10392,6 +10743,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10407,7 +10760,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10508,7 +10861,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistryCertificatesResponse}
    */
-  public  static final class ListRegistryCertificatesResponse extends
+  public static final class ListRegistryCertificatesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistryCertificatesResponse)
       ListRegistryCertificatesResponseOrBuilder {
@@ -10519,6 +10872,13 @@ public final class RegistryServiceOuterClass {
     }
     private ListRegistryCertificatesResponse() {
       certificates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistryCertificatesResponse();
     }
 
     @java.lang.Override
@@ -10546,7 +10906,7 @@ public final class RegistryServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -10555,7 +10915,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10569,7 +10929,7 @@ public final class RegistryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           certificates_ = java.util.Collections.unmodifiableList(certificates_);
         }
         this.unknownFields = unknownFields.build();
@@ -10598,6 +10958,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate> getCertificatesList() {
       return certificates_;
     }
@@ -10608,6 +10969,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder> 
         getCertificatesOrBuilderList() {
       return certificates_;
@@ -10619,6 +10981,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public int getCertificatesCount() {
       return certificates_.size();
     }
@@ -10629,6 +10992,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate getCertificates(int index) {
       return certificates_.get(index);
     }
@@ -10639,6 +11003,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder getCertificatesOrBuilder(
         int index) {
       return certificates_.get(index);
@@ -10689,11 +11054,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse) obj;
 
-      boolean result = true;
-      result = result && getCertificatesList()
-          .equals(other.getCertificatesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCertificatesList()
+          .equals(other.getCertificatesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10875,7 +11239,7 @@ public final class RegistryServiceOuterClass {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse(this);
         int from_bitField0_ = bitField0_;
         if (certificatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             certificates_ = java.util.Collections.unmodifiableList(certificates_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -10889,35 +11253,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10990,7 +11354,7 @@ public final class RegistryServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate> certificates_ =
         java.util.Collections.emptyList();
       private void ensureCertificatesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate>(certificates_);
           bitField0_ |= 0x00000001;
          }
@@ -11291,7 +11655,7 @@ public final class RegistryServiceOuterClass {
           certificatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder>(
                   certificates_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           certificates_ = null;
@@ -11301,7 +11665,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11362,6 +11726,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -11371,6 +11736,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -11381,6 +11747,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The certificateData.
      */
     java.lang.String getCertificateData();
     /**
@@ -11389,6 +11756,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The bytes for certificateData.
      */
     com.google.protobuf.ByteString
         getCertificateDataBytes();
@@ -11396,7 +11764,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddRegistryCertificateRequest}
    */
-  public  static final class AddRegistryCertificateRequest extends
+  public static final class AddRegistryCertificateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddRegistryCertificateRequest)
       AddRegistryCertificateRequestOrBuilder {
@@ -11408,6 +11776,13 @@ public final class RegistryServiceOuterClass {
     private AddRegistryCertificateRequest() {
       registryId_ = "";
       certificateData_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddRegistryCertificateRequest();
     }
 
     @java.lang.Override
@@ -11423,7 +11798,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11447,7 +11821,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11487,7 +11861,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -11507,7 +11883,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -11530,7 +11908,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The certificateData.
      */
+    @java.lang.Override
     public java.lang.String getCertificateData() {
       java.lang.Object ref = certificateData_;
       if (ref instanceof java.lang.String) {
@@ -11549,7 +11929,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The bytes for certificateData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateDataBytes() {
       java.lang.Object ref = certificateData_;
@@ -11578,10 +11960,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getCertificateDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, certificateData_);
       }
       unknownFields.writeTo(output);
@@ -11593,10 +11975,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getCertificateDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, certificateData_);
       }
       size += unknownFields.getSerializedSize();
@@ -11614,13 +11996,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getCertificateData()
-          .equals(other.getCertificateData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getCertificateData()
+          .equals(other.getCertificateData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11805,35 +12186,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11892,6 +12273,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -11912,6 +12294,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -11933,6 +12316,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -11951,6 +12336,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -11965,6 +12351,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11985,6 +12373,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return The certificateData.
        */
       public java.lang.String getCertificateData() {
         java.lang.Object ref = certificateData_;
@@ -12004,6 +12393,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return The bytes for certificateData.
        */
       public com.google.protobuf.ByteString
           getCertificateDataBytes() {
@@ -12024,6 +12414,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @param value The certificateData to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateData(
           java.lang.String value) {
@@ -12041,6 +12433,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateData() {
         
@@ -12054,6 +12447,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @param value The bytes for certificateData to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateDataBytes(
           com.google.protobuf.ByteString value) {
@@ -12069,7 +12464,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12129,6 +12524,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -12137,6 +12533,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -12147,6 +12544,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -12155,6 +12553,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -12162,7 +12561,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddRegistryCertificateMetadata}
    */
-  public  static final class AddRegistryCertificateMetadata extends
+  public static final class AddRegistryCertificateMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddRegistryCertificateMetadata)
       AddRegistryCertificateMetadataOrBuilder {
@@ -12174,6 +12573,13 @@ public final class RegistryServiceOuterClass {
     private AddRegistryCertificateMetadata() {
       registryId_ = "";
       fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddRegistryCertificateMetadata();
     }
 
     @java.lang.Override
@@ -12189,7 +12595,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12213,7 +12618,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12252,7 +12657,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -12271,7 +12678,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -12294,7 +12703,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -12313,7 +12724,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -12342,10 +12755,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
       unknownFields.writeTo(output);
@@ -12357,10 +12770,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
@@ -12378,13 +12791,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12569,35 +12981,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12655,6 +13067,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -12674,6 +13087,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -12694,6 +13108,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -12711,6 +13127,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -12724,6 +13141,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12744,6 +13163,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -12763,6 +13183,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -12783,6 +13204,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -12800,6 +13223,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -12813,6 +13237,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -12828,7 +13254,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12889,6 +13315,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -12898,6 +13325,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -12908,6 +13336,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -12916,6 +13345,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -12923,7 +13353,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteRegistryCertificateRequest}
    */
-  public  static final class DeleteRegistryCertificateRequest extends
+  public static final class DeleteRegistryCertificateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteRegistryCertificateRequest)
       DeleteRegistryCertificateRequestOrBuilder {
@@ -12935,6 +13365,13 @@ public final class RegistryServiceOuterClass {
     private DeleteRegistryCertificateRequest() {
       registryId_ = "";
       fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRegistryCertificateRequest();
     }
 
     @java.lang.Override
@@ -12950,7 +13387,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12974,7 +13410,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13014,7 +13450,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -13034,7 +13472,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -13057,7 +13497,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -13076,7 +13518,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -13105,10 +13549,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
       unknownFields.writeTo(output);
@@ -13120,10 +13564,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
@@ -13141,13 +13585,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13332,35 +13775,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13419,6 +13862,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -13439,6 +13883,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -13460,6 +13905,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -13478,6 +13925,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -13492,6 +13940,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13512,6 +13962,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -13531,6 +13982,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -13551,6 +14003,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -13568,6 +14022,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -13581,6 +14036,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -13596,7 +14053,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13656,6 +14113,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -13664,6 +14122,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -13674,6 +14133,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -13682,6 +14142,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -13689,7 +14150,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteRegistryCertificateMetadata}
    */
-  public  static final class DeleteRegistryCertificateMetadata extends
+  public static final class DeleteRegistryCertificateMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteRegistryCertificateMetadata)
       DeleteRegistryCertificateMetadataOrBuilder {
@@ -13701,6 +14162,13 @@ public final class RegistryServiceOuterClass {
     private DeleteRegistryCertificateMetadata() {
       registryId_ = "";
       fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRegistryCertificateMetadata();
     }
 
     @java.lang.Override
@@ -13716,7 +14184,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13740,7 +14207,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13779,7 +14246,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -13798,7 +14267,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -13821,7 +14292,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -13840,7 +14313,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -13869,10 +14344,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
       unknownFields.writeTo(output);
@@ -13884,10 +14359,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
@@ -13905,13 +14380,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14096,35 +14570,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14182,6 +14656,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -14201,6 +14676,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -14221,6 +14697,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -14238,6 +14716,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -14251,6 +14730,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14271,6 +14752,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -14290,6 +14772,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -14310,6 +14793,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -14327,6 +14812,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -14340,6 +14826,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -14355,7 +14843,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14416,6 +14904,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -14425,6 +14914,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -14432,7 +14922,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistryPasswordsRequest}
    */
-  public  static final class ListRegistryPasswordsRequest extends
+  public static final class ListRegistryPasswordsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistryPasswordsRequest)
       ListRegistryPasswordsRequestOrBuilder {
@@ -14443,6 +14933,13 @@ public final class RegistryServiceOuterClass {
     }
     private ListRegistryPasswordsRequest() {
       registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistryPasswordsRequest();
     }
 
     @java.lang.Override
@@ -14458,7 +14955,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14476,7 +14972,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14516,7 +15012,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -14536,7 +15034,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -14565,7 +15065,7 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       unknownFields.writeTo(output);
@@ -14577,7 +15077,7 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       size += unknownFields.getSerializedSize();
@@ -14595,11 +15095,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14779,35 +15278,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14862,6 +15361,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -14882,6 +15382,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -14903,6 +15404,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -14921,6 +15424,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -14935,6 +15439,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14950,7 +15456,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15051,7 +15557,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistryPasswordsResponse}
    */
-  public  static final class ListRegistryPasswordsResponse extends
+  public static final class ListRegistryPasswordsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistryPasswordsResponse)
       ListRegistryPasswordsResponseOrBuilder {
@@ -15062,6 +15568,13 @@ public final class RegistryServiceOuterClass {
     }
     private ListRegistryPasswordsResponse() {
       passwords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistryPasswordsResponse();
     }
 
     @java.lang.Override
@@ -15089,7 +15602,7 @@ public final class RegistryServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 passwords_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -15098,7 +15611,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15112,7 +15625,7 @@ public final class RegistryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           passwords_ = java.util.Collections.unmodifiableList(passwords_);
         }
         this.unknownFields = unknownFields.build();
@@ -15141,6 +15654,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword> getPasswordsList() {
       return passwords_;
     }
@@ -15151,6 +15665,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder> 
         getPasswordsOrBuilderList() {
       return passwords_;
@@ -15162,6 +15677,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
+    @java.lang.Override
     public int getPasswordsCount() {
       return passwords_.size();
     }
@@ -15172,6 +15688,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword getPasswords(int index) {
       return passwords_.get(index);
     }
@@ -15182,6 +15699,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder getPasswordsOrBuilder(
         int index) {
       return passwords_.get(index);
@@ -15232,11 +15750,10 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse) obj;
 
-      boolean result = true;
-      result = result && getPasswordsList()
-          .equals(other.getPasswordsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPasswordsList()
+          .equals(other.getPasswordsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15418,7 +15935,7 @@ public final class RegistryServiceOuterClass {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse(this);
         int from_bitField0_ = bitField0_;
         if (passwordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             passwords_ = java.util.Collections.unmodifiableList(passwords_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -15432,35 +15949,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15533,7 +16050,7 @@ public final class RegistryServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword> passwords_ =
         java.util.Collections.emptyList();
       private void ensurePasswordsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           passwords_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword>(passwords_);
           bitField0_ |= 0x00000001;
          }
@@ -15834,7 +16351,7 @@ public final class RegistryServiceOuterClass {
           passwordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder>(
                   passwords_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           passwords_ = null;
@@ -15844,7 +16361,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15905,6 +16422,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -15914,6 +16432,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -15925,6 +16444,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -15934,6 +16454,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -15941,7 +16462,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddRegistryPasswordRequest}
    */
-  public  static final class AddRegistryPasswordRequest extends
+  public static final class AddRegistryPasswordRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddRegistryPasswordRequest)
       AddRegistryPasswordRequestOrBuilder {
@@ -15953,6 +16474,13 @@ public final class RegistryServiceOuterClass {
     private AddRegistryPasswordRequest() {
       registryId_ = "";
       password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddRegistryPasswordRequest();
     }
 
     @java.lang.Override
@@ -15968,7 +16496,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15992,7 +16519,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16032,7 +16559,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -16052,7 +16581,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -16076,7 +16607,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -16096,7 +16629,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -16125,10 +16660,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
       unknownFields.writeTo(output);
@@ -16140,10 +16675,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
       size += unknownFields.getSerializedSize();
@@ -16161,13 +16696,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16352,35 +16886,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16439,6 +16973,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -16459,6 +16994,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -16480,6 +17016,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -16498,6 +17036,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -16512,6 +17051,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16533,6 +17074,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -16553,6 +17095,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -16574,6 +17117,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -16592,6 +17137,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -16606,6 +17152,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -16621,7 +17169,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16681,6 +17229,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -16689,6 +17238,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -16699,6 +17249,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The passwordId.
      */
     java.lang.String getPasswordId();
     /**
@@ -16707,6 +17258,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The bytes for passwordId.
      */
     com.google.protobuf.ByteString
         getPasswordIdBytes();
@@ -16714,7 +17266,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddRegistryPasswordMetadata}
    */
-  public  static final class AddRegistryPasswordMetadata extends
+  public static final class AddRegistryPasswordMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddRegistryPasswordMetadata)
       AddRegistryPasswordMetadataOrBuilder {
@@ -16726,6 +17278,13 @@ public final class RegistryServiceOuterClass {
     private AddRegistryPasswordMetadata() {
       registryId_ = "";
       passwordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddRegistryPasswordMetadata();
     }
 
     @java.lang.Override
@@ -16741,7 +17300,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16765,7 +17323,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16804,7 +17362,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -16823,7 +17383,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -16846,7 +17408,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The passwordId.
      */
+    @java.lang.Override
     public java.lang.String getPasswordId() {
       java.lang.Object ref = passwordId_;
       if (ref instanceof java.lang.String) {
@@ -16865,7 +17429,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The bytes for passwordId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordIdBytes() {
       java.lang.Object ref = passwordId_;
@@ -16894,10 +17460,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, passwordId_);
       }
       unknownFields.writeTo(output);
@@ -16909,10 +17475,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, passwordId_);
       }
       size += unknownFields.getSerializedSize();
@@ -16930,13 +17496,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getPasswordId()
-          .equals(other.getPasswordId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getPasswordId()
+          .equals(other.getPasswordId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17121,35 +17686,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17207,6 +17772,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -17226,6 +17792,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -17246,6 +17813,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -17263,6 +17832,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -17276,6 +17846,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17296,6 +17868,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @return The passwordId.
        */
       public java.lang.String getPasswordId() {
         java.lang.Object ref = passwordId_;
@@ -17315,6 +17888,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @return The bytes for passwordId.
        */
       public com.google.protobuf.ByteString
           getPasswordIdBytes() {
@@ -17335,6 +17909,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @param value The passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordId(
           java.lang.String value) {
@@ -17352,6 +17928,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPasswordId() {
         
@@ -17365,6 +17942,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @param value The bytes for passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17380,7 +17959,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17441,6 +18020,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -17450,6 +18030,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -17461,6 +18042,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
     java.lang.String getPasswordId();
     /**
@@ -17470,6 +18052,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
     com.google.protobuf.ByteString
         getPasswordIdBytes();
@@ -17477,7 +18060,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteRegistryPasswordRequest}
    */
-  public  static final class DeleteRegistryPasswordRequest extends
+  public static final class DeleteRegistryPasswordRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteRegistryPasswordRequest)
       DeleteRegistryPasswordRequestOrBuilder {
@@ -17489,6 +18072,13 @@ public final class RegistryServiceOuterClass {
     private DeleteRegistryPasswordRequest() {
       registryId_ = "";
       passwordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRegistryPasswordRequest();
     }
 
     @java.lang.Override
@@ -17504,7 +18094,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17528,7 +18117,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17568,7 +18157,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -17588,7 +18179,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -17612,7 +18205,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
+    @java.lang.Override
     public java.lang.String getPasswordId() {
       java.lang.Object ref = passwordId_;
       if (ref instanceof java.lang.String) {
@@ -17632,7 +18227,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordIdBytes() {
       java.lang.Object ref = passwordId_;
@@ -17661,10 +18258,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, passwordId_);
       }
       unknownFields.writeTo(output);
@@ -17676,10 +18273,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, passwordId_);
       }
       size += unknownFields.getSerializedSize();
@@ -17697,13 +18294,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getPasswordId()
-          .equals(other.getPasswordId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getPasswordId()
+          .equals(other.getPasswordId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17888,35 +18484,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17975,6 +18571,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -17995,6 +18592,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -18016,6 +18614,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -18034,6 +18634,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -18048,6 +18649,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18069,6 +18672,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The passwordId.
        */
       public java.lang.String getPasswordId() {
         java.lang.Object ref = passwordId_;
@@ -18089,6 +18693,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for passwordId.
        */
       public com.google.protobuf.ByteString
           getPasswordIdBytes() {
@@ -18110,6 +18715,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordId(
           java.lang.String value) {
@@ -18128,6 +18735,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPasswordId() {
         
@@ -18142,6 +18750,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18157,7 +18767,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18217,6 +18827,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -18225,6 +18836,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -18236,6 +18848,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
     java.lang.String getPasswordId();
     /**
@@ -18245,6 +18858,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
     com.google.protobuf.ByteString
         getPasswordIdBytes();
@@ -18252,7 +18866,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteRegistryPasswordMetadata}
    */
-  public  static final class DeleteRegistryPasswordMetadata extends
+  public static final class DeleteRegistryPasswordMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteRegistryPasswordMetadata)
       DeleteRegistryPasswordMetadataOrBuilder {
@@ -18264,6 +18878,13 @@ public final class RegistryServiceOuterClass {
     private DeleteRegistryPasswordMetadata() {
       registryId_ = "";
       passwordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRegistryPasswordMetadata();
     }
 
     @java.lang.Override
@@ -18279,7 +18900,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18303,7 +18923,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18342,7 +18962,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -18361,7 +18983,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -18385,7 +19009,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
+    @java.lang.Override
     public java.lang.String getPasswordId() {
       java.lang.Object ref = passwordId_;
       if (ref instanceof java.lang.String) {
@@ -18405,7 +19031,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordIdBytes() {
       java.lang.Object ref = passwordId_;
@@ -18434,10 +19062,10 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, passwordId_);
       }
       unknownFields.writeTo(output);
@@ -18449,10 +19077,10 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, passwordId_);
       }
       size += unknownFields.getSerializedSize();
@@ -18470,13 +19098,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordMetadata) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getPasswordId()
-          .equals(other.getPasswordId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getPasswordId()
+          .equals(other.getPasswordId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18661,35 +19288,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18747,6 +19374,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -18766,6 +19394,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -18786,6 +19415,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -18803,6 +19434,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -18816,6 +19448,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18837,6 +19471,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The passwordId.
        */
       public java.lang.String getPasswordId() {
         java.lang.Object ref = passwordId_;
@@ -18857,6 +19492,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for passwordId.
        */
       public com.google.protobuf.ByteString
           getPasswordIdBytes() {
@@ -18878,6 +19514,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordId(
           java.lang.String value) {
@@ -18896,6 +19534,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPasswordId() {
         
@@ -18910,6 +19549,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18925,7 +19566,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18986,6 +19627,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -18995,6 +19637,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -19008,6 +19651,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -19018,6 +19662,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -19027,6 +19672,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -19034,7 +19680,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDeviceTopicAliasesRequest}
    */
-  public  static final class ListDeviceTopicAliasesRequest extends
+  public static final class ListDeviceTopicAliasesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDeviceTopicAliasesRequest)
       ListDeviceTopicAliasesRequestOrBuilder {
@@ -19045,8 +19691,14 @@ public final class RegistryServiceOuterClass {
     }
     private ListDeviceTopicAliasesRequest() {
       registryId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDeviceTopicAliasesRequest();
     }
 
     @java.lang.Override
@@ -19062,7 +19714,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19091,7 +19742,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19131,7 +19782,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -19151,7 +19804,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -19177,7 +19832,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -19191,7 +19848,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -19211,7 +19870,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -19240,13 +19901,13 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -19258,14 +19919,14 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -19283,15 +19944,14 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19482,35 +20142,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19572,6 +20232,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -19592,6 +20253,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -19613,6 +20275,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -19631,6 +20295,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -19645,6 +20310,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -19668,7 +20335,9 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -19681,6 +20350,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -19697,6 +20368,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -19713,6 +20385,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -19733,6 +20406,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -19754,6 +20428,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -19772,6 +20448,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -19786,6 +20463,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -19801,7 +20480,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19908,6 +20587,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -19919,6 +20599,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -19926,7 +20607,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDeviceTopicAliasesResponse}
    */
-  public  static final class ListDeviceTopicAliasesResponse extends
+  public static final class ListDeviceTopicAliasesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDeviceTopicAliasesResponse)
       ListDeviceTopicAliasesResponseOrBuilder {
@@ -19938,6 +20619,13 @@ public final class RegistryServiceOuterClass {
     private ListDeviceTopicAliasesResponse() {
       aliases_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDeviceTopicAliasesResponse();
     }
 
     @java.lang.Override
@@ -19965,7 +20653,7 @@ public final class RegistryServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 aliases_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -19980,7 +20668,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19994,7 +20682,7 @@ public final class RegistryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           aliases_ = java.util.Collections.unmodifiableList(aliases_);
         }
         this.unknownFields = unknownFields.build();
@@ -20014,7 +20702,6 @@ public final class RegistryServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ALIASES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> aliases_;
     /**
@@ -20024,6 +20711,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> getAliasesList() {
       return aliases_;
     }
@@ -20034,6 +20722,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder> 
         getAliasesOrBuilderList() {
       return aliases_;
@@ -20045,6 +20734,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
+    @java.lang.Override
     public int getAliasesCount() {
       return aliases_.size();
     }
@@ -20055,6 +20745,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias getAliases(int index) {
       return aliases_.get(index);
     }
@@ -20065,6 +20756,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder getAliasesOrBuilder(
         int index) {
       return aliases_.get(index);
@@ -20081,7 +20773,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -20103,7 +20797,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -20135,7 +20831,7 @@ public final class RegistryServiceOuterClass {
       for (int i = 0; i < aliases_.size(); i++) {
         output.writeMessage(1, aliases_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -20151,7 +20847,7 @@ public final class RegistryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, aliases_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -20169,13 +20865,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse) obj;
 
-      boolean result = true;
-      result = result && getAliasesList()
-          .equals(other.getAliasesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAliasesList()
+          .equals(other.getAliasesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20360,9 +21055,8 @@ public final class RegistryServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse buildPartial() {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (aliasesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             aliases_ = java.util.Collections.unmodifiableList(aliases_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -20371,42 +21065,41 @@ public final class RegistryServiceOuterClass {
           result.aliases_ = aliasesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20483,7 +21176,7 @@ public final class RegistryServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> aliases_ =
         java.util.Collections.emptyList();
       private void ensureAliasesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           aliases_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias>(aliases_);
           bitField0_ |= 0x00000001;
          }
@@ -20784,7 +21477,7 @@ public final class RegistryServiceOuterClass {
           aliasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder>(
                   aliases_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           aliases_ = null;
@@ -20802,6 +21495,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -20824,6 +21518,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -20847,6 +21542,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -20867,6 +21564,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -20883,6 +21581,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -20898,7 +21598,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20958,6 +21658,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -20966,6 +21667,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -20979,6 +21681,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -20989,6 +21692,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -20998,6 +21702,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -21009,6 +21714,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -21018,6 +21724,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -21025,7 +21732,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistryOperationsRequest}
    */
-  public  static final class ListRegistryOperationsRequest extends
+  public static final class ListRegistryOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistryOperationsRequest)
       ListRegistryOperationsRequestOrBuilder {
@@ -21036,9 +21743,15 @@ public final class RegistryServiceOuterClass {
     }
     private ListRegistryOperationsRequest() {
       registryId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistryOperationsRequest();
     }
 
     @java.lang.Override
@@ -21054,7 +21767,6 @@ public final class RegistryServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21089,7 +21801,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21128,7 +21840,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -21147,7 +21861,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -21173,7 +21889,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -21187,7 +21905,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -21207,7 +21927,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -21231,7 +21953,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -21251,7 +21975,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -21280,16 +22006,16 @@ public final class RegistryServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -21301,17 +22027,17 @@ public final class RegistryServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -21329,17 +22055,16 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21535,35 +22260,35 @@ public final class RegistryServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21628,6 +22353,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -21647,6 +22373,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -21667,6 +22394,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -21684,6 +22413,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -21697,6 +22427,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -21720,7 +22452,9 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -21733,6 +22467,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -21749,6 +22485,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -21765,6 +22502,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -21785,6 +22523,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -21806,6 +22545,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -21824,6 +22565,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -21838,6 +22580,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -21859,6 +22603,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -21879,6 +22624,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -21900,6 +22646,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -21918,6 +22666,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -21932,6 +22681,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -21947,7 +22698,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22054,6 +22805,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -22065,6 +22817,7 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -22072,7 +22825,7 @@ public final class RegistryServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListRegistryOperationsResponse}
    */
-  public  static final class ListRegistryOperationsResponse extends
+  public static final class ListRegistryOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListRegistryOperationsResponse)
       ListRegistryOperationsResponseOrBuilder {
@@ -22084,6 +22837,13 @@ public final class RegistryServiceOuterClass {
     private ListRegistryOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRegistryOperationsResponse();
     }
 
     @java.lang.Override
@@ -22111,7 +22871,7 @@ public final class RegistryServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -22126,7 +22886,7 @@ public final class RegistryServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22140,7 +22900,7 @@ public final class RegistryServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -22160,7 +22920,6 @@ public final class RegistryServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -22170,6 +22929,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -22180,6 +22940,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -22191,6 +22952,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -22201,6 +22963,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -22211,6 +22974,7 @@ public final class RegistryServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -22227,7 +22991,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -22249,7 +23015,9 @@ public final class RegistryServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -22281,7 +23049,7 @@ public final class RegistryServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -22297,7 +23065,7 @@ public final class RegistryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -22315,13 +23083,12 @@ public final class RegistryServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22506,9 +23273,8 @@ public final class RegistryServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse buildPartial() {
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -22517,42 +23283,41 @@ public final class RegistryServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22629,7 +23394,7 @@ public final class RegistryServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -22930,7 +23695,7 @@ public final class RegistryServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -22948,6 +23713,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -22970,6 +23736,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -22993,6 +23760,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -23013,6 +23782,7 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -23029,6 +23799,8 @@ public final class RegistryServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -23044,7 +23816,7 @@ public final class RegistryServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -23407,15 +24179,7 @@ public final class RegistryServiceOuterClass {
       "yandex-cloud/go-genproto/yandex/cloud/io" +
       "t/devices/v1;devicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -23424,7 +24188,7 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iot.devices.v1.RegistryOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iot_devices_v1_GetRegistryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_GetRegistryRequest_fieldAccessorTable = new

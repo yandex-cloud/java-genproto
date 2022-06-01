@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/snapshot_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SnapshotServiceGrpc {
 
   private SnapshotServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class SnapshotServiceGrpc {
     if ((getGetMethod = SnapshotServiceGrpc.getGetMethod) == null) {
       synchronized (SnapshotServiceGrpc.class) {
         if ((getGetMethod = SnapshotServiceGrpc.getGetMethod) == null) {
-          SnapshotServiceGrpc.getGetMethod = getGetMethod = 
+          SnapshotServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest, yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.SnapshotService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot.getDefaultInstance()))
-                  .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest,
@@ -76,22 +63,21 @@ public final class SnapshotServiceGrpc {
     if ((getListMethod = SnapshotServiceGrpc.getListMethod) == null) {
       synchronized (SnapshotServiceGrpc.class) {
         if ((getListMethod = SnapshotServiceGrpc.getListMethod) == null) {
-          SnapshotServiceGrpc.getListMethod = getListMethod = 
+          SnapshotServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest, yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.SnapshotService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest,
@@ -108,22 +94,21 @@ public final class SnapshotServiceGrpc {
     if ((getCreateMethod = SnapshotServiceGrpc.getCreateMethod) == null) {
       synchronized (SnapshotServiceGrpc.class) {
         if ((getCreateMethod = SnapshotServiceGrpc.getCreateMethod) == null) {
-          SnapshotServiceGrpc.getCreateMethod = getCreateMethod = 
+          SnapshotServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.SnapshotService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest,
@@ -140,22 +125,21 @@ public final class SnapshotServiceGrpc {
     if ((getUpdateMethod = SnapshotServiceGrpc.getUpdateMethod) == null) {
       synchronized (SnapshotServiceGrpc.class) {
         if ((getUpdateMethod = SnapshotServiceGrpc.getUpdateMethod) == null) {
-          SnapshotServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          SnapshotServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.SnapshotService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest,
@@ -172,22 +156,21 @@ public final class SnapshotServiceGrpc {
     if ((getDeleteMethod = SnapshotServiceGrpc.getDeleteMethod) == null) {
       synchronized (SnapshotServiceGrpc.class) {
         if ((getDeleteMethod = SnapshotServiceGrpc.getDeleteMethod) == null) {
-          SnapshotServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          SnapshotServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.SnapshotService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest,
@@ -204,29 +187,35 @@ public final class SnapshotServiceGrpc {
     if ((getListOperationsMethod = SnapshotServiceGrpc.getListOperationsMethod) == null) {
       synchronized (SnapshotServiceGrpc.class) {
         if ((getListOperationsMethod = SnapshotServiceGrpc.getListOperationsMethod) == null) {
-          SnapshotServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          SnapshotServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest, yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.SnapshotService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SnapshotServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SnapshotServiceStub newStub(io.grpc.Channel channel) {
-    return new SnapshotServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SnapshotServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SnapshotServiceStub>() {
+        @java.lang.Override
+        public SnapshotServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SnapshotServiceStub(channel, callOptions);
+        }
+      };
+    return SnapshotServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class SnapshotServiceGrpc {
    */
   public static SnapshotServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SnapshotServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SnapshotServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SnapshotServiceBlockingStub>() {
+        @java.lang.Override
+        public SnapshotServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SnapshotServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SnapshotServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class SnapshotServiceGrpc {
    */
   public static SnapshotServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SnapshotServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SnapshotServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SnapshotServiceFutureStub>() {
+        @java.lang.Override
+        public SnapshotServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SnapshotServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SnapshotServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -260,7 +263,7 @@ public final class SnapshotServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class SnapshotServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class SnapshotServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -291,7 +294,7 @@ public final class SnapshotServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +305,7 @@ public final class SnapshotServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -312,49 +315,49 @@ public final class SnapshotServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest,
                 yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest,
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest,
                 yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse>(
@@ -368,19 +371,15 @@ public final class SnapshotServiceGrpc {
    * A set of methods for managing Snapshot resources.
    * </pre>
    */
-  public static final class SnapshotServiceStub extends io.grpc.stub.AbstractStub<SnapshotServiceStub> {
-    private SnapshotServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SnapshotServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SnapshotServiceStub extends io.grpc.stub.AbstractAsyncStub<SnapshotServiceStub> {
+    private SnapshotServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SnapshotServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SnapshotServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SnapshotServiceStub(channel, callOptions);
     }
 
@@ -392,7 +391,7 @@ public final class SnapshotServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -403,7 +402,7 @@ public final class SnapshotServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -414,7 +413,7 @@ public final class SnapshotServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -426,7 +425,7 @@ public final class SnapshotServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -438,7 +437,7 @@ public final class SnapshotServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -449,7 +448,7 @@ public final class SnapshotServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -459,19 +458,15 @@ public final class SnapshotServiceGrpc {
    * A set of methods for managing Snapshot resources.
    * </pre>
    */
-  public static final class SnapshotServiceBlockingStub extends io.grpc.stub.AbstractStub<SnapshotServiceBlockingStub> {
-    private SnapshotServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SnapshotServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SnapshotServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SnapshotServiceBlockingStub> {
+    private SnapshotServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SnapshotServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SnapshotServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SnapshotServiceBlockingStub(channel, callOptions);
     }
 
@@ -482,7 +477,7 @@ public final class SnapshotServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot get(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -492,7 +487,7 @@ public final class SnapshotServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse list(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -502,7 +497,7 @@ public final class SnapshotServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -513,7 +508,7 @@ public final class SnapshotServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -524,7 +519,7 @@ public final class SnapshotServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -534,7 +529,7 @@ public final class SnapshotServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse listOperations(yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -544,19 +539,15 @@ public final class SnapshotServiceGrpc {
    * A set of methods for managing Snapshot resources.
    * </pre>
    */
-  public static final class SnapshotServiceFutureStub extends io.grpc.stub.AbstractStub<SnapshotServiceFutureStub> {
-    private SnapshotServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SnapshotServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SnapshotServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SnapshotServiceFutureStub> {
+    private SnapshotServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SnapshotServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SnapshotServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SnapshotServiceFutureStub(channel, callOptions);
     }
 
@@ -568,7 +559,7 @@ public final class SnapshotServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> get(
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.GetSnapshotRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -579,7 +570,7 @@ public final class SnapshotServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsResponse> list(
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -590,7 +581,7 @@ public final class SnapshotServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.CreateSnapshotRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -602,7 +593,7 @@ public final class SnapshotServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.UpdateSnapshotRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -614,7 +605,7 @@ public final class SnapshotServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.DeleteSnapshotRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -625,7 +616,7 @@ public final class SnapshotServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsResponse> listOperations(
         yandex.cloud.api.compute.v1.SnapshotServiceOuterClass.ListSnapshotOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

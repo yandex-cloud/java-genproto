@@ -24,6 +24,16 @@ public final class Tts {
      * </pre>
      *
      * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * Bytes with audio data.
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
@@ -33,6 +43,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
+     * @return Whether the audioSpec field is set.
      */
     boolean hasAudioSpec();
     /**
@@ -41,6 +52,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
+     * @return The audioSpec.
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getAudioSpec();
     /**
@@ -57,7 +69,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.AudioContent}
    */
-  public  static final class AudioContent extends
+  public static final class AudioContent extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.AudioContent)
       AudioContentOrBuilder {
@@ -67,6 +79,13 @@ public final class Tts {
       super(builder);
     }
     private AudioContent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioContent();
     }
 
     @java.lang.Override
@@ -82,7 +101,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -94,8 +112,8 @@ public final class Tts {
               done = true;
               break;
             case 10: {
-              audioSourceCase_ = 1;
               audioSource_ = input.readBytes();
+              audioSourceCase_ = 1;
               break;
             }
             case 18: {
@@ -112,7 +130,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -146,7 +164,8 @@ public final class Tts {
     private int audioSourceCase_ = 0;
     private java.lang.Object audioSource_;
     public enum AudioSourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONTENT(1),
       AUDIOSOURCE_NOT_SET(0);
       private final int value;
@@ -154,6 +173,8 @@ public final class Tts {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -186,7 +207,21 @@ public final class Tts {
      * </pre>
      *
      * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
      */
+    @java.lang.Override
+    public boolean hasContent() {
+      return audioSourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Bytes with audio data.
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return The content.
+     */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       if (audioSourceCase_ == 1) {
         return (com.google.protobuf.ByteString) audioSource_;
@@ -202,7 +237,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
+     * @return Whether the audioSpec field is set.
      */
+    @java.lang.Override
     public boolean hasAudioSpec() {
       return audioSpec_ != null;
     }
@@ -212,7 +249,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
+     * @return The audioSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getAudioSpec() {
       return audioSpec_ == null ? yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions.getDefaultInstance() : audioSpec_;
     }
@@ -223,6 +262,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptionsOrBuilder getAudioSpecOrBuilder() {
       return getAudioSpec();
     }
@@ -281,25 +321,22 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.AudioContent other = (yandex.cloud.api.ai.tts.v3.Tts.AudioContent) obj;
 
-      boolean result = true;
-      result = result && (hasAudioSpec() == other.hasAudioSpec());
+      if (hasAudioSpec() != other.hasAudioSpec()) return false;
       if (hasAudioSpec()) {
-        result = result && getAudioSpec()
-            .equals(other.getAudioSpec());
+        if (!getAudioSpec()
+            .equals(other.getAudioSpec())) return false;
       }
-      result = result && getAudioSourceCase().equals(
-          other.getAudioSourceCase());
-      if (!result) return false;
+      if (!getAudioSourceCase().equals(other.getAudioSourceCase())) return false;
       switch (audioSourceCase_) {
         case 1:
-          result = result && getContent()
-              .equals(other.getContent());
+          if (!getContent()
+              .equals(other.getContent())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -503,35 +540,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -607,6 +644,18 @@ public final class Tts {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return audioSourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Bytes with audio data.
+       * </pre>
+       *
+       * <code>bytes content = 1;</code>
+       * @return The content.
        */
       public com.google.protobuf.ByteString getContent() {
         if (audioSourceCase_ == 1) {
@@ -620,6 +669,8 @@ public final class Tts {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -636,6 +687,7 @@ public final class Tts {
        * </pre>
        *
        * <code>bytes content = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         if (audioSourceCase_ == 1) {
@@ -646,7 +698,7 @@ public final class Tts {
         return this;
       }
 
-      private yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions audioSpec_ = null;
+      private yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions audioSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions, yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions.Builder, yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptionsOrBuilder> audioSpecBuilder_;
       /**
@@ -655,6 +707,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
+       * @return Whether the audioSpec field is set.
        */
       public boolean hasAudioSpec() {
         return audioSpecBuilder_ != null || audioSpec_ != null;
@@ -665,6 +718,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions audio_spec = 2;</code>
+       * @return The audioSpec.
        */
       public yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getAudioSpec() {
         if (audioSpecBuilder_ == null) {
@@ -801,7 +855,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -861,6 +915,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
+     * @return Whether the rawAudio field is set.
      */
     boolean hasRawAudio();
     /**
@@ -869,6 +924,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
+     * @return The rawAudio.
      */
     yandex.cloud.api.ai.tts.v3.Tts.RawAudio getRawAudio();
     /**
@@ -886,6 +942,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
+     * @return Whether the containerAudio field is set.
      */
     boolean hasContainerAudio();
     /**
@@ -894,6 +951,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
+     * @return The containerAudio.
      */
     yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio getContainerAudio();
     /**
@@ -910,7 +968,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.AudioFormatOptions}
    */
-  public  static final class AudioFormatOptions extends
+  public static final class AudioFormatOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.AudioFormatOptions)
       AudioFormatOptionsOrBuilder {
@@ -920,6 +978,13 @@ public final class Tts {
       super(builder);
     }
     private AudioFormatOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioFormatOptions();
     }
 
     @java.lang.Override
@@ -935,7 +1000,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -975,7 +1039,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1009,7 +1073,8 @@ public final class Tts {
     private int audioFormatCase_ = 0;
     private java.lang.Object audioFormat_;
     public enum AudioFormatCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RAW_AUDIO(1),
       CONTAINER_AUDIO(2),
       AUDIOFORMAT_NOT_SET(0);
@@ -1018,6 +1083,8 @@ public final class Tts {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1051,7 +1118,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
+     * @return Whether the rawAudio field is set.
      */
+    @java.lang.Override
     public boolean hasRawAudio() {
       return audioFormatCase_ == 1;
     }
@@ -1061,7 +1130,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
+     * @return The rawAudio.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.RawAudio getRawAudio() {
       if (audioFormatCase_ == 1) {
          return (yandex.cloud.api.ai.tts.v3.Tts.RawAudio) audioFormat_;
@@ -1075,6 +1146,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.RawAudioOrBuilder getRawAudioOrBuilder() {
       if (audioFormatCase_ == 1) {
          return (yandex.cloud.api.ai.tts.v3.Tts.RawAudio) audioFormat_;
@@ -1089,7 +1161,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
+     * @return Whether the containerAudio field is set.
      */
+    @java.lang.Override
     public boolean hasContainerAudio() {
       return audioFormatCase_ == 2;
     }
@@ -1099,7 +1173,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
+     * @return The containerAudio.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio getContainerAudio() {
       if (audioFormatCase_ == 2) {
          return (yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio) audioFormat_;
@@ -1113,6 +1189,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudioOrBuilder getContainerAudioOrBuilder() {
       if (audioFormatCase_ == 2) {
          return (yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio) audioFormat_;
@@ -1172,24 +1249,21 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions other = (yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions) obj;
 
-      boolean result = true;
-      result = result && getAudioFormatCase().equals(
-          other.getAudioFormatCase());
-      if (!result) return false;
+      if (!getAudioFormatCase().equals(other.getAudioFormatCase())) return false;
       switch (audioFormatCase_) {
         case 1:
-          result = result && getRawAudio()
-              .equals(other.getRawAudio());
+          if (!getRawAudio()
+              .equals(other.getRawAudio())) return false;
           break;
         case 2:
-          result = result && getContainerAudio()
-              .equals(other.getContainerAudio());
+          if (!getContainerAudio()
+              .equals(other.getContainerAudio())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1393,35 +1467,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1500,7 +1574,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
+       * @return Whether the rawAudio field is set.
        */
+      @java.lang.Override
       public boolean hasRawAudio() {
         return audioFormatCase_ == 1;
       }
@@ -1510,7 +1586,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
+       * @return The rawAudio.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.RawAudio getRawAudio() {
         if (rawAudioBuilder_ == null) {
           if (audioFormatCase_ == 1) {
@@ -1628,6 +1706,7 @@ public final class Tts {
        *
        * <code>.speechkit.tts.v3.RawAudio raw_audio = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.RawAudioOrBuilder getRawAudioOrBuilder() {
         if ((audioFormatCase_ == 1) && (rawAudioBuilder_ != null)) {
           return rawAudioBuilder_.getMessageOrBuilder();
@@ -1672,7 +1751,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
+       * @return Whether the containerAudio field is set.
        */
+      @java.lang.Override
       public boolean hasContainerAudio() {
         return audioFormatCase_ == 2;
       }
@@ -1682,7 +1763,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
+       * @return The containerAudio.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio getContainerAudio() {
         if (containerAudioBuilder_ == null) {
           if (audioFormatCase_ == 2) {
@@ -1800,6 +1883,7 @@ public final class Tts {
        *
        * <code>.speechkit.tts.v3.ContainerAudio container_audio = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudioOrBuilder getContainerAudioOrBuilder() {
         if ((audioFormatCase_ == 2) && (containerAudioBuilder_ != null)) {
           return containerAudioBuilder_.getMessageOrBuilder();
@@ -1838,7 +1922,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1898,6 +1982,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The enum numeric value on the wire for audioEncoding.
      */
     int getAudioEncodingValue();
     /**
@@ -1906,6 +1991,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The audioEncoding.
      */
     yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding getAudioEncoding();
 
@@ -1915,13 +2001,14 @@ public final class Tts {
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
+     * @return The sampleRateHertz.
      */
     long getSampleRateHertz();
   }
   /**
    * Protobuf type {@code speechkit.tts.v3.RawAudio}
    */
-  public  static final class RawAudio extends
+  public static final class RawAudio extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.RawAudio)
       RawAudioOrBuilder {
@@ -1932,7 +2019,13 @@ public final class Tts {
     }
     private RawAudio() {
       audioEncoding_ = 0;
-      sampleRateHertz_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RawAudio();
     }
 
     @java.lang.Override
@@ -1948,7 +2041,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1971,7 +2063,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2045,6 +2137,8 @@ public final class Tts {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2052,6 +2146,10 @@ public final class Tts {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static AudioEncoding forNumber(int value) {
         switch (value) {
           case 0: return AUDIO_ENCODING_UNSPECIFIED;
@@ -2074,6 +2172,10 @@ public final class Tts {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2116,8 +2218,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The enum numeric value on the wire for audioEncoding.
      */
-    public int getAudioEncodingValue() {
+    @java.lang.Override public int getAudioEncodingValue() {
       return audioEncoding_;
     }
     /**
@@ -2126,8 +2229,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The audioEncoding.
      */
-    public yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding getAudioEncoding() {
+    @java.lang.Override public yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding getAudioEncoding() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding result = yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding.valueOf(audioEncoding_);
       return result == null ? yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding.UNRECOGNIZED : result;
@@ -2141,7 +2245,9 @@ public final class Tts {
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
+     * @return The sampleRateHertz.
      */
+    @java.lang.Override
     public long getSampleRateHertz() {
       return sampleRateHertz_;
     }
@@ -2198,12 +2304,11 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.RawAudio other = (yandex.cloud.api.ai.tts.v3.Tts.RawAudio) obj;
 
-      boolean result = true;
-      result = result && audioEncoding_ == other.audioEncoding_;
-      result = result && (getSampleRateHertz()
-          == other.getSampleRateHertz());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (audioEncoding_ != other.audioEncoding_) return false;
+      if (getSampleRateHertz()
+          != other.getSampleRateHertz()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2389,35 +2494,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2473,8 +2578,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @return The enum numeric value on the wire for audioEncoding.
        */
-      public int getAudioEncodingValue() {
+      @java.lang.Override public int getAudioEncodingValue() {
         return audioEncoding_;
       }
       /**
@@ -2483,8 +2589,11 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @param value The enum numeric value on the wire for audioEncoding to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioEncodingValue(int value) {
+        
         audioEncoding_ = value;
         onChanged();
         return this;
@@ -2495,7 +2604,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @return The audioEncoding.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding getAudioEncoding() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding result = yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding.valueOf(audioEncoding_);
@@ -2507,6 +2618,8 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @param value The audioEncoding to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioEncoding(yandex.cloud.api.ai.tts.v3.Tts.RawAudio.AudioEncoding value) {
         if (value == null) {
@@ -2523,6 +2636,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioEncoding() {
         
@@ -2538,7 +2652,9 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @return The sampleRateHertz.
        */
+      @java.lang.Override
       public long getSampleRateHertz() {
         return sampleRateHertz_;
       }
@@ -2548,6 +2664,8 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @param value The sampleRateHertz to set.
+       * @return This builder for chaining.
        */
       public Builder setSampleRateHertz(long value) {
         
@@ -2561,6 +2679,7 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSampleRateHertz() {
         
@@ -2571,7 +2690,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2627,17 +2746,19 @@ public final class Tts {
 
     /**
      * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The enum numeric value on the wire for containerAudioType.
      */
     int getContainerAudioTypeValue();
     /**
      * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The containerAudioType.
      */
     yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType getContainerAudioType();
   }
   /**
    * Protobuf type {@code speechkit.tts.v3.ContainerAudio}
    */
-  public  static final class ContainerAudio extends
+  public static final class ContainerAudio extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.ContainerAudio)
       ContainerAudioOrBuilder {
@@ -2648,6 +2769,13 @@ public final class Tts {
     }
     private ContainerAudio() {
       containerAudioType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContainerAudio();
     }
 
     @java.lang.Override
@@ -2663,7 +2791,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2681,7 +2808,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2771,6 +2898,8 @@ public final class Tts {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2778,6 +2907,10 @@ public final class Tts {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ContainerAudioType forNumber(int value) {
         switch (value) {
           case 0: return CONTAINER_AUDIO_TYPE_UNSPECIFIED;
@@ -2802,6 +2935,10 @@ public final class Tts {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2840,14 +2977,16 @@ public final class Tts {
     private int containerAudioType_;
     /**
      * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The enum numeric value on the wire for containerAudioType.
      */
-    public int getContainerAudioTypeValue() {
+    @java.lang.Override public int getContainerAudioTypeValue() {
       return containerAudioType_;
     }
     /**
      * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The containerAudioType.
      */
-    public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType getContainerAudioType() {
+    @java.lang.Override public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType getContainerAudioType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType result = yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType.valueOf(containerAudioType_);
       return result == null ? yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType.UNRECOGNIZED : result;
@@ -2898,10 +3037,9 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio other = (yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio) obj;
 
-      boolean result = true;
-      result = result && containerAudioType_ == other.containerAudioType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (containerAudioType_ != other.containerAudioType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3081,35 +3219,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3158,21 +3296,27 @@ public final class Tts {
       private int containerAudioType_ = 0;
       /**
        * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @return The enum numeric value on the wire for containerAudioType.
        */
-      public int getContainerAudioTypeValue() {
+      @java.lang.Override public int getContainerAudioTypeValue() {
         return containerAudioType_;
       }
       /**
        * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @param value The enum numeric value on the wire for containerAudioType to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerAudioTypeValue(int value) {
+        
         containerAudioType_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @return The containerAudioType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType getContainerAudioType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType result = yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType.valueOf(containerAudioType_);
@@ -3180,6 +3324,8 @@ public final class Tts {
       }
       /**
        * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @param value The containerAudioType to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerAudioType(yandex.cloud.api.ai.tts.v3.Tts.ContainerAudio.ContainerAudioType value) {
         if (value == null) {
@@ -3192,6 +3338,7 @@ public final class Tts {
       }
       /**
        * <code>.speechkit.tts.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContainerAudioType() {
         
@@ -3202,7 +3349,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3262,6 +3409,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The variableName.
      */
     java.lang.String getVariableName();
     /**
@@ -3270,6 +3418,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The bytes for variableName.
      */
     com.google.protobuf.ByteString
         getVariableNameBytes();
@@ -3280,6 +3429,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_value = 2;</code>
+     * @return The variableValue.
      */
     java.lang.String getVariableValue();
     /**
@@ -3288,6 +3438,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_value = 2;</code>
+     * @return The bytes for variableValue.
      */
     com.google.protobuf.ByteString
         getVariableValueBytes();
@@ -3295,7 +3446,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.TextVariable}
    */
-  public  static final class TextVariable extends
+  public static final class TextVariable extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.TextVariable)
       TextVariableOrBuilder {
@@ -3307,6 +3458,13 @@ public final class Tts {
     private TextVariable() {
       variableName_ = "";
       variableValue_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextVariable();
     }
 
     @java.lang.Override
@@ -3322,7 +3480,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3346,7 +3503,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3385,7 +3542,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The variableName.
      */
+    @java.lang.Override
     public java.lang.String getVariableName() {
       java.lang.Object ref = variableName_;
       if (ref instanceof java.lang.String) {
@@ -3404,7 +3563,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The bytes for variableName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVariableNameBytes() {
       java.lang.Object ref = variableName_;
@@ -3427,7 +3588,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_value = 2;</code>
+     * @return The variableValue.
      */
+    @java.lang.Override
     public java.lang.String getVariableValue() {
       java.lang.Object ref = variableValue_;
       if (ref instanceof java.lang.String) {
@@ -3446,7 +3609,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_value = 2;</code>
+     * @return The bytes for variableValue.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVariableValueBytes() {
       java.lang.Object ref = variableValue_;
@@ -3475,10 +3640,10 @@ public final class Tts {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVariableNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variableName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, variableName_);
       }
-      if (!getVariableValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variableValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, variableValue_);
       }
       unknownFields.writeTo(output);
@@ -3490,10 +3655,10 @@ public final class Tts {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVariableNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variableName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, variableName_);
       }
-      if (!getVariableValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variableValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, variableValue_);
       }
       size += unknownFields.getSerializedSize();
@@ -3511,13 +3676,12 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.TextVariable other = (yandex.cloud.api.ai.tts.v3.Tts.TextVariable) obj;
 
-      boolean result = true;
-      result = result && getVariableName()
-          .equals(other.getVariableName());
-      result = result && getVariableValue()
-          .equals(other.getVariableValue());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVariableName()
+          .equals(other.getVariableName())) return false;
+      if (!getVariableValue()
+          .equals(other.getVariableValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3702,35 +3866,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3788,6 +3952,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @return The variableName.
        */
       public java.lang.String getVariableName() {
         java.lang.Object ref = variableName_;
@@ -3807,6 +3972,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @return The bytes for variableName.
        */
       public com.google.protobuf.ByteString
           getVariableNameBytes() {
@@ -3827,6 +3993,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @param value The variableName to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableName(
           java.lang.String value) {
@@ -3844,6 +4012,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVariableName() {
         
@@ -3857,6 +4026,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @param value The bytes for variableName to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3877,6 +4048,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_value = 2;</code>
+       * @return The variableValue.
        */
       public java.lang.String getVariableValue() {
         java.lang.Object ref = variableValue_;
@@ -3896,6 +4068,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_value = 2;</code>
+       * @return The bytes for variableValue.
        */
       public com.google.protobuf.ByteString
           getVariableValueBytes() {
@@ -3916,6 +4089,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_value = 2;</code>
+       * @param value The variableValue to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableValue(
           java.lang.String value) {
@@ -3933,6 +4108,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_value = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVariableValue() {
         
@@ -3946,6 +4122,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_value = 2;</code>
+       * @param value The bytes for variableValue to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableValueBytes(
           com.google.protobuf.ByteString value) {
@@ -3961,7 +4139,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4021,6 +4199,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The variableName.
      */
     java.lang.String getVariableName();
     /**
@@ -4029,6 +4208,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The bytes for variableName.
      */
     com.google.protobuf.ByteString
         getVariableNameBytes();
@@ -4039,6 +4219,7 @@ public final class Tts {
      * </pre>
      *
      * <code>int64 variable_start_ms = 2;</code>
+     * @return The variableStartMs.
      */
     long getVariableStartMs();
 
@@ -4048,13 +4229,14 @@ public final class Tts {
      * </pre>
      *
      * <code>int64 variable_length_ms = 3;</code>
+     * @return The variableLengthMs.
      */
     long getVariableLengthMs();
   }
   /**
    * Protobuf type {@code speechkit.tts.v3.AudioVariable}
    */
-  public  static final class AudioVariable extends
+  public static final class AudioVariable extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.AudioVariable)
       AudioVariableOrBuilder {
@@ -4065,8 +4247,13 @@ public final class Tts {
     }
     private AudioVariable() {
       variableName_ = "";
-      variableStartMs_ = 0L;
-      variableLengthMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioVariable();
     }
 
     @java.lang.Override
@@ -4082,7 +4269,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4110,7 +4296,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4149,7 +4335,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The variableName.
      */
+    @java.lang.Override
     public java.lang.String getVariableName() {
       java.lang.Object ref = variableName_;
       if (ref instanceof java.lang.String) {
@@ -4168,7 +4356,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string variable_name = 1;</code>
+     * @return The bytes for variableName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVariableNameBytes() {
       java.lang.Object ref = variableName_;
@@ -4191,7 +4381,9 @@ public final class Tts {
      * </pre>
      *
      * <code>int64 variable_start_ms = 2;</code>
+     * @return The variableStartMs.
      */
+    @java.lang.Override
     public long getVariableStartMs() {
       return variableStartMs_;
     }
@@ -4204,7 +4396,9 @@ public final class Tts {
      * </pre>
      *
      * <code>int64 variable_length_ms = 3;</code>
+     * @return The variableLengthMs.
      */
+    @java.lang.Override
     public long getVariableLengthMs() {
       return variableLengthMs_;
     }
@@ -4223,7 +4417,7 @@ public final class Tts {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVariableNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variableName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, variableName_);
       }
       if (variableStartMs_ != 0L) {
@@ -4241,7 +4435,7 @@ public final class Tts {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVariableNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variableName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, variableName_);
       }
       if (variableStartMs_ != 0L) {
@@ -4267,15 +4461,14 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.AudioVariable other = (yandex.cloud.api.ai.tts.v3.Tts.AudioVariable) obj;
 
-      boolean result = true;
-      result = result && getVariableName()
-          .equals(other.getVariableName());
-      result = result && (getVariableStartMs()
-          == other.getVariableStartMs());
-      result = result && (getVariableLengthMs()
-          == other.getVariableLengthMs());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVariableName()
+          .equals(other.getVariableName())) return false;
+      if (getVariableStartMs()
+          != other.getVariableStartMs()) return false;
+      if (getVariableLengthMs()
+          != other.getVariableLengthMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4467,35 +4660,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4555,6 +4748,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @return The variableName.
        */
       public java.lang.String getVariableName() {
         java.lang.Object ref = variableName_;
@@ -4574,6 +4768,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @return The bytes for variableName.
        */
       public com.google.protobuf.ByteString
           getVariableNameBytes() {
@@ -4594,6 +4789,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @param value The variableName to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableName(
           java.lang.String value) {
@@ -4611,6 +4808,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVariableName() {
         
@@ -4624,6 +4822,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string variable_name = 1;</code>
+       * @param value The bytes for variableName to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4644,7 +4844,9 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 variable_start_ms = 2;</code>
+       * @return The variableStartMs.
        */
+      @java.lang.Override
       public long getVariableStartMs() {
         return variableStartMs_;
       }
@@ -4654,6 +4856,8 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 variable_start_ms = 2;</code>
+       * @param value The variableStartMs to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableStartMs(long value) {
         
@@ -4667,6 +4871,7 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 variable_start_ms = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVariableStartMs() {
         
@@ -4682,7 +4887,9 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 variable_length_ms = 3;</code>
+       * @return The variableLengthMs.
        */
+      @java.lang.Override
       public long getVariableLengthMs() {
         return variableLengthMs_;
       }
@@ -4692,6 +4899,8 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 variable_length_ms = 3;</code>
+       * @param value The variableLengthMs to set.
+       * @return This builder for chaining.
        */
       public Builder setVariableLengthMs(long value) {
         
@@ -4705,6 +4914,7 @@ public final class Tts {
        * </pre>
        *
        * <code>int64 variable_length_ms = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVariableLengthMs() {
         
@@ -4715,7 +4925,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4775,6 +4985,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
+     * @return Whether the audioChunk field is set.
      */
     boolean hasAudioChunk();
     /**
@@ -4783,6 +4994,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
+     * @return The audioChunk.
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioChunk getAudioChunk();
     /**
@@ -4797,7 +5009,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.UtteranceSynthesisResponse}
    */
-  public  static final class UtteranceSynthesisResponse extends
+  public static final class UtteranceSynthesisResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.UtteranceSynthesisResponse)
       UtteranceSynthesisResponseOrBuilder {
@@ -4807,6 +5019,13 @@ public final class Tts {
       super(builder);
     }
     private UtteranceSynthesisResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UtteranceSynthesisResponse();
     }
 
     @java.lang.Override
@@ -4822,7 +5041,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4847,7 +5065,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4886,7 +5104,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
+     * @return Whether the audioChunk field is set.
      */
+    @java.lang.Override
     public boolean hasAudioChunk() {
       return audioChunk_ != null;
     }
@@ -4896,7 +5116,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
+     * @return The audioChunk.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioChunk getAudioChunk() {
       return audioChunk_ == null ? yandex.cloud.api.ai.tts.v3.Tts.AudioChunk.getDefaultInstance() : audioChunk_;
     }
@@ -4907,6 +5129,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioChunkOrBuilder getAudioChunkOrBuilder() {
       return getAudioChunk();
     }
@@ -4956,14 +5179,13 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse other = (yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse) obj;
 
-      boolean result = true;
-      result = result && (hasAudioChunk() == other.hasAudioChunk());
+      if (hasAudioChunk() != other.hasAudioChunk()) return false;
       if (hasAudioChunk()) {
-        result = result && getAudioChunk()
-            .equals(other.getAudioChunk());
+        if (!getAudioChunk()
+            .equals(other.getAudioChunk())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5153,35 +5375,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5227,7 +5449,7 @@ public final class Tts {
         return this;
       }
 
-      private yandex.cloud.api.ai.tts.v3.Tts.AudioChunk audioChunk_ = null;
+      private yandex.cloud.api.ai.tts.v3.Tts.AudioChunk audioChunk_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.tts.v3.Tts.AudioChunk, yandex.cloud.api.ai.tts.v3.Tts.AudioChunk.Builder, yandex.cloud.api.ai.tts.v3.Tts.AudioChunkOrBuilder> audioChunkBuilder_;
       /**
@@ -5236,6 +5458,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
+       * @return Whether the audioChunk field is set.
        */
       public boolean hasAudioChunk() {
         return audioChunkBuilder_ != null || audioChunk_ != null;
@@ -5246,6 +5469,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
+       * @return The audioChunk.
        */
       public yandex.cloud.api.ai.tts.v3.Tts.AudioChunk getAudioChunk() {
         if (audioChunkBuilder_ == null) {
@@ -5382,7 +5606,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5442,6 +5666,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
+     * @return Whether the audio field is set.
      */
     boolean hasAudio();
     /**
@@ -5450,6 +5675,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
+     * @return The audio.
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioContent getAudio();
     /**
@@ -5467,6 +5693,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
+     * @return Whether the textTemplate field is set.
      */
     boolean hasTextTemplate();
     /**
@@ -5475,6 +5702,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
+     * @return The textTemplate.
      */
     yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate();
     /**
@@ -5533,7 +5761,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.AudioTemplate}
    */
-  public  static final class AudioTemplate extends
+  public static final class AudioTemplate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.AudioTemplate)
       AudioTemplateOrBuilder {
@@ -5544,6 +5772,13 @@ public final class Tts {
     }
     private AudioTemplate() {
       variables_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioTemplate();
     }
 
     @java.lang.Override
@@ -5597,16 +5832,16 @@ public final class Tts {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 variables_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.AudioVariable>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               variables_.add(
                   input.readMessage(yandex.cloud.api.ai.tts.v3.Tts.AudioVariable.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5620,7 +5855,7 @@ public final class Tts {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           variables_ = java.util.Collections.unmodifiableList(variables_);
         }
         this.unknownFields = unknownFields.build();
@@ -5640,7 +5875,6 @@ public final class Tts {
               yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate.class, yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUDIO_FIELD_NUMBER = 1;
     private yandex.cloud.api.ai.tts.v3.Tts.AudioContent audio_;
     /**
@@ -5649,7 +5883,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
+     * @return Whether the audio field is set.
      */
+    @java.lang.Override
     public boolean hasAudio() {
       return audio_ != null;
     }
@@ -5659,7 +5895,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
+     * @return The audio.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioContent getAudio() {
       return audio_ == null ? yandex.cloud.api.ai.tts.v3.Tts.AudioContent.getDefaultInstance() : audio_;
     }
@@ -5670,6 +5908,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioContentOrBuilder getAudioOrBuilder() {
       return getAudio();
     }
@@ -5682,7 +5921,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
+     * @return Whether the textTemplate field is set.
      */
+    @java.lang.Override
     public boolean hasTextTemplate() {
       return textTemplate_ != null;
     }
@@ -5692,7 +5933,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
+     * @return The textTemplate.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate() {
       return textTemplate_ == null ? yandex.cloud.api.ai.tts.v3.Tts.TextTemplate.getDefaultInstance() : textTemplate_;
     }
@@ -5703,6 +5946,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.TextTemplateOrBuilder getTextTemplateOrBuilder() {
       return getTextTemplate();
     }
@@ -5716,6 +5960,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.AudioVariable variables = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.tts.v3.Tts.AudioVariable> getVariablesList() {
       return variables_;
     }
@@ -5726,6 +5971,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.AudioVariable variables = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.tts.v3.Tts.AudioVariableOrBuilder> 
         getVariablesOrBuilderList() {
       return variables_;
@@ -5737,6 +5983,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.AudioVariable variables = 3;</code>
      */
+    @java.lang.Override
     public int getVariablesCount() {
       return variables_.size();
     }
@@ -5747,6 +5994,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.AudioVariable variables = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioVariable getVariables(int index) {
       return variables_.get(index);
     }
@@ -5757,6 +6005,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.AudioVariable variables = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioVariableOrBuilder getVariablesOrBuilder(
         int index) {
       return variables_.get(index);
@@ -5821,21 +6070,20 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate other = (yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate) obj;
 
-      boolean result = true;
-      result = result && (hasAudio() == other.hasAudio());
+      if (hasAudio() != other.hasAudio()) return false;
       if (hasAudio()) {
-        result = result && getAudio()
-            .equals(other.getAudio());
+        if (!getAudio()
+            .equals(other.getAudio())) return false;
       }
-      result = result && (hasTextTemplate() == other.hasTextTemplate());
+      if (hasTextTemplate() != other.hasTextTemplate()) return false;
       if (hasTextTemplate()) {
-        result = result && getTextTemplate()
-            .equals(other.getTextTemplate());
+        if (!getTextTemplate()
+            .equals(other.getTextTemplate())) return false;
       }
-      result = result && getVariablesList()
-          .equals(other.getVariablesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVariablesList()
+          .equals(other.getVariablesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6005,7 +6253,7 @@ public final class Tts {
         }
         if (variablesBuilder_ == null) {
           variables_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           variablesBuilder_.clear();
         }
@@ -6036,7 +6284,6 @@ public final class Tts {
       public yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate buildPartial() {
         yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate result = new yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (audioBuilder_ == null) {
           result.audio_ = audio_;
         } else {
@@ -6048,50 +6295,49 @@ public final class Tts {
           result.textTemplate_ = textTemplateBuilder_.build();
         }
         if (variablesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             variables_ = java.util.Collections.unmodifiableList(variables_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.variables_ = variables_;
         } else {
           result.variables_ = variablesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6115,7 +6361,7 @@ public final class Tts {
           if (!other.variables_.isEmpty()) {
             if (variables_.isEmpty()) {
               variables_ = other.variables_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureVariablesIsMutable();
               variables_.addAll(other.variables_);
@@ -6128,7 +6374,7 @@ public final class Tts {
               variablesBuilder_.dispose();
               variablesBuilder_ = null;
               variables_ = other.variables_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               variablesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getVariablesFieldBuilder() : null;
@@ -6167,7 +6413,7 @@ public final class Tts {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.ai.tts.v3.Tts.AudioContent audio_ = null;
+      private yandex.cloud.api.ai.tts.v3.Tts.AudioContent audio_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.tts.v3.Tts.AudioContent, yandex.cloud.api.ai.tts.v3.Tts.AudioContent.Builder, yandex.cloud.api.ai.tts.v3.Tts.AudioContentOrBuilder> audioBuilder_;
       /**
@@ -6176,6 +6422,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
+       * @return Whether the audio field is set.
        */
       public boolean hasAudio() {
         return audioBuilder_ != null || audio_ != null;
@@ -6186,6 +6433,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioContent audio = 1;</code>
+       * @return The audio.
        */
       public yandex.cloud.api.ai.tts.v3.Tts.AudioContent getAudio() {
         if (audioBuilder_ == null) {
@@ -6320,7 +6568,7 @@ public final class Tts {
         return audioBuilder_;
       }
 
-      private yandex.cloud.api.ai.tts.v3.Tts.TextTemplate textTemplate_ = null;
+      private yandex.cloud.api.ai.tts.v3.Tts.TextTemplate textTemplate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.tts.v3.Tts.TextTemplate, yandex.cloud.api.ai.tts.v3.Tts.TextTemplate.Builder, yandex.cloud.api.ai.tts.v3.Tts.TextTemplateOrBuilder> textTemplateBuilder_;
       /**
@@ -6329,6 +6577,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
+       * @return Whether the textTemplate field is set.
        */
       public boolean hasTextTemplate() {
         return textTemplateBuilder_ != null || textTemplate_ != null;
@@ -6339,6 +6588,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 2;</code>
+       * @return The textTemplate.
        */
       public yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate() {
         if (textTemplateBuilder_ == null) {
@@ -6476,9 +6726,9 @@ public final class Tts {
       private java.util.List<yandex.cloud.api.ai.tts.v3.Tts.AudioVariable> variables_ =
         java.util.Collections.emptyList();
       private void ensureVariablesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           variables_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.AudioVariable>(variables_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -6672,7 +6922,7 @@ public final class Tts {
       public Builder clearVariables() {
         if (variablesBuilder_ == null) {
           variables_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           variablesBuilder_.clear();
@@ -6777,7 +7027,7 @@ public final class Tts {
           variablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.tts.v3.Tts.AudioVariable, yandex.cloud.api.ai.tts.v3.Tts.AudioVariable.Builder, yandex.cloud.api.ai.tts.v3.Tts.AudioVariableOrBuilder>(
                   variables_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           variables_ = null;
@@ -6787,7 +7037,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6847,13 +7097,14 @@ public final class Tts {
      * </pre>
      *
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
     com.google.protobuf.ByteString getData();
   }
   /**
    * Protobuf type {@code speechkit.tts.v3.AudioChunk}
    */
-  public  static final class AudioChunk extends
+  public static final class AudioChunk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.AudioChunk)
       AudioChunkOrBuilder {
@@ -6864,6 +7115,13 @@ public final class Tts {
     }
     private AudioChunk() {
       data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioChunk();
     }
 
     @java.lang.Override
@@ -6879,7 +7137,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6896,7 +7153,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6935,7 +7192,9 @@ public final class Tts {
      * </pre>
      *
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -6985,11 +7244,10 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.AudioChunk other = (yandex.cloud.api.ai.tts.v3.Tts.AudioChunk) obj;
 
-      boolean result = true;
-      result = result && getData()
-          .equals(other.getData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7169,35 +7427,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7250,7 +7508,9 @@ public final class Tts {
        * </pre>
        *
        * <code>bytes data = 1;</code>
+       * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -7260,6 +7520,8 @@ public final class Tts {
        * </pre>
        *
        * <code>bytes data = 1;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -7276,6 +7538,7 @@ public final class Tts {
        * </pre>
        *
        * <code>bytes data = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearData() {
         
@@ -7286,7 +7549,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7347,6 +7610,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string text_template = 1;</code>
+     * @return The textTemplate.
      */
     java.lang.String getTextTemplate();
     /**
@@ -7356,6 +7620,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string text_template = 1;</code>
+     * @return The bytes for textTemplate.
      */
     com.google.protobuf.ByteString
         getTextTemplateBytes();
@@ -7412,7 +7677,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.TextTemplate}
    */
-  public  static final class TextTemplate extends
+  public static final class TextTemplate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.TextTemplate)
       TextTemplateOrBuilder {
@@ -7424,6 +7689,13 @@ public final class Tts {
     private TextTemplate() {
       textTemplate_ = "";
       variables_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextTemplate();
     }
 
     @java.lang.Override
@@ -7457,16 +7729,16 @@ public final class Tts {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 variables_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.TextVariable>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               variables_.add(
                   input.readMessage(yandex.cloud.api.ai.tts.v3.Tts.TextVariable.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7480,7 +7752,7 @@ public final class Tts {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           variables_ = java.util.Collections.unmodifiableList(variables_);
         }
         this.unknownFields = unknownFields.build();
@@ -7500,7 +7772,6 @@ public final class Tts {
               yandex.cloud.api.ai.tts.v3.Tts.TextTemplate.class, yandex.cloud.api.ai.tts.v3.Tts.TextTemplate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TEXT_TEMPLATE_FIELD_NUMBER = 1;
     private volatile java.lang.Object textTemplate_;
     /**
@@ -7510,7 +7781,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string text_template = 1;</code>
+     * @return The textTemplate.
      */
+    @java.lang.Override
     public java.lang.String getTextTemplate() {
       java.lang.Object ref = textTemplate_;
       if (ref instanceof java.lang.String) {
@@ -7530,7 +7803,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string text_template = 1;</code>
+     * @return The bytes for textTemplate.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextTemplateBytes() {
       java.lang.Object ref = textTemplate_;
@@ -7555,6 +7830,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.TextVariable variables = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.tts.v3.Tts.TextVariable> getVariablesList() {
       return variables_;
     }
@@ -7566,6 +7842,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.TextVariable variables = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.tts.v3.Tts.TextVariableOrBuilder> 
         getVariablesOrBuilderList() {
       return variables_;
@@ -7578,6 +7855,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.TextVariable variables = 2;</code>
      */
+    @java.lang.Override
     public int getVariablesCount() {
       return variables_.size();
     }
@@ -7589,6 +7867,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.TextVariable variables = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.TextVariable getVariables(int index) {
       return variables_.get(index);
     }
@@ -7600,6 +7879,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.TextVariable variables = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.TextVariableOrBuilder getVariablesOrBuilder(
         int index) {
       return variables_.get(index);
@@ -7619,7 +7899,7 @@ public final class Tts {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextTemplateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textTemplate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, textTemplate_);
       }
       for (int i = 0; i < variables_.size(); i++) {
@@ -7634,7 +7914,7 @@ public final class Tts {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextTemplateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textTemplate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, textTemplate_);
       }
       for (int i = 0; i < variables_.size(); i++) {
@@ -7656,13 +7936,12 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.TextTemplate other = (yandex.cloud.api.ai.tts.v3.Tts.TextTemplate) obj;
 
-      boolean result = true;
-      result = result && getTextTemplate()
-          .equals(other.getTextTemplate());
-      result = result && getVariablesList()
-          .equals(other.getVariablesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTextTemplate()
+          .equals(other.getTextTemplate())) return false;
+      if (!getVariablesList()
+          .equals(other.getVariablesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7816,7 +8095,7 @@ public final class Tts {
 
         if (variablesBuilder_ == null) {
           variables_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           variablesBuilder_.clear();
         }
@@ -7847,53 +8126,51 @@ public final class Tts {
       public yandex.cloud.api.ai.tts.v3.Tts.TextTemplate buildPartial() {
         yandex.cloud.api.ai.tts.v3.Tts.TextTemplate result = new yandex.cloud.api.ai.tts.v3.Tts.TextTemplate(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.textTemplate_ = textTemplate_;
         if (variablesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             variables_ = java.util.Collections.unmodifiableList(variables_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.variables_ = variables_;
         } else {
           result.variables_ = variablesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7915,7 +8192,7 @@ public final class Tts {
           if (!other.variables_.isEmpty()) {
             if (variables_.isEmpty()) {
               variables_ = other.variables_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureVariablesIsMutable();
               variables_.addAll(other.variables_);
@@ -7928,7 +8205,7 @@ public final class Tts {
               variablesBuilder_.dispose();
               variablesBuilder_ = null;
               variables_ = other.variables_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               variablesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getVariablesFieldBuilder() : null;
@@ -7975,6 +8252,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string text_template = 1;</code>
+       * @return The textTemplate.
        */
       public java.lang.String getTextTemplate() {
         java.lang.Object ref = textTemplate_;
@@ -7995,6 +8273,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string text_template = 1;</code>
+       * @return The bytes for textTemplate.
        */
       public com.google.protobuf.ByteString
           getTextTemplateBytes() {
@@ -8016,6 +8295,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string text_template = 1;</code>
+       * @param value The textTemplate to set.
+       * @return This builder for chaining.
        */
       public Builder setTextTemplate(
           java.lang.String value) {
@@ -8034,6 +8315,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string text_template = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTextTemplate() {
         
@@ -8048,6 +8330,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string text_template = 1;</code>
+       * @param value The bytes for textTemplate to set.
+       * @return This builder for chaining.
        */
       public Builder setTextTemplateBytes(
           com.google.protobuf.ByteString value) {
@@ -8064,9 +8348,9 @@ public final class Tts {
       private java.util.List<yandex.cloud.api.ai.tts.v3.Tts.TextVariable> variables_ =
         java.util.Collections.emptyList();
       private void ensureVariablesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           variables_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.TextVariable>(variables_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -8271,7 +8555,7 @@ public final class Tts {
       public Builder clearVariables() {
         if (variablesBuilder_ == null) {
           variables_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           variablesBuilder_.clear();
@@ -8383,7 +8667,7 @@ public final class Tts {
           variablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.tts.v3.Tts.TextVariable, yandex.cloud.api.ai.tts.v3.Tts.TextVariable.Builder, yandex.cloud.api.ai.tts.v3.Tts.TextVariableOrBuilder>(
                   variables_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           variables_ = null;
@@ -8393,7 +8677,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8453,6 +8737,16 @@ public final class Tts {
      * </pre>
      *
      * <code>string voice = 1;</code>
+     * @return Whether the voice field is set.
+     */
+    boolean hasVoice();
+    /**
+     * <pre>
+     * Name of speaker to use.
+     * </pre>
+     *
+     * <code>string voice = 1;</code>
+     * @return The voice.
      */
     java.lang.String getVoice();
     /**
@@ -8461,6 +8755,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string voice = 1;</code>
+     * @return The bytes for voice.
      */
     com.google.protobuf.ByteString
         getVoiceBytes();
@@ -8471,6 +8766,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
+     * @return Whether the audioTemplate field is set.
      */
     boolean hasAudioTemplate();
     /**
@@ -8479,6 +8775,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
+     * @return The audioTemplate.
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate getAudioTemplate();
     /**
@@ -8496,6 +8793,16 @@ public final class Tts {
      * </pre>
      *
      * <code>double speed = 3;</code>
+     * @return Whether the speed field is set.
+     */
+    boolean hasSpeed();
+    /**
+     * <pre>
+     * hint to change speed
+     * </pre>
+     *
+     * <code>double speed = 3;</code>
+     * @return The speed.
      */
     double getSpeed();
 
@@ -8505,15 +8812,32 @@ public final class Tts {
      * </pre>
      *
      * <code>double volume = 4;</code>
+     * @return Whether the volume field is set.
+     */
+    boolean hasVolume();
+    /**
+     * <pre>
+     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * </pre>
+     *
+     * <code>double volume = 4;</code>
+     * @return The volume.
      */
     double getVolume();
 
     /**
      * <code>string role = 5;</code>
+     * @return Whether the role field is set.
+     */
+    boolean hasRole();
+    /**
+     * <code>string role = 5;</code>
+     * @return The role.
      */
     java.lang.String getRole();
     /**
      * <code>string role = 5;</code>
+     * @return The bytes for role.
      */
     com.google.protobuf.ByteString
         getRoleBytes();
@@ -8523,7 +8847,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.Hints}
    */
-  public  static final class Hints extends
+  public static final class Hints extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.Hints)
       HintsOrBuilder {
@@ -8533,6 +8857,13 @@ public final class Tts {
       super(builder);
     }
     private Hints() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Hints();
     }
 
     @java.lang.Override
@@ -8548,7 +8879,6 @@ public final class Tts {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8580,13 +8910,13 @@ public final class Tts {
               break;
             }
             case 25: {
-              hintCase_ = 3;
               hint_ = input.readDouble();
+              hintCase_ = 3;
               break;
             }
             case 33: {
-              hintCase_ = 4;
               hint_ = input.readDouble();
+              hintCase_ = 4;
               break;
             }
             case 42: {
@@ -8596,7 +8926,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8630,7 +8960,8 @@ public final class Tts {
     private int hintCase_ = 0;
     private java.lang.Object hint_;
     public enum HintCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       VOICE(1),
       AUDIO_TEMPLATE(2),
       SPEED(3),
@@ -8642,6 +8973,8 @@ public final class Tts {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8678,6 +9011,18 @@ public final class Tts {
      * </pre>
      *
      * <code>string voice = 1;</code>
+     * @return Whether the voice field is set.
+     */
+    public boolean hasVoice() {
+      return hintCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Name of speaker to use.
+     * </pre>
+     *
+     * <code>string voice = 1;</code>
+     * @return The voice.
      */
     public java.lang.String getVoice() {
       java.lang.Object ref = "";
@@ -8702,6 +9047,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string voice = 1;</code>
+     * @return The bytes for voice.
      */
     public com.google.protobuf.ByteString
         getVoiceBytes() {
@@ -8729,7 +9075,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
+     * @return Whether the audioTemplate field is set.
      */
+    @java.lang.Override
     public boolean hasAudioTemplate() {
       return hintCase_ == 2;
     }
@@ -8739,7 +9087,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
+     * @return The audioTemplate.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate getAudioTemplate() {
       if (hintCase_ == 2) {
          return (yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate) hint_;
@@ -8753,6 +9103,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioTemplateOrBuilder getAudioTemplateOrBuilder() {
       if (hintCase_ == 2) {
          return (yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate) hint_;
@@ -8767,7 +9118,21 @@ public final class Tts {
      * </pre>
      *
      * <code>double speed = 3;</code>
+     * @return Whether the speed field is set.
      */
+    @java.lang.Override
+    public boolean hasSpeed() {
+      return hintCase_ == 3;
+    }
+    /**
+     * <pre>
+     * hint to change speed
+     * </pre>
+     *
+     * <code>double speed = 3;</code>
+     * @return The speed.
+     */
+    @java.lang.Override
     public double getSpeed() {
       if (hintCase_ == 3) {
         return (java.lang.Double) hint_;
@@ -8782,7 +9147,21 @@ public final class Tts {
      * </pre>
      *
      * <code>double volume = 4;</code>
+     * @return Whether the volume field is set.
      */
+    @java.lang.Override
+    public boolean hasVolume() {
+      return hintCase_ == 4;
+    }
+    /**
+     * <pre>
+     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * </pre>
+     *
+     * <code>double volume = 4;</code>
+     * @return The volume.
+     */
+    @java.lang.Override
     public double getVolume() {
       if (hintCase_ == 4) {
         return (java.lang.Double) hint_;
@@ -8793,6 +9172,14 @@ public final class Tts {
     public static final int ROLE_FIELD_NUMBER = 5;
     /**
      * <code>string role = 5;</code>
+     * @return Whether the role field is set.
+     */
+    public boolean hasRole() {
+      return hintCase_ == 5;
+    }
+    /**
+     * <code>string role = 5;</code>
+     * @return The role.
      */
     public java.lang.String getRole() {
       java.lang.Object ref = "";
@@ -8813,6 +9200,7 @@ public final class Tts {
     }
     /**
      * <code>string role = 5;</code>
+     * @return The bytes for role.
      */
     public com.google.protobuf.ByteString
         getRoleBytes() {
@@ -8908,40 +9296,35 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.Hints other = (yandex.cloud.api.ai.tts.v3.Tts.Hints) obj;
 
-      boolean result = true;
-      result = result && getHintCase().equals(
-          other.getHintCase());
-      if (!result) return false;
+      if (!getHintCase().equals(other.getHintCase())) return false;
       switch (hintCase_) {
         case 1:
-          result = result && getVoice()
-              .equals(other.getVoice());
+          if (!getVoice()
+              .equals(other.getVoice())) return false;
           break;
         case 2:
-          result = result && getAudioTemplate()
-              .equals(other.getAudioTemplate());
+          if (!getAudioTemplate()
+              .equals(other.getAudioTemplate())) return false;
           break;
         case 3:
-          result = result && (
-              java.lang.Double.doubleToLongBits(getSpeed())
-              == java.lang.Double.doubleToLongBits(
-                  other.getSpeed()));
+          if (java.lang.Double.doubleToLongBits(getSpeed())
+              != java.lang.Double.doubleToLongBits(
+                  other.getSpeed())) return false;
           break;
         case 4:
-          result = result && (
-              java.lang.Double.doubleToLongBits(getVolume())
-              == java.lang.Double.doubleToLongBits(
-                  other.getVolume()));
+          if (java.lang.Double.doubleToLongBits(getVolume())
+              != java.lang.Double.doubleToLongBits(
+                  other.getVolume())) return false;
           break;
         case 5:
-          result = result && getRole()
-              .equals(other.getRole());
+          if (!getRole()
+              .equals(other.getRole())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9164,35 +9547,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9285,7 +9668,21 @@ public final class Tts {
        * </pre>
        *
        * <code>string voice = 1;</code>
+       * @return Whether the voice field is set.
        */
+      @java.lang.Override
+      public boolean hasVoice() {
+        return hintCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Name of speaker to use.
+       * </pre>
+       *
+       * <code>string voice = 1;</code>
+       * @return The voice.
+       */
+      @java.lang.Override
       public java.lang.String getVoice() {
         java.lang.Object ref = "";
         if (hintCase_ == 1) {
@@ -9309,7 +9706,9 @@ public final class Tts {
        * </pre>
        *
        * <code>string voice = 1;</code>
+       * @return The bytes for voice.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVoiceBytes() {
         java.lang.Object ref = "";
@@ -9334,6 +9733,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string voice = 1;</code>
+       * @param value The voice to set.
+       * @return This builder for chaining.
        */
       public Builder setVoice(
           java.lang.String value) {
@@ -9351,6 +9752,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string voice = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVoice() {
         if (hintCase_ == 1) {
@@ -9366,6 +9768,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string voice = 1;</code>
+       * @param value The bytes for voice to set.
+       * @return This builder for chaining.
        */
       public Builder setVoiceBytes(
           com.google.protobuf.ByteString value) {
@@ -9387,7 +9791,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
+       * @return Whether the audioTemplate field is set.
        */
+      @java.lang.Override
       public boolean hasAudioTemplate() {
         return hintCase_ == 2;
       }
@@ -9397,7 +9803,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
+       * @return The audioTemplate.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate getAudioTemplate() {
         if (audioTemplateBuilder_ == null) {
           if (hintCase_ == 2) {
@@ -9515,6 +9923,7 @@ public final class Tts {
        *
        * <code>.speechkit.tts.v3.AudioTemplate audio_template = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.AudioTemplateOrBuilder getAudioTemplateOrBuilder() {
         if ((hintCase_ == 2) && (audioTemplateBuilder_ != null)) {
           return audioTemplateBuilder_.getMessageOrBuilder();
@@ -9557,6 +9966,18 @@ public final class Tts {
        * </pre>
        *
        * <code>double speed = 3;</code>
+       * @return Whether the speed field is set.
+       */
+      public boolean hasSpeed() {
+        return hintCase_ == 3;
+      }
+      /**
+       * <pre>
+       * hint to change speed
+       * </pre>
+       *
+       * <code>double speed = 3;</code>
+       * @return The speed.
        */
       public double getSpeed() {
         if (hintCase_ == 3) {
@@ -9570,6 +9991,8 @@ public final class Tts {
        * </pre>
        *
        * <code>double speed = 3;</code>
+       * @param value The speed to set.
+       * @return This builder for chaining.
        */
       public Builder setSpeed(double value) {
         hintCase_ = 3;
@@ -9583,6 +10006,7 @@ public final class Tts {
        * </pre>
        *
        * <code>double speed = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSpeed() {
         if (hintCase_ == 3) {
@@ -9599,6 +10023,18 @@ public final class Tts {
        * </pre>
        *
        * <code>double volume = 4;</code>
+       * @return Whether the volume field is set.
+       */
+      public boolean hasVolume() {
+        return hintCase_ == 4;
+      }
+      /**
+       * <pre>
+       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * </pre>
+       *
+       * <code>double volume = 4;</code>
+       * @return The volume.
        */
       public double getVolume() {
         if (hintCase_ == 4) {
@@ -9612,6 +10048,8 @@ public final class Tts {
        * </pre>
        *
        * <code>double volume = 4;</code>
+       * @param value The volume to set.
+       * @return This builder for chaining.
        */
       public Builder setVolume(double value) {
         hintCase_ = 4;
@@ -9625,6 +10063,7 @@ public final class Tts {
        * </pre>
        *
        * <code>double volume = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVolume() {
         if (hintCase_ == 4) {
@@ -9637,7 +10076,17 @@ public final class Tts {
 
       /**
        * <code>string role = 5;</code>
+       * @return Whether the role field is set.
        */
+      @java.lang.Override
+      public boolean hasRole() {
+        return hintCase_ == 5;
+      }
+      /**
+       * <code>string role = 5;</code>
+       * @return The role.
+       */
+      @java.lang.Override
       public java.lang.String getRole() {
         java.lang.Object ref = "";
         if (hintCase_ == 5) {
@@ -9657,7 +10106,9 @@ public final class Tts {
       }
       /**
        * <code>string role = 5;</code>
+       * @return The bytes for role.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRoleBytes() {
         java.lang.Object ref = "";
@@ -9678,6 +10129,8 @@ public final class Tts {
       }
       /**
        * <code>string role = 5;</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
        */
       public Builder setRole(
           java.lang.String value) {
@@ -9691,6 +10144,7 @@ public final class Tts {
       }
       /**
        * <code>string role = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRole() {
         if (hintCase_ == 5) {
@@ -9702,6 +10156,8 @@ public final class Tts {
       }
       /**
        * <code>string role = 5;</code>
+       * @param value The bytes for role to set.
+       * @return This builder for chaining.
        */
       public Builder setRoleBytes(
           com.google.protobuf.ByteString value) {
@@ -9717,7 +10173,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9778,6 +10234,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The model.
      */
     java.lang.String getModel();
     /**
@@ -9787,6 +10244,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
@@ -9797,6 +10255,16 @@ public final class Tts {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    boolean hasText();
+    /**
+     * <pre>
+     * Raw text (e.g. "Hello, Alice").
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -9805,6 +10273,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -9815,6 +10284,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
+     * @return Whether the textTemplate field is set.
      */
     boolean hasTextTemplate();
     /**
@@ -9823,6 +10293,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
+     * @return The textTemplate.
      */
     yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate();
     /**
@@ -9884,6 +10355,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
+     * @return Whether the outputAudioSpec field is set.
      */
     boolean hasOutputAudioSpec();
     /**
@@ -9892,6 +10364,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
+     * @return The outputAudioSpec.
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getOutputAudioSpec();
     /**
@@ -9909,6 +10382,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     * @return The enum numeric value on the wire for loudnessNormalizationType.
      */
     int getLoudnessNormalizationTypeValue();
     /**
@@ -9917,6 +10391,7 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     * @return The loudnessNormalizationType.
      */
     yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType();
 
@@ -9926,6 +10401,7 @@ public final class Tts {
      * </pre>
      *
      * <code>bool unsafe_mode = 7;</code>
+     * @return The unsafeMode.
      */
     boolean getUnsafeMode();
 
@@ -9934,7 +10410,7 @@ public final class Tts {
   /**
    * Protobuf type {@code speechkit.tts.v3.UtteranceSynthesisRequest}
    */
-  public  static final class UtteranceSynthesisRequest extends
+  public static final class UtteranceSynthesisRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.tts.v3.UtteranceSynthesisRequest)
       UtteranceSynthesisRequestOrBuilder {
@@ -9947,7 +10423,13 @@ public final class Tts {
       model_ = "";
       hints_ = java.util.Collections.emptyList();
       loudnessNormalizationType_ = 0;
-      unsafeMode_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UtteranceSynthesisRequest();
     }
 
     @java.lang.Override
@@ -10001,9 +10483,9 @@ public final class Tts {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 hints_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.Hints>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               hints_.add(
                   input.readMessage(yandex.cloud.api.ai.tts.v3.Tts.Hints.parser(), extensionRegistry));
@@ -10034,7 +10516,7 @@ public final class Tts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10048,7 +10530,7 @@ public final class Tts {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           hints_ = java.util.Collections.unmodifiableList(hints_);
         }
         this.unknownFields = unknownFields.build();
@@ -10115,6 +10597,8 @@ public final class Tts {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10122,6 +10606,10 @@ public final class Tts {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LoudnessNormalizationType forNumber(int value) {
         switch (value) {
           case 0: return LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED;
@@ -10145,6 +10633,10 @@ public final class Tts {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -10179,11 +10671,11 @@ public final class Tts {
       // @@protoc_insertion_point(enum_scope:speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType)
     }
 
-    private int bitField0_;
     private int utteranceCase_ = 0;
     private java.lang.Object utterance_;
     public enum UtteranceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT(2),
       TEXT_TEMPLATE(3),
       UTTERANCE_NOT_SET(0);
@@ -10192,6 +10684,8 @@ public final class Tts {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10227,7 +10721,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The model.
      */
+    @java.lang.Override
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
       if (ref instanceof java.lang.String) {
@@ -10247,7 +10743,9 @@ public final class Tts {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The bytes for model.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
       java.lang.Object ref = model_;
@@ -10269,6 +10767,18 @@ public final class Tts {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    public boolean hasText() {
+      return utteranceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Raw text (e.g. "Hello, Alice").
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
      */
     public java.lang.String getText() {
       java.lang.Object ref = "";
@@ -10293,6 +10803,7 @@ public final class Tts {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
         getTextBytes() {
@@ -10320,7 +10831,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
+     * @return Whether the textTemplate field is set.
      */
+    @java.lang.Override
     public boolean hasTextTemplate() {
       return utteranceCase_ == 3;
     }
@@ -10330,7 +10843,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
+     * @return The textTemplate.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate() {
       if (utteranceCase_ == 3) {
          return (yandex.cloud.api.ai.tts.v3.Tts.TextTemplate) utterance_;
@@ -10344,6 +10859,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.TextTemplateOrBuilder getTextTemplateOrBuilder() {
       if (utteranceCase_ == 3) {
          return (yandex.cloud.api.ai.tts.v3.Tts.TextTemplate) utterance_;
@@ -10360,6 +10876,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.Hints hints = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.tts.v3.Tts.Hints> getHintsList() {
       return hints_;
     }
@@ -10370,6 +10887,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.Hints hints = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.tts.v3.Tts.HintsOrBuilder> 
         getHintsOrBuilderList() {
       return hints_;
@@ -10381,6 +10899,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.Hints hints = 4;</code>
      */
+    @java.lang.Override
     public int getHintsCount() {
       return hints_.size();
     }
@@ -10391,6 +10910,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.Hints hints = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.Hints getHints(int index) {
       return hints_.get(index);
     }
@@ -10401,6 +10921,7 @@ public final class Tts {
      *
      * <code>repeated .speechkit.tts.v3.Hints hints = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.HintsOrBuilder getHintsOrBuilder(
         int index) {
       return hints_.get(index);
@@ -10414,7 +10935,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
+     * @return Whether the outputAudioSpec field is set.
      */
+    @java.lang.Override
     public boolean hasOutputAudioSpec() {
       return outputAudioSpec_ != null;
     }
@@ -10424,7 +10947,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
+     * @return The outputAudioSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getOutputAudioSpec() {
       return outputAudioSpec_ == null ? yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions.getDefaultInstance() : outputAudioSpec_;
     }
@@ -10435,6 +10960,7 @@ public final class Tts {
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptionsOrBuilder getOutputAudioSpecOrBuilder() {
       return getOutputAudioSpec();
     }
@@ -10447,8 +10973,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     * @return The enum numeric value on the wire for loudnessNormalizationType.
      */
-    public int getLoudnessNormalizationTypeValue() {
+    @java.lang.Override public int getLoudnessNormalizationTypeValue() {
       return loudnessNormalizationType_;
     }
     /**
@@ -10457,8 +10984,9 @@ public final class Tts {
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     * @return The loudnessNormalizationType.
      */
-    public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType() {
+    @java.lang.Override public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType result = yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.valueOf(loudnessNormalizationType_);
       return result == null ? yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.UNRECOGNIZED : result;
@@ -10472,7 +11000,9 @@ public final class Tts {
      * </pre>
      *
      * <code>bool unsafe_mode = 7;</code>
+     * @return The unsafeMode.
      */
+    @java.lang.Override
     public boolean getUnsafeMode() {
       return unsafeMode_;
     }
@@ -10491,7 +11021,7 @@ public final class Tts {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, model_);
       }
       if (utteranceCase_ == 2) {
@@ -10521,7 +11051,7 @@ public final class Tts {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, model_);
       }
       if (utteranceCase_ == 2) {
@@ -10562,36 +11092,33 @@ public final class Tts {
       }
       yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest other = (yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest) obj;
 
-      boolean result = true;
-      result = result && getModel()
-          .equals(other.getModel());
-      result = result && getHintsList()
-          .equals(other.getHintsList());
-      result = result && (hasOutputAudioSpec() == other.hasOutputAudioSpec());
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (!getHintsList()
+          .equals(other.getHintsList())) return false;
+      if (hasOutputAudioSpec() != other.hasOutputAudioSpec()) return false;
       if (hasOutputAudioSpec()) {
-        result = result && getOutputAudioSpec()
-            .equals(other.getOutputAudioSpec());
+        if (!getOutputAudioSpec()
+            .equals(other.getOutputAudioSpec())) return false;
       }
-      result = result && loudnessNormalizationType_ == other.loudnessNormalizationType_;
-      result = result && (getUnsafeMode()
-          == other.getUnsafeMode());
-      result = result && getUtteranceCase().equals(
-          other.getUtteranceCase());
-      if (!result) return false;
+      if (loudnessNormalizationType_ != other.loudnessNormalizationType_) return false;
+      if (getUnsafeMode()
+          != other.getUnsafeMode()) return false;
+      if (!getUtteranceCase().equals(other.getUtteranceCase())) return false;
       switch (utteranceCase_) {
         case 2:
-          result = result && getText()
-              .equals(other.getText());
+          if (!getText()
+              .equals(other.getText())) return false;
           break;
         case 3:
-          result = result && getTextTemplate()
-              .equals(other.getTextTemplate());
+          if (!getTextTemplate()
+              .equals(other.getTextTemplate())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10766,7 +11293,7 @@ public final class Tts {
 
         if (hintsBuilder_ == null) {
           hints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           hintsBuilder_.clear();
         }
@@ -10809,7 +11336,6 @@ public final class Tts {
       public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest buildPartial() {
         yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest result = new yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.model_ = model_;
         if (utteranceCase_ == 2) {
           result.utterance_ = utterance_;
@@ -10822,9 +11348,9 @@ public final class Tts {
           }
         }
         if (hintsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             hints_ = java.util.Collections.unmodifiableList(hints_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.hints_ = hints_;
         } else {
@@ -10837,7 +11363,6 @@ public final class Tts {
         }
         result.loudnessNormalizationType_ = loudnessNormalizationType_;
         result.unsafeMode_ = unsafeMode_;
-        result.bitField0_ = to_bitField0_;
         result.utteranceCase_ = utteranceCase_;
         onBuilt();
         return result;
@@ -10845,35 +11370,35 @@ public final class Tts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10895,7 +11420,7 @@ public final class Tts {
           if (!other.hints_.isEmpty()) {
             if (hints_.isEmpty()) {
               hints_ = other.hints_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHintsIsMutable();
               hints_.addAll(other.hints_);
@@ -10908,7 +11433,7 @@ public final class Tts {
               hintsBuilder_.dispose();
               hintsBuilder_ = null;
               hints_ = other.hints_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
               hintsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHintsFieldBuilder() : null;
@@ -10994,6 +11519,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @return The model.
        */
       public java.lang.String getModel() {
         java.lang.Object ref = model_;
@@ -11014,6 +11540,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
           getModelBytes() {
@@ -11035,6 +11562,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
        */
       public Builder setModel(
           java.lang.String value) {
@@ -11053,6 +11582,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModel() {
         
@@ -11067,6 +11597,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
@@ -11086,7 +11618,21 @@ public final class Tts {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return Whether the text field is set.
        */
+      @java.lang.Override
+      public boolean hasText() {
+        return utteranceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Raw text (e.g. "Hello, Alice").
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The text.
+       */
+      @java.lang.Override
       public java.lang.String getText() {
         java.lang.Object ref = "";
         if (utteranceCase_ == 2) {
@@ -11110,7 +11656,9 @@ public final class Tts {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The bytes for text.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTextBytes() {
         java.lang.Object ref = "";
@@ -11135,6 +11683,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -11152,6 +11702,7 @@ public final class Tts {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         if (utteranceCase_ == 2) {
@@ -11167,6 +11718,8 @@ public final class Tts {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -11188,7 +11741,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
+       * @return Whether the textTemplate field is set.
        */
+      @java.lang.Override
       public boolean hasTextTemplate() {
         return utteranceCase_ == 3;
       }
@@ -11198,7 +11753,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
+       * @return The textTemplate.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate() {
         if (textTemplateBuilder_ == null) {
           if (utteranceCase_ == 3) {
@@ -11316,6 +11873,7 @@ public final class Tts {
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.TextTemplateOrBuilder getTextTemplateOrBuilder() {
         if ((utteranceCase_ == 3) && (textTemplateBuilder_ != null)) {
           return textTemplateBuilder_.getMessageOrBuilder();
@@ -11355,9 +11913,9 @@ public final class Tts {
       private java.util.List<yandex.cloud.api.ai.tts.v3.Tts.Hints> hints_ =
         java.util.Collections.emptyList();
       private void ensureHintsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           hints_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.Hints>(hints_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -11551,7 +12109,7 @@ public final class Tts {
       public Builder clearHints() {
         if (hintsBuilder_ == null) {
           hints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           hintsBuilder_.clear();
@@ -11656,7 +12214,7 @@ public final class Tts {
           hintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.tts.v3.Tts.Hints, yandex.cloud.api.ai.tts.v3.Tts.Hints.Builder, yandex.cloud.api.ai.tts.v3.Tts.HintsOrBuilder>(
                   hints_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           hints_ = null;
@@ -11664,7 +12222,7 @@ public final class Tts {
         return hintsBuilder_;
       }
 
-      private yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions outputAudioSpec_ = null;
+      private yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions outputAudioSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions, yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions.Builder, yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptionsOrBuilder> outputAudioSpecBuilder_;
       /**
@@ -11673,6 +12231,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
+       * @return Whether the outputAudioSpec field is set.
        */
       public boolean hasOutputAudioSpec() {
         return outputAudioSpecBuilder_ != null || outputAudioSpec_ != null;
@@ -11683,6 +12242,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
+       * @return The outputAudioSpec.
        */
       public yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getOutputAudioSpec() {
         if (outputAudioSpecBuilder_ == null) {
@@ -11824,8 +12384,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       * @return The enum numeric value on the wire for loudnessNormalizationType.
        */
-      public int getLoudnessNormalizationTypeValue() {
+      @java.lang.Override public int getLoudnessNormalizationTypeValue() {
         return loudnessNormalizationType_;
       }
       /**
@@ -11834,8 +12395,11 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       * @param value The enum numeric value on the wire for loudnessNormalizationType to set.
+       * @return This builder for chaining.
        */
       public Builder setLoudnessNormalizationTypeValue(int value) {
+        
         loudnessNormalizationType_ = value;
         onChanged();
         return this;
@@ -11846,7 +12410,9 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       * @return The loudnessNormalizationType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType result = yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.valueOf(loudnessNormalizationType_);
@@ -11858,6 +12424,8 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       * @param value The loudnessNormalizationType to set.
+       * @return This builder for chaining.
        */
       public Builder setLoudnessNormalizationType(yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType value) {
         if (value == null) {
@@ -11874,6 +12442,7 @@ public final class Tts {
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoudnessNormalizationType() {
         
@@ -11889,7 +12458,9 @@ public final class Tts {
        * </pre>
        *
        * <code>bool unsafe_mode = 7;</code>
+       * @return The unsafeMode.
        */
+      @java.lang.Override
       public boolean getUnsafeMode() {
         return unsafeMode_;
       }
@@ -11899,6 +12470,8 @@ public final class Tts {
        * </pre>
        *
        * <code>bool unsafe_mode = 7;</code>
+       * @param value The unsafeMode to set.
+       * @return This builder for chaining.
        */
       public Builder setUnsafeMode(boolean value) {
         
@@ -11912,6 +12485,7 @@ public final class Tts {
        * </pre>
        *
        * <code>bool unsafe_mode = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUnsafeMode() {
         
@@ -11922,7 +12496,7 @@ public final class Tts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12090,18 +12664,10 @@ public final class Tts {
       "v3Z>github.com/yandex-cloud/go-genproto/" +
       "yandex/cloud/ai/tts/v3;ttsb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_speechkit_tts_v3_AudioContent_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_speechkit_tts_v3_AudioContent_fieldAccessorTable = new

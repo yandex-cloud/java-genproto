@@ -24,6 +24,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -32,6 +33,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -39,7 +41,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.GetLifecyclePolicyRequest}
    */
-  public  static final class GetLifecyclePolicyRequest extends
+  public static final class GetLifecyclePolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetLifecyclePolicyRequest)
       GetLifecyclePolicyRequestOrBuilder {
@@ -50,6 +52,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private GetLifecyclePolicyRequest() {
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLifecyclePolicyRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,7 +91,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -122,7 +130,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -141,7 +151,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -170,7 +182,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -182,7 +194,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -200,11 +212,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -384,35 +395,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -466,6 +477,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -485,6 +497,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -505,6 +518,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -522,6 +537,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -535,6 +551,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -550,7 +568,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -610,6 +628,16 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the registryId field is set.
+     */
+    boolean hasRegistryId();
+    /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -618,6 +646,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -628,6 +657,16 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the repositoryId field is set.
+     */
+    boolean hasRepositoryId();
+    /**
+     * <pre>
+     * Repository of the lifecycle policy.
+     * </pre>
+     *
+     * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -636,6 +675,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -649,6 +689,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -659,6 +700,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -668,6 +710,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -682,6 +725,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -694,6 +738,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -705,6 +750,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
@@ -714,6 +760,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
@@ -723,7 +770,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListLifecyclePoliciesRequest}
    */
-  public  static final class ListLifecyclePoliciesRequest extends
+  public static final class ListLifecyclePoliciesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListLifecyclePoliciesRequest)
       ListLifecyclePoliciesRequestOrBuilder {
@@ -733,10 +780,16 @@ public final class LifecyclePolicyServiceOuterClass {
       super(builder);
     }
     private ListLifecyclePoliciesRequest() {
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
       orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLifecyclePoliciesRequest();
     }
 
     @java.lang.Override
@@ -752,7 +805,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -799,7 +851,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -833,7 +885,8 @@ public final class LifecyclePolicyServiceOuterClass {
     private int idCase_ = 0;
     private java.lang.Object id_;
     public enum IdCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       REGISTRY_ID(1),
       REPOSITORY_ID(6),
       ID_NOT_SET(0);
@@ -842,6 +895,8 @@ public final class LifecyclePolicyServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -875,6 +930,18 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the registryId field is set.
+     */
+    public boolean hasRegistryId() {
+      return idCase_ == 1;
+    }
+    /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     public java.lang.String getRegistryId() {
       java.lang.Object ref = "";
@@ -899,6 +966,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
@@ -926,6 +994,18 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the repositoryId field is set.
+     */
+    public boolean hasRepositoryId() {
+      return idCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Repository of the lifecycle policy.
+     * </pre>
+     *
+     * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = "";
@@ -950,6 +1030,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
@@ -981,7 +1062,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -995,7 +1078,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1015,7 +1100,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1042,7 +1129,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -1065,7 +1154,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -1089,7 +1180,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
+    @java.lang.Override
     public java.lang.String getOrderBy() {
       java.lang.Object ref = orderBy_;
       if (ref instanceof java.lang.String) {
@@ -1109,7 +1202,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrderByBytes() {
       java.lang.Object ref = orderBy_;
@@ -1144,13 +1239,13 @@ public final class LifecyclePolicyServiceOuterClass {
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
       }
       if (idCase_ == 6) {
@@ -1172,13 +1267,13 @@ public final class LifecyclePolicyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       if (idCase_ == 6) {
@@ -1199,32 +1294,29 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest) obj;
 
-      boolean result = true;
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getOrderBy()
-          .equals(other.getOrderBy());
-      result = result && getIdCase().equals(
-          other.getIdCase());
-      if (!result) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
-          result = result && getRegistryId()
-              .equals(other.getRegistryId());
+          if (!getRegistryId()
+              .equals(other.getRegistryId())) return false;
           break;
         case 6:
-          result = result && getRepositoryId()
-              .equals(other.getRepositoryId());
+          if (!getRepositoryId()
+              .equals(other.getRepositoryId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1441,35 +1533,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1565,7 +1657,21 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the registryId field is set.
        */
+      @java.lang.Override
+      public boolean hasRegistryId() {
+        return idCase_ == 1;
+      }
+      /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
+       */
+      @java.lang.Override
       public java.lang.String getRegistryId() {
         java.lang.Object ref = "";
         if (idCase_ == 1) {
@@ -1589,7 +1695,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
         java.lang.Object ref = "";
@@ -1614,6 +1722,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -1631,6 +1741,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         if (idCase_ == 1) {
@@ -1646,6 +1757,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1665,7 +1778,21 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the repositoryId field is set.
        */
+      @java.lang.Override
+      public boolean hasRepositoryId() {
+        return idCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Repository of the lifecycle policy.
+       * </pre>
+       *
+       * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The repositoryId.
+       */
+      @java.lang.Override
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = "";
         if (idCase_ == 6) {
@@ -1689,7 +1816,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for repositoryId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
         java.lang.Object ref = "";
@@ -1714,6 +1843,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -1731,6 +1862,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         if (idCase_ == 6) {
@@ -1746,6 +1878,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1769,7 +1903,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1782,6 +1918,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1798,6 +1936,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1814,6 +1953,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1834,6 +1974,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1855,6 +1996,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1873,6 +2016,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1887,6 +2031,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1911,6 +2057,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1934,6 +2081,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1958,6 +2106,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1979,6 +2129,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1996,6 +2147,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -2017,6 +2170,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
         java.lang.Object ref = orderBy_;
@@ -2037,6 +2191,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
           getOrderByBytes() {
@@ -2058,6 +2213,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderBy(
           java.lang.String value) {
@@ -2076,6 +2233,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
@@ -2090,6 +2248,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
@@ -2105,7 +2265,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2212,6 +2372,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -2223,6 +2384,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -2230,7 +2392,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListLifecyclePoliciesResponse}
    */
-  public  static final class ListLifecyclePoliciesResponse extends
+  public static final class ListLifecyclePoliciesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListLifecyclePoliciesResponse)
       ListLifecyclePoliciesResponseOrBuilder {
@@ -2242,6 +2404,13 @@ public final class LifecyclePolicyServiceOuterClass {
     private ListLifecyclePoliciesResponse() {
       lifecyclePolicies_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLifecyclePoliciesResponse();
     }
 
     @java.lang.Override
@@ -2269,7 +2438,7 @@ public final class LifecyclePolicyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 lifecyclePolicies_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2284,7 +2453,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2298,7 +2467,7 @@ public final class LifecyclePolicyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           lifecyclePolicies_ = java.util.Collections.unmodifiableList(lifecyclePolicies_);
         }
         this.unknownFields = unknownFields.build();
@@ -2318,7 +2487,6 @@ public final class LifecyclePolicyServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LIFECYCLE_POLICIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> lifecyclePolicies_;
     /**
@@ -2328,6 +2496,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> getLifecyclePoliciesList() {
       return lifecyclePolicies_;
     }
@@ -2338,6 +2507,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder> 
         getLifecyclePoliciesOrBuilderList() {
       return lifecyclePolicies_;
@@ -2349,6 +2519,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
+    @java.lang.Override
     public int getLifecyclePoliciesCount() {
       return lifecyclePolicies_.size();
     }
@@ -2359,6 +2530,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getLifecyclePolicies(int index) {
       return lifecyclePolicies_.get(index);
     }
@@ -2369,6 +2541,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder getLifecyclePoliciesOrBuilder(
         int index) {
       return lifecyclePolicies_.get(index);
@@ -2385,7 +2558,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2407,7 +2582,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2439,7 +2616,7 @@ public final class LifecyclePolicyServiceOuterClass {
       for (int i = 0; i < lifecyclePolicies_.size(); i++) {
         output.writeMessage(1, lifecyclePolicies_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2455,7 +2632,7 @@ public final class LifecyclePolicyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, lifecyclePolicies_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2473,13 +2650,12 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePoliciesList()
-          .equals(other.getLifecyclePoliciesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePoliciesList()
+          .equals(other.getLifecyclePoliciesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2664,9 +2840,8 @@ public final class LifecyclePolicyServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse buildPartial() {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (lifecyclePoliciesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             lifecyclePolicies_ = java.util.Collections.unmodifiableList(lifecyclePolicies_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2675,42 +2850,41 @@ public final class LifecyclePolicyServiceOuterClass {
           result.lifecyclePolicies_ = lifecyclePoliciesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2787,7 +2961,7 @@ public final class LifecyclePolicyServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> lifecyclePolicies_ =
         java.util.Collections.emptyList();
       private void ensureLifecyclePoliciesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           lifecyclePolicies_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy>(lifecyclePolicies_);
           bitField0_ |= 0x00000001;
          }
@@ -3088,7 +3262,7 @@ public final class LifecyclePolicyServiceOuterClass {
           lifecyclePoliciesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder>(
                   lifecyclePolicies_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           lifecyclePolicies_ = null;
@@ -3106,6 +3280,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3128,6 +3303,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3151,6 +3327,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -3171,6 +3349,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -3187,6 +3366,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3202,7 +3383,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3262,6 +3443,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -3270,6 +3452,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -3280,6 +3463,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3288,6 +3472,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3298,6 +3483,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -3306,6 +3492,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -3316,6 +3503,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -3324,6 +3512,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The status.
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus();
 
@@ -3374,7 +3563,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateLifecyclePolicyRequest}
    */
-  public  static final class CreateLifecyclePolicyRequest extends
+  public static final class CreateLifecyclePolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.CreateLifecyclePolicyRequest)
       CreateLifecyclePolicyRequestOrBuilder {
@@ -3389,6 +3578,13 @@ public final class LifecyclePolicyServiceOuterClass {
       description_ = "";
       status_ = 0;
       rules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateLifecyclePolicyRequest();
     }
 
     @java.lang.Override
@@ -3440,16 +3636,16 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 rules_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               rules_.add(
                   input.readMessage(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3463,7 +3659,7 @@ public final class LifecyclePolicyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           rules_ = java.util.Collections.unmodifiableList(rules_);
         }
         this.unknownFields = unknownFields.build();
@@ -3483,7 +3679,6 @@ public final class LifecyclePolicyServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REPOSITORY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object repositoryId_;
     /**
@@ -3492,7 +3687,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = repositoryId_;
       if (ref instanceof java.lang.String) {
@@ -3511,7 +3708,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
       java.lang.Object ref = repositoryId_;
@@ -3534,7 +3733,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3553,7 +3754,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3576,7 +3779,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3595,7 +3800,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3618,8 +3825,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3628,8 +3836,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The status.
      */
-    public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status result = yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.UNRECOGNIZED : result;
@@ -3644,6 +3853,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
       return rules_;
     }
@@ -3654,6 +3864,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList() {
       return rules_;
@@ -3665,6 +3876,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
+    @java.lang.Override
     public int getRulesCount() {
       return rules_.size();
     }
@@ -3675,6 +3887,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
@@ -3685,6 +3898,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
         int index) {
       return rules_.get(index);
@@ -3704,13 +3918,13 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       if (status_ != yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -3728,13 +3942,13 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       if (status_ != yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -3760,18 +3974,17 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getRepositoryId()
-          .equals(other.getRepositoryId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && status_ == other.status_;
-      result = result && getRulesList()
-          .equals(other.getRulesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRepositoryId()
+          .equals(other.getRepositoryId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (!getRulesList()
+          .equals(other.getRulesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3937,7 +4150,7 @@ public final class LifecyclePolicyServiceOuterClass {
 
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           rulesBuilder_.clear();
         }
@@ -3968,56 +4181,54 @@ public final class LifecyclePolicyServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest buildPartial() {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.repositoryId_ = repositoryId_;
         result.name_ = name_;
         result.description_ = description_;
         result.status_ = status_;
         if (rulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             rules_ = java.util.Collections.unmodifiableList(rules_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.rules_ = rules_;
         } else {
           result.rules_ = rulesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4050,7 +4261,7 @@ public final class LifecyclePolicyServiceOuterClass {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureRulesIsMutable();
               rules_.addAll(other.rules_);
@@ -4063,7 +4274,7 @@ public final class LifecyclePolicyServiceOuterClass {
               rulesBuilder_.dispose();
               rulesBuilder_ = null;
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               rulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRulesFieldBuilder() : null;
@@ -4109,6 +4320,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The repositoryId.
        */
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = repositoryId_;
@@ -4128,6 +4340,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for repositoryId.
        */
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
@@ -4148,6 +4361,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -4165,6 +4380,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         
@@ -4178,6 +4394,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4198,6 +4416,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4217,6 +4436,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4237,6 +4457,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4254,6 +4476,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4267,6 +4490,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4287,6 +4512,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4306,6 +4532,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4326,6 +4553,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4343,6 +4572,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4356,6 +4586,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4376,8 +4608,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -4386,8 +4619,11 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -4398,7 +4634,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status result = yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.valueOf(status_);
@@ -4410,6 +4648,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status value) {
         if (value == null) {
@@ -4426,6 +4666,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -4437,9 +4678,9 @@ public final class LifecyclePolicyServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_ =
         java.util.Collections.emptyList();
       private void ensureRulesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           rules_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>(rules_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4633,7 +4874,7 @@ public final class LifecyclePolicyServiceOuterClass {
       public Builder clearRules() {
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           rulesBuilder_.clear();
@@ -4738,7 +4979,7 @@ public final class LifecyclePolicyServiceOuterClass {
           rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder>(
                   rules_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           rules_ = null;
@@ -4748,7 +4989,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4808,6 +5049,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -4816,6 +5058,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -4826,6 +5069,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4834,6 +5078,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4851,6 +5096,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4859,6 +5105,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4869,6 +5116,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4877,6 +5125,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4887,6 +5136,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -4895,6 +5145,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The status.
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus();
 
@@ -4945,7 +5196,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.UpdateLifecyclePolicyRequest}
    */
-  public  static final class UpdateLifecyclePolicyRequest extends
+  public static final class UpdateLifecyclePolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpdateLifecyclePolicyRequest)
       UpdateLifecyclePolicyRequestOrBuilder {
@@ -4960,6 +5211,13 @@ public final class LifecyclePolicyServiceOuterClass {
       description_ = "";
       status_ = 0;
       rules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateLifecyclePolicyRequest();
     }
 
     @java.lang.Override
@@ -5024,16 +5282,16 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 rules_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               rules_.add(
                   input.readMessage(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5047,7 +5305,7 @@ public final class LifecyclePolicyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           rules_ = java.util.Collections.unmodifiableList(rules_);
         }
         this.unknownFields = unknownFields.build();
@@ -5067,7 +5325,6 @@ public final class LifecyclePolicyServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
@@ -5076,7 +5333,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -5095,7 +5354,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -5118,7 +5379,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5128,7 +5391,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5139,6 +5404,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5151,7 +5417,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5170,7 +5438,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5193,7 +5463,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5212,7 +5484,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5235,8 +5509,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -5245,8 +5520,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The status.
      */
-    public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status result = yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.UNRECOGNIZED : result;
@@ -5261,6 +5537,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
       return rules_;
     }
@@ -5271,6 +5548,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList() {
       return rules_;
@@ -5282,6 +5560,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
+    @java.lang.Override
     public int getRulesCount() {
       return rules_.size();
     }
@@ -5292,6 +5571,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
@@ -5302,6 +5582,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
         int index) {
       return rules_.get(index);
@@ -5321,16 +5602,16 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       if (status_ != yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -5348,17 +5629,17 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       if (status_ != yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -5384,23 +5665,22 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && status_ == other.status_;
-      result = result && getRulesList()
-          .equals(other.getRulesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (!getRulesList()
+          .equals(other.getRulesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5576,7 +5856,7 @@ public final class LifecyclePolicyServiceOuterClass {
 
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           rulesBuilder_.clear();
         }
@@ -5607,7 +5887,6 @@ public final class LifecyclePolicyServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest buildPartial() {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.lifecyclePolicyId_ = lifecyclePolicyId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5618,50 +5897,49 @@ public final class LifecyclePolicyServiceOuterClass {
         result.description_ = description_;
         result.status_ = status_;
         if (rulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             rules_ = java.util.Collections.unmodifiableList(rules_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.rules_ = rules_;
         } else {
           result.rules_ = rulesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5697,7 +5975,7 @@ public final class LifecyclePolicyServiceOuterClass {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureRulesIsMutable();
               rules_.addAll(other.rules_);
@@ -5710,7 +5988,7 @@ public final class LifecyclePolicyServiceOuterClass {
               rulesBuilder_.dispose();
               rulesBuilder_ = null;
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               rulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRulesFieldBuilder() : null;
@@ -5756,6 +6034,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -5775,6 +6054,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -5795,6 +6075,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -5812,6 +6094,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -5825,6 +6108,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5838,7 +6123,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -5847,6 +6132,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -5857,6 +6143,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5998,6 +6285,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6017,6 +6305,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6037,6 +6326,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6054,6 +6345,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6067,6 +6359,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6087,6 +6381,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6106,6 +6401,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6126,6 +6422,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6143,6 +6441,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6156,6 +6455,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6176,8 +6477,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -6186,8 +6488,11 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -6198,7 +6503,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status result = yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.valueOf(status_);
@@ -6210,6 +6517,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status value) {
         if (value == null) {
@@ -6226,6 +6535,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -6237,9 +6547,9 @@ public final class LifecyclePolicyServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_ =
         java.util.Collections.emptyList();
       private void ensureRulesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           rules_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>(rules_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -6433,7 +6743,7 @@ public final class LifecyclePolicyServiceOuterClass {
       public Builder clearRules() {
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           rulesBuilder_.clear();
@@ -6538,7 +6848,7 @@ public final class LifecyclePolicyServiceOuterClass {
           rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder>(
                   rules_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           rules_ = null;
@@ -6548,7 +6858,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6608,6 +6918,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -6616,6 +6927,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -6623,7 +6935,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteLifecyclePolicyRequest}
    */
-  public  static final class DeleteLifecyclePolicyRequest extends
+  public static final class DeleteLifecyclePolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DeleteLifecyclePolicyRequest)
       DeleteLifecyclePolicyRequestOrBuilder {
@@ -6634,6 +6946,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private DeleteLifecyclePolicyRequest() {
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteLifecyclePolicyRequest();
     }
 
     @java.lang.Override
@@ -6649,7 +6968,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6667,7 +6985,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6706,7 +7024,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -6725,7 +7045,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -6754,7 +7076,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -6766,7 +7088,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6784,11 +7106,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6968,35 +7289,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7050,6 +7371,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -7069,6 +7391,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -7089,6 +7412,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -7106,6 +7431,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -7119,6 +7445,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7134,7 +7462,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7194,6 +7522,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -7202,6 +7531,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -7209,7 +7539,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateLifecyclePolicyMetadata}
    */
-  public  static final class CreateLifecyclePolicyMetadata extends
+  public static final class CreateLifecyclePolicyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.CreateLifecyclePolicyMetadata)
       CreateLifecyclePolicyMetadataOrBuilder {
@@ -7220,6 +7550,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private CreateLifecyclePolicyMetadata() {
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateLifecyclePolicyMetadata();
     }
 
     @java.lang.Override
@@ -7235,7 +7572,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7253,7 +7589,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7292,7 +7628,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -7311,7 +7649,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -7340,7 +7680,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -7352,7 +7692,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7370,11 +7710,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyMetadata other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyMetadata) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7554,35 +7893,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7636,6 +7975,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -7655,6 +7995,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -7675,6 +8016,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -7692,6 +8035,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -7705,6 +8049,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7720,7 +8066,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7780,6 +8126,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -7788,6 +8135,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -7795,7 +8143,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.UpdateLifecyclePolicyMetadata}
    */
-  public  static final class UpdateLifecyclePolicyMetadata extends
+  public static final class UpdateLifecyclePolicyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpdateLifecyclePolicyMetadata)
       UpdateLifecyclePolicyMetadataOrBuilder {
@@ -7806,6 +8154,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private UpdateLifecyclePolicyMetadata() {
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateLifecyclePolicyMetadata();
     }
 
     @java.lang.Override
@@ -7821,7 +8176,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7839,7 +8193,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7878,7 +8232,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -7897,7 +8253,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -7926,7 +8284,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -7938,7 +8296,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7956,11 +8314,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyMetadata other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyMetadata) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8140,35 +8497,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8222,6 +8579,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -8241,6 +8599,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -8261,6 +8620,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -8278,6 +8639,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -8291,6 +8653,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8306,7 +8670,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8366,6 +8730,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -8374,6 +8739,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -8381,7 +8747,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteLifecyclePolicyMetadata}
    */
-  public  static final class DeleteLifecyclePolicyMetadata extends
+  public static final class DeleteLifecyclePolicyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DeleteLifecyclePolicyMetadata)
       DeleteLifecyclePolicyMetadataOrBuilder {
@@ -8392,6 +8758,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private DeleteLifecyclePolicyMetadata() {
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteLifecyclePolicyMetadata();
     }
 
     @java.lang.Override
@@ -8407,7 +8780,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8425,7 +8797,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8464,7 +8836,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -8483,7 +8857,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -8512,7 +8888,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -8524,7 +8900,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8542,11 +8918,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyMetadata other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyMetadata) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8726,35 +9101,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8808,6 +9183,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -8827,6 +9203,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -8847,6 +9224,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -8864,6 +9243,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -8877,6 +9257,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1;</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8892,7 +9274,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8952,6 +9334,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -8960,6 +9343,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -8967,7 +9351,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyRequest}
    */
-  public  static final class DryRunLifecyclePolicyRequest extends
+  public static final class DryRunLifecyclePolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyRequest)
       DryRunLifecyclePolicyRequestOrBuilder {
@@ -8978,6 +9362,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private DryRunLifecyclePolicyRequest() {
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DryRunLifecyclePolicyRequest();
     }
 
     @java.lang.Override
@@ -8993,7 +9384,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9011,7 +9401,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9050,7 +9440,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -9069,7 +9461,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -9098,7 +9492,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -9110,7 +9504,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9128,11 +9522,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9312,35 +9705,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9394,6 +9787,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -9413,6 +9807,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -9433,6 +9828,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -9450,6 +9847,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -9463,6 +9861,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9478,7 +9878,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9538,6 +9938,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
@@ -9546,6 +9947,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
@@ -9556,6 +9958,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -9564,6 +9967,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -9571,7 +9975,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyMetadata}
    */
-  public  static final class DryRunLifecyclePolicyMetadata extends
+  public static final class DryRunLifecyclePolicyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyMetadata)
       DryRunLifecyclePolicyMetadataOrBuilder {
@@ -9583,6 +9987,13 @@ public final class LifecyclePolicyServiceOuterClass {
     private DryRunLifecyclePolicyMetadata() {
       dryRunLifecyclePolicyResultId_ = "";
       lifecyclePolicyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DryRunLifecyclePolicyMetadata();
     }
 
     @java.lang.Override
@@ -9598,7 +10009,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9622,7 +10032,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9661,7 +10071,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public java.lang.String getDryRunLifecyclePolicyResultId() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
       if (ref instanceof java.lang.String) {
@@ -9680,7 +10092,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -9703,7 +10117,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -9722,7 +10138,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -9751,10 +10169,10 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dryRunLifecyclePolicyResultId_);
       }
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lifecyclePolicyId_);
       }
       unknownFields.writeTo(output);
@@ -9766,10 +10184,10 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dryRunLifecyclePolicyResultId_);
       }
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lifecyclePolicyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9787,13 +10205,12 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyMetadata other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyMetadata) obj;
 
-      boolean result = true;
-      result = result && getDryRunLifecyclePolicyResultId()
-          .equals(other.getDryRunLifecyclePolicyResultId());
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDryRunLifecyclePolicyResultId()
+          .equals(other.getDryRunLifecyclePolicyResultId())) return false;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9978,35 +10395,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10064,6 +10481,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @return The dryRunLifecyclePolicyResultId.
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
         java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -10083,6 +10501,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @return The bytes for dryRunLifecyclePolicyResultId.
        */
       public com.google.protobuf.ByteString
           getDryRunLifecyclePolicyResultIdBytes() {
@@ -10103,6 +10522,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @param value The dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultId(
           java.lang.String value) {
@@ -10120,6 +10541,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
         
@@ -10133,6 +10555,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @param value The bytes for dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10153,6 +10577,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -10172,6 +10597,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -10192,6 +10618,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -10209,6 +10637,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -10222,6 +10651,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10237,7 +10668,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10297,6 +10728,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
@@ -10305,6 +10737,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
@@ -10315,6 +10748,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -10323,6 +10757,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -10333,6 +10768,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * @return Whether the runAt field is set.
      */
     boolean hasRunAt();
     /**
@@ -10341,6 +10777,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * @return The runAt.
      */
     com.google.protobuf.Timestamp getRunAt();
     /**
@@ -10358,13 +10795,14 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 affected_images_count = 4;</code>
+     * @return The affectedImagesCount.
      */
     long getAffectedImagesCount();
   }
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult}
    */
-  public  static final class DryRunLifecyclePolicyResult extends
+  public static final class DryRunLifecyclePolicyResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult)
       DryRunLifecyclePolicyResultOrBuilder {
@@ -10376,7 +10814,13 @@ public final class LifecyclePolicyServiceOuterClass {
     private DryRunLifecyclePolicyResult() {
       dryRunLifecyclePolicyResultId_ = "";
       lifecyclePolicyId_ = "";
-      affectedImagesCount_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DryRunLifecyclePolicyResult();
     }
 
     @java.lang.Override
@@ -10392,7 +10836,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10434,7 +10877,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10473,7 +10916,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public java.lang.String getDryRunLifecyclePolicyResultId() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
       if (ref instanceof java.lang.String) {
@@ -10492,7 +10937,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -10515,7 +10962,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -10534,7 +10983,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 2;</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -10557,7 +11008,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * @return Whether the runAt field is set.
      */
+    @java.lang.Override
     public boolean hasRunAt() {
       return runAt_ != null;
     }
@@ -10567,7 +11020,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * @return The runAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getRunAt() {
       return runAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : runAt_;
     }
@@ -10578,6 +11033,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
       return getRunAt();
     }
@@ -10590,7 +11046,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 affected_images_count = 4;</code>
+     * @return The affectedImagesCount.
      */
+    @java.lang.Override
     public long getAffectedImagesCount() {
       return affectedImagesCount_;
     }
@@ -10609,10 +11067,10 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dryRunLifecyclePolicyResultId_);
       }
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lifecyclePolicyId_);
       }
       if (runAt_ != null) {
@@ -10630,10 +11088,10 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dryRunLifecyclePolicyResultId_);
       }
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lifecyclePolicyId_);
       }
       if (runAt_ != null) {
@@ -10659,20 +11117,19 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult) obj;
 
-      boolean result = true;
-      result = result && getDryRunLifecyclePolicyResultId()
-          .equals(other.getDryRunLifecyclePolicyResultId());
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && (hasRunAt() == other.hasRunAt());
+      if (!getDryRunLifecyclePolicyResultId()
+          .equals(other.getDryRunLifecyclePolicyResultId())) return false;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (hasRunAt() != other.hasRunAt()) return false;
       if (hasRunAt()) {
-        result = result && getRunAt()
-            .equals(other.getRunAt());
+        if (!getRunAt()
+            .equals(other.getRunAt())) return false;
       }
-      result = result && (getAffectedImagesCount()
-          == other.getAffectedImagesCount());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAffectedImagesCount()
+          != other.getAffectedImagesCount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10878,35 +11335,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10970,6 +11427,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @return The dryRunLifecyclePolicyResultId.
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
         java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -10989,6 +11447,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @return The bytes for dryRunLifecyclePolicyResultId.
        */
       public com.google.protobuf.ByteString
           getDryRunLifecyclePolicyResultIdBytes() {
@@ -11009,6 +11468,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @param value The dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultId(
           java.lang.String value) {
@@ -11026,6 +11487,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
         
@@ -11039,6 +11501,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * @param value The bytes for dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11059,6 +11523,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -11078,6 +11543,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -11098,6 +11564,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -11115,6 +11583,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -11128,6 +11597,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 2;</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11141,7 +11612,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp runAt_ = null;
+      private com.google.protobuf.Timestamp runAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> runAtBuilder_;
       /**
@@ -11150,6 +11621,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * @return Whether the runAt field is set.
        */
       public boolean hasRunAt() {
         return runAtBuilder_ != null || runAt_ != null;
@@ -11160,6 +11632,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * @return The runAt.
        */
       public com.google.protobuf.Timestamp getRunAt() {
         if (runAtBuilder_ == null) {
@@ -11301,7 +11774,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 affected_images_count = 4;</code>
+       * @return The affectedImagesCount.
        */
+      @java.lang.Override
       public long getAffectedImagesCount() {
         return affectedImagesCount_;
       }
@@ -11311,6 +11786,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 affected_images_count = 4;</code>
+       * @param value The affectedImagesCount to set.
+       * @return This builder for chaining.
        */
       public Builder setAffectedImagesCount(long value) {
         
@@ -11324,6 +11801,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 affected_images_count = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAffectedImagesCount() {
         
@@ -11334,7 +11812,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11394,6 +11872,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
@@ -11402,6 +11881,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
@@ -11409,7 +11889,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest}
    */
-  public  static final class GetDryRunLifecyclePolicyResultRequest extends
+  public static final class GetDryRunLifecyclePolicyResultRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest)
       GetDryRunLifecyclePolicyResultRequestOrBuilder {
@@ -11420,6 +11900,13 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private GetDryRunLifecyclePolicyResultRequest() {
       dryRunLifecyclePolicyResultId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDryRunLifecyclePolicyResultRequest();
     }
 
     @java.lang.Override
@@ -11435,7 +11922,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11453,7 +11939,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11492,7 +11978,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public java.lang.String getDryRunLifecyclePolicyResultId() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
       if (ref instanceof java.lang.String) {
@@ -11511,7 +11999,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -11540,7 +12030,7 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dryRunLifecyclePolicyResultId_);
       }
       unknownFields.writeTo(output);
@@ -11552,7 +12042,7 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dryRunLifecyclePolicyResultId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11570,11 +12060,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest) obj;
 
-      boolean result = true;
-      result = result && getDryRunLifecyclePolicyResultId()
-          .equals(other.getDryRunLifecyclePolicyResultId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDryRunLifecyclePolicyResultId()
+          .equals(other.getDryRunLifecyclePolicyResultId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11754,35 +12243,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11836,6 +12325,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The dryRunLifecyclePolicyResultId.
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
         java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -11855,6 +12345,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for dryRunLifecyclePolicyResultId.
        */
       public com.google.protobuf.ByteString
           getDryRunLifecyclePolicyResultIdBytes() {
@@ -11875,6 +12366,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultId(
           java.lang.String value) {
@@ -11892,6 +12385,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
         
@@ -11905,6 +12399,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11920,7 +12416,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11980,6 +12476,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
     java.lang.String getLifecyclePolicyId();
     /**
@@ -11988,6 +12485,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
@@ -12001,6 +12499,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -12011,6 +12510,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -12020,6 +12520,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -12034,6 +12535,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -12046,6 +12548,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -12057,6 +12560,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
@@ -12066,6 +12570,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
@@ -12073,7 +12578,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultsRequest}
    */
-  public  static final class ListDryRunLifecyclePolicyResultsRequest extends
+  public static final class ListDryRunLifecyclePolicyResultsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultsRequest)
       ListDryRunLifecyclePolicyResultsRequestOrBuilder {
@@ -12084,10 +12589,16 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private ListDryRunLifecyclePolicyResultsRequest() {
       lifecyclePolicyId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
       orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDryRunLifecyclePolicyResultsRequest();
     }
 
     @java.lang.Override
@@ -12103,7 +12614,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12144,7 +12654,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12183,7 +12693,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The lifecyclePolicyId.
      */
+    @java.lang.Override
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
       if (ref instanceof java.lang.String) {
@@ -12202,7 +12714,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for lifecyclePolicyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -12228,7 +12742,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -12242,7 +12758,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -12262,7 +12780,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -12289,7 +12809,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -12312,7 +12834,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -12336,7 +12860,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
+    @java.lang.Override
     public java.lang.String getOrderBy() {
       java.lang.Object ref = orderBy_;
       if (ref instanceof java.lang.String) {
@@ -12356,7 +12882,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrderByBytes() {
       java.lang.Object ref = orderBy_;
@@ -12385,19 +12913,19 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lifecyclePolicyId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
       }
       unknownFields.writeTo(output);
@@ -12409,20 +12937,20 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecyclePolicyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lifecyclePolicyId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -12440,19 +12968,18 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest) obj;
 
-      boolean result = true;
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getOrderBy()
-          .equals(other.getOrderBy());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLifecyclePolicyId()
+          .equals(other.getLifecyclePolicyId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12653,35 +13180,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12750,6 +13277,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The lifecyclePolicyId.
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -12769,6 +13297,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for lifecyclePolicyId.
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -12789,6 +13318,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -12806,6 +13337,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -12819,6 +13351,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for lifecyclePolicyId to set.
+       * @return This builder for chaining.
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12842,7 +13376,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -12855,6 +13391,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -12871,6 +13409,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -12887,6 +13426,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -12907,6 +13447,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -12928,6 +13469,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -12946,6 +13489,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -12960,6 +13504,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12984,6 +13530,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -13007,6 +13554,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -13031,6 +13579,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -13052,6 +13602,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -13069,6 +13620,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -13090,6 +13643,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
         java.lang.Object ref = orderBy_;
@@ -13110,6 +13664,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
           getOrderByBytes() {
@@ -13131,6 +13686,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderBy(
           java.lang.String value) {
@@ -13149,6 +13706,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
@@ -13163,6 +13721,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
@@ -13178,7 +13738,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13285,6 +13845,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -13296,6 +13857,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -13303,7 +13865,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultsResponse}
    */
-  public  static final class ListDryRunLifecyclePolicyResultsResponse extends
+  public static final class ListDryRunLifecyclePolicyResultsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultsResponse)
       ListDryRunLifecyclePolicyResultsResponseOrBuilder {
@@ -13315,6 +13877,13 @@ public final class LifecyclePolicyServiceOuterClass {
     private ListDryRunLifecyclePolicyResultsResponse() {
       dryRunLifecyclePolicyResults_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDryRunLifecyclePolicyResultsResponse();
     }
 
     @java.lang.Override
@@ -13342,7 +13911,7 @@ public final class LifecyclePolicyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 dryRunLifecyclePolicyResults_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -13357,7 +13926,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13371,7 +13940,7 @@ public final class LifecyclePolicyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           dryRunLifecyclePolicyResults_ = java.util.Collections.unmodifiableList(dryRunLifecyclePolicyResults_);
         }
         this.unknownFields = unknownFields.build();
@@ -13391,7 +13960,6 @@ public final class LifecyclePolicyServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DRY_RUN_LIFECYCLE_POLICY_RESULTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> dryRunLifecyclePolicyResults_;
     /**
@@ -13401,6 +13969,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getDryRunLifecyclePolicyResultsList() {
       return dryRunLifecyclePolicyResults_;
     }
@@ -13411,6 +13980,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder> 
         getDryRunLifecyclePolicyResultsOrBuilderList() {
       return dryRunLifecyclePolicyResults_;
@@ -13422,6 +13992,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
+    @java.lang.Override
     public int getDryRunLifecyclePolicyResultsCount() {
       return dryRunLifecyclePolicyResults_.size();
     }
@@ -13432,6 +14003,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunLifecyclePolicyResults(int index) {
       return dryRunLifecyclePolicyResults_.get(index);
     }
@@ -13442,6 +14014,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder getDryRunLifecyclePolicyResultsOrBuilder(
         int index) {
       return dryRunLifecyclePolicyResults_.get(index);
@@ -13458,7 +14031,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -13480,7 +14055,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -13512,7 +14089,7 @@ public final class LifecyclePolicyServiceOuterClass {
       for (int i = 0; i < dryRunLifecyclePolicyResults_.size(); i++) {
         output.writeMessage(1, dryRunLifecyclePolicyResults_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -13528,7 +14105,7 @@ public final class LifecyclePolicyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, dryRunLifecyclePolicyResults_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -13546,13 +14123,12 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse) obj;
 
-      boolean result = true;
-      result = result && getDryRunLifecyclePolicyResultsList()
-          .equals(other.getDryRunLifecyclePolicyResultsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDryRunLifecyclePolicyResultsList()
+          .equals(other.getDryRunLifecyclePolicyResultsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13737,9 +14313,8 @@ public final class LifecyclePolicyServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse buildPartial() {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (dryRunLifecyclePolicyResultsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             dryRunLifecyclePolicyResults_ = java.util.Collections.unmodifiableList(dryRunLifecyclePolicyResults_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -13748,42 +14323,41 @@ public final class LifecyclePolicyServiceOuterClass {
           result.dryRunLifecyclePolicyResults_ = dryRunLifecyclePolicyResultsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13860,7 +14434,7 @@ public final class LifecyclePolicyServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> dryRunLifecyclePolicyResults_ =
         java.util.Collections.emptyList();
       private void ensureDryRunLifecyclePolicyResultsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           dryRunLifecyclePolicyResults_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>(dryRunLifecyclePolicyResults_);
           bitField0_ |= 0x00000001;
          }
@@ -14161,7 +14735,7 @@ public final class LifecyclePolicyServiceOuterClass {
           dryRunLifecyclePolicyResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder>(
                   dryRunLifecyclePolicyResults_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           dryRunLifecyclePolicyResults_ = null;
@@ -14179,6 +14753,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -14201,6 +14776,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -14224,6 +14800,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -14244,6 +14822,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -14260,6 +14839,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -14275,7 +14856,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14335,6 +14916,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
@@ -14343,6 +14925,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
@@ -14355,6 +14938,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -14365,6 +14949,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -14374,6 +14959,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -14388,6 +14974,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -14400,6 +14987,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -14411,6 +14999,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
@@ -14420,6 +15009,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
@@ -14427,7 +15017,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultAffectedImagesRequest}
    */
-  public  static final class ListDryRunLifecyclePolicyResultAffectedImagesRequest extends
+  public static final class ListDryRunLifecyclePolicyResultAffectedImagesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultAffectedImagesRequest)
       ListDryRunLifecyclePolicyResultAffectedImagesRequestOrBuilder {
@@ -14438,10 +15028,16 @@ public final class LifecyclePolicyServiceOuterClass {
     }
     private ListDryRunLifecyclePolicyResultAffectedImagesRequest() {
       dryRunLifecyclePolicyResultId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
       orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDryRunLifecyclePolicyResultAffectedImagesRequest();
     }
 
     @java.lang.Override
@@ -14457,7 +15053,6 @@ public final class LifecyclePolicyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14498,7 +15093,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14537,7 +15132,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public java.lang.String getDryRunLifecyclePolicyResultId() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
       if (ref instanceof java.lang.String) {
@@ -14556,7 +15153,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for dryRunLifecyclePolicyResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -14581,7 +15180,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -14595,7 +15196,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -14615,7 +15218,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -14642,7 +15247,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -14665,7 +15272,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -14689,7 +15298,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
+    @java.lang.Override
     public java.lang.String getOrderBy() {
       java.lang.Object ref = orderBy_;
       if (ref instanceof java.lang.String) {
@@ -14709,7 +15320,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrderByBytes() {
       java.lang.Object ref = orderBy_;
@@ -14738,19 +15351,19 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dryRunLifecyclePolicyResultId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
       }
       unknownFields.writeTo(output);
@@ -14762,20 +15375,20 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dryRunLifecyclePolicyResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dryRunLifecyclePolicyResultId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -14793,19 +15406,18 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest) obj;
 
-      boolean result = true;
-      result = result && getDryRunLifecyclePolicyResultId()
-          .equals(other.getDryRunLifecyclePolicyResultId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getOrderBy()
-          .equals(other.getOrderBy());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDryRunLifecyclePolicyResultId()
+          .equals(other.getDryRunLifecyclePolicyResultId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15006,35 +15618,35 @@ public final class LifecyclePolicyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15103,6 +15715,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The dryRunLifecyclePolicyResultId.
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
         java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -15122,6 +15735,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for dryRunLifecyclePolicyResultId.
        */
       public com.google.protobuf.ByteString
           getDryRunLifecyclePolicyResultIdBytes() {
@@ -15142,6 +15756,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultId(
           java.lang.String value) {
@@ -15159,6 +15775,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
         
@@ -15172,6 +15789,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for dryRunLifecyclePolicyResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15194,7 +15813,9 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -15206,6 +15827,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -15221,6 +15844,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -15237,6 +15861,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -15257,6 +15882,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -15278,6 +15904,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -15296,6 +15924,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -15310,6 +15939,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -15334,6 +15965,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -15357,6 +15989,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -15381,6 +16014,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -15402,6 +16037,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -15419,6 +16055,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -15440,6 +16078,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
         java.lang.Object ref = orderBy_;
@@ -15460,6 +16099,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
           getOrderByBytes() {
@@ -15481,6 +16121,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderBy(
           java.lang.String value) {
@@ -15499,6 +16141,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
@@ -15513,6 +16156,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
@@ -15528,7 +16173,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15635,6 +16280,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -15646,6 +16292,7 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -15653,7 +16300,7 @@ public final class LifecyclePolicyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultAffectedImagesResponse}
    */
-  public  static final class ListDryRunLifecyclePolicyResultAffectedImagesResponse extends
+  public static final class ListDryRunLifecyclePolicyResultAffectedImagesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultAffectedImagesResponse)
       ListDryRunLifecyclePolicyResultAffectedImagesResponseOrBuilder {
@@ -15665,6 +16312,13 @@ public final class LifecyclePolicyServiceOuterClass {
     private ListDryRunLifecyclePolicyResultAffectedImagesResponse() {
       affectedImages_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDryRunLifecyclePolicyResultAffectedImagesResponse();
     }
 
     @java.lang.Override
@@ -15692,7 +16346,7 @@ public final class LifecyclePolicyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 affectedImages_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -15707,7 +16361,7 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15721,7 +16375,7 @@ public final class LifecyclePolicyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           affectedImages_ = java.util.Collections.unmodifiableList(affectedImages_);
         }
         this.unknownFields = unknownFields.build();
@@ -15741,7 +16395,6 @@ public final class LifecyclePolicyServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AFFECTED_IMAGES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages_;
     /**
@@ -15751,6 +16404,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImagesList() {
       return affectedImages_;
     }
@@ -15761,6 +16415,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
         getAffectedImagesOrBuilderList() {
       return affectedImages_;
@@ -15772,6 +16427,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
+    @java.lang.Override
     public int getAffectedImagesCount() {
       return affectedImages_.size();
     }
@@ -15782,6 +16438,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index) {
       return affectedImages_.get(index);
     }
@@ -15792,6 +16449,7 @@ public final class LifecyclePolicyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
         int index) {
       return affectedImages_.get(index);
@@ -15808,7 +16466,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -15830,7 +16490,9 @@ public final class LifecyclePolicyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -15862,7 +16524,7 @@ public final class LifecyclePolicyServiceOuterClass {
       for (int i = 0; i < affectedImages_.size(); i++) {
         output.writeMessage(1, affectedImages_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -15878,7 +16540,7 @@ public final class LifecyclePolicyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, affectedImages_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -15896,13 +16558,12 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse) obj;
 
-      boolean result = true;
-      result = result && getAffectedImagesList()
-          .equals(other.getAffectedImagesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAffectedImagesList()
+          .equals(other.getAffectedImagesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16087,9 +16748,8 @@ public final class LifecyclePolicyServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse buildPartial() {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (affectedImagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             affectedImages_ = java.util.Collections.unmodifiableList(affectedImages_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -16098,42 +16758,41 @@ public final class LifecyclePolicyServiceOuterClass {
           result.affectedImages_ = affectedImagesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16210,7 +16869,7 @@ public final class LifecyclePolicyServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages_ =
         java.util.Collections.emptyList();
       private void ensureAffectedImagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           affectedImages_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>(affectedImages_);
           bitField0_ |= 0x00000001;
          }
@@ -16511,7 +17170,7 @@ public final class LifecyclePolicyServiceOuterClass {
           affectedImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder>(
                   affectedImages_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           affectedImages_ = null;
@@ -16529,6 +17188,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -16551,6 +17211,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -16574,6 +17235,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -16594,6 +17257,7 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -16610,6 +17274,8 @@ public final class LifecyclePolicyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -16625,7 +17291,7 @@ public final class LifecyclePolicyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16903,15 +17569,7 @@ public final class LifecyclePolicyServiceOuterClass {
       "enproto/yandex/cloud/containerregistry/v" +
       "1;containerregistryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -16922,7 +17580,7 @@ public final class LifecyclePolicyServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_GetLifecyclePolicyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_GetLifecyclePolicyRequest_fieldAccessorTable = new

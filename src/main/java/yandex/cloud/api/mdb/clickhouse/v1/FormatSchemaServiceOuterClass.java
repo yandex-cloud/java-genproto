@@ -20,20 +20,24 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
@@ -41,7 +45,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.GetFormatSchemaRequest}
    */
-  public  static final class GetFormatSchemaRequest extends
+  public static final class GetFormatSchemaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.GetFormatSchemaRequest)
       GetFormatSchemaRequestOrBuilder {
@@ -53,6 +57,13 @@ public final class FormatSchemaServiceOuterClass {
     private GetFormatSchemaRequest() {
       clusterId_ = "";
       formatSchemaName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFormatSchemaRequest();
     }
 
     @java.lang.Override
@@ -68,7 +79,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -92,7 +102,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -127,7 +137,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -142,7 +154,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -161,7 +175,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -176,7 +192,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -205,10 +223,10 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       unknownFields.writeTo(output);
@@ -220,10 +238,10 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       size += unknownFields.getSerializedSize();
@@ -241,13 +259,12 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -432,35 +449,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -514,6 +531,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -529,6 +547,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -545,6 +564,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -558,6 +579,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -567,6 +589,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -583,6 +607,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -598,6 +623,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -614,6 +640,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -627,6 +655,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -636,6 +665,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -651,7 +682,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -707,25 +738,30 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
     /**
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -733,7 +769,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListFormatSchemasRequest}
    */
-  public  static final class ListFormatSchemasRequest extends
+  public static final class ListFormatSchemasRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListFormatSchemasRequest)
       ListFormatSchemasRequestOrBuilder {
@@ -744,8 +780,14 @@ public final class FormatSchemaServiceOuterClass {
     }
     private ListFormatSchemasRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFormatSchemasRequest();
     }
 
     @java.lang.Override
@@ -761,7 +803,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -790,7 +831,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -825,7 +866,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -840,7 +883,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -859,7 +904,9 @@ public final class FormatSchemaServiceOuterClass {
     private long pageSize_;
     /**
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -868,7 +915,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -883,7 +932,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -912,13 +963,13 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -930,14 +981,14 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -955,15 +1006,14 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1154,35 +1204,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1239,6 +1289,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1254,6 +1305,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1270,6 +1322,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1283,6 +1337,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1292,6 +1347,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1308,12 +1365,16 @@ public final class FormatSchemaServiceOuterClass {
       private long pageSize_ ;
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1323,6 +1384,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1334,6 +1396,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1349,6 +1412,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1365,6 +1429,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1378,6 +1444,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1387,6 +1454,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1402,7 +1471,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1482,10 +1551,12 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1493,7 +1564,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListFormatSchemasResponse}
    */
-  public  static final class ListFormatSchemasResponse extends
+  public static final class ListFormatSchemasResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListFormatSchemasResponse)
       ListFormatSchemasResponseOrBuilder {
@@ -1505,6 +1576,13 @@ public final class FormatSchemaServiceOuterClass {
     private ListFormatSchemasResponse() {
       formatSchemas_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFormatSchemasResponse();
     }
 
     @java.lang.Override
@@ -1532,7 +1610,7 @@ public final class FormatSchemaServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 formatSchemas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1547,7 +1625,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1561,7 +1639,7 @@ public final class FormatSchemaServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           formatSchemas_ = java.util.Collections.unmodifiableList(formatSchemas_);
         }
         this.unknownFields = unknownFields.build();
@@ -1581,18 +1659,19 @@ public final class FormatSchemaServiceOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse.class, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FORMAT_SCHEMAS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> formatSchemas_;
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> getFormatSchemasList() {
       return formatSchemas_;
     }
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder> 
         getFormatSchemasOrBuilderList() {
       return formatSchemas_;
@@ -1600,18 +1679,21 @@ public final class FormatSchemaServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
+    @java.lang.Override
     public int getFormatSchemasCount() {
       return formatSchemas_.size();
     }
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema getFormatSchemas(int index) {
       return formatSchemas_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder getFormatSchemasOrBuilder(
         int index) {
       return formatSchemas_.get(index);
@@ -1621,7 +1703,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1636,7 +1720,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1668,7 +1754,7 @@ public final class FormatSchemaServiceOuterClass {
       for (int i = 0; i < formatSchemas_.size(); i++) {
         output.writeMessage(1, formatSchemas_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1684,7 +1770,7 @@ public final class FormatSchemaServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, formatSchemas_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1702,13 +1788,12 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse) obj;
 
-      boolean result = true;
-      result = result && getFormatSchemasList()
-          .equals(other.getFormatSchemasList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFormatSchemasList()
+          .equals(other.getFormatSchemasList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1893,9 +1978,8 @@ public final class FormatSchemaServiceOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse result = new yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (formatSchemasBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             formatSchemas_ = java.util.Collections.unmodifiableList(formatSchemas_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1904,42 +1988,41 @@ public final class FormatSchemaServiceOuterClass {
           result.formatSchemas_ = formatSchemasBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2016,7 +2099,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> formatSchemas_ =
         java.util.Collections.emptyList();
       private void ensureFormatSchemasIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           formatSchemas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema>(formatSchemas_);
           bitField0_ |= 0x00000001;
          }
@@ -2245,7 +2328,7 @@ public final class FormatSchemaServiceOuterClass {
           formatSchemasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.Builder, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder>(
                   formatSchemas_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           formatSchemas_ = null;
@@ -2256,6 +2339,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2271,6 +2355,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2287,6 +2372,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2300,6 +2387,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2309,6 +2397,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2324,7 +2414,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2380,39 +2470,47 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
 
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType getType();
 
     /**
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -2420,7 +2518,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateFormatSchemaRequest}
    */
-  public  static final class CreateFormatSchemaRequest extends
+  public static final class CreateFormatSchemaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CreateFormatSchemaRequest)
       CreateFormatSchemaRequestOrBuilder {
@@ -2437,6 +2535,13 @@ public final class FormatSchemaServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFormatSchemaRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2449,7 +2554,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2485,7 +2589,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2520,7 +2624,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2535,7 +2641,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2554,7 +2662,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -2569,7 +2679,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -2588,14 +2700,16 @@ public final class FormatSchemaServiceOuterClass {
     private int type_;
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType result = yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.UNRECOGNIZED : result;
@@ -2605,7 +2719,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The uri.
      */
+    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -2620,7 +2736,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for uri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -2649,16 +2767,16 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       if (type_ != yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.FORMAT_SCHEMA_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, type_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uri_);
       }
       unknownFields.writeTo(output);
@@ -2670,17 +2788,17 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       if (type_ != yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.FORMAT_SCHEMA_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, type_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uri_);
       }
       size += unknownFields.getSerializedSize();
@@ -2698,16 +2816,15 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && type_ == other.type_;
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (type_ != other.type_) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2902,35 +3019,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2991,6 +3108,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3006,6 +3124,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3022,6 +3141,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3035,6 +3156,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3044,6 +3166,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3060,6 +3184,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -3075,6 +3200,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -3091,6 +3217,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -3104,6 +3232,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -3113,6 +3242,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3129,21 +3260,27 @@ public final class FormatSchemaServiceOuterClass {
       private int type_ = 0;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType result = yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.valueOf(type_);
@@ -3151,6 +3288,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType value) {
         if (value == null) {
@@ -3163,6 +3302,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3174,6 +3314,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The uri.
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -3189,6 +3330,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for uri.
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -3205,6 +3347,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -3218,6 +3362,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         
@@ -3227,6 +3372,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -3242,7 +3389,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3298,20 +3445,24 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
@@ -3319,7 +3470,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateFormatSchemaMetadata}
    */
-  public  static final class CreateFormatSchemaMetadata extends
+  public static final class CreateFormatSchemaMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CreateFormatSchemaMetadata)
       CreateFormatSchemaMetadataOrBuilder {
@@ -3331,6 +3482,13 @@ public final class FormatSchemaServiceOuterClass {
     private CreateFormatSchemaMetadata() {
       clusterId_ = "";
       formatSchemaName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFormatSchemaMetadata();
     }
 
     @java.lang.Override
@@ -3346,7 +3504,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3370,7 +3527,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3405,7 +3562,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3420,7 +3579,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3439,7 +3600,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -3454,7 +3617,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -3483,10 +3648,10 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       unknownFields.writeTo(output);
@@ -3498,10 +3663,10 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       size += unknownFields.getSerializedSize();
@@ -3519,13 +3684,12 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3710,35 +3874,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3792,6 +3956,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3807,6 +3972,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3823,6 +3989,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3836,6 +4004,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3845,6 +4014,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3861,6 +4032,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -3876,6 +4048,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -3892,6 +4065,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -3905,6 +4080,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -3914,6 +4090,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3929,7 +4107,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3985,30 +4163,36 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
 
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4018,10 +4202,12 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string uri = 4;</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
      * <code>string uri = 4;</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -4029,7 +4215,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateFormatSchemaRequest}
    */
-  public  static final class UpdateFormatSchemaRequest extends
+  public static final class UpdateFormatSchemaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UpdateFormatSchemaRequest)
       UpdateFormatSchemaRequestOrBuilder {
@@ -4045,6 +4231,13 @@ public final class FormatSchemaServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFormatSchemaRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4057,7 +4250,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4100,7 +4292,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4135,7 +4327,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4150,7 +4344,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4169,7 +4365,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -4184,7 +4382,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -4203,19 +4403,24 @@ public final class FormatSchemaServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4224,7 +4429,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <code>string uri = 4;</code>
+     * @return The uri.
      */
+    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -4239,7 +4446,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string uri = 4;</code>
+     * @return The bytes for uri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -4268,16 +4477,16 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       if (updateMask_ != null) {
         output.writeMessage(3, getUpdateMask());
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uri_);
       }
       unknownFields.writeTo(output);
@@ -4289,17 +4498,17 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdateMask());
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uri_);
       }
       size += unknownFields.getSerializedSize();
@@ -4317,20 +4526,19 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4535,35 +4743,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4624,6 +4832,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4639,6 +4848,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4655,6 +4865,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4668,6 +4880,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4677,6 +4890,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4693,6 +4908,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -4708,6 +4924,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -4724,6 +4941,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -4737,6 +4956,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -4746,6 +4966,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4759,17 +4981,19 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -4879,6 +5103,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <code>string uri = 4;</code>
+       * @return The uri.
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -4894,6 +5119,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4;</code>
+       * @return The bytes for uri.
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -4910,6 +5136,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4;</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -4923,6 +5151,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         
@@ -4932,6 +5161,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string uri = 4;</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -4947,7 +5178,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5003,20 +5234,24 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
@@ -5024,7 +5259,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateFormatSchemaMetadata}
    */
-  public  static final class UpdateFormatSchemaMetadata extends
+  public static final class UpdateFormatSchemaMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UpdateFormatSchemaMetadata)
       UpdateFormatSchemaMetadataOrBuilder {
@@ -5036,6 +5271,13 @@ public final class FormatSchemaServiceOuterClass {
     private UpdateFormatSchemaMetadata() {
       clusterId_ = "";
       formatSchemaName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFormatSchemaMetadata();
     }
 
     @java.lang.Override
@@ -5051,7 +5293,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5075,7 +5316,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5110,7 +5351,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5125,7 +5368,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5144,7 +5389,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -5159,7 +5406,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -5188,10 +5437,10 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       unknownFields.writeTo(output);
@@ -5203,10 +5452,10 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       size += unknownFields.getSerializedSize();
@@ -5224,13 +5473,12 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5415,35 +5663,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5497,6 +5745,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5512,6 +5761,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5528,6 +5778,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5541,6 +5793,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5550,6 +5803,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5566,6 +5821,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -5581,6 +5837,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -5597,6 +5854,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -5610,6 +5869,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -5619,6 +5879,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5634,7 +5896,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5690,20 +5952,24 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
@@ -5711,7 +5977,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteFormatSchemaRequest}
    */
-  public  static final class DeleteFormatSchemaRequest extends
+  public static final class DeleteFormatSchemaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.DeleteFormatSchemaRequest)
       DeleteFormatSchemaRequestOrBuilder {
@@ -5723,6 +5989,13 @@ public final class FormatSchemaServiceOuterClass {
     private DeleteFormatSchemaRequest() {
       clusterId_ = "";
       formatSchemaName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFormatSchemaRequest();
     }
 
     @java.lang.Override
@@ -5738,7 +6011,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5762,7 +6034,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5797,7 +6069,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5812,7 +6086,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5831,7 +6107,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -5846,7 +6124,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -5875,10 +6155,10 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       unknownFields.writeTo(output);
@@ -5890,10 +6170,10 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       size += unknownFields.getSerializedSize();
@@ -5911,13 +6191,12 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6102,35 +6381,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6184,6 +6463,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6199,6 +6479,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6215,6 +6496,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6228,6 +6511,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6237,6 +6521,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6253,6 +6539,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -6268,6 +6555,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -6284,6 +6572,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -6297,6 +6587,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -6306,6 +6597,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6321,7 +6614,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6377,20 +6670,24 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The bytes for formatSchemaName.
      */
     com.google.protobuf.ByteString
         getFormatSchemaNameBytes();
@@ -6398,7 +6695,7 @@ public final class FormatSchemaServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteFormatSchemaMetadata}
    */
-  public  static final class DeleteFormatSchemaMetadata extends
+  public static final class DeleteFormatSchemaMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.DeleteFormatSchemaMetadata)
       DeleteFormatSchemaMetadataOrBuilder {
@@ -6410,6 +6707,13 @@ public final class FormatSchemaServiceOuterClass {
     private DeleteFormatSchemaMetadata() {
       clusterId_ = "";
       formatSchemaName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFormatSchemaMetadata();
     }
 
     @java.lang.Override
@@ -6425,7 +6729,6 @@ public final class FormatSchemaServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6449,7 +6752,7 @@ public final class FormatSchemaServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6484,7 +6787,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6499,7 +6804,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6518,7 +6825,9 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object formatSchemaName_;
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The formatSchemaName.
      */
+    @java.lang.Override
     public java.lang.String getFormatSchemaName() {
       java.lang.Object ref = formatSchemaName_;
       if (ref instanceof java.lang.String) {
@@ -6533,7 +6842,9 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <code>string format_schema_name = 2;</code>
+     * @return The bytes for formatSchemaName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatSchemaNameBytes() {
       java.lang.Object ref = formatSchemaName_;
@@ -6562,10 +6873,10 @@ public final class FormatSchemaServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatSchemaName_);
       }
       unknownFields.writeTo(output);
@@ -6577,10 +6888,10 @@ public final class FormatSchemaServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getFormatSchemaNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatSchemaName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatSchemaName_);
       }
       size += unknownFields.getSerializedSize();
@@ -6598,13 +6909,12 @@ public final class FormatSchemaServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getFormatSchemaName()
-          .equals(other.getFormatSchemaName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFormatSchemaName()
+          .equals(other.getFormatSchemaName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6789,35 +7099,35 @@ public final class FormatSchemaServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6871,6 +7181,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6886,6 +7197,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6902,6 +7214,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6915,6 +7229,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6924,6 +7239,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6940,6 +7257,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object formatSchemaName_ = "";
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return The formatSchemaName.
        */
       public java.lang.String getFormatSchemaName() {
         java.lang.Object ref = formatSchemaName_;
@@ -6955,6 +7273,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return The bytes for formatSchemaName.
        */
       public com.google.protobuf.ByteString
           getFormatSchemaNameBytes() {
@@ -6971,6 +7290,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @param value The formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaName(
           java.lang.String value) {
@@ -6984,6 +7305,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormatSchemaName() {
         
@@ -6993,6 +7315,8 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <code>string format_schema_name = 2;</code>
+       * @param value The bytes for formatSchemaName to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatSchemaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7008,7 +7332,7 @@ public final class FormatSchemaServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7181,15 +7505,7 @@ public final class FormatSchemaServiceOuterClass {
       "proto/yandex/cloud/mdb/clickhouse/v1;cli" +
       "ckhouseb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -7198,7 +7514,7 @@ public final class FormatSchemaServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetFormatSchemaRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetFormatSchemaRequest_fieldAccessorTable = new

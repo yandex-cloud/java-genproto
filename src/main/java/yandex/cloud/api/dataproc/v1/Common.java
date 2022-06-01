@@ -97,6 +97,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -104,6 +106,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static Health forNumber(int value) {
       switch (value) {
         case 0: return HEALTH_UNKNOWN;
@@ -128,6 +134,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -173,6 +183,7 @@ public final class Common {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
@@ -182,6 +193,7 @@ public final class Common {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
     com.google.protobuf.ByteString
         getResourcePresetIdBytes();
@@ -195,6 +207,7 @@ public final class Common {
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
+     * @return The diskTypeId.
      */
     java.lang.String getDiskTypeId();
     /**
@@ -206,6 +219,7 @@ public final class Common {
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
+     * @return The bytes for diskTypeId.
      */
     com.google.protobuf.ByteString
         getDiskTypeIdBytes();
@@ -216,13 +230,14 @@ public final class Common {
      * </pre>
      *
      * <code>int64 disk_size = 3;</code>
+     * @return The diskSize.
      */
     long getDiskSize();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.Resources}
    */
-  public  static final class Resources extends
+  public static final class Resources extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.Resources)
       ResourcesOrBuilder {
@@ -234,7 +249,13 @@ public final class Common {
     private Resources() {
       resourcePresetId_ = "";
       diskTypeId_ = "";
-      diskSize_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Resources();
     }
 
     @java.lang.Override
@@ -250,7 +271,6 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -279,7 +299,7 @@ public final class Common {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -319,7 +339,9 @@ public final class Common {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
+    @java.lang.Override
     public java.lang.String getResourcePresetId() {
       java.lang.Object ref = resourcePresetId_;
       if (ref instanceof java.lang.String) {
@@ -339,7 +361,9 @@ public final class Common {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourcePresetIdBytes() {
       java.lang.Object ref = resourcePresetId_;
@@ -365,7 +389,9 @@ public final class Common {
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
+     * @return The diskTypeId.
      */
+    @java.lang.Override
     public java.lang.String getDiskTypeId() {
       java.lang.Object ref = diskTypeId_;
       if (ref instanceof java.lang.String) {
@@ -387,7 +413,9 @@ public final class Common {
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
+     * @return The bytes for diskTypeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskTypeIdBytes() {
       java.lang.Object ref = diskTypeId_;
@@ -410,7 +438,9 @@ public final class Common {
      * </pre>
      *
      * <code>int64 disk_size = 3;</code>
+     * @return The diskSize.
      */
+    @java.lang.Override
     public long getDiskSize() {
       return diskSize_;
     }
@@ -429,10 +459,10 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, diskTypeId_);
       }
       if (diskSize_ != 0L) {
@@ -447,10 +477,10 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, diskTypeId_);
       }
       if (diskSize_ != 0L) {
@@ -472,15 +502,14 @@ public final class Common {
       }
       yandex.cloud.api.dataproc.v1.Common.Resources other = (yandex.cloud.api.dataproc.v1.Common.Resources) obj;
 
-      boolean result = true;
-      result = result && getResourcePresetId()
-          .equals(other.getResourcePresetId());
-      result = result && getDiskTypeId()
-          .equals(other.getDiskTypeId());
-      result = result && (getDiskSize()
-          == other.getDiskSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcePresetId()
+          .equals(other.getResourcePresetId())) return false;
+      if (!getDiskTypeId()
+          .equals(other.getDiskTypeId())) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -671,35 +700,35 @@ public final class Common {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -761,6 +790,7 @@ public final class Common {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The resourcePresetId.
        */
       public java.lang.String getResourcePresetId() {
         java.lang.Object ref = resourcePresetId_;
@@ -781,6 +811,7 @@ public final class Common {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The bytes for resourcePresetId.
        */
       public com.google.protobuf.ByteString
           getResourcePresetIdBytes() {
@@ -802,6 +833,8 @@ public final class Common {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetId(
           java.lang.String value) {
@@ -820,6 +853,7 @@ public final class Common {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourcePresetId() {
         
@@ -834,6 +868,8 @@ public final class Common {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The bytes for resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -857,6 +893,7 @@ public final class Common {
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
+       * @return The diskTypeId.
        */
       public java.lang.String getDiskTypeId() {
         java.lang.Object ref = diskTypeId_;
@@ -879,6 +916,7 @@ public final class Common {
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
+       * @return The bytes for diskTypeId.
        */
       public com.google.protobuf.ByteString
           getDiskTypeIdBytes() {
@@ -902,6 +940,8 @@ public final class Common {
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
+       * @param value The diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeId(
           java.lang.String value) {
@@ -922,6 +962,7 @@ public final class Common {
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskTypeId() {
         
@@ -938,6 +979,8 @@ public final class Common {
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
+       * @param value The bytes for diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -958,7 +1001,9 @@ public final class Common {
        * </pre>
        *
        * <code>int64 disk_size = 3;</code>
+       * @return The diskSize.
        */
+      @java.lang.Override
       public long getDiskSize() {
         return diskSize_;
       }
@@ -968,6 +1013,8 @@ public final class Common {
        * </pre>
        *
        * <code>int64 disk_size = 3;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskSize(long value) {
         
@@ -981,6 +1028,7 @@ public final class Common {
        * </pre>
        *
        * <code>int64 disk_size = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskSize() {
         
@@ -991,7 +1039,7 @@ public final class Common {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1065,18 +1113,10 @@ public final class Common {
       "o/yandex/cloud/dataproc/v1;dataprocb\006pro" +
       "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_dataproc_v1_Resources_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_Resources_fieldAccessorTable = new

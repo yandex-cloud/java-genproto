@@ -24,6 +24,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 2;</code>
+     * @return The billingAccountId.
      */
     java.lang.String getBillingAccountId();
     /**
@@ -50,6 +53,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 2;</code>
+     * @return The bytes for billingAccountId.
      */
     com.google.protobuf.ByteString
         getBillingAccountIdBytes();
@@ -61,7 +65,7 @@ public final class CustomerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.Customer}
    */
-  public  static final class Customer extends
+  public static final class Customer extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.Customer)
       CustomerOrBuilder {
@@ -73,6 +77,13 @@ public final class CustomerOuterClass {
     private Customer() {
       id_ = "";
       billingAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Customer();
     }
 
     @java.lang.Override
@@ -88,7 +99,6 @@ public final class CustomerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,7 +122,7 @@ public final class CustomerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -151,7 +161,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -170,7 +182,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -193,7 +207,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 2;</code>
+     * @return The billingAccountId.
      */
+    @java.lang.Override
     public java.lang.String getBillingAccountId() {
       java.lang.Object ref = billingAccountId_;
       if (ref instanceof java.lang.String) {
@@ -212,7 +228,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string billing_account_id = 2;</code>
+     * @return The bytes for billingAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBillingAccountIdBytes() {
       java.lang.Object ref = billingAccountId_;
@@ -241,10 +259,10 @@ public final class CustomerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getBillingAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, billingAccountId_);
       }
       unknownFields.writeTo(output);
@@ -256,10 +274,10 @@ public final class CustomerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getBillingAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, billingAccountId_);
       }
       size += unknownFields.getSerializedSize();
@@ -277,13 +295,12 @@ public final class CustomerOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerOuterClass.Customer other = (yandex.cloud.api.billing.v1.CustomerOuterClass.Customer) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getBillingAccountId()
-          .equals(other.getBillingAccountId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getBillingAccountId()
+          .equals(other.getBillingAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -472,35 +489,35 @@ public final class CustomerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -558,6 +575,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -577,6 +595,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -597,6 +616,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -614,6 +635,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -627,6 +649,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -647,6 +671,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 2;</code>
+       * @return The billingAccountId.
        */
       public java.lang.String getBillingAccountId() {
         java.lang.Object ref = billingAccountId_;
@@ -666,6 +691,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 2;</code>
+       * @return The bytes for billingAccountId.
        */
       public com.google.protobuf.ByteString
           getBillingAccountIdBytes() {
@@ -686,6 +712,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 2;</code>
+       * @param value The billingAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setBillingAccountId(
           java.lang.String value) {
@@ -703,6 +731,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBillingAccountId() {
         
@@ -716,6 +745,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string billing_account_id = 2;</code>
+       * @param value The bytes for billingAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setBillingAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -731,7 +762,7 @@ public final class CustomerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -791,6 +822,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -799,6 +831,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -809,6 +842,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string longname = 2;</code>
+     * @return The longname.
      */
     java.lang.String getLongname();
     /**
@@ -817,6 +851,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string longname = 2;</code>
+     * @return The bytes for longname.
      */
     com.google.protobuf.ByteString
         getLongnameBytes();
@@ -827,6 +862,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string phone = 3;</code>
+     * @return The phone.
      */
     java.lang.String getPhone();
     /**
@@ -835,6 +871,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string phone = 3;</code>
+     * @return The bytes for phone.
      */
     com.google.protobuf.ByteString
         getPhoneBytes();
@@ -845,6 +882,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string email = 4;</code>
+     * @return The email.
      */
     java.lang.String getEmail();
     /**
@@ -853,6 +891,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string email = 4;</code>
+     * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
@@ -863,6 +902,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_code = 5;</code>
+     * @return The postCode.
      */
     java.lang.String getPostCode();
     /**
@@ -871,6 +911,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_code = 5;</code>
+     * @return The bytes for postCode.
      */
     com.google.protobuf.ByteString
         getPostCodeBytes();
@@ -881,6 +922,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_address = 6;</code>
+     * @return The postAddress.
      */
     java.lang.String getPostAddress();
     /**
@@ -889,6 +931,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_address = 6;</code>
+     * @return The bytes for postAddress.
      */
     com.google.protobuf.ByteString
         getPostAddressBytes();
@@ -899,6 +942,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string legal_address = 7;</code>
+     * @return The legalAddress.
      */
     java.lang.String getLegalAddress();
     /**
@@ -907,6 +951,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string legal_address = 7;</code>
+     * @return The bytes for legalAddress.
      */
     com.google.protobuf.ByteString
         getLegalAddressBytes();
@@ -917,6 +962,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string tin = 8;</code>
+     * @return The tin.
      */
     java.lang.String getTin();
     /**
@@ -925,6 +971,7 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string tin = 8;</code>
+     * @return The bytes for tin.
      */
     com.google.protobuf.ByteString
         getTinBytes();
@@ -936,7 +983,7 @@ public final class CustomerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.CustomerPerson}
    */
-  public  static final class CustomerPerson extends
+  public static final class CustomerPerson extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.CustomerPerson)
       CustomerPersonOrBuilder {
@@ -957,6 +1004,13 @@ public final class CustomerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerPerson();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -969,7 +1023,6 @@ public final class CustomerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1029,7 +1082,7 @@ public final class CustomerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1068,7 +1121,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1087,7 +1142,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1110,7 +1167,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string longname = 2;</code>
+     * @return The longname.
      */
+    @java.lang.Override
     public java.lang.String getLongname() {
       java.lang.Object ref = longname_;
       if (ref instanceof java.lang.String) {
@@ -1129,7 +1188,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string longname = 2;</code>
+     * @return The bytes for longname.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLongnameBytes() {
       java.lang.Object ref = longname_;
@@ -1152,7 +1213,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string phone = 3;</code>
+     * @return The phone.
      */
+    @java.lang.Override
     public java.lang.String getPhone() {
       java.lang.Object ref = phone_;
       if (ref instanceof java.lang.String) {
@@ -1171,7 +1234,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string phone = 3;</code>
+     * @return The bytes for phone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPhoneBytes() {
       java.lang.Object ref = phone_;
@@ -1194,7 +1259,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string email = 4;</code>
+     * @return The email.
      */
+    @java.lang.Override
     public java.lang.String getEmail() {
       java.lang.Object ref = email_;
       if (ref instanceof java.lang.String) {
@@ -1213,7 +1280,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string email = 4;</code>
+     * @return The bytes for email.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEmailBytes() {
       java.lang.Object ref = email_;
@@ -1236,7 +1305,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_code = 5;</code>
+     * @return The postCode.
      */
+    @java.lang.Override
     public java.lang.String getPostCode() {
       java.lang.Object ref = postCode_;
       if (ref instanceof java.lang.String) {
@@ -1255,7 +1326,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_code = 5;</code>
+     * @return The bytes for postCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPostCodeBytes() {
       java.lang.Object ref = postCode_;
@@ -1278,7 +1351,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_address = 6;</code>
+     * @return The postAddress.
      */
+    @java.lang.Override
     public java.lang.String getPostAddress() {
       java.lang.Object ref = postAddress_;
       if (ref instanceof java.lang.String) {
@@ -1297,7 +1372,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string post_address = 6;</code>
+     * @return The bytes for postAddress.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPostAddressBytes() {
       java.lang.Object ref = postAddress_;
@@ -1320,7 +1397,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string legal_address = 7;</code>
+     * @return The legalAddress.
      */
+    @java.lang.Override
     public java.lang.String getLegalAddress() {
       java.lang.Object ref = legalAddress_;
       if (ref instanceof java.lang.String) {
@@ -1339,7 +1418,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string legal_address = 7;</code>
+     * @return The bytes for legalAddress.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLegalAddressBytes() {
       java.lang.Object ref = legalAddress_;
@@ -1362,7 +1443,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string tin = 8;</code>
+     * @return The tin.
      */
+    @java.lang.Override
     public java.lang.String getTin() {
       java.lang.Object ref = tin_;
       if (ref instanceof java.lang.String) {
@@ -1381,7 +1464,9 @@ public final class CustomerOuterClass {
      * </pre>
      *
      * <code>string tin = 8;</code>
+     * @return The bytes for tin.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTinBytes() {
       java.lang.Object ref = tin_;
@@ -1410,28 +1495,28 @@ public final class CustomerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getLongnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(longname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, longname_);
       }
-      if (!getPhoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, phone_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, email_);
       }
-      if (!getPostCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, postCode_);
       }
-      if (!getPostAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, postAddress_);
       }
-      if (!getLegalAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(legalAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, legalAddress_);
       }
-      if (!getTinBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tin_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, tin_);
       }
       unknownFields.writeTo(output);
@@ -1443,28 +1528,28 @@ public final class CustomerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getLongnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(longname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, longname_);
       }
-      if (!getPhoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, phone_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, email_);
       }
-      if (!getPostCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, postCode_);
       }
-      if (!getPostAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, postAddress_);
       }
-      if (!getLegalAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(legalAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, legalAddress_);
       }
-      if (!getTinBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tin_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, tin_);
       }
       size += unknownFields.getSerializedSize();
@@ -1482,25 +1567,24 @@ public final class CustomerOuterClass {
       }
       yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson other = (yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getLongname()
-          .equals(other.getLongname());
-      result = result && getPhone()
-          .equals(other.getPhone());
-      result = result && getEmail()
-          .equals(other.getEmail());
-      result = result && getPostCode()
-          .equals(other.getPostCode());
-      result = result && getPostAddress()
-          .equals(other.getPostAddress());
-      result = result && getLegalAddress()
-          .equals(other.getLegalAddress());
-      result = result && getTin()
-          .equals(other.getTin());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getLongname()
+          .equals(other.getLongname())) return false;
+      if (!getPhone()
+          .equals(other.getPhone())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (!getPostCode()
+          .equals(other.getPostCode())) return false;
+      if (!getPostAddress()
+          .equals(other.getPostAddress())) return false;
+      if (!getLegalAddress()
+          .equals(other.getLegalAddress())) return false;
+      if (!getTin()
+          .equals(other.getTin())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1719,35 +1803,35 @@ public final class CustomerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1829,6 +1913,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1848,6 +1933,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1868,6 +1954,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1885,6 +1973,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1898,6 +1987,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1918,6 +2009,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string longname = 2;</code>
+       * @return The longname.
        */
       public java.lang.String getLongname() {
         java.lang.Object ref = longname_;
@@ -1937,6 +2029,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string longname = 2;</code>
+       * @return The bytes for longname.
        */
       public com.google.protobuf.ByteString
           getLongnameBytes() {
@@ -1957,6 +2050,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string longname = 2;</code>
+       * @param value The longname to set.
+       * @return This builder for chaining.
        */
       public Builder setLongname(
           java.lang.String value) {
@@ -1974,6 +2069,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string longname = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLongname() {
         
@@ -1987,6 +2083,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string longname = 2;</code>
+       * @param value The bytes for longname to set.
+       * @return This builder for chaining.
        */
       public Builder setLongnameBytes(
           com.google.protobuf.ByteString value) {
@@ -2007,6 +2105,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string phone = 3;</code>
+       * @return The phone.
        */
       public java.lang.String getPhone() {
         java.lang.Object ref = phone_;
@@ -2026,6 +2125,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string phone = 3;</code>
+       * @return The bytes for phone.
        */
       public com.google.protobuf.ByteString
           getPhoneBytes() {
@@ -2046,6 +2146,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string phone = 3;</code>
+       * @param value The phone to set.
+       * @return This builder for chaining.
        */
       public Builder setPhone(
           java.lang.String value) {
@@ -2063,6 +2165,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string phone = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPhone() {
         
@@ -2076,6 +2179,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string phone = 3;</code>
+       * @param value The bytes for phone to set.
+       * @return This builder for chaining.
        */
       public Builder setPhoneBytes(
           com.google.protobuf.ByteString value) {
@@ -2096,6 +2201,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string email = 4;</code>
+       * @return The email.
        */
       public java.lang.String getEmail() {
         java.lang.Object ref = email_;
@@ -2115,6 +2221,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string email = 4;</code>
+       * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
           getEmailBytes() {
@@ -2135,6 +2242,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string email = 4;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmail(
           java.lang.String value) {
@@ -2152,6 +2261,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string email = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEmail() {
         
@@ -2165,6 +2275,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string email = 4;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -2185,6 +2297,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_code = 5;</code>
+       * @return The postCode.
        */
       public java.lang.String getPostCode() {
         java.lang.Object ref = postCode_;
@@ -2204,6 +2317,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_code = 5;</code>
+       * @return The bytes for postCode.
        */
       public com.google.protobuf.ByteString
           getPostCodeBytes() {
@@ -2224,6 +2338,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_code = 5;</code>
+       * @param value The postCode to set.
+       * @return This builder for chaining.
        */
       public Builder setPostCode(
           java.lang.String value) {
@@ -2241,6 +2357,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_code = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPostCode() {
         
@@ -2254,6 +2371,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_code = 5;</code>
+       * @param value The bytes for postCode to set.
+       * @return This builder for chaining.
        */
       public Builder setPostCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -2274,6 +2393,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_address = 6;</code>
+       * @return The postAddress.
        */
       public java.lang.String getPostAddress() {
         java.lang.Object ref = postAddress_;
@@ -2293,6 +2413,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_address = 6;</code>
+       * @return The bytes for postAddress.
        */
       public com.google.protobuf.ByteString
           getPostAddressBytes() {
@@ -2313,6 +2434,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_address = 6;</code>
+       * @param value The postAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setPostAddress(
           java.lang.String value) {
@@ -2330,6 +2453,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_address = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPostAddress() {
         
@@ -2343,6 +2467,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string post_address = 6;</code>
+       * @param value The bytes for postAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setPostAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -2363,6 +2489,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string legal_address = 7;</code>
+       * @return The legalAddress.
        */
       public java.lang.String getLegalAddress() {
         java.lang.Object ref = legalAddress_;
@@ -2382,6 +2509,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string legal_address = 7;</code>
+       * @return The bytes for legalAddress.
        */
       public com.google.protobuf.ByteString
           getLegalAddressBytes() {
@@ -2402,6 +2530,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string legal_address = 7;</code>
+       * @param value The legalAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setLegalAddress(
           java.lang.String value) {
@@ -2419,6 +2549,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string legal_address = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLegalAddress() {
         
@@ -2432,6 +2563,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string legal_address = 7;</code>
+       * @param value The bytes for legalAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setLegalAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -2452,6 +2585,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string tin = 8;</code>
+       * @return The tin.
        */
       public java.lang.String getTin() {
         java.lang.Object ref = tin_;
@@ -2471,6 +2605,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string tin = 8;</code>
+       * @return The bytes for tin.
        */
       public com.google.protobuf.ByteString
           getTinBytes() {
@@ -2491,6 +2626,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string tin = 8;</code>
+       * @param value The tin to set.
+       * @return This builder for chaining.
        */
       public Builder setTin(
           java.lang.String value) {
@@ -2508,6 +2645,7 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string tin = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTin() {
         
@@ -2521,6 +2659,8 @@ public final class CustomerOuterClass {
        * </pre>
        *
        * <code>string tin = 8;</code>
+       * @param value The bytes for tin to set.
+       * @return This builder for chaining.
        */
       public Builder setTinBytes(
           com.google.protobuf.ByteString value) {
@@ -2536,7 +2676,7 @@ public final class CustomerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2616,18 +2756,10 @@ public final class CustomerOuterClass {
       "andex-cloud/go-genproto/yandex/cloud/bil" +
       "ling/v1;billingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_Customer_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_Customer_fieldAccessorTable = new

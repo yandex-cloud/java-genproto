@@ -29,30 +29,36 @@ public final class Validation {
 
     /**
      * <code>string value = 1;</code>
+     * @return The value.
      */
     java.lang.String getValue();
     /**
      * <code>string value = 1;</code>
+     * @return The bytes for value.
      */
     com.google.protobuf.ByteString
         getValueBytes();
 
     /**
      * <code>string pattern = 2;</code>
+     * @return The pattern.
      */
     java.lang.String getPattern();
     /**
      * <code>string pattern = 2;</code>
+     * @return The bytes for pattern.
      */
     com.google.protobuf.ByteString
         getPatternBytes();
 
     /**
      * <code>string length = 3;</code>
+     * @return The length.
      */
     java.lang.String getLength();
     /**
      * <code>string length = 3;</code>
+     * @return The bytes for length.
      */
     com.google.protobuf.ByteString
         getLengthBytes();
@@ -60,7 +66,7 @@ public final class Validation {
   /**
    * Protobuf type {@code yandex.cloud.MapKeySpec}
    */
-  public  static final class MapKeySpec extends
+  public static final class MapKeySpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.MapKeySpec)
       MapKeySpecOrBuilder {
@@ -76,6 +82,13 @@ public final class Validation {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MapKeySpec();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -88,7 +101,6 @@ public final class Validation {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -118,7 +130,7 @@ public final class Validation {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -153,7 +165,9 @@ public final class Validation {
     private volatile java.lang.Object value_;
     /**
      * <code>string value = 1;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -168,7 +182,9 @@ public final class Validation {
     }
     /**
      * <code>string value = 1;</code>
+     * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -187,7 +203,9 @@ public final class Validation {
     private volatile java.lang.Object pattern_;
     /**
      * <code>string pattern = 2;</code>
+     * @return The pattern.
      */
+    @java.lang.Override
     public java.lang.String getPattern() {
       java.lang.Object ref = pattern_;
       if (ref instanceof java.lang.String) {
@@ -202,7 +220,9 @@ public final class Validation {
     }
     /**
      * <code>string pattern = 2;</code>
+     * @return The bytes for pattern.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPatternBytes() {
       java.lang.Object ref = pattern_;
@@ -221,7 +241,9 @@ public final class Validation {
     private volatile java.lang.Object length_;
     /**
      * <code>string length = 3;</code>
+     * @return The length.
      */
+    @java.lang.Override
     public java.lang.String getLength() {
       java.lang.Object ref = length_;
       if (ref instanceof java.lang.String) {
@@ -236,7 +258,9 @@ public final class Validation {
     }
     /**
      * <code>string length = 3;</code>
+     * @return The bytes for length.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLengthBytes() {
       java.lang.Object ref = length_;
@@ -265,13 +289,13 @@ public final class Validation {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pattern_);
       }
-      if (!getLengthBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(length_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, length_);
       }
       unknownFields.writeTo(output);
@@ -283,13 +307,13 @@ public final class Validation {
       if (size != -1) return size;
 
       size = 0;
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pattern_);
       }
-      if (!getLengthBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(length_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, length_);
       }
       size += unknownFields.getSerializedSize();
@@ -307,15 +331,14 @@ public final class Validation {
       }
       yandex.cloud.api.Validation.MapKeySpec other = (yandex.cloud.api.Validation.MapKeySpec) obj;
 
-      boolean result = true;
-      result = result && getValue()
-          .equals(other.getValue());
-      result = result && getPattern()
-          .equals(other.getPattern());
-      result = result && getLength()
-          .equals(other.getLength());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getPattern()
+          .equals(other.getPattern())) return false;
+      if (!getLength()
+          .equals(other.getLength())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -505,35 +528,35 @@ public final class Validation {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -591,6 +614,7 @@ public final class Validation {
       private java.lang.Object value_ = "";
       /**
        * <code>string value = 1;</code>
+       * @return The value.
        */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
@@ -606,6 +630,7 @@ public final class Validation {
       }
       /**
        * <code>string value = 1;</code>
+       * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
@@ -622,6 +647,8 @@ public final class Validation {
       }
       /**
        * <code>string value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
        */
       public Builder setValue(
           java.lang.String value) {
@@ -635,6 +662,7 @@ public final class Validation {
       }
       /**
        * <code>string value = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearValue() {
         
@@ -644,6 +672,8 @@ public final class Validation {
       }
       /**
        * <code>string value = 1;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
@@ -660,6 +690,7 @@ public final class Validation {
       private java.lang.Object pattern_ = "";
       /**
        * <code>string pattern = 2;</code>
+       * @return The pattern.
        */
       public java.lang.String getPattern() {
         java.lang.Object ref = pattern_;
@@ -675,6 +706,7 @@ public final class Validation {
       }
       /**
        * <code>string pattern = 2;</code>
+       * @return The bytes for pattern.
        */
       public com.google.protobuf.ByteString
           getPatternBytes() {
@@ -691,6 +723,8 @@ public final class Validation {
       }
       /**
        * <code>string pattern = 2;</code>
+       * @param value The pattern to set.
+       * @return This builder for chaining.
        */
       public Builder setPattern(
           java.lang.String value) {
@@ -704,6 +738,7 @@ public final class Validation {
       }
       /**
        * <code>string pattern = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPattern() {
         
@@ -713,6 +748,8 @@ public final class Validation {
       }
       /**
        * <code>string pattern = 2;</code>
+       * @param value The bytes for pattern to set.
+       * @return This builder for chaining.
        */
       public Builder setPatternBytes(
           com.google.protobuf.ByteString value) {
@@ -729,6 +766,7 @@ public final class Validation {
       private java.lang.Object length_ = "";
       /**
        * <code>string length = 3;</code>
+       * @return The length.
        */
       public java.lang.String getLength() {
         java.lang.Object ref = length_;
@@ -744,6 +782,7 @@ public final class Validation {
       }
       /**
        * <code>string length = 3;</code>
+       * @return The bytes for length.
        */
       public com.google.protobuf.ByteString
           getLengthBytes() {
@@ -760,6 +799,8 @@ public final class Validation {
       }
       /**
        * <code>string length = 3;</code>
+       * @param value The length to set.
+       * @return This builder for chaining.
        */
       public Builder setLength(
           java.lang.String value) {
@@ -773,6 +814,7 @@ public final class Validation {
       }
       /**
        * <code>string length = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLength() {
         
@@ -782,6 +824,8 @@ public final class Validation {
       }
       /**
        * <code>string length = 3;</code>
+       * @param value The bytes for length to set.
+       * @return This builder for chaining.
        */
       public Builder setLengthBytes(
           com.google.protobuf.ByteString value) {
@@ -797,7 +841,7 @@ public final class Validation {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -979,19 +1023,11 @@ public final class Validation {
       "b.com/yandex-cloud/go-genproto/yandex/cl" +
       "oud;cloudb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_MapKeySpec_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_MapKeySpec_fieldAccessorTable = new

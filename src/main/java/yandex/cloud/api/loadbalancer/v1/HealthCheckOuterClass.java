@@ -24,6 +24,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,6 +33,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -42,6 +44,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2;</code>
+     * @return Whether the interval field is set.
      */
     boolean hasInterval();
     /**
@@ -50,6 +53,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2;</code>
+     * @return The interval.
      */
     com.google.protobuf.Duration getInterval();
     /**
@@ -67,6 +71,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return Whether the timeout field is set.
      */
     boolean hasTimeout();
     /**
@@ -75,6 +80,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return The timeout.
      */
     com.google.protobuf.Duration getTimeout();
     /**
@@ -92,6 +98,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>int64 unhealthy_threshold = 4 [(.yandex.cloud.value) = "2-10"];</code>
+     * @return The unhealthyThreshold.
      */
     long getUnhealthyThreshold();
 
@@ -101,6 +108,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>int64 healthy_threshold = 5 [(.yandex.cloud.value) = "2-10"];</code>
+     * @return The healthyThreshold.
      */
     long getHealthyThreshold();
 
@@ -110,6 +118,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
+     * @return Whether the tcpOptions field is set.
      */
     boolean hasTcpOptions();
     /**
@@ -118,6 +127,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
+     * @return The tcpOptions.
      */
     yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions getTcpOptions();
     /**
@@ -135,6 +145,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
+     * @return Whether the httpOptions field is set.
      */
     boolean hasHttpOptions();
     /**
@@ -143,6 +154,7 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
+     * @return The httpOptions.
      */
     yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions getHttpOptions();
     /**
@@ -163,7 +175,7 @@ public final class HealthCheckOuterClass {
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.HealthCheck}
    */
-  public  static final class HealthCheck extends
+  public static final class HealthCheck extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.HealthCheck)
       HealthCheckOrBuilder {
@@ -174,8 +186,13 @@ public final class HealthCheckOuterClass {
     }
     private HealthCheck() {
       name_ = "";
-      unhealthyThreshold_ = 0L;
-      healthyThreshold_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HealthCheck();
     }
 
     @java.lang.Override
@@ -191,7 +208,6 @@ public final class HealthCheckOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -273,7 +289,7 @@ public final class HealthCheckOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -314,6 +330,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return The port.
        */
       long getPort();
     }
@@ -324,7 +341,7 @@ public final class HealthCheckOuterClass {
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions}
      */
-    public  static final class TcpOptions extends
+    public static final class TcpOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions)
         TcpOptionsOrBuilder {
@@ -334,7 +351,13 @@ public final class HealthCheckOuterClass {
         super(builder);
       }
       private TcpOptions() {
-        port_ = 0L;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new TcpOptions();
       }
 
       @java.lang.Override
@@ -350,7 +373,6 @@ public final class HealthCheckOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -367,7 +389,7 @@ public final class HealthCheckOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -406,7 +428,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -456,11 +480,10 @@ public final class HealthCheckOuterClass {
         }
         yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions other = (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions) obj;
 
-        boolean result = true;
-        result = result && (getPort()
-            == other.getPort());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getPort()
+            != other.getPort()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -645,35 +668,35 @@ public final class HealthCheckOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -726,7 +749,9 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+         * @return The port.
          */
+        @java.lang.Override
         public long getPort() {
           return port_;
         }
@@ -736,6 +761,8 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+         * @param value The port to set.
+         * @return This builder for chaining.
          */
         public Builder setPort(long value) {
           
@@ -749,6 +776,7 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearPort() {
           
@@ -759,7 +787,7 @@ public final class HealthCheckOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -819,6 +847,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return The port.
        */
       long getPort();
 
@@ -829,6 +858,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string path = 2;</code>
+       * @return The path.
        */
       java.lang.String getPath();
       /**
@@ -838,6 +868,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string path = 2;</code>
+       * @return The bytes for path.
        */
       com.google.protobuf.ByteString
           getPathBytes();
@@ -849,7 +880,7 @@ public final class HealthCheckOuterClass {
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions}
      */
-    public  static final class HttpOptions extends
+    public static final class HttpOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions)
         HttpOptionsOrBuilder {
@@ -859,8 +890,14 @@ public final class HealthCheckOuterClass {
         super(builder);
       }
       private HttpOptions() {
-        port_ = 0L;
         path_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HttpOptions();
       }
 
       @java.lang.Override
@@ -876,7 +913,6 @@ public final class HealthCheckOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -899,7 +935,7 @@ public final class HealthCheckOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -938,7 +974,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -952,7 +990,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string path = 2;</code>
+       * @return The path.
        */
+      @java.lang.Override
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
         if (ref instanceof java.lang.String) {
@@ -972,7 +1012,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string path = 2;</code>
+       * @return The bytes for path.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPathBytes() {
         java.lang.Object ref = path_;
@@ -1004,7 +1046,7 @@ public final class HealthCheckOuterClass {
         if (port_ != 0L) {
           output.writeInt64(1, port_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, path_);
         }
         unknownFields.writeTo(output);
@@ -1020,7 +1062,7 @@ public final class HealthCheckOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(1, port_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, path_);
         }
         size += unknownFields.getSerializedSize();
@@ -1038,13 +1080,12 @@ public final class HealthCheckOuterClass {
         }
         yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions other = (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions) obj;
 
-        boolean result = true;
-        result = result && (getPort()
-            == other.getPort());
-        result = result && getPath()
-            .equals(other.getPath());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getPort()
+            != other.getPort()) return false;
+        if (!getPath()
+            .equals(other.getPath())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1234,35 +1275,35 @@ public final class HealthCheckOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1319,7 +1360,9 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+         * @return The port.
          */
+        @java.lang.Override
         public long getPort() {
           return port_;
         }
@@ -1329,6 +1372,8 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+         * @param value The port to set.
+         * @return This builder for chaining.
          */
         public Builder setPort(long value) {
           
@@ -1342,6 +1387,7 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearPort() {
           
@@ -1358,6 +1404,7 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>string path = 2;</code>
+         * @return The path.
          */
         public java.lang.String getPath() {
           java.lang.Object ref = path_;
@@ -1378,6 +1425,7 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>string path = 2;</code>
+         * @return The bytes for path.
          */
         public com.google.protobuf.ByteString
             getPathBytes() {
@@ -1399,6 +1447,8 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>string path = 2;</code>
+         * @param value The path to set.
+         * @return This builder for chaining.
          */
         public Builder setPath(
             java.lang.String value) {
@@ -1417,6 +1467,7 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>string path = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearPath() {
           
@@ -1431,6 +1482,8 @@ public final class HealthCheckOuterClass {
          * </pre>
          *
          * <code>string path = 2;</code>
+         * @param value The bytes for path to set.
+         * @return This builder for chaining.
          */
         public Builder setPathBytes(
             com.google.protobuf.ByteString value) {
@@ -1446,7 +1499,7 @@ public final class HealthCheckOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1499,7 +1552,8 @@ public final class HealthCheckOuterClass {
     private int optionsCase_ = 0;
     private java.lang.Object options_;
     public enum OptionsCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TCP_OPTIONS(6),
       HTTP_OPTIONS(7),
       OPTIONS_NOT_SET(0);
@@ -1508,6 +1562,8 @@ public final class HealthCheckOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1542,7 +1598,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1561,7 +1619,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1584,7 +1644,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2;</code>
+     * @return Whether the interval field is set.
      */
+    @java.lang.Override
     public boolean hasInterval() {
       return interval_ != null;
     }
@@ -1594,7 +1656,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2;</code>
+     * @return The interval.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getInterval() {
       return interval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : interval_;
     }
@@ -1605,6 +1669,7 @@ public final class HealthCheckOuterClass {
      *
      * <code>.google.protobuf.Duration interval = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
       return getInterval();
     }
@@ -1617,7 +1682,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return Whether the timeout field is set.
      */
+    @java.lang.Override
     public boolean hasTimeout() {
       return timeout_ != null;
     }
@@ -1627,7 +1694,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return The timeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getTimeout() {
       return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
     }
@@ -1638,6 +1707,7 @@ public final class HealthCheckOuterClass {
      *
      * <code>.google.protobuf.Duration timeout = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
       return getTimeout();
     }
@@ -1650,7 +1720,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>int64 unhealthy_threshold = 4 [(.yandex.cloud.value) = "2-10"];</code>
+     * @return The unhealthyThreshold.
      */
+    @java.lang.Override
     public long getUnhealthyThreshold() {
       return unhealthyThreshold_;
     }
@@ -1663,7 +1735,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>int64 healthy_threshold = 5 [(.yandex.cloud.value) = "2-10"];</code>
+     * @return The healthyThreshold.
      */
+    @java.lang.Override
     public long getHealthyThreshold() {
       return healthyThreshold_;
     }
@@ -1675,7 +1749,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
+     * @return Whether the tcpOptions field is set.
      */
+    @java.lang.Override
     public boolean hasTcpOptions() {
       return optionsCase_ == 6;
     }
@@ -1685,7 +1761,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
+     * @return The tcpOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions getTcpOptions() {
       if (optionsCase_ == 6) {
          return (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions) options_;
@@ -1699,6 +1777,7 @@ public final class HealthCheckOuterClass {
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptionsOrBuilder getTcpOptionsOrBuilder() {
       if (optionsCase_ == 6) {
          return (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions) options_;
@@ -1713,7 +1792,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
+     * @return Whether the httpOptions field is set.
      */
+    @java.lang.Override
     public boolean hasHttpOptions() {
       return optionsCase_ == 7;
     }
@@ -1723,7 +1804,9 @@ public final class HealthCheckOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
+     * @return The httpOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions getHttpOptions() {
       if (optionsCase_ == 7) {
          return (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions) options_;
@@ -1737,6 +1820,7 @@ public final class HealthCheckOuterClass {
      *
      * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptionsOrBuilder getHttpOptionsOrBuilder() {
       if (optionsCase_ == 7) {
          return (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions) options_;
@@ -1758,7 +1842,7 @@ public final class HealthCheckOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (interval_ != null) {
@@ -1788,7 +1872,7 @@ public final class HealthCheckOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (interval_ != null) {
@@ -1830,40 +1914,37 @@ public final class HealthCheckOuterClass {
       }
       yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck other = (yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasInterval() == other.hasInterval());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasInterval() != other.hasInterval()) return false;
       if (hasInterval()) {
-        result = result && getInterval()
-            .equals(other.getInterval());
+        if (!getInterval()
+            .equals(other.getInterval())) return false;
       }
-      result = result && (hasTimeout() == other.hasTimeout());
+      if (hasTimeout() != other.hasTimeout()) return false;
       if (hasTimeout()) {
-        result = result && getTimeout()
-            .equals(other.getTimeout());
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
       }
-      result = result && (getUnhealthyThreshold()
-          == other.getUnhealthyThreshold());
-      result = result && (getHealthyThreshold()
-          == other.getHealthyThreshold());
-      result = result && getOptionsCase().equals(
-          other.getOptionsCase());
-      if (!result) return false;
+      if (getUnhealthyThreshold()
+          != other.getUnhealthyThreshold()) return false;
+      if (getHealthyThreshold()
+          != other.getHealthyThreshold()) return false;
+      if (!getOptionsCase().equals(other.getOptionsCase())) return false;
       switch (optionsCase_) {
         case 6:
-          result = result && getTcpOptions()
-              .equals(other.getTcpOptions());
+          if (!getTcpOptions()
+              .equals(other.getTcpOptions())) return false;
           break;
         case 7:
-          result = result && getHttpOptions()
-              .equals(other.getHttpOptions());
+          if (!getHttpOptions()
+              .equals(other.getHttpOptions())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2118,35 +2199,35 @@ public final class HealthCheckOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2240,6 +2321,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2259,6 +2341,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2279,6 +2362,8 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2296,6 +2381,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2309,6 +2395,8 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2322,7 +2410,7 @@ public final class HealthCheckOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration interval_ = null;
+      private com.google.protobuf.Duration interval_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> intervalBuilder_;
       /**
@@ -2331,6 +2419,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2;</code>
+       * @return Whether the interval field is set.
        */
       public boolean hasInterval() {
         return intervalBuilder_ != null || interval_ != null;
@@ -2341,6 +2430,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2;</code>
+       * @return The interval.
        */
       public com.google.protobuf.Duration getInterval() {
         if (intervalBuilder_ == null) {
@@ -2475,7 +2565,7 @@ public final class HealthCheckOuterClass {
         return intervalBuilder_;
       }
 
-      private com.google.protobuf.Duration timeout_ = null;
+      private com.google.protobuf.Duration timeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
       /**
@@ -2484,6 +2574,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 3;</code>
+       * @return Whether the timeout field is set.
        */
       public boolean hasTimeout() {
         return timeoutBuilder_ != null || timeout_ != null;
@@ -2494,6 +2585,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 3;</code>
+       * @return The timeout.
        */
       public com.google.protobuf.Duration getTimeout() {
         if (timeoutBuilder_ == null) {
@@ -2635,7 +2727,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 unhealthy_threshold = 4 [(.yandex.cloud.value) = "2-10"];</code>
+       * @return The unhealthyThreshold.
        */
+      @java.lang.Override
       public long getUnhealthyThreshold() {
         return unhealthyThreshold_;
       }
@@ -2645,6 +2739,8 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 unhealthy_threshold = 4 [(.yandex.cloud.value) = "2-10"];</code>
+       * @param value The unhealthyThreshold to set.
+       * @return This builder for chaining.
        */
       public Builder setUnhealthyThreshold(long value) {
         
@@ -2658,6 +2754,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 unhealthy_threshold = 4 [(.yandex.cloud.value) = "2-10"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUnhealthyThreshold() {
         
@@ -2673,7 +2770,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 healthy_threshold = 5 [(.yandex.cloud.value) = "2-10"];</code>
+       * @return The healthyThreshold.
        */
+      @java.lang.Override
       public long getHealthyThreshold() {
         return healthyThreshold_;
       }
@@ -2683,6 +2782,8 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 healthy_threshold = 5 [(.yandex.cloud.value) = "2-10"];</code>
+       * @param value The healthyThreshold to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthyThreshold(long value) {
         
@@ -2696,6 +2797,7 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>int64 healthy_threshold = 5 [(.yandex.cloud.value) = "2-10"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealthyThreshold() {
         
@@ -2712,7 +2814,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
+       * @return Whether the tcpOptions field is set.
        */
+      @java.lang.Override
       public boolean hasTcpOptions() {
         return optionsCase_ == 6;
       }
@@ -2722,7 +2826,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
+       * @return The tcpOptions.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptions getTcpOptions() {
         if (tcpOptionsBuilder_ == null) {
           if (optionsCase_ == 6) {
@@ -2840,6 +2946,7 @@ public final class HealthCheckOuterClass {
        *
        * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.TcpOptions tcp_options = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.TcpOptionsOrBuilder getTcpOptionsOrBuilder() {
         if ((optionsCase_ == 6) && (tcpOptionsBuilder_ != null)) {
           return tcpOptionsBuilder_.getMessageOrBuilder();
@@ -2884,7 +2991,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
+       * @return Whether the httpOptions field is set.
        */
+      @java.lang.Override
       public boolean hasHttpOptions() {
         return optionsCase_ == 7;
       }
@@ -2894,7 +3003,9 @@ public final class HealthCheckOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
+       * @return The httpOptions.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptions getHttpOptions() {
         if (httpOptionsBuilder_ == null) {
           if (optionsCase_ == 7) {
@@ -3012,6 +3123,7 @@ public final class HealthCheckOuterClass {
        *
        * <code>.yandex.cloud.loadbalancer.v1.HealthCheck.HttpOptions http_options = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.HttpOptionsOrBuilder getHttpOptionsOrBuilder() {
         if ((optionsCase_ == 7) && (httpOptionsBuilder_ != null)) {
           return httpOptionsBuilder_.getMessageOrBuilder();
@@ -3050,7 +3162,7 @@ public final class HealthCheckOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3145,20 +3257,12 @@ public final class HealthCheckOuterClass {
       "yandex/cloud/loadbalancer/v1;loadbalance" +
       "rb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_loadbalancer_v1_HealthCheck_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_loadbalancer_v1_HealthCheck_fieldAccessorTable = new

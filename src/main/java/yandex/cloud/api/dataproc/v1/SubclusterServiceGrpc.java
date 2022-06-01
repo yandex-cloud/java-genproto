@@ -1,19 +1,6 @@
 package yandex.cloud.api.dataproc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/dataproc/v1/subcluster_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SubclusterServiceGrpc {
 
   private SubclusterServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class SubclusterServiceGrpc {
     if ((getGetMethod = SubclusterServiceGrpc.getGetMethod) == null) {
       synchronized (SubclusterServiceGrpc.class) {
         if ((getGetMethod = SubclusterServiceGrpc.getGetMethod) == null) {
-          SubclusterServiceGrpc.getGetMethod = getGetMethod = 
+          SubclusterServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.v1.SubclusterService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest,
@@ -76,22 +63,21 @@ public final class SubclusterServiceGrpc {
     if ((getListMethod = SubclusterServiceGrpc.getListMethod) == null) {
       synchronized (SubclusterServiceGrpc.class) {
         if ((getListMethod = SubclusterServiceGrpc.getListMethod) == null) {
-          SubclusterServiceGrpc.getListMethod = getListMethod = 
+          SubclusterServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest, yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.v1.SubclusterService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest,
@@ -108,22 +94,21 @@ public final class SubclusterServiceGrpc {
     if ((getCreateMethod = SubclusterServiceGrpc.getCreateMethod) == null) {
       synchronized (SubclusterServiceGrpc.class) {
         if ((getCreateMethod = SubclusterServiceGrpc.getCreateMethod) == null) {
-          SubclusterServiceGrpc.getCreateMethod = getCreateMethod = 
+          SubclusterServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.v1.SubclusterService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest,
@@ -140,22 +125,21 @@ public final class SubclusterServiceGrpc {
     if ((getUpdateMethod = SubclusterServiceGrpc.getUpdateMethod) == null) {
       synchronized (SubclusterServiceGrpc.class) {
         if ((getUpdateMethod = SubclusterServiceGrpc.getUpdateMethod) == null) {
-          SubclusterServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          SubclusterServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.v1.SubclusterService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest,
@@ -172,29 +156,35 @@ public final class SubclusterServiceGrpc {
     if ((getDeleteMethod = SubclusterServiceGrpc.getDeleteMethod) == null) {
       synchronized (SubclusterServiceGrpc.class) {
         if ((getDeleteMethod = SubclusterServiceGrpc.getDeleteMethod) == null) {
-          SubclusterServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          SubclusterServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.v1.SubclusterService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubclusterServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SubclusterServiceStub newStub(io.grpc.Channel channel) {
-    return new SubclusterServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubclusterServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubclusterServiceStub>() {
+        @java.lang.Override
+        public SubclusterServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubclusterServiceStub(channel, callOptions);
+        }
+      };
+    return SubclusterServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -202,7 +192,14 @@ public final class SubclusterServiceGrpc {
    */
   public static SubclusterServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SubclusterServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubclusterServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubclusterServiceBlockingStub>() {
+        @java.lang.Override
+        public SubclusterServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubclusterServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SubclusterServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -210,7 +207,14 @@ public final class SubclusterServiceGrpc {
    */
   public static SubclusterServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SubclusterServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubclusterServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubclusterServiceFutureStub>() {
+        @java.lang.Override
+        public SubclusterServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubclusterServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SubclusterServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -228,7 +232,7 @@ public final class SubclusterServiceGrpc {
      */
     public void get(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -238,7 +242,7 @@ public final class SubclusterServiceGrpc {
      */
     public void list(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -248,7 +252,7 @@ public final class SubclusterServiceGrpc {
      */
     public void create(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -258,7 +262,7 @@ public final class SubclusterServiceGrpc {
      */
     public void update(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -268,42 +272,42 @@ public final class SubclusterServiceGrpc {
      */
     public void delete(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest,
                 yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest,
                 yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -317,19 +321,15 @@ public final class SubclusterServiceGrpc {
    * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
-  public static final class SubclusterServiceStub extends io.grpc.stub.AbstractStub<SubclusterServiceStub> {
-    private SubclusterServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubclusterServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubclusterServiceStub extends io.grpc.stub.AbstractAsyncStub<SubclusterServiceStub> {
+    private SubclusterServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubclusterServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubclusterServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubclusterServiceStub(channel, callOptions);
     }
 
@@ -341,7 +341,7 @@ public final class SubclusterServiceGrpc {
      */
     public void get(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -352,7 +352,7 @@ public final class SubclusterServiceGrpc {
      */
     public void list(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -363,7 +363,7 @@ public final class SubclusterServiceGrpc {
      */
     public void create(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -374,7 +374,7 @@ public final class SubclusterServiceGrpc {
      */
     public void update(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -385,7 +385,7 @@ public final class SubclusterServiceGrpc {
      */
     public void delete(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -395,19 +395,15 @@ public final class SubclusterServiceGrpc {
    * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
-  public static final class SubclusterServiceBlockingStub extends io.grpc.stub.AbstractStub<SubclusterServiceBlockingStub> {
-    private SubclusterServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubclusterServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubclusterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SubclusterServiceBlockingStub> {
+    private SubclusterServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubclusterServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubclusterServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubclusterServiceBlockingStub(channel, callOptions);
     }
 
@@ -418,7 +414,7 @@ public final class SubclusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster get(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -428,7 +424,7 @@ public final class SubclusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse list(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -438,7 +434,7 @@ public final class SubclusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -448,7 +444,7 @@ public final class SubclusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -458,7 +454,7 @@ public final class SubclusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
@@ -468,19 +464,15 @@ public final class SubclusterServiceGrpc {
    * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
-  public static final class SubclusterServiceFutureStub extends io.grpc.stub.AbstractStub<SubclusterServiceFutureStub> {
-    private SubclusterServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubclusterServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubclusterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SubclusterServiceFutureStub> {
+    private SubclusterServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubclusterServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubclusterServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubclusterServiceFutureStub(channel, callOptions);
     }
 
@@ -492,7 +484,7 @@ public final class SubclusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> get(
         yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -503,7 +495,7 @@ public final class SubclusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse> list(
         yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -514,7 +506,7 @@ public final class SubclusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -525,7 +517,7 @@ public final class SubclusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -536,7 +528,7 @@ public final class SubclusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

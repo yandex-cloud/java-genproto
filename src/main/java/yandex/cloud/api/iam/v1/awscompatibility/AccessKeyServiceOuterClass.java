@@ -25,6 +25,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
@@ -34,6 +35,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
     com.google.protobuf.ByteString
         getAccessKeyIdBytes();
@@ -41,7 +43,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.GetAccessKeyRequest}
    */
-  public  static final class GetAccessKeyRequest extends
+  public static final class GetAccessKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.GetAccessKeyRequest)
       GetAccessKeyRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class AccessKeyServiceOuterClass {
     }
     private GetAccessKeyRequest() {
       accessKeyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetAccessKeyRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
+    @java.lang.Override
     public java.lang.String getAccessKeyId() {
       java.lang.Object ref = accessKeyId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessKeyIdBytes() {
       java.lang.Object ref = accessKeyId_;
@@ -174,7 +186,7 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getAccessKeyId()
-          .equals(other.getAccessKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The accessKeyId.
        */
       public java.lang.String getAccessKeyId() {
         java.lang.Object ref = accessKeyId_;
@@ -491,6 +503,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for accessKeyId.
        */
       public com.google.protobuf.ByteString
           getAccessKeyIdBytes() {
@@ -512,6 +525,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAccessKeyId() {
         
@@ -544,6 +560,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -621,6 +639,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -631,6 +650,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -645,6 +665,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -656,6 +677,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -666,6 +688,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -673,7 +696,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.ListAccessKeysRequest}
    */
-  public  static final class ListAccessKeysRequest extends
+  public static final class ListAccessKeysRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.ListAccessKeysRequest)
       ListAccessKeysRequestOrBuilder {
@@ -684,8 +707,14 @@ public final class AccessKeyServiceOuterClass {
     }
     private ListAccessKeysRequest() {
       serviceAccountId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessKeysRequest();
     }
 
     @java.lang.Override
@@ -701,7 +730,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -730,7 +758,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -771,7 +799,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -792,7 +822,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -819,7 +851,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -834,7 +868,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -855,7 +891,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -884,13 +922,13 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceAccountId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -902,14 +940,14 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceAccountId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -927,15 +965,14 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest) obj;
 
-      boolean result = true;
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1126,35 +1163,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1217,6 +1254,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -1238,6 +1276,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -1260,6 +1299,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -1279,6 +1320,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -1294,6 +1336,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1318,7 +1362,9 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1332,6 +1378,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1349,6 +1397,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1366,6 +1415,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1387,6 +1437,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1409,6 +1460,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1428,6 +1481,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1443,6 +1497,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1458,7 +1514,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1567,6 +1623,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1580,6 +1637,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1587,7 +1645,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.ListAccessKeysResponse}
    */
-  public  static final class ListAccessKeysResponse extends
+  public static final class ListAccessKeysResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.ListAccessKeysResponse)
       ListAccessKeysResponseOrBuilder {
@@ -1599,6 +1657,13 @@ public final class AccessKeyServiceOuterClass {
     private ListAccessKeysResponse() {
       accessKeys_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessKeysResponse();
     }
 
     @java.lang.Override
@@ -1626,7 +1691,7 @@ public final class AccessKeyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 accessKeys_ = new java.util.ArrayList<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1641,7 +1706,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1655,7 +1720,7 @@ public final class AccessKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           accessKeys_ = java.util.Collections.unmodifiableList(accessKeys_);
         }
         this.unknownFields = unknownFields.build();
@@ -1675,7 +1740,6 @@ public final class AccessKeyServiceOuterClass {
               yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse.class, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACCESS_KEYS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey> accessKeys_;
     /**
@@ -1685,6 +1749,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iam.v1.awscompatibility.AccessKey access_keys = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey> getAccessKeysList() {
       return accessKeys_;
     }
@@ -1695,6 +1760,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iam.v1.awscompatibility.AccessKey access_keys = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKeyOrBuilder> 
         getAccessKeysOrBuilderList() {
       return accessKeys_;
@@ -1706,6 +1772,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iam.v1.awscompatibility.AccessKey access_keys = 1;</code>
      */
+    @java.lang.Override
     public int getAccessKeysCount() {
       return accessKeys_.size();
     }
@@ -1716,6 +1783,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iam.v1.awscompatibility.AccessKey access_keys = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey getAccessKeys(int index) {
       return accessKeys_.get(index);
     }
@@ -1726,6 +1794,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iam.v1.awscompatibility.AccessKey access_keys = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKeyOrBuilder getAccessKeysOrBuilder(
         int index) {
       return accessKeys_.get(index);
@@ -1744,7 +1813,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1768,7 +1839,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1800,7 +1873,7 @@ public final class AccessKeyServiceOuterClass {
       for (int i = 0; i < accessKeys_.size(); i++) {
         output.writeMessage(1, accessKeys_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1816,7 +1889,7 @@ public final class AccessKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, accessKeys_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1834,13 +1907,12 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse) obj;
 
-      boolean result = true;
-      result = result && getAccessKeysList()
-          .equals(other.getAccessKeysList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessKeysList()
+          .equals(other.getAccessKeysList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2025,9 +2097,8 @@ public final class AccessKeyServiceOuterClass {
       public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse buildPartial() {
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse result = new yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (accessKeysBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             accessKeys_ = java.util.Collections.unmodifiableList(accessKeys_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2036,42 +2107,41 @@ public final class AccessKeyServiceOuterClass {
           result.accessKeys_ = accessKeysBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2148,7 +2218,7 @@ public final class AccessKeyServiceOuterClass {
       private java.util.List<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey> accessKeys_ =
         java.util.Collections.emptyList();
       private void ensureAccessKeysIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           accessKeys_ = new java.util.ArrayList<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey>(accessKeys_);
           bitField0_ |= 0x00000001;
          }
@@ -2449,7 +2519,7 @@ public final class AccessKeyServiceOuterClass {
           accessKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey.Builder, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKeyOrBuilder>(
                   accessKeys_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           accessKeys_ = null;
@@ -2469,6 +2539,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2493,6 +2564,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2518,6 +2590,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2540,6 +2614,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2558,6 +2633,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2573,7 +2650,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2635,6 +2712,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -2645,6 +2723,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -2655,6 +2734,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2663,6 +2743,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2670,7 +2751,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.CreateAccessKeyRequest}
    */
-  public  static final class CreateAccessKeyRequest extends
+  public static final class CreateAccessKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.CreateAccessKeyRequest)
       CreateAccessKeyRequestOrBuilder {
@@ -2682,6 +2763,13 @@ public final class AccessKeyServiceOuterClass {
     private CreateAccessKeyRequest() {
       serviceAccountId_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateAccessKeyRequest();
     }
 
     @java.lang.Override
@@ -2697,7 +2785,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2721,7 +2808,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2762,7 +2849,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -2783,7 +2872,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -2806,7 +2897,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2825,7 +2918,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -2854,10 +2949,10 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceAccountId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       unknownFields.writeTo(output);
@@ -2869,10 +2964,10 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceAccountId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       size += unknownFields.getSerializedSize();
@@ -2890,13 +2985,12 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3081,35 +3175,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3169,6 +3263,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -3190,6 +3285,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -3212,6 +3308,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -3231,6 +3329,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -3246,6 +3345,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3266,6 +3367,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -3285,6 +3387,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -3305,6 +3408,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3322,6 +3427,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -3335,6 +3441,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3350,7 +3458,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3410,6 +3518,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
+     * @return Whether the accessKey field is set.
      */
     boolean hasAccessKey();
     /**
@@ -3418,6 +3527,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
+     * @return The accessKey.
      */
     yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey getAccessKey();
     /**
@@ -3436,6 +3546,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string secret = 2;</code>
+     * @return The secret.
      */
     java.lang.String getSecret();
     /**
@@ -3445,6 +3556,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string secret = 2;</code>
+     * @return The bytes for secret.
      */
     com.google.protobuf.ByteString
         getSecretBytes();
@@ -3452,7 +3564,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.CreateAccessKeyResponse}
    */
-  public  static final class CreateAccessKeyResponse extends
+  public static final class CreateAccessKeyResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.CreateAccessKeyResponse)
       CreateAccessKeyResponseOrBuilder {
@@ -3463,6 +3575,13 @@ public final class AccessKeyServiceOuterClass {
     }
     private CreateAccessKeyResponse() {
       secret_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateAccessKeyResponse();
     }
 
     @java.lang.Override
@@ -3478,7 +3597,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3509,7 +3627,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3548,7 +3666,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
+     * @return Whether the accessKey field is set.
      */
+    @java.lang.Override
     public boolean hasAccessKey() {
       return accessKey_ != null;
     }
@@ -3558,7 +3678,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
+     * @return The accessKey.
      */
+    @java.lang.Override
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey getAccessKey() {
       return accessKey_ == null ? yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey.getDefaultInstance() : accessKey_;
     }
@@ -3569,6 +3691,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKeyOrBuilder getAccessKeyOrBuilder() {
       return getAccessKey();
     }
@@ -3582,7 +3705,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string secret = 2;</code>
+     * @return The secret.
      */
+    @java.lang.Override
     public java.lang.String getSecret() {
       java.lang.Object ref = secret_;
       if (ref instanceof java.lang.String) {
@@ -3602,7 +3727,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string secret = 2;</code>
+     * @return The bytes for secret.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecretBytes() {
       java.lang.Object ref = secret_;
@@ -3634,7 +3761,7 @@ public final class AccessKeyServiceOuterClass {
       if (accessKey_ != null) {
         output.writeMessage(1, getAccessKey());
       }
-      if (!getSecretBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secret_);
       }
       unknownFields.writeTo(output);
@@ -3650,7 +3777,7 @@ public final class AccessKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccessKey());
       }
-      if (!getSecretBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secret_);
       }
       size += unknownFields.getSerializedSize();
@@ -3668,16 +3795,15 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse) obj;
 
-      boolean result = true;
-      result = result && (hasAccessKey() == other.hasAccessKey());
+      if (hasAccessKey() != other.hasAccessKey()) return false;
       if (hasAccessKey()) {
-        result = result && getAccessKey()
-            .equals(other.getAccessKey());
+        if (!getAccessKey()
+            .equals(other.getAccessKey())) return false;
       }
-      result = result && getSecret()
-          .equals(other.getSecret());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecret()
+          .equals(other.getSecret())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3872,35 +3998,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3950,7 +4076,7 @@ public final class AccessKeyServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey accessKey_ = null;
+      private yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey accessKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey.Builder, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKeyOrBuilder> accessKeyBuilder_;
       /**
@@ -3959,6 +4085,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
+       * @return Whether the accessKey field is set.
        */
       public boolean hasAccessKey() {
         return accessKeyBuilder_ != null || accessKey_ != null;
@@ -3969,6 +4096,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iam.v1.awscompatibility.AccessKey access_key = 1;</code>
+       * @return The accessKey.
        */
       public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey getAccessKey() {
         if (accessKeyBuilder_ == null) {
@@ -4111,6 +4239,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string secret = 2;</code>
+       * @return The secret.
        */
       public java.lang.String getSecret() {
         java.lang.Object ref = secret_;
@@ -4131,6 +4260,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string secret = 2;</code>
+       * @return The bytes for secret.
        */
       public com.google.protobuf.ByteString
           getSecretBytes() {
@@ -4152,6 +4282,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string secret = 2;</code>
+       * @param value The secret to set.
+       * @return This builder for chaining.
        */
       public Builder setSecret(
           java.lang.String value) {
@@ -4170,6 +4302,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string secret = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecret() {
         
@@ -4184,6 +4317,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string secret = 2;</code>
+       * @param value The bytes for secret to set.
+       * @return This builder for chaining.
        */
       public Builder setSecretBytes(
           com.google.protobuf.ByteString value) {
@@ -4199,7 +4334,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4260,6 +4395,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
@@ -4269,6 +4405,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
     com.google.protobuf.ByteString
         getAccessKeyIdBytes();
@@ -4279,6 +4416,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4287,6 +4425,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4304,6 +4443,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4312,6 +4452,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4319,7 +4460,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest}
    */
-  public  static final class UpdateAccessKeyRequest extends
+  public static final class UpdateAccessKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest)
       UpdateAccessKeyRequestOrBuilder {
@@ -4331,6 +4472,13 @@ public final class AccessKeyServiceOuterClass {
     private UpdateAccessKeyRequest() {
       accessKeyId_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessKeyRequest();
     }
 
     @java.lang.Override
@@ -4346,7 +4494,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4383,7 +4530,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4423,7 +4570,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
+    @java.lang.Override
     public java.lang.String getAccessKeyId() {
       java.lang.Object ref = accessKeyId_;
       if (ref instanceof java.lang.String) {
@@ -4443,7 +4592,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessKeyIdBytes() {
       java.lang.Object ref = accessKeyId_;
@@ -4466,7 +4617,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -4476,7 +4629,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -4487,6 +4642,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4499,7 +4655,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4518,7 +4676,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4547,13 +4707,13 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       unknownFields.writeTo(output);
@@ -4565,14 +4725,14 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       size += unknownFields.getSerializedSize();
@@ -4590,18 +4750,17 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getAccessKeyId()
-          .equals(other.getAccessKeyId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4801,35 +4960,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4891,6 +5050,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The accessKeyId.
        */
       public java.lang.String getAccessKeyId() {
         java.lang.Object ref = accessKeyId_;
@@ -4911,6 +5071,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for accessKeyId.
        */
       public com.google.protobuf.ByteString
           getAccessKeyIdBytes() {
@@ -4932,6 +5093,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyId(
           java.lang.String value) {
@@ -4950,6 +5113,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAccessKeyId() {
         
@@ -4964,6 +5128,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4977,7 +5143,7 @@ public final class AccessKeyServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -4986,6 +5152,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -4996,6 +5163,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5137,6 +5305,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5156,6 +5325,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5176,6 +5346,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5193,6 +5365,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5206,6 +5379,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5221,7 +5396,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5281,6 +5456,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
@@ -5289,6 +5465,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
      */
     com.google.protobuf.ByteString
         getAccessKeyIdBytes();
@@ -5296,7 +5473,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata}
    */
-  public  static final class UpdateAccessKeyMetadata extends
+  public static final class UpdateAccessKeyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata)
       UpdateAccessKeyMetadataOrBuilder {
@@ -5307,6 +5484,13 @@ public final class AccessKeyServiceOuterClass {
     }
     private UpdateAccessKeyMetadata() {
       accessKeyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessKeyMetadata();
     }
 
     @java.lang.Override
@@ -5322,7 +5506,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5340,7 +5523,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5379,7 +5562,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
      */
+    @java.lang.Override
     public java.lang.String getAccessKeyId() {
       java.lang.Object ref = accessKeyId_;
       if (ref instanceof java.lang.String) {
@@ -5398,7 +5583,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessKeyIdBytes() {
       java.lang.Object ref = accessKeyId_;
@@ -5427,7 +5614,7 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
       }
       unknownFields.writeTo(output);
@@ -5439,7 +5626,7 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5457,11 +5644,10 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata) obj;
 
-      boolean result = true;
-      result = result && getAccessKeyId()
-          .equals(other.getAccessKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5641,35 +5827,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5723,6 +5909,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @return The accessKeyId.
        */
       public java.lang.String getAccessKeyId() {
         java.lang.Object ref = accessKeyId_;
@@ -5742,6 +5929,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @return The bytes for accessKeyId.
        */
       public com.google.protobuf.ByteString
           getAccessKeyIdBytes() {
@@ -5762,6 +5950,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyId(
           java.lang.String value) {
@@ -5779,6 +5969,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAccessKeyId() {
         
@@ -5792,6 +5983,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5807,7 +6000,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5868,6 +6061,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
@@ -5877,6 +6071,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
     com.google.protobuf.ByteString
         getAccessKeyIdBytes();
@@ -5884,7 +6079,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.DeleteAccessKeyRequest}
    */
-  public  static final class DeleteAccessKeyRequest extends
+  public static final class DeleteAccessKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.DeleteAccessKeyRequest)
       DeleteAccessKeyRequestOrBuilder {
@@ -5895,6 +6090,13 @@ public final class AccessKeyServiceOuterClass {
     }
     private DeleteAccessKeyRequest() {
       accessKeyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAccessKeyRequest();
     }
 
     @java.lang.Override
@@ -5910,7 +6112,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5928,7 +6129,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5968,7 +6169,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
+    @java.lang.Override
     public java.lang.String getAccessKeyId() {
       java.lang.Object ref = accessKeyId_;
       if (ref instanceof java.lang.String) {
@@ -5988,7 +6191,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessKeyIdBytes() {
       java.lang.Object ref = accessKeyId_;
@@ -6017,7 +6222,7 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
       }
       unknownFields.writeTo(output);
@@ -6029,7 +6234,7 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6047,11 +6252,10 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest) obj;
 
-      boolean result = true;
-      result = result && getAccessKeyId()
-          .equals(other.getAccessKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6231,35 +6435,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6314,6 +6518,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The accessKeyId.
        */
       public java.lang.String getAccessKeyId() {
         java.lang.Object ref = accessKeyId_;
@@ -6334,6 +6539,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for accessKeyId.
        */
       public com.google.protobuf.ByteString
           getAccessKeyIdBytes() {
@@ -6355,6 +6561,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyId(
           java.lang.String value) {
@@ -6373,6 +6581,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAccessKeyId() {
         
@@ -6387,6 +6596,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6402,7 +6613,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6462,6 +6673,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
@@ -6470,6 +6682,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
      */
     com.google.protobuf.ByteString
         getAccessKeyIdBytes();
@@ -6477,7 +6690,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.DeleteAccessKeyMetadata}
    */
-  public  static final class DeleteAccessKeyMetadata extends
+  public static final class DeleteAccessKeyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.DeleteAccessKeyMetadata)
       DeleteAccessKeyMetadataOrBuilder {
@@ -6488,6 +6701,13 @@ public final class AccessKeyServiceOuterClass {
     }
     private DeleteAccessKeyMetadata() {
       accessKeyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAccessKeyMetadata();
     }
 
     @java.lang.Override
@@ -6503,7 +6723,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6521,7 +6740,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6560,7 +6779,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The accessKeyId.
      */
+    @java.lang.Override
     public java.lang.String getAccessKeyId() {
       java.lang.Object ref = accessKeyId_;
       if (ref instanceof java.lang.String) {
@@ -6579,7 +6800,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1;</code>
+     * @return The bytes for accessKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessKeyIdBytes() {
       java.lang.Object ref = accessKeyId_;
@@ -6608,7 +6831,7 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
       }
       unknownFields.writeTo(output);
@@ -6620,7 +6843,7 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6638,11 +6861,10 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyMetadata other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyMetadata) obj;
 
-      boolean result = true;
-      result = result && getAccessKeyId()
-          .equals(other.getAccessKeyId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6822,35 +7044,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6904,6 +7126,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @return The accessKeyId.
        */
       public java.lang.String getAccessKeyId() {
         java.lang.Object ref = accessKeyId_;
@@ -6923,6 +7146,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @return The bytes for accessKeyId.
        */
       public com.google.protobuf.ByteString
           getAccessKeyIdBytes() {
@@ -6943,6 +7167,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyId(
           java.lang.String value) {
@@ -6960,6 +7186,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAccessKeyId() {
         
@@ -6973,6 +7200,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1;</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6988,7 +7217,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7048,6 +7277,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
     java.lang.String getAccessKeyId();
     /**
@@ -7056,6 +7286,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
     com.google.protobuf.ByteString
         getAccessKeyIdBytes();
@@ -7070,6 +7301,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -7080,6 +7312,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -7089,6 +7322,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -7096,7 +7330,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.ListAccessKeyOperationsRequest}
    */
-  public  static final class ListAccessKeyOperationsRequest extends
+  public static final class ListAccessKeyOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.ListAccessKeyOperationsRequest)
       ListAccessKeyOperationsRequestOrBuilder {
@@ -7107,8 +7341,14 @@ public final class AccessKeyServiceOuterClass {
     }
     private ListAccessKeyOperationsRequest() {
       accessKeyId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessKeyOperationsRequest();
     }
 
     @java.lang.Override
@@ -7124,7 +7364,6 @@ public final class AccessKeyServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7153,7 +7392,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7192,7 +7431,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessKeyId.
      */
+    @java.lang.Override
     public java.lang.String getAccessKeyId() {
       java.lang.Object ref = accessKeyId_;
       if (ref instanceof java.lang.String) {
@@ -7211,7 +7452,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessKeyIdBytes() {
       java.lang.Object ref = accessKeyId_;
@@ -7238,7 +7481,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -7252,7 +7497,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -7272,7 +7519,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -7301,13 +7550,13 @@ public final class AccessKeyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -7319,14 +7568,14 @@ public final class AccessKeyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -7344,15 +7593,14 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getAccessKeyId()
-          .equals(other.getAccessKeyId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessKeyId()
+          .equals(other.getAccessKeyId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7543,35 +7791,35 @@ public final class AccessKeyServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7632,6 +7880,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The accessKeyId.
        */
       public java.lang.String getAccessKeyId() {
         java.lang.Object ref = accessKeyId_;
@@ -7651,6 +7900,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for accessKeyId.
        */
       public com.google.protobuf.ByteString
           getAccessKeyIdBytes() {
@@ -7671,6 +7921,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyId(
           java.lang.String value) {
@@ -7688,6 +7940,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAccessKeyId() {
         
@@ -7701,6 +7954,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for accessKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setAccessKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7725,7 +7980,9 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -7739,6 +7996,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -7756,6 +8015,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -7772,6 +8032,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -7792,6 +8053,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -7813,6 +8075,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -7831,6 +8095,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -7845,6 +8110,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -7860,7 +8127,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7967,6 +8234,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -7978,6 +8246,7 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -7985,7 +8254,7 @@ public final class AccessKeyServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.ListAccessKeyOperationsResponse}
    */
-  public  static final class ListAccessKeyOperationsResponse extends
+  public static final class ListAccessKeyOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.ListAccessKeyOperationsResponse)
       ListAccessKeyOperationsResponseOrBuilder {
@@ -7997,6 +8266,13 @@ public final class AccessKeyServiceOuterClass {
     private ListAccessKeyOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessKeyOperationsResponse();
     }
 
     @java.lang.Override
@@ -8024,7 +8300,7 @@ public final class AccessKeyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -8039,7 +8315,7 @@ public final class AccessKeyServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8053,7 +8329,7 @@ public final class AccessKeyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -8073,7 +8349,6 @@ public final class AccessKeyServiceOuterClass {
               yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse.class, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -8083,6 +8358,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -8093,6 +8369,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -8104,6 +8381,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -8114,6 +8392,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -8124,6 +8403,7 @@ public final class AccessKeyServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -8140,7 +8420,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -8162,7 +8444,9 @@ public final class AccessKeyServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -8194,7 +8478,7 @@ public final class AccessKeyServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -8210,7 +8494,7 @@ public final class AccessKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -8228,13 +8512,12 @@ public final class AccessKeyServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8419,9 +8702,8 @@ public final class AccessKeyServiceOuterClass {
       public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse buildPartial() {
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse result = new yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -8430,42 +8712,41 @@ public final class AccessKeyServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8542,7 +8823,7 @@ public final class AccessKeyServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -8843,7 +9124,7 @@ public final class AccessKeyServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -8861,6 +9142,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -8883,6 +9165,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -8906,6 +9189,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -8926,6 +9211,7 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -8942,6 +9228,8 @@ public final class AccessKeyServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -8957,7 +9245,7 @@ public final class AccessKeyServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9142,15 +9430,7 @@ public final class AccessKeyServiceOuterClass {
       "d/iam/v1/awscompatibility;awscompatibili" +
       "tyb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -9159,7 +9439,7 @@ public final class AccessKeyServiceOuterClass {
           yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iam_v1_awscompatibility_GetAccessKeyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iam_v1_awscompatibility_GetAccessKeyRequest_fieldAccessorTable = new

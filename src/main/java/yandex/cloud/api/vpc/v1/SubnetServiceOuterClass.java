@@ -25,6 +25,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -34,6 +35,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -41,7 +43,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.GetSubnetRequest}
    */
-  public  static final class GetSubnetRequest extends
+  public static final class GetSubnetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.GetSubnetRequest)
       GetSubnetRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class SubnetServiceOuterClass {
     }
     private GetSubnetRequest() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetSubnetRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -174,7 +186,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -491,6 +503,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -512,6 +525,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -544,6 +560,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -652,6 +673,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -661,6 +683,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -675,6 +698,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -687,6 +711,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -694,7 +719,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSubnetsRequest}
    */
-  public  static final class ListSubnetsRequest extends
+  public static final class ListSubnetsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSubnetsRequest)
       ListSubnetsRequestOrBuilder {
@@ -705,9 +730,15 @@ public final class SubnetServiceOuterClass {
     }
     private ListSubnetsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSubnetsRequest();
     }
 
     @java.lang.Override
@@ -723,7 +754,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -758,7 +788,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -798,7 +828,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -818,7 +850,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -844,7 +878,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -858,7 +894,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -878,7 +916,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -905,7 +945,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -928,7 +970,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -957,16 +1001,16 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -978,17 +1022,17 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1006,17 +1050,16 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1212,35 +1255,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1306,6 +1349,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1326,6 +1370,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1347,6 +1392,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1365,6 +1412,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1379,6 +1427,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1402,7 +1452,9 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1415,6 +1467,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1431,6 +1485,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1447,6 +1502,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1467,6 +1523,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1488,6 +1545,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1506,6 +1565,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1520,6 +1580,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1544,6 +1606,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1567,6 +1630,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1591,6 +1655,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1612,6 +1678,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1629,6 +1696,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1644,7 +1713,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1753,6 +1822,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1766,6 +1836,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1773,7 +1844,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSubnetsResponse}
    */
-  public  static final class ListSubnetsResponse extends
+  public static final class ListSubnetsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSubnetsResponse)
       ListSubnetsResponseOrBuilder {
@@ -1785,6 +1856,13 @@ public final class SubnetServiceOuterClass {
     private ListSubnetsResponse() {
       subnets_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSubnetsResponse();
     }
 
     @java.lang.Override
@@ -1812,7 +1890,7 @@ public final class SubnetServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 subnets_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1827,7 +1905,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1841,7 +1919,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           subnets_ = java.util.Collections.unmodifiableList(subnets_);
         }
         this.unknownFields = unknownFields.build();
@@ -1861,7 +1939,6 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBNETS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet> subnets_;
     /**
@@ -1871,6 +1948,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.Subnet subnets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet> getSubnetsList() {
       return subnets_;
     }
@@ -1881,6 +1959,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.Subnet subnets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.SubnetOuterClass.SubnetOrBuilder> 
         getSubnetsOrBuilderList() {
       return subnets_;
@@ -1892,6 +1971,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.Subnet subnets = 1;</code>
      */
+    @java.lang.Override
     public int getSubnetsCount() {
       return subnets_.size();
     }
@@ -1902,6 +1982,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.Subnet subnets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet getSubnets(int index) {
       return subnets_.get(index);
     }
@@ -1912,6 +1993,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.Subnet subnets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.SubnetOrBuilder getSubnetsOrBuilder(
         int index) {
       return subnets_.get(index);
@@ -1930,7 +2012,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1954,7 +2038,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1986,7 +2072,7 @@ public final class SubnetServiceOuterClass {
       for (int i = 0; i < subnets_.size(); i++) {
         output.writeMessage(1, subnets_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2002,7 +2088,7 @@ public final class SubnetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subnets_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2020,13 +2106,12 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse) obj;
 
-      boolean result = true;
-      result = result && getSubnetsList()
-          .equals(other.getSubnetsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetsList()
+          .equals(other.getSubnetsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2211,9 +2296,8 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (subnetsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             subnets_ = java.util.Collections.unmodifiableList(subnets_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2222,42 +2306,41 @@ public final class SubnetServiceOuterClass {
           result.subnets_ = subnetsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2334,7 +2417,7 @@ public final class SubnetServiceOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet> subnets_ =
         java.util.Collections.emptyList();
       private void ensureSubnetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           subnets_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet>(subnets_);
           bitField0_ |= 0x00000001;
          }
@@ -2635,7 +2718,7 @@ public final class SubnetServiceOuterClass {
           subnetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet, yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.SubnetOrBuilder>(
                   subnets_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           subnets_ = null;
@@ -2655,6 +2738,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2679,6 +2763,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2704,6 +2789,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2726,6 +2813,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2744,6 +2832,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2759,7 +2849,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2820,6 +2910,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2829,6 +2920,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2840,6 +2932,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2849,6 +2942,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2859,6 +2953,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2867,6 +2962,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2931,6 +3027,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -2939,6 +3036,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -2950,6 +3048,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -2959,6 +3058,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -2973,6 +3073,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @return A list containing the v4CidrBlocks.
      */
     java.util.List<java.lang.String>
         getV4CidrBlocksList();
@@ -2986,6 +3087,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @return The count of v4CidrBlocks.
      */
     int getV4CidrBlocksCount();
     /**
@@ -2998,6 +3100,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     java.lang.String getV4CidrBlocks(int index);
     /**
@@ -3010,6 +3114,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index);
@@ -3020,6 +3126,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The routeTableId.
      */
     java.lang.String getRouteTableId();
     /**
@@ -3028,16 +3135,19 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for routeTableId.
      */
     com.google.protobuf.ByteString
         getRouteTableIdBytes();
 
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     * @return Whether the dhcpOptions field is set.
      */
     boolean hasDhcpOptions();
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     * @return The dhcpOptions.
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
     /**
@@ -3048,7 +3158,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.CreateSubnetRequest}
    */
-  public  static final class CreateSubnetRequest extends
+  public static final class CreateSubnetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.CreateSubnetRequest)
       CreateSubnetRequestOrBuilder {
@@ -3065,6 +3175,13 @@ public final class SubnetServiceOuterClass {
       zoneId_ = "";
       v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       routeTableId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSubnetRequest();
     }
 
     @java.lang.Override
@@ -3110,10 +3227,10 @@ public final class SubnetServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3136,9 +3253,9 @@ public final class SubnetServiceOuterClass {
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000002;
               }
               v4CidrBlocks_.add(s);
               break;
@@ -3163,7 +3280,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3177,7 +3294,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -3209,7 +3326,6 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -3219,7 +3335,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3239,7 +3357,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3263,7 +3383,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3283,7 +3405,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3306,7 +3430,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3325,7 +3451,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3374,14 +3502,16 @@ public final class SubnetServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3393,6 +3523,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3404,11 +3535,12 @@ public final class SubnetServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3420,10 +3552,11 @@ public final class SubnetServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3440,7 +3573,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -3459,7 +3594,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -3483,7 +3620,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -3503,7 +3642,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -3530,6 +3671,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @return A list containing the v4CidrBlocks.
      */
     public com.google.protobuf.ProtocolStringList
         getV4CidrBlocksList() {
@@ -3545,6 +3687,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @return The count of v4CidrBlocks.
      */
     public int getV4CidrBlocksCount() {
       return v4CidrBlocks_.size();
@@ -3559,6 +3702,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     public java.lang.String getV4CidrBlocks(int index) {
       return v4CidrBlocks_.get(index);
@@ -3573,6 +3718,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     public com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index) {
@@ -3587,7 +3734,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The routeTableId.
      */
+    @java.lang.Override
     public java.lang.String getRouteTableId() {
       java.lang.Object ref = routeTableId_;
       if (ref instanceof java.lang.String) {
@@ -3606,7 +3755,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for routeTableId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteTableIdBytes() {
       java.lang.Object ref = routeTableId_;
@@ -3625,19 +3776,24 @@ public final class SubnetServiceOuterClass {
     private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     * @return Whether the dhcpOptions field is set.
      */
+    @java.lang.Override
     public boolean hasDhcpOptions() {
       return dhcpOptions_ != null;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     * @return The dhcpOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
       return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
       return getDhcpOptions();
     }
@@ -3656,13 +3812,13 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3671,16 +3827,16 @@ public final class SubnetServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, networkId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zoneId_);
       }
       for (int i = 0; i < v4CidrBlocks_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, v4CidrBlocks_.getRaw(i));
       }
-      if (!getRouteTableIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeTableId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, routeTableId_);
       }
       if (dhcpOptions_ != null) {
@@ -3695,13 +3851,13 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3714,10 +3870,10 @@ public final class SubnetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, networkId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, zoneId_);
       }
       {
@@ -3728,7 +3884,7 @@ public final class SubnetServiceOuterClass {
         size += dataSize;
         size += 1 * getV4CidrBlocksList().size();
       }
-      if (!getRouteTableIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeTableId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, routeTableId_);
       }
       if (dhcpOptions_ != null) {
@@ -3750,30 +3906,29 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && getV4CidrBlocksList()
-          .equals(other.getV4CidrBlocksList());
-      result = result && getRouteTableId()
-          .equals(other.getRouteTableId());
-      result = result && (hasDhcpOptions() == other.hasDhcpOptions());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (!getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList())) return false;
+      if (!getRouteTableId()
+          .equals(other.getRouteTableId())) return false;
+      if (hasDhcpOptions() != other.hasDhcpOptions()) return false;
       if (hasDhcpOptions()) {
-        result = result && getDhcpOptions()
-            .equals(other.getDhcpOptions());
+        if (!getDhcpOptions()
+            .equals(other.getDhcpOptions())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3974,7 +4129,7 @@ public final class SubnetServiceOuterClass {
         zoneId_ = "";
 
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         routeTableId_ = "";
 
         if (dhcpOptionsBuilder_ == null) {
@@ -4010,7 +4165,6 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -4018,9 +4172,9 @@ public final class SubnetServiceOuterClass {
         result.labels_.makeImmutable();
         result.networkId_ = networkId_;
         result.zoneId_ = zoneId_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.v4CidrBlocks_ = v4CidrBlocks_;
         result.routeTableId_ = routeTableId_;
@@ -4029,42 +4183,41 @@ public final class SubnetServiceOuterClass {
         } else {
           result.dhcpOptions_ = dhcpOptionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4103,7 +4256,7 @@ public final class SubnetServiceOuterClass {
         if (!other.v4CidrBlocks_.isEmpty()) {
           if (v4CidrBlocks_.isEmpty()) {
             v4CidrBlocks_ = other.v4CidrBlocks_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureV4CidrBlocksIsMutable();
             v4CidrBlocks_.addAll(other.v4CidrBlocks_);
@@ -4155,6 +4308,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -4175,6 +4329,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -4196,6 +4351,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -4214,6 +4371,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -4228,6 +4386,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4249,6 +4409,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4269,6 +4430,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4290,6 +4452,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4308,6 +4472,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4322,6 +4487,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4342,6 +4509,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4361,6 +4529,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4381,6 +4550,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4398,6 +4569,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4411,6 +4583,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4458,14 +4632,16 @@ public final class SubnetServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4477,6 +4653,7 @@ public final class SubnetServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4488,11 +4665,12 @@ public final class SubnetServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4504,10 +4682,11 @@ public final class SubnetServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4531,7 +4710,7 @@ public final class SubnetServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4554,8 +4733,11 @@ public final class SubnetServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4582,6 +4764,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -4601,6 +4784,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -4621,6 +4805,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -4638,6 +4824,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -4651,6 +4838,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4672,6 +4861,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -4692,6 +4882,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -4713,6 +4904,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -4731,6 +4924,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -4745,6 +4939,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4760,9 +4956,9 @@ public final class SubnetServiceOuterClass {
 
       private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureV4CidrBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -4775,6 +4971,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @return A list containing the v4CidrBlocks.
        */
       public com.google.protobuf.ProtocolStringList
           getV4CidrBlocksList() {
@@ -4790,6 +4987,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @return The count of v4CidrBlocks.
        */
       public int getV4CidrBlocksCount() {
         return v4CidrBlocks_.size();
@@ -4804,6 +5002,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @param index The index of the element to return.
+       * @return The v4CidrBlocks at the given index.
        */
       public java.lang.String getV4CidrBlocks(int index) {
         return v4CidrBlocks_.get(index);
@@ -4818,6 +5018,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the v4CidrBlocks at the given index.
        */
       public com.google.protobuf.ByteString
           getV4CidrBlocksBytes(int index) {
@@ -4833,6 +5035,9 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @param index The index to set the value at.
+       * @param value The v4CidrBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setV4CidrBlocks(
           int index, java.lang.String value) {
@@ -4854,6 +5059,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @param value The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocks(
           java.lang.String value) {
@@ -4875,6 +5082,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @param values The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addAllV4CidrBlocks(
           java.lang.Iterable<java.lang.String> values) {
@@ -4894,10 +5103,11 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearV4CidrBlocks() {
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4911,6 +5121,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes of the v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocksBytes(
           com.google.protobuf.ByteString value) {
@@ -4931,6 +5143,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The routeTableId.
        */
       public java.lang.String getRouteTableId() {
         java.lang.Object ref = routeTableId_;
@@ -4950,6 +5163,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for routeTableId.
        */
       public com.google.protobuf.ByteString
           getRouteTableIdBytes() {
@@ -4970,6 +5184,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The routeTableId to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteTableId(
           java.lang.String value) {
@@ -4987,6 +5203,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteTableId() {
         
@@ -5000,6 +5217,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for routeTableId to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteTableIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5013,17 +5232,19 @@ public final class SubnetServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_ = null;
+      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
       /**
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       * @return Whether the dhcpOptions field is set.
        */
       public boolean hasDhcpOptions() {
         return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       * @return The dhcpOptions.
        */
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
         if (dhcpOptionsBuilder_ == null) {
@@ -5132,7 +5353,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5192,6 +5413,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -5200,6 +5422,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -5207,7 +5430,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.CreateSubnetMetadata}
    */
-  public  static final class CreateSubnetMetadata extends
+  public static final class CreateSubnetMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.CreateSubnetMetadata)
       CreateSubnetMetadataOrBuilder {
@@ -5218,6 +5441,13 @@ public final class SubnetServiceOuterClass {
     }
     private CreateSubnetMetadata() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateSubnetMetadata();
     }
 
     @java.lang.Override
@@ -5233,7 +5463,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5251,7 +5480,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5290,7 +5519,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -5309,7 +5540,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -5338,7 +5571,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -5350,7 +5583,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5368,11 +5601,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetMetadata) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5552,35 +5784,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5634,6 +5866,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -5653,6 +5886,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -5673,6 +5907,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -5690,6 +5926,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -5703,6 +5940,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5718,7 +5957,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5778,6 +6017,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -5786,6 +6026,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -5796,6 +6037,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5804,6 +6046,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5822,6 +6065,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5831,6 +6075,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5841,6 +6086,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5849,6 +6095,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5913,6 +6160,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The routeTableId.
      */
     java.lang.String getRouteTableId();
     /**
@@ -5921,16 +6169,19 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for routeTableId.
      */
     com.google.protobuf.ByteString
         getRouteTableIdBytes();
 
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     * @return Whether the dhcpOptions field is set.
      */
     boolean hasDhcpOptions();
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     * @return The dhcpOptions.
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
     /**
@@ -5941,7 +6192,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSubnetRequest}
    */
-  public  static final class UpdateSubnetRequest extends
+  public static final class UpdateSubnetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSubnetRequest)
       UpdateSubnetRequestOrBuilder {
@@ -5955,6 +6206,13 @@ public final class SubnetServiceOuterClass {
       name_ = "";
       description_ = "";
       routeTableId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSubnetRequest();
     }
 
     @java.lang.Override
@@ -6013,10 +6271,10 @@ public final class SubnetServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6045,7 +6303,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6088,7 +6346,6 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBNET_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object subnetId_;
     /**
@@ -6097,7 +6354,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -6116,7 +6375,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -6139,7 +6400,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -6149,7 +6412,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -6160,6 +6425,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -6173,7 +6439,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6193,7 +6461,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6216,7 +6486,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -6235,7 +6507,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -6284,14 +6558,16 @@ public final class SubnetServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -6303,6 +6579,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -6314,11 +6591,12 @@ public final class SubnetServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6330,10 +6608,11 @@ public final class SubnetServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -6350,7 +6629,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The routeTableId.
      */
+    @java.lang.Override
     public java.lang.String getRouteTableId() {
       java.lang.Object ref = routeTableId_;
       if (ref instanceof java.lang.String) {
@@ -6369,7 +6650,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for routeTableId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteTableIdBytes() {
       java.lang.Object ref = routeTableId_;
@@ -6388,19 +6671,24 @@ public final class SubnetServiceOuterClass {
     private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     * @return Whether the dhcpOptions field is set.
      */
+    @java.lang.Override
     public boolean hasDhcpOptions() {
       return dhcpOptions_ != null;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     * @return The dhcpOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
       return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
       return getDhcpOptions();
     }
@@ -6419,16 +6707,16 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -6437,7 +6725,7 @@ public final class SubnetServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           5);
-      if (!getRouteTableIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeTableId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, routeTableId_);
       }
       if (dhcpOptions_ != null) {
@@ -6452,17 +6740,17 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -6475,7 +6763,7 @@ public final class SubnetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, labels__);
       }
-      if (!getRouteTableIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeTableId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, routeTableId_);
       }
       if (dhcpOptions_ != null) {
@@ -6497,29 +6785,28 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getRouteTableId()
-          .equals(other.getRouteTableId());
-      result = result && (hasDhcpOptions() == other.hasDhcpOptions());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getRouteTableId()
+          .equals(other.getRouteTableId())) return false;
+      if (hasDhcpOptions() != other.hasDhcpOptions()) return false;
       if (hasDhcpOptions()) {
-        result = result && getDhcpOptions()
-            .equals(other.getDhcpOptions());
+        if (!getDhcpOptions()
+            .equals(other.getDhcpOptions())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6752,7 +7039,6 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.subnetId_ = subnetId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6769,42 +7055,41 @@ public final class SubnetServiceOuterClass {
         } else {
           result.dhcpOptions_ = dhcpOptionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6879,6 +7164,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -6898,6 +7184,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -6918,6 +7205,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -6935,6 +7224,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -6948,6 +7238,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6961,7 +7253,7 @@ public final class SubnetServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6970,6 +7262,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6980,6 +7273,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -7122,6 +7416,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7142,6 +7437,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7163,6 +7459,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7181,6 +7479,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7195,6 +7494,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7215,6 +7516,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -7234,6 +7536,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -7254,6 +7557,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -7271,6 +7576,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -7284,6 +7590,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -7331,14 +7639,16 @@ public final class SubnetServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -7350,6 +7660,7 @@ public final class SubnetServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -7361,11 +7672,12 @@ public final class SubnetServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7377,10 +7689,11 @@ public final class SubnetServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -7404,7 +7717,7 @@ public final class SubnetServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -7427,8 +7740,11 @@ public final class SubnetServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -7455,6 +7771,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The routeTableId.
        */
       public java.lang.String getRouteTableId() {
         java.lang.Object ref = routeTableId_;
@@ -7474,6 +7791,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for routeTableId.
        */
       public com.google.protobuf.ByteString
           getRouteTableIdBytes() {
@@ -7494,6 +7812,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The routeTableId to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteTableId(
           java.lang.String value) {
@@ -7511,6 +7831,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteTableId() {
         
@@ -7524,6 +7845,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for routeTableId to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteTableIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7537,17 +7860,19 @@ public final class SubnetServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_ = null;
+      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
       /**
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       * @return Whether the dhcpOptions field is set.
        */
       public boolean hasDhcpOptions() {
         return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       * @return The dhcpOptions.
        */
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
         if (dhcpOptionsBuilder_ == null) {
@@ -7656,7 +7981,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7716,6 +8041,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -7724,6 +8050,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -7731,7 +8058,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSubnetMetadata}
    */
-  public  static final class UpdateSubnetMetadata extends
+  public static final class UpdateSubnetMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UpdateSubnetMetadata)
       UpdateSubnetMetadataOrBuilder {
@@ -7742,6 +8069,13 @@ public final class SubnetServiceOuterClass {
     }
     private UpdateSubnetMetadata() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSubnetMetadata();
     }
 
     @java.lang.Override
@@ -7757,7 +8091,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7775,7 +8108,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7814,7 +8147,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -7833,7 +8168,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -7862,7 +8199,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -7874,7 +8211,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7892,11 +8229,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetMetadata) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8076,35 +8412,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8158,6 +8494,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -8177,6 +8514,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -8197,6 +8535,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -8214,6 +8554,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -8227,6 +8568,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8242,7 +8585,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8302,6 +8645,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -8310,6 +8654,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -8323,6 +8668,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return A list containing the v4CidrBlocks.
      */
     java.util.List<java.lang.String>
         getV4CidrBlocksList();
@@ -8335,6 +8681,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return The count of v4CidrBlocks.
      */
     int getV4CidrBlocksCount();
     /**
@@ -8346,6 +8693,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     java.lang.String getV4CidrBlocks(int index);
     /**
@@ -8357,6 +8706,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index);
@@ -8364,7 +8715,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest}
    */
-  public  static final class AddSubnetCidrBlocksRequest extends
+  public static final class AddSubnetCidrBlocksRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest)
       AddSubnetCidrBlocksRequestOrBuilder {
@@ -8376,6 +8727,13 @@ public final class SubnetServiceOuterClass {
     private AddSubnetCidrBlocksRequest() {
       subnetId_ = "";
       v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddSubnetCidrBlocksRequest();
     }
 
     @java.lang.Override
@@ -8410,15 +8768,15 @@ public final class SubnetServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               v4CidrBlocks_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8432,7 +8790,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8452,7 +8810,6 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBNET_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object subnetId_;
     /**
@@ -8461,7 +8818,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -8480,7 +8839,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -8506,6 +8867,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return A list containing the v4CidrBlocks.
      */
     public com.google.protobuf.ProtocolStringList
         getV4CidrBlocksList() {
@@ -8520,6 +8882,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return The count of v4CidrBlocks.
      */
     public int getV4CidrBlocksCount() {
       return v4CidrBlocks_.size();
@@ -8533,6 +8896,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     public java.lang.String getV4CidrBlocks(int index) {
       return v4CidrBlocks_.get(index);
@@ -8546,6 +8911,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     public com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index) {
@@ -8566,7 +8933,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       for (int i = 0; i < v4CidrBlocks_.size(); i++) {
@@ -8581,7 +8948,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       {
@@ -8607,13 +8974,12 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && getV4CidrBlocksList()
-          .equals(other.getV4CidrBlocksList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8765,7 +9131,7 @@ public final class SubnetServiceOuterClass {
         subnetId_ = "";
 
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -8793,49 +9159,47 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.subnetId_ = subnetId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.v4CidrBlocks_ = v4CidrBlocks_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8856,7 +9220,7 @@ public final class SubnetServiceOuterClass {
         if (!other.v4CidrBlocks_.isEmpty()) {
           if (v4CidrBlocks_.isEmpty()) {
             v4CidrBlocks_ = other.v4CidrBlocks_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureV4CidrBlocksIsMutable();
             v4CidrBlocks_.addAll(other.v4CidrBlocks_);
@@ -8900,6 +9264,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -8919,6 +9284,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -8939,6 +9305,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -8956,6 +9324,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -8969,6 +9338,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8984,9 +9355,9 @@ public final class SubnetServiceOuterClass {
 
       private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureV4CidrBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -8998,6 +9369,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @return A list containing the v4CidrBlocks.
        */
       public com.google.protobuf.ProtocolStringList
           getV4CidrBlocksList() {
@@ -9012,6 +9384,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @return The count of v4CidrBlocks.
        */
       public int getV4CidrBlocksCount() {
         return v4CidrBlocks_.size();
@@ -9025,6 +9398,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param index The index of the element to return.
+       * @return The v4CidrBlocks at the given index.
        */
       public java.lang.String getV4CidrBlocks(int index) {
         return v4CidrBlocks_.get(index);
@@ -9038,6 +9413,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the v4CidrBlocks at the given index.
        */
       public com.google.protobuf.ByteString
           getV4CidrBlocksBytes(int index) {
@@ -9052,6 +9429,9 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The v4CidrBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setV4CidrBlocks(
           int index, java.lang.String value) {
@@ -9072,6 +9452,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param value The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocks(
           java.lang.String value) {
@@ -9092,6 +9474,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param values The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addAllV4CidrBlocks(
           java.lang.Iterable<java.lang.String> values) {
@@ -9110,10 +9494,11 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearV4CidrBlocks() {
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9126,6 +9511,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param value The bytes of the v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocksBytes(
           com.google.protobuf.ByteString value) {
@@ -9141,7 +9528,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9201,6 +9588,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -9209,6 +9597,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -9216,7 +9605,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata}
    */
-  public  static final class AddSubnetCidrBlocksMetadata extends
+  public static final class AddSubnetCidrBlocksMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata)
       AddSubnetCidrBlocksMetadataOrBuilder {
@@ -9227,6 +9616,13 @@ public final class SubnetServiceOuterClass {
     }
     private AddSubnetCidrBlocksMetadata() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddSubnetCidrBlocksMetadata();
     }
 
     @java.lang.Override
@@ -9242,7 +9638,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9260,7 +9655,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9299,7 +9694,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -9318,7 +9715,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -9347,7 +9746,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -9359,7 +9758,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9377,11 +9776,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9561,35 +9959,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9643,6 +10041,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -9662,6 +10061,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -9682,6 +10082,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -9699,6 +10101,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -9712,6 +10115,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9727,7 +10132,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9787,6 +10192,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -9795,6 +10201,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -9806,6 +10213,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return A list containing the v4CidrBlocks.
      */
     java.util.List<java.lang.String>
         getV4CidrBlocksList();
@@ -9816,6 +10224,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return The count of v4CidrBlocks.
      */
     int getV4CidrBlocksCount();
     /**
@@ -9825,6 +10234,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     java.lang.String getV4CidrBlocks(int index);
     /**
@@ -9834,6 +10245,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index);
@@ -9841,7 +10254,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest}
    */
-  public  static final class RemoveSubnetCidrBlocksRequest extends
+  public static final class RemoveSubnetCidrBlocksRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest)
       RemoveSubnetCidrBlocksRequestOrBuilder {
@@ -9853,6 +10266,13 @@ public final class SubnetServiceOuterClass {
     private RemoveSubnetCidrBlocksRequest() {
       subnetId_ = "";
       v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveSubnetCidrBlocksRequest();
     }
 
     @java.lang.Override
@@ -9887,15 +10307,15 @@ public final class SubnetServiceOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               v4CidrBlocks_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9909,7 +10329,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -9929,7 +10349,6 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBNET_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object subnetId_;
     /**
@@ -9938,7 +10357,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -9957,7 +10378,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -9981,6 +10404,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return A list containing the v4CidrBlocks.
      */
     public com.google.protobuf.ProtocolStringList
         getV4CidrBlocksList() {
@@ -9993,6 +10417,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @return The count of v4CidrBlocks.
      */
     public int getV4CidrBlocksCount() {
       return v4CidrBlocks_.size();
@@ -10004,6 +10429,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     public java.lang.String getV4CidrBlocks(int index) {
       return v4CidrBlocks_.get(index);
@@ -10015,6 +10442,8 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     public com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index) {
@@ -10035,7 +10464,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       for (int i = 0; i < v4CidrBlocks_.size(); i++) {
@@ -10050,7 +10479,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       {
@@ -10076,13 +10505,12 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && getV4CidrBlocksList()
-          .equals(other.getV4CidrBlocksList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10234,7 +10662,7 @@ public final class SubnetServiceOuterClass {
         subnetId_ = "";
 
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -10262,49 +10690,47 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.subnetId_ = subnetId_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.v4CidrBlocks_ = v4CidrBlocks_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10325,7 +10751,7 @@ public final class SubnetServiceOuterClass {
         if (!other.v4CidrBlocks_.isEmpty()) {
           if (v4CidrBlocks_.isEmpty()) {
             v4CidrBlocks_ = other.v4CidrBlocks_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureV4CidrBlocksIsMutable();
             v4CidrBlocks_.addAll(other.v4CidrBlocks_);
@@ -10369,6 +10795,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -10388,6 +10815,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -10408,6 +10836,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -10425,6 +10855,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -10438,6 +10869,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10453,9 +10886,9 @@ public final class SubnetServiceOuterClass {
 
       private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureV4CidrBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -10465,6 +10898,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @return A list containing the v4CidrBlocks.
        */
       public com.google.protobuf.ProtocolStringList
           getV4CidrBlocksList() {
@@ -10477,6 +10911,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @return The count of v4CidrBlocks.
        */
       public int getV4CidrBlocksCount() {
         return v4CidrBlocks_.size();
@@ -10488,6 +10923,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param index The index of the element to return.
+       * @return The v4CidrBlocks at the given index.
        */
       public java.lang.String getV4CidrBlocks(int index) {
         return v4CidrBlocks_.get(index);
@@ -10499,6 +10936,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the v4CidrBlocks at the given index.
        */
       public com.google.protobuf.ByteString
           getV4CidrBlocksBytes(int index) {
@@ -10511,6 +10950,9 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The v4CidrBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setV4CidrBlocks(
           int index, java.lang.String value) {
@@ -10529,6 +10971,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param value The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocks(
           java.lang.String value) {
@@ -10547,6 +10991,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param values The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addAllV4CidrBlocks(
           java.lang.Iterable<java.lang.String> values) {
@@ -10563,10 +11009,11 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearV4CidrBlocks() {
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10577,6 +11024,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 2;</code>
+       * @param value The bytes of the v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocksBytes(
           com.google.protobuf.ByteString value) {
@@ -10592,7 +11041,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10652,6 +11101,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -10660,6 +11110,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -10667,7 +11118,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata}
    */
-  public  static final class RemoveSubnetCidrBlocksMetadata extends
+  public static final class RemoveSubnetCidrBlocksMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata)
       RemoveSubnetCidrBlocksMetadataOrBuilder {
@@ -10678,6 +11129,13 @@ public final class SubnetServiceOuterClass {
     }
     private RemoveSubnetCidrBlocksMetadata() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveSubnetCidrBlocksMetadata();
     }
 
     @java.lang.Override
@@ -10693,7 +11151,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10711,7 +11168,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10750,7 +11207,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -10769,7 +11228,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -10798,7 +11259,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -10810,7 +11271,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10828,11 +11289,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11012,35 +11472,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11094,6 +11554,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -11113,6 +11574,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -11133,6 +11595,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -11150,6 +11614,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -11163,6 +11628,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11178,7 +11645,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11239,6 +11706,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -11248,6 +11716,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -11255,7 +11724,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.DeleteSubnetRequest}
    */
-  public  static final class DeleteSubnetRequest extends
+  public static final class DeleteSubnetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.DeleteSubnetRequest)
       DeleteSubnetRequestOrBuilder {
@@ -11266,6 +11735,13 @@ public final class SubnetServiceOuterClass {
     }
     private DeleteSubnetRequest() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSubnetRequest();
     }
 
     @java.lang.Override
@@ -11281,7 +11757,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11299,7 +11774,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11339,7 +11814,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -11359,7 +11836,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -11388,7 +11867,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -11400,7 +11879,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11418,11 +11897,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11602,35 +12080,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11685,6 +12163,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -11705,6 +12184,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -11726,6 +12206,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -11744,6 +12226,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -11758,6 +12241,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11773,7 +12258,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11833,6 +12318,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -11841,6 +12327,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -11848,7 +12335,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.DeleteSubnetMetadata}
    */
-  public  static final class DeleteSubnetMetadata extends
+  public static final class DeleteSubnetMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.DeleteSubnetMetadata)
       DeleteSubnetMetadataOrBuilder {
@@ -11859,6 +12346,13 @@ public final class SubnetServiceOuterClass {
     }
     private DeleteSubnetMetadata() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteSubnetMetadata();
     }
 
     @java.lang.Override
@@ -11874,7 +12368,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11892,7 +12385,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11931,7 +12424,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -11950,7 +12445,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -11979,7 +12476,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -11991,7 +12488,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12009,11 +12506,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetMetadata) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12193,35 +12689,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12275,6 +12771,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -12294,6 +12791,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -12314,6 +12812,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -12331,6 +12831,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -12344,6 +12845,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12359,7 +12862,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12419,6 +12922,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -12427,6 +12931,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -12439,6 +12944,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -12449,6 +12955,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -12458,6 +12965,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -12465,7 +12973,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSubnetOperationsRequest}
    */
-  public  static final class ListSubnetOperationsRequest extends
+  public static final class ListSubnetOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSubnetOperationsRequest)
       ListSubnetOperationsRequestOrBuilder {
@@ -12476,8 +12984,14 @@ public final class SubnetServiceOuterClass {
     }
     private ListSubnetOperationsRequest() {
       subnetId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSubnetOperationsRequest();
     }
 
     @java.lang.Override
@@ -12493,7 +13007,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12522,7 +13035,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12561,7 +13074,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -12580,7 +13095,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -12605,7 +13122,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -12619,7 +13138,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -12639,7 +13160,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -12668,13 +13191,13 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -12686,14 +13209,14 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -12711,15 +13234,14 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12910,35 +13432,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12999,6 +13521,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -13018,6 +13541,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -13038,6 +13562,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -13055,6 +13581,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -13068,6 +13595,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13090,7 +13619,9 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -13102,6 +13633,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -13117,6 +13650,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -13133,6 +13667,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -13153,6 +13688,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -13174,6 +13710,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -13192,6 +13730,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -13206,6 +13745,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -13221,7 +13762,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13328,6 +13869,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -13339,6 +13881,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -13346,7 +13889,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListSubnetOperationsResponse}
    */
-  public  static final class ListSubnetOperationsResponse extends
+  public static final class ListSubnetOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListSubnetOperationsResponse)
       ListSubnetOperationsResponseOrBuilder {
@@ -13358,6 +13901,13 @@ public final class SubnetServiceOuterClass {
     private ListSubnetOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListSubnetOperationsResponse();
     }
 
     @java.lang.Override
@@ -13385,7 +13935,7 @@ public final class SubnetServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -13400,7 +13950,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13414,7 +13964,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -13434,7 +13984,6 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -13444,6 +13993,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -13454,6 +14004,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -13465,6 +14016,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -13475,6 +14027,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -13485,6 +14038,7 @@ public final class SubnetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -13501,7 +14055,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -13523,7 +14079,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -13555,7 +14113,7 @@ public final class SubnetServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -13571,7 +14129,7 @@ public final class SubnetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -13589,13 +14147,12 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13780,9 +14337,8 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -13791,42 +14347,41 @@ public final class SubnetServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13903,7 +14458,7 @@ public final class SubnetServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -14204,7 +14759,7 @@ public final class SubnetServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -14222,6 +14777,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -14244,6 +14800,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -14267,6 +14824,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -14287,6 +14846,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -14303,6 +14863,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -14318,7 +14880,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14378,6 +14940,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -14386,6 +14949,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -14396,6 +14960,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
      */
     java.lang.String getDestinationFolderId();
     /**
@@ -14404,6 +14969,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
      */
     com.google.protobuf.ByteString
         getDestinationFolderIdBytes();
@@ -14411,7 +14977,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.MoveSubnetRequest}
    */
-  public  static final class MoveSubnetRequest extends
+  public static final class MoveSubnetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.MoveSubnetRequest)
       MoveSubnetRequestOrBuilder {
@@ -14423,6 +14989,13 @@ public final class SubnetServiceOuterClass {
     private MoveSubnetRequest() {
       subnetId_ = "";
       destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveSubnetRequest();
     }
 
     @java.lang.Override
@@ -14438,7 +15011,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14462,7 +15034,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14501,7 +15073,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -14520,7 +15094,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -14543,7 +15119,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
      */
+    @java.lang.Override
     public java.lang.String getDestinationFolderId() {
       java.lang.Object ref = destinationFolderId_;
       if (ref instanceof java.lang.String) {
@@ -14562,7 +15140,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDestinationFolderIdBytes() {
       java.lang.Object ref = destinationFolderId_;
@@ -14591,10 +15171,10 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
-      if (!getDestinationFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
       }
       unknownFields.writeTo(output);
@@ -14606,10 +15186,10 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
-      if (!getDestinationFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -14627,13 +15207,12 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && getDestinationFolderId()
-          .equals(other.getDestinationFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14818,35 +15397,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14904,6 +15483,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -14923,6 +15503,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -14943,6 +15524,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -14960,6 +15543,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -14973,6 +15557,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14993,6 +15579,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The destinationFolderId.
        */
       public java.lang.String getDestinationFolderId() {
         java.lang.Object ref = destinationFolderId_;
@@ -15012,6 +15599,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for destinationFolderId.
        */
       public com.google.protobuf.ByteString
           getDestinationFolderIdBytes() {
@@ -15032,6 +15620,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
        */
       public Builder setDestinationFolderId(
           java.lang.String value) {
@@ -15049,6 +15639,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDestinationFolderId() {
         
@@ -15062,6 +15653,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
        */
       public Builder setDestinationFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15077,7 +15670,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15137,6 +15730,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -15145,6 +15739,7 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -15152,7 +15747,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.MoveSubnetMetadata}
    */
-  public  static final class MoveSubnetMetadata extends
+  public static final class MoveSubnetMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.MoveSubnetMetadata)
       MoveSubnetMetadataOrBuilder {
@@ -15163,6 +15758,13 @@ public final class SubnetServiceOuterClass {
     }
     private MoveSubnetMetadata() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveSubnetMetadata();
     }
 
     @java.lang.Override
@@ -15178,7 +15780,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15196,7 +15797,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15235,7 +15836,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -15254,7 +15857,9 @@ public final class SubnetServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -15283,7 +15888,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -15295,7 +15900,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -15313,11 +15918,10 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetMetadata) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15497,35 +16101,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15579,6 +16183,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -15598,6 +16203,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -15618,6 +16224,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -15635,6 +16243,7 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -15648,6 +16257,8 @@ public final class SubnetServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15663,7 +16274,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15719,35 +16330,42 @@ public final class SubnetServiceOuterClass {
 
     /**
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
 
     /**
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
     /**
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -15755,7 +16373,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListUsedAddressesRequest}
    */
-  public  static final class ListUsedAddressesRequest extends
+  public static final class ListUsedAddressesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListUsedAddressesRequest)
       ListUsedAddressesRequestOrBuilder {
@@ -15766,9 +16384,15 @@ public final class SubnetServiceOuterClass {
     }
     private ListUsedAddressesRequest() {
       subnetId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListUsedAddressesRequest();
     }
 
     @java.lang.Override
@@ -15784,7 +16408,6 @@ public final class SubnetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15819,7 +16442,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15854,7 +16477,9 @@ public final class SubnetServiceOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -15869,7 +16494,9 @@ public final class SubnetServiceOuterClass {
     }
     /**
      * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -15888,7 +16515,9 @@ public final class SubnetServiceOuterClass {
     private long pageSize_;
     /**
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -15897,7 +16526,9 @@ public final class SubnetServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -15912,7 +16543,9 @@ public final class SubnetServiceOuterClass {
     }
     /**
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -15931,7 +16564,9 @@ public final class SubnetServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -15946,7 +16581,9 @@ public final class SubnetServiceOuterClass {
     }
     /**
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -15975,16 +16612,16 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -15996,17 +16633,17 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -16024,17 +16661,16 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16230,35 +16866,35 @@ public final class SubnetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16319,6 +16955,7 @@ public final class SubnetServiceOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -16334,6 +16971,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -16350,6 +16988,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -16363,6 +17003,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -16372,6 +17013,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16388,12 +17031,16 @@ public final class SubnetServiceOuterClass {
       private long pageSize_ ;
       /**
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
       /**
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -16403,6 +17050,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -16414,6 +17062,7 @@ public final class SubnetServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -16429,6 +17078,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -16445,6 +17095,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -16458,6 +17110,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -16467,6 +17120,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -16483,6 +17138,7 @@ public final class SubnetServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <code>string filter = 4;</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -16498,6 +17154,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string filter = 4;</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -16514,6 +17171,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -16527,6 +17186,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -16536,6 +17196,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -16551,7 +17213,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16631,10 +17293,12 @@ public final class SubnetServiceOuterClass {
 
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -16642,7 +17306,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.ListUsedAddressesResponse}
    */
-  public  static final class ListUsedAddressesResponse extends
+  public static final class ListUsedAddressesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListUsedAddressesResponse)
       ListUsedAddressesResponseOrBuilder {
@@ -16654,6 +17318,13 @@ public final class SubnetServiceOuterClass {
     private ListUsedAddressesResponse() {
       addresses_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListUsedAddressesResponse();
     }
 
     @java.lang.Override
@@ -16681,7 +17352,7 @@ public final class SubnetServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 addresses_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -16696,7 +17367,7 @@ public final class SubnetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16710,7 +17381,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           addresses_ = java.util.Collections.unmodifiableList(addresses_);
         }
         this.unknownFields = unknownFields.build();
@@ -16730,18 +17401,19 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESSES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> addresses_;
     /**
      * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> getAddressesList() {
       return addresses_;
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder> 
         getAddressesOrBuilderList() {
       return addresses_;
@@ -16749,18 +17421,21 @@ public final class SubnetServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
      */
+    @java.lang.Override
     public int getAddressesCount() {
       return addresses_.size();
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getAddresses(int index) {
       return addresses_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder getAddressesOrBuilder(
         int index) {
       return addresses_.get(index);
@@ -16770,7 +17445,9 @@ public final class SubnetServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -16785,7 +17462,9 @@ public final class SubnetServiceOuterClass {
     }
     /**
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -16817,7 +17496,7 @@ public final class SubnetServiceOuterClass {
       for (int i = 0; i < addresses_.size(); i++) {
         output.writeMessage(1, addresses_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -16833,7 +17512,7 @@ public final class SubnetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, addresses_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -16851,13 +17530,12 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse) obj;
 
-      boolean result = true;
-      result = result && getAddressesList()
-          .equals(other.getAddressesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAddressesList()
+          .equals(other.getAddressesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17042,9 +17720,8 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (addressesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             addresses_ = java.util.Collections.unmodifiableList(addresses_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -17053,42 +17730,41 @@ public final class SubnetServiceOuterClass {
           result.addresses_ = addressesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17165,7 +17841,7 @@ public final class SubnetServiceOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> addresses_ =
         java.util.Collections.emptyList();
       private void ensureAddressesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           addresses_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress>(addresses_);
           bitField0_ |= 0x00000001;
          }
@@ -17394,7 +18070,7 @@ public final class SubnetServiceOuterClass {
           addressesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder>(
                   addresses_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           addresses_ = null;
@@ -17405,6 +18081,7 @@ public final class SubnetServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -17420,6 +18097,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -17436,6 +18114,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -17449,6 +18129,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -17458,6 +18139,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -17473,7 +18156,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17529,20 +18212,24 @@ public final class SubnetServiceOuterClass {
 
     /**
      * <code>string address = 1;</code>
+     * @return The address.
      */
     java.lang.String getAddress();
     /**
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
      * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     * @return The enum numeric value on the wire for ipVersion.
      */
     int getIpVersionValue();
     /**
      * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     * @return The ipVersion.
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion();
 
@@ -17573,7 +18260,7 @@ public final class SubnetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UsedAddress}
    */
-  public  static final class UsedAddress extends
+  public static final class UsedAddress extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UsedAddress)
       UsedAddressOrBuilder {
@@ -17586,6 +18273,13 @@ public final class SubnetServiceOuterClass {
       address_ = "";
       ipVersion_ = 0;
       references_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UsedAddress();
     }
 
     @java.lang.Override
@@ -17625,16 +18319,16 @@ public final class SubnetServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 references_ = new java.util.ArrayList<yandex.cloud.api.reference.ReferenceOuterClass.Reference>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               references_.add(
                   input.readMessage(yandex.cloud.api.reference.ReferenceOuterClass.Reference.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17648,7 +18342,7 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           references_ = java.util.Collections.unmodifiableList(references_);
         }
         this.unknownFields = unknownFields.build();
@@ -17668,12 +18362,13 @@ public final class SubnetServiceOuterClass {
               yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
      * <code>string address = 1;</code>
+     * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -17688,7 +18383,9 @@ public final class SubnetServiceOuterClass {
     }
     /**
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -17707,14 +18404,16 @@ public final class SubnetServiceOuterClass {
     private int ipVersion_;
     /**
      * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     * @return The enum numeric value on the wire for ipVersion.
      */
-    public int getIpVersionValue() {
+    @java.lang.Override public int getIpVersionValue() {
       return ipVersion_;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     * @return The ipVersion.
      */
-    public yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion() {
+    @java.lang.Override public yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion result = yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.valueOf(ipVersion_);
       return result == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.UNRECOGNIZED : result;
@@ -17725,12 +18424,14 @@ public final class SubnetServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> getReferencesList() {
       return references_;
     }
     /**
      * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder> 
         getReferencesOrBuilderList() {
       return references_;
@@ -17738,18 +18439,21 @@ public final class SubnetServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
      */
+    @java.lang.Override
     public int getReferencesCount() {
       return references_.size();
     }
     /**
      * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.reference.ReferenceOuterClass.Reference getReferences(int index) {
       return references_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder getReferencesOrBuilder(
         int index) {
       return references_.get(index);
@@ -17769,7 +18473,7 @@ public final class SubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
       if (ipVersion_ != yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
@@ -17787,7 +18491,7 @@ public final class SubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
       if (ipVersion_ != yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
@@ -17813,14 +18517,13 @@ public final class SubnetServiceOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress) obj;
 
-      boolean result = true;
-      result = result && getAddress()
-          .equals(other.getAddress());
-      result = result && ipVersion_ == other.ipVersion_;
-      result = result && getReferencesList()
-          .equals(other.getReferencesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (ipVersion_ != other.ipVersion_) return false;
+      if (!getReferencesList()
+          .equals(other.getReferencesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17978,7 +18681,7 @@ public final class SubnetServiceOuterClass {
 
         if (referencesBuilder_ == null) {
           references_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           referencesBuilder_.clear();
         }
@@ -18009,54 +18712,52 @@ public final class SubnetServiceOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.address_ = address_;
         result.ipVersion_ = ipVersion_;
         if (referencesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             references_ = java.util.Collections.unmodifiableList(references_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.references_ = references_;
         } else {
           result.references_ = referencesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18081,7 +18782,7 @@ public final class SubnetServiceOuterClass {
           if (!other.references_.isEmpty()) {
             if (references_.isEmpty()) {
               references_ = other.references_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureReferencesIsMutable();
               references_.addAll(other.references_);
@@ -18094,7 +18795,7 @@ public final class SubnetServiceOuterClass {
               referencesBuilder_.dispose();
               referencesBuilder_ = null;
               references_ = other.references_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               referencesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getReferencesFieldBuilder() : null;
@@ -18136,6 +18837,7 @@ public final class SubnetServiceOuterClass {
       private java.lang.Object address_ = "";
       /**
        * <code>string address = 1;</code>
+       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -18151,6 +18853,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string address = 1;</code>
+       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -18167,6 +18870,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string address = 1;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -18180,6 +18885,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string address = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -18189,6 +18895,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>string address = 1;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -18205,21 +18913,27 @@ public final class SubnetServiceOuterClass {
       private int ipVersion_ = 0;
       /**
        * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       * @return The enum numeric value on the wire for ipVersion.
        */
-      public int getIpVersionValue() {
+      @java.lang.Override public int getIpVersionValue() {
         return ipVersion_;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       * @param value The enum numeric value on the wire for ipVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setIpVersionValue(int value) {
+        
         ipVersion_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       * @return The ipVersion.
        */
+      @java.lang.Override
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion result = yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.valueOf(ipVersion_);
@@ -18227,6 +18941,8 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       * @param value The ipVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setIpVersion(yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion value) {
         if (value == null) {
@@ -18239,6 +18955,7 @@ public final class SubnetServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIpVersion() {
         
@@ -18250,9 +18967,9 @@ public final class SubnetServiceOuterClass {
       private java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> references_ =
         java.util.Collections.emptyList();
       private void ensureReferencesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           references_ = new java.util.ArrayList<yandex.cloud.api.reference.ReferenceOuterClass.Reference>(references_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -18402,7 +19119,7 @@ public final class SubnetServiceOuterClass {
       public Builder clearReferences() {
         if (referencesBuilder_ == null) {
           references_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           referencesBuilder_.clear();
@@ -18479,7 +19196,7 @@ public final class SubnetServiceOuterClass {
           referencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.reference.ReferenceOuterClass.Reference, yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder, yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder>(
                   references_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           references_ = null;
@@ -18489,7 +19206,7 @@ public final class SubnetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18770,15 +19487,7 @@ public final class SubnetServiceOuterClass {
       "Z;github.com/yandex-cloud/go-genproto/ya" +
       "ndex/cloud/vpc/v1;vpcb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -18788,7 +19497,7 @@ public final class SubnetServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.reference.ReferenceOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_vpc_v1_GetSubnetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_GetSubnetRequest_fieldAccessorTable = new

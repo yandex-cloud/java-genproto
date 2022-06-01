@@ -97,6 +97,8 @@ public final class ResourceOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -104,6 +106,10 @@ public final class ResourceOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static OriginProtocol forNumber(int value) {
       switch (value) {
         case 0: return ORIGIN_PROTOCOL_UNSPECIFIED;
@@ -128,6 +134,10 @@ public final class ResourceOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -261,6 +271,8 @@ public final class ResourceOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -268,6 +280,10 @@ public final class ResourceOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static RewriteFlag forNumber(int value) {
       switch (value) {
         case 0: return REWRITE_FLAG_UNSPECIFIED;
@@ -293,6 +309,10 @@ public final class ResourceOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -414,6 +434,8 @@ public final class ResourceOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -421,6 +443,10 @@ public final class ResourceOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static SSLCertificateType forNumber(int value) {
       switch (value) {
         case 0: return SSL_CERTIFICATE_TYPE_UNSPECIFIED;
@@ -445,6 +471,10 @@ public final class ResourceOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -550,6 +580,8 @@ public final class ResourceOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -557,6 +589,10 @@ public final class ResourceOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static SSLCertificateStatus forNumber(int value) {
       switch (value) {
         case 0: return SSL_CERTIFICATE_STATUS_UNSPECIFIED;
@@ -580,6 +616,10 @@ public final class ResourceOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -624,6 +664,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @return A list containing the values.
      */
     java.util.List<java.lang.String>
         getValuesList();
@@ -633,6 +674,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @return The count of values.
      */
     int getValuesCount();
     /**
@@ -641,6 +683,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
      */
     java.lang.String getValues(int index);
     /**
@@ -649,6 +693,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
      */
     com.google.protobuf.ByteString
         getValuesBytes(int index);
@@ -660,7 +706,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SecondaryHostnames}
    */
-  public  static final class SecondaryHostnames extends
+  public static final class SecondaryHostnames extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.SecondaryHostnames)
       SecondaryHostnamesOrBuilder {
@@ -671,6 +717,13 @@ public final class ResourceOuterClass {
     }
     private SecondaryHostnames() {
       values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecondaryHostnames();
     }
 
     @java.lang.Override
@@ -699,7 +752,7 @@ public final class ResourceOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 values_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -707,7 +760,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -721,7 +774,7 @@ public final class ResourceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           values_ = values_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -749,6 +802,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @return A list containing the values.
      */
     public com.google.protobuf.ProtocolStringList
         getValuesList() {
@@ -760,6 +814,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @return The count of values.
      */
     public int getValuesCount() {
       return values_.size();
@@ -770,6 +825,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
      */
     public java.lang.String getValues(int index) {
       return values_.get(index);
@@ -780,6 +837,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string values = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
      */
     public com.google.protobuf.ByteString
         getValuesBytes(int index) {
@@ -835,11 +894,10 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SecondaryHostnames other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.SecondaryHostnames) obj;
 
-      boolean result = true;
-      result = result && getValuesList()
-          .equals(other.getValuesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1019,7 +1077,7 @@ public final class ResourceOuterClass {
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SecondaryHostnames buildPartial() {
         yandex.cloud.api.cdn.v1.ResourceOuterClass.SecondaryHostnames result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.SecondaryHostnames(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           values_ = values_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -1030,35 +1088,35 @@ public final class ResourceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1114,7 +1172,7 @@ public final class ResourceOuterClass {
 
       private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureValuesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           values_ = new com.google.protobuf.LazyStringArrayList(values_);
           bitField0_ |= 0x00000001;
          }
@@ -1125,6 +1183,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @return A list containing the values.
        */
       public com.google.protobuf.ProtocolStringList
           getValuesList() {
@@ -1136,6 +1195,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @return The count of values.
        */
       public int getValuesCount() {
         return values_.size();
@@ -1146,6 +1206,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
        */
       public java.lang.String getValues(int index) {
         return values_.get(index);
@@ -1156,6 +1218,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
        */
       public com.google.protobuf.ByteString
           getValuesBytes(int index) {
@@ -1167,6 +1231,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The values to set.
+       * @return This builder for chaining.
        */
       public Builder setValues(
           int index, java.lang.String value) {
@@ -1184,6 +1251,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
        */
       public Builder addValues(
           java.lang.String value) {
@@ -1201,6 +1270,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
        */
       public Builder addAllValues(
           java.lang.Iterable<java.lang.String> values) {
@@ -1216,6 +1287,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearValues() {
         values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -1229,6 +1301,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string values = 1;</code>
+       * @param value The bytes of the values to add.
+       * @return This builder for chaining.
        */
       public Builder addValuesBytes(
           com.google.protobuf.ByteString value) {
@@ -1244,7 +1318,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1304,6 +1378,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -1312,6 +1387,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -1322,6 +1398,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1330,6 +1407,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1340,6 +1418,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string cname = 3;</code>
+     * @return The cname.
      */
     java.lang.String getCname();
     /**
@@ -1348,6 +1427,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string cname = 3;</code>
+     * @return The bytes for cname.
      */
     com.google.protobuf.ByteString
         getCnameBytes();
@@ -1358,6 +1438,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -1366,6 +1447,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -1383,6 +1465,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 5;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
@@ -1391,6 +1474,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 5;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -1410,6 +1494,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>bool active = 6;</code>
+     * @return The active.
      */
     boolean getActive();
 
@@ -1419,6 +1504,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
+     * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
@@ -1427,6 +1513,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
+     * @return The options.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions getOptions();
     /**
@@ -1444,6 +1531,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @return A list containing the secondaryHostnames.
      */
     java.util.List<java.lang.String>
         getSecondaryHostnamesList();
@@ -1453,6 +1541,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @return The count of secondaryHostnames.
      */
     int getSecondaryHostnamesCount();
     /**
@@ -1461,6 +1550,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @param index The index of the element to return.
+     * @return The secondaryHostnames at the given index.
      */
     java.lang.String getSecondaryHostnames(int index);
     /**
@@ -1469,6 +1560,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the secondaryHostnames at the given index.
      */
     com.google.protobuf.ByteString
         getSecondaryHostnamesBytes(int index);
@@ -1479,6 +1572,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>int64 origin_group_id = 9;</code>
+     * @return The originGroupId.
      */
     long getOriginGroupId();
 
@@ -1488,6 +1582,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string origin_group_name = 10;</code>
+     * @return The originGroupName.
      */
     java.lang.String getOriginGroupName();
     /**
@@ -1496,6 +1591,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string origin_group_name = 10;</code>
+     * @return The bytes for originGroupName.
      */
     com.google.protobuf.ByteString
         getOriginGroupNameBytes();
@@ -1506,6 +1602,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+     * @return The enum numeric value on the wire for originProtocol.
      */
     int getOriginProtocolValue();
     /**
@@ -1514,6 +1611,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+     * @return The originProtocol.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol getOriginProtocol();
 
@@ -1523,6 +1621,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
+     * @return Whether the sslCertificate field is set.
      */
     boolean hasSslCertificate();
     /**
@@ -1531,6 +1630,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
+     * @return The sslCertificate.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate getSslCertificate();
     /**
@@ -1549,7 +1649,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.Resource}
    */
-  public  static final class Resource extends
+  public static final class Resource extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.Resource)
       ResourceOrBuilder {
@@ -1562,11 +1662,16 @@ public final class ResourceOuterClass {
       id_ = "";
       folderId_ = "";
       cname_ = "";
-      active_ = false;
       secondaryHostnames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      originGroupId_ = 0L;
       originGroupName_ = "";
       originProtocol_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Resource();
     }
 
     @java.lang.Override
@@ -1657,9 +1762,9 @@ public final class ResourceOuterClass {
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 secondaryHostnames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000001;
               }
               secondaryHostnames_.add(s);
               break;
@@ -1695,7 +1800,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1709,7 +1814,7 @@ public final class ResourceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           secondaryHostnames_ = secondaryHostnames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -1729,7 +1834,6 @@ public final class ResourceOuterClass {
               yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -1738,7 +1842,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1757,7 +1863,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1780,7 +1888,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1799,7 +1909,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1822,7 +1934,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string cname = 3;</code>
+     * @return The cname.
      */
+    @java.lang.Override
     public java.lang.String getCname() {
       java.lang.Object ref = cname_;
       if (ref instanceof java.lang.String) {
@@ -1841,7 +1955,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string cname = 3;</code>
+     * @return The bytes for cname.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCnameBytes() {
       java.lang.Object ref = cname_;
@@ -1864,7 +1980,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -1874,7 +1992,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -1885,6 +2005,7 @@ public final class ResourceOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -1897,7 +2018,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 5;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
@@ -1907,7 +2030,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 5;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
@@ -1918,6 +2043,7 @@ public final class ResourceOuterClass {
      *
      * <code>.google.protobuf.Timestamp updated_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
@@ -1932,7 +2058,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>bool active = 6;</code>
+     * @return The active.
      */
+    @java.lang.Override
     public boolean getActive() {
       return active_;
     }
@@ -1945,7 +2073,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
+     * @return Whether the options field is set.
      */
+    @java.lang.Override
     public boolean hasOptions() {
       return options_ != null;
     }
@@ -1955,7 +2085,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
+     * @return The options.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions getOptions() {
       return options_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.getDefaultInstance() : options_;
     }
@@ -1966,6 +2098,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
     }
@@ -1978,6 +2111,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @return A list containing the secondaryHostnames.
      */
     public com.google.protobuf.ProtocolStringList
         getSecondaryHostnamesList() {
@@ -1989,6 +2123,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @return The count of secondaryHostnames.
      */
     public int getSecondaryHostnamesCount() {
       return secondaryHostnames_.size();
@@ -1999,6 +2134,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @param index The index of the element to return.
+     * @return The secondaryHostnames at the given index.
      */
     public java.lang.String getSecondaryHostnames(int index) {
       return secondaryHostnames_.get(index);
@@ -2009,6 +2146,8 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>repeated string secondary_hostnames = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the secondaryHostnames at the given index.
      */
     public com.google.protobuf.ByteString
         getSecondaryHostnamesBytes(int index) {
@@ -2023,7 +2162,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>int64 origin_group_id = 9;</code>
+     * @return The originGroupId.
      */
+    @java.lang.Override
     public long getOriginGroupId() {
       return originGroupId_;
     }
@@ -2036,7 +2177,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string origin_group_name = 10;</code>
+     * @return The originGroupName.
      */
+    @java.lang.Override
     public java.lang.String getOriginGroupName() {
       java.lang.Object ref = originGroupName_;
       if (ref instanceof java.lang.String) {
@@ -2055,7 +2198,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string origin_group_name = 10;</code>
+     * @return The bytes for originGroupName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOriginGroupNameBytes() {
       java.lang.Object ref = originGroupName_;
@@ -2078,8 +2223,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+     * @return The enum numeric value on the wire for originProtocol.
      */
-    public int getOriginProtocolValue() {
+    @java.lang.Override public int getOriginProtocolValue() {
       return originProtocol_;
     }
     /**
@@ -2088,8 +2234,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+     * @return The originProtocol.
      */
-    public yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol getOriginProtocol() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol getOriginProtocol() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol result = yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol.valueOf(originProtocol_);
       return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol.UNRECOGNIZED : result;
@@ -2103,7 +2250,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
+     * @return Whether the sslCertificate field is set.
      */
+    @java.lang.Override
     public boolean hasSslCertificate() {
       return sslCertificate_ != null;
     }
@@ -2113,7 +2262,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
+     * @return The sslCertificate.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate getSslCertificate() {
       return sslCertificate_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate.getDefaultInstance() : sslCertificate_;
     }
@@ -2124,6 +2275,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateOrBuilder getSslCertificateOrBuilder() {
       return getSslCertificate();
     }
@@ -2142,13 +2294,13 @@ public final class ResourceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
-      if (!getCnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cname_);
       }
       if (createdAt_ != null) {
@@ -2169,7 +2321,7 @@ public final class ResourceOuterClass {
       if (originGroupId_ != 0L) {
         output.writeInt64(9, originGroupId_);
       }
-      if (!getOriginGroupNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originGroupName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, originGroupName_);
       }
       if (originProtocol_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol.ORIGIN_PROTOCOL_UNSPECIFIED.getNumber()) {
@@ -2187,13 +2339,13 @@ public final class ResourceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
-      if (!getCnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cname_);
       }
       if (createdAt_ != null) {
@@ -2224,7 +2376,7 @@ public final class ResourceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, originGroupId_);
       }
-      if (!getOriginGroupNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originGroupName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, originGroupName_);
       }
       if (originProtocol_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol.ORIGIN_PROTOCOL_UNSPECIFIED.getNumber()) {
@@ -2250,44 +2402,43 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getCname()
-          .equals(other.getCname());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getCname()
+          .equals(other.getCname())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && (getActive()
-          == other.getActive());
-      result = result && (hasOptions() == other.hasOptions());
+      if (getActive()
+          != other.getActive()) return false;
+      if (hasOptions() != other.hasOptions()) return false;
       if (hasOptions()) {
-        result = result && getOptions()
-            .equals(other.getOptions());
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
       }
-      result = result && getSecondaryHostnamesList()
-          .equals(other.getSecondaryHostnamesList());
-      result = result && (getOriginGroupId()
-          == other.getOriginGroupId());
-      result = result && getOriginGroupName()
-          .equals(other.getOriginGroupName());
-      result = result && originProtocol_ == other.originProtocol_;
-      result = result && (hasSslCertificate() == other.hasSslCertificate());
+      if (!getSecondaryHostnamesList()
+          .equals(other.getSecondaryHostnamesList())) return false;
+      if (getOriginGroupId()
+          != other.getOriginGroupId()) return false;
+      if (!getOriginGroupName()
+          .equals(other.getOriginGroupName())) return false;
+      if (originProtocol_ != other.originProtocol_) return false;
+      if (hasSslCertificate() != other.hasSslCertificate()) return false;
       if (hasSslCertificate()) {
-        result = result && getSslCertificate()
-            .equals(other.getSslCertificate());
+        if (!getSslCertificate()
+            .equals(other.getSslCertificate())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2497,7 +2648,7 @@ public final class ResourceOuterClass {
           optionsBuilder_ = null;
         }
         secondaryHostnames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000001);
         originGroupId_ = 0L;
 
         originGroupName_ = "";
@@ -2537,7 +2688,6 @@ public final class ResourceOuterClass {
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource buildPartial() {
         yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.Resource(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.cname_ = cname_;
@@ -2557,9 +2707,9 @@ public final class ResourceOuterClass {
         } else {
           result.options_ = optionsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           secondaryHostnames_ = secondaryHostnames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.secondaryHostnames_ = secondaryHostnames_;
         result.originGroupId_ = originGroupId_;
@@ -2570,42 +2720,41 @@ public final class ResourceOuterClass {
         } else {
           result.sslCertificate_ = sslCertificateBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2646,7 +2795,7 @@ public final class ResourceOuterClass {
         if (!other.secondaryHostnames_.isEmpty()) {
           if (secondaryHostnames_.isEmpty()) {
             secondaryHostnames_ = other.secondaryHostnames_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSecondaryHostnamesIsMutable();
             secondaryHostnames_.addAll(other.secondaryHostnames_);
@@ -2703,6 +2852,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2722,6 +2872,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2742,6 +2893,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2759,6 +2912,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2772,6 +2926,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2792,6 +2948,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2811,6 +2968,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2831,6 +2989,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2848,6 +3008,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2861,6 +3022,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2881,6 +3044,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string cname = 3;</code>
+       * @return The cname.
        */
       public java.lang.String getCname() {
         java.lang.Object ref = cname_;
@@ -2900,6 +3064,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string cname = 3;</code>
+       * @return The bytes for cname.
        */
       public com.google.protobuf.ByteString
           getCnameBytes() {
@@ -2920,6 +3085,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string cname = 3;</code>
+       * @param value The cname to set.
+       * @return This builder for chaining.
        */
       public Builder setCname(
           java.lang.String value) {
@@ -2937,6 +3104,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string cname = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCname() {
         
@@ -2950,6 +3118,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string cname = 3;</code>
+       * @param value The bytes for cname to set.
+       * @return This builder for chaining.
        */
       public Builder setCnameBytes(
           com.google.protobuf.ByteString value) {
@@ -2963,7 +3133,7 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2972,6 +3142,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2982,6 +3153,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -3116,7 +3288,7 @@ public final class ResourceOuterClass {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
@@ -3125,6 +3297,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 5;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
@@ -3135,6 +3308,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 5;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -3278,7 +3452,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool active = 6;</code>
+       * @return The active.
        */
+      @java.lang.Override
       public boolean getActive() {
         return active_;
       }
@@ -3290,6 +3466,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool active = 6;</code>
+       * @param value The active to set.
+       * @return This builder for chaining.
        */
       public Builder setActive(boolean value) {
         
@@ -3305,6 +3483,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool active = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearActive() {
         
@@ -3313,7 +3492,7 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions options_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions options_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptionsOrBuilder> optionsBuilder_;
       /**
@@ -3322,6 +3501,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
+       * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
@@ -3332,6 +3512,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions options = 7;</code>
+       * @return The options.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions getOptions() {
         if (optionsBuilder_ == null) {
@@ -3468,9 +3649,9 @@ public final class ResourceOuterClass {
 
       private com.google.protobuf.LazyStringList secondaryHostnames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecondaryHostnamesIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           secondaryHostnames_ = new com.google.protobuf.LazyStringArrayList(secondaryHostnames_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -3479,6 +3660,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @return A list containing the secondaryHostnames.
        */
       public com.google.protobuf.ProtocolStringList
           getSecondaryHostnamesList() {
@@ -3490,6 +3672,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @return The count of secondaryHostnames.
        */
       public int getSecondaryHostnamesCount() {
         return secondaryHostnames_.size();
@@ -3500,6 +3683,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @param index The index of the element to return.
+       * @return The secondaryHostnames at the given index.
        */
       public java.lang.String getSecondaryHostnames(int index) {
         return secondaryHostnames_.get(index);
@@ -3510,6 +3695,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the secondaryHostnames at the given index.
        */
       public com.google.protobuf.ByteString
           getSecondaryHostnamesBytes(int index) {
@@ -3521,6 +3708,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The secondaryHostnames to set.
+       * @return This builder for chaining.
        */
       public Builder setSecondaryHostnames(
           int index, java.lang.String value) {
@@ -3538,6 +3728,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @param value The secondaryHostnames to add.
+       * @return This builder for chaining.
        */
       public Builder addSecondaryHostnames(
           java.lang.String value) {
@@ -3555,6 +3747,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @param values The secondaryHostnames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecondaryHostnames(
           java.lang.Iterable<java.lang.String> values) {
@@ -3570,10 +3764,11 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecondaryHostnames() {
         secondaryHostnames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3583,6 +3778,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string secondary_hostnames = 8;</code>
+       * @param value The bytes of the secondaryHostnames to add.
+       * @return This builder for chaining.
        */
       public Builder addSecondaryHostnamesBytes(
           com.google.protobuf.ByteString value) {
@@ -3603,7 +3800,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 origin_group_id = 9;</code>
+       * @return The originGroupId.
        */
+      @java.lang.Override
       public long getOriginGroupId() {
         return originGroupId_;
       }
@@ -3613,6 +3812,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 origin_group_id = 9;</code>
+       * @param value The originGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setOriginGroupId(long value) {
         
@@ -3626,6 +3827,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 origin_group_id = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOriginGroupId() {
         
@@ -3641,6 +3843,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string origin_group_name = 10;</code>
+       * @return The originGroupName.
        */
       public java.lang.String getOriginGroupName() {
         java.lang.Object ref = originGroupName_;
@@ -3660,6 +3863,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string origin_group_name = 10;</code>
+       * @return The bytes for originGroupName.
        */
       public com.google.protobuf.ByteString
           getOriginGroupNameBytes() {
@@ -3680,6 +3884,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string origin_group_name = 10;</code>
+       * @param value The originGroupName to set.
+       * @return This builder for chaining.
        */
       public Builder setOriginGroupName(
           java.lang.String value) {
@@ -3697,6 +3903,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string origin_group_name = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOriginGroupName() {
         
@@ -3710,6 +3917,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string origin_group_name = 10;</code>
+       * @param value The bytes for originGroupName to set.
+       * @return This builder for chaining.
        */
       public Builder setOriginGroupNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3730,8 +3939,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+       * @return The enum numeric value on the wire for originProtocol.
        */
-      public int getOriginProtocolValue() {
+      @java.lang.Override public int getOriginProtocolValue() {
         return originProtocol_;
       }
       /**
@@ -3740,8 +3950,11 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+       * @param value The enum numeric value on the wire for originProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setOriginProtocolValue(int value) {
+        
         originProtocol_ = value;
         onChanged();
         return this;
@@ -3752,7 +3965,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+       * @return The originProtocol.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol getOriginProtocol() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol result = yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol.valueOf(originProtocol_);
@@ -3764,6 +3979,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+       * @param value The originProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setOriginProtocol(yandex.cloud.api.cdn.v1.ResourceOuterClass.OriginProtocol value) {
         if (value == null) {
@@ -3780,6 +3997,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOriginProtocol() {
         
@@ -3788,7 +4006,7 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate sslCertificate_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate sslCertificate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateOrBuilder> sslCertificateBuilder_;
       /**
@@ -3797,6 +4015,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
+       * @return Whether the sslCertificate field is set.
        */
       public boolean hasSslCertificate() {
         return sslCertificateBuilder_ != null || sslCertificate_ != null;
@@ -3807,6 +4026,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificate ssl_certificate = 12;</code>
+       * @return The sslCertificate.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate getSslCertificate() {
         if (sslCertificateBuilder_ == null) {
@@ -3943,7 +4163,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4003,6 +4223,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
+     * @return Whether the disableCache field is set.
      */
     boolean hasDisableCache();
     /**
@@ -4011,6 +4232,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
+     * @return The disableCache.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getDisableCache();
     /**
@@ -4028,6 +4250,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
+     * @return Whether the edgeCacheSettings field is set.
      */
     boolean hasEdgeCacheSettings();
     /**
@@ -4036,6 +4259,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
+     * @return The edgeCacheSettings.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings getEdgeCacheSettings();
     /**
@@ -4058,6 +4282,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
+     * @return Whether the browserCacheSettings field is set.
      */
     boolean hasBrowserCacheSettings();
     /**
@@ -4071,6 +4296,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
+     * @return The browserCacheSettings.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option getBrowserCacheSettings();
     /**
@@ -4093,6 +4319,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
+     * @return Whether the cacheHttpHeaders field is set.
      */
     boolean hasCacheHttpHeaders();
     /**
@@ -4101,6 +4328,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
+     * @return The cacheHttpHeaders.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCacheHttpHeaders();
     /**
@@ -4118,6 +4346,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
+     * @return Whether the queryParamsOptions field is set.
      */
     boolean hasQueryParamsOptions();
     /**
@@ -4126,6 +4355,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
+     * @return The queryParamsOptions.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions getQueryParamsOptions();
     /**
@@ -4145,6 +4375,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
+     * @return Whether the slice field is set.
      */
     boolean hasSlice();
     /**
@@ -4155,6 +4386,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
+     * @return The slice.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getSlice();
     /**
@@ -4174,6 +4406,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
+     * @return Whether the compressionOptions field is set.
      */
     boolean hasCompressionOptions();
     /**
@@ -4182,6 +4415,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
+     * @return The compressionOptions.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions getCompressionOptions();
     /**
@@ -4199,6 +4433,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
+     * @return Whether the redirectOptions field is set.
      */
     boolean hasRedirectOptions();
     /**
@@ -4207,6 +4442,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
+     * @return The redirectOptions.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions getRedirectOptions();
     /**
@@ -4224,6 +4460,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
+     * @return Whether the hostOptions field is set.
      */
     boolean hasHostOptions();
     /**
@@ -4232,6 +4469,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
+     * @return The hostOptions.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions getHostOptions();
     /**
@@ -4249,6 +4487,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
+     * @return Whether the staticHeaders field is set.
      */
     boolean hasStaticHeaders();
     /**
@@ -4257,6 +4496,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
+     * @return The staticHeaders.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption getStaticHeaders();
     /**
@@ -4276,6 +4516,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
+     * @return Whether the cors field is set.
      */
     boolean hasCors();
     /**
@@ -4286,6 +4527,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
+     * @return The cors.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCors();
     /**
@@ -4306,6 +4548,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
+     * @return Whether the stale field is set.
      */
     boolean hasStale();
     /**
@@ -4315,6 +4558,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
+     * @return The stale.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getStale();
     /**
@@ -4337,6 +4581,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
+     * @return Whether the allowedHttpMethods field is set.
      */
     boolean hasAllowedHttpMethods();
     /**
@@ -4349,6 +4594,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
+     * @return The allowedHttpMethods.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getAllowedHttpMethods();
     /**
@@ -4370,6 +4616,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
+     * @return Whether the proxyCacheMethodsSet field is set.
      */
     boolean hasProxyCacheMethodsSet();
     /**
@@ -4378,6 +4625,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
+     * @return The proxyCacheMethodsSet.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getProxyCacheMethodsSet();
     /**
@@ -4395,6 +4643,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
+     * @return Whether the disableProxyForceRanges field is set.
      */
     boolean hasDisableProxyForceRanges();
     /**
@@ -4403,6 +4652,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
+     * @return The disableProxyForceRanges.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getDisableProxyForceRanges();
     /**
@@ -4423,6 +4673,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
+     * @return Whether the staticRequestHeaders field is set.
      */
     boolean hasStaticRequestHeaders();
     /**
@@ -4434,6 +4685,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
+     * @return The staticRequestHeaders.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption getStaticRequestHeaders();
     /**
@@ -4455,6 +4707,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
+     * @return Whether the customServerName field is set.
      */
     boolean hasCustomServerName();
     /**
@@ -4464,6 +4717,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
+     * @return The customServerName.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getCustomServerName();
     /**
@@ -4482,6 +4736,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
+     * @return Whether the ignoreCookie field is set.
      */
     boolean hasIgnoreCookie();
     /**
@@ -4490,6 +4745,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
+     * @return The ignoreCookie.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreCookie();
     /**
@@ -4507,6 +4763,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
+     * @return Whether the rewrite field is set.
      */
     boolean hasRewrite();
     /**
@@ -4515,6 +4772,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
+     * @return The rewrite.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption getRewrite();
     /**
@@ -4533,7 +4791,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions}
    */
-  public  static final class ResourceOptions extends
+  public static final class ResourceOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions)
       ResourceOptionsOrBuilder {
@@ -4543,6 +4801,13 @@ public final class ResourceOuterClass {
       super(builder);
     }
     private ResourceOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceOptions();
     }
 
     @java.lang.Override
@@ -4558,7 +4823,6 @@ public final class ResourceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4817,7 +5081,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4859,6 +5123,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -4868,6 +5133,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool value = 2;</code>
+       * @return The value.
        */
       boolean getValue();
     }
@@ -4878,7 +5144,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.BoolOption}
      */
-    public  static final class BoolOption extends
+    public static final class BoolOption extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.BoolOption)
         BoolOptionOrBuilder {
@@ -4888,8 +5154,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private BoolOption() {
-        enabled_ = false;
-        value_ = false;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new BoolOption();
       }
 
       @java.lang.Override
@@ -4905,7 +5176,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -4927,7 +5197,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4967,7 +5237,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -4980,7 +5252,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool value = 2;</code>
+       * @return The value.
        */
+      @java.lang.Override
       public boolean getValue() {
         return value_;
       }
@@ -5037,13 +5311,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && (getValue()
-            == other.getValue());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (getValue()
+            != other.getValue()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5234,35 +5507,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5319,7 +5592,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -5330,6 +5605,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -5344,6 +5621,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -5359,7 +5637,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool value = 2;</code>
+         * @return The value.
          */
+        @java.lang.Override
         public boolean getValue() {
           return value_;
         }
@@ -5369,6 +5649,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool value = 2;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
          */
         public Builder setValue(boolean value) {
           
@@ -5382,6 +5664,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool value = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearValue() {
           
@@ -5392,7 +5675,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5453,6 +5736,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -5462,6 +5746,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
+       * @return The value.
        */
       java.lang.String getValue();
       /**
@@ -5470,6 +5755,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
+       * @return The bytes for value.
        */
       com.google.protobuf.ByteString
           getValueBytes();
@@ -5481,7 +5767,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringOption}
      */
-    public  static final class StringOption extends
+    public static final class StringOption extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.StringOption)
         StringOptionOrBuilder {
@@ -5491,8 +5777,14 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private StringOption() {
-        enabled_ = false;
         value_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StringOption();
       }
 
       @java.lang.Override
@@ -5508,7 +5800,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5531,7 +5822,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5571,7 +5862,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -5584,7 +5877,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
+       * @return The value.
        */
+      @java.lang.Override
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -5603,7 +5898,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string value = 2;</code>
+       * @return The bytes for value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getValueBytes() {
         java.lang.Object ref = value_;
@@ -5635,7 +5932,7 @@ public final class ResourceOuterClass {
         if (enabled_ != false) {
           output.writeBool(1, enabled_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
         }
         unknownFields.writeTo(output);
@@ -5651,7 +5948,7 @@ public final class ResourceOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(1, enabled_);
         }
-        if (!getValueBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
         }
         size += unknownFields.getSerializedSize();
@@ -5669,13 +5966,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && getValue()
-            .equals(other.getValue());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getValue()
+            .equals(other.getValue())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5865,35 +6161,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5951,7 +6247,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -5962,6 +6260,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -5976,6 +6276,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -5991,6 +6292,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string value = 2;</code>
+         * @return The value.
          */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
@@ -6010,6 +6312,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string value = 2;</code>
+         * @return The bytes for value.
          */
         public com.google.protobuf.ByteString
             getValueBytes() {
@@ -6030,6 +6333,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string value = 2;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
          */
         public Builder setValue(
             java.lang.String value) {
@@ -6047,6 +6352,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string value = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearValue() {
           
@@ -6060,6 +6366,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string value = 2;</code>
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
          */
         public Builder setValueBytes(
             com.google.protobuf.ByteString value) {
@@ -6075,7 +6383,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6136,6 +6444,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -6145,6 +6454,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 value = 2;</code>
+       * @return The value.
        */
       long getValue();
     }
@@ -6155,7 +6465,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.Int64Option}
      */
-    public  static final class Int64Option extends
+    public static final class Int64Option extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.Int64Option)
         Int64OptionOrBuilder {
@@ -6165,8 +6475,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private Int64Option() {
-        enabled_ = false;
-        value_ = 0L;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Int64Option();
       }
 
       @java.lang.Override
@@ -6182,7 +6497,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -6204,7 +6518,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6244,7 +6558,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -6257,7 +6573,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 value = 2;</code>
+       * @return The value.
        */
+      @java.lang.Override
       public long getValue() {
         return value_;
       }
@@ -6314,13 +6632,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && (getValue()
-            == other.getValue());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (getValue()
+            != other.getValue()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -6511,35 +6828,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6596,7 +6913,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -6607,6 +6926,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -6621,6 +6942,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -6636,7 +6958,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 value = 2;</code>
+         * @return The value.
          */
+        @java.lang.Override
         public long getValue() {
           return value_;
         }
@@ -6646,6 +6970,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 value = 2;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
          */
         public Builder setValue(long value) {
           
@@ -6659,6 +6985,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 value = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearValue() {
           
@@ -6669,7 +6996,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6730,6 +7057,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -6739,6 +7067,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @return A list containing the value.
        */
       java.util.List<java.lang.String>
           getValueList();
@@ -6748,6 +7077,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @return The count of value.
        */
       int getValueCount();
       /**
@@ -6756,6 +7086,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @param index The index of the element to return.
+       * @return The value at the given index.
        */
       java.lang.String getValue(int index);
       /**
@@ -6764,6 +7096,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the value at the given index.
        */
       com.google.protobuf.ByteString
           getValueBytes(int index);
@@ -6775,7 +7109,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringsListOption}
      */
-    public  static final class StringsListOption extends
+    public static final class StringsListOption extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.StringsListOption)
         StringsListOptionOrBuilder {
@@ -6785,8 +7119,14 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private StringsListOption() {
-        enabled_ = false;
         value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StringsListOption();
       }
 
       @java.lang.Override
@@ -6820,15 +7160,15 @@ public final class ResourceOuterClass {
               }
               case 18: {
                 java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   value_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 value_.add(s);
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6842,7 +7182,7 @@ public final class ResourceOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             value_ = value_.getUnmodifiableView();
           }
           this.unknownFields = unknownFields.build();
@@ -6862,7 +7202,6 @@ public final class ResourceOuterClass {
                 yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder.class);
       }
 
-      private int bitField0_;
       public static final int ENABLED_FIELD_NUMBER = 1;
       private boolean enabled_;
       /**
@@ -6872,7 +7211,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -6885,6 +7226,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @return A list containing the value.
        */
       public com.google.protobuf.ProtocolStringList
           getValueList() {
@@ -6896,6 +7238,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @return The count of value.
        */
       public int getValueCount() {
         return value_.size();
@@ -6906,6 +7249,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @param index The index of the element to return.
+       * @return The value at the given index.
        */
       public java.lang.String getValue(int index) {
         return value_.get(index);
@@ -6916,6 +7261,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>repeated string value = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the value at the given index.
        */
       public com.google.protobuf.ByteString
           getValueBytes(int index) {
@@ -6978,13 +7325,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && getValueList()
-            .equals(other.getValueList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getValueList()
+            .equals(other.getValueList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7141,7 +7487,7 @@ public final class ResourceOuterClass {
           enabled_ = false;
 
           value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -7169,49 +7515,47 @@ public final class ResourceOuterClass {
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption buildPartial() {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.enabled_ = enabled_;
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             value_ = value_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.value_ = value_;
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7231,7 +7575,7 @@ public final class ResourceOuterClass {
           if (!other.value_.isEmpty()) {
             if (value_.isEmpty()) {
               value_ = other.value_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureValueIsMutable();
               value_.addAll(other.value_);
@@ -7276,7 +7620,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -7287,6 +7633,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -7301,6 +7649,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -7311,9 +7660,9 @@ public final class ResourceOuterClass {
 
         private com.google.protobuf.LazyStringList value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         private void ensureValueIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             value_ = new com.google.protobuf.LazyStringArrayList(value_);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
            }
         }
         /**
@@ -7322,6 +7671,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @return A list containing the value.
          */
         public com.google.protobuf.ProtocolStringList
             getValueList() {
@@ -7333,6 +7683,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @return The count of value.
          */
         public int getValueCount() {
           return value_.size();
@@ -7343,6 +7694,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @param index The index of the element to return.
+         * @return The value at the given index.
          */
         public java.lang.String getValue(int index) {
           return value_.get(index);
@@ -7353,6 +7706,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the value at the given index.
          */
         public com.google.protobuf.ByteString
             getValueBytes(int index) {
@@ -7364,6 +7719,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The value to set.
+         * @return This builder for chaining.
          */
         public Builder setValue(
             int index, java.lang.String value) {
@@ -7381,6 +7739,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @param value The value to add.
+         * @return This builder for chaining.
          */
         public Builder addValue(
             java.lang.String value) {
@@ -7398,6 +7758,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @param values The value to add.
+         * @return This builder for chaining.
          */
         public Builder addAllValue(
             java.lang.Iterable<java.lang.String> values) {
@@ -7413,10 +7775,11 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearValue() {
           value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -7426,6 +7789,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>repeated string value = 2;</code>
+         * @param value The bytes of the value to add.
+         * @return This builder for chaining.
          */
         public Builder addValueBytes(
             com.google.protobuf.ByteString value) {
@@ -7441,7 +7806,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -7502,6 +7867,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -7566,7 +7932,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption}
      */
-    public  static final class StringsMapOption extends
+    public static final class StringsMapOption extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption)
         StringsMapOptionOrBuilder {
@@ -7576,7 +7942,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private StringsMapOption() {
-        enabled_ = false;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StringsMapOption();
       }
 
       @java.lang.Override
@@ -7609,10 +7981,10 @@ public final class ResourceOuterClass {
                 break;
               }
               case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   value_ = com.google.protobuf.MapField.newMapField(
                       ValueDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
                 value__ = input.readMessage(
@@ -7622,7 +7994,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -7665,7 +8037,6 @@ public final class ResourceOuterClass {
                 yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption.Builder.class);
       }
 
-      private int bitField0_;
       public static final int ENABLED_FIELD_NUMBER = 1;
       private boolean enabled_;
       /**
@@ -7675,7 +8046,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -7714,14 +8087,16 @@ public final class ResourceOuterClass {
        * <code>map&lt;string, string&gt; value = 2;</code>
        */
 
+      @java.lang.Override
       public boolean containsValue(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetValue().getMap().containsKey(key);
       }
       /**
        * Use {@link #getValueMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getValue() {
         return getValueMap();
@@ -7733,6 +8108,7 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, string&gt; value = 2;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getValueMap() {
         return internalGetValue().getMap();
@@ -7744,11 +8120,12 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, string&gt; value = 2;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getValueOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetValue().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7760,10 +8137,11 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, string&gt; value = 2;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getValueOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetValue().getMap();
         if (!map.containsKey(key)) {
@@ -7833,13 +8211,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && internalGetValue().equals(
-            other.internalGetValue());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!internalGetValue().equals(
+            other.internalGetValue())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -8045,46 +8422,44 @@ public final class ResourceOuterClass {
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption buildPartial() {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.enabled_ = enabled_;
           result.value_ = internalGetValue();
           result.value_.makeImmutable();
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8141,7 +8516,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -8152,6 +8529,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -8166,6 +8545,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -8208,14 +8588,16 @@ public final class ResourceOuterClass {
          * <code>map&lt;string, string&gt; value = 2;</code>
          */
 
+        @java.lang.Override
         public boolean containsValue(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetValue().getMap().containsKey(key);
         }
         /**
          * Use {@link #getValueMap()} instead.
          */
+        @java.lang.Override
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.String> getValue() {
           return getValueMap();
@@ -8227,6 +8609,7 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, string&gt; value = 2;</code>
          */
+        @java.lang.Override
 
         public java.util.Map<java.lang.String, java.lang.String> getValueMap() {
           return internalGetValue().getMap();
@@ -8238,11 +8621,12 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, string&gt; value = 2;</code>
          */
+        @java.lang.Override
 
         public java.lang.String getValueOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetValue().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8254,10 +8638,11 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, string&gt; value = 2;</code>
          */
+        @java.lang.Override
 
         public java.lang.String getValueOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetValue().getMap();
           if (!map.containsKey(key)) {
@@ -8281,7 +8666,7 @@ public final class ResourceOuterClass {
 
         public Builder removeValue(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableValue().getMutableMap()
               .remove(key);
           return this;
@@ -8304,8 +8689,11 @@ public final class ResourceOuterClass {
         public Builder putValue(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableValue().getMutableMap()
               .put(key, value);
           return this;
@@ -8327,7 +8715,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -8389,6 +8777,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 simple_value = 1;</code>
+       * @return The simpleValue.
        */
       long getSimpleValue();
 
@@ -8463,7 +8852,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.CachingTimes}
      */
-    public  static final class CachingTimes extends
+    public static final class CachingTimes extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.CachingTimes)
         CachingTimesOrBuilder {
@@ -8473,7 +8862,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private CachingTimes() {
-        simpleValue_ = 0L;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CachingTimes();
       }
 
       @java.lang.Override
@@ -8506,10 +8901,10 @@ public final class ResourceOuterClass {
                 break;
               }
               case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   customValues_ = com.google.protobuf.MapField.newMapField(
                       CustomValuesDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
                 customValues__ = input.readMessage(
@@ -8519,7 +8914,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -8562,7 +8957,6 @@ public final class ResourceOuterClass {
                 yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes.Builder.class);
       }
 
-      private int bitField0_;
       public static final int SIMPLE_VALUE_FIELD_NUMBER = 1;
       private long simpleValue_;
       /**
@@ -8573,7 +8967,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 simple_value = 1;</code>
+       * @return The simpleValue.
        */
+      @java.lang.Override
       public long getSimpleValue() {
         return simpleValue_;
       }
@@ -8614,14 +9010,16 @@ public final class ResourceOuterClass {
        * <code>map&lt;string, int64&gt; custom_values = 2;</code>
        */
 
+      @java.lang.Override
       public boolean containsCustomValues(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetCustomValues().getMap().containsKey(key);
       }
       /**
        * Use {@link #getCustomValuesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Long> getCustomValues() {
         return getCustomValuesMap();
@@ -8635,6 +9033,7 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, int64&gt; custom_values = 2;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.Long> getCustomValuesMap() {
         return internalGetCustomValues().getMap();
@@ -8648,11 +9047,12 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, int64&gt; custom_values = 2;</code>
        */
+      @java.lang.Override
 
       public long getCustomValuesOrDefault(
           java.lang.String key,
           long defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Long> map =
             internalGetCustomValues().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8666,10 +9066,11 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, int64&gt; custom_values = 2;</code>
        */
+      @java.lang.Override
 
       public long getCustomValuesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Long> map =
             internalGetCustomValues().getMap();
         if (!map.containsKey(key)) {
@@ -8739,13 +9140,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes) obj;
 
-        boolean result = true;
-        result = result && (getSimpleValue()
-            == other.getSimpleValue());
-        result = result && internalGetCustomValues().equals(
-            other.internalGetCustomValues());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getSimpleValue()
+            != other.getSimpleValue()) return false;
+        if (!internalGetCustomValues().equals(
+            other.internalGetCustomValues())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -8951,46 +9351,44 @@ public final class ResourceOuterClass {
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes buildPartial() {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.simpleValue_ = simpleValue_;
           result.customValues_ = internalGetCustomValues();
           result.customValues_.makeImmutable();
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9048,7 +9446,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 simple_value = 1;</code>
+         * @return The simpleValue.
          */
+        @java.lang.Override
         public long getSimpleValue() {
           return simpleValue_;
         }
@@ -9060,6 +9460,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 simple_value = 1;</code>
+         * @param value The simpleValue to set.
+         * @return This builder for chaining.
          */
         public Builder setSimpleValue(long value) {
           
@@ -9075,6 +9477,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 simple_value = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSimpleValue() {
           
@@ -9119,14 +9522,16 @@ public final class ResourceOuterClass {
          * <code>map&lt;string, int64&gt; custom_values = 2;</code>
          */
 
+        @java.lang.Override
         public boolean containsCustomValues(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetCustomValues().getMap().containsKey(key);
         }
         /**
          * Use {@link #getCustomValuesMap()} instead.
          */
+        @java.lang.Override
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.Long> getCustomValues() {
           return getCustomValuesMap();
@@ -9140,6 +9545,7 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, int64&gt; custom_values = 2;</code>
          */
+        @java.lang.Override
 
         public java.util.Map<java.lang.String, java.lang.Long> getCustomValuesMap() {
           return internalGetCustomValues().getMap();
@@ -9153,11 +9559,12 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, int64&gt; custom_values = 2;</code>
          */
+        @java.lang.Override
 
         public long getCustomValuesOrDefault(
             java.lang.String key,
             long defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.Long> map =
               internalGetCustomValues().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -9171,10 +9578,11 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, int64&gt; custom_values = 2;</code>
          */
+        @java.lang.Override
 
         public long getCustomValuesOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.Long> map =
               internalGetCustomValues().getMap();
           if (!map.containsKey(key)) {
@@ -9200,7 +9608,7 @@ public final class ResourceOuterClass {
 
         public Builder removeCustomValues(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableCustomValues().getMutableMap()
               .remove(key);
           return this;
@@ -9225,7 +9633,7 @@ public final class ResourceOuterClass {
         public Builder putCustomValues(
             java.lang.String key,
             long value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           
           internalGetMutableCustomValues().getMutableMap()
               .put(key, value);
@@ -9250,7 +9658,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -9311,6 +9719,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -9320,6 +9729,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
+       * @return Whether the value field is set.
        */
       boolean hasValue();
       /**
@@ -9328,6 +9738,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
+       * @return The value.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes getValue();
       /**
@@ -9348,6 +9759,19 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 default_value = 3;</code>
+       * @return Whether the defaultValue field is set.
+       */
+      boolean hasDefaultValue();
+      /**
+       * <pre>
+       * Content will be cached according to origin cache settings.
+       * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
+       * if an origin server does not have caching HTTP headers.
+       * Responses with other codes will not be cached.
+       * </pre>
+       *
+       * <code>int64 default_value = 3;</code>
+       * @return The defaultValue.
        */
       long getDefaultValue();
 
@@ -9360,7 +9784,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings}
      */
-    public  static final class EdgeCacheSettings extends
+    public static final class EdgeCacheSettings extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings)
         EdgeCacheSettingsOrBuilder {
@@ -9370,7 +9794,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private EdgeCacheSettings() {
-        enabled_ = false;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EdgeCacheSettings();
       }
 
       @java.lang.Override
@@ -9386,7 +9816,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -9417,12 +9846,12 @@ public final class ResourceOuterClass {
                 break;
               }
               case 24: {
-                valuesVariantCase_ = 3;
                 valuesVariant_ = input.readInt64();
+                valuesVariantCase_ = 3;
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -9456,7 +9885,8 @@ public final class ResourceOuterClass {
       private int valuesVariantCase_ = 0;
       private java.lang.Object valuesVariant_;
       public enum ValuesVariantCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         VALUE(2),
         DEFAULT_VALUE(3),
         VALUESVARIANT_NOT_SET(0);
@@ -9465,6 +9895,8 @@ public final class ResourceOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -9500,7 +9932,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -9512,7 +9946,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
+       * @return Whether the value field is set.
        */
+      @java.lang.Override
       public boolean hasValue() {
         return valuesVariantCase_ == 2;
       }
@@ -9522,7 +9958,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
+       * @return The value.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes getValue() {
         if (valuesVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes) valuesVariant_;
@@ -9536,6 +9974,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimesOrBuilder getValueOrBuilder() {
         if (valuesVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes) valuesVariant_;
@@ -9553,7 +9992,24 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>int64 default_value = 3;</code>
+       * @return Whether the defaultValue field is set.
        */
+      @java.lang.Override
+      public boolean hasDefaultValue() {
+        return valuesVariantCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Content will be cached according to origin cache settings.
+       * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
+       * if an origin server does not have caching HTTP headers.
+       * Responses with other codes will not be cached.
+       * </pre>
+       *
+       * <code>int64 default_value = 3;</code>
+       * @return The defaultValue.
+       */
+      @java.lang.Override
       public long getDefaultValue() {
         if (valuesVariantCase_ == 3) {
           return (java.lang.Long) valuesVariant_;
@@ -9622,26 +10078,23 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && getValuesVariantCase().equals(
-            other.getValuesVariantCase());
-        if (!result) return false;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getValuesVariantCase().equals(other.getValuesVariantCase())) return false;
         switch (valuesVariantCase_) {
           case 2:
-            result = result && getValue()
-                .equals(other.getValue());
+            if (!getValue()
+                .equals(other.getValue())) return false;
             break;
           case 3:
-            result = result && (getDefaultValue()
-                == other.getDefaultValue());
+            if (getDefaultValue()
+                != other.getDefaultValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -9852,35 +10305,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9962,7 +10415,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -9973,6 +10428,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -9987,6 +10444,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -10003,7 +10461,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
+         * @return Whether the value field is set.
          */
+        @java.lang.Override
         public boolean hasValue() {
           return valuesVariantCase_ == 2;
         }
@@ -10013,7 +10473,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
+         * @return The value.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimes getValue() {
           if (valueBuilder_ == null) {
             if (valuesVariantCase_ == 2) {
@@ -10131,6 +10593,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.CachingTimes value = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CachingTimesOrBuilder getValueOrBuilder() {
           if ((valuesVariantCase_ == 2) && (valueBuilder_ != null)) {
             return valueBuilder_.getMessageOrBuilder();
@@ -10176,6 +10639,21 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 default_value = 3;</code>
+         * @return Whether the defaultValue field is set.
+         */
+        public boolean hasDefaultValue() {
+          return valuesVariantCase_ == 3;
+        }
+        /**
+         * <pre>
+         * Content will be cached according to origin cache settings.
+         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
+         * if an origin server does not have caching HTTP headers.
+         * Responses with other codes will not be cached.
+         * </pre>
+         *
+         * <code>int64 default_value = 3;</code>
+         * @return The defaultValue.
          */
         public long getDefaultValue() {
           if (valuesVariantCase_ == 3) {
@@ -10192,6 +10670,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 default_value = 3;</code>
+         * @param value The defaultValue to set.
+         * @return This builder for chaining.
          */
         public Builder setDefaultValue(long value) {
           valuesVariantCase_ = 3;
@@ -10208,6 +10688,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>int64 default_value = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearDefaultValue() {
           if (valuesVariantCase_ == 3) {
@@ -10220,7 +10701,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -10281,6 +10762,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -10345,7 +10827,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption}
      */
-    public  static final class StringVariableMapOption extends
+    public static final class StringVariableMapOption extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption)
         StringVariableMapOptionOrBuilder {
@@ -10355,7 +10837,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private StringVariableMapOption() {
-        enabled_ = false;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StringVariableMapOption();
       }
 
       @java.lang.Override
@@ -10388,10 +10876,10 @@ public final class ResourceOuterClass {
                 break;
               }
               case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   value_ = com.google.protobuf.MapField.newMapField(
                       ValueDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString>
                 value__ = input.readMessage(
@@ -10401,7 +10889,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -10454,6 +10942,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
+         * @return Whether the value field is set.
          */
         boolean hasValue();
         /**
@@ -10462,6 +10951,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
+         * @return The value.
          */
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getValue();
         /**
@@ -10479,6 +10969,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
+         * @return Whether the values field is set.
          */
         boolean hasValues();
         /**
@@ -10487,6 +10978,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
+         * @return The values.
          */
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getValues();
         /**
@@ -10503,7 +10995,7 @@ public final class ResourceOuterClass {
       /**
        * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString}
        */
-      public  static final class OneofString extends
+      public static final class OneofString extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString)
           OneofStringOrBuilder {
@@ -10513,6 +11005,13 @@ public final class ResourceOuterClass {
           super(builder);
         }
         private OneofString() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new OneofString();
         }
 
         @java.lang.Override
@@ -10528,7 +11027,6 @@ public final class ResourceOuterClass {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -10568,7 +11066,7 @@ public final class ResourceOuterClass {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -10602,7 +11100,8 @@ public final class ResourceOuterClass {
         private int stringOptionCase_ = 0;
         private java.lang.Object stringOption_;
         public enum StringOptionCase
-            implements com.google.protobuf.Internal.EnumLite {
+            implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
           VALUE(1),
           VALUES(2),
           STRINGOPTION_NOT_SET(0);
@@ -10611,6 +11110,8 @@ public final class ResourceOuterClass {
             this.value = value;
           }
           /**
+           * @param value The number of the enum to look for.
+           * @return The enum associated with the given number.
            * @deprecated Use {@link #forNumber(int)} instead.
            */
           @java.lang.Deprecated
@@ -10644,7 +11145,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
+         * @return Whether the value field is set.
          */
+        @java.lang.Override
         public boolean hasValue() {
           return stringOptionCase_ == 1;
         }
@@ -10654,7 +11157,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
+         * @return The value.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getValue() {
           if (stringOptionCase_ == 1) {
              return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption) stringOption_;
@@ -10668,6 +11173,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder getValueOrBuilder() {
           if (stringOptionCase_ == 1) {
              return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption) stringOption_;
@@ -10682,7 +11188,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
+         * @return Whether the values field is set.
          */
+        @java.lang.Override
         public boolean hasValues() {
           return stringOptionCase_ == 2;
         }
@@ -10692,7 +11200,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
+         * @return The values.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getValues() {
           if (stringOptionCase_ == 2) {
              return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) stringOption_;
@@ -10706,6 +11216,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getValuesOrBuilder() {
           if (stringOptionCase_ == 2) {
              return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) stringOption_;
@@ -10765,24 +11276,21 @@ public final class ResourceOuterClass {
           }
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString) obj;
 
-          boolean result = true;
-          result = result && getStringOptionCase().equals(
-              other.getStringOptionCase());
-          if (!result) return false;
+          if (!getStringOptionCase().equals(other.getStringOptionCase())) return false;
           switch (stringOptionCase_) {
             case 1:
-              result = result && getValue()
-                  .equals(other.getValue());
+              if (!getValue()
+                  .equals(other.getValue())) return false;
               break;
             case 2:
-              result = result && getValues()
-                  .equals(other.getValues());
+              if (!getValues()
+                  .equals(other.getValues())) return false;
               break;
             case 0:
             default:
           }
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -10986,35 +11494,35 @@ public final class ResourceOuterClass {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11093,7 +11601,9 @@ public final class ResourceOuterClass {
            * </pre>
            *
            * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
+           * @return Whether the value field is set.
            */
+          @java.lang.Override
           public boolean hasValue() {
             return stringOptionCase_ == 1;
           }
@@ -11103,7 +11613,9 @@ public final class ResourceOuterClass {
            * </pre>
            *
            * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
+           * @return The value.
            */
+          @java.lang.Override
           public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getValue() {
             if (valueBuilder_ == null) {
               if (stringOptionCase_ == 1) {
@@ -11221,6 +11733,7 @@ public final class ResourceOuterClass {
            *
            * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption value = 1;</code>
            */
+          @java.lang.Override
           public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder getValueOrBuilder() {
             if ((stringOptionCase_ == 1) && (valueBuilder_ != null)) {
               return valueBuilder_.getMessageOrBuilder();
@@ -11265,7 +11778,9 @@ public final class ResourceOuterClass {
            * </pre>
            *
            * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
+           * @return Whether the values field is set.
            */
+          @java.lang.Override
           public boolean hasValues() {
             return stringOptionCase_ == 2;
           }
@@ -11275,7 +11790,9 @@ public final class ResourceOuterClass {
            * </pre>
            *
            * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
+           * @return The values.
            */
+          @java.lang.Override
           public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getValues() {
             if (valuesBuilder_ == null) {
               if (stringOptionCase_ == 2) {
@@ -11393,6 +11910,7 @@ public final class ResourceOuterClass {
            *
            * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption values = 2;</code>
            */
+          @java.lang.Override
           public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getValuesOrBuilder() {
             if ((stringOptionCase_ == 2) && (valuesBuilder_ != null)) {
               return valuesBuilder_.getMessageOrBuilder();
@@ -11431,7 +11949,7 @@ public final class ResourceOuterClass {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -11481,7 +11999,6 @@ public final class ResourceOuterClass {
 
       }
 
-      private int bitField0_;
       public static final int ENABLED_FIELD_NUMBER = 1;
       private boolean enabled_;
       /**
@@ -11491,7 +12008,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -11530,14 +12049,16 @@ public final class ResourceOuterClass {
        * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
        */
 
+      @java.lang.Override
       public boolean containsValue(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetValue().getMap().containsKey(key);
       }
       /**
        * Use {@link #getValueMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> getValue() {
         return getValueMap();
@@ -11549,6 +12070,7 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> getValueMap() {
         return internalGetValue().getMap();
@@ -11560,11 +12082,12 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
        */
+      @java.lang.Override
 
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString getValueOrDefault(
           java.lang.String key,
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> map =
             internalGetValue().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11576,10 +12099,11 @@ public final class ResourceOuterClass {
        *
        * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
        */
+      @java.lang.Override
 
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString getValueOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> map =
             internalGetValue().getMap();
         if (!map.containsKey(key)) {
@@ -11649,13 +12173,12 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && internalGetValue().equals(
-            other.internalGetValue());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!internalGetValue().equals(
+            other.internalGetValue())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -11861,46 +12384,44 @@ public final class ResourceOuterClass {
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption buildPartial() {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.enabled_ = enabled_;
           result.value_ = internalGetValue();
           result.value_.makeImmutable();
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11957,7 +12478,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -11968,6 +12491,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -11982,6 +12507,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -12024,14 +12550,16 @@ public final class ResourceOuterClass {
          * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
          */
 
+        @java.lang.Override
         public boolean containsValue(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetValue().getMap().containsKey(key);
         }
         /**
          * Use {@link #getValueMap()} instead.
          */
+        @java.lang.Override
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> getValue() {
           return getValueMap();
@@ -12043,6 +12571,7 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
          */
+        @java.lang.Override
 
         public java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> getValueMap() {
           return internalGetValue().getMap();
@@ -12054,11 +12583,12 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
          */
+        @java.lang.Override
 
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString getValueOrDefault(
             java.lang.String key,
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> map =
               internalGetValue().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -12070,10 +12600,11 @@ public final class ResourceOuterClass {
          *
          * <code>map&lt;string, .yandex.cloud.cdn.v1.ResourceOptions.StringVariableMapOption.OneofString&gt; value = 2;</code>
          */
+        @java.lang.Override
 
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString getValueOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString> map =
               internalGetValue().getMap();
           if (!map.containsKey(key)) {
@@ -12097,7 +12628,7 @@ public final class ResourceOuterClass {
 
         public Builder removeValue(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableValue().getMutableMap()
               .remove(key);
           return this;
@@ -12120,8 +12651,11 @@ public final class ResourceOuterClass {
         public Builder putValue(
             java.lang.String key,
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringVariableMapOption.OneofString value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableValue().getMutableMap()
               .put(key, value);
           return this;
@@ -12143,7 +12677,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -12203,6 +12737,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
+       * @return Whether the ignoreQueryString field is set.
        */
       boolean hasIgnoreQueryString();
       /**
@@ -12211,6 +12746,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
+       * @return The ignoreQueryString.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreQueryString();
       /**
@@ -12230,6 +12766,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
+       * @return Whether the queryParamsWhitelist field is set.
        */
       boolean hasQueryParamsWhitelist();
       /**
@@ -12240,6 +12777,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
+       * @return The queryParamsWhitelist.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsWhitelist();
       /**
@@ -12260,6 +12798,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
+       * @return Whether the queryParamsBlacklist field is set.
        */
       boolean hasQueryParamsBlacklist();
       /**
@@ -12269,6 +12808,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
+       * @return The queryParamsBlacklist.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsBlacklist();
       /**
@@ -12290,7 +12830,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions}
      */
-    public  static final class QueryParamsOptions extends
+    public static final class QueryParamsOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions)
         QueryParamsOptionsOrBuilder {
@@ -12300,6 +12840,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private QueryParamsOptions() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new QueryParamsOptions();
       }
 
       @java.lang.Override
@@ -12315,7 +12862,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -12369,7 +12915,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -12403,7 +12949,8 @@ public final class ResourceOuterClass {
       private int queryParamsVariantCase_ = 0;
       private java.lang.Object queryParamsVariant_;
       public enum QueryParamsVariantCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         IGNORE_QUERY_STRING(1),
         QUERY_PARAMS_WHITELIST(2),
         QUERY_PARAMS_BLACKLIST(3),
@@ -12413,6 +12960,8 @@ public final class ResourceOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -12447,7 +12996,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
+       * @return Whether the ignoreQueryString field is set.
        */
+      @java.lang.Override
       public boolean hasIgnoreQueryString() {
         return queryParamsVariantCase_ == 1;
       }
@@ -12457,7 +13008,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
+       * @return The ignoreQueryString.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreQueryString() {
         if (queryParamsVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) queryParamsVariant_;
@@ -12471,6 +13024,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getIgnoreQueryStringOrBuilder() {
         if (queryParamsVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) queryParamsVariant_;
@@ -12487,7 +13041,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
+       * @return Whether the queryParamsWhitelist field is set.
        */
+      @java.lang.Override
       public boolean hasQueryParamsWhitelist() {
         return queryParamsVariantCase_ == 2;
       }
@@ -12499,7 +13055,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
+       * @return The queryParamsWhitelist.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsWhitelist() {
         if (queryParamsVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) queryParamsVariant_;
@@ -12515,6 +13073,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getQueryParamsWhitelistOrBuilder() {
         if (queryParamsVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) queryParamsVariant_;
@@ -12530,7 +13089,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
+       * @return Whether the queryParamsBlacklist field is set.
        */
+      @java.lang.Override
       public boolean hasQueryParamsBlacklist() {
         return queryParamsVariantCase_ == 3;
       }
@@ -12541,7 +13102,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
+       * @return The queryParamsBlacklist.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsBlacklist() {
         if (queryParamsVariantCase_ == 3) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) queryParamsVariant_;
@@ -12556,6 +13119,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getQueryParamsBlacklistOrBuilder() {
         if (queryParamsVariantCase_ == 3) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) queryParamsVariant_;
@@ -12622,28 +13186,25 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions) obj;
 
-        boolean result = true;
-        result = result && getQueryParamsVariantCase().equals(
-            other.getQueryParamsVariantCase());
-        if (!result) return false;
+        if (!getQueryParamsVariantCase().equals(other.getQueryParamsVariantCase())) return false;
         switch (queryParamsVariantCase_) {
           case 1:
-            result = result && getIgnoreQueryString()
-                .equals(other.getIgnoreQueryString());
+            if (!getIgnoreQueryString()
+                .equals(other.getIgnoreQueryString())) return false;
             break;
           case 2:
-            result = result && getQueryParamsWhitelist()
-                .equals(other.getQueryParamsWhitelist());
+            if (!getQueryParamsWhitelist()
+                .equals(other.getQueryParamsWhitelist())) return false;
             break;
           case 3:
-            result = result && getQueryParamsBlacklist()
-                .equals(other.getQueryParamsBlacklist());
+            if (!getQueryParamsBlacklist()
+                .equals(other.getQueryParamsBlacklist())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -12862,35 +13423,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12973,7 +13534,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
+         * @return Whether the ignoreQueryString field is set.
          */
+        @java.lang.Override
         public boolean hasIgnoreQueryString() {
           return queryParamsVariantCase_ == 1;
         }
@@ -12983,7 +13546,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
+         * @return The ignoreQueryString.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreQueryString() {
           if (ignoreQueryStringBuilder_ == null) {
             if (queryParamsVariantCase_ == 1) {
@@ -13101,6 +13666,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getIgnoreQueryStringOrBuilder() {
           if ((queryParamsVariantCase_ == 1) && (ignoreQueryStringBuilder_ != null)) {
             return ignoreQueryStringBuilder_.getMessageOrBuilder();
@@ -13147,7 +13713,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
+         * @return Whether the queryParamsWhitelist field is set.
          */
+        @java.lang.Override
         public boolean hasQueryParamsWhitelist() {
           return queryParamsVariantCase_ == 2;
         }
@@ -13159,7 +13727,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
+         * @return The queryParamsWhitelist.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsWhitelist() {
           if (queryParamsWhitelistBuilder_ == null) {
             if (queryParamsVariantCase_ == 2) {
@@ -13289,6 +13859,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_whitelist = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getQueryParamsWhitelistOrBuilder() {
           if ((queryParamsVariantCase_ == 2) && (queryParamsWhitelistBuilder_ != null)) {
             return queryParamsWhitelistBuilder_.getMessageOrBuilder();
@@ -13336,7 +13907,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
+         * @return Whether the queryParamsBlacklist field is set.
          */
+        @java.lang.Override
         public boolean hasQueryParamsBlacklist() {
           return queryParamsVariantCase_ == 3;
         }
@@ -13347,7 +13920,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
+         * @return The queryParamsBlacklist.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsBlacklist() {
           if (queryParamsBlacklistBuilder_ == null) {
             if (queryParamsVariantCase_ == 3) {
@@ -13471,6 +14046,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption query_params_blacklist = 3;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getQueryParamsBlacklistOrBuilder() {
           if ((queryParamsVariantCase_ == 3) && (queryParamsBlacklistBuilder_ != null)) {
             return queryParamsBlacklistBuilder_.getMessageOrBuilder();
@@ -13510,7 +14086,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -13570,6 +14146,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
+       * @return Whether the redirectHttpToHttps field is set.
        */
       boolean hasRedirectHttpToHttps();
       /**
@@ -13578,6 +14155,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
+       * @return The redirectHttpToHttps.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpToHttps();
       /**
@@ -13595,6 +14173,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * @return Whether the redirectHttpsToHttp field is set.
        */
       boolean hasRedirectHttpsToHttp();
       /**
@@ -13603,6 +14182,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * @return The redirectHttpsToHttp.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp();
       /**
@@ -13623,7 +14203,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions}
      */
-    public  static final class RedirectOptions extends
+    public static final class RedirectOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions)
         RedirectOptionsOrBuilder {
@@ -13633,6 +14213,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private RedirectOptions() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RedirectOptions();
       }
 
       @java.lang.Override
@@ -13648,7 +14235,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -13688,7 +14274,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -13722,7 +14308,8 @@ public final class ResourceOuterClass {
       private int redirectVariantCase_ = 0;
       private java.lang.Object redirectVariant_;
       public enum RedirectVariantCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         REDIRECT_HTTP_TO_HTTPS(1),
         REDIRECT_HTTPS_TO_HTTP(2),
         REDIRECTVARIANT_NOT_SET(0);
@@ -13731,6 +14318,8 @@ public final class ResourceOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -13764,7 +14353,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
+       * @return Whether the redirectHttpToHttps field is set.
        */
+      @java.lang.Override
       public boolean hasRedirectHttpToHttps() {
         return redirectVariantCase_ == 1;
       }
@@ -13774,7 +14365,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
+       * @return The redirectHttpToHttps.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpToHttps() {
         if (redirectVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
@@ -13788,6 +14381,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpToHttpsOrBuilder() {
         if (redirectVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
@@ -13802,7 +14396,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * @return Whether the redirectHttpsToHttp field is set.
        */
+      @java.lang.Override
       public boolean hasRedirectHttpsToHttp() {
         return redirectVariantCase_ == 2;
       }
@@ -13812,7 +14408,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * @return The redirectHttpsToHttp.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp() {
         if (redirectVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
@@ -13826,6 +14424,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder() {
         if (redirectVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
@@ -13885,24 +14484,21 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions) obj;
 
-        boolean result = true;
-        result = result && getRedirectVariantCase().equals(
-            other.getRedirectVariantCase());
-        if (!result) return false;
+        if (!getRedirectVariantCase().equals(other.getRedirectVariantCase())) return false;
         switch (redirectVariantCase_) {
           case 1:
-            result = result && getRedirectHttpToHttps()
-                .equals(other.getRedirectHttpToHttps());
+            if (!getRedirectHttpToHttps()
+                .equals(other.getRedirectHttpToHttps())) return false;
             break;
           case 2:
-            result = result && getRedirectHttpsToHttp()
-                .equals(other.getRedirectHttpsToHttp());
+            if (!getRedirectHttpsToHttp()
+                .equals(other.getRedirectHttpsToHttp())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14110,35 +14706,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14217,7 +14813,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
+         * @return Whether the redirectHttpToHttps field is set.
          */
+        @java.lang.Override
         public boolean hasRedirectHttpToHttps() {
           return redirectVariantCase_ == 1;
         }
@@ -14227,7 +14825,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
+         * @return The redirectHttpToHttps.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpToHttps() {
           if (redirectHttpToHttpsBuilder_ == null) {
             if (redirectVariantCase_ == 1) {
@@ -14345,6 +14945,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_http_to_https = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpToHttpsOrBuilder() {
           if ((redirectVariantCase_ == 1) && (redirectHttpToHttpsBuilder_ != null)) {
             return redirectHttpToHttpsBuilder_.getMessageOrBuilder();
@@ -14389,7 +14990,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * @return Whether the redirectHttpsToHttp field is set.
          */
+        @java.lang.Override
         public boolean hasRedirectHttpsToHttp() {
           return redirectVariantCase_ == 2;
         }
@@ -14399,7 +15002,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * @return The redirectHttpsToHttp.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp() {
           if (redirectHttpsToHttpBuilder_ == null) {
             if (redirectVariantCase_ == 2) {
@@ -14517,6 +15122,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder() {
           if ((redirectVariantCase_ == 2) && (redirectHttpsToHttpBuilder_ != null)) {
             return redirectHttpsToHttpBuilder_.getMessageOrBuilder();
@@ -14555,7 +15161,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -14617,6 +15223,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
+       * @return Whether the host field is set.
        */
       boolean hasHost();
       /**
@@ -14627,6 +15234,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
+       * @return The host.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getHost();
       /**
@@ -14647,6 +15255,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
+       * @return Whether the forwardHostHeader field is set.
        */
       boolean hasForwardHostHeader();
       /**
@@ -14656,6 +15265,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
+       * @return The forwardHostHeader.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getForwardHostHeader();
       /**
@@ -14677,7 +15287,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.HostOptions}
      */
-    public  static final class HostOptions extends
+    public static final class HostOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.HostOptions)
         HostOptionsOrBuilder {
@@ -14687,6 +15297,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private HostOptions() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HostOptions();
       }
 
       @java.lang.Override
@@ -14702,7 +15319,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -14742,7 +15358,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -14776,7 +15392,8 @@ public final class ResourceOuterClass {
       private int hostVariantCase_ = 0;
       private java.lang.Object hostVariant_;
       public enum HostVariantCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         HOST(1),
         FORWARD_HOST_HEADER(2),
         HOSTVARIANT_NOT_SET(0);
@@ -14785,6 +15402,8 @@ public final class ResourceOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -14820,7 +15439,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
+       * @return Whether the host field is set.
        */
+      @java.lang.Override
       public boolean hasHost() {
         return hostVariantCase_ == 1;
       }
@@ -14832,7 +15453,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
+       * @return The host.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getHost() {
         if (hostVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption) hostVariant_;
@@ -14848,6 +15471,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder getHostOrBuilder() {
         if (hostVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption) hostVariant_;
@@ -14863,7 +15487,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
+       * @return Whether the forwardHostHeader field is set.
        */
+      @java.lang.Override
       public boolean hasForwardHostHeader() {
         return hostVariantCase_ == 2;
       }
@@ -14874,7 +15500,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
+       * @return The forwardHostHeader.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getForwardHostHeader() {
         if (hostVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) hostVariant_;
@@ -14889,6 +15517,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getForwardHostHeaderOrBuilder() {
         if (hostVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) hostVariant_;
@@ -14948,24 +15577,21 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions) obj;
 
-        boolean result = true;
-        result = result && getHostVariantCase().equals(
-            other.getHostVariantCase());
-        if (!result) return false;
+        if (!getHostVariantCase().equals(other.getHostVariantCase())) return false;
         switch (hostVariantCase_) {
           case 1:
-            result = result && getHost()
-                .equals(other.getHost());
+            if (!getHost()
+                .equals(other.getHost())) return false;
             break;
           case 2:
-            result = result && getForwardHostHeader()
-                .equals(other.getForwardHostHeader());
+            if (!getForwardHostHeader()
+                .equals(other.getForwardHostHeader())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -15173,35 +15799,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15282,7 +15908,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
+         * @return Whether the host field is set.
          */
+        @java.lang.Override
         public boolean hasHost() {
           return hostVariantCase_ == 1;
         }
@@ -15294,7 +15922,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
+         * @return The host.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getHost() {
           if (hostBuilder_ == null) {
             if (hostVariantCase_ == 1) {
@@ -15424,6 +16054,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption host = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder getHostOrBuilder() {
           if ((hostVariantCase_ == 1) && (hostBuilder_ != null)) {
             return hostBuilder_.getMessageOrBuilder();
@@ -15471,7 +16102,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
+         * @return Whether the forwardHostHeader field is set.
          */
+        @java.lang.Override
         public boolean hasForwardHostHeader() {
           return hostVariantCase_ == 2;
         }
@@ -15482,7 +16115,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
+         * @return The forwardHostHeader.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getForwardHostHeader() {
           if (forwardHostHeaderBuilder_ == null) {
             if (hostVariantCase_ == 2) {
@@ -15606,6 +16241,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption forward_host_header = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getForwardHostHeaderOrBuilder() {
           if ((hostVariantCase_ == 2) && (forwardHostHeaderBuilder_ != null)) {
             return forwardHostHeaderBuilder_.getMessageOrBuilder();
@@ -15645,7 +16281,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -15708,6 +16344,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
+       * @return Whether the fetchCompressed field is set.
        */
       boolean hasFetchCompressed();
       /**
@@ -15719,6 +16356,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
+       * @return The fetchCompressed.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getFetchCompressed();
       /**
@@ -15739,6 +16377,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
+       * @return Whether the gzipOn field is set.
        */
       boolean hasGzipOn();
       /**
@@ -15747,6 +16386,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
+       * @return The gzipOn.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getGzipOn();
       /**
@@ -15766,6 +16406,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
+       * @return Whether the brotliCompression field is set.
        */
       boolean hasBrotliCompression();
       /**
@@ -15776,6 +16417,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
+       * @return The brotliCompression.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getBrotliCompression();
       /**
@@ -15798,7 +16440,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions}
      */
-    public  static final class CompressionOptions extends
+    public static final class CompressionOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions)
         CompressionOptionsOrBuilder {
@@ -15808,6 +16450,13 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private CompressionOptions() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CompressionOptions();
       }
 
       @java.lang.Override
@@ -15823,7 +16472,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -15877,7 +16525,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -15911,7 +16559,8 @@ public final class ResourceOuterClass {
       private int compressionVariantCase_ = 0;
       private java.lang.Object compressionVariant_;
       public enum CompressionVariantCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         FETCH_COMPRESSED(1),
         GZIP_ON(2),
         BROTLI_COMPRESSION(3),
@@ -15921,6 +16570,8 @@ public final class ResourceOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -15958,7 +16609,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
+       * @return Whether the fetchCompressed field is set.
        */
+      @java.lang.Override
       public boolean hasFetchCompressed() {
         return compressionVariantCase_ == 1;
       }
@@ -15971,7 +16624,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
+       * @return The fetchCompressed.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getFetchCompressed() {
         if (compressionVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) compressionVariant_;
@@ -15988,6 +16643,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getFetchCompressedOrBuilder() {
         if (compressionVariantCase_ == 1) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) compressionVariant_;
@@ -16002,7 +16658,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
+       * @return Whether the gzipOn field is set.
        */
+      @java.lang.Override
       public boolean hasGzipOn() {
         return compressionVariantCase_ == 2;
       }
@@ -16012,7 +16670,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
+       * @return The gzipOn.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getGzipOn() {
         if (compressionVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) compressionVariant_;
@@ -16026,6 +16686,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getGzipOnOrBuilder() {
         if (compressionVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) compressionVariant_;
@@ -16042,7 +16703,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
+       * @return Whether the brotliCompression field is set.
        */
+      @java.lang.Override
       public boolean hasBrotliCompression() {
         return compressionVariantCase_ == 3;
       }
@@ -16054,7 +16717,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
+       * @return The brotliCompression.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getBrotliCompression() {
         if (compressionVariantCase_ == 3) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) compressionVariant_;
@@ -16070,6 +16735,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getBrotliCompressionOrBuilder() {
         if (compressionVariantCase_ == 3) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption) compressionVariant_;
@@ -16136,28 +16802,25 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions) obj;
 
-        boolean result = true;
-        result = result && getCompressionVariantCase().equals(
-            other.getCompressionVariantCase());
-        if (!result) return false;
+        if (!getCompressionVariantCase().equals(other.getCompressionVariantCase())) return false;
         switch (compressionVariantCase_) {
           case 1:
-            result = result && getFetchCompressed()
-                .equals(other.getFetchCompressed());
+            if (!getFetchCompressed()
+                .equals(other.getFetchCompressed())) return false;
             break;
           case 2:
-            result = result && getGzipOn()
-                .equals(other.getGzipOn());
+            if (!getGzipOn()
+                .equals(other.getGzipOn())) return false;
             break;
           case 3:
-            result = result && getBrotliCompression()
-                .equals(other.getBrotliCompression());
+            if (!getBrotliCompression()
+                .equals(other.getBrotliCompression())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -16376,35 +17039,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16490,7 +17153,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
+         * @return Whether the fetchCompressed field is set.
          */
+        @java.lang.Override
         public boolean hasFetchCompressed() {
           return compressionVariantCase_ == 1;
         }
@@ -16503,7 +17168,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
+         * @return The fetchCompressed.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getFetchCompressed() {
           if (fetchCompressedBuilder_ == null) {
             if (compressionVariantCase_ == 1) {
@@ -16639,6 +17306,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption fetch_compressed = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getFetchCompressedOrBuilder() {
           if ((compressionVariantCase_ == 1) && (fetchCompressedBuilder_ != null)) {
             return fetchCompressedBuilder_.getMessageOrBuilder();
@@ -16686,7 +17354,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
+         * @return Whether the gzipOn field is set.
          */
+        @java.lang.Override
         public boolean hasGzipOn() {
           return compressionVariantCase_ == 2;
         }
@@ -16696,7 +17366,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
+         * @return The gzipOn.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getGzipOn() {
           if (gzipOnBuilder_ == null) {
             if (compressionVariantCase_ == 2) {
@@ -16814,6 +17486,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption gzip_on = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getGzipOnOrBuilder() {
           if ((compressionVariantCase_ == 2) && (gzipOnBuilder_ != null)) {
             return gzipOnBuilder_.getMessageOrBuilder();
@@ -16860,7 +17533,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
+         * @return Whether the brotliCompression field is set.
          */
+        @java.lang.Override
         public boolean hasBrotliCompression() {
           return compressionVariantCase_ == 3;
         }
@@ -16872,7 +17547,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
+         * @return The brotliCompression.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getBrotliCompression() {
           if (brotliCompressionBuilder_ == null) {
             if (compressionVariantCase_ == 3) {
@@ -17002,6 +17679,7 @@ public final class ResourceOuterClass {
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption brotli_compression = 3;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getBrotliCompressionOrBuilder() {
           if ((compressionVariantCase_ == 3) && (brotliCompressionBuilder_ != null)) {
             return brotliCompressionBuilder_.getMessageOrBuilder();
@@ -17042,7 +17720,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -17103,6 +17781,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
       boolean getEnabled();
 
@@ -17113,6 +17792,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string body = 2;</code>
+       * @return The body.
        */
       java.lang.String getBody();
       /**
@@ -17122,6 +17802,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string body = 2;</code>
+       * @return The bytes for body.
        */
       com.google.protobuf.ByteString
           getBodyBytes();
@@ -17133,6 +17814,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+       * @return The enum numeric value on the wire for flag.
        */
       int getFlagValue();
       /**
@@ -17142,6 +17824,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+       * @return The flag.
        */
       yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag getFlag();
     }
@@ -17152,7 +17835,7 @@ public final class ResourceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.RewriteOption}
      */
-    public  static final class RewriteOption extends
+    public static final class RewriteOption extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.RewriteOption)
         RewriteOptionOrBuilder {
@@ -17162,9 +17845,15 @@ public final class ResourceOuterClass {
         super(builder);
       }
       private RewriteOption() {
-        enabled_ = false;
         body_ = "";
         flag_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RewriteOption();
       }
 
       @java.lang.Override
@@ -17180,7 +17869,6 @@ public final class ResourceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -17209,7 +17897,7 @@ public final class ResourceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -17249,7 +17937,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>bool enabled = 1;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
@@ -17263,7 +17953,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string body = 2;</code>
+       * @return The body.
        */
+      @java.lang.Override
       public java.lang.String getBody() {
         java.lang.Object ref = body_;
         if (ref instanceof java.lang.String) {
@@ -17283,7 +17975,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string body = 2;</code>
+       * @return The bytes for body.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getBodyBytes() {
         java.lang.Object ref = body_;
@@ -17307,8 +18001,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+       * @return The enum numeric value on the wire for flag.
        */
-      public int getFlagValue() {
+      @java.lang.Override public int getFlagValue() {
         return flag_;
       }
       /**
@@ -17318,8 +18013,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+       * @return The flag.
        */
-      public yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag getFlag() {
+      @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag getFlag() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag result = yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag.valueOf(flag_);
         return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag.UNRECOGNIZED : result;
@@ -17342,7 +18038,7 @@ public final class ResourceOuterClass {
         if (enabled_ != false) {
           output.writeBool(1, enabled_);
         }
-        if (!getBodyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(body_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, body_);
         }
         if (flag_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag.REWRITE_FLAG_UNSPECIFIED.getNumber()) {
@@ -17361,7 +18057,7 @@ public final class ResourceOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(1, enabled_);
         }
-        if (!getBodyBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(body_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, body_);
         }
         if (flag_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag.REWRITE_FLAG_UNSPECIFIED.getNumber()) {
@@ -17383,14 +18079,13 @@ public final class ResourceOuterClass {
         }
         yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption) obj;
 
-        boolean result = true;
-        result = result && (getEnabled()
-            == other.getEnabled());
-        result = result && getBody()
-            .equals(other.getBody());
-        result = result && flag_ == other.flag_;
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getBody()
+            .equals(other.getBody())) return false;
+        if (flag_ != other.flag_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -17585,35 +18280,35 @@ public final class ResourceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17674,7 +18369,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return The enabled.
          */
+        @java.lang.Override
         public boolean getEnabled() {
           return enabled_;
         }
@@ -17685,6 +18382,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
          */
         public Builder setEnabled(boolean value) {
           
@@ -17699,6 +18398,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearEnabled() {
           
@@ -17715,6 +18415,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string body = 2;</code>
+         * @return The body.
          */
         public java.lang.String getBody() {
           java.lang.Object ref = body_;
@@ -17735,6 +18436,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string body = 2;</code>
+         * @return The bytes for body.
          */
         public com.google.protobuf.ByteString
             getBodyBytes() {
@@ -17756,6 +18458,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string body = 2;</code>
+         * @param value The body to set.
+         * @return This builder for chaining.
          */
         public Builder setBody(
             java.lang.String value) {
@@ -17774,6 +18478,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string body = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearBody() {
           
@@ -17788,6 +18493,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>string body = 2;</code>
+         * @param value The bytes for body to set.
+         * @return This builder for chaining.
          */
         public Builder setBodyBytes(
             com.google.protobuf.ByteString value) {
@@ -17809,8 +18516,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+         * @return The enum numeric value on the wire for flag.
          */
-        public int getFlagValue() {
+        @java.lang.Override public int getFlagValue() {
           return flag_;
         }
         /**
@@ -17820,8 +18528,11 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+         * @param value The enum numeric value on the wire for flag to set.
+         * @return This builder for chaining.
          */
         public Builder setFlagValue(int value) {
+          
           flag_ = value;
           onChanged();
           return this;
@@ -17833,7 +18544,9 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+         * @return The flag.
          */
+        @java.lang.Override
         public yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag getFlag() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag result = yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag.valueOf(flag_);
@@ -17846,6 +18559,8 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+         * @param value The flag to set.
+         * @return This builder for chaining.
          */
         public Builder setFlag(yandex.cloud.api.cdn.v1.ResourceOuterClass.RewriteFlag value) {
           if (value == null) {
@@ -17863,6 +18578,7 @@ public final class ResourceOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearFlag() {
           
@@ -17873,7 +18589,7 @@ public final class ResourceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -17931,7 +18647,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
+     * @return Whether the disableCache field is set.
      */
+    @java.lang.Override
     public boolean hasDisableCache() {
       return disableCache_ != null;
     }
@@ -17941,7 +18659,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
+     * @return The disableCache.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getDisableCache() {
       return disableCache_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.getDefaultInstance() : disableCache_;
     }
@@ -17952,6 +18672,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getDisableCacheOrBuilder() {
       return getDisableCache();
     }
@@ -17964,7 +18685,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
+     * @return Whether the edgeCacheSettings field is set.
      */
+    @java.lang.Override
     public boolean hasEdgeCacheSettings() {
       return edgeCacheSettings_ != null;
     }
@@ -17974,7 +18697,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
+     * @return The edgeCacheSettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings getEdgeCacheSettings() {
       return edgeCacheSettings_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings.getDefaultInstance() : edgeCacheSettings_;
     }
@@ -17985,6 +18710,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettingsOrBuilder getEdgeCacheSettingsOrBuilder() {
       return getEdgeCacheSettings();
     }
@@ -18002,7 +18728,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
+     * @return Whether the browserCacheSettings field is set.
      */
+    @java.lang.Override
     public boolean hasBrowserCacheSettings() {
       return browserCacheSettings_ != null;
     }
@@ -18017,7 +18745,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
+     * @return The browserCacheSettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option getBrowserCacheSettings() {
       return browserCacheSettings_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option.getDefaultInstance() : browserCacheSettings_;
     }
@@ -18033,6 +18763,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64OptionOrBuilder getBrowserCacheSettingsOrBuilder() {
       return getBrowserCacheSettings();
     }
@@ -18045,7 +18776,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
+     * @return Whether the cacheHttpHeaders field is set.
      */
+    @java.lang.Override
     public boolean hasCacheHttpHeaders() {
       return cacheHttpHeaders_ != null;
     }
@@ -18055,7 +18788,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
+     * @return The cacheHttpHeaders.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCacheHttpHeaders() {
       return cacheHttpHeaders_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.getDefaultInstance() : cacheHttpHeaders_;
     }
@@ -18066,6 +18801,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getCacheHttpHeadersOrBuilder() {
       return getCacheHttpHeaders();
     }
@@ -18078,7 +18814,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
+     * @return Whether the queryParamsOptions field is set.
      */
+    @java.lang.Override
     public boolean hasQueryParamsOptions() {
       return queryParamsOptions_ != null;
     }
@@ -18088,7 +18826,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
+     * @return The queryParamsOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions getQueryParamsOptions() {
       return queryParamsOptions_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions.getDefaultInstance() : queryParamsOptions_;
     }
@@ -18099,6 +18839,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptionsOrBuilder getQueryParamsOptionsOrBuilder() {
       return getQueryParamsOptions();
     }
@@ -18113,7 +18854,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
+     * @return Whether the slice field is set.
      */
+    @java.lang.Override
     public boolean hasSlice() {
       return slice_ != null;
     }
@@ -18125,7 +18868,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
+     * @return The slice.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getSlice() {
       return slice_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.getDefaultInstance() : slice_;
     }
@@ -18138,6 +18883,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getSliceOrBuilder() {
       return getSlice();
     }
@@ -18150,7 +18896,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
+     * @return Whether the compressionOptions field is set.
      */
+    @java.lang.Override
     public boolean hasCompressionOptions() {
       return compressionOptions_ != null;
     }
@@ -18160,7 +18908,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
+     * @return The compressionOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions getCompressionOptions() {
       return compressionOptions_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions.getDefaultInstance() : compressionOptions_;
     }
@@ -18171,6 +18921,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptionsOrBuilder getCompressionOptionsOrBuilder() {
       return getCompressionOptions();
     }
@@ -18183,7 +18934,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
+     * @return Whether the redirectOptions field is set.
      */
+    @java.lang.Override
     public boolean hasRedirectOptions() {
       return redirectOptions_ != null;
     }
@@ -18193,7 +18946,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
+     * @return The redirectOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions getRedirectOptions() {
       return redirectOptions_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions.getDefaultInstance() : redirectOptions_;
     }
@@ -18204,6 +18959,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptionsOrBuilder getRedirectOptionsOrBuilder() {
       return getRedirectOptions();
     }
@@ -18216,7 +18972,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
+     * @return Whether the hostOptions field is set.
      */
+    @java.lang.Override
     public boolean hasHostOptions() {
       return hostOptions_ != null;
     }
@@ -18226,7 +18984,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
+     * @return The hostOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions getHostOptions() {
       return hostOptions_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions.getDefaultInstance() : hostOptions_;
     }
@@ -18237,6 +18997,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptionsOrBuilder getHostOptionsOrBuilder() {
       return getHostOptions();
     }
@@ -18249,7 +19010,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
+     * @return Whether the staticHeaders field is set.
      */
+    @java.lang.Override
     public boolean hasStaticHeaders() {
       return staticHeaders_ != null;
     }
@@ -18259,7 +19022,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
+     * @return The staticHeaders.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption getStaticHeaders() {
       return staticHeaders_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption.getDefaultInstance() : staticHeaders_;
     }
@@ -18270,6 +19035,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOptionOrBuilder getStaticHeadersOrBuilder() {
       return getStaticHeaders();
     }
@@ -18284,7 +19050,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
+     * @return Whether the cors field is set.
      */
+    @java.lang.Override
     public boolean hasCors() {
       return cors_ != null;
     }
@@ -18296,7 +19064,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
+     * @return The cors.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCors() {
       return cors_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.getDefaultInstance() : cors_;
     }
@@ -18309,6 +19079,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getCorsOrBuilder() {
       return getCors();
     }
@@ -18322,7 +19093,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
+     * @return Whether the stale field is set.
      */
+    @java.lang.Override
     public boolean hasStale() {
       return stale_ != null;
     }
@@ -18333,7 +19106,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
+     * @return The stale.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getStale() {
       return stale_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.getDefaultInstance() : stale_;
     }
@@ -18345,6 +19120,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getStaleOrBuilder() {
       return getStale();
     }
@@ -18361,7 +19137,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
+     * @return Whether the allowedHttpMethods field is set.
      */
+    @java.lang.Override
     public boolean hasAllowedHttpMethods() {
       return allowedHttpMethods_ != null;
     }
@@ -18375,7 +19153,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
+     * @return The allowedHttpMethods.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getAllowedHttpMethods() {
       return allowedHttpMethods_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.getDefaultInstance() : allowedHttpMethods_;
     }
@@ -18390,6 +19170,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder getAllowedHttpMethodsOrBuilder() {
       return getAllowedHttpMethods();
     }
@@ -18402,7 +19183,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
+     * @return Whether the proxyCacheMethodsSet field is set.
      */
+    @java.lang.Override
     public boolean hasProxyCacheMethodsSet() {
       return proxyCacheMethodsSet_ != null;
     }
@@ -18412,7 +19195,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
+     * @return The proxyCacheMethodsSet.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getProxyCacheMethodsSet() {
       return proxyCacheMethodsSet_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.getDefaultInstance() : proxyCacheMethodsSet_;
     }
@@ -18423,6 +19208,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getProxyCacheMethodsSetOrBuilder() {
       return getProxyCacheMethodsSet();
     }
@@ -18435,7 +19221,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
+     * @return Whether the disableProxyForceRanges field is set.
      */
+    @java.lang.Override
     public boolean hasDisableProxyForceRanges() {
       return disableProxyForceRanges_ != null;
     }
@@ -18445,7 +19233,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
+     * @return The disableProxyForceRanges.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getDisableProxyForceRanges() {
       return disableProxyForceRanges_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.getDefaultInstance() : disableProxyForceRanges_;
     }
@@ -18456,6 +19246,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getDisableProxyForceRangesOrBuilder() {
       return getDisableProxyForceRanges();
     }
@@ -18471,7 +19262,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
+     * @return Whether the staticRequestHeaders field is set.
      */
+    @java.lang.Override
     public boolean hasStaticRequestHeaders() {
       return staticRequestHeaders_ != null;
     }
@@ -18484,7 +19277,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
+     * @return The staticRequestHeaders.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption getStaticRequestHeaders() {
       return staticRequestHeaders_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption.getDefaultInstance() : staticRequestHeaders_;
     }
@@ -18498,6 +19293,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOptionOrBuilder getStaticRequestHeadersOrBuilder() {
       return getStaticRequestHeaders();
     }
@@ -18511,7 +19307,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
+     * @return Whether the customServerName field is set.
      */
+    @java.lang.Override
     public boolean hasCustomServerName() {
       return customServerName_ != null;
     }
@@ -18522,7 +19320,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
+     * @return The customServerName.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getCustomServerName() {
       return customServerName_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption.getDefaultInstance() : customServerName_;
     }
@@ -18534,6 +19334,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder getCustomServerNameOrBuilder() {
       return getCustomServerName();
     }
@@ -18546,7 +19347,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
+     * @return Whether the ignoreCookie field is set.
      */
+    @java.lang.Override
     public boolean hasIgnoreCookie() {
       return ignoreCookie_ != null;
     }
@@ -18556,7 +19359,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
+     * @return The ignoreCookie.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreCookie() {
       return ignoreCookie_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.getDefaultInstance() : ignoreCookie_;
     }
@@ -18567,6 +19372,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getIgnoreCookieOrBuilder() {
       return getIgnoreCookie();
     }
@@ -18579,7 +19385,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
+     * @return Whether the rewrite field is set.
      */
+    @java.lang.Override
     public boolean hasRewrite() {
       return rewrite_ != null;
     }
@@ -18589,7 +19397,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
+     * @return The rewrite.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption getRewrite() {
       return rewrite_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption.getDefaultInstance() : rewrite_;
     }
@@ -18600,6 +19410,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOptionOrBuilder getRewriteOrBuilder() {
       return getRewrite();
     }
@@ -18775,104 +19586,103 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions) obj;
 
-      boolean result = true;
-      result = result && (hasDisableCache() == other.hasDisableCache());
+      if (hasDisableCache() != other.hasDisableCache()) return false;
       if (hasDisableCache()) {
-        result = result && getDisableCache()
-            .equals(other.getDisableCache());
+        if (!getDisableCache()
+            .equals(other.getDisableCache())) return false;
       }
-      result = result && (hasEdgeCacheSettings() == other.hasEdgeCacheSettings());
+      if (hasEdgeCacheSettings() != other.hasEdgeCacheSettings()) return false;
       if (hasEdgeCacheSettings()) {
-        result = result && getEdgeCacheSettings()
-            .equals(other.getEdgeCacheSettings());
+        if (!getEdgeCacheSettings()
+            .equals(other.getEdgeCacheSettings())) return false;
       }
-      result = result && (hasBrowserCacheSettings() == other.hasBrowserCacheSettings());
+      if (hasBrowserCacheSettings() != other.hasBrowserCacheSettings()) return false;
       if (hasBrowserCacheSettings()) {
-        result = result && getBrowserCacheSettings()
-            .equals(other.getBrowserCacheSettings());
+        if (!getBrowserCacheSettings()
+            .equals(other.getBrowserCacheSettings())) return false;
       }
-      result = result && (hasCacheHttpHeaders() == other.hasCacheHttpHeaders());
+      if (hasCacheHttpHeaders() != other.hasCacheHttpHeaders()) return false;
       if (hasCacheHttpHeaders()) {
-        result = result && getCacheHttpHeaders()
-            .equals(other.getCacheHttpHeaders());
+        if (!getCacheHttpHeaders()
+            .equals(other.getCacheHttpHeaders())) return false;
       }
-      result = result && (hasQueryParamsOptions() == other.hasQueryParamsOptions());
+      if (hasQueryParamsOptions() != other.hasQueryParamsOptions()) return false;
       if (hasQueryParamsOptions()) {
-        result = result && getQueryParamsOptions()
-            .equals(other.getQueryParamsOptions());
+        if (!getQueryParamsOptions()
+            .equals(other.getQueryParamsOptions())) return false;
       }
-      result = result && (hasSlice() == other.hasSlice());
+      if (hasSlice() != other.hasSlice()) return false;
       if (hasSlice()) {
-        result = result && getSlice()
-            .equals(other.getSlice());
+        if (!getSlice()
+            .equals(other.getSlice())) return false;
       }
-      result = result && (hasCompressionOptions() == other.hasCompressionOptions());
+      if (hasCompressionOptions() != other.hasCompressionOptions()) return false;
       if (hasCompressionOptions()) {
-        result = result && getCompressionOptions()
-            .equals(other.getCompressionOptions());
+        if (!getCompressionOptions()
+            .equals(other.getCompressionOptions())) return false;
       }
-      result = result && (hasRedirectOptions() == other.hasRedirectOptions());
+      if (hasRedirectOptions() != other.hasRedirectOptions()) return false;
       if (hasRedirectOptions()) {
-        result = result && getRedirectOptions()
-            .equals(other.getRedirectOptions());
+        if (!getRedirectOptions()
+            .equals(other.getRedirectOptions())) return false;
       }
-      result = result && (hasHostOptions() == other.hasHostOptions());
+      if (hasHostOptions() != other.hasHostOptions()) return false;
       if (hasHostOptions()) {
-        result = result && getHostOptions()
-            .equals(other.getHostOptions());
+        if (!getHostOptions()
+            .equals(other.getHostOptions())) return false;
       }
-      result = result && (hasStaticHeaders() == other.hasStaticHeaders());
+      if (hasStaticHeaders() != other.hasStaticHeaders()) return false;
       if (hasStaticHeaders()) {
-        result = result && getStaticHeaders()
-            .equals(other.getStaticHeaders());
+        if (!getStaticHeaders()
+            .equals(other.getStaticHeaders())) return false;
       }
-      result = result && (hasCors() == other.hasCors());
+      if (hasCors() != other.hasCors()) return false;
       if (hasCors()) {
-        result = result && getCors()
-            .equals(other.getCors());
+        if (!getCors()
+            .equals(other.getCors())) return false;
       }
-      result = result && (hasStale() == other.hasStale());
+      if (hasStale() != other.hasStale()) return false;
       if (hasStale()) {
-        result = result && getStale()
-            .equals(other.getStale());
+        if (!getStale()
+            .equals(other.getStale())) return false;
       }
-      result = result && (hasAllowedHttpMethods() == other.hasAllowedHttpMethods());
+      if (hasAllowedHttpMethods() != other.hasAllowedHttpMethods()) return false;
       if (hasAllowedHttpMethods()) {
-        result = result && getAllowedHttpMethods()
-            .equals(other.getAllowedHttpMethods());
+        if (!getAllowedHttpMethods()
+            .equals(other.getAllowedHttpMethods())) return false;
       }
-      result = result && (hasProxyCacheMethodsSet() == other.hasProxyCacheMethodsSet());
+      if (hasProxyCacheMethodsSet() != other.hasProxyCacheMethodsSet()) return false;
       if (hasProxyCacheMethodsSet()) {
-        result = result && getProxyCacheMethodsSet()
-            .equals(other.getProxyCacheMethodsSet());
+        if (!getProxyCacheMethodsSet()
+            .equals(other.getProxyCacheMethodsSet())) return false;
       }
-      result = result && (hasDisableProxyForceRanges() == other.hasDisableProxyForceRanges());
+      if (hasDisableProxyForceRanges() != other.hasDisableProxyForceRanges()) return false;
       if (hasDisableProxyForceRanges()) {
-        result = result && getDisableProxyForceRanges()
-            .equals(other.getDisableProxyForceRanges());
+        if (!getDisableProxyForceRanges()
+            .equals(other.getDisableProxyForceRanges())) return false;
       }
-      result = result && (hasStaticRequestHeaders() == other.hasStaticRequestHeaders());
+      if (hasStaticRequestHeaders() != other.hasStaticRequestHeaders()) return false;
       if (hasStaticRequestHeaders()) {
-        result = result && getStaticRequestHeaders()
-            .equals(other.getStaticRequestHeaders());
+        if (!getStaticRequestHeaders()
+            .equals(other.getStaticRequestHeaders())) return false;
       }
-      result = result && (hasCustomServerName() == other.hasCustomServerName());
+      if (hasCustomServerName() != other.hasCustomServerName()) return false;
       if (hasCustomServerName()) {
-        result = result && getCustomServerName()
-            .equals(other.getCustomServerName());
+        if (!getCustomServerName()
+            .equals(other.getCustomServerName())) return false;
       }
-      result = result && (hasIgnoreCookie() == other.hasIgnoreCookie());
+      if (hasIgnoreCookie() != other.hasIgnoreCookie()) return false;
       if (hasIgnoreCookie()) {
-        result = result && getIgnoreCookie()
-            .equals(other.getIgnoreCookie());
+        if (!getIgnoreCookie()
+            .equals(other.getIgnoreCookie())) return false;
       }
-      result = result && (hasRewrite() == other.hasRewrite());
+      if (hasRewrite() != other.hasRewrite()) return false;
       if (hasRewrite()) {
-        result = result && getRewrite()
-            .equals(other.getRewrite());
+        if (!getRewrite()
+            .equals(other.getRewrite())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19336,35 +20146,35 @@ public final class ResourceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19464,7 +20274,7 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption disableCache_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption disableCache_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> disableCacheBuilder_;
       /**
@@ -19473,6 +20283,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
+       * @return Whether the disableCache field is set.
        */
       public boolean hasDisableCache() {
         return disableCacheBuilder_ != null || disableCache_ != null;
@@ -19483,6 +20294,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_cache = 1;</code>
+       * @return The disableCache.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getDisableCache() {
         if (disableCacheBuilder_ == null) {
@@ -19617,7 +20429,7 @@ public final class ResourceOuterClass {
         return disableCacheBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings edgeCacheSettings_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings edgeCacheSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettingsOrBuilder> edgeCacheSettingsBuilder_;
       /**
@@ -19626,6 +20438,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
+       * @return Whether the edgeCacheSettings field is set.
        */
       public boolean hasEdgeCacheSettings() {
         return edgeCacheSettingsBuilder_ != null || edgeCacheSettings_ != null;
@@ -19636,6 +20449,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.EdgeCacheSettings edge_cache_settings = 2;</code>
+       * @return The edgeCacheSettings.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.EdgeCacheSettings getEdgeCacheSettings() {
         if (edgeCacheSettingsBuilder_ == null) {
@@ -19770,7 +20584,7 @@ public final class ResourceOuterClass {
         return edgeCacheSettingsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option browserCacheSettings_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option browserCacheSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64OptionOrBuilder> browserCacheSettingsBuilder_;
       /**
@@ -19784,6 +20598,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
+       * @return Whether the browserCacheSettings field is set.
        */
       public boolean hasBrowserCacheSettings() {
         return browserCacheSettingsBuilder_ != null || browserCacheSettings_ != null;
@@ -19799,6 +20614,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
+       * @return The browserCacheSettings.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.Int64Option getBrowserCacheSettings() {
         if (browserCacheSettingsBuilder_ == null) {
@@ -19968,7 +20784,7 @@ public final class ResourceOuterClass {
         return browserCacheSettingsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption cacheHttpHeaders_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption cacheHttpHeaders_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> cacheHttpHeadersBuilder_;
       /**
@@ -19977,6 +20793,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
+       * @return Whether the cacheHttpHeaders field is set.
        */
       public boolean hasCacheHttpHeaders() {
         return cacheHttpHeadersBuilder_ != null || cacheHttpHeaders_ != null;
@@ -19987,6 +20804,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cache_http_headers = 4;</code>
+       * @return The cacheHttpHeaders.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCacheHttpHeaders() {
         if (cacheHttpHeadersBuilder_ == null) {
@@ -20121,7 +20939,7 @@ public final class ResourceOuterClass {
         return cacheHttpHeadersBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions queryParamsOptions_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions queryParamsOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptionsOrBuilder> queryParamsOptionsBuilder_;
       /**
@@ -20130,6 +20948,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
+       * @return Whether the queryParamsOptions field is set.
        */
       public boolean hasQueryParamsOptions() {
         return queryParamsOptionsBuilder_ != null || queryParamsOptions_ != null;
@@ -20140,6 +20959,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.QueryParamsOptions query_params_options = 5;</code>
+       * @return The queryParamsOptions.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.QueryParamsOptions getQueryParamsOptions() {
         if (queryParamsOptionsBuilder_ == null) {
@@ -20274,7 +21094,7 @@ public final class ResourceOuterClass {
         return queryParamsOptionsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption slice_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption slice_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> sliceBuilder_;
       /**
@@ -20285,6 +21105,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
+       * @return Whether the slice field is set.
        */
       public boolean hasSlice() {
         return sliceBuilder_ != null || slice_ != null;
@@ -20297,6 +21118,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption slice = 6;</code>
+       * @return The slice.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getSlice() {
         if (sliceBuilder_ == null) {
@@ -20445,7 +21267,7 @@ public final class ResourceOuterClass {
         return sliceBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions compressionOptions_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions compressionOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptionsOrBuilder> compressionOptionsBuilder_;
       /**
@@ -20454,6 +21276,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
+       * @return Whether the compressionOptions field is set.
        */
       public boolean hasCompressionOptions() {
         return compressionOptionsBuilder_ != null || compressionOptions_ != null;
@@ -20464,6 +21287,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions compression_options = 7;</code>
+       * @return The compressionOptions.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.CompressionOptions getCompressionOptions() {
         if (compressionOptionsBuilder_ == null) {
@@ -20598,7 +21422,7 @@ public final class ResourceOuterClass {
         return compressionOptionsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions redirectOptions_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions redirectOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptionsOrBuilder> redirectOptionsBuilder_;
       /**
@@ -20607,6 +21431,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
+       * @return Whether the redirectOptions field is set.
        */
       public boolean hasRedirectOptions() {
         return redirectOptionsBuilder_ != null || redirectOptions_ != null;
@@ -20617,6 +21442,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.RedirectOptions redirect_options = 8;</code>
+       * @return The redirectOptions.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions getRedirectOptions() {
         if (redirectOptionsBuilder_ == null) {
@@ -20751,7 +21577,7 @@ public final class ResourceOuterClass {
         return redirectOptionsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions hostOptions_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions hostOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptionsOrBuilder> hostOptionsBuilder_;
       /**
@@ -20760,6 +21586,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
+       * @return Whether the hostOptions field is set.
        */
       public boolean hasHostOptions() {
         return hostOptionsBuilder_ != null || hostOptions_ != null;
@@ -20770,6 +21597,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.HostOptions host_options = 9;</code>
+       * @return The hostOptions.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HostOptions getHostOptions() {
         if (hostOptionsBuilder_ == null) {
@@ -20904,7 +21732,7 @@ public final class ResourceOuterClass {
         return hostOptionsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption staticHeaders_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption staticHeaders_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOptionOrBuilder> staticHeadersBuilder_;
       /**
@@ -20913,6 +21741,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
+       * @return Whether the staticHeaders field is set.
        */
       public boolean hasStaticHeaders() {
         return staticHeadersBuilder_ != null || staticHeaders_ != null;
@@ -20923,6 +21752,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_headers = 10;</code>
+       * @return The staticHeaders.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption getStaticHeaders() {
         if (staticHeadersBuilder_ == null) {
@@ -21057,7 +21887,7 @@ public final class ResourceOuterClass {
         return staticHeadersBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption cors_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption cors_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> corsBuilder_;
       /**
@@ -21068,6 +21898,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
+       * @return Whether the cors field is set.
        */
       public boolean hasCors() {
         return corsBuilder_ != null || cors_ != null;
@@ -21080,6 +21911,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption cors = 11;</code>
+       * @return The cors.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCors() {
         if (corsBuilder_ == null) {
@@ -21228,7 +22060,7 @@ public final class ResourceOuterClass {
         return corsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption stale_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption stale_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> staleBuilder_;
       /**
@@ -21238,6 +22070,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
+       * @return Whether the stale field is set.
        */
       public boolean hasStale() {
         return staleBuilder_ != null || stale_ != null;
@@ -21249,6 +22082,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption stale = 12;</code>
+       * @return The stale.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getStale() {
         if (staleBuilder_ == null) {
@@ -21390,7 +22224,7 @@ public final class ResourceOuterClass {
         return staleBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption allowedHttpMethods_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption allowedHttpMethods_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> allowedHttpMethodsBuilder_;
       /**
@@ -21403,6 +22237,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
+       * @return Whether the allowedHttpMethods field is set.
        */
       public boolean hasAllowedHttpMethods() {
         return allowedHttpMethodsBuilder_ != null || allowedHttpMethods_ != null;
@@ -21417,6 +22252,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsListOption allowed_http_methods = 13;</code>
+       * @return The allowedHttpMethods.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getAllowedHttpMethods() {
         if (allowedHttpMethodsBuilder_ == null) {
@@ -21579,7 +22415,7 @@ public final class ResourceOuterClass {
         return allowedHttpMethodsBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption proxyCacheMethodsSet_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption proxyCacheMethodsSet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> proxyCacheMethodsSetBuilder_;
       /**
@@ -21588,6 +22424,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
+       * @return Whether the proxyCacheMethodsSet field is set.
        */
       public boolean hasProxyCacheMethodsSet() {
         return proxyCacheMethodsSetBuilder_ != null || proxyCacheMethodsSet_ != null;
@@ -21598,6 +22435,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption proxy_cache_methods_set = 14;</code>
+       * @return The proxyCacheMethodsSet.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getProxyCacheMethodsSet() {
         if (proxyCacheMethodsSetBuilder_ == null) {
@@ -21732,7 +22570,7 @@ public final class ResourceOuterClass {
         return proxyCacheMethodsSetBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption disableProxyForceRanges_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption disableProxyForceRanges_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> disableProxyForceRangesBuilder_;
       /**
@@ -21741,6 +22579,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
+       * @return Whether the disableProxyForceRanges field is set.
        */
       public boolean hasDisableProxyForceRanges() {
         return disableProxyForceRangesBuilder_ != null || disableProxyForceRanges_ != null;
@@ -21751,6 +22590,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption disable_proxy_force_ranges = 15;</code>
+       * @return The disableProxyForceRanges.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getDisableProxyForceRanges() {
         if (disableProxyForceRangesBuilder_ == null) {
@@ -21885,7 +22725,7 @@ public final class ResourceOuterClass {
         return disableProxyForceRangesBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption staticRequestHeaders_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption staticRequestHeaders_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOptionOrBuilder> staticRequestHeadersBuilder_;
       /**
@@ -21897,6 +22737,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
+       * @return Whether the staticRequestHeaders field is set.
        */
       public boolean hasStaticRequestHeaders() {
         return staticRequestHeadersBuilder_ != null || staticRequestHeaders_ != null;
@@ -21910,6 +22751,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption static_request_headers = 16;</code>
+       * @return The staticRequestHeaders.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsMapOption getStaticRequestHeaders() {
         if (staticRequestHeadersBuilder_ == null) {
@@ -22065,7 +22907,7 @@ public final class ResourceOuterClass {
         return staticRequestHeadersBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption customServerName_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption customServerName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder> customServerNameBuilder_;
       /**
@@ -22075,6 +22917,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
+       * @return Whether the customServerName field is set.
        */
       public boolean hasCustomServerName() {
         return customServerNameBuilder_ != null || customServerName_ != null;
@@ -22086,6 +22929,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.StringOption custom_server_name = 17;</code>
+       * @return The customServerName.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getCustomServerName() {
         if (customServerNameBuilder_ == null) {
@@ -22227,7 +23071,7 @@ public final class ResourceOuterClass {
         return customServerNameBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption ignoreCookie_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption ignoreCookie_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> ignoreCookieBuilder_;
       /**
@@ -22236,6 +23080,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
+       * @return Whether the ignoreCookie field is set.
        */
       public boolean hasIgnoreCookie() {
         return ignoreCookieBuilder_ != null || ignoreCookie_ != null;
@@ -22246,6 +23091,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_cookie = 18;</code>
+       * @return The ignoreCookie.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreCookie() {
         if (ignoreCookieBuilder_ == null) {
@@ -22380,7 +23226,7 @@ public final class ResourceOuterClass {
         return ignoreCookieBuilder_;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption rewrite_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption rewrite_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOptionOrBuilder> rewriteBuilder_;
       /**
@@ -22389,6 +23235,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
+       * @return Whether the rewrite field is set.
        */
       public boolean hasRewrite() {
         return rewriteBuilder_ != null || rewrite_ != null;
@@ -22399,6 +23246,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
+       * @return The rewrite.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOption getRewrite() {
         if (rewriteBuilder_ == null) {
@@ -22535,7 +23383,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22595,6 +23443,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -22603,6 +23452,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType();
 
@@ -22612,6 +23462,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
+     * @return Whether the data field is set.
      */
     boolean hasData();
     /**
@@ -22620,6 +23471,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
+     * @return The data.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData getData();
     /**
@@ -22638,7 +23490,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLTargetCertificate}
    */
-  public  static final class SSLTargetCertificate extends
+  public static final class SSLTargetCertificate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.SSLTargetCertificate)
       SSLTargetCertificateOrBuilder {
@@ -22649,6 +23501,13 @@ public final class ResourceOuterClass {
     }
     private SSLTargetCertificate() {
       type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SSLTargetCertificate();
     }
 
     @java.lang.Override
@@ -22664,7 +23523,6 @@ public final class ResourceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -22695,7 +23553,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22734,8 +23592,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -22744,8 +23603,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType.valueOf(type_);
       return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType.UNRECOGNIZED : result;
@@ -22759,7 +23619,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
+     * @return Whether the data field is set.
      */
+    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
@@ -22769,7 +23631,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData getData() {
       return data_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData.getDefaultInstance() : data_;
     }
@@ -22780,6 +23644,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateDataOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -22836,15 +23701,14 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLTargetCertificate other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLTargetCertificate) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (hasData() == other.hasData());
+      if (type_ != other.type_) return false;
+      if (hasData() != other.hasData()) return false;
       if (hasData()) {
-        result = result && getData()
-            .equals(other.getData());
+        if (!getData()
+            .equals(other.getData())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23043,35 +23907,35 @@ public final class ResourceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23127,8 +23991,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -23137,8 +24002,11 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -23149,7 +24017,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType.valueOf(type_);
@@ -23161,6 +24031,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType value) {
         if (value == null) {
@@ -23177,6 +24049,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -23185,7 +24058,7 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData data_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData data_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateDataOrBuilder> dataBuilder_;
       /**
@@ -23194,6 +24067,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
+       * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
@@ -23204,6 +24078,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 2;</code>
+       * @return The data.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData getData() {
         if (dataBuilder_ == null) {
@@ -23340,7 +24215,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -23400,6 +24275,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -23408,6 +24284,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType();
 
@@ -23417,6 +24294,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -23425,6 +24303,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+     * @return The status.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus getStatus();
 
@@ -23434,6 +24313,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
+     * @return Whether the data field is set.
      */
     boolean hasData();
     /**
@@ -23442,6 +24322,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
+     * @return The data.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData getData();
     /**
@@ -23460,7 +24341,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificate}
    */
-  public  static final class SSLCertificate extends
+  public static final class SSLCertificate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.SSLCertificate)
       SSLCertificateOrBuilder {
@@ -23472,6 +24353,13 @@ public final class ResourceOuterClass {
     private SSLCertificate() {
       type_ = 0;
       status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SSLCertificate();
     }
 
     @java.lang.Override
@@ -23487,7 +24375,6 @@ public final class ResourceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -23524,7 +24411,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -23563,8 +24450,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -23573,8 +24461,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType.valueOf(type_);
       return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType.UNRECOGNIZED : result;
@@ -23588,8 +24477,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -23598,8 +24488,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus getStatus() {
+    @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus.valueOf(status_);
       return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus.UNRECOGNIZED : result;
@@ -23613,7 +24504,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
+     * @return Whether the data field is set.
      */
+    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
@@ -23623,7 +24516,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData getData() {
       return data_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData.getDefaultInstance() : data_;
     }
@@ -23634,6 +24529,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateDataOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -23697,16 +24593,15 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificate) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && status_ == other.status_;
-      result = result && (hasData() == other.hasData());
+      if (type_ != other.type_) return false;
+      if (status_ != other.status_) return false;
+      if (hasData() != other.hasData()) return false;
       if (hasData()) {
-        result = result && getData()
-            .equals(other.getData());
+        if (!getData()
+            .equals(other.getData())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23910,35 +24805,35 @@ public final class ResourceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23997,8 +24892,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -24007,8 +24903,11 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -24019,7 +24918,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType.valueOf(type_);
@@ -24031,6 +24932,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateType value) {
         if (value == null) {
@@ -24047,6 +24950,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -24062,8 +24966,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -24072,8 +24977,11 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -24084,7 +24992,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus.valueOf(status_);
@@ -24096,6 +25006,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateStatus value) {
         if (value == null) {
@@ -24112,6 +25024,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -24120,7 +25033,7 @@ public final class ResourceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData data_ = null;
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData data_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateDataOrBuilder> dataBuilder_;
       /**
@@ -24129,6 +25042,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
+       * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
@@ -24139,6 +25053,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateData data = 3;</code>
+       * @return The data.
        */
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData getData() {
         if (dataBuilder_ == null) {
@@ -24275,7 +25190,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24336,6 +25251,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
+     * @return Whether the cm field is set.
      */
     boolean hasCm();
     /**
@@ -24345,6 +25261,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
+     * @return The cm.
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData getCm();
     /**
@@ -24366,7 +25283,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificateData}
    */
-  public  static final class SSLCertificateData extends
+  public static final class SSLCertificateData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.SSLCertificateData)
       SSLCertificateDataOrBuilder {
@@ -24376,6 +25293,13 @@ public final class ResourceOuterClass {
       super(builder);
     }
     private SSLCertificateData() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SSLCertificateData();
     }
 
     @java.lang.Override
@@ -24391,7 +25315,6 @@ public final class ResourceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -24417,7 +25340,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24451,7 +25374,8 @@ public final class ResourceOuterClass {
     private int sslCertificateDataVariantCase_ = 0;
     private java.lang.Object sslCertificateDataVariant_;
     public enum SslCertificateDataVariantCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CM(1),
       SSLCERTIFICATEDATAVARIANT_NOT_SET(0);
       private final int value;
@@ -24459,6 +25383,8 @@ public final class ResourceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -24492,7 +25418,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
+     * @return Whether the cm field is set.
      */
+    @java.lang.Override
     public boolean hasCm() {
       return sslCertificateDataVariantCase_ == 1;
     }
@@ -24503,7 +25431,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
+     * @return The cm.
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData getCm() {
       if (sslCertificateDataVariantCase_ == 1) {
          return (yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData) sslCertificateDataVariant_;
@@ -24518,6 +25448,7 @@ public final class ResourceOuterClass {
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMDataOrBuilder getCmOrBuilder() {
       if (sslCertificateDataVariantCase_ == 1) {
          return (yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData) sslCertificateDataVariant_;
@@ -24570,20 +25501,17 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateData) obj;
 
-      boolean result = true;
-      result = result && getSslCertificateDataVariantCase().equals(
-          other.getSslCertificateDataVariantCase());
-      if (!result) return false;
+      if (!getSslCertificateDataVariantCase().equals(other.getSslCertificateDataVariantCase())) return false;
       switch (sslCertificateDataVariantCase_) {
         case 1:
-          result = result && getCm()
-              .equals(other.getCm());
+          if (!getCm()
+              .equals(other.getCm())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -24780,35 +25708,35 @@ public final class ResourceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24884,7 +25812,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
+       * @return Whether the cm field is set.
        */
+      @java.lang.Override
       public boolean hasCm() {
         return sslCertificateDataVariantCase_ == 1;
       }
@@ -24895,7 +25825,9 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
+       * @return The cm.
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData getCm() {
         if (cmBuilder_ == null) {
           if (sslCertificateDataVariantCase_ == 1) {
@@ -25019,6 +25951,7 @@ public final class ResourceOuterClass {
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateCMData cm = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMDataOrBuilder getCmOrBuilder() {
         if ((sslCertificateDataVariantCase_ == 1) && (cmBuilder_ != null)) {
           return cmBuilder_.getMessageOrBuilder();
@@ -25058,7 +25991,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -25118,6 +26051,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -25126,6 +26060,7 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -25137,7 +26072,7 @@ public final class ResourceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificateCMData}
    */
-  public  static final class SSLCertificateCMData extends
+  public static final class SSLCertificateCMData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.SSLCertificateCMData)
       SSLCertificateCMDataOrBuilder {
@@ -25148,6 +26083,13 @@ public final class ResourceOuterClass {
     }
     private SSLCertificateCMData() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SSLCertificateCMData();
     }
 
     @java.lang.Override
@@ -25163,7 +26105,6 @@ public final class ResourceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -25181,7 +26122,7 @@ public final class ResourceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -25220,7 +26161,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -25239,7 +26182,9 @@ public final class ResourceOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -25268,7 +26213,7 @@ public final class ResourceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       unknownFields.writeTo(output);
@@ -25280,7 +26225,7 @@ public final class ResourceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -25298,11 +26243,10 @@ public final class ResourceOuterClass {
       }
       yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25486,35 +26430,35 @@ public final class ResourceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25568,6 +26512,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -25587,6 +26532,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -25607,6 +26553,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -25624,6 +26572,7 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -25637,6 +26586,8 @@ public final class ResourceOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25652,7 +26603,7 @@ public final class ResourceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -25962,19 +26913,11 @@ public final class ResourceOuterClass {
       ".cdn.v1Z;github.com/yandex-cloud/go-genp" +
       "roto/yandex/cloud/cdn/v1;cdnb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_cdn_v1_SecondaryHostnames_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_SecondaryHostnames_fieldAccessorTable = new

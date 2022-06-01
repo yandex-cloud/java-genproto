@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.sqlserver.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/sqlserver/v1/database_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DatabaseServiceGrpc {
 
   private DatabaseServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class DatabaseServiceGrpc {
     if ((getGetMethod = DatabaseServiceGrpc.getGetMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getGetMethod = DatabaseServiceGrpc.getGetMethod) == null) {
-          DatabaseServiceGrpc.getGetMethod = getGetMethod = 
+          DatabaseServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest, yandex.cloud.api.mdb.sqlserver.v1.PSD.Database>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSD.Database.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest,
@@ -76,22 +63,21 @@ public final class DatabaseServiceGrpc {
     if ((getListMethod = DatabaseServiceGrpc.getListMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getListMethod = DatabaseServiceGrpc.getListMethod) == null) {
-          DatabaseServiceGrpc.getListMethod = getListMethod = 
+          DatabaseServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest, yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest,
@@ -108,22 +94,21 @@ public final class DatabaseServiceGrpc {
     if ((getCreateMethod = DatabaseServiceGrpc.getCreateMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getCreateMethod = DatabaseServiceGrpc.getCreateMethod) == null) {
-          DatabaseServiceGrpc.getCreateMethod = getCreateMethod = 
+          DatabaseServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest,
@@ -140,22 +125,21 @@ public final class DatabaseServiceGrpc {
     if ((getRestoreMethod = DatabaseServiceGrpc.getRestoreMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getRestoreMethod = DatabaseServiceGrpc.getRestoreMethod) == null) {
-          DatabaseServiceGrpc.getRestoreMethod = getRestoreMethod = 
+          DatabaseServiceGrpc.getRestoreMethod = getRestoreMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "Restore"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Restore"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Restore"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Restore"))
+              .build();
         }
-     }
-     return getRestoreMethod;
+      }
+    }
+    return getRestoreMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest,
@@ -172,22 +156,21 @@ public final class DatabaseServiceGrpc {
     if ((getImportBackupMethod = DatabaseServiceGrpc.getImportBackupMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getImportBackupMethod = DatabaseServiceGrpc.getImportBackupMethod) == null) {
-          DatabaseServiceGrpc.getImportBackupMethod = getImportBackupMethod = 
+          DatabaseServiceGrpc.getImportBackupMethod = getImportBackupMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "ImportBackup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ImportBackup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ImportBackup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ImportBackup"))
+              .build();
         }
-     }
-     return getImportBackupMethod;
+      }
+    }
+    return getImportBackupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest,
@@ -204,22 +187,21 @@ public final class DatabaseServiceGrpc {
     if ((getExportBackupMethod = DatabaseServiceGrpc.getExportBackupMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getExportBackupMethod = DatabaseServiceGrpc.getExportBackupMethod) == null) {
-          DatabaseServiceGrpc.getExportBackupMethod = getExportBackupMethod = 
+          DatabaseServiceGrpc.getExportBackupMethod = getExportBackupMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "ExportBackup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportBackup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ExportBackup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ExportBackup"))
+              .build();
         }
-     }
-     return getExportBackupMethod;
+      }
+    }
+    return getExportBackupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest,
@@ -236,29 +218,35 @@ public final class DatabaseServiceGrpc {
     if ((getDeleteMethod = DatabaseServiceGrpc.getDeleteMethod) == null) {
       synchronized (DatabaseServiceGrpc.class) {
         if ((getDeleteMethod = DatabaseServiceGrpc.getDeleteMethod) == null) {
-          DatabaseServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          DatabaseServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DatabaseServiceStub newStub(io.grpc.Channel channel) {
-    return new DatabaseServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceStub>() {
+        @java.lang.Override
+        public DatabaseServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatabaseServiceStub(channel, callOptions);
+        }
+      };
+    return DatabaseServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class DatabaseServiceGrpc {
    */
   public static DatabaseServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DatabaseServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceBlockingStub>() {
+        @java.lang.Override
+        public DatabaseServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatabaseServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DatabaseServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class DatabaseServiceGrpc {
    */
   public static DatabaseServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DatabaseServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatabaseServiceFutureStub>() {
+        @java.lang.Override
+        public DatabaseServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatabaseServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DatabaseServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class DatabaseServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.sqlserver.v1.PSD.Database> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class DatabaseServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -312,7 +314,7 @@ public final class DatabaseServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -322,7 +324,7 @@ public final class DatabaseServiceGrpc {
      */
     public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRestoreMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestoreMethod(), responseObserver);
     }
 
     /**
@@ -332,7 +334,7 @@ public final class DatabaseServiceGrpc {
      */
     public void importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getImportBackupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportBackupMethod(), responseObserver);
     }
 
     /**
@@ -342,7 +344,7 @@ public final class DatabaseServiceGrpc {
      */
     public void exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getExportBackupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportBackupMethod(), responseObserver);
     }
 
     /**
@@ -352,56 +354,56 @@ public final class DatabaseServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest,
                 yandex.cloud.api.mdb.sqlserver.v1.PSD.Database>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest,
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getRestoreMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESTORE)))
           .addMethod(
             getImportBackupMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_IMPORT_BACKUP)))
           .addMethod(
             getExportBackupMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_EXPORT_BACKUP)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -415,19 +417,15 @@ public final class DatabaseServiceGrpc {
    * A set of methods for managing SQL Server databases.
    * </pre>
    */
-  public static final class DatabaseServiceStub extends io.grpc.stub.AbstractStub<DatabaseServiceStub> {
-    private DatabaseServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DatabaseServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DatabaseServiceStub extends io.grpc.stub.AbstractAsyncStub<DatabaseServiceStub> {
+    private DatabaseServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DatabaseServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DatabaseServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DatabaseServiceStub(channel, callOptions);
     }
 
@@ -439,7 +437,7 @@ public final class DatabaseServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.sqlserver.v1.PSD.Database> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -450,7 +448,7 @@ public final class DatabaseServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -461,7 +459,7 @@ public final class DatabaseServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -472,7 +470,7 @@ public final class DatabaseServiceGrpc {
      */
     public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRestoreMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -483,7 +481,7 @@ public final class DatabaseServiceGrpc {
      */
     public void importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getImportBackupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -494,7 +492,7 @@ public final class DatabaseServiceGrpc {
      */
     public void exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExportBackupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -505,7 +503,7 @@ public final class DatabaseServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -515,19 +513,15 @@ public final class DatabaseServiceGrpc {
    * A set of methods for managing SQL Server databases.
    * </pre>
    */
-  public static final class DatabaseServiceBlockingStub extends io.grpc.stub.AbstractStub<DatabaseServiceBlockingStub> {
-    private DatabaseServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DatabaseServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DatabaseServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DatabaseServiceBlockingStub> {
+    private DatabaseServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DatabaseServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DatabaseServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DatabaseServiceBlockingStub(channel, callOptions);
     }
 
@@ -538,7 +532,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.sqlserver.v1.PSD.Database get(yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -548,7 +542,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse list(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -558,7 +552,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -568,7 +562,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRestoreMethod(), getCallOptions(), request);
     }
 
@@ -578,7 +572,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getImportBackupMethod(), getCallOptions(), request);
     }
 
@@ -588,7 +582,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExportBackupMethod(), getCallOptions(), request);
     }
 
@@ -598,7 +592,7 @@ public final class DatabaseServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
@@ -608,19 +602,15 @@ public final class DatabaseServiceGrpc {
    * A set of methods for managing SQL Server databases.
    * </pre>
    */
-  public static final class DatabaseServiceFutureStub extends io.grpc.stub.AbstractStub<DatabaseServiceFutureStub> {
-    private DatabaseServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DatabaseServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DatabaseServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DatabaseServiceFutureStub> {
+    private DatabaseServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DatabaseServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DatabaseServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DatabaseServiceFutureStub(channel, callOptions);
     }
 
@@ -632,7 +622,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.sqlserver.v1.PSD.Database> get(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.GetDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -643,7 +633,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesResponse> list(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.ListDatabasesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -654,7 +644,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -665,7 +655,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restore(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRestoreMethod(), getCallOptions()), request);
     }
 
@@ -676,7 +666,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> importBackup(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getImportBackupMethod(), getCallOptions()), request);
     }
 
@@ -687,7 +677,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> exportBackup(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExportBackupMethod(), getCallOptions()), request);
     }
 
@@ -698,7 +688,7 @@ public final class DatabaseServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

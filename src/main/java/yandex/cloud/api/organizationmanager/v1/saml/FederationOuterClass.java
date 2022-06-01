@@ -89,6 +89,8 @@ public final class FederationOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -96,6 +98,10 @@ public final class FederationOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static BindingType forNumber(int value) {
       switch (value) {
         case 0: return BINDING_TYPE_UNSPECIFIED;
@@ -120,6 +126,10 @@ public final class FederationOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -164,6 +174,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -172,6 +183,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -182,6 +194,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string organization_id = 2;</code>
+     * @return The organizationId.
      */
     java.lang.String getOrganizationId();
     /**
@@ -190,6 +203,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string organization_id = 2;</code>
+     * @return The bytes for organizationId.
      */
     com.google.protobuf.ByteString
         getOrganizationIdBytes();
@@ -200,6 +214,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -208,6 +223,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -218,6 +234,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -226,6 +243,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -236,6 +254,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -244,6 +263,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -263,6 +283,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
+     * @return Whether the cookieMaxAge field is set.
      */
     boolean hasCookieMaxAge();
     /**
@@ -273,6 +294,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
+     * @return The cookieMaxAge.
      */
     com.google.protobuf.Duration getCookieMaxAge();
     /**
@@ -296,6 +318,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>bool auto_create_account_on_login = 7;</code>
+     * @return The autoCreateAccountOnLogin.
      */
     boolean getAutoCreateAccountOnLogin();
 
@@ -306,6 +329,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The issuer.
      */
     java.lang.String getIssuer();
     /**
@@ -315,6 +339,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The bytes for issuer.
      */
     com.google.protobuf.ByteString
         getIssuerBytes();
@@ -327,6 +352,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+     * @return The enum numeric value on the wire for ssoBinding.
      */
     int getSsoBindingValue();
     /**
@@ -337,6 +363,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+     * @return The ssoBinding.
      */
     yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType getSsoBinding();
 
@@ -347,6 +374,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The ssoUrl.
      */
     java.lang.String getSsoUrl();
     /**
@@ -356,6 +384,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The bytes for ssoUrl.
      */
     com.google.protobuf.ByteString
         getSsoUrlBytes();
@@ -366,6 +395,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
+     * @return Whether the securitySettings field is set.
      */
     boolean hasSecuritySettings();
     /**
@@ -374,6 +404,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
+     * @return The securitySettings.
      */
     yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings getSecuritySettings();
     /**
@@ -391,6 +422,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>bool case_insensitive_name_ids = 12;</code>
+     * @return The caseInsensitiveNameIds.
      */
     boolean getCaseInsensitiveNameIds();
 
@@ -456,7 +488,7 @@ public final class FederationOuterClass {
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.Federation}
    */
-  public  static final class Federation extends
+  public static final class Federation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.Federation)
       FederationOrBuilder {
@@ -470,11 +502,16 @@ public final class FederationOuterClass {
       organizationId_ = "";
       name_ = "";
       description_ = "";
-      autoCreateAccountOnLogin_ = false;
       issuer_ = "";
       ssoBinding_ = 0;
       ssoUrl_ = "";
-      caseInsensitiveNameIds_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Federation();
     }
 
     @java.lang.Override
@@ -593,10 +630,10 @@ public final class FederationOuterClass {
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00001000;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -606,7 +643,7 @@ public final class FederationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -649,7 +686,6 @@ public final class FederationOuterClass {
               yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -658,7 +694,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -677,7 +715,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -700,7 +740,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string organization_id = 2;</code>
+     * @return The organizationId.
      */
+    @java.lang.Override
     public java.lang.String getOrganizationId() {
       java.lang.Object ref = organizationId_;
       if (ref instanceof java.lang.String) {
@@ -719,7 +761,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string organization_id = 2;</code>
+     * @return The bytes for organizationId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
       java.lang.Object ref = organizationId_;
@@ -742,7 +786,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -761,7 +807,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -784,7 +832,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -803,7 +853,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -826,7 +878,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -836,7 +890,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -847,6 +903,7 @@ public final class FederationOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -861,7 +918,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
+     * @return Whether the cookieMaxAge field is set.
      */
+    @java.lang.Override
     public boolean hasCookieMaxAge() {
       return cookieMaxAge_ != null;
     }
@@ -873,7 +932,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
+     * @return The cookieMaxAge.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getCookieMaxAge() {
       return cookieMaxAge_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cookieMaxAge_;
     }
@@ -886,6 +947,7 @@ public final class FederationOuterClass {
      *
      * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getCookieMaxAgeOrBuilder() {
       return getCookieMaxAge();
     }
@@ -902,7 +964,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>bool auto_create_account_on_login = 7;</code>
+     * @return The autoCreateAccountOnLogin.
      */
+    @java.lang.Override
     public boolean getAutoCreateAccountOnLogin() {
       return autoCreateAccountOnLogin_;
     }
@@ -916,7 +980,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The issuer.
      */
+    @java.lang.Override
     public java.lang.String getIssuer() {
       java.lang.Object ref = issuer_;
       if (ref instanceof java.lang.String) {
@@ -936,7 +1002,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The bytes for issuer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIssuerBytes() {
       java.lang.Object ref = issuer_;
@@ -961,8 +1029,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+     * @return The enum numeric value on the wire for ssoBinding.
      */
-    public int getSsoBindingValue() {
+    @java.lang.Override public int getSsoBindingValue() {
       return ssoBinding_;
     }
     /**
@@ -973,8 +1042,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+     * @return The ssoBinding.
      */
-    public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType getSsoBinding() {
+    @java.lang.Override public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType getSsoBinding() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType.valueOf(ssoBinding_);
       return result == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType.UNRECOGNIZED : result;
@@ -989,7 +1059,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The ssoUrl.
      */
+    @java.lang.Override
     public java.lang.String getSsoUrl() {
       java.lang.Object ref = ssoUrl_;
       if (ref instanceof java.lang.String) {
@@ -1009,7 +1081,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+     * @return The bytes for ssoUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSsoUrlBytes() {
       java.lang.Object ref = ssoUrl_;
@@ -1032,7 +1106,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
+     * @return Whether the securitySettings field is set.
      */
+    @java.lang.Override
     public boolean hasSecuritySettings() {
       return securitySettings_ != null;
     }
@@ -1042,7 +1118,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
+     * @return The securitySettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings getSecuritySettings() {
       return securitySettings_ == null ? yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings.getDefaultInstance() : securitySettings_;
     }
@@ -1053,6 +1131,7 @@ public final class FederationOuterClass {
      *
      * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettingsOrBuilder getSecuritySettingsOrBuilder() {
       return getSecuritySettings();
     }
@@ -1065,7 +1144,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>bool case_insensitive_name_ids = 12;</code>
+     * @return The caseInsensitiveNameIds.
      */
+    @java.lang.Override
     public boolean getCaseInsensitiveNameIds() {
       return caseInsensitiveNameIds_;
     }
@@ -1104,14 +1185,16 @@ public final class FederationOuterClass {
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -1123,6 +1206,7 @@ public final class FederationOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -1134,11 +1218,12 @@ public final class FederationOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1150,10 +1235,11 @@ public final class FederationOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 13;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1176,16 +1262,16 @@ public final class FederationOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getOrganizationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, organizationId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       if (createdAt_ != null) {
@@ -1197,13 +1283,13 @@ public final class FederationOuterClass {
       if (autoCreateAccountOnLogin_ != false) {
         output.writeBool(7, autoCreateAccountOnLogin_);
       }
-      if (!getIssuerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, issuer_);
       }
       if (ssoBinding_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType.BINDING_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, ssoBinding_);
       }
-      if (!getSsoUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ssoUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, ssoUrl_);
       }
       if (securitySettings_ != null) {
@@ -1227,16 +1313,16 @@ public final class FederationOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getOrganizationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, organizationId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       if (createdAt_ != null) {
@@ -1251,14 +1337,14 @@ public final class FederationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, autoCreateAccountOnLogin_);
       }
-      if (!getIssuerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, issuer_);
       }
       if (ssoBinding_ != yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType.BINDING_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, ssoBinding_);
       }
-      if (!getSsoUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ssoUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, ssoUrl_);
       }
       if (securitySettings_ != null) {
@@ -1294,43 +1380,42 @@ public final class FederationOuterClass {
       }
       yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation other = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getOrganizationId()
-          .equals(other.getOrganizationId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasCookieMaxAge() == other.hasCookieMaxAge());
+      if (hasCookieMaxAge() != other.hasCookieMaxAge()) return false;
       if (hasCookieMaxAge()) {
-        result = result && getCookieMaxAge()
-            .equals(other.getCookieMaxAge());
+        if (!getCookieMaxAge()
+            .equals(other.getCookieMaxAge())) return false;
       }
-      result = result && (getAutoCreateAccountOnLogin()
-          == other.getAutoCreateAccountOnLogin());
-      result = result && getIssuer()
-          .equals(other.getIssuer());
-      result = result && ssoBinding_ == other.ssoBinding_;
-      result = result && getSsoUrl()
-          .equals(other.getSsoUrl());
-      result = result && (hasSecuritySettings() == other.hasSecuritySettings());
+      if (getAutoCreateAccountOnLogin()
+          != other.getAutoCreateAccountOnLogin()) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (ssoBinding_ != other.ssoBinding_) return false;
+      if (!getSsoUrl()
+          .equals(other.getSsoUrl())) return false;
+      if (hasSecuritySettings() != other.hasSecuritySettings()) return false;
       if (hasSecuritySettings()) {
-        result = result && getSecuritySettings()
-            .equals(other.getSecuritySettings());
+        if (!getSecuritySettings()
+            .equals(other.getSecuritySettings())) return false;
       }
-      result = result && (getCaseInsensitiveNameIds()
-          == other.getCaseInsensitiveNameIds());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getCaseInsensitiveNameIds()
+          != other.getCaseInsensitiveNameIds()) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1600,7 +1685,6 @@ public final class FederationOuterClass {
       public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation buildPartial() {
         yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation result = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.organizationId_ = organizationId_;
         result.name_ = name_;
@@ -1627,42 +1711,41 @@ public final class FederationOuterClass {
         result.caseInsensitiveNameIds_ = caseInsensitiveNameIds_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1757,6 +1840,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1776,6 +1860,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1796,6 +1881,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1813,6 +1900,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1826,6 +1914,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1846,6 +1936,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string organization_id = 2;</code>
+       * @return The organizationId.
        */
       public java.lang.String getOrganizationId() {
         java.lang.Object ref = organizationId_;
@@ -1865,6 +1956,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string organization_id = 2;</code>
+       * @return The bytes for organizationId.
        */
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
@@ -1885,6 +1977,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string organization_id = 2;</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
        */
       public Builder setOrganizationId(
           java.lang.String value) {
@@ -1902,6 +1996,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string organization_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
         
@@ -1915,6 +2010,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string organization_id = 2;</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1935,6 +2032,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1954,6 +2052,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1974,6 +2073,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1991,6 +2092,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2004,6 +2106,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2024,6 +2128,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2043,6 +2148,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2063,6 +2169,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2080,6 +2188,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2093,6 +2202,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2106,7 +2217,7 @@ public final class FederationOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2115,6 +2226,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2125,6 +2237,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2259,7 +2372,7 @@ public final class FederationOuterClass {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Duration cookieMaxAge_ = null;
+      private com.google.protobuf.Duration cookieMaxAge_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cookieMaxAgeBuilder_;
       /**
@@ -2270,6 +2383,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
+       * @return Whether the cookieMaxAge field is set.
        */
       public boolean hasCookieMaxAge() {
         return cookieMaxAgeBuilder_ != null || cookieMaxAge_ != null;
@@ -2282,6 +2396,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cookie_max_age = 6 [(.yandex.cloud.value) = "10m-12h"];</code>
+       * @return The cookieMaxAge.
        */
       public com.google.protobuf.Duration getCookieMaxAge() {
         if (cookieMaxAgeBuilder_ == null) {
@@ -2441,7 +2556,9 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool auto_create_account_on_login = 7;</code>
+       * @return The autoCreateAccountOnLogin.
        */
+      @java.lang.Override
       public boolean getAutoCreateAccountOnLogin() {
         return autoCreateAccountOnLogin_;
       }
@@ -2455,6 +2572,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool auto_create_account_on_login = 7;</code>
+       * @param value The autoCreateAccountOnLogin to set.
+       * @return This builder for chaining.
        */
       public Builder setAutoCreateAccountOnLogin(boolean value) {
         
@@ -2472,6 +2591,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool auto_create_account_on_login = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAutoCreateAccountOnLogin() {
         
@@ -2488,6 +2608,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @return The issuer.
        */
       public java.lang.String getIssuer() {
         java.lang.Object ref = issuer_;
@@ -2508,6 +2629,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @return The bytes for issuer.
        */
       public com.google.protobuf.ByteString
           getIssuerBytes() {
@@ -2529,6 +2651,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
        */
       public Builder setIssuer(
           java.lang.String value) {
@@ -2547,6 +2671,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearIssuer() {
         
@@ -2561,6 +2686,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string issuer = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
        */
       public Builder setIssuerBytes(
           com.google.protobuf.ByteString value) {
@@ -2583,8 +2710,9 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+       * @return The enum numeric value on the wire for ssoBinding.
        */
-      public int getSsoBindingValue() {
+      @java.lang.Override public int getSsoBindingValue() {
         return ssoBinding_;
       }
       /**
@@ -2595,8 +2723,11 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+       * @param value The enum numeric value on the wire for ssoBinding to set.
+       * @return This builder for chaining.
        */
       public Builder setSsoBindingValue(int value) {
+        
         ssoBinding_ = value;
         onChanged();
         return this;
@@ -2609,7 +2740,9 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+       * @return The ssoBinding.
        */
+      @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType getSsoBinding() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType result = yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType.valueOf(ssoBinding_);
@@ -2623,6 +2756,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+       * @param value The ssoBinding to set.
+       * @return This builder for chaining.
        */
       public Builder setSsoBinding(yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.BindingType value) {
         if (value == null) {
@@ -2641,6 +2776,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.BindingType sso_binding = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSsoBinding() {
         
@@ -2657,6 +2793,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @return The ssoUrl.
        */
       public java.lang.String getSsoUrl() {
         java.lang.Object ref = ssoUrl_;
@@ -2677,6 +2814,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @return The bytes for ssoUrl.
        */
       public com.google.protobuf.ByteString
           getSsoUrlBytes() {
@@ -2698,6 +2836,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @param value The ssoUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setSsoUrl(
           java.lang.String value) {
@@ -2716,6 +2856,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSsoUrl() {
         
@@ -2730,6 +2871,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>string sso_url = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=8000"];</code>
+       * @param value The bytes for ssoUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setSsoUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -2743,7 +2886,7 @@ public final class FederationOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings securitySettings_ = null;
+      private yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings securitySettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings.Builder, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettingsOrBuilder> securitySettingsBuilder_;
       /**
@@ -2752,6 +2895,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
+       * @return Whether the securitySettings field is set.
        */
       public boolean hasSecuritySettings() {
         return securitySettingsBuilder_ != null || securitySettings_ != null;
@@ -2762,6 +2906,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings security_settings = 11;</code>
+       * @return The securitySettings.
        */
       public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings getSecuritySettings() {
         if (securitySettingsBuilder_ == null) {
@@ -2903,7 +3048,9 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool case_insensitive_name_ids = 12;</code>
+       * @return The caseInsensitiveNameIds.
        */
+      @java.lang.Override
       public boolean getCaseInsensitiveNameIds() {
         return caseInsensitiveNameIds_;
       }
@@ -2913,6 +3060,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool case_insensitive_name_ids = 12;</code>
+       * @param value The caseInsensitiveNameIds to set.
+       * @return This builder for chaining.
        */
       public Builder setCaseInsensitiveNameIds(boolean value) {
         
@@ -2926,6 +3075,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool case_insensitive_name_ids = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCaseInsensitiveNameIds() {
         
@@ -2968,14 +3118,16 @@ public final class FederationOuterClass {
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2987,6 +3139,7 @@ public final class FederationOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2998,11 +3151,12 @@ public final class FederationOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3014,10 +3168,11 @@ public final class FederationOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 13;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3041,7 +3196,7 @@ public final class FederationOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3064,8 +3219,11 @@ public final class FederationOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3087,7 +3245,7 @@ public final class FederationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3147,6 +3305,7 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>bool encrypted_assertions = 1;</code>
+     * @return The encryptedAssertions.
      */
     boolean getEncryptedAssertions();
   }
@@ -3157,7 +3316,7 @@ public final class FederationOuterClass {
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings}
    */
-  public  static final class FederationSecuritySettings extends
+  public static final class FederationSecuritySettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.FederationSecuritySettings)
       FederationSecuritySettingsOrBuilder {
@@ -3167,7 +3326,13 @@ public final class FederationOuterClass {
       super(builder);
     }
     private FederationSecuritySettings() {
-      encryptedAssertions_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FederationSecuritySettings();
     }
 
     @java.lang.Override
@@ -3183,7 +3348,6 @@ public final class FederationOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3200,7 +3364,7 @@ public final class FederationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3239,7 +3403,9 @@ public final class FederationOuterClass {
      * </pre>
      *
      * <code>bool encrypted_assertions = 1;</code>
+     * @return The encryptedAssertions.
      */
+    @java.lang.Override
     public boolean getEncryptedAssertions() {
       return encryptedAssertions_;
     }
@@ -3289,11 +3455,10 @@ public final class FederationOuterClass {
       }
       yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings other = (yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings) obj;
 
-      boolean result = true;
-      result = result && (getEncryptedAssertions()
-          == other.getEncryptedAssertions());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getEncryptedAssertions()
+          != other.getEncryptedAssertions()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3478,35 +3643,35 @@ public final class FederationOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3559,7 +3724,9 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool encrypted_assertions = 1;</code>
+       * @return The encryptedAssertions.
        */
+      @java.lang.Override
       public boolean getEncryptedAssertions() {
         return encryptedAssertions_;
       }
@@ -3569,6 +3736,8 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool encrypted_assertions = 1;</code>
+       * @param value The encryptedAssertions to set.
+       * @return This builder for chaining.
        */
       public Builder setEncryptedAssertions(boolean value) {
         
@@ -3582,6 +3751,7 @@ public final class FederationOuterClass {
        * </pre>
        *
        * <code>bool encrypted_assertions = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEncryptedAssertions() {
         
@@ -3592,7 +3762,7 @@ public final class FederationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3697,21 +3867,13 @@ public final class FederationOuterClass {
       "-genproto/yandex/cloud/organizationmanag" +
       "er/v1/saml;samlb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_fieldAccessorTable = new

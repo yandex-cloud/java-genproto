@@ -90,6 +90,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -100,6 +101,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -107,7 +109,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.BatchAnalyzeRequest}
    */
-  public  static final class BatchAnalyzeRequest extends
+  public static final class BatchAnalyzeRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.BatchAnalyzeRequest)
       BatchAnalyzeRequestOrBuilder {
@@ -119,6 +121,13 @@ public final class VisionServiceOuterClass {
     private BatchAnalyzeRequest() {
       analyzeSpecs_ = java.util.Collections.emptyList();
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchAnalyzeRequest();
     }
 
     @java.lang.Override
@@ -146,7 +155,7 @@ public final class VisionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 analyzeSpecs_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -161,7 +170,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -175,7 +184,7 @@ public final class VisionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           analyzeSpecs_ = java.util.Collections.unmodifiableList(analyzeSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -195,7 +204,6 @@ public final class VisionServiceOuterClass {
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest.class, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ANALYZE_SPECS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec> analyzeSpecs_;
     /**
@@ -209,6 +217,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeSpec analyze_specs = 1 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec> getAnalyzeSpecsList() {
       return analyzeSpecs_;
     }
@@ -223,6 +232,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeSpec analyze_specs = 1 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpecOrBuilder> 
         getAnalyzeSpecsOrBuilderList() {
       return analyzeSpecs_;
@@ -238,6 +248,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeSpec analyze_specs = 1 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public int getAnalyzeSpecsCount() {
       return analyzeSpecs_.size();
     }
@@ -252,6 +263,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeSpec analyze_specs = 1 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec getAnalyzeSpecs(int index) {
       return analyzeSpecs_.get(index);
     }
@@ -266,6 +278,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeSpec analyze_specs = 1 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpecOrBuilder getAnalyzeSpecsOrBuilder(
         int index) {
       return analyzeSpecs_.get(index);
@@ -281,7 +294,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -302,7 +317,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -334,7 +351,7 @@ public final class VisionServiceOuterClass {
       for (int i = 0; i < analyzeSpecs_.size(); i++) {
         output.writeMessage(1, analyzeSpecs_.get(i));
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       unknownFields.writeTo(output);
@@ -350,7 +367,7 @@ public final class VisionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, analyzeSpecs_.get(i));
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -368,13 +385,12 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest) obj;
 
-      boolean result = true;
-      result = result && getAnalyzeSpecsList()
-          .equals(other.getAnalyzeSpecsList());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAnalyzeSpecsList()
+          .equals(other.getAnalyzeSpecsList())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -559,9 +575,8 @@ public final class VisionServiceOuterClass {
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest buildPartial() {
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest result = new yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (analyzeSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             analyzeSpecs_ = java.util.Collections.unmodifiableList(analyzeSpecs_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -570,42 +585,41 @@ public final class VisionServiceOuterClass {
           result.analyzeSpecs_ = analyzeSpecsBuilder_.build();
         }
         result.folderId_ = folderId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -682,7 +696,7 @@ public final class VisionServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec> analyzeSpecs_ =
         java.util.Collections.emptyList();
       private void ensureAnalyzeSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           analyzeSpecs_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec>(analyzeSpecs_);
           bitField0_ |= 0x00000001;
          }
@@ -1055,7 +1069,7 @@ public final class VisionServiceOuterClass {
           analyzeSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec.Builder, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpecOrBuilder>(
                   analyzeSpecs_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           analyzeSpecs_ = null;
@@ -1072,6 +1086,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1093,6 +1108,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1115,6 +1131,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1134,6 +1152,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1149,6 +1168,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1164,7 +1185,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1225,15 +1246,33 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * Image content, represented as a stream of bytes.
+     * Note: As with all bytes fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+     * </pre>
+     *
+     * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+     * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
     /**
      * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     * @return Whether the signature field is set.
+     */
+    boolean hasSignature();
+    /**
+     * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     * @return The signature.
      */
     java.lang.String getSignature();
     /**
      * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     * @return The bytes for signature.
      */
     com.google.protobuf.ByteString
         getSignatureBytes();
@@ -1293,6 +1332,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The mimeType.
      */
     java.lang.String getMimeType();
     /**
@@ -1301,6 +1341,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The bytes for mimeType.
      */
     com.google.protobuf.ByteString
         getMimeTypeBytes();
@@ -1310,7 +1351,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.AnalyzeSpec}
    */
-  public  static final class AnalyzeSpec extends
+  public static final class AnalyzeSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.AnalyzeSpec)
       AnalyzeSpecOrBuilder {
@@ -1322,6 +1363,13 @@ public final class VisionServiceOuterClass {
     private AnalyzeSpec() {
       features_ = java.util.Collections.emptyList();
       mimeType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnalyzeSpec();
     }
 
     @java.lang.Override
@@ -1349,14 +1397,14 @@ public final class VisionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              sourceCase_ = 1;
               source_ = input.readBytes();
+              sourceCase_ = 1;
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 features_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               features_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.parser(), extensionRegistry));
@@ -1375,7 +1423,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1389,7 +1437,7 @@ public final class VisionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           features_ = java.util.Collections.unmodifiableList(features_);
         }
         this.unknownFields = unknownFields.build();
@@ -1409,11 +1457,11 @@ public final class VisionServiceOuterClass {
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec.class, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int sourceCase_ = 0;
     private java.lang.Object source_;
     public enum SourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONTENT(1),
       SIGNATURE(5),
       SOURCE_NOT_SET(0);
@@ -1422,6 +1470,8 @@ public final class VisionServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1456,7 +1506,22 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+     * @return Whether the content field is set.
      */
+    @java.lang.Override
+    public boolean hasContent() {
+      return sourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Image content, represented as a stream of bytes.
+     * Note: As with all bytes fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+     * </pre>
+     *
+     * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+     * @return The content.
+     */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       if (sourceCase_ == 1) {
         return (com.google.protobuf.ByteString) source_;
@@ -1467,6 +1532,14 @@ public final class VisionServiceOuterClass {
     public static final int SIGNATURE_FIELD_NUMBER = 5;
     /**
      * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     * @return Whether the signature field is set.
+     */
+    public boolean hasSignature() {
+      return sourceCase_ == 5;
+    }
+    /**
+     * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     * @return The signature.
      */
     public java.lang.String getSignature() {
       java.lang.Object ref = "";
@@ -1487,6 +1560,7 @@ public final class VisionServiceOuterClass {
     }
     /**
      * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     * @return The bytes for signature.
      */
     public com.google.protobuf.ByteString
         getSignatureBytes() {
@@ -1517,6 +1591,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Feature features = 3 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature> getFeaturesList() {
       return features_;
     }
@@ -1528,6 +1603,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Feature features = 3 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureOrBuilder> 
         getFeaturesOrBuilderList() {
       return features_;
@@ -1540,6 +1616,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Feature features = 3 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public int getFeaturesCount() {
       return features_.size();
     }
@@ -1551,6 +1628,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Feature features = 3 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature getFeatures(int index) {
       return features_.get(index);
     }
@@ -1562,6 +1640,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Feature features = 3 [(.yandex.cloud.size) = "1-8"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureOrBuilder getFeaturesOrBuilder(
         int index) {
       return features_.get(index);
@@ -1575,7 +1654,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The mimeType.
      */
+    @java.lang.Override
     public java.lang.String getMimeType() {
       java.lang.Object ref = mimeType_;
       if (ref instanceof java.lang.String) {
@@ -1594,7 +1675,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The bytes for mimeType.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
       java.lang.Object ref = mimeType_;
@@ -1630,7 +1713,7 @@ public final class VisionServiceOuterClass {
       for (int i = 0; i < features_.size(); i++) {
         output.writeMessage(3, features_.get(i));
       }
-      if (!getMimeTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mimeType_);
       }
       if (sourceCase_ == 5) {
@@ -1654,7 +1737,7 @@ public final class VisionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, features_.get(i));
       }
-      if (!getMimeTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, mimeType_);
       }
       if (sourceCase_ == 5) {
@@ -1675,28 +1758,25 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec) obj;
 
-      boolean result = true;
-      result = result && getFeaturesList()
-          .equals(other.getFeaturesList());
-      result = result && getMimeType()
-          .equals(other.getMimeType());
-      result = result && getSourceCase().equals(
-          other.getSourceCase());
-      if (!result) return false;
+      if (!getFeaturesList()
+          .equals(other.getFeaturesList())) return false;
+      if (!getMimeType()
+          .equals(other.getMimeType())) return false;
+      if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
         case 1:
-          result = result && getContent()
-              .equals(other.getContent());
+          if (!getContent()
+              .equals(other.getContent())) return false;
           break;
         case 5:
-          result = result && getSignature()
-              .equals(other.getSignature());
+          if (!getSignature()
+              .equals(other.getSignature())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1860,7 +1940,7 @@ public final class VisionServiceOuterClass {
         super.clear();
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           featuresBuilder_.clear();
         }
@@ -1895,7 +1975,6 @@ public final class VisionServiceOuterClass {
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec buildPartial() {
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec result = new yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (sourceCase_ == 1) {
           result.source_ = source_;
         }
@@ -1903,16 +1982,15 @@ public final class VisionServiceOuterClass {
           result.source_ = source_;
         }
         if (featuresBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             features_ = java.util.Collections.unmodifiableList(features_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.features_ = features_;
         } else {
           result.features_ = featuresBuilder_.build();
         }
         result.mimeType_ = mimeType_;
-        result.bitField0_ = to_bitField0_;
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -1920,35 +1998,35 @@ public final class VisionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1966,7 +2044,7 @@ public final class VisionServiceOuterClass {
           if (!other.features_.isEmpty()) {
             if (features_.isEmpty()) {
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureFeaturesIsMutable();
               features_.addAll(other.features_);
@@ -1979,7 +2057,7 @@ public final class VisionServiceOuterClass {
               featuresBuilder_.dispose();
               featuresBuilder_ = null;
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               featuresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFeaturesFieldBuilder() : null;
@@ -2059,6 +2137,19 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return sourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Image content, represented as a stream of bytes.
+       * Note: As with all bytes fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+       * </pre>
+       *
+       * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+       * @return The content.
        */
       public com.google.protobuf.ByteString getContent() {
         if (sourceCase_ == 1) {
@@ -2073,6 +2164,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2090,6 +2183,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>bytes content = 1 [(.yandex.cloud.length) = "&lt;=10485760"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         if (sourceCase_ == 1) {
@@ -2102,7 +2196,17 @@ public final class VisionServiceOuterClass {
 
       /**
        * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       * @return Whether the signature field is set.
        */
+      @java.lang.Override
+      public boolean hasSignature() {
+        return sourceCase_ == 5;
+      }
+      /**
+       * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
       public java.lang.String getSignature() {
         java.lang.Object ref = "";
         if (sourceCase_ == 5) {
@@ -2122,7 +2226,9 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       * @return The bytes for signature.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSignatureBytes() {
         java.lang.Object ref = "";
@@ -2143,6 +2249,8 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
        */
       public Builder setSignature(
           java.lang.String value) {
@@ -2156,6 +2264,7 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSignature() {
         if (sourceCase_ == 5) {
@@ -2167,6 +2276,8 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       * @param value The bytes for signature to set.
+       * @return This builder for chaining.
        */
       public Builder setSignatureBytes(
           com.google.protobuf.ByteString value) {
@@ -2183,9 +2294,9 @@ public final class VisionServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature> features_ =
         java.util.Collections.emptyList();
       private void ensureFeaturesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           features_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature>(features_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -2390,7 +2501,7 @@ public final class VisionServiceOuterClass {
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           featuresBuilder_.clear();
@@ -2502,7 +2613,7 @@ public final class VisionServiceOuterClass {
           featuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Builder, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureOrBuilder>(
                   features_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           features_ = null;
@@ -2517,6 +2628,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return The mimeType.
        */
       public java.lang.String getMimeType() {
         java.lang.Object ref = mimeType_;
@@ -2536,6 +2648,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return The bytes for mimeType.
        */
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
@@ -2556,6 +2669,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+       * @param value The mimeType to set.
+       * @return This builder for chaining.
        */
       public Builder setMimeType(
           java.lang.String value) {
@@ -2573,6 +2688,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMimeType() {
         
@@ -2586,6 +2702,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string mime_type = 4 [(.yandex.cloud.length) = "&lt;=255"];</code>
+       * @param value The bytes for mimeType to set.
+       * @return This builder for chaining.
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -2601,7 +2719,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2661,6 +2779,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -2669,6 +2788,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type getType();
 
@@ -2678,6 +2798,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
+     * @return Whether the classificationConfig field is set.
      */
     boolean hasClassificationConfig();
     /**
@@ -2686,6 +2807,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
+     * @return The classificationConfig.
      */
     yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig getClassificationConfig();
     /**
@@ -2703,6 +2825,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
+     * @return Whether the textDetectionConfig field is set.
      */
     boolean hasTextDetectionConfig();
     /**
@@ -2711,6 +2834,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
+     * @return The textDetectionConfig.
      */
     yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig getTextDetectionConfig();
     /**
@@ -2727,7 +2851,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Feature}
    */
-  public  static final class Feature extends
+  public static final class Feature extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Feature)
       FeatureOrBuilder {
@@ -2738,6 +2862,13 @@ public final class VisionServiceOuterClass {
     }
     private Feature() {
       type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Feature();
     }
 
     @java.lang.Override
@@ -2753,7 +2884,6 @@ public final class VisionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2799,7 +2929,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2921,6 +3051,8 @@ public final class VisionServiceOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2928,6 +3060,10 @@ public final class VisionServiceOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -2953,6 +3089,10 @@ public final class VisionServiceOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2990,7 +3130,8 @@ public final class VisionServiceOuterClass {
     private int configCase_ = 0;
     private java.lang.Object config_;
     public enum ConfigCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CLASSIFICATION_CONFIG(2),
       TEXT_DETECTION_CONFIG(3),
       CONFIG_NOT_SET(0);
@@ -2999,6 +3140,8 @@ public final class VisionServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3033,8 +3176,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -3043,8 +3187,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type getType() {
+    @java.lang.Override public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type result = yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type.UNRECOGNIZED : result;
@@ -3057,7 +3202,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
+     * @return Whether the classificationConfig field is set.
      */
+    @java.lang.Override
     public boolean hasClassificationConfig() {
       return configCase_ == 2;
     }
@@ -3067,7 +3214,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
+     * @return The classificationConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig getClassificationConfig() {
       if (configCase_ == 2) {
          return (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig) config_;
@@ -3081,6 +3230,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfigOrBuilder getClassificationConfigOrBuilder() {
       if (configCase_ == 2) {
          return (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig) config_;
@@ -3095,7 +3245,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
+     * @return Whether the textDetectionConfig field is set.
      */
+    @java.lang.Override
     public boolean hasTextDetectionConfig() {
       return configCase_ == 3;
     }
@@ -3105,7 +3257,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
+     * @return The textDetectionConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig getTextDetectionConfig() {
       if (configCase_ == 3) {
          return (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig) config_;
@@ -3119,6 +3273,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfigOrBuilder getTextDetectionConfigOrBuilder() {
       if (configCase_ == 3) {
          return (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig) config_;
@@ -3185,25 +3340,22 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && getConfigCase().equals(
-          other.getConfigCase());
-      if (!result) return false;
+      if (type_ != other.type_) return false;
+      if (!getConfigCase().equals(other.getConfigCase())) return false;
       switch (configCase_) {
         case 2:
-          result = result && getClassificationConfig()
-              .equals(other.getClassificationConfig());
+          if (!getClassificationConfig()
+              .equals(other.getClassificationConfig())) return false;
           break;
         case 3:
-          result = result && getTextDetectionConfig()
-              .equals(other.getTextDetectionConfig());
+          if (!getTextDetectionConfig()
+              .equals(other.getTextDetectionConfig())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3412,35 +3564,35 @@ public final class VisionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3521,8 +3673,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -3531,8 +3684,11 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -3543,7 +3699,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type result = yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type.valueOf(type_);
@@ -3555,6 +3713,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Type value) {
         if (value == null) {
@@ -3571,6 +3731,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.Feature.Type type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3587,7 +3748,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
+       * @return Whether the classificationConfig field is set.
        */
+      @java.lang.Override
       public boolean hasClassificationConfig() {
         return configCase_ == 2;
       }
@@ -3597,7 +3760,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
+       * @return The classificationConfig.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig getClassificationConfig() {
         if (classificationConfigBuilder_ == null) {
           if (configCase_ == 2) {
@@ -3715,6 +3880,7 @@ public final class VisionServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.vision.v1.FeatureClassificationConfig classification_config = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfigOrBuilder getClassificationConfigOrBuilder() {
         if ((configCase_ == 2) && (classificationConfigBuilder_ != null)) {
           return classificationConfigBuilder_.getMessageOrBuilder();
@@ -3759,7 +3925,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
+       * @return Whether the textDetectionConfig field is set.
        */
+      @java.lang.Override
       public boolean hasTextDetectionConfig() {
         return configCase_ == 3;
       }
@@ -3769,7 +3937,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
+       * @return The textDetectionConfig.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig getTextDetectionConfig() {
         if (textDetectionConfigBuilder_ == null) {
           if (configCase_ == 3) {
@@ -3887,6 +4057,7 @@ public final class VisionServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig text_detection_config = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfigOrBuilder getTextDetectionConfigOrBuilder() {
         if ((configCase_ == 3) && (textDetectionConfigBuilder_ != null)) {
           return textDetectionConfigBuilder_.getMessageOrBuilder();
@@ -3925,7 +4096,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3985,6 +4156,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The model.
      */
     java.lang.String getModel();
     /**
@@ -3993,6 +4165,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
@@ -4000,7 +4173,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.FeatureClassificationConfig}
    */
-  public  static final class FeatureClassificationConfig extends
+  public static final class FeatureClassificationConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.FeatureClassificationConfig)
       FeatureClassificationConfigOrBuilder {
@@ -4011,6 +4184,13 @@ public final class VisionServiceOuterClass {
     }
     private FeatureClassificationConfig() {
       model_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureClassificationConfig();
     }
 
     @java.lang.Override
@@ -4026,7 +4206,6 @@ public final class VisionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4044,7 +4223,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4083,7 +4262,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The model.
      */
+    @java.lang.Override
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
       if (ref instanceof java.lang.String) {
@@ -4102,7 +4283,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for model.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
       java.lang.Object ref = model_;
@@ -4131,7 +4314,7 @@ public final class VisionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, model_);
       }
       unknownFields.writeTo(output);
@@ -4143,7 +4326,7 @@ public final class VisionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, model_);
       }
       size += unknownFields.getSerializedSize();
@@ -4161,11 +4344,10 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureClassificationConfig) obj;
 
-      boolean result = true;
-      result = result && getModel()
-          .equals(other.getModel());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4345,35 +4527,35 @@ public final class VisionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4427,6 +4609,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The model.
        */
       public java.lang.String getModel() {
         java.lang.Object ref = model_;
@@ -4446,6 +4629,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
           getModelBytes() {
@@ -4466,6 +4650,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
        */
       public Builder setModel(
           java.lang.String value) {
@@ -4483,6 +4669,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearModel() {
         
@@ -4496,6 +4683,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
@@ -4511,7 +4700,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4572,6 +4761,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return A list containing the languageCodes.
      */
     java.util.List<java.lang.String>
         getLanguageCodesList();
@@ -4582,6 +4772,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The count of languageCodes.
      */
     int getLanguageCodesCount();
     /**
@@ -4591,6 +4782,8 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the element to return.
+     * @return The languageCodes at the given index.
      */
     java.lang.String getLanguageCodes(int index);
     /**
@@ -4600,6 +4793,8 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the languageCodes at the given index.
      */
     com.google.protobuf.ByteString
         getLanguageCodesBytes(int index);
@@ -4613,6 +4808,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The model.
      */
     java.lang.String getModel();
     /**
@@ -4624,6 +4820,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
@@ -4631,7 +4828,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig}
    */
-  public  static final class FeatureTextDetectionConfig extends
+  public static final class FeatureTextDetectionConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.FeatureTextDetectionConfig)
       FeatureTextDetectionConfigOrBuilder {
@@ -4643,6 +4840,13 @@ public final class VisionServiceOuterClass {
     private FeatureTextDetectionConfig() {
       languageCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       model_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureTextDetectionConfig();
     }
 
     @java.lang.Override
@@ -4671,7 +4875,7 @@ public final class VisionServiceOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 languageCodes_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4685,7 +4889,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4699,7 +4903,7 @@ public final class VisionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           languageCodes_ = languageCodes_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4719,7 +4923,6 @@ public final class VisionServiceOuterClass {
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig.class, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LANGUAGE_CODES_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList languageCodes_;
     /**
@@ -4729,6 +4932,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return A list containing the languageCodes.
      */
     public com.google.protobuf.ProtocolStringList
         getLanguageCodesList() {
@@ -4741,6 +4945,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @return The count of languageCodes.
      */
     public int getLanguageCodesCount() {
       return languageCodes_.size();
@@ -4752,6 +4957,8 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the element to return.
+     * @return The languageCodes at the given index.
      */
     public java.lang.String getLanguageCodes(int index) {
       return languageCodes_.get(index);
@@ -4763,6 +4970,8 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the languageCodes at the given index.
      */
     public com.google.protobuf.ByteString
         getLanguageCodesBytes(int index) {
@@ -4780,7 +4989,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The model.
      */
+    @java.lang.Override
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
       if (ref instanceof java.lang.String) {
@@ -4802,7 +5013,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for model.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
       java.lang.Object ref = model_;
@@ -4834,7 +5047,7 @@ public final class VisionServiceOuterClass {
       for (int i = 0; i < languageCodes_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, languageCodes_.getRaw(i));
       }
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, model_);
       }
       unknownFields.writeTo(output);
@@ -4854,7 +5067,7 @@ public final class VisionServiceOuterClass {
         size += dataSize;
         size += 1 * getLanguageCodesList().size();
       }
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, model_);
       }
       size += unknownFields.getSerializedSize();
@@ -4872,13 +5085,12 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig) obj;
 
-      boolean result = true;
-      result = result && getLanguageCodesList()
-          .equals(other.getLanguageCodesList());
-      result = result && getModel()
-          .equals(other.getModel());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLanguageCodesList()
+          .equals(other.getLanguageCodesList())) return false;
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5058,49 +5270,47 @@ public final class VisionServiceOuterClass {
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig buildPartial() {
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig result = new yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureTextDetectionConfig(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           languageCodes_ = languageCodes_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.languageCodes_ = languageCodes_;
         result.model_ = model_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5160,7 +5370,7 @@ public final class VisionServiceOuterClass {
 
       private com.google.protobuf.LazyStringList languageCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureLanguageCodesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           languageCodes_ = new com.google.protobuf.LazyStringArrayList(languageCodes_);
           bitField0_ |= 0x00000001;
          }
@@ -5172,6 +5382,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return A list containing the languageCodes.
        */
       public com.google.protobuf.ProtocolStringList
           getLanguageCodesList() {
@@ -5184,6 +5395,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The count of languageCodes.
        */
       public int getLanguageCodesCount() {
         return languageCodes_.size();
@@ -5195,6 +5407,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param index The index of the element to return.
+       * @return The languageCodes at the given index.
        */
       public java.lang.String getLanguageCodes(int index) {
         return languageCodes_.get(index);
@@ -5206,6 +5420,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the languageCodes at the given index.
        */
       public com.google.protobuf.ByteString
           getLanguageCodesBytes(int index) {
@@ -5218,6 +5434,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param index The index to set the value at.
+       * @param value The languageCodes to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCodes(
           int index, java.lang.String value) {
@@ -5236,6 +5455,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The languageCodes to add.
+       * @return This builder for chaining.
        */
       public Builder addLanguageCodes(
           java.lang.String value) {
@@ -5254,6 +5475,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param values The languageCodes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLanguageCodes(
           java.lang.Iterable<java.lang.String> values) {
@@ -5270,6 +5493,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLanguageCodes() {
         languageCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -5284,6 +5508,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
+       * @param value The bytes of the languageCodes to add.
+       * @return This builder for chaining.
        */
       public Builder addLanguageCodesBytes(
           com.google.protobuf.ByteString value) {
@@ -5307,6 +5533,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The model.
        */
       public java.lang.String getModel() {
         java.lang.Object ref = model_;
@@ -5329,6 +5556,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
           getModelBytes() {
@@ -5352,6 +5580,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
        */
       public Builder setModel(
           java.lang.String value) {
@@ -5372,6 +5602,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearModel() {
         
@@ -5388,6 +5619,8 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
@@ -5403,7 +5636,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5509,7 +5742,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.BatchAnalyzeResponse}
    */
-  public  static final class BatchAnalyzeResponse extends
+  public static final class BatchAnalyzeResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.BatchAnalyzeResponse)
       BatchAnalyzeResponseOrBuilder {
@@ -5520,6 +5753,13 @@ public final class VisionServiceOuterClass {
     }
     private BatchAnalyzeResponse() {
       results_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchAnalyzeResponse();
     }
 
     @java.lang.Override
@@ -5547,7 +5787,7 @@ public final class VisionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 results_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -5556,7 +5796,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5570,7 +5810,7 @@ public final class VisionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
         }
         this.unknownFields = unknownFields.build();
@@ -5600,6 +5840,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeResult results = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult> getResultsList() {
       return results_;
     }
@@ -5611,6 +5852,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeResult results = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResultOrBuilder> 
         getResultsOrBuilderList() {
       return results_;
@@ -5623,6 +5865,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeResult results = 1;</code>
      */
+    @java.lang.Override
     public int getResultsCount() {
       return results_.size();
     }
@@ -5634,6 +5877,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeResult results = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult getResults(int index) {
       return results_.get(index);
     }
@@ -5645,6 +5889,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.AnalyzeResult results = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResultOrBuilder getResultsOrBuilder(
         int index) {
       return results_.get(index);
@@ -5695,11 +5940,10 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse) obj;
 
-      boolean result = true;
-      result = result && getResultsList()
-          .equals(other.getResultsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5881,7 +6125,7 @@ public final class VisionServiceOuterClass {
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse result = new yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.BatchAnalyzeResponse(this);
         int from_bitField0_ = bitField0_;
         if (resultsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             results_ = java.util.Collections.unmodifiableList(results_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -5895,35 +6139,35 @@ public final class VisionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5996,7 +6240,7 @@ public final class VisionServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult> results_ =
         java.util.Collections.emptyList();
       private void ensureResultsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           results_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult>(results_);
           bitField0_ |= 0x00000001;
          }
@@ -6315,7 +6559,7 @@ public final class VisionServiceOuterClass {
           resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult.Builder, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResultOrBuilder>(
                   results_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           results_ = null;
@@ -6325,7 +6569,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6434,6 +6678,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return Whether the error field is set.
      */
     boolean hasError();
     /**
@@ -6442,6 +6687,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return The error.
      */
     com.google.rpc.Status getError();
     /**
@@ -6456,7 +6702,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.AnalyzeResult}
    */
-  public  static final class AnalyzeResult extends
+  public static final class AnalyzeResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.AnalyzeResult)
       AnalyzeResultOrBuilder {
@@ -6467,6 +6713,13 @@ public final class VisionServiceOuterClass {
     }
     private AnalyzeResult() {
       results_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnalyzeResult();
     }
 
     @java.lang.Override
@@ -6507,7 +6760,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 results_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6516,7 +6769,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6530,7 +6783,7 @@ public final class VisionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
         }
         this.unknownFields = unknownFields.build();
@@ -6550,7 +6803,6 @@ public final class VisionServiceOuterClass {
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult.class, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RESULTS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult> results_;
     /**
@@ -6561,6 +6813,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.FeatureResult results = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult> getResultsList() {
       return results_;
     }
@@ -6572,6 +6825,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.FeatureResult results = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResultOrBuilder> 
         getResultsOrBuilderList() {
       return results_;
@@ -6584,6 +6838,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.FeatureResult results = 2;</code>
      */
+    @java.lang.Override
     public int getResultsCount() {
       return results_.size();
     }
@@ -6595,6 +6850,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.FeatureResult results = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult getResults(int index) {
       return results_.get(index);
     }
@@ -6606,6 +6862,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.FeatureResult results = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResultOrBuilder getResultsOrBuilder(
         int index) {
       return results_.get(index);
@@ -6619,7 +6876,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return Whether the error field is set.
      */
+    @java.lang.Override
     public boolean hasError() {
       return error_ != null;
     }
@@ -6629,7 +6888,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return The error.
      */
+    @java.lang.Override
     public com.google.rpc.Status getError() {
       return error_ == null ? com.google.rpc.Status.getDefaultInstance() : error_;
     }
@@ -6640,6 +6901,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.google.rpc.Status error = 1;</code>
      */
+    @java.lang.Override
     public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
       return getError();
     }
@@ -6696,16 +6958,15 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult) obj;
 
-      boolean result = true;
-      result = result && getResultsList()
-          .equals(other.getResultsList());
-      result = result && (hasError() == other.hasError());
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (hasError() != other.hasError()) return false;
       if (hasError()) {
-        result = result && getError()
-            .equals(other.getError());
+        if (!getError()
+            .equals(other.getError())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6896,9 +7157,8 @@ public final class VisionServiceOuterClass {
       public yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult buildPartial() {
         yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult result = new yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.AnalyzeResult(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (resultsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             results_ = java.util.Collections.unmodifiableList(results_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6911,42 +7171,41 @@ public final class VisionServiceOuterClass {
         } else {
           result.error_ = errorBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7022,7 +7281,7 @@ public final class VisionServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult> results_ =
         java.util.Collections.emptyList();
       private void ensureResultsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           results_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult>(results_);
           bitField0_ |= 0x00000001;
          }
@@ -7341,7 +7600,7 @@ public final class VisionServiceOuterClass {
           resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult.Builder, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResultOrBuilder>(
                   results_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           results_ = null;
@@ -7349,7 +7608,7 @@ public final class VisionServiceOuterClass {
         return resultsBuilder_;
       }
 
-      private com.google.rpc.Status error_ = null;
+      private com.google.rpc.Status error_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorBuilder_;
       /**
@@ -7358,6 +7617,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.google.rpc.Status error = 1;</code>
+       * @return Whether the error field is set.
        */
       public boolean hasError() {
         return errorBuilder_ != null || error_ != null;
@@ -7368,6 +7628,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.google.rpc.Status error = 1;</code>
+       * @return The error.
        */
       public com.google.rpc.Status getError() {
         if (errorBuilder_ == null) {
@@ -7504,7 +7765,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7564,6 +7825,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
+     * @return Whether the textDetection field is set.
      */
     boolean hasTextDetection();
     /**
@@ -7572,6 +7834,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
+     * @return The textDetection.
      */
     yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation getTextDetection();
     /**
@@ -7589,6 +7852,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
+     * @return Whether the classification field is set.
      */
     boolean hasClassification();
     /**
@@ -7597,6 +7861,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
+     * @return The classification.
      */
     yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation getClassification();
     /**
@@ -7614,6 +7879,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
+     * @return Whether the faceDetection field is set.
      */
     boolean hasFaceDetection();
     /**
@@ -7622,6 +7888,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
+     * @return The faceDetection.
      */
     yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation getFaceDetection();
     /**
@@ -7639,6 +7906,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     * @return Whether the imageCopySearch field is set.
      */
     boolean hasImageCopySearch();
     /**
@@ -7647,6 +7915,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     * @return The imageCopySearch.
      */
     yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation getImageCopySearch();
     /**
@@ -7664,6 +7933,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return Whether the error field is set.
      */
     boolean hasError();
     /**
@@ -7672,6 +7942,7 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return The error.
      */
     com.google.rpc.Status getError();
     /**
@@ -7688,7 +7959,7 @@ public final class VisionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.FeatureResult}
    */
-  public  static final class FeatureResult extends
+  public static final class FeatureResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.FeatureResult)
       FeatureResultOrBuilder {
@@ -7698,6 +7969,13 @@ public final class VisionServiceOuterClass {
       super(builder);
     }
     private FeatureResult() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureResult();
     }
 
     @java.lang.Override
@@ -7713,7 +7991,6 @@ public final class VisionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7794,7 +8071,7 @@ public final class VisionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7828,7 +8105,8 @@ public final class VisionServiceOuterClass {
     private int featureCase_ = 0;
     private java.lang.Object feature_;
     public enum FeatureCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT_DETECTION(2),
       CLASSIFICATION(3),
       FACE_DETECTION(4),
@@ -7839,6 +8117,8 @@ public final class VisionServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -7874,7 +8154,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
+     * @return Whether the textDetection field is set.
      */
+    @java.lang.Override
     public boolean hasTextDetection() {
       return featureCase_ == 2;
     }
@@ -7884,7 +8166,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
+     * @return The textDetection.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation getTextDetection() {
       if (featureCase_ == 2) {
          return (yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation) feature_;
@@ -7898,6 +8182,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotationOrBuilder getTextDetectionOrBuilder() {
       if (featureCase_ == 2) {
          return (yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation) feature_;
@@ -7912,7 +8197,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
+     * @return Whether the classification field is set.
      */
+    @java.lang.Override
     public boolean hasClassification() {
       return featureCase_ == 3;
     }
@@ -7922,7 +8209,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
+     * @return The classification.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation getClassification() {
       if (featureCase_ == 3) {
          return (yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation) feature_;
@@ -7936,6 +8225,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotationOrBuilder getClassificationOrBuilder() {
       if (featureCase_ == 3) {
          return (yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation) feature_;
@@ -7950,7 +8240,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
+     * @return Whether the faceDetection field is set.
      */
+    @java.lang.Override
     public boolean hasFaceDetection() {
       return featureCase_ == 4;
     }
@@ -7960,7 +8252,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
+     * @return The faceDetection.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation getFaceDetection() {
       if (featureCase_ == 4) {
          return (yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation) feature_;
@@ -7974,6 +8268,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotationOrBuilder getFaceDetectionOrBuilder() {
       if (featureCase_ == 4) {
          return (yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation) feature_;
@@ -7988,7 +8283,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     * @return Whether the imageCopySearch field is set.
      */
+    @java.lang.Override
     public boolean hasImageCopySearch() {
       return featureCase_ == 5;
     }
@@ -7998,7 +8295,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     * @return The imageCopySearch.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation getImageCopySearch() {
       if (featureCase_ == 5) {
          return (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_;
@@ -8012,6 +8311,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder getImageCopySearchOrBuilder() {
       if (featureCase_ == 5) {
          return (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_;
@@ -8027,7 +8327,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return Whether the error field is set.
      */
+    @java.lang.Override
     public boolean hasError() {
       return error_ != null;
     }
@@ -8037,7 +8339,9 @@ public final class VisionServiceOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 1;</code>
+     * @return The error.
      */
+    @java.lang.Override
     public com.google.rpc.Status getError() {
       return error_ == null ? com.google.rpc.Status.getDefaultInstance() : error_;
     }
@@ -8048,6 +8352,7 @@ public final class VisionServiceOuterClass {
      *
      * <code>.google.rpc.Status error = 1;</code>
      */
+    @java.lang.Override
     public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
       return getError();
     }
@@ -8125,37 +8430,34 @@ public final class VisionServiceOuterClass {
       }
       yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult other = (yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureResult) obj;
 
-      boolean result = true;
-      result = result && (hasError() == other.hasError());
+      if (hasError() != other.hasError()) return false;
       if (hasError()) {
-        result = result && getError()
-            .equals(other.getError());
+        if (!getError()
+            .equals(other.getError())) return false;
       }
-      result = result && getFeatureCase().equals(
-          other.getFeatureCase());
-      if (!result) return false;
+      if (!getFeatureCase().equals(other.getFeatureCase())) return false;
       switch (featureCase_) {
         case 2:
-          result = result && getTextDetection()
-              .equals(other.getTextDetection());
+          if (!getTextDetection()
+              .equals(other.getTextDetection())) return false;
           break;
         case 3:
-          result = result && getClassification()
-              .equals(other.getClassification());
+          if (!getClassification()
+              .equals(other.getClassification())) return false;
           break;
         case 4:
-          result = result && getFaceDetection()
-              .equals(other.getFaceDetection());
+          if (!getFaceDetection()
+              .equals(other.getFaceDetection())) return false;
           break;
         case 5:
-          result = result && getImageCopySearch()
-              .equals(other.getImageCopySearch());
+          if (!getImageCopySearch()
+              .equals(other.getImageCopySearch())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8396,35 +8698,35 @@ public final class VisionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8514,7 +8816,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
+       * @return Whether the textDetection field is set.
        */
+      @java.lang.Override
       public boolean hasTextDetection() {
         return featureCase_ == 2;
       }
@@ -8524,7 +8828,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
+       * @return The textDetection.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotation getTextDetection() {
         if (textDetectionBuilder_ == null) {
           if (featureCase_ == 2) {
@@ -8642,6 +8948,7 @@ public final class VisionServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.vision.v1.TextAnnotation text_detection = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.TextDetection.TextAnnotationOrBuilder getTextDetectionOrBuilder() {
         if ((featureCase_ == 2) && (textDetectionBuilder_ != null)) {
           return textDetectionBuilder_.getMessageOrBuilder();
@@ -8686,7 +8993,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
+       * @return Whether the classification field is set.
        */
+      @java.lang.Override
       public boolean hasClassification() {
         return featureCase_ == 3;
       }
@@ -8696,7 +9005,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
+       * @return The classification.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation getClassification() {
         if (classificationBuilder_ == null) {
           if (featureCase_ == 3) {
@@ -8814,6 +9125,7 @@ public final class VisionServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.vision.v1.ClassAnnotation classification = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotationOrBuilder getClassificationOrBuilder() {
         if ((featureCase_ == 3) && (classificationBuilder_ != null)) {
           return classificationBuilder_.getMessageOrBuilder();
@@ -8858,7 +9170,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
+       * @return Whether the faceDetection field is set.
        */
+      @java.lang.Override
       public boolean hasFaceDetection() {
         return featureCase_ == 4;
       }
@@ -8868,7 +9182,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
+       * @return The faceDetection.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation getFaceDetection() {
         if (faceDetectionBuilder_ == null) {
           if (featureCase_ == 4) {
@@ -8986,6 +9302,7 @@ public final class VisionServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.vision.v1.FaceAnnotation face_detection = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotationOrBuilder getFaceDetectionOrBuilder() {
         if ((featureCase_ == 4) && (faceDetectionBuilder_ != null)) {
           return faceDetectionBuilder_.getMessageOrBuilder();
@@ -9030,7 +9347,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       * @return Whether the imageCopySearch field is set.
        */
+      @java.lang.Override
       public boolean hasImageCopySearch() {
         return featureCase_ == 5;
       }
@@ -9040,7 +9359,9 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       * @return The imageCopySearch.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation getImageCopySearch() {
         if (imageCopySearchBuilder_ == null) {
           if (featureCase_ == 5) {
@@ -9158,6 +9479,7 @@ public final class VisionServiceOuterClass {
        *
        * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder getImageCopySearchOrBuilder() {
         if ((featureCase_ == 5) && (imageCopySearchBuilder_ != null)) {
           return imageCopySearchBuilder_.getMessageOrBuilder();
@@ -9194,7 +9516,7 @@ public final class VisionServiceOuterClass {
         return imageCopySearchBuilder_;
       }
 
-      private com.google.rpc.Status error_ = null;
+      private com.google.rpc.Status error_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorBuilder_;
       /**
@@ -9203,6 +9525,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.google.rpc.Status error = 1;</code>
+       * @return Whether the error field is set.
        */
       public boolean hasError() {
         return errorBuilder_ != null || error_ != null;
@@ -9213,6 +9536,7 @@ public final class VisionServiceOuterClass {
        * </pre>
        *
        * <code>.google.rpc.Status error = 1;</code>
+       * @return The error.
        */
       public com.google.rpc.Status getError() {
         if (errorBuilder_ == null) {
@@ -9349,7 +9673,7 @@ public final class VisionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9500,15 +9824,7 @@ public final class VisionServiceOuterClass {
       "ex-cloud/go-genproto/yandex/cloud/ai/vis" +
       "ion/v1;visionb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.vision.v1.TextDetection.getDescriptor(),
@@ -9518,7 +9834,7 @@ public final class VisionServiceOuterClass {
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_vision_v1_BatchAnalyzeRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v1_BatchAnalyzeRequest_fieldAccessorTable = new

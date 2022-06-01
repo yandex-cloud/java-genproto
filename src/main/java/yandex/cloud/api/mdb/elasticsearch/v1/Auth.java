@@ -45,7 +45,7 @@ public final class Auth {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.AuthProviders}
    */
-  public  static final class AuthProviders extends
+  public static final class AuthProviders extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.AuthProviders)
       AuthProvidersOrBuilder {
@@ -56,6 +56,13 @@ public final class Auth {
     }
     private AuthProviders() {
       providers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuthProviders();
     }
 
     @java.lang.Override
@@ -83,7 +90,7 @@ public final class Auth {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -92,7 +99,7 @@ public final class Auth {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -106,7 +113,7 @@ public final class Auth {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           providers_ = java.util.Collections.unmodifiableList(providers_);
         }
         this.unknownFields = unknownFields.build();
@@ -131,12 +138,14 @@ public final class Auth {
     /**
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> getProvidersList() {
       return providers_;
     }
     /**
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder> 
         getProvidersOrBuilderList() {
       return providers_;
@@ -144,18 +153,21 @@ public final class Auth {
     /**
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public int getProvidersCount() {
       return providers_.size();
     }
     /**
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProviders(int index) {
       return providers_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.AuthProvider providers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder getProvidersOrBuilder(
         int index) {
       return providers_.get(index);
@@ -206,11 +218,10 @@ public final class Auth {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviders other = (yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviders) obj;
 
-      boolean result = true;
-      result = result && getProvidersList()
-          .equals(other.getProvidersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -392,7 +403,7 @@ public final class Auth {
         yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviders result = new yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviders(this);
         int from_bitField0_ = bitField0_;
         if (providersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             providers_ = java.util.Collections.unmodifiableList(providers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -406,35 +417,35 @@ public final class Auth {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -507,7 +518,7 @@ public final class Auth {
       private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> providers_ =
         java.util.Collections.emptyList();
       private void ensureProvidersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           providers_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>(providers_);
           bitField0_ |= 0x00000001;
          }
@@ -736,7 +747,7 @@ public final class Auth {
           providersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProviderOrBuilder>(
                   providers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           providers_ = null;
@@ -746,7 +757,7 @@ public final class Auth {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -802,30 +813,36 @@ public final class Auth {
 
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type getType();
 
     /**
      * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>int64 order = 3;</code>
+     * @return The order.
      */
     long getOrder();
 
     /**
      * <code>bool enabled = 4;</code>
+     * @return The enabled.
      */
     boolean getEnabled();
 
@@ -835,45 +852,54 @@ public final class Auth {
      * </pre>
      *
      * <code>bool hidden = 5;</code>
+     * @return The hidden.
      */
     boolean getHidden();
 
     /**
      * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
      * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The hint.
      */
     java.lang.String getHint();
     /**
      * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for hint.
      */
     com.google.protobuf.ByteString
         getHintBytes();
 
     /**
      * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The icon.
      */
     java.lang.String getIcon();
     /**
      * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for icon.
      */
     com.google.protobuf.ByteString
         getIconBytes();
 
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
+     * @return Whether the saml field is set.
      */
     boolean hasSaml();
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
+     * @return The saml.
      */
     yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings getSaml();
     /**
@@ -886,7 +912,7 @@ public final class Auth {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.AuthProvider}
    */
-  public  static final class AuthProvider extends
+  public static final class AuthProvider extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.AuthProvider)
       AuthProviderOrBuilder {
@@ -898,12 +924,16 @@ public final class Auth {
     private AuthProvider() {
       type_ = 0;
       name_ = "";
-      order_ = 0L;
-      enabled_ = false;
-      hidden_ = false;
       description_ = "";
       hint_ = "";
       icon_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuthProvider();
     }
 
     @java.lang.Override
@@ -919,7 +949,6 @@ public final class Auth {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -990,7 +1019,7 @@ public final class Auth {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1074,6 +1103,8 @@ public final class Auth {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1081,6 +1112,10 @@ public final class Auth {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -1104,6 +1139,10 @@ public final class Auth {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1141,7 +1180,8 @@ public final class Auth {
     private int settingsCase_ = 0;
     private java.lang.Object settings_;
     public enum SettingsCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SAML(9),
       SETTINGS_NOT_SET(0);
       private final int value;
@@ -1149,6 +1189,8 @@ public final class Auth {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1178,14 +1220,16 @@ public final class Auth {
     private int type_;
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type result = yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type.UNRECOGNIZED : result;
@@ -1195,7 +1239,9 @@ public final class Auth {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1210,7 +1256,9 @@ public final class Auth {
     }
     /**
      * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1229,7 +1277,9 @@ public final class Auth {
     private long order_;
     /**
      * <code>int64 order = 3;</code>
+     * @return The order.
      */
+    @java.lang.Override
     public long getOrder() {
       return order_;
     }
@@ -1238,7 +1288,9 @@ public final class Auth {
     private boolean enabled_;
     /**
      * <code>bool enabled = 4;</code>
+     * @return The enabled.
      */
+    @java.lang.Override
     public boolean getEnabled() {
       return enabled_;
     }
@@ -1251,7 +1303,9 @@ public final class Auth {
      * </pre>
      *
      * <code>bool hidden = 5;</code>
+     * @return The hidden.
      */
+    @java.lang.Override
     public boolean getHidden() {
       return hidden_;
     }
@@ -1260,7 +1314,9 @@ public final class Auth {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1275,7 +1331,9 @@ public final class Auth {
     }
     /**
      * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1294,7 +1352,9 @@ public final class Auth {
     private volatile java.lang.Object hint_;
     /**
      * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The hint.
      */
+    @java.lang.Override
     public java.lang.String getHint() {
       java.lang.Object ref = hint_;
       if (ref instanceof java.lang.String) {
@@ -1309,7 +1369,9 @@ public final class Auth {
     }
     /**
      * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for hint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHintBytes() {
       java.lang.Object ref = hint_;
@@ -1328,7 +1390,9 @@ public final class Auth {
     private volatile java.lang.Object icon_;
     /**
      * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The icon.
      */
+    @java.lang.Override
     public java.lang.String getIcon() {
       java.lang.Object ref = icon_;
       if (ref instanceof java.lang.String) {
@@ -1343,7 +1407,9 @@ public final class Auth {
     }
     /**
      * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for icon.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIconBytes() {
       java.lang.Object ref = icon_;
@@ -1361,13 +1427,17 @@ public final class Auth {
     public static final int SAML_FIELD_NUMBER = 9;
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
+     * @return Whether the saml field is set.
      */
+    @java.lang.Override
     public boolean hasSaml() {
       return settingsCase_ == 9;
     }
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
+     * @return The saml.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings getSaml() {
       if (settingsCase_ == 9) {
          return (yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings) settings_;
@@ -1377,6 +1447,7 @@ public final class Auth {
     /**
      * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettingsOrBuilder getSamlOrBuilder() {
       if (settingsCase_ == 9) {
          return (yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings) settings_;
@@ -1401,7 +1472,7 @@ public final class Auth {
       if (type_ != yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (order_ != 0L) {
@@ -1413,13 +1484,13 @@ public final class Auth {
       if (hidden_ != false) {
         output.writeBool(5, hidden_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
       }
-      if (!getHintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, hint_);
       }
-      if (!getIconBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(icon_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, icon_);
       }
       if (settingsCase_ == 9) {
@@ -1438,7 +1509,7 @@ public final class Auth {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (order_ != 0L) {
@@ -1453,13 +1524,13 @@ public final class Auth {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, hidden_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
       }
-      if (!getHintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, hint_);
       }
-      if (!getIconBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(icon_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, icon_);
       }
       if (settingsCase_ == 9) {
@@ -1481,35 +1552,32 @@ public final class Auth {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider other = (yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getOrder()
-          == other.getOrder());
-      result = result && (getEnabled()
-          == other.getEnabled());
-      result = result && (getHidden()
-          == other.getHidden());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getHint()
-          .equals(other.getHint());
-      result = result && getIcon()
-          .equals(other.getIcon());
-      result = result && getSettingsCase().equals(
-          other.getSettingsCase());
-      if (!result) return false;
+      if (type_ != other.type_) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getOrder()
+          != other.getOrder()) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (getHidden()
+          != other.getHidden()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getHint()
+          .equals(other.getHint())) return false;
+      if (!getIcon()
+          .equals(other.getIcon())) return false;
+      if (!getSettingsCase().equals(other.getSettingsCase())) return false;
       switch (settingsCase_) {
         case 9:
-          result = result && getSaml()
-              .equals(other.getSaml());
+          if (!getSaml()
+              .equals(other.getSaml())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1745,35 +1813,35 @@ public final class Auth {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1871,21 +1939,27 @@ public final class Auth {
       private int type_ = 0;
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type result = yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type.valueOf(type_);
@@ -1893,6 +1967,8 @@ public final class Auth {
       }
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.Type value) {
         if (value == null) {
@@ -1905,6 +1981,7 @@ public final class Auth {
       }
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.AuthProvider.Type type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1916,6 +1993,7 @@ public final class Auth {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1931,6 +2009,7 @@ public final class Auth {
       }
       /**
        * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1947,6 +2026,8 @@ public final class Auth {
       }
       /**
        * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1960,6 +2041,7 @@ public final class Auth {
       }
       /**
        * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1969,6 +2051,8 @@ public final class Auth {
       }
       /**
        * <code>string name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1985,12 +2069,16 @@ public final class Auth {
       private long order_ ;
       /**
        * <code>int64 order = 3;</code>
+       * @return The order.
        */
+      @java.lang.Override
       public long getOrder() {
         return order_;
       }
       /**
        * <code>int64 order = 3;</code>
+       * @param value The order to set.
+       * @return This builder for chaining.
        */
       public Builder setOrder(long value) {
         
@@ -2000,6 +2088,7 @@ public final class Auth {
       }
       /**
        * <code>int64 order = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrder() {
         
@@ -2011,12 +2100,16 @@ public final class Auth {
       private boolean enabled_ ;
       /**
        * <code>bool enabled = 4;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public boolean getEnabled() {
         return enabled_;
       }
       /**
        * <code>bool enabled = 4;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
        */
       public Builder setEnabled(boolean value) {
         
@@ -2026,6 +2119,7 @@ public final class Auth {
       }
       /**
        * <code>bool enabled = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEnabled() {
         
@@ -2041,7 +2135,9 @@ public final class Auth {
        * </pre>
        *
        * <code>bool hidden = 5;</code>
+       * @return The hidden.
        */
+      @java.lang.Override
       public boolean getHidden() {
         return hidden_;
       }
@@ -2051,6 +2147,8 @@ public final class Auth {
        * </pre>
        *
        * <code>bool hidden = 5;</code>
+       * @param value The hidden to set.
+       * @return This builder for chaining.
        */
       public Builder setHidden(boolean value) {
         
@@ -2064,6 +2162,7 @@ public final class Auth {
        * </pre>
        *
        * <code>bool hidden = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHidden() {
         
@@ -2075,6 +2174,7 @@ public final class Auth {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2090,6 +2190,7 @@ public final class Auth {
       }
       /**
        * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2106,6 +2207,8 @@ public final class Auth {
       }
       /**
        * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2119,6 +2222,7 @@ public final class Auth {
       }
       /**
        * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2128,6 +2232,8 @@ public final class Auth {
       }
       /**
        * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2144,6 +2250,7 @@ public final class Auth {
       private java.lang.Object hint_ = "";
       /**
        * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The hint.
        */
       public java.lang.String getHint() {
         java.lang.Object ref = hint_;
@@ -2159,6 +2266,7 @@ public final class Auth {
       }
       /**
        * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The bytes for hint.
        */
       public com.google.protobuf.ByteString
           getHintBytes() {
@@ -2175,6 +2283,8 @@ public final class Auth {
       }
       /**
        * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The hint to set.
+       * @return This builder for chaining.
        */
       public Builder setHint(
           java.lang.String value) {
@@ -2188,6 +2298,7 @@ public final class Auth {
       }
       /**
        * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHint() {
         
@@ -2197,6 +2308,8 @@ public final class Auth {
       }
       /**
        * <code>string hint = 7 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The bytes for hint to set.
+       * @return This builder for chaining.
        */
       public Builder setHintBytes(
           com.google.protobuf.ByteString value) {
@@ -2213,6 +2326,7 @@ public final class Auth {
       private java.lang.Object icon_ = "";
       /**
        * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The icon.
        */
       public java.lang.String getIcon() {
         java.lang.Object ref = icon_;
@@ -2228,6 +2342,7 @@ public final class Auth {
       }
       /**
        * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The bytes for icon.
        */
       public com.google.protobuf.ByteString
           getIconBytes() {
@@ -2244,6 +2359,8 @@ public final class Auth {
       }
       /**
        * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The icon to set.
+       * @return This builder for chaining.
        */
       public Builder setIcon(
           java.lang.String value) {
@@ -2257,6 +2374,7 @@ public final class Auth {
       }
       /**
        * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearIcon() {
         
@@ -2266,6 +2384,8 @@ public final class Auth {
       }
       /**
        * <code>string icon = 8 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The bytes for icon to set.
+       * @return This builder for chaining.
        */
       public Builder setIconBytes(
           com.google.protobuf.ByteString value) {
@@ -2283,13 +2403,17 @@ public final class Auth {
           yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings, yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettingsOrBuilder> samlBuilder_;
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
+       * @return Whether the saml field is set.
        */
+      @java.lang.Override
       public boolean hasSaml() {
         return settingsCase_ == 9;
       }
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
+       * @return The saml.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings getSaml() {
         if (samlBuilder_ == null) {
           if (settingsCase_ == 9) {
@@ -2383,6 +2507,7 @@ public final class Auth {
       /**
        * <code>.yandex.cloud.mdb.elasticsearch.v1.SamlSettings saml = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettingsOrBuilder getSamlOrBuilder() {
         if ((settingsCase_ == 9) && (samlBuilder_ != null)) {
           return samlBuilder_.getMessageOrBuilder();
@@ -2417,7 +2542,7 @@ public final class Auth {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2473,85 +2598,102 @@ public final class Auth {
 
     /**
      * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The idpEntityId.
      */
     java.lang.String getIdpEntityId();
     /**
      * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for idpEntityId.
      */
     com.google.protobuf.ByteString
         getIdpEntityIdBytes();
 
     /**
      * <code>bytes idp_metadata_file = 2 [(.yandex.cloud.length) = "&lt;=10000"];</code>
+     * @return The idpMetadataFile.
      */
     com.google.protobuf.ByteString getIdpMetadataFile();
 
     /**
      * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The spEntityId.
      */
     java.lang.String getSpEntityId();
     /**
      * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for spEntityId.
      */
     com.google.protobuf.ByteString
         getSpEntityIdBytes();
 
     /**
      * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The kibanaUrl.
      */
     java.lang.String getKibanaUrl();
     /**
      * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for kibanaUrl.
      */
     com.google.protobuf.ByteString
         getKibanaUrlBytes();
 
     /**
      * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributePrincipal.
      */
     java.lang.String getAttributePrincipal();
     /**
      * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributePrincipal.
      */
     com.google.protobuf.ByteString
         getAttributePrincipalBytes();
 
     /**
      * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeGroups.
      */
     java.lang.String getAttributeGroups();
     /**
      * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeGroups.
      */
     com.google.protobuf.ByteString
         getAttributeGroupsBytes();
 
     /**
      * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeName.
      */
     java.lang.String getAttributeName();
     /**
      * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeName.
      */
     com.google.protobuf.ByteString
         getAttributeNameBytes();
 
     /**
      * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeEmail.
      */
     java.lang.String getAttributeEmail();
     /**
      * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeEmail.
      */
     com.google.protobuf.ByteString
         getAttributeEmailBytes();
 
     /**
      * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeDn.
      */
     java.lang.String getAttributeDn();
     /**
      * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeDn.
      */
     com.google.protobuf.ByteString
         getAttributeDnBytes();
@@ -2559,7 +2701,7 @@ public final class Auth {
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.SamlSettings}
    */
-  public  static final class SamlSettings extends
+  public static final class SamlSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.SamlSettings)
       SamlSettingsOrBuilder {
@@ -2581,6 +2723,13 @@ public final class Auth {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SamlSettings();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2593,7 +2742,6 @@ public final class Auth {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2658,7 +2806,7 @@ public final class Auth {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2693,7 +2841,9 @@ public final class Auth {
     private volatile java.lang.Object idpEntityId_;
     /**
      * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The idpEntityId.
      */
+    @java.lang.Override
     public java.lang.String getIdpEntityId() {
       java.lang.Object ref = idpEntityId_;
       if (ref instanceof java.lang.String) {
@@ -2708,7 +2858,9 @@ public final class Auth {
     }
     /**
      * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for idpEntityId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdpEntityIdBytes() {
       java.lang.Object ref = idpEntityId_;
@@ -2727,7 +2879,9 @@ public final class Auth {
     private com.google.protobuf.ByteString idpMetadataFile_;
     /**
      * <code>bytes idp_metadata_file = 2 [(.yandex.cloud.length) = "&lt;=10000"];</code>
+     * @return The idpMetadataFile.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getIdpMetadataFile() {
       return idpMetadataFile_;
     }
@@ -2736,7 +2890,9 @@ public final class Auth {
     private volatile java.lang.Object spEntityId_;
     /**
      * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The spEntityId.
      */
+    @java.lang.Override
     public java.lang.String getSpEntityId() {
       java.lang.Object ref = spEntityId_;
       if (ref instanceof java.lang.String) {
@@ -2751,7 +2907,9 @@ public final class Auth {
     }
     /**
      * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for spEntityId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSpEntityIdBytes() {
       java.lang.Object ref = spEntityId_;
@@ -2770,7 +2928,9 @@ public final class Auth {
     private volatile java.lang.Object kibanaUrl_;
     /**
      * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The kibanaUrl.
      */
+    @java.lang.Override
     public java.lang.String getKibanaUrl() {
       java.lang.Object ref = kibanaUrl_;
       if (ref instanceof java.lang.String) {
@@ -2785,7 +2945,9 @@ public final class Auth {
     }
     /**
      * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+     * @return The bytes for kibanaUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKibanaUrlBytes() {
       java.lang.Object ref = kibanaUrl_;
@@ -2804,7 +2966,9 @@ public final class Auth {
     private volatile java.lang.Object attributePrincipal_;
     /**
      * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributePrincipal.
      */
+    @java.lang.Override
     public java.lang.String getAttributePrincipal() {
       java.lang.Object ref = attributePrincipal_;
       if (ref instanceof java.lang.String) {
@@ -2819,7 +2983,9 @@ public final class Auth {
     }
     /**
      * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributePrincipal.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAttributePrincipalBytes() {
       java.lang.Object ref = attributePrincipal_;
@@ -2838,7 +3004,9 @@ public final class Auth {
     private volatile java.lang.Object attributeGroups_;
     /**
      * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeGroups.
      */
+    @java.lang.Override
     public java.lang.String getAttributeGroups() {
       java.lang.Object ref = attributeGroups_;
       if (ref instanceof java.lang.String) {
@@ -2853,7 +3021,9 @@ public final class Auth {
     }
     /**
      * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeGroups.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAttributeGroupsBytes() {
       java.lang.Object ref = attributeGroups_;
@@ -2872,7 +3042,9 @@ public final class Auth {
     private volatile java.lang.Object attributeName_;
     /**
      * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeName.
      */
+    @java.lang.Override
     public java.lang.String getAttributeName() {
       java.lang.Object ref = attributeName_;
       if (ref instanceof java.lang.String) {
@@ -2887,7 +3059,9 @@ public final class Auth {
     }
     /**
      * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAttributeNameBytes() {
       java.lang.Object ref = attributeName_;
@@ -2906,7 +3080,9 @@ public final class Auth {
     private volatile java.lang.Object attributeEmail_;
     /**
      * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeEmail.
      */
+    @java.lang.Override
     public java.lang.String getAttributeEmail() {
       java.lang.Object ref = attributeEmail_;
       if (ref instanceof java.lang.String) {
@@ -2921,7 +3097,9 @@ public final class Auth {
     }
     /**
      * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeEmail.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAttributeEmailBytes() {
       java.lang.Object ref = attributeEmail_;
@@ -2940,7 +3118,9 @@ public final class Auth {
     private volatile java.lang.Object attributeDn_;
     /**
      * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The attributeDn.
      */
+    @java.lang.Override
     public java.lang.String getAttributeDn() {
       java.lang.Object ref = attributeDn_;
       if (ref instanceof java.lang.String) {
@@ -2955,7 +3135,9 @@ public final class Auth {
     }
     /**
      * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for attributeDn.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAttributeDnBytes() {
       java.lang.Object ref = attributeDn_;
@@ -2984,31 +3166,31 @@ public final class Auth {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdpEntityIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idpEntityId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, idpEntityId_);
       }
       if (!idpMetadataFile_.isEmpty()) {
         output.writeBytes(2, idpMetadataFile_);
       }
-      if (!getSpEntityIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spEntityId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, spEntityId_);
       }
-      if (!getKibanaUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kibanaUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, kibanaUrl_);
       }
-      if (!getAttributePrincipalBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributePrincipal_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, attributePrincipal_);
       }
-      if (!getAttributeGroupsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeGroups_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, attributeGroups_);
       }
-      if (!getAttributeNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, attributeName_);
       }
-      if (!getAttributeEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeEmail_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, attributeEmail_);
       }
-      if (!getAttributeDnBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeDn_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, attributeDn_);
       }
       unknownFields.writeTo(output);
@@ -3020,32 +3202,32 @@ public final class Auth {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdpEntityIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idpEntityId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, idpEntityId_);
       }
       if (!idpMetadataFile_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, idpMetadataFile_);
       }
-      if (!getSpEntityIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spEntityId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, spEntityId_);
       }
-      if (!getKibanaUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kibanaUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, kibanaUrl_);
       }
-      if (!getAttributePrincipalBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributePrincipal_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, attributePrincipal_);
       }
-      if (!getAttributeGroupsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeGroups_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, attributeGroups_);
       }
-      if (!getAttributeNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, attributeName_);
       }
-      if (!getAttributeEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeEmail_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, attributeEmail_);
       }
-      if (!getAttributeDnBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeDn_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, attributeDn_);
       }
       size += unknownFields.getSerializedSize();
@@ -3063,27 +3245,26 @@ public final class Auth {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings other = (yandex.cloud.api.mdb.elasticsearch.v1.Auth.SamlSettings) obj;
 
-      boolean result = true;
-      result = result && getIdpEntityId()
-          .equals(other.getIdpEntityId());
-      result = result && getIdpMetadataFile()
-          .equals(other.getIdpMetadataFile());
-      result = result && getSpEntityId()
-          .equals(other.getSpEntityId());
-      result = result && getKibanaUrl()
-          .equals(other.getKibanaUrl());
-      result = result && getAttributePrincipal()
-          .equals(other.getAttributePrincipal());
-      result = result && getAttributeGroups()
-          .equals(other.getAttributeGroups());
-      result = result && getAttributeName()
-          .equals(other.getAttributeName());
-      result = result && getAttributeEmail()
-          .equals(other.getAttributeEmail());
-      result = result && getAttributeDn()
-          .equals(other.getAttributeDn());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getIdpEntityId()
+          .equals(other.getIdpEntityId())) return false;
+      if (!getIdpMetadataFile()
+          .equals(other.getIdpMetadataFile())) return false;
+      if (!getSpEntityId()
+          .equals(other.getSpEntityId())) return false;
+      if (!getKibanaUrl()
+          .equals(other.getKibanaUrl())) return false;
+      if (!getAttributePrincipal()
+          .equals(other.getAttributePrincipal())) return false;
+      if (!getAttributeGroups()
+          .equals(other.getAttributeGroups())) return false;
+      if (!getAttributeName()
+          .equals(other.getAttributeName())) return false;
+      if (!getAttributeEmail()
+          .equals(other.getAttributeEmail())) return false;
+      if (!getAttributeDn()
+          .equals(other.getAttributeDn())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3303,35 +3484,35 @@ public final class Auth {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3412,6 +3593,7 @@ public final class Auth {
       private java.lang.Object idpEntityId_ = "";
       /**
        * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The idpEntityId.
        */
       public java.lang.String getIdpEntityId() {
         java.lang.Object ref = idpEntityId_;
@@ -3427,6 +3609,7 @@ public final class Auth {
       }
       /**
        * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The bytes for idpEntityId.
        */
       public com.google.protobuf.ByteString
           getIdpEntityIdBytes() {
@@ -3443,6 +3626,8 @@ public final class Auth {
       }
       /**
        * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The idpEntityId to set.
+       * @return This builder for chaining.
        */
       public Builder setIdpEntityId(
           java.lang.String value) {
@@ -3456,6 +3641,7 @@ public final class Auth {
       }
       /**
        * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearIdpEntityId() {
         
@@ -3465,6 +3651,8 @@ public final class Auth {
       }
       /**
        * <code>string idp_entity_id = 1 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The bytes for idpEntityId to set.
+       * @return This builder for chaining.
        */
       public Builder setIdpEntityIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3481,12 +3669,16 @@ public final class Auth {
       private com.google.protobuf.ByteString idpMetadataFile_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes idp_metadata_file = 2 [(.yandex.cloud.length) = "&lt;=10000"];</code>
+       * @return The idpMetadataFile.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getIdpMetadataFile() {
         return idpMetadataFile_;
       }
       /**
        * <code>bytes idp_metadata_file = 2 [(.yandex.cloud.length) = "&lt;=10000"];</code>
+       * @param value The idpMetadataFile to set.
+       * @return This builder for chaining.
        */
       public Builder setIdpMetadataFile(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -3499,6 +3691,7 @@ public final class Auth {
       }
       /**
        * <code>bytes idp_metadata_file = 2 [(.yandex.cloud.length) = "&lt;=10000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearIdpMetadataFile() {
         
@@ -3510,6 +3703,7 @@ public final class Auth {
       private java.lang.Object spEntityId_ = "";
       /**
        * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The spEntityId.
        */
       public java.lang.String getSpEntityId() {
         java.lang.Object ref = spEntityId_;
@@ -3525,6 +3719,7 @@ public final class Auth {
       }
       /**
        * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The bytes for spEntityId.
        */
       public com.google.protobuf.ByteString
           getSpEntityIdBytes() {
@@ -3541,6 +3736,8 @@ public final class Auth {
       }
       /**
        * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The spEntityId to set.
+       * @return This builder for chaining.
        */
       public Builder setSpEntityId(
           java.lang.String value) {
@@ -3554,6 +3751,7 @@ public final class Auth {
       }
       /**
        * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSpEntityId() {
         
@@ -3563,6 +3761,8 @@ public final class Auth {
       }
       /**
        * <code>string sp_entity_id = 3 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The bytes for spEntityId to set.
+       * @return This builder for chaining.
        */
       public Builder setSpEntityIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3579,6 +3779,7 @@ public final class Auth {
       private java.lang.Object kibanaUrl_ = "";
       /**
        * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The kibanaUrl.
        */
       public java.lang.String getKibanaUrl() {
         java.lang.Object ref = kibanaUrl_;
@@ -3594,6 +3795,7 @@ public final class Auth {
       }
       /**
        * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return The bytes for kibanaUrl.
        */
       public com.google.protobuf.ByteString
           getKibanaUrlBytes() {
@@ -3610,6 +3812,8 @@ public final class Auth {
       }
       /**
        * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The kibanaUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setKibanaUrl(
           java.lang.String value) {
@@ -3623,6 +3827,7 @@ public final class Auth {
       }
       /**
        * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearKibanaUrl() {
         
@@ -3632,6 +3837,8 @@ public final class Auth {
       }
       /**
        * <code>string kibana_url = 4 [(.yandex.cloud.length) = "&lt;=250"];</code>
+       * @param value The bytes for kibanaUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setKibanaUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -3648,6 +3855,7 @@ public final class Auth {
       private java.lang.Object attributePrincipal_ = "";
       /**
        * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The attributePrincipal.
        */
       public java.lang.String getAttributePrincipal() {
         java.lang.Object ref = attributePrincipal_;
@@ -3663,6 +3871,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for attributePrincipal.
        */
       public com.google.protobuf.ByteString
           getAttributePrincipalBytes() {
@@ -3679,6 +3888,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The attributePrincipal to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributePrincipal(
           java.lang.String value) {
@@ -3692,6 +3903,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAttributePrincipal() {
         
@@ -3701,6 +3913,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_principal = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for attributePrincipal to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributePrincipalBytes(
           com.google.protobuf.ByteString value) {
@@ -3717,6 +3931,7 @@ public final class Auth {
       private java.lang.Object attributeGroups_ = "";
       /**
        * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The attributeGroups.
        */
       public java.lang.String getAttributeGroups() {
         java.lang.Object ref = attributeGroups_;
@@ -3732,6 +3947,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for attributeGroups.
        */
       public com.google.protobuf.ByteString
           getAttributeGroupsBytes() {
@@ -3748,6 +3964,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The attributeGroups to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeGroups(
           java.lang.String value) {
@@ -3761,6 +3979,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAttributeGroups() {
         
@@ -3770,6 +3989,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_groups = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for attributeGroups to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeGroupsBytes(
           com.google.protobuf.ByteString value) {
@@ -3786,6 +4007,7 @@ public final class Auth {
       private java.lang.Object attributeName_ = "";
       /**
        * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The attributeName.
        */
       public java.lang.String getAttributeName() {
         java.lang.Object ref = attributeName_;
@@ -3801,6 +4023,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for attributeName.
        */
       public com.google.protobuf.ByteString
           getAttributeNameBytes() {
@@ -3817,6 +4040,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The attributeName to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeName(
           java.lang.String value) {
@@ -3830,6 +4055,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAttributeName() {
         
@@ -3839,6 +4065,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_name = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for attributeName to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3855,6 +4083,7 @@ public final class Auth {
       private java.lang.Object attributeEmail_ = "";
       /**
        * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The attributeEmail.
        */
       public java.lang.String getAttributeEmail() {
         java.lang.Object ref = attributeEmail_;
@@ -3870,6 +4099,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for attributeEmail.
        */
       public com.google.protobuf.ByteString
           getAttributeEmailBytes() {
@@ -3886,6 +4116,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The attributeEmail to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeEmail(
           java.lang.String value) {
@@ -3899,6 +4131,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAttributeEmail() {
         
@@ -3908,6 +4141,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_email = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for attributeEmail to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -3924,6 +4159,7 @@ public final class Auth {
       private java.lang.Object attributeDn_ = "";
       /**
        * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The attributeDn.
        */
       public java.lang.String getAttributeDn() {
         java.lang.Object ref = attributeDn_;
@@ -3939,6 +4175,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for attributeDn.
        */
       public com.google.protobuf.ByteString
           getAttributeDnBytes() {
@@ -3955,6 +4192,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The attributeDn to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeDn(
           java.lang.String value) {
@@ -3968,6 +4207,7 @@ public final class Auth {
       }
       /**
        * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAttributeDn() {
         
@@ -3977,6 +4217,8 @@ public final class Auth {
       }
       /**
        * <code>string attribute_dn = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for attributeDn to set.
+       * @return This builder for chaining.
        */
       public Builder setAttributeDnBytes(
           com.google.protobuf.ByteString value) {
@@ -3992,7 +4234,7 @@ public final class Auth {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4094,19 +4336,11 @@ public final class Auth {
       "/cloud/mdb/elasticsearch/v1;elasticsearc" +
       "hb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AuthProviders_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AuthProviders_fieldAccessorTable = new

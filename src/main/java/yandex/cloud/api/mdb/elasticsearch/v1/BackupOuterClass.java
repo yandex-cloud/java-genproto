@@ -24,6 +24,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -60,6 +64,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 3;</code>
+     * @return The sourceClusterId.
      */
     java.lang.String getSourceClusterId();
     /**
@@ -68,6 +73,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 3;</code>
+     * @return The bytes for sourceClusterId.
      */
     com.google.protobuf.ByteString
         getSourceClusterIdBytes();
@@ -78,6 +84,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return Whether the startedAt field is set.
      */
     boolean hasStartedAt();
     /**
@@ -86,6 +93,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return The startedAt.
      */
     com.google.protobuf.Timestamp getStartedAt();
     /**
@@ -103,6 +111,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -111,6 +120,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -128,6 +138,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the indices.
      */
     java.util.List<java.lang.String>
         getIndicesList();
@@ -137,6 +148,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of indices.
      */
     int getIndicesCount();
     /**
@@ -145,6 +157,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The indices at the given index.
      */
     java.lang.String getIndices(int index);
     /**
@@ -153,6 +167,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the indices at the given index.
      */
     com.google.protobuf.ByteString
         getIndicesBytes(int index);
@@ -163,6 +179,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string elasticsearch_version = 7;</code>
+     * @return The elasticsearchVersion.
      */
     java.lang.String getElasticsearchVersion();
     /**
@@ -171,6 +188,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string elasticsearch_version = 7;</code>
+     * @return The bytes for elasticsearchVersion.
      */
     com.google.protobuf.ByteString
         getElasticsearchVersionBytes();
@@ -181,6 +199,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 size_bytes = 8;</code>
+     * @return The sizeBytes.
      */
     long getSizeBytes();
 
@@ -190,13 +209,14 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 indices_total = 9;</code>
+     * @return The indicesTotal.
      */
     long getIndicesTotal();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.Backup}
    */
-  public  static final class Backup extends
+  public static final class Backup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.Backup)
       BackupOrBuilder {
@@ -211,8 +231,13 @@ public final class BackupOuterClass {
       sourceClusterId_ = "";
       indices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       elasticsearchVersion_ = "";
-      sizeBytes_ = 0L;
-      indicesTotal_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Backup();
     }
 
     @java.lang.Override
@@ -285,9 +310,9 @@ public final class BackupOuterClass {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 indices_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               indices_.add(s);
               break;
@@ -309,7 +334,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -323,7 +348,7 @@ public final class BackupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           indices_ = indices_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -343,7 +368,6 @@ public final class BackupOuterClass {
               yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.class, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -352,7 +376,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -371,7 +397,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -394,7 +422,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -413,7 +443,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -436,7 +468,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 3;</code>
+     * @return The sourceClusterId.
      */
+    @java.lang.Override
     public java.lang.String getSourceClusterId() {
       java.lang.Object ref = sourceClusterId_;
       if (ref instanceof java.lang.String) {
@@ -455,7 +489,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 3;</code>
+     * @return The bytes for sourceClusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceClusterIdBytes() {
       java.lang.Object ref = sourceClusterId_;
@@ -478,7 +514,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return Whether the startedAt field is set.
      */
+    @java.lang.Override
     public boolean hasStartedAt() {
       return startedAt_ != null;
     }
@@ -488,7 +526,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return The startedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartedAt() {
       return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
@@ -499,6 +539,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
       return getStartedAt();
     }
@@ -511,7 +552,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -521,7 +564,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -532,6 +577,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -544,6 +590,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return A list containing the indices.
      */
     public com.google.protobuf.ProtocolStringList
         getIndicesList() {
@@ -555,6 +602,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @return The count of indices.
      */
     public int getIndicesCount() {
       return indices_.size();
@@ -565,6 +613,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the element to return.
+     * @return The indices at the given index.
      */
     public java.lang.String getIndices(int index) {
       return indices_.get(index);
@@ -575,6 +625,8 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the indices at the given index.
      */
     public com.google.protobuf.ByteString
         getIndicesBytes(int index) {
@@ -589,7 +641,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string elasticsearch_version = 7;</code>
+     * @return The elasticsearchVersion.
      */
+    @java.lang.Override
     public java.lang.String getElasticsearchVersion() {
       java.lang.Object ref = elasticsearchVersion_;
       if (ref instanceof java.lang.String) {
@@ -608,7 +662,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string elasticsearch_version = 7;</code>
+     * @return The bytes for elasticsearchVersion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getElasticsearchVersionBytes() {
       java.lang.Object ref = elasticsearchVersion_;
@@ -631,7 +687,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 size_bytes = 8;</code>
+     * @return The sizeBytes.
      */
+    @java.lang.Override
     public long getSizeBytes() {
       return sizeBytes_;
     }
@@ -644,7 +702,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 indices_total = 9;</code>
+     * @return The indicesTotal.
      */
+    @java.lang.Override
     public long getIndicesTotal() {
       return indicesTotal_;
     }
@@ -663,13 +723,13 @@ public final class BackupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
-      if (!getSourceClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceClusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sourceClusterId_);
       }
       if (startedAt_ != null) {
@@ -681,7 +741,7 @@ public final class BackupOuterClass {
       for (int i = 0; i < indices_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, indices_.getRaw(i));
       }
-      if (!getElasticsearchVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elasticsearchVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, elasticsearchVersion_);
       }
       if (sizeBytes_ != 0L) {
@@ -699,13 +759,13 @@ public final class BackupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
-      if (!getSourceClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceClusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sourceClusterId_);
       }
       if (startedAt_ != null) {
@@ -724,7 +784,7 @@ public final class BackupOuterClass {
         size += dataSize;
         size += 1 * getIndicesList().size();
       }
-      if (!getElasticsearchVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elasticsearchVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, elasticsearchVersion_);
       }
       if (sizeBytes_ != 0L) {
@@ -750,33 +810,32 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup other = (yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getSourceClusterId()
-          .equals(other.getSourceClusterId());
-      result = result && (hasStartedAt() == other.hasStartedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getSourceClusterId()
+          .equals(other.getSourceClusterId())) return false;
+      if (hasStartedAt() != other.hasStartedAt()) return false;
       if (hasStartedAt()) {
-        result = result && getStartedAt()
-            .equals(other.getStartedAt());
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
       }
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getIndicesList()
-          .equals(other.getIndicesList());
-      result = result && getElasticsearchVersion()
-          .equals(other.getElasticsearchVersion());
-      result = result && (getSizeBytes()
-          == other.getSizeBytes());
-      result = result && (getIndicesTotal()
-          == other.getIndicesTotal());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getIndicesList()
+          .equals(other.getIndicesList())) return false;
+      if (!getElasticsearchVersion()
+          .equals(other.getElasticsearchVersion())) return false;
+      if (getSizeBytes()
+          != other.getSizeBytes()) return false;
+      if (getIndicesTotal()
+          != other.getIndicesTotal()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -964,7 +1023,7 @@ public final class BackupOuterClass {
           createdAtBuilder_ = null;
         }
         indices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
         elasticsearchVersion_ = "";
 
         sizeBytes_ = 0L;
@@ -998,7 +1057,6 @@ public final class BackupOuterClass {
       public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup buildPartial() {
         yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup result = new yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.sourceClusterId_ = sourceClusterId_;
@@ -1012,50 +1070,49 @@ public final class BackupOuterClass {
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           indices_ = indices_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.indices_ = indices_;
         result.elasticsearchVersion_ = elasticsearchVersion_;
         result.sizeBytes_ = sizeBytes_;
         result.indicesTotal_ = indicesTotal_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1090,7 +1147,7 @@ public final class BackupOuterClass {
         if (!other.indices_.isEmpty()) {
           if (indices_.isEmpty()) {
             indices_ = other.indices_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIndicesIsMutable();
             indices_.addAll(other.indices_);
@@ -1144,6 +1201,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1163,6 +1221,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1183,6 +1242,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1200,6 +1261,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1213,6 +1275,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1233,6 +1297,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1252,6 +1317,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1272,6 +1338,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1289,6 +1357,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1302,6 +1371,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1322,6 +1393,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 3;</code>
+       * @return The sourceClusterId.
        */
       public java.lang.String getSourceClusterId() {
         java.lang.Object ref = sourceClusterId_;
@@ -1341,6 +1413,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 3;</code>
+       * @return The bytes for sourceClusterId.
        */
       public com.google.protobuf.ByteString
           getSourceClusterIdBytes() {
@@ -1361,6 +1434,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 3;</code>
+       * @param value The sourceClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceClusterId(
           java.lang.String value) {
@@ -1378,6 +1453,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceClusterId() {
         
@@ -1391,6 +1467,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 3;</code>
+       * @param value The bytes for sourceClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1404,7 +1482,7 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp startedAt_ = null;
+      private com.google.protobuf.Timestamp startedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
@@ -1413,6 +1491,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       * @return Whether the startedAt field is set.
        */
       public boolean hasStartedAt() {
         return startedAtBuilder_ != null || startedAt_ != null;
@@ -1423,6 +1502,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       * @return The startedAt.
        */
       public com.google.protobuf.Timestamp getStartedAt() {
         if (startedAtBuilder_ == null) {
@@ -1557,7 +1637,7 @@ public final class BackupOuterClass {
         return startedAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1566,6 +1646,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1576,6 +1657,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1712,9 +1794,9 @@ public final class BackupOuterClass {
 
       private com.google.protobuf.LazyStringList indices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIndicesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           indices_ = new com.google.protobuf.LazyStringArrayList(indices_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -1723,6 +1805,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the indices.
        */
       public com.google.protobuf.ProtocolStringList
           getIndicesList() {
@@ -1734,6 +1817,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of indices.
        */
       public int getIndicesCount() {
         return indices_.size();
@@ -1744,6 +1828,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The indices at the given index.
        */
       public java.lang.String getIndices(int index) {
         return indices_.get(index);
@@ -1754,6 +1840,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the indices at the given index.
        */
       public com.google.protobuf.ByteString
           getIndicesBytes(int index) {
@@ -1765,6 +1853,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index to set the value at.
+       * @param value The indices to set.
+       * @return This builder for chaining.
        */
       public Builder setIndices(
           int index, java.lang.String value) {
@@ -1782,6 +1873,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The indices to add.
+       * @return This builder for chaining.
        */
       public Builder addIndices(
           java.lang.String value) {
@@ -1799,6 +1892,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param values The indices to add.
+       * @return This builder for chaining.
        */
       public Builder addAllIndices(
           java.lang.Iterable<java.lang.String> values) {
@@ -1814,10 +1909,11 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearIndices() {
         indices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1827,6 +1923,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>repeated string indices = 6 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param value The bytes of the indices to add.
+       * @return This builder for chaining.
        */
       public Builder addIndicesBytes(
           com.google.protobuf.ByteString value) {
@@ -1847,6 +1945,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string elasticsearch_version = 7;</code>
+       * @return The elasticsearchVersion.
        */
       public java.lang.String getElasticsearchVersion() {
         java.lang.Object ref = elasticsearchVersion_;
@@ -1866,6 +1965,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string elasticsearch_version = 7;</code>
+       * @return The bytes for elasticsearchVersion.
        */
       public com.google.protobuf.ByteString
           getElasticsearchVersionBytes() {
@@ -1886,6 +1986,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string elasticsearch_version = 7;</code>
+       * @param value The elasticsearchVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setElasticsearchVersion(
           java.lang.String value) {
@@ -1903,6 +2005,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string elasticsearch_version = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearElasticsearchVersion() {
         
@@ -1916,6 +2019,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string elasticsearch_version = 7;</code>
+       * @param value The bytes for elasticsearchVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setElasticsearchVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -1936,7 +2041,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size_bytes = 8;</code>
+       * @return The sizeBytes.
        */
+      @java.lang.Override
       public long getSizeBytes() {
         return sizeBytes_;
       }
@@ -1946,6 +2053,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size_bytes = 8;</code>
+       * @param value The sizeBytes to set.
+       * @return This builder for chaining.
        */
       public Builder setSizeBytes(long value) {
         
@@ -1959,6 +2068,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size_bytes = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSizeBytes() {
         
@@ -1974,7 +2084,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 indices_total = 9;</code>
+       * @return The indicesTotal.
        */
+      @java.lang.Override
       public long getIndicesTotal() {
         return indicesTotal_;
       }
@@ -1984,6 +2096,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 indices_total = 9;</code>
+       * @param value The indicesTotal to set.
+       * @return This builder for chaining.
        */
       public Builder setIndicesTotal(long value) {
         
@@ -1997,6 +2111,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 indices_total = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIndicesTotal() {
         
@@ -2007,7 +2122,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2086,20 +2201,12 @@ public final class BackupOuterClass {
       "/go-genproto/yandex/cloud/mdb/elasticsea" +
       "rch/v1;elasticsearchb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Backup_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Backup_fieldAccessorTable = new

@@ -24,6 +24,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,6 +33,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -42,6 +44,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -50,6 +53,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -100,10 +104,12 @@ public final class UserOuterClass {
 
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return The settings.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings getSettings();
     /**
@@ -163,7 +169,7 @@ public final class UserOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.User}
    */
-  public  static final class User extends
+  public static final class User extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.User)
       UserOrBuilder {
@@ -177,6 +183,13 @@ public final class UserOuterClass {
       clusterId_ = "";
       permissions_ = java.util.Collections.emptyList();
       quotas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new User();
     }
 
     @java.lang.Override
@@ -216,9 +229,9 @@ public final class UserOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 permissions_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               permissions_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.parser(), extensionRegistry));
@@ -238,16 +251,16 @@ public final class UserOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               quotas_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -261,10 +274,10 @@ public final class UserOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           quotas_ = java.util.Collections.unmodifiableList(quotas_);
         }
         this.unknownFields = unknownFields.build();
@@ -284,7 +297,6 @@ public final class UserOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -293,7 +305,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -312,7 +326,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -335,7 +351,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -354,7 +372,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -378,6 +398,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission> getPermissionsList() {
       return permissions_;
     }
@@ -388,6 +409,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.PermissionOrBuilder> 
         getPermissionsOrBuilderList() {
       return permissions_;
@@ -399,6 +421,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public int getPermissionsCount() {
       return permissions_.size();
     }
@@ -409,6 +432,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission getPermissions(int index) {
       return permissions_.get(index);
     }
@@ -419,6 +443,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.PermissionOrBuilder getPermissionsOrBuilder(
         int index) {
       return permissions_.get(index);
@@ -428,19 +453,24 @@ public final class UserOuterClass {
     private yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings settings_;
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDefaultInstance() : settings_;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -454,6 +484,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
       return quotas_;
     }
@@ -464,6 +495,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
         getQuotasOrBuilderList() {
       return quotas_;
@@ -475,6 +507,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public int getQuotasCount() {
       return quotas_.size();
     }
@@ -485,6 +518,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
       return quotas_.get(index);
     }
@@ -495,6 +529,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
         int index) {
       return quotas_.get(index);
@@ -514,10 +549,10 @@ public final class UserOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
       for (int i = 0; i < permissions_.size(); i++) {
@@ -538,10 +573,10 @@ public final class UserOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
       for (int i = 0; i < permissions_.size(); i++) {
@@ -571,22 +606,21 @@ public final class UserOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getPermissionsList()
-          .equals(other.getPermissionsList());
-      result = result && (hasSettings() == other.hasSettings());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && getQuotasList()
-          .equals(other.getQuotasList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getQuotasList()
+          .equals(other.getQuotasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -758,7 +792,7 @@ public final class UserOuterClass {
 
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           permissionsBuilder_.clear();
         }
@@ -770,7 +804,7 @@ public final class UserOuterClass {
         }
         if (quotasBuilder_ == null) {
           quotas_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           quotasBuilder_.clear();
         }
@@ -801,13 +835,12 @@ public final class UserOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User result = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.User(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.clusterId_ = clusterId_;
         if (permissionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             permissions_ = java.util.Collections.unmodifiableList(permissions_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.permissions_ = permissions_;
         } else {
@@ -819,50 +852,49 @@ public final class UserOuterClass {
           result.settings_ = settingsBuilder_.build();
         }
         if (quotasBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             quotas_ = java.util.Collections.unmodifiableList(quotas_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.quotas_ = quotas_;
         } else {
           result.quotas_ = quotasBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -888,7 +920,7 @@ public final class UserOuterClass {
           if (!other.permissions_.isEmpty()) {
             if (permissions_.isEmpty()) {
               permissions_ = other.permissions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensurePermissionsIsMutable();
               permissions_.addAll(other.permissions_);
@@ -901,7 +933,7 @@ public final class UserOuterClass {
               permissionsBuilder_.dispose();
               permissionsBuilder_ = null;
               permissions_ = other.permissions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               permissionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPermissionsFieldBuilder() : null;
@@ -917,7 +949,7 @@ public final class UserOuterClass {
           if (!other.quotas_.isEmpty()) {
             if (quotas_.isEmpty()) {
               quotas_ = other.quotas_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureQuotasIsMutable();
               quotas_.addAll(other.quotas_);
@@ -930,7 +962,7 @@ public final class UserOuterClass {
               quotasBuilder_.dispose();
               quotasBuilder_ = null;
               quotas_ = other.quotas_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
               quotasBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getQuotasFieldBuilder() : null;
@@ -976,6 +1008,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -995,6 +1028,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1015,6 +1049,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1032,6 +1068,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1045,6 +1082,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1065,6 +1104,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1084,6 +1124,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1104,6 +1145,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1121,6 +1164,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1134,6 +1178,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1150,9 +1196,9 @@ public final class UserOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission> permissions_ =
         java.util.Collections.emptyList();
       private void ensurePermissionsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           permissions_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission>(permissions_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1346,7 +1392,7 @@ public final class UserOuterClass {
       public Builder clearPermissions() {
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           permissionsBuilder_.clear();
@@ -1451,7 +1497,7 @@ public final class UserOuterClass {
           permissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.PermissionOrBuilder>(
                   permissions_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           permissions_ = null;
@@ -1459,17 +1505,19 @@ public final class UserOuterClass {
         return permissionsBuilder_;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings settings_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder> settingsBuilder_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -1579,9 +1627,9 @@ public final class UserOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_ =
         java.util.Collections.emptyList();
       private void ensureQuotasIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>(quotas_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -1775,7 +1823,7 @@ public final class UserOuterClass {
       public Builder clearQuotas() {
         if (quotasBuilder_ == null) {
           quotas_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           quotasBuilder_.clear();
@@ -1880,7 +1928,7 @@ public final class UserOuterClass {
           quotasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder>(
                   quotas_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           quotas_ = null;
@@ -1890,7 +1938,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1950,6 +1998,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string database_name = 1;</code>
+     * @return The databaseName.
      */
     java.lang.String getDatabaseName();
     /**
@@ -1958,6 +2007,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string database_name = 1;</code>
+     * @return The bytes for databaseName.
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
@@ -1965,7 +2015,7 @@ public final class UserOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Permission}
    */
-  public  static final class Permission extends
+  public static final class Permission extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.Permission)
       PermissionOrBuilder {
@@ -1976,6 +2026,13 @@ public final class UserOuterClass {
     }
     private Permission() {
       databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Permission();
     }
 
     @java.lang.Override
@@ -1991,7 +2048,6 @@ public final class UserOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2009,7 +2065,7 @@ public final class UserOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2048,7 +2104,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string database_name = 1;</code>
+     * @return The databaseName.
      */
+    @java.lang.Override
     public java.lang.String getDatabaseName() {
       java.lang.Object ref = databaseName_;
       if (ref instanceof java.lang.String) {
@@ -2067,7 +2125,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string database_name = 1;</code>
+     * @return The bytes for databaseName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseNameBytes() {
       java.lang.Object ref = databaseName_;
@@ -2096,7 +2156,7 @@ public final class UserOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, databaseName_);
       }
       unknownFields.writeTo(output);
@@ -2108,7 +2168,7 @@ public final class UserOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatabaseNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, databaseName_);
       }
       size += unknownFields.getSerializedSize();
@@ -2126,11 +2186,10 @@ public final class UserOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission) obj;
 
-      boolean result = true;
-      result = result && getDatabaseName()
-          .equals(other.getDatabaseName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2310,35 +2369,35 @@ public final class UserOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2392,6 +2451,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string database_name = 1;</code>
+       * @return The databaseName.
        */
       public java.lang.String getDatabaseName() {
         java.lang.Object ref = databaseName_;
@@ -2411,6 +2471,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string database_name = 1;</code>
+       * @return The bytes for databaseName.
        */
       public com.google.protobuf.ByteString
           getDatabaseNameBytes() {
@@ -2431,6 +2492,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string database_name = 1;</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseName(
           java.lang.String value) {
@@ -2448,6 +2511,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string database_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabaseName() {
         
@@ -2461,6 +2525,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string database_name = 1;</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2476,7 +2542,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2536,6 +2602,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2544,6 +2611,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2554,6 +2622,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -2562,6 +2631,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -2612,10 +2682,12 @@ public final class UserOuterClass {
 
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return The settings.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings getSettings();
     /**
@@ -2670,7 +2742,7 @@ public final class UserOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserSpec}
    */
-  public  static final class UserSpec extends
+  public static final class UserSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UserSpec)
       UserSpecOrBuilder {
@@ -2684,6 +2756,13 @@ public final class UserOuterClass {
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
       quotas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserSpec();
     }
 
     @java.lang.Override
@@ -2723,9 +2802,9 @@ public final class UserOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 permissions_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               permissions_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.parser(), extensionRegistry));
@@ -2745,16 +2824,16 @@ public final class UserOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               quotas_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2768,10 +2847,10 @@ public final class UserOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           quotas_ = java.util.Collections.unmodifiableList(quotas_);
         }
         this.unknownFields = unknownFields.build();
@@ -2791,7 +2870,6 @@ public final class UserOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -2800,7 +2878,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2819,7 +2899,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2842,7 +2924,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -2861,7 +2945,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -2885,6 +2971,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission> getPermissionsList() {
       return permissions_;
     }
@@ -2895,6 +2982,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.PermissionOrBuilder> 
         getPermissionsOrBuilderList() {
       return permissions_;
@@ -2906,6 +2994,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public int getPermissionsCount() {
       return permissions_.size();
     }
@@ -2916,6 +3005,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission getPermissions(int index) {
       return permissions_.get(index);
     }
@@ -2926,6 +3016,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.PermissionOrBuilder getPermissionsOrBuilder(
         int index) {
       return permissions_.get(index);
@@ -2935,19 +3026,24 @@ public final class UserOuterClass {
     private yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings settings_;
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return Whether the settings field is set.
      */
+    @java.lang.Override
     public boolean hasSettings() {
       return settings_ != null;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+     * @return The settings.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDefaultInstance() : settings_;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
@@ -2961,6 +3057,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
       return quotas_;
     }
@@ -2971,6 +3068,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
         getQuotasOrBuilderList() {
       return quotas_;
@@ -2982,6 +3080,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public int getQuotasCount() {
       return quotas_.size();
     }
@@ -2992,6 +3091,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
       return quotas_.get(index);
     }
@@ -3002,6 +3102,7 @@ public final class UserOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
         int index) {
       return quotas_.get(index);
@@ -3021,10 +3122,10 @@ public final class UserOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
       for (int i = 0; i < permissions_.size(); i++) {
@@ -3045,10 +3146,10 @@ public final class UserOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
       for (int i = 0; i < permissions_.size(); i++) {
@@ -3078,22 +3179,21 @@ public final class UserOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && getPermissionsList()
-          .equals(other.getPermissionsList());
-      result = result && (hasSettings() == other.hasSettings());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && getQuotasList()
-          .equals(other.getQuotasList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getQuotasList()
+          .equals(other.getQuotasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3260,7 +3360,7 @@ public final class UserOuterClass {
 
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           permissionsBuilder_.clear();
         }
@@ -3272,7 +3372,7 @@ public final class UserOuterClass {
         }
         if (quotasBuilder_ == null) {
           quotas_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           quotasBuilder_.clear();
         }
@@ -3303,13 +3403,12 @@ public final class UserOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec result = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.password_ = password_;
         if (permissionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             permissions_ = java.util.Collections.unmodifiableList(permissions_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.permissions_ = permissions_;
         } else {
@@ -3321,50 +3420,49 @@ public final class UserOuterClass {
           result.settings_ = settingsBuilder_.build();
         }
         if (quotasBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             quotas_ = java.util.Collections.unmodifiableList(quotas_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.quotas_ = quotas_;
         } else {
           result.quotas_ = quotasBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3390,7 +3488,7 @@ public final class UserOuterClass {
           if (!other.permissions_.isEmpty()) {
             if (permissions_.isEmpty()) {
               permissions_ = other.permissions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensurePermissionsIsMutable();
               permissions_.addAll(other.permissions_);
@@ -3403,7 +3501,7 @@ public final class UserOuterClass {
               permissionsBuilder_.dispose();
               permissionsBuilder_ = null;
               permissions_ = other.permissions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               permissionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPermissionsFieldBuilder() : null;
@@ -3419,7 +3517,7 @@ public final class UserOuterClass {
           if (!other.quotas_.isEmpty()) {
             if (quotas_.isEmpty()) {
               quotas_ = other.quotas_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureQuotasIsMutable();
               quotas_.addAll(other.quotas_);
@@ -3432,7 +3530,7 @@ public final class UserOuterClass {
               quotasBuilder_.dispose();
               quotasBuilder_ = null;
               quotas_ = other.quotas_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
               quotasBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getQuotasFieldBuilder() : null;
@@ -3478,6 +3576,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3497,6 +3596,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3517,6 +3617,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3534,6 +3636,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3547,6 +3650,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3567,6 +3672,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -3586,6 +3692,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -3606,6 +3713,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -3623,6 +3732,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -3636,6 +3746,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -3652,9 +3764,9 @@ public final class UserOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission> permissions_ =
         java.util.Collections.emptyList();
       private void ensurePermissionsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           permissions_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission>(permissions_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -3848,7 +3960,7 @@ public final class UserOuterClass {
       public Builder clearPermissions() {
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           permissionsBuilder_.clear();
@@ -3953,7 +4065,7 @@ public final class UserOuterClass {
           permissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.PermissionOrBuilder>(
                   permissions_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           permissions_ = null;
@@ -3961,17 +4073,19 @@ public final class UserOuterClass {
         return permissionsBuilder_;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings settings_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder> settingsBuilder_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+       * @return Whether the settings field is set.
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
+       * @return The settings.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -4081,9 +4195,9 @@ public final class UserOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_ =
         java.util.Collections.emptyList();
       private void ensureQuotasIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>(quotas_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -4277,7 +4391,7 @@ public final class UserOuterClass {
       public Builder clearQuotas() {
         if (quotasBuilder_ == null) {
           quotas_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           quotasBuilder_.clear();
@@ -4382,7 +4496,7 @@ public final class UserOuterClass {
           quotasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder>(
                   quotas_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           quotas_ = null;
@@ -4392,7 +4506,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4456,6 +4570,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return Whether the readonly field is set.
      */
     boolean hasReadonly();
     /**
@@ -4468,6 +4583,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return The readonly.
      */
     com.google.protobuf.Int64Value getReadonly();
     /**
@@ -4491,6 +4607,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
+     * @return Whether the allowDdl field is set.
      */
     boolean hasAllowDdl();
     /**
@@ -4501,6 +4618,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
+     * @return The allowDdl.
      */
     com.google.protobuf.BoolValue getAllowDdl();
     /**
@@ -4526,6 +4644,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the insertQuorum field is set.
      */
     boolean hasInsertQuorum();
     /**
@@ -4540,6 +4659,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The insertQuorum.
      */
     com.google.protobuf.Int64Value getInsertQuorum();
     /**
@@ -4564,6 +4684,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the connectTimeout field is set.
      */
     boolean hasConnectTimeout();
     /**
@@ -4573,6 +4694,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The connectTimeout.
      */
     com.google.protobuf.Int64Value getConnectTimeout();
     /**
@@ -4592,6 +4714,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the receiveTimeout field is set.
      */
     boolean hasReceiveTimeout();
     /**
@@ -4601,6 +4724,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The receiveTimeout.
      */
     com.google.protobuf.Int64Value getReceiveTimeout();
     /**
@@ -4620,6 +4744,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the sendTimeout field is set.
      */
     boolean hasSendTimeout();
     /**
@@ -4629,6 +4754,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The sendTimeout.
      */
     com.google.protobuf.Int64Value getSendTimeout();
     /**
@@ -4650,6 +4776,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return Whether the insertQuorumTimeout field is set.
      */
     boolean hasInsertQuorumTimeout();
     /**
@@ -4661,6 +4788,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return The insertQuorumTimeout.
      */
     com.google.protobuf.Int64Value getInsertQuorumTimeout();
     /**
@@ -4682,6 +4810,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
+     * @return Whether the selectSequentialConsistency field is set.
      */
     boolean hasSelectSequentialConsistency();
     /**
@@ -4691,6 +4820,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
+     * @return The selectSequentialConsistency.
      */
     com.google.protobuf.BoolValue getSelectSequentialConsistency();
     /**
@@ -4711,6 +4841,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return Whether the maxReplicaDelayForDistributedQueries field is set.
      */
     boolean hasMaxReplicaDelayForDistributedQueries();
     /**
@@ -4721,6 +4852,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return The maxReplicaDelayForDistributedQueries.
      */
     com.google.protobuf.Int64Value getMaxReplicaDelayForDistributedQueries();
     /**
@@ -4744,6 +4876,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
+     * @return Whether the fallbackToStaleReplicasForDistributedQueries field is set.
      */
     boolean hasFallbackToStaleReplicasForDistributedQueries();
     /**
@@ -4756,6 +4889,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
+     * @return The fallbackToStaleReplicasForDistributedQueries.
      */
     com.google.protobuf.BoolValue getFallbackToStaleReplicasForDistributedQueries();
     /**
@@ -4781,6 +4915,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return Whether the replicationAlterPartitionsSync field is set.
      */
     boolean hasReplicationAlterPartitionsSync();
     /**
@@ -4793,6 +4928,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return The replicationAlterPartitionsSync.
      */
     com.google.protobuf.Int64Value getReplicationAlterPartitionsSync();
     /**
@@ -4815,6 +4951,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+     * @return The enum numeric value on the wire for distributedProductMode.
      */
     int getDistributedProductModeValue();
     /**
@@ -4824,6 +4961,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+     * @return The distributedProductMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode getDistributedProductMode();
 
@@ -4837,6 +4975,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
+     * @return Whether the distributedAggregationMemoryEfficient field is set.
      */
     boolean hasDistributedAggregationMemoryEfficient();
     /**
@@ -4849,6 +4988,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
+     * @return The distributedAggregationMemoryEfficient.
      */
     com.google.protobuf.BoolValue getDistributedAggregationMemoryEfficient();
     /**
@@ -4870,6 +5010,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
+     * @return Whether the distributedDdlTaskTimeout field is set.
      */
     boolean hasDistributedDdlTaskTimeout();
     /**
@@ -4878,6 +5019,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
+     * @return The distributedDdlTaskTimeout.
      */
     com.google.protobuf.Int64Value getDistributedDdlTaskTimeout();
     /**
@@ -4898,6 +5040,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     * @return Whether the skipUnavailableShards field is set.
      */
     boolean hasSkipUnavailableShards();
     /**
@@ -4909,6 +5052,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     * @return The skipUnavailableShards.
      */
     com.google.protobuf.BoolValue getSkipUnavailableShards();
     /**
@@ -4934,6 +5078,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
+     * @return Whether the compile field is set.
      */
     boolean hasCompile();
     /**
@@ -4947,6 +5092,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
+     * @return The compile.
      */
     com.google.protobuf.BoolValue getCompile();
     /**
@@ -4975,6 +5121,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minCountToCompile field is set.
      */
     boolean hasMinCountToCompile();
     /**
@@ -4989,6 +5136,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minCountToCompile.
      */
     com.google.protobuf.Int64Value getMinCountToCompile();
     /**
@@ -5016,6 +5164,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
+     * @return Whether the compileExpressions field is set.
      */
     boolean hasCompileExpressions();
     /**
@@ -5028,6 +5177,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
+     * @return The compileExpressions.
      */
     com.google.protobuf.BoolValue getCompileExpressions();
     /**
@@ -5054,6 +5204,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minCountToCompileExpression field is set.
      */
     boolean hasMinCountToCompileExpression();
     /**
@@ -5067,6 +5218,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minCountToCompileExpression.
      */
     com.google.protobuf.Int64Value getMinCountToCompileExpression();
     /**
@@ -5094,6 +5246,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxBlockSize field is set.
      */
     boolean hasMaxBlockSize();
     /**
@@ -5107,6 +5260,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxBlockSize.
      */
     com.google.protobuf.Int64Value getMaxBlockSize();
     /**
@@ -5131,6 +5285,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minInsertBlockSizeRows field is set.
      */
     boolean hasMinInsertBlockSizeRows();
     /**
@@ -5141,6 +5296,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minInsertBlockSizeRows.
      */
     com.google.protobuf.Int64Value getMinInsertBlockSizeRows();
     /**
@@ -5162,6 +5318,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minInsertBlockSizeBytes field is set.
      */
     boolean hasMinInsertBlockSizeBytes();
     /**
@@ -5172,6 +5329,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minInsertBlockSizeBytes.
      */
     com.google.protobuf.Int64Value getMinInsertBlockSizeBytes();
     /**
@@ -5194,6 +5352,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxInsertBlockSize field is set.
      */
     boolean hasMaxInsertBlockSize();
     /**
@@ -5205,6 +5364,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxInsertBlockSize.
      */
     com.google.protobuf.Int64Value getMaxInsertBlockSize();
     /**
@@ -5230,6 +5390,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minBytesToUseDirectIo field is set.
      */
     boolean hasMinBytesToUseDirectIo();
     /**
@@ -5243,6 +5404,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minBytesToUseDirectIo.
      */
     com.google.protobuf.Int64Value getMinBytesToUseDirectIo();
     /**
@@ -5270,6 +5432,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
+     * @return Whether the useUncompressedCache field is set.
      */
     boolean hasUseUncompressedCache();
     /**
@@ -5283,6 +5446,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
+     * @return The useUncompressedCache.
      */
     com.google.protobuf.BoolValue getUseUncompressedCache();
     /**
@@ -5308,6 +5472,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMaxRowsToUseCache field is set.
      */
     boolean hasMergeTreeMaxRowsToUseCache();
     /**
@@ -5319,6 +5484,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMaxRowsToUseCache.
      */
     com.google.protobuf.Int64Value getMergeTreeMaxRowsToUseCache();
     /**
@@ -5342,6 +5508,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMaxBytesToUseCache field is set.
      */
     boolean hasMergeTreeMaxBytesToUseCache();
     /**
@@ -5353,6 +5520,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMaxBytesToUseCache.
      */
     com.google.protobuf.Int64Value getMergeTreeMaxBytesToUseCache();
     /**
@@ -5376,6 +5544,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMinRowsForConcurrentRead field is set.
      */
     boolean hasMergeTreeMinRowsForConcurrentRead();
     /**
@@ -5387,6 +5556,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMinRowsForConcurrentRead.
      */
     com.google.protobuf.Int64Value getMergeTreeMinRowsForConcurrentRead();
     /**
@@ -5410,6 +5580,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMinBytesForConcurrentRead field is set.
      */
     boolean hasMergeTreeMinBytesForConcurrentRead();
     /**
@@ -5421,6 +5592,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMinBytesForConcurrentRead.
      */
     com.google.protobuf.Int64Value getMergeTreeMinBytesForConcurrentRead();
     /**
@@ -5448,6 +5620,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
+     * @return Whether the maxBytesBeforeExternalGroupBy field is set.
      */
     boolean hasMaxBytesBeforeExternalGroupBy();
     /**
@@ -5463,6 +5636,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
+     * @return The maxBytesBeforeExternalGroupBy.
      */
     com.google.protobuf.Int64Value getMaxBytesBeforeExternalGroupBy();
     /**
@@ -5487,6 +5661,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
+     * @return Whether the maxBytesBeforeExternalSort field is set.
      */
     boolean hasMaxBytesBeforeExternalSort();
     /**
@@ -5495,6 +5670,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
+     * @return The maxBytesBeforeExternalSort.
      */
     com.google.protobuf.Int64Value getMaxBytesBeforeExternalSort();
     /**
@@ -5513,6 +5689,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
+     * @return Whether the groupByTwoLevelThreshold field is set.
      */
     boolean hasGroupByTwoLevelThreshold();
     /**
@@ -5522,6 +5699,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
+     * @return The groupByTwoLevelThreshold.
      */
     com.google.protobuf.Int64Value getGroupByTwoLevelThreshold();
     /**
@@ -5541,6 +5719,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
+     * @return Whether the groupByTwoLevelThresholdBytes field is set.
      */
     boolean hasGroupByTwoLevelThresholdBytes();
     /**
@@ -5550,6 +5729,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
+     * @return The groupByTwoLevelThresholdBytes.
      */
     com.google.protobuf.Int64Value getGroupByTwoLevelThresholdBytes();
     /**
@@ -5574,6 +5754,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the priority field is set.
      */
     boolean hasPriority();
     /**
@@ -5588,6 +5769,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The priority.
      */
     com.google.protobuf.Int64Value getPriority();
     /**
@@ -5614,6 +5796,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxThreads field is set.
      */
     boolean hasMaxThreads();
     /**
@@ -5625,6 +5808,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxThreads.
      */
     com.google.protobuf.Int64Value getMaxThreads();
     /**
@@ -5651,6 +5835,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxMemoryUsage field is set.
      */
     boolean hasMaxMemoryUsage();
     /**
@@ -5665,6 +5850,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxMemoryUsage.
      */
     com.google.protobuf.Int64Value getMaxMemoryUsage();
     /**
@@ -5691,6 +5877,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxMemoryUsageForUser field is set.
      */
     boolean hasMaxMemoryUsageForUser();
     /**
@@ -5702,6 +5889,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxMemoryUsageForUser.
      */
     com.google.protobuf.Int64Value getMaxMemoryUsageForUser();
     /**
@@ -5723,6 +5911,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
+     * @return Whether the maxNetworkBandwidth field is set.
      */
     boolean hasMaxNetworkBandwidth();
     /**
@@ -5732,6 +5921,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
+     * @return The maxNetworkBandwidth.
      */
     com.google.protobuf.Int64Value getMaxNetworkBandwidth();
     /**
@@ -5751,6 +5941,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
+     * @return Whether the maxNetworkBandwidthForUser field is set.
      */
     boolean hasMaxNetworkBandwidthForUser();
     /**
@@ -5760,6 +5951,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
+     * @return The maxNetworkBandwidthForUser.
      */
     com.google.protobuf.Int64Value getMaxNetworkBandwidthForUser();
     /**
@@ -5781,6 +5973,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
+     * @return Whether the forceIndexByDate field is set.
      */
     boolean hasForceIndexByDate();
     /**
@@ -5792,6 +5985,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
+     * @return The forceIndexByDate.
      */
     com.google.protobuf.BoolValue getForceIndexByDate();
     /**
@@ -5815,6 +6009,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
+     * @return Whether the forcePrimaryKey field is set.
      */
     boolean hasForcePrimaryKey();
     /**
@@ -5826,6 +6021,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
+     * @return The forcePrimaryKey.
      */
     com.google.protobuf.BoolValue getForcePrimaryKey();
     /**
@@ -5848,6 +6044,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToRead field is set.
      */
     boolean hasMaxRowsToRead();
     /**
@@ -5858,6 +6055,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToRead.
      */
     com.google.protobuf.Int64Value getMaxRowsToRead();
     /**
@@ -5878,6 +6076,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesToRead field is set.
      */
     boolean hasMaxBytesToRead();
     /**
@@ -5887,6 +6086,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesToRead.
      */
     com.google.protobuf.Int64Value getMaxBytesToRead();
     /**
@@ -5907,6 +6107,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+     * @return The enum numeric value on the wire for readOverflowMode.
      */
     int getReadOverflowModeValue();
     /**
@@ -5917,6 +6118,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+     * @return The readOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getReadOverflowMode();
 
@@ -5928,6 +6130,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToGroupBy field is set.
      */
     boolean hasMaxRowsToGroupBy();
     /**
@@ -5938,6 +6141,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToGroupBy.
      */
     com.google.protobuf.Int64Value getMaxRowsToGroupBy();
     /**
@@ -5960,6 +6164,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+     * @return The enum numeric value on the wire for groupByOverflowMode.
      */
     int getGroupByOverflowModeValue();
     /**
@@ -5971,6 +6176,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+     * @return The groupByOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode getGroupByOverflowMode();
 
@@ -5982,6 +6188,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToSort field is set.
      */
     boolean hasMaxRowsToSort();
     /**
@@ -5992,6 +6199,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToSort.
      */
     com.google.protobuf.Int64Value getMaxRowsToSort();
     /**
@@ -6013,6 +6221,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesToSort field is set.
      */
     boolean hasMaxBytesToSort();
     /**
@@ -6023,6 +6232,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesToSort.
      */
     com.google.protobuf.Int64Value getMaxBytesToSort();
     /**
@@ -6044,6 +6254,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+     * @return The enum numeric value on the wire for sortOverflowMode.
      */
     int getSortOverflowModeValue();
     /**
@@ -6054,6 +6265,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+     * @return The sortOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSortOverflowMode();
 
@@ -6065,6 +6277,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxResultRows field is set.
      */
     boolean hasMaxResultRows();
     /**
@@ -6075,6 +6288,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxResultRows.
      */
     com.google.protobuf.Int64Value getMaxResultRows();
     /**
@@ -6096,6 +6310,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxResultBytes field is set.
      */
     boolean hasMaxResultBytes();
     /**
@@ -6106,6 +6321,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxResultBytes.
      */
     com.google.protobuf.Int64Value getMaxResultBytes();
     /**
@@ -6127,6 +6343,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+     * @return The enum numeric value on the wire for resultOverflowMode.
      */
     int getResultOverflowModeValue();
     /**
@@ -6137,6 +6354,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+     * @return The resultOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getResultOverflowMode();
 
@@ -6147,6 +6365,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsInDistinct field is set.
      */
     boolean hasMaxRowsInDistinct();
     /**
@@ -6156,6 +6375,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsInDistinct.
      */
     com.google.protobuf.Int64Value getMaxRowsInDistinct();
     /**
@@ -6174,6 +6394,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesInDistinct field is set.
      */
     boolean hasMaxBytesInDistinct();
     /**
@@ -6182,6 +6403,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesInDistinct.
      */
     com.google.protobuf.Int64Value getMaxBytesInDistinct();
     /**
@@ -6201,6 +6423,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+     * @return The enum numeric value on the wire for distinctOverflowMode.
      */
     int getDistinctOverflowModeValue();
     /**
@@ -6211,6 +6434,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+     * @return The distinctOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getDistinctOverflowMode();
 
@@ -6221,6 +6445,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToTransfer field is set.
      */
     boolean hasMaxRowsToTransfer();
     /**
@@ -6230,6 +6455,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToTransfer.
      */
     com.google.protobuf.Int64Value getMaxRowsToTransfer();
     /**
@@ -6250,6 +6476,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesToTransfer field is set.
      */
     boolean hasMaxBytesToTransfer();
     /**
@@ -6260,6 +6487,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesToTransfer.
      */
     com.google.protobuf.Int64Value getMaxBytesToTransfer();
     /**
@@ -6281,6 +6509,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+     * @return The enum numeric value on the wire for transferOverflowMode.
      */
     int getTransferOverflowModeValue();
     /**
@@ -6291,6 +6520,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+     * @return The transferOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTransferOverflowMode();
 
@@ -6302,6 +6532,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxExecutionTime field is set.
      */
     boolean hasMaxExecutionTime();
     /**
@@ -6312,6 +6543,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxExecutionTime.
      */
     com.google.protobuf.Int64Value getMaxExecutionTime();
     /**
@@ -6333,6 +6565,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+     * @return The enum numeric value on the wire for timeoutOverflowMode.
      */
     int getTimeoutOverflowModeValue();
     /**
@@ -6343,6 +6576,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+     * @return The timeoutOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTimeoutOverflowMode();
 
@@ -6352,6 +6586,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsInSet field is set.
      */
     boolean hasMaxRowsInSet();
     /**
@@ -6360,6 +6595,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsInSet.
      */
     com.google.protobuf.Int64Value getMaxRowsInSet();
     /**
@@ -6377,6 +6613,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesInSet field is set.
      */
     boolean hasMaxBytesInSet();
     /**
@@ -6385,6 +6622,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesInSet.
      */
     com.google.protobuf.Int64Value getMaxBytesInSet();
     /**
@@ -6403,6 +6641,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     * @return The enum numeric value on the wire for setOverflowMode.
      */
     int getSetOverflowModeValue();
     /**
@@ -6412,6 +6651,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     * @return The setOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode();
 
@@ -6421,6 +6661,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsInJoin field is set.
      */
     boolean hasMaxRowsInJoin();
     /**
@@ -6429,6 +6670,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsInJoin.
      */
     com.google.protobuf.Int64Value getMaxRowsInJoin();
     /**
@@ -6446,6 +6688,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesInJoin field is set.
      */
     boolean hasMaxBytesInJoin();
     /**
@@ -6454,6 +6697,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesInJoin.
      */
     com.google.protobuf.Int64Value getMaxBytesInJoin();
     /**
@@ -6472,6 +6716,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     * @return The enum numeric value on the wire for joinOverflowMode.
      */
     int getJoinOverflowModeValue();
     /**
@@ -6481,6 +6726,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     * @return The joinOverflowMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode();
 
@@ -6492,6 +6738,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxColumnsToRead field is set.
      */
     boolean hasMaxColumnsToRead();
     /**
@@ -6502,6 +6749,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxColumnsToRead.
      */
     com.google.protobuf.Int64Value getMaxColumnsToRead();
     /**
@@ -6522,6 +6770,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryColumns field is set.
      */
     boolean hasMaxTemporaryColumns();
     /**
@@ -6531,6 +6780,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryColumns.
      */
     com.google.protobuf.Int64Value getMaxTemporaryColumns();
     /**
@@ -6550,6 +6800,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryNonConstColumns field is set.
      */
     boolean hasMaxTemporaryNonConstColumns();
     /**
@@ -6559,6 +6810,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryNonConstColumns.
      */
     com.google.protobuf.Int64Value getMaxTemporaryNonConstColumns();
     /**
@@ -6579,6 +6831,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxQuerySize field is set.
      */
     boolean hasMaxQuerySize();
     /**
@@ -6589,6 +6842,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxQuerySize.
      */
     com.google.protobuf.Int64Value getMaxQuerySize();
     /**
@@ -6615,6 +6869,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxAstDepth field is set.
      */
     boolean hasMaxAstDepth();
     /**
@@ -6630,6 +6885,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxAstDepth.
      */
     com.google.protobuf.Int64Value getMaxAstDepth();
     /**
@@ -6659,6 +6915,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxAstElements field is set.
      */
     boolean hasMaxAstElements();
     /**
@@ -6672,6 +6929,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxAstElements.
      */
     com.google.protobuf.Int64Value getMaxAstElements();
     /**
@@ -6698,6 +6956,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxExpandedAstElements field is set.
      */
     boolean hasMaxExpandedAstElements();
     /**
@@ -6710,6 +6969,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxExpandedAstElements.
      */
     com.google.protobuf.Int64Value getMaxExpandedAstElements();
     /**
@@ -6731,6 +6991,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minExecutionSpeed field is set.
      */
     boolean hasMinExecutionSpeed();
     /**
@@ -6739,6 +7000,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minExecutionSpeed.
      */
     com.google.protobuf.Int64Value getMinExecutionSpeed();
     /**
@@ -6756,6 +7018,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minExecutionSpeedBytes field is set.
      */
     boolean hasMinExecutionSpeedBytes();
     /**
@@ -6764,6 +7027,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minExecutionSpeedBytes.
      */
     com.google.protobuf.Int64Value getMinExecutionSpeedBytes();
     /**
@@ -6781,6 +7045,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     * @return The enum numeric value on the wire for countDistinctImplementation.
      */
     int getCountDistinctImplementationValue();
     /**
@@ -6789,6 +7054,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     * @return The countDistinctImplementation.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation();
 
@@ -6804,6 +7070,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
+     * @return Whether the inputFormatValuesInterpretExpressions field is set.
      */
     boolean hasInputFormatValuesInterpretExpressions();
     /**
@@ -6818,6 +7085,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
+     * @return The inputFormatValuesInterpretExpressions.
      */
     com.google.protobuf.BoolValue getInputFormatValuesInterpretExpressions();
     /**
@@ -6842,6 +7110,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
+     * @return Whether the inputFormatDefaultsForOmittedFields field is set.
      */
     boolean hasInputFormatDefaultsForOmittedFields();
     /**
@@ -6851,6 +7120,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
+     * @return The inputFormatDefaultsForOmittedFields.
      */
     com.google.protobuf.BoolValue getInputFormatDefaultsForOmittedFields();
     /**
@@ -6871,7 +7141,8 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * @return Whether the outputFormatJsonQuote64bitIntegers field is set.
      */
     boolean hasOutputFormatJsonQuote64BitIntegers();
     /**
@@ -6882,7 +7153,8 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * @return The outputFormatJsonQuote64bitIntegers.
      */
     com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers();
     /**
@@ -6893,7 +7165,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuote64BitIntegersOrBuilder();
 
@@ -6904,6 +7176,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
+     * @return Whether the outputFormatJsonQuoteDenormals field is set.
      */
     boolean hasOutputFormatJsonQuoteDenormals();
     /**
@@ -6913,6 +7186,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
+     * @return The outputFormatJsonQuoteDenormals.
      */
     com.google.protobuf.BoolValue getOutputFormatJsonQuoteDenormals();
     /**
@@ -6939,6 +7213,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
+     * @return Whether the lowCardinalityAllowInNativeFormat field is set.
      */
     boolean hasLowCardinalityAllowInNativeFormat();
     /**
@@ -6955,6 +7230,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
+     * @return The lowCardinalityAllowInNativeFormat.
      */
     com.google.protobuf.BoolValue getLowCardinalityAllowInNativeFormat();
     /**
@@ -6982,6 +7258,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
+     * @return Whether the emptyResultForAggregationByEmptySet field is set.
      */
     boolean hasEmptyResultForAggregationByEmptySet();
     /**
@@ -6992,6 +7269,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
+     * @return The emptyResultForAggregationByEmptySet.
      */
     com.google.protobuf.BoolValue getEmptyResultForAggregationByEmptySet();
     /**
@@ -7007,10 +7285,12 @@ public final class UserOuterClass {
 
     /**
      * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return Whether the joinedSubqueryRequiresAlias field is set.
      */
     boolean hasJoinedSubqueryRequiresAlias();
     /**
      * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return The joinedSubqueryRequiresAlias.
      */
     com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias();
     /**
@@ -7020,10 +7300,12 @@ public final class UserOuterClass {
 
     /**
      * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return Whether the joinUseNulls field is set.
      */
     boolean hasJoinUseNulls();
     /**
      * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return The joinUseNulls.
      */
     com.google.protobuf.BoolValue getJoinUseNulls();
     /**
@@ -7033,10 +7315,12 @@ public final class UserOuterClass {
 
     /**
      * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return Whether the transformNullIn field is set.
      */
     boolean hasTransformNullIn();
     /**
      * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return The transformNullIn.
      */
     com.google.protobuf.BoolValue getTransformNullIn();
     /**
@@ -7051,6 +7335,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
+     * @return Whether the httpConnectionTimeout field is set.
      */
     boolean hasHttpConnectionTimeout();
     /**
@@ -7060,6 +7345,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
+     * @return The httpConnectionTimeout.
      */
     com.google.protobuf.Int64Value getHttpConnectionTimeout();
     /**
@@ -7079,6 +7365,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
+     * @return Whether the httpReceiveTimeout field is set.
      */
     boolean hasHttpReceiveTimeout();
     /**
@@ -7088,6 +7375,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
+     * @return The httpReceiveTimeout.
      */
     com.google.protobuf.Int64Value getHttpReceiveTimeout();
     /**
@@ -7107,6 +7395,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
+     * @return Whether the httpSendTimeout field is set.
      */
     boolean hasHttpSendTimeout();
     /**
@@ -7116,6 +7405,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
+     * @return The httpSendTimeout.
      */
     com.google.protobuf.Int64Value getHttpSendTimeout();
     /**
@@ -7140,6 +7430,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
+     * @return Whether the enableHttpCompression field is set.
      */
     boolean hasEnableHttpCompression();
     /**
@@ -7154,6 +7445,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
+     * @return The enableHttpCompression.
      */
     com.google.protobuf.BoolValue getEnableHttpCompression();
     /**
@@ -7178,6 +7470,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
+     * @return Whether the sendProgressInHttpHeaders field is set.
      */
     boolean hasSendProgressInHttpHeaders();
     /**
@@ -7187,6 +7480,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
+     * @return The sendProgressInHttpHeaders.
      */
     com.google.protobuf.BoolValue getSendProgressInHttpHeaders();
     /**
@@ -7206,6 +7500,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
+     * @return Whether the httpHeadersProgressInterval field is set.
      */
     boolean hasHttpHeadersProgressInterval();
     /**
@@ -7215,6 +7510,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
+     * @return The httpHeadersProgressInterval.
      */
     com.google.protobuf.Int64Value getHttpHeadersProgressInterval();
     /**
@@ -7234,6 +7530,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
+     * @return Whether the addHttpCorsHeader field is set.
      */
     boolean hasAddHttpCorsHeader();
     /**
@@ -7243,6 +7540,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
+     * @return The addHttpCorsHeader.
      */
     com.google.protobuf.BoolValue getAddHttpCorsHeader();
     /**
@@ -7261,6 +7559,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     * @return The enum numeric value on the wire for quotaMode.
      */
     int getQuotaModeValue();
     /**
@@ -7269,6 +7568,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     * @return The quotaMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode();
   }
@@ -7280,7 +7580,7 @@ public final class UserOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserSettings}
    */
-  public  static final class UserSettings extends
+  public static final class UserSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UserSettings)
       UserSettingsOrBuilder {
@@ -7305,6 +7605,13 @@ public final class UserOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserSettings();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -7317,9 +7624,6 @@ public final class UserOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
-      int mutable_bitField1_ = 0;
-      int mutable_bitField2_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8456,7 +8760,7 @@ public final class UserOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8530,6 +8834,8 @@ public final class UserOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8537,6 +8843,10 @@ public final class UserOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static OverflowMode forNumber(int value) {
         switch (value) {
           case 0: return OVERFLOW_MODE_UNSPECIFIED;
@@ -8560,6 +8870,10 @@ public final class UserOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8645,6 +8959,8 @@ public final class UserOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8652,6 +8968,10 @@ public final class UserOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static GroupByOverflowMode forNumber(int value) {
         switch (value) {
           case 0: return GROUP_BY_OVERFLOW_MODE_UNSPECIFIED;
@@ -8676,6 +8996,10 @@ public final class UserOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8801,6 +9125,8 @@ public final class UserOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8808,6 +9134,10 @@ public final class UserOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static DistributedProductMode forNumber(int value) {
         switch (value) {
           case 0: return DISTRIBUTED_PRODUCT_MODE_UNSPECIFIED;
@@ -8833,6 +9163,10 @@ public final class UserOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -8918,6 +9252,8 @@ public final class UserOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8925,6 +9261,10 @@ public final class UserOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static QuotaMode forNumber(int value) {
         switch (value) {
           case 0: return QUOTA_MODE_UNSPECIFIED;
@@ -8949,6 +9289,10 @@ public final class UserOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -9050,6 +9394,8 @@ public final class UserOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -9057,6 +9403,10 @@ public final class UserOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static CountDistinctImplementation forNumber(int value) {
         switch (value) {
           case 0: return COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED;
@@ -9083,6 +9433,10 @@ public final class UserOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -9129,7 +9483,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return Whether the readonly field is set.
      */
+    @java.lang.Override
     public boolean hasReadonly() {
       return readonly_ != null;
     }
@@ -9143,7 +9499,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return The readonly.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReadonly() {
       return readonly_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readonly_;
     }
@@ -9158,6 +9516,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReadonlyOrBuilder() {
       return getReadonly();
     }
@@ -9172,7 +9531,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
+     * @return Whether the allowDdl field is set.
      */
+    @java.lang.Override
     public boolean hasAllowDdl() {
       return allowDdl_ != null;
     }
@@ -9184,7 +9545,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
+     * @return The allowDdl.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getAllowDdl() {
       return allowDdl_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowDdl_;
     }
@@ -9197,6 +9560,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getAllowDdlOrBuilder() {
       return getAllowDdl();
     }
@@ -9215,7 +9579,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the insertQuorum field is set.
      */
+    @java.lang.Override
     public boolean hasInsertQuorum() {
       return insertQuorum_ != null;
     }
@@ -9231,7 +9597,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The insertQuorum.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInsertQuorum() {
       return insertQuorum_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
     }
@@ -9248,6 +9616,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder() {
       return getInsertQuorum();
     }
@@ -9261,7 +9630,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the connectTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasConnectTimeout() {
       return connectTimeout_ != null;
     }
@@ -9272,7 +9643,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The connectTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getConnectTimeout() {
       return connectTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : connectTimeout_;
     }
@@ -9284,6 +9657,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getConnectTimeoutOrBuilder() {
       return getConnectTimeout();
     }
@@ -9297,7 +9671,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the receiveTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasReceiveTimeout() {
       return receiveTimeout_ != null;
     }
@@ -9308,7 +9684,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The receiveTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReceiveTimeout() {
       return receiveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : receiveTimeout_;
     }
@@ -9320,6 +9698,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReceiveTimeoutOrBuilder() {
       return getReceiveTimeout();
     }
@@ -9333,7 +9712,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the sendTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasSendTimeout() {
       return sendTimeout_ != null;
     }
@@ -9344,7 +9725,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The sendTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSendTimeout() {
       return sendTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sendTimeout_;
     }
@@ -9356,6 +9739,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSendTimeoutOrBuilder() {
       return getSendTimeout();
     }
@@ -9371,7 +9755,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return Whether the insertQuorumTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasInsertQuorumTimeout() {
       return insertQuorumTimeout_ != null;
     }
@@ -9384,7 +9770,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return The insertQuorumTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInsertQuorumTimeout() {
       return insertQuorumTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorumTimeout_;
     }
@@ -9398,6 +9786,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInsertQuorumTimeoutOrBuilder() {
       return getInsertQuorumTimeout();
     }
@@ -9411,7 +9800,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
+     * @return Whether the selectSequentialConsistency field is set.
      */
+    @java.lang.Override
     public boolean hasSelectSequentialConsistency() {
       return selectSequentialConsistency_ != null;
     }
@@ -9422,7 +9813,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
+     * @return The selectSequentialConsistency.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getSelectSequentialConsistency() {
       return selectSequentialConsistency_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectSequentialConsistency_;
     }
@@ -9434,6 +9827,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSelectSequentialConsistencyOrBuilder() {
       return getSelectSequentialConsistency();
     }
@@ -9448,7 +9842,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return Whether the maxReplicaDelayForDistributedQueries field is set.
      */
+    @java.lang.Override
     public boolean hasMaxReplicaDelayForDistributedQueries() {
       return maxReplicaDelayForDistributedQueries_ != null;
     }
@@ -9460,7 +9856,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return The maxReplicaDelayForDistributedQueries.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxReplicaDelayForDistributedQueries() {
       return maxReplicaDelayForDistributedQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxReplicaDelayForDistributedQueries_;
     }
@@ -9473,6 +9871,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxReplicaDelayForDistributedQueriesOrBuilder() {
       return getMaxReplicaDelayForDistributedQueries();
     }
@@ -9489,7 +9888,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
+     * @return Whether the fallbackToStaleReplicasForDistributedQueries field is set.
      */
+    @java.lang.Override
     public boolean hasFallbackToStaleReplicasForDistributedQueries() {
       return fallbackToStaleReplicasForDistributedQueries_ != null;
     }
@@ -9503,7 +9904,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
+     * @return The fallbackToStaleReplicasForDistributedQueries.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getFallbackToStaleReplicasForDistributedQueries() {
       return fallbackToStaleReplicasForDistributedQueries_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fallbackToStaleReplicasForDistributedQueries_;
     }
@@ -9518,6 +9921,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getFallbackToStaleReplicasForDistributedQueriesOrBuilder() {
       return getFallbackToStaleReplicasForDistributedQueries();
     }
@@ -9534,7 +9938,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return Whether the replicationAlterPartitionsSync field is set.
      */
+    @java.lang.Override
     public boolean hasReplicationAlterPartitionsSync() {
       return replicationAlterPartitionsSync_ != null;
     }
@@ -9548,7 +9954,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return The replicationAlterPartitionsSync.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReplicationAlterPartitionsSync() {
       return replicationAlterPartitionsSync_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
     }
@@ -9563,6 +9971,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder() {
       return getReplicationAlterPartitionsSync();
     }
@@ -9576,8 +9985,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+     * @return The enum numeric value on the wire for distributedProductMode.
      */
-    public int getDistributedProductModeValue() {
+    @java.lang.Override public int getDistributedProductModeValue() {
       return distributedProductMode_;
     }
     /**
@@ -9587,8 +9997,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+     * @return The distributedProductMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode getDistributedProductMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode getDistributedProductMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode.valueOf(distributedProductMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode.UNRECOGNIZED : result;
@@ -9606,7 +10017,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
+     * @return Whether the distributedAggregationMemoryEfficient field is set.
      */
+    @java.lang.Override
     public boolean hasDistributedAggregationMemoryEfficient() {
       return distributedAggregationMemoryEfficient_ != null;
     }
@@ -9620,7 +10033,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
+     * @return The distributedAggregationMemoryEfficient.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getDistributedAggregationMemoryEfficient() {
       return distributedAggregationMemoryEfficient_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : distributedAggregationMemoryEfficient_;
     }
@@ -9635,6 +10050,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getDistributedAggregationMemoryEfficientOrBuilder() {
       return getDistributedAggregationMemoryEfficient();
     }
@@ -9647,7 +10063,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
+     * @return Whether the distributedDdlTaskTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasDistributedDdlTaskTimeout() {
       return distributedDdlTaskTimeout_ != null;
     }
@@ -9657,7 +10075,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
+     * @return The distributedDdlTaskTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getDistributedDdlTaskTimeout() {
       return distributedDdlTaskTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : distributedDdlTaskTimeout_;
     }
@@ -9668,6 +10088,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDistributedDdlTaskTimeoutOrBuilder() {
       return getDistributedDdlTaskTimeout();
     }
@@ -9683,7 +10104,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     * @return Whether the skipUnavailableShards field is set.
      */
+    @java.lang.Override
     public boolean hasSkipUnavailableShards() {
       return skipUnavailableShards_ != null;
     }
@@ -9696,7 +10119,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     * @return The skipUnavailableShards.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getSkipUnavailableShards() {
       return skipUnavailableShards_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : skipUnavailableShards_;
     }
@@ -9710,6 +10135,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSkipUnavailableShardsOrBuilder() {
       return getSkipUnavailableShards();
     }
@@ -9727,7 +10153,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
+     * @return Whether the compile field is set.
      */
+    @java.lang.Override
     public boolean hasCompile() {
       return compile_ != null;
     }
@@ -9742,7 +10170,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
+     * @return The compile.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getCompile() {
       return compile_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
     }
@@ -9758,6 +10188,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder() {
       return getCompile();
     }
@@ -9776,7 +10207,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minCountToCompile field is set.
      */
+    @java.lang.Override
     public boolean hasMinCountToCompile() {
       return minCountToCompile_ != null;
     }
@@ -9792,7 +10225,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minCountToCompile.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinCountToCompile() {
       return minCountToCompile_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
     }
@@ -9809,6 +10244,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder() {
       return getMinCountToCompile();
     }
@@ -9825,7 +10261,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
+     * @return Whether the compileExpressions field is set.
      */
+    @java.lang.Override
     public boolean hasCompileExpressions() {
       return compileExpressions_ != null;
     }
@@ -9839,7 +10277,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
+     * @return The compileExpressions.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getCompileExpressions() {
       return compileExpressions_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : compileExpressions_;
     }
@@ -9854,6 +10294,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getCompileExpressionsOrBuilder() {
       return getCompileExpressions();
     }
@@ -9871,7 +10312,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minCountToCompileExpression field is set.
      */
+    @java.lang.Override
     public boolean hasMinCountToCompileExpression() {
       return minCountToCompileExpression_ != null;
     }
@@ -9886,7 +10329,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minCountToCompileExpression.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinCountToCompileExpression() {
       return minCountToCompileExpression_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompileExpression_;
     }
@@ -9902,6 +10347,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileExpressionOrBuilder() {
       return getMinCountToCompileExpression();
     }
@@ -9919,7 +10365,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxBlockSize field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBlockSize() {
       return maxBlockSize_ != null;
     }
@@ -9934,7 +10382,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxBlockSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBlockSize() {
       return maxBlockSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBlockSize_;
     }
@@ -9950,6 +10400,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBlockSizeOrBuilder() {
       return getMaxBlockSize();
     }
@@ -9964,7 +10415,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minInsertBlockSizeRows field is set.
      */
+    @java.lang.Override
     public boolean hasMinInsertBlockSizeRows() {
       return minInsertBlockSizeRows_ != null;
     }
@@ -9976,7 +10429,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minInsertBlockSizeRows.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinInsertBlockSizeRows() {
       return minInsertBlockSizeRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsertBlockSizeRows_;
     }
@@ -9989,6 +10444,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinInsertBlockSizeRowsOrBuilder() {
       return getMinInsertBlockSizeRows();
     }
@@ -10003,7 +10459,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minInsertBlockSizeBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMinInsertBlockSizeBytes() {
       return minInsertBlockSizeBytes_ != null;
     }
@@ -10015,7 +10473,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minInsertBlockSizeBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinInsertBlockSizeBytes() {
       return minInsertBlockSizeBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsertBlockSizeBytes_;
     }
@@ -10028,6 +10488,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinInsertBlockSizeBytesOrBuilder() {
       return getMinInsertBlockSizeBytes();
     }
@@ -10043,7 +10504,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxInsertBlockSize field is set.
      */
+    @java.lang.Override
     public boolean hasMaxInsertBlockSize() {
       return maxInsertBlockSize_ != null;
     }
@@ -10056,7 +10519,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxInsertBlockSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxInsertBlockSize() {
       return maxInsertBlockSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxInsertBlockSize_;
     }
@@ -10070,6 +10535,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxInsertBlockSizeOrBuilder() {
       return getMaxInsertBlockSize();
     }
@@ -10087,7 +10553,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minBytesToUseDirectIo field is set.
      */
+    @java.lang.Override
     public boolean hasMinBytesToUseDirectIo() {
       return minBytesToUseDirectIo_ != null;
     }
@@ -10102,7 +10570,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minBytesToUseDirectIo.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinBytesToUseDirectIo() {
       return minBytesToUseDirectIo_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minBytesToUseDirectIo_;
     }
@@ -10118,6 +10588,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinBytesToUseDirectIoOrBuilder() {
       return getMinBytesToUseDirectIo();
     }
@@ -10135,7 +10606,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
+     * @return Whether the useUncompressedCache field is set.
      */
+    @java.lang.Override
     public boolean hasUseUncompressedCache() {
       return useUncompressedCache_ != null;
     }
@@ -10150,7 +10623,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
+     * @return The useUncompressedCache.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getUseUncompressedCache() {
       return useUncompressedCache_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useUncompressedCache_;
     }
@@ -10166,6 +10641,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getUseUncompressedCacheOrBuilder() {
       return getUseUncompressedCache();
     }
@@ -10181,7 +10657,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMaxRowsToUseCache field is set.
      */
+    @java.lang.Override
     public boolean hasMergeTreeMaxRowsToUseCache() {
       return mergeTreeMaxRowsToUseCache_ != null;
     }
@@ -10194,7 +10672,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMaxRowsToUseCache.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMergeTreeMaxRowsToUseCache() {
       return mergeTreeMaxRowsToUseCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeTreeMaxRowsToUseCache_;
     }
@@ -10208,6 +10688,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMergeTreeMaxRowsToUseCacheOrBuilder() {
       return getMergeTreeMaxRowsToUseCache();
     }
@@ -10223,7 +10704,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMaxBytesToUseCache field is set.
      */
+    @java.lang.Override
     public boolean hasMergeTreeMaxBytesToUseCache() {
       return mergeTreeMaxBytesToUseCache_ != null;
     }
@@ -10236,7 +10719,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMaxBytesToUseCache.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMergeTreeMaxBytesToUseCache() {
       return mergeTreeMaxBytesToUseCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeTreeMaxBytesToUseCache_;
     }
@@ -10250,6 +10735,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMergeTreeMaxBytesToUseCacheOrBuilder() {
       return getMergeTreeMaxBytesToUseCache();
     }
@@ -10265,7 +10751,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMinRowsForConcurrentRead field is set.
      */
+    @java.lang.Override
     public boolean hasMergeTreeMinRowsForConcurrentRead() {
       return mergeTreeMinRowsForConcurrentRead_ != null;
     }
@@ -10278,7 +10766,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMinRowsForConcurrentRead.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMergeTreeMinRowsForConcurrentRead() {
       return mergeTreeMinRowsForConcurrentRead_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeTreeMinRowsForConcurrentRead_;
     }
@@ -10292,6 +10782,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMergeTreeMinRowsForConcurrentReadOrBuilder() {
       return getMergeTreeMinRowsForConcurrentRead();
     }
@@ -10307,7 +10798,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the mergeTreeMinBytesForConcurrentRead field is set.
      */
+    @java.lang.Override
     public boolean hasMergeTreeMinBytesForConcurrentRead() {
       return mergeTreeMinBytesForConcurrentRead_ != null;
     }
@@ -10320,7 +10813,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The mergeTreeMinBytesForConcurrentRead.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMergeTreeMinBytesForConcurrentRead() {
       return mergeTreeMinBytesForConcurrentRead_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeTreeMinBytesForConcurrentRead_;
     }
@@ -10334,6 +10829,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMergeTreeMinBytesForConcurrentReadOrBuilder() {
       return getMergeTreeMinBytesForConcurrentRead();
     }
@@ -10353,7 +10849,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
+     * @return Whether the maxBytesBeforeExternalGroupBy field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesBeforeExternalGroupBy() {
       return maxBytesBeforeExternalGroupBy_ != null;
     }
@@ -10370,7 +10868,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
+     * @return The maxBytesBeforeExternalGroupBy.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesBeforeExternalGroupBy() {
       return maxBytesBeforeExternalGroupBy_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesBeforeExternalGroupBy_;
     }
@@ -10388,6 +10888,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalGroupByOrBuilder() {
       return getMaxBytesBeforeExternalGroupBy();
     }
@@ -10400,7 +10901,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
+     * @return Whether the maxBytesBeforeExternalSort field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesBeforeExternalSort() {
       return maxBytesBeforeExternalSort_ != null;
     }
@@ -10410,7 +10913,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
+     * @return The maxBytesBeforeExternalSort.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesBeforeExternalSort() {
       return maxBytesBeforeExternalSort_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesBeforeExternalSort_;
     }
@@ -10421,6 +10926,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalSortOrBuilder() {
       return getMaxBytesBeforeExternalSort();
     }
@@ -10434,7 +10940,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
+     * @return Whether the groupByTwoLevelThreshold field is set.
      */
+    @java.lang.Override
     public boolean hasGroupByTwoLevelThreshold() {
       return groupByTwoLevelThreshold_ != null;
     }
@@ -10445,7 +10953,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
+     * @return The groupByTwoLevelThreshold.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGroupByTwoLevelThreshold() {
       return groupByTwoLevelThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : groupByTwoLevelThreshold_;
     }
@@ -10457,6 +10967,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdOrBuilder() {
       return getGroupByTwoLevelThreshold();
     }
@@ -10470,7 +10981,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
+     * @return Whether the groupByTwoLevelThresholdBytes field is set.
      */
+    @java.lang.Override
     public boolean hasGroupByTwoLevelThresholdBytes() {
       return groupByTwoLevelThresholdBytes_ != null;
     }
@@ -10481,7 +10994,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
+     * @return The groupByTwoLevelThresholdBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGroupByTwoLevelThresholdBytes() {
       return groupByTwoLevelThresholdBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : groupByTwoLevelThresholdBytes_;
     }
@@ -10493,6 +11008,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdBytesOrBuilder() {
       return getGroupByTwoLevelThresholdBytes();
     }
@@ -10511,7 +11027,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the priority field is set.
      */
+    @java.lang.Override
     public boolean hasPriority() {
       return priority_ != null;
     }
@@ -10527,7 +11045,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The priority.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getPriority() {
       return priority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : priority_;
     }
@@ -10544,6 +11064,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPriorityOrBuilder() {
       return getPriority();
     }
@@ -10559,7 +11080,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxThreads field is set.
      */
+    @java.lang.Override
     public boolean hasMaxThreads() {
       return maxThreads_ != null;
     }
@@ -10572,7 +11095,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxThreads.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxThreads() {
       return maxThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxThreads_;
     }
@@ -10586,6 +11111,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxThreadsOrBuilder() {
       return getMaxThreads();
     }
@@ -10604,7 +11130,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxMemoryUsage field is set.
      */
+    @java.lang.Override
     public boolean hasMaxMemoryUsage() {
       return maxMemoryUsage_ != null;
     }
@@ -10620,7 +11148,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxMemoryUsage.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxMemoryUsage() {
       return maxMemoryUsage_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMemoryUsage_;
     }
@@ -10637,6 +11167,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxMemoryUsageOrBuilder() {
       return getMaxMemoryUsage();
     }
@@ -10652,7 +11183,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxMemoryUsageForUser field is set.
      */
+    @java.lang.Override
     public boolean hasMaxMemoryUsageForUser() {
       return maxMemoryUsageForUser_ != null;
     }
@@ -10665,7 +11198,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxMemoryUsageForUser.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxMemoryUsageForUser() {
       return maxMemoryUsageForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMemoryUsageForUser_;
     }
@@ -10679,6 +11214,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxMemoryUsageForUserOrBuilder() {
       return getMaxMemoryUsageForUser();
     }
@@ -10692,7 +11228,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
+     * @return Whether the maxNetworkBandwidth field is set.
      */
+    @java.lang.Override
     public boolean hasMaxNetworkBandwidth() {
       return maxNetworkBandwidth_ != null;
     }
@@ -10703,7 +11241,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
+     * @return The maxNetworkBandwidth.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxNetworkBandwidth() {
       return maxNetworkBandwidth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxNetworkBandwidth_;
     }
@@ -10715,6 +11255,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxNetworkBandwidthOrBuilder() {
       return getMaxNetworkBandwidth();
     }
@@ -10728,7 +11269,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
+     * @return Whether the maxNetworkBandwidthForUser field is set.
      */
+    @java.lang.Override
     public boolean hasMaxNetworkBandwidthForUser() {
       return maxNetworkBandwidthForUser_ != null;
     }
@@ -10739,7 +11282,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
+     * @return The maxNetworkBandwidthForUser.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxNetworkBandwidthForUser() {
       return maxNetworkBandwidthForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxNetworkBandwidthForUser_;
     }
@@ -10751,6 +11296,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxNetworkBandwidthForUserOrBuilder() {
       return getMaxNetworkBandwidthForUser();
     }
@@ -10766,7 +11312,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
+     * @return Whether the forceIndexByDate field is set.
      */
+    @java.lang.Override
     public boolean hasForceIndexByDate() {
       return forceIndexByDate_ != null;
     }
@@ -10779,7 +11327,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
+     * @return The forceIndexByDate.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getForceIndexByDate() {
       return forceIndexByDate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : forceIndexByDate_;
     }
@@ -10793,6 +11343,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getForceIndexByDateOrBuilder() {
       return getForceIndexByDate();
     }
@@ -10808,7 +11359,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
+     * @return Whether the forcePrimaryKey field is set.
      */
+    @java.lang.Override
     public boolean hasForcePrimaryKey() {
       return forcePrimaryKey_ != null;
     }
@@ -10821,7 +11374,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
+     * @return The forcePrimaryKey.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getForcePrimaryKey() {
       return forcePrimaryKey_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : forcePrimaryKey_;
     }
@@ -10835,6 +11390,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getForcePrimaryKeyOrBuilder() {
       return getForcePrimaryKey();
     }
@@ -10849,7 +11405,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToRead field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsToRead() {
       return maxRowsToRead_ != null;
     }
@@ -10861,7 +11419,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToRead.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsToRead() {
       return maxRowsToRead_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsToRead_;
     }
@@ -10874,6 +11434,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsToReadOrBuilder() {
       return getMaxRowsToRead();
     }
@@ -10887,7 +11448,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesToRead field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesToRead() {
       return maxBytesToRead_ != null;
     }
@@ -10898,7 +11461,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesToRead.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesToRead() {
       return maxBytesToRead_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToRead_;
     }
@@ -10910,6 +11475,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToReadOrBuilder() {
       return getMaxBytesToRead();
     }
@@ -10924,8 +11490,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+     * @return The enum numeric value on the wire for readOverflowMode.
      */
-    public int getReadOverflowModeValue() {
+    @java.lang.Override public int getReadOverflowModeValue() {
       return readOverflowMode_;
     }
     /**
@@ -10936,8 +11503,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+     * @return The readOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getReadOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getReadOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(readOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -10953,7 +11521,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToGroupBy field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsToGroupBy() {
       return maxRowsToGroupBy_ != null;
     }
@@ -10965,7 +11535,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToGroupBy.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsToGroupBy() {
       return maxRowsToGroupBy_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsToGroupBy_;
     }
@@ -10978,6 +11550,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsToGroupByOrBuilder() {
       return getMaxRowsToGroupBy();
     }
@@ -10993,8 +11566,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+     * @return The enum numeric value on the wire for groupByOverflowMode.
      */
-    public int getGroupByOverflowModeValue() {
+    @java.lang.Override public int getGroupByOverflowModeValue() {
       return groupByOverflowMode_;
     }
     /**
@@ -11006,8 +11580,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+     * @return The groupByOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode getGroupByOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode getGroupByOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode.valueOf(groupByOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode.UNRECOGNIZED : result;
@@ -11023,7 +11598,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToSort field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsToSort() {
       return maxRowsToSort_ != null;
     }
@@ -11035,7 +11612,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToSort.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsToSort() {
       return maxRowsToSort_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsToSort_;
     }
@@ -11048,6 +11627,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsToSortOrBuilder() {
       return getMaxRowsToSort();
     }
@@ -11062,7 +11642,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesToSort field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesToSort() {
       return maxBytesToSort_ != null;
     }
@@ -11074,7 +11656,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesToSort.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesToSort() {
       return maxBytesToSort_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToSort_;
     }
@@ -11087,6 +11671,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToSortOrBuilder() {
       return getMaxBytesToSort();
     }
@@ -11101,8 +11686,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+     * @return The enum numeric value on the wire for sortOverflowMode.
      */
-    public int getSortOverflowModeValue() {
+    @java.lang.Override public int getSortOverflowModeValue() {
       return sortOverflowMode_;
     }
     /**
@@ -11113,8 +11699,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+     * @return The sortOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSortOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSortOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(sortOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11130,7 +11717,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxResultRows field is set.
      */
+    @java.lang.Override
     public boolean hasMaxResultRows() {
       return maxResultRows_ != null;
     }
@@ -11142,7 +11731,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxResultRows.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxResultRows() {
       return maxResultRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxResultRows_;
     }
@@ -11155,6 +11746,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxResultRowsOrBuilder() {
       return getMaxResultRows();
     }
@@ -11169,7 +11761,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxResultBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMaxResultBytes() {
       return maxResultBytes_ != null;
     }
@@ -11181,7 +11775,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxResultBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxResultBytes() {
       return maxResultBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxResultBytes_;
     }
@@ -11194,6 +11790,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxResultBytesOrBuilder() {
       return getMaxResultBytes();
     }
@@ -11208,8 +11805,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+     * @return The enum numeric value on the wire for resultOverflowMode.
      */
-    public int getResultOverflowModeValue() {
+    @java.lang.Override public int getResultOverflowModeValue() {
       return resultOverflowMode_;
     }
     /**
@@ -11220,8 +11818,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+     * @return The resultOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getResultOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getResultOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(resultOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11236,7 +11835,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsInDistinct field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsInDistinct() {
       return maxRowsInDistinct_ != null;
     }
@@ -11247,7 +11848,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsInDistinct.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsInDistinct() {
       return maxRowsInDistinct_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInDistinct_;
     }
@@ -11259,6 +11862,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInDistinctOrBuilder() {
       return getMaxRowsInDistinct();
     }
@@ -11271,7 +11875,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesInDistinct field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesInDistinct() {
       return maxBytesInDistinct_ != null;
     }
@@ -11281,7 +11887,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesInDistinct.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesInDistinct() {
       return maxBytesInDistinct_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInDistinct_;
     }
@@ -11292,6 +11900,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInDistinctOrBuilder() {
       return getMaxBytesInDistinct();
     }
@@ -11306,8 +11915,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+     * @return The enum numeric value on the wire for distinctOverflowMode.
      */
-    public int getDistinctOverflowModeValue() {
+    @java.lang.Override public int getDistinctOverflowModeValue() {
       return distinctOverflowMode_;
     }
     /**
@@ -11318,8 +11928,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+     * @return The distinctOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getDistinctOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getDistinctOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(distinctOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11334,7 +11945,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsToTransfer field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsToTransfer() {
       return maxRowsToTransfer_ != null;
     }
@@ -11345,7 +11958,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsToTransfer.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsToTransfer() {
       return maxRowsToTransfer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsToTransfer_;
     }
@@ -11357,6 +11972,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsToTransferOrBuilder() {
       return getMaxRowsToTransfer();
     }
@@ -11371,7 +11987,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesToTransfer field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesToTransfer() {
       return maxBytesToTransfer_ != null;
     }
@@ -11383,7 +12001,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesToTransfer.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesToTransfer() {
       return maxBytesToTransfer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToTransfer_;
     }
@@ -11396,6 +12016,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToTransferOrBuilder() {
       return getMaxBytesToTransfer();
     }
@@ -11410,8 +12031,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+     * @return The enum numeric value on the wire for transferOverflowMode.
      */
-    public int getTransferOverflowModeValue() {
+    @java.lang.Override public int getTransferOverflowModeValue() {
       return transferOverflowMode_;
     }
     /**
@@ -11422,8 +12044,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+     * @return The transferOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTransferOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTransferOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(transferOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11439,7 +12062,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxExecutionTime field is set.
      */
+    @java.lang.Override
     public boolean hasMaxExecutionTime() {
       return maxExecutionTime_ != null;
     }
@@ -11451,7 +12076,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxExecutionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxExecutionTime() {
       return maxExecutionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxExecutionTime_;
     }
@@ -11464,6 +12091,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxExecutionTimeOrBuilder() {
       return getMaxExecutionTime();
     }
@@ -11478,8 +12106,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+     * @return The enum numeric value on the wire for timeoutOverflowMode.
      */
-    public int getTimeoutOverflowModeValue() {
+    @java.lang.Override public int getTimeoutOverflowModeValue() {
       return timeoutOverflowMode_;
     }
     /**
@@ -11490,8 +12119,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+     * @return The timeoutOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTimeoutOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTimeoutOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(timeoutOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11505,7 +12135,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsInSet field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsInSet() {
       return maxRowsInSet_ != null;
     }
@@ -11515,7 +12147,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsInSet.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsInSet() {
       return maxRowsInSet_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInSet_;
     }
@@ -11526,6 +12160,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInSetOrBuilder() {
       return getMaxRowsInSet();
     }
@@ -11538,7 +12173,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesInSet field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesInSet() {
       return maxBytesInSet_ != null;
     }
@@ -11548,7 +12185,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesInSet.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesInSet() {
       return maxBytesInSet_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInSet_;
     }
@@ -11559,6 +12198,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInSetOrBuilder() {
       return getMaxBytesInSet();
     }
@@ -11572,8 +12212,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     * @return The enum numeric value on the wire for setOverflowMode.
      */
-    public int getSetOverflowModeValue() {
+    @java.lang.Override public int getSetOverflowModeValue() {
       return setOverflowMode_;
     }
     /**
@@ -11583,8 +12224,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     * @return The setOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(setOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11598,7 +12240,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxRowsInJoin field is set.
      */
+    @java.lang.Override
     public boolean hasMaxRowsInJoin() {
       return maxRowsInJoin_ != null;
     }
@@ -11608,7 +12252,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxRowsInJoin.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxRowsInJoin() {
       return maxRowsInJoin_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInJoin_;
     }
@@ -11619,6 +12265,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInJoinOrBuilder() {
       return getMaxRowsInJoin();
     }
@@ -11631,7 +12278,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBytesInJoin field is set.
      */
+    @java.lang.Override
     public boolean hasMaxBytesInJoin() {
       return maxBytesInJoin_ != null;
     }
@@ -11641,7 +12290,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBytesInJoin.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxBytesInJoin() {
       return maxBytesInJoin_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInJoin_;
     }
@@ -11652,6 +12303,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInJoinOrBuilder() {
       return getMaxBytesInJoin();
     }
@@ -11665,8 +12317,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     * @return The enum numeric value on the wire for joinOverflowMode.
      */
-    public int getJoinOverflowModeValue() {
+    @java.lang.Override public int getJoinOverflowModeValue() {
       return joinOverflowMode_;
     }
     /**
@@ -11676,8 +12329,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     * @return The joinOverflowMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(joinOverflowMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
@@ -11693,7 +12347,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxColumnsToRead field is set.
      */
+    @java.lang.Override
     public boolean hasMaxColumnsToRead() {
       return maxColumnsToRead_ != null;
     }
@@ -11705,7 +12361,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxColumnsToRead.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxColumnsToRead() {
       return maxColumnsToRead_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxColumnsToRead_;
     }
@@ -11718,6 +12376,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxColumnsToReadOrBuilder() {
       return getMaxColumnsToRead();
     }
@@ -11731,7 +12390,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryColumns field is set.
      */
+    @java.lang.Override
     public boolean hasMaxTemporaryColumns() {
       return maxTemporaryColumns_ != null;
     }
@@ -11742,7 +12403,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryColumns.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxTemporaryColumns() {
       return maxTemporaryColumns_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryColumns_;
     }
@@ -11754,6 +12417,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryColumnsOrBuilder() {
       return getMaxTemporaryColumns();
     }
@@ -11767,7 +12431,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryNonConstColumns field is set.
      */
+    @java.lang.Override
     public boolean hasMaxTemporaryNonConstColumns() {
       return maxTemporaryNonConstColumns_ != null;
     }
@@ -11778,7 +12444,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryNonConstColumns.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxTemporaryNonConstColumns() {
       return maxTemporaryNonConstColumns_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryNonConstColumns_;
     }
@@ -11790,6 +12458,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryNonConstColumnsOrBuilder() {
       return getMaxTemporaryNonConstColumns();
     }
@@ -11804,7 +12473,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxQuerySize field is set.
      */
+    @java.lang.Override
     public boolean hasMaxQuerySize() {
       return maxQuerySize_ != null;
     }
@@ -11816,7 +12487,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxQuerySize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxQuerySize() {
       return maxQuerySize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuerySize_;
     }
@@ -11829,6 +12502,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxQuerySizeOrBuilder() {
       return getMaxQuerySize();
     }
@@ -11848,7 +12522,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxAstDepth field is set.
      */
+    @java.lang.Override
     public boolean hasMaxAstDepth() {
       return maxAstDepth_ != null;
     }
@@ -11865,7 +12541,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxAstDepth.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxAstDepth() {
       return maxAstDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxAstDepth_;
     }
@@ -11883,6 +12561,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxAstDepthOrBuilder() {
       return getMaxAstDepth();
     }
@@ -11900,7 +12579,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxAstElements field is set.
      */
+    @java.lang.Override
     public boolean hasMaxAstElements() {
       return maxAstElements_ != null;
     }
@@ -11915,7 +12596,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxAstElements.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxAstElements() {
       return maxAstElements_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxAstElements_;
     }
@@ -11931,6 +12614,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxAstElementsOrBuilder() {
       return getMaxAstElements();
     }
@@ -11947,7 +12631,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxExpandedAstElements field is set.
      */
+    @java.lang.Override
     public boolean hasMaxExpandedAstElements() {
       return maxExpandedAstElements_ != null;
     }
@@ -11961,7 +12647,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxExpandedAstElements.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxExpandedAstElements() {
       return maxExpandedAstElements_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxExpandedAstElements_;
     }
@@ -11976,6 +12664,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxExpandedAstElementsOrBuilder() {
       return getMaxExpandedAstElements();
     }
@@ -11988,7 +12677,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minExecutionSpeed field is set.
      */
+    @java.lang.Override
     public boolean hasMinExecutionSpeed() {
       return minExecutionSpeed_ != null;
     }
@@ -11998,7 +12689,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minExecutionSpeed.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinExecutionSpeed() {
       return minExecutionSpeed_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeed_;
     }
@@ -12009,6 +12702,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedOrBuilder() {
       return getMinExecutionSpeed();
     }
@@ -12021,7 +12715,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the minExecutionSpeedBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMinExecutionSpeedBytes() {
       return minExecutionSpeedBytes_ != null;
     }
@@ -12031,7 +12727,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The minExecutionSpeedBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMinExecutionSpeedBytes() {
       return minExecutionSpeedBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeedBytes_;
     }
@@ -12042,6 +12740,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedBytesOrBuilder() {
       return getMinExecutionSpeedBytes();
     }
@@ -12054,8 +12753,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     * @return The enum numeric value on the wire for countDistinctImplementation.
      */
-    public int getCountDistinctImplementationValue() {
+    @java.lang.Override public int getCountDistinctImplementationValue() {
       return countDistinctImplementation_;
     }
     /**
@@ -12064,8 +12764,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     * @return The countDistinctImplementation.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.valueOf(countDistinctImplementation_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.UNRECOGNIZED : result;
@@ -12085,7 +12786,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
+     * @return Whether the inputFormatValuesInterpretExpressions field is set.
      */
+    @java.lang.Override
     public boolean hasInputFormatValuesInterpretExpressions() {
       return inputFormatValuesInterpretExpressions_ != null;
     }
@@ -12101,7 +12804,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
+     * @return The inputFormatValuesInterpretExpressions.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getInputFormatValuesInterpretExpressions() {
       return inputFormatValuesInterpretExpressions_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatValuesInterpretExpressions_;
     }
@@ -12118,6 +12823,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getInputFormatValuesInterpretExpressionsOrBuilder() {
       return getInputFormatValuesInterpretExpressions();
     }
@@ -12131,7 +12837,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
+     * @return Whether the inputFormatDefaultsForOmittedFields field is set.
      */
+    @java.lang.Override
     public boolean hasInputFormatDefaultsForOmittedFields() {
       return inputFormatDefaultsForOmittedFields_ != null;
     }
@@ -12142,7 +12850,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
+     * @return The inputFormatDefaultsForOmittedFields.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getInputFormatDefaultsForOmittedFields() {
       return inputFormatDefaultsForOmittedFields_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatDefaultsForOmittedFields_;
     }
@@ -12154,6 +12864,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getInputFormatDefaultsForOmittedFieldsOrBuilder() {
       return getInputFormatDefaultsForOmittedFields();
     }
@@ -12168,8 +12879,10 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * @return Whether the outputFormatJsonQuote64bitIntegers field is set.
      */
+    @java.lang.Override
     public boolean hasOutputFormatJsonQuote64BitIntegers() {
       return outputFormatJsonQuote64BitIntegers_ != null;
     }
@@ -12181,8 +12894,10 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * @return The outputFormatJsonQuote64bitIntegers.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers() {
       return outputFormatJsonQuote64BitIntegers_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : outputFormatJsonQuote64BitIntegers_;
     }
@@ -12194,8 +12909,9 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuote64BitIntegersOrBuilder() {
       return getOutputFormatJsonQuote64BitIntegers();
     }
@@ -12209,7 +12925,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
+     * @return Whether the outputFormatJsonQuoteDenormals field is set.
      */
+    @java.lang.Override
     public boolean hasOutputFormatJsonQuoteDenormals() {
       return outputFormatJsonQuoteDenormals_ != null;
     }
@@ -12220,7 +12938,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
+     * @return The outputFormatJsonQuoteDenormals.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getOutputFormatJsonQuoteDenormals() {
       return outputFormatJsonQuoteDenormals_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : outputFormatJsonQuoteDenormals_;
     }
@@ -12232,6 +12952,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuoteDenormalsOrBuilder() {
       return getOutputFormatJsonQuoteDenormals();
     }
@@ -12252,7 +12973,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
+     * @return Whether the lowCardinalityAllowInNativeFormat field is set.
      */
+    @java.lang.Override
     public boolean hasLowCardinalityAllowInNativeFormat() {
       return lowCardinalityAllowInNativeFormat_ != null;
     }
@@ -12270,7 +12993,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
+     * @return The lowCardinalityAllowInNativeFormat.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLowCardinalityAllowInNativeFormat() {
       return lowCardinalityAllowInNativeFormat_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : lowCardinalityAllowInNativeFormat_;
     }
@@ -12289,6 +13014,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLowCardinalityAllowInNativeFormatOrBuilder() {
       return getLowCardinalityAllowInNativeFormat();
     }
@@ -12303,7 +13029,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
+     * @return Whether the emptyResultForAggregationByEmptySet field is set.
      */
+    @java.lang.Override
     public boolean hasEmptyResultForAggregationByEmptySet() {
       return emptyResultForAggregationByEmptySet_ != null;
     }
@@ -12315,7 +13043,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
+     * @return The emptyResultForAggregationByEmptySet.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEmptyResultForAggregationByEmptySet() {
       return emptyResultForAggregationByEmptySet_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : emptyResultForAggregationByEmptySet_;
     }
@@ -12328,6 +13058,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEmptyResultForAggregationByEmptySetOrBuilder() {
       return getEmptyResultForAggregationByEmptySet();
     }
@@ -12336,19 +13067,24 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
     /**
      * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return Whether the joinedSubqueryRequiresAlias field is set.
      */
+    @java.lang.Override
     public boolean hasJoinedSubqueryRequiresAlias() {
       return joinedSubqueryRequiresAlias_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return The joinedSubqueryRequiresAlias.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
       return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
     }
     /**
      * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
       return getJoinedSubqueryRequiresAlias();
     }
@@ -12357,19 +13093,24 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue joinUseNulls_;
     /**
      * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return Whether the joinUseNulls field is set.
      */
+    @java.lang.Override
     public boolean hasJoinUseNulls() {
       return joinUseNulls_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return The joinUseNulls.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getJoinUseNulls() {
       return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
     }
     /**
      * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
       return getJoinUseNulls();
     }
@@ -12378,19 +13119,24 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue transformNullIn_;
     /**
      * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return Whether the transformNullIn field is set.
      */
+    @java.lang.Override
     public boolean hasTransformNullIn() {
       return transformNullIn_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return The transformNullIn.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTransformNullIn() {
       return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
     }
     /**
      * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
       return getTransformNullIn();
     }
@@ -12404,7 +13150,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
+     * @return Whether the httpConnectionTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasHttpConnectionTimeout() {
       return httpConnectionTimeout_ != null;
     }
@@ -12415,7 +13163,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
+     * @return The httpConnectionTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getHttpConnectionTimeout() {
       return httpConnectionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpConnectionTimeout_;
     }
@@ -12427,6 +13177,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHttpConnectionTimeoutOrBuilder() {
       return getHttpConnectionTimeout();
     }
@@ -12440,7 +13191,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
+     * @return Whether the httpReceiveTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasHttpReceiveTimeout() {
       return httpReceiveTimeout_ != null;
     }
@@ -12451,7 +13204,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
+     * @return The httpReceiveTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getHttpReceiveTimeout() {
       return httpReceiveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpReceiveTimeout_;
     }
@@ -12463,6 +13218,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHttpReceiveTimeoutOrBuilder() {
       return getHttpReceiveTimeout();
     }
@@ -12476,7 +13232,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
+     * @return Whether the httpSendTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasHttpSendTimeout() {
       return httpSendTimeout_ != null;
     }
@@ -12487,7 +13245,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
+     * @return The httpSendTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getHttpSendTimeout() {
       return httpSendTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpSendTimeout_;
     }
@@ -12499,6 +13259,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHttpSendTimeoutOrBuilder() {
       return getHttpSendTimeout();
     }
@@ -12517,7 +13278,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
+     * @return Whether the enableHttpCompression field is set.
      */
+    @java.lang.Override
     public boolean hasEnableHttpCompression() {
       return enableHttpCompression_ != null;
     }
@@ -12533,7 +13296,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
+     * @return The enableHttpCompression.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableHttpCompression() {
       return enableHttpCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableHttpCompression_;
     }
@@ -12550,6 +13315,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableHttpCompressionOrBuilder() {
       return getEnableHttpCompression();
     }
@@ -12563,7 +13329,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
+     * @return Whether the sendProgressInHttpHeaders field is set.
      */
+    @java.lang.Override
     public boolean hasSendProgressInHttpHeaders() {
       return sendProgressInHttpHeaders_ != null;
     }
@@ -12574,7 +13342,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
+     * @return The sendProgressInHttpHeaders.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getSendProgressInHttpHeaders() {
       return sendProgressInHttpHeaders_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sendProgressInHttpHeaders_;
     }
@@ -12586,6 +13356,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSendProgressInHttpHeadersOrBuilder() {
       return getSendProgressInHttpHeaders();
     }
@@ -12599,7 +13370,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
+     * @return Whether the httpHeadersProgressInterval field is set.
      */
+    @java.lang.Override
     public boolean hasHttpHeadersProgressInterval() {
       return httpHeadersProgressInterval_ != null;
     }
@@ -12610,7 +13383,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
+     * @return The httpHeadersProgressInterval.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getHttpHeadersProgressInterval() {
       return httpHeadersProgressInterval_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : httpHeadersProgressInterval_;
     }
@@ -12622,6 +13397,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHttpHeadersProgressIntervalOrBuilder() {
       return getHttpHeadersProgressInterval();
     }
@@ -12635,7 +13411,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
+     * @return Whether the addHttpCorsHeader field is set.
      */
+    @java.lang.Override
     public boolean hasAddHttpCorsHeader() {
       return addHttpCorsHeader_ != null;
     }
@@ -12646,7 +13424,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
+     * @return The addHttpCorsHeader.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getAddHttpCorsHeader() {
       return addHttpCorsHeader_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : addHttpCorsHeader_;
     }
@@ -12658,6 +13438,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getAddHttpCorsHeaderOrBuilder() {
       return getAddHttpCorsHeader();
     }
@@ -12670,8 +13451,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     * @return The enum numeric value on the wire for quotaMode.
      */
-    public int getQuotaModeValue() {
+    @java.lang.Override public int getQuotaModeValue() {
       return quotaMode_;
     }
     /**
@@ -12680,8 +13462,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     * @return The quotaMode.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.valueOf(quotaMode_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.UNRECOGNIZED : result;
@@ -13376,426 +14159,425 @@ public final class UserOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings) obj;
 
-      boolean result = true;
-      result = result && (hasReadonly() == other.hasReadonly());
+      if (hasReadonly() != other.hasReadonly()) return false;
       if (hasReadonly()) {
-        result = result && getReadonly()
-            .equals(other.getReadonly());
+        if (!getReadonly()
+            .equals(other.getReadonly())) return false;
       }
-      result = result && (hasAllowDdl() == other.hasAllowDdl());
+      if (hasAllowDdl() != other.hasAllowDdl()) return false;
       if (hasAllowDdl()) {
-        result = result && getAllowDdl()
-            .equals(other.getAllowDdl());
+        if (!getAllowDdl()
+            .equals(other.getAllowDdl())) return false;
       }
-      result = result && (hasInsertQuorum() == other.hasInsertQuorum());
+      if (hasInsertQuorum() != other.hasInsertQuorum()) return false;
       if (hasInsertQuorum()) {
-        result = result && getInsertQuorum()
-            .equals(other.getInsertQuorum());
+        if (!getInsertQuorum()
+            .equals(other.getInsertQuorum())) return false;
       }
-      result = result && (hasConnectTimeout() == other.hasConnectTimeout());
+      if (hasConnectTimeout() != other.hasConnectTimeout()) return false;
       if (hasConnectTimeout()) {
-        result = result && getConnectTimeout()
-            .equals(other.getConnectTimeout());
+        if (!getConnectTimeout()
+            .equals(other.getConnectTimeout())) return false;
       }
-      result = result && (hasReceiveTimeout() == other.hasReceiveTimeout());
+      if (hasReceiveTimeout() != other.hasReceiveTimeout()) return false;
       if (hasReceiveTimeout()) {
-        result = result && getReceiveTimeout()
-            .equals(other.getReceiveTimeout());
+        if (!getReceiveTimeout()
+            .equals(other.getReceiveTimeout())) return false;
       }
-      result = result && (hasSendTimeout() == other.hasSendTimeout());
+      if (hasSendTimeout() != other.hasSendTimeout()) return false;
       if (hasSendTimeout()) {
-        result = result && getSendTimeout()
-            .equals(other.getSendTimeout());
+        if (!getSendTimeout()
+            .equals(other.getSendTimeout())) return false;
       }
-      result = result && (hasInsertQuorumTimeout() == other.hasInsertQuorumTimeout());
+      if (hasInsertQuorumTimeout() != other.hasInsertQuorumTimeout()) return false;
       if (hasInsertQuorumTimeout()) {
-        result = result && getInsertQuorumTimeout()
-            .equals(other.getInsertQuorumTimeout());
+        if (!getInsertQuorumTimeout()
+            .equals(other.getInsertQuorumTimeout())) return false;
       }
-      result = result && (hasSelectSequentialConsistency() == other.hasSelectSequentialConsistency());
+      if (hasSelectSequentialConsistency() != other.hasSelectSequentialConsistency()) return false;
       if (hasSelectSequentialConsistency()) {
-        result = result && getSelectSequentialConsistency()
-            .equals(other.getSelectSequentialConsistency());
+        if (!getSelectSequentialConsistency()
+            .equals(other.getSelectSequentialConsistency())) return false;
       }
-      result = result && (hasMaxReplicaDelayForDistributedQueries() == other.hasMaxReplicaDelayForDistributedQueries());
+      if (hasMaxReplicaDelayForDistributedQueries() != other.hasMaxReplicaDelayForDistributedQueries()) return false;
       if (hasMaxReplicaDelayForDistributedQueries()) {
-        result = result && getMaxReplicaDelayForDistributedQueries()
-            .equals(other.getMaxReplicaDelayForDistributedQueries());
+        if (!getMaxReplicaDelayForDistributedQueries()
+            .equals(other.getMaxReplicaDelayForDistributedQueries())) return false;
       }
-      result = result && (hasFallbackToStaleReplicasForDistributedQueries() == other.hasFallbackToStaleReplicasForDistributedQueries());
+      if (hasFallbackToStaleReplicasForDistributedQueries() != other.hasFallbackToStaleReplicasForDistributedQueries()) return false;
       if (hasFallbackToStaleReplicasForDistributedQueries()) {
-        result = result && getFallbackToStaleReplicasForDistributedQueries()
-            .equals(other.getFallbackToStaleReplicasForDistributedQueries());
+        if (!getFallbackToStaleReplicasForDistributedQueries()
+            .equals(other.getFallbackToStaleReplicasForDistributedQueries())) return false;
       }
-      result = result && (hasReplicationAlterPartitionsSync() == other.hasReplicationAlterPartitionsSync());
+      if (hasReplicationAlterPartitionsSync() != other.hasReplicationAlterPartitionsSync()) return false;
       if (hasReplicationAlterPartitionsSync()) {
-        result = result && getReplicationAlterPartitionsSync()
-            .equals(other.getReplicationAlterPartitionsSync());
+        if (!getReplicationAlterPartitionsSync()
+            .equals(other.getReplicationAlterPartitionsSync())) return false;
       }
-      result = result && distributedProductMode_ == other.distributedProductMode_;
-      result = result && (hasDistributedAggregationMemoryEfficient() == other.hasDistributedAggregationMemoryEfficient());
+      if (distributedProductMode_ != other.distributedProductMode_) return false;
+      if (hasDistributedAggregationMemoryEfficient() != other.hasDistributedAggregationMemoryEfficient()) return false;
       if (hasDistributedAggregationMemoryEfficient()) {
-        result = result && getDistributedAggregationMemoryEfficient()
-            .equals(other.getDistributedAggregationMemoryEfficient());
+        if (!getDistributedAggregationMemoryEfficient()
+            .equals(other.getDistributedAggregationMemoryEfficient())) return false;
       }
-      result = result && (hasDistributedDdlTaskTimeout() == other.hasDistributedDdlTaskTimeout());
+      if (hasDistributedDdlTaskTimeout() != other.hasDistributedDdlTaskTimeout()) return false;
       if (hasDistributedDdlTaskTimeout()) {
-        result = result && getDistributedDdlTaskTimeout()
-            .equals(other.getDistributedDdlTaskTimeout());
+        if (!getDistributedDdlTaskTimeout()
+            .equals(other.getDistributedDdlTaskTimeout())) return false;
       }
-      result = result && (hasSkipUnavailableShards() == other.hasSkipUnavailableShards());
+      if (hasSkipUnavailableShards() != other.hasSkipUnavailableShards()) return false;
       if (hasSkipUnavailableShards()) {
-        result = result && getSkipUnavailableShards()
-            .equals(other.getSkipUnavailableShards());
+        if (!getSkipUnavailableShards()
+            .equals(other.getSkipUnavailableShards())) return false;
       }
-      result = result && (hasCompile() == other.hasCompile());
+      if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
-        result = result && getCompile()
-            .equals(other.getCompile());
+        if (!getCompile()
+            .equals(other.getCompile())) return false;
       }
-      result = result && (hasMinCountToCompile() == other.hasMinCountToCompile());
+      if (hasMinCountToCompile() != other.hasMinCountToCompile()) return false;
       if (hasMinCountToCompile()) {
-        result = result && getMinCountToCompile()
-            .equals(other.getMinCountToCompile());
+        if (!getMinCountToCompile()
+            .equals(other.getMinCountToCompile())) return false;
       }
-      result = result && (hasCompileExpressions() == other.hasCompileExpressions());
+      if (hasCompileExpressions() != other.hasCompileExpressions()) return false;
       if (hasCompileExpressions()) {
-        result = result && getCompileExpressions()
-            .equals(other.getCompileExpressions());
+        if (!getCompileExpressions()
+            .equals(other.getCompileExpressions())) return false;
       }
-      result = result && (hasMinCountToCompileExpression() == other.hasMinCountToCompileExpression());
+      if (hasMinCountToCompileExpression() != other.hasMinCountToCompileExpression()) return false;
       if (hasMinCountToCompileExpression()) {
-        result = result && getMinCountToCompileExpression()
-            .equals(other.getMinCountToCompileExpression());
+        if (!getMinCountToCompileExpression()
+            .equals(other.getMinCountToCompileExpression())) return false;
       }
-      result = result && (hasMaxBlockSize() == other.hasMaxBlockSize());
+      if (hasMaxBlockSize() != other.hasMaxBlockSize()) return false;
       if (hasMaxBlockSize()) {
-        result = result && getMaxBlockSize()
-            .equals(other.getMaxBlockSize());
+        if (!getMaxBlockSize()
+            .equals(other.getMaxBlockSize())) return false;
       }
-      result = result && (hasMinInsertBlockSizeRows() == other.hasMinInsertBlockSizeRows());
+      if (hasMinInsertBlockSizeRows() != other.hasMinInsertBlockSizeRows()) return false;
       if (hasMinInsertBlockSizeRows()) {
-        result = result && getMinInsertBlockSizeRows()
-            .equals(other.getMinInsertBlockSizeRows());
+        if (!getMinInsertBlockSizeRows()
+            .equals(other.getMinInsertBlockSizeRows())) return false;
       }
-      result = result && (hasMinInsertBlockSizeBytes() == other.hasMinInsertBlockSizeBytes());
+      if (hasMinInsertBlockSizeBytes() != other.hasMinInsertBlockSizeBytes()) return false;
       if (hasMinInsertBlockSizeBytes()) {
-        result = result && getMinInsertBlockSizeBytes()
-            .equals(other.getMinInsertBlockSizeBytes());
+        if (!getMinInsertBlockSizeBytes()
+            .equals(other.getMinInsertBlockSizeBytes())) return false;
       }
-      result = result && (hasMaxInsertBlockSize() == other.hasMaxInsertBlockSize());
+      if (hasMaxInsertBlockSize() != other.hasMaxInsertBlockSize()) return false;
       if (hasMaxInsertBlockSize()) {
-        result = result && getMaxInsertBlockSize()
-            .equals(other.getMaxInsertBlockSize());
+        if (!getMaxInsertBlockSize()
+            .equals(other.getMaxInsertBlockSize())) return false;
       }
-      result = result && (hasMinBytesToUseDirectIo() == other.hasMinBytesToUseDirectIo());
+      if (hasMinBytesToUseDirectIo() != other.hasMinBytesToUseDirectIo()) return false;
       if (hasMinBytesToUseDirectIo()) {
-        result = result && getMinBytesToUseDirectIo()
-            .equals(other.getMinBytesToUseDirectIo());
+        if (!getMinBytesToUseDirectIo()
+            .equals(other.getMinBytesToUseDirectIo())) return false;
       }
-      result = result && (hasUseUncompressedCache() == other.hasUseUncompressedCache());
+      if (hasUseUncompressedCache() != other.hasUseUncompressedCache()) return false;
       if (hasUseUncompressedCache()) {
-        result = result && getUseUncompressedCache()
-            .equals(other.getUseUncompressedCache());
+        if (!getUseUncompressedCache()
+            .equals(other.getUseUncompressedCache())) return false;
       }
-      result = result && (hasMergeTreeMaxRowsToUseCache() == other.hasMergeTreeMaxRowsToUseCache());
+      if (hasMergeTreeMaxRowsToUseCache() != other.hasMergeTreeMaxRowsToUseCache()) return false;
       if (hasMergeTreeMaxRowsToUseCache()) {
-        result = result && getMergeTreeMaxRowsToUseCache()
-            .equals(other.getMergeTreeMaxRowsToUseCache());
+        if (!getMergeTreeMaxRowsToUseCache()
+            .equals(other.getMergeTreeMaxRowsToUseCache())) return false;
       }
-      result = result && (hasMergeTreeMaxBytesToUseCache() == other.hasMergeTreeMaxBytesToUseCache());
+      if (hasMergeTreeMaxBytesToUseCache() != other.hasMergeTreeMaxBytesToUseCache()) return false;
       if (hasMergeTreeMaxBytesToUseCache()) {
-        result = result && getMergeTreeMaxBytesToUseCache()
-            .equals(other.getMergeTreeMaxBytesToUseCache());
+        if (!getMergeTreeMaxBytesToUseCache()
+            .equals(other.getMergeTreeMaxBytesToUseCache())) return false;
       }
-      result = result && (hasMergeTreeMinRowsForConcurrentRead() == other.hasMergeTreeMinRowsForConcurrentRead());
+      if (hasMergeTreeMinRowsForConcurrentRead() != other.hasMergeTreeMinRowsForConcurrentRead()) return false;
       if (hasMergeTreeMinRowsForConcurrentRead()) {
-        result = result && getMergeTreeMinRowsForConcurrentRead()
-            .equals(other.getMergeTreeMinRowsForConcurrentRead());
+        if (!getMergeTreeMinRowsForConcurrentRead()
+            .equals(other.getMergeTreeMinRowsForConcurrentRead())) return false;
       }
-      result = result && (hasMergeTreeMinBytesForConcurrentRead() == other.hasMergeTreeMinBytesForConcurrentRead());
+      if (hasMergeTreeMinBytesForConcurrentRead() != other.hasMergeTreeMinBytesForConcurrentRead()) return false;
       if (hasMergeTreeMinBytesForConcurrentRead()) {
-        result = result && getMergeTreeMinBytesForConcurrentRead()
-            .equals(other.getMergeTreeMinBytesForConcurrentRead());
+        if (!getMergeTreeMinBytesForConcurrentRead()
+            .equals(other.getMergeTreeMinBytesForConcurrentRead())) return false;
       }
-      result = result && (hasMaxBytesBeforeExternalGroupBy() == other.hasMaxBytesBeforeExternalGroupBy());
+      if (hasMaxBytesBeforeExternalGroupBy() != other.hasMaxBytesBeforeExternalGroupBy()) return false;
       if (hasMaxBytesBeforeExternalGroupBy()) {
-        result = result && getMaxBytesBeforeExternalGroupBy()
-            .equals(other.getMaxBytesBeforeExternalGroupBy());
+        if (!getMaxBytesBeforeExternalGroupBy()
+            .equals(other.getMaxBytesBeforeExternalGroupBy())) return false;
       }
-      result = result && (hasMaxBytesBeforeExternalSort() == other.hasMaxBytesBeforeExternalSort());
+      if (hasMaxBytesBeforeExternalSort() != other.hasMaxBytesBeforeExternalSort()) return false;
       if (hasMaxBytesBeforeExternalSort()) {
-        result = result && getMaxBytesBeforeExternalSort()
-            .equals(other.getMaxBytesBeforeExternalSort());
+        if (!getMaxBytesBeforeExternalSort()
+            .equals(other.getMaxBytesBeforeExternalSort())) return false;
       }
-      result = result && (hasGroupByTwoLevelThreshold() == other.hasGroupByTwoLevelThreshold());
+      if (hasGroupByTwoLevelThreshold() != other.hasGroupByTwoLevelThreshold()) return false;
       if (hasGroupByTwoLevelThreshold()) {
-        result = result && getGroupByTwoLevelThreshold()
-            .equals(other.getGroupByTwoLevelThreshold());
+        if (!getGroupByTwoLevelThreshold()
+            .equals(other.getGroupByTwoLevelThreshold())) return false;
       }
-      result = result && (hasGroupByTwoLevelThresholdBytes() == other.hasGroupByTwoLevelThresholdBytes());
+      if (hasGroupByTwoLevelThresholdBytes() != other.hasGroupByTwoLevelThresholdBytes()) return false;
       if (hasGroupByTwoLevelThresholdBytes()) {
-        result = result && getGroupByTwoLevelThresholdBytes()
-            .equals(other.getGroupByTwoLevelThresholdBytes());
+        if (!getGroupByTwoLevelThresholdBytes()
+            .equals(other.getGroupByTwoLevelThresholdBytes())) return false;
       }
-      result = result && (hasPriority() == other.hasPriority());
+      if (hasPriority() != other.hasPriority()) return false;
       if (hasPriority()) {
-        result = result && getPriority()
-            .equals(other.getPriority());
+        if (!getPriority()
+            .equals(other.getPriority())) return false;
       }
-      result = result && (hasMaxThreads() == other.hasMaxThreads());
+      if (hasMaxThreads() != other.hasMaxThreads()) return false;
       if (hasMaxThreads()) {
-        result = result && getMaxThreads()
-            .equals(other.getMaxThreads());
+        if (!getMaxThreads()
+            .equals(other.getMaxThreads())) return false;
       }
-      result = result && (hasMaxMemoryUsage() == other.hasMaxMemoryUsage());
+      if (hasMaxMemoryUsage() != other.hasMaxMemoryUsage()) return false;
       if (hasMaxMemoryUsage()) {
-        result = result && getMaxMemoryUsage()
-            .equals(other.getMaxMemoryUsage());
+        if (!getMaxMemoryUsage()
+            .equals(other.getMaxMemoryUsage())) return false;
       }
-      result = result && (hasMaxMemoryUsageForUser() == other.hasMaxMemoryUsageForUser());
+      if (hasMaxMemoryUsageForUser() != other.hasMaxMemoryUsageForUser()) return false;
       if (hasMaxMemoryUsageForUser()) {
-        result = result && getMaxMemoryUsageForUser()
-            .equals(other.getMaxMemoryUsageForUser());
+        if (!getMaxMemoryUsageForUser()
+            .equals(other.getMaxMemoryUsageForUser())) return false;
       }
-      result = result && (hasMaxNetworkBandwidth() == other.hasMaxNetworkBandwidth());
+      if (hasMaxNetworkBandwidth() != other.hasMaxNetworkBandwidth()) return false;
       if (hasMaxNetworkBandwidth()) {
-        result = result && getMaxNetworkBandwidth()
-            .equals(other.getMaxNetworkBandwidth());
+        if (!getMaxNetworkBandwidth()
+            .equals(other.getMaxNetworkBandwidth())) return false;
       }
-      result = result && (hasMaxNetworkBandwidthForUser() == other.hasMaxNetworkBandwidthForUser());
+      if (hasMaxNetworkBandwidthForUser() != other.hasMaxNetworkBandwidthForUser()) return false;
       if (hasMaxNetworkBandwidthForUser()) {
-        result = result && getMaxNetworkBandwidthForUser()
-            .equals(other.getMaxNetworkBandwidthForUser());
+        if (!getMaxNetworkBandwidthForUser()
+            .equals(other.getMaxNetworkBandwidthForUser())) return false;
       }
-      result = result && (hasForceIndexByDate() == other.hasForceIndexByDate());
+      if (hasForceIndexByDate() != other.hasForceIndexByDate()) return false;
       if (hasForceIndexByDate()) {
-        result = result && getForceIndexByDate()
-            .equals(other.getForceIndexByDate());
+        if (!getForceIndexByDate()
+            .equals(other.getForceIndexByDate())) return false;
       }
-      result = result && (hasForcePrimaryKey() == other.hasForcePrimaryKey());
+      if (hasForcePrimaryKey() != other.hasForcePrimaryKey()) return false;
       if (hasForcePrimaryKey()) {
-        result = result && getForcePrimaryKey()
-            .equals(other.getForcePrimaryKey());
+        if (!getForcePrimaryKey()
+            .equals(other.getForcePrimaryKey())) return false;
       }
-      result = result && (hasMaxRowsToRead() == other.hasMaxRowsToRead());
+      if (hasMaxRowsToRead() != other.hasMaxRowsToRead()) return false;
       if (hasMaxRowsToRead()) {
-        result = result && getMaxRowsToRead()
-            .equals(other.getMaxRowsToRead());
+        if (!getMaxRowsToRead()
+            .equals(other.getMaxRowsToRead())) return false;
       }
-      result = result && (hasMaxBytesToRead() == other.hasMaxBytesToRead());
+      if (hasMaxBytesToRead() != other.hasMaxBytesToRead()) return false;
       if (hasMaxBytesToRead()) {
-        result = result && getMaxBytesToRead()
-            .equals(other.getMaxBytesToRead());
+        if (!getMaxBytesToRead()
+            .equals(other.getMaxBytesToRead())) return false;
       }
-      result = result && readOverflowMode_ == other.readOverflowMode_;
-      result = result && (hasMaxRowsToGroupBy() == other.hasMaxRowsToGroupBy());
+      if (readOverflowMode_ != other.readOverflowMode_) return false;
+      if (hasMaxRowsToGroupBy() != other.hasMaxRowsToGroupBy()) return false;
       if (hasMaxRowsToGroupBy()) {
-        result = result && getMaxRowsToGroupBy()
-            .equals(other.getMaxRowsToGroupBy());
+        if (!getMaxRowsToGroupBy()
+            .equals(other.getMaxRowsToGroupBy())) return false;
       }
-      result = result && groupByOverflowMode_ == other.groupByOverflowMode_;
-      result = result && (hasMaxRowsToSort() == other.hasMaxRowsToSort());
+      if (groupByOverflowMode_ != other.groupByOverflowMode_) return false;
+      if (hasMaxRowsToSort() != other.hasMaxRowsToSort()) return false;
       if (hasMaxRowsToSort()) {
-        result = result && getMaxRowsToSort()
-            .equals(other.getMaxRowsToSort());
+        if (!getMaxRowsToSort()
+            .equals(other.getMaxRowsToSort())) return false;
       }
-      result = result && (hasMaxBytesToSort() == other.hasMaxBytesToSort());
+      if (hasMaxBytesToSort() != other.hasMaxBytesToSort()) return false;
       if (hasMaxBytesToSort()) {
-        result = result && getMaxBytesToSort()
-            .equals(other.getMaxBytesToSort());
+        if (!getMaxBytesToSort()
+            .equals(other.getMaxBytesToSort())) return false;
       }
-      result = result && sortOverflowMode_ == other.sortOverflowMode_;
-      result = result && (hasMaxResultRows() == other.hasMaxResultRows());
+      if (sortOverflowMode_ != other.sortOverflowMode_) return false;
+      if (hasMaxResultRows() != other.hasMaxResultRows()) return false;
       if (hasMaxResultRows()) {
-        result = result && getMaxResultRows()
-            .equals(other.getMaxResultRows());
+        if (!getMaxResultRows()
+            .equals(other.getMaxResultRows())) return false;
       }
-      result = result && (hasMaxResultBytes() == other.hasMaxResultBytes());
+      if (hasMaxResultBytes() != other.hasMaxResultBytes()) return false;
       if (hasMaxResultBytes()) {
-        result = result && getMaxResultBytes()
-            .equals(other.getMaxResultBytes());
+        if (!getMaxResultBytes()
+            .equals(other.getMaxResultBytes())) return false;
       }
-      result = result && resultOverflowMode_ == other.resultOverflowMode_;
-      result = result && (hasMaxRowsInDistinct() == other.hasMaxRowsInDistinct());
+      if (resultOverflowMode_ != other.resultOverflowMode_) return false;
+      if (hasMaxRowsInDistinct() != other.hasMaxRowsInDistinct()) return false;
       if (hasMaxRowsInDistinct()) {
-        result = result && getMaxRowsInDistinct()
-            .equals(other.getMaxRowsInDistinct());
+        if (!getMaxRowsInDistinct()
+            .equals(other.getMaxRowsInDistinct())) return false;
       }
-      result = result && (hasMaxBytesInDistinct() == other.hasMaxBytesInDistinct());
+      if (hasMaxBytesInDistinct() != other.hasMaxBytesInDistinct()) return false;
       if (hasMaxBytesInDistinct()) {
-        result = result && getMaxBytesInDistinct()
-            .equals(other.getMaxBytesInDistinct());
+        if (!getMaxBytesInDistinct()
+            .equals(other.getMaxBytesInDistinct())) return false;
       }
-      result = result && distinctOverflowMode_ == other.distinctOverflowMode_;
-      result = result && (hasMaxRowsToTransfer() == other.hasMaxRowsToTransfer());
+      if (distinctOverflowMode_ != other.distinctOverflowMode_) return false;
+      if (hasMaxRowsToTransfer() != other.hasMaxRowsToTransfer()) return false;
       if (hasMaxRowsToTransfer()) {
-        result = result && getMaxRowsToTransfer()
-            .equals(other.getMaxRowsToTransfer());
+        if (!getMaxRowsToTransfer()
+            .equals(other.getMaxRowsToTransfer())) return false;
       }
-      result = result && (hasMaxBytesToTransfer() == other.hasMaxBytesToTransfer());
+      if (hasMaxBytesToTransfer() != other.hasMaxBytesToTransfer()) return false;
       if (hasMaxBytesToTransfer()) {
-        result = result && getMaxBytesToTransfer()
-            .equals(other.getMaxBytesToTransfer());
+        if (!getMaxBytesToTransfer()
+            .equals(other.getMaxBytesToTransfer())) return false;
       }
-      result = result && transferOverflowMode_ == other.transferOverflowMode_;
-      result = result && (hasMaxExecutionTime() == other.hasMaxExecutionTime());
+      if (transferOverflowMode_ != other.transferOverflowMode_) return false;
+      if (hasMaxExecutionTime() != other.hasMaxExecutionTime()) return false;
       if (hasMaxExecutionTime()) {
-        result = result && getMaxExecutionTime()
-            .equals(other.getMaxExecutionTime());
+        if (!getMaxExecutionTime()
+            .equals(other.getMaxExecutionTime())) return false;
       }
-      result = result && timeoutOverflowMode_ == other.timeoutOverflowMode_;
-      result = result && (hasMaxRowsInSet() == other.hasMaxRowsInSet());
+      if (timeoutOverflowMode_ != other.timeoutOverflowMode_) return false;
+      if (hasMaxRowsInSet() != other.hasMaxRowsInSet()) return false;
       if (hasMaxRowsInSet()) {
-        result = result && getMaxRowsInSet()
-            .equals(other.getMaxRowsInSet());
+        if (!getMaxRowsInSet()
+            .equals(other.getMaxRowsInSet())) return false;
       }
-      result = result && (hasMaxBytesInSet() == other.hasMaxBytesInSet());
+      if (hasMaxBytesInSet() != other.hasMaxBytesInSet()) return false;
       if (hasMaxBytesInSet()) {
-        result = result && getMaxBytesInSet()
-            .equals(other.getMaxBytesInSet());
+        if (!getMaxBytesInSet()
+            .equals(other.getMaxBytesInSet())) return false;
       }
-      result = result && setOverflowMode_ == other.setOverflowMode_;
-      result = result && (hasMaxRowsInJoin() == other.hasMaxRowsInJoin());
+      if (setOverflowMode_ != other.setOverflowMode_) return false;
+      if (hasMaxRowsInJoin() != other.hasMaxRowsInJoin()) return false;
       if (hasMaxRowsInJoin()) {
-        result = result && getMaxRowsInJoin()
-            .equals(other.getMaxRowsInJoin());
+        if (!getMaxRowsInJoin()
+            .equals(other.getMaxRowsInJoin())) return false;
       }
-      result = result && (hasMaxBytesInJoin() == other.hasMaxBytesInJoin());
+      if (hasMaxBytesInJoin() != other.hasMaxBytesInJoin()) return false;
       if (hasMaxBytesInJoin()) {
-        result = result && getMaxBytesInJoin()
-            .equals(other.getMaxBytesInJoin());
+        if (!getMaxBytesInJoin()
+            .equals(other.getMaxBytesInJoin())) return false;
       }
-      result = result && joinOverflowMode_ == other.joinOverflowMode_;
-      result = result && (hasMaxColumnsToRead() == other.hasMaxColumnsToRead());
+      if (joinOverflowMode_ != other.joinOverflowMode_) return false;
+      if (hasMaxColumnsToRead() != other.hasMaxColumnsToRead()) return false;
       if (hasMaxColumnsToRead()) {
-        result = result && getMaxColumnsToRead()
-            .equals(other.getMaxColumnsToRead());
+        if (!getMaxColumnsToRead()
+            .equals(other.getMaxColumnsToRead())) return false;
       }
-      result = result && (hasMaxTemporaryColumns() == other.hasMaxTemporaryColumns());
+      if (hasMaxTemporaryColumns() != other.hasMaxTemporaryColumns()) return false;
       if (hasMaxTemporaryColumns()) {
-        result = result && getMaxTemporaryColumns()
-            .equals(other.getMaxTemporaryColumns());
+        if (!getMaxTemporaryColumns()
+            .equals(other.getMaxTemporaryColumns())) return false;
       }
-      result = result && (hasMaxTemporaryNonConstColumns() == other.hasMaxTemporaryNonConstColumns());
+      if (hasMaxTemporaryNonConstColumns() != other.hasMaxTemporaryNonConstColumns()) return false;
       if (hasMaxTemporaryNonConstColumns()) {
-        result = result && getMaxTemporaryNonConstColumns()
-            .equals(other.getMaxTemporaryNonConstColumns());
+        if (!getMaxTemporaryNonConstColumns()
+            .equals(other.getMaxTemporaryNonConstColumns())) return false;
       }
-      result = result && (hasMaxQuerySize() == other.hasMaxQuerySize());
+      if (hasMaxQuerySize() != other.hasMaxQuerySize()) return false;
       if (hasMaxQuerySize()) {
-        result = result && getMaxQuerySize()
-            .equals(other.getMaxQuerySize());
+        if (!getMaxQuerySize()
+            .equals(other.getMaxQuerySize())) return false;
       }
-      result = result && (hasMaxAstDepth() == other.hasMaxAstDepth());
+      if (hasMaxAstDepth() != other.hasMaxAstDepth()) return false;
       if (hasMaxAstDepth()) {
-        result = result && getMaxAstDepth()
-            .equals(other.getMaxAstDepth());
+        if (!getMaxAstDepth()
+            .equals(other.getMaxAstDepth())) return false;
       }
-      result = result && (hasMaxAstElements() == other.hasMaxAstElements());
+      if (hasMaxAstElements() != other.hasMaxAstElements()) return false;
       if (hasMaxAstElements()) {
-        result = result && getMaxAstElements()
-            .equals(other.getMaxAstElements());
+        if (!getMaxAstElements()
+            .equals(other.getMaxAstElements())) return false;
       }
-      result = result && (hasMaxExpandedAstElements() == other.hasMaxExpandedAstElements());
+      if (hasMaxExpandedAstElements() != other.hasMaxExpandedAstElements()) return false;
       if (hasMaxExpandedAstElements()) {
-        result = result && getMaxExpandedAstElements()
-            .equals(other.getMaxExpandedAstElements());
+        if (!getMaxExpandedAstElements()
+            .equals(other.getMaxExpandedAstElements())) return false;
       }
-      result = result && (hasMinExecutionSpeed() == other.hasMinExecutionSpeed());
+      if (hasMinExecutionSpeed() != other.hasMinExecutionSpeed()) return false;
       if (hasMinExecutionSpeed()) {
-        result = result && getMinExecutionSpeed()
-            .equals(other.getMinExecutionSpeed());
+        if (!getMinExecutionSpeed()
+            .equals(other.getMinExecutionSpeed())) return false;
       }
-      result = result && (hasMinExecutionSpeedBytes() == other.hasMinExecutionSpeedBytes());
+      if (hasMinExecutionSpeedBytes() != other.hasMinExecutionSpeedBytes()) return false;
       if (hasMinExecutionSpeedBytes()) {
-        result = result && getMinExecutionSpeedBytes()
-            .equals(other.getMinExecutionSpeedBytes());
+        if (!getMinExecutionSpeedBytes()
+            .equals(other.getMinExecutionSpeedBytes())) return false;
       }
-      result = result && countDistinctImplementation_ == other.countDistinctImplementation_;
-      result = result && (hasInputFormatValuesInterpretExpressions() == other.hasInputFormatValuesInterpretExpressions());
+      if (countDistinctImplementation_ != other.countDistinctImplementation_) return false;
+      if (hasInputFormatValuesInterpretExpressions() != other.hasInputFormatValuesInterpretExpressions()) return false;
       if (hasInputFormatValuesInterpretExpressions()) {
-        result = result && getInputFormatValuesInterpretExpressions()
-            .equals(other.getInputFormatValuesInterpretExpressions());
+        if (!getInputFormatValuesInterpretExpressions()
+            .equals(other.getInputFormatValuesInterpretExpressions())) return false;
       }
-      result = result && (hasInputFormatDefaultsForOmittedFields() == other.hasInputFormatDefaultsForOmittedFields());
+      if (hasInputFormatDefaultsForOmittedFields() != other.hasInputFormatDefaultsForOmittedFields()) return false;
       if (hasInputFormatDefaultsForOmittedFields()) {
-        result = result && getInputFormatDefaultsForOmittedFields()
-            .equals(other.getInputFormatDefaultsForOmittedFields());
+        if (!getInputFormatDefaultsForOmittedFields()
+            .equals(other.getInputFormatDefaultsForOmittedFields())) return false;
       }
-      result = result && (hasOutputFormatJsonQuote64BitIntegers() == other.hasOutputFormatJsonQuote64BitIntegers());
+      if (hasOutputFormatJsonQuote64BitIntegers() != other.hasOutputFormatJsonQuote64BitIntegers()) return false;
       if (hasOutputFormatJsonQuote64BitIntegers()) {
-        result = result && getOutputFormatJsonQuote64BitIntegers()
-            .equals(other.getOutputFormatJsonQuote64BitIntegers());
+        if (!getOutputFormatJsonQuote64BitIntegers()
+            .equals(other.getOutputFormatJsonQuote64BitIntegers())) return false;
       }
-      result = result && (hasOutputFormatJsonQuoteDenormals() == other.hasOutputFormatJsonQuoteDenormals());
+      if (hasOutputFormatJsonQuoteDenormals() != other.hasOutputFormatJsonQuoteDenormals()) return false;
       if (hasOutputFormatJsonQuoteDenormals()) {
-        result = result && getOutputFormatJsonQuoteDenormals()
-            .equals(other.getOutputFormatJsonQuoteDenormals());
+        if (!getOutputFormatJsonQuoteDenormals()
+            .equals(other.getOutputFormatJsonQuoteDenormals())) return false;
       }
-      result = result && (hasLowCardinalityAllowInNativeFormat() == other.hasLowCardinalityAllowInNativeFormat());
+      if (hasLowCardinalityAllowInNativeFormat() != other.hasLowCardinalityAllowInNativeFormat()) return false;
       if (hasLowCardinalityAllowInNativeFormat()) {
-        result = result && getLowCardinalityAllowInNativeFormat()
-            .equals(other.getLowCardinalityAllowInNativeFormat());
+        if (!getLowCardinalityAllowInNativeFormat()
+            .equals(other.getLowCardinalityAllowInNativeFormat())) return false;
       }
-      result = result && (hasEmptyResultForAggregationByEmptySet() == other.hasEmptyResultForAggregationByEmptySet());
+      if (hasEmptyResultForAggregationByEmptySet() != other.hasEmptyResultForAggregationByEmptySet()) return false;
       if (hasEmptyResultForAggregationByEmptySet()) {
-        result = result && getEmptyResultForAggregationByEmptySet()
-            .equals(other.getEmptyResultForAggregationByEmptySet());
+        if (!getEmptyResultForAggregationByEmptySet()
+            .equals(other.getEmptyResultForAggregationByEmptySet())) return false;
       }
-      result = result && (hasJoinedSubqueryRequiresAlias() == other.hasJoinedSubqueryRequiresAlias());
+      if (hasJoinedSubqueryRequiresAlias() != other.hasJoinedSubqueryRequiresAlias()) return false;
       if (hasJoinedSubqueryRequiresAlias()) {
-        result = result && getJoinedSubqueryRequiresAlias()
-            .equals(other.getJoinedSubqueryRequiresAlias());
+        if (!getJoinedSubqueryRequiresAlias()
+            .equals(other.getJoinedSubqueryRequiresAlias())) return false;
       }
-      result = result && (hasJoinUseNulls() == other.hasJoinUseNulls());
+      if (hasJoinUseNulls() != other.hasJoinUseNulls()) return false;
       if (hasJoinUseNulls()) {
-        result = result && getJoinUseNulls()
-            .equals(other.getJoinUseNulls());
+        if (!getJoinUseNulls()
+            .equals(other.getJoinUseNulls())) return false;
       }
-      result = result && (hasTransformNullIn() == other.hasTransformNullIn());
+      if (hasTransformNullIn() != other.hasTransformNullIn()) return false;
       if (hasTransformNullIn()) {
-        result = result && getTransformNullIn()
-            .equals(other.getTransformNullIn());
+        if (!getTransformNullIn()
+            .equals(other.getTransformNullIn())) return false;
       }
-      result = result && (hasHttpConnectionTimeout() == other.hasHttpConnectionTimeout());
+      if (hasHttpConnectionTimeout() != other.hasHttpConnectionTimeout()) return false;
       if (hasHttpConnectionTimeout()) {
-        result = result && getHttpConnectionTimeout()
-            .equals(other.getHttpConnectionTimeout());
+        if (!getHttpConnectionTimeout()
+            .equals(other.getHttpConnectionTimeout())) return false;
       }
-      result = result && (hasHttpReceiveTimeout() == other.hasHttpReceiveTimeout());
+      if (hasHttpReceiveTimeout() != other.hasHttpReceiveTimeout()) return false;
       if (hasHttpReceiveTimeout()) {
-        result = result && getHttpReceiveTimeout()
-            .equals(other.getHttpReceiveTimeout());
+        if (!getHttpReceiveTimeout()
+            .equals(other.getHttpReceiveTimeout())) return false;
       }
-      result = result && (hasHttpSendTimeout() == other.hasHttpSendTimeout());
+      if (hasHttpSendTimeout() != other.hasHttpSendTimeout()) return false;
       if (hasHttpSendTimeout()) {
-        result = result && getHttpSendTimeout()
-            .equals(other.getHttpSendTimeout());
+        if (!getHttpSendTimeout()
+            .equals(other.getHttpSendTimeout())) return false;
       }
-      result = result && (hasEnableHttpCompression() == other.hasEnableHttpCompression());
+      if (hasEnableHttpCompression() != other.hasEnableHttpCompression()) return false;
       if (hasEnableHttpCompression()) {
-        result = result && getEnableHttpCompression()
-            .equals(other.getEnableHttpCompression());
+        if (!getEnableHttpCompression()
+            .equals(other.getEnableHttpCompression())) return false;
       }
-      result = result && (hasSendProgressInHttpHeaders() == other.hasSendProgressInHttpHeaders());
+      if (hasSendProgressInHttpHeaders() != other.hasSendProgressInHttpHeaders()) return false;
       if (hasSendProgressInHttpHeaders()) {
-        result = result && getSendProgressInHttpHeaders()
-            .equals(other.getSendProgressInHttpHeaders());
+        if (!getSendProgressInHttpHeaders()
+            .equals(other.getSendProgressInHttpHeaders())) return false;
       }
-      result = result && (hasHttpHeadersProgressInterval() == other.hasHttpHeadersProgressInterval());
+      if (hasHttpHeadersProgressInterval() != other.hasHttpHeadersProgressInterval()) return false;
       if (hasHttpHeadersProgressInterval()) {
-        result = result && getHttpHeadersProgressInterval()
-            .equals(other.getHttpHeadersProgressInterval());
+        if (!getHttpHeadersProgressInterval()
+            .equals(other.getHttpHeadersProgressInterval())) return false;
       }
-      result = result && (hasAddHttpCorsHeader() == other.hasAddHttpCorsHeader());
+      if (hasAddHttpCorsHeader() != other.hasAddHttpCorsHeader()) return false;
       if (hasAddHttpCorsHeader()) {
-        result = result && getAddHttpCorsHeader()
-            .equals(other.getAddHttpCorsHeader());
+        if (!getAddHttpCorsHeader()
+            .equals(other.getAddHttpCorsHeader())) return false;
       }
-      result = result && quotaMode_ == other.quotaMode_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (quotaMode_ != other.quotaMode_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15250,35 +16032,35 @@ public final class UserOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15600,7 +16382,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value readonly_ = null;
+      private com.google.protobuf.Int64Value readonly_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> readonlyBuilder_;
       /**
@@ -15613,6 +16395,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
+       * @return Whether the readonly field is set.
        */
       public boolean hasReadonly() {
         return readonlyBuilder_ != null || readonly_ != null;
@@ -15627,6 +16410,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
+       * @return The readonly.
        */
       public com.google.protobuf.Int64Value getReadonly() {
         if (readonlyBuilder_ == null) {
@@ -15789,7 +16573,7 @@ public final class UserOuterClass {
         return readonlyBuilder_;
       }
 
-      private com.google.protobuf.BoolValue allowDdl_ = null;
+      private com.google.protobuf.BoolValue allowDdl_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowDdlBuilder_;
       /**
@@ -15800,6 +16584,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
+       * @return Whether the allowDdl field is set.
        */
       public boolean hasAllowDdl() {
         return allowDdlBuilder_ != null || allowDdl_ != null;
@@ -15812,6 +16597,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
+       * @return The allowDdl.
        */
       public com.google.protobuf.BoolValue getAllowDdl() {
         if (allowDdlBuilder_ == null) {
@@ -15960,7 +16746,7 @@ public final class UserOuterClass {
         return allowDdlBuilder_;
       }
 
-      private com.google.protobuf.Int64Value insertQuorum_ = null;
+      private com.google.protobuf.Int64Value insertQuorum_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumBuilder_;
       /**
@@ -15975,6 +16761,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the insertQuorum field is set.
        */
       public boolean hasInsertQuorum() {
         return insertQuorumBuilder_ != null || insertQuorum_ != null;
@@ -15991,6 +16778,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The insertQuorum.
        */
       public com.google.protobuf.Int64Value getInsertQuorum() {
         if (insertQuorumBuilder_ == null) {
@@ -16167,7 +16955,7 @@ public final class UserOuterClass {
         return insertQuorumBuilder_;
       }
 
-      private com.google.protobuf.Int64Value connectTimeout_ = null;
+      private com.google.protobuf.Int64Value connectTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> connectTimeoutBuilder_;
       /**
@@ -16177,6 +16965,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the connectTimeout field is set.
        */
       public boolean hasConnectTimeout() {
         return connectTimeoutBuilder_ != null || connectTimeout_ != null;
@@ -16188,6 +16977,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The connectTimeout.
        */
       public com.google.protobuf.Int64Value getConnectTimeout() {
         if (connectTimeoutBuilder_ == null) {
@@ -16329,7 +17119,7 @@ public final class UserOuterClass {
         return connectTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value receiveTimeout_ = null;
+      private com.google.protobuf.Int64Value receiveTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> receiveTimeoutBuilder_;
       /**
@@ -16339,6 +17129,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the receiveTimeout field is set.
        */
       public boolean hasReceiveTimeout() {
         return receiveTimeoutBuilder_ != null || receiveTimeout_ != null;
@@ -16350,6 +17141,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The receiveTimeout.
        */
       public com.google.protobuf.Int64Value getReceiveTimeout() {
         if (receiveTimeoutBuilder_ == null) {
@@ -16491,7 +17283,7 @@ public final class UserOuterClass {
         return receiveTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value sendTimeout_ = null;
+      private com.google.protobuf.Int64Value sendTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sendTimeoutBuilder_;
       /**
@@ -16501,6 +17293,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the sendTimeout field is set.
        */
       public boolean hasSendTimeout() {
         return sendTimeoutBuilder_ != null || sendTimeout_ != null;
@@ -16512,6 +17305,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The sendTimeout.
        */
       public com.google.protobuf.Int64Value getSendTimeout() {
         if (sendTimeoutBuilder_ == null) {
@@ -16653,7 +17447,7 @@ public final class UserOuterClass {
         return sendTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value insertQuorumTimeout_ = null;
+      private com.google.protobuf.Int64Value insertQuorumTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumTimeoutBuilder_;
       /**
@@ -16665,6 +17459,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+       * @return Whether the insertQuorumTimeout field is set.
        */
       public boolean hasInsertQuorumTimeout() {
         return insertQuorumTimeoutBuilder_ != null || insertQuorumTimeout_ != null;
@@ -16678,6 +17473,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+       * @return The insertQuorumTimeout.
        */
       public com.google.protobuf.Int64Value getInsertQuorumTimeout() {
         if (insertQuorumTimeoutBuilder_ == null) {
@@ -16833,7 +17629,7 @@ public final class UserOuterClass {
         return insertQuorumTimeoutBuilder_;
       }
 
-      private com.google.protobuf.BoolValue selectSequentialConsistency_ = null;
+      private com.google.protobuf.BoolValue selectSequentialConsistency_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> selectSequentialConsistencyBuilder_;
       /**
@@ -16843,6 +17639,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
+       * @return Whether the selectSequentialConsistency field is set.
        */
       public boolean hasSelectSequentialConsistency() {
         return selectSequentialConsistencyBuilder_ != null || selectSequentialConsistency_ != null;
@@ -16854,6 +17651,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
+       * @return The selectSequentialConsistency.
        */
       public com.google.protobuf.BoolValue getSelectSequentialConsistency() {
         if (selectSequentialConsistencyBuilder_ == null) {
@@ -16995,7 +17793,7 @@ public final class UserOuterClass {
         return selectSequentialConsistencyBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxReplicaDelayForDistributedQueries_ = null;
+      private com.google.protobuf.Int64Value maxReplicaDelayForDistributedQueries_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxReplicaDelayForDistributedQueriesBuilder_;
       /**
@@ -17006,6 +17804,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+       * @return Whether the maxReplicaDelayForDistributedQueries field is set.
        */
       public boolean hasMaxReplicaDelayForDistributedQueries() {
         return maxReplicaDelayForDistributedQueriesBuilder_ != null || maxReplicaDelayForDistributedQueries_ != null;
@@ -17018,6 +17817,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+       * @return The maxReplicaDelayForDistributedQueries.
        */
       public com.google.protobuf.Int64Value getMaxReplicaDelayForDistributedQueries() {
         if (maxReplicaDelayForDistributedQueriesBuilder_ == null) {
@@ -17166,7 +17966,7 @@ public final class UserOuterClass {
         return maxReplicaDelayForDistributedQueriesBuilder_;
       }
 
-      private com.google.protobuf.BoolValue fallbackToStaleReplicasForDistributedQueries_ = null;
+      private com.google.protobuf.BoolValue fallbackToStaleReplicasForDistributedQueries_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> fallbackToStaleReplicasForDistributedQueriesBuilder_;
       /**
@@ -17179,6 +17979,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
+       * @return Whether the fallbackToStaleReplicasForDistributedQueries field is set.
        */
       public boolean hasFallbackToStaleReplicasForDistributedQueries() {
         return fallbackToStaleReplicasForDistributedQueriesBuilder_ != null || fallbackToStaleReplicasForDistributedQueries_ != null;
@@ -17193,6 +17994,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
+       * @return The fallbackToStaleReplicasForDistributedQueries.
        */
       public com.google.protobuf.BoolValue getFallbackToStaleReplicasForDistributedQueries() {
         if (fallbackToStaleReplicasForDistributedQueriesBuilder_ == null) {
@@ -17355,7 +18157,7 @@ public final class UserOuterClass {
         return fallbackToStaleReplicasForDistributedQueriesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value replicationAlterPartitionsSync_ = null;
+      private com.google.protobuf.Int64Value replicationAlterPartitionsSync_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationAlterPartitionsSyncBuilder_;
       /**
@@ -17368,6 +18170,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       * @return Whether the replicationAlterPartitionsSync field is set.
        */
       public boolean hasReplicationAlterPartitionsSync() {
         return replicationAlterPartitionsSyncBuilder_ != null || replicationAlterPartitionsSync_ != null;
@@ -17382,6 +18185,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       * @return The replicationAlterPartitionsSync.
        */
       public com.google.protobuf.Int64Value getReplicationAlterPartitionsSync() {
         if (replicationAlterPartitionsSyncBuilder_ == null) {
@@ -17552,8 +18356,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+       * @return The enum numeric value on the wire for distributedProductMode.
        */
-      public int getDistributedProductModeValue() {
+      @java.lang.Override public int getDistributedProductModeValue() {
         return distributedProductMode_;
       }
       /**
@@ -17563,8 +18368,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+       * @param value The enum numeric value on the wire for distributedProductMode to set.
+       * @return This builder for chaining.
        */
       public Builder setDistributedProductModeValue(int value) {
+        
         distributedProductMode_ = value;
         onChanged();
         return this;
@@ -17576,7 +18384,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+       * @return The distributedProductMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode getDistributedProductMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode.valueOf(distributedProductMode_);
@@ -17589,6 +18399,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+       * @param value The distributedProductMode to set.
+       * @return This builder for chaining.
        */
       public Builder setDistributedProductMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DistributedProductMode value) {
         if (value == null) {
@@ -17606,6 +18418,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDistributedProductMode() {
         
@@ -17614,7 +18427,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.BoolValue distributedAggregationMemoryEfficient_ = null;
+      private com.google.protobuf.BoolValue distributedAggregationMemoryEfficient_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> distributedAggregationMemoryEfficientBuilder_;
       /**
@@ -17627,6 +18440,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
+       * @return Whether the distributedAggregationMemoryEfficient field is set.
        */
       public boolean hasDistributedAggregationMemoryEfficient() {
         return distributedAggregationMemoryEfficientBuilder_ != null || distributedAggregationMemoryEfficient_ != null;
@@ -17641,6 +18455,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
+       * @return The distributedAggregationMemoryEfficient.
        */
       public com.google.protobuf.BoolValue getDistributedAggregationMemoryEfficient() {
         if (distributedAggregationMemoryEfficientBuilder_ == null) {
@@ -17803,7 +18618,7 @@ public final class UserOuterClass {
         return distributedAggregationMemoryEfficientBuilder_;
       }
 
-      private com.google.protobuf.Int64Value distributedDdlTaskTimeout_ = null;
+      private com.google.protobuf.Int64Value distributedDdlTaskTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> distributedDdlTaskTimeoutBuilder_;
       /**
@@ -17812,6 +18627,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
+       * @return Whether the distributedDdlTaskTimeout field is set.
        */
       public boolean hasDistributedDdlTaskTimeout() {
         return distributedDdlTaskTimeoutBuilder_ != null || distributedDdlTaskTimeout_ != null;
@@ -17822,6 +18638,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value distributed_ddl_task_timeout = 73;</code>
+       * @return The distributedDdlTaskTimeout.
        */
       public com.google.protobuf.Int64Value getDistributedDdlTaskTimeout() {
         if (distributedDdlTaskTimeoutBuilder_ == null) {
@@ -17956,7 +18773,7 @@ public final class UserOuterClass {
         return distributedDdlTaskTimeoutBuilder_;
       }
 
-      private com.google.protobuf.BoolValue skipUnavailableShards_ = null;
+      private com.google.protobuf.BoolValue skipUnavailableShards_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> skipUnavailableShardsBuilder_;
       /**
@@ -17968,6 +18785,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       * @return Whether the skipUnavailableShards field is set.
        */
       public boolean hasSkipUnavailableShards() {
         return skipUnavailableShardsBuilder_ != null || skipUnavailableShards_ != null;
@@ -17981,6 +18799,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       * @return The skipUnavailableShards.
        */
       public com.google.protobuf.BoolValue getSkipUnavailableShards() {
         if (skipUnavailableShardsBuilder_ == null) {
@@ -18136,7 +18955,7 @@ public final class UserOuterClass {
         return skipUnavailableShardsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue compile_ = null;
+      private com.google.protobuf.BoolValue compile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
       /**
@@ -18150,6 +18969,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
+       * @return Whether the compile field is set.
        */
       public boolean hasCompile() {
         return compileBuilder_ != null || compile_ != null;
@@ -18165,6 +18985,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
+       * @return The compile.
        */
       public com.google.protobuf.BoolValue getCompile() {
         if (compileBuilder_ == null) {
@@ -18334,7 +19155,7 @@ public final class UserOuterClass {
         return compileBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minCountToCompile_ = null;
+      private com.google.protobuf.Int64Value minCountToCompile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCountToCompileBuilder_;
       /**
@@ -18349,6 +19170,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minCountToCompile field is set.
        */
       public boolean hasMinCountToCompile() {
         return minCountToCompileBuilder_ != null || minCountToCompile_ != null;
@@ -18365,6 +19187,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minCountToCompile.
        */
       public com.google.protobuf.Int64Value getMinCountToCompile() {
         if (minCountToCompileBuilder_ == null) {
@@ -18541,7 +19364,7 @@ public final class UserOuterClass {
         return minCountToCompileBuilder_;
       }
 
-      private com.google.protobuf.BoolValue compileExpressions_ = null;
+      private com.google.protobuf.BoolValue compileExpressions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileExpressionsBuilder_;
       /**
@@ -18554,6 +19377,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
+       * @return Whether the compileExpressions field is set.
        */
       public boolean hasCompileExpressions() {
         return compileExpressionsBuilder_ != null || compileExpressions_ != null;
@@ -18568,6 +19392,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
+       * @return The compileExpressions.
        */
       public com.google.protobuf.BoolValue getCompileExpressions() {
         if (compileExpressionsBuilder_ == null) {
@@ -18730,7 +19555,7 @@ public final class UserOuterClass {
         return compileExpressionsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minCountToCompileExpression_ = null;
+      private com.google.protobuf.Int64Value minCountToCompileExpression_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCountToCompileExpressionBuilder_;
       /**
@@ -18744,6 +19569,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minCountToCompileExpression field is set.
        */
       public boolean hasMinCountToCompileExpression() {
         return minCountToCompileExpressionBuilder_ != null || minCountToCompileExpression_ != null;
@@ -18759,6 +19585,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minCountToCompileExpression.
        */
       public com.google.protobuf.Int64Value getMinCountToCompileExpression() {
         if (minCountToCompileExpressionBuilder_ == null) {
@@ -18928,7 +19755,7 @@ public final class UserOuterClass {
         return minCountToCompileExpressionBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBlockSize_ = null;
+      private com.google.protobuf.Int64Value maxBlockSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBlockSizeBuilder_;
       /**
@@ -18942,6 +19769,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxBlockSize field is set.
        */
       public boolean hasMaxBlockSize() {
         return maxBlockSizeBuilder_ != null || maxBlockSize_ != null;
@@ -18957,6 +19785,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxBlockSize.
        */
       public com.google.protobuf.Int64Value getMaxBlockSize() {
         if (maxBlockSizeBuilder_ == null) {
@@ -19126,7 +19955,7 @@ public final class UserOuterClass {
         return maxBlockSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minInsertBlockSizeRows_ = null;
+      private com.google.protobuf.Int64Value minInsertBlockSizeRows_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsertBlockSizeRowsBuilder_;
       /**
@@ -19137,6 +19966,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minInsertBlockSizeRows field is set.
        */
       public boolean hasMinInsertBlockSizeRows() {
         return minInsertBlockSizeRowsBuilder_ != null || minInsertBlockSizeRows_ != null;
@@ -19149,6 +19979,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minInsertBlockSizeRows.
        */
       public com.google.protobuf.Int64Value getMinInsertBlockSizeRows() {
         if (minInsertBlockSizeRowsBuilder_ == null) {
@@ -19297,7 +20128,7 @@ public final class UserOuterClass {
         return minInsertBlockSizeRowsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minInsertBlockSizeBytes_ = null;
+      private com.google.protobuf.Int64Value minInsertBlockSizeBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsertBlockSizeBytesBuilder_;
       /**
@@ -19308,6 +20139,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minInsertBlockSizeBytes field is set.
        */
       public boolean hasMinInsertBlockSizeBytes() {
         return minInsertBlockSizeBytesBuilder_ != null || minInsertBlockSizeBytes_ != null;
@@ -19320,6 +20152,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minInsertBlockSizeBytes.
        */
       public com.google.protobuf.Int64Value getMinInsertBlockSizeBytes() {
         if (minInsertBlockSizeBytesBuilder_ == null) {
@@ -19468,7 +20301,7 @@ public final class UserOuterClass {
         return minInsertBlockSizeBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxInsertBlockSize_ = null;
+      private com.google.protobuf.Int64Value maxInsertBlockSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxInsertBlockSizeBuilder_;
       /**
@@ -19480,6 +20313,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxInsertBlockSize field is set.
        */
       public boolean hasMaxInsertBlockSize() {
         return maxInsertBlockSizeBuilder_ != null || maxInsertBlockSize_ != null;
@@ -19493,6 +20327,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxInsertBlockSize.
        */
       public com.google.protobuf.Int64Value getMaxInsertBlockSize() {
         if (maxInsertBlockSizeBuilder_ == null) {
@@ -19648,7 +20483,7 @@ public final class UserOuterClass {
         return maxInsertBlockSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minBytesToUseDirectIo_ = null;
+      private com.google.protobuf.Int64Value minBytesToUseDirectIo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minBytesToUseDirectIoBuilder_;
       /**
@@ -19662,6 +20497,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minBytesToUseDirectIo field is set.
        */
       public boolean hasMinBytesToUseDirectIo() {
         return minBytesToUseDirectIoBuilder_ != null || minBytesToUseDirectIo_ != null;
@@ -19677,6 +20513,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minBytesToUseDirectIo.
        */
       public com.google.protobuf.Int64Value getMinBytesToUseDirectIo() {
         if (minBytesToUseDirectIoBuilder_ == null) {
@@ -19846,7 +20683,7 @@ public final class UserOuterClass {
         return minBytesToUseDirectIoBuilder_;
       }
 
-      private com.google.protobuf.BoolValue useUncompressedCache_ = null;
+      private com.google.protobuf.BoolValue useUncompressedCache_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useUncompressedCacheBuilder_;
       /**
@@ -19860,6 +20697,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
+       * @return Whether the useUncompressedCache field is set.
        */
       public boolean hasUseUncompressedCache() {
         return useUncompressedCacheBuilder_ != null || useUncompressedCache_ != null;
@@ -19875,6 +20713,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
+       * @return The useUncompressedCache.
        */
       public com.google.protobuf.BoolValue getUseUncompressedCache() {
         if (useUncompressedCacheBuilder_ == null) {
@@ -20044,7 +20883,7 @@ public final class UserOuterClass {
         return useUncompressedCacheBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mergeTreeMaxRowsToUseCache_ = null;
+      private com.google.protobuf.Int64Value mergeTreeMaxRowsToUseCache_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMaxRowsToUseCacheBuilder_;
       /**
@@ -20056,6 +20895,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the mergeTreeMaxRowsToUseCache field is set.
        */
       public boolean hasMergeTreeMaxRowsToUseCache() {
         return mergeTreeMaxRowsToUseCacheBuilder_ != null || mergeTreeMaxRowsToUseCache_ != null;
@@ -20069,6 +20909,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The mergeTreeMaxRowsToUseCache.
        */
       public com.google.protobuf.Int64Value getMergeTreeMaxRowsToUseCache() {
         if (mergeTreeMaxRowsToUseCacheBuilder_ == null) {
@@ -20224,7 +21065,7 @@ public final class UserOuterClass {
         return mergeTreeMaxRowsToUseCacheBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mergeTreeMaxBytesToUseCache_ = null;
+      private com.google.protobuf.Int64Value mergeTreeMaxBytesToUseCache_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMaxBytesToUseCacheBuilder_;
       /**
@@ -20236,6 +21077,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the mergeTreeMaxBytesToUseCache field is set.
        */
       public boolean hasMergeTreeMaxBytesToUseCache() {
         return mergeTreeMaxBytesToUseCacheBuilder_ != null || mergeTreeMaxBytesToUseCache_ != null;
@@ -20249,6 +21091,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The mergeTreeMaxBytesToUseCache.
        */
       public com.google.protobuf.Int64Value getMergeTreeMaxBytesToUseCache() {
         if (mergeTreeMaxBytesToUseCacheBuilder_ == null) {
@@ -20404,7 +21247,7 @@ public final class UserOuterClass {
         return mergeTreeMaxBytesToUseCacheBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mergeTreeMinRowsForConcurrentRead_ = null;
+      private com.google.protobuf.Int64Value mergeTreeMinRowsForConcurrentRead_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMinRowsForConcurrentReadBuilder_;
       /**
@@ -20416,6 +21259,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the mergeTreeMinRowsForConcurrentRead field is set.
        */
       public boolean hasMergeTreeMinRowsForConcurrentRead() {
         return mergeTreeMinRowsForConcurrentReadBuilder_ != null || mergeTreeMinRowsForConcurrentRead_ != null;
@@ -20429,6 +21273,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The mergeTreeMinRowsForConcurrentRead.
        */
       public com.google.protobuf.Int64Value getMergeTreeMinRowsForConcurrentRead() {
         if (mergeTreeMinRowsForConcurrentReadBuilder_ == null) {
@@ -20584,7 +21429,7 @@ public final class UserOuterClass {
         return mergeTreeMinRowsForConcurrentReadBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mergeTreeMinBytesForConcurrentRead_ = null;
+      private com.google.protobuf.Int64Value mergeTreeMinBytesForConcurrentRead_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMinBytesForConcurrentReadBuilder_;
       /**
@@ -20596,6 +21441,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the mergeTreeMinBytesForConcurrentRead field is set.
        */
       public boolean hasMergeTreeMinBytesForConcurrentRead() {
         return mergeTreeMinBytesForConcurrentReadBuilder_ != null || mergeTreeMinBytesForConcurrentRead_ != null;
@@ -20609,6 +21455,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The mergeTreeMinBytesForConcurrentRead.
        */
       public com.google.protobuf.Int64Value getMergeTreeMinBytesForConcurrentRead() {
         if (mergeTreeMinBytesForConcurrentReadBuilder_ == null) {
@@ -20764,7 +21611,7 @@ public final class UserOuterClass {
         return mergeTreeMinBytesForConcurrentReadBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesBeforeExternalGroupBy_ = null;
+      private com.google.protobuf.Int64Value maxBytesBeforeExternalGroupBy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesBeforeExternalGroupByBuilder_;
       /**
@@ -20780,6 +21627,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
+       * @return Whether the maxBytesBeforeExternalGroupBy field is set.
        */
       public boolean hasMaxBytesBeforeExternalGroupBy() {
         return maxBytesBeforeExternalGroupByBuilder_ != null || maxBytesBeforeExternalGroupBy_ != null;
@@ -20797,6 +21645,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
+       * @return The maxBytesBeforeExternalGroupBy.
        */
       public com.google.protobuf.Int64Value getMaxBytesBeforeExternalGroupBy() {
         if (maxBytesBeforeExternalGroupByBuilder_ == null) {
@@ -20980,7 +21829,7 @@ public final class UserOuterClass {
         return maxBytesBeforeExternalGroupByBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesBeforeExternalSort_ = null;
+      private com.google.protobuf.Int64Value maxBytesBeforeExternalSort_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesBeforeExternalSortBuilder_;
       /**
@@ -20989,6 +21838,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
+       * @return Whether the maxBytesBeforeExternalSort field is set.
        */
       public boolean hasMaxBytesBeforeExternalSort() {
         return maxBytesBeforeExternalSortBuilder_ != null || maxBytesBeforeExternalSort_ != null;
@@ -20999,6 +21849,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
+       * @return The maxBytesBeforeExternalSort.
        */
       public com.google.protobuf.Int64Value getMaxBytesBeforeExternalSort() {
         if (maxBytesBeforeExternalSortBuilder_ == null) {
@@ -21133,7 +21984,7 @@ public final class UserOuterClass {
         return maxBytesBeforeExternalSortBuilder_;
       }
 
-      private com.google.protobuf.Int64Value groupByTwoLevelThreshold_ = null;
+      private com.google.protobuf.Int64Value groupByTwoLevelThreshold_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> groupByTwoLevelThresholdBuilder_;
       /**
@@ -21143,6 +21994,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
+       * @return Whether the groupByTwoLevelThreshold field is set.
        */
       public boolean hasGroupByTwoLevelThreshold() {
         return groupByTwoLevelThresholdBuilder_ != null || groupByTwoLevelThreshold_ != null;
@@ -21154,6 +22006,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
+       * @return The groupByTwoLevelThreshold.
        */
       public com.google.protobuf.Int64Value getGroupByTwoLevelThreshold() {
         if (groupByTwoLevelThresholdBuilder_ == null) {
@@ -21295,7 +22148,7 @@ public final class UserOuterClass {
         return groupByTwoLevelThresholdBuilder_;
       }
 
-      private com.google.protobuf.Int64Value groupByTwoLevelThresholdBytes_ = null;
+      private com.google.protobuf.Int64Value groupByTwoLevelThresholdBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> groupByTwoLevelThresholdBytesBuilder_;
       /**
@@ -21305,6 +22158,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
+       * @return Whether the groupByTwoLevelThresholdBytes field is set.
        */
       public boolean hasGroupByTwoLevelThresholdBytes() {
         return groupByTwoLevelThresholdBytesBuilder_ != null || groupByTwoLevelThresholdBytes_ != null;
@@ -21316,6 +22170,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
+       * @return The groupByTwoLevelThresholdBytes.
        */
       public com.google.protobuf.Int64Value getGroupByTwoLevelThresholdBytes() {
         if (groupByTwoLevelThresholdBytesBuilder_ == null) {
@@ -21457,7 +22312,7 @@ public final class UserOuterClass {
         return groupByTwoLevelThresholdBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value priority_ = null;
+      private com.google.protobuf.Int64Value priority_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> priorityBuilder_;
       /**
@@ -21472,6 +22327,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the priority field is set.
        */
       public boolean hasPriority() {
         return priorityBuilder_ != null || priority_ != null;
@@ -21488,6 +22344,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The priority.
        */
       public com.google.protobuf.Int64Value getPriority() {
         if (priorityBuilder_ == null) {
@@ -21664,7 +22521,7 @@ public final class UserOuterClass {
         return priorityBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxThreads_ = null;
+      private com.google.protobuf.Int64Value maxThreads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxThreadsBuilder_;
       /**
@@ -21676,6 +22533,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxThreads field is set.
        */
       public boolean hasMaxThreads() {
         return maxThreadsBuilder_ != null || maxThreads_ != null;
@@ -21689,6 +22547,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxThreads.
        */
       public com.google.protobuf.Int64Value getMaxThreads() {
         if (maxThreadsBuilder_ == null) {
@@ -21844,7 +22703,7 @@ public final class UserOuterClass {
         return maxThreadsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxMemoryUsage_ = null;
+      private com.google.protobuf.Int64Value maxMemoryUsage_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMemoryUsageBuilder_;
       /**
@@ -21859,6 +22718,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxMemoryUsage field is set.
        */
       public boolean hasMaxMemoryUsage() {
         return maxMemoryUsageBuilder_ != null || maxMemoryUsage_ != null;
@@ -21875,6 +22735,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxMemoryUsage.
        */
       public com.google.protobuf.Int64Value getMaxMemoryUsage() {
         if (maxMemoryUsageBuilder_ == null) {
@@ -22051,7 +22912,7 @@ public final class UserOuterClass {
         return maxMemoryUsageBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxMemoryUsageForUser_ = null;
+      private com.google.protobuf.Int64Value maxMemoryUsageForUser_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMemoryUsageForUserBuilder_;
       /**
@@ -22063,6 +22924,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxMemoryUsageForUser field is set.
        */
       public boolean hasMaxMemoryUsageForUser() {
         return maxMemoryUsageForUserBuilder_ != null || maxMemoryUsageForUser_ != null;
@@ -22076,6 +22938,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxMemoryUsageForUser.
        */
       public com.google.protobuf.Int64Value getMaxMemoryUsageForUser() {
         if (maxMemoryUsageForUserBuilder_ == null) {
@@ -22231,7 +23094,7 @@ public final class UserOuterClass {
         return maxMemoryUsageForUserBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxNetworkBandwidth_ = null;
+      private com.google.protobuf.Int64Value maxNetworkBandwidth_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxNetworkBandwidthBuilder_;
       /**
@@ -22241,6 +23104,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
+       * @return Whether the maxNetworkBandwidth field is set.
        */
       public boolean hasMaxNetworkBandwidth() {
         return maxNetworkBandwidthBuilder_ != null || maxNetworkBandwidth_ != null;
@@ -22252,6 +23116,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
+       * @return The maxNetworkBandwidth.
        */
       public com.google.protobuf.Int64Value getMaxNetworkBandwidth() {
         if (maxNetworkBandwidthBuilder_ == null) {
@@ -22393,7 +23258,7 @@ public final class UserOuterClass {
         return maxNetworkBandwidthBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxNetworkBandwidthForUser_ = null;
+      private com.google.protobuf.Int64Value maxNetworkBandwidthForUser_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxNetworkBandwidthForUserBuilder_;
       /**
@@ -22403,6 +23268,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
+       * @return Whether the maxNetworkBandwidthForUser field is set.
        */
       public boolean hasMaxNetworkBandwidthForUser() {
         return maxNetworkBandwidthForUserBuilder_ != null || maxNetworkBandwidthForUser_ != null;
@@ -22414,6 +23280,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
+       * @return The maxNetworkBandwidthForUser.
        */
       public com.google.protobuf.Int64Value getMaxNetworkBandwidthForUser() {
         if (maxNetworkBandwidthForUserBuilder_ == null) {
@@ -22555,7 +23422,7 @@ public final class UserOuterClass {
         return maxNetworkBandwidthForUserBuilder_;
       }
 
-      private com.google.protobuf.BoolValue forceIndexByDate_ = null;
+      private com.google.protobuf.BoolValue forceIndexByDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forceIndexByDateBuilder_;
       /**
@@ -22567,6 +23434,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
+       * @return Whether the forceIndexByDate field is set.
        */
       public boolean hasForceIndexByDate() {
         return forceIndexByDateBuilder_ != null || forceIndexByDate_ != null;
@@ -22580,6 +23448,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
+       * @return The forceIndexByDate.
        */
       public com.google.protobuf.BoolValue getForceIndexByDate() {
         if (forceIndexByDateBuilder_ == null) {
@@ -22735,7 +23604,7 @@ public final class UserOuterClass {
         return forceIndexByDateBuilder_;
       }
 
-      private com.google.protobuf.BoolValue forcePrimaryKey_ = null;
+      private com.google.protobuf.BoolValue forcePrimaryKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forcePrimaryKeyBuilder_;
       /**
@@ -22747,6 +23616,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
+       * @return Whether the forcePrimaryKey field is set.
        */
       public boolean hasForcePrimaryKey() {
         return forcePrimaryKeyBuilder_ != null || forcePrimaryKey_ != null;
@@ -22760,6 +23630,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
+       * @return The forcePrimaryKey.
        */
       public com.google.protobuf.BoolValue getForcePrimaryKey() {
         if (forcePrimaryKeyBuilder_ == null) {
@@ -22915,7 +23786,7 @@ public final class UserOuterClass {
         return forcePrimaryKeyBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxRowsToRead_ = null;
+      private com.google.protobuf.Int64Value maxRowsToRead_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToReadBuilder_;
       /**
@@ -22926,6 +23797,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsToRead field is set.
        */
       public boolean hasMaxRowsToRead() {
         return maxRowsToReadBuilder_ != null || maxRowsToRead_ != null;
@@ -22938,6 +23810,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsToRead.
        */
       public com.google.protobuf.Int64Value getMaxRowsToRead() {
         if (maxRowsToReadBuilder_ == null) {
@@ -23086,7 +23959,7 @@ public final class UserOuterClass {
         return maxRowsToReadBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesToRead_ = null;
+      private com.google.protobuf.Int64Value maxBytesToRead_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToReadBuilder_;
       /**
@@ -23096,6 +23969,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBytesToRead field is set.
        */
       public boolean hasMaxBytesToRead() {
         return maxBytesToReadBuilder_ != null || maxBytesToRead_ != null;
@@ -23107,6 +23981,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBytesToRead.
        */
       public com.google.protobuf.Int64Value getMaxBytesToRead() {
         if (maxBytesToReadBuilder_ == null) {
@@ -23257,8 +24132,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+       * @return The enum numeric value on the wire for readOverflowMode.
        */
-      public int getReadOverflowModeValue() {
+      @java.lang.Override public int getReadOverflowModeValue() {
         return readOverflowMode_;
       }
       /**
@@ -23269,8 +24145,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+       * @param value The enum numeric value on the wire for readOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setReadOverflowModeValue(int value) {
+        
         readOverflowMode_ = value;
         onChanged();
         return this;
@@ -23283,7 +24162,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+       * @return The readOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getReadOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(readOverflowMode_);
@@ -23297,6 +24178,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+       * @param value The readOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setReadOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -23315,6 +24198,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReadOverflowMode() {
         
@@ -23323,7 +24207,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxRowsToGroupBy_ = null;
+      private com.google.protobuf.Int64Value maxRowsToGroupBy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToGroupByBuilder_;
       /**
@@ -23334,6 +24218,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsToGroupBy field is set.
        */
       public boolean hasMaxRowsToGroupBy() {
         return maxRowsToGroupByBuilder_ != null || maxRowsToGroupBy_ != null;
@@ -23346,6 +24231,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsToGroupBy.
        */
       public com.google.protobuf.Int64Value getMaxRowsToGroupBy() {
         if (maxRowsToGroupByBuilder_ == null) {
@@ -23504,8 +24390,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+       * @return The enum numeric value on the wire for groupByOverflowMode.
        */
-      public int getGroupByOverflowModeValue() {
+      @java.lang.Override public int getGroupByOverflowModeValue() {
         return groupByOverflowMode_;
       }
       /**
@@ -23517,8 +24404,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+       * @param value The enum numeric value on the wire for groupByOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setGroupByOverflowModeValue(int value) {
+        
         groupByOverflowMode_ = value;
         onChanged();
         return this;
@@ -23532,7 +24422,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+       * @return The groupByOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode getGroupByOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode.valueOf(groupByOverflowMode_);
@@ -23547,6 +24439,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+       * @param value The groupByOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setGroupByOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.GroupByOverflowMode value) {
         if (value == null) {
@@ -23566,6 +24460,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGroupByOverflowMode() {
         
@@ -23574,7 +24469,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxRowsToSort_ = null;
+      private com.google.protobuf.Int64Value maxRowsToSort_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToSortBuilder_;
       /**
@@ -23585,6 +24480,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsToSort field is set.
        */
       public boolean hasMaxRowsToSort() {
         return maxRowsToSortBuilder_ != null || maxRowsToSort_ != null;
@@ -23597,6 +24493,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsToSort.
        */
       public com.google.protobuf.Int64Value getMaxRowsToSort() {
         if (maxRowsToSortBuilder_ == null) {
@@ -23745,7 +24642,7 @@ public final class UserOuterClass {
         return maxRowsToSortBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesToSort_ = null;
+      private com.google.protobuf.Int64Value maxBytesToSort_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToSortBuilder_;
       /**
@@ -23756,6 +24653,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBytesToSort field is set.
        */
       public boolean hasMaxBytesToSort() {
         return maxBytesToSortBuilder_ != null || maxBytesToSort_ != null;
@@ -23768,6 +24666,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBytesToSort.
        */
       public com.google.protobuf.Int64Value getMaxBytesToSort() {
         if (maxBytesToSortBuilder_ == null) {
@@ -23925,8 +24824,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+       * @return The enum numeric value on the wire for sortOverflowMode.
        */
-      public int getSortOverflowModeValue() {
+      @java.lang.Override public int getSortOverflowModeValue() {
         return sortOverflowMode_;
       }
       /**
@@ -23937,8 +24837,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+       * @param value The enum numeric value on the wire for sortOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSortOverflowModeValue(int value) {
+        
         sortOverflowMode_ = value;
         onChanged();
         return this;
@@ -23951,7 +24854,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+       * @return The sortOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSortOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(sortOverflowMode_);
@@ -23965,6 +24870,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+       * @param value The sortOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSortOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -23983,6 +24890,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSortOverflowMode() {
         
@@ -23991,7 +24899,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxResultRows_ = null;
+      private com.google.protobuf.Int64Value maxResultRows_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxResultRowsBuilder_;
       /**
@@ -24002,6 +24910,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxResultRows field is set.
        */
       public boolean hasMaxResultRows() {
         return maxResultRowsBuilder_ != null || maxResultRows_ != null;
@@ -24014,6 +24923,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxResultRows.
        */
       public com.google.protobuf.Int64Value getMaxResultRows() {
         if (maxResultRowsBuilder_ == null) {
@@ -24162,7 +25072,7 @@ public final class UserOuterClass {
         return maxResultRowsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxResultBytes_ = null;
+      private com.google.protobuf.Int64Value maxResultBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxResultBytesBuilder_;
       /**
@@ -24173,6 +25083,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxResultBytes field is set.
        */
       public boolean hasMaxResultBytes() {
         return maxResultBytesBuilder_ != null || maxResultBytes_ != null;
@@ -24185,6 +25096,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxResultBytes.
        */
       public com.google.protobuf.Int64Value getMaxResultBytes() {
         if (maxResultBytesBuilder_ == null) {
@@ -24342,8 +25254,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+       * @return The enum numeric value on the wire for resultOverflowMode.
        */
-      public int getResultOverflowModeValue() {
+      @java.lang.Override public int getResultOverflowModeValue() {
         return resultOverflowMode_;
       }
       /**
@@ -24354,8 +25267,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+       * @param value The enum numeric value on the wire for resultOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setResultOverflowModeValue(int value) {
+        
         resultOverflowMode_ = value;
         onChanged();
         return this;
@@ -24368,7 +25284,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+       * @return The resultOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getResultOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(resultOverflowMode_);
@@ -24382,6 +25300,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+       * @param value The resultOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setResultOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -24400,6 +25320,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResultOverflowMode() {
         
@@ -24408,7 +25329,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxRowsInDistinct_ = null;
+      private com.google.protobuf.Int64Value maxRowsInDistinct_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsInDistinctBuilder_;
       /**
@@ -24418,6 +25339,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsInDistinct field is set.
        */
       public boolean hasMaxRowsInDistinct() {
         return maxRowsInDistinctBuilder_ != null || maxRowsInDistinct_ != null;
@@ -24429,6 +25351,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsInDistinct.
        */
       public com.google.protobuf.Int64Value getMaxRowsInDistinct() {
         if (maxRowsInDistinctBuilder_ == null) {
@@ -24570,7 +25493,7 @@ public final class UserOuterClass {
         return maxRowsInDistinctBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesInDistinct_ = null;
+      private com.google.protobuf.Int64Value maxBytesInDistinct_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesInDistinctBuilder_;
       /**
@@ -24579,6 +25502,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBytesInDistinct field is set.
        */
       public boolean hasMaxBytesInDistinct() {
         return maxBytesInDistinctBuilder_ != null || maxBytesInDistinct_ != null;
@@ -24589,6 +25513,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBytesInDistinct.
        */
       public com.google.protobuf.Int64Value getMaxBytesInDistinct() {
         if (maxBytesInDistinctBuilder_ == null) {
@@ -24732,8 +25657,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+       * @return The enum numeric value on the wire for distinctOverflowMode.
        */
-      public int getDistinctOverflowModeValue() {
+      @java.lang.Override public int getDistinctOverflowModeValue() {
         return distinctOverflowMode_;
       }
       /**
@@ -24744,8 +25670,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+       * @param value The enum numeric value on the wire for distinctOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setDistinctOverflowModeValue(int value) {
+        
         distinctOverflowMode_ = value;
         onChanged();
         return this;
@@ -24758,7 +25687,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+       * @return The distinctOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getDistinctOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(distinctOverflowMode_);
@@ -24772,6 +25703,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+       * @param value The distinctOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setDistinctOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -24790,6 +25723,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDistinctOverflowMode() {
         
@@ -24798,7 +25732,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxRowsToTransfer_ = null;
+      private com.google.protobuf.Int64Value maxRowsToTransfer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToTransferBuilder_;
       /**
@@ -24808,6 +25742,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsToTransfer field is set.
        */
       public boolean hasMaxRowsToTransfer() {
         return maxRowsToTransferBuilder_ != null || maxRowsToTransfer_ != null;
@@ -24819,6 +25754,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsToTransfer.
        */
       public com.google.protobuf.Int64Value getMaxRowsToTransfer() {
         if (maxRowsToTransferBuilder_ == null) {
@@ -24960,7 +25896,7 @@ public final class UserOuterClass {
         return maxRowsToTransferBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesToTransfer_ = null;
+      private com.google.protobuf.Int64Value maxBytesToTransfer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToTransferBuilder_;
       /**
@@ -24971,6 +25907,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBytesToTransfer field is set.
        */
       public boolean hasMaxBytesToTransfer() {
         return maxBytesToTransferBuilder_ != null || maxBytesToTransfer_ != null;
@@ -24983,6 +25920,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBytesToTransfer.
        */
       public com.google.protobuf.Int64Value getMaxBytesToTransfer() {
         if (maxBytesToTransferBuilder_ == null) {
@@ -25140,8 +26078,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+       * @return The enum numeric value on the wire for transferOverflowMode.
        */
-      public int getTransferOverflowModeValue() {
+      @java.lang.Override public int getTransferOverflowModeValue() {
         return transferOverflowMode_;
       }
       /**
@@ -25152,8 +26091,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+       * @param value The enum numeric value on the wire for transferOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferOverflowModeValue(int value) {
+        
         transferOverflowMode_ = value;
         onChanged();
         return this;
@@ -25166,7 +26108,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+       * @return The transferOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTransferOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(transferOverflowMode_);
@@ -25180,6 +26124,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+       * @param value The transferOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -25198,6 +26144,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferOverflowMode() {
         
@@ -25206,7 +26153,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxExecutionTime_ = null;
+      private com.google.protobuf.Int64Value maxExecutionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxExecutionTimeBuilder_;
       /**
@@ -25217,6 +26164,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxExecutionTime field is set.
        */
       public boolean hasMaxExecutionTime() {
         return maxExecutionTimeBuilder_ != null || maxExecutionTime_ != null;
@@ -25229,6 +26177,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxExecutionTime.
        */
       public com.google.protobuf.Int64Value getMaxExecutionTime() {
         if (maxExecutionTimeBuilder_ == null) {
@@ -25386,8 +26335,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+       * @return The enum numeric value on the wire for timeoutOverflowMode.
        */
-      public int getTimeoutOverflowModeValue() {
+      @java.lang.Override public int getTimeoutOverflowModeValue() {
         return timeoutOverflowMode_;
       }
       /**
@@ -25398,8 +26348,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+       * @param value The enum numeric value on the wire for timeoutOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setTimeoutOverflowModeValue(int value) {
+        
         timeoutOverflowMode_ = value;
         onChanged();
         return this;
@@ -25412,7 +26365,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+       * @return The timeoutOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getTimeoutOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(timeoutOverflowMode_);
@@ -25426,6 +26381,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+       * @param value The timeoutOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setTimeoutOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -25444,6 +26401,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTimeoutOverflowMode() {
         
@@ -25452,7 +26410,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxRowsInSet_ = null;
+      private com.google.protobuf.Int64Value maxRowsInSet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsInSetBuilder_;
       /**
@@ -25461,6 +26419,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsInSet field is set.
        */
       public boolean hasMaxRowsInSet() {
         return maxRowsInSetBuilder_ != null || maxRowsInSet_ != null;
@@ -25471,6 +26430,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsInSet.
        */
       public com.google.protobuf.Int64Value getMaxRowsInSet() {
         if (maxRowsInSetBuilder_ == null) {
@@ -25605,7 +26565,7 @@ public final class UserOuterClass {
         return maxRowsInSetBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesInSet_ = null;
+      private com.google.protobuf.Int64Value maxBytesInSet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesInSetBuilder_;
       /**
@@ -25614,6 +26574,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBytesInSet field is set.
        */
       public boolean hasMaxBytesInSet() {
         return maxBytesInSetBuilder_ != null || maxBytesInSet_ != null;
@@ -25624,6 +26585,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBytesInSet.
        */
       public com.google.protobuf.Int64Value getMaxBytesInSet() {
         if (maxBytesInSetBuilder_ == null) {
@@ -25766,8 +26728,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       * @return The enum numeric value on the wire for setOverflowMode.
        */
-      public int getSetOverflowModeValue() {
+      @java.lang.Override public int getSetOverflowModeValue() {
         return setOverflowMode_;
       }
       /**
@@ -25777,8 +26740,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       * @param value The enum numeric value on the wire for setOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSetOverflowModeValue(int value) {
+        
         setOverflowMode_ = value;
         onChanged();
         return this;
@@ -25790,7 +26756,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       * @return The setOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(setOverflowMode_);
@@ -25803,6 +26771,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       * @param value The setOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSetOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -25820,6 +26790,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSetOverflowMode() {
         
@@ -25828,7 +26799,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxRowsInJoin_ = null;
+      private com.google.protobuf.Int64Value maxRowsInJoin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsInJoinBuilder_;
       /**
@@ -25837,6 +26808,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxRowsInJoin field is set.
        */
       public boolean hasMaxRowsInJoin() {
         return maxRowsInJoinBuilder_ != null || maxRowsInJoin_ != null;
@@ -25847,6 +26819,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxRowsInJoin.
        */
       public com.google.protobuf.Int64Value getMaxRowsInJoin() {
         if (maxRowsInJoinBuilder_ == null) {
@@ -25981,7 +26954,7 @@ public final class UserOuterClass {
         return maxRowsInJoinBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxBytesInJoin_ = null;
+      private com.google.protobuf.Int64Value maxBytesInJoin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesInJoinBuilder_;
       /**
@@ -25990,6 +26963,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBytesInJoin field is set.
        */
       public boolean hasMaxBytesInJoin() {
         return maxBytesInJoinBuilder_ != null || maxBytesInJoin_ != null;
@@ -26000,6 +26974,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBytesInJoin.
        */
       public com.google.protobuf.Int64Value getMaxBytesInJoin() {
         if (maxBytesInJoinBuilder_ == null) {
@@ -26142,8 +27117,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       * @return The enum numeric value on the wire for joinOverflowMode.
        */
-      public int getJoinOverflowModeValue() {
+      @java.lang.Override public int getJoinOverflowModeValue() {
         return joinOverflowMode_;
       }
       /**
@@ -26153,8 +27129,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       * @param value The enum numeric value on the wire for joinOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setJoinOverflowModeValue(int value) {
+        
         joinOverflowMode_ = value;
         onChanged();
         return this;
@@ -26166,7 +27145,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       * @return The joinOverflowMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(joinOverflowMode_);
@@ -26179,6 +27160,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       * @param value The joinOverflowMode to set.
+       * @return This builder for chaining.
        */
       public Builder setJoinOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
         if (value == null) {
@@ -26196,6 +27179,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       * @return This builder for chaining.
        */
       public Builder clearJoinOverflowMode() {
         
@@ -26204,7 +27188,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxColumnsToRead_ = null;
+      private com.google.protobuf.Int64Value maxColumnsToRead_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxColumnsToReadBuilder_;
       /**
@@ -26215,6 +27199,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxColumnsToRead field is set.
        */
       public boolean hasMaxColumnsToRead() {
         return maxColumnsToReadBuilder_ != null || maxColumnsToRead_ != null;
@@ -26227,6 +27212,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxColumnsToRead.
        */
       public com.google.protobuf.Int64Value getMaxColumnsToRead() {
         if (maxColumnsToReadBuilder_ == null) {
@@ -26375,7 +27361,7 @@ public final class UserOuterClass {
         return maxColumnsToReadBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxTemporaryColumns_ = null;
+      private com.google.protobuf.Int64Value maxTemporaryColumns_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTemporaryColumnsBuilder_;
       /**
@@ -26385,6 +27371,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxTemporaryColumns field is set.
        */
       public boolean hasMaxTemporaryColumns() {
         return maxTemporaryColumnsBuilder_ != null || maxTemporaryColumns_ != null;
@@ -26396,6 +27383,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxTemporaryColumns.
        */
       public com.google.protobuf.Int64Value getMaxTemporaryColumns() {
         if (maxTemporaryColumnsBuilder_ == null) {
@@ -26537,7 +27525,7 @@ public final class UserOuterClass {
         return maxTemporaryColumnsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxTemporaryNonConstColumns_ = null;
+      private com.google.protobuf.Int64Value maxTemporaryNonConstColumns_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTemporaryNonConstColumnsBuilder_;
       /**
@@ -26547,6 +27535,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxTemporaryNonConstColumns field is set.
        */
       public boolean hasMaxTemporaryNonConstColumns() {
         return maxTemporaryNonConstColumnsBuilder_ != null || maxTemporaryNonConstColumns_ != null;
@@ -26558,6 +27547,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxTemporaryNonConstColumns.
        */
       public com.google.protobuf.Int64Value getMaxTemporaryNonConstColumns() {
         if (maxTemporaryNonConstColumnsBuilder_ == null) {
@@ -26699,7 +27689,7 @@ public final class UserOuterClass {
         return maxTemporaryNonConstColumnsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxQuerySize_ = null;
+      private com.google.protobuf.Int64Value maxQuerySize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxQuerySizeBuilder_;
       /**
@@ -26710,6 +27700,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxQuerySize field is set.
        */
       public boolean hasMaxQuerySize() {
         return maxQuerySizeBuilder_ != null || maxQuerySize_ != null;
@@ -26722,6 +27713,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxQuerySize.
        */
       public com.google.protobuf.Int64Value getMaxQuerySize() {
         if (maxQuerySizeBuilder_ == null) {
@@ -26870,7 +27862,7 @@ public final class UserOuterClass {
         return maxQuerySizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxAstDepth_ = null;
+      private com.google.protobuf.Int64Value maxAstDepth_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxAstDepthBuilder_;
       /**
@@ -26886,6 +27878,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxAstDepth field is set.
        */
       public boolean hasMaxAstDepth() {
         return maxAstDepthBuilder_ != null || maxAstDepth_ != null;
@@ -26903,6 +27896,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxAstDepth.
        */
       public com.google.protobuf.Int64Value getMaxAstDepth() {
         if (maxAstDepthBuilder_ == null) {
@@ -27086,7 +28080,7 @@ public final class UserOuterClass {
         return maxAstDepthBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxAstElements_ = null;
+      private com.google.protobuf.Int64Value maxAstElements_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxAstElementsBuilder_;
       /**
@@ -27100,6 +28094,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxAstElements field is set.
        */
       public boolean hasMaxAstElements() {
         return maxAstElementsBuilder_ != null || maxAstElements_ != null;
@@ -27115,6 +28110,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxAstElements.
        */
       public com.google.protobuf.Int64Value getMaxAstElements() {
         if (maxAstElementsBuilder_ == null) {
@@ -27284,7 +28280,7 @@ public final class UserOuterClass {
         return maxAstElementsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxExpandedAstElements_ = null;
+      private com.google.protobuf.Int64Value maxExpandedAstElements_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxExpandedAstElementsBuilder_;
       /**
@@ -27297,6 +28293,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxExpandedAstElements field is set.
        */
       public boolean hasMaxExpandedAstElements() {
         return maxExpandedAstElementsBuilder_ != null || maxExpandedAstElements_ != null;
@@ -27311,6 +28308,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxExpandedAstElements.
        */
       public com.google.protobuf.Int64Value getMaxExpandedAstElements() {
         if (maxExpandedAstElementsBuilder_ == null) {
@@ -27473,7 +28471,7 @@ public final class UserOuterClass {
         return maxExpandedAstElementsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minExecutionSpeed_ = null;
+      private com.google.protobuf.Int64Value minExecutionSpeed_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minExecutionSpeedBuilder_;
       /**
@@ -27482,6 +28480,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minExecutionSpeed field is set.
        */
       public boolean hasMinExecutionSpeed() {
         return minExecutionSpeedBuilder_ != null || minExecutionSpeed_ != null;
@@ -27492,6 +28491,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minExecutionSpeed.
        */
       public com.google.protobuf.Int64Value getMinExecutionSpeed() {
         if (minExecutionSpeedBuilder_ == null) {
@@ -27626,7 +28626,7 @@ public final class UserOuterClass {
         return minExecutionSpeedBuilder_;
       }
 
-      private com.google.protobuf.Int64Value minExecutionSpeedBytes_ = null;
+      private com.google.protobuf.Int64Value minExecutionSpeedBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minExecutionSpeedBytesBuilder_;
       /**
@@ -27635,6 +28635,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minExecutionSpeedBytes field is set.
        */
       public boolean hasMinExecutionSpeedBytes() {
         return minExecutionSpeedBytesBuilder_ != null || minExecutionSpeedBytes_ != null;
@@ -27645,6 +28646,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minExecutionSpeedBytes.
        */
       public com.google.protobuf.Int64Value getMinExecutionSpeedBytes() {
         if (minExecutionSpeedBytesBuilder_ == null) {
@@ -27786,8 +28788,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       * @return The enum numeric value on the wire for countDistinctImplementation.
        */
-      public int getCountDistinctImplementationValue() {
+      @java.lang.Override public int getCountDistinctImplementationValue() {
         return countDistinctImplementation_;
       }
       /**
@@ -27796,8 +28799,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       * @param value The enum numeric value on the wire for countDistinctImplementation to set.
+       * @return This builder for chaining.
        */
       public Builder setCountDistinctImplementationValue(int value) {
+        
         countDistinctImplementation_ = value;
         onChanged();
         return this;
@@ -27808,7 +28814,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       * @return The countDistinctImplementation.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.valueOf(countDistinctImplementation_);
@@ -27820,6 +28828,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       * @param value The countDistinctImplementation to set.
+       * @return This builder for chaining.
        */
       public Builder setCountDistinctImplementation(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation value) {
         if (value == null) {
@@ -27836,6 +28846,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCountDistinctImplementation() {
         
@@ -27844,7 +28855,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.BoolValue inputFormatValuesInterpretExpressions_ = null;
+      private com.google.protobuf.BoolValue inputFormatValuesInterpretExpressions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatValuesInterpretExpressionsBuilder_;
       /**
@@ -27859,6 +28870,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
+       * @return Whether the inputFormatValuesInterpretExpressions field is set.
        */
       public boolean hasInputFormatValuesInterpretExpressions() {
         return inputFormatValuesInterpretExpressionsBuilder_ != null || inputFormatValuesInterpretExpressions_ != null;
@@ -27875,6 +28887,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
+       * @return The inputFormatValuesInterpretExpressions.
        */
       public com.google.protobuf.BoolValue getInputFormatValuesInterpretExpressions() {
         if (inputFormatValuesInterpretExpressionsBuilder_ == null) {
@@ -28051,7 +29064,7 @@ public final class UserOuterClass {
         return inputFormatValuesInterpretExpressionsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue inputFormatDefaultsForOmittedFields_ = null;
+      private com.google.protobuf.BoolValue inputFormatDefaultsForOmittedFields_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatDefaultsForOmittedFieldsBuilder_;
       /**
@@ -28061,6 +29074,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
+       * @return Whether the inputFormatDefaultsForOmittedFields field is set.
        */
       public boolean hasInputFormatDefaultsForOmittedFields() {
         return inputFormatDefaultsForOmittedFieldsBuilder_ != null || inputFormatDefaultsForOmittedFields_ != null;
@@ -28072,6 +29086,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
+       * @return The inputFormatDefaultsForOmittedFields.
        */
       public com.google.protobuf.BoolValue getInputFormatDefaultsForOmittedFields() {
         if (inputFormatDefaultsForOmittedFieldsBuilder_ == null) {
@@ -28213,7 +29228,7 @@ public final class UserOuterClass {
         return inputFormatDefaultsForOmittedFieldsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue outputFormatJsonQuote64BitIntegers_ = null;
+      private com.google.protobuf.BoolValue outputFormatJsonQuote64BitIntegers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> outputFormatJsonQuote64BitIntegersBuilder_;
       /**
@@ -28224,7 +29239,8 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * @return Whether the outputFormatJsonQuote64bitIntegers field is set.
        */
       public boolean hasOutputFormatJsonQuote64BitIntegers() {
         return outputFormatJsonQuote64BitIntegersBuilder_ != null || outputFormatJsonQuote64BitIntegers_ != null;
@@ -28237,7 +29253,8 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * @return The outputFormatJsonQuote64bitIntegers.
        */
       public com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers() {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28254,7 +29271,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder setOutputFormatJsonQuote64BitIntegers(com.google.protobuf.BoolValue value) {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28277,7 +29294,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder setOutputFormatJsonQuote64BitIntegers(
           com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -28298,7 +29315,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder mergeOutputFormatJsonQuote64BitIntegers(com.google.protobuf.BoolValue value) {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28323,7 +29340,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder clearOutputFormatJsonQuote64BitIntegers() {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28344,7 +29361,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public com.google.protobuf.BoolValue.Builder getOutputFormatJsonQuote64BitIntegersBuilder() {
         
@@ -28359,7 +29376,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuote64BitIntegersOrBuilder() {
         if (outputFormatJsonQuote64BitIntegersBuilder_ != null) {
@@ -28377,7 +29394,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63 [json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -28393,7 +29410,7 @@ public final class UserOuterClass {
         return outputFormatJsonQuote64BitIntegersBuilder_;
       }
 
-      private com.google.protobuf.BoolValue outputFormatJsonQuoteDenormals_ = null;
+      private com.google.protobuf.BoolValue outputFormatJsonQuoteDenormals_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> outputFormatJsonQuoteDenormalsBuilder_;
       /**
@@ -28403,6 +29420,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
+       * @return Whether the outputFormatJsonQuoteDenormals field is set.
        */
       public boolean hasOutputFormatJsonQuoteDenormals() {
         return outputFormatJsonQuoteDenormalsBuilder_ != null || outputFormatJsonQuoteDenormals_ != null;
@@ -28414,6 +29432,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
+       * @return The outputFormatJsonQuoteDenormals.
        */
       public com.google.protobuf.BoolValue getOutputFormatJsonQuoteDenormals() {
         if (outputFormatJsonQuoteDenormalsBuilder_ == null) {
@@ -28555,7 +29574,7 @@ public final class UserOuterClass {
         return outputFormatJsonQuoteDenormalsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue lowCardinalityAllowInNativeFormat_ = null;
+      private com.google.protobuf.BoolValue lowCardinalityAllowInNativeFormat_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> lowCardinalityAllowInNativeFormatBuilder_;
       /**
@@ -28572,6 +29591,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
+       * @return Whether the lowCardinalityAllowInNativeFormat field is set.
        */
       public boolean hasLowCardinalityAllowInNativeFormat() {
         return lowCardinalityAllowInNativeFormatBuilder_ != null || lowCardinalityAllowInNativeFormat_ != null;
@@ -28590,6 +29610,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
+       * @return The lowCardinalityAllowInNativeFormat.
        */
       public com.google.protobuf.BoolValue getLowCardinalityAllowInNativeFormat() {
         if (lowCardinalityAllowInNativeFormatBuilder_ == null) {
@@ -28780,7 +29801,7 @@ public final class UserOuterClass {
         return lowCardinalityAllowInNativeFormatBuilder_;
       }
 
-      private com.google.protobuf.BoolValue emptyResultForAggregationByEmptySet_ = null;
+      private com.google.protobuf.BoolValue emptyResultForAggregationByEmptySet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> emptyResultForAggregationByEmptySetBuilder_;
       /**
@@ -28791,6 +29812,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
+       * @return Whether the emptyResultForAggregationByEmptySet field is set.
        */
       public boolean hasEmptyResultForAggregationByEmptySet() {
         return emptyResultForAggregationByEmptySetBuilder_ != null || emptyResultForAggregationByEmptySet_ != null;
@@ -28803,6 +29825,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
+       * @return The emptyResultForAggregationByEmptySet.
        */
       public com.google.protobuf.BoolValue getEmptyResultForAggregationByEmptySet() {
         if (emptyResultForAggregationByEmptySetBuilder_ == null) {
@@ -28951,17 +29974,19 @@ public final class UserOuterClass {
         return emptyResultForAggregationByEmptySetBuilder_;
       }
 
-      private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_ = null;
+      private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinedSubqueryRequiresAliasBuilder_;
       /**
        * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       * @return Whether the joinedSubqueryRequiresAlias field is set.
        */
       public boolean hasJoinedSubqueryRequiresAlias() {
         return joinedSubqueryRequiresAliasBuilder_ != null || joinedSubqueryRequiresAlias_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       * @return The joinedSubqueryRequiresAlias.
        */
       public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
         if (joinedSubqueryRequiresAliasBuilder_ == null) {
@@ -29068,17 +30093,19 @@ public final class UserOuterClass {
         return joinedSubqueryRequiresAliasBuilder_;
       }
 
-      private com.google.protobuf.BoolValue joinUseNulls_ = null;
+      private com.google.protobuf.BoolValue joinUseNulls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinUseNullsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       * @return Whether the joinUseNulls field is set.
        */
       public boolean hasJoinUseNulls() {
         return joinUseNullsBuilder_ != null || joinUseNulls_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       * @return The joinUseNulls.
        */
       public com.google.protobuf.BoolValue getJoinUseNulls() {
         if (joinUseNullsBuilder_ == null) {
@@ -29185,17 +30212,19 @@ public final class UserOuterClass {
         return joinUseNullsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue transformNullIn_ = null;
+      private com.google.protobuf.BoolValue transformNullIn_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> transformNullInBuilder_;
       /**
        * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       * @return Whether the transformNullIn field is set.
        */
       public boolean hasTransformNullIn() {
         return transformNullInBuilder_ != null || transformNullIn_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       * @return The transformNullIn.
        */
       public com.google.protobuf.BoolValue getTransformNullIn() {
         if (transformNullInBuilder_ == null) {
@@ -29302,7 +30331,7 @@ public final class UserOuterClass {
         return transformNullInBuilder_;
       }
 
-      private com.google.protobuf.Int64Value httpConnectionTimeout_ = null;
+      private com.google.protobuf.Int64Value httpConnectionTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpConnectionTimeoutBuilder_;
       /**
@@ -29312,6 +30341,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
+       * @return Whether the httpConnectionTimeout field is set.
        */
       public boolean hasHttpConnectionTimeout() {
         return httpConnectionTimeoutBuilder_ != null || httpConnectionTimeout_ != null;
@@ -29323,6 +30353,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
+       * @return The httpConnectionTimeout.
        */
       public com.google.protobuf.Int64Value getHttpConnectionTimeout() {
         if (httpConnectionTimeoutBuilder_ == null) {
@@ -29464,7 +30495,7 @@ public final class UserOuterClass {
         return httpConnectionTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value httpReceiveTimeout_ = null;
+      private com.google.protobuf.Int64Value httpReceiveTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpReceiveTimeoutBuilder_;
       /**
@@ -29474,6 +30505,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
+       * @return Whether the httpReceiveTimeout field is set.
        */
       public boolean hasHttpReceiveTimeout() {
         return httpReceiveTimeoutBuilder_ != null || httpReceiveTimeout_ != null;
@@ -29485,6 +30517,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
+       * @return The httpReceiveTimeout.
        */
       public com.google.protobuf.Int64Value getHttpReceiveTimeout() {
         if (httpReceiveTimeoutBuilder_ == null) {
@@ -29626,7 +30659,7 @@ public final class UserOuterClass {
         return httpReceiveTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value httpSendTimeout_ = null;
+      private com.google.protobuf.Int64Value httpSendTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpSendTimeoutBuilder_;
       /**
@@ -29636,6 +30669,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
+       * @return Whether the httpSendTimeout field is set.
        */
       public boolean hasHttpSendTimeout() {
         return httpSendTimeoutBuilder_ != null || httpSendTimeout_ != null;
@@ -29647,6 +30681,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
+       * @return The httpSendTimeout.
        */
       public com.google.protobuf.Int64Value getHttpSendTimeout() {
         if (httpSendTimeoutBuilder_ == null) {
@@ -29788,7 +30823,7 @@ public final class UserOuterClass {
         return httpSendTimeoutBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableHttpCompression_ = null;
+      private com.google.protobuf.BoolValue enableHttpCompression_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableHttpCompressionBuilder_;
       /**
@@ -29803,6 +30838,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
+       * @return Whether the enableHttpCompression field is set.
        */
       public boolean hasEnableHttpCompression() {
         return enableHttpCompressionBuilder_ != null || enableHttpCompression_ != null;
@@ -29819,6 +30855,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
+       * @return The enableHttpCompression.
        */
       public com.google.protobuf.BoolValue getEnableHttpCompression() {
         if (enableHttpCompressionBuilder_ == null) {
@@ -29995,7 +31032,7 @@ public final class UserOuterClass {
         return enableHttpCompressionBuilder_;
       }
 
-      private com.google.protobuf.BoolValue sendProgressInHttpHeaders_ = null;
+      private com.google.protobuf.BoolValue sendProgressInHttpHeaders_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sendProgressInHttpHeadersBuilder_;
       /**
@@ -30005,6 +31042,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
+       * @return Whether the sendProgressInHttpHeaders field is set.
        */
       public boolean hasSendProgressInHttpHeaders() {
         return sendProgressInHttpHeadersBuilder_ != null || sendProgressInHttpHeaders_ != null;
@@ -30016,6 +31054,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
+       * @return The sendProgressInHttpHeaders.
        */
       public com.google.protobuf.BoolValue getSendProgressInHttpHeaders() {
         if (sendProgressInHttpHeadersBuilder_ == null) {
@@ -30157,7 +31196,7 @@ public final class UserOuterClass {
         return sendProgressInHttpHeadersBuilder_;
       }
 
-      private com.google.protobuf.Int64Value httpHeadersProgressInterval_ = null;
+      private com.google.protobuf.Int64Value httpHeadersProgressInterval_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpHeadersProgressIntervalBuilder_;
       /**
@@ -30167,6 +31206,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
+       * @return Whether the httpHeadersProgressInterval field is set.
        */
       public boolean hasHttpHeadersProgressInterval() {
         return httpHeadersProgressIntervalBuilder_ != null || httpHeadersProgressInterval_ != null;
@@ -30178,6 +31218,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
+       * @return The httpHeadersProgressInterval.
        */
       public com.google.protobuf.Int64Value getHttpHeadersProgressInterval() {
         if (httpHeadersProgressIntervalBuilder_ == null) {
@@ -30319,7 +31360,7 @@ public final class UserOuterClass {
         return httpHeadersProgressIntervalBuilder_;
       }
 
-      private com.google.protobuf.BoolValue addHttpCorsHeader_ = null;
+      private com.google.protobuf.BoolValue addHttpCorsHeader_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> addHttpCorsHeaderBuilder_;
       /**
@@ -30329,6 +31370,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
+       * @return Whether the addHttpCorsHeader field is set.
        */
       public boolean hasAddHttpCorsHeader() {
         return addHttpCorsHeaderBuilder_ != null || addHttpCorsHeader_ != null;
@@ -30340,6 +31382,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
+       * @return The addHttpCorsHeader.
        */
       public com.google.protobuf.BoolValue getAddHttpCorsHeader() {
         if (addHttpCorsHeaderBuilder_ == null) {
@@ -30488,8 +31531,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       * @return The enum numeric value on the wire for quotaMode.
        */
-      public int getQuotaModeValue() {
+      @java.lang.Override public int getQuotaModeValue() {
         return quotaMode_;
       }
       /**
@@ -30498,8 +31542,11 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       * @param value The enum numeric value on the wire for quotaMode to set.
+       * @return This builder for chaining.
        */
       public Builder setQuotaModeValue(int value) {
+        
         quotaMode_ = value;
         onChanged();
         return this;
@@ -30510,7 +31557,9 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       * @return The quotaMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.valueOf(quotaMode_);
@@ -30522,6 +31571,8 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       * @param value The quotaMode to set.
+       * @return This builder for chaining.
        */
       public Builder setQuotaMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode value) {
         if (value == null) {
@@ -30538,6 +31589,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQuotaMode() {
         
@@ -30548,7 +31600,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -30609,6 +31661,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return Whether the intervalDuration field is set.
      */
     boolean hasIntervalDuration();
     /**
@@ -30618,6 +31671,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return The intervalDuration.
      */
     com.google.protobuf.Int64Value getIntervalDuration();
     /**
@@ -30637,6 +31691,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queries field is set.
      */
     boolean hasQueries();
     /**
@@ -30646,6 +31701,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queries.
      */
     com.google.protobuf.Int64Value getQueries();
     /**
@@ -30665,6 +31721,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the errors field is set.
      */
     boolean hasErrors();
     /**
@@ -30674,6 +31731,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The errors.
      */
     com.google.protobuf.Int64Value getErrors();
     /**
@@ -30693,6 +31751,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the resultRows field is set.
      */
     boolean hasResultRows();
     /**
@@ -30702,6 +31761,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The resultRows.
      */
     com.google.protobuf.Int64Value getResultRows();
     /**
@@ -30721,6 +31781,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the readRows field is set.
      */
     boolean hasReadRows();
     /**
@@ -30730,6 +31791,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The readRows.
      */
     com.google.protobuf.Int64Value getReadRows();
     /**
@@ -30749,6 +31811,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the executionTime field is set.
      */
     boolean hasExecutionTime();
     /**
@@ -30758,6 +31821,7 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The executionTime.
      */
     com.google.protobuf.Int64Value getExecutionTime();
     /**
@@ -30778,7 +31842,7 @@ public final class UserOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserQuota}
    */
-  public  static final class UserQuota extends
+  public static final class UserQuota extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UserQuota)
       UserQuotaOrBuilder {
@@ -30788,6 +31852,13 @@ public final class UserOuterClass {
       super(builder);
     }
     private UserQuota() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserQuota();
     }
 
     @java.lang.Override
@@ -30803,7 +31874,6 @@ public final class UserOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -30893,7 +31963,7 @@ public final class UserOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -30933,7 +32003,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return Whether the intervalDuration field is set.
      */
+    @java.lang.Override
     public boolean hasIntervalDuration() {
       return intervalDuration_ != null;
     }
@@ -30944,7 +32016,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+     * @return The intervalDuration.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getIntervalDuration() {
       return intervalDuration_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : intervalDuration_;
     }
@@ -30956,6 +32030,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder() {
       return getIntervalDuration();
     }
@@ -30969,7 +32044,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queries field is set.
      */
+    @java.lang.Override
     public boolean hasQueries() {
       return queries_ != null;
     }
@@ -30980,7 +32057,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queries.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getQueries() {
       return queries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queries_;
     }
@@ -30992,6 +32071,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getQueriesOrBuilder() {
       return getQueries();
     }
@@ -31005,7 +32085,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the errors field is set.
      */
+    @java.lang.Override
     public boolean hasErrors() {
       return errors_ != null;
     }
@@ -31016,7 +32098,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The errors.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getErrors() {
       return errors_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errors_;
     }
@@ -31028,6 +32112,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getErrorsOrBuilder() {
       return getErrors();
     }
@@ -31041,7 +32126,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the resultRows field is set.
      */
+    @java.lang.Override
     public boolean hasResultRows() {
       return resultRows_ != null;
     }
@@ -31052,7 +32139,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The resultRows.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getResultRows() {
       return resultRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : resultRows_;
     }
@@ -31064,6 +32153,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getResultRowsOrBuilder() {
       return getResultRows();
     }
@@ -31077,7 +32167,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the readRows field is set.
      */
+    @java.lang.Override
     public boolean hasReadRows() {
       return readRows_ != null;
     }
@@ -31088,7 +32180,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The readRows.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReadRows() {
       return readRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readRows_;
     }
@@ -31100,6 +32194,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReadRowsOrBuilder() {
       return getReadRows();
     }
@@ -31113,7 +32208,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the executionTime field is set.
      */
+    @java.lang.Override
     public boolean hasExecutionTime() {
       return executionTime_ != null;
     }
@@ -31124,7 +32221,9 @@ public final class UserOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The executionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getExecutionTime() {
       return executionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executionTime_;
     }
@@ -31136,6 +32235,7 @@ public final class UserOuterClass {
      *
      * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getExecutionTimeOrBuilder() {
       return getExecutionTime();
     }
@@ -31220,39 +32320,38 @@ public final class UserOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota) obj;
 
-      boolean result = true;
-      result = result && (hasIntervalDuration() == other.hasIntervalDuration());
+      if (hasIntervalDuration() != other.hasIntervalDuration()) return false;
       if (hasIntervalDuration()) {
-        result = result && getIntervalDuration()
-            .equals(other.getIntervalDuration());
+        if (!getIntervalDuration()
+            .equals(other.getIntervalDuration())) return false;
       }
-      result = result && (hasQueries() == other.hasQueries());
+      if (hasQueries() != other.hasQueries()) return false;
       if (hasQueries()) {
-        result = result && getQueries()
-            .equals(other.getQueries());
+        if (!getQueries()
+            .equals(other.getQueries())) return false;
       }
-      result = result && (hasErrors() == other.hasErrors());
+      if (hasErrors() != other.hasErrors()) return false;
       if (hasErrors()) {
-        result = result && getErrors()
-            .equals(other.getErrors());
+        if (!getErrors()
+            .equals(other.getErrors())) return false;
       }
-      result = result && (hasResultRows() == other.hasResultRows());
+      if (hasResultRows() != other.hasResultRows()) return false;
       if (hasResultRows()) {
-        result = result && getResultRows()
-            .equals(other.getResultRows());
+        if (!getResultRows()
+            .equals(other.getResultRows())) return false;
       }
-      result = result && (hasReadRows() == other.hasReadRows());
+      if (hasReadRows() != other.hasReadRows()) return false;
       if (hasReadRows()) {
-        result = result && getReadRows()
-            .equals(other.getReadRows());
+        if (!getReadRows()
+            .equals(other.getReadRows())) return false;
       }
-      result = result && (hasExecutionTime() == other.hasExecutionTime());
+      if (hasExecutionTime() != other.hasExecutionTime()) return false;
       if (hasExecutionTime()) {
-        result = result && getExecutionTime()
-            .equals(other.getExecutionTime());
+        if (!getExecutionTime()
+            .equals(other.getExecutionTime())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -31522,35 +32621,35 @@ public final class UserOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -31611,7 +32710,7 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value intervalDuration_ = null;
+      private com.google.protobuf.Int64Value intervalDuration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> intervalDurationBuilder_;
       /**
@@ -31621,6 +32720,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+       * @return Whether the intervalDuration field is set.
        */
       public boolean hasIntervalDuration() {
         return intervalDurationBuilder_ != null || intervalDuration_ != null;
@@ -31632,6 +32732,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
+       * @return The intervalDuration.
        */
       public com.google.protobuf.Int64Value getIntervalDuration() {
         if (intervalDurationBuilder_ == null) {
@@ -31773,7 +32874,7 @@ public final class UserOuterClass {
         return intervalDurationBuilder_;
       }
 
-      private com.google.protobuf.Int64Value queries_ = null;
+      private com.google.protobuf.Int64Value queries_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queriesBuilder_;
       /**
@@ -31783,6 +32884,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queries field is set.
        */
       public boolean hasQueries() {
         return queriesBuilder_ != null || queries_ != null;
@@ -31794,6 +32896,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queries.
        */
       public com.google.protobuf.Int64Value getQueries() {
         if (queriesBuilder_ == null) {
@@ -31935,7 +33038,7 @@ public final class UserOuterClass {
         return queriesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value errors_ = null;
+      private com.google.protobuf.Int64Value errors_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> errorsBuilder_;
       /**
@@ -31945,6 +33048,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the errors field is set.
        */
       public boolean hasErrors() {
         return errorsBuilder_ != null || errors_ != null;
@@ -31956,6 +33060,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The errors.
        */
       public com.google.protobuf.Int64Value getErrors() {
         if (errorsBuilder_ == null) {
@@ -32097,7 +33202,7 @@ public final class UserOuterClass {
         return errorsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value resultRows_ = null;
+      private com.google.protobuf.Int64Value resultRows_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> resultRowsBuilder_;
       /**
@@ -32107,6 +33212,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the resultRows field is set.
        */
       public boolean hasResultRows() {
         return resultRowsBuilder_ != null || resultRows_ != null;
@@ -32118,6 +33224,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The resultRows.
        */
       public com.google.protobuf.Int64Value getResultRows() {
         if (resultRowsBuilder_ == null) {
@@ -32259,7 +33366,7 @@ public final class UserOuterClass {
         return resultRowsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value readRows_ = null;
+      private com.google.protobuf.Int64Value readRows_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> readRowsBuilder_;
       /**
@@ -32269,6 +33376,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the readRows field is set.
        */
       public boolean hasReadRows() {
         return readRowsBuilder_ != null || readRows_ != null;
@@ -32280,6 +33388,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The readRows.
        */
       public com.google.protobuf.Int64Value getReadRows() {
         if (readRowsBuilder_ == null) {
@@ -32421,7 +33530,7 @@ public final class UserOuterClass {
         return readRowsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value executionTime_ = null;
+      private com.google.protobuf.Int64Value executionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> executionTimeBuilder_;
       /**
@@ -32431,6 +33540,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the executionTime field is set.
        */
       public boolean hasExecutionTime() {
         return executionTimeBuilder_ != null || executionTime_ != null;
@@ -32442,6 +33552,7 @@ public final class UserOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The executionTime.
        */
       public com.google.protobuf.Int64Value getExecutionTime() {
         if (executionTimeBuilder_ == null) {
@@ -32585,7 +33696,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -32888,20 +33999,12 @@ public final class UserOuterClass {
       "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
       "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_clickhouse_v1_User_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_User_fieldAccessorTable = new

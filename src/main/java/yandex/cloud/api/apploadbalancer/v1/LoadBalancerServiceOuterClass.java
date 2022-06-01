@@ -25,6 +25,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -34,6 +35,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -41,7 +43,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GetLoadBalancerRequest}
    */
-  public  static final class GetLoadBalancerRequest extends
+  public static final class GetLoadBalancerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GetLoadBalancerRequest)
       GetLoadBalancerRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private GetLoadBalancerRequest() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLoadBalancerRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -174,7 +186,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -491,6 +503,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -512,6 +525,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -544,6 +560,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -652,6 +673,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -661,6 +683,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -676,6 +699,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -689,6 +713,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -696,7 +721,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListLoadBalancersRequest}
    */
-  public  static final class ListLoadBalancersRequest extends
+  public static final class ListLoadBalancersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListLoadBalancersRequest)
       ListLoadBalancersRequestOrBuilder {
@@ -707,9 +732,15 @@ public final class LoadBalancerServiceOuterClass {
     }
     private ListLoadBalancersRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLoadBalancersRequest();
     }
 
     @java.lang.Override
@@ -725,7 +756,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -760,7 +790,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -800,7 +830,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -820,7 +852,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -846,7 +880,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -860,7 +896,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -880,7 +918,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -908,7 +948,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -932,7 +974,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -961,16 +1005,16 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -982,17 +1026,17 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1010,17 +1054,16 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1216,35 +1259,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1310,6 +1353,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1330,6 +1374,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1351,6 +1396,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1369,6 +1416,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1383,6 +1431,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1406,7 +1456,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1419,6 +1471,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1435,6 +1489,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1451,6 +1506,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1471,6 +1527,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1492,6 +1549,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1510,6 +1569,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1524,6 +1584,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1549,6 +1611,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1573,6 +1636,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1598,6 +1662,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1620,6 +1686,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1638,6 +1705,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1653,7 +1722,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1760,6 +1829,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1771,6 +1841,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1778,7 +1849,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListLoadBalancersResponse}
    */
-  public  static final class ListLoadBalancersResponse extends
+  public static final class ListLoadBalancersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListLoadBalancersResponse)
       ListLoadBalancersResponseOrBuilder {
@@ -1790,6 +1861,13 @@ public final class LoadBalancerServiceOuterClass {
     private ListLoadBalancersResponse() {
       loadBalancers_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLoadBalancersResponse();
     }
 
     @java.lang.Override
@@ -1817,7 +1895,7 @@ public final class LoadBalancerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 loadBalancers_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1832,7 +1910,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1846,7 +1924,7 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           loadBalancers_ = java.util.Collections.unmodifiableList(loadBalancers_);
         }
         this.unknownFields = unknownFields.build();
@@ -1866,7 +1944,6 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOAD_BALANCERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> loadBalancers_;
     /**
@@ -1876,6 +1953,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LoadBalancer load_balancers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> getLoadBalancersList() {
       return loadBalancers_;
     }
@@ -1886,6 +1964,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LoadBalancer load_balancers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancerOrBuilder> 
         getLoadBalancersOrBuilderList() {
       return loadBalancers_;
@@ -1897,6 +1976,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LoadBalancer load_balancers = 1;</code>
      */
+    @java.lang.Override
     public int getLoadBalancersCount() {
       return loadBalancers_.size();
     }
@@ -1907,6 +1987,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LoadBalancer load_balancers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer getLoadBalancers(int index) {
       return loadBalancers_.get(index);
     }
@@ -1917,6 +1998,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LoadBalancer load_balancers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancerOrBuilder getLoadBalancersOrBuilder(
         int index) {
       return loadBalancers_.get(index);
@@ -1933,7 +2015,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1955,7 +2039,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1987,7 +2073,7 @@ public final class LoadBalancerServiceOuterClass {
       for (int i = 0; i < loadBalancers_.size(); i++) {
         output.writeMessage(1, loadBalancers_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2003,7 +2089,7 @@ public final class LoadBalancerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, loadBalancers_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2021,13 +2107,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancersList()
-          .equals(other.getLoadBalancersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancersList()
+          .equals(other.getLoadBalancersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2212,9 +2297,8 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (loadBalancersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             loadBalancers_ = java.util.Collections.unmodifiableList(loadBalancers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2223,42 +2307,41 @@ public final class LoadBalancerServiceOuterClass {
           result.loadBalancers_ = loadBalancersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2335,7 +2418,7 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> loadBalancers_ =
         java.util.Collections.emptyList();
       private void ensureLoadBalancersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           loadBalancers_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer>(loadBalancers_);
           bitField0_ |= 0x00000001;
          }
@@ -2636,7 +2719,7 @@ public final class LoadBalancerServiceOuterClass {
           loadBalancersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancerOrBuilder>(
                   loadBalancers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           loadBalancers_ = null;
@@ -2654,6 +2737,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2676,6 +2760,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2699,6 +2784,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2719,6 +2806,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2735,6 +2823,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2750,7 +2840,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2811,6 +2901,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -2820,6 +2911,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -2827,7 +2919,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DeleteLoadBalancerRequest}
    */
-  public  static final class DeleteLoadBalancerRequest extends
+  public static final class DeleteLoadBalancerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DeleteLoadBalancerRequest)
       DeleteLoadBalancerRequestOrBuilder {
@@ -2838,6 +2930,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private DeleteLoadBalancerRequest() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteLoadBalancerRequest();
     }
 
     @java.lang.Override
@@ -2853,7 +2952,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2871,7 +2969,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2911,7 +3009,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -2931,7 +3031,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -2960,7 +3062,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -2972,7 +3074,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2990,11 +3092,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3174,35 +3275,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3257,6 +3358,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -3277,6 +3379,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -3298,6 +3401,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -3316,6 +3421,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -3330,6 +3436,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3345,7 +3453,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3405,6 +3513,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -3413,6 +3522,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -3420,7 +3530,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DeleteLoadBalancerMetadata}
    */
-  public  static final class DeleteLoadBalancerMetadata extends
+  public static final class DeleteLoadBalancerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DeleteLoadBalancerMetadata)
       DeleteLoadBalancerMetadataOrBuilder {
@@ -3431,6 +3541,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private DeleteLoadBalancerMetadata() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteLoadBalancerMetadata();
     }
 
     @java.lang.Override
@@ -3446,7 +3563,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3464,7 +3580,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3503,7 +3619,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -3522,7 +3640,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -3551,7 +3671,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -3563,7 +3683,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3581,11 +3701,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3765,35 +3884,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3847,6 +3966,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -3866,6 +3986,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -3886,6 +4007,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -3903,6 +4026,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -3916,6 +4040,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3931,7 +4057,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3992,6 +4118,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -4001,6 +4128,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -4011,6 +4139,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4019,6 +4148,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4037,6 +4167,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4046,6 +4177,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4056,6 +4188,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4064,6 +4197,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4234,6 +4368,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
+     * @return Whether the allocationPolicy field is set.
      */
     boolean hasAllocationPolicy();
     /**
@@ -4249,6 +4384,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
+     * @return The allocationPolicy.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy();
     /**
@@ -4280,6 +4416,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @return A list containing the securityGroupIds.
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
@@ -4296,6 +4433,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @return The count of securityGroupIds.
      */
     int getSecurityGroupIdsCount();
     /**
@@ -4311,6 +4449,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
@@ -4326,6 +4466,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
@@ -4333,7 +4475,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateLoadBalancerRequest}
    */
-  public  static final class UpdateLoadBalancerRequest extends
+  public static final class UpdateLoadBalancerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateLoadBalancerRequest)
       UpdateLoadBalancerRequestOrBuilder {
@@ -4348,6 +4490,13 @@ public final class LoadBalancerServiceOuterClass {
       description_ = "";
       listenerSpecs_ = java.util.Collections.emptyList();
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateLoadBalancerRequest();
     }
 
     @java.lang.Override
@@ -4406,10 +4555,10 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -4419,9 +4568,9 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 listenerSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               listenerSpecs_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.parser(), extensionRegistry));
@@ -4442,15 +4591,15 @@ public final class LoadBalancerServiceOuterClass {
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroupIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4464,10 +4613,10 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           listenerSpecs_ = java.util.Collections.unmodifiableList(listenerSpecs_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4499,7 +4648,6 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object loadBalancerId_;
     /**
@@ -4509,7 +4657,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -4529,7 +4679,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -4552,7 +4704,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -4562,7 +4716,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -4573,6 +4729,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4586,7 +4743,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4606,7 +4765,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4629,7 +4790,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4648,7 +4811,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4703,14 +4868,16 @@ public final class LoadBalancerServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -4728,6 +4895,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -4745,11 +4913,12 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4767,10 +4936,11 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -4793,6 +4963,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec> getListenerSpecsList() {
       return listenerSpecs_;
     }
@@ -4808,6 +4979,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder> 
         getListenerSpecsOrBuilderList() {
       return listenerSpecs_;
@@ -4824,6 +4996,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 6;</code>
      */
+    @java.lang.Override
     public int getListenerSpecsCount() {
       return listenerSpecs_.size();
     }
@@ -4839,6 +5012,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpecs(int index) {
       return listenerSpecs_.get(index);
     }
@@ -4854,6 +5028,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder getListenerSpecsOrBuilder(
         int index) {
       return listenerSpecs_.get(index);
@@ -4874,7 +5049,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
+     * @return Whether the allocationPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasAllocationPolicy() {
       return allocationPolicy_ != null;
     }
@@ -4891,7 +5068,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
+     * @return The allocationPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy() {
       return allocationPolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy.getDefaultInstance() : allocationPolicy_;
     }
@@ -4909,6 +5088,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicyOrBuilder getAllocationPolicyOrBuilder() {
       return getAllocationPolicy();
     }
@@ -4928,6 +5108,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @return A list containing the securityGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupIdsList() {
@@ -4946,6 +5127,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @return The count of securityGroupIds.
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
@@ -4963,6 +5145,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
@@ -4980,6 +5164,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index) {
@@ -5000,16 +5186,16 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -5036,17 +5222,17 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -5090,31 +5276,30 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getListenerSpecsList()
-          .equals(other.getListenerSpecsList());
-      result = result && (hasAllocationPolicy() == other.hasAllocationPolicy());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getListenerSpecsList()
+          .equals(other.getListenerSpecsList())) return false;
+      if (hasAllocationPolicy() != other.hasAllocationPolicy()) return false;
       if (hasAllocationPolicy()) {
-        result = result && getAllocationPolicy()
-            .equals(other.getAllocationPolicy());
+        if (!getAllocationPolicy()
+            .equals(other.getAllocationPolicy())) return false;
       }
-      result = result && getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5321,7 +5506,7 @@ public final class LoadBalancerServiceOuterClass {
         internalGetMutableLabels().clear();
         if (listenerSpecsBuilder_ == null) {
           listenerSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           listenerSpecsBuilder_.clear();
         }
@@ -5332,7 +5517,7 @@ public final class LoadBalancerServiceOuterClass {
           allocationPolicyBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -5360,7 +5545,6 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.loadBalancerId_ = loadBalancerId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5372,9 +5556,9 @@ public final class LoadBalancerServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (listenerSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             listenerSpecs_ = java.util.Collections.unmodifiableList(listenerSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.listenerSpecs_ = listenerSpecs_;
         } else {
@@ -5385,47 +5569,46 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.allocationPolicy_ = allocationPolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroupIds_ = securityGroupIds_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5460,7 +5643,7 @@ public final class LoadBalancerServiceOuterClass {
           if (!other.listenerSpecs_.isEmpty()) {
             if (listenerSpecs_.isEmpty()) {
               listenerSpecs_ = other.listenerSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureListenerSpecsIsMutable();
               listenerSpecs_.addAll(other.listenerSpecs_);
@@ -5473,7 +5656,7 @@ public final class LoadBalancerServiceOuterClass {
               listenerSpecsBuilder_.dispose();
               listenerSpecsBuilder_ = null;
               listenerSpecs_ = other.listenerSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
               listenerSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getListenerSpecsFieldBuilder() : null;
@@ -5488,7 +5671,7 @@ public final class LoadBalancerServiceOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -5533,6 +5716,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -5553,6 +5737,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -5574,6 +5759,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -5592,6 +5779,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -5606,6 +5794,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5619,7 +5809,7 @@ public final class LoadBalancerServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -5628,6 +5818,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -5638,6 +5829,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5780,6 +5972,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5800,6 +5993,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5821,6 +6015,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5839,6 +6035,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5853,6 +6050,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5873,6 +6072,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5892,6 +6092,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5912,6 +6113,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5929,6 +6132,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5942,6 +6146,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5995,14 +6201,16 @@ public final class LoadBalancerServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -6020,6 +6228,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -6037,11 +6246,12 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6059,10 +6269,11 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -6092,7 +6303,7 @@ public final class LoadBalancerServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -6121,8 +6332,11 @@ public final class LoadBalancerServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -6151,9 +6365,9 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec> listenerSpecs_ =
         java.util.Collections.emptyList();
       private void ensureListenerSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           listenerSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec>(listenerSpecs_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -6402,7 +6616,7 @@ public final class LoadBalancerServiceOuterClass {
       public Builder clearListenerSpecs() {
         if (listenerSpecsBuilder_ == null) {
           listenerSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           listenerSpecsBuilder_.clear();
@@ -6542,7 +6756,7 @@ public final class LoadBalancerServiceOuterClass {
           listenerSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder>(
                   listenerSpecs_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           listenerSpecs_ = null;
@@ -6550,7 +6764,7 @@ public final class LoadBalancerServiceOuterClass {
         return listenerSpecsBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy allocationPolicy_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy allocationPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicyOrBuilder> allocationPolicyBuilder_;
       /**
@@ -6566,6 +6780,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
+       * @return Whether the allocationPolicy field is set.
        */
       public boolean hasAllocationPolicy() {
         return allocationPolicyBuilder_ != null || allocationPolicy_ != null;
@@ -6583,6 +6798,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 7;</code>
+       * @return The allocationPolicy.
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy() {
         if (allocationPolicyBuilder_ == null) {
@@ -6768,9 +6984,9 @@ public final class LoadBalancerServiceOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -6786,6 +7002,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @return A list containing the securityGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupIdsList() {
@@ -6804,6 +7021,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @return The count of securityGroupIds.
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
@@ -6821,6 +7039,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
@@ -6838,6 +7058,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdsBytes(int index) {
@@ -6856,6 +7078,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIds(
           int index, java.lang.String value) {
@@ -6880,6 +7105,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIds(
           java.lang.String value) {
@@ -6904,6 +7131,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -6926,10 +7155,11 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -6946,6 +7176,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -6961,7 +7193,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7021,6 +7253,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -7029,6 +7262,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -7036,7 +7270,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateLoadBalancerMetadata}
    */
-  public  static final class UpdateLoadBalancerMetadata extends
+  public static final class UpdateLoadBalancerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateLoadBalancerMetadata)
       UpdateLoadBalancerMetadataOrBuilder {
@@ -7047,6 +7281,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private UpdateLoadBalancerMetadata() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateLoadBalancerMetadata();
     }
 
     @java.lang.Override
@@ -7062,7 +7303,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7080,7 +7320,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7119,7 +7359,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -7138,7 +7380,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -7167,7 +7411,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -7179,7 +7423,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7197,11 +7441,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7381,35 +7624,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7463,6 +7706,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -7482,6 +7726,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -7502,6 +7747,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -7519,6 +7766,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -7532,6 +7780,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7547,7 +7797,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7608,6 +7858,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -7617,6 +7868,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -7628,6 +7880,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7637,6 +7890,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7647,6 +7901,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -7655,6 +7910,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -7725,6 +7981,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The regionId.
      */
     java.lang.String getRegionId();
     /**
@@ -7734,6 +7991,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for regionId.
      */
     com.google.protobuf.ByteString
         getRegionIdBytes();
@@ -7744,6 +8002,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -7752,6 +8011,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -7818,6 +8078,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
+     * @return Whether the allocationPolicy field is set.
      */
     boolean hasAllocationPolicy();
     /**
@@ -7828,6 +8089,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
+     * @return The allocationPolicy.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy();
     /**
@@ -7849,6 +8111,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @return A list containing the securityGroupIds.
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
@@ -7860,6 +8123,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @return The count of securityGroupIds.
      */
     int getSecurityGroupIdsCount();
     /**
@@ -7870,6 +8134,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
@@ -7880,6 +8146,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
@@ -7887,7 +8155,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateLoadBalancerRequest}
    */
-  public  static final class CreateLoadBalancerRequest extends
+  public static final class CreateLoadBalancerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CreateLoadBalancerRequest)
       CreateLoadBalancerRequestOrBuilder {
@@ -7904,6 +8172,13 @@ public final class LoadBalancerServiceOuterClass {
       networkId_ = "";
       listenerSpecs_ = java.util.Collections.emptyList();
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateLoadBalancerRequest();
     }
 
     @java.lang.Override
@@ -7949,10 +8224,10 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -7974,9 +8249,9 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 listenerSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000002;
               }
               listenerSpecs_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.parser(), extensionRegistry));
@@ -7997,15 +8272,15 @@ public final class LoadBalancerServiceOuterClass {
             }
             case 74: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroupIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8019,10 +8294,10 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           listenerSpecs_ = java.util.Collections.unmodifiableList(listenerSpecs_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8054,7 +8329,6 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -8064,7 +8338,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -8084,7 +8360,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -8108,7 +8386,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8128,7 +8408,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8151,7 +8433,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -8170,7 +8454,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -8220,14 +8506,16 @@ public final class LoadBalancerServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -8240,6 +8528,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -8252,11 +8541,12 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8269,10 +8559,11 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -8290,7 +8581,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The regionId.
      */
+    @java.lang.Override
     public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -8310,7 +8603,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for regionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
@@ -8333,7 +8628,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -8352,7 +8649,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -8378,6 +8677,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec> getListenerSpecsList() {
       return listenerSpecs_;
     }
@@ -8390,6 +8690,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder> 
         getListenerSpecsOrBuilderList() {
       return listenerSpecs_;
@@ -8403,6 +8704,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 7;</code>
      */
+    @java.lang.Override
     public int getListenerSpecsCount() {
       return listenerSpecs_.size();
     }
@@ -8415,6 +8717,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpecs(int index) {
       return listenerSpecs_.get(index);
     }
@@ -8427,6 +8730,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.ListenerSpec listener_specs = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder getListenerSpecsOrBuilder(
         int index) {
       return listenerSpecs_.get(index);
@@ -8442,7 +8746,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
+     * @return Whether the allocationPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasAllocationPolicy() {
       return allocationPolicy_ != null;
     }
@@ -8454,7 +8760,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
+     * @return The allocationPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy() {
       return allocationPolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy.getDefaultInstance() : allocationPolicy_;
     }
@@ -8467,6 +8775,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicyOrBuilder getAllocationPolicyOrBuilder() {
       return getAllocationPolicy();
     }
@@ -8481,6 +8790,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @return A list containing the securityGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupIdsList() {
@@ -8494,6 +8804,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @return The count of securityGroupIds.
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
@@ -8506,6 +8817,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
@@ -8518,6 +8831,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index) {
@@ -8538,13 +8853,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -8553,10 +8868,10 @@ public final class LoadBalancerServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, regionId_);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, networkId_);
       }
       for (int i = 0; i < listenerSpecs_.size(); i++) {
@@ -8577,13 +8892,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -8596,10 +8911,10 @@ public final class LoadBalancerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, regionId_);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, networkId_);
       }
       for (int i = 0; i < listenerSpecs_.size(); i++) {
@@ -8633,30 +8948,29 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getRegionId()
-          .equals(other.getRegionId());
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && getListenerSpecsList()
-          .equals(other.getListenerSpecsList());
-      result = result && (hasAllocationPolicy() == other.hasAllocationPolicy());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getRegionId()
+          .equals(other.getRegionId())) return false;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (!getListenerSpecsList()
+          .equals(other.getListenerSpecsList())) return false;
+      if (hasAllocationPolicy() != other.hasAllocationPolicy()) return false;
       if (hasAllocationPolicy()) {
-        result = result && getAllocationPolicy()
-            .equals(other.getAllocationPolicy());
+        if (!getAllocationPolicy()
+            .equals(other.getAllocationPolicy())) return false;
       }
-      result = result && getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8861,7 +9175,7 @@ public final class LoadBalancerServiceOuterClass {
 
         if (listenerSpecsBuilder_ == null) {
           listenerSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           listenerSpecsBuilder_.clear();
         }
@@ -8872,7 +9186,7 @@ public final class LoadBalancerServiceOuterClass {
           allocationPolicyBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -8900,7 +9214,6 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -8909,9 +9222,9 @@ public final class LoadBalancerServiceOuterClass {
         result.regionId_ = regionId_;
         result.networkId_ = networkId_;
         if (listenerSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             listenerSpecs_ = java.util.Collections.unmodifiableList(listenerSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.listenerSpecs_ = listenerSpecs_;
         } else {
@@ -8922,47 +9235,46 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.allocationPolicy_ = allocationPolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroupIds_ = securityGroupIds_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9002,7 +9314,7 @@ public final class LoadBalancerServiceOuterClass {
           if (!other.listenerSpecs_.isEmpty()) {
             if (listenerSpecs_.isEmpty()) {
               listenerSpecs_ = other.listenerSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureListenerSpecsIsMutable();
               listenerSpecs_.addAll(other.listenerSpecs_);
@@ -9015,7 +9327,7 @@ public final class LoadBalancerServiceOuterClass {
               listenerSpecsBuilder_.dispose();
               listenerSpecsBuilder_ = null;
               listenerSpecs_ = other.listenerSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000002);
               listenerSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getListenerSpecsFieldBuilder() : null;
@@ -9030,7 +9342,7 @@ public final class LoadBalancerServiceOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -9075,6 +9387,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -9095,6 +9408,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -9116,6 +9430,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -9134,6 +9450,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -9148,6 +9465,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9169,6 +9488,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9189,6 +9509,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9210,6 +9531,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9228,6 +9551,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9242,6 +9566,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9262,6 +9588,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -9281,6 +9608,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -9301,6 +9629,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -9318,6 +9648,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -9331,6 +9662,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -9379,14 +9712,16 @@ public final class LoadBalancerServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -9399,6 +9734,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -9411,11 +9747,12 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -9428,10 +9765,11 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -9456,7 +9794,7 @@ public final class LoadBalancerServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -9480,8 +9818,11 @@ public final class LoadBalancerServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -9510,6 +9851,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The regionId.
        */
       public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
@@ -9530,6 +9872,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for regionId.
        */
       public com.google.protobuf.ByteString
           getRegionIdBytes() {
@@ -9551,6 +9894,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The regionId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegionId(
           java.lang.String value) {
@@ -9569,6 +9914,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegionId() {
         
@@ -9583,6 +9929,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for regionId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9603,6 +9951,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -9622,6 +9971,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -9642,6 +9992,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -9659,6 +10011,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -9672,6 +10025,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9688,9 +10043,9 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec> listenerSpecs_ =
         java.util.Collections.emptyList();
       private void ensureListenerSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           listenerSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec>(listenerSpecs_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -9906,7 +10261,7 @@ public final class LoadBalancerServiceOuterClass {
       public Builder clearListenerSpecs() {
         if (listenerSpecsBuilder_ == null) {
           listenerSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           listenerSpecsBuilder_.clear();
@@ -10025,7 +10380,7 @@ public final class LoadBalancerServiceOuterClass {
           listenerSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder>(
                   listenerSpecs_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           listenerSpecs_ = null;
@@ -10033,7 +10388,7 @@ public final class LoadBalancerServiceOuterClass {
         return listenerSpecsBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy allocationPolicy_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy allocationPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicyOrBuilder> allocationPolicyBuilder_;
       /**
@@ -10044,6 +10399,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
+       * @return Whether the allocationPolicy field is set.
        */
       public boolean hasAllocationPolicy() {
         return allocationPolicyBuilder_ != null || allocationPolicy_ != null;
@@ -10056,6 +10412,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 8;</code>
+       * @return The allocationPolicy.
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy() {
         if (allocationPolicyBuilder_ == null) {
@@ -10206,9 +10563,9 @@ public final class LoadBalancerServiceOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -10219,6 +10576,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @return A list containing the securityGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupIdsList() {
@@ -10232,6 +10590,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @return The count of securityGroupIds.
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
@@ -10244,6 +10603,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
@@ -10256,6 +10617,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdsBytes(int index) {
@@ -10269,6 +10632,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIds(
           int index, java.lang.String value) {
@@ -10288,6 +10654,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIds(
           java.lang.String value) {
@@ -10307,6 +10675,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -10324,10 +10694,11 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -10339,6 +10710,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 9;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -10354,7 +10727,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10414,6 +10787,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -10422,6 +10796,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -10429,7 +10804,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateLoadBalancerMetadata}
    */
-  public  static final class CreateLoadBalancerMetadata extends
+  public static final class CreateLoadBalancerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CreateLoadBalancerMetadata)
       CreateLoadBalancerMetadataOrBuilder {
@@ -10440,6 +10815,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private CreateLoadBalancerMetadata() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateLoadBalancerMetadata();
     }
 
     @java.lang.Override
@@ -10455,7 +10837,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10473,7 +10854,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10512,7 +10893,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -10531,7 +10914,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -10560,7 +10945,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -10572,7 +10957,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10590,11 +10975,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10774,35 +11158,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10856,6 +11240,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -10875,6 +11260,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -10895,6 +11281,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -10912,6 +11300,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -10925,6 +11314,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10940,7 +11331,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11002,6 +11393,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -11012,6 +11404,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -11019,7 +11412,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StartLoadBalancerRequest}
    */
-  public  static final class StartLoadBalancerRequest extends
+  public static final class StartLoadBalancerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StartLoadBalancerRequest)
       StartLoadBalancerRequestOrBuilder {
@@ -11030,6 +11423,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private StartLoadBalancerRequest() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartLoadBalancerRequest();
     }
 
     @java.lang.Override
@@ -11045,7 +11445,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11063,7 +11462,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11104,7 +11503,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -11125,7 +11526,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -11154,7 +11557,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -11166,7 +11569,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11184,11 +11587,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11368,35 +11770,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11452,6 +11854,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -11473,6 +11876,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -11495,6 +11899,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -11514,6 +11920,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -11529,6 +11936,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11544,7 +11953,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11604,6 +12013,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -11612,6 +12022,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -11619,7 +12030,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StartLoadBalancerMetadata}
    */
-  public  static final class StartLoadBalancerMetadata extends
+  public static final class StartLoadBalancerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StartLoadBalancerMetadata)
       StartLoadBalancerMetadataOrBuilder {
@@ -11630,6 +12041,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private StartLoadBalancerMetadata() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartLoadBalancerMetadata();
     }
 
     @java.lang.Override
@@ -11645,7 +12063,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11663,7 +12080,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11702,7 +12119,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -11721,7 +12140,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -11750,7 +12171,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -11762,7 +12183,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11780,11 +12201,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11964,35 +12384,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12046,6 +12466,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -12065,6 +12486,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -12085,6 +12507,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -12102,6 +12526,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -12115,6 +12540,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12130,7 +12557,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12192,6 +12619,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -12202,6 +12630,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -12209,7 +12638,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StopLoadBalancerRequest}
    */
-  public  static final class StopLoadBalancerRequest extends
+  public static final class StopLoadBalancerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StopLoadBalancerRequest)
       StopLoadBalancerRequestOrBuilder {
@@ -12220,6 +12649,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private StopLoadBalancerRequest() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StopLoadBalancerRequest();
     }
 
     @java.lang.Override
@@ -12235,7 +12671,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12253,7 +12688,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12294,7 +12729,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -12315,7 +12752,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -12344,7 +12783,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -12356,7 +12795,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12374,11 +12813,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12558,35 +12996,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12642,6 +13080,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -12663,6 +13102,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -12685,6 +13125,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -12704,6 +13146,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -12719,6 +13162,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12734,7 +13179,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12794,6 +13239,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -12802,6 +13248,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -12809,7 +13256,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StopLoadBalancerMetadata}
    */
-  public  static final class StopLoadBalancerMetadata extends
+  public static final class StopLoadBalancerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StopLoadBalancerMetadata)
       StopLoadBalancerMetadataOrBuilder {
@@ -12820,6 +13267,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private StopLoadBalancerMetadata() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StopLoadBalancerMetadata();
     }
 
     @java.lang.Override
@@ -12835,7 +13289,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12853,7 +13306,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12892,7 +13345,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -12911,7 +13366,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -12940,7 +13397,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       unknownFields.writeTo(output);
@@ -12952,7 +13409,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -12970,11 +13427,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13154,35 +13610,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13236,6 +13692,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -13255,6 +13712,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -13275,6 +13733,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -13292,6 +13752,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -13305,6 +13766,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13320,7 +13783,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13380,6 +13843,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -13388,6 +13852,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -13398,6 +13863,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the listenerSpec field is set.
      */
     boolean hasListenerSpec();
     /**
@@ -13406,6 +13872,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerSpec.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpec();
     /**
@@ -13420,7 +13887,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AddListenerRequest}
    */
-  public  static final class AddListenerRequest extends
+  public static final class AddListenerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.AddListenerRequest)
       AddListenerRequestOrBuilder {
@@ -13431,6 +13898,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private AddListenerRequest() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddListenerRequest();
     }
 
     @java.lang.Override
@@ -13446,7 +13920,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13477,7 +13950,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13516,7 +13989,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -13535,7 +14010,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -13558,7 +14035,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the listenerSpec field is set.
      */
+    @java.lang.Override
     public boolean hasListenerSpec() {
       return listenerSpec_ != null;
     }
@@ -13568,7 +14047,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpec() {
       return listenerSpec_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.getDefaultInstance() : listenerSpec_;
     }
@@ -13579,6 +14060,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder getListenerSpecOrBuilder() {
       return getListenerSpec();
     }
@@ -13597,7 +14079,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       if (listenerSpec_ != null) {
@@ -13612,7 +14094,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       if (listenerSpec_ != null) {
@@ -13634,16 +14116,15 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && (hasListenerSpec() == other.hasListenerSpec());
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (hasListenerSpec() != other.hasListenerSpec()) return false;
       if (hasListenerSpec()) {
-        result = result && getListenerSpec()
-            .equals(other.getListenerSpec());
+        if (!getListenerSpec()
+            .equals(other.getListenerSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13838,35 +14319,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13923,6 +14404,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -13942,6 +14424,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -13962,6 +14445,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -13979,6 +14464,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -13992,6 +14478,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14005,7 +14493,7 @@ public final class LoadBalancerServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec listenerSpec_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec listenerSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder> listenerSpecBuilder_;
       /**
@@ -14014,6 +14502,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the listenerSpec field is set.
        */
       public boolean hasListenerSpec() {
         return listenerSpecBuilder_ != null || listenerSpec_ != null;
@@ -14024,6 +14513,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The listenerSpec.
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpec() {
         if (listenerSpecBuilder_ == null) {
@@ -14160,7 +14650,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14220,6 +14710,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -14228,6 +14719,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -14238,6 +14730,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -14246,6 +14739,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -14253,7 +14747,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AddListenerMetadata}
    */
-  public  static final class AddListenerMetadata extends
+  public static final class AddListenerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.AddListenerMetadata)
       AddListenerMetadataOrBuilder {
@@ -14265,6 +14759,13 @@ public final class LoadBalancerServiceOuterClass {
     private AddListenerMetadata() {
       loadBalancerId_ = "";
       listenerName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddListenerMetadata();
     }
 
     @java.lang.Override
@@ -14280,7 +14781,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14304,7 +14804,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14343,7 +14843,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -14362,7 +14864,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -14385,7 +14889,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -14404,7 +14910,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -14433,10 +14941,10 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
       unknownFields.writeTo(output);
@@ -14448,10 +14956,10 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
       size += unknownFields.getSerializedSize();
@@ -14469,13 +14977,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14660,35 +15167,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14746,6 +15253,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -14765,6 +15273,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -14785,6 +15294,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -14802,6 +15313,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -14815,6 +15327,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14835,6 +15349,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -14854,6 +15369,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -14874,6 +15390,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -14891,6 +15409,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -14904,6 +15423,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14919,7 +15440,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14979,6 +15500,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -14987,6 +15509,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -14997,6 +15520,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -15005,6 +15529,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -15012,7 +15537,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RemoveListenerRequest}
    */
-  public  static final class RemoveListenerRequest extends
+  public static final class RemoveListenerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RemoveListenerRequest)
       RemoveListenerRequestOrBuilder {
@@ -15024,6 +15549,13 @@ public final class LoadBalancerServiceOuterClass {
     private RemoveListenerRequest() {
       loadBalancerId_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveListenerRequest();
     }
 
     @java.lang.Override
@@ -15039,7 +15571,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15063,7 +15594,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15102,7 +15633,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -15121,7 +15654,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -15144,7 +15679,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -15163,7 +15700,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -15192,10 +15731,10 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       unknownFields.writeTo(output);
@@ -15207,10 +15746,10 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -15228,13 +15767,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15419,35 +15957,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15505,6 +16043,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -15524,6 +16063,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -15544,6 +16084,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -15561,6 +16103,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -15574,6 +16117,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15594,6 +16139,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -15613,6 +16159,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -15633,6 +16180,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -15650,6 +16199,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -15663,6 +16213,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -15678,7 +16230,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15738,6 +16290,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -15746,6 +16299,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -15756,6 +16310,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -15764,6 +16319,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -15771,7 +16327,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RemoveListenerMetadata}
    */
-  public  static final class RemoveListenerMetadata extends
+  public static final class RemoveListenerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RemoveListenerMetadata)
       RemoveListenerMetadataOrBuilder {
@@ -15783,6 +16339,13 @@ public final class LoadBalancerServiceOuterClass {
     private RemoveListenerMetadata() {
       loadBalancerId_ = "";
       listenerName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveListenerMetadata();
     }
 
     @java.lang.Override
@@ -15798,7 +16361,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15822,7 +16384,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15861,7 +16423,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -15880,7 +16444,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -15903,7 +16469,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -15922,7 +16490,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -15951,10 +16521,10 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
       unknownFields.writeTo(output);
@@ -15966,10 +16536,10 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
       size += unknownFields.getSerializedSize();
@@ -15987,13 +16557,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16178,35 +16747,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16264,6 +16833,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -16283,6 +16853,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -16303,6 +16874,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -16320,6 +16893,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -16333,6 +16907,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16353,6 +16929,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -16372,6 +16949,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -16392,6 +16970,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -16409,6 +16989,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -16422,6 +17003,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -16437,7 +17020,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16497,6 +17080,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -16505,6 +17089,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -16515,6 +17100,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -16523,6 +17109,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -16540,6 +17127,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the listenerSpec field is set.
      */
     boolean hasListenerSpec();
     /**
@@ -16548,6 +17136,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerSpec.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpec();
     /**
@@ -16562,7 +17151,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateListenerRequest}
    */
-  public  static final class UpdateListenerRequest extends
+  public static final class UpdateListenerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateListenerRequest)
       UpdateListenerRequestOrBuilder {
@@ -16573,6 +17162,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private UpdateListenerRequest() {
       loadBalancerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateListenerRequest();
     }
 
     @java.lang.Override
@@ -16588,7 +17184,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16632,7 +17227,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16671,7 +17266,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -16690,7 +17287,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -16713,7 +17312,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -16723,7 +17324,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -16734,6 +17337,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -16746,7 +17350,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the listenerSpec field is set.
      */
+    @java.lang.Override
     public boolean hasListenerSpec() {
       return listenerSpec_ != null;
     }
@@ -16756,7 +17362,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpec() {
       return listenerSpec_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.getDefaultInstance() : listenerSpec_;
     }
@@ -16767,6 +17375,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder getListenerSpecOrBuilder() {
       return getListenerSpec();
     }
@@ -16785,7 +17394,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       if (updateMask_ != null) {
@@ -16803,7 +17412,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       if (updateMask_ != null) {
@@ -16829,21 +17438,20 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && (hasListenerSpec() == other.hasListenerSpec());
+      if (hasListenerSpec() != other.hasListenerSpec()) return false;
       if (hasListenerSpec()) {
-        result = result && getListenerSpec()
-            .equals(other.getListenerSpec());
+        if (!getListenerSpec()
+            .equals(other.getListenerSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17053,35 +17661,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17141,6 +17749,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -17160,6 +17769,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -17180,6 +17790,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -17197,6 +17809,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -17210,6 +17823,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17223,7 +17838,7 @@ public final class LoadBalancerServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -17232,6 +17847,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -17242,6 +17858,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -17376,7 +17993,7 @@ public final class LoadBalancerServiceOuterClass {
         return updateMaskBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec listenerSpec_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec listenerSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpecOrBuilder> listenerSpecBuilder_;
       /**
@@ -17385,6 +18002,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the listenerSpec field is set.
        */
       public boolean hasListenerSpec() {
         return listenerSpecBuilder_ != null || listenerSpec_ != null;
@@ -17395,6 +18013,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ListenerSpec listener_spec = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The listenerSpec.
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec getListenerSpec() {
         if (listenerSpecBuilder_ == null) {
@@ -17531,7 +18150,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17591,6 +18210,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -17599,6 +18219,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -17609,6 +18230,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -17617,6 +18239,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -17624,7 +18247,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateListenerMetadata}
    */
-  public  static final class UpdateListenerMetadata extends
+  public static final class UpdateListenerMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateListenerMetadata)
       UpdateListenerMetadataOrBuilder {
@@ -17636,6 +18259,13 @@ public final class LoadBalancerServiceOuterClass {
     private UpdateListenerMetadata() {
       loadBalancerId_ = "";
       listenerName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateListenerMetadata();
     }
 
     @java.lang.Override
@@ -17651,7 +18281,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17675,7 +18304,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17714,7 +18343,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -17733,7 +18364,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -17756,7 +18389,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -17775,7 +18410,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -17804,10 +18441,10 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
       unknownFields.writeTo(output);
@@ -17819,10 +18456,10 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
       size += unknownFields.getSerializedSize();
@@ -17840,13 +18477,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18031,35 +18667,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18117,6 +18753,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -18136,6 +18773,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -18156,6 +18794,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -18173,6 +18813,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -18186,6 +18827,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18206,6 +18849,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -18225,6 +18869,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -18245,6 +18890,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -18262,6 +18909,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -18275,6 +18923,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -18290,7 +18940,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18350,6 +19000,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
+     * @return Whether the externalIpv4AddressSpec field is set.
      */
     boolean hasExternalIpv4AddressSpec();
     /**
@@ -18358,6 +19009,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
+     * @return The externalIpv4AddressSpec.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec getExternalIpv4AddressSpec();
     /**
@@ -18376,6 +19028,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
+     * @return Whether the internalIpv4AddressSpec field is set.
      */
     boolean hasInternalIpv4AddressSpec();
     /**
@@ -18385,6 +19038,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
+     * @return The internalIpv4AddressSpec.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec getInternalIpv4AddressSpec();
     /**
@@ -18403,6 +19057,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
+     * @return Whether the externalIpv6AddressSpec field is set.
      */
     boolean hasExternalIpv6AddressSpec();
     /**
@@ -18411,6 +19066,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
+     * @return The externalIpv6AddressSpec.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec getExternalIpv6AddressSpec();
     /**
@@ -18427,7 +19083,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AddressSpec}
    */
-  public  static final class AddressSpec extends
+  public static final class AddressSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.AddressSpec)
       AddressSpecOrBuilder {
@@ -18437,6 +19093,13 @@ public final class LoadBalancerServiceOuterClass {
       super(builder);
     }
     private AddressSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddressSpec();
     }
 
     @java.lang.Override
@@ -18452,7 +19115,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18506,7 +19168,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18540,7 +19202,8 @@ public final class LoadBalancerServiceOuterClass {
     private int addressSpecCase_ = 0;
     private java.lang.Object addressSpec_;
     public enum AddressSpecCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       EXTERNAL_IPV4_ADDRESS_SPEC(1),
       INTERNAL_IPV4_ADDRESS_SPEC(2),
       EXTERNAL_IPV6_ADDRESS_SPEC(3),
@@ -18550,6 +19213,8 @@ public final class LoadBalancerServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -18584,7 +19249,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
+     * @return Whether the externalIpv4AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasExternalIpv4AddressSpec() {
       return addressSpecCase_ == 1;
     }
@@ -18594,7 +19261,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
+     * @return The externalIpv4AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec getExternalIpv4AddressSpec() {
       if (addressSpecCase_ == 1) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec) addressSpec_;
@@ -18608,6 +19277,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpecOrBuilder getExternalIpv4AddressSpecOrBuilder() {
       if (addressSpecCase_ == 1) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec) addressSpec_;
@@ -18623,7 +19293,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
+     * @return Whether the internalIpv4AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasInternalIpv4AddressSpec() {
       return addressSpecCase_ == 2;
     }
@@ -18634,7 +19306,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
+     * @return The internalIpv4AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec getInternalIpv4AddressSpec() {
       if (addressSpecCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec) addressSpec_;
@@ -18649,6 +19323,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpecOrBuilder getInternalIpv4AddressSpecOrBuilder() {
       if (addressSpecCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec) addressSpec_;
@@ -18663,7 +19338,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
+     * @return Whether the externalIpv6AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasExternalIpv6AddressSpec() {
       return addressSpecCase_ == 3;
     }
@@ -18673,7 +19350,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
+     * @return The externalIpv6AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec getExternalIpv6AddressSpec() {
       if (addressSpecCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec) addressSpec_;
@@ -18687,6 +19366,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpecOrBuilder getExternalIpv6AddressSpecOrBuilder() {
       if (addressSpecCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec) addressSpec_;
@@ -18753,28 +19433,25 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec) obj;
 
-      boolean result = true;
-      result = result && getAddressSpecCase().equals(
-          other.getAddressSpecCase());
-      if (!result) return false;
+      if (!getAddressSpecCase().equals(other.getAddressSpecCase())) return false;
       switch (addressSpecCase_) {
         case 1:
-          result = result && getExternalIpv4AddressSpec()
-              .equals(other.getExternalIpv4AddressSpec());
+          if (!getExternalIpv4AddressSpec()
+              .equals(other.getExternalIpv4AddressSpec())) return false;
           break;
         case 2:
-          result = result && getInternalIpv4AddressSpec()
-              .equals(other.getInternalIpv4AddressSpec());
+          if (!getInternalIpv4AddressSpec()
+              .equals(other.getInternalIpv4AddressSpec())) return false;
           break;
         case 3:
-          result = result && getExternalIpv6AddressSpec()
-              .equals(other.getExternalIpv6AddressSpec());
+          if (!getExternalIpv6AddressSpec()
+              .equals(other.getExternalIpv6AddressSpec())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18989,35 +19666,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19100,7 +19777,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
+       * @return Whether the externalIpv4AddressSpec field is set.
        */
+      @java.lang.Override
       public boolean hasExternalIpv4AddressSpec() {
         return addressSpecCase_ == 1;
       }
@@ -19110,7 +19789,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
+       * @return The externalIpv4AddressSpec.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec getExternalIpv4AddressSpec() {
         if (externalIpv4AddressSpecBuilder_ == null) {
           if (addressSpecCase_ == 1) {
@@ -19228,6 +19909,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec external_ipv4_address_spec = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpecOrBuilder getExternalIpv4AddressSpecOrBuilder() {
         if ((addressSpecCase_ == 1) && (externalIpv4AddressSpecBuilder_ != null)) {
           return externalIpv4AddressSpecBuilder_.getMessageOrBuilder();
@@ -19273,7 +19955,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
+       * @return Whether the internalIpv4AddressSpec field is set.
        */
+      @java.lang.Override
       public boolean hasInternalIpv4AddressSpec() {
         return addressSpecCase_ == 2;
       }
@@ -19284,7 +19968,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
+       * @return The internalIpv4AddressSpec.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec getInternalIpv4AddressSpec() {
         if (internalIpv4AddressSpecBuilder_ == null) {
           if (addressSpecCase_ == 2) {
@@ -19408,6 +20094,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec internal_ipv4_address_spec = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpecOrBuilder getInternalIpv4AddressSpecOrBuilder() {
         if ((addressSpecCase_ == 2) && (internalIpv4AddressSpecBuilder_ != null)) {
           return internalIpv4AddressSpecBuilder_.getMessageOrBuilder();
@@ -19453,7 +20140,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
+       * @return Whether the externalIpv6AddressSpec field is set.
        */
+      @java.lang.Override
       public boolean hasExternalIpv6AddressSpec() {
         return addressSpecCase_ == 3;
       }
@@ -19463,7 +20152,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
+       * @return The externalIpv6AddressSpec.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec getExternalIpv6AddressSpec() {
         if (externalIpv6AddressSpecBuilder_ == null) {
           if (addressSpecCase_ == 3) {
@@ -19581,6 +20272,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec external_ipv6_address_spec = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpecOrBuilder getExternalIpv6AddressSpecOrBuilder() {
         if ((addressSpecCase_ == 3) && (externalIpv6AddressSpecBuilder_ != null)) {
           return externalIpv6AddressSpecBuilder_.getMessageOrBuilder();
@@ -19619,7 +20311,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19679,6 +20371,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The address.
      */
     java.lang.String getAddress();
     /**
@@ -19687,6 +20380,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -19694,7 +20388,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec}
    */
-  public  static final class ExternalIpv4AddressSpec extends
+  public static final class ExternalIpv4AddressSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ExternalIpv4AddressSpec)
       ExternalIpv4AddressSpecOrBuilder {
@@ -19705,6 +20399,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private ExternalIpv4AddressSpec() {
       address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalIpv4AddressSpec();
     }
 
     @java.lang.Override
@@ -19720,7 +20421,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19738,7 +20438,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19777,7 +20477,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -19796,7 +20498,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -19825,7 +20529,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
       unknownFields.writeTo(output);
@@ -19837,7 +20541,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
       size += unknownFields.getSerializedSize();
@@ -19855,11 +20559,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv4AddressSpec) obj;
 
-      boolean result = true;
-      result = result && getAddress()
-          .equals(other.getAddress());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20039,35 +20742,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20121,6 +20824,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -20140,6 +20844,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -20160,6 +20865,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -20177,6 +20884,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -20190,6 +20898,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -20205,7 +20915,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20265,6 +20975,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The address.
      */
     java.lang.String getAddress();
     /**
@@ -20273,6 +20984,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -20283,6 +20995,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -20291,6 +21004,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -20298,7 +21012,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec}
    */
-  public  static final class InternalIpv4AddressSpec extends
+  public static final class InternalIpv4AddressSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.InternalIpv4AddressSpec)
       InternalIpv4AddressSpecOrBuilder {
@@ -20310,6 +21024,13 @@ public final class LoadBalancerServiceOuterClass {
     private InternalIpv4AddressSpec() {
       address_ = "";
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InternalIpv4AddressSpec();
     }
 
     @java.lang.Override
@@ -20325,7 +21046,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20349,7 +21069,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20388,7 +21108,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -20407,7 +21129,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -20430,7 +21154,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -20449,7 +21175,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -20478,10 +21206,10 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -20493,10 +21221,10 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -20514,13 +21242,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.InternalIpv4AddressSpec) obj;
 
-      boolean result = true;
-      result = result && getAddress()
-          .equals(other.getAddress());
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20705,35 +21432,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20791,6 +21518,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -20810,6 +21538,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -20830,6 +21559,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -20847,6 +21578,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -20860,6 +21592,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -20880,6 +21614,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -20899,6 +21634,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -20919,6 +21655,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -20936,6 +21674,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -20949,6 +21688,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20964,7 +21705,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21024,6 +21765,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The address.
      */
     java.lang.String getAddress();
     /**
@@ -21032,6 +21774,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -21039,7 +21782,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec}
    */
-  public  static final class ExternalIpv6AddressSpec extends
+  public static final class ExternalIpv6AddressSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ExternalIpv6AddressSpec)
       ExternalIpv6AddressSpecOrBuilder {
@@ -21050,6 +21793,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private ExternalIpv6AddressSpec() {
       address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalIpv6AddressSpec();
     }
 
     @java.lang.Override
@@ -21065,7 +21815,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21083,7 +21832,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21122,7 +21871,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -21141,7 +21892,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string address = 1;</code>
+     * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -21170,7 +21923,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
       unknownFields.writeTo(output);
@@ -21182,7 +21935,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
       size += unknownFields.getSerializedSize();
@@ -21200,11 +21953,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ExternalIpv6AddressSpec) obj;
 
-      boolean result = true;
-      result = result && getAddress()
-          .equals(other.getAddress());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21384,35 +22136,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21466,6 +22218,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -21485,6 +22238,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -21505,6 +22259,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -21522,6 +22278,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -21535,6 +22292,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string address = 1;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -21550,7 +22309,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21654,6 +22413,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the ports.
      */
     java.util.List<java.lang.Long> getPortsList();
     /**
@@ -21662,6 +22422,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of ports.
      */
     int getPortsCount();
     /**
@@ -21670,13 +22431,15 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The ports at the given index.
      */
     long getPorts(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.EndpointSpec}
    */
-  public  static final class EndpointSpec extends
+  public static final class EndpointSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.EndpointSpec)
       EndpointSpecOrBuilder {
@@ -21687,7 +22450,14 @@ public final class LoadBalancerServiceOuterClass {
     }
     private EndpointSpec() {
       addressSpecs_ = java.util.Collections.emptyList();
-      ports_ = java.util.Collections.emptyList();
+      ports_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EndpointSpec();
     }
 
     @java.lang.Override
@@ -21715,7 +22485,7 @@ public final class LoadBalancerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 addressSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -21724,28 +22494,28 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             case 16: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                ports_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                ports_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              ports_.add(input.readInt64());
+              ports_.addLong(input.readInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                ports_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                ports_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                ports_.add(input.readInt64());
+                ports_.addLong(input.readInt64());
               }
               input.popLimit(limit);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21759,11 +22529,11 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           addressSpecs_ = java.util.Collections.unmodifiableList(addressSpecs_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          ports_ = java.util.Collections.unmodifiableList(ports_);
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          ports_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -21791,6 +22561,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.AddressSpec address_specs = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec> getAddressSpecsList() {
       return addressSpecs_;
     }
@@ -21801,6 +22572,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.AddressSpec address_specs = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpecOrBuilder> 
         getAddressSpecsOrBuilderList() {
       return addressSpecs_;
@@ -21812,6 +22584,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.AddressSpec address_specs = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public int getAddressSpecsCount() {
       return addressSpecs_.size();
     }
@@ -21822,6 +22595,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.AddressSpec address_specs = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec getAddressSpecs(int index) {
       return addressSpecs_.get(index);
     }
@@ -21832,20 +22606,23 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.AddressSpec address_specs = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpecOrBuilder getAddressSpecsOrBuilder(
         int index) {
       return addressSpecs_.get(index);
     }
 
     public static final int PORTS_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Long> ports_;
+    private com.google.protobuf.Internal.LongList ports_;
     /**
      * <pre>
      * Endpoint ports.
      * </pre>
      *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the ports.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Long>
         getPortsList() {
       return ports_;
@@ -21856,6 +22633,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of ports.
      */
     public int getPortsCount() {
       return ports_.size();
@@ -21866,9 +22644,11 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The ports at the given index.
      */
     public long getPorts(int index) {
-      return ports_.get(index);
+      return ports_.getLong(index);
     }
     private int portsMemoizedSerializedSize = -1;
 
@@ -21895,7 +22675,7 @@ public final class LoadBalancerServiceOuterClass {
         output.writeUInt32NoTag(portsMemoizedSerializedSize);
       }
       for (int i = 0; i < ports_.size(); i++) {
-        output.writeInt64NoTag(ports_.get(i));
+        output.writeInt64NoTag(ports_.getLong(i));
       }
       unknownFields.writeTo(output);
     }
@@ -21914,7 +22694,7 @@ public final class LoadBalancerServiceOuterClass {
         int dataSize = 0;
         for (int i = 0; i < ports_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(ports_.get(i));
+            .computeInt64SizeNoTag(ports_.getLong(i));
         }
         size += dataSize;
         if (!getPortsList().isEmpty()) {
@@ -21939,13 +22719,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec) obj;
 
-      boolean result = true;
-      result = result && getAddressSpecsList()
-          .equals(other.getAddressSpecsList());
-      result = result && getPortsList()
-          .equals(other.getPortsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAddressSpecsList()
+          .equals(other.getAddressSpecsList())) return false;
+      if (!getPortsList()
+          .equals(other.getPortsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22103,7 +22882,7 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           addressSpecsBuilder_.clear();
         }
-        ports_ = java.util.Collections.emptyList();
+        ports_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -22133,7 +22912,7 @@ public final class LoadBalancerServiceOuterClass {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec(this);
         int from_bitField0_ = bitField0_;
         if (addressSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             addressSpecs_ = java.util.Collections.unmodifiableList(addressSpecs_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -22141,8 +22920,8 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.addressSpecs_ = addressSpecsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          ports_ = java.util.Collections.unmodifiableList(ports_);
+        if (((bitField0_ & 0x00000002) != 0)) {
+          ports_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.ports_ = ports_;
@@ -22152,35 +22931,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22263,7 +23042,7 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec> addressSpecs_ =
         java.util.Collections.emptyList();
       private void ensureAddressSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           addressSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec>(addressSpecs_);
           bitField0_ |= 0x00000001;
          }
@@ -22564,7 +23343,7 @@ public final class LoadBalancerServiceOuterClass {
           addressSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpec.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddressSpecOrBuilder>(
                   addressSpecs_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           addressSpecs_ = null;
@@ -22572,10 +23351,10 @@ public final class LoadBalancerServiceOuterClass {
         return addressSpecsBuilder_;
       }
 
-      private java.util.List<java.lang.Long> ports_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.LongList ports_ = emptyLongList();
       private void ensurePortsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          ports_ = new java.util.ArrayList<java.lang.Long>(ports_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          ports_ = mutableCopy(ports_);
           bitField0_ |= 0x00000002;
          }
       }
@@ -22585,10 +23364,12 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the ports.
        */
       public java.util.List<java.lang.Long>
           getPortsList() {
-        return java.util.Collections.unmodifiableList(ports_);
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(ports_) : ports_;
       }
       /**
        * <pre>
@@ -22596,6 +23377,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of ports.
        */
       public int getPortsCount() {
         return ports_.size();
@@ -22606,9 +23388,11 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The ports at the given index.
        */
       public long getPorts(int index) {
-        return ports_.get(index);
+        return ports_.getLong(index);
       }
       /**
        * <pre>
@@ -22616,11 +23400,14 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The ports to set.
+       * @return This builder for chaining.
        */
       public Builder setPorts(
           int index, long value) {
         ensurePortsIsMutable();
-        ports_.set(index, value);
+        ports_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -22630,10 +23417,12 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The ports to add.
+       * @return This builder for chaining.
        */
       public Builder addPorts(long value) {
         ensurePortsIsMutable();
-        ports_.add(value);
+        ports_.addLong(value);
         onChanged();
         return this;
       }
@@ -22643,6 +23432,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The ports to add.
+       * @return This builder for chaining.
        */
       public Builder addAllPorts(
           java.lang.Iterable<? extends java.lang.Long> values) {
@@ -22658,9 +23449,10 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPorts() {
-        ports_ = java.util.Collections.emptyList();
+        ports_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -22668,7 +23460,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22728,6 +23520,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -22736,6 +23529,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -22795,6 +23589,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
+     * @return Whether the http field is set.
      */
     boolean hasHttp();
     /**
@@ -22803,6 +23598,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
+     * @return The http.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp();
     /**
@@ -22823,6 +23619,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
+     * @return Whether the tls field is set.
      */
     boolean hasTls();
     /**
@@ -22834,6 +23631,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
+     * @return The tls.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls();
     /**
@@ -22854,6 +23652,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     * @return Whether the stream field is set.
      */
     boolean hasStream();
     /**
@@ -22862,6 +23661,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     * @return The stream.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream();
     /**
@@ -22878,7 +23678,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListenerSpec}
    */
-  public  static final class ListenerSpec extends
+  public static final class ListenerSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListenerSpec)
       ListenerSpecOrBuilder {
@@ -22890,6 +23690,13 @@ public final class LoadBalancerServiceOuterClass {
     private ListenerSpec() {
       name_ = "";
       endpointSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListenerSpec();
     }
 
     @java.lang.Override
@@ -22923,9 +23730,9 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 endpointSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               endpointSpecs_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec.parser(), extensionRegistry));
@@ -22974,7 +23781,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22988,7 +23795,7 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           endpointSpecs_ = java.util.Collections.unmodifiableList(endpointSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -23008,11 +23815,11 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int listenerCase_ = 0;
     private java.lang.Object listener_;
     public enum ListenerCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       HTTP(3),
       TLS(4),
       STREAM(5),
@@ -23022,6 +23829,8 @@ public final class LoadBalancerServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -23057,7 +23866,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -23076,7 +23887,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -23101,6 +23914,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.EndpointSpec endpoint_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec> getEndpointSpecsList() {
       return endpointSpecs_;
     }
@@ -23112,6 +23926,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.EndpointSpec endpoint_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpecOrBuilder> 
         getEndpointSpecsOrBuilderList() {
       return endpointSpecs_;
@@ -23124,6 +23939,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.EndpointSpec endpoint_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public int getEndpointSpecsCount() {
       return endpointSpecs_.size();
     }
@@ -23135,6 +23951,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.EndpointSpec endpoint_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec getEndpointSpecs(int index) {
       return endpointSpecs_.get(index);
     }
@@ -23146,6 +23963,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.EndpointSpec endpoint_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpecOrBuilder getEndpointSpecsOrBuilder(
         int index) {
       return endpointSpecs_.get(index);
@@ -23158,7 +23976,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
+     * @return Whether the http field is set.
      */
+    @java.lang.Override
     public boolean hasHttp() {
       return listenerCase_ == 3;
     }
@@ -23168,7 +23988,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
+     * @return The http.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp() {
       if (listenerCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener) listener_;
@@ -23182,6 +24004,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder getHttpOrBuilder() {
       if (listenerCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener) listener_;
@@ -23199,7 +24022,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
+     * @return Whether the tls field is set.
      */
+    @java.lang.Override
     public boolean hasTls() {
       return listenerCase_ == 4;
     }
@@ -23212,7 +24037,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
+     * @return The tls.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls() {
       if (listenerCase_ == 4) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener) listener_;
@@ -23229,6 +24056,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder getTlsOrBuilder() {
       if (listenerCase_ == 4) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener) listener_;
@@ -23243,7 +24071,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     * @return Whether the stream field is set.
      */
+    @java.lang.Override
     public boolean hasStream() {
       return listenerCase_ == 5;
     }
@@ -23253,7 +24083,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     * @return The stream.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream() {
       if (listenerCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
@@ -23267,6 +24099,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder() {
       if (listenerCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
@@ -23288,7 +24121,7 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       for (int i = 0; i < endpointSpecs_.size(); i++) {
@@ -23312,7 +24145,7 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       for (int i = 0; i < endpointSpecs_.size(); i++) {
@@ -23346,32 +24179,29 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getEndpointSpecsList()
-          .equals(other.getEndpointSpecsList());
-      result = result && getListenerCase().equals(
-          other.getListenerCase());
-      if (!result) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getEndpointSpecsList()
+          .equals(other.getEndpointSpecsList())) return false;
+      if (!getListenerCase().equals(other.getListenerCase())) return false;
       switch (listenerCase_) {
         case 3:
-          result = result && getHttp()
-              .equals(other.getHttp());
+          if (!getHttp()
+              .equals(other.getHttp())) return false;
           break;
         case 4:
-          result = result && getTls()
-              .equals(other.getTls());
+          if (!getTls()
+              .equals(other.getTls())) return false;
           break;
         case 5:
-          result = result && getStream()
-              .equals(other.getStream());
+          if (!getStream()
+              .equals(other.getStream())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23541,7 +24371,7 @@ public final class LoadBalancerServiceOuterClass {
 
         if (endpointSpecsBuilder_ == null) {
           endpointSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           endpointSpecsBuilder_.clear();
         }
@@ -23574,12 +24404,11 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (endpointSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             endpointSpecs_ = java.util.Collections.unmodifiableList(endpointSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.endpointSpecs_ = endpointSpecs_;
         } else {
@@ -23606,7 +24435,6 @@ public final class LoadBalancerServiceOuterClass {
             result.listener_ = streamBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.listenerCase_ = listenerCase_;
         onBuilt();
         return result;
@@ -23614,35 +24442,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23664,7 +24492,7 @@ public final class LoadBalancerServiceOuterClass {
           if (!other.endpointSpecs_.isEmpty()) {
             if (endpointSpecs_.isEmpty()) {
               endpointSpecs_ = other.endpointSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureEndpointSpecsIsMutable();
               endpointSpecs_.addAll(other.endpointSpecs_);
@@ -23677,7 +24505,7 @@ public final class LoadBalancerServiceOuterClass {
               endpointSpecsBuilder_.dispose();
               endpointSpecsBuilder_ = null;
               endpointSpecs_ = other.endpointSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               endpointSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEndpointSpecsFieldBuilder() : null;
@@ -23755,6 +24583,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -23774,6 +24603,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -23794,6 +24624,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -23811,6 +24643,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -23824,6 +24657,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -23840,9 +24675,9 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec> endpointSpecs_ =
         java.util.Collections.emptyList();
       private void ensureEndpointSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           endpointSpecs_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec>(endpointSpecs_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -24047,7 +24882,7 @@ public final class LoadBalancerServiceOuterClass {
       public Builder clearEndpointSpecs() {
         if (endpointSpecsBuilder_ == null) {
           endpointSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           endpointSpecsBuilder_.clear();
@@ -24159,7 +24994,7 @@ public final class LoadBalancerServiceOuterClass {
           endpointSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpec.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.EndpointSpecOrBuilder>(
                   endpointSpecs_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           endpointSpecs_ = null;
@@ -24175,7 +25010,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
+       * @return Whether the http field is set.
        */
+      @java.lang.Override
       public boolean hasHttp() {
         return listenerCase_ == 3;
       }
@@ -24185,7 +25022,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
+       * @return The http.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp() {
         if (httpBuilder_ == null) {
           if (listenerCase_ == 3) {
@@ -24303,6 +25142,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder getHttpOrBuilder() {
         if ((listenerCase_ == 3) && (httpBuilder_ != null)) {
           return httpBuilder_.getMessageOrBuilder();
@@ -24350,7 +25190,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
+       * @return Whether the tls field is set.
        */
+      @java.lang.Override
       public boolean hasTls() {
         return listenerCase_ == 4;
       }
@@ -24363,7 +25205,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
+       * @return The tls.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls() {
         if (tlsBuilder_ == null) {
           if (listenerCase_ == 4) {
@@ -24499,6 +25343,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder getTlsOrBuilder() {
         if ((listenerCase_ == 4) && (tlsBuilder_ != null)) {
           return tlsBuilder_.getMessageOrBuilder();
@@ -24546,7 +25391,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       * @return Whether the stream field is set.
        */
+      @java.lang.Override
       public boolean hasStream() {
         return listenerCase_ == 5;
       }
@@ -24556,7 +25403,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       * @return The stream.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream() {
         if (streamBuilder_ == null) {
           if (listenerCase_ == 5) {
@@ -24674,6 +25523,7 @@ public final class LoadBalancerServiceOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder() {
         if ((listenerCase_ == 5) && (streamBuilder_ != null)) {
           return streamBuilder_.getMessageOrBuilder();
@@ -24712,7 +25562,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24772,6 +25622,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -24780,6 +25631,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -24790,6 +25642,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The backendGroupId.
      */
     java.lang.String getBackendGroupId();
     /**
@@ -24798,6 +25651,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backendGroupId.
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
@@ -24808,6 +25662,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The targetGroupId.
      */
     java.lang.String getTargetGroupId();
     /**
@@ -24816,6 +25671,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for targetGroupId.
      */
     com.google.protobuf.ByteString
         getTargetGroupIdBytes();
@@ -24823,7 +25679,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GetTargetStatesRequest}
    */
-  public  static final class GetTargetStatesRequest extends
+  public static final class GetTargetStatesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GetTargetStatesRequest)
       GetTargetStatesRequestOrBuilder {
@@ -24839,6 +25695,13 @@ public final class LoadBalancerServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTargetStatesRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -24851,7 +25714,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -24881,7 +25743,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24920,7 +25782,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -24939,7 +25803,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -24962,7 +25828,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The backendGroupId.
      */
+    @java.lang.Override
     public java.lang.String getBackendGroupId() {
       java.lang.Object ref = backendGroupId_;
       if (ref instanceof java.lang.String) {
@@ -24981,7 +25849,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backendGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBackendGroupIdBytes() {
       java.lang.Object ref = backendGroupId_;
@@ -25004,7 +25874,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The targetGroupId.
      */
+    @java.lang.Override
     public java.lang.String getTargetGroupId() {
       java.lang.Object ref = targetGroupId_;
       if (ref instanceof java.lang.String) {
@@ -25023,7 +25895,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for targetGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTargetGroupIdBytes() {
       java.lang.Object ref = targetGroupId_;
@@ -25052,13 +25926,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getBackendGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, backendGroupId_);
       }
-      if (!getTargetGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, targetGroupId_);
       }
       unknownFields.writeTo(output);
@@ -25070,13 +25944,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getBackendGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, backendGroupId_);
       }
-      if (!getTargetGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, targetGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -25094,15 +25968,14 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getBackendGroupId()
-          .equals(other.getBackendGroupId());
-      result = result && getTargetGroupId()
-          .equals(other.getTargetGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getBackendGroupId()
+          .equals(other.getBackendGroupId())) return false;
+      if (!getTargetGroupId()
+          .equals(other.getTargetGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25292,35 +26165,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25382,6 +26255,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -25401,6 +26275,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -25421,6 +26296,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -25438,6 +26315,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -25451,6 +26329,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25471,6 +26351,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The backendGroupId.
        */
       public java.lang.String getBackendGroupId() {
         java.lang.Object ref = backendGroupId_;
@@ -25490,6 +26371,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backendGroupId.
        */
       public com.google.protobuf.ByteString
           getBackendGroupIdBytes() {
@@ -25510,6 +26392,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The backendGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackendGroupId(
           java.lang.String value) {
@@ -25527,6 +26411,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBackendGroupId() {
         
@@ -25540,6 +26425,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string backend_group_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for backendGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackendGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25560,6 +26447,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The targetGroupId.
        */
       public java.lang.String getTargetGroupId() {
         java.lang.Object ref = targetGroupId_;
@@ -25579,6 +26467,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for targetGroupId.
        */
       public com.google.protobuf.ByteString
           getTargetGroupIdBytes() {
@@ -25599,6 +26488,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The targetGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetGroupId(
           java.lang.String value) {
@@ -25616,6 +26507,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetGroupId() {
         
@@ -25629,6 +26521,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for targetGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25644,7 +26538,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -25745,7 +26639,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GetTargetStatesResponse}
    */
-  public  static final class GetTargetStatesResponse extends
+  public static final class GetTargetStatesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GetTargetStatesResponse)
       GetTargetStatesResponseOrBuilder {
@@ -25756,6 +26650,13 @@ public final class LoadBalancerServiceOuterClass {
     }
     private GetTargetStatesResponse() {
       targetStates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTargetStatesResponse();
     }
 
     @java.lang.Override
@@ -25783,7 +26684,7 @@ public final class LoadBalancerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 targetStates_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -25792,7 +26693,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -25806,7 +26707,7 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           targetStates_ = java.util.Collections.unmodifiableList(targetStates_);
         }
         this.unknownFields = unknownFields.build();
@@ -25835,6 +26736,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState target_states = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState> getTargetStatesList() {
       return targetStates_;
     }
@@ -25845,6 +26747,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState target_states = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetStateOrBuilder> 
         getTargetStatesOrBuilderList() {
       return targetStates_;
@@ -25856,6 +26759,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState target_states = 1;</code>
      */
+    @java.lang.Override
     public int getTargetStatesCount() {
       return targetStates_.size();
     }
@@ -25866,6 +26770,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState target_states = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState getTargetStates(int index) {
       return targetStates_.get(index);
     }
@@ -25876,6 +26781,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState target_states = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetStateOrBuilder getTargetStatesOrBuilder(
         int index) {
       return targetStates_.get(index);
@@ -25926,11 +26832,10 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse) obj;
 
-      boolean result = true;
-      result = result && getTargetStatesList()
-          .equals(other.getTargetStatesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTargetStatesList()
+          .equals(other.getTargetStatesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26112,7 +27017,7 @@ public final class LoadBalancerServiceOuterClass {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse(this);
         int from_bitField0_ = bitField0_;
         if (targetStatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             targetStates_ = java.util.Collections.unmodifiableList(targetStates_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -26126,35 +27031,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26227,7 +27132,7 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState> targetStates_ =
         java.util.Collections.emptyList();
       private void ensureTargetStatesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           targetStates_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState>(targetStates_);
           bitField0_ |= 0x00000001;
          }
@@ -26528,7 +27433,7 @@ public final class LoadBalancerServiceOuterClass {
           targetStatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetStateOrBuilder>(
                   targetStates_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           targetStates_ = null;
@@ -26538,7 +27443,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26598,6 +27503,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -26606,6 +27512,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -26616,6 +27523,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -26624,6 +27532,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -26634,6 +27543,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -26642,6 +27552,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -26652,6 +27563,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the serverNames.
      */
     java.util.List<java.lang.String>
         getServerNamesList();
@@ -26661,6 +27573,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of serverNames.
      */
     int getServerNamesCount();
     /**
@@ -26669,6 +27582,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The serverNames at the given index.
      */
     java.lang.String getServerNames(int index);
     /**
@@ -26677,6 +27592,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the serverNames at the given index.
      */
     com.google.protobuf.ByteString
         getServerNamesBytes(int index);
@@ -26687,6 +27604,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the handler field is set.
      */
     boolean hasHandler();
     /**
@@ -26695,6 +27613,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The handler.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler();
     /**
@@ -26709,7 +27628,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AddSniMatchRequest}
    */
-  public  static final class AddSniMatchRequest extends
+  public static final class AddSniMatchRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.AddSniMatchRequest)
       AddSniMatchRequestOrBuilder {
@@ -26723,6 +27642,13 @@ public final class LoadBalancerServiceOuterClass {
       listenerName_ = "";
       name_ = "";
       serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddSniMatchRequest();
     }
 
     @java.lang.Override
@@ -26769,9 +27695,9 @@ public final class LoadBalancerServiceOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 serverNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               serverNames_.add(s);
               break;
@@ -26790,7 +27716,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26804,7 +27730,7 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           serverNames_ = serverNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -26824,7 +27750,6 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object loadBalancerId_;
     /**
@@ -26833,7 +27758,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -26852,7 +27779,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -26875,7 +27804,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -26894,7 +27825,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -26917,7 +27850,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -26936,7 +27871,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -26959,6 +27896,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the serverNames.
      */
     public com.google.protobuf.ProtocolStringList
         getServerNamesList() {
@@ -26970,6 +27908,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of serverNames.
      */
     public int getServerNamesCount() {
       return serverNames_.size();
@@ -26980,6 +27919,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The serverNames at the given index.
      */
     public java.lang.String getServerNames(int index) {
       return serverNames_.get(index);
@@ -26990,6 +27931,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the serverNames at the given index.
      */
     public com.google.protobuf.ByteString
         getServerNamesBytes(int index) {
@@ -27004,7 +27947,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the handler field is set.
      */
+    @java.lang.Override
     public boolean hasHandler() {
       return handler_ != null;
     }
@@ -27014,7 +27959,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The handler.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler() {
       return handler_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.getDefaultInstance() : handler_;
     }
@@ -27025,6 +27972,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getHandlerOrBuilder() {
       return getHandler();
     }
@@ -27043,13 +27991,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       for (int i = 0; i < serverNames_.size(); i++) {
@@ -27067,13 +28015,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       {
@@ -27103,22 +28051,21 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getServerNamesList()
-          .equals(other.getServerNamesList());
-      result = result && (hasHandler() == other.hasHandler());
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getServerNamesList()
+          .equals(other.getServerNamesList())) return false;
+      if (hasHandler() != other.hasHandler()) return false;
       if (hasHandler()) {
-        result = result && getHandler()
-            .equals(other.getHandler());
+        if (!getHandler()
+            .equals(other.getHandler())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27282,7 +28229,7 @@ public final class LoadBalancerServiceOuterClass {
         name_ = "";
 
         serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (handlerBuilder_ == null) {
           handler_ = null;
         } else {
@@ -27316,13 +28263,12 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.loadBalancerId_ = loadBalancerId_;
         result.listenerName_ = listenerName_;
         result.name_ = name_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           serverNames_ = serverNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.serverNames_ = serverNames_;
         if (handlerBuilder_ == null) {
@@ -27330,42 +28276,41 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.handler_ = handlerBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27394,7 +28339,7 @@ public final class LoadBalancerServiceOuterClass {
         if (!other.serverNames_.isEmpty()) {
           if (serverNames_.isEmpty()) {
             serverNames_ = other.serverNames_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureServerNamesIsMutable();
             serverNames_.addAll(other.serverNames_);
@@ -27441,6 +28386,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -27460,6 +28406,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -27480,6 +28427,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -27497,6 +28446,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -27510,6 +28460,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27530,6 +28482,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -27549,6 +28502,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -27569,6 +28523,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -27586,6 +28542,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -27599,6 +28556,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -27619,6 +28578,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -27638,6 +28598,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -27658,6 +28619,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -27675,6 +28638,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -27688,6 +28652,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -27703,9 +28669,9 @@ public final class LoadBalancerServiceOuterClass {
 
       private com.google.protobuf.LazyStringList serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureServerNamesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           serverNames_ = new com.google.protobuf.LazyStringArrayList(serverNames_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -27714,6 +28680,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the serverNames.
        */
       public com.google.protobuf.ProtocolStringList
           getServerNamesList() {
@@ -27725,6 +28692,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of serverNames.
        */
       public int getServerNamesCount() {
         return serverNames_.size();
@@ -27735,6 +28703,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The serverNames at the given index.
        */
       public java.lang.String getServerNames(int index) {
         return serverNames_.get(index);
@@ -27745,6 +28715,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the serverNames at the given index.
        */
       public com.google.protobuf.ByteString
           getServerNamesBytes(int index) {
@@ -27756,6 +28728,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The serverNames to set.
+       * @return This builder for chaining.
        */
       public Builder setServerNames(
           int index, java.lang.String value) {
@@ -27773,6 +28748,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The serverNames to add.
+       * @return This builder for chaining.
        */
       public Builder addServerNames(
           java.lang.String value) {
@@ -27790,6 +28767,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The serverNames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllServerNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -27805,10 +28784,11 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServerNames() {
         serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -27818,6 +28798,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 4 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the serverNames to add.
+       * @return This builder for chaining.
        */
       public Builder addServerNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -27831,7 +28813,7 @@ public final class LoadBalancerServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler handler_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler handler_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder> handlerBuilder_;
       /**
@@ -27840,6 +28822,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the handler field is set.
        */
       public boolean hasHandler() {
         return handlerBuilder_ != null || handler_ != null;
@@ -27850,6 +28833,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The handler.
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler() {
         if (handlerBuilder_ == null) {
@@ -27986,7 +28970,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -28046,6 +29030,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -28054,6 +29039,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -28064,6 +29050,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -28072,6 +29059,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -28082,6 +29070,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The sniMatchName.
      */
     java.lang.String getSniMatchName();
     /**
@@ -28090,6 +29079,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The bytes for sniMatchName.
      */
     com.google.protobuf.ByteString
         getSniMatchNameBytes();
@@ -28097,7 +29087,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AddSniMatchMetadata}
    */
-  public  static final class AddSniMatchMetadata extends
+  public static final class AddSniMatchMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.AddSniMatchMetadata)
       AddSniMatchMetadataOrBuilder {
@@ -28113,6 +29103,13 @@ public final class LoadBalancerServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddSniMatchMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -28125,7 +29122,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -28155,7 +29151,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -28194,7 +29190,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -28213,7 +29211,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -28236,7 +29236,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -28255,7 +29257,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -28278,7 +29282,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The sniMatchName.
      */
+    @java.lang.Override
     public java.lang.String getSniMatchName() {
       java.lang.Object ref = sniMatchName_;
       if (ref instanceof java.lang.String) {
@@ -28297,7 +29303,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The bytes for sniMatchName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSniMatchNameBytes() {
       java.lang.Object ref = sniMatchName_;
@@ -28326,13 +29334,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sniMatchName_);
       }
       unknownFields.writeTo(output);
@@ -28344,13 +29352,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sniMatchName_);
       }
       size += unknownFields.getSerializedSize();
@@ -28368,15 +29376,14 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && getSniMatchName()
-          .equals(other.getSniMatchName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!getSniMatchName()
+          .equals(other.getSniMatchName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -28566,35 +29573,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -28656,6 +29663,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -28675,6 +29683,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -28695,6 +29704,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -28712,6 +29723,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -28725,6 +29737,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -28745,6 +29759,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -28764,6 +29779,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -28784,6 +29800,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -28801,6 +29819,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -28814,6 +29833,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -28834,6 +29855,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return The sniMatchName.
        */
       public java.lang.String getSniMatchName() {
         java.lang.Object ref = sniMatchName_;
@@ -28853,6 +29875,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return The bytes for sniMatchName.
        */
       public com.google.protobuf.ByteString
           getSniMatchNameBytes() {
@@ -28873,6 +29896,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @param value The sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchName(
           java.lang.String value) {
@@ -28890,6 +29915,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSniMatchName() {
         
@@ -28903,6 +29929,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @param value The bytes for sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchNameBytes(
           com.google.protobuf.ByteString value) {
@@ -28918,7 +29946,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -28978,6 +30006,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -28986,6 +30015,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -28996,6 +30026,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -29004,6 +30035,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -29014,6 +30046,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The sniMatchName.
      */
     java.lang.String getSniMatchName();
     /**
@@ -29022,6 +30055,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for sniMatchName.
      */
     com.google.protobuf.ByteString
         getSniMatchNameBytes();
@@ -29029,7 +30063,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RemoveSniMatchRequest}
    */
-  public  static final class RemoveSniMatchRequest extends
+  public static final class RemoveSniMatchRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RemoveSniMatchRequest)
       RemoveSniMatchRequestOrBuilder {
@@ -29045,6 +30079,13 @@ public final class LoadBalancerServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveSniMatchRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -29057,7 +30098,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -29087,7 +30127,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -29126,7 +30166,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -29145,7 +30187,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -29168,7 +30212,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -29187,7 +30233,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -29210,7 +30258,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The sniMatchName.
      */
+    @java.lang.Override
     public java.lang.String getSniMatchName() {
       java.lang.Object ref = sniMatchName_;
       if (ref instanceof java.lang.String) {
@@ -29229,7 +30279,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for sniMatchName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSniMatchNameBytes() {
       java.lang.Object ref = sniMatchName_;
@@ -29258,13 +30310,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sniMatchName_);
       }
       unknownFields.writeTo(output);
@@ -29276,13 +30328,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sniMatchName_);
       }
       size += unknownFields.getSerializedSize();
@@ -29300,15 +30352,14 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && getSniMatchName()
-          .equals(other.getSniMatchName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!getSniMatchName()
+          .equals(other.getSniMatchName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29498,35 +30549,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -29588,6 +30639,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -29607,6 +30659,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -29627,6 +30680,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -29644,6 +30699,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -29657,6 +30713,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29677,6 +30735,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -29696,6 +30755,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -29716,6 +30776,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -29733,6 +30795,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -29746,6 +30809,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -29766,6 +30831,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The sniMatchName.
        */
       public java.lang.String getSniMatchName() {
         java.lang.Object ref = sniMatchName_;
@@ -29785,6 +30851,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for sniMatchName.
        */
       public com.google.protobuf.ByteString
           getSniMatchNameBytes() {
@@ -29805,6 +30872,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchName(
           java.lang.String value) {
@@ -29822,6 +30891,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSniMatchName() {
         
@@ -29835,6 +30905,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchNameBytes(
           com.google.protobuf.ByteString value) {
@@ -29850,7 +30922,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -29910,6 +30982,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -29918,6 +30991,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -29928,6 +31002,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -29936,6 +31011,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -29946,6 +31022,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The sniMatchName.
      */
     java.lang.String getSniMatchName();
     /**
@@ -29954,6 +31031,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The bytes for sniMatchName.
      */
     com.google.protobuf.ByteString
         getSniMatchNameBytes();
@@ -29961,7 +31039,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RemoveSniMatchMetadata}
    */
-  public  static final class RemoveSniMatchMetadata extends
+  public static final class RemoveSniMatchMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RemoveSniMatchMetadata)
       RemoveSniMatchMetadataOrBuilder {
@@ -29977,6 +31055,13 @@ public final class LoadBalancerServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveSniMatchMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -29989,7 +31074,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -30019,7 +31103,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -30058,7 +31142,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -30077,7 +31163,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -30100,7 +31188,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -30119,7 +31209,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -30142,7 +31234,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The sniMatchName.
      */
+    @java.lang.Override
     public java.lang.String getSniMatchName() {
       java.lang.Object ref = sniMatchName_;
       if (ref instanceof java.lang.String) {
@@ -30161,7 +31255,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The bytes for sniMatchName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSniMatchNameBytes() {
       java.lang.Object ref = sniMatchName_;
@@ -30190,13 +31286,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sniMatchName_);
       }
       unknownFields.writeTo(output);
@@ -30208,13 +31304,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sniMatchName_);
       }
       size += unknownFields.getSerializedSize();
@@ -30232,15 +31328,14 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && getSniMatchName()
-          .equals(other.getSniMatchName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!getSniMatchName()
+          .equals(other.getSniMatchName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -30430,35 +31525,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -30520,6 +31615,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -30539,6 +31635,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -30559,6 +31656,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -30576,6 +31675,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -30589,6 +31689,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -30609,6 +31711,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -30628,6 +31731,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -30648,6 +31752,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -30665,6 +31771,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -30678,6 +31785,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -30698,6 +31807,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return The sniMatchName.
        */
       public java.lang.String getSniMatchName() {
         java.lang.Object ref = sniMatchName_;
@@ -30717,6 +31827,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return The bytes for sniMatchName.
        */
       public com.google.protobuf.ByteString
           getSniMatchNameBytes() {
@@ -30737,6 +31848,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @param value The sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchName(
           java.lang.String value) {
@@ -30754,6 +31867,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSniMatchName() {
         
@@ -30767,6 +31881,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @param value The bytes for sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchNameBytes(
           com.google.protobuf.ByteString value) {
@@ -30782,7 +31898,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -30842,6 +31958,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -30850,6 +31967,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -30860,6 +31978,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -30868,6 +31987,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -30878,6 +31998,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -30886,6 +32007,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -30896,6 +32018,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -30904,6 +32027,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -30926,6 +32050,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the serverNames.
      */
     java.util.List<java.lang.String>
         getServerNamesList();
@@ -30940,6 +32065,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of serverNames.
      */
     int getServerNamesCount();
     /**
@@ -30953,6 +32079,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The serverNames at the given index.
      */
     java.lang.String getServerNames(int index);
     /**
@@ -30966,6 +32094,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the serverNames at the given index.
      */
     com.google.protobuf.ByteString
         getServerNamesBytes(int index);
@@ -30976,6 +32106,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the handler field is set.
      */
     boolean hasHandler();
     /**
@@ -30984,6 +32115,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The handler.
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler();
     /**
@@ -30998,7 +32130,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateSniMatchRequest}
    */
-  public  static final class UpdateSniMatchRequest extends
+  public static final class UpdateSniMatchRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateSniMatchRequest)
       UpdateSniMatchRequestOrBuilder {
@@ -31012,6 +32144,13 @@ public final class LoadBalancerServiceOuterClass {
       listenerName_ = "";
       name_ = "";
       serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSniMatchRequest();
     }
 
     @java.lang.Override
@@ -31071,9 +32210,9 @@ public final class LoadBalancerServiceOuterClass {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 serverNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               serverNames_.add(s);
               break;
@@ -31092,7 +32231,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -31106,7 +32245,7 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           serverNames_ = serverNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -31126,7 +32265,6 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object loadBalancerId_;
     /**
@@ -31135,7 +32273,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -31154,7 +32294,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -31177,7 +32319,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -31196,7 +32340,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -31219,7 +32365,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -31238,7 +32386,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -31261,7 +32411,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -31271,7 +32423,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -31282,6 +32436,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -31299,6 +32454,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the serverNames.
      */
     public com.google.protobuf.ProtocolStringList
         getServerNamesList() {
@@ -31315,6 +32471,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of serverNames.
      */
     public int getServerNamesCount() {
       return serverNames_.size();
@@ -31330,6 +32487,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The serverNames at the given index.
      */
     public java.lang.String getServerNames(int index) {
       return serverNames_.get(index);
@@ -31345,6 +32504,8 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the serverNames at the given index.
      */
     public com.google.protobuf.ByteString
         getServerNamesBytes(int index) {
@@ -31359,7 +32520,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the handler field is set.
      */
+    @java.lang.Override
     public boolean hasHandler() {
       return handler_ != null;
     }
@@ -31369,7 +32532,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The handler.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler() {
       return handler_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.getDefaultInstance() : handler_;
     }
@@ -31380,6 +32545,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getHandlerOrBuilder() {
       return getHandler();
     }
@@ -31398,13 +32564,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (updateMask_ != null) {
@@ -31425,13 +32591,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (updateMask_ != null) {
@@ -31465,27 +32631,26 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getServerNamesList()
-          .equals(other.getServerNamesList());
-      result = result && (hasHandler() == other.hasHandler());
+      if (!getServerNamesList()
+          .equals(other.getServerNamesList())) return false;
+      if (hasHandler() != other.hasHandler()) return false;
       if (hasHandler()) {
-        result = result && getHandler()
-            .equals(other.getHandler());
+        if (!getHandler()
+            .equals(other.getHandler())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -31659,7 +32824,7 @@ public final class LoadBalancerServiceOuterClass {
           updateMaskBuilder_ = null;
         }
         serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (handlerBuilder_ == null) {
           handler_ = null;
         } else {
@@ -31693,7 +32858,6 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.loadBalancerId_ = loadBalancerId_;
         result.listenerName_ = listenerName_;
         result.name_ = name_;
@@ -31702,9 +32866,9 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.updateMask_ = updateMaskBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           serverNames_ = serverNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.serverNames_ = serverNames_;
         if (handlerBuilder_ == null) {
@@ -31712,42 +32876,41 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.handler_ = handlerBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -31779,7 +32942,7 @@ public final class LoadBalancerServiceOuterClass {
         if (!other.serverNames_.isEmpty()) {
           if (serverNames_.isEmpty()) {
             serverNames_ = other.serverNames_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureServerNamesIsMutable();
             serverNames_.addAll(other.serverNames_);
@@ -31826,6 +32989,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -31845,6 +33009,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -31865,6 +33030,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -31882,6 +33049,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -31895,6 +33063,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -31915,6 +33085,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -31934,6 +33105,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -31954,6 +33126,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -31971,6 +33145,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -31984,6 +33159,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -32004,6 +33181,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -32023,6 +33201,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -32043,6 +33222,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -32060,6 +33241,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -32073,6 +33255,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -32086,7 +33270,7 @@ public final class LoadBalancerServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -32095,6 +33279,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -32105,6 +33290,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -32241,9 +33427,9 @@ public final class LoadBalancerServiceOuterClass {
 
       private com.google.protobuf.LazyStringList serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureServerNamesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           serverNames_ = new com.google.protobuf.LazyStringArrayList(serverNames_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -32257,6 +33443,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the serverNames.
        */
       public com.google.protobuf.ProtocolStringList
           getServerNamesList() {
@@ -32273,6 +33460,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of serverNames.
        */
       public int getServerNamesCount() {
         return serverNames_.size();
@@ -32288,6 +33476,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The serverNames at the given index.
        */
       public java.lang.String getServerNames(int index) {
         return serverNames_.get(index);
@@ -32303,6 +33493,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the serverNames at the given index.
        */
       public com.google.protobuf.ByteString
           getServerNamesBytes(int index) {
@@ -32319,6 +33511,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The serverNames to set.
+       * @return This builder for chaining.
        */
       public Builder setServerNames(
           int index, java.lang.String value) {
@@ -32341,6 +33536,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The serverNames to add.
+       * @return This builder for chaining.
        */
       public Builder addServerNames(
           java.lang.String value) {
@@ -32363,6 +33560,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The serverNames to add.
+       * @return This builder for chaining.
        */
       public Builder addAllServerNames(
           java.lang.Iterable<java.lang.String> values) {
@@ -32383,10 +33582,11 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServerNames() {
         serverNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -32401,6 +33601,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>repeated string server_names = 5 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the serverNames to add.
+       * @return This builder for chaining.
        */
       public Builder addServerNamesBytes(
           com.google.protobuf.ByteString value) {
@@ -32414,7 +33616,7 @@ public final class LoadBalancerServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler handler_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler handler_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder> handlerBuilder_;
       /**
@@ -32423,6 +33625,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the handler field is set.
        */
       public boolean hasHandler() {
         return handlerBuilder_ != null || handler_ != null;
@@ -32433,6 +33636,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The handler.
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler() {
         if (handlerBuilder_ == null) {
@@ -32569,7 +33773,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -32629,6 +33833,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -32637,6 +33842,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -32647,6 +33853,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
     java.lang.String getListenerName();
     /**
@@ -32655,6 +33862,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
     com.google.protobuf.ByteString
         getListenerNameBytes();
@@ -32665,6 +33873,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The sniMatchName.
      */
     java.lang.String getSniMatchName();
     /**
@@ -32673,6 +33882,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The bytes for sniMatchName.
      */
     com.google.protobuf.ByteString
         getSniMatchNameBytes();
@@ -32680,7 +33890,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateSniMatchMetadata}
    */
-  public  static final class UpdateSniMatchMetadata extends
+  public static final class UpdateSniMatchMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateSniMatchMetadata)
       UpdateSniMatchMetadataOrBuilder {
@@ -32696,6 +33906,13 @@ public final class LoadBalancerServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateSniMatchMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -32708,7 +33925,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -32738,7 +33954,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -32777,7 +33993,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -32796,7 +34014,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -32819,7 +34039,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The listenerName.
      */
+    @java.lang.Override
     public java.lang.String getListenerName() {
       java.lang.Object ref = listenerName_;
       if (ref instanceof java.lang.String) {
@@ -32838,7 +34060,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string listener_name = 2;</code>
+     * @return The bytes for listenerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenerNameBytes() {
       java.lang.Object ref = listenerName_;
@@ -32861,7 +34085,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The sniMatchName.
      */
+    @java.lang.Override
     public java.lang.String getSniMatchName() {
       java.lang.Object ref = sniMatchName_;
       if (ref instanceof java.lang.String) {
@@ -32880,7 +34106,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string sni_match_name = 3;</code>
+     * @return The bytes for sniMatchName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSniMatchNameBytes() {
       java.lang.Object ref = sniMatchName_;
@@ -32909,13 +34137,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sniMatchName_);
       }
       unknownFields.writeTo(output);
@@ -32927,13 +34155,13 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
-      if (!getListenerNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, listenerName_);
       }
-      if (!getSniMatchNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sniMatchName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sniMatchName_);
       }
       size += unknownFields.getSerializedSize();
@@ -32951,15 +34179,14 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchMetadata) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && getListenerName()
-          .equals(other.getListenerName());
-      result = result && getSniMatchName()
-          .equals(other.getSniMatchName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getListenerName()
+          .equals(other.getListenerName())) return false;
+      if (!getSniMatchName()
+          .equals(other.getSniMatchName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -33149,35 +34376,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -33239,6 +34466,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -33258,6 +34486,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -33278,6 +34507,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -33295,6 +34526,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -33308,6 +34540,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -33328,6 +34562,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The listenerName.
        */
       public java.lang.String getListenerName() {
         java.lang.Object ref = listenerName_;
@@ -33347,6 +34582,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return The bytes for listenerName.
        */
       public com.google.protobuf.ByteString
           getListenerNameBytes() {
@@ -33367,6 +34603,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerName(
           java.lang.String value) {
@@ -33384,6 +34622,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenerName() {
         
@@ -33397,6 +34636,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string listener_name = 2;</code>
+       * @param value The bytes for listenerName to set.
+       * @return This builder for chaining.
        */
       public Builder setListenerNameBytes(
           com.google.protobuf.ByteString value) {
@@ -33417,6 +34658,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return The sniMatchName.
        */
       public java.lang.String getSniMatchName() {
         java.lang.Object ref = sniMatchName_;
@@ -33436,6 +34678,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return The bytes for sniMatchName.
        */
       public com.google.protobuf.ByteString
           getSniMatchNameBytes() {
@@ -33456,6 +34699,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @param value The sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchName(
           java.lang.String value) {
@@ -33473,6 +34718,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSniMatchName() {
         
@@ -33486,6 +34732,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string sni_match_name = 3;</code>
+       * @param value The bytes for sniMatchName to set.
+       * @return This builder for chaining.
        */
       public Builder setSniMatchNameBytes(
           com.google.protobuf.ByteString value) {
@@ -33501,7 +34749,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -33562,6 +34810,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The loadBalancerId.
      */
     java.lang.String getLoadBalancerId();
     /**
@@ -33571,6 +34820,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for loadBalancerId.
      */
     com.google.protobuf.ByteString
         getLoadBalancerIdBytes();
@@ -33584,6 +34834,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -33594,6 +34845,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -33603,6 +34855,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -33610,7 +34863,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListLoadBalancerOperationsRequest}
    */
-  public  static final class ListLoadBalancerOperationsRequest extends
+  public static final class ListLoadBalancerOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListLoadBalancerOperationsRequest)
       ListLoadBalancerOperationsRequestOrBuilder {
@@ -33621,8 +34874,14 @@ public final class LoadBalancerServiceOuterClass {
     }
     private ListLoadBalancerOperationsRequest() {
       loadBalancerId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLoadBalancerOperationsRequest();
     }
 
     @java.lang.Override
@@ -33638,7 +34897,6 @@ public final class LoadBalancerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -33667,7 +34925,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -33707,7 +34965,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The loadBalancerId.
      */
+    @java.lang.Override
     public java.lang.String getLoadBalancerId() {
       java.lang.Object ref = loadBalancerId_;
       if (ref instanceof java.lang.String) {
@@ -33727,7 +34987,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for loadBalancerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoadBalancerIdBytes() {
       java.lang.Object ref = loadBalancerId_;
@@ -33753,7 +35015,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -33767,7 +35031,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -33787,7 +35053,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -33816,13 +35084,13 @@ public final class LoadBalancerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -33834,14 +35102,14 @@ public final class LoadBalancerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoadBalancerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -33859,15 +35127,14 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getLoadBalancerId()
-          .equals(other.getLoadBalancerId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -34058,35 +35325,35 @@ public final class LoadBalancerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -34148,6 +35415,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The loadBalancerId.
        */
       public java.lang.String getLoadBalancerId() {
         java.lang.Object ref = loadBalancerId_;
@@ -34168,6 +35436,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for loadBalancerId.
        */
       public com.google.protobuf.ByteString
           getLoadBalancerIdBytes() {
@@ -34189,6 +35458,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerId(
           java.lang.String value) {
@@ -34207,6 +35478,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLoadBalancerId() {
         
@@ -34221,6 +35493,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
        */
       public Builder setLoadBalancerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -34244,7 +35518,9 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -34257,6 +35533,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -34273,6 +35551,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -34289,6 +35568,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -34309,6 +35589,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -34330,6 +35611,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -34348,6 +35631,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -34362,6 +35646,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -34377,7 +35663,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -34484,6 +35770,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -34495,6 +35782,7 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -34502,7 +35790,7 @@ public final class LoadBalancerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListLoadBalancerOperationsResponse}
    */
-  public  static final class ListLoadBalancerOperationsResponse extends
+  public static final class ListLoadBalancerOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListLoadBalancerOperationsResponse)
       ListLoadBalancerOperationsResponseOrBuilder {
@@ -34514,6 +35802,13 @@ public final class LoadBalancerServiceOuterClass {
     private ListLoadBalancerOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLoadBalancerOperationsResponse();
     }
 
     @java.lang.Override
@@ -34541,7 +35836,7 @@ public final class LoadBalancerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -34556,7 +35851,7 @@ public final class LoadBalancerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -34570,7 +35865,7 @@ public final class LoadBalancerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -34590,7 +35885,6 @@ public final class LoadBalancerServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -34600,6 +35894,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -34610,6 +35905,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -34621,6 +35917,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -34631,6 +35928,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -34641,6 +35939,7 @@ public final class LoadBalancerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -34657,7 +35956,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -34679,7 +35980,9 @@ public final class LoadBalancerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -34711,7 +36014,7 @@ public final class LoadBalancerServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -34727,7 +36030,7 @@ public final class LoadBalancerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -34745,13 +36048,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -34936,9 +36238,8 @@ public final class LoadBalancerServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -34947,42 +36248,41 @@ public final class LoadBalancerServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -35059,7 +36359,7 @@ public final class LoadBalancerServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -35360,7 +36660,7 @@ public final class LoadBalancerServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -35378,6 +36678,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -35400,6 +36701,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -35423,6 +36725,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -35443,6 +36747,7 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -35459,6 +36764,8 @@ public final class LoadBalancerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -35474,7 +36781,7 @@ public final class LoadBalancerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -35935,15 +37242,7 @@ public final class LoadBalancerServiceOuterClass {
       "proto/yandex/cloud/apploadbalancer/v1;ap" +
       "ploadbalancerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -35952,7 +37251,7 @@ public final class LoadBalancerServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_apploadbalancer_v1_GetLoadBalancerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_GetLoadBalancerRequest_fieldAccessorTable = new

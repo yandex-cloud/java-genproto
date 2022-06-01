@@ -1,19 +1,6 @@
 package yandex.cloud.api.kms.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/kms/v1/symmetric_key_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SymmetricKeyServiceGrpc {
 
   private SymmetricKeyServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getCreateMethod = SymmetricKeyServiceGrpc.getCreateMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getCreateMethod = SymmetricKeyServiceGrpc.getCreateMethod) == null) {
-          SymmetricKeyServiceGrpc.getCreateMethod = getCreateMethod = 
+          SymmetricKeyServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest,
@@ -76,22 +63,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getGetMethod = SymmetricKeyServiceGrpc.getGetMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getGetMethod = SymmetricKeyServiceGrpc.getGetMethod) == null) {
-          SymmetricKeyServiceGrpc.getGetMethod = getGetMethod = 
+          SymmetricKeyServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest, yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest,
@@ -108,22 +94,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getListMethod = SymmetricKeyServiceGrpc.getListMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getListMethod = SymmetricKeyServiceGrpc.getListMethod) == null) {
-          SymmetricKeyServiceGrpc.getListMethod = getListMethod = 
+          SymmetricKeyServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest,
@@ -140,22 +125,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getListVersionsMethod = SymmetricKeyServiceGrpc.getListVersionsMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getListVersionsMethod = SymmetricKeyServiceGrpc.getListVersionsMethod) == null) {
-          SymmetricKeyServiceGrpc.getListVersionsMethod = getListVersionsMethod = 
+          SymmetricKeyServiceGrpc.getListVersionsMethod = getListVersionsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "ListVersions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVersions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ListVersions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ListVersions"))
+              .build();
         }
-     }
-     return getListVersionsMethod;
+      }
+    }
+    return getListVersionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest,
@@ -172,22 +156,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getUpdateMethod = SymmetricKeyServiceGrpc.getUpdateMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getUpdateMethod = SymmetricKeyServiceGrpc.getUpdateMethod) == null) {
-          SymmetricKeyServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          SymmetricKeyServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest,
@@ -204,22 +187,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getDeleteMethod = SymmetricKeyServiceGrpc.getDeleteMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getDeleteMethod = SymmetricKeyServiceGrpc.getDeleteMethod) == null) {
-          SymmetricKeyServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          SymmetricKeyServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest,
@@ -236,22 +218,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getSetPrimaryVersionMethod = SymmetricKeyServiceGrpc.getSetPrimaryVersionMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getSetPrimaryVersionMethod = SymmetricKeyServiceGrpc.getSetPrimaryVersionMethod) == null) {
-          SymmetricKeyServiceGrpc.getSetPrimaryVersionMethod = getSetPrimaryVersionMethod = 
+          SymmetricKeyServiceGrpc.getSetPrimaryVersionMethod = getSetPrimaryVersionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "SetPrimaryVersion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPrimaryVersion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("SetPrimaryVersion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("SetPrimaryVersion"))
+              .build();
         }
-     }
-     return getSetPrimaryVersionMethod;
+      }
+    }
+    return getSetPrimaryVersionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest,
@@ -268,22 +249,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getScheduleVersionDestructionMethod = SymmetricKeyServiceGrpc.getScheduleVersionDestructionMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getScheduleVersionDestructionMethod = SymmetricKeyServiceGrpc.getScheduleVersionDestructionMethod) == null) {
-          SymmetricKeyServiceGrpc.getScheduleVersionDestructionMethod = getScheduleVersionDestructionMethod = 
+          SymmetricKeyServiceGrpc.getScheduleVersionDestructionMethod = getScheduleVersionDestructionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "ScheduleVersionDestruction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScheduleVersionDestruction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ScheduleVersionDestruction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ScheduleVersionDestruction"))
+              .build();
         }
-     }
-     return getScheduleVersionDestructionMethod;
+      }
+    }
+    return getScheduleVersionDestructionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest,
@@ -300,22 +280,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getCancelVersionDestructionMethod = SymmetricKeyServiceGrpc.getCancelVersionDestructionMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getCancelVersionDestructionMethod = SymmetricKeyServiceGrpc.getCancelVersionDestructionMethod) == null) {
-          SymmetricKeyServiceGrpc.getCancelVersionDestructionMethod = getCancelVersionDestructionMethod = 
+          SymmetricKeyServiceGrpc.getCancelVersionDestructionMethod = getCancelVersionDestructionMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "CancelVersionDestruction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelVersionDestruction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("CancelVersionDestruction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("CancelVersionDestruction"))
+              .build();
         }
-     }
-     return getCancelVersionDestructionMethod;
+      }
+    }
+    return getCancelVersionDestructionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest,
@@ -332,22 +311,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getRotateMethod = SymmetricKeyServiceGrpc.getRotateMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getRotateMethod = SymmetricKeyServiceGrpc.getRotateMethod) == null) {
-          SymmetricKeyServiceGrpc.getRotateMethod = getRotateMethod = 
+          SymmetricKeyServiceGrpc.getRotateMethod = getRotateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "Rotate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Rotate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Rotate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("Rotate"))
+              .build();
         }
-     }
-     return getRotateMethod;
+      }
+    }
+    return getRotateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest,
@@ -364,22 +342,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getListOperationsMethod = SymmetricKeyServiceGrpc.getListOperationsMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getListOperationsMethod = SymmetricKeyServiceGrpc.getListOperationsMethod) == null) {
-          SymmetricKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          SymmetricKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest, yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -396,22 +373,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getListAccessBindingsMethod = SymmetricKeyServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getListAccessBindingsMethod = SymmetricKeyServiceGrpc.getListAccessBindingsMethod) == null) {
-          SymmetricKeyServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          SymmetricKeyServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -428,22 +404,21 @@ public final class SymmetricKeyServiceGrpc {
     if ((getSetAccessBindingsMethod = SymmetricKeyServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = SymmetricKeyServiceGrpc.getSetAccessBindingsMethod) == null) {
-          SymmetricKeyServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          SymmetricKeyServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -460,29 +435,35 @@ public final class SymmetricKeyServiceGrpc {
     if ((getUpdateAccessBindingsMethod = SymmetricKeyServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (SymmetricKeyServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = SymmetricKeyServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          SymmetricKeyServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          SymmetricKeyServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.kms.v1.SymmetricKeyService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SymmetricKeyServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SymmetricKeyServiceStub newStub(io.grpc.Channel channel) {
-    return new SymmetricKeyServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SymmetricKeyServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SymmetricKeyServiceStub>() {
+        @java.lang.Override
+        public SymmetricKeyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SymmetricKeyServiceStub(channel, callOptions);
+        }
+      };
+    return SymmetricKeyServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -490,7 +471,14 @@ public final class SymmetricKeyServiceGrpc {
    */
   public static SymmetricKeyServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SymmetricKeyServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SymmetricKeyServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SymmetricKeyServiceBlockingStub>() {
+        @java.lang.Override
+        public SymmetricKeyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SymmetricKeyServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SymmetricKeyServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -498,7 +486,14 @@ public final class SymmetricKeyServiceGrpc {
    */
   public static SymmetricKeyServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SymmetricKeyServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SymmetricKeyServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SymmetricKeyServiceFutureStub>() {
+        @java.lang.Override
+        public SymmetricKeyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SymmetricKeyServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SymmetricKeyServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -515,7 +510,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void create(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -526,7 +521,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void get(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -536,7 +531,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void list(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -546,7 +541,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void listVersions(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
     }
 
     /**
@@ -556,7 +551,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void update(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -569,7 +564,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -580,7 +575,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void setPrimaryVersion(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetPrimaryVersionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPrimaryVersionMethod(), responseObserver);
     }
 
     /**
@@ -591,7 +586,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void scheduleVersionDestruction(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getScheduleVersionDestructionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScheduleVersionDestructionMethod(), responseObserver);
     }
 
     /**
@@ -601,7 +596,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void cancelVersionDestruction(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCancelVersionDestructionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelVersionDestructionMethod(), responseObserver);
     }
 
     /**
@@ -612,7 +607,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void rotate(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRotateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRotateMethod(), responseObserver);
     }
 
     /**
@@ -622,7 +617,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -632,7 +627,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -642,7 +637,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -652,105 +647,105 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest,
                 yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest,
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getListVersionsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest,
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse>(
                   this, METHODID_LIST_VERSIONS)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getSetPrimaryVersionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_PRIMARY_VERSION)))
           .addMethod(
             getScheduleVersionDestructionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SCHEDULE_VERSION_DESTRUCTION)))
           .addMethod(
             getCancelVersionDestructionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CANCEL_VERSION_DESTRUCTION)))
           .addMethod(
             getRotateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ROTATE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest,
                 yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -764,19 +759,15 @@ public final class SymmetricKeyServiceGrpc {
    * Set of methods for managing symmetric KMS keys.
    * </pre>
    */
-  public static final class SymmetricKeyServiceStub extends io.grpc.stub.AbstractStub<SymmetricKeyServiceStub> {
-    private SymmetricKeyServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SymmetricKeyServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SymmetricKeyServiceStub extends io.grpc.stub.AbstractAsyncStub<SymmetricKeyServiceStub> {
+    private SymmetricKeyServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SymmetricKeyServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SymmetricKeyServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SymmetricKeyServiceStub(channel, callOptions);
     }
 
@@ -787,7 +778,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void create(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -799,7 +790,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void get(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -810,7 +801,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void list(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -821,7 +812,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void listVersions(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -832,7 +823,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void update(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -846,7 +837,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -858,7 +849,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void setPrimaryVersion(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetPrimaryVersionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -870,7 +861,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void scheduleVersionDestruction(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getScheduleVersionDestructionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -881,7 +872,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void cancelVersionDestruction(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCancelVersionDestructionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -893,7 +884,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void rotate(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRotateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -904,7 +895,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -915,7 +906,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -926,7 +917,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -937,7 +928,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -947,19 +938,15 @@ public final class SymmetricKeyServiceGrpc {
    * Set of methods for managing symmetric KMS keys.
    * </pre>
    */
-  public static final class SymmetricKeyServiceBlockingStub extends io.grpc.stub.AbstractStub<SymmetricKeyServiceBlockingStub> {
-    private SymmetricKeyServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SymmetricKeyServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SymmetricKeyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SymmetricKeyServiceBlockingStub> {
+    private SymmetricKeyServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SymmetricKeyServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SymmetricKeyServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SymmetricKeyServiceBlockingStub(channel, callOptions);
     }
 
@@ -969,7 +956,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -980,7 +967,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey get(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -990,7 +977,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse list(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -1000,7 +987,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse listVersions(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListVersionsMethod(), getCallOptions(), request);
     }
 
@@ -1010,7 +997,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -1023,7 +1010,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -1034,7 +1021,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setPrimaryVersion(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetPrimaryVersionMethod(), getCallOptions(), request);
     }
 
@@ -1045,7 +1032,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation scheduleVersionDestruction(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getScheduleVersionDestructionMethod(), getCallOptions(), request);
     }
 
@@ -1055,7 +1042,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation cancelVersionDestruction(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCancelVersionDestructionMethod(), getCallOptions(), request);
     }
 
@@ -1066,7 +1053,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rotate(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRotateMethod(), getCallOptions(), request);
     }
 
@@ -1076,7 +1063,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse listOperations(yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -1086,7 +1073,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1096,7 +1083,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1106,7 +1093,7 @@ public final class SymmetricKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
@@ -1116,19 +1103,15 @@ public final class SymmetricKeyServiceGrpc {
    * Set of methods for managing symmetric KMS keys.
    * </pre>
    */
-  public static final class SymmetricKeyServiceFutureStub extends io.grpc.stub.AbstractStub<SymmetricKeyServiceFutureStub> {
-    private SymmetricKeyServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SymmetricKeyServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SymmetricKeyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SymmetricKeyServiceFutureStub> {
+    private SymmetricKeyServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SymmetricKeyServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SymmetricKeyServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SymmetricKeyServiceFutureStub(channel, callOptions);
     }
 
@@ -1139,7 +1122,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CreateSymmetricKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1151,7 +1134,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricKeyOuterClass.SymmetricKey> get(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.GetSymmetricKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1162,7 +1145,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysResponse> list(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeysRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1173,7 +1156,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsResponse> listVersions(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyVersionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request);
     }
 
@@ -1184,7 +1167,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.UpdateSymmetricKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1198,7 +1181,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.DeleteSymmetricKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1210,7 +1193,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setPrimaryVersion(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.SetPrimarySymmetricKeyVersionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetPrimaryVersionMethod(), getCallOptions()), request);
     }
 
@@ -1222,7 +1205,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> scheduleVersionDestruction(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ScheduleSymmetricKeyVersionDestructionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getScheduleVersionDestructionMethod(), getCallOptions()), request);
     }
 
@@ -1233,7 +1216,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancelVersionDestruction(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.CancelSymmetricKeyVersionDestructionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCancelVersionDestructionMethod(), getCallOptions()), request);
     }
 
@@ -1245,7 +1228,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rotate(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.RotateSymmetricKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRotateMethod(), getCallOptions()), request);
     }
 
@@ -1256,7 +1239,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsResponse> listOperations(
         yandex.cloud.api.kms.v1.SymmetricKeyServiceOuterClass.ListSymmetricKeyOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -1267,7 +1250,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1278,7 +1261,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1289,7 +1272,7 @@ public final class SymmetricKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

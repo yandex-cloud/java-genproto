@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/disk_type_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DiskTypeServiceGrpc {
 
   private DiskTypeServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class DiskTypeServiceGrpc {
     if ((getGetMethod = DiskTypeServiceGrpc.getGetMethod) == null) {
       synchronized (DiskTypeServiceGrpc.class) {
         if ((getGetMethod = DiskTypeServiceGrpc.getGetMethod) == null) {
-          DiskTypeServiceGrpc.getGetMethod = getGetMethod = 
+          DiskTypeServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest, yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskTypeService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskTypeServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskTypeServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest,
@@ -76,29 +63,35 @@ public final class DiskTypeServiceGrpc {
     if ((getListMethod = DiskTypeServiceGrpc.getListMethod) == null) {
       synchronized (DiskTypeServiceGrpc.class) {
         if ((getListMethod = DiskTypeServiceGrpc.getListMethod) == null) {
-          DiskTypeServiceGrpc.getListMethod = getListMethod = 
+          DiskTypeServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest, yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskTypeService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskTypeServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskTypeServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DiskTypeServiceStub newStub(io.grpc.Channel channel) {
-    return new DiskTypeServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DiskTypeServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiskTypeServiceStub>() {
+        @java.lang.Override
+        public DiskTypeServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiskTypeServiceStub(channel, callOptions);
+        }
+      };
+    return DiskTypeServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class DiskTypeServiceGrpc {
    */
   public static DiskTypeServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DiskTypeServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DiskTypeServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiskTypeServiceBlockingStub>() {
+        @java.lang.Override
+        public DiskTypeServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiskTypeServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DiskTypeServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class DiskTypeServiceGrpc {
    */
   public static DiskTypeServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DiskTypeServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DiskTypeServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiskTypeServiceFutureStub>() {
+        @java.lang.Override
+        public DiskTypeServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiskTypeServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DiskTypeServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -132,7 +139,7 @@ public final class DiskTypeServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -142,21 +149,21 @@ public final class DiskTypeServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest,
                 yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest,
                 yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse>(
@@ -170,19 +177,15 @@ public final class DiskTypeServiceGrpc {
    * A set of methods to retrieve information about disk types.
    * </pre>
    */
-  public static final class DiskTypeServiceStub extends io.grpc.stub.AbstractStub<DiskTypeServiceStub> {
-    private DiskTypeServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DiskTypeServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DiskTypeServiceStub extends io.grpc.stub.AbstractAsyncStub<DiskTypeServiceStub> {
+    private DiskTypeServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DiskTypeServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DiskTypeServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DiskTypeServiceStub(channel, callOptions);
     }
 
@@ -194,7 +197,7 @@ public final class DiskTypeServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -205,7 +208,7 @@ public final class DiskTypeServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -215,19 +218,15 @@ public final class DiskTypeServiceGrpc {
    * A set of methods to retrieve information about disk types.
    * </pre>
    */
-  public static final class DiskTypeServiceBlockingStub extends io.grpc.stub.AbstractStub<DiskTypeServiceBlockingStub> {
-    private DiskTypeServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DiskTypeServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DiskTypeServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DiskTypeServiceBlockingStub> {
+    private DiskTypeServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DiskTypeServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DiskTypeServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DiskTypeServiceBlockingStub(channel, callOptions);
     }
 
@@ -238,7 +237,7 @@ public final class DiskTypeServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType get(yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -248,7 +247,7 @@ public final class DiskTypeServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse list(yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -258,19 +257,15 @@ public final class DiskTypeServiceGrpc {
    * A set of methods to retrieve information about disk types.
    * </pre>
    */
-  public static final class DiskTypeServiceFutureStub extends io.grpc.stub.AbstractStub<DiskTypeServiceFutureStub> {
-    private DiskTypeServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DiskTypeServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DiskTypeServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DiskTypeServiceFutureStub> {
+    private DiskTypeServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DiskTypeServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DiskTypeServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DiskTypeServiceFutureStub(channel, callOptions);
     }
 
@@ -282,7 +277,7 @@ public final class DiskTypeServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskTypeOuterClass.DiskType> get(
         yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.GetDiskTypeRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -293,7 +288,7 @@ public final class DiskTypeServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesResponse> list(
         yandex.cloud.api.compute.v1.DiskTypeServiceOuterClass.ListDiskTypesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

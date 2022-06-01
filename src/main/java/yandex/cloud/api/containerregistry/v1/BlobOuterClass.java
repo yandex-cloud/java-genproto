@@ -24,6 +24,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string digest = 2;</code>
+     * @return The digest.
      */
     java.lang.String getDigest();
     /**
@@ -50,6 +53,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string digest = 2;</code>
+     * @return The bytes for digest.
      */
     com.google.protobuf.ByteString
         getDigestBytes();
@@ -60,6 +64,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>int64 size = 3;</code>
+     * @return The size.
      */
     long getSize();
 
@@ -69,6 +74,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @return A list containing the urls.
      */
     java.util.List<java.lang.String>
         getUrlsList();
@@ -78,6 +84,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @return The count of urls.
      */
     int getUrlsCount();
     /**
@@ -86,6 +93,8 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @param index The index of the element to return.
+     * @return The urls at the given index.
      */
     java.lang.String getUrls(int index);
     /**
@@ -94,6 +103,8 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the urls at the given index.
      */
     com.google.protobuf.ByteString
         getUrlsBytes(int index);
@@ -105,7 +116,7 @@ public final class BlobOuterClass {
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.Blob}
    */
-  public  static final class Blob extends
+  public static final class Blob extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.Blob)
       BlobOrBuilder {
@@ -117,8 +128,14 @@ public final class BlobOuterClass {
     private Blob() {
       id_ = "";
       digest_ = "";
-      size_ = 0L;
       urls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Blob();
     }
 
     @java.lang.Override
@@ -164,15 +181,15 @@ public final class BlobOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 urls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               urls_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -186,7 +203,7 @@ public final class BlobOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           urls_ = urls_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -206,7 +223,6 @@ public final class BlobOuterClass {
               yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob.class, yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -215,7 +231,9 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -234,7 +252,9 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -257,7 +277,9 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string digest = 2;</code>
+     * @return The digest.
      */
+    @java.lang.Override
     public java.lang.String getDigest() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
@@ -276,7 +298,9 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>string digest = 2;</code>
+     * @return The bytes for digest.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDigestBytes() {
       java.lang.Object ref = digest_;
@@ -299,7 +323,9 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>int64 size = 3;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -312,6 +338,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @return A list containing the urls.
      */
     public com.google.protobuf.ProtocolStringList
         getUrlsList() {
@@ -323,6 +350,7 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @return The count of urls.
      */
     public int getUrlsCount() {
       return urls_.size();
@@ -333,6 +361,8 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @param index The index of the element to return.
+     * @return The urls at the given index.
      */
     public java.lang.String getUrls(int index) {
       return urls_.get(index);
@@ -343,6 +373,8 @@ public final class BlobOuterClass {
      * </pre>
      *
      * <code>repeated string urls = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the urls at the given index.
      */
     public com.google.protobuf.ByteString
         getUrlsBytes(int index) {
@@ -363,10 +395,10 @@ public final class BlobOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getDigestBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(digest_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, digest_);
       }
       if (size_ != 0L) {
@@ -384,10 +416,10 @@ public final class BlobOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getDigestBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(digest_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, digest_);
       }
       if (size_ != 0L) {
@@ -417,17 +449,16 @@ public final class BlobOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob other = (yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getDigest()
-          .equals(other.getDigest());
-      result = result && (getSize()
-          == other.getSize());
-      result = result && getUrlsList()
-          .equals(other.getUrlsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDigest()
+          .equals(other.getDigest())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (!getUrlsList()
+          .equals(other.getUrlsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -592,7 +623,7 @@ public final class BlobOuterClass {
         size_ = 0L;
 
         urls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -620,51 +651,49 @@ public final class BlobOuterClass {
       public yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob buildPartial() {
         yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob result = new yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.digest_ = digest_;
         result.size_ = size_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           urls_ = urls_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.urls_ = urls_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -692,7 +721,7 @@ public final class BlobOuterClass {
         if (!other.urls_.isEmpty()) {
           if (urls_.isEmpty()) {
             urls_ = other.urls_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureUrlsIsMutable();
             urls_.addAll(other.urls_);
@@ -736,6 +765,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -755,6 +785,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -775,6 +806,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -792,6 +825,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -805,6 +839,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -825,6 +861,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string digest = 2;</code>
+       * @return The digest.
        */
       public java.lang.String getDigest() {
         java.lang.Object ref = digest_;
@@ -844,6 +881,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string digest = 2;</code>
+       * @return The bytes for digest.
        */
       public com.google.protobuf.ByteString
           getDigestBytes() {
@@ -864,6 +902,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string digest = 2;</code>
+       * @param value The digest to set.
+       * @return This builder for chaining.
        */
       public Builder setDigest(
           java.lang.String value) {
@@ -881,6 +921,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string digest = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDigest() {
         
@@ -894,6 +935,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>string digest = 2;</code>
+       * @param value The bytes for digest to set.
+       * @return This builder for chaining.
        */
       public Builder setDigestBytes(
           com.google.protobuf.ByteString value) {
@@ -914,7 +957,9 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>int64 size = 3;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -924,6 +969,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>int64 size = 3;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -937,6 +984,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>int64 size = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -947,9 +995,9 @@ public final class BlobOuterClass {
 
       private com.google.protobuf.LazyStringList urls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureUrlsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           urls_ = new com.google.protobuf.LazyStringArrayList(urls_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -958,6 +1006,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @return A list containing the urls.
        */
       public com.google.protobuf.ProtocolStringList
           getUrlsList() {
@@ -969,6 +1018,7 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @return The count of urls.
        */
       public int getUrlsCount() {
         return urls_.size();
@@ -979,6 +1029,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @param index The index of the element to return.
+       * @return The urls at the given index.
        */
       public java.lang.String getUrls(int index) {
         return urls_.get(index);
@@ -989,6 +1041,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the urls at the given index.
        */
       public com.google.protobuf.ByteString
           getUrlsBytes(int index) {
@@ -1000,6 +1054,9 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The urls to set.
+       * @return This builder for chaining.
        */
       public Builder setUrls(
           int index, java.lang.String value) {
@@ -1017,6 +1074,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @param value The urls to add.
+       * @return This builder for chaining.
        */
       public Builder addUrls(
           java.lang.String value) {
@@ -1034,6 +1093,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @param values The urls to add.
+       * @return This builder for chaining.
        */
       public Builder addAllUrls(
           java.lang.Iterable<java.lang.String> values) {
@@ -1049,10 +1110,11 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrls() {
         urls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1062,6 +1124,8 @@ public final class BlobOuterClass {
        * </pre>
        *
        * <code>repeated string urls = 4;</code>
+       * @param value The bytes of the urls to add.
+       * @return This builder for chaining.
        */
       public Builder addUrlsBytes(
           com.google.protobuf.ByteString value) {
@@ -1077,7 +1141,7 @@ public final class BlobOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1150,18 +1214,10 @@ public final class BlobOuterClass {
       "ntainerregistry/v1;containerregistryb\006pr" +
       "oto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_Blob_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_Blob_fieldAccessorTable = new

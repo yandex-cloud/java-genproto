@@ -25,6 +25,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -34,6 +35,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -45,6 +47,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+     * @return The enum numeric value on the wire for deviceView.
      */
     int getDeviceViewValue();
     /**
@@ -54,13 +57,14 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+     * @return The deviceView.
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView();
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.GetDeviceRequest}
    */
-  public  static final class GetDeviceRequest extends
+  public static final class GetDeviceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.GetDeviceRequest)
       GetDeviceRequestOrBuilder {
@@ -72,6 +76,13 @@ public final class DeviceServiceOuterClass {
     private GetDeviceRequest() {
       deviceId_ = "";
       deviceView_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDeviceRequest();
     }
 
     @java.lang.Override
@@ -87,7 +98,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -111,7 +121,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -151,7 +161,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -171,7 +183,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -195,8 +209,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+     * @return The enum numeric value on the wire for deviceView.
      */
-    public int getDeviceViewValue() {
+    @java.lang.Override public int getDeviceViewValue() {
       return deviceView_;
     }
     /**
@@ -206,8 +221,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+     * @return The deviceView.
      */
-    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
+    @java.lang.Override public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
       return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.UNRECOGNIZED : result;
@@ -227,7 +243,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
@@ -242,7 +258,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
@@ -264,12 +280,11 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && deviceView_ == other.deviceView_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (deviceView_ != other.deviceView_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -454,35 +469,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -540,6 +555,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -560,6 +576,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -581,6 +598,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -599,6 +618,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -613,6 +633,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -634,8 +656,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+       * @return The enum numeric value on the wire for deviceView.
        */
-      public int getDeviceViewValue() {
+      @java.lang.Override public int getDeviceViewValue() {
         return deviceView_;
       }
       /**
@@ -645,8 +668,11 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+       * @param value The enum numeric value on the wire for deviceView to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceViewValue(int value) {
+        
         deviceView_ = value;
         onChanged();
         return this;
@@ -658,7 +684,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+       * @return The deviceView.
        */
+      @java.lang.Override
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
@@ -671,6 +699,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+       * @param value The deviceView to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceView(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView value) {
         if (value == null) {
@@ -688,6 +718,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceView() {
         
@@ -698,7 +729,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -759,6 +790,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -768,6 +800,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -779,6 +812,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceName.
      */
     java.lang.String getDeviceName();
     /**
@@ -788,6 +822,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceName.
      */
     com.google.protobuf.ByteString
         getDeviceNameBytes();
@@ -799,6 +834,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     * @return The enum numeric value on the wire for deviceView.
      */
     int getDeviceViewValue();
     /**
@@ -808,13 +844,14 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     * @return The deviceView.
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView();
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.GetByNameDeviceRequest}
    */
-  public  static final class GetByNameDeviceRequest extends
+  public static final class GetByNameDeviceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.GetByNameDeviceRequest)
       GetByNameDeviceRequestOrBuilder {
@@ -830,6 +867,13 @@ public final class DeviceServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetByNameDeviceRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -842,7 +886,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -872,7 +915,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -912,7 +955,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -932,7 +977,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -956,7 +1003,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceName.
      */
+    @java.lang.Override
     public java.lang.String getDeviceName() {
       java.lang.Object ref = deviceName_;
       if (ref instanceof java.lang.String) {
@@ -976,7 +1025,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceNameBytes() {
       java.lang.Object ref = deviceName_;
@@ -1000,8 +1051,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     * @return The enum numeric value on the wire for deviceView.
      */
-    public int getDeviceViewValue() {
+    @java.lang.Override public int getDeviceViewValue() {
       return deviceView_;
     }
     /**
@@ -1011,8 +1063,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     * @return The deviceView.
      */
-    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
+    @java.lang.Override public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
       return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.UNRECOGNIZED : result;
@@ -1032,10 +1085,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getDeviceNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceName_);
       }
       if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
@@ -1050,10 +1103,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getDeviceNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceName_);
       }
       if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
@@ -1075,14 +1128,13 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getDeviceName()
-          .equals(other.getDeviceName());
-      result = result && deviceView_ == other.deviceView_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getDeviceName()
+          .equals(other.getDeviceName())) return false;
+      if (deviceView_ != other.deviceView_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1272,35 +1324,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1362,6 +1414,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -1382,6 +1435,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -1403,6 +1457,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -1421,6 +1477,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -1435,6 +1492,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1456,6 +1515,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceName.
        */
       public java.lang.String getDeviceName() {
         java.lang.Object ref = deviceName_;
@@ -1476,6 +1536,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceName.
        */
       public com.google.protobuf.ByteString
           getDeviceNameBytes() {
@@ -1497,6 +1558,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceName to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceName(
           java.lang.String value) {
@@ -1515,6 +1578,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceName() {
         
@@ -1529,6 +1593,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceName to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1550,8 +1616,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       * @return The enum numeric value on the wire for deviceView.
        */
-      public int getDeviceViewValue() {
+      @java.lang.Override public int getDeviceViewValue() {
         return deviceView_;
       }
       /**
@@ -1561,8 +1628,11 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       * @param value The enum numeric value on the wire for deviceView to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceViewValue(int value) {
+        
         deviceView_ = value;
         onChanged();
         return this;
@@ -1574,7 +1644,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       * @return The deviceView.
        */
+      @java.lang.Override
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
@@ -1587,6 +1659,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       * @param value The deviceView to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceView(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView value) {
         if (value == null) {
@@ -1604,6 +1678,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceView() {
         
@@ -1614,7 +1689,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1675,6 +1750,17 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the registryId field is set.
+     */
+    boolean hasRegistryId();
+    /**
+     * <pre>
+     * ID of the registry to list devices in.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -1684,6 +1770,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -1695,6 +1782,17 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the folderId field is set.
+     */
+    boolean hasFolderId();
+    /**
+     * <pre>
+     * ID of the folder to list devices in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1704,6 +1802,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1717,6 +1816,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -1727,6 +1827,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -1736,6 +1837,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -1747,6 +1849,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+     * @return The enum numeric value on the wire for deviceView.
      */
     int getDeviceViewValue();
     /**
@@ -1756,6 +1859,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+     * @return The deviceView.
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView();
 
@@ -1764,7 +1868,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDevicesRequest}
    */
-  public  static final class ListDevicesRequest extends
+  public static final class ListDevicesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDevicesRequest)
       ListDevicesRequestOrBuilder {
@@ -1774,9 +1878,15 @@ public final class DeviceServiceOuterClass {
       super(builder);
     }
     private ListDevicesRequest() {
-      pageSize_ = 0L;
       pageToken_ = "";
       deviceView_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDevicesRequest();
     }
 
     @java.lang.Override
@@ -1792,7 +1902,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1833,7 +1942,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1867,7 +1976,8 @@ public final class DeviceServiceOuterClass {
     private int idCase_ = 0;
     private java.lang.Object id_;
     public enum IdCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       REGISTRY_ID(1),
       FOLDER_ID(2),
       ID_NOT_SET(0);
@@ -1876,6 +1986,8 @@ public final class DeviceServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1910,6 +2022,19 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the registryId field is set.
+     */
+    public boolean hasRegistryId() {
+      return idCase_ == 1;
+    }
+    /**
+     * <pre>
+     * ID of the registry to list devices in.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     public java.lang.String getRegistryId() {
       java.lang.Object ref = "";
@@ -1935,6 +2060,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
@@ -1963,6 +2089,19 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the folderId field is set.
+     */
+    public boolean hasFolderId() {
+      return idCase_ == 2;
+    }
+    /**
+     * <pre>
+     * ID of the folder to list devices in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     public java.lang.String getFolderId() {
       java.lang.Object ref = "";
@@ -1988,6 +2127,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
@@ -2019,7 +2159,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -2033,7 +2175,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -2053,7 +2197,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -2077,8 +2223,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+     * @return The enum numeric value on the wire for deviceView.
      */
-    public int getDeviceViewValue() {
+    @java.lang.Override public int getDeviceViewValue() {
       return deviceView_;
     }
     /**
@@ -2088,8 +2235,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+     * @return The deviceView.
      */
-    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
+    @java.lang.Override public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
       return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.UNRECOGNIZED : result;
@@ -2118,7 +2266,7 @@ public final class DeviceServiceOuterClass {
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
       if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
@@ -2143,7 +2291,7 @@ public final class DeviceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
       if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
@@ -2165,29 +2313,26 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest) obj;
 
-      boolean result = true;
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && deviceView_ == other.deviceView_;
-      result = result && getIdCase().equals(
-          other.getIdCase());
-      if (!result) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (deviceView_ != other.deviceView_) return false;
+      if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
-          result = result && getRegistryId()
-              .equals(other.getRegistryId());
+          if (!getRegistryId()
+              .equals(other.getRegistryId())) return false;
           break;
         case 2:
-          result = result && getFolderId()
-              .equals(other.getFolderId());
+          if (!getFolderId()
+              .equals(other.getFolderId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2399,35 +2544,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2519,7 +2664,22 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the registryId field is set.
        */
+      @java.lang.Override
+      public boolean hasRegistryId() {
+        return idCase_ == 1;
+      }
+      /**
+       * <pre>
+       * ID of the registry to list devices in.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
+       */
+      @java.lang.Override
       public java.lang.String getRegistryId() {
         java.lang.Object ref = "";
         if (idCase_ == 1) {
@@ -2544,7 +2704,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
         java.lang.Object ref = "";
@@ -2570,6 +2732,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -2588,6 +2752,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         if (idCase_ == 1) {
@@ -2604,6 +2769,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2624,7 +2791,22 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the folderId field is set.
        */
+      @java.lang.Override
+      public boolean hasFolderId() {
+        return idCase_ == 2;
+      }
+      /**
+       * <pre>
+       * ID of the folder to list devices in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
       public java.lang.String getFolderId() {
         java.lang.Object ref = "";
         if (idCase_ == 2) {
@@ -2649,7 +2831,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
         java.lang.Object ref = "";
@@ -2675,6 +2859,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2693,6 +2879,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         if (idCase_ == 2) {
@@ -2709,6 +2896,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2732,7 +2921,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2745,6 +2936,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2761,6 +2954,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2777,6 +2971,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2797,6 +2992,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2818,6 +3014,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2836,6 +3034,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2850,6 +3049,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2871,8 +3072,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+       * @return The enum numeric value on the wire for deviceView.
        */
-      public int getDeviceViewValue() {
+      @java.lang.Override public int getDeviceViewValue() {
         return deviceView_;
       }
       /**
@@ -2882,8 +3084,11 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+       * @param value The enum numeric value on the wire for deviceView to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceViewValue(int value) {
+        
         deviceView_ = value;
         onChanged();
         return this;
@@ -2895,7 +3100,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+       * @return The deviceView.
        */
+      @java.lang.Override
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
@@ -2908,6 +3115,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+       * @param value The deviceView to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceView(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView value) {
         if (value == null) {
@@ -2925,6 +3134,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceView() {
         
@@ -2935,7 +3145,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3042,6 +3252,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -3053,6 +3264,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -3060,7 +3272,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDevicesResponse}
    */
-  public  static final class ListDevicesResponse extends
+  public static final class ListDevicesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDevicesResponse)
       ListDevicesResponseOrBuilder {
@@ -3072,6 +3284,13 @@ public final class DeviceServiceOuterClass {
     private ListDevicesResponse() {
       devices_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDevicesResponse();
     }
 
     @java.lang.Override
@@ -3099,7 +3318,7 @@ public final class DeviceServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 devices_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3114,7 +3333,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3128,7 +3347,7 @@ public final class DeviceServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           devices_ = java.util.Collections.unmodifiableList(devices_);
         }
         this.unknownFields = unknownFields.build();
@@ -3148,7 +3367,6 @@ public final class DeviceServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse.class, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEVICES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> devices_;
     /**
@@ -3158,6 +3376,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getDevicesList() {
       return devices_;
     }
@@ -3168,6 +3387,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder> 
         getDevicesOrBuilderList() {
       return devices_;
@@ -3179,6 +3399,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
+    @java.lang.Override
     public int getDevicesCount() {
       return devices_.size();
     }
@@ -3189,6 +3410,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device getDevices(int index) {
       return devices_.get(index);
     }
@@ -3199,6 +3421,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder getDevicesOrBuilder(
         int index) {
       return devices_.get(index);
@@ -3215,7 +3438,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -3237,7 +3462,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -3269,7 +3496,7 @@ public final class DeviceServiceOuterClass {
       for (int i = 0; i < devices_.size(); i++) {
         output.writeMessage(1, devices_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -3285,7 +3512,7 @@ public final class DeviceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, devices_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -3303,13 +3530,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse) obj;
 
-      boolean result = true;
-      result = result && getDevicesList()
-          .equals(other.getDevicesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDevicesList()
+          .equals(other.getDevicesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3494,9 +3720,8 @@ public final class DeviceServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse buildPartial() {
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (devicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             devices_ = java.util.Collections.unmodifiableList(devices_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3505,42 +3730,41 @@ public final class DeviceServiceOuterClass {
           result.devices_ = devicesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3617,7 +3841,7 @@ public final class DeviceServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> devices_ =
         java.util.Collections.emptyList();
       private void ensureDevicesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           devices_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>(devices_);
           bitField0_ |= 0x00000001;
          }
@@ -3918,7 +4142,7 @@ public final class DeviceServiceOuterClass {
           devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder>(
                   devices_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           devices_ = null;
@@ -3936,6 +4160,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3958,6 +4183,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3981,6 +4207,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -4001,6 +4229,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -4017,6 +4246,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -4032,7 +4263,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4093,6 +4324,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -4102,6 +4334,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -4112,6 +4345,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4120,6 +4354,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4130,6 +4365,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4138,6 +4374,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4252,6 +4489,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -4261,6 +4499,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -4268,7 +4507,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateDeviceRequest}
    */
-  public  static final class CreateDeviceRequest extends
+  public static final class CreateDeviceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.CreateDeviceRequest)
       CreateDeviceRequestOrBuilder {
@@ -4283,6 +4522,13 @@ public final class DeviceServiceOuterClass {
       description_ = "";
       certificates_ = java.util.Collections.emptyList();
       password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDeviceRequest();
     }
 
     @java.lang.Override
@@ -4328,19 +4574,19 @@ public final class DeviceServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               certificates_.add(
                   input.readMessage(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.parser(), extensionRegistry));
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 topicAliases_ = com.google.protobuf.MapField.newMapField(
                     TopicAliasesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               topicAliases__ = input.readMessage(
@@ -4356,7 +4602,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4370,7 +4616,7 @@ public final class DeviceServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           certificates_ = java.util.Collections.unmodifiableList(certificates_);
         }
         this.unknownFields = unknownFields.build();
@@ -4412,6 +4658,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The certificateData.
        */
       java.lang.String getCertificateData();
       /**
@@ -4420,6 +4667,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The bytes for certificateData.
        */
       com.google.protobuf.ByteString
           getCertificateDataBytes();
@@ -4431,7 +4679,7 @@ public final class DeviceServiceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate}
      */
-    public  static final class Certificate extends
+    public static final class Certificate extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate)
         CertificateOrBuilder {
@@ -4442,6 +4690,13 @@ public final class DeviceServiceOuterClass {
       }
       private Certificate() {
         certificateData_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Certificate();
       }
 
       @java.lang.Override
@@ -4457,7 +4712,6 @@ public final class DeviceServiceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -4475,7 +4729,7 @@ public final class DeviceServiceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4514,7 +4768,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The certificateData.
        */
+      @java.lang.Override
       public java.lang.String getCertificateData() {
         java.lang.Object ref = certificateData_;
         if (ref instanceof java.lang.String) {
@@ -4533,7 +4789,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 1;</code>
+       * @return The bytes for certificateData.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCertificateDataBytes() {
         java.lang.Object ref = certificateData_;
@@ -4562,7 +4820,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getCertificateDataBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateData_);
         }
         unknownFields.writeTo(output);
@@ -4574,7 +4832,7 @@ public final class DeviceServiceOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getCertificateDataBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateData_);
         }
         size += unknownFields.getSerializedSize();
@@ -4592,11 +4850,10 @@ public final class DeviceServiceOuterClass {
         }
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate) obj;
 
-        boolean result = true;
-        result = result && getCertificateData()
-            .equals(other.getCertificateData());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getCertificateData()
+            .equals(other.getCertificateData())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4780,35 +5037,35 @@ public final class DeviceServiceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4862,6 +5119,7 @@ public final class DeviceServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @return The certificateData.
          */
         public java.lang.String getCertificateData() {
           java.lang.Object ref = certificateData_;
@@ -4881,6 +5139,7 @@ public final class DeviceServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @return The bytes for certificateData.
          */
         public com.google.protobuf.ByteString
             getCertificateDataBytes() {
@@ -4901,6 +5160,8 @@ public final class DeviceServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @param value The certificateData to set.
+         * @return This builder for chaining.
          */
         public Builder setCertificateData(
             java.lang.String value) {
@@ -4918,6 +5179,7 @@ public final class DeviceServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearCertificateData() {
           
@@ -4931,6 +5193,8 @@ public final class DeviceServiceOuterClass {
          * </pre>
          *
          * <code>string certificate_data = 1;</code>
+         * @param value The bytes for certificateData to set.
+         * @return This builder for chaining.
          */
         public Builder setCertificateDataBytes(
             com.google.protobuf.ByteString value) {
@@ -4946,7 +5210,7 @@ public final class DeviceServiceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -4996,7 +5260,6 @@ public final class DeviceServiceOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
@@ -5006,7 +5269,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -5026,7 +5291,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -5049,7 +5316,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5068,7 +5337,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5091,7 +5362,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5110,7 +5383,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5134,6 +5409,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate> getCertificatesList() {
       return certificates_;
     }
@@ -5144,6 +5420,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder> 
         getCertificatesOrBuilderList() {
       return certificates_;
@@ -5155,6 +5432,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
+    @java.lang.Override
     public int getCertificatesCount() {
       return certificates_.size();
     }
@@ -5165,6 +5443,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate getCertificates(int index) {
       return certificates_.get(index);
     }
@@ -5175,6 +5454,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder getCertificatesOrBuilder(
         int index) {
       return certificates_.get(index);
@@ -5215,14 +5495,16 @@ public final class DeviceServiceOuterClass {
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsTopicAliases(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTopicAliases().getMap().containsKey(key);
     }
     /**
      * Use {@link #getTopicAliasesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getTopicAliases() {
       return getTopicAliasesMap();
@@ -5235,6 +5517,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getTopicAliasesMap() {
       return internalGetTopicAliases().getMap();
@@ -5247,11 +5530,12 @@ public final class DeviceServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getTopicAliasesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTopicAliases().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5264,10 +5548,11 @@ public final class DeviceServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getTopicAliasesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTopicAliases().getMap();
       if (!map.containsKey(key)) {
@@ -5285,7 +5570,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -5305,7 +5592,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 6;</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -5334,13 +5623,13 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       for (int i = 0; i < certificates_.size(); i++) {
@@ -5352,7 +5641,7 @@ public final class DeviceServiceOuterClass {
           internalGetTopicAliases(),
           TopicAliasesDefaultEntryHolder.defaultEntry,
           5);
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
       }
       unknownFields.writeTo(output);
@@ -5364,13 +5653,13 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (int i = 0; i < certificates_.size(); i++) {
@@ -5387,7 +5676,7 @@ public final class DeviceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, topicAliases__);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
       }
       size += unknownFields.getSerializedSize();
@@ -5405,21 +5694,20 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getCertificatesList()
-          .equals(other.getCertificatesList());
-      result = result && internalGetTopicAliases().equals(
-          other.internalGetTopicAliases());
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getCertificatesList()
+          .equals(other.getCertificatesList())) return false;
+      if (!internalGetTopicAliases().equals(
+          other.internalGetTopicAliases())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5609,7 +5897,7 @@ public final class DeviceServiceOuterClass {
 
         if (certificatesBuilder_ == null) {
           certificates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           certificatesBuilder_.clear();
         }
@@ -5643,14 +5931,13 @@ public final class DeviceServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest buildPartial() {
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.registryId_ = registryId_;
         result.name_ = name_;
         result.description_ = description_;
         if (certificatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             certificates_ = java.util.Collections.unmodifiableList(certificates_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.certificates_ = certificates_;
         } else {
@@ -5659,42 +5946,41 @@ public final class DeviceServiceOuterClass {
         result.topicAliases_ = internalGetTopicAliases();
         result.topicAliases_.makeImmutable();
         result.password_ = password_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5724,7 +6010,7 @@ public final class DeviceServiceOuterClass {
           if (!other.certificates_.isEmpty()) {
             if (certificates_.isEmpty()) {
               certificates_ = other.certificates_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureCertificatesIsMutable();
               certificates_.addAll(other.certificates_);
@@ -5737,7 +6023,7 @@ public final class DeviceServiceOuterClass {
               certificatesBuilder_.dispose();
               certificatesBuilder_ = null;
               certificates_ = other.certificates_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
               certificatesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCertificatesFieldBuilder() : null;
@@ -5790,6 +6076,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -5810,6 +6097,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -5831,6 +6119,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -5849,6 +6139,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -5863,6 +6154,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5883,6 +6176,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5902,6 +6196,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5922,6 +6217,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5939,6 +6236,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5952,6 +6250,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5972,6 +6272,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5991,6 +6292,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6011,6 +6313,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6028,6 +6332,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6041,6 +6346,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6057,9 +6364,9 @@ public final class DeviceServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate> certificates_ =
         java.util.Collections.emptyList();
       private void ensureCertificatesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate>(certificates_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -6253,7 +6560,7 @@ public final class DeviceServiceOuterClass {
       public Builder clearCertificates() {
         if (certificatesBuilder_ == null) {
           certificates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           certificatesBuilder_.clear();
@@ -6358,7 +6665,7 @@ public final class DeviceServiceOuterClass {
           certificatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.Builder, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder>(
                   certificates_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           certificates_ = null;
@@ -6401,14 +6708,16 @@ public final class DeviceServiceOuterClass {
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsTopicAliases(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetTopicAliases().getMap().containsKey(key);
       }
       /**
        * Use {@link #getTopicAliasesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getTopicAliases() {
         return getTopicAliasesMap();
@@ -6421,6 +6730,7 @@ public final class DeviceServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getTopicAliasesMap() {
         return internalGetTopicAliases().getMap();
@@ -6433,11 +6743,12 @@ public final class DeviceServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getTopicAliasesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTopicAliases().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6450,10 +6761,11 @@ public final class DeviceServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getTopicAliasesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTopicAliases().getMap();
         if (!map.containsKey(key)) {
@@ -6478,7 +6790,7 @@ public final class DeviceServiceOuterClass {
 
       public Builder removeTopicAliases(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableTopicAliases().getMutableMap()
             .remove(key);
         return this;
@@ -6502,8 +6814,11 @@ public final class DeviceServiceOuterClass {
       public Builder putTopicAliases(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableTopicAliases().getMutableMap()
             .put(key, value);
         return this;
@@ -6532,6 +6847,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -6552,6 +6868,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -6573,6 +6890,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -6591,6 +6910,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -6605,6 +6925,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 6;</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -6620,7 +6942,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6680,6 +7002,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -6688,6 +7011,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -6695,7 +7019,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateDeviceMetadata}
    */
-  public  static final class CreateDeviceMetadata extends
+  public static final class CreateDeviceMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.CreateDeviceMetadata)
       CreateDeviceMetadataOrBuilder {
@@ -6706,6 +7030,13 @@ public final class DeviceServiceOuterClass {
     }
     private CreateDeviceMetadata() {
       deviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDeviceMetadata();
     }
 
     @java.lang.Override
@@ -6721,7 +7052,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6739,7 +7069,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6778,7 +7108,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -6797,7 +7129,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -6826,7 +7160,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       unknownFields.writeTo(output);
@@ -6838,7 +7172,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6856,11 +7190,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7040,35 +7373,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7122,6 +7455,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -7141,6 +7475,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -7161,6 +7496,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -7178,6 +7515,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -7191,6 +7529,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7206,7 +7546,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7267,6 +7607,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -7276,6 +7617,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -7286,6 +7628,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -7294,6 +7637,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -7311,6 +7655,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7319,6 +7664,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7329,6 +7675,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -7337,6 +7684,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -7403,7 +7751,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.UpdateDeviceRequest}
    */
-  public  static final class UpdateDeviceRequest extends
+  public static final class UpdateDeviceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.UpdateDeviceRequest)
       UpdateDeviceRequestOrBuilder {
@@ -7416,6 +7764,13 @@ public final class DeviceServiceOuterClass {
       deviceId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDeviceRequest();
     }
 
     @java.lang.Override
@@ -7474,10 +7829,10 @@ public final class DeviceServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 topicAliases_ = com.google.protobuf.MapField.newMapField(
                     TopicAliasesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               topicAliases__ = input.readMessage(
@@ -7487,7 +7842,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7530,7 +7885,6 @@ public final class DeviceServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest.class, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
@@ -7540,7 +7894,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -7560,7 +7916,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -7583,7 +7941,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -7593,7 +7953,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -7604,6 +7966,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -7616,7 +7979,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7635,7 +8000,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7658,7 +8025,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -7677,7 +8046,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -7727,14 +8098,16 @@ public final class DeviceServiceOuterClass {
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsTopicAliases(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTopicAliases().getMap().containsKey(key);
     }
     /**
      * Use {@link #getTopicAliasesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getTopicAliases() {
       return getTopicAliasesMap();
@@ -7747,6 +8120,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getTopicAliasesMap() {
       return internalGetTopicAliases().getMap();
@@ -7759,11 +8133,12 @@ public final class DeviceServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getTopicAliasesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTopicAliases().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7776,10 +8151,11 @@ public final class DeviceServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getTopicAliasesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTopicAliases().getMap();
       if (!map.containsKey(key)) {
@@ -7802,16 +8178,16 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -7829,17 +8205,17 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -7867,22 +8243,21 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetTopicAliases().equals(
-          other.internalGetTopicAliases());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetTopicAliases().equals(
+          other.internalGetTopicAliases())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8101,7 +8476,6 @@ public final class DeviceServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest buildPartial() {
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.deviceId_ = deviceId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -8112,42 +8486,41 @@ public final class DeviceServiceOuterClass {
         result.description_ = description_;
         result.topicAliases_ = internalGetTopicAliases();
         result.topicAliases_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8216,6 +8589,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -8236,6 +8610,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -8257,6 +8632,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -8275,6 +8652,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -8289,6 +8667,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8302,7 +8682,7 @@ public final class DeviceServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -8311,6 +8691,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -8321,6 +8702,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -8462,6 +8844,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8481,6 +8864,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8501,6 +8885,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8518,6 +8904,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8531,6 +8918,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8551,6 +8940,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8570,6 +8960,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8590,6 +8981,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8607,6 +9000,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8620,6 +9014,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8668,14 +9064,16 @@ public final class DeviceServiceOuterClass {
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsTopicAliases(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetTopicAliases().getMap().containsKey(key);
       }
       /**
        * Use {@link #getTopicAliasesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getTopicAliases() {
         return getTopicAliasesMap();
@@ -8688,6 +9086,7 @@ public final class DeviceServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getTopicAliasesMap() {
         return internalGetTopicAliases().getMap();
@@ -8700,11 +9099,12 @@ public final class DeviceServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getTopicAliasesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTopicAliases().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8717,10 +9117,11 @@ public final class DeviceServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getTopicAliasesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTopicAliases().getMap();
         if (!map.containsKey(key)) {
@@ -8745,7 +9146,7 @@ public final class DeviceServiceOuterClass {
 
       public Builder removeTopicAliases(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableTopicAliases().getMutableMap()
             .remove(key);
         return this;
@@ -8769,8 +9170,11 @@ public final class DeviceServiceOuterClass {
       public Builder putTopicAliases(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableTopicAliases().getMutableMap()
             .put(key, value);
         return this;
@@ -8793,7 +9197,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8853,6 +9257,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -8861,6 +9266,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -8868,7 +9274,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.UpdateDeviceMetadata}
    */
-  public  static final class UpdateDeviceMetadata extends
+  public static final class UpdateDeviceMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.UpdateDeviceMetadata)
       UpdateDeviceMetadataOrBuilder {
@@ -8879,6 +9285,13 @@ public final class DeviceServiceOuterClass {
     }
     private UpdateDeviceMetadata() {
       deviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDeviceMetadata();
     }
 
     @java.lang.Override
@@ -8894,7 +9307,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8912,7 +9324,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8951,7 +9363,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -8970,7 +9384,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -8999,7 +9415,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       unknownFields.writeTo(output);
@@ -9011,7 +9427,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9029,11 +9445,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9213,35 +9628,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9295,6 +9710,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -9314,6 +9730,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -9334,6 +9751,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -9351,6 +9770,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -9364,6 +9784,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9379,7 +9801,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9440,6 +9862,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -9449,6 +9872,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -9456,7 +9880,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDeviceRequest}
    */
-  public  static final class DeleteDeviceRequest extends
+  public static final class DeleteDeviceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDeviceRequest)
       DeleteDeviceRequestOrBuilder {
@@ -9467,6 +9891,13 @@ public final class DeviceServiceOuterClass {
     }
     private DeleteDeviceRequest() {
       deviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDeviceRequest();
     }
 
     @java.lang.Override
@@ -9482,7 +9913,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9500,7 +9930,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9540,7 +9970,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -9560,7 +9992,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -9589,7 +10023,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       unknownFields.writeTo(output);
@@ -9601,7 +10035,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9619,11 +10053,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9803,35 +10236,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9886,6 +10319,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -9906,6 +10340,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -9927,6 +10362,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -9945,6 +10382,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -9959,6 +10397,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9974,7 +10414,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10034,6 +10474,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -10042,6 +10483,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -10049,7 +10491,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDeviceMetadata}
    */
-  public  static final class DeleteDeviceMetadata extends
+  public static final class DeleteDeviceMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDeviceMetadata)
       DeleteDeviceMetadataOrBuilder {
@@ -10060,6 +10502,13 @@ public final class DeviceServiceOuterClass {
     }
     private DeleteDeviceMetadata() {
       deviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDeviceMetadata();
     }
 
     @java.lang.Override
@@ -10075,7 +10524,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10093,7 +10541,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10132,7 +10580,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -10151,7 +10601,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -10180,7 +10632,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       unknownFields.writeTo(output);
@@ -10192,7 +10644,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10210,11 +10662,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10394,35 +10845,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10476,6 +10927,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -10495,6 +10947,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -10515,6 +10968,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -10532,6 +10987,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -10545,6 +11001,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10560,7 +11018,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10620,6 +11078,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -10628,6 +11087,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -10635,7 +11095,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDeviceCertificatesRequest}
    */
-  public  static final class ListDeviceCertificatesRequest extends
+  public static final class ListDeviceCertificatesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDeviceCertificatesRequest)
       ListDeviceCertificatesRequestOrBuilder {
@@ -10646,6 +11106,13 @@ public final class DeviceServiceOuterClass {
     }
     private ListDeviceCertificatesRequest() {
       deviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDeviceCertificatesRequest();
     }
 
     @java.lang.Override
@@ -10661,7 +11128,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10679,7 +11145,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10718,7 +11184,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -10737,7 +11205,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -10766,7 +11236,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       unknownFields.writeTo(output);
@@ -10778,7 +11248,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10796,11 +11266,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10980,35 +11449,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11062,6 +11531,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -11081,6 +11551,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -11101,6 +11572,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -11118,6 +11591,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -11131,6 +11605,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11146,7 +11622,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11247,7 +11723,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDeviceCertificatesResponse}
    */
-  public  static final class ListDeviceCertificatesResponse extends
+  public static final class ListDeviceCertificatesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDeviceCertificatesResponse)
       ListDeviceCertificatesResponseOrBuilder {
@@ -11258,6 +11734,13 @@ public final class DeviceServiceOuterClass {
     }
     private ListDeviceCertificatesResponse() {
       certificates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDeviceCertificatesResponse();
     }
 
     @java.lang.Override
@@ -11285,7 +11768,7 @@ public final class DeviceServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -11294,7 +11777,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11308,7 +11791,7 @@ public final class DeviceServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           certificates_ = java.util.Collections.unmodifiableList(certificates_);
         }
         this.unknownFields = unknownFields.build();
@@ -11337,6 +11820,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate> getCertificatesList() {
       return certificates_;
     }
@@ -11347,6 +11831,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder> 
         getCertificatesOrBuilderList() {
       return certificates_;
@@ -11358,6 +11843,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public int getCertificatesCount() {
       return certificates_.size();
     }
@@ -11368,6 +11854,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate getCertificates(int index) {
       return certificates_.get(index);
     }
@@ -11378,6 +11865,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder getCertificatesOrBuilder(
         int index) {
       return certificates_.get(index);
@@ -11428,11 +11916,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse) obj;
 
-      boolean result = true;
-      result = result && getCertificatesList()
-          .equals(other.getCertificatesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCertificatesList()
+          .equals(other.getCertificatesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11614,7 +12101,7 @@ public final class DeviceServiceOuterClass {
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse(this);
         int from_bitField0_ = bitField0_;
         if (certificatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             certificates_ = java.util.Collections.unmodifiableList(certificates_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -11628,35 +12115,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11729,7 +12216,7 @@ public final class DeviceServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate> certificates_ =
         java.util.Collections.emptyList();
       private void ensureCertificatesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           certificates_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate>(certificates_);
           bitField0_ |= 0x00000001;
          }
@@ -12030,7 +12517,7 @@ public final class DeviceServiceOuterClass {
           certificatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder>(
                   certificates_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           certificates_ = null;
@@ -12040,7 +12527,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12101,6 +12588,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -12110,6 +12598,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -12120,6 +12609,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The certificateData.
      */
     java.lang.String getCertificateData();
     /**
@@ -12128,6 +12618,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The bytes for certificateData.
      */
     com.google.protobuf.ByteString
         getCertificateDataBytes();
@@ -12135,7 +12626,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDeviceCertificateRequest}
    */
-  public  static final class AddDeviceCertificateRequest extends
+  public static final class AddDeviceCertificateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddDeviceCertificateRequest)
       AddDeviceCertificateRequestOrBuilder {
@@ -12147,6 +12638,13 @@ public final class DeviceServiceOuterClass {
     private AddDeviceCertificateRequest() {
       deviceId_ = "";
       certificateData_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDeviceCertificateRequest();
     }
 
     @java.lang.Override
@@ -12162,7 +12660,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12186,7 +12683,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12226,7 +12723,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -12246,7 +12745,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -12269,7 +12770,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The certificateData.
      */
+    @java.lang.Override
     public java.lang.String getCertificateData() {
       java.lang.Object ref = certificateData_;
       if (ref instanceof java.lang.String) {
@@ -12288,7 +12791,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The bytes for certificateData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateDataBytes() {
       java.lang.Object ref = certificateData_;
@@ -12317,10 +12822,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getCertificateDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, certificateData_);
       }
       unknownFields.writeTo(output);
@@ -12332,10 +12837,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getCertificateDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, certificateData_);
       }
       size += unknownFields.getSerializedSize();
@@ -12353,13 +12858,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getCertificateData()
-          .equals(other.getCertificateData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getCertificateData()
+          .equals(other.getCertificateData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12544,35 +13048,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12631,6 +13135,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -12651,6 +13156,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -12672,6 +13178,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -12690,6 +13198,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -12704,6 +13213,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12724,6 +13235,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return The certificateData.
        */
       public java.lang.String getCertificateData() {
         java.lang.Object ref = certificateData_;
@@ -12743,6 +13255,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return The bytes for certificateData.
        */
       public com.google.protobuf.ByteString
           getCertificateDataBytes() {
@@ -12763,6 +13276,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @param value The certificateData to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateData(
           java.lang.String value) {
@@ -12780,6 +13295,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateData() {
         
@@ -12793,6 +13309,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @param value The bytes for certificateData to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateDataBytes(
           com.google.protobuf.ByteString value) {
@@ -12808,7 +13326,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12868,6 +13386,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -12876,6 +13395,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -12886,6 +13406,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -12894,6 +13415,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -12901,7 +13423,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDeviceCertificateMetadata}
    */
-  public  static final class AddDeviceCertificateMetadata extends
+  public static final class AddDeviceCertificateMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddDeviceCertificateMetadata)
       AddDeviceCertificateMetadataOrBuilder {
@@ -12913,6 +13435,13 @@ public final class DeviceServiceOuterClass {
     private AddDeviceCertificateMetadata() {
       deviceId_ = "";
       fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDeviceCertificateMetadata();
     }
 
     @java.lang.Override
@@ -12928,7 +13457,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12952,7 +13480,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12991,7 +13519,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -13010,7 +13540,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -13033,7 +13565,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -13052,7 +13586,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -13081,10 +13617,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
       unknownFields.writeTo(output);
@@ -13096,10 +13632,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
@@ -13117,13 +13653,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13308,35 +13843,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13394,6 +13929,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -13413,6 +13949,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -13433,6 +13970,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -13450,6 +13989,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -13463,6 +14003,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13483,6 +14025,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -13502,6 +14045,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -13522,6 +14066,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -13539,6 +14085,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -13552,6 +14099,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -13567,7 +14116,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13628,6 +14177,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -13637,6 +14187,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -13647,6 +14198,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -13655,6 +14207,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -13662,7 +14215,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDeviceCertificateRequest}
    */
-  public  static final class DeleteDeviceCertificateRequest extends
+  public static final class DeleteDeviceCertificateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDeviceCertificateRequest)
       DeleteDeviceCertificateRequestOrBuilder {
@@ -13674,6 +14227,13 @@ public final class DeviceServiceOuterClass {
     private DeleteDeviceCertificateRequest() {
       deviceId_ = "";
       fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDeviceCertificateRequest();
     }
 
     @java.lang.Override
@@ -13689,7 +14249,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13713,7 +14272,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13753,7 +14312,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -13773,7 +14334,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -13796,7 +14359,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -13815,7 +14380,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -13844,10 +14411,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
       unknownFields.writeTo(output);
@@ -13859,10 +14426,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
@@ -13880,13 +14447,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14071,35 +14637,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14158,6 +14724,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -14178,6 +14745,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -14199,6 +14767,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -14217,6 +14787,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -14231,6 +14802,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14251,6 +14824,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -14270,6 +14844,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -14290,6 +14865,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -14307,6 +14884,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -14320,6 +14898,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -14335,7 +14915,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14395,6 +14975,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -14403,6 +14984,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -14413,6 +14995,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -14421,6 +15004,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -14428,7 +15012,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDeviceCertificateMetadata}
    */
-  public  static final class DeleteDeviceCertificateMetadata extends
+  public static final class DeleteDeviceCertificateMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDeviceCertificateMetadata)
       DeleteDeviceCertificateMetadataOrBuilder {
@@ -14440,6 +15024,13 @@ public final class DeviceServiceOuterClass {
     private DeleteDeviceCertificateMetadata() {
       deviceId_ = "";
       fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDeviceCertificateMetadata();
     }
 
     @java.lang.Override
@@ -14455,7 +15046,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14479,7 +15069,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14518,7 +15108,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -14537,7 +15129,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -14560,7 +15154,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -14579,7 +15175,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -14608,10 +15206,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
       unknownFields.writeTo(output);
@@ -14623,10 +15221,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
@@ -14644,13 +15242,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14835,35 +15432,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14921,6 +15518,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -14940,6 +15538,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -14960,6 +15559,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -14977,6 +15578,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -14990,6 +15592,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15010,6 +15614,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -15029,6 +15634,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -15049,6 +15655,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -15066,6 +15674,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -15079,6 +15688,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -15094,7 +15705,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15155,6 +15766,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -15164,6 +15776,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -15171,7 +15784,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDevicePasswordsRequest}
    */
-  public  static final class ListDevicePasswordsRequest extends
+  public static final class ListDevicePasswordsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDevicePasswordsRequest)
       ListDevicePasswordsRequestOrBuilder {
@@ -15182,6 +15795,13 @@ public final class DeviceServiceOuterClass {
     }
     private ListDevicePasswordsRequest() {
       deviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDevicePasswordsRequest();
     }
 
     @java.lang.Override
@@ -15197,7 +15817,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15215,7 +15834,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15255,7 +15874,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -15275,7 +15896,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -15304,7 +15927,7 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       unknownFields.writeTo(output);
@@ -15316,7 +15939,7 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -15334,11 +15957,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15518,35 +16140,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15601,6 +16223,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -15621,6 +16244,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -15642,6 +16266,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -15660,6 +16286,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -15674,6 +16301,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15689,7 +16318,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15790,7 +16419,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDevicePasswordsResponse}
    */
-  public  static final class ListDevicePasswordsResponse extends
+  public static final class ListDevicePasswordsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDevicePasswordsResponse)
       ListDevicePasswordsResponseOrBuilder {
@@ -15801,6 +16430,13 @@ public final class DeviceServiceOuterClass {
     }
     private ListDevicePasswordsResponse() {
       passwords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDevicePasswordsResponse();
     }
 
     @java.lang.Override
@@ -15828,7 +16464,7 @@ public final class DeviceServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 passwords_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -15837,7 +16473,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15851,7 +16487,7 @@ public final class DeviceServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           passwords_ = java.util.Collections.unmodifiableList(passwords_);
         }
         this.unknownFields = unknownFields.build();
@@ -15880,6 +16516,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword> getPasswordsList() {
       return passwords_;
     }
@@ -15890,6 +16527,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder> 
         getPasswordsOrBuilderList() {
       return passwords_;
@@ -15901,6 +16539,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
+    @java.lang.Override
     public int getPasswordsCount() {
       return passwords_.size();
     }
@@ -15911,6 +16550,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword getPasswords(int index) {
       return passwords_.get(index);
     }
@@ -15921,6 +16561,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder getPasswordsOrBuilder(
         int index) {
       return passwords_.get(index);
@@ -15971,11 +16612,10 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse) obj;
 
-      boolean result = true;
-      result = result && getPasswordsList()
-          .equals(other.getPasswordsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPasswordsList()
+          .equals(other.getPasswordsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16157,7 +16797,7 @@ public final class DeviceServiceOuterClass {
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse(this);
         int from_bitField0_ = bitField0_;
         if (passwordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             passwords_ = java.util.Collections.unmodifiableList(passwords_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -16171,35 +16811,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16272,7 +16912,7 @@ public final class DeviceServiceOuterClass {
       private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword> passwords_ =
         java.util.Collections.emptyList();
       private void ensurePasswordsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           passwords_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword>(passwords_);
           bitField0_ |= 0x00000001;
          }
@@ -16573,7 +17213,7 @@ public final class DeviceServiceOuterClass {
           passwordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder>(
                   passwords_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           passwords_ = null;
@@ -16583,7 +17223,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16644,6 +17284,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -16653,6 +17294,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -16664,6 +17306,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -16673,6 +17316,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -16680,7 +17324,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDevicePasswordRequest}
    */
-  public  static final class AddDevicePasswordRequest extends
+  public static final class AddDevicePasswordRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddDevicePasswordRequest)
       AddDevicePasswordRequestOrBuilder {
@@ -16692,6 +17336,13 @@ public final class DeviceServiceOuterClass {
     private AddDevicePasswordRequest() {
       deviceId_ = "";
       password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDevicePasswordRequest();
     }
 
     @java.lang.Override
@@ -16707,7 +17358,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16731,7 +17381,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16771,7 +17421,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -16791,7 +17443,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -16815,7 +17469,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -16835,7 +17491,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -16864,10 +17522,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
       unknownFields.writeTo(output);
@@ -16879,10 +17537,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
       size += unknownFields.getSerializedSize();
@@ -16900,13 +17558,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17091,35 +17748,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17178,6 +17835,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -17198,6 +17856,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -17219,6 +17878,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -17237,6 +17898,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -17251,6 +17913,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17272,6 +17936,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -17292,6 +17957,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -17313,6 +17979,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -17331,6 +17999,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -17345,6 +18014,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -17360,7 +18031,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17420,6 +18091,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -17428,6 +18100,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -17438,6 +18111,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The passwordId.
      */
     java.lang.String getPasswordId();
     /**
@@ -17446,6 +18120,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The bytes for passwordId.
      */
     com.google.protobuf.ByteString
         getPasswordIdBytes();
@@ -17453,7 +18128,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDevicePasswordMetadata}
    */
-  public  static final class AddDevicePasswordMetadata extends
+  public static final class AddDevicePasswordMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddDevicePasswordMetadata)
       AddDevicePasswordMetadataOrBuilder {
@@ -17465,6 +18140,13 @@ public final class DeviceServiceOuterClass {
     private AddDevicePasswordMetadata() {
       deviceId_ = "";
       passwordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDevicePasswordMetadata();
     }
 
     @java.lang.Override
@@ -17480,7 +18162,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17504,7 +18185,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17543,7 +18224,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -17562,7 +18245,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -17585,7 +18270,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The passwordId.
      */
+    @java.lang.Override
     public java.lang.String getPasswordId() {
       java.lang.Object ref = passwordId_;
       if (ref instanceof java.lang.String) {
@@ -17604,7 +18291,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2;</code>
+     * @return The bytes for passwordId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordIdBytes() {
       java.lang.Object ref = passwordId_;
@@ -17633,10 +18322,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, passwordId_);
       }
       unknownFields.writeTo(output);
@@ -17648,10 +18337,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, passwordId_);
       }
       size += unknownFields.getSerializedSize();
@@ -17669,13 +18358,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getPasswordId()
-          .equals(other.getPasswordId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getPasswordId()
+          .equals(other.getPasswordId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17860,35 +18548,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17946,6 +18634,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -17965,6 +18654,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -17985,6 +18675,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -18002,6 +18694,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -18015,6 +18708,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18035,6 +18730,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @return The passwordId.
        */
       public java.lang.String getPasswordId() {
         java.lang.Object ref = passwordId_;
@@ -18054,6 +18750,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @return The bytes for passwordId.
        */
       public com.google.protobuf.ByteString
           getPasswordIdBytes() {
@@ -18074,6 +18771,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @param value The passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordId(
           java.lang.String value) {
@@ -18091,6 +18790,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPasswordId() {
         
@@ -18104,6 +18804,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2;</code>
+       * @param value The bytes for passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18119,7 +18821,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18180,6 +18882,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -18189,6 +18892,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -18200,6 +18904,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
     java.lang.String getPasswordId();
     /**
@@ -18209,6 +18914,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
     com.google.protobuf.ByteString
         getPasswordIdBytes();
@@ -18216,7 +18922,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDevicePasswordRequest}
    */
-  public  static final class DeleteDevicePasswordRequest extends
+  public static final class DeleteDevicePasswordRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDevicePasswordRequest)
       DeleteDevicePasswordRequestOrBuilder {
@@ -18228,6 +18934,13 @@ public final class DeviceServiceOuterClass {
     private DeleteDevicePasswordRequest() {
       deviceId_ = "";
       passwordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDevicePasswordRequest();
     }
 
     @java.lang.Override
@@ -18243,7 +18956,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18267,7 +18979,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18307,7 +19019,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -18327,7 +19041,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -18351,7 +19067,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
+    @java.lang.Override
     public java.lang.String getPasswordId() {
       java.lang.Object ref = passwordId_;
       if (ref instanceof java.lang.String) {
@@ -18371,7 +19089,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordIdBytes() {
       java.lang.Object ref = passwordId_;
@@ -18400,10 +19120,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, passwordId_);
       }
       unknownFields.writeTo(output);
@@ -18415,10 +19135,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, passwordId_);
       }
       size += unknownFields.getSerializedSize();
@@ -18436,13 +19156,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getPasswordId()
-          .equals(other.getPasswordId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getPasswordId()
+          .equals(other.getPasswordId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18627,35 +19346,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18714,6 +19433,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -18734,6 +19454,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -18755,6 +19476,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -18773,6 +19496,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -18787,6 +19511,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18808,6 +19534,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The passwordId.
        */
       public java.lang.String getPasswordId() {
         java.lang.Object ref = passwordId_;
@@ -18828,6 +19555,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for passwordId.
        */
       public com.google.protobuf.ByteString
           getPasswordIdBytes() {
@@ -18849,6 +19577,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordId(
           java.lang.String value) {
@@ -18867,6 +19597,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPasswordId() {
         
@@ -18881,6 +19612,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18896,7 +19629,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18956,6 +19689,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -18964,6 +19698,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -18974,6 +19709,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
     java.lang.String getPasswordId();
     /**
@@ -18982,6 +19718,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
     com.google.protobuf.ByteString
         getPasswordIdBytes();
@@ -18989,7 +19726,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDevicePasswordMetadata}
    */
-  public  static final class DeleteDevicePasswordMetadata extends
+  public static final class DeleteDevicePasswordMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDevicePasswordMetadata)
       DeleteDevicePasswordMetadataOrBuilder {
@@ -19001,6 +19738,13 @@ public final class DeviceServiceOuterClass {
     private DeleteDevicePasswordMetadata() {
       deviceId_ = "";
       passwordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDevicePasswordMetadata();
     }
 
     @java.lang.Override
@@ -19016,7 +19760,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19040,7 +19783,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19079,7 +19822,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -19098,7 +19843,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -19121,7 +19868,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The passwordId.
      */
+    @java.lang.Override
     public java.lang.String getPasswordId() {
       java.lang.Object ref = passwordId_;
       if (ref instanceof java.lang.String) {
@@ -19140,7 +19889,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for passwordId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordIdBytes() {
       java.lang.Object ref = passwordId_;
@@ -19169,10 +19920,10 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, passwordId_);
       }
       unknownFields.writeTo(output);
@@ -19184,10 +19935,10 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getPasswordIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, passwordId_);
       }
       size += unknownFields.getSerializedSize();
@@ -19205,13 +19956,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordMetadata other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordMetadata) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getPasswordId()
-          .equals(other.getPasswordId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getPasswordId()
+          .equals(other.getPasswordId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19396,35 +20146,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19482,6 +20232,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -19501,6 +20252,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -19521,6 +20273,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -19538,6 +20292,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -19551,6 +20306,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -19571,6 +20328,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The passwordId.
        */
       public java.lang.String getPasswordId() {
         java.lang.Object ref = passwordId_;
@@ -19590,6 +20348,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for passwordId.
        */
       public com.google.protobuf.ByteString
           getPasswordIdBytes() {
@@ -19610,6 +20369,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordId(
           java.lang.String value) {
@@ -19627,6 +20388,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPasswordId() {
         
@@ -19640,6 +20402,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for passwordId to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordIdBytes(
           com.google.protobuf.ByteString value) {
@@ -19655,7 +20419,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19716,6 +20480,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -19725,6 +20490,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -19738,6 +20504,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -19748,6 +20515,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -19757,6 +20525,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -19768,6 +20537,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -19777,6 +20547,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -19784,7 +20555,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDeviceOperationsRequest}
    */
-  public  static final class ListDeviceOperationsRequest extends
+  public static final class ListDeviceOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDeviceOperationsRequest)
       ListDeviceOperationsRequestOrBuilder {
@@ -19795,9 +20566,15 @@ public final class DeviceServiceOuterClass {
     }
     private ListDeviceOperationsRequest() {
       deviceId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDeviceOperationsRequest();
     }
 
     @java.lang.Override
@@ -19813,7 +20590,6 @@ public final class DeviceServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19848,7 +20624,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19888,7 +20664,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -19908,7 +20686,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -19934,7 +20714,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -19948,7 +20730,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -19968,7 +20752,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -19992,7 +20778,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -20012,7 +20800,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -20041,16 +20831,16 @@ public final class DeviceServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -20062,17 +20852,17 @@ public final class DeviceServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -20090,17 +20880,16 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20296,35 +21085,35 @@ public final class DeviceServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20390,6 +21179,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -20410,6 +21200,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -20431,6 +21222,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -20449,6 +21242,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -20463,6 +21257,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20486,7 +21282,9 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -20499,6 +21297,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -20515,6 +21315,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -20531,6 +21332,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -20551,6 +21353,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -20572,6 +21375,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -20590,6 +21395,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -20604,6 +21410,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -20625,6 +21433,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -20645,6 +21454,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -20666,6 +21476,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -20684,6 +21496,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -20698,6 +21511,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -20713,7 +21528,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20820,6 +21635,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -20831,6 +21647,7 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -20838,7 +21655,7 @@ public final class DeviceServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDeviceOperationsResponse}
    */
-  public  static final class ListDeviceOperationsResponse extends
+  public static final class ListDeviceOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDeviceOperationsResponse)
       ListDeviceOperationsResponseOrBuilder {
@@ -20850,6 +21667,13 @@ public final class DeviceServiceOuterClass {
     private ListDeviceOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDeviceOperationsResponse();
     }
 
     @java.lang.Override
@@ -20877,7 +21701,7 @@ public final class DeviceServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -20892,7 +21716,7 @@ public final class DeviceServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20906,7 +21730,7 @@ public final class DeviceServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -20926,7 +21750,6 @@ public final class DeviceServiceOuterClass {
               yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse.class, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -20936,6 +21759,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -20946,6 +21770,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -20957,6 +21782,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -20967,6 +21793,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -20977,6 +21804,7 @@ public final class DeviceServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -20993,7 +21821,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -21015,7 +21845,9 @@ public final class DeviceServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -21047,7 +21879,7 @@ public final class DeviceServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -21063,7 +21895,7 @@ public final class DeviceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -21081,13 +21913,12 @@ public final class DeviceServiceOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21272,9 +22103,8 @@ public final class DeviceServiceOuterClass {
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse buildPartial() {
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -21283,42 +22113,41 @@ public final class DeviceServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21395,7 +22224,7 @@ public final class DeviceServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -21696,7 +22525,7 @@ public final class DeviceServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -21714,6 +22543,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -21736,6 +22566,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -21759,6 +22590,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -21779,6 +22612,7 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -21795,6 +22629,8 @@ public final class DeviceServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -21810,7 +22646,7 @@ public final class DeviceServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22149,15 +22985,7 @@ public final class DeviceServiceOuterClass {
       "m/yandex-cloud/go-genproto/yandex/cloud/" +
       "iot/devices/v1;devicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -22166,7 +22994,7 @@ public final class DeviceServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iot.devices.v1.DeviceOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iot_devices_v1_GetDeviceRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_GetDeviceRequest_fieldAccessorTable = new

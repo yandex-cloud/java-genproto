@@ -25,6 +25,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -34,6 +35,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -41,7 +43,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.GetDnsZoneRequest}
    */
-  public  static final class GetDnsZoneRequest extends
+  public static final class GetDnsZoneRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.GetDnsZoneRequest)
       GetDnsZoneRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class DnsZoneServiceOuterClass {
     }
     private GetDnsZoneRequest() {
       dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDnsZoneRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -174,7 +186,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -491,6 +503,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -512,6 +525,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -544,6 +560,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -641,6 +661,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -651,6 +672,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -660,6 +682,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -675,6 +698,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -688,6 +712,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -695,7 +720,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZonesRequest}
    */
-  public  static final class ListDnsZonesRequest extends
+  public static final class ListDnsZonesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.ListDnsZonesRequest)
       ListDnsZonesRequestOrBuilder {
@@ -706,9 +731,15 @@ public final class DnsZoneServiceOuterClass {
     }
     private ListDnsZonesRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDnsZonesRequest();
     }
 
     @java.lang.Override
@@ -724,7 +755,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -759,7 +789,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -799,7 +829,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -819,7 +851,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -844,7 +878,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -858,7 +894,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -878,7 +916,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -906,7 +946,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -930,7 +972,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -959,16 +1003,16 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -980,17 +1024,17 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1008,17 +1052,16 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1214,35 +1257,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1308,6 +1351,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1328,6 +1372,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1349,6 +1394,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1367,6 +1414,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1381,6 +1429,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1403,7 +1453,9 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1415,6 +1467,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1430,6 +1484,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1446,6 +1501,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1466,6 +1522,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1487,6 +1544,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1505,6 +1564,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1519,6 +1579,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1544,6 +1606,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1568,6 +1631,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1593,6 +1657,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1615,6 +1681,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1633,6 +1700,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1648,7 +1717,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1755,6 +1824,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1766,6 +1836,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1773,7 +1844,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZonesResponse}
    */
-  public  static final class ListDnsZonesResponse extends
+  public static final class ListDnsZonesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.ListDnsZonesResponse)
       ListDnsZonesResponseOrBuilder {
@@ -1785,6 +1856,13 @@ public final class DnsZoneServiceOuterClass {
     private ListDnsZonesResponse() {
       dnsZones_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDnsZonesResponse();
     }
 
     @java.lang.Override
@@ -1812,7 +1890,7 @@ public final class DnsZoneServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 dnsZones_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1827,7 +1905,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1841,7 +1919,7 @@ public final class DnsZoneServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           dnsZones_ = java.util.Collections.unmodifiableList(dnsZones_);
         }
         this.unknownFields = unknownFields.build();
@@ -1861,7 +1939,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DNS_ZONES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> dnsZones_;
     /**
@@ -1871,6 +1948,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> getDnsZonesList() {
       return dnsZones_;
     }
@@ -1881,6 +1959,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder> 
         getDnsZonesOrBuilderList() {
       return dnsZones_;
@@ -1892,6 +1971,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
+    @java.lang.Override
     public int getDnsZonesCount() {
       return dnsZones_.size();
     }
@@ -1902,6 +1982,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone getDnsZones(int index) {
       return dnsZones_.get(index);
     }
@@ -1912,6 +1993,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder getDnsZonesOrBuilder(
         int index) {
       return dnsZones_.get(index);
@@ -1928,7 +2010,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1950,7 +2034,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1982,7 +2068,7 @@ public final class DnsZoneServiceOuterClass {
       for (int i = 0; i < dnsZones_.size(); i++) {
         output.writeMessage(1, dnsZones_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1998,7 +2084,7 @@ public final class DnsZoneServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, dnsZones_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2016,13 +2102,12 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse) obj;
 
-      boolean result = true;
-      result = result && getDnsZonesList()
-          .equals(other.getDnsZonesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZonesList()
+          .equals(other.getDnsZonesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2207,9 +2292,8 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (dnsZonesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             dnsZones_ = java.util.Collections.unmodifiableList(dnsZones_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2218,42 +2302,41 @@ public final class DnsZoneServiceOuterClass {
           result.dnsZones_ = dnsZonesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2330,7 +2413,7 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> dnsZones_ =
         java.util.Collections.emptyList();
       private void ensureDnsZonesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           dnsZones_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone>(dnsZones_);
           bitField0_ |= 0x00000001;
          }
@@ -2631,7 +2714,7 @@ public final class DnsZoneServiceOuterClass {
           dnsZonesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone, yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder>(
                   dnsZones_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           dnsZones_ = null;
@@ -2649,6 +2732,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2671,6 +2755,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2694,6 +2779,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2714,6 +2801,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2730,6 +2818,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2745,7 +2835,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2806,6 +2896,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2815,6 +2906,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2826,6 +2918,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2835,6 +2928,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2845,6 +2939,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2853,6 +2948,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2917,6 +3013,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The zone.
      */
     java.lang.String getZone();
     /**
@@ -2925,6 +3022,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The bytes for zone.
      */
     com.google.protobuf.ByteString
         getZoneBytes();
@@ -2936,6 +3034,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return Whether the privateVisibility field is set.
      */
     boolean hasPrivateVisibility();
     /**
@@ -2945,6 +3044,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return The privateVisibility.
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
@@ -2964,6 +3064,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return Whether the publicVisibility field is set.
      */
     boolean hasPublicVisibility();
     /**
@@ -2973,6 +3074,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return The publicVisibility.
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility();
     /**
@@ -2988,7 +3090,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.CreateDnsZoneRequest}
    */
-  public  static final class CreateDnsZoneRequest extends
+  public static final class CreateDnsZoneRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.CreateDnsZoneRequest)
       CreateDnsZoneRequestOrBuilder {
@@ -3002,6 +3104,13 @@ public final class DnsZoneServiceOuterClass {
       name_ = "";
       description_ = "";
       zone_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDnsZoneRequest();
     }
 
     @java.lang.Override
@@ -3047,10 +3156,10 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3092,7 +3201,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3135,7 +3244,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -3145,7 +3253,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3165,7 +3275,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3189,7 +3301,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3209,7 +3323,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3232,7 +3348,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3251,7 +3369,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3300,14 +3420,16 @@ public final class DnsZoneServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3319,6 +3441,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3330,11 +3453,12 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3346,10 +3470,11 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3366,7 +3491,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The zone.
      */
+    @java.lang.Override
     public java.lang.String getZone() {
       java.lang.Object ref = zone_;
       if (ref instanceof java.lang.String) {
@@ -3385,7 +3512,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The bytes for zone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneBytes() {
       java.lang.Object ref = zone_;
@@ -3409,7 +3538,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return Whether the privateVisibility field is set.
      */
+    @java.lang.Override
     public boolean hasPrivateVisibility() {
       return privateVisibility_ != null;
     }
@@ -3420,7 +3551,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return The privateVisibility.
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility() {
       return privateVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.getDefaultInstance() : privateVisibility_;
     }
@@ -3432,6 +3565,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder() {
       return getPrivateVisibility();
     }
@@ -3445,7 +3579,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return Whether the publicVisibility field is set.
      */
+    @java.lang.Override
     public boolean hasPublicVisibility() {
       return publicVisibility_ != null;
     }
@@ -3456,7 +3592,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return The publicVisibility.
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
       return publicVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.getDefaultInstance() : publicVisibility_;
     }
@@ -3468,6 +3606,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
       return getPublicVisibility();
     }
@@ -3486,13 +3625,13 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3501,7 +3640,7 @@ public final class DnsZoneServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getZoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, zone_);
       }
       if (privateVisibility_ != null) {
@@ -3519,13 +3658,13 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3538,7 +3677,7 @@ public final class DnsZoneServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getZoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, zone_);
       }
       if (privateVisibility_ != null) {
@@ -3564,29 +3703,28 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getZone()
-          .equals(other.getZone());
-      result = result && (hasPrivateVisibility() == other.hasPrivateVisibility());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getZone()
+          .equals(other.getZone())) return false;
+      if (hasPrivateVisibility() != other.hasPrivateVisibility()) return false;
       if (hasPrivateVisibility()) {
-        result = result && getPrivateVisibility()
-            .equals(other.getPrivateVisibility());
+        if (!getPrivateVisibility()
+            .equals(other.getPrivateVisibility())) return false;
       }
-      result = result && (hasPublicVisibility() == other.hasPublicVisibility());
+      if (hasPublicVisibility() != other.hasPublicVisibility()) return false;
       if (hasPublicVisibility()) {
-        result = result && getPublicVisibility()
-            .equals(other.getPublicVisibility());
+        if (!getPublicVisibility()
+            .equals(other.getPublicVisibility())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3819,7 +3957,6 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3836,42 +3973,41 @@ public final class DnsZoneServiceOuterClass {
         } else {
           result.publicVisibility_ = publicVisibilityBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3947,6 +4083,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3967,6 +4104,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3988,6 +4126,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -4006,6 +4146,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -4020,6 +4161,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4041,6 +4184,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4061,6 +4205,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4082,6 +4227,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4100,6 +4247,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4114,6 +4262,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4134,6 +4284,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4153,6 +4304,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4173,6 +4325,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4190,6 +4344,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4203,6 +4358,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4250,14 +4407,16 @@ public final class DnsZoneServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4269,6 +4428,7 @@ public final class DnsZoneServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4280,11 +4440,12 @@ public final class DnsZoneServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4296,10 +4457,11 @@ public final class DnsZoneServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4323,7 +4485,7 @@ public final class DnsZoneServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4346,8 +4508,11 @@ public final class DnsZoneServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4374,6 +4539,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return The zone.
        */
       public java.lang.String getZone() {
         java.lang.Object ref = zone_;
@@ -4393,6 +4559,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return The bytes for zone.
        */
       public com.google.protobuf.ByteString
           getZoneBytes() {
@@ -4413,6 +4580,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @param value The zone to set.
+       * @return This builder for chaining.
        */
       public Builder setZone(
           java.lang.String value) {
@@ -4430,6 +4599,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZone() {
         
@@ -4443,6 +4613,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @param value The bytes for zone to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneBytes(
           com.google.protobuf.ByteString value) {
@@ -4456,7 +4628,7 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_ = null;
+      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
@@ -4466,6 +4638,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+       * @return Whether the privateVisibility field is set.
        */
       public boolean hasPrivateVisibility() {
         return privateVisibilityBuilder_ != null || privateVisibility_ != null;
@@ -4477,6 +4650,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+       * @return The privateVisibility.
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility() {
         if (privateVisibilityBuilder_ == null) {
@@ -4618,7 +4792,7 @@ public final class DnsZoneServiceOuterClass {
         return privateVisibilityBuilder_;
       }
 
-      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_ = null;
+      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder> publicVisibilityBuilder_;
       /**
@@ -4628,6 +4802,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+       * @return Whether the publicVisibility field is set.
        */
       public boolean hasPublicVisibility() {
         return publicVisibilityBuilder_ != null || publicVisibility_ != null;
@@ -4639,6 +4814,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+       * @return The publicVisibility.
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
         if (publicVisibilityBuilder_ == null) {
@@ -4782,7 +4958,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4842,6 +5018,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -4850,6 +5027,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -4857,7 +5035,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.CreateDnsZoneMetadata}
    */
-  public  static final class CreateDnsZoneMetadata extends
+  public static final class CreateDnsZoneMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.CreateDnsZoneMetadata)
       CreateDnsZoneMetadataOrBuilder {
@@ -4868,6 +5046,13 @@ public final class DnsZoneServiceOuterClass {
     }
     private CreateDnsZoneMetadata() {
       dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDnsZoneMetadata();
     }
 
     @java.lang.Override
@@ -4883,7 +5068,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4901,7 +5085,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4940,7 +5124,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -4959,7 +5145,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -4988,7 +5176,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       unknownFields.writeTo(output);
@@ -5000,7 +5188,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5018,11 +5206,10 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneMetadata) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5202,35 +5389,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5284,6 +5471,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -5303,6 +5491,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -5323,6 +5512,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -5340,6 +5531,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -5353,6 +5545,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5368,7 +5562,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5430,6 +5624,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -5440,6 +5635,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -5450,6 +5646,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5458,6 +5655,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5476,6 +5674,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5485,6 +5684,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5495,6 +5695,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5503,6 +5704,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5592,6 +5794,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return Whether the privateVisibility field is set.
      */
     boolean hasPrivateVisibility();
     /**
@@ -5600,6 +5803,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return The privateVisibility.
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
@@ -5617,6 +5821,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return Whether the publicVisibility field is set.
      */
     boolean hasPublicVisibility();
     /**
@@ -5625,6 +5830,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return The publicVisibility.
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility();
     /**
@@ -5639,7 +5845,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZoneRequest}
    */
-  public  static final class UpdateDnsZoneRequest extends
+  public static final class UpdateDnsZoneRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpdateDnsZoneRequest)
       UpdateDnsZoneRequestOrBuilder {
@@ -5652,6 +5858,13 @@ public final class DnsZoneServiceOuterClass {
       dnsZoneId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDnsZoneRequest();
     }
 
     @java.lang.Override
@@ -5710,10 +5923,10 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -5749,7 +5962,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5792,7 +6005,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
@@ -5803,7 +6015,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -5824,7 +6038,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -5847,7 +6063,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5857,7 +6075,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5868,6 +6088,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5881,7 +6102,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5901,7 +6124,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5924,7 +6149,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5943,7 +6170,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5997,14 +6226,16 @@ public final class DnsZoneServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -6021,6 +6252,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -6037,11 +6269,12 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6058,10 +6291,11 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -6078,7 +6312,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return Whether the privateVisibility field is set.
      */
+    @java.lang.Override
     public boolean hasPrivateVisibility() {
       return privateVisibility_ != null;
     }
@@ -6088,7 +6324,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+     * @return The privateVisibility.
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility() {
       return privateVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.getDefaultInstance() : privateVisibility_;
     }
@@ -6099,6 +6337,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder() {
       return getPrivateVisibility();
     }
@@ -6111,7 +6350,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return Whether the publicVisibility field is set.
      */
+    @java.lang.Override
     public boolean hasPublicVisibility() {
       return publicVisibility_ != null;
     }
@@ -6121,7 +6362,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+     * @return The publicVisibility.
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
       return publicVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.getDefaultInstance() : publicVisibility_;
     }
@@ -6132,6 +6375,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
       return getPublicVisibility();
     }
@@ -6150,16 +6394,16 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -6183,17 +6427,17 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -6229,32 +6473,31 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasPrivateVisibility() == other.hasPrivateVisibility());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasPrivateVisibility() != other.hasPrivateVisibility()) return false;
       if (hasPrivateVisibility()) {
-        result = result && getPrivateVisibility()
-            .equals(other.getPrivateVisibility());
+        if (!getPrivateVisibility()
+            .equals(other.getPrivateVisibility())) return false;
       }
-      result = result && (hasPublicVisibility() == other.hasPublicVisibility());
+      if (hasPublicVisibility() != other.hasPublicVisibility()) return false;
       if (hasPublicVisibility()) {
-        result = result && getPublicVisibility()
-            .equals(other.getPublicVisibility());
+        if (!getPublicVisibility()
+            .equals(other.getPublicVisibility())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6493,7 +6736,6 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.dnsZoneId_ = dnsZoneId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6514,42 +6756,41 @@ public final class DnsZoneServiceOuterClass {
         } else {
           result.publicVisibility_ = publicVisibilityBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6625,6 +6866,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -6646,6 +6888,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -6668,6 +6911,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -6687,6 +6932,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -6702,6 +6948,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6715,7 +6963,7 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6724,6 +6972,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6734,6 +6983,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6876,6 +7126,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6896,6 +7147,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6917,6 +7169,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6935,6 +7189,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6949,6 +7204,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6969,6 +7226,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6988,6 +7246,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -7008,6 +7267,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -7025,6 +7286,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -7038,6 +7300,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -7090,14 +7354,16 @@ public final class DnsZoneServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -7114,6 +7380,7 @@ public final class DnsZoneServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -7130,11 +7397,12 @@ public final class DnsZoneServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7151,10 +7419,11 @@ public final class DnsZoneServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -7183,7 +7452,7 @@ public final class DnsZoneServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -7211,8 +7480,11 @@ public final class DnsZoneServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -7237,7 +7509,7 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_ = null;
+      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
@@ -7246,6 +7518,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+       * @return Whether the privateVisibility field is set.
        */
       public boolean hasPrivateVisibility() {
         return privateVisibilityBuilder_ != null || privateVisibility_ != null;
@@ -7256,6 +7529,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
+       * @return The privateVisibility.
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility() {
         if (privateVisibilityBuilder_ == null) {
@@ -7390,7 +7664,7 @@ public final class DnsZoneServiceOuterClass {
         return privateVisibilityBuilder_;
       }
 
-      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_ = null;
+      private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder> publicVisibilityBuilder_;
       /**
@@ -7399,6 +7673,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+       * @return Whether the publicVisibility field is set.
        */
       public boolean hasPublicVisibility() {
         return publicVisibilityBuilder_ != null || publicVisibility_ != null;
@@ -7409,6 +7684,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
+       * @return The publicVisibility.
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
         if (publicVisibilityBuilder_ == null) {
@@ -7545,7 +7821,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7605,6 +7881,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -7613,6 +7890,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -7620,7 +7898,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZoneMetadata}
    */
-  public  static final class UpdateDnsZoneMetadata extends
+  public static final class UpdateDnsZoneMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpdateDnsZoneMetadata)
       UpdateDnsZoneMetadataOrBuilder {
@@ -7631,6 +7909,13 @@ public final class DnsZoneServiceOuterClass {
     }
     private UpdateDnsZoneMetadata() {
       dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDnsZoneMetadata();
     }
 
     @java.lang.Override
@@ -7646,7 +7931,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7664,7 +7948,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7703,7 +7987,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -7722,7 +8008,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -7751,7 +8039,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       unknownFields.writeTo(output);
@@ -7763,7 +8051,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7781,11 +8069,10 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneMetadata) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7965,35 +8252,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8047,6 +8334,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -8066,6 +8354,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -8086,6 +8375,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -8103,6 +8394,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -8116,6 +8408,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8131,7 +8425,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8192,6 +8486,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -8201,6 +8496,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -8208,7 +8504,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.DeleteDnsZoneRequest}
    */
-  public  static final class DeleteDnsZoneRequest extends
+  public static final class DeleteDnsZoneRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.DeleteDnsZoneRequest)
       DeleteDnsZoneRequestOrBuilder {
@@ -8219,6 +8515,13 @@ public final class DnsZoneServiceOuterClass {
     }
     private DeleteDnsZoneRequest() {
       dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDnsZoneRequest();
     }
 
     @java.lang.Override
@@ -8234,7 +8537,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8252,7 +8554,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8292,7 +8594,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -8312,7 +8616,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -8341,7 +8647,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       unknownFields.writeTo(output);
@@ -8353,7 +8659,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8371,11 +8677,10 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8555,35 +8860,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8638,6 +8943,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -8658,6 +8964,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -8679,6 +8986,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -8697,6 +9006,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -8711,6 +9021,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8726,7 +9038,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8786,6 +9098,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -8794,6 +9107,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -8801,7 +9115,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.DeleteDnsZoneMetadata}
    */
-  public  static final class DeleteDnsZoneMetadata extends
+  public static final class DeleteDnsZoneMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.DeleteDnsZoneMetadata)
       DeleteDnsZoneMetadataOrBuilder {
@@ -8812,6 +9126,13 @@ public final class DnsZoneServiceOuterClass {
     }
     private DeleteDnsZoneMetadata() {
       dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDnsZoneMetadata();
     }
 
     @java.lang.Override
@@ -8827,7 +9148,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8845,7 +9165,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8884,7 +9204,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -8903,7 +9225,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -8932,7 +9256,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       unknownFields.writeTo(output);
@@ -8944,7 +9268,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8962,11 +9286,10 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneMetadata) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9146,35 +9469,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9228,6 +9551,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -9247,6 +9571,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -9267,6 +9592,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -9284,6 +9611,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -9297,6 +9625,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1;</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9312,7 +9642,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9373,6 +9703,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -9382,6 +9713,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -9392,6 +9724,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -9400,6 +9733,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -9410,6 +9744,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -9418,6 +9753,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -9425,7 +9761,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.GetDnsZoneRecordSetRequest}
    */
-  public  static final class GetDnsZoneRecordSetRequest extends
+  public static final class GetDnsZoneRecordSetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.GetDnsZoneRecordSetRequest)
       GetDnsZoneRecordSetRequestOrBuilder {
@@ -9441,6 +9777,13 @@ public final class DnsZoneServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDnsZoneRecordSetRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -9453,7 +9796,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9483,7 +9825,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9523,7 +9865,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -9543,7 +9887,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -9566,7 +9912,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -9585,7 +9933,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -9608,7 +9958,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -9627,7 +9979,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -9656,13 +10010,13 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
       unknownFields.writeTo(output);
@@ -9674,13 +10028,13 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
       size += unknownFields.getSerializedSize();
@@ -9698,15 +10052,14 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9896,35 +10249,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9987,6 +10340,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -10007,6 +10361,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -10028,6 +10383,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -10046,6 +10403,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -10060,6 +10418,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10080,6 +10440,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -10099,6 +10460,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -10119,6 +10481,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -10136,6 +10500,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -10149,6 +10514,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10169,6 +10536,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -10188,6 +10556,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -10208,6 +10577,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -10225,6 +10596,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -10238,6 +10610,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -10253,7 +10627,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10314,6 +10688,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -10323,6 +10698,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -10335,6 +10711,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -10345,6 +10722,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -10354,6 +10732,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -10371,6 +10750,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -10386,6 +10766,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -10393,7 +10774,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZoneRecordSetsRequest}
    */
-  public  static final class ListDnsZoneRecordSetsRequest extends
+  public static final class ListDnsZoneRecordSetsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.ListDnsZoneRecordSetsRequest)
       ListDnsZoneRecordSetsRequestOrBuilder {
@@ -10404,9 +10785,15 @@ public final class DnsZoneServiceOuterClass {
     }
     private ListDnsZoneRecordSetsRequest() {
       dnsZoneId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDnsZoneRecordSetsRequest();
     }
 
     @java.lang.Override
@@ -10422,7 +10809,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10457,7 +10843,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10497,7 +10883,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -10517,7 +10905,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -10542,7 +10932,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -10556,7 +10948,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -10576,7 +10970,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -10606,7 +11002,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -10632,7 +11030,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -10661,16 +11061,16 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -10682,17 +11082,17 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -10710,17 +11110,16 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10916,35 +11315,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11010,6 +11409,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -11030,6 +11430,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -11051,6 +11452,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -11069,6 +11472,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -11083,6 +11487,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11105,7 +11511,9 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -11117,6 +11525,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -11132,6 +11542,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -11148,6 +11559,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -11168,6 +11580,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -11189,6 +11602,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -11207,6 +11622,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -11221,6 +11637,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -11248,6 +11666,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -11274,6 +11693,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -11301,6 +11721,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -11325,6 +11747,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -11345,6 +11768,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -11360,7 +11785,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11467,6 +11892,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -11478,6 +11904,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -11485,7 +11912,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZoneRecordSetsResponse}
    */
-  public  static final class ListDnsZoneRecordSetsResponse extends
+  public static final class ListDnsZoneRecordSetsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.ListDnsZoneRecordSetsResponse)
       ListDnsZoneRecordSetsResponseOrBuilder {
@@ -11497,6 +11924,13 @@ public final class DnsZoneServiceOuterClass {
     private ListDnsZoneRecordSetsResponse() {
       recordSets_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDnsZoneRecordSetsResponse();
     }
 
     @java.lang.Override
@@ -11524,7 +11958,7 @@ public final class DnsZoneServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 recordSets_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -11539,7 +11973,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11553,7 +11987,7 @@ public final class DnsZoneServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           recordSets_ = java.util.Collections.unmodifiableList(recordSets_);
         }
         this.unknownFields = unknownFields.build();
@@ -11573,7 +12007,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_SETS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> recordSets_;
     /**
@@ -11583,6 +12016,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getRecordSetsList() {
       return recordSets_;
     }
@@ -11593,6 +12027,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getRecordSetsOrBuilderList() {
       return recordSets_;
@@ -11604,6 +12039,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
+    @java.lang.Override
     public int getRecordSetsCount() {
       return recordSets_.size();
     }
@@ -11614,6 +12050,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getRecordSets(int index) {
       return recordSets_.get(index);
     }
@@ -11624,6 +12061,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getRecordSetsOrBuilder(
         int index) {
       return recordSets_.get(index);
@@ -11640,7 +12078,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -11662,7 +12102,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -11694,7 +12136,7 @@ public final class DnsZoneServiceOuterClass {
       for (int i = 0; i < recordSets_.size(); i++) {
         output.writeMessage(1, recordSets_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -11710,7 +12152,7 @@ public final class DnsZoneServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, recordSets_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -11728,13 +12170,12 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse) obj;
 
-      boolean result = true;
-      result = result && getRecordSetsList()
-          .equals(other.getRecordSetsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRecordSetsList()
+          .equals(other.getRecordSetsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11919,9 +12360,8 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (recordSetsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             recordSets_ = java.util.Collections.unmodifiableList(recordSets_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -11930,42 +12370,41 @@ public final class DnsZoneServiceOuterClass {
           result.recordSets_ = recordSetsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12042,7 +12481,7 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> recordSets_ =
         java.util.Collections.emptyList();
       private void ensureRecordSetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           recordSets_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(recordSets_);
           bitField0_ |= 0x00000001;
          }
@@ -12343,7 +12782,7 @@ public final class DnsZoneServiceOuterClass {
           recordSetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
                   recordSets_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           recordSets_ = null;
@@ -12361,6 +12800,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -12383,6 +12823,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -12406,6 +12847,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -12426,6 +12869,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -12442,6 +12886,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12457,7 +12903,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12519,6 +12965,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -12529,6 +12976,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -12624,7 +13072,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpdateRecordSetsRequest}
    */
-  public  static final class UpdateRecordSetsRequest extends
+  public static final class UpdateRecordSetsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpdateRecordSetsRequest)
       UpdateRecordSetsRequestOrBuilder {
@@ -12637,6 +13085,13 @@ public final class DnsZoneServiceOuterClass {
       dnsZoneId_ = "";
       deletions_ = java.util.Collections.emptyList();
       additions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRecordSetsRequest();
     }
 
     @java.lang.Override
@@ -12670,25 +13125,25 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 deletions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               deletions_.add(
                   input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 additions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               additions_.add(
                   input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12702,10 +13157,10 @@ public final class DnsZoneServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           deletions_ = java.util.Collections.unmodifiableList(deletions_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           additions_ = java.util.Collections.unmodifiableList(additions_);
         }
         this.unknownFields = unknownFields.build();
@@ -12725,7 +13180,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
@@ -12736,7 +13190,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -12757,7 +13213,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -12781,6 +13239,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getDeletionsList() {
       return deletions_;
     }
@@ -12791,6 +13250,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getDeletionsOrBuilderList() {
       return deletions_;
@@ -12802,6 +13262,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public int getDeletionsCount() {
       return deletions_.size();
     }
@@ -12812,6 +13273,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index) {
       return deletions_.get(index);
     }
@@ -12822,6 +13284,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
         int index) {
       return deletions_.get(index);
@@ -12836,6 +13299,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getAdditionsList() {
       return additions_;
     }
@@ -12846,6 +13310,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getAdditionsOrBuilderList() {
       return additions_;
@@ -12857,6 +13322,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public int getAdditionsCount() {
       return additions_.size();
     }
@@ -12867,6 +13333,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index) {
       return additions_.get(index);
     }
@@ -12877,6 +13344,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
         int index) {
       return additions_.get(index);
@@ -12896,7 +13364,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       for (int i = 0; i < deletions_.size(); i++) {
@@ -12914,7 +13382,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       for (int i = 0; i < deletions_.size(); i++) {
@@ -12940,15 +13408,14 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && getDeletionsList()
-          .equals(other.getDeletionsList());
-      result = result && getAdditionsList()
-          .equals(other.getAdditionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!getDeletionsList()
+          .equals(other.getDeletionsList())) return false;
+      if (!getAdditionsList()
+          .equals(other.getAdditionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13107,13 +13574,13 @@ public final class DnsZoneServiceOuterClass {
 
         if (deletionsBuilder_ == null) {
           deletions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           deletionsBuilder_.clear();
         }
         if (additionsBuilder_ == null) {
           additions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           additionsBuilder_.clear();
         }
@@ -13144,62 +13611,60 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.dnsZoneId_ = dnsZoneId_;
         if (deletionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             deletions_ = java.util.Collections.unmodifiableList(deletions_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.deletions_ = deletions_;
         } else {
           result.deletions_ = deletionsBuilder_.build();
         }
         if (additionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             additions_ = java.util.Collections.unmodifiableList(additions_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.additions_ = additions_;
         } else {
           result.additions_ = additionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13221,7 +13686,7 @@ public final class DnsZoneServiceOuterClass {
           if (!other.deletions_.isEmpty()) {
             if (deletions_.isEmpty()) {
               deletions_ = other.deletions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureDeletionsIsMutable();
               deletions_.addAll(other.deletions_);
@@ -13234,7 +13699,7 @@ public final class DnsZoneServiceOuterClass {
               deletionsBuilder_.dispose();
               deletionsBuilder_ = null;
               deletions_ = other.deletions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               deletionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDeletionsFieldBuilder() : null;
@@ -13247,7 +13712,7 @@ public final class DnsZoneServiceOuterClass {
           if (!other.additions_.isEmpty()) {
             if (additions_.isEmpty()) {
               additions_ = other.additions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureAdditionsIsMutable();
               additions_.addAll(other.additions_);
@@ -13260,7 +13725,7 @@ public final class DnsZoneServiceOuterClass {
               additionsBuilder_.dispose();
               additionsBuilder_ = null;
               additions_ = other.additions_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               additionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAdditionsFieldBuilder() : null;
@@ -13308,6 +13773,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -13329,6 +13795,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -13351,6 +13818,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -13370,6 +13839,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -13385,6 +13855,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13401,9 +13873,9 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_ =
         java.util.Collections.emptyList();
       private void ensureDeletionsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           deletions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(deletions_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -13597,7 +14069,7 @@ public final class DnsZoneServiceOuterClass {
       public Builder clearDeletions() {
         if (deletionsBuilder_ == null) {
           deletions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           deletionsBuilder_.clear();
@@ -13702,7 +14174,7 @@ public final class DnsZoneServiceOuterClass {
           deletionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
                   deletions_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           deletions_ = null;
@@ -13713,9 +14185,9 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> additions_ =
         java.util.Collections.emptyList();
       private void ensureAdditionsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           additions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(additions_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -13909,7 +14381,7 @@ public final class DnsZoneServiceOuterClass {
       public Builder clearAdditions() {
         if (additionsBuilder_ == null) {
           additions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           additionsBuilder_.clear();
@@ -14014,7 +14486,7 @@ public final class DnsZoneServiceOuterClass {
           additionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
                   additions_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           additions_ = null;
@@ -14024,7 +14496,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14081,7 +14553,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpdateRecordSetsMetadata}
    */
-  public  static final class UpdateRecordSetsMetadata extends
+  public static final class UpdateRecordSetsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpdateRecordSetsMetadata)
       UpdateRecordSetsMetadataOrBuilder {
@@ -14091,6 +14563,13 @@ public final class DnsZoneServiceOuterClass {
       super(builder);
     }
     private UpdateRecordSetsMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRecordSetsMetadata();
     }
 
     @java.lang.Override
@@ -14117,7 +14596,7 @@ public final class DnsZoneServiceOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14186,9 +14665,8 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14363,35 +14841,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14436,7 +14914,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14498,6 +14976,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -14508,6 +14987,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -14647,7 +15127,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpsertRecordSetsRequest}
    */
-  public  static final class UpsertRecordSetsRequest extends
+  public static final class UpsertRecordSetsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpsertRecordSetsRequest)
       UpsertRecordSetsRequestOrBuilder {
@@ -14661,6 +15141,13 @@ public final class DnsZoneServiceOuterClass {
       deletions_ = java.util.Collections.emptyList();
       replacements_ = java.util.Collections.emptyList();
       merges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpsertRecordSetsRequest();
     }
 
     @java.lang.Override
@@ -14694,34 +15181,34 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 deletions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               deletions_.add(
                   input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 replacements_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               replacements_.add(
                   input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 merges_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000004;
               }
               merges_.add(
                   input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14735,13 +15222,13 @@ public final class DnsZoneServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           deletions_ = java.util.Collections.unmodifiableList(deletions_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           replacements_ = java.util.Collections.unmodifiableList(replacements_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           merges_ = java.util.Collections.unmodifiableList(merges_);
         }
         this.unknownFields = unknownFields.build();
@@ -14761,7 +15248,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
@@ -14772,7 +15258,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -14793,7 +15281,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -14817,6 +15307,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getDeletionsList() {
       return deletions_;
     }
@@ -14827,6 +15318,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getDeletionsOrBuilderList() {
       return deletions_;
@@ -14838,6 +15330,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public int getDeletionsCount() {
       return deletions_.size();
     }
@@ -14848,6 +15341,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index) {
       return deletions_.get(index);
     }
@@ -14858,6 +15352,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
         int index) {
       return deletions_.get(index);
@@ -14872,6 +15367,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getReplacementsList() {
       return replacements_;
     }
@@ -14882,6 +15378,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getReplacementsOrBuilderList() {
       return replacements_;
@@ -14893,6 +15390,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public int getReplacementsCount() {
       return replacements_.size();
     }
@@ -14903,6 +15401,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getReplacements(int index) {
       return replacements_.get(index);
     }
@@ -14913,6 +15412,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getReplacementsOrBuilder(
         int index) {
       return replacements_.get(index);
@@ -14927,6 +15427,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getMergesList() {
       return merges_;
     }
@@ -14937,6 +15438,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getMergesOrBuilderList() {
       return merges_;
@@ -14948,6 +15450,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public int getMergesCount() {
       return merges_.size();
     }
@@ -14958,6 +15461,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getMerges(int index) {
       return merges_.get(index);
     }
@@ -14968,6 +15472,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getMergesOrBuilder(
         int index) {
       return merges_.get(index);
@@ -14987,7 +15492,7 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       for (int i = 0; i < deletions_.size(); i++) {
@@ -15008,7 +15513,7 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       for (int i = 0; i < deletions_.size(); i++) {
@@ -15038,17 +15543,16 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && getDeletionsList()
-          .equals(other.getDeletionsList());
-      result = result && getReplacementsList()
-          .equals(other.getReplacementsList());
-      result = result && getMergesList()
-          .equals(other.getMergesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!getDeletionsList()
+          .equals(other.getDeletionsList())) return false;
+      if (!getReplacementsList()
+          .equals(other.getReplacementsList())) return false;
+      if (!getMergesList()
+          .equals(other.getMergesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15212,19 +15716,19 @@ public final class DnsZoneServiceOuterClass {
 
         if (deletionsBuilder_ == null) {
           deletions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           deletionsBuilder_.clear();
         }
         if (replacementsBuilder_ == null) {
           replacements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           replacementsBuilder_.clear();
         }
         if (mergesBuilder_ == null) {
           merges_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           mergesBuilder_.clear();
         }
@@ -15255,71 +15759,69 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.dnsZoneId_ = dnsZoneId_;
         if (deletionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             deletions_ = java.util.Collections.unmodifiableList(deletions_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.deletions_ = deletions_;
         } else {
           result.deletions_ = deletionsBuilder_.build();
         }
         if (replacementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             replacements_ = java.util.Collections.unmodifiableList(replacements_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.replacements_ = replacements_;
         } else {
           result.replacements_ = replacementsBuilder_.build();
         }
         if (mergesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             merges_ = java.util.Collections.unmodifiableList(merges_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.merges_ = merges_;
         } else {
           result.merges_ = mergesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15341,7 +15843,7 @@ public final class DnsZoneServiceOuterClass {
           if (!other.deletions_.isEmpty()) {
             if (deletions_.isEmpty()) {
               deletions_ = other.deletions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureDeletionsIsMutable();
               deletions_.addAll(other.deletions_);
@@ -15354,7 +15856,7 @@ public final class DnsZoneServiceOuterClass {
               deletionsBuilder_.dispose();
               deletionsBuilder_ = null;
               deletions_ = other.deletions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               deletionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDeletionsFieldBuilder() : null;
@@ -15367,7 +15869,7 @@ public final class DnsZoneServiceOuterClass {
           if (!other.replacements_.isEmpty()) {
             if (replacements_.isEmpty()) {
               replacements_ = other.replacements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureReplacementsIsMutable();
               replacements_.addAll(other.replacements_);
@@ -15380,7 +15882,7 @@ public final class DnsZoneServiceOuterClass {
               replacementsBuilder_.dispose();
               replacementsBuilder_ = null;
               replacements_ = other.replacements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               replacementsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getReplacementsFieldBuilder() : null;
@@ -15393,7 +15895,7 @@ public final class DnsZoneServiceOuterClass {
           if (!other.merges_.isEmpty()) {
             if (merges_.isEmpty()) {
               merges_ = other.merges_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureMergesIsMutable();
               merges_.addAll(other.merges_);
@@ -15406,7 +15908,7 @@ public final class DnsZoneServiceOuterClass {
               mergesBuilder_.dispose();
               mergesBuilder_ = null;
               merges_ = other.merges_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
               mergesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getMergesFieldBuilder() : null;
@@ -15454,6 +15956,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -15475,6 +15978,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -15497,6 +16001,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -15516,6 +16022,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -15531,6 +16038,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15547,9 +16056,9 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_ =
         java.util.Collections.emptyList();
       private void ensureDeletionsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           deletions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(deletions_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -15743,7 +16252,7 @@ public final class DnsZoneServiceOuterClass {
       public Builder clearDeletions() {
         if (deletionsBuilder_ == null) {
           deletions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           deletionsBuilder_.clear();
@@ -15848,7 +16357,7 @@ public final class DnsZoneServiceOuterClass {
           deletionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
                   deletions_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           deletions_ = null;
@@ -15859,9 +16368,9 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> replacements_ =
         java.util.Collections.emptyList();
       private void ensureReplacementsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           replacements_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(replacements_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -16055,7 +16564,7 @@ public final class DnsZoneServiceOuterClass {
       public Builder clearReplacements() {
         if (replacementsBuilder_ == null) {
           replacements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           replacementsBuilder_.clear();
@@ -16160,7 +16669,7 @@ public final class DnsZoneServiceOuterClass {
           replacementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
                   replacements_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           replacements_ = null;
@@ -16171,9 +16680,9 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> merges_ =
         java.util.Collections.emptyList();
       private void ensureMergesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           merges_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(merges_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -16367,7 +16876,7 @@ public final class DnsZoneServiceOuterClass {
       public Builder clearMerges() {
         if (mergesBuilder_ == null) {
           merges_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           mergesBuilder_.clear();
@@ -16472,7 +16981,7 @@ public final class DnsZoneServiceOuterClass {
           mergesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
                   merges_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           merges_ = null;
@@ -16482,7 +16991,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16539,7 +17048,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpsertRecordSetsMetadata}
    */
-  public  static final class UpsertRecordSetsMetadata extends
+  public static final class UpsertRecordSetsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpsertRecordSetsMetadata)
       UpsertRecordSetsMetadataOrBuilder {
@@ -16549,6 +17058,13 @@ public final class DnsZoneServiceOuterClass {
       super(builder);
     }
     private UpsertRecordSetsMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpsertRecordSetsMetadata();
     }
 
     @java.lang.Override
@@ -16575,7 +17091,7 @@ public final class DnsZoneServiceOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16644,9 +17160,8 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16821,35 +17336,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16894,7 +17409,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16955,6 +17470,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
     java.lang.String getDnsZoneId();
     /**
@@ -16964,6 +17480,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
@@ -16976,6 +17493,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -16986,6 +17504,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -16995,6 +17514,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -17010,6 +17530,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -17023,6 +17544,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -17030,7 +17552,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZoneOperationsRequest}
    */
-  public  static final class ListDnsZoneOperationsRequest extends
+  public static final class ListDnsZoneOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.ListDnsZoneOperationsRequest)
       ListDnsZoneOperationsRequestOrBuilder {
@@ -17041,9 +17563,15 @@ public final class DnsZoneServiceOuterClass {
     }
     private ListDnsZoneOperationsRequest() {
       dnsZoneId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDnsZoneOperationsRequest();
     }
 
     @java.lang.Override
@@ -17059,7 +17587,6 @@ public final class DnsZoneServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17094,7 +17621,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17134,7 +17661,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
      */
+    @java.lang.Override
     public java.lang.String getDnsZoneId() {
       java.lang.Object ref = dnsZoneId_;
       if (ref instanceof java.lang.String) {
@@ -17154,7 +17683,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDnsZoneIdBytes() {
       java.lang.Object ref = dnsZoneId_;
@@ -17179,7 +17710,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -17193,7 +17726,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -17213,7 +17748,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -17241,7 +17778,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -17265,7 +17804,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -17294,16 +17835,16 @@ public final class DnsZoneServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -17315,17 +17856,17 @@ public final class DnsZoneServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDnsZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -17343,17 +17884,16 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getDnsZoneId()
-          .equals(other.getDnsZoneId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17549,35 +18089,35 @@ public final class DnsZoneServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17643,6 +18183,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
        */
       public java.lang.String getDnsZoneId() {
         java.lang.Object ref = dnsZoneId_;
@@ -17663,6 +18204,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
        */
       public com.google.protobuf.ByteString
           getDnsZoneIdBytes() {
@@ -17684,6 +18226,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneId(
           java.lang.String value) {
@@ -17702,6 +18246,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDnsZoneId() {
         
@@ -17716,6 +18261,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setDnsZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17738,7 +18285,9 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -17750,6 +18299,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -17765,6 +18316,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -17781,6 +18333,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -17801,6 +18354,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -17822,6 +18376,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -17840,6 +18396,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -17854,6 +18411,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -17879,6 +18438,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -17903,6 +18463,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -17928,6 +18489,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -17950,6 +18513,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -17968,6 +18532,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -17983,7 +18549,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18090,6 +18656,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -18101,6 +18668,7 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -18108,7 +18676,7 @@ public final class DnsZoneServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZoneOperationsResponse}
    */
-  public  static final class ListDnsZoneOperationsResponse extends
+  public static final class ListDnsZoneOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.ListDnsZoneOperationsResponse)
       ListDnsZoneOperationsResponseOrBuilder {
@@ -18120,6 +18688,13 @@ public final class DnsZoneServiceOuterClass {
     private ListDnsZoneOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDnsZoneOperationsResponse();
     }
 
     @java.lang.Override
@@ -18147,7 +18722,7 @@ public final class DnsZoneServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -18162,7 +18737,7 @@ public final class DnsZoneServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18176,7 +18751,7 @@ public final class DnsZoneServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -18196,7 +18771,6 @@ public final class DnsZoneServiceOuterClass {
               yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -18206,6 +18780,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -18216,6 +18791,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -18227,6 +18803,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -18237,6 +18814,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -18247,6 +18825,7 @@ public final class DnsZoneServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -18263,7 +18842,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -18285,7 +18866,9 @@ public final class DnsZoneServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -18317,7 +18900,7 @@ public final class DnsZoneServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -18333,7 +18916,7 @@ public final class DnsZoneServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -18351,13 +18934,12 @@ public final class DnsZoneServiceOuterClass {
       }
       yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18542,9 +19124,8 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -18553,42 +19134,41 @@ public final class DnsZoneServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18665,7 +19245,7 @@ public final class DnsZoneServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -18966,7 +19546,7 @@ public final class DnsZoneServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -18984,6 +19564,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -19006,6 +19587,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -19029,6 +19611,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -19049,6 +19633,7 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -19065,6 +19650,8 @@ public final class DnsZoneServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -19080,7 +19667,7 @@ public final class DnsZoneServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19374,15 +19961,7 @@ public final class DnsZoneServiceOuterClass {
       "m/yandex-cloud/go-genproto/yandex/cloud/" +
       "dns/v1;dnsb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -19392,7 +19971,7 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_fieldAccessorTable = new

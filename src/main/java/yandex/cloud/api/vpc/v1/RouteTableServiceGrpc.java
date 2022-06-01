@@ -1,19 +1,6 @@
 package yandex.cloud.api.vpc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/vpc/v1/route_table_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RouteTableServiceGrpc {
 
   private RouteTableServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class RouteTableServiceGrpc {
     if ((getGetMethod = RouteTableServiceGrpc.getGetMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getGetMethod = RouteTableServiceGrpc.getGetMethod) == null) {
-          RouteTableServiceGrpc.getGetMethod = getGetMethod = 
+          RouteTableServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest,
@@ -76,22 +63,21 @@ public final class RouteTableServiceGrpc {
     if ((getListMethod = RouteTableServiceGrpc.getListMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getListMethod = RouteTableServiceGrpc.getListMethod) == null) {
-          RouteTableServiceGrpc.getListMethod = getListMethod = 
+          RouteTableServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest, yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest,
@@ -108,22 +94,21 @@ public final class RouteTableServiceGrpc {
     if ((getCreateMethod = RouteTableServiceGrpc.getCreateMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getCreateMethod = RouteTableServiceGrpc.getCreateMethod) == null) {
-          RouteTableServiceGrpc.getCreateMethod = getCreateMethod = 
+          RouteTableServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest,
@@ -140,22 +125,21 @@ public final class RouteTableServiceGrpc {
     if ((getUpdateMethod = RouteTableServiceGrpc.getUpdateMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getUpdateMethod = RouteTableServiceGrpc.getUpdateMethod) == null) {
-          RouteTableServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          RouteTableServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest,
@@ -172,22 +156,21 @@ public final class RouteTableServiceGrpc {
     if ((getDeleteMethod = RouteTableServiceGrpc.getDeleteMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getDeleteMethod = RouteTableServiceGrpc.getDeleteMethod) == null) {
-          RouteTableServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          RouteTableServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest,
@@ -204,22 +187,21 @@ public final class RouteTableServiceGrpc {
     if ((getListOperationsMethod = RouteTableServiceGrpc.getListOperationsMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getListOperationsMethod = RouteTableServiceGrpc.getListOperationsMethod) == null) {
-          RouteTableServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          RouteTableServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest, yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest,
@@ -236,29 +218,35 @@ public final class RouteTableServiceGrpc {
     if ((getMoveMethod = RouteTableServiceGrpc.getMoveMethod) == null) {
       synchronized (RouteTableServiceGrpc.class) {
         if ((getMoveMethod = RouteTableServiceGrpc.getMoveMethod) == null) {
-          RouteTableServiceGrpc.getMoveMethod = getMoveMethod = 
+          RouteTableServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.RouteTableService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RouteTableServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RouteTableServiceStub newStub(io.grpc.Channel channel) {
-    return new RouteTableServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RouteTableServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RouteTableServiceStub>() {
+        @java.lang.Override
+        public RouteTableServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RouteTableServiceStub(channel, callOptions);
+        }
+      };
+    return RouteTableServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class RouteTableServiceGrpc {
    */
   public static RouteTableServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RouteTableServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RouteTableServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RouteTableServiceBlockingStub>() {
+        @java.lang.Override
+        public RouteTableServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RouteTableServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RouteTableServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class RouteTableServiceGrpc {
    */
   public static RouteTableServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RouteTableServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RouteTableServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RouteTableServiceFutureStub>() {
+        @java.lang.Override
+        public RouteTableServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RouteTableServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RouteTableServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class RouteTableServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class RouteTableServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -313,7 +315,7 @@ public final class RouteTableServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -324,7 +326,7 @@ public final class RouteTableServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -334,7 +336,7 @@ public final class RouteTableServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -344,7 +346,7 @@ public final class RouteTableServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -354,56 +356,56 @@ public final class RouteTableServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest,
                 yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest,
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest,
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -417,19 +419,15 @@ public final class RouteTableServiceGrpc {
    * A set of methods for managing RouteTable resources.
    * </pre>
    */
-  public static final class RouteTableServiceStub extends io.grpc.stub.AbstractStub<RouteTableServiceStub> {
-    private RouteTableServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RouteTableServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RouteTableServiceStub extends io.grpc.stub.AbstractAsyncStub<RouteTableServiceStub> {
+    private RouteTableServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RouteTableServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RouteTableServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RouteTableServiceStub(channel, callOptions);
     }
 
@@ -441,7 +439,7 @@ public final class RouteTableServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -452,7 +450,7 @@ public final class RouteTableServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -464,7 +462,7 @@ public final class RouteTableServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -476,7 +474,7 @@ public final class RouteTableServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -487,7 +485,7 @@ public final class RouteTableServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -498,7 +496,7 @@ public final class RouteTableServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -509,7 +507,7 @@ public final class RouteTableServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -519,19 +517,15 @@ public final class RouteTableServiceGrpc {
    * A set of methods for managing RouteTable resources.
    * </pre>
    */
-  public static final class RouteTableServiceBlockingStub extends io.grpc.stub.AbstractStub<RouteTableServiceBlockingStub> {
-    private RouteTableServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RouteTableServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RouteTableServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RouteTableServiceBlockingStub> {
+    private RouteTableServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RouteTableServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RouteTableServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RouteTableServiceBlockingStub(channel, callOptions);
     }
 
@@ -542,7 +536,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable get(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -552,7 +546,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse list(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -563,7 +557,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -574,7 +568,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -584,7 +578,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -594,7 +588,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse listOperations(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -604,7 +598,7 @@ public final class RouteTableServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
   }
@@ -614,19 +608,15 @@ public final class RouteTableServiceGrpc {
    * A set of methods for managing RouteTable resources.
    * </pre>
    */
-  public static final class RouteTableServiceFutureStub extends io.grpc.stub.AbstractStub<RouteTableServiceFutureStub> {
-    private RouteTableServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RouteTableServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RouteTableServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RouteTableServiceFutureStub> {
+    private RouteTableServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RouteTableServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RouteTableServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RouteTableServiceFutureStub(channel, callOptions);
     }
 
@@ -638,7 +628,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> get(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.GetRouteTableRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -649,7 +639,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesResponse> list(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTablesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -661,7 +651,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.CreateRouteTableRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -673,7 +663,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.UpdateRouteTableRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -684,7 +674,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.DeleteRouteTableRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -695,7 +685,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.ListRouteTableOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -706,7 +696,7 @@ public final class RouteTableServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.vpc.v1.RouteTableServiceOuterClass.MoveRouteTableRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
   }

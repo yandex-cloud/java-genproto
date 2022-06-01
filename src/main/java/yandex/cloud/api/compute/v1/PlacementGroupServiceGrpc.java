@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/placement_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class PlacementGroupServiceGrpc {
 
   private PlacementGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class PlacementGroupServiceGrpc {
     if ((getGetMethod = PlacementGroupServiceGrpc.getGetMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getGetMethod = PlacementGroupServiceGrpc.getGetMethod) == null) {
-          PlacementGroupServiceGrpc.getGetMethod = getGetMethod = 
+          PlacementGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest,
@@ -76,22 +63,21 @@ public final class PlacementGroupServiceGrpc {
     if ((getListMethod = PlacementGroupServiceGrpc.getListMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getListMethod = PlacementGroupServiceGrpc.getListMethod) == null) {
-          PlacementGroupServiceGrpc.getListMethod = getListMethod = 
+          PlacementGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest,
@@ -108,22 +94,21 @@ public final class PlacementGroupServiceGrpc {
     if ((getCreateMethod = PlacementGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getCreateMethod = PlacementGroupServiceGrpc.getCreateMethod) == null) {
-          PlacementGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          PlacementGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest,
@@ -140,22 +125,21 @@ public final class PlacementGroupServiceGrpc {
     if ((getUpdateMethod = PlacementGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getUpdateMethod = PlacementGroupServiceGrpc.getUpdateMethod) == null) {
-          PlacementGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          PlacementGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest,
@@ -172,22 +156,21 @@ public final class PlacementGroupServiceGrpc {
     if ((getDeleteMethod = PlacementGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getDeleteMethod = PlacementGroupServiceGrpc.getDeleteMethod) == null) {
-          PlacementGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          PlacementGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest,
@@ -204,22 +187,21 @@ public final class PlacementGroupServiceGrpc {
     if ((getListInstancesMethod = PlacementGroupServiceGrpc.getListInstancesMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getListInstancesMethod = PlacementGroupServiceGrpc.getListInstancesMethod) == null) {
-          PlacementGroupServiceGrpc.getListInstancesMethod = getListInstancesMethod = 
+          PlacementGroupServiceGrpc.getListInstancesMethod = getListInstancesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "ListInstances"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInstances"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("ListInstances"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("ListInstances"))
+              .build();
         }
-     }
-     return getListInstancesMethod;
+      }
+    }
+    return getListInstancesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest,
@@ -236,29 +218,35 @@ public final class PlacementGroupServiceGrpc {
     if ((getListOperationsMethod = PlacementGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (PlacementGroupServiceGrpc.class) {
         if ((getListOperationsMethod = PlacementGroupServiceGrpc.getListOperationsMethod) == null) {
-          PlacementGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          PlacementGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest, yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.PlacementGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PlacementGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static PlacementGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new PlacementGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PlacementGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PlacementGroupServiceStub>() {
+        @java.lang.Override
+        public PlacementGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PlacementGroupServiceStub(channel, callOptions);
+        }
+      };
+    return PlacementGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class PlacementGroupServiceGrpc {
    */
   public static PlacementGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PlacementGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PlacementGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PlacementGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public PlacementGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PlacementGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return PlacementGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class PlacementGroupServiceGrpc {
    */
   public static PlacementGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PlacementGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PlacementGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PlacementGroupServiceFutureStub>() {
+        @java.lang.Override
+        public PlacementGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PlacementGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return PlacementGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -312,7 +314,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -322,7 +324,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -332,7 +334,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -342,7 +344,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void listInstances(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInstancesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInstancesMethod(), responseObserver);
     }
 
     /**
@@ -352,56 +354,56 @@ public final class PlacementGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest,
                 yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest,
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListInstancesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest,
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse>(
                   this, METHODID_LIST_INSTANCES)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest,
                 yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse>(
@@ -415,19 +417,15 @@ public final class PlacementGroupServiceGrpc {
    * A set of methods for managing placement groups.
    * </pre>
    */
-  public static final class PlacementGroupServiceStub extends io.grpc.stub.AbstractStub<PlacementGroupServiceStub> {
-    private PlacementGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PlacementGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PlacementGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<PlacementGroupServiceStub> {
+    private PlacementGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PlacementGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PlacementGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PlacementGroupServiceStub(channel, callOptions);
     }
 
@@ -439,7 +437,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -450,7 +448,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -461,7 +459,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -472,7 +470,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -483,7 +481,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -494,7 +492,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void listInstances(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInstancesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -505,7 +503,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -515,19 +513,15 @@ public final class PlacementGroupServiceGrpc {
    * A set of methods for managing placement groups.
    * </pre>
    */
-  public static final class PlacementGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<PlacementGroupServiceBlockingStub> {
-    private PlacementGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PlacementGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PlacementGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PlacementGroupServiceBlockingStub> {
+    private PlacementGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PlacementGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PlacementGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PlacementGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -538,7 +532,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup get(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -548,7 +542,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse list(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -558,7 +552,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -568,7 +562,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -578,7 +572,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -588,7 +582,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse listInstances(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInstancesMethod(), getCallOptions(), request);
     }
 
@@ -598,7 +592,7 @@ public final class PlacementGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse listOperations(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -608,19 +602,15 @@ public final class PlacementGroupServiceGrpc {
    * A set of methods for managing placement groups.
    * </pre>
    */
-  public static final class PlacementGroupServiceFutureStub extends io.grpc.stub.AbstractStub<PlacementGroupServiceFutureStub> {
-    private PlacementGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PlacementGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PlacementGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PlacementGroupServiceFutureStub> {
+    private PlacementGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PlacementGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PlacementGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PlacementGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -632,7 +622,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> get(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -643,7 +633,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsResponse> list(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -654,7 +644,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -665,7 +655,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.UpdatePlacementGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -676,7 +666,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.DeletePlacementGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -687,7 +677,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesResponse> listInstances(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupInstancesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInstancesMethod(), getCallOptions()), request);
     }
 
@@ -698,7 +688,7 @@ public final class PlacementGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsResponse> listOperations(
         yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.ListPlacementGroupOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

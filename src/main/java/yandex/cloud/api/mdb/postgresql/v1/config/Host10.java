@@ -24,6 +24,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
+     * @return Whether the recoveryMinApplyDelay field is set.
      */
     boolean hasRecoveryMinApplyDelay();
     /**
@@ -32,6 +33,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
+     * @return The recoveryMinApplyDelay.
      */
     com.google.protobuf.Int64Value getRecoveryMinApplyDelay();
     /**
@@ -49,6 +51,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
+     * @return Whether the sharedBuffers field is set.
      */
     boolean hasSharedBuffers();
     /**
@@ -57,6 +60,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
+     * @return The sharedBuffers.
      */
     com.google.protobuf.Int64Value getSharedBuffers();
     /**
@@ -74,6 +78,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
+     * @return Whether the tempBuffers field is set.
      */
     boolean hasTempBuffers();
     /**
@@ -82,6 +87,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
+     * @return The tempBuffers.
      */
     com.google.protobuf.Int64Value getTempBuffers();
     /**
@@ -99,6 +105,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value work_mem = 4;</code>
+     * @return Whether the workMem field is set.
      */
     boolean hasWorkMem();
     /**
@@ -107,6 +114,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value work_mem = 4;</code>
+     * @return The workMem.
      */
     com.google.protobuf.Int64Value getWorkMem();
     /**
@@ -124,6 +132,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
+     * @return Whether the replacementSortTuples field is set.
      */
     boolean hasReplacementSortTuples();
     /**
@@ -132,6 +141,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
+     * @return The replacementSortTuples.
      */
     com.google.protobuf.Int64Value getReplacementSortTuples();
     /**
@@ -149,6 +159,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
+     * @return Whether the tempFileLimit field is set.
      */
     boolean hasTempFileLimit();
     /**
@@ -157,6 +168,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
+     * @return The tempFileLimit.
      */
     com.google.protobuf.Int64Value getTempFileLimit();
     /**
@@ -170,10 +182,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
+     * @return Whether the backendFlushAfter field is set.
      */
     boolean hasBackendFlushAfter();
     /**
      * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
+     * @return The backendFlushAfter.
      */
     com.google.protobuf.Int64Value getBackendFlushAfter();
     /**
@@ -183,10 +197,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
+     * @return Whether the oldSnapshotThreshold field is set.
      */
     boolean hasOldSnapshotThreshold();
     /**
      * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
+     * @return The oldSnapshotThreshold.
      */
     com.google.protobuf.Int64Value getOldSnapshotThreshold();
     /**
@@ -200,6 +216,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
+     * @return Whether the maxStandbyStreamingDelay field is set.
      */
     boolean hasMaxStandbyStreamingDelay();
     /**
@@ -208,6 +225,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
+     * @return The maxStandbyStreamingDelay.
      */
     com.google.protobuf.Int64Value getMaxStandbyStreamingDelay();
     /**
@@ -221,19 +239,23 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+     * @return The enum numeric value on the wire for constraintExclusion.
      */
     int getConstraintExclusionValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+     * @return The constraintExclusion.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion getConstraintExclusion();
 
     /**
      * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
+     * @return Whether the cursorTupleFraction field is set.
      */
     boolean hasCursorTupleFraction();
     /**
      * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
+     * @return The cursorTupleFraction.
      */
     com.google.protobuf.DoubleValue getCursorTupleFraction();
     /**
@@ -243,10 +265,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return Whether the fromCollapseLimit field is set.
      */
     boolean hasFromCollapseLimit();
     /**
      * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return The fromCollapseLimit.
      */
     com.google.protobuf.Int64Value getFromCollapseLimit();
     /**
@@ -256,10 +280,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return Whether the joinCollapseLimit field is set.
      */
     boolean hasJoinCollapseLimit();
     /**
      * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return The joinCollapseLimit.
      */
     com.google.protobuf.Int64Value getJoinCollapseLimit();
     /**
@@ -269,37 +295,45 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+     * @return The enum numeric value on the wire for forceParallelMode.
      */
     int getForceParallelModeValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+     * @return The forceParallelMode.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode getForceParallelMode();
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+     * @return The enum numeric value on the wire for clientMinMessages.
      */
     int getClientMinMessagesValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+     * @return The clientMinMessages.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getClientMinMessages();
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+     * @return The enum numeric value on the wire for logMinMessages.
      */
     int getLogMinMessagesValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+     * @return The logMinMessages.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinMessages();
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+     * @return The enum numeric value on the wire for logMinErrorStatement.
      */
     int getLogMinErrorStatementValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+     * @return The logMinErrorStatement.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinErrorStatement();
 
@@ -309,6 +343,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
+     * @return Whether the logMinDurationStatement field is set.
      */
     boolean hasLogMinDurationStatement();
     /**
@@ -317,6 +352,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
+     * @return The logMinDurationStatement.
      */
     com.google.protobuf.Int64Value getLogMinDurationStatement();
     /**
@@ -330,10 +366,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
+     * @return Whether the logCheckpoints field is set.
      */
     boolean hasLogCheckpoints();
     /**
      * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
+     * @return The logCheckpoints.
      */
     com.google.protobuf.BoolValue getLogCheckpoints();
     /**
@@ -343,10 +381,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue log_connections = 20;</code>
+     * @return Whether the logConnections field is set.
      */
     boolean hasLogConnections();
     /**
      * <code>.google.protobuf.BoolValue log_connections = 20;</code>
+     * @return The logConnections.
      */
     com.google.protobuf.BoolValue getLogConnections();
     /**
@@ -356,10 +396,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
+     * @return Whether the logDisconnections field is set.
      */
     boolean hasLogDisconnections();
     /**
      * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
+     * @return The logDisconnections.
      */
     com.google.protobuf.BoolValue getLogDisconnections();
     /**
@@ -369,10 +411,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue log_duration = 22;</code>
+     * @return Whether the logDuration field is set.
      */
     boolean hasLogDuration();
     /**
      * <code>.google.protobuf.BoolValue log_duration = 22;</code>
+     * @return The logDuration.
      */
     com.google.protobuf.BoolValue getLogDuration();
     /**
@@ -382,19 +426,23 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+     * @return The enum numeric value on the wire for logErrorVerbosity.
      */
     int getLogErrorVerbosityValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+     * @return The logErrorVerbosity.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity getLogErrorVerbosity();
 
     /**
      * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
+     * @return Whether the logLockWaits field is set.
      */
     boolean hasLogLockWaits();
     /**
      * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
+     * @return The logLockWaits.
      */
     com.google.protobuf.BoolValue getLogLockWaits();
     /**
@@ -404,19 +452,23 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+     * @return The enum numeric value on the wire for logStatement.
      */
     int getLogStatementValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+     * @return The logStatement.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement getLogStatement();
 
     /**
      * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
+     * @return Whether the logTempFiles field is set.
      */
     boolean hasLogTempFiles();
     /**
      * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
+     * @return The logTempFiles.
      */
     com.google.protobuf.Int64Value getLogTempFiles();
     /**
@@ -426,20 +478,24 @@ public final class Host10 {
 
     /**
      * <code>string search_path = 27;</code>
+     * @return The searchPath.
      */
     java.lang.String getSearchPath();
     /**
      * <code>string search_path = 27;</code>
+     * @return The bytes for searchPath.
      */
     com.google.protobuf.ByteString
         getSearchPathBytes();
 
     /**
      * <code>.google.protobuf.BoolValue row_security = 28;</code>
+     * @return Whether the rowSecurity field is set.
      */
     boolean hasRowSecurity();
     /**
      * <code>.google.protobuf.BoolValue row_security = 28;</code>
+     * @return The rowSecurity.
      */
     com.google.protobuf.BoolValue getRowSecurity();
     /**
@@ -449,10 +505,12 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+     * @return The enum numeric value on the wire for defaultTransactionIsolation.
      */
     int getDefaultTransactionIsolationValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+     * @return The defaultTransactionIsolation.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation getDefaultTransactionIsolation();
 
@@ -462,6 +520,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
+     * @return Whether the statementTimeout field is set.
      */
     boolean hasStatementTimeout();
     /**
@@ -470,6 +529,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
+     * @return The statementTimeout.
      */
     com.google.protobuf.Int64Value getStatementTimeout();
     /**
@@ -487,6 +547,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
+     * @return Whether the lockTimeout field is set.
      */
     boolean hasLockTimeout();
     /**
@@ -495,6 +556,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
+     * @return The lockTimeout.
      */
     com.google.protobuf.Int64Value getLockTimeout();
     /**
@@ -512,6 +574,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * @return Whether the idleInTransactionSessionTimeout field is set.
      */
     boolean hasIdleInTransactionSessionTimeout();
     /**
@@ -520,6 +583,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * @return The idleInTransactionSessionTimeout.
      */
     com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout();
     /**
@@ -533,28 +597,34 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+     * @return The enum numeric value on the wire for byteaOutput.
      */
     int getByteaOutputValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+     * @return The byteaOutput.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput getByteaOutput();
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+     * @return The enum numeric value on the wire for xmlbinary.
      */
     int getXmlbinaryValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+     * @return The xmlbinary.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary getXmlbinary();
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+     * @return The enum numeric value on the wire for xmloption.
      */
     int getXmloptionValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+     * @return The xmloption.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption getXmloption();
 
@@ -564,6 +634,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
+     * @return Whether the ginPendingListLimit field is set.
      */
     boolean hasGinPendingListLimit();
     /**
@@ -572,6 +643,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
+     * @return The ginPendingListLimit.
      */
     com.google.protobuf.Int64Value getGinPendingListLimit();
     /**
@@ -589,6 +661,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
+     * @return Whether the deadlockTimeout field is set.
      */
     boolean hasDeadlockTimeout();
     /**
@@ -597,6 +670,7 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
+     * @return The deadlockTimeout.
      */
     com.google.protobuf.Int64Value getDeadlockTimeout();
     /**
@@ -610,10 +684,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
+     * @return Whether the maxLocksPerTransaction field is set.
      */
     boolean hasMaxLocksPerTransaction();
     /**
      * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
+     * @return The maxLocksPerTransaction.
      */
     com.google.protobuf.Int64Value getMaxLocksPerTransaction();
     /**
@@ -623,10 +699,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
+     * @return Whether the maxPredLocksPerTransaction field is set.
      */
     boolean hasMaxPredLocksPerTransaction();
     /**
      * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
+     * @return The maxPredLocksPerTransaction.
      */
     com.google.protobuf.Int64Value getMaxPredLocksPerTransaction();
     /**
@@ -636,10 +714,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
+     * @return Whether the arrayNulls field is set.
      */
     boolean hasArrayNulls();
     /**
      * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
+     * @return The arrayNulls.
      */
     com.google.protobuf.BoolValue getArrayNulls();
     /**
@@ -649,19 +729,23 @@ public final class Host10 {
 
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+     * @return The enum numeric value on the wire for backslashQuote.
      */
     int getBackslashQuoteValue();
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+     * @return The backslashQuote.
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote getBackslashQuote();
 
     /**
      * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
+     * @return Whether the defaultWithOids field is set.
      */
     boolean hasDefaultWithOids();
     /**
      * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
+     * @return The defaultWithOids.
      */
     com.google.protobuf.BoolValue getDefaultWithOids();
     /**
@@ -671,10 +755,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
+     * @return Whether the escapeStringWarning field is set.
      */
     boolean hasEscapeStringWarning();
     /**
      * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
+     * @return The escapeStringWarning.
      */
     com.google.protobuf.BoolValue getEscapeStringWarning();
     /**
@@ -684,10 +770,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
+     * @return Whether the loCompatPrivileges field is set.
      */
     boolean hasLoCompatPrivileges();
     /**
      * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
+     * @return The loCompatPrivileges.
      */
     com.google.protobuf.BoolValue getLoCompatPrivileges();
     /**
@@ -697,10 +785,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
+     * @return Whether the operatorPrecedenceWarning field is set.
      */
     boolean hasOperatorPrecedenceWarning();
     /**
      * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
+     * @return The operatorPrecedenceWarning.
      */
     com.google.protobuf.BoolValue getOperatorPrecedenceWarning();
     /**
@@ -710,10 +800,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
+     * @return Whether the quoteAllIdentifiers field is set.
      */
     boolean hasQuoteAllIdentifiers();
     /**
      * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
+     * @return The quoteAllIdentifiers.
      */
     com.google.protobuf.BoolValue getQuoteAllIdentifiers();
     /**
@@ -723,10 +815,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
+     * @return Whether the standardConformingStrings field is set.
      */
     boolean hasStandardConformingStrings();
     /**
      * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
+     * @return The standardConformingStrings.
      */
     com.google.protobuf.BoolValue getStandardConformingStrings();
     /**
@@ -736,10 +830,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
+     * @return Whether the synchronizeSeqscans field is set.
      */
     boolean hasSynchronizeSeqscans();
     /**
      * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
+     * @return The synchronizeSeqscans.
      */
     com.google.protobuf.BoolValue getSynchronizeSeqscans();
     /**
@@ -749,10 +845,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
+     * @return Whether the transformNullEquals field is set.
      */
     boolean hasTransformNullEquals();
     /**
      * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
+     * @return The transformNullEquals.
      */
     com.google.protobuf.BoolValue getTransformNullEquals();
     /**
@@ -762,10 +860,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
+     * @return Whether the exitOnError field is set.
      */
     boolean hasExitOnError();
     /**
      * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
+     * @return The exitOnError.
      */
     com.google.protobuf.BoolValue getExitOnError();
     /**
@@ -775,10 +875,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
+     * @return Whether the seqPageCost field is set.
      */
     boolean hasSeqPageCost();
     /**
      * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
+     * @return The seqPageCost.
      */
     com.google.protobuf.DoubleValue getSeqPageCost();
     /**
@@ -788,10 +890,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
+     * @return Whether the randomPageCost field is set.
      */
     boolean hasRandomPageCost();
     /**
      * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
+     * @return The randomPageCost.
      */
     com.google.protobuf.DoubleValue getRandomPageCost();
     /**
@@ -801,10 +905,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
+     * @return Whether the enableBitmapscan field is set.
      */
     boolean hasEnableBitmapscan();
     /**
      * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
+     * @return The enableBitmapscan.
      */
     com.google.protobuf.BoolValue getEnableBitmapscan();
     /**
@@ -814,10 +920,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
+     * @return Whether the enableHashagg field is set.
      */
     boolean hasEnableHashagg();
     /**
      * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
+     * @return The enableHashagg.
      */
     com.google.protobuf.BoolValue getEnableHashagg();
     /**
@@ -827,10 +935,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
+     * @return Whether the enableHashjoin field is set.
      */
     boolean hasEnableHashjoin();
     /**
      * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
+     * @return The enableHashjoin.
      */
     com.google.protobuf.BoolValue getEnableHashjoin();
     /**
@@ -840,10 +950,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
+     * @return Whether the enableIndexscan field is set.
      */
     boolean hasEnableIndexscan();
     /**
      * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
+     * @return The enableIndexscan.
      */
     com.google.protobuf.BoolValue getEnableIndexscan();
     /**
@@ -853,10 +965,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
+     * @return Whether the enableIndexonlyscan field is set.
      */
     boolean hasEnableIndexonlyscan();
     /**
      * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
+     * @return The enableIndexonlyscan.
      */
     com.google.protobuf.BoolValue getEnableIndexonlyscan();
     /**
@@ -866,10 +980,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_material = 59;</code>
+     * @return Whether the enableMaterial field is set.
      */
     boolean hasEnableMaterial();
     /**
      * <code>.google.protobuf.BoolValue enable_material = 59;</code>
+     * @return The enableMaterial.
      */
     com.google.protobuf.BoolValue getEnableMaterial();
     /**
@@ -879,10 +995,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
+     * @return Whether the enableMergejoin field is set.
      */
     boolean hasEnableMergejoin();
     /**
      * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
+     * @return The enableMergejoin.
      */
     com.google.protobuf.BoolValue getEnableMergejoin();
     /**
@@ -892,10 +1010,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
+     * @return Whether the enableNestloop field is set.
      */
     boolean hasEnableNestloop();
     /**
      * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
+     * @return The enableNestloop.
      */
     com.google.protobuf.BoolValue getEnableNestloop();
     /**
@@ -905,10 +1025,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
+     * @return Whether the enableSeqscan field is set.
      */
     boolean hasEnableSeqscan();
     /**
      * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
+     * @return The enableSeqscan.
      */
     com.google.protobuf.BoolValue getEnableSeqscan();
     /**
@@ -918,10 +1040,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
+     * @return Whether the enableSort field is set.
      */
     boolean hasEnableSort();
     /**
      * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
+     * @return The enableSort.
      */
     com.google.protobuf.BoolValue getEnableSort();
     /**
@@ -931,10 +1055,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
+     * @return Whether the enableTidscan field is set.
      */
     boolean hasEnableTidscan();
     /**
      * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
+     * @return The enableTidscan.
      */
     com.google.protobuf.BoolValue getEnableTidscan();
     /**
@@ -944,10 +1070,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return Whether the maxParallelWorkers field is set.
      */
     boolean hasMaxParallelWorkers();
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return The maxParallelWorkers.
      */
     com.google.protobuf.Int64Value getMaxParallelWorkers();
     /**
@@ -957,10 +1085,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return Whether the maxParallelWorkersPerGather field is set.
      */
     boolean hasMaxParallelWorkersPerGather();
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return The maxParallelWorkersPerGather.
      */
     com.google.protobuf.Int64Value getMaxParallelWorkersPerGather();
     /**
@@ -970,20 +1100,24 @@ public final class Host10 {
 
     /**
      * <code>string timezone = 67;</code>
+     * @return The timezone.
      */
     java.lang.String getTimezone();
     /**
      * <code>string timezone = 67;</code>
+     * @return The bytes for timezone.
      */
     com.google.protobuf.ByteString
         getTimezoneBytes();
 
     /**
      * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return Whether the effectiveIoConcurrency field is set.
      */
     boolean hasEffectiveIoConcurrency();
     /**
      * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The effectiveIoConcurrency.
      */
     com.google.protobuf.Int64Value getEffectiveIoConcurrency();
     /**
@@ -993,10 +1127,12 @@ public final class Host10 {
 
     /**
      * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * @return Whether the effectiveCacheSize field is set.
      */
     boolean hasEffectiveCacheSize();
     /**
      * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * @return The effectiveCacheSize.
      */
     com.google.protobuf.Int64Value getEffectiveCacheSize();
     /**
@@ -1013,7 +1149,7 @@ public final class Host10 {
    *
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10}
    */
-  public  static final class PostgresqlHostConfig10 extends
+  public static final class PostgresqlHostConfig10 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10)
       PostgresqlHostConfig10OrBuilder {
@@ -1040,6 +1176,13 @@ public final class Host10 {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PostgresqlHostConfig10();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1052,9 +1195,6 @@ public final class Host10 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
-      int mutable_bitField1_ = 0;
-      int mutable_bitField2_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1852,7 +1992,7 @@ public final class Host10 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1934,6 +2074,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1941,6 +2083,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ConstraintExclusion forNumber(int value) {
         switch (value) {
           case 0: return CONSTRAINT_EXCLUSION_UNSPECIFIED;
@@ -1965,6 +2111,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2050,6 +2200,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2057,6 +2209,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ForceParallelMode forNumber(int value) {
         switch (value) {
           case 0: return FORCE_PARALLEL_MODE_UNSPECIFIED;
@@ -2081,6 +2237,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2230,6 +2390,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2237,6 +2399,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LogLevel forNumber(int value) {
         switch (value) {
           case 0: return LOG_LEVEL_UNSPECIFIED;
@@ -2269,6 +2435,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2354,6 +2524,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2361,6 +2533,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LogErrorVerbosity forNumber(int value) {
         switch (value) {
           case 0: return LOG_ERROR_VERBOSITY_UNSPECIFIED;
@@ -2385,6 +2561,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2478,6 +2658,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2485,6 +2667,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LogStatement forNumber(int value) {
         switch (value) {
           case 0: return LOG_STATEMENT_UNSPECIFIED;
@@ -2510,6 +2696,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2603,6 +2793,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2610,6 +2802,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static TransactionIsolation forNumber(int value) {
         switch (value) {
           case 0: return TRANSACTION_ISOLATION_UNSPECIFIED;
@@ -2635,6 +2831,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2712,6 +2912,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2719,6 +2921,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ByteaOutput forNumber(int value) {
         switch (value) {
           case 0: return BYTEA_OUTPUT_UNSPECIFIED;
@@ -2742,6 +2948,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2819,6 +3029,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2826,6 +3038,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static XmlBinary forNumber(int value) {
         switch (value) {
           case 0: return XML_BINARY_UNSPECIFIED;
@@ -2849,6 +3065,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2926,6 +3146,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2933,6 +3155,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static XmlOption forNumber(int value) {
         switch (value) {
           case 0: return XML_OPTION_UNSPECIFIED;
@@ -2956,6 +3182,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3049,6 +3279,8 @@ public final class Host10 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3056,6 +3288,10 @@ public final class Host10 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static BackslashQuote forNumber(int value) {
         switch (value) {
           case 0: return BACKSLASH_QUOTE_UNSPECIFIED;
@@ -3081,6 +3317,10 @@ public final class Host10 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3123,7 +3363,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
+     * @return Whether the recoveryMinApplyDelay field is set.
      */
+    @java.lang.Override
     public boolean hasRecoveryMinApplyDelay() {
       return recoveryMinApplyDelay_ != null;
     }
@@ -3133,7 +3375,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
+     * @return The recoveryMinApplyDelay.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRecoveryMinApplyDelay() {
       return recoveryMinApplyDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recoveryMinApplyDelay_;
     }
@@ -3144,6 +3388,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRecoveryMinApplyDelayOrBuilder() {
       return getRecoveryMinApplyDelay();
     }
@@ -3156,7 +3401,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
+     * @return Whether the sharedBuffers field is set.
      */
+    @java.lang.Override
     public boolean hasSharedBuffers() {
       return sharedBuffers_ != null;
     }
@@ -3166,7 +3413,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
+     * @return The sharedBuffers.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSharedBuffers() {
       return sharedBuffers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sharedBuffers_;
     }
@@ -3177,6 +3426,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSharedBuffersOrBuilder() {
       return getSharedBuffers();
     }
@@ -3189,7 +3439,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
+     * @return Whether the tempBuffers field is set.
      */
+    @java.lang.Override
     public boolean hasTempBuffers() {
       return tempBuffers_ != null;
     }
@@ -3199,7 +3451,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
+     * @return The tempBuffers.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTempBuffers() {
       return tempBuffers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tempBuffers_;
     }
@@ -3210,6 +3464,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTempBuffersOrBuilder() {
       return getTempBuffers();
     }
@@ -3222,7 +3477,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value work_mem = 4;</code>
+     * @return Whether the workMem field is set.
      */
+    @java.lang.Override
     public boolean hasWorkMem() {
       return workMem_ != null;
     }
@@ -3232,7 +3489,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value work_mem = 4;</code>
+     * @return The workMem.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getWorkMem() {
       return workMem_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : workMem_;
     }
@@ -3243,6 +3502,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value work_mem = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getWorkMemOrBuilder() {
       return getWorkMem();
     }
@@ -3255,7 +3515,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
+     * @return Whether the replacementSortTuples field is set.
      */
+    @java.lang.Override
     public boolean hasReplacementSortTuples() {
       return replacementSortTuples_ != null;
     }
@@ -3265,7 +3527,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
+     * @return The replacementSortTuples.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getReplacementSortTuples() {
       return replacementSortTuples_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replacementSortTuples_;
     }
@@ -3276,6 +3540,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getReplacementSortTuplesOrBuilder() {
       return getReplacementSortTuples();
     }
@@ -3288,7 +3553,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
+     * @return Whether the tempFileLimit field is set.
      */
+    @java.lang.Override
     public boolean hasTempFileLimit() {
       return tempFileLimit_ != null;
     }
@@ -3298,7 +3565,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
+     * @return The tempFileLimit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTempFileLimit() {
       return tempFileLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tempFileLimit_;
     }
@@ -3309,6 +3578,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTempFileLimitOrBuilder() {
       return getTempFileLimit();
     }
@@ -3317,19 +3587,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value backendFlushAfter_;
     /**
      * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
+     * @return Whether the backendFlushAfter field is set.
      */
+    @java.lang.Override
     public boolean hasBackendFlushAfter() {
       return backendFlushAfter_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
+     * @return The backendFlushAfter.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackendFlushAfter() {
       return backendFlushAfter_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backendFlushAfter_;
     }
     /**
      * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackendFlushAfterOrBuilder() {
       return getBackendFlushAfter();
     }
@@ -3338,19 +3613,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value oldSnapshotThreshold_;
     /**
      * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
+     * @return Whether the oldSnapshotThreshold field is set.
      */
+    @java.lang.Override
     public boolean hasOldSnapshotThreshold() {
       return oldSnapshotThreshold_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
+     * @return The oldSnapshotThreshold.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getOldSnapshotThreshold() {
       return oldSnapshotThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : oldSnapshotThreshold_;
     }
     /**
      * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getOldSnapshotThresholdOrBuilder() {
       return getOldSnapshotThreshold();
     }
@@ -3363,7 +3643,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
+     * @return Whether the maxStandbyStreamingDelay field is set.
      */
+    @java.lang.Override
     public boolean hasMaxStandbyStreamingDelay() {
       return maxStandbyStreamingDelay_ != null;
     }
@@ -3373,7 +3655,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
+     * @return The maxStandbyStreamingDelay.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxStandbyStreamingDelay() {
       return maxStandbyStreamingDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyStreamingDelay_;
     }
@@ -3384,6 +3668,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxStandbyStreamingDelayOrBuilder() {
       return getMaxStandbyStreamingDelay();
     }
@@ -3392,14 +3677,16 @@ public final class Host10 {
     private int constraintExclusion_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+     * @return The enum numeric value on the wire for constraintExclusion.
      */
-    public int getConstraintExclusionValue() {
+    @java.lang.Override public int getConstraintExclusionValue() {
       return constraintExclusion_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+     * @return The constraintExclusion.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion getConstraintExclusion() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion getConstraintExclusion() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion.valueOf(constraintExclusion_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion.UNRECOGNIZED : result;
@@ -3409,19 +3696,24 @@ public final class Host10 {
     private com.google.protobuf.DoubleValue cursorTupleFraction_;
     /**
      * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
+     * @return Whether the cursorTupleFraction field is set.
      */
+    @java.lang.Override
     public boolean hasCursorTupleFraction() {
       return cursorTupleFraction_ != null;
     }
     /**
      * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
+     * @return The cursorTupleFraction.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getCursorTupleFraction() {
       return cursorTupleFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cursorTupleFraction_;
     }
     /**
      * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getCursorTupleFractionOrBuilder() {
       return getCursorTupleFraction();
     }
@@ -3430,19 +3722,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value fromCollapseLimit_;
     /**
      * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return Whether the fromCollapseLimit field is set.
      */
+    @java.lang.Override
     public boolean hasFromCollapseLimit() {
       return fromCollapseLimit_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return The fromCollapseLimit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFromCollapseLimit() {
       return fromCollapseLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fromCollapseLimit_;
     }
     /**
      * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFromCollapseLimitOrBuilder() {
       return getFromCollapseLimit();
     }
@@ -3451,19 +3748,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value joinCollapseLimit_;
     /**
      * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return Whether the joinCollapseLimit field is set.
      */
+    @java.lang.Override
     public boolean hasJoinCollapseLimit() {
       return joinCollapseLimit_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
+     * @return The joinCollapseLimit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getJoinCollapseLimit() {
       return joinCollapseLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : joinCollapseLimit_;
     }
     /**
      * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getJoinCollapseLimitOrBuilder() {
       return getJoinCollapseLimit();
     }
@@ -3472,14 +3774,16 @@ public final class Host10 {
     private int forceParallelMode_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+     * @return The enum numeric value on the wire for forceParallelMode.
      */
-    public int getForceParallelModeValue() {
+    @java.lang.Override public int getForceParallelModeValue() {
       return forceParallelMode_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+     * @return The forceParallelMode.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode getForceParallelMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode getForceParallelMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode.valueOf(forceParallelMode_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode.UNRECOGNIZED : result;
@@ -3489,14 +3793,16 @@ public final class Host10 {
     private int clientMinMessages_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+     * @return The enum numeric value on the wire for clientMinMessages.
      */
-    public int getClientMinMessagesValue() {
+    @java.lang.Override public int getClientMinMessagesValue() {
       return clientMinMessages_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+     * @return The clientMinMessages.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getClientMinMessages() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getClientMinMessages() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.valueOf(clientMinMessages_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.UNRECOGNIZED : result;
@@ -3506,14 +3812,16 @@ public final class Host10 {
     private int logMinMessages_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+     * @return The enum numeric value on the wire for logMinMessages.
      */
-    public int getLogMinMessagesValue() {
+    @java.lang.Override public int getLogMinMessagesValue() {
       return logMinMessages_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+     * @return The logMinMessages.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinMessages() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinMessages() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.valueOf(logMinMessages_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.UNRECOGNIZED : result;
@@ -3523,14 +3831,16 @@ public final class Host10 {
     private int logMinErrorStatement_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+     * @return The enum numeric value on the wire for logMinErrorStatement.
      */
-    public int getLogMinErrorStatementValue() {
+    @java.lang.Override public int getLogMinErrorStatementValue() {
       return logMinErrorStatement_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+     * @return The logMinErrorStatement.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinErrorStatement() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinErrorStatement() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.valueOf(logMinErrorStatement_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.UNRECOGNIZED : result;
@@ -3544,7 +3854,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
+     * @return Whether the logMinDurationStatement field is set.
      */
+    @java.lang.Override
     public boolean hasLogMinDurationStatement() {
       return logMinDurationStatement_ != null;
     }
@@ -3554,7 +3866,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
+     * @return The logMinDurationStatement.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getLogMinDurationStatement() {
       return logMinDurationStatement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logMinDurationStatement_;
     }
@@ -3565,6 +3879,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getLogMinDurationStatementOrBuilder() {
       return getLogMinDurationStatement();
     }
@@ -3573,19 +3888,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue logCheckpoints_;
     /**
      * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
+     * @return Whether the logCheckpoints field is set.
      */
+    @java.lang.Override
     public boolean hasLogCheckpoints() {
       return logCheckpoints_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
+     * @return The logCheckpoints.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLogCheckpoints() {
       return logCheckpoints_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logCheckpoints_;
     }
     /**
      * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogCheckpointsOrBuilder() {
       return getLogCheckpoints();
     }
@@ -3594,19 +3914,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue logConnections_;
     /**
      * <code>.google.protobuf.BoolValue log_connections = 20;</code>
+     * @return Whether the logConnections field is set.
      */
+    @java.lang.Override
     public boolean hasLogConnections() {
       return logConnections_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue log_connections = 20;</code>
+     * @return The logConnections.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLogConnections() {
       return logConnections_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logConnections_;
     }
     /**
      * <code>.google.protobuf.BoolValue log_connections = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogConnectionsOrBuilder() {
       return getLogConnections();
     }
@@ -3615,19 +3940,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue logDisconnections_;
     /**
      * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
+     * @return Whether the logDisconnections field is set.
      */
+    @java.lang.Override
     public boolean hasLogDisconnections() {
       return logDisconnections_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
+     * @return The logDisconnections.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLogDisconnections() {
       return logDisconnections_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logDisconnections_;
     }
     /**
      * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogDisconnectionsOrBuilder() {
       return getLogDisconnections();
     }
@@ -3636,19 +3966,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue logDuration_;
     /**
      * <code>.google.protobuf.BoolValue log_duration = 22;</code>
+     * @return Whether the logDuration field is set.
      */
+    @java.lang.Override
     public boolean hasLogDuration() {
       return logDuration_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue log_duration = 22;</code>
+     * @return The logDuration.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLogDuration() {
       return logDuration_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logDuration_;
     }
     /**
      * <code>.google.protobuf.BoolValue log_duration = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogDurationOrBuilder() {
       return getLogDuration();
     }
@@ -3657,14 +3992,16 @@ public final class Host10 {
     private int logErrorVerbosity_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+     * @return The enum numeric value on the wire for logErrorVerbosity.
      */
-    public int getLogErrorVerbosityValue() {
+    @java.lang.Override public int getLogErrorVerbosityValue() {
       return logErrorVerbosity_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+     * @return The logErrorVerbosity.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity getLogErrorVerbosity() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity getLogErrorVerbosity() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity.valueOf(logErrorVerbosity_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity.UNRECOGNIZED : result;
@@ -3674,19 +4011,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue logLockWaits_;
     /**
      * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
+     * @return Whether the logLockWaits field is set.
      */
+    @java.lang.Override
     public boolean hasLogLockWaits() {
       return logLockWaits_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
+     * @return The logLockWaits.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLogLockWaits() {
       return logLockWaits_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logLockWaits_;
     }
     /**
      * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogLockWaitsOrBuilder() {
       return getLogLockWaits();
     }
@@ -3695,14 +4037,16 @@ public final class Host10 {
     private int logStatement_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+     * @return The enum numeric value on the wire for logStatement.
      */
-    public int getLogStatementValue() {
+    @java.lang.Override public int getLogStatementValue() {
       return logStatement_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+     * @return The logStatement.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement getLogStatement() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement getLogStatement() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement.valueOf(logStatement_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement.UNRECOGNIZED : result;
@@ -3712,19 +4056,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value logTempFiles_;
     /**
      * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
+     * @return Whether the logTempFiles field is set.
      */
+    @java.lang.Override
     public boolean hasLogTempFiles() {
       return logTempFiles_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
+     * @return The logTempFiles.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getLogTempFiles() {
       return logTempFiles_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logTempFiles_;
     }
     /**
      * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getLogTempFilesOrBuilder() {
       return getLogTempFiles();
     }
@@ -3733,7 +4082,9 @@ public final class Host10 {
     private volatile java.lang.Object searchPath_;
     /**
      * <code>string search_path = 27;</code>
+     * @return The searchPath.
      */
+    @java.lang.Override
     public java.lang.String getSearchPath() {
       java.lang.Object ref = searchPath_;
       if (ref instanceof java.lang.String) {
@@ -3748,7 +4099,9 @@ public final class Host10 {
     }
     /**
      * <code>string search_path = 27;</code>
+     * @return The bytes for searchPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSearchPathBytes() {
       java.lang.Object ref = searchPath_;
@@ -3767,19 +4120,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue rowSecurity_;
     /**
      * <code>.google.protobuf.BoolValue row_security = 28;</code>
+     * @return Whether the rowSecurity field is set.
      */
+    @java.lang.Override
     public boolean hasRowSecurity() {
       return rowSecurity_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue row_security = 28;</code>
+     * @return The rowSecurity.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getRowSecurity() {
       return rowSecurity_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : rowSecurity_;
     }
     /**
      * <code>.google.protobuf.BoolValue row_security = 28;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getRowSecurityOrBuilder() {
       return getRowSecurity();
     }
@@ -3788,14 +4146,16 @@ public final class Host10 {
     private int defaultTransactionIsolation_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+     * @return The enum numeric value on the wire for defaultTransactionIsolation.
      */
-    public int getDefaultTransactionIsolationValue() {
+    @java.lang.Override public int getDefaultTransactionIsolationValue() {
       return defaultTransactionIsolation_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+     * @return The defaultTransactionIsolation.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation getDefaultTransactionIsolation() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation getDefaultTransactionIsolation() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation.valueOf(defaultTransactionIsolation_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation.UNRECOGNIZED : result;
@@ -3809,7 +4169,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
+     * @return Whether the statementTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasStatementTimeout() {
       return statementTimeout_ != null;
     }
@@ -3819,7 +4181,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
+     * @return The statementTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getStatementTimeout() {
       return statementTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementTimeout_;
     }
@@ -3830,6 +4194,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getStatementTimeoutOrBuilder() {
       return getStatementTimeout();
     }
@@ -3842,7 +4207,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
+     * @return Whether the lockTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasLockTimeout() {
       return lockTimeout_ != null;
     }
@@ -3852,7 +4219,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
+     * @return The lockTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getLockTimeout() {
       return lockTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lockTimeout_;
     }
@@ -3863,6 +4232,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getLockTimeoutOrBuilder() {
       return getLockTimeout();
     }
@@ -3875,7 +4245,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * @return Whether the idleInTransactionSessionTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasIdleInTransactionSessionTimeout() {
       return idleInTransactionSessionTimeout_ != null;
     }
@@ -3885,7 +4257,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * @return The idleInTransactionSessionTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout() {
       return idleInTransactionSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleInTransactionSessionTimeout_;
     }
@@ -3896,6 +4270,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
       return getIdleInTransactionSessionTimeout();
     }
@@ -3904,14 +4279,16 @@ public final class Host10 {
     private int byteaOutput_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+     * @return The enum numeric value on the wire for byteaOutput.
      */
-    public int getByteaOutputValue() {
+    @java.lang.Override public int getByteaOutputValue() {
       return byteaOutput_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+     * @return The byteaOutput.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput getByteaOutput() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput getByteaOutput() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput.valueOf(byteaOutput_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput.UNRECOGNIZED : result;
@@ -3921,14 +4298,16 @@ public final class Host10 {
     private int xmlbinary_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+     * @return The enum numeric value on the wire for xmlbinary.
      */
-    public int getXmlbinaryValue() {
+    @java.lang.Override public int getXmlbinaryValue() {
       return xmlbinary_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+     * @return The xmlbinary.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary getXmlbinary() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary getXmlbinary() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary.valueOf(xmlbinary_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary.UNRECOGNIZED : result;
@@ -3938,14 +4317,16 @@ public final class Host10 {
     private int xmloption_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+     * @return The enum numeric value on the wire for xmloption.
      */
-    public int getXmloptionValue() {
+    @java.lang.Override public int getXmloptionValue() {
       return xmloption_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+     * @return The xmloption.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption getXmloption() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption getXmloption() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption.valueOf(xmloption_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption.UNRECOGNIZED : result;
@@ -3959,7 +4340,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
+     * @return Whether the ginPendingListLimit field is set.
      */
+    @java.lang.Override
     public boolean hasGinPendingListLimit() {
       return ginPendingListLimit_ != null;
     }
@@ -3969,7 +4352,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
+     * @return The ginPendingListLimit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGinPendingListLimit() {
       return ginPendingListLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : ginPendingListLimit_;
     }
@@ -3980,6 +4365,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGinPendingListLimitOrBuilder() {
       return getGinPendingListLimit();
     }
@@ -3992,7 +4378,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
+     * @return Whether the deadlockTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasDeadlockTimeout() {
       return deadlockTimeout_ != null;
     }
@@ -4002,7 +4390,9 @@ public final class Host10 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
+     * @return The deadlockTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getDeadlockTimeout() {
       return deadlockTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : deadlockTimeout_;
     }
@@ -4013,6 +4403,7 @@ public final class Host10 {
      *
      * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDeadlockTimeoutOrBuilder() {
       return getDeadlockTimeout();
     }
@@ -4021,19 +4412,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value maxLocksPerTransaction_;
     /**
      * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
+     * @return Whether the maxLocksPerTransaction field is set.
      */
+    @java.lang.Override
     public boolean hasMaxLocksPerTransaction() {
       return maxLocksPerTransaction_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
+     * @return The maxLocksPerTransaction.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxLocksPerTransaction() {
       return maxLocksPerTransaction_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxLocksPerTransaction_;
     }
     /**
      * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxLocksPerTransactionOrBuilder() {
       return getMaxLocksPerTransaction();
     }
@@ -4042,19 +4438,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value maxPredLocksPerTransaction_;
     /**
      * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
+     * @return Whether the maxPredLocksPerTransaction field is set.
      */
+    @java.lang.Override
     public boolean hasMaxPredLocksPerTransaction() {
       return maxPredLocksPerTransaction_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
+     * @return The maxPredLocksPerTransaction.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxPredLocksPerTransaction() {
       return maxPredLocksPerTransaction_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPredLocksPerTransaction_;
     }
     /**
      * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxPredLocksPerTransactionOrBuilder() {
       return getMaxPredLocksPerTransaction();
     }
@@ -4063,19 +4464,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue arrayNulls_;
     /**
      * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
+     * @return Whether the arrayNulls field is set.
      */
+    @java.lang.Override
     public boolean hasArrayNulls() {
       return arrayNulls_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
+     * @return The arrayNulls.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getArrayNulls() {
       return arrayNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : arrayNulls_;
     }
     /**
      * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getArrayNullsOrBuilder() {
       return getArrayNulls();
     }
@@ -4084,14 +4490,16 @@ public final class Host10 {
     private int backslashQuote_;
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+     * @return The enum numeric value on the wire for backslashQuote.
      */
-    public int getBackslashQuoteValue() {
+    @java.lang.Override public int getBackslashQuoteValue() {
       return backslashQuote_;
     }
     /**
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+     * @return The backslashQuote.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote getBackslashQuote() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote getBackslashQuote() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote.valueOf(backslashQuote_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote.UNRECOGNIZED : result;
@@ -4101,19 +4509,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue defaultWithOids_;
     /**
      * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
+     * @return Whether the defaultWithOids field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultWithOids() {
       return defaultWithOids_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
+     * @return The defaultWithOids.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getDefaultWithOids() {
       return defaultWithOids_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : defaultWithOids_;
     }
     /**
      * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getDefaultWithOidsOrBuilder() {
       return getDefaultWithOids();
     }
@@ -4122,19 +4535,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue escapeStringWarning_;
     /**
      * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
+     * @return Whether the escapeStringWarning field is set.
      */
+    @java.lang.Override
     public boolean hasEscapeStringWarning() {
       return escapeStringWarning_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
+     * @return The escapeStringWarning.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEscapeStringWarning() {
       return escapeStringWarning_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : escapeStringWarning_;
     }
     /**
      * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEscapeStringWarningOrBuilder() {
       return getEscapeStringWarning();
     }
@@ -4143,19 +4561,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue loCompatPrivileges_;
     /**
      * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
+     * @return Whether the loCompatPrivileges field is set.
      */
+    @java.lang.Override
     public boolean hasLoCompatPrivileges() {
       return loCompatPrivileges_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
+     * @return The loCompatPrivileges.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLoCompatPrivileges() {
       return loCompatPrivileges_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : loCompatPrivileges_;
     }
     /**
      * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLoCompatPrivilegesOrBuilder() {
       return getLoCompatPrivileges();
     }
@@ -4164,19 +4587,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue operatorPrecedenceWarning_;
     /**
      * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
+     * @return Whether the operatorPrecedenceWarning field is set.
      */
+    @java.lang.Override
     public boolean hasOperatorPrecedenceWarning() {
       return operatorPrecedenceWarning_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
+     * @return The operatorPrecedenceWarning.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getOperatorPrecedenceWarning() {
       return operatorPrecedenceWarning_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : operatorPrecedenceWarning_;
     }
     /**
      * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getOperatorPrecedenceWarningOrBuilder() {
       return getOperatorPrecedenceWarning();
     }
@@ -4185,19 +4613,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue quoteAllIdentifiers_;
     /**
      * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
+     * @return Whether the quoteAllIdentifiers field is set.
      */
+    @java.lang.Override
     public boolean hasQuoteAllIdentifiers() {
       return quoteAllIdentifiers_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
+     * @return The quoteAllIdentifiers.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getQuoteAllIdentifiers() {
       return quoteAllIdentifiers_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : quoteAllIdentifiers_;
     }
     /**
      * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getQuoteAllIdentifiersOrBuilder() {
       return getQuoteAllIdentifiers();
     }
@@ -4206,19 +4639,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue standardConformingStrings_;
     /**
      * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
+     * @return Whether the standardConformingStrings field is set.
      */
+    @java.lang.Override
     public boolean hasStandardConformingStrings() {
       return standardConformingStrings_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
+     * @return The standardConformingStrings.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getStandardConformingStrings() {
       return standardConformingStrings_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : standardConformingStrings_;
     }
     /**
      * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getStandardConformingStringsOrBuilder() {
       return getStandardConformingStrings();
     }
@@ -4227,19 +4665,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue synchronizeSeqscans_;
     /**
      * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
+     * @return Whether the synchronizeSeqscans field is set.
      */
+    @java.lang.Override
     public boolean hasSynchronizeSeqscans() {
       return synchronizeSeqscans_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
+     * @return The synchronizeSeqscans.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getSynchronizeSeqscans() {
       return synchronizeSeqscans_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : synchronizeSeqscans_;
     }
     /**
      * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSynchronizeSeqscansOrBuilder() {
       return getSynchronizeSeqscans();
     }
@@ -4248,19 +4691,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue transformNullEquals_;
     /**
      * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
+     * @return Whether the transformNullEquals field is set.
      */
+    @java.lang.Override
     public boolean hasTransformNullEquals() {
       return transformNullEquals_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
+     * @return The transformNullEquals.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTransformNullEquals() {
       return transformNullEquals_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullEquals_;
     }
     /**
      * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTransformNullEqualsOrBuilder() {
       return getTransformNullEquals();
     }
@@ -4269,19 +4717,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue exitOnError_;
     /**
      * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
+     * @return Whether the exitOnError field is set.
      */
+    @java.lang.Override
     public boolean hasExitOnError() {
       return exitOnError_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
+     * @return The exitOnError.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getExitOnError() {
       return exitOnError_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : exitOnError_;
     }
     /**
      * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getExitOnErrorOrBuilder() {
       return getExitOnError();
     }
@@ -4290,19 +4743,24 @@ public final class Host10 {
     private com.google.protobuf.DoubleValue seqPageCost_;
     /**
      * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
+     * @return Whether the seqPageCost field is set.
      */
+    @java.lang.Override
     public boolean hasSeqPageCost() {
       return seqPageCost_ != null;
     }
     /**
      * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
+     * @return The seqPageCost.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getSeqPageCost() {
       return seqPageCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : seqPageCost_;
     }
     /**
      * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getSeqPageCostOrBuilder() {
       return getSeqPageCost();
     }
@@ -4311,19 +4769,24 @@ public final class Host10 {
     private com.google.protobuf.DoubleValue randomPageCost_;
     /**
      * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
+     * @return Whether the randomPageCost field is set.
      */
+    @java.lang.Override
     public boolean hasRandomPageCost() {
       return randomPageCost_ != null;
     }
     /**
      * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
+     * @return The randomPageCost.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getRandomPageCost() {
       return randomPageCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : randomPageCost_;
     }
     /**
      * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getRandomPageCostOrBuilder() {
       return getRandomPageCost();
     }
@@ -4332,19 +4795,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableBitmapscan_;
     /**
      * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
+     * @return Whether the enableBitmapscan field is set.
      */
+    @java.lang.Override
     public boolean hasEnableBitmapscan() {
       return enableBitmapscan_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
+     * @return The enableBitmapscan.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableBitmapscan() {
       return enableBitmapscan_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableBitmapscan_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableBitmapscanOrBuilder() {
       return getEnableBitmapscan();
     }
@@ -4353,19 +4821,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableHashagg_;
     /**
      * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
+     * @return Whether the enableHashagg field is set.
      */
+    @java.lang.Override
     public boolean hasEnableHashagg() {
       return enableHashagg_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
+     * @return The enableHashagg.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableHashagg() {
       return enableHashagg_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableHashagg_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableHashaggOrBuilder() {
       return getEnableHashagg();
     }
@@ -4374,19 +4847,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableHashjoin_;
     /**
      * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
+     * @return Whether the enableHashjoin field is set.
      */
+    @java.lang.Override
     public boolean hasEnableHashjoin() {
       return enableHashjoin_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
+     * @return The enableHashjoin.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableHashjoin() {
       return enableHashjoin_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableHashjoin_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableHashjoinOrBuilder() {
       return getEnableHashjoin();
     }
@@ -4395,19 +4873,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableIndexscan_;
     /**
      * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
+     * @return Whether the enableIndexscan field is set.
      */
+    @java.lang.Override
     public boolean hasEnableIndexscan() {
       return enableIndexscan_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
+     * @return The enableIndexscan.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableIndexscan() {
       return enableIndexscan_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableIndexscan_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableIndexscanOrBuilder() {
       return getEnableIndexscan();
     }
@@ -4416,19 +4899,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableIndexonlyscan_;
     /**
      * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
+     * @return Whether the enableIndexonlyscan field is set.
      */
+    @java.lang.Override
     public boolean hasEnableIndexonlyscan() {
       return enableIndexonlyscan_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
+     * @return The enableIndexonlyscan.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableIndexonlyscan() {
       return enableIndexonlyscan_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableIndexonlyscan_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableIndexonlyscanOrBuilder() {
       return getEnableIndexonlyscan();
     }
@@ -4437,19 +4925,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableMaterial_;
     /**
      * <code>.google.protobuf.BoolValue enable_material = 59;</code>
+     * @return Whether the enableMaterial field is set.
      */
+    @java.lang.Override
     public boolean hasEnableMaterial() {
       return enableMaterial_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_material = 59;</code>
+     * @return The enableMaterial.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableMaterial() {
       return enableMaterial_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableMaterial_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_material = 59;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableMaterialOrBuilder() {
       return getEnableMaterial();
     }
@@ -4458,19 +4951,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableMergejoin_;
     /**
      * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
+     * @return Whether the enableMergejoin field is set.
      */
+    @java.lang.Override
     public boolean hasEnableMergejoin() {
       return enableMergejoin_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
+     * @return The enableMergejoin.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableMergejoin() {
       return enableMergejoin_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableMergejoin_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableMergejoinOrBuilder() {
       return getEnableMergejoin();
     }
@@ -4479,19 +4977,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableNestloop_;
     /**
      * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
+     * @return Whether the enableNestloop field is set.
      */
+    @java.lang.Override
     public boolean hasEnableNestloop() {
       return enableNestloop_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
+     * @return The enableNestloop.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableNestloop() {
       return enableNestloop_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableNestloop_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableNestloopOrBuilder() {
       return getEnableNestloop();
     }
@@ -4500,19 +5003,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableSeqscan_;
     /**
      * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
+     * @return Whether the enableSeqscan field is set.
      */
+    @java.lang.Override
     public boolean hasEnableSeqscan() {
       return enableSeqscan_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
+     * @return The enableSeqscan.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableSeqscan() {
       return enableSeqscan_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableSeqscan_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableSeqscanOrBuilder() {
       return getEnableSeqscan();
     }
@@ -4521,19 +5029,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableSort_;
     /**
      * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
+     * @return Whether the enableSort field is set.
      */
+    @java.lang.Override
     public boolean hasEnableSort() {
       return enableSort_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
+     * @return The enableSort.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableSort() {
       return enableSort_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableSort_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableSortOrBuilder() {
       return getEnableSort();
     }
@@ -4542,19 +5055,24 @@ public final class Host10 {
     private com.google.protobuf.BoolValue enableTidscan_;
     /**
      * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
+     * @return Whether the enableTidscan field is set.
      */
+    @java.lang.Override
     public boolean hasEnableTidscan() {
       return enableTidscan_ != null;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
+     * @return The enableTidscan.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableTidscan() {
       return enableTidscan_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableTidscan_;
     }
     /**
      * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableTidscanOrBuilder() {
       return getEnableTidscan();
     }
@@ -4563,19 +5081,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value maxParallelWorkers_;
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return Whether the maxParallelWorkers field is set.
      */
+    @java.lang.Override
     public boolean hasMaxParallelWorkers() {
       return maxParallelWorkers_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return The maxParallelWorkers.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxParallelWorkers() {
       return maxParallelWorkers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxParallelWorkers_;
     }
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxParallelWorkersOrBuilder() {
       return getMaxParallelWorkers();
     }
@@ -4584,19 +5107,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value maxParallelWorkersPerGather_;
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return Whether the maxParallelWorkersPerGather field is set.
      */
+    @java.lang.Override
     public boolean hasMaxParallelWorkersPerGather() {
       return maxParallelWorkersPerGather_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
+     * @return The maxParallelWorkersPerGather.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxParallelWorkersPerGather() {
       return maxParallelWorkersPerGather_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxParallelWorkersPerGather_;
     }
     /**
      * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxParallelWorkersPerGatherOrBuilder() {
       return getMaxParallelWorkersPerGather();
     }
@@ -4605,7 +5133,9 @@ public final class Host10 {
     private volatile java.lang.Object timezone_;
     /**
      * <code>string timezone = 67;</code>
+     * @return The timezone.
      */
+    @java.lang.Override
     public java.lang.String getTimezone() {
       java.lang.Object ref = timezone_;
       if (ref instanceof java.lang.String) {
@@ -4620,7 +5150,9 @@ public final class Host10 {
     }
     /**
      * <code>string timezone = 67;</code>
+     * @return The bytes for timezone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTimezoneBytes() {
       java.lang.Object ref = timezone_;
@@ -4639,19 +5171,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value effectiveIoConcurrency_;
     /**
      * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return Whether the effectiveIoConcurrency field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveIoConcurrency() {
       return effectiveIoConcurrency_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The effectiveIoConcurrency.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getEffectiveIoConcurrency() {
       return effectiveIoConcurrency_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveIoConcurrency_;
     }
     /**
      * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getEffectiveIoConcurrencyOrBuilder() {
       return getEffectiveIoConcurrency();
     }
@@ -4660,19 +5197,24 @@ public final class Host10 {
     private com.google.protobuf.Int64Value effectiveCacheSize_;
     /**
      * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * @return Whether the effectiveCacheSize field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveCacheSize() {
       return effectiveCacheSize_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * @return The effectiveCacheSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getEffectiveCacheSize() {
       return effectiveCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveCacheSize_;
     }
     /**
      * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder() {
       return getEffectiveCacheSize();
     }
@@ -4769,7 +5311,7 @@ public final class Host10 {
       if (logTempFiles_ != null) {
         output.writeMessage(26, getLogTempFiles());
       }
-      if (!getSearchPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, searchPath_);
       }
       if (rowSecurity_ != null) {
@@ -4886,7 +5428,7 @@ public final class Host10 {
       if (maxParallelWorkersPerGather_ != null) {
         output.writeMessage(66, getMaxParallelWorkersPerGather());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 67, timezone_);
       }
       if (effectiveIoConcurrency_ != null) {
@@ -5008,7 +5550,7 @@ public final class Host10 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getLogTempFiles());
       }
-      if (!getSearchPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, searchPath_);
       }
       if (rowSecurity_ != null) {
@@ -5163,7 +5705,7 @@ public final class Host10 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(66, getMaxParallelWorkersPerGather());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(67, timezone_);
       }
       if (effectiveIoConcurrency_ != null) {
@@ -5189,295 +5731,294 @@ public final class Host10 {
       }
       yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10 other = (yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10) obj;
 
-      boolean result = true;
-      result = result && (hasRecoveryMinApplyDelay() == other.hasRecoveryMinApplyDelay());
+      if (hasRecoveryMinApplyDelay() != other.hasRecoveryMinApplyDelay()) return false;
       if (hasRecoveryMinApplyDelay()) {
-        result = result && getRecoveryMinApplyDelay()
-            .equals(other.getRecoveryMinApplyDelay());
+        if (!getRecoveryMinApplyDelay()
+            .equals(other.getRecoveryMinApplyDelay())) return false;
       }
-      result = result && (hasSharedBuffers() == other.hasSharedBuffers());
+      if (hasSharedBuffers() != other.hasSharedBuffers()) return false;
       if (hasSharedBuffers()) {
-        result = result && getSharedBuffers()
-            .equals(other.getSharedBuffers());
+        if (!getSharedBuffers()
+            .equals(other.getSharedBuffers())) return false;
       }
-      result = result && (hasTempBuffers() == other.hasTempBuffers());
+      if (hasTempBuffers() != other.hasTempBuffers()) return false;
       if (hasTempBuffers()) {
-        result = result && getTempBuffers()
-            .equals(other.getTempBuffers());
+        if (!getTempBuffers()
+            .equals(other.getTempBuffers())) return false;
       }
-      result = result && (hasWorkMem() == other.hasWorkMem());
+      if (hasWorkMem() != other.hasWorkMem()) return false;
       if (hasWorkMem()) {
-        result = result && getWorkMem()
-            .equals(other.getWorkMem());
+        if (!getWorkMem()
+            .equals(other.getWorkMem())) return false;
       }
-      result = result && (hasReplacementSortTuples() == other.hasReplacementSortTuples());
+      if (hasReplacementSortTuples() != other.hasReplacementSortTuples()) return false;
       if (hasReplacementSortTuples()) {
-        result = result && getReplacementSortTuples()
-            .equals(other.getReplacementSortTuples());
+        if (!getReplacementSortTuples()
+            .equals(other.getReplacementSortTuples())) return false;
       }
-      result = result && (hasTempFileLimit() == other.hasTempFileLimit());
+      if (hasTempFileLimit() != other.hasTempFileLimit()) return false;
       if (hasTempFileLimit()) {
-        result = result && getTempFileLimit()
-            .equals(other.getTempFileLimit());
+        if (!getTempFileLimit()
+            .equals(other.getTempFileLimit())) return false;
       }
-      result = result && (hasBackendFlushAfter() == other.hasBackendFlushAfter());
+      if (hasBackendFlushAfter() != other.hasBackendFlushAfter()) return false;
       if (hasBackendFlushAfter()) {
-        result = result && getBackendFlushAfter()
-            .equals(other.getBackendFlushAfter());
+        if (!getBackendFlushAfter()
+            .equals(other.getBackendFlushAfter())) return false;
       }
-      result = result && (hasOldSnapshotThreshold() == other.hasOldSnapshotThreshold());
+      if (hasOldSnapshotThreshold() != other.hasOldSnapshotThreshold()) return false;
       if (hasOldSnapshotThreshold()) {
-        result = result && getOldSnapshotThreshold()
-            .equals(other.getOldSnapshotThreshold());
+        if (!getOldSnapshotThreshold()
+            .equals(other.getOldSnapshotThreshold())) return false;
       }
-      result = result && (hasMaxStandbyStreamingDelay() == other.hasMaxStandbyStreamingDelay());
+      if (hasMaxStandbyStreamingDelay() != other.hasMaxStandbyStreamingDelay()) return false;
       if (hasMaxStandbyStreamingDelay()) {
-        result = result && getMaxStandbyStreamingDelay()
-            .equals(other.getMaxStandbyStreamingDelay());
+        if (!getMaxStandbyStreamingDelay()
+            .equals(other.getMaxStandbyStreamingDelay())) return false;
       }
-      result = result && constraintExclusion_ == other.constraintExclusion_;
-      result = result && (hasCursorTupleFraction() == other.hasCursorTupleFraction());
+      if (constraintExclusion_ != other.constraintExclusion_) return false;
+      if (hasCursorTupleFraction() != other.hasCursorTupleFraction()) return false;
       if (hasCursorTupleFraction()) {
-        result = result && getCursorTupleFraction()
-            .equals(other.getCursorTupleFraction());
+        if (!getCursorTupleFraction()
+            .equals(other.getCursorTupleFraction())) return false;
       }
-      result = result && (hasFromCollapseLimit() == other.hasFromCollapseLimit());
+      if (hasFromCollapseLimit() != other.hasFromCollapseLimit()) return false;
       if (hasFromCollapseLimit()) {
-        result = result && getFromCollapseLimit()
-            .equals(other.getFromCollapseLimit());
+        if (!getFromCollapseLimit()
+            .equals(other.getFromCollapseLimit())) return false;
       }
-      result = result && (hasJoinCollapseLimit() == other.hasJoinCollapseLimit());
+      if (hasJoinCollapseLimit() != other.hasJoinCollapseLimit()) return false;
       if (hasJoinCollapseLimit()) {
-        result = result && getJoinCollapseLimit()
-            .equals(other.getJoinCollapseLimit());
+        if (!getJoinCollapseLimit()
+            .equals(other.getJoinCollapseLimit())) return false;
       }
-      result = result && forceParallelMode_ == other.forceParallelMode_;
-      result = result && clientMinMessages_ == other.clientMinMessages_;
-      result = result && logMinMessages_ == other.logMinMessages_;
-      result = result && logMinErrorStatement_ == other.logMinErrorStatement_;
-      result = result && (hasLogMinDurationStatement() == other.hasLogMinDurationStatement());
+      if (forceParallelMode_ != other.forceParallelMode_) return false;
+      if (clientMinMessages_ != other.clientMinMessages_) return false;
+      if (logMinMessages_ != other.logMinMessages_) return false;
+      if (logMinErrorStatement_ != other.logMinErrorStatement_) return false;
+      if (hasLogMinDurationStatement() != other.hasLogMinDurationStatement()) return false;
       if (hasLogMinDurationStatement()) {
-        result = result && getLogMinDurationStatement()
-            .equals(other.getLogMinDurationStatement());
+        if (!getLogMinDurationStatement()
+            .equals(other.getLogMinDurationStatement())) return false;
       }
-      result = result && (hasLogCheckpoints() == other.hasLogCheckpoints());
+      if (hasLogCheckpoints() != other.hasLogCheckpoints()) return false;
       if (hasLogCheckpoints()) {
-        result = result && getLogCheckpoints()
-            .equals(other.getLogCheckpoints());
+        if (!getLogCheckpoints()
+            .equals(other.getLogCheckpoints())) return false;
       }
-      result = result && (hasLogConnections() == other.hasLogConnections());
+      if (hasLogConnections() != other.hasLogConnections()) return false;
       if (hasLogConnections()) {
-        result = result && getLogConnections()
-            .equals(other.getLogConnections());
+        if (!getLogConnections()
+            .equals(other.getLogConnections())) return false;
       }
-      result = result && (hasLogDisconnections() == other.hasLogDisconnections());
+      if (hasLogDisconnections() != other.hasLogDisconnections()) return false;
       if (hasLogDisconnections()) {
-        result = result && getLogDisconnections()
-            .equals(other.getLogDisconnections());
+        if (!getLogDisconnections()
+            .equals(other.getLogDisconnections())) return false;
       }
-      result = result && (hasLogDuration() == other.hasLogDuration());
+      if (hasLogDuration() != other.hasLogDuration()) return false;
       if (hasLogDuration()) {
-        result = result && getLogDuration()
-            .equals(other.getLogDuration());
+        if (!getLogDuration()
+            .equals(other.getLogDuration())) return false;
       }
-      result = result && logErrorVerbosity_ == other.logErrorVerbosity_;
-      result = result && (hasLogLockWaits() == other.hasLogLockWaits());
+      if (logErrorVerbosity_ != other.logErrorVerbosity_) return false;
+      if (hasLogLockWaits() != other.hasLogLockWaits()) return false;
       if (hasLogLockWaits()) {
-        result = result && getLogLockWaits()
-            .equals(other.getLogLockWaits());
+        if (!getLogLockWaits()
+            .equals(other.getLogLockWaits())) return false;
       }
-      result = result && logStatement_ == other.logStatement_;
-      result = result && (hasLogTempFiles() == other.hasLogTempFiles());
+      if (logStatement_ != other.logStatement_) return false;
+      if (hasLogTempFiles() != other.hasLogTempFiles()) return false;
       if (hasLogTempFiles()) {
-        result = result && getLogTempFiles()
-            .equals(other.getLogTempFiles());
+        if (!getLogTempFiles()
+            .equals(other.getLogTempFiles())) return false;
       }
-      result = result && getSearchPath()
-          .equals(other.getSearchPath());
-      result = result && (hasRowSecurity() == other.hasRowSecurity());
+      if (!getSearchPath()
+          .equals(other.getSearchPath())) return false;
+      if (hasRowSecurity() != other.hasRowSecurity()) return false;
       if (hasRowSecurity()) {
-        result = result && getRowSecurity()
-            .equals(other.getRowSecurity());
+        if (!getRowSecurity()
+            .equals(other.getRowSecurity())) return false;
       }
-      result = result && defaultTransactionIsolation_ == other.defaultTransactionIsolation_;
-      result = result && (hasStatementTimeout() == other.hasStatementTimeout());
+      if (defaultTransactionIsolation_ != other.defaultTransactionIsolation_) return false;
+      if (hasStatementTimeout() != other.hasStatementTimeout()) return false;
       if (hasStatementTimeout()) {
-        result = result && getStatementTimeout()
-            .equals(other.getStatementTimeout());
+        if (!getStatementTimeout()
+            .equals(other.getStatementTimeout())) return false;
       }
-      result = result && (hasLockTimeout() == other.hasLockTimeout());
+      if (hasLockTimeout() != other.hasLockTimeout()) return false;
       if (hasLockTimeout()) {
-        result = result && getLockTimeout()
-            .equals(other.getLockTimeout());
+        if (!getLockTimeout()
+            .equals(other.getLockTimeout())) return false;
       }
-      result = result && (hasIdleInTransactionSessionTimeout() == other.hasIdleInTransactionSessionTimeout());
+      if (hasIdleInTransactionSessionTimeout() != other.hasIdleInTransactionSessionTimeout()) return false;
       if (hasIdleInTransactionSessionTimeout()) {
-        result = result && getIdleInTransactionSessionTimeout()
-            .equals(other.getIdleInTransactionSessionTimeout());
+        if (!getIdleInTransactionSessionTimeout()
+            .equals(other.getIdleInTransactionSessionTimeout())) return false;
       }
-      result = result && byteaOutput_ == other.byteaOutput_;
-      result = result && xmlbinary_ == other.xmlbinary_;
-      result = result && xmloption_ == other.xmloption_;
-      result = result && (hasGinPendingListLimit() == other.hasGinPendingListLimit());
+      if (byteaOutput_ != other.byteaOutput_) return false;
+      if (xmlbinary_ != other.xmlbinary_) return false;
+      if (xmloption_ != other.xmloption_) return false;
+      if (hasGinPendingListLimit() != other.hasGinPendingListLimit()) return false;
       if (hasGinPendingListLimit()) {
-        result = result && getGinPendingListLimit()
-            .equals(other.getGinPendingListLimit());
+        if (!getGinPendingListLimit()
+            .equals(other.getGinPendingListLimit())) return false;
       }
-      result = result && (hasDeadlockTimeout() == other.hasDeadlockTimeout());
+      if (hasDeadlockTimeout() != other.hasDeadlockTimeout()) return false;
       if (hasDeadlockTimeout()) {
-        result = result && getDeadlockTimeout()
-            .equals(other.getDeadlockTimeout());
+        if (!getDeadlockTimeout()
+            .equals(other.getDeadlockTimeout())) return false;
       }
-      result = result && (hasMaxLocksPerTransaction() == other.hasMaxLocksPerTransaction());
+      if (hasMaxLocksPerTransaction() != other.hasMaxLocksPerTransaction()) return false;
       if (hasMaxLocksPerTransaction()) {
-        result = result && getMaxLocksPerTransaction()
-            .equals(other.getMaxLocksPerTransaction());
+        if (!getMaxLocksPerTransaction()
+            .equals(other.getMaxLocksPerTransaction())) return false;
       }
-      result = result && (hasMaxPredLocksPerTransaction() == other.hasMaxPredLocksPerTransaction());
+      if (hasMaxPredLocksPerTransaction() != other.hasMaxPredLocksPerTransaction()) return false;
       if (hasMaxPredLocksPerTransaction()) {
-        result = result && getMaxPredLocksPerTransaction()
-            .equals(other.getMaxPredLocksPerTransaction());
+        if (!getMaxPredLocksPerTransaction()
+            .equals(other.getMaxPredLocksPerTransaction())) return false;
       }
-      result = result && (hasArrayNulls() == other.hasArrayNulls());
+      if (hasArrayNulls() != other.hasArrayNulls()) return false;
       if (hasArrayNulls()) {
-        result = result && getArrayNulls()
-            .equals(other.getArrayNulls());
+        if (!getArrayNulls()
+            .equals(other.getArrayNulls())) return false;
       }
-      result = result && backslashQuote_ == other.backslashQuote_;
-      result = result && (hasDefaultWithOids() == other.hasDefaultWithOids());
+      if (backslashQuote_ != other.backslashQuote_) return false;
+      if (hasDefaultWithOids() != other.hasDefaultWithOids()) return false;
       if (hasDefaultWithOids()) {
-        result = result && getDefaultWithOids()
-            .equals(other.getDefaultWithOids());
+        if (!getDefaultWithOids()
+            .equals(other.getDefaultWithOids())) return false;
       }
-      result = result && (hasEscapeStringWarning() == other.hasEscapeStringWarning());
+      if (hasEscapeStringWarning() != other.hasEscapeStringWarning()) return false;
       if (hasEscapeStringWarning()) {
-        result = result && getEscapeStringWarning()
-            .equals(other.getEscapeStringWarning());
+        if (!getEscapeStringWarning()
+            .equals(other.getEscapeStringWarning())) return false;
       }
-      result = result && (hasLoCompatPrivileges() == other.hasLoCompatPrivileges());
+      if (hasLoCompatPrivileges() != other.hasLoCompatPrivileges()) return false;
       if (hasLoCompatPrivileges()) {
-        result = result && getLoCompatPrivileges()
-            .equals(other.getLoCompatPrivileges());
+        if (!getLoCompatPrivileges()
+            .equals(other.getLoCompatPrivileges())) return false;
       }
-      result = result && (hasOperatorPrecedenceWarning() == other.hasOperatorPrecedenceWarning());
+      if (hasOperatorPrecedenceWarning() != other.hasOperatorPrecedenceWarning()) return false;
       if (hasOperatorPrecedenceWarning()) {
-        result = result && getOperatorPrecedenceWarning()
-            .equals(other.getOperatorPrecedenceWarning());
+        if (!getOperatorPrecedenceWarning()
+            .equals(other.getOperatorPrecedenceWarning())) return false;
       }
-      result = result && (hasQuoteAllIdentifiers() == other.hasQuoteAllIdentifiers());
+      if (hasQuoteAllIdentifiers() != other.hasQuoteAllIdentifiers()) return false;
       if (hasQuoteAllIdentifiers()) {
-        result = result && getQuoteAllIdentifiers()
-            .equals(other.getQuoteAllIdentifiers());
+        if (!getQuoteAllIdentifiers()
+            .equals(other.getQuoteAllIdentifiers())) return false;
       }
-      result = result && (hasStandardConformingStrings() == other.hasStandardConformingStrings());
+      if (hasStandardConformingStrings() != other.hasStandardConformingStrings()) return false;
       if (hasStandardConformingStrings()) {
-        result = result && getStandardConformingStrings()
-            .equals(other.getStandardConformingStrings());
+        if (!getStandardConformingStrings()
+            .equals(other.getStandardConformingStrings())) return false;
       }
-      result = result && (hasSynchronizeSeqscans() == other.hasSynchronizeSeqscans());
+      if (hasSynchronizeSeqscans() != other.hasSynchronizeSeqscans()) return false;
       if (hasSynchronizeSeqscans()) {
-        result = result && getSynchronizeSeqscans()
-            .equals(other.getSynchronizeSeqscans());
+        if (!getSynchronizeSeqscans()
+            .equals(other.getSynchronizeSeqscans())) return false;
       }
-      result = result && (hasTransformNullEquals() == other.hasTransformNullEquals());
+      if (hasTransformNullEquals() != other.hasTransformNullEquals()) return false;
       if (hasTransformNullEquals()) {
-        result = result && getTransformNullEquals()
-            .equals(other.getTransformNullEquals());
+        if (!getTransformNullEquals()
+            .equals(other.getTransformNullEquals())) return false;
       }
-      result = result && (hasExitOnError() == other.hasExitOnError());
+      if (hasExitOnError() != other.hasExitOnError()) return false;
       if (hasExitOnError()) {
-        result = result && getExitOnError()
-            .equals(other.getExitOnError());
+        if (!getExitOnError()
+            .equals(other.getExitOnError())) return false;
       }
-      result = result && (hasSeqPageCost() == other.hasSeqPageCost());
+      if (hasSeqPageCost() != other.hasSeqPageCost()) return false;
       if (hasSeqPageCost()) {
-        result = result && getSeqPageCost()
-            .equals(other.getSeqPageCost());
+        if (!getSeqPageCost()
+            .equals(other.getSeqPageCost())) return false;
       }
-      result = result && (hasRandomPageCost() == other.hasRandomPageCost());
+      if (hasRandomPageCost() != other.hasRandomPageCost()) return false;
       if (hasRandomPageCost()) {
-        result = result && getRandomPageCost()
-            .equals(other.getRandomPageCost());
+        if (!getRandomPageCost()
+            .equals(other.getRandomPageCost())) return false;
       }
-      result = result && (hasEnableBitmapscan() == other.hasEnableBitmapscan());
+      if (hasEnableBitmapscan() != other.hasEnableBitmapscan()) return false;
       if (hasEnableBitmapscan()) {
-        result = result && getEnableBitmapscan()
-            .equals(other.getEnableBitmapscan());
+        if (!getEnableBitmapscan()
+            .equals(other.getEnableBitmapscan())) return false;
       }
-      result = result && (hasEnableHashagg() == other.hasEnableHashagg());
+      if (hasEnableHashagg() != other.hasEnableHashagg()) return false;
       if (hasEnableHashagg()) {
-        result = result && getEnableHashagg()
-            .equals(other.getEnableHashagg());
+        if (!getEnableHashagg()
+            .equals(other.getEnableHashagg())) return false;
       }
-      result = result && (hasEnableHashjoin() == other.hasEnableHashjoin());
+      if (hasEnableHashjoin() != other.hasEnableHashjoin()) return false;
       if (hasEnableHashjoin()) {
-        result = result && getEnableHashjoin()
-            .equals(other.getEnableHashjoin());
+        if (!getEnableHashjoin()
+            .equals(other.getEnableHashjoin())) return false;
       }
-      result = result && (hasEnableIndexscan() == other.hasEnableIndexscan());
+      if (hasEnableIndexscan() != other.hasEnableIndexscan()) return false;
       if (hasEnableIndexscan()) {
-        result = result && getEnableIndexscan()
-            .equals(other.getEnableIndexscan());
+        if (!getEnableIndexscan()
+            .equals(other.getEnableIndexscan())) return false;
       }
-      result = result && (hasEnableIndexonlyscan() == other.hasEnableIndexonlyscan());
+      if (hasEnableIndexonlyscan() != other.hasEnableIndexonlyscan()) return false;
       if (hasEnableIndexonlyscan()) {
-        result = result && getEnableIndexonlyscan()
-            .equals(other.getEnableIndexonlyscan());
+        if (!getEnableIndexonlyscan()
+            .equals(other.getEnableIndexonlyscan())) return false;
       }
-      result = result && (hasEnableMaterial() == other.hasEnableMaterial());
+      if (hasEnableMaterial() != other.hasEnableMaterial()) return false;
       if (hasEnableMaterial()) {
-        result = result && getEnableMaterial()
-            .equals(other.getEnableMaterial());
+        if (!getEnableMaterial()
+            .equals(other.getEnableMaterial())) return false;
       }
-      result = result && (hasEnableMergejoin() == other.hasEnableMergejoin());
+      if (hasEnableMergejoin() != other.hasEnableMergejoin()) return false;
       if (hasEnableMergejoin()) {
-        result = result && getEnableMergejoin()
-            .equals(other.getEnableMergejoin());
+        if (!getEnableMergejoin()
+            .equals(other.getEnableMergejoin())) return false;
       }
-      result = result && (hasEnableNestloop() == other.hasEnableNestloop());
+      if (hasEnableNestloop() != other.hasEnableNestloop()) return false;
       if (hasEnableNestloop()) {
-        result = result && getEnableNestloop()
-            .equals(other.getEnableNestloop());
+        if (!getEnableNestloop()
+            .equals(other.getEnableNestloop())) return false;
       }
-      result = result && (hasEnableSeqscan() == other.hasEnableSeqscan());
+      if (hasEnableSeqscan() != other.hasEnableSeqscan()) return false;
       if (hasEnableSeqscan()) {
-        result = result && getEnableSeqscan()
-            .equals(other.getEnableSeqscan());
+        if (!getEnableSeqscan()
+            .equals(other.getEnableSeqscan())) return false;
       }
-      result = result && (hasEnableSort() == other.hasEnableSort());
+      if (hasEnableSort() != other.hasEnableSort()) return false;
       if (hasEnableSort()) {
-        result = result && getEnableSort()
-            .equals(other.getEnableSort());
+        if (!getEnableSort()
+            .equals(other.getEnableSort())) return false;
       }
-      result = result && (hasEnableTidscan() == other.hasEnableTidscan());
+      if (hasEnableTidscan() != other.hasEnableTidscan()) return false;
       if (hasEnableTidscan()) {
-        result = result && getEnableTidscan()
-            .equals(other.getEnableTidscan());
+        if (!getEnableTidscan()
+            .equals(other.getEnableTidscan())) return false;
       }
-      result = result && (hasMaxParallelWorkers() == other.hasMaxParallelWorkers());
+      if (hasMaxParallelWorkers() != other.hasMaxParallelWorkers()) return false;
       if (hasMaxParallelWorkers()) {
-        result = result && getMaxParallelWorkers()
-            .equals(other.getMaxParallelWorkers());
+        if (!getMaxParallelWorkers()
+            .equals(other.getMaxParallelWorkers())) return false;
       }
-      result = result && (hasMaxParallelWorkersPerGather() == other.hasMaxParallelWorkersPerGather());
+      if (hasMaxParallelWorkersPerGather() != other.hasMaxParallelWorkersPerGather()) return false;
       if (hasMaxParallelWorkersPerGather()) {
-        result = result && getMaxParallelWorkersPerGather()
-            .equals(other.getMaxParallelWorkersPerGather());
+        if (!getMaxParallelWorkersPerGather()
+            .equals(other.getMaxParallelWorkersPerGather())) return false;
       }
-      result = result && getTimezone()
-          .equals(other.getTimezone());
-      result = result && (hasEffectiveIoConcurrency() == other.hasEffectiveIoConcurrency());
+      if (!getTimezone()
+          .equals(other.getTimezone())) return false;
+      if (hasEffectiveIoConcurrency() != other.hasEffectiveIoConcurrency()) return false;
       if (hasEffectiveIoConcurrency()) {
-        result = result && getEffectiveIoConcurrency()
-            .equals(other.getEffectiveIoConcurrency());
+        if (!getEffectiveIoConcurrency()
+            .equals(other.getEffectiveIoConcurrency())) return false;
       }
-      result = result && (hasEffectiveCacheSize() == other.hasEffectiveCacheSize());
+      if (hasEffectiveCacheSize() != other.hasEffectiveCacheSize()) return false;
       if (hasEffectiveCacheSize()) {
-        result = result && getEffectiveCacheSize()
-            .equals(other.getEffectiveCacheSize());
+        if (!getEffectiveCacheSize()
+            .equals(other.getEffectiveCacheSize())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6538,35 +7079,35 @@ public final class Host10 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6815,7 +7356,7 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value recoveryMinApplyDelay_ = null;
+      private com.google.protobuf.Int64Value recoveryMinApplyDelay_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recoveryMinApplyDelayBuilder_;
       /**
@@ -6824,6 +7365,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
+       * @return Whether the recoveryMinApplyDelay field is set.
        */
       public boolean hasRecoveryMinApplyDelay() {
         return recoveryMinApplyDelayBuilder_ != null || recoveryMinApplyDelay_ != null;
@@ -6834,6 +7376,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value recovery_min_apply_delay = 1;</code>
+       * @return The recoveryMinApplyDelay.
        */
       public com.google.protobuf.Int64Value getRecoveryMinApplyDelay() {
         if (recoveryMinApplyDelayBuilder_ == null) {
@@ -6968,7 +7511,7 @@ public final class Host10 {
         return recoveryMinApplyDelayBuilder_;
       }
 
-      private com.google.protobuf.Int64Value sharedBuffers_ = null;
+      private com.google.protobuf.Int64Value sharedBuffers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sharedBuffersBuilder_;
       /**
@@ -6977,6 +7520,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
+       * @return Whether the sharedBuffers field is set.
        */
       public boolean hasSharedBuffers() {
         return sharedBuffersBuilder_ != null || sharedBuffers_ != null;
@@ -6987,6 +7531,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value shared_buffers = 2;</code>
+       * @return The sharedBuffers.
        */
       public com.google.protobuf.Int64Value getSharedBuffers() {
         if (sharedBuffersBuilder_ == null) {
@@ -7121,7 +7666,7 @@ public final class Host10 {
         return sharedBuffersBuilder_;
       }
 
-      private com.google.protobuf.Int64Value tempBuffers_ = null;
+      private com.google.protobuf.Int64Value tempBuffers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tempBuffersBuilder_;
       /**
@@ -7130,6 +7675,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
+       * @return Whether the tempBuffers field is set.
        */
       public boolean hasTempBuffers() {
         return tempBuffersBuilder_ != null || tempBuffers_ != null;
@@ -7140,6 +7686,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_buffers = 3;</code>
+       * @return The tempBuffers.
        */
       public com.google.protobuf.Int64Value getTempBuffers() {
         if (tempBuffersBuilder_ == null) {
@@ -7274,7 +7821,7 @@ public final class Host10 {
         return tempBuffersBuilder_;
       }
 
-      private com.google.protobuf.Int64Value workMem_ = null;
+      private com.google.protobuf.Int64Value workMem_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> workMemBuilder_;
       /**
@@ -7283,6 +7830,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value work_mem = 4;</code>
+       * @return Whether the workMem field is set.
        */
       public boolean hasWorkMem() {
         return workMemBuilder_ != null || workMem_ != null;
@@ -7293,6 +7841,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value work_mem = 4;</code>
+       * @return The workMem.
        */
       public com.google.protobuf.Int64Value getWorkMem() {
         if (workMemBuilder_ == null) {
@@ -7427,7 +7976,7 @@ public final class Host10 {
         return workMemBuilder_;
       }
 
-      private com.google.protobuf.Int64Value replacementSortTuples_ = null;
+      private com.google.protobuf.Int64Value replacementSortTuples_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replacementSortTuplesBuilder_;
       /**
@@ -7436,6 +7985,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
+       * @return Whether the replacementSortTuples field is set.
        */
       public boolean hasReplacementSortTuples() {
         return replacementSortTuplesBuilder_ != null || replacementSortTuples_ != null;
@@ -7446,6 +7996,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replacement_sort_tuples = 5;</code>
+       * @return The replacementSortTuples.
        */
       public com.google.protobuf.Int64Value getReplacementSortTuples() {
         if (replacementSortTuplesBuilder_ == null) {
@@ -7580,7 +8131,7 @@ public final class Host10 {
         return replacementSortTuplesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value tempFileLimit_ = null;
+      private com.google.protobuf.Int64Value tempFileLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tempFileLimitBuilder_;
       /**
@@ -7589,6 +8140,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
+       * @return Whether the tempFileLimit field is set.
        */
       public boolean hasTempFileLimit() {
         return tempFileLimitBuilder_ != null || tempFileLimit_ != null;
@@ -7599,6 +8151,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 6;</code>
+       * @return The tempFileLimit.
        */
       public com.google.protobuf.Int64Value getTempFileLimit() {
         if (tempFileLimitBuilder_ == null) {
@@ -7733,17 +8286,19 @@ public final class Host10 {
         return tempFileLimitBuilder_;
       }
 
-      private com.google.protobuf.Int64Value backendFlushAfter_ = null;
+      private com.google.protobuf.Int64Value backendFlushAfter_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backendFlushAfterBuilder_;
       /**
        * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
+       * @return Whether the backendFlushAfter field is set.
        */
       public boolean hasBackendFlushAfter() {
         return backendFlushAfterBuilder_ != null || backendFlushAfter_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value backend_flush_after = 7 [(.yandex.cloud.value) = "0-2048"];</code>
+       * @return The backendFlushAfter.
        */
       public com.google.protobuf.Int64Value getBackendFlushAfter() {
         if (backendFlushAfterBuilder_ == null) {
@@ -7850,17 +8405,19 @@ public final class Host10 {
         return backendFlushAfterBuilder_;
       }
 
-      private com.google.protobuf.Int64Value oldSnapshotThreshold_ = null;
+      private com.google.protobuf.Int64Value oldSnapshotThreshold_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> oldSnapshotThresholdBuilder_;
       /**
        * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
+       * @return Whether the oldSnapshotThreshold field is set.
        */
       public boolean hasOldSnapshotThreshold() {
         return oldSnapshotThresholdBuilder_ != null || oldSnapshotThreshold_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value old_snapshot_threshold = 8 [(.yandex.cloud.value) = "-1-86400"];</code>
+       * @return The oldSnapshotThreshold.
        */
       public com.google.protobuf.Int64Value getOldSnapshotThreshold() {
         if (oldSnapshotThresholdBuilder_ == null) {
@@ -7967,7 +8524,7 @@ public final class Host10 {
         return oldSnapshotThresholdBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxStandbyStreamingDelay_ = null;
+      private com.google.protobuf.Int64Value maxStandbyStreamingDelay_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStandbyStreamingDelayBuilder_;
       /**
@@ -7976,6 +8533,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
+       * @return Whether the maxStandbyStreamingDelay field is set.
        */
       public boolean hasMaxStandbyStreamingDelay() {
         return maxStandbyStreamingDelayBuilder_ != null || maxStandbyStreamingDelay_ != null;
@@ -7986,6 +8544,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_standby_streaming_delay = 9;</code>
+       * @return The maxStandbyStreamingDelay.
        */
       public com.google.protobuf.Int64Value getMaxStandbyStreamingDelay() {
         if (maxStandbyStreamingDelayBuilder_ == null) {
@@ -8123,21 +8682,27 @@ public final class Host10 {
       private int constraintExclusion_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+       * @return The enum numeric value on the wire for constraintExclusion.
        */
-      public int getConstraintExclusionValue() {
+      @java.lang.Override public int getConstraintExclusionValue() {
         return constraintExclusion_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+       * @param value The enum numeric value on the wire for constraintExclusion to set.
+       * @return This builder for chaining.
        */
       public Builder setConstraintExclusionValue(int value) {
+        
         constraintExclusion_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+       * @return The constraintExclusion.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion getConstraintExclusion() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion.valueOf(constraintExclusion_);
@@ -8145,6 +8710,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+       * @param value The constraintExclusion to set.
+       * @return This builder for chaining.
        */
       public Builder setConstraintExclusion(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ConstraintExclusion value) {
         if (value == null) {
@@ -8157,6 +8724,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ConstraintExclusion constraint_exclusion = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConstraintExclusion() {
         
@@ -8165,17 +8733,19 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.DoubleValue cursorTupleFraction_ = null;
+      private com.google.protobuf.DoubleValue cursorTupleFraction_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> cursorTupleFractionBuilder_;
       /**
        * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
+       * @return Whether the cursorTupleFraction field is set.
        */
       public boolean hasCursorTupleFraction() {
         return cursorTupleFractionBuilder_ != null || cursorTupleFraction_ != null;
       }
       /**
        * <code>.google.protobuf.DoubleValue cursor_tuple_fraction = 11;</code>
+       * @return The cursorTupleFraction.
        */
       public com.google.protobuf.DoubleValue getCursorTupleFraction() {
         if (cursorTupleFractionBuilder_ == null) {
@@ -8282,17 +8852,19 @@ public final class Host10 {
         return cursorTupleFractionBuilder_;
       }
 
-      private com.google.protobuf.Int64Value fromCollapseLimit_ = null;
+      private com.google.protobuf.Int64Value fromCollapseLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fromCollapseLimitBuilder_;
       /**
        * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return Whether the fromCollapseLimit field is set.
        */
       public boolean hasFromCollapseLimit() {
         return fromCollapseLimitBuilder_ != null || fromCollapseLimit_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value from_collapse_limit = 12 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return The fromCollapseLimit.
        */
       public com.google.protobuf.Int64Value getFromCollapseLimit() {
         if (fromCollapseLimitBuilder_ == null) {
@@ -8399,17 +8971,19 @@ public final class Host10 {
         return fromCollapseLimitBuilder_;
       }
 
-      private com.google.protobuf.Int64Value joinCollapseLimit_ = null;
+      private com.google.protobuf.Int64Value joinCollapseLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> joinCollapseLimitBuilder_;
       /**
        * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return Whether the joinCollapseLimit field is set.
        */
       public boolean hasJoinCollapseLimit() {
         return joinCollapseLimitBuilder_ != null || joinCollapseLimit_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value join_collapse_limit = 13 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return The joinCollapseLimit.
        */
       public com.google.protobuf.Int64Value getJoinCollapseLimit() {
         if (joinCollapseLimitBuilder_ == null) {
@@ -8519,21 +9093,27 @@ public final class Host10 {
       private int forceParallelMode_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+       * @return The enum numeric value on the wire for forceParallelMode.
        */
-      public int getForceParallelModeValue() {
+      @java.lang.Override public int getForceParallelModeValue() {
         return forceParallelMode_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+       * @param value The enum numeric value on the wire for forceParallelMode to set.
+       * @return This builder for chaining.
        */
       public Builder setForceParallelModeValue(int value) {
+        
         forceParallelMode_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+       * @return The forceParallelMode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode getForceParallelMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode.valueOf(forceParallelMode_);
@@ -8541,6 +9121,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+       * @param value The forceParallelMode to set.
+       * @return This builder for chaining.
        */
       public Builder setForceParallelMode(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ForceParallelMode value) {
         if (value == null) {
@@ -8553,6 +9135,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ForceParallelMode force_parallel_mode = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearForceParallelMode() {
         
@@ -8564,21 +9147,27 @@ public final class Host10 {
       private int clientMinMessages_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+       * @return The enum numeric value on the wire for clientMinMessages.
        */
-      public int getClientMinMessagesValue() {
+      @java.lang.Override public int getClientMinMessagesValue() {
         return clientMinMessages_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+       * @param value The enum numeric value on the wire for clientMinMessages to set.
+       * @return This builder for chaining.
        */
       public Builder setClientMinMessagesValue(int value) {
+        
         clientMinMessages_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+       * @return The clientMinMessages.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getClientMinMessages() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.valueOf(clientMinMessages_);
@@ -8586,6 +9175,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+       * @param value The clientMinMessages to set.
+       * @return This builder for chaining.
        */
       public Builder setClientMinMessages(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel value) {
         if (value == null) {
@@ -8598,6 +9189,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel client_min_messages = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClientMinMessages() {
         
@@ -8609,21 +9201,27 @@ public final class Host10 {
       private int logMinMessages_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+       * @return The enum numeric value on the wire for logMinMessages.
        */
-      public int getLogMinMessagesValue() {
+      @java.lang.Override public int getLogMinMessagesValue() {
         return logMinMessages_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+       * @param value The enum numeric value on the wire for logMinMessages to set.
+       * @return This builder for chaining.
        */
       public Builder setLogMinMessagesValue(int value) {
+        
         logMinMessages_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+       * @return The logMinMessages.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinMessages() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.valueOf(logMinMessages_);
@@ -8631,6 +9229,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+       * @param value The logMinMessages to set.
+       * @return This builder for chaining.
        */
       public Builder setLogMinMessages(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel value) {
         if (value == null) {
@@ -8643,6 +9243,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_messages = 16;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogMinMessages() {
         
@@ -8654,21 +9255,27 @@ public final class Host10 {
       private int logMinErrorStatement_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+       * @return The enum numeric value on the wire for logMinErrorStatement.
        */
-      public int getLogMinErrorStatementValue() {
+      @java.lang.Override public int getLogMinErrorStatementValue() {
         return logMinErrorStatement_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+       * @param value The enum numeric value on the wire for logMinErrorStatement to set.
+       * @return This builder for chaining.
        */
       public Builder setLogMinErrorStatementValue(int value) {
+        
         logMinErrorStatement_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+       * @return The logMinErrorStatement.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel getLogMinErrorStatement() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel.valueOf(logMinErrorStatement_);
@@ -8676,6 +9283,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+       * @param value The logMinErrorStatement to set.
+       * @return This builder for chaining.
        */
       public Builder setLogMinErrorStatement(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogLevel value) {
         if (value == null) {
@@ -8688,6 +9297,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogLevel log_min_error_statement = 17;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogMinErrorStatement() {
         
@@ -8696,7 +9306,7 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value logMinDurationStatement_ = null;
+      private com.google.protobuf.Int64Value logMinDurationStatement_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logMinDurationStatementBuilder_;
       /**
@@ -8705,6 +9315,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
+       * @return Whether the logMinDurationStatement field is set.
        */
       public boolean hasLogMinDurationStatement() {
         return logMinDurationStatementBuilder_ != null || logMinDurationStatement_ != null;
@@ -8715,6 +9326,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 18;</code>
+       * @return The logMinDurationStatement.
        */
       public com.google.protobuf.Int64Value getLogMinDurationStatement() {
         if (logMinDurationStatementBuilder_ == null) {
@@ -8849,17 +9461,19 @@ public final class Host10 {
         return logMinDurationStatementBuilder_;
       }
 
-      private com.google.protobuf.BoolValue logCheckpoints_ = null;
+      private com.google.protobuf.BoolValue logCheckpoints_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logCheckpointsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
+       * @return Whether the logCheckpoints field is set.
        */
       public boolean hasLogCheckpoints() {
         return logCheckpointsBuilder_ != null || logCheckpoints_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue log_checkpoints = 19;</code>
+       * @return The logCheckpoints.
        */
       public com.google.protobuf.BoolValue getLogCheckpoints() {
         if (logCheckpointsBuilder_ == null) {
@@ -8966,17 +9580,19 @@ public final class Host10 {
         return logCheckpointsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue logConnections_ = null;
+      private com.google.protobuf.BoolValue logConnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logConnectionsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue log_connections = 20;</code>
+       * @return Whether the logConnections field is set.
        */
       public boolean hasLogConnections() {
         return logConnectionsBuilder_ != null || logConnections_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue log_connections = 20;</code>
+       * @return The logConnections.
        */
       public com.google.protobuf.BoolValue getLogConnections() {
         if (logConnectionsBuilder_ == null) {
@@ -9083,17 +9699,19 @@ public final class Host10 {
         return logConnectionsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue logDisconnections_ = null;
+      private com.google.protobuf.BoolValue logDisconnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logDisconnectionsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
+       * @return Whether the logDisconnections field is set.
        */
       public boolean hasLogDisconnections() {
         return logDisconnectionsBuilder_ != null || logDisconnections_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue log_disconnections = 21;</code>
+       * @return The logDisconnections.
        */
       public com.google.protobuf.BoolValue getLogDisconnections() {
         if (logDisconnectionsBuilder_ == null) {
@@ -9200,17 +9818,19 @@ public final class Host10 {
         return logDisconnectionsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue logDuration_ = null;
+      private com.google.protobuf.BoolValue logDuration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logDurationBuilder_;
       /**
        * <code>.google.protobuf.BoolValue log_duration = 22;</code>
+       * @return Whether the logDuration field is set.
        */
       public boolean hasLogDuration() {
         return logDurationBuilder_ != null || logDuration_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue log_duration = 22;</code>
+       * @return The logDuration.
        */
       public com.google.protobuf.BoolValue getLogDuration() {
         if (logDurationBuilder_ == null) {
@@ -9320,21 +9940,27 @@ public final class Host10 {
       private int logErrorVerbosity_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+       * @return The enum numeric value on the wire for logErrorVerbosity.
        */
-      public int getLogErrorVerbosityValue() {
+      @java.lang.Override public int getLogErrorVerbosityValue() {
         return logErrorVerbosity_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+       * @param value The enum numeric value on the wire for logErrorVerbosity to set.
+       * @return This builder for chaining.
        */
       public Builder setLogErrorVerbosityValue(int value) {
+        
         logErrorVerbosity_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+       * @return The logErrorVerbosity.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity getLogErrorVerbosity() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity.valueOf(logErrorVerbosity_);
@@ -9342,6 +9968,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+       * @param value The logErrorVerbosity to set.
+       * @return This builder for chaining.
        */
       public Builder setLogErrorVerbosity(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogErrorVerbosity value) {
         if (value == null) {
@@ -9354,6 +9982,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogErrorVerbosity log_error_verbosity = 23;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogErrorVerbosity() {
         
@@ -9362,17 +9991,19 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.BoolValue logLockWaits_ = null;
+      private com.google.protobuf.BoolValue logLockWaits_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logLockWaitsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
+       * @return Whether the logLockWaits field is set.
        */
       public boolean hasLogLockWaits() {
         return logLockWaitsBuilder_ != null || logLockWaits_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue log_lock_waits = 24;</code>
+       * @return The logLockWaits.
        */
       public com.google.protobuf.BoolValue getLogLockWaits() {
         if (logLockWaitsBuilder_ == null) {
@@ -9482,21 +10113,27 @@ public final class Host10 {
       private int logStatement_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+       * @return The enum numeric value on the wire for logStatement.
        */
-      public int getLogStatementValue() {
+      @java.lang.Override public int getLogStatementValue() {
         return logStatement_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+       * @param value The enum numeric value on the wire for logStatement to set.
+       * @return This builder for chaining.
        */
       public Builder setLogStatementValue(int value) {
+        
         logStatement_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+       * @return The logStatement.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement getLogStatement() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement.valueOf(logStatement_);
@@ -9504,6 +10141,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+       * @param value The logStatement to set.
+       * @return This builder for chaining.
        */
       public Builder setLogStatement(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.LogStatement value) {
         if (value == null) {
@@ -9516,6 +10155,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.LogStatement log_statement = 25;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogStatement() {
         
@@ -9524,17 +10164,19 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value logTempFiles_ = null;
+      private com.google.protobuf.Int64Value logTempFiles_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logTempFilesBuilder_;
       /**
        * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
+       * @return Whether the logTempFiles field is set.
        */
       public boolean hasLogTempFiles() {
         return logTempFilesBuilder_ != null || logTempFiles_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value log_temp_files = 26;</code>
+       * @return The logTempFiles.
        */
       public com.google.protobuf.Int64Value getLogTempFiles() {
         if (logTempFilesBuilder_ == null) {
@@ -9644,6 +10286,7 @@ public final class Host10 {
       private java.lang.Object searchPath_ = "";
       /**
        * <code>string search_path = 27;</code>
+       * @return The searchPath.
        */
       public java.lang.String getSearchPath() {
         java.lang.Object ref = searchPath_;
@@ -9659,6 +10302,7 @@ public final class Host10 {
       }
       /**
        * <code>string search_path = 27;</code>
+       * @return The bytes for searchPath.
        */
       public com.google.protobuf.ByteString
           getSearchPathBytes() {
@@ -9675,6 +10319,8 @@ public final class Host10 {
       }
       /**
        * <code>string search_path = 27;</code>
+       * @param value The searchPath to set.
+       * @return This builder for chaining.
        */
       public Builder setSearchPath(
           java.lang.String value) {
@@ -9688,6 +10334,7 @@ public final class Host10 {
       }
       /**
        * <code>string search_path = 27;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSearchPath() {
         
@@ -9697,6 +10344,8 @@ public final class Host10 {
       }
       /**
        * <code>string search_path = 27;</code>
+       * @param value The bytes for searchPath to set.
+       * @return This builder for chaining.
        */
       public Builder setSearchPathBytes(
           com.google.protobuf.ByteString value) {
@@ -9710,17 +10359,19 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.BoolValue rowSecurity_ = null;
+      private com.google.protobuf.BoolValue rowSecurity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> rowSecurityBuilder_;
       /**
        * <code>.google.protobuf.BoolValue row_security = 28;</code>
+       * @return Whether the rowSecurity field is set.
        */
       public boolean hasRowSecurity() {
         return rowSecurityBuilder_ != null || rowSecurity_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue row_security = 28;</code>
+       * @return The rowSecurity.
        */
       public com.google.protobuf.BoolValue getRowSecurity() {
         if (rowSecurityBuilder_ == null) {
@@ -9830,21 +10481,27 @@ public final class Host10 {
       private int defaultTransactionIsolation_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+       * @return The enum numeric value on the wire for defaultTransactionIsolation.
        */
-      public int getDefaultTransactionIsolationValue() {
+      @java.lang.Override public int getDefaultTransactionIsolationValue() {
         return defaultTransactionIsolation_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+       * @param value The enum numeric value on the wire for defaultTransactionIsolation to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultTransactionIsolationValue(int value) {
+        
         defaultTransactionIsolation_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+       * @return The defaultTransactionIsolation.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation getDefaultTransactionIsolation() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation.valueOf(defaultTransactionIsolation_);
@@ -9852,6 +10509,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+       * @param value The defaultTransactionIsolation to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultTransactionIsolation(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.TransactionIsolation value) {
         if (value == null) {
@@ -9864,6 +10523,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.TransactionIsolation default_transaction_isolation = 29;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultTransactionIsolation() {
         
@@ -9872,7 +10532,7 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value statementTimeout_ = null;
+      private com.google.protobuf.Int64Value statementTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementTimeoutBuilder_;
       /**
@@ -9881,6 +10541,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
+       * @return Whether the statementTimeout field is set.
        */
       public boolean hasStatementTimeout() {
         return statementTimeoutBuilder_ != null || statementTimeout_ != null;
@@ -9891,6 +10552,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 30;</code>
+       * @return The statementTimeout.
        */
       public com.google.protobuf.Int64Value getStatementTimeout() {
         if (statementTimeoutBuilder_ == null) {
@@ -10025,7 +10687,7 @@ public final class Host10 {
         return statementTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value lockTimeout_ = null;
+      private com.google.protobuf.Int64Value lockTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lockTimeoutBuilder_;
       /**
@@ -10034,6 +10696,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
+       * @return Whether the lockTimeout field is set.
        */
       public boolean hasLockTimeout() {
         return lockTimeoutBuilder_ != null || lockTimeout_ != null;
@@ -10044,6 +10707,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 31;</code>
+       * @return The lockTimeout.
        */
       public com.google.protobuf.Int64Value getLockTimeout() {
         if (lockTimeoutBuilder_ == null) {
@@ -10178,7 +10842,7 @@ public final class Host10 {
         return lockTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value idleInTransactionSessionTimeout_ = null;
+      private com.google.protobuf.Int64Value idleInTransactionSessionTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idleInTransactionSessionTimeoutBuilder_;
       /**
@@ -10187,6 +10851,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * @return Whether the idleInTransactionSessionTimeout field is set.
        */
       public boolean hasIdleInTransactionSessionTimeout() {
         return idleInTransactionSessionTimeoutBuilder_ != null || idleInTransactionSessionTimeout_ != null;
@@ -10197,6 +10862,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * @return The idleInTransactionSessionTimeout.
        */
       public com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout() {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -10334,21 +11000,27 @@ public final class Host10 {
       private int byteaOutput_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+       * @return The enum numeric value on the wire for byteaOutput.
        */
-      public int getByteaOutputValue() {
+      @java.lang.Override public int getByteaOutputValue() {
         return byteaOutput_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+       * @param value The enum numeric value on the wire for byteaOutput to set.
+       * @return This builder for chaining.
        */
       public Builder setByteaOutputValue(int value) {
+        
         byteaOutput_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+       * @return The byteaOutput.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput getByteaOutput() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput.valueOf(byteaOutput_);
@@ -10356,6 +11028,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+       * @param value The byteaOutput to set.
+       * @return This builder for chaining.
        */
       public Builder setByteaOutput(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.ByteaOutput value) {
         if (value == null) {
@@ -10368,6 +11042,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.ByteaOutput bytea_output = 33;</code>
+       * @return This builder for chaining.
        */
       public Builder clearByteaOutput() {
         
@@ -10379,21 +11054,27 @@ public final class Host10 {
       private int xmlbinary_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+       * @return The enum numeric value on the wire for xmlbinary.
        */
-      public int getXmlbinaryValue() {
+      @java.lang.Override public int getXmlbinaryValue() {
         return xmlbinary_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+       * @param value The enum numeric value on the wire for xmlbinary to set.
+       * @return This builder for chaining.
        */
       public Builder setXmlbinaryValue(int value) {
+        
         xmlbinary_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+       * @return The xmlbinary.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary getXmlbinary() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary.valueOf(xmlbinary_);
@@ -10401,6 +11082,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+       * @param value The xmlbinary to set.
+       * @return This builder for chaining.
        */
       public Builder setXmlbinary(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlBinary value) {
         if (value == null) {
@@ -10413,6 +11096,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlBinary xmlbinary = 34;</code>
+       * @return This builder for chaining.
        */
       public Builder clearXmlbinary() {
         
@@ -10424,21 +11108,27 @@ public final class Host10 {
       private int xmloption_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+       * @return The enum numeric value on the wire for xmloption.
        */
-      public int getXmloptionValue() {
+      @java.lang.Override public int getXmloptionValue() {
         return xmloption_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+       * @param value The enum numeric value on the wire for xmloption to set.
+       * @return This builder for chaining.
        */
       public Builder setXmloptionValue(int value) {
+        
         xmloption_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+       * @return The xmloption.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption getXmloption() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption.valueOf(xmloption_);
@@ -10446,6 +11136,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+       * @param value The xmloption to set.
+       * @return This builder for chaining.
        */
       public Builder setXmloption(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.XmlOption value) {
         if (value == null) {
@@ -10458,6 +11150,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.XmlOption xmloption = 35;</code>
+       * @return This builder for chaining.
        */
       public Builder clearXmloption() {
         
@@ -10466,7 +11159,7 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value ginPendingListLimit_ = null;
+      private com.google.protobuf.Int64Value ginPendingListLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> ginPendingListLimitBuilder_;
       /**
@@ -10475,6 +11168,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
+       * @return Whether the ginPendingListLimit field is set.
        */
       public boolean hasGinPendingListLimit() {
         return ginPendingListLimitBuilder_ != null || ginPendingListLimit_ != null;
@@ -10485,6 +11179,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gin_pending_list_limit = 36;</code>
+       * @return The ginPendingListLimit.
        */
       public com.google.protobuf.Int64Value getGinPendingListLimit() {
         if (ginPendingListLimitBuilder_ == null) {
@@ -10619,7 +11314,7 @@ public final class Host10 {
         return ginPendingListLimitBuilder_;
       }
 
-      private com.google.protobuf.Int64Value deadlockTimeout_ = null;
+      private com.google.protobuf.Int64Value deadlockTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> deadlockTimeoutBuilder_;
       /**
@@ -10628,6 +11323,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
+       * @return Whether the deadlockTimeout field is set.
        */
       public boolean hasDeadlockTimeout() {
         return deadlockTimeoutBuilder_ != null || deadlockTimeout_ != null;
@@ -10638,6 +11334,7 @@ public final class Host10 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value deadlock_timeout = 37;</code>
+       * @return The deadlockTimeout.
        */
       public com.google.protobuf.Int64Value getDeadlockTimeout() {
         if (deadlockTimeoutBuilder_ == null) {
@@ -10772,17 +11469,19 @@ public final class Host10 {
         return deadlockTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxLocksPerTransaction_ = null;
+      private com.google.protobuf.Int64Value maxLocksPerTransaction_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxLocksPerTransactionBuilder_;
       /**
        * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
+       * @return Whether the maxLocksPerTransaction field is set.
        */
       public boolean hasMaxLocksPerTransaction() {
         return maxLocksPerTransactionBuilder_ != null || maxLocksPerTransaction_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value max_locks_per_transaction = 38;</code>
+       * @return The maxLocksPerTransaction.
        */
       public com.google.protobuf.Int64Value getMaxLocksPerTransaction() {
         if (maxLocksPerTransactionBuilder_ == null) {
@@ -10889,17 +11588,19 @@ public final class Host10 {
         return maxLocksPerTransactionBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxPredLocksPerTransaction_ = null;
+      private com.google.protobuf.Int64Value maxPredLocksPerTransaction_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPredLocksPerTransactionBuilder_;
       /**
        * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
+       * @return Whether the maxPredLocksPerTransaction field is set.
        */
       public boolean hasMaxPredLocksPerTransaction() {
         return maxPredLocksPerTransactionBuilder_ != null || maxPredLocksPerTransaction_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value max_pred_locks_per_transaction = 39;</code>
+       * @return The maxPredLocksPerTransaction.
        */
       public com.google.protobuf.Int64Value getMaxPredLocksPerTransaction() {
         if (maxPredLocksPerTransactionBuilder_ == null) {
@@ -11006,17 +11707,19 @@ public final class Host10 {
         return maxPredLocksPerTransactionBuilder_;
       }
 
-      private com.google.protobuf.BoolValue arrayNulls_ = null;
+      private com.google.protobuf.BoolValue arrayNulls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> arrayNullsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
+       * @return Whether the arrayNulls field is set.
        */
       public boolean hasArrayNulls() {
         return arrayNullsBuilder_ != null || arrayNulls_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue array_nulls = 40;</code>
+       * @return The arrayNulls.
        */
       public com.google.protobuf.BoolValue getArrayNulls() {
         if (arrayNullsBuilder_ == null) {
@@ -11126,21 +11829,27 @@ public final class Host10 {
       private int backslashQuote_ = 0;
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+       * @return The enum numeric value on the wire for backslashQuote.
        */
-      public int getBackslashQuoteValue() {
+      @java.lang.Override public int getBackslashQuoteValue() {
         return backslashQuote_;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+       * @param value The enum numeric value on the wire for backslashQuote to set.
+       * @return This builder for chaining.
        */
       public Builder setBackslashQuoteValue(int value) {
+        
         backslashQuote_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+       * @return The backslashQuote.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote getBackslashQuote() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote result = yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote.valueOf(backslashQuote_);
@@ -11148,6 +11857,8 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+       * @param value The backslashQuote to set.
+       * @return This builder for chaining.
        */
       public Builder setBackslashQuote(yandex.cloud.api.mdb.postgresql.v1.config.Host10.PostgresqlHostConfig10.BackslashQuote value) {
         if (value == null) {
@@ -11160,6 +11871,7 @@ public final class Host10 {
       }
       /**
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig10.BackslashQuote backslash_quote = 41;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBackslashQuote() {
         
@@ -11168,17 +11880,19 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.BoolValue defaultWithOids_ = null;
+      private com.google.protobuf.BoolValue defaultWithOids_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> defaultWithOidsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
+       * @return Whether the defaultWithOids field is set.
        */
       public boolean hasDefaultWithOids() {
         return defaultWithOidsBuilder_ != null || defaultWithOids_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue default_with_oids = 42;</code>
+       * @return The defaultWithOids.
        */
       public com.google.protobuf.BoolValue getDefaultWithOids() {
         if (defaultWithOidsBuilder_ == null) {
@@ -11285,17 +11999,19 @@ public final class Host10 {
         return defaultWithOidsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue escapeStringWarning_ = null;
+      private com.google.protobuf.BoolValue escapeStringWarning_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> escapeStringWarningBuilder_;
       /**
        * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
+       * @return Whether the escapeStringWarning field is set.
        */
       public boolean hasEscapeStringWarning() {
         return escapeStringWarningBuilder_ != null || escapeStringWarning_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue escape_string_warning = 43;</code>
+       * @return The escapeStringWarning.
        */
       public com.google.protobuf.BoolValue getEscapeStringWarning() {
         if (escapeStringWarningBuilder_ == null) {
@@ -11402,17 +12118,19 @@ public final class Host10 {
         return escapeStringWarningBuilder_;
       }
 
-      private com.google.protobuf.BoolValue loCompatPrivileges_ = null;
+      private com.google.protobuf.BoolValue loCompatPrivileges_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> loCompatPrivilegesBuilder_;
       /**
        * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
+       * @return Whether the loCompatPrivileges field is set.
        */
       public boolean hasLoCompatPrivileges() {
         return loCompatPrivilegesBuilder_ != null || loCompatPrivileges_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue lo_compat_privileges = 44;</code>
+       * @return The loCompatPrivileges.
        */
       public com.google.protobuf.BoolValue getLoCompatPrivileges() {
         if (loCompatPrivilegesBuilder_ == null) {
@@ -11519,17 +12237,19 @@ public final class Host10 {
         return loCompatPrivilegesBuilder_;
       }
 
-      private com.google.protobuf.BoolValue operatorPrecedenceWarning_ = null;
+      private com.google.protobuf.BoolValue operatorPrecedenceWarning_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> operatorPrecedenceWarningBuilder_;
       /**
        * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
+       * @return Whether the operatorPrecedenceWarning field is set.
        */
       public boolean hasOperatorPrecedenceWarning() {
         return operatorPrecedenceWarningBuilder_ != null || operatorPrecedenceWarning_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue operator_precedence_warning = 45;</code>
+       * @return The operatorPrecedenceWarning.
        */
       public com.google.protobuf.BoolValue getOperatorPrecedenceWarning() {
         if (operatorPrecedenceWarningBuilder_ == null) {
@@ -11636,17 +12356,19 @@ public final class Host10 {
         return operatorPrecedenceWarningBuilder_;
       }
 
-      private com.google.protobuf.BoolValue quoteAllIdentifiers_ = null;
+      private com.google.protobuf.BoolValue quoteAllIdentifiers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> quoteAllIdentifiersBuilder_;
       /**
        * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
+       * @return Whether the quoteAllIdentifiers field is set.
        */
       public boolean hasQuoteAllIdentifiers() {
         return quoteAllIdentifiersBuilder_ != null || quoteAllIdentifiers_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue quote_all_identifiers = 46;</code>
+       * @return The quoteAllIdentifiers.
        */
       public com.google.protobuf.BoolValue getQuoteAllIdentifiers() {
         if (quoteAllIdentifiersBuilder_ == null) {
@@ -11753,17 +12475,19 @@ public final class Host10 {
         return quoteAllIdentifiersBuilder_;
       }
 
-      private com.google.protobuf.BoolValue standardConformingStrings_ = null;
+      private com.google.protobuf.BoolValue standardConformingStrings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> standardConformingStringsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
+       * @return Whether the standardConformingStrings field is set.
        */
       public boolean hasStandardConformingStrings() {
         return standardConformingStringsBuilder_ != null || standardConformingStrings_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue standard_conforming_strings = 47;</code>
+       * @return The standardConformingStrings.
        */
       public com.google.protobuf.BoolValue getStandardConformingStrings() {
         if (standardConformingStringsBuilder_ == null) {
@@ -11870,17 +12594,19 @@ public final class Host10 {
         return standardConformingStringsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue synchronizeSeqscans_ = null;
+      private com.google.protobuf.BoolValue synchronizeSeqscans_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> synchronizeSeqscansBuilder_;
       /**
        * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
+       * @return Whether the synchronizeSeqscans field is set.
        */
       public boolean hasSynchronizeSeqscans() {
         return synchronizeSeqscansBuilder_ != null || synchronizeSeqscans_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue synchronize_seqscans = 48;</code>
+       * @return The synchronizeSeqscans.
        */
       public com.google.protobuf.BoolValue getSynchronizeSeqscans() {
         if (synchronizeSeqscansBuilder_ == null) {
@@ -11987,17 +12713,19 @@ public final class Host10 {
         return synchronizeSeqscansBuilder_;
       }
 
-      private com.google.protobuf.BoolValue transformNullEquals_ = null;
+      private com.google.protobuf.BoolValue transformNullEquals_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> transformNullEqualsBuilder_;
       /**
        * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
+       * @return Whether the transformNullEquals field is set.
        */
       public boolean hasTransformNullEquals() {
         return transformNullEqualsBuilder_ != null || transformNullEquals_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue transform_null_equals = 49;</code>
+       * @return The transformNullEquals.
        */
       public com.google.protobuf.BoolValue getTransformNullEquals() {
         if (transformNullEqualsBuilder_ == null) {
@@ -12104,17 +12832,19 @@ public final class Host10 {
         return transformNullEqualsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue exitOnError_ = null;
+      private com.google.protobuf.BoolValue exitOnError_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> exitOnErrorBuilder_;
       /**
        * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
+       * @return Whether the exitOnError field is set.
        */
       public boolean hasExitOnError() {
         return exitOnErrorBuilder_ != null || exitOnError_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue exit_on_error = 50;</code>
+       * @return The exitOnError.
        */
       public com.google.protobuf.BoolValue getExitOnError() {
         if (exitOnErrorBuilder_ == null) {
@@ -12221,17 +12951,19 @@ public final class Host10 {
         return exitOnErrorBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue seqPageCost_ = null;
+      private com.google.protobuf.DoubleValue seqPageCost_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> seqPageCostBuilder_;
       /**
        * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
+       * @return Whether the seqPageCost field is set.
        */
       public boolean hasSeqPageCost() {
         return seqPageCostBuilder_ != null || seqPageCost_ != null;
       }
       /**
        * <code>.google.protobuf.DoubleValue seq_page_cost = 51;</code>
+       * @return The seqPageCost.
        */
       public com.google.protobuf.DoubleValue getSeqPageCost() {
         if (seqPageCostBuilder_ == null) {
@@ -12338,17 +13070,19 @@ public final class Host10 {
         return seqPageCostBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue randomPageCost_ = null;
+      private com.google.protobuf.DoubleValue randomPageCost_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> randomPageCostBuilder_;
       /**
        * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
+       * @return Whether the randomPageCost field is set.
        */
       public boolean hasRandomPageCost() {
         return randomPageCostBuilder_ != null || randomPageCost_ != null;
       }
       /**
        * <code>.google.protobuf.DoubleValue random_page_cost = 52;</code>
+       * @return The randomPageCost.
        */
       public com.google.protobuf.DoubleValue getRandomPageCost() {
         if (randomPageCostBuilder_ == null) {
@@ -12455,17 +13189,19 @@ public final class Host10 {
         return randomPageCostBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableBitmapscan_ = null;
+      private com.google.protobuf.BoolValue enableBitmapscan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableBitmapscanBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
+       * @return Whether the enableBitmapscan field is set.
        */
       public boolean hasEnableBitmapscan() {
         return enableBitmapscanBuilder_ != null || enableBitmapscan_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_bitmapscan = 54;</code>
+       * @return The enableBitmapscan.
        */
       public com.google.protobuf.BoolValue getEnableBitmapscan() {
         if (enableBitmapscanBuilder_ == null) {
@@ -12572,17 +13308,19 @@ public final class Host10 {
         return enableBitmapscanBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableHashagg_ = null;
+      private com.google.protobuf.BoolValue enableHashagg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableHashaggBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
+       * @return Whether the enableHashagg field is set.
        */
       public boolean hasEnableHashagg() {
         return enableHashaggBuilder_ != null || enableHashagg_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_hashagg = 55;</code>
+       * @return The enableHashagg.
        */
       public com.google.protobuf.BoolValue getEnableHashagg() {
         if (enableHashaggBuilder_ == null) {
@@ -12689,17 +13427,19 @@ public final class Host10 {
         return enableHashaggBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableHashjoin_ = null;
+      private com.google.protobuf.BoolValue enableHashjoin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableHashjoinBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
+       * @return Whether the enableHashjoin field is set.
        */
       public boolean hasEnableHashjoin() {
         return enableHashjoinBuilder_ != null || enableHashjoin_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_hashjoin = 56;</code>
+       * @return The enableHashjoin.
        */
       public com.google.protobuf.BoolValue getEnableHashjoin() {
         if (enableHashjoinBuilder_ == null) {
@@ -12806,17 +13546,19 @@ public final class Host10 {
         return enableHashjoinBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableIndexscan_ = null;
+      private com.google.protobuf.BoolValue enableIndexscan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableIndexscanBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
+       * @return Whether the enableIndexscan field is set.
        */
       public boolean hasEnableIndexscan() {
         return enableIndexscanBuilder_ != null || enableIndexscan_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_indexscan = 57;</code>
+       * @return The enableIndexscan.
        */
       public com.google.protobuf.BoolValue getEnableIndexscan() {
         if (enableIndexscanBuilder_ == null) {
@@ -12923,17 +13665,19 @@ public final class Host10 {
         return enableIndexscanBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableIndexonlyscan_ = null;
+      private com.google.protobuf.BoolValue enableIndexonlyscan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableIndexonlyscanBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
+       * @return Whether the enableIndexonlyscan field is set.
        */
       public boolean hasEnableIndexonlyscan() {
         return enableIndexonlyscanBuilder_ != null || enableIndexonlyscan_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_indexonlyscan = 58;</code>
+       * @return The enableIndexonlyscan.
        */
       public com.google.protobuf.BoolValue getEnableIndexonlyscan() {
         if (enableIndexonlyscanBuilder_ == null) {
@@ -13040,17 +13784,19 @@ public final class Host10 {
         return enableIndexonlyscanBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableMaterial_ = null;
+      private com.google.protobuf.BoolValue enableMaterial_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableMaterialBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_material = 59;</code>
+       * @return Whether the enableMaterial field is set.
        */
       public boolean hasEnableMaterial() {
         return enableMaterialBuilder_ != null || enableMaterial_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_material = 59;</code>
+       * @return The enableMaterial.
        */
       public com.google.protobuf.BoolValue getEnableMaterial() {
         if (enableMaterialBuilder_ == null) {
@@ -13157,17 +13903,19 @@ public final class Host10 {
         return enableMaterialBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableMergejoin_ = null;
+      private com.google.protobuf.BoolValue enableMergejoin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableMergejoinBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
+       * @return Whether the enableMergejoin field is set.
        */
       public boolean hasEnableMergejoin() {
         return enableMergejoinBuilder_ != null || enableMergejoin_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_mergejoin = 60;</code>
+       * @return The enableMergejoin.
        */
       public com.google.protobuf.BoolValue getEnableMergejoin() {
         if (enableMergejoinBuilder_ == null) {
@@ -13274,17 +14022,19 @@ public final class Host10 {
         return enableMergejoinBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableNestloop_ = null;
+      private com.google.protobuf.BoolValue enableNestloop_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableNestloopBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
+       * @return Whether the enableNestloop field is set.
        */
       public boolean hasEnableNestloop() {
         return enableNestloopBuilder_ != null || enableNestloop_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_nestloop = 61;</code>
+       * @return The enableNestloop.
        */
       public com.google.protobuf.BoolValue getEnableNestloop() {
         if (enableNestloopBuilder_ == null) {
@@ -13391,17 +14141,19 @@ public final class Host10 {
         return enableNestloopBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableSeqscan_ = null;
+      private com.google.protobuf.BoolValue enableSeqscan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableSeqscanBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
+       * @return Whether the enableSeqscan field is set.
        */
       public boolean hasEnableSeqscan() {
         return enableSeqscanBuilder_ != null || enableSeqscan_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_seqscan = 62;</code>
+       * @return The enableSeqscan.
        */
       public com.google.protobuf.BoolValue getEnableSeqscan() {
         if (enableSeqscanBuilder_ == null) {
@@ -13508,17 +14260,19 @@ public final class Host10 {
         return enableSeqscanBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableSort_ = null;
+      private com.google.protobuf.BoolValue enableSort_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableSortBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
+       * @return Whether the enableSort field is set.
        */
       public boolean hasEnableSort() {
         return enableSortBuilder_ != null || enableSort_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_sort = 63;</code>
+       * @return The enableSort.
        */
       public com.google.protobuf.BoolValue getEnableSort() {
         if (enableSortBuilder_ == null) {
@@ -13625,17 +14379,19 @@ public final class Host10 {
         return enableSortBuilder_;
       }
 
-      private com.google.protobuf.BoolValue enableTidscan_ = null;
+      private com.google.protobuf.BoolValue enableTidscan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableTidscanBuilder_;
       /**
        * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
+       * @return Whether the enableTidscan field is set.
        */
       public boolean hasEnableTidscan() {
         return enableTidscanBuilder_ != null || enableTidscan_ != null;
       }
       /**
        * <code>.google.protobuf.BoolValue enable_tidscan = 64;</code>
+       * @return The enableTidscan.
        */
       public com.google.protobuf.BoolValue getEnableTidscan() {
         if (enableTidscanBuilder_ == null) {
@@ -13742,17 +14498,19 @@ public final class Host10 {
         return enableTidscanBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxParallelWorkers_ = null;
+      private com.google.protobuf.Int64Value maxParallelWorkers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxParallelWorkersBuilder_;
       /**
        * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
+       * @return Whether the maxParallelWorkers field is set.
        */
       public boolean hasMaxParallelWorkers() {
         return maxParallelWorkersBuilder_ != null || maxParallelWorkers_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value max_parallel_workers = 65 [(.yandex.cloud.value) = "0-1024"];</code>
+       * @return The maxParallelWorkers.
        */
       public com.google.protobuf.Int64Value getMaxParallelWorkers() {
         if (maxParallelWorkersBuilder_ == null) {
@@ -13859,17 +14617,19 @@ public final class Host10 {
         return maxParallelWorkersBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxParallelWorkersPerGather_ = null;
+      private com.google.protobuf.Int64Value maxParallelWorkersPerGather_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxParallelWorkersPerGatherBuilder_;
       /**
        * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
+       * @return Whether the maxParallelWorkersPerGather field is set.
        */
       public boolean hasMaxParallelWorkersPerGather() {
         return maxParallelWorkersPerGatherBuilder_ != null || maxParallelWorkersPerGather_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value max_parallel_workers_per_gather = 66 [(.yandex.cloud.value) = "0-1024"];</code>
+       * @return The maxParallelWorkersPerGather.
        */
       public com.google.protobuf.Int64Value getMaxParallelWorkersPerGather() {
         if (maxParallelWorkersPerGatherBuilder_ == null) {
@@ -13979,6 +14739,7 @@ public final class Host10 {
       private java.lang.Object timezone_ = "";
       /**
        * <code>string timezone = 67;</code>
+       * @return The timezone.
        */
       public java.lang.String getTimezone() {
         java.lang.Object ref = timezone_;
@@ -13994,6 +14755,7 @@ public final class Host10 {
       }
       /**
        * <code>string timezone = 67;</code>
+       * @return The bytes for timezone.
        */
       public com.google.protobuf.ByteString
           getTimezoneBytes() {
@@ -14010,6 +14772,8 @@ public final class Host10 {
       }
       /**
        * <code>string timezone = 67;</code>
+       * @param value The timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezone(
           java.lang.String value) {
@@ -14023,6 +14787,7 @@ public final class Host10 {
       }
       /**
        * <code>string timezone = 67;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTimezone() {
         
@@ -14032,6 +14797,8 @@ public final class Host10 {
       }
       /**
        * <code>string timezone = 67;</code>
+       * @param value The bytes for timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
@@ -14045,17 +14812,19 @@ public final class Host10 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value effectiveIoConcurrency_ = null;
+      private com.google.protobuf.Int64Value effectiveIoConcurrency_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveIoConcurrencyBuilder_;
       /**
        * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return Whether the effectiveIoConcurrency field is set.
        */
       public boolean hasEffectiveIoConcurrency() {
         return effectiveIoConcurrencyBuilder_ != null || effectiveIoConcurrency_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value effective_io_concurrency = 68 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The effectiveIoConcurrency.
        */
       public com.google.protobuf.Int64Value getEffectiveIoConcurrency() {
         if (effectiveIoConcurrencyBuilder_ == null) {
@@ -14162,17 +14931,19 @@ public final class Host10 {
         return effectiveIoConcurrencyBuilder_;
       }
 
-      private com.google.protobuf.Int64Value effectiveCacheSize_ = null;
+      private com.google.protobuf.Int64Value effectiveCacheSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveCacheSizeBuilder_;
       /**
        * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * @return Whether the effectiveCacheSize field is set.
        */
       public boolean hasEffectiveCacheSize() {
         return effectiveCacheSizeBuilder_ != null || effectiveCacheSize_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value effective_cache_size = 69 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * @return The effectiveCacheSize.
        */
       public com.google.protobuf.Int64Value getEffectiveCacheSize() {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -14281,7 +15052,7 @@ public final class Host10 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14505,20 +15276,12 @@ public final class Host10 {
       "andex/cloud/mdb/postgresql/v1/config;pos" +
       "tgresqlb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlHostConfig10_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlHostConfig10_fieldAccessorTable = new

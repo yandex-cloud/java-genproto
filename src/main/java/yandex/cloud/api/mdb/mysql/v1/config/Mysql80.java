@@ -25,6 +25,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return Whether the innodbBufferPoolSize field is set.
      */
     boolean hasInnodbBufferPoolSize();
     /**
@@ -34,6 +35,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return The innodbBufferPoolSize.
      */
     com.google.protobuf.Int64Value getInnodbBufferPoolSize();
     /**
@@ -53,6 +55,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
+     * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
     /**
@@ -62,6 +65,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
+     * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
@@ -81,6 +85,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return Whether the longQueryTime field is set.
      */
     boolean hasLongQueryTime();
     /**
@@ -90,6 +95,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return The longQueryTime.
      */
     com.google.protobuf.DoubleValue getLongQueryTime();
     /**
@@ -109,6 +115,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue general_log = 4;</code>
+     * @return Whether the generalLog field is set.
      */
     boolean hasGeneralLog();
     /**
@@ -118,6 +125,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue general_log = 4;</code>
+     * @return The generalLog.
      */
     com.google.protobuf.BoolValue getGeneralLog();
     /**
@@ -137,6 +145,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
      */
     boolean hasAuditLog();
     /**
@@ -146,6 +155,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
+     * @return The auditLog.
      */
     com.google.protobuf.BoolValue getAuditLog();
     /**
@@ -165,6 +175,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @return A list containing the sqlMode.
      */
     java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode> getSqlModeList();
     /**
@@ -174,6 +185,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @return The count of sqlMode.
      */
     int getSqlModeCount();
     /**
@@ -183,6 +195,8 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @param index The index of the element to return.
+     * @return The sqlMode at the given index.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode getSqlMode(int index);
     /**
@@ -192,6 +206,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @return A list containing the enum numeric values on the wire for sqlMode.
      */
     java.util.List<java.lang.Integer>
     getSqlModeValueList();
@@ -202,6 +217,8 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of sqlMode at the given index.
      */
     int getSqlModeValue(int index);
 
@@ -212,6 +229,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
+     * @return Whether the maxAllowedPacket field is set.
      */
     boolean hasMaxAllowedPacket();
     /**
@@ -221,6 +239,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
+     * @return The maxAllowedPacket.
      */
     com.google.protobuf.Int64Value getMaxAllowedPacket();
     /**
@@ -240,6 +259,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+     * @return The enum numeric value on the wire for defaultAuthenticationPlugin.
      */
     int getDefaultAuthenticationPluginValue();
     /**
@@ -249,6 +269,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+     * @return The defaultAuthenticationPlugin.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin();
 
@@ -259,6 +280,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return Whether the innodbFlushLogAtTrxCommit field is set.
      */
     boolean hasInnodbFlushLogAtTrxCommit();
     /**
@@ -268,6 +290,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return The innodbFlushLogAtTrxCommit.
      */
     com.google.protobuf.Int64Value getInnodbFlushLogAtTrxCommit();
     /**
@@ -287,6 +310,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
+     * @return Whether the innodbLockWaitTimeout field is set.
      */
     boolean hasInnodbLockWaitTimeout();
     /**
@@ -296,6 +320,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
+     * @return The innodbLockWaitTimeout.
      */
     com.google.protobuf.Int64Value getInnodbLockWaitTimeout();
     /**
@@ -315,6 +340,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+     * @return The enum numeric value on the wire for transactionIsolation.
      */
     int getTransactionIsolationValue();
     /**
@@ -324,6 +350,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+     * @return The transactionIsolation.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation getTransactionIsolation();
 
@@ -334,6 +361,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
+     * @return Whether the innodbPrintAllDeadlocks field is set.
      */
     boolean hasInnodbPrintAllDeadlocks();
     /**
@@ -343,6 +371,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
+     * @return The innodbPrintAllDeadlocks.
      */
     com.google.protobuf.BoolValue getInnodbPrintAllDeadlocks();
     /**
@@ -362,6 +391,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return Whether the netReadTimeout field is set.
      */
     boolean hasNetReadTimeout();
     /**
@@ -371,6 +401,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return The netReadTimeout.
      */
     com.google.protobuf.Int64Value getNetReadTimeout();
     /**
@@ -390,6 +421,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return Whether the netWriteTimeout field is set.
      */
     boolean hasNetWriteTimeout();
     /**
@@ -399,6 +431,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return The netWriteTimeout.
      */
     com.google.protobuf.Int64Value getNetWriteTimeout();
     /**
@@ -418,6 +451,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
+     * @return Whether the groupConcatMaxLen field is set.
      */
     boolean hasGroupConcatMaxLen();
     /**
@@ -427,6 +461,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
+     * @return The groupConcatMaxLen.
      */
     com.google.protobuf.Int64Value getGroupConcatMaxLen();
     /**
@@ -446,6 +481,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
+     * @return Whether the tmpTableSize field is set.
      */
     boolean hasTmpTableSize();
     /**
@@ -455,6 +491,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
+     * @return The tmpTableSize.
      */
     com.google.protobuf.Int64Value getTmpTableSize();
     /**
@@ -474,6 +511,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
+     * @return Whether the maxHeapTableSize field is set.
      */
     boolean hasMaxHeapTableSize();
     /**
@@ -483,6 +521,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
+     * @return The maxHeapTableSize.
      */
     com.google.protobuf.Int64Value getMaxHeapTableSize();
     /**
@@ -502,6 +541,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
+     * @return The defaultTimeZone.
      */
     java.lang.String getDefaultTimeZone();
     /**
@@ -511,6 +551,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
+     * @return The bytes for defaultTimeZone.
      */
     com.google.protobuf.ByteString
         getDefaultTimeZoneBytes();
@@ -522,6 +563,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
+     * @return The characterSetServer.
      */
     java.lang.String getCharacterSetServer();
     /**
@@ -531,6 +573,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
+     * @return The bytes for characterSetServer.
      */
     com.google.protobuf.ByteString
         getCharacterSetServerBytes();
@@ -542,6 +585,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string collation_server = 20;</code>
+     * @return The collationServer.
      */
     java.lang.String getCollationServer();
     /**
@@ -551,6 +595,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string collation_server = 20;</code>
+     * @return The bytes for collationServer.
      */
     com.google.protobuf.ByteString
         getCollationServerBytes();
@@ -562,6 +607,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     * @return Whether the innodbAdaptiveHashIndex field is set.
      */
     boolean hasInnodbAdaptiveHashIndex();
     /**
@@ -571,6 +617,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     * @return The innodbAdaptiveHashIndex.
      */
     com.google.protobuf.BoolValue getInnodbAdaptiveHashIndex();
     /**
@@ -590,6 +637,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     * @return Whether the innodbNumaInterleave field is set.
      */
     boolean hasInnodbNumaInterleave();
     /**
@@ -599,6 +647,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     * @return The innodbNumaInterleave.
      */
     com.google.protobuf.BoolValue getInnodbNumaInterleave();
     /**
@@ -618,6 +667,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return Whether the innodbLogBufferSize field is set.
      */
     boolean hasInnodbLogBufferSize();
     /**
@@ -627,6 +677,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return The innodbLogBufferSize.
      */
     com.google.protobuf.Int64Value getInnodbLogBufferSize();
     /**
@@ -646,6 +697,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     * @return Whether the innodbLogFileSize field is set.
      */
     boolean hasInnodbLogFileSize();
     /**
@@ -655,6 +707,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     * @return The innodbLogFileSize.
      */
     com.google.protobuf.Int64Value getInnodbLogFileSize();
     /**
@@ -674,6 +727,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return Whether the innodbIoCapacity field is set.
      */
     boolean hasInnodbIoCapacity();
     /**
@@ -683,6 +737,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return The innodbIoCapacity.
      */
     com.google.protobuf.Int64Value getInnodbIoCapacity();
     /**
@@ -702,6 +757,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return Whether the innodbIoCapacityMax field is set.
      */
     boolean hasInnodbIoCapacityMax();
     /**
@@ -711,6 +767,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return The innodbIoCapacityMax.
      */
     com.google.protobuf.Int64Value getInnodbIoCapacityMax();
     /**
@@ -730,6 +787,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return Whether the innodbReadIoThreads field is set.
      */
     boolean hasInnodbReadIoThreads();
     /**
@@ -739,6 +797,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return The innodbReadIoThreads.
      */
     com.google.protobuf.Int64Value getInnodbReadIoThreads();
     /**
@@ -758,6 +817,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return Whether the innodbWriteIoThreads field is set.
      */
     boolean hasInnodbWriteIoThreads();
     /**
@@ -767,6 +827,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return The innodbWriteIoThreads.
      */
     com.google.protobuf.Int64Value getInnodbWriteIoThreads();
     /**
@@ -786,6 +847,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return Whether the innodbPurgeThreads field is set.
      */
     boolean hasInnodbPurgeThreads();
     /**
@@ -795,6 +857,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return The innodbPurgeThreads.
      */
     com.google.protobuf.Int64Value getInnodbPurgeThreads();
     /**
@@ -814,6 +877,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return Whether the innodbThreadConcurrency field is set.
      */
     boolean hasInnodbThreadConcurrency();
     /**
@@ -823,6 +887,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The innodbThreadConcurrency.
      */
     com.google.protobuf.Int64Value getInnodbThreadConcurrency();
     /**
@@ -842,6 +907,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     * @return Whether the innodbTempDataFileMaxSize field is set.
      */
     boolean hasInnodbTempDataFileMaxSize();
     /**
@@ -851,6 +917,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     * @return The innodbTempDataFileMaxSize.
      */
     com.google.protobuf.Int64Value getInnodbTempDataFileMaxSize();
     /**
@@ -870,6 +937,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return Whether the threadCacheSize field is set.
      */
     boolean hasThreadCacheSize();
     /**
@@ -879,6 +947,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return The threadCacheSize.
      */
     com.google.protobuf.Int64Value getThreadCacheSize();
     /**
@@ -898,6 +967,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     * @return Whether the threadStack field is set.
      */
     boolean hasThreadStack();
     /**
@@ -907,6 +977,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     * @return The threadStack.
      */
     com.google.protobuf.Int64Value getThreadStack();
     /**
@@ -926,6 +997,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return Whether the joinBufferSize field is set.
      */
     boolean hasJoinBufferSize();
     /**
@@ -935,6 +1007,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return The joinBufferSize.
      */
     com.google.protobuf.Int64Value getJoinBufferSize();
     /**
@@ -954,6 +1027,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return Whether the sortBufferSize field is set.
      */
     boolean hasSortBufferSize();
     /**
@@ -963,6 +1037,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return The sortBufferSize.
      */
     com.google.protobuf.Int64Value getSortBufferSize();
     /**
@@ -982,6 +1057,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return Whether the tableDefinitionCache field is set.
      */
     boolean hasTableDefinitionCache();
     /**
@@ -991,6 +1067,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return The tableDefinitionCache.
      */
     com.google.protobuf.Int64Value getTableDefinitionCache();
     /**
@@ -1010,6 +1087,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return Whether the tableOpenCache field is set.
      */
     boolean hasTableOpenCache();
     /**
@@ -1019,6 +1097,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return The tableOpenCache.
      */
     com.google.protobuf.Int64Value getTableOpenCache();
     /**
@@ -1038,6 +1117,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     * @return Whether the tableOpenCacheInstances field is set.
      */
     boolean hasTableOpenCacheInstances();
     /**
@@ -1047,6 +1127,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     * @return The tableOpenCacheInstances.
      */
     com.google.protobuf.Int64Value getTableOpenCacheInstances();
     /**
@@ -1066,6 +1147,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     * @return Whether the explicitDefaultsForTimestamp field is set.
      */
     boolean hasExplicitDefaultsForTimestamp();
     /**
@@ -1075,6 +1157,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     * @return The explicitDefaultsForTimestamp.
      */
     com.google.protobuf.BoolValue getExplicitDefaultsForTimestamp();
     /**
@@ -1094,6 +1177,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return Whether the autoIncrementIncrement field is set.
      */
     boolean hasAutoIncrementIncrement();
     /**
@@ -1103,6 +1187,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return The autoIncrementIncrement.
      */
     com.google.protobuf.Int64Value getAutoIncrementIncrement();
     /**
@@ -1122,6 +1207,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return Whether the autoIncrementOffset field is set.
      */
     boolean hasAutoIncrementOffset();
     /**
@@ -1131,6 +1217,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return The autoIncrementOffset.
      */
     com.google.protobuf.Int64Value getAutoIncrementOffset();
     /**
@@ -1150,6 +1237,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     * @return Whether the syncBinlog field is set.
      */
     boolean hasSyncBinlog();
     /**
@@ -1159,6 +1247,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     * @return The syncBinlog.
      */
     com.google.protobuf.Int64Value getSyncBinlog();
     /**
@@ -1178,6 +1267,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     * @return Whether the binlogCacheSize field is set.
      */
     boolean hasBinlogCacheSize();
     /**
@@ -1187,6 +1277,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     * @return The binlogCacheSize.
      */
     com.google.protobuf.Int64Value getBinlogCacheSize();
     /**
@@ -1206,6 +1297,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
+     * @return Whether the binlogGroupCommitSyncDelay field is set.
      */
     boolean hasBinlogGroupCommitSyncDelay();
     /**
@@ -1215,6 +1307,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
+     * @return The binlogGroupCommitSyncDelay.
      */
     com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay();
     /**
@@ -1234,6 +1327,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+     * @return The enum numeric value on the wire for binlogRowImage.
      */
     int getBinlogRowImageValue();
     /**
@@ -1243,6 +1337,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+     * @return The binlogRowImage.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage getBinlogRowImage();
 
@@ -1253,6 +1348,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     * @return Whether the binlogRowsQueryLogEvents field is set.
      */
     boolean hasBinlogRowsQueryLogEvents();
     /**
@@ -1262,6 +1358,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     * @return The binlogRowsQueryLogEvents.
      */
     com.google.protobuf.BoolValue getBinlogRowsQueryLogEvents();
     /**
@@ -1281,6 +1378,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return Whether the rplSemiSyncMasterWaitForSlaveCount field is set.
      */
     boolean hasRplSemiSyncMasterWaitForSlaveCount();
     /**
@@ -1290,6 +1388,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return The rplSemiSyncMasterWaitForSlaveCount.
      */
     com.google.protobuf.Int64Value getRplSemiSyncMasterWaitForSlaveCount();
     /**
@@ -1309,6 +1408,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+     * @return The enum numeric value on the wire for slaveParallelType.
      */
     int getSlaveParallelTypeValue();
     /**
@@ -1318,6 +1418,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+     * @return The slaveParallelType.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType getSlaveParallelType();
 
@@ -1328,6 +1429,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     * @return Whether the slaveParallelWorkers field is set.
      */
     boolean hasSlaveParallelWorkers();
     /**
@@ -1337,6 +1439,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     * @return The slaveParallelWorkers.
      */
     com.google.protobuf.Int64Value getSlaveParallelWorkers();
     /**
@@ -1356,6 +1459,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return Whether the regexpTimeLimit field is set.
      */
     boolean hasRegexpTimeLimit();
     /**
@@ -1365,6 +1469,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return The regexpTimeLimit.
      */
     com.google.protobuf.Int64Value getRegexpTimeLimit();
     /**
@@ -1383,6 +1488,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
+     * @return Whether the mdbPreserveBinlogBytes field is set.
      */
     boolean hasMdbPreserveBinlogBytes();
     /**
@@ -1391,6 +1497,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
+     * @return The mdbPreserveBinlogBytes.
      */
     com.google.protobuf.Int64Value getMdbPreserveBinlogBytes();
     /**
@@ -1409,6 +1516,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return Whether the interactiveTimeout field is set.
      */
     boolean hasInteractiveTimeout();
     /**
@@ -1418,6 +1526,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return The interactiveTimeout.
      */
     com.google.protobuf.Int64Value getInteractiveTimeout();
     /**
@@ -1437,6 +1546,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return Whether the waitTimeout field is set.
      */
     boolean hasWaitTimeout();
     /**
@@ -1446,6 +1556,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return The waitTimeout.
      */
     com.google.protobuf.Int64Value getWaitTimeout();
     /**
@@ -1464,6 +1575,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     * @return Whether the mdbOfflineModeEnableLag field is set.
      */
     boolean hasMdbOfflineModeEnableLag();
     /**
@@ -1472,6 +1584,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     * @return The mdbOfflineModeEnableLag.
      */
     com.google.protobuf.Int64Value getMdbOfflineModeEnableLag();
     /**
@@ -1490,6 +1603,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     * @return Whether the mdbOfflineModeDisableLag field is set.
      */
     boolean hasMdbOfflineModeDisableLag();
     /**
@@ -1499,6 +1613,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     * @return The mdbOfflineModeDisableLag.
      */
     com.google.protobuf.Int64Value getMdbOfflineModeDisableLag();
     /**
@@ -1518,6 +1633,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return Whether the rangeOptimizerMaxMemSize field is set.
      */
     boolean hasRangeOptimizerMaxMemSize();
     /**
@@ -1527,6 +1643,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return The rangeOptimizerMaxMemSize.
      */
     com.google.protobuf.Int64Value getRangeOptimizerMaxMemSize();
     /**
@@ -1546,6 +1663,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     * @return Whether the slowQueryLog field is set.
      */
     boolean hasSlowQueryLog();
     /**
@@ -1555,6 +1673,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     * @return The slowQueryLog.
      */
     com.google.protobuf.BoolValue getSlowQueryLog();
     /**
@@ -1574,6 +1693,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     * @return Whether the slowQueryLogAlwaysWriteTime field is set.
      */
     boolean hasSlowQueryLogAlwaysWriteTime();
     /**
@@ -1583,6 +1703,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     * @return The slowQueryLogAlwaysWriteTime.
      */
     com.google.protobuf.DoubleValue getSlowQueryLogAlwaysWriteTime();
     /**
@@ -1602,6 +1723,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     * @return The enum numeric value on the wire for logSlowRateType.
      */
     int getLogSlowRateTypeValue();
     /**
@@ -1611,6 +1733,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     * @return The logSlowRateType.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType();
 
@@ -1621,6 +1744,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     * @return Whether the logSlowRateLimit field is set.
      */
     boolean hasLogSlowRateLimit();
     /**
@@ -1630,6 +1754,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     * @return The logSlowRateLimit.
      */
     com.google.protobuf.Int64Value getLogSlowRateLimit();
     /**
@@ -1649,6 +1774,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     * @return Whether the logSlowSpStatements field is set.
      */
     boolean hasLogSlowSpStatements();
     /**
@@ -1658,6 +1784,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     * @return The logSlowSpStatements.
      */
     com.google.protobuf.BoolValue getLogSlowSpStatements();
     /**
@@ -1677,6 +1804,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @return A list containing the logSlowFilter.
      */
     java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> getLogSlowFilterList();
     /**
@@ -1686,6 +1814,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @return The count of logSlowFilter.
      */
     int getLogSlowFilterCount();
     /**
@@ -1695,6 +1824,8 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @param index The index of the element to return.
+     * @return The logSlowFilter at the given index.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType getLogSlowFilter(int index);
     /**
@@ -1704,6 +1835,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @return A list containing the enum numeric values on the wire for logSlowFilter.
      */
     java.util.List<java.lang.Integer>
     getLogSlowFilterValueList();
@@ -1714,6 +1846,8 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of logSlowFilter at the given index.
      */
     int getLogSlowFilterValue(int index);
 
@@ -1724,6 +1858,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return Whether the mdbPriorityChoiceMaxLag field is set.
      */
     boolean hasMdbPriorityChoiceMaxLag();
     /**
@@ -1733,6 +1868,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return The mdbPriorityChoiceMaxLag.
      */
     com.google.protobuf.Int64Value getMdbPriorityChoiceMaxLag();
     /**
@@ -1752,6 +1888,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
+     * @return Whether the innodbPageSize field is set.
      */
     boolean hasInnodbPageSize();
     /**
@@ -1761,6 +1898,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
+     * @return The innodbPageSize.
      */
     com.google.protobuf.Int64Value getInnodbPageSize();
     /**
@@ -1780,6 +1918,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     * @return Whether the innodbOnlineAlterLogMaxSize field is set.
      */
     boolean hasInnodbOnlineAlterLogMaxSize();
     /**
@@ -1789,6 +1928,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     * @return The innodbOnlineAlterLogMaxSize.
      */
     com.google.protobuf.Int64Value getInnodbOnlineAlterLogMaxSize();
     /**
@@ -1808,6 +1948,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return Whether the innodbFtMinTokenSize field is set.
      */
     boolean hasInnodbFtMinTokenSize();
     /**
@@ -1817,6 +1958,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return The innodbFtMinTokenSize.
      */
     com.google.protobuf.Int64Value getInnodbFtMinTokenSize();
     /**
@@ -1836,6 +1978,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     * @return Whether the innodbFtMaxTokenSize field is set.
      */
     boolean hasInnodbFtMaxTokenSize();
     /**
@@ -1845,6 +1988,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     * @return The innodbFtMaxTokenSize.
      */
     com.google.protobuf.Int64Value getInnodbFtMaxTokenSize();
     /**
@@ -1864,6 +2008,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     * @return Whether the lowerCaseTableNames field is set.
      */
     boolean hasLowerCaseTableNames();
     /**
@@ -1873,6 +2018,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     * @return The lowerCaseTableNames.
      */
     com.google.protobuf.Int64Value getLowerCaseTableNames();
     /**
@@ -1892,6 +2038,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
+     * @return Whether the maxSpRecursionDepth field is set.
      */
     boolean hasMaxSpRecursionDepth();
     /**
@@ -1901,6 +2048,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
+     * @return The maxSpRecursionDepth.
      */
     com.google.protobuf.Int64Value getMaxSpRecursionDepth();
     /**
@@ -1920,6 +2068,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     * @return Whether the innodbCompressionLevel field is set.
      */
     boolean hasInnodbCompressionLevel();
     /**
@@ -1929,6 +2078,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     * @return The innodbCompressionLevel.
      */
     com.google.protobuf.Int64Value getInnodbCompressionLevel();
     /**
@@ -1948,7 +2098,7 @@ public final class Mysql80 {
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0}
    */
-  public  static final class MysqlConfig8_0 extends
+  public static final class MysqlConfig8_0 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0)
       MysqlConfig8_0OrBuilder {
@@ -1971,6 +2121,13 @@ public final class Mysql80 {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConfig8_0();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1984,8 +2141,6 @@ public final class Mysql80 {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
-      int mutable_bitField1_ = 0;
-      int mutable_bitField2_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2063,9 +2218,9 @@ public final class Mysql80 {
             }
             case 48: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sqlMode_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               sqlMode_.add(rawValue);
               break;
@@ -2075,9 +2230,9 @@ public final class Mysql80 {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   sqlMode_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000020;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 sqlMode_.add(rawValue);
               }
@@ -2745,9 +2900,9 @@ public final class Mysql80 {
             }
             case 496: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 logSlowFilter_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField1_ |= 0x20000000;
+                mutable_bitField0_ |= 0x00000002;
               }
               logSlowFilter_.add(rawValue);
               break;
@@ -2757,9 +2912,9 @@ public final class Mysql80 {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   logSlowFilter_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField1_ |= 0x20000000;
+                  mutable_bitField0_ |= 0x00000002;
                 }
                 logSlowFilter_.add(rawValue);
               }
@@ -2871,7 +3026,7 @@ public final class Mysql80 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2885,10 +3040,10 @@ public final class Mysql80 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sqlMode_ = java.util.Collections.unmodifiableList(sqlMode_);
         }
-        if (((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           logSlowFilter_ = java.util.Collections.unmodifiableList(logSlowFilter_);
         }
         this.unknownFields = unknownFields.build();
@@ -3103,6 +3258,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3110,6 +3267,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static SQLMode forNumber(int value) {
         switch (value) {
           case 0: return SQLMODE_UNSPECIFIED;
@@ -3152,6 +3313,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3261,6 +3426,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3268,6 +3435,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static AuthPlugin forNumber(int value) {
         switch (value) {
           case 0: return AUTH_PLUGIN_UNSPECIFIED;
@@ -3292,6 +3463,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3377,6 +3552,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3384,6 +3561,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static TransactionIsolation forNumber(int value) {
         switch (value) {
           case 0: return TRANSACTION_ISOLATION_UNSPECIFIED;
@@ -3408,6 +3589,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3493,6 +3678,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3500,6 +3687,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static BinlogRowImage forNumber(int value) {
         switch (value) {
           case 0: return BINLOG_ROW_IMAGE_UNSPECIFIED;
@@ -3524,6 +3715,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3601,6 +3796,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3608,6 +3805,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static SlaveParallelType forNumber(int value) {
         switch (value) {
           case 0: return SLAVE_PARALLEL_TYPE_UNSPECIFIED;
@@ -3631,6 +3832,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3708,6 +3913,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3715,6 +3922,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LogSlowRateType forNumber(int value) {
         switch (value) {
           case 0: return LOG_SLOW_RATE_TYPE_UNSPECIFIED;
@@ -3738,6 +3949,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3847,6 +4062,8 @@ public final class Mysql80 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3854,6 +4071,10 @@ public final class Mysql80 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LogSlowFilterType forNumber(int value) {
         switch (value) {
           case 0: return LOG_SLOW_FILTER_TYPE_UNSPECIFIED;
@@ -3881,6 +4102,10 @@ public final class Mysql80 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3915,9 +4140,6 @@ public final class Mysql80 {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType)
     }
 
-    private int bitField0_;
-    private int bitField1_;
-    private int bitField2_;
     public static final int INNODB_BUFFER_POOL_SIZE_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value innodbBufferPoolSize_;
     /**
@@ -3927,7 +4149,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return Whether the innodbBufferPoolSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbBufferPoolSize() {
       return innodbBufferPoolSize_ != null;
     }
@@ -3938,7 +4162,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return The innodbBufferPoolSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbBufferPoolSize() {
       return innodbBufferPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbBufferPoolSize_;
     }
@@ -3950,6 +4176,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbBufferPoolSizeOrBuilder() {
       return getInnodbBufferPoolSize();
     }
@@ -3963,7 +4190,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
+     * @return Whether the maxConnections field is set.
      */
+    @java.lang.Override
     public boolean hasMaxConnections() {
       return maxConnections_ != null;
     }
@@ -3974,7 +4203,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
+     * @return The maxConnections.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxConnections() {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
     }
@@ -3986,6 +4217,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
       return getMaxConnections();
     }
@@ -3999,7 +4231,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return Whether the longQueryTime field is set.
      */
+    @java.lang.Override
     public boolean hasLongQueryTime() {
       return longQueryTime_ != null;
     }
@@ -4010,7 +4244,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return The longQueryTime.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getLongQueryTime() {
       return longQueryTime_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : longQueryTime_;
     }
@@ -4022,6 +4258,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getLongQueryTimeOrBuilder() {
       return getLongQueryTime();
     }
@@ -4035,7 +4272,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue general_log = 4;</code>
+     * @return Whether the generalLog field is set.
      */
+    @java.lang.Override
     public boolean hasGeneralLog() {
       return generalLog_ != null;
     }
@@ -4046,7 +4285,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue general_log = 4;</code>
+     * @return The generalLog.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getGeneralLog() {
       return generalLog_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : generalLog_;
     }
@@ -4058,6 +4299,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue general_log = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getGeneralLogOrBuilder() {
       return getGeneralLog();
     }
@@ -4071,7 +4313,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
      */
+    @java.lang.Override
     public boolean hasAuditLog() {
       return auditLog_ != null;
     }
@@ -4082,7 +4326,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
+     * @return The auditLog.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getAuditLog() {
       return auditLog_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditLog_;
     }
@@ -4094,6 +4340,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getAuditLogOrBuilder() {
       return getAuditLog();
     }
@@ -4117,7 +4364,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @return A list containing the sqlMode.
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode> getSqlModeList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode>(sqlMode_, sqlMode_converter_);
@@ -4129,7 +4378,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @return The count of sqlMode.
      */
+    @java.lang.Override
     public int getSqlModeCount() {
       return sqlMode_.size();
     }
@@ -4140,7 +4391,10 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @param index The index of the element to return.
+     * @return The sqlMode at the given index.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode getSqlMode(int index) {
       return sqlMode_converter_.convert(sqlMode_.get(index));
     }
@@ -4151,7 +4405,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @return A list containing the enum numeric values on the wire for sqlMode.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getSqlModeValueList() {
       return sqlMode_;
@@ -4163,7 +4419,10 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of sqlMode at the given index.
      */
+    @java.lang.Override
     public int getSqlModeValue(int index) {
       return sqlMode_.get(index);
     }
@@ -4178,7 +4437,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
+     * @return Whether the maxAllowedPacket field is set.
      */
+    @java.lang.Override
     public boolean hasMaxAllowedPacket() {
       return maxAllowedPacket_ != null;
     }
@@ -4189,7 +4450,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
+     * @return The maxAllowedPacket.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxAllowedPacket() {
       return maxAllowedPacket_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxAllowedPacket_;
     }
@@ -4201,6 +4464,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxAllowedPacketOrBuilder() {
       return getMaxAllowedPacket();
     }
@@ -4214,8 +4478,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+     * @return The enum numeric value on the wire for defaultAuthenticationPlugin.
      */
-    public int getDefaultAuthenticationPluginValue() {
+    @java.lang.Override public int getDefaultAuthenticationPluginValue() {
       return defaultAuthenticationPlugin_;
     }
     /**
@@ -4225,8 +4490,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+     * @return The defaultAuthenticationPlugin.
      */
-    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin() {
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin.valueOf(defaultAuthenticationPlugin_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin.UNRECOGNIZED : result;
@@ -4241,7 +4507,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return Whether the innodbFlushLogAtTrxCommit field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbFlushLogAtTrxCommit() {
       return innodbFlushLogAtTrxCommit_ != null;
     }
@@ -4252,7 +4520,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return The innodbFlushLogAtTrxCommit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbFlushLogAtTrxCommit() {
       return innodbFlushLogAtTrxCommit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFlushLogAtTrxCommit_;
     }
@@ -4264,6 +4534,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbFlushLogAtTrxCommitOrBuilder() {
       return getInnodbFlushLogAtTrxCommit();
     }
@@ -4277,7 +4548,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
+     * @return Whether the innodbLockWaitTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbLockWaitTimeout() {
       return innodbLockWaitTimeout_ != null;
     }
@@ -4288,7 +4561,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
+     * @return The innodbLockWaitTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbLockWaitTimeout() {
       return innodbLockWaitTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLockWaitTimeout_;
     }
@@ -4300,6 +4575,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbLockWaitTimeoutOrBuilder() {
       return getInnodbLockWaitTimeout();
     }
@@ -4313,8 +4589,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+     * @return The enum numeric value on the wire for transactionIsolation.
      */
-    public int getTransactionIsolationValue() {
+    @java.lang.Override public int getTransactionIsolationValue() {
       return transactionIsolation_;
     }
     /**
@@ -4324,8 +4601,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+     * @return The transactionIsolation.
      */
-    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation getTransactionIsolation() {
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation getTransactionIsolation() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation.valueOf(transactionIsolation_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation.UNRECOGNIZED : result;
@@ -4340,7 +4618,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
+     * @return Whether the innodbPrintAllDeadlocks field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbPrintAllDeadlocks() {
       return innodbPrintAllDeadlocks_ != null;
     }
@@ -4351,7 +4631,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
+     * @return The innodbPrintAllDeadlocks.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getInnodbPrintAllDeadlocks() {
       return innodbPrintAllDeadlocks_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbPrintAllDeadlocks_;
     }
@@ -4363,6 +4645,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getInnodbPrintAllDeadlocksOrBuilder() {
       return getInnodbPrintAllDeadlocks();
     }
@@ -4376,7 +4659,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return Whether the netReadTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasNetReadTimeout() {
       return netReadTimeout_ != null;
     }
@@ -4387,7 +4672,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return The netReadTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getNetReadTimeout() {
       return netReadTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : netReadTimeout_;
     }
@@ -4399,6 +4686,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getNetReadTimeoutOrBuilder() {
       return getNetReadTimeout();
     }
@@ -4412,7 +4700,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return Whether the netWriteTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasNetWriteTimeout() {
       return netWriteTimeout_ != null;
     }
@@ -4423,7 +4713,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
+     * @return The netWriteTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getNetWriteTimeout() {
       return netWriteTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : netWriteTimeout_;
     }
@@ -4435,6 +4727,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getNetWriteTimeoutOrBuilder() {
       return getNetWriteTimeout();
     }
@@ -4448,7 +4741,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
+     * @return Whether the groupConcatMaxLen field is set.
      */
+    @java.lang.Override
     public boolean hasGroupConcatMaxLen() {
       return groupConcatMaxLen_ != null;
     }
@@ -4459,7 +4754,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
+     * @return The groupConcatMaxLen.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGroupConcatMaxLen() {
       return groupConcatMaxLen_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : groupConcatMaxLen_;
     }
@@ -4471,6 +4768,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGroupConcatMaxLenOrBuilder() {
       return getGroupConcatMaxLen();
     }
@@ -4484,7 +4782,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
+     * @return Whether the tmpTableSize field is set.
      */
+    @java.lang.Override
     public boolean hasTmpTableSize() {
       return tmpTableSize_ != null;
     }
@@ -4495,7 +4795,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
+     * @return The tmpTableSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTmpTableSize() {
       return tmpTableSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tmpTableSize_;
     }
@@ -4507,6 +4809,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTmpTableSizeOrBuilder() {
       return getTmpTableSize();
     }
@@ -4520,7 +4823,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
+     * @return Whether the maxHeapTableSize field is set.
      */
+    @java.lang.Override
     public boolean hasMaxHeapTableSize() {
       return maxHeapTableSize_ != null;
     }
@@ -4531,7 +4836,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
+     * @return The maxHeapTableSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxHeapTableSize() {
       return maxHeapTableSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxHeapTableSize_;
     }
@@ -4543,6 +4850,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
       return getMaxHeapTableSize();
     }
@@ -4556,7 +4864,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
+     * @return The defaultTimeZone.
      */
+    @java.lang.Override
     public java.lang.String getDefaultTimeZone() {
       java.lang.Object ref = defaultTimeZone_;
       if (ref instanceof java.lang.String) {
@@ -4576,7 +4886,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
+     * @return The bytes for defaultTimeZone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDefaultTimeZoneBytes() {
       java.lang.Object ref = defaultTimeZone_;
@@ -4600,7 +4912,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
+     * @return The characterSetServer.
      */
+    @java.lang.Override
     public java.lang.String getCharacterSetServer() {
       java.lang.Object ref = characterSetServer_;
       if (ref instanceof java.lang.String) {
@@ -4620,7 +4934,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
+     * @return The bytes for characterSetServer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCharacterSetServerBytes() {
       java.lang.Object ref = characterSetServer_;
@@ -4644,7 +4960,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string collation_server = 20;</code>
+     * @return The collationServer.
      */
+    @java.lang.Override
     public java.lang.String getCollationServer() {
       java.lang.Object ref = collationServer_;
       if (ref instanceof java.lang.String) {
@@ -4664,7 +4982,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>string collation_server = 20;</code>
+     * @return The bytes for collationServer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCollationServerBytes() {
       java.lang.Object ref = collationServer_;
@@ -4688,7 +5008,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     * @return Whether the innodbAdaptiveHashIndex field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbAdaptiveHashIndex() {
       return innodbAdaptiveHashIndex_ != null;
     }
@@ -4699,7 +5021,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     * @return The innodbAdaptiveHashIndex.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getInnodbAdaptiveHashIndex() {
       return innodbAdaptiveHashIndex_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbAdaptiveHashIndex_;
     }
@@ -4711,6 +5035,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getInnodbAdaptiveHashIndexOrBuilder() {
       return getInnodbAdaptiveHashIndex();
     }
@@ -4724,7 +5049,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     * @return Whether the innodbNumaInterleave field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbNumaInterleave() {
       return innodbNumaInterleave_ != null;
     }
@@ -4735,7 +5062,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     * @return The innodbNumaInterleave.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getInnodbNumaInterleave() {
       return innodbNumaInterleave_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbNumaInterleave_;
     }
@@ -4747,6 +5076,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getInnodbNumaInterleaveOrBuilder() {
       return getInnodbNumaInterleave();
     }
@@ -4760,7 +5090,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return Whether the innodbLogBufferSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbLogBufferSize() {
       return innodbLogBufferSize_ != null;
     }
@@ -4771,7 +5103,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return The innodbLogBufferSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbLogBufferSize() {
       return innodbLogBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogBufferSize_;
     }
@@ -4783,6 +5117,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbLogBufferSizeOrBuilder() {
       return getInnodbLogBufferSize();
     }
@@ -4796,7 +5131,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     * @return Whether the innodbLogFileSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbLogFileSize() {
       return innodbLogFileSize_ != null;
     }
@@ -4807,7 +5144,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     * @return The innodbLogFileSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbLogFileSize() {
       return innodbLogFileSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogFileSize_;
     }
@@ -4819,6 +5158,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbLogFileSizeOrBuilder() {
       return getInnodbLogFileSize();
     }
@@ -4832,7 +5172,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return Whether the innodbIoCapacity field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbIoCapacity() {
       return innodbIoCapacity_ != null;
     }
@@ -4843,7 +5185,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return The innodbIoCapacity.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbIoCapacity() {
       return innodbIoCapacity_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacity_;
     }
@@ -4855,6 +5199,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityOrBuilder() {
       return getInnodbIoCapacity();
     }
@@ -4868,7 +5213,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return Whether the innodbIoCapacityMax field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbIoCapacityMax() {
       return innodbIoCapacityMax_ != null;
     }
@@ -4879,7 +5226,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     * @return The innodbIoCapacityMax.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbIoCapacityMax() {
       return innodbIoCapacityMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacityMax_;
     }
@@ -4891,6 +5240,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityMaxOrBuilder() {
       return getInnodbIoCapacityMax();
     }
@@ -4904,7 +5254,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return Whether the innodbReadIoThreads field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbReadIoThreads() {
       return innodbReadIoThreads_ != null;
     }
@@ -4915,7 +5267,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return The innodbReadIoThreads.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbReadIoThreads() {
       return innodbReadIoThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbReadIoThreads_;
     }
@@ -4927,6 +5281,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbReadIoThreadsOrBuilder() {
       return getInnodbReadIoThreads();
     }
@@ -4940,7 +5295,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return Whether the innodbWriteIoThreads field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbWriteIoThreads() {
       return innodbWriteIoThreads_ != null;
     }
@@ -4951,7 +5308,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return The innodbWriteIoThreads.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbWriteIoThreads() {
       return innodbWriteIoThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbWriteIoThreads_;
     }
@@ -4963,6 +5322,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbWriteIoThreadsOrBuilder() {
       return getInnodbWriteIoThreads();
     }
@@ -4976,7 +5336,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return Whether the innodbPurgeThreads field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbPurgeThreads() {
       return innodbPurgeThreads_ != null;
     }
@@ -4987,7 +5349,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     * @return The innodbPurgeThreads.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbPurgeThreads() {
       return innodbPurgeThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbPurgeThreads_;
     }
@@ -4999,6 +5363,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbPurgeThreadsOrBuilder() {
       return getInnodbPurgeThreads();
     }
@@ -5012,7 +5377,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return Whether the innodbThreadConcurrency field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbThreadConcurrency() {
       return innodbThreadConcurrency_ != null;
     }
@@ -5023,7 +5390,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The innodbThreadConcurrency.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbThreadConcurrency() {
       return innodbThreadConcurrency_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbThreadConcurrency_;
     }
@@ -5035,6 +5404,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbThreadConcurrencyOrBuilder() {
       return getInnodbThreadConcurrency();
     }
@@ -5048,7 +5418,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     * @return Whether the innodbTempDataFileMaxSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbTempDataFileMaxSize() {
       return innodbTempDataFileMaxSize_ != null;
     }
@@ -5059,7 +5431,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     * @return The innodbTempDataFileMaxSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbTempDataFileMaxSize() {
       return innodbTempDataFileMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbTempDataFileMaxSize_;
     }
@@ -5071,6 +5445,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbTempDataFileMaxSizeOrBuilder() {
       return getInnodbTempDataFileMaxSize();
     }
@@ -5084,7 +5459,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return Whether the threadCacheSize field is set.
      */
+    @java.lang.Override
     public boolean hasThreadCacheSize() {
       return threadCacheSize_ != null;
     }
@@ -5095,7 +5472,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return The threadCacheSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getThreadCacheSize() {
       return threadCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : threadCacheSize_;
     }
@@ -5107,6 +5486,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getThreadCacheSizeOrBuilder() {
       return getThreadCacheSize();
     }
@@ -5120,7 +5500,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     * @return Whether the threadStack field is set.
      */
+    @java.lang.Override
     public boolean hasThreadStack() {
       return threadStack_ != null;
     }
@@ -5131,7 +5513,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     * @return The threadStack.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getThreadStack() {
       return threadStack_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : threadStack_;
     }
@@ -5143,6 +5527,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getThreadStackOrBuilder() {
       return getThreadStack();
     }
@@ -5156,7 +5541,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return Whether the joinBufferSize field is set.
      */
+    @java.lang.Override
     public boolean hasJoinBufferSize() {
       return joinBufferSize_ != null;
     }
@@ -5167,7 +5554,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return The joinBufferSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getJoinBufferSize() {
       return joinBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : joinBufferSize_;
     }
@@ -5179,6 +5568,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getJoinBufferSizeOrBuilder() {
       return getJoinBufferSize();
     }
@@ -5192,7 +5582,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return Whether the sortBufferSize field is set.
      */
+    @java.lang.Override
     public boolean hasSortBufferSize() {
       return sortBufferSize_ != null;
     }
@@ -5203,7 +5595,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     * @return The sortBufferSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSortBufferSize() {
       return sortBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sortBufferSize_;
     }
@@ -5215,6 +5609,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSortBufferSizeOrBuilder() {
       return getSortBufferSize();
     }
@@ -5228,7 +5623,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return Whether the tableDefinitionCache field is set.
      */
+    @java.lang.Override
     public boolean hasTableDefinitionCache() {
       return tableDefinitionCache_ != null;
     }
@@ -5239,7 +5636,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return The tableDefinitionCache.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTableDefinitionCache() {
       return tableDefinitionCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableDefinitionCache_;
     }
@@ -5251,6 +5650,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTableDefinitionCacheOrBuilder() {
       return getTableDefinitionCache();
     }
@@ -5264,7 +5664,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return Whether the tableOpenCache field is set.
      */
+    @java.lang.Override
     public boolean hasTableOpenCache() {
       return tableOpenCache_ != null;
     }
@@ -5275,7 +5677,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     * @return The tableOpenCache.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTableOpenCache() {
       return tableOpenCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCache_;
     }
@@ -5287,6 +5691,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheOrBuilder() {
       return getTableOpenCache();
     }
@@ -5300,7 +5705,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     * @return Whether the tableOpenCacheInstances field is set.
      */
+    @java.lang.Override
     public boolean hasTableOpenCacheInstances() {
       return tableOpenCacheInstances_ != null;
     }
@@ -5311,7 +5718,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     * @return The tableOpenCacheInstances.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTableOpenCacheInstances() {
       return tableOpenCacheInstances_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCacheInstances_;
     }
@@ -5323,6 +5732,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheInstancesOrBuilder() {
       return getTableOpenCacheInstances();
     }
@@ -5336,7 +5746,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     * @return Whether the explicitDefaultsForTimestamp field is set.
      */
+    @java.lang.Override
     public boolean hasExplicitDefaultsForTimestamp() {
       return explicitDefaultsForTimestamp_ != null;
     }
@@ -5347,7 +5759,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     * @return The explicitDefaultsForTimestamp.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getExplicitDefaultsForTimestamp() {
       return explicitDefaultsForTimestamp_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : explicitDefaultsForTimestamp_;
     }
@@ -5359,6 +5773,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getExplicitDefaultsForTimestampOrBuilder() {
       return getExplicitDefaultsForTimestamp();
     }
@@ -5372,7 +5787,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return Whether the autoIncrementIncrement field is set.
      */
+    @java.lang.Override
     public boolean hasAutoIncrementIncrement() {
       return autoIncrementIncrement_ != null;
     }
@@ -5383,7 +5800,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return The autoIncrementIncrement.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getAutoIncrementIncrement() {
       return autoIncrementIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementIncrement_;
     }
@@ -5395,6 +5814,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getAutoIncrementIncrementOrBuilder() {
       return getAutoIncrementIncrement();
     }
@@ -5408,7 +5828,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return Whether the autoIncrementOffset field is set.
      */
+    @java.lang.Override
     public boolean hasAutoIncrementOffset() {
       return autoIncrementOffset_ != null;
     }
@@ -5419,7 +5841,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     * @return The autoIncrementOffset.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getAutoIncrementOffset() {
       return autoIncrementOffset_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementOffset_;
     }
@@ -5431,6 +5855,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getAutoIncrementOffsetOrBuilder() {
       return getAutoIncrementOffset();
     }
@@ -5444,7 +5869,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     * @return Whether the syncBinlog field is set.
      */
+    @java.lang.Override
     public boolean hasSyncBinlog() {
       return syncBinlog_ != null;
     }
@@ -5455,7 +5882,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     * @return The syncBinlog.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSyncBinlog() {
       return syncBinlog_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : syncBinlog_;
     }
@@ -5467,6 +5896,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSyncBinlogOrBuilder() {
       return getSyncBinlog();
     }
@@ -5480,7 +5910,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     * @return Whether the binlogCacheSize field is set.
      */
+    @java.lang.Override
     public boolean hasBinlogCacheSize() {
       return binlogCacheSize_ != null;
     }
@@ -5491,7 +5923,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     * @return The binlogCacheSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBinlogCacheSize() {
       return binlogCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogCacheSize_;
     }
@@ -5503,6 +5937,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBinlogCacheSizeOrBuilder() {
       return getBinlogCacheSize();
     }
@@ -5516,7 +5951,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
+     * @return Whether the binlogGroupCommitSyncDelay field is set.
      */
+    @java.lang.Override
     public boolean hasBinlogGroupCommitSyncDelay() {
       return binlogGroupCommitSyncDelay_ != null;
     }
@@ -5527,7 +5964,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
+     * @return The binlogGroupCommitSyncDelay.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay() {
       return binlogGroupCommitSyncDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogGroupCommitSyncDelay_;
     }
@@ -5539,6 +5978,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder() {
       return getBinlogGroupCommitSyncDelay();
     }
@@ -5552,8 +5992,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+     * @return The enum numeric value on the wire for binlogRowImage.
      */
-    public int getBinlogRowImageValue() {
+    @java.lang.Override public int getBinlogRowImageValue() {
       return binlogRowImage_;
     }
     /**
@@ -5563,8 +6004,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+     * @return The binlogRowImage.
      */
-    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage getBinlogRowImage() {
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage getBinlogRowImage() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage.valueOf(binlogRowImage_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage.UNRECOGNIZED : result;
@@ -5579,7 +6021,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     * @return Whether the binlogRowsQueryLogEvents field is set.
      */
+    @java.lang.Override
     public boolean hasBinlogRowsQueryLogEvents() {
       return binlogRowsQueryLogEvents_ != null;
     }
@@ -5590,7 +6034,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     * @return The binlogRowsQueryLogEvents.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getBinlogRowsQueryLogEvents() {
       return binlogRowsQueryLogEvents_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : binlogRowsQueryLogEvents_;
     }
@@ -5602,6 +6048,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getBinlogRowsQueryLogEventsOrBuilder() {
       return getBinlogRowsQueryLogEvents();
     }
@@ -5615,7 +6062,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return Whether the rplSemiSyncMasterWaitForSlaveCount field is set.
      */
+    @java.lang.Override
     public boolean hasRplSemiSyncMasterWaitForSlaveCount() {
       return rplSemiSyncMasterWaitForSlaveCount_ != null;
     }
@@ -5626,7 +6075,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     * @return The rplSemiSyncMasterWaitForSlaveCount.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRplSemiSyncMasterWaitForSlaveCount() {
       return rplSemiSyncMasterWaitForSlaveCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rplSemiSyncMasterWaitForSlaveCount_;
     }
@@ -5638,6 +6089,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRplSemiSyncMasterWaitForSlaveCountOrBuilder() {
       return getRplSemiSyncMasterWaitForSlaveCount();
     }
@@ -5651,8 +6103,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+     * @return The enum numeric value on the wire for slaveParallelType.
      */
-    public int getSlaveParallelTypeValue() {
+    @java.lang.Override public int getSlaveParallelTypeValue() {
       return slaveParallelType_;
     }
     /**
@@ -5662,8 +6115,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+     * @return The slaveParallelType.
      */
-    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType getSlaveParallelType() {
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType getSlaveParallelType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType.valueOf(slaveParallelType_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType.UNRECOGNIZED : result;
@@ -5678,7 +6132,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     * @return Whether the slaveParallelWorkers field is set.
      */
+    @java.lang.Override
     public boolean hasSlaveParallelWorkers() {
       return slaveParallelWorkers_ != null;
     }
@@ -5689,7 +6145,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     * @return The slaveParallelWorkers.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSlaveParallelWorkers() {
       return slaveParallelWorkers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slaveParallelWorkers_;
     }
@@ -5701,6 +6159,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSlaveParallelWorkersOrBuilder() {
       return getSlaveParallelWorkers();
     }
@@ -5714,7 +6173,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return Whether the regexpTimeLimit field is set.
      */
+    @java.lang.Override
     public boolean hasRegexpTimeLimit() {
       return regexpTimeLimit_ != null;
     }
@@ -5725,7 +6186,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return The regexpTimeLimit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRegexpTimeLimit() {
       return regexpTimeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : regexpTimeLimit_;
     }
@@ -5737,6 +6200,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRegexpTimeLimitOrBuilder() {
       return getRegexpTimeLimit();
     }
@@ -5749,7 +6213,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
+     * @return Whether the mdbPreserveBinlogBytes field is set.
      */
+    @java.lang.Override
     public boolean hasMdbPreserveBinlogBytes() {
       return mdbPreserveBinlogBytes_ != null;
     }
@@ -5759,7 +6225,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
+     * @return The mdbPreserveBinlogBytes.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMdbPreserveBinlogBytes() {
       return mdbPreserveBinlogBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPreserveBinlogBytes_;
     }
@@ -5770,6 +6238,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder() {
       return getMdbPreserveBinlogBytes();
     }
@@ -5783,7 +6252,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return Whether the interactiveTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasInteractiveTimeout() {
       return interactiveTimeout_ != null;
     }
@@ -5794,7 +6265,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return The interactiveTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInteractiveTimeout() {
       return interactiveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : interactiveTimeout_;
     }
@@ -5806,6 +6279,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInteractiveTimeoutOrBuilder() {
       return getInteractiveTimeout();
     }
@@ -5819,7 +6293,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return Whether the waitTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasWaitTimeout() {
       return waitTimeout_ != null;
     }
@@ -5830,7 +6306,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     * @return The waitTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getWaitTimeout() {
       return waitTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : waitTimeout_;
     }
@@ -5842,6 +6320,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getWaitTimeoutOrBuilder() {
       return getWaitTimeout();
     }
@@ -5854,7 +6333,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     * @return Whether the mdbOfflineModeEnableLag field is set.
      */
+    @java.lang.Override
     public boolean hasMdbOfflineModeEnableLag() {
       return mdbOfflineModeEnableLag_ != null;
     }
@@ -5864,7 +6345,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     * @return The mdbOfflineModeEnableLag.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMdbOfflineModeEnableLag() {
       return mdbOfflineModeEnableLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeEnableLag_;
     }
@@ -5875,6 +6358,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder() {
       return getMdbOfflineModeEnableLag();
     }
@@ -5888,7 +6372,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     * @return Whether the mdbOfflineModeDisableLag field is set.
      */
+    @java.lang.Override
     public boolean hasMdbOfflineModeDisableLag() {
       return mdbOfflineModeDisableLag_ != null;
     }
@@ -5899,7 +6385,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     * @return The mdbOfflineModeDisableLag.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMdbOfflineModeDisableLag() {
       return mdbOfflineModeDisableLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeDisableLag_;
     }
@@ -5911,6 +6399,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder() {
       return getMdbOfflineModeDisableLag();
     }
@@ -5924,7 +6413,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return Whether the rangeOptimizerMaxMemSize field is set.
      */
+    @java.lang.Override
     public boolean hasRangeOptimizerMaxMemSize() {
       return rangeOptimizerMaxMemSize_ != null;
     }
@@ -5935,7 +6426,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     * @return The rangeOptimizerMaxMemSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getRangeOptimizerMaxMemSize() {
       return rangeOptimizerMaxMemSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeOptimizerMaxMemSize_;
     }
@@ -5947,6 +6440,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getRangeOptimizerMaxMemSizeOrBuilder() {
       return getRangeOptimizerMaxMemSize();
     }
@@ -5960,7 +6454,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     * @return Whether the slowQueryLog field is set.
      */
+    @java.lang.Override
     public boolean hasSlowQueryLog() {
       return slowQueryLog_ != null;
     }
@@ -5971,7 +6467,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     * @return The slowQueryLog.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getSlowQueryLog() {
       return slowQueryLog_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : slowQueryLog_;
     }
@@ -5983,6 +6481,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSlowQueryLogOrBuilder() {
       return getSlowQueryLog();
     }
@@ -5996,7 +6495,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     * @return Whether the slowQueryLogAlwaysWriteTime field is set.
      */
+    @java.lang.Override
     public boolean hasSlowQueryLogAlwaysWriteTime() {
       return slowQueryLogAlwaysWriteTime_ != null;
     }
@@ -6007,7 +6508,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     * @return The slowQueryLogAlwaysWriteTime.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getSlowQueryLogAlwaysWriteTime() {
       return slowQueryLogAlwaysWriteTime_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : slowQueryLogAlwaysWriteTime_;
     }
@@ -6019,6 +6522,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getSlowQueryLogAlwaysWriteTimeOrBuilder() {
       return getSlowQueryLogAlwaysWriteTime();
     }
@@ -6032,8 +6536,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     * @return The enum numeric value on the wire for logSlowRateType.
      */
-    public int getLogSlowRateTypeValue() {
+    @java.lang.Override public int getLogSlowRateTypeValue() {
       return logSlowRateType_;
     }
     /**
@@ -6043,8 +6548,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     * @return The logSlowRateType.
      */
-    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType() {
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.valueOf(logSlowRateType_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.UNRECOGNIZED : result;
@@ -6059,7 +6565,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     * @return Whether the logSlowRateLimit field is set.
      */
+    @java.lang.Override
     public boolean hasLogSlowRateLimit() {
       return logSlowRateLimit_ != null;
     }
@@ -6070,7 +6578,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     * @return The logSlowRateLimit.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getLogSlowRateLimit() {
       return logSlowRateLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSlowRateLimit_;
     }
@@ -6082,6 +6592,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getLogSlowRateLimitOrBuilder() {
       return getLogSlowRateLimit();
     }
@@ -6095,7 +6606,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     * @return Whether the logSlowSpStatements field is set.
      */
+    @java.lang.Override
     public boolean hasLogSlowSpStatements() {
       return logSlowSpStatements_ != null;
     }
@@ -6106,7 +6619,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     * @return The logSlowSpStatements.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getLogSlowSpStatements() {
       return logSlowSpStatements_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logSlowSpStatements_;
     }
@@ -6118,6 +6633,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getLogSlowSpStatementsOrBuilder() {
       return getLogSlowSpStatements();
     }
@@ -6141,7 +6657,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @return A list containing the logSlowFilter.
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> getLogSlowFilterList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType>(logSlowFilter_, logSlowFilter_converter_);
@@ -6153,7 +6671,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @return The count of logSlowFilter.
      */
+    @java.lang.Override
     public int getLogSlowFilterCount() {
       return logSlowFilter_.size();
     }
@@ -6164,7 +6684,10 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @param index The index of the element to return.
+     * @return The logSlowFilter at the given index.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType getLogSlowFilter(int index) {
       return logSlowFilter_converter_.convert(logSlowFilter_.get(index));
     }
@@ -6175,7 +6698,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @return A list containing the enum numeric values on the wire for logSlowFilter.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getLogSlowFilterValueList() {
       return logSlowFilter_;
@@ -6187,7 +6712,10 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of logSlowFilter at the given index.
      */
+    @java.lang.Override
     public int getLogSlowFilterValue(int index) {
       return logSlowFilter_.get(index);
     }
@@ -6202,7 +6730,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return Whether the mdbPriorityChoiceMaxLag field is set.
      */
+    @java.lang.Override
     public boolean hasMdbPriorityChoiceMaxLag() {
       return mdbPriorityChoiceMaxLag_ != null;
     }
@@ -6213,7 +6743,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
+     * @return The mdbPriorityChoiceMaxLag.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMdbPriorityChoiceMaxLag() {
       return mdbPriorityChoiceMaxLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPriorityChoiceMaxLag_;
     }
@@ -6225,6 +6757,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMdbPriorityChoiceMaxLagOrBuilder() {
       return getMdbPriorityChoiceMaxLag();
     }
@@ -6238,7 +6771,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
+     * @return Whether the innodbPageSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbPageSize() {
       return innodbPageSize_ != null;
     }
@@ -6249,7 +6784,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
+     * @return The innodbPageSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbPageSize() {
       return innodbPageSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbPageSize_;
     }
@@ -6261,6 +6798,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbPageSizeOrBuilder() {
       return getInnodbPageSize();
     }
@@ -6274,7 +6812,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     * @return Whether the innodbOnlineAlterLogMaxSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbOnlineAlterLogMaxSize() {
       return innodbOnlineAlterLogMaxSize_ != null;
     }
@@ -6285,7 +6825,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     * @return The innodbOnlineAlterLogMaxSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbOnlineAlterLogMaxSize() {
       return innodbOnlineAlterLogMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbOnlineAlterLogMaxSize_;
     }
@@ -6297,6 +6839,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbOnlineAlterLogMaxSizeOrBuilder() {
       return getInnodbOnlineAlterLogMaxSize();
     }
@@ -6310,7 +6853,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return Whether the innodbFtMinTokenSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbFtMinTokenSize() {
       return innodbFtMinTokenSize_ != null;
     }
@@ -6321,7 +6866,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return The innodbFtMinTokenSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbFtMinTokenSize() {
       return innodbFtMinTokenSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMinTokenSize_;
     }
@@ -6333,6 +6880,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbFtMinTokenSizeOrBuilder() {
       return getInnodbFtMinTokenSize();
     }
@@ -6346,7 +6894,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     * @return Whether the innodbFtMaxTokenSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbFtMaxTokenSize() {
       return innodbFtMaxTokenSize_ != null;
     }
@@ -6357,7 +6907,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     * @return The innodbFtMaxTokenSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbFtMaxTokenSize() {
       return innodbFtMaxTokenSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMaxTokenSize_;
     }
@@ -6369,6 +6921,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbFtMaxTokenSizeOrBuilder() {
       return getInnodbFtMaxTokenSize();
     }
@@ -6382,7 +6935,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     * @return Whether the lowerCaseTableNames field is set.
      */
+    @java.lang.Override
     public boolean hasLowerCaseTableNames() {
       return lowerCaseTableNames_ != null;
     }
@@ -6393,7 +6948,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     * @return The lowerCaseTableNames.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getLowerCaseTableNames() {
       return lowerCaseTableNames_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lowerCaseTableNames_;
     }
@@ -6405,6 +6962,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getLowerCaseTableNamesOrBuilder() {
       return getLowerCaseTableNames();
     }
@@ -6418,7 +6976,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
+     * @return Whether the maxSpRecursionDepth field is set.
      */
+    @java.lang.Override
     public boolean hasMaxSpRecursionDepth() {
       return maxSpRecursionDepth_ != null;
     }
@@ -6429,7 +6989,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
+     * @return The maxSpRecursionDepth.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxSpRecursionDepth() {
       return maxSpRecursionDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSpRecursionDepth_;
     }
@@ -6441,6 +7003,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxSpRecursionDepthOrBuilder() {
       return getMaxSpRecursionDepth();
     }
@@ -6454,7 +7017,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     * @return Whether the innodbCompressionLevel field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbCompressionLevel() {
       return innodbCompressionLevel_ != null;
     }
@@ -6465,7 +7030,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     * @return The innodbCompressionLevel.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbCompressionLevel() {
       return innodbCompressionLevel_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbCompressionLevel_;
     }
@@ -6477,6 +7044,7 @@ public final class Mysql80 {
      *
      * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbCompressionLevelOrBuilder() {
       return getInnodbCompressionLevel();
     }
@@ -6551,13 +7119,13 @@ public final class Mysql80 {
       if (maxHeapTableSize_ != null) {
         output.writeMessage(17, getMaxHeapTableSize());
       }
-      if (!getDefaultTimeZoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTimeZone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, defaultTimeZone_);
       }
-      if (!getCharacterSetServerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(characterSetServer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, characterSetServer_);
       }
-      if (!getCollationServerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collationServer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 20, collationServer_);
       }
       if (innodbAdaptiveHashIndex_ != null) {
@@ -6799,13 +7367,13 @@ public final class Mysql80 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getMaxHeapTableSize());
       }
-      if (!getDefaultTimeZoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTimeZone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, defaultTimeZone_);
       }
-      if (!getCharacterSetServerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(characterSetServer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, characterSetServer_);
       }
-      if (!getCollationServerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collationServer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, collationServer_);
       }
       if (innodbAdaptiveHashIndex_ != null) {
@@ -7031,322 +7599,321 @@ public final class Mysql80 {
       }
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 other = (yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0) obj;
 
-      boolean result = true;
-      result = result && (hasInnodbBufferPoolSize() == other.hasInnodbBufferPoolSize());
+      if (hasInnodbBufferPoolSize() != other.hasInnodbBufferPoolSize()) return false;
       if (hasInnodbBufferPoolSize()) {
-        result = result && getInnodbBufferPoolSize()
-            .equals(other.getInnodbBufferPoolSize());
+        if (!getInnodbBufferPoolSize()
+            .equals(other.getInnodbBufferPoolSize())) return false;
       }
-      result = result && (hasMaxConnections() == other.hasMaxConnections());
+      if (hasMaxConnections() != other.hasMaxConnections()) return false;
       if (hasMaxConnections()) {
-        result = result && getMaxConnections()
-            .equals(other.getMaxConnections());
+        if (!getMaxConnections()
+            .equals(other.getMaxConnections())) return false;
       }
-      result = result && (hasLongQueryTime() == other.hasLongQueryTime());
+      if (hasLongQueryTime() != other.hasLongQueryTime()) return false;
       if (hasLongQueryTime()) {
-        result = result && getLongQueryTime()
-            .equals(other.getLongQueryTime());
+        if (!getLongQueryTime()
+            .equals(other.getLongQueryTime())) return false;
       }
-      result = result && (hasGeneralLog() == other.hasGeneralLog());
+      if (hasGeneralLog() != other.hasGeneralLog()) return false;
       if (hasGeneralLog()) {
-        result = result && getGeneralLog()
-            .equals(other.getGeneralLog());
+        if (!getGeneralLog()
+            .equals(other.getGeneralLog())) return false;
       }
-      result = result && (hasAuditLog() == other.hasAuditLog());
+      if (hasAuditLog() != other.hasAuditLog()) return false;
       if (hasAuditLog()) {
-        result = result && getAuditLog()
-            .equals(other.getAuditLog());
+        if (!getAuditLog()
+            .equals(other.getAuditLog())) return false;
       }
-      result = result && sqlMode_.equals(other.sqlMode_);
-      result = result && (hasMaxAllowedPacket() == other.hasMaxAllowedPacket());
+      if (!sqlMode_.equals(other.sqlMode_)) return false;
+      if (hasMaxAllowedPacket() != other.hasMaxAllowedPacket()) return false;
       if (hasMaxAllowedPacket()) {
-        result = result && getMaxAllowedPacket()
-            .equals(other.getMaxAllowedPacket());
+        if (!getMaxAllowedPacket()
+            .equals(other.getMaxAllowedPacket())) return false;
       }
-      result = result && defaultAuthenticationPlugin_ == other.defaultAuthenticationPlugin_;
-      result = result && (hasInnodbFlushLogAtTrxCommit() == other.hasInnodbFlushLogAtTrxCommit());
+      if (defaultAuthenticationPlugin_ != other.defaultAuthenticationPlugin_) return false;
+      if (hasInnodbFlushLogAtTrxCommit() != other.hasInnodbFlushLogAtTrxCommit()) return false;
       if (hasInnodbFlushLogAtTrxCommit()) {
-        result = result && getInnodbFlushLogAtTrxCommit()
-            .equals(other.getInnodbFlushLogAtTrxCommit());
+        if (!getInnodbFlushLogAtTrxCommit()
+            .equals(other.getInnodbFlushLogAtTrxCommit())) return false;
       }
-      result = result && (hasInnodbLockWaitTimeout() == other.hasInnodbLockWaitTimeout());
+      if (hasInnodbLockWaitTimeout() != other.hasInnodbLockWaitTimeout()) return false;
       if (hasInnodbLockWaitTimeout()) {
-        result = result && getInnodbLockWaitTimeout()
-            .equals(other.getInnodbLockWaitTimeout());
+        if (!getInnodbLockWaitTimeout()
+            .equals(other.getInnodbLockWaitTimeout())) return false;
       }
-      result = result && transactionIsolation_ == other.transactionIsolation_;
-      result = result && (hasInnodbPrintAllDeadlocks() == other.hasInnodbPrintAllDeadlocks());
+      if (transactionIsolation_ != other.transactionIsolation_) return false;
+      if (hasInnodbPrintAllDeadlocks() != other.hasInnodbPrintAllDeadlocks()) return false;
       if (hasInnodbPrintAllDeadlocks()) {
-        result = result && getInnodbPrintAllDeadlocks()
-            .equals(other.getInnodbPrintAllDeadlocks());
+        if (!getInnodbPrintAllDeadlocks()
+            .equals(other.getInnodbPrintAllDeadlocks())) return false;
       }
-      result = result && (hasNetReadTimeout() == other.hasNetReadTimeout());
+      if (hasNetReadTimeout() != other.hasNetReadTimeout()) return false;
       if (hasNetReadTimeout()) {
-        result = result && getNetReadTimeout()
-            .equals(other.getNetReadTimeout());
+        if (!getNetReadTimeout()
+            .equals(other.getNetReadTimeout())) return false;
       }
-      result = result && (hasNetWriteTimeout() == other.hasNetWriteTimeout());
+      if (hasNetWriteTimeout() != other.hasNetWriteTimeout()) return false;
       if (hasNetWriteTimeout()) {
-        result = result && getNetWriteTimeout()
-            .equals(other.getNetWriteTimeout());
+        if (!getNetWriteTimeout()
+            .equals(other.getNetWriteTimeout())) return false;
       }
-      result = result && (hasGroupConcatMaxLen() == other.hasGroupConcatMaxLen());
+      if (hasGroupConcatMaxLen() != other.hasGroupConcatMaxLen()) return false;
       if (hasGroupConcatMaxLen()) {
-        result = result && getGroupConcatMaxLen()
-            .equals(other.getGroupConcatMaxLen());
+        if (!getGroupConcatMaxLen()
+            .equals(other.getGroupConcatMaxLen())) return false;
       }
-      result = result && (hasTmpTableSize() == other.hasTmpTableSize());
+      if (hasTmpTableSize() != other.hasTmpTableSize()) return false;
       if (hasTmpTableSize()) {
-        result = result && getTmpTableSize()
-            .equals(other.getTmpTableSize());
+        if (!getTmpTableSize()
+            .equals(other.getTmpTableSize())) return false;
       }
-      result = result && (hasMaxHeapTableSize() == other.hasMaxHeapTableSize());
+      if (hasMaxHeapTableSize() != other.hasMaxHeapTableSize()) return false;
       if (hasMaxHeapTableSize()) {
-        result = result && getMaxHeapTableSize()
-            .equals(other.getMaxHeapTableSize());
+        if (!getMaxHeapTableSize()
+            .equals(other.getMaxHeapTableSize())) return false;
       }
-      result = result && getDefaultTimeZone()
-          .equals(other.getDefaultTimeZone());
-      result = result && getCharacterSetServer()
-          .equals(other.getCharacterSetServer());
-      result = result && getCollationServer()
-          .equals(other.getCollationServer());
-      result = result && (hasInnodbAdaptiveHashIndex() == other.hasInnodbAdaptiveHashIndex());
+      if (!getDefaultTimeZone()
+          .equals(other.getDefaultTimeZone())) return false;
+      if (!getCharacterSetServer()
+          .equals(other.getCharacterSetServer())) return false;
+      if (!getCollationServer()
+          .equals(other.getCollationServer())) return false;
+      if (hasInnodbAdaptiveHashIndex() != other.hasInnodbAdaptiveHashIndex()) return false;
       if (hasInnodbAdaptiveHashIndex()) {
-        result = result && getInnodbAdaptiveHashIndex()
-            .equals(other.getInnodbAdaptiveHashIndex());
+        if (!getInnodbAdaptiveHashIndex()
+            .equals(other.getInnodbAdaptiveHashIndex())) return false;
       }
-      result = result && (hasInnodbNumaInterleave() == other.hasInnodbNumaInterleave());
+      if (hasInnodbNumaInterleave() != other.hasInnodbNumaInterleave()) return false;
       if (hasInnodbNumaInterleave()) {
-        result = result && getInnodbNumaInterleave()
-            .equals(other.getInnodbNumaInterleave());
+        if (!getInnodbNumaInterleave()
+            .equals(other.getInnodbNumaInterleave())) return false;
       }
-      result = result && (hasInnodbLogBufferSize() == other.hasInnodbLogBufferSize());
+      if (hasInnodbLogBufferSize() != other.hasInnodbLogBufferSize()) return false;
       if (hasInnodbLogBufferSize()) {
-        result = result && getInnodbLogBufferSize()
-            .equals(other.getInnodbLogBufferSize());
+        if (!getInnodbLogBufferSize()
+            .equals(other.getInnodbLogBufferSize())) return false;
       }
-      result = result && (hasInnodbLogFileSize() == other.hasInnodbLogFileSize());
+      if (hasInnodbLogFileSize() != other.hasInnodbLogFileSize()) return false;
       if (hasInnodbLogFileSize()) {
-        result = result && getInnodbLogFileSize()
-            .equals(other.getInnodbLogFileSize());
+        if (!getInnodbLogFileSize()
+            .equals(other.getInnodbLogFileSize())) return false;
       }
-      result = result && (hasInnodbIoCapacity() == other.hasInnodbIoCapacity());
+      if (hasInnodbIoCapacity() != other.hasInnodbIoCapacity()) return false;
       if (hasInnodbIoCapacity()) {
-        result = result && getInnodbIoCapacity()
-            .equals(other.getInnodbIoCapacity());
+        if (!getInnodbIoCapacity()
+            .equals(other.getInnodbIoCapacity())) return false;
       }
-      result = result && (hasInnodbIoCapacityMax() == other.hasInnodbIoCapacityMax());
+      if (hasInnodbIoCapacityMax() != other.hasInnodbIoCapacityMax()) return false;
       if (hasInnodbIoCapacityMax()) {
-        result = result && getInnodbIoCapacityMax()
-            .equals(other.getInnodbIoCapacityMax());
+        if (!getInnodbIoCapacityMax()
+            .equals(other.getInnodbIoCapacityMax())) return false;
       }
-      result = result && (hasInnodbReadIoThreads() == other.hasInnodbReadIoThreads());
+      if (hasInnodbReadIoThreads() != other.hasInnodbReadIoThreads()) return false;
       if (hasInnodbReadIoThreads()) {
-        result = result && getInnodbReadIoThreads()
-            .equals(other.getInnodbReadIoThreads());
+        if (!getInnodbReadIoThreads()
+            .equals(other.getInnodbReadIoThreads())) return false;
       }
-      result = result && (hasInnodbWriteIoThreads() == other.hasInnodbWriteIoThreads());
+      if (hasInnodbWriteIoThreads() != other.hasInnodbWriteIoThreads()) return false;
       if (hasInnodbWriteIoThreads()) {
-        result = result && getInnodbWriteIoThreads()
-            .equals(other.getInnodbWriteIoThreads());
+        if (!getInnodbWriteIoThreads()
+            .equals(other.getInnodbWriteIoThreads())) return false;
       }
-      result = result && (hasInnodbPurgeThreads() == other.hasInnodbPurgeThreads());
+      if (hasInnodbPurgeThreads() != other.hasInnodbPurgeThreads()) return false;
       if (hasInnodbPurgeThreads()) {
-        result = result && getInnodbPurgeThreads()
-            .equals(other.getInnodbPurgeThreads());
+        if (!getInnodbPurgeThreads()
+            .equals(other.getInnodbPurgeThreads())) return false;
       }
-      result = result && (hasInnodbThreadConcurrency() == other.hasInnodbThreadConcurrency());
+      if (hasInnodbThreadConcurrency() != other.hasInnodbThreadConcurrency()) return false;
       if (hasInnodbThreadConcurrency()) {
-        result = result && getInnodbThreadConcurrency()
-            .equals(other.getInnodbThreadConcurrency());
+        if (!getInnodbThreadConcurrency()
+            .equals(other.getInnodbThreadConcurrency())) return false;
       }
-      result = result && (hasInnodbTempDataFileMaxSize() == other.hasInnodbTempDataFileMaxSize());
+      if (hasInnodbTempDataFileMaxSize() != other.hasInnodbTempDataFileMaxSize()) return false;
       if (hasInnodbTempDataFileMaxSize()) {
-        result = result && getInnodbTempDataFileMaxSize()
-            .equals(other.getInnodbTempDataFileMaxSize());
+        if (!getInnodbTempDataFileMaxSize()
+            .equals(other.getInnodbTempDataFileMaxSize())) return false;
       }
-      result = result && (hasThreadCacheSize() == other.hasThreadCacheSize());
+      if (hasThreadCacheSize() != other.hasThreadCacheSize()) return false;
       if (hasThreadCacheSize()) {
-        result = result && getThreadCacheSize()
-            .equals(other.getThreadCacheSize());
+        if (!getThreadCacheSize()
+            .equals(other.getThreadCacheSize())) return false;
       }
-      result = result && (hasThreadStack() == other.hasThreadStack());
+      if (hasThreadStack() != other.hasThreadStack()) return false;
       if (hasThreadStack()) {
-        result = result && getThreadStack()
-            .equals(other.getThreadStack());
+        if (!getThreadStack()
+            .equals(other.getThreadStack())) return false;
       }
-      result = result && (hasJoinBufferSize() == other.hasJoinBufferSize());
+      if (hasJoinBufferSize() != other.hasJoinBufferSize()) return false;
       if (hasJoinBufferSize()) {
-        result = result && getJoinBufferSize()
-            .equals(other.getJoinBufferSize());
+        if (!getJoinBufferSize()
+            .equals(other.getJoinBufferSize())) return false;
       }
-      result = result && (hasSortBufferSize() == other.hasSortBufferSize());
+      if (hasSortBufferSize() != other.hasSortBufferSize()) return false;
       if (hasSortBufferSize()) {
-        result = result && getSortBufferSize()
-            .equals(other.getSortBufferSize());
+        if (!getSortBufferSize()
+            .equals(other.getSortBufferSize())) return false;
       }
-      result = result && (hasTableDefinitionCache() == other.hasTableDefinitionCache());
+      if (hasTableDefinitionCache() != other.hasTableDefinitionCache()) return false;
       if (hasTableDefinitionCache()) {
-        result = result && getTableDefinitionCache()
-            .equals(other.getTableDefinitionCache());
+        if (!getTableDefinitionCache()
+            .equals(other.getTableDefinitionCache())) return false;
       }
-      result = result && (hasTableOpenCache() == other.hasTableOpenCache());
+      if (hasTableOpenCache() != other.hasTableOpenCache()) return false;
       if (hasTableOpenCache()) {
-        result = result && getTableOpenCache()
-            .equals(other.getTableOpenCache());
+        if (!getTableOpenCache()
+            .equals(other.getTableOpenCache())) return false;
       }
-      result = result && (hasTableOpenCacheInstances() == other.hasTableOpenCacheInstances());
+      if (hasTableOpenCacheInstances() != other.hasTableOpenCacheInstances()) return false;
       if (hasTableOpenCacheInstances()) {
-        result = result && getTableOpenCacheInstances()
-            .equals(other.getTableOpenCacheInstances());
+        if (!getTableOpenCacheInstances()
+            .equals(other.getTableOpenCacheInstances())) return false;
       }
-      result = result && (hasExplicitDefaultsForTimestamp() == other.hasExplicitDefaultsForTimestamp());
+      if (hasExplicitDefaultsForTimestamp() != other.hasExplicitDefaultsForTimestamp()) return false;
       if (hasExplicitDefaultsForTimestamp()) {
-        result = result && getExplicitDefaultsForTimestamp()
-            .equals(other.getExplicitDefaultsForTimestamp());
+        if (!getExplicitDefaultsForTimestamp()
+            .equals(other.getExplicitDefaultsForTimestamp())) return false;
       }
-      result = result && (hasAutoIncrementIncrement() == other.hasAutoIncrementIncrement());
+      if (hasAutoIncrementIncrement() != other.hasAutoIncrementIncrement()) return false;
       if (hasAutoIncrementIncrement()) {
-        result = result && getAutoIncrementIncrement()
-            .equals(other.getAutoIncrementIncrement());
+        if (!getAutoIncrementIncrement()
+            .equals(other.getAutoIncrementIncrement())) return false;
       }
-      result = result && (hasAutoIncrementOffset() == other.hasAutoIncrementOffset());
+      if (hasAutoIncrementOffset() != other.hasAutoIncrementOffset()) return false;
       if (hasAutoIncrementOffset()) {
-        result = result && getAutoIncrementOffset()
-            .equals(other.getAutoIncrementOffset());
+        if (!getAutoIncrementOffset()
+            .equals(other.getAutoIncrementOffset())) return false;
       }
-      result = result && (hasSyncBinlog() == other.hasSyncBinlog());
+      if (hasSyncBinlog() != other.hasSyncBinlog()) return false;
       if (hasSyncBinlog()) {
-        result = result && getSyncBinlog()
-            .equals(other.getSyncBinlog());
+        if (!getSyncBinlog()
+            .equals(other.getSyncBinlog())) return false;
       }
-      result = result && (hasBinlogCacheSize() == other.hasBinlogCacheSize());
+      if (hasBinlogCacheSize() != other.hasBinlogCacheSize()) return false;
       if (hasBinlogCacheSize()) {
-        result = result && getBinlogCacheSize()
-            .equals(other.getBinlogCacheSize());
+        if (!getBinlogCacheSize()
+            .equals(other.getBinlogCacheSize())) return false;
       }
-      result = result && (hasBinlogGroupCommitSyncDelay() == other.hasBinlogGroupCommitSyncDelay());
+      if (hasBinlogGroupCommitSyncDelay() != other.hasBinlogGroupCommitSyncDelay()) return false;
       if (hasBinlogGroupCommitSyncDelay()) {
-        result = result && getBinlogGroupCommitSyncDelay()
-            .equals(other.getBinlogGroupCommitSyncDelay());
+        if (!getBinlogGroupCommitSyncDelay()
+            .equals(other.getBinlogGroupCommitSyncDelay())) return false;
       }
-      result = result && binlogRowImage_ == other.binlogRowImage_;
-      result = result && (hasBinlogRowsQueryLogEvents() == other.hasBinlogRowsQueryLogEvents());
+      if (binlogRowImage_ != other.binlogRowImage_) return false;
+      if (hasBinlogRowsQueryLogEvents() != other.hasBinlogRowsQueryLogEvents()) return false;
       if (hasBinlogRowsQueryLogEvents()) {
-        result = result && getBinlogRowsQueryLogEvents()
-            .equals(other.getBinlogRowsQueryLogEvents());
+        if (!getBinlogRowsQueryLogEvents()
+            .equals(other.getBinlogRowsQueryLogEvents())) return false;
       }
-      result = result && (hasRplSemiSyncMasterWaitForSlaveCount() == other.hasRplSemiSyncMasterWaitForSlaveCount());
+      if (hasRplSemiSyncMasterWaitForSlaveCount() != other.hasRplSemiSyncMasterWaitForSlaveCount()) return false;
       if (hasRplSemiSyncMasterWaitForSlaveCount()) {
-        result = result && getRplSemiSyncMasterWaitForSlaveCount()
-            .equals(other.getRplSemiSyncMasterWaitForSlaveCount());
+        if (!getRplSemiSyncMasterWaitForSlaveCount()
+            .equals(other.getRplSemiSyncMasterWaitForSlaveCount())) return false;
       }
-      result = result && slaveParallelType_ == other.slaveParallelType_;
-      result = result && (hasSlaveParallelWorkers() == other.hasSlaveParallelWorkers());
+      if (slaveParallelType_ != other.slaveParallelType_) return false;
+      if (hasSlaveParallelWorkers() != other.hasSlaveParallelWorkers()) return false;
       if (hasSlaveParallelWorkers()) {
-        result = result && getSlaveParallelWorkers()
-            .equals(other.getSlaveParallelWorkers());
+        if (!getSlaveParallelWorkers()
+            .equals(other.getSlaveParallelWorkers())) return false;
       }
-      result = result && (hasRegexpTimeLimit() == other.hasRegexpTimeLimit());
+      if (hasRegexpTimeLimit() != other.hasRegexpTimeLimit()) return false;
       if (hasRegexpTimeLimit()) {
-        result = result && getRegexpTimeLimit()
-            .equals(other.getRegexpTimeLimit());
+        if (!getRegexpTimeLimit()
+            .equals(other.getRegexpTimeLimit())) return false;
       }
-      result = result && (hasMdbPreserveBinlogBytes() == other.hasMdbPreserveBinlogBytes());
+      if (hasMdbPreserveBinlogBytes() != other.hasMdbPreserveBinlogBytes()) return false;
       if (hasMdbPreserveBinlogBytes()) {
-        result = result && getMdbPreserveBinlogBytes()
-            .equals(other.getMdbPreserveBinlogBytes());
+        if (!getMdbPreserveBinlogBytes()
+            .equals(other.getMdbPreserveBinlogBytes())) return false;
       }
-      result = result && (hasInteractiveTimeout() == other.hasInteractiveTimeout());
+      if (hasInteractiveTimeout() != other.hasInteractiveTimeout()) return false;
       if (hasInteractiveTimeout()) {
-        result = result && getInteractiveTimeout()
-            .equals(other.getInteractiveTimeout());
+        if (!getInteractiveTimeout()
+            .equals(other.getInteractiveTimeout())) return false;
       }
-      result = result && (hasWaitTimeout() == other.hasWaitTimeout());
+      if (hasWaitTimeout() != other.hasWaitTimeout()) return false;
       if (hasWaitTimeout()) {
-        result = result && getWaitTimeout()
-            .equals(other.getWaitTimeout());
+        if (!getWaitTimeout()
+            .equals(other.getWaitTimeout())) return false;
       }
-      result = result && (hasMdbOfflineModeEnableLag() == other.hasMdbOfflineModeEnableLag());
+      if (hasMdbOfflineModeEnableLag() != other.hasMdbOfflineModeEnableLag()) return false;
       if (hasMdbOfflineModeEnableLag()) {
-        result = result && getMdbOfflineModeEnableLag()
-            .equals(other.getMdbOfflineModeEnableLag());
+        if (!getMdbOfflineModeEnableLag()
+            .equals(other.getMdbOfflineModeEnableLag())) return false;
       }
-      result = result && (hasMdbOfflineModeDisableLag() == other.hasMdbOfflineModeDisableLag());
+      if (hasMdbOfflineModeDisableLag() != other.hasMdbOfflineModeDisableLag()) return false;
       if (hasMdbOfflineModeDisableLag()) {
-        result = result && getMdbOfflineModeDisableLag()
-            .equals(other.getMdbOfflineModeDisableLag());
+        if (!getMdbOfflineModeDisableLag()
+            .equals(other.getMdbOfflineModeDisableLag())) return false;
       }
-      result = result && (hasRangeOptimizerMaxMemSize() == other.hasRangeOptimizerMaxMemSize());
+      if (hasRangeOptimizerMaxMemSize() != other.hasRangeOptimizerMaxMemSize()) return false;
       if (hasRangeOptimizerMaxMemSize()) {
-        result = result && getRangeOptimizerMaxMemSize()
-            .equals(other.getRangeOptimizerMaxMemSize());
+        if (!getRangeOptimizerMaxMemSize()
+            .equals(other.getRangeOptimizerMaxMemSize())) return false;
       }
-      result = result && (hasSlowQueryLog() == other.hasSlowQueryLog());
+      if (hasSlowQueryLog() != other.hasSlowQueryLog()) return false;
       if (hasSlowQueryLog()) {
-        result = result && getSlowQueryLog()
-            .equals(other.getSlowQueryLog());
+        if (!getSlowQueryLog()
+            .equals(other.getSlowQueryLog())) return false;
       }
-      result = result && (hasSlowQueryLogAlwaysWriteTime() == other.hasSlowQueryLogAlwaysWriteTime());
+      if (hasSlowQueryLogAlwaysWriteTime() != other.hasSlowQueryLogAlwaysWriteTime()) return false;
       if (hasSlowQueryLogAlwaysWriteTime()) {
-        result = result && getSlowQueryLogAlwaysWriteTime()
-            .equals(other.getSlowQueryLogAlwaysWriteTime());
+        if (!getSlowQueryLogAlwaysWriteTime()
+            .equals(other.getSlowQueryLogAlwaysWriteTime())) return false;
       }
-      result = result && logSlowRateType_ == other.logSlowRateType_;
-      result = result && (hasLogSlowRateLimit() == other.hasLogSlowRateLimit());
+      if (logSlowRateType_ != other.logSlowRateType_) return false;
+      if (hasLogSlowRateLimit() != other.hasLogSlowRateLimit()) return false;
       if (hasLogSlowRateLimit()) {
-        result = result && getLogSlowRateLimit()
-            .equals(other.getLogSlowRateLimit());
+        if (!getLogSlowRateLimit()
+            .equals(other.getLogSlowRateLimit())) return false;
       }
-      result = result && (hasLogSlowSpStatements() == other.hasLogSlowSpStatements());
+      if (hasLogSlowSpStatements() != other.hasLogSlowSpStatements()) return false;
       if (hasLogSlowSpStatements()) {
-        result = result && getLogSlowSpStatements()
-            .equals(other.getLogSlowSpStatements());
+        if (!getLogSlowSpStatements()
+            .equals(other.getLogSlowSpStatements())) return false;
       }
-      result = result && logSlowFilter_.equals(other.logSlowFilter_);
-      result = result && (hasMdbPriorityChoiceMaxLag() == other.hasMdbPriorityChoiceMaxLag());
+      if (!logSlowFilter_.equals(other.logSlowFilter_)) return false;
+      if (hasMdbPriorityChoiceMaxLag() != other.hasMdbPriorityChoiceMaxLag()) return false;
       if (hasMdbPriorityChoiceMaxLag()) {
-        result = result && getMdbPriorityChoiceMaxLag()
-            .equals(other.getMdbPriorityChoiceMaxLag());
+        if (!getMdbPriorityChoiceMaxLag()
+            .equals(other.getMdbPriorityChoiceMaxLag())) return false;
       }
-      result = result && (hasInnodbPageSize() == other.hasInnodbPageSize());
+      if (hasInnodbPageSize() != other.hasInnodbPageSize()) return false;
       if (hasInnodbPageSize()) {
-        result = result && getInnodbPageSize()
-            .equals(other.getInnodbPageSize());
+        if (!getInnodbPageSize()
+            .equals(other.getInnodbPageSize())) return false;
       }
-      result = result && (hasInnodbOnlineAlterLogMaxSize() == other.hasInnodbOnlineAlterLogMaxSize());
+      if (hasInnodbOnlineAlterLogMaxSize() != other.hasInnodbOnlineAlterLogMaxSize()) return false;
       if (hasInnodbOnlineAlterLogMaxSize()) {
-        result = result && getInnodbOnlineAlterLogMaxSize()
-            .equals(other.getInnodbOnlineAlterLogMaxSize());
+        if (!getInnodbOnlineAlterLogMaxSize()
+            .equals(other.getInnodbOnlineAlterLogMaxSize())) return false;
       }
-      result = result && (hasInnodbFtMinTokenSize() == other.hasInnodbFtMinTokenSize());
+      if (hasInnodbFtMinTokenSize() != other.hasInnodbFtMinTokenSize()) return false;
       if (hasInnodbFtMinTokenSize()) {
-        result = result && getInnodbFtMinTokenSize()
-            .equals(other.getInnodbFtMinTokenSize());
+        if (!getInnodbFtMinTokenSize()
+            .equals(other.getInnodbFtMinTokenSize())) return false;
       }
-      result = result && (hasInnodbFtMaxTokenSize() == other.hasInnodbFtMaxTokenSize());
+      if (hasInnodbFtMaxTokenSize() != other.hasInnodbFtMaxTokenSize()) return false;
       if (hasInnodbFtMaxTokenSize()) {
-        result = result && getInnodbFtMaxTokenSize()
-            .equals(other.getInnodbFtMaxTokenSize());
+        if (!getInnodbFtMaxTokenSize()
+            .equals(other.getInnodbFtMaxTokenSize())) return false;
       }
-      result = result && (hasLowerCaseTableNames() == other.hasLowerCaseTableNames());
+      if (hasLowerCaseTableNames() != other.hasLowerCaseTableNames()) return false;
       if (hasLowerCaseTableNames()) {
-        result = result && getLowerCaseTableNames()
-            .equals(other.getLowerCaseTableNames());
+        if (!getLowerCaseTableNames()
+            .equals(other.getLowerCaseTableNames())) return false;
       }
-      result = result && (hasMaxSpRecursionDepth() == other.hasMaxSpRecursionDepth());
+      if (hasMaxSpRecursionDepth() != other.hasMaxSpRecursionDepth()) return false;
       if (hasMaxSpRecursionDepth()) {
-        result = result && getMaxSpRecursionDepth()
-            .equals(other.getMaxSpRecursionDepth());
+        if (!getMaxSpRecursionDepth()
+            .equals(other.getMaxSpRecursionDepth())) return false;
       }
-      result = result && (hasInnodbCompressionLevel() == other.hasInnodbCompressionLevel());
+      if (hasInnodbCompressionLevel() != other.hasInnodbCompressionLevel()) return false;
       if (hasInnodbCompressionLevel()) {
-        result = result && getInnodbCompressionLevel()
-            .equals(other.getInnodbCompressionLevel());
+        if (!getInnodbCompressionLevel()
+            .equals(other.getInnodbCompressionLevel())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7788,7 +8355,7 @@ public final class Mysql80 {
           auditLogBuilder_ = null;
         }
         sqlMode_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (maxAllowedPacketBuilder_ == null) {
           maxAllowedPacket_ = null;
         } else {
@@ -8088,7 +8655,7 @@ public final class Mysql80 {
           logSlowSpStatementsBuilder_ = null;
         }
         logSlowFilter_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (mdbPriorityChoiceMaxLagBuilder_ == null) {
           mdbPriorityChoiceMaxLag_ = null;
         } else {
@@ -8164,11 +8731,6 @@ public final class Mysql80 {
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 buildPartial() {
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 result = new yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0(this);
         int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
-        int from_bitField2_ = bitField2_;
-        int to_bitField0_ = 0;
-        int to_bitField1_ = 0;
-        int to_bitField2_ = 0;
         if (innodbBufferPoolSizeBuilder_ == null) {
           result.innodbBufferPoolSize_ = innodbBufferPoolSize_;
         } else {
@@ -8194,9 +8756,9 @@ public final class Mysql80 {
         } else {
           result.auditLog_ = auditLogBuilder_.build();
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           sqlMode_ = java.util.Collections.unmodifiableList(sqlMode_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sqlMode_ = sqlMode_;
         if (maxAllowedPacketBuilder_ == null) {
@@ -8442,9 +9004,9 @@ public final class Mysql80 {
         } else {
           result.logSlowSpStatements_ = logSlowSpStatementsBuilder_.build();
         }
-        if (((bitField1_ & 0x20000000) == 0x20000000)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           logSlowFilter_ = java.util.Collections.unmodifiableList(logSlowFilter_);
-          bitField1_ = (bitField1_ & ~0x20000000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.logSlowFilter_ = logSlowFilter_;
         if (mdbPriorityChoiceMaxLagBuilder_ == null) {
@@ -8487,44 +9049,41 @@ public final class Mysql80 {
         } else {
           result.innodbCompressionLevel_ = innodbCompressionLevelBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
-        result.bitField1_ = to_bitField1_;
-        result.bitField2_ = to_bitField2_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8556,7 +9115,7 @@ public final class Mysql80 {
         if (!other.sqlMode_.isEmpty()) {
           if (sqlMode_.isEmpty()) {
             sqlMode_ = other.sqlMode_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSqlModeIsMutable();
             sqlMode_.addAll(other.sqlMode_);
@@ -8734,7 +9293,7 @@ public final class Mysql80 {
         if (!other.logSlowFilter_.isEmpty()) {
           if (logSlowFilter_.isEmpty()) {
             logSlowFilter_ = other.logSlowFilter_;
-            bitField1_ = (bitField1_ & ~0x20000000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureLogSlowFilterIsMutable();
             logSlowFilter_.addAll(other.logSlowFilter_);
@@ -8794,10 +9353,8 @@ public final class Mysql80 {
         return this;
       }
       private int bitField0_;
-      private int bitField1_;
-      private int bitField2_;
 
-      private com.google.protobuf.Int64Value innodbBufferPoolSize_ = null;
+      private com.google.protobuf.Int64Value innodbBufferPoolSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbBufferPoolSizeBuilder_;
       /**
@@ -8807,6 +9364,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+       * @return Whether the innodbBufferPoolSize field is set.
        */
       public boolean hasInnodbBufferPoolSize() {
         return innodbBufferPoolSizeBuilder_ != null || innodbBufferPoolSize_ != null;
@@ -8818,6 +9376,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+       * @return The innodbBufferPoolSize.
        */
       public com.google.protobuf.Int64Value getInnodbBufferPoolSize() {
         if (innodbBufferPoolSizeBuilder_ == null) {
@@ -8959,7 +9518,7 @@ public final class Mysql80 {
         return innodbBufferPoolSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.Int64Value maxConnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
@@ -8969,6 +9528,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
@@ -8980,6 +9540,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -9121,7 +9682,7 @@ public final class Mysql80 {
         return maxConnectionsBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue longQueryTime_ = null;
+      private com.google.protobuf.DoubleValue longQueryTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> longQueryTimeBuilder_;
       /**
@@ -9131,6 +9692,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+       * @return Whether the longQueryTime field is set.
        */
       public boolean hasLongQueryTime() {
         return longQueryTimeBuilder_ != null || longQueryTime_ != null;
@@ -9142,6 +9704,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+       * @return The longQueryTime.
        */
       public com.google.protobuf.DoubleValue getLongQueryTime() {
         if (longQueryTimeBuilder_ == null) {
@@ -9283,7 +9846,7 @@ public final class Mysql80 {
         return longQueryTimeBuilder_;
       }
 
-      private com.google.protobuf.BoolValue generalLog_ = null;
+      private com.google.protobuf.BoolValue generalLog_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> generalLogBuilder_;
       /**
@@ -9293,6 +9856,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue general_log = 4;</code>
+       * @return Whether the generalLog field is set.
        */
       public boolean hasGeneralLog() {
         return generalLogBuilder_ != null || generalLog_ != null;
@@ -9304,6 +9868,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue general_log = 4;</code>
+       * @return The generalLog.
        */
       public com.google.protobuf.BoolValue getGeneralLog() {
         if (generalLogBuilder_ == null) {
@@ -9445,7 +10010,7 @@ public final class Mysql80 {
         return generalLogBuilder_;
       }
 
-      private com.google.protobuf.BoolValue auditLog_ = null;
+      private com.google.protobuf.BoolValue auditLog_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> auditLogBuilder_;
       /**
@@ -9455,6 +10020,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
+       * @return Whether the auditLog field is set.
        */
       public boolean hasAuditLog() {
         return auditLogBuilder_ != null || auditLog_ != null;
@@ -9466,6 +10032,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
+       * @return The auditLog.
        */
       public com.google.protobuf.BoolValue getAuditLog() {
         if (auditLogBuilder_ == null) {
@@ -9610,9 +10177,9 @@ public final class Mysql80 {
       private java.util.List<java.lang.Integer> sqlMode_ =
         java.util.Collections.emptyList();
       private void ensureSqlModeIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           sqlMode_ = new java.util.ArrayList<java.lang.Integer>(sqlMode_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
         }
       }
       /**
@@ -9622,6 +10189,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @return A list containing the sqlMode.
        */
       public java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode> getSqlModeList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -9634,6 +10202,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @return The count of sqlMode.
        */
       public int getSqlModeCount() {
         return sqlMode_.size();
@@ -9645,6 +10214,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param index The index of the element to return.
+       * @return The sqlMode at the given index.
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode getSqlMode(int index) {
         return sqlMode_converter_.convert(sqlMode_.get(index));
@@ -9656,6 +10227,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The sqlMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSqlMode(
           int index, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode value) {
@@ -9674,6 +10248,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param value The sqlMode to add.
+       * @return This builder for chaining.
        */
       public Builder addSqlMode(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode value) {
         if (value == null) {
@@ -9691,6 +10267,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param values The sqlMode to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSqlMode(
           java.lang.Iterable<? extends yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SQLMode> values) {
@@ -9708,10 +10286,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSqlMode() {
         sqlMode_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9722,6 +10301,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @return A list containing the enum numeric values on the wire for sqlMode.
        */
       public java.util.List<java.lang.Integer>
       getSqlModeValueList() {
@@ -9734,6 +10314,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of sqlMode at the given index.
        */
       public int getSqlModeValue(int index) {
         return sqlMode_.get(index);
@@ -9745,6 +10327,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of sqlMode at the given index.
+       * @return This builder for chaining.
        */
       public Builder setSqlModeValue(
           int index, int value) {
@@ -9760,6 +10345,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param value The enum numeric value on the wire for sqlMode to add.
+       * @return This builder for chaining.
        */
       public Builder addSqlModeValue(int value) {
         ensureSqlModeIsMutable();
@@ -9774,6 +10361,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SQLMode sql_mode = 6;</code>
+       * @param values The enum numeric values on the wire for sqlMode to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSqlModeValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -9785,7 +10374,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxAllowedPacket_ = null;
+      private com.google.protobuf.Int64Value maxAllowedPacket_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxAllowedPacketBuilder_;
       /**
@@ -9795,6 +10384,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
+       * @return Whether the maxAllowedPacket field is set.
        */
       public boolean hasMaxAllowedPacket() {
         return maxAllowedPacketBuilder_ != null || maxAllowedPacket_ != null;
@@ -9806,6 +10396,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
+       * @return The maxAllowedPacket.
        */
       public com.google.protobuf.Int64Value getMaxAllowedPacket() {
         if (maxAllowedPacketBuilder_ == null) {
@@ -9955,8 +10546,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+       * @return The enum numeric value on the wire for defaultAuthenticationPlugin.
        */
-      public int getDefaultAuthenticationPluginValue() {
+      @java.lang.Override public int getDefaultAuthenticationPluginValue() {
         return defaultAuthenticationPlugin_;
       }
       /**
@@ -9966,8 +10558,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+       * @param value The enum numeric value on the wire for defaultAuthenticationPlugin to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultAuthenticationPluginValue(int value) {
+        
         defaultAuthenticationPlugin_ = value;
         onChanged();
         return this;
@@ -9979,7 +10574,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+       * @return The defaultAuthenticationPlugin.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin.valueOf(defaultAuthenticationPlugin_);
@@ -9992,6 +10589,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+       * @param value The defaultAuthenticationPlugin to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultAuthenticationPlugin(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin value) {
         if (value == null) {
@@ -10009,6 +10608,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultAuthenticationPlugin() {
         
@@ -10017,7 +10617,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value innodbFlushLogAtTrxCommit_ = null;
+      private com.google.protobuf.Int64Value innodbFlushLogAtTrxCommit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbFlushLogAtTrxCommitBuilder_;
       /**
@@ -10027,6 +10627,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
+       * @return Whether the innodbFlushLogAtTrxCommit field is set.
        */
       public boolean hasInnodbFlushLogAtTrxCommit() {
         return innodbFlushLogAtTrxCommitBuilder_ != null || innodbFlushLogAtTrxCommit_ != null;
@@ -10038,6 +10639,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
+       * @return The innodbFlushLogAtTrxCommit.
        */
       public com.google.protobuf.Int64Value getInnodbFlushLogAtTrxCommit() {
         if (innodbFlushLogAtTrxCommitBuilder_ == null) {
@@ -10179,7 +10781,7 @@ public final class Mysql80 {
         return innodbFlushLogAtTrxCommitBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbLockWaitTimeout_ = null;
+      private com.google.protobuf.Int64Value innodbLockWaitTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbLockWaitTimeoutBuilder_;
       /**
@@ -10189,6 +10791,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
+       * @return Whether the innodbLockWaitTimeout field is set.
        */
       public boolean hasInnodbLockWaitTimeout() {
         return innodbLockWaitTimeoutBuilder_ != null || innodbLockWaitTimeout_ != null;
@@ -10200,6 +10803,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
+       * @return The innodbLockWaitTimeout.
        */
       public com.google.protobuf.Int64Value getInnodbLockWaitTimeout() {
         if (innodbLockWaitTimeoutBuilder_ == null) {
@@ -10349,8 +10953,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+       * @return The enum numeric value on the wire for transactionIsolation.
        */
-      public int getTransactionIsolationValue() {
+      @java.lang.Override public int getTransactionIsolationValue() {
         return transactionIsolation_;
       }
       /**
@@ -10360,8 +10965,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+       * @param value The enum numeric value on the wire for transactionIsolation to set.
+       * @return This builder for chaining.
        */
       public Builder setTransactionIsolationValue(int value) {
+        
         transactionIsolation_ = value;
         onChanged();
         return this;
@@ -10373,7 +10981,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+       * @return The transactionIsolation.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation getTransactionIsolation() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation.valueOf(transactionIsolation_);
@@ -10386,6 +10996,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+       * @param value The transactionIsolation to set.
+       * @return This builder for chaining.
        */
       public Builder setTransactionIsolation(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.TransactionIsolation value) {
         if (value == null) {
@@ -10403,6 +11015,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransactionIsolation() {
         
@@ -10411,7 +11024,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.BoolValue innodbPrintAllDeadlocks_ = null;
+      private com.google.protobuf.BoolValue innodbPrintAllDeadlocks_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbPrintAllDeadlocksBuilder_;
       /**
@@ -10421,6 +11034,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
+       * @return Whether the innodbPrintAllDeadlocks field is set.
        */
       public boolean hasInnodbPrintAllDeadlocks() {
         return innodbPrintAllDeadlocksBuilder_ != null || innodbPrintAllDeadlocks_ != null;
@@ -10432,6 +11046,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
+       * @return The innodbPrintAllDeadlocks.
        */
       public com.google.protobuf.BoolValue getInnodbPrintAllDeadlocks() {
         if (innodbPrintAllDeadlocksBuilder_ == null) {
@@ -10573,7 +11188,7 @@ public final class Mysql80 {
         return innodbPrintAllDeadlocksBuilder_;
       }
 
-      private com.google.protobuf.Int64Value netReadTimeout_ = null;
+      private com.google.protobuf.Int64Value netReadTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> netReadTimeoutBuilder_;
       /**
@@ -10583,6 +11198,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
+       * @return Whether the netReadTimeout field is set.
        */
       public boolean hasNetReadTimeout() {
         return netReadTimeoutBuilder_ != null || netReadTimeout_ != null;
@@ -10594,6 +11210,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
+       * @return The netReadTimeout.
        */
       public com.google.protobuf.Int64Value getNetReadTimeout() {
         if (netReadTimeoutBuilder_ == null) {
@@ -10735,7 +11352,7 @@ public final class Mysql80 {
         return netReadTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value netWriteTimeout_ = null;
+      private com.google.protobuf.Int64Value netWriteTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> netWriteTimeoutBuilder_;
       /**
@@ -10745,6 +11362,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
+       * @return Whether the netWriteTimeout field is set.
        */
       public boolean hasNetWriteTimeout() {
         return netWriteTimeoutBuilder_ != null || netWriteTimeout_ != null;
@@ -10756,6 +11374,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
+       * @return The netWriteTimeout.
        */
       public com.google.protobuf.Int64Value getNetWriteTimeout() {
         if (netWriteTimeoutBuilder_ == null) {
@@ -10897,7 +11516,7 @@ public final class Mysql80 {
         return netWriteTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value groupConcatMaxLen_ = null;
+      private com.google.protobuf.Int64Value groupConcatMaxLen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> groupConcatMaxLenBuilder_;
       /**
@@ -10907,6 +11526,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
+       * @return Whether the groupConcatMaxLen field is set.
        */
       public boolean hasGroupConcatMaxLen() {
         return groupConcatMaxLenBuilder_ != null || groupConcatMaxLen_ != null;
@@ -10918,6 +11538,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
+       * @return The groupConcatMaxLen.
        */
       public com.google.protobuf.Int64Value getGroupConcatMaxLen() {
         if (groupConcatMaxLenBuilder_ == null) {
@@ -11059,7 +11680,7 @@ public final class Mysql80 {
         return groupConcatMaxLenBuilder_;
       }
 
-      private com.google.protobuf.Int64Value tmpTableSize_ = null;
+      private com.google.protobuf.Int64Value tmpTableSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tmpTableSizeBuilder_;
       /**
@@ -11069,6 +11690,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
+       * @return Whether the tmpTableSize field is set.
        */
       public boolean hasTmpTableSize() {
         return tmpTableSizeBuilder_ != null || tmpTableSize_ != null;
@@ -11080,6 +11702,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
+       * @return The tmpTableSize.
        */
       public com.google.protobuf.Int64Value getTmpTableSize() {
         if (tmpTableSizeBuilder_ == null) {
@@ -11221,7 +11844,7 @@ public final class Mysql80 {
         return tmpTableSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxHeapTableSize_ = null;
+      private com.google.protobuf.Int64Value maxHeapTableSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxHeapTableSizeBuilder_;
       /**
@@ -11231,6 +11854,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
+       * @return Whether the maxHeapTableSize field is set.
        */
       public boolean hasMaxHeapTableSize() {
         return maxHeapTableSizeBuilder_ != null || maxHeapTableSize_ != null;
@@ -11242,6 +11866,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
+       * @return The maxHeapTableSize.
        */
       public com.google.protobuf.Int64Value getMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -11391,6 +12016,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
+       * @return The defaultTimeZone.
        */
       public java.lang.String getDefaultTimeZone() {
         java.lang.Object ref = defaultTimeZone_;
@@ -11411,6 +12037,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
+       * @return The bytes for defaultTimeZone.
        */
       public com.google.protobuf.ByteString
           getDefaultTimeZoneBytes() {
@@ -11432,6 +12059,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
+       * @param value The defaultTimeZone to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultTimeZone(
           java.lang.String value) {
@@ -11450,6 +12079,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultTimeZone() {
         
@@ -11464,6 +12094,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
+       * @param value The bytes for defaultTimeZone to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultTimeZoneBytes(
           com.google.protobuf.ByteString value) {
@@ -11485,6 +12117,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
+       * @return The characterSetServer.
        */
       public java.lang.String getCharacterSetServer() {
         java.lang.Object ref = characterSetServer_;
@@ -11505,6 +12138,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
+       * @return The bytes for characterSetServer.
        */
       public com.google.protobuf.ByteString
           getCharacterSetServerBytes() {
@@ -11526,6 +12160,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
+       * @param value The characterSetServer to set.
+       * @return This builder for chaining.
        */
       public Builder setCharacterSetServer(
           java.lang.String value) {
@@ -11544,6 +12180,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCharacterSetServer() {
         
@@ -11558,6 +12195,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
+       * @param value The bytes for characterSetServer to set.
+       * @return This builder for chaining.
        */
       public Builder setCharacterSetServerBytes(
           com.google.protobuf.ByteString value) {
@@ -11579,6 +12218,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string collation_server = 20;</code>
+       * @return The collationServer.
        */
       public java.lang.String getCollationServer() {
         java.lang.Object ref = collationServer_;
@@ -11599,6 +12239,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string collation_server = 20;</code>
+       * @return The bytes for collationServer.
        */
       public com.google.protobuf.ByteString
           getCollationServerBytes() {
@@ -11620,6 +12261,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string collation_server = 20;</code>
+       * @param value The collationServer to set.
+       * @return This builder for chaining.
        */
       public Builder setCollationServer(
           java.lang.String value) {
@@ -11638,6 +12281,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string collation_server = 20;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCollationServer() {
         
@@ -11652,6 +12296,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>string collation_server = 20;</code>
+       * @param value The bytes for collationServer to set.
+       * @return This builder for chaining.
        */
       public Builder setCollationServerBytes(
           com.google.protobuf.ByteString value) {
@@ -11665,7 +12311,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.BoolValue innodbAdaptiveHashIndex_ = null;
+      private com.google.protobuf.BoolValue innodbAdaptiveHashIndex_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbAdaptiveHashIndexBuilder_;
       /**
@@ -11675,6 +12321,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       * @return Whether the innodbAdaptiveHashIndex field is set.
        */
       public boolean hasInnodbAdaptiveHashIndex() {
         return innodbAdaptiveHashIndexBuilder_ != null || innodbAdaptiveHashIndex_ != null;
@@ -11686,6 +12333,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       * @return The innodbAdaptiveHashIndex.
        */
       public com.google.protobuf.BoolValue getInnodbAdaptiveHashIndex() {
         if (innodbAdaptiveHashIndexBuilder_ == null) {
@@ -11827,7 +12475,7 @@ public final class Mysql80 {
         return innodbAdaptiveHashIndexBuilder_;
       }
 
-      private com.google.protobuf.BoolValue innodbNumaInterleave_ = null;
+      private com.google.protobuf.BoolValue innodbNumaInterleave_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbNumaInterleaveBuilder_;
       /**
@@ -11837,6 +12485,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       * @return Whether the innodbNumaInterleave field is set.
        */
       public boolean hasInnodbNumaInterleave() {
         return innodbNumaInterleaveBuilder_ != null || innodbNumaInterleave_ != null;
@@ -11848,6 +12497,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       * @return The innodbNumaInterleave.
        */
       public com.google.protobuf.BoolValue getInnodbNumaInterleave() {
         if (innodbNumaInterleaveBuilder_ == null) {
@@ -11989,7 +12639,7 @@ public final class Mysql80 {
         return innodbNumaInterleaveBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbLogBufferSize_ = null;
+      private com.google.protobuf.Int64Value innodbLogBufferSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbLogBufferSizeBuilder_;
       /**
@@ -11999,6 +12649,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       * @return Whether the innodbLogBufferSize field is set.
        */
       public boolean hasInnodbLogBufferSize() {
         return innodbLogBufferSizeBuilder_ != null || innodbLogBufferSize_ != null;
@@ -12010,6 +12661,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       * @return The innodbLogBufferSize.
        */
       public com.google.protobuf.Int64Value getInnodbLogBufferSize() {
         if (innodbLogBufferSizeBuilder_ == null) {
@@ -12151,7 +12803,7 @@ public final class Mysql80 {
         return innodbLogBufferSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbLogFileSize_ = null;
+      private com.google.protobuf.Int64Value innodbLogFileSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbLogFileSizeBuilder_;
       /**
@@ -12161,6 +12813,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       * @return Whether the innodbLogFileSize field is set.
        */
       public boolean hasInnodbLogFileSize() {
         return innodbLogFileSizeBuilder_ != null || innodbLogFileSize_ != null;
@@ -12172,6 +12825,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       * @return The innodbLogFileSize.
        */
       public com.google.protobuf.Int64Value getInnodbLogFileSize() {
         if (innodbLogFileSizeBuilder_ == null) {
@@ -12313,7 +12967,7 @@ public final class Mysql80 {
         return innodbLogFileSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbIoCapacity_ = null;
+      private com.google.protobuf.Int64Value innodbIoCapacity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbIoCapacityBuilder_;
       /**
@@ -12323,6 +12977,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       * @return Whether the innodbIoCapacity field is set.
        */
       public boolean hasInnodbIoCapacity() {
         return innodbIoCapacityBuilder_ != null || innodbIoCapacity_ != null;
@@ -12334,6 +12989,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       * @return The innodbIoCapacity.
        */
       public com.google.protobuf.Int64Value getInnodbIoCapacity() {
         if (innodbIoCapacityBuilder_ == null) {
@@ -12475,7 +13131,7 @@ public final class Mysql80 {
         return innodbIoCapacityBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbIoCapacityMax_ = null;
+      private com.google.protobuf.Int64Value innodbIoCapacityMax_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbIoCapacityMaxBuilder_;
       /**
@@ -12485,6 +13141,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       * @return Whether the innodbIoCapacityMax field is set.
        */
       public boolean hasInnodbIoCapacityMax() {
         return innodbIoCapacityMaxBuilder_ != null || innodbIoCapacityMax_ != null;
@@ -12496,6 +13153,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       * @return The innodbIoCapacityMax.
        */
       public com.google.protobuf.Int64Value getInnodbIoCapacityMax() {
         if (innodbIoCapacityMaxBuilder_ == null) {
@@ -12637,7 +13295,7 @@ public final class Mysql80 {
         return innodbIoCapacityMaxBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbReadIoThreads_ = null;
+      private com.google.protobuf.Int64Value innodbReadIoThreads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbReadIoThreadsBuilder_;
       /**
@@ -12647,6 +13305,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       * @return Whether the innodbReadIoThreads field is set.
        */
       public boolean hasInnodbReadIoThreads() {
         return innodbReadIoThreadsBuilder_ != null || innodbReadIoThreads_ != null;
@@ -12658,6 +13317,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       * @return The innodbReadIoThreads.
        */
       public com.google.protobuf.Int64Value getInnodbReadIoThreads() {
         if (innodbReadIoThreadsBuilder_ == null) {
@@ -12799,7 +13459,7 @@ public final class Mysql80 {
         return innodbReadIoThreadsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbWriteIoThreads_ = null;
+      private com.google.protobuf.Int64Value innodbWriteIoThreads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbWriteIoThreadsBuilder_;
       /**
@@ -12809,6 +13469,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       * @return Whether the innodbWriteIoThreads field is set.
        */
       public boolean hasInnodbWriteIoThreads() {
         return innodbWriteIoThreadsBuilder_ != null || innodbWriteIoThreads_ != null;
@@ -12820,6 +13481,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       * @return The innodbWriteIoThreads.
        */
       public com.google.protobuf.Int64Value getInnodbWriteIoThreads() {
         if (innodbWriteIoThreadsBuilder_ == null) {
@@ -12961,7 +13623,7 @@ public final class Mysql80 {
         return innodbWriteIoThreadsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbPurgeThreads_ = null;
+      private com.google.protobuf.Int64Value innodbPurgeThreads_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbPurgeThreadsBuilder_;
       /**
@@ -12971,6 +13633,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       * @return Whether the innodbPurgeThreads field is set.
        */
       public boolean hasInnodbPurgeThreads() {
         return innodbPurgeThreadsBuilder_ != null || innodbPurgeThreads_ != null;
@@ -12982,6 +13645,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       * @return The innodbPurgeThreads.
        */
       public com.google.protobuf.Int64Value getInnodbPurgeThreads() {
         if (innodbPurgeThreadsBuilder_ == null) {
@@ -13123,7 +13787,7 @@ public final class Mysql80 {
         return innodbPurgeThreadsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbThreadConcurrency_ = null;
+      private com.google.protobuf.Int64Value innodbThreadConcurrency_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbThreadConcurrencyBuilder_;
       /**
@@ -13133,6 +13797,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return Whether the innodbThreadConcurrency field is set.
        */
       public boolean hasInnodbThreadConcurrency() {
         return innodbThreadConcurrencyBuilder_ != null || innodbThreadConcurrency_ != null;
@@ -13144,6 +13809,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The innodbThreadConcurrency.
        */
       public com.google.protobuf.Int64Value getInnodbThreadConcurrency() {
         if (innodbThreadConcurrencyBuilder_ == null) {
@@ -13285,7 +13951,7 @@ public final class Mysql80 {
         return innodbThreadConcurrencyBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbTempDataFileMaxSize_ = null;
+      private com.google.protobuf.Int64Value innodbTempDataFileMaxSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbTempDataFileMaxSizeBuilder_;
       /**
@@ -13295,6 +13961,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       * @return Whether the innodbTempDataFileMaxSize field is set.
        */
       public boolean hasInnodbTempDataFileMaxSize() {
         return innodbTempDataFileMaxSizeBuilder_ != null || innodbTempDataFileMaxSize_ != null;
@@ -13306,6 +13973,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       * @return The innodbTempDataFileMaxSize.
        */
       public com.google.protobuf.Int64Value getInnodbTempDataFileMaxSize() {
         if (innodbTempDataFileMaxSizeBuilder_ == null) {
@@ -13447,7 +14115,7 @@ public final class Mysql80 {
         return innodbTempDataFileMaxSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value threadCacheSize_ = null;
+      private com.google.protobuf.Int64Value threadCacheSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> threadCacheSizeBuilder_;
       /**
@@ -13457,6 +14125,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       * @return Whether the threadCacheSize field is set.
        */
       public boolean hasThreadCacheSize() {
         return threadCacheSizeBuilder_ != null || threadCacheSize_ != null;
@@ -13468,6 +14137,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       * @return The threadCacheSize.
        */
       public com.google.protobuf.Int64Value getThreadCacheSize() {
         if (threadCacheSizeBuilder_ == null) {
@@ -13609,7 +14279,7 @@ public final class Mysql80 {
         return threadCacheSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value threadStack_ = null;
+      private com.google.protobuf.Int64Value threadStack_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> threadStackBuilder_;
       /**
@@ -13619,6 +14289,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       * @return Whether the threadStack field is set.
        */
       public boolean hasThreadStack() {
         return threadStackBuilder_ != null || threadStack_ != null;
@@ -13630,6 +14301,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       * @return The threadStack.
        */
       public com.google.protobuf.Int64Value getThreadStack() {
         if (threadStackBuilder_ == null) {
@@ -13771,7 +14443,7 @@ public final class Mysql80 {
         return threadStackBuilder_;
       }
 
-      private com.google.protobuf.Int64Value joinBufferSize_ = null;
+      private com.google.protobuf.Int64Value joinBufferSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> joinBufferSizeBuilder_;
       /**
@@ -13781,6 +14453,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       * @return Whether the joinBufferSize field is set.
        */
       public boolean hasJoinBufferSize() {
         return joinBufferSizeBuilder_ != null || joinBufferSize_ != null;
@@ -13792,6 +14465,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       * @return The joinBufferSize.
        */
       public com.google.protobuf.Int64Value getJoinBufferSize() {
         if (joinBufferSizeBuilder_ == null) {
@@ -13933,7 +14607,7 @@ public final class Mysql80 {
         return joinBufferSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value sortBufferSize_ = null;
+      private com.google.protobuf.Int64Value sortBufferSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sortBufferSizeBuilder_;
       /**
@@ -13943,6 +14617,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       * @return Whether the sortBufferSize field is set.
        */
       public boolean hasSortBufferSize() {
         return sortBufferSizeBuilder_ != null || sortBufferSize_ != null;
@@ -13954,6 +14629,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       * @return The sortBufferSize.
        */
       public com.google.protobuf.Int64Value getSortBufferSize() {
         if (sortBufferSizeBuilder_ == null) {
@@ -14095,7 +14771,7 @@ public final class Mysql80 {
         return sortBufferSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value tableDefinitionCache_ = null;
+      private com.google.protobuf.Int64Value tableDefinitionCache_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tableDefinitionCacheBuilder_;
       /**
@@ -14105,6 +14781,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       * @return Whether the tableDefinitionCache field is set.
        */
       public boolean hasTableDefinitionCache() {
         return tableDefinitionCacheBuilder_ != null || tableDefinitionCache_ != null;
@@ -14116,6 +14793,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       * @return The tableDefinitionCache.
        */
       public com.google.protobuf.Int64Value getTableDefinitionCache() {
         if (tableDefinitionCacheBuilder_ == null) {
@@ -14257,7 +14935,7 @@ public final class Mysql80 {
         return tableDefinitionCacheBuilder_;
       }
 
-      private com.google.protobuf.Int64Value tableOpenCache_ = null;
+      private com.google.protobuf.Int64Value tableOpenCache_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tableOpenCacheBuilder_;
       /**
@@ -14267,6 +14945,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       * @return Whether the tableOpenCache field is set.
        */
       public boolean hasTableOpenCache() {
         return tableOpenCacheBuilder_ != null || tableOpenCache_ != null;
@@ -14278,6 +14957,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       * @return The tableOpenCache.
        */
       public com.google.protobuf.Int64Value getTableOpenCache() {
         if (tableOpenCacheBuilder_ == null) {
@@ -14419,7 +15099,7 @@ public final class Mysql80 {
         return tableOpenCacheBuilder_;
       }
 
-      private com.google.protobuf.Int64Value tableOpenCacheInstances_ = null;
+      private com.google.protobuf.Int64Value tableOpenCacheInstances_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tableOpenCacheInstancesBuilder_;
       /**
@@ -14429,6 +15109,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       * @return Whether the tableOpenCacheInstances field is set.
        */
       public boolean hasTableOpenCacheInstances() {
         return tableOpenCacheInstancesBuilder_ != null || tableOpenCacheInstances_ != null;
@@ -14440,6 +15121,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       * @return The tableOpenCacheInstances.
        */
       public com.google.protobuf.Int64Value getTableOpenCacheInstances() {
         if (tableOpenCacheInstancesBuilder_ == null) {
@@ -14581,7 +15263,7 @@ public final class Mysql80 {
         return tableOpenCacheInstancesBuilder_;
       }
 
-      private com.google.protobuf.BoolValue explicitDefaultsForTimestamp_ = null;
+      private com.google.protobuf.BoolValue explicitDefaultsForTimestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> explicitDefaultsForTimestampBuilder_;
       /**
@@ -14591,6 +15273,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       * @return Whether the explicitDefaultsForTimestamp field is set.
        */
       public boolean hasExplicitDefaultsForTimestamp() {
         return explicitDefaultsForTimestampBuilder_ != null || explicitDefaultsForTimestamp_ != null;
@@ -14602,6 +15285,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       * @return The explicitDefaultsForTimestamp.
        */
       public com.google.protobuf.BoolValue getExplicitDefaultsForTimestamp() {
         if (explicitDefaultsForTimestampBuilder_ == null) {
@@ -14743,7 +15427,7 @@ public final class Mysql80 {
         return explicitDefaultsForTimestampBuilder_;
       }
 
-      private com.google.protobuf.Int64Value autoIncrementIncrement_ = null;
+      private com.google.protobuf.Int64Value autoIncrementIncrement_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> autoIncrementIncrementBuilder_;
       /**
@@ -14753,6 +15437,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return Whether the autoIncrementIncrement field is set.
        */
       public boolean hasAutoIncrementIncrement() {
         return autoIncrementIncrementBuilder_ != null || autoIncrementIncrement_ != null;
@@ -14764,6 +15449,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return The autoIncrementIncrement.
        */
       public com.google.protobuf.Int64Value getAutoIncrementIncrement() {
         if (autoIncrementIncrementBuilder_ == null) {
@@ -14905,7 +15591,7 @@ public final class Mysql80 {
         return autoIncrementIncrementBuilder_;
       }
 
-      private com.google.protobuf.Int64Value autoIncrementOffset_ = null;
+      private com.google.protobuf.Int64Value autoIncrementOffset_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> autoIncrementOffsetBuilder_;
       /**
@@ -14915,6 +15601,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return Whether the autoIncrementOffset field is set.
        */
       public boolean hasAutoIncrementOffset() {
         return autoIncrementOffsetBuilder_ != null || autoIncrementOffset_ != null;
@@ -14926,6 +15613,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       * @return The autoIncrementOffset.
        */
       public com.google.protobuf.Int64Value getAutoIncrementOffset() {
         if (autoIncrementOffsetBuilder_ == null) {
@@ -15067,7 +15755,7 @@ public final class Mysql80 {
         return autoIncrementOffsetBuilder_;
       }
 
-      private com.google.protobuf.Int64Value syncBinlog_ = null;
+      private com.google.protobuf.Int64Value syncBinlog_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> syncBinlogBuilder_;
       /**
@@ -15077,6 +15765,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       * @return Whether the syncBinlog field is set.
        */
       public boolean hasSyncBinlog() {
         return syncBinlogBuilder_ != null || syncBinlog_ != null;
@@ -15088,6 +15777,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       * @return The syncBinlog.
        */
       public com.google.protobuf.Int64Value getSyncBinlog() {
         if (syncBinlogBuilder_ == null) {
@@ -15229,7 +15919,7 @@ public final class Mysql80 {
         return syncBinlogBuilder_;
       }
 
-      private com.google.protobuf.Int64Value binlogCacheSize_ = null;
+      private com.google.protobuf.Int64Value binlogCacheSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> binlogCacheSizeBuilder_;
       /**
@@ -15239,6 +15929,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       * @return Whether the binlogCacheSize field is set.
        */
       public boolean hasBinlogCacheSize() {
         return binlogCacheSizeBuilder_ != null || binlogCacheSize_ != null;
@@ -15250,6 +15941,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       * @return The binlogCacheSize.
        */
       public com.google.protobuf.Int64Value getBinlogCacheSize() {
         if (binlogCacheSizeBuilder_ == null) {
@@ -15391,7 +16083,7 @@ public final class Mysql80 {
         return binlogCacheSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value binlogGroupCommitSyncDelay_ = null;
+      private com.google.protobuf.Int64Value binlogGroupCommitSyncDelay_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> binlogGroupCommitSyncDelayBuilder_;
       /**
@@ -15401,6 +16093,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
+       * @return Whether the binlogGroupCommitSyncDelay field is set.
        */
       public boolean hasBinlogGroupCommitSyncDelay() {
         return binlogGroupCommitSyncDelayBuilder_ != null || binlogGroupCommitSyncDelay_ != null;
@@ -15412,6 +16105,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
+       * @return The binlogGroupCommitSyncDelay.
        */
       public com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay() {
         if (binlogGroupCommitSyncDelayBuilder_ == null) {
@@ -15561,8 +16255,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+       * @return The enum numeric value on the wire for binlogRowImage.
        */
-      public int getBinlogRowImageValue() {
+      @java.lang.Override public int getBinlogRowImageValue() {
         return binlogRowImage_;
       }
       /**
@@ -15572,8 +16267,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+       * @param value The enum numeric value on the wire for binlogRowImage to set.
+       * @return This builder for chaining.
        */
       public Builder setBinlogRowImageValue(int value) {
+        
         binlogRowImage_ = value;
         onChanged();
         return this;
@@ -15585,7 +16283,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+       * @return The binlogRowImage.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage getBinlogRowImage() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage.valueOf(binlogRowImage_);
@@ -15598,6 +16298,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+       * @param value The binlogRowImage to set.
+       * @return This builder for chaining.
        */
       public Builder setBinlogRowImage(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogRowImage value) {
         if (value == null) {
@@ -15615,6 +16317,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogRowImage binlog_row_image = 45;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBinlogRowImage() {
         
@@ -15623,7 +16326,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.BoolValue binlogRowsQueryLogEvents_ = null;
+      private com.google.protobuf.BoolValue binlogRowsQueryLogEvents_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> binlogRowsQueryLogEventsBuilder_;
       /**
@@ -15633,6 +16336,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       * @return Whether the binlogRowsQueryLogEvents field is set.
        */
       public boolean hasBinlogRowsQueryLogEvents() {
         return binlogRowsQueryLogEventsBuilder_ != null || binlogRowsQueryLogEvents_ != null;
@@ -15644,6 +16348,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       * @return The binlogRowsQueryLogEvents.
        */
       public com.google.protobuf.BoolValue getBinlogRowsQueryLogEvents() {
         if (binlogRowsQueryLogEventsBuilder_ == null) {
@@ -15785,7 +16490,7 @@ public final class Mysql80 {
         return binlogRowsQueryLogEventsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value rplSemiSyncMasterWaitForSlaveCount_ = null;
+      private com.google.protobuf.Int64Value rplSemiSyncMasterWaitForSlaveCount_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> rplSemiSyncMasterWaitForSlaveCountBuilder_;
       /**
@@ -15795,6 +16500,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       * @return Whether the rplSemiSyncMasterWaitForSlaveCount field is set.
        */
       public boolean hasRplSemiSyncMasterWaitForSlaveCount() {
         return rplSemiSyncMasterWaitForSlaveCountBuilder_ != null || rplSemiSyncMasterWaitForSlaveCount_ != null;
@@ -15806,6 +16512,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       * @return The rplSemiSyncMasterWaitForSlaveCount.
        */
       public com.google.protobuf.Int64Value getRplSemiSyncMasterWaitForSlaveCount() {
         if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
@@ -15955,8 +16662,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+       * @return The enum numeric value on the wire for slaveParallelType.
        */
-      public int getSlaveParallelTypeValue() {
+      @java.lang.Override public int getSlaveParallelTypeValue() {
         return slaveParallelType_;
       }
       /**
@@ -15966,8 +16674,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+       * @param value The enum numeric value on the wire for slaveParallelType to set.
+       * @return This builder for chaining.
        */
       public Builder setSlaveParallelTypeValue(int value) {
+        
         slaveParallelType_ = value;
         onChanged();
         return this;
@@ -15979,7 +16690,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+       * @return The slaveParallelType.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType getSlaveParallelType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType.valueOf(slaveParallelType_);
@@ -15992,6 +16705,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+       * @param value The slaveParallelType to set.
+       * @return This builder for chaining.
        */
       public Builder setSlaveParallelType(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.SlaveParallelType value) {
         if (value == null) {
@@ -16009,6 +16724,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType slave_parallel_type = 48;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSlaveParallelType() {
         
@@ -16017,7 +16733,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value slaveParallelWorkers_ = null;
+      private com.google.protobuf.Int64Value slaveParallelWorkers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slaveParallelWorkersBuilder_;
       /**
@@ -16027,6 +16743,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       * @return Whether the slaveParallelWorkers field is set.
        */
       public boolean hasSlaveParallelWorkers() {
         return slaveParallelWorkersBuilder_ != null || slaveParallelWorkers_ != null;
@@ -16038,6 +16755,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       * @return The slaveParallelWorkers.
        */
       public com.google.protobuf.Int64Value getSlaveParallelWorkers() {
         if (slaveParallelWorkersBuilder_ == null) {
@@ -16179,7 +16897,7 @@ public final class Mysql80 {
         return slaveParallelWorkersBuilder_;
       }
 
-      private com.google.protobuf.Int64Value regexpTimeLimit_ = null;
+      private com.google.protobuf.Int64Value regexpTimeLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> regexpTimeLimitBuilder_;
       /**
@@ -16189,6 +16907,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       * @return Whether the regexpTimeLimit field is set.
        */
       public boolean hasRegexpTimeLimit() {
         return regexpTimeLimitBuilder_ != null || regexpTimeLimit_ != null;
@@ -16200,6 +16919,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       * @return The regexpTimeLimit.
        */
       public com.google.protobuf.Int64Value getRegexpTimeLimit() {
         if (regexpTimeLimitBuilder_ == null) {
@@ -16341,7 +17061,7 @@ public final class Mysql80 {
         return regexpTimeLimitBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mdbPreserveBinlogBytes_ = null;
+      private com.google.protobuf.Int64Value mdbPreserveBinlogBytes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbPreserveBinlogBytesBuilder_;
       /**
@@ -16350,6 +17070,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
+       * @return Whether the mdbPreserveBinlogBytes field is set.
        */
       public boolean hasMdbPreserveBinlogBytes() {
         return mdbPreserveBinlogBytesBuilder_ != null || mdbPreserveBinlogBytes_ != null;
@@ -16360,6 +17081,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
+       * @return The mdbPreserveBinlogBytes.
        */
       public com.google.protobuf.Int64Value getMdbPreserveBinlogBytes() {
         if (mdbPreserveBinlogBytesBuilder_ == null) {
@@ -16494,7 +17216,7 @@ public final class Mysql80 {
         return mdbPreserveBinlogBytesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value interactiveTimeout_ = null;
+      private com.google.protobuf.Int64Value interactiveTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> interactiveTimeoutBuilder_;
       /**
@@ -16504,6 +17226,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       * @return Whether the interactiveTimeout field is set.
        */
       public boolean hasInteractiveTimeout() {
         return interactiveTimeoutBuilder_ != null || interactiveTimeout_ != null;
@@ -16515,6 +17238,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       * @return The interactiveTimeout.
        */
       public com.google.protobuf.Int64Value getInteractiveTimeout() {
         if (interactiveTimeoutBuilder_ == null) {
@@ -16656,7 +17380,7 @@ public final class Mysql80 {
         return interactiveTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value waitTimeout_ = null;
+      private com.google.protobuf.Int64Value waitTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> waitTimeoutBuilder_;
       /**
@@ -16666,6 +17390,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       * @return Whether the waitTimeout field is set.
        */
       public boolean hasWaitTimeout() {
         return waitTimeoutBuilder_ != null || waitTimeout_ != null;
@@ -16677,6 +17402,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       * @return The waitTimeout.
        */
       public com.google.protobuf.Int64Value getWaitTimeout() {
         if (waitTimeoutBuilder_ == null) {
@@ -16818,7 +17544,7 @@ public final class Mysql80 {
         return waitTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mdbOfflineModeEnableLag_ = null;
+      private com.google.protobuf.Int64Value mdbOfflineModeEnableLag_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbOfflineModeEnableLagBuilder_;
       /**
@@ -16827,6 +17553,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       * @return Whether the mdbOfflineModeEnableLag field is set.
        */
       public boolean hasMdbOfflineModeEnableLag() {
         return mdbOfflineModeEnableLagBuilder_ != null || mdbOfflineModeEnableLag_ != null;
@@ -16837,6 +17564,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       * @return The mdbOfflineModeEnableLag.
        */
       public com.google.protobuf.Int64Value getMdbOfflineModeEnableLag() {
         if (mdbOfflineModeEnableLagBuilder_ == null) {
@@ -16971,7 +17699,7 @@ public final class Mysql80 {
         return mdbOfflineModeEnableLagBuilder_;
       }
 
-      private com.google.protobuf.Int64Value mdbOfflineModeDisableLag_ = null;
+      private com.google.protobuf.Int64Value mdbOfflineModeDisableLag_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbOfflineModeDisableLagBuilder_;
       /**
@@ -16981,6 +17709,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       * @return Whether the mdbOfflineModeDisableLag field is set.
        */
       public boolean hasMdbOfflineModeDisableLag() {
         return mdbOfflineModeDisableLagBuilder_ != null || mdbOfflineModeDisableLag_ != null;
@@ -16992,6 +17721,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       * @return The mdbOfflineModeDisableLag.
        */
       public com.google.protobuf.Int64Value getMdbOfflineModeDisableLag() {
         if (mdbOfflineModeDisableLagBuilder_ == null) {
@@ -17133,7 +17863,7 @@ public final class Mysql80 {
         return mdbOfflineModeDisableLagBuilder_;
       }
 
-      private com.google.protobuf.Int64Value rangeOptimizerMaxMemSize_ = null;
+      private com.google.protobuf.Int64Value rangeOptimizerMaxMemSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> rangeOptimizerMaxMemSizeBuilder_;
       /**
@@ -17143,6 +17873,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       * @return Whether the rangeOptimizerMaxMemSize field is set.
        */
       public boolean hasRangeOptimizerMaxMemSize() {
         return rangeOptimizerMaxMemSizeBuilder_ != null || rangeOptimizerMaxMemSize_ != null;
@@ -17154,6 +17885,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       * @return The rangeOptimizerMaxMemSize.
        */
       public com.google.protobuf.Int64Value getRangeOptimizerMaxMemSize() {
         if (rangeOptimizerMaxMemSizeBuilder_ == null) {
@@ -17295,7 +18027,7 @@ public final class Mysql80 {
         return rangeOptimizerMaxMemSizeBuilder_;
       }
 
-      private com.google.protobuf.BoolValue slowQueryLog_ = null;
+      private com.google.protobuf.BoolValue slowQueryLog_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> slowQueryLogBuilder_;
       /**
@@ -17305,6 +18037,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       * @return Whether the slowQueryLog field is set.
        */
       public boolean hasSlowQueryLog() {
         return slowQueryLogBuilder_ != null || slowQueryLog_ != null;
@@ -17316,6 +18049,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       * @return The slowQueryLog.
        */
       public com.google.protobuf.BoolValue getSlowQueryLog() {
         if (slowQueryLogBuilder_ == null) {
@@ -17457,7 +18191,7 @@ public final class Mysql80 {
         return slowQueryLogBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue slowQueryLogAlwaysWriteTime_ = null;
+      private com.google.protobuf.DoubleValue slowQueryLogAlwaysWriteTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> slowQueryLogAlwaysWriteTimeBuilder_;
       /**
@@ -17467,6 +18201,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       * @return Whether the slowQueryLogAlwaysWriteTime field is set.
        */
       public boolean hasSlowQueryLogAlwaysWriteTime() {
         return slowQueryLogAlwaysWriteTimeBuilder_ != null || slowQueryLogAlwaysWriteTime_ != null;
@@ -17478,6 +18213,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       * @return The slowQueryLogAlwaysWriteTime.
        */
       public com.google.protobuf.DoubleValue getSlowQueryLogAlwaysWriteTime() {
         if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
@@ -17627,8 +18363,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       * @return The enum numeric value on the wire for logSlowRateType.
        */
-      public int getLogSlowRateTypeValue() {
+      @java.lang.Override public int getLogSlowRateTypeValue() {
         return logSlowRateType_;
       }
       /**
@@ -17638,8 +18375,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       * @param value The enum numeric value on the wire for logSlowRateType to set.
+       * @return This builder for chaining.
        */
       public Builder setLogSlowRateTypeValue(int value) {
+        
         logSlowRateType_ = value;
         onChanged();
         return this;
@@ -17651,7 +18391,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       * @return The logSlowRateType.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.valueOf(logSlowRateType_);
@@ -17664,6 +18406,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       * @param value The logSlowRateType to set.
+       * @return This builder for chaining.
        */
       public Builder setLogSlowRateType(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType value) {
         if (value == null) {
@@ -17681,6 +18425,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogSlowRateType() {
         
@@ -17689,7 +18434,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value logSlowRateLimit_ = null;
+      private com.google.protobuf.Int64Value logSlowRateLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logSlowRateLimitBuilder_;
       /**
@@ -17699,6 +18444,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       * @return Whether the logSlowRateLimit field is set.
        */
       public boolean hasLogSlowRateLimit() {
         return logSlowRateLimitBuilder_ != null || logSlowRateLimit_ != null;
@@ -17710,6 +18456,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       * @return The logSlowRateLimit.
        */
       public com.google.protobuf.Int64Value getLogSlowRateLimit() {
         if (logSlowRateLimitBuilder_ == null) {
@@ -17851,7 +18598,7 @@ public final class Mysql80 {
         return logSlowRateLimitBuilder_;
       }
 
-      private com.google.protobuf.BoolValue logSlowSpStatements_ = null;
+      private com.google.protobuf.BoolValue logSlowSpStatements_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logSlowSpStatementsBuilder_;
       /**
@@ -17861,6 +18608,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       * @return Whether the logSlowSpStatements field is set.
        */
       public boolean hasLogSlowSpStatements() {
         return logSlowSpStatementsBuilder_ != null || logSlowSpStatements_ != null;
@@ -17872,6 +18620,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       * @return The logSlowSpStatements.
        */
       public com.google.protobuf.BoolValue getLogSlowSpStatements() {
         if (logSlowSpStatementsBuilder_ == null) {
@@ -18016,9 +18765,9 @@ public final class Mysql80 {
       private java.util.List<java.lang.Integer> logSlowFilter_ =
         java.util.Collections.emptyList();
       private void ensureLogSlowFilterIsMutable() {
-        if (!((bitField1_ & 0x20000000) == 0x20000000)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           logSlowFilter_ = new java.util.ArrayList<java.lang.Integer>(logSlowFilter_);
-          bitField1_ |= 0x20000000;
+          bitField0_ |= 0x00000002;
         }
       }
       /**
@@ -18028,6 +18777,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @return A list containing the logSlowFilter.
        */
       public java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> getLogSlowFilterList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -18040,6 +18790,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @return The count of logSlowFilter.
        */
       public int getLogSlowFilterCount() {
         return logSlowFilter_.size();
@@ -18051,6 +18802,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param index The index of the element to return.
+       * @return The logSlowFilter at the given index.
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType getLogSlowFilter(int index) {
         return logSlowFilter_converter_.convert(logSlowFilter_.get(index));
@@ -18062,6 +18815,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param index The index to set the value at.
+       * @param value The logSlowFilter to set.
+       * @return This builder for chaining.
        */
       public Builder setLogSlowFilter(
           int index, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType value) {
@@ -18080,6 +18836,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param value The logSlowFilter to add.
+       * @return This builder for chaining.
        */
       public Builder addLogSlowFilter(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType value) {
         if (value == null) {
@@ -18097,6 +18855,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param values The logSlowFilter to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLogSlowFilter(
           java.lang.Iterable<? extends yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> values) {
@@ -18114,10 +18874,11 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogSlowFilter() {
         logSlowFilter_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -18128,6 +18889,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @return A list containing the enum numeric values on the wire for logSlowFilter.
        */
       public java.util.List<java.lang.Integer>
       getLogSlowFilterValueList() {
@@ -18140,6 +18902,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of logSlowFilter at the given index.
        */
       public int getLogSlowFilterValue(int index) {
         return logSlowFilter_.get(index);
@@ -18151,6 +18915,9 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of logSlowFilter at the given index.
+       * @return This builder for chaining.
        */
       public Builder setLogSlowFilterValue(
           int index, int value) {
@@ -18166,6 +18933,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param value The enum numeric value on the wire for logSlowFilter to add.
+       * @return This builder for chaining.
        */
       public Builder addLogSlowFilterValue(int value) {
         ensureLogSlowFilterIsMutable();
@@ -18180,6 +18949,8 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       * @param values The enum numeric values on the wire for logSlowFilter to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLogSlowFilterValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -18191,7 +18962,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value mdbPriorityChoiceMaxLag_ = null;
+      private com.google.protobuf.Int64Value mdbPriorityChoiceMaxLag_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbPriorityChoiceMaxLagBuilder_;
       /**
@@ -18201,6 +18972,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @return Whether the mdbPriorityChoiceMaxLag field is set.
        */
       public boolean hasMdbPriorityChoiceMaxLag() {
         return mdbPriorityChoiceMaxLagBuilder_ != null || mdbPriorityChoiceMaxLag_ != null;
@@ -18212,6 +18984,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 63 [(.yandex.cloud.value) = "0-86400"];</code>
+       * @return The mdbPriorityChoiceMaxLag.
        */
       public com.google.protobuf.Int64Value getMdbPriorityChoiceMaxLag() {
         if (mdbPriorityChoiceMaxLagBuilder_ == null) {
@@ -18353,7 +19126,7 @@ public final class Mysql80 {
         return mdbPriorityChoiceMaxLagBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbPageSize_ = null;
+      private com.google.protobuf.Int64Value innodbPageSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbPageSizeBuilder_;
       /**
@@ -18363,6 +19136,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
+       * @return Whether the innodbPageSize field is set.
        */
       public boolean hasInnodbPageSize() {
         return innodbPageSizeBuilder_ != null || innodbPageSize_ != null;
@@ -18374,6 +19148,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
+       * @return The innodbPageSize.
        */
       public com.google.protobuf.Int64Value getInnodbPageSize() {
         if (innodbPageSizeBuilder_ == null) {
@@ -18515,7 +19290,7 @@ public final class Mysql80 {
         return innodbPageSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbOnlineAlterLogMaxSize_ = null;
+      private com.google.protobuf.Int64Value innodbOnlineAlterLogMaxSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbOnlineAlterLogMaxSizeBuilder_;
       /**
@@ -18525,6 +19300,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       * @return Whether the innodbOnlineAlterLogMaxSize field is set.
        */
       public boolean hasInnodbOnlineAlterLogMaxSize() {
         return innodbOnlineAlterLogMaxSizeBuilder_ != null || innodbOnlineAlterLogMaxSize_ != null;
@@ -18536,6 +19312,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       * @return The innodbOnlineAlterLogMaxSize.
        */
       public com.google.protobuf.Int64Value getInnodbOnlineAlterLogMaxSize() {
         if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
@@ -18677,7 +19454,7 @@ public final class Mysql80 {
         return innodbOnlineAlterLogMaxSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbFtMinTokenSize_ = null;
+      private com.google.protobuf.Int64Value innodbFtMinTokenSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbFtMinTokenSizeBuilder_;
       /**
@@ -18687,6 +19464,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       * @return Whether the innodbFtMinTokenSize field is set.
        */
       public boolean hasInnodbFtMinTokenSize() {
         return innodbFtMinTokenSizeBuilder_ != null || innodbFtMinTokenSize_ != null;
@@ -18698,6 +19476,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       * @return The innodbFtMinTokenSize.
        */
       public com.google.protobuf.Int64Value getInnodbFtMinTokenSize() {
         if (innodbFtMinTokenSizeBuilder_ == null) {
@@ -18839,7 +19618,7 @@ public final class Mysql80 {
         return innodbFtMinTokenSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbFtMaxTokenSize_ = null;
+      private com.google.protobuf.Int64Value innodbFtMaxTokenSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbFtMaxTokenSizeBuilder_;
       /**
@@ -18849,6 +19628,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       * @return Whether the innodbFtMaxTokenSize field is set.
        */
       public boolean hasInnodbFtMaxTokenSize() {
         return innodbFtMaxTokenSizeBuilder_ != null || innodbFtMaxTokenSize_ != null;
@@ -18860,6 +19640,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       * @return The innodbFtMaxTokenSize.
        */
       public com.google.protobuf.Int64Value getInnodbFtMaxTokenSize() {
         if (innodbFtMaxTokenSizeBuilder_ == null) {
@@ -19001,7 +19782,7 @@ public final class Mysql80 {
         return innodbFtMaxTokenSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value lowerCaseTableNames_ = null;
+      private com.google.protobuf.Int64Value lowerCaseTableNames_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lowerCaseTableNamesBuilder_;
       /**
@@ -19011,6 +19792,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       * @return Whether the lowerCaseTableNames field is set.
        */
       public boolean hasLowerCaseTableNames() {
         return lowerCaseTableNamesBuilder_ != null || lowerCaseTableNames_ != null;
@@ -19022,6 +19804,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       * @return The lowerCaseTableNames.
        */
       public com.google.protobuf.Int64Value getLowerCaseTableNames() {
         if (lowerCaseTableNamesBuilder_ == null) {
@@ -19163,7 +19946,7 @@ public final class Mysql80 {
         return lowerCaseTableNamesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxSpRecursionDepth_ = null;
+      private com.google.protobuf.Int64Value maxSpRecursionDepth_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSpRecursionDepthBuilder_;
       /**
@@ -19173,6 +19956,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
+       * @return Whether the maxSpRecursionDepth field is set.
        */
       public boolean hasMaxSpRecursionDepth() {
         return maxSpRecursionDepthBuilder_ != null || maxSpRecursionDepth_ != null;
@@ -19184,6 +19968,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
+       * @return The maxSpRecursionDepth.
        */
       public com.google.protobuf.Int64Value getMaxSpRecursionDepth() {
         if (maxSpRecursionDepthBuilder_ == null) {
@@ -19325,7 +20110,7 @@ public final class Mysql80 {
         return maxSpRecursionDepthBuilder_;
       }
 
-      private com.google.protobuf.Int64Value innodbCompressionLevel_ = null;
+      private com.google.protobuf.Int64Value innodbCompressionLevel_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbCompressionLevelBuilder_;
       /**
@@ -19335,6 +20120,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       * @return Whether the innodbCompressionLevel field is set.
        */
       public boolean hasInnodbCompressionLevel() {
         return innodbCompressionLevelBuilder_ != null || innodbCompressionLevel_ != null;
@@ -19346,6 +20132,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       * @return The innodbCompressionLevel.
        */
       public com.google.protobuf.Int64Value getInnodbCompressionLevel() {
         if (innodbCompressionLevelBuilder_ == null) {
@@ -19489,7 +20276,7 @@ public final class Mysql80 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19550,6 +20337,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -19559,6 +20347,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getEffectiveConfig();
     /**
@@ -19577,6 +20366,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -19585,6 +20375,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getUserConfig();
     /**
@@ -19602,6 +20393,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -19610,6 +20402,7 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getDefaultConfig();
     /**
@@ -19624,7 +20417,7 @@ public final class Mysql80 {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0}
    */
-  public  static final class MysqlConfigSet8_0 extends
+  public static final class MysqlConfigSet8_0 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0)
       MysqlConfigSet8_0OrBuilder {
@@ -19634,6 +20427,13 @@ public final class Mysql80 {
       super(builder);
     }
     private MysqlConfigSet8_0() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConfigSet8_0();
     }
 
     @java.lang.Override
@@ -19649,7 +20449,6 @@ public final class Mysql80 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19700,7 +20499,7 @@ public final class Mysql80 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19740,7 +20539,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -19751,7 +20552,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.getDefaultInstance() : effectiveConfig_;
     }
@@ -19763,6 +20566,7 @@ public final class Mysql80 {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -19775,7 +20579,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -19785,7 +20591,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.getDefaultInstance() : userConfig_;
     }
@@ -19796,6 +20604,7 @@ public final class Mysql80 {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -19808,7 +20617,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -19818,7 +20629,9 @@ public final class Mysql80 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.getDefaultInstance() : defaultConfig_;
     }
@@ -19829,6 +20642,7 @@ public final class Mysql80 {
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -19892,24 +20706,23 @@ public final class Mysql80 {
       }
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0 other = (yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20129,35 +20942,35 @@ public final class Mysql80 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20209,7 +21022,7 @@ public final class Mysql80 {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder> effectiveConfigBuilder_;
       /**
@@ -20219,6 +21032,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -20230,6 +21044,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -20371,7 +21186,7 @@ public final class Mysql80 {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 userConfig_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder> userConfigBuilder_;
       /**
@@ -20380,6 +21195,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -20390,6 +21206,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -20524,7 +21341,7 @@ public final class Mysql80 {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 defaultConfig_ = null;
+      private yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder> defaultConfigBuilder_;
       /**
@@ -20533,6 +21350,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -20543,6 +21361,7 @@ public final class Mysql80 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -20679,7 +21498,7 @@ public final class Mysql80 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20920,20 +21739,12 @@ public final class Mysql80 {
       "/go-genproto/yandex/cloud/mdb/mysql/v1/c" +
       "onfig;mysqlb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.containerregistry.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/containerregistry/v1/lifecycle_policy_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class LifecyclePolicyServiceGrpc {
 
   private LifecyclePolicyServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getGetMethod = LifecyclePolicyServiceGrpc.getGetMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getGetMethod = LifecyclePolicyServiceGrpc.getGetMethod) == null) {
-          LifecyclePolicyServiceGrpc.getGetMethod = getGetMethod = 
+          LifecyclePolicyServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest,
@@ -76,22 +63,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getListMethod = LifecyclePolicyServiceGrpc.getListMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getListMethod = LifecyclePolicyServiceGrpc.getListMethod) == null) {
-          LifecyclePolicyServiceGrpc.getListMethod = getListMethod = 
+          LifecyclePolicyServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest,
@@ -108,22 +94,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getCreateMethod = LifecyclePolicyServiceGrpc.getCreateMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getCreateMethod = LifecyclePolicyServiceGrpc.getCreateMethod) == null) {
-          LifecyclePolicyServiceGrpc.getCreateMethod = getCreateMethod = 
+          LifecyclePolicyServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest,
@@ -140,22 +125,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getUpdateMethod = LifecyclePolicyServiceGrpc.getUpdateMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getUpdateMethod = LifecyclePolicyServiceGrpc.getUpdateMethod) == null) {
-          LifecyclePolicyServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          LifecyclePolicyServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest,
@@ -172,22 +156,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getDeleteMethod = LifecyclePolicyServiceGrpc.getDeleteMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getDeleteMethod = LifecyclePolicyServiceGrpc.getDeleteMethod) == null) {
-          LifecyclePolicyServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          LifecyclePolicyServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest,
@@ -204,22 +187,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getDryRunMethod = LifecyclePolicyServiceGrpc.getDryRunMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getDryRunMethod = LifecyclePolicyServiceGrpc.getDryRunMethod) == null) {
-          LifecyclePolicyServiceGrpc.getDryRunMethod = getDryRunMethod = 
+          LifecyclePolicyServiceGrpc.getDryRunMethod = getDryRunMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "DryRun"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DryRun"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("DryRun"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("DryRun"))
+              .build();
         }
-     }
-     return getDryRunMethod;
+      }
+    }
+    return getDryRunMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest,
@@ -236,22 +218,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getGetDryRunResultMethod = LifecyclePolicyServiceGrpc.getGetDryRunResultMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getGetDryRunResultMethod = LifecyclePolicyServiceGrpc.getGetDryRunResultMethod) == null) {
-          LifecyclePolicyServiceGrpc.getGetDryRunResultMethod = getGetDryRunResultMethod = 
+          LifecyclePolicyServiceGrpc.getGetDryRunResultMethod = getGetDryRunResultMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "GetDryRunResult"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDryRunResult"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("GetDryRunResult"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("GetDryRunResult"))
+              .build();
         }
-     }
-     return getGetDryRunResultMethod;
+      }
+    }
+    return getGetDryRunResultMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest,
@@ -268,22 +249,21 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getListDryRunResultsMethod = LifecyclePolicyServiceGrpc.getListDryRunResultsMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getListDryRunResultsMethod = LifecyclePolicyServiceGrpc.getListDryRunResultsMethod) == null) {
-          LifecyclePolicyServiceGrpc.getListDryRunResultsMethod = getListDryRunResultsMethod = 
+          LifecyclePolicyServiceGrpc.getListDryRunResultsMethod = getListDryRunResultsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "ListDryRunResults"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDryRunResults"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("ListDryRunResults"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("ListDryRunResults"))
+              .build();
         }
-     }
-     return getListDryRunResultsMethod;
+      }
+    }
+    return getListDryRunResultsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest,
@@ -300,29 +280,35 @@ public final class LifecyclePolicyServiceGrpc {
     if ((getListDryRunResultAffectedImagesMethod = LifecyclePolicyServiceGrpc.getListDryRunResultAffectedImagesMethod) == null) {
       synchronized (LifecyclePolicyServiceGrpc.class) {
         if ((getListDryRunResultAffectedImagesMethod = LifecyclePolicyServiceGrpc.getListDryRunResultAffectedImagesMethod) == null) {
-          LifecyclePolicyServiceGrpc.getListDryRunResultAffectedImagesMethod = getListDryRunResultAffectedImagesMethod = 
+          LifecyclePolicyServiceGrpc.getListDryRunResultAffectedImagesMethod = getListDryRunResultAffectedImagesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "ListDryRunResultAffectedImages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDryRunResultAffectedImages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("ListDryRunResultAffectedImages"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("ListDryRunResultAffectedImages"))
+              .build();
         }
-     }
-     return getListDryRunResultAffectedImagesMethod;
+      }
+    }
+    return getListDryRunResultAffectedImagesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LifecyclePolicyServiceStub newStub(io.grpc.Channel channel) {
-    return new LifecyclePolicyServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LifecyclePolicyServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LifecyclePolicyServiceStub>() {
+        @java.lang.Override
+        public LifecyclePolicyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LifecyclePolicyServiceStub(channel, callOptions);
+        }
+      };
+    return LifecyclePolicyServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -330,7 +316,14 @@ public final class LifecyclePolicyServiceGrpc {
    */
   public static LifecyclePolicyServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LifecyclePolicyServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LifecyclePolicyServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LifecyclePolicyServiceBlockingStub>() {
+        @java.lang.Override
+        public LifecyclePolicyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LifecyclePolicyServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LifecyclePolicyServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -338,7 +331,14 @@ public final class LifecyclePolicyServiceGrpc {
    */
   public static LifecyclePolicyServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LifecyclePolicyServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LifecyclePolicyServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LifecyclePolicyServiceFutureStub>() {
+        @java.lang.Override
+        public LifecyclePolicyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LifecyclePolicyServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LifecyclePolicyServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -356,7 +356,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void get(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -366,7 +366,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void list(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -376,7 +376,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void create(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -386,7 +386,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void update(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -396,7 +396,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void delete(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -406,7 +406,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDryRunMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDryRunMethod(), responseObserver);
     }
 
     /**
@@ -416,7 +416,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDryRunResultMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDryRunResultMethod(), responseObserver);
     }
 
     /**
@@ -426,7 +426,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListDryRunResultsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDryRunResultsMethod(), responseObserver);
     }
 
     /**
@@ -436,70 +436,70 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void listDryRunResultAffectedImages(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListDryRunResultAffectedImagesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDryRunResultAffectedImagesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest,
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest,
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getDryRunMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DRY_RUN)))
           .addMethod(
             getGetDryRunResultMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest,
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>(
                   this, METHODID_GET_DRY_RUN_RESULT)))
           .addMethod(
             getListDryRunResultsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest,
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse>(
                   this, METHODID_LIST_DRY_RUN_RESULTS)))
           .addMethod(
             getListDryRunResultAffectedImagesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest,
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse>(
@@ -513,19 +513,15 @@ public final class LifecyclePolicyServiceGrpc {
    * A set of methods for managing Lifecycle policy resources.
    * </pre>
    */
-  public static final class LifecyclePolicyServiceStub extends io.grpc.stub.AbstractStub<LifecyclePolicyServiceStub> {
-    private LifecyclePolicyServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LifecyclePolicyServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LifecyclePolicyServiceStub extends io.grpc.stub.AbstractAsyncStub<LifecyclePolicyServiceStub> {
+    private LifecyclePolicyServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LifecyclePolicyServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LifecyclePolicyServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LifecyclePolicyServiceStub(channel, callOptions);
     }
 
@@ -537,7 +533,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void get(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -548,7 +544,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void list(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -559,7 +555,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void create(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -570,7 +566,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void update(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -581,7 +577,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void delete(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -592,7 +588,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDryRunMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -603,7 +599,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDryRunResultMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -614,7 +610,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDryRunResultsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -625,7 +621,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public void listDryRunResultAffectedImages(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDryRunResultAffectedImagesMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -635,19 +631,15 @@ public final class LifecyclePolicyServiceGrpc {
    * A set of methods for managing Lifecycle policy resources.
    * </pre>
    */
-  public static final class LifecyclePolicyServiceBlockingStub extends io.grpc.stub.AbstractStub<LifecyclePolicyServiceBlockingStub> {
-    private LifecyclePolicyServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LifecyclePolicyServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LifecyclePolicyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LifecyclePolicyServiceBlockingStub> {
+    private LifecyclePolicyServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LifecyclePolicyServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LifecyclePolicyServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LifecyclePolicyServiceBlockingStub(channel, callOptions);
     }
 
@@ -658,7 +650,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy get(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -668,7 +660,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse list(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -678,7 +670,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -688,7 +680,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -698,7 +690,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -708,7 +700,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDryRunMethod(), getCallOptions(), request);
     }
 
@@ -718,7 +710,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDryRunResultMethod(), getCallOptions(), request);
     }
 
@@ -728,7 +720,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDryRunResultsMethod(), getCallOptions(), request);
     }
 
@@ -738,7 +730,7 @@ public final class LifecyclePolicyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse listDryRunResultAffectedImages(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDryRunResultAffectedImagesMethod(), getCallOptions(), request);
     }
   }
@@ -748,19 +740,15 @@ public final class LifecyclePolicyServiceGrpc {
    * A set of methods for managing Lifecycle policy resources.
    * </pre>
    */
-  public static final class LifecyclePolicyServiceFutureStub extends io.grpc.stub.AbstractStub<LifecyclePolicyServiceFutureStub> {
-    private LifecyclePolicyServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LifecyclePolicyServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LifecyclePolicyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LifecyclePolicyServiceFutureStub> {
+    private LifecyclePolicyServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LifecyclePolicyServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LifecyclePolicyServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LifecyclePolicyServiceFutureStub(channel, callOptions);
     }
 
@@ -772,7 +760,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> get(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -783,7 +771,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse> list(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -794,7 +782,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -805,7 +793,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -816,7 +804,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -827,7 +815,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> dryRun(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDryRunMethod(), getCallOptions()), request);
     }
 
@@ -838,7 +826,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getDryRunResult(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDryRunResultMethod(), getCallOptions()), request);
     }
 
@@ -849,7 +837,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> listDryRunResults(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDryRunResultsMethod(), getCallOptions()), request);
     }
 
@@ -860,7 +848,7 @@ public final class LifecyclePolicyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse> listDryRunResultAffectedImages(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDryRunResultAffectedImagesMethod(), getCallOptions()), request);
     }
   }

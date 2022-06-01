@@ -57,6 +57,8 @@ public final class SubnetOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -64,6 +66,10 @@ public final class SubnetOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static IpVersion forNumber(int value) {
       switch (value) {
         case 0: return IP_VERSION_UNSPECIFIED;
@@ -87,6 +93,10 @@ public final class SubnetOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -131,6 +141,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -139,6 +150,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -149,6 +161,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -157,6 +170,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -167,6 +181,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -175,6 +190,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -192,6 +208,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -200,6 +217,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -210,6 +228,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -218,6 +237,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -282,6 +302,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -290,6 +311,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -300,6 +322,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -308,6 +331,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -322,6 +346,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @return A list containing the v4CidrBlocks.
      */
     java.util.List<java.lang.String>
         getV4CidrBlocksList();
@@ -335,6 +360,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @return The count of v4CidrBlocks.
      */
     int getV4CidrBlocksCount();
     /**
@@ -347,6 +373,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     java.lang.String getV4CidrBlocks(int index);
     /**
@@ -359,6 +387,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index);
@@ -369,6 +399,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @return A list containing the v6CidrBlocks.
      */
     java.util.List<java.lang.String>
         getV6CidrBlocksList();
@@ -378,6 +409,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @return The count of v6CidrBlocks.
      */
     int getV6CidrBlocksCount();
     /**
@@ -386,6 +418,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @param index The index of the element to return.
+     * @return The v6CidrBlocks at the given index.
      */
     java.lang.String getV6CidrBlocks(int index);
     /**
@@ -394,6 +428,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v6CidrBlocks at the given index.
      */
     com.google.protobuf.ByteString
         getV6CidrBlocksBytes(int index);
@@ -404,6 +440,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 12;</code>
+     * @return The routeTableId.
      */
     java.lang.String getRouteTableId();
     /**
@@ -412,16 +449,19 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 12;</code>
+     * @return The bytes for routeTableId.
      */
     com.google.protobuf.ByteString
         getRouteTableIdBytes();
 
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     * @return Whether the dhcpOptions field is set.
      */
     boolean hasDhcpOptions();
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     * @return The dhcpOptions.
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
     /**
@@ -436,7 +476,7 @@ public final class SubnetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.Subnet}
    */
-  public  static final class Subnet extends
+  public static final class Subnet extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.Subnet)
       SubnetOrBuilder {
@@ -455,6 +495,13 @@ public final class SubnetOuterClass {
       v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       v6CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       routeTableId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Subnet();
     }
 
     @java.lang.Override
@@ -519,10 +566,10 @@ public final class SubnetOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -545,18 +592,18 @@ public final class SubnetOuterClass {
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000002;
               }
               v4CidrBlocks_.add(s);
               break;
             }
             case 90: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 v6CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000004;
               }
               v6CidrBlocks_.add(s);
               break;
@@ -581,7 +628,7 @@ public final class SubnetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -595,10 +642,10 @@ public final class SubnetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           v6CidrBlocks_ = v6CidrBlocks_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -630,7 +677,6 @@ public final class SubnetOuterClass {
               yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet.class, yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -639,7 +685,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -658,7 +706,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -681,7 +731,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -700,7 +752,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -723,7 +777,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -733,7 +789,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -744,6 +802,7 @@ public final class SubnetOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -756,7 +815,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -775,7 +836,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -798,7 +861,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -817,7 +882,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -866,14 +933,16 @@ public final class SubnetOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -885,6 +954,7 @@ public final class SubnetOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -896,11 +966,12 @@ public final class SubnetOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -912,10 +983,11 @@ public final class SubnetOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -932,7 +1004,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -951,7 +1025,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -974,7 +1050,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -993,7 +1071,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -1020,6 +1100,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @return A list containing the v4CidrBlocks.
      */
     public com.google.protobuf.ProtocolStringList
         getV4CidrBlocksList() {
@@ -1035,6 +1116,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @return The count of v4CidrBlocks.
      */
     public int getV4CidrBlocksCount() {
       return v4CidrBlocks_.size();
@@ -1049,6 +1131,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
      */
     public java.lang.String getV4CidrBlocks(int index) {
       return v4CidrBlocks_.get(index);
@@ -1063,6 +1147,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v4_cidr_blocks = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
      */
     public com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index) {
@@ -1077,6 +1163,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @return A list containing the v6CidrBlocks.
      */
     public com.google.protobuf.ProtocolStringList
         getV6CidrBlocksList() {
@@ -1088,6 +1175,7 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @return The count of v6CidrBlocks.
      */
     public int getV6CidrBlocksCount() {
       return v6CidrBlocks_.size();
@@ -1098,6 +1186,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @param index The index of the element to return.
+     * @return The v6CidrBlocks at the given index.
      */
     public java.lang.String getV6CidrBlocks(int index) {
       return v6CidrBlocks_.get(index);
@@ -1108,6 +1198,8 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>repeated string v6_cidr_blocks = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v6CidrBlocks at the given index.
      */
     public com.google.protobuf.ByteString
         getV6CidrBlocksBytes(int index) {
@@ -1122,7 +1214,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 12;</code>
+     * @return The routeTableId.
      */
+    @java.lang.Override
     public java.lang.String getRouteTableId() {
       java.lang.Object ref = routeTableId_;
       if (ref instanceof java.lang.String) {
@@ -1141,7 +1235,9 @@ public final class SubnetOuterClass {
      * </pre>
      *
      * <code>string route_table_id = 12;</code>
+     * @return The bytes for routeTableId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRouteTableIdBytes() {
       java.lang.Object ref = routeTableId_;
@@ -1160,19 +1256,24 @@ public final class SubnetOuterClass {
     private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     * @return Whether the dhcpOptions field is set.
      */
+    @java.lang.Override
     public boolean hasDhcpOptions() {
       return dhcpOptions_ != null;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     * @return The dhcpOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
       return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
     }
     /**
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
       return getDhcpOptions();
     }
@@ -1191,19 +1292,19 @@ public final class SubnetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1212,10 +1313,10 @@ public final class SubnetOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, networkId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, zoneId_);
       }
       for (int i = 0; i < v4CidrBlocks_.size(); i++) {
@@ -1224,7 +1325,7 @@ public final class SubnetOuterClass {
       for (int i = 0; i < v6CidrBlocks_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, v6CidrBlocks_.getRaw(i));
       }
-      if (!getRouteTableIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeTableId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, routeTableId_);
       }
       if (dhcpOptions_ != null) {
@@ -1239,20 +1340,20 @@ public final class SubnetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1265,10 +1366,10 @@ public final class SubnetOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, networkId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, zoneId_);
       }
       {
@@ -1287,7 +1388,7 @@ public final class SubnetOuterClass {
         size += dataSize;
         size += 1 * getV6CidrBlocksList().size();
       }
-      if (!getRouteTableIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(routeTableId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, routeTableId_);
       }
       if (dhcpOptions_ != null) {
@@ -1309,39 +1410,38 @@ public final class SubnetOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet other = (yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && getV4CidrBlocksList()
-          .equals(other.getV4CidrBlocksList());
-      result = result && getV6CidrBlocksList()
-          .equals(other.getV6CidrBlocksList());
-      result = result && getRouteTableId()
-          .equals(other.getRouteTableId());
-      result = result && (hasDhcpOptions() == other.hasDhcpOptions());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (!getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList())) return false;
+      if (!getV6CidrBlocksList()
+          .equals(other.getV6CidrBlocksList())) return false;
+      if (!getRouteTableId()
+          .equals(other.getRouteTableId())) return false;
+      if (hasDhcpOptions() != other.hasDhcpOptions()) return false;
       if (hasDhcpOptions()) {
-        result = result && getDhcpOptions()
-            .equals(other.getDhcpOptions());
+        if (!getDhcpOptions()
+            .equals(other.getDhcpOptions())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1564,9 +1664,9 @@ public final class SubnetOuterClass {
         zoneId_ = "";
 
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000002);
         v6CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000004);
         routeTableId_ = "";
 
         if (dhcpOptionsBuilder_ == null) {
@@ -1602,7 +1702,6 @@ public final class SubnetOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet result = new yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1616,14 +1715,14 @@ public final class SubnetOuterClass {
         result.labels_.makeImmutable();
         result.networkId_ = networkId_;
         result.zoneId_ = zoneId_;
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.v4CidrBlocks_ = v4CidrBlocks_;
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           v6CidrBlocks_ = v6CidrBlocks_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.v6CidrBlocks_ = v6CidrBlocks_;
         result.routeTableId_ = routeTableId_;
@@ -1632,42 +1731,41 @@ public final class SubnetOuterClass {
         } else {
           result.dhcpOptions_ = dhcpOptionsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1713,7 +1811,7 @@ public final class SubnetOuterClass {
         if (!other.v4CidrBlocks_.isEmpty()) {
           if (v4CidrBlocks_.isEmpty()) {
             v4CidrBlocks_ = other.v4CidrBlocks_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureV4CidrBlocksIsMutable();
             v4CidrBlocks_.addAll(other.v4CidrBlocks_);
@@ -1723,7 +1821,7 @@ public final class SubnetOuterClass {
         if (!other.v6CidrBlocks_.isEmpty()) {
           if (v6CidrBlocks_.isEmpty()) {
             v6CidrBlocks_ = other.v6CidrBlocks_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureV6CidrBlocksIsMutable();
             v6CidrBlocks_.addAll(other.v6CidrBlocks_);
@@ -1774,6 +1872,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1793,6 +1892,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1813,6 +1913,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1830,6 +1932,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1843,6 +1946,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1863,6 +1968,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1882,6 +1988,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1902,6 +2009,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1919,6 +2028,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1932,6 +2042,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1945,7 +2057,7 @@ public final class SubnetOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1954,6 +2066,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1964,6 +2077,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2105,6 +2219,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2124,6 +2239,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2144,6 +2260,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2161,6 +2279,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2174,6 +2293,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2194,6 +2315,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2213,6 +2335,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2233,6 +2356,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2250,6 +2375,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2263,6 +2389,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2310,14 +2438,16 @@ public final class SubnetOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2329,6 +2459,7 @@ public final class SubnetOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2340,11 +2471,12 @@ public final class SubnetOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2356,10 +2488,11 @@ public final class SubnetOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2383,7 +2516,7 @@ public final class SubnetOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2406,8 +2539,11 @@ public final class SubnetOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2434,6 +2570,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -2453,6 +2590,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -2473,6 +2611,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -2490,6 +2630,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -2503,6 +2644,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2523,6 +2666,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -2542,6 +2686,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -2562,6 +2707,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -2579,6 +2726,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -2592,6 +2740,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2607,9 +2757,9 @@ public final class SubnetOuterClass {
 
       private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureV4CidrBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -2622,6 +2772,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @return A list containing the v4CidrBlocks.
        */
       public com.google.protobuf.ProtocolStringList
           getV4CidrBlocksList() {
@@ -2637,6 +2788,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @return The count of v4CidrBlocks.
        */
       public int getV4CidrBlocksCount() {
         return v4CidrBlocks_.size();
@@ -2651,6 +2803,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @param index The index of the element to return.
+       * @return The v4CidrBlocks at the given index.
        */
       public java.lang.String getV4CidrBlocks(int index) {
         return v4CidrBlocks_.get(index);
@@ -2665,6 +2819,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the v4CidrBlocks at the given index.
        */
       public com.google.protobuf.ByteString
           getV4CidrBlocksBytes(int index) {
@@ -2680,6 +2836,9 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The v4CidrBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setV4CidrBlocks(
           int index, java.lang.String value) {
@@ -2701,6 +2860,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @param value The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocks(
           java.lang.String value) {
@@ -2722,6 +2883,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @param values The v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addAllV4CidrBlocks(
           java.lang.Iterable<java.lang.String> values) {
@@ -2741,10 +2904,11 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearV4CidrBlocks() {
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2758,6 +2922,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v4_cidr_blocks = 10;</code>
+       * @param value The bytes of the v4CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV4CidrBlocksBytes(
           com.google.protobuf.ByteString value) {
@@ -2773,9 +2939,9 @@ public final class SubnetOuterClass {
 
       private com.google.protobuf.LazyStringList v6CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureV6CidrBlocksIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           v6CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v6CidrBlocks_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -2784,6 +2950,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @return A list containing the v6CidrBlocks.
        */
       public com.google.protobuf.ProtocolStringList
           getV6CidrBlocksList() {
@@ -2795,6 +2962,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @return The count of v6CidrBlocks.
        */
       public int getV6CidrBlocksCount() {
         return v6CidrBlocks_.size();
@@ -2805,6 +2973,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @param index The index of the element to return.
+       * @return The v6CidrBlocks at the given index.
        */
       public java.lang.String getV6CidrBlocks(int index) {
         return v6CidrBlocks_.get(index);
@@ -2815,6 +2985,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the v6CidrBlocks at the given index.
        */
       public com.google.protobuf.ByteString
           getV6CidrBlocksBytes(int index) {
@@ -2826,6 +2998,9 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @param index The index to set the value at.
+       * @param value The v6CidrBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setV6CidrBlocks(
           int index, java.lang.String value) {
@@ -2843,6 +3018,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @param value The v6CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV6CidrBlocks(
           java.lang.String value) {
@@ -2860,6 +3037,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @param values The v6CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addAllV6CidrBlocks(
           java.lang.Iterable<java.lang.String> values) {
@@ -2875,10 +3054,11 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearV6CidrBlocks() {
         v6CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2888,6 +3068,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>repeated string v6_cidr_blocks = 11;</code>
+       * @param value The bytes of the v6CidrBlocks to add.
+       * @return This builder for chaining.
        */
       public Builder addV6CidrBlocksBytes(
           com.google.protobuf.ByteString value) {
@@ -2908,6 +3090,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 12;</code>
+       * @return The routeTableId.
        */
       public java.lang.String getRouteTableId() {
         java.lang.Object ref = routeTableId_;
@@ -2927,6 +3110,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 12;</code>
+       * @return The bytes for routeTableId.
        */
       public com.google.protobuf.ByteString
           getRouteTableIdBytes() {
@@ -2947,6 +3131,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 12;</code>
+       * @param value The routeTableId to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteTableId(
           java.lang.String value) {
@@ -2964,6 +3150,7 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRouteTableId() {
         
@@ -2977,6 +3164,8 @@ public final class SubnetOuterClass {
        * </pre>
        *
        * <code>string route_table_id = 12;</code>
+       * @param value The bytes for routeTableId to set.
+       * @return This builder for chaining.
        */
       public Builder setRouteTableIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2990,17 +3179,19 @@ public final class SubnetOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_ = null;
+      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
       /**
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       * @return Whether the dhcpOptions field is set.
        */
       public boolean hasDhcpOptions() {
         return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
       }
       /**
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       * @return The dhcpOptions.
        */
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
         if (dhcpOptionsBuilder_ == null) {
@@ -3109,7 +3300,7 @@ public final class SubnetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3165,48 +3356,62 @@ public final class SubnetOuterClass {
 
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @return A list containing the domainNameServers.
      */
     java.util.List<java.lang.String>
         getDomainNameServersList();
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @return The count of domainNameServers.
      */
     int getDomainNameServersCount();
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @param index The index of the element to return.
+     * @return The domainNameServers at the given index.
      */
     java.lang.String getDomainNameServers(int index);
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the domainNameServers at the given index.
      */
     com.google.protobuf.ByteString
         getDomainNameServersBytes(int index);
 
     /**
      * <code>string domain_name = 2;</code>
+     * @return The domainName.
      */
     java.lang.String getDomainName();
     /**
      * <code>string domain_name = 2;</code>
+     * @return The bytes for domainName.
      */
     com.google.protobuf.ByteString
         getDomainNameBytes();
 
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @return A list containing the ntpServers.
      */
     java.util.List<java.lang.String>
         getNtpServersList();
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @return The count of ntpServers.
      */
     int getNtpServersCount();
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @param index The index of the element to return.
+     * @return The ntpServers at the given index.
      */
     java.lang.String getNtpServers(int index);
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ntpServers at the given index.
      */
     com.google.protobuf.ByteString
         getNtpServersBytes(int index);
@@ -3214,7 +3419,7 @@ public final class SubnetOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.DhcpOptions}
    */
-  public  static final class DhcpOptions extends
+  public static final class DhcpOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.DhcpOptions)
       DhcpOptionsOrBuilder {
@@ -3227,6 +3432,13 @@ public final class SubnetOuterClass {
       domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       domainName_ = "";
       ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DhcpOptions();
     }
 
     @java.lang.Override
@@ -3255,7 +3467,7 @@ public final class SubnetOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 domainNameServers_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3270,15 +3482,15 @@ public final class SubnetOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 ntpServers_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               ntpServers_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3292,10 +3504,10 @@ public final class SubnetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           domainNameServers_ = domainNameServers_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           ntpServers_ = ntpServers_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -3315,11 +3527,11 @@ public final class SubnetOuterClass {
               yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.class, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DOMAIN_NAME_SERVERS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList domainNameServers_;
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @return A list containing the domainNameServers.
      */
     public com.google.protobuf.ProtocolStringList
         getDomainNameServersList() {
@@ -3327,18 +3539,23 @@ public final class SubnetOuterClass {
     }
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @return The count of domainNameServers.
      */
     public int getDomainNameServersCount() {
       return domainNameServers_.size();
     }
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @param index The index of the element to return.
+     * @return The domainNameServers at the given index.
      */
     public java.lang.String getDomainNameServers(int index) {
       return domainNameServers_.get(index);
     }
     /**
      * <code>repeated string domain_name_servers = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the domainNameServers at the given index.
      */
     public com.google.protobuf.ByteString
         getDomainNameServersBytes(int index) {
@@ -3349,7 +3566,9 @@ public final class SubnetOuterClass {
     private volatile java.lang.Object domainName_;
     /**
      * <code>string domain_name = 2;</code>
+     * @return The domainName.
      */
+    @java.lang.Override
     public java.lang.String getDomainName() {
       java.lang.Object ref = domainName_;
       if (ref instanceof java.lang.String) {
@@ -3364,7 +3583,9 @@ public final class SubnetOuterClass {
     }
     /**
      * <code>string domain_name = 2;</code>
+     * @return The bytes for domainName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDomainNameBytes() {
       java.lang.Object ref = domainName_;
@@ -3383,6 +3604,7 @@ public final class SubnetOuterClass {
     private com.google.protobuf.LazyStringList ntpServers_;
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @return A list containing the ntpServers.
      */
     public com.google.protobuf.ProtocolStringList
         getNtpServersList() {
@@ -3390,18 +3612,23 @@ public final class SubnetOuterClass {
     }
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @return The count of ntpServers.
      */
     public int getNtpServersCount() {
       return ntpServers_.size();
     }
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @param index The index of the element to return.
+     * @return The ntpServers at the given index.
      */
     public java.lang.String getNtpServers(int index) {
       return ntpServers_.get(index);
     }
     /**
      * <code>repeated string ntp_servers = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ntpServers at the given index.
      */
     public com.google.protobuf.ByteString
         getNtpServersBytes(int index) {
@@ -3425,7 +3652,7 @@ public final class SubnetOuterClass {
       for (int i = 0; i < domainNameServers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domainNameServers_.getRaw(i));
       }
-      if (!getDomainNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainName_);
       }
       for (int i = 0; i < ntpServers_.size(); i++) {
@@ -3448,7 +3675,7 @@ public final class SubnetOuterClass {
         size += dataSize;
         size += 1 * getDomainNameServersList().size();
       }
-      if (!getDomainNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainName_);
       }
       {
@@ -3474,15 +3701,14 @@ public final class SubnetOuterClass {
       }
       yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions other = (yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions) obj;
 
-      boolean result = true;
-      result = result && getDomainNameServersList()
-          .equals(other.getDomainNameServersList());
-      result = result && getDomainName()
-          .equals(other.getDomainName());
-      result = result && getNtpServersList()
-          .equals(other.getNtpServersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDomainNameServersList()
+          .equals(other.getDomainNameServersList())) return false;
+      if (!getDomainName()
+          .equals(other.getDomainName())) return false;
+      if (!getNtpServersList()
+          .equals(other.getNtpServersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3640,7 +3866,7 @@ public final class SubnetOuterClass {
         domainName_ = "";
 
         ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -3668,54 +3894,52 @@ public final class SubnetOuterClass {
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions buildPartial() {
         yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions result = new yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           domainNameServers_ = domainNameServers_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.domainNameServers_ = domainNameServers_;
         result.domainName_ = domainName_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           ntpServers_ = ntpServers_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.ntpServers_ = ntpServers_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3746,7 +3970,7 @@ public final class SubnetOuterClass {
         if (!other.ntpServers_.isEmpty()) {
           if (ntpServers_.isEmpty()) {
             ntpServers_ = other.ntpServers_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureNtpServersIsMutable();
             ntpServers_.addAll(other.ntpServers_);
@@ -3785,13 +4009,14 @@ public final class SubnetOuterClass {
 
       private com.google.protobuf.LazyStringList domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureDomainNameServersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           domainNameServers_ = new com.google.protobuf.LazyStringArrayList(domainNameServers_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @return A list containing the domainNameServers.
        */
       public com.google.protobuf.ProtocolStringList
           getDomainNameServersList() {
@@ -3799,18 +4024,23 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @return The count of domainNameServers.
        */
       public int getDomainNameServersCount() {
         return domainNameServers_.size();
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @param index The index of the element to return.
+       * @return The domainNameServers at the given index.
        */
       public java.lang.String getDomainNameServers(int index) {
         return domainNameServers_.get(index);
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the domainNameServers at the given index.
        */
       public com.google.protobuf.ByteString
           getDomainNameServersBytes(int index) {
@@ -3818,6 +4048,9 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The domainNameServers to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainNameServers(
           int index, java.lang.String value) {
@@ -3831,6 +4064,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @param value The domainNameServers to add.
+       * @return This builder for chaining.
        */
       public Builder addDomainNameServers(
           java.lang.String value) {
@@ -3844,6 +4079,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @param values The domainNameServers to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDomainNameServers(
           java.lang.Iterable<java.lang.String> values) {
@@ -3855,6 +4092,7 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainNameServers() {
         domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3864,6 +4102,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string domain_name_servers = 1;</code>
+       * @param value The bytes of the domainNameServers to add.
+       * @return This builder for chaining.
        */
       public Builder addDomainNameServersBytes(
           com.google.protobuf.ByteString value) {
@@ -3880,6 +4120,7 @@ public final class SubnetOuterClass {
       private java.lang.Object domainName_ = "";
       /**
        * <code>string domain_name = 2;</code>
+       * @return The domainName.
        */
       public java.lang.String getDomainName() {
         java.lang.Object ref = domainName_;
@@ -3895,6 +4136,7 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>string domain_name = 2;</code>
+       * @return The bytes for domainName.
        */
       public com.google.protobuf.ByteString
           getDomainNameBytes() {
@@ -3911,6 +4153,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>string domain_name = 2;</code>
+       * @param value The domainName to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainName(
           java.lang.String value) {
@@ -3924,6 +4168,7 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>string domain_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDomainName() {
         
@@ -3933,6 +4178,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>string domain_name = 2;</code>
+       * @param value The bytes for domainName to set.
+       * @return This builder for chaining.
        */
       public Builder setDomainNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3948,13 +4195,14 @@ public final class SubnetOuterClass {
 
       private com.google.protobuf.LazyStringList ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureNtpServersIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           ntpServers_ = new com.google.protobuf.LazyStringArrayList(ntpServers_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @return A list containing the ntpServers.
        */
       public com.google.protobuf.ProtocolStringList
           getNtpServersList() {
@@ -3962,18 +4210,23 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @return The count of ntpServers.
        */
       public int getNtpServersCount() {
         return ntpServers_.size();
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @param index The index of the element to return.
+       * @return The ntpServers at the given index.
        */
       public java.lang.String getNtpServers(int index) {
         return ntpServers_.get(index);
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ntpServers at the given index.
        */
       public com.google.protobuf.ByteString
           getNtpServersBytes(int index) {
@@ -3981,6 +4234,9 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The ntpServers to set.
+       * @return This builder for chaining.
        */
       public Builder setNtpServers(
           int index, java.lang.String value) {
@@ -3994,6 +4250,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @param value The ntpServers to add.
+       * @return This builder for chaining.
        */
       public Builder addNtpServers(
           java.lang.String value) {
@@ -4007,6 +4265,8 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @param values The ntpServers to add.
+       * @return This builder for chaining.
        */
       public Builder addAllNtpServers(
           java.lang.Iterable<java.lang.String> values) {
@@ -4018,15 +4278,18 @@ public final class SubnetOuterClass {
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNtpServers() {
         ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string ntp_servers = 3;</code>
+       * @param value The bytes of the ntpServers to add.
+       * @return This builder for chaining.
        */
       public Builder addNtpServersBytes(
           com.google.protobuf.ByteString value) {
@@ -4042,7 +4305,7 @@ public final class SubnetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4136,19 +4399,11 @@ public final class SubnetOuterClass {
       "d/go-genproto/yandex/cloud/vpc/v1;vpcb\006p" +
       "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_vpc_v1_Subnet_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_Subnet_fieldAccessorTable = new

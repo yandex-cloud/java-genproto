@@ -25,6 +25,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -34,6 +35,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -41,7 +43,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.GetLogGroupRequest}
    */
-  public  static final class GetLogGroupRequest extends
+  public static final class GetLogGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.GetLogGroupRequest)
       GetLogGroupRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class LogGroupServiceOuterClass {
     }
     private GetLogGroupRequest() {
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLogGroupRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -174,7 +186,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -491,6 +503,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -512,6 +525,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -544,6 +560,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -629,6 +648,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -636,7 +656,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.GetLogGroupStatsRequest}
    */
-  public  static final class GetLogGroupStatsRequest extends
+  public static final class GetLogGroupStatsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.GetLogGroupStatsRequest)
       GetLogGroupStatsRequestOrBuilder {
@@ -647,6 +667,13 @@ public final class LogGroupServiceOuterClass {
     }
     private GetLogGroupStatsRequest() {
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLogGroupStatsRequest();
     }
 
     @java.lang.Override
@@ -662,7 +689,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -680,7 +706,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -720,7 +746,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -740,7 +768,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -769,7 +799,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -781,7 +811,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -799,11 +829,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -983,35 +1012,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1066,6 +1095,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -1086,6 +1116,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -1107,6 +1138,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -1125,6 +1158,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -1139,6 +1173,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1154,7 +1190,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1215,6 +1251,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1224,6 +1261,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1237,6 +1275,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -1247,6 +1286,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -1256,6 +1296,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -1271,6 +1312,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -1284,6 +1326,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -1291,7 +1334,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ListLogGroupsRequest}
    */
-  public  static final class ListLogGroupsRequest extends
+  public static final class ListLogGroupsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListLogGroupsRequest)
       ListLogGroupsRequestOrBuilder {
@@ -1302,9 +1345,15 @@ public final class LogGroupServiceOuterClass {
     }
     private ListLogGroupsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLogGroupsRequest();
     }
 
     @java.lang.Override
@@ -1320,7 +1369,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1355,7 +1403,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1395,7 +1443,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1415,7 +1465,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1441,7 +1493,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1455,7 +1509,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1475,7 +1531,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1503,7 +1561,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -1527,7 +1587,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -1556,16 +1618,16 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -1577,17 +1639,17 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1605,17 +1667,16 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1811,35 +1872,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1905,6 +1966,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1925,6 +1987,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1946,6 +2009,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1964,6 +2029,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1978,6 +2044,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2001,7 +2069,9 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2014,6 +2084,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2030,6 +2102,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2046,6 +2119,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2066,6 +2140,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2087,6 +2162,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2105,6 +2182,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2119,6 +2197,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2144,6 +2224,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -2168,6 +2249,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -2193,6 +2275,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -2215,6 +2299,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -2233,6 +2318,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -2248,7 +2335,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2355,6 +2442,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -2366,6 +2454,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -2373,7 +2462,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ListLogGroupsResponse}
    */
-  public  static final class ListLogGroupsResponse extends
+  public static final class ListLogGroupsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListLogGroupsResponse)
       ListLogGroupsResponseOrBuilder {
@@ -2385,6 +2474,13 @@ public final class LogGroupServiceOuterClass {
     private ListLogGroupsResponse() {
       groups_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLogGroupsResponse();
     }
 
     @java.lang.Override
@@ -2412,7 +2508,7 @@ public final class LogGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 groups_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2427,7 +2523,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2441,7 +2537,7 @@ public final class LogGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           groups_ = java.util.Collections.unmodifiableList(groups_);
         }
         this.unknownFields = unknownFields.build();
@@ -2461,7 +2557,6 @@ public final class LogGroupServiceOuterClass {
               yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse.class, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> groups_;
     /**
@@ -2471,6 +2566,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getGroupsList() {
       return groups_;
     }
@@ -2481,6 +2577,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder> 
         getGroupsOrBuilderList() {
       return groups_;
@@ -2492,6 +2589,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
+    @java.lang.Override
     public int getGroupsCount() {
       return groups_.size();
     }
@@ -2502,6 +2600,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup getGroups(int index) {
       return groups_.get(index);
     }
@@ -2512,6 +2611,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder getGroupsOrBuilder(
         int index) {
       return groups_.get(index);
@@ -2528,7 +2628,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2550,7 +2652,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2582,7 +2686,7 @@ public final class LogGroupServiceOuterClass {
       for (int i = 0; i < groups_.size(); i++) {
         output.writeMessage(1, groups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2598,7 +2702,7 @@ public final class LogGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, groups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2616,13 +2720,12 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse) obj;
 
-      boolean result = true;
-      result = result && getGroupsList()
-          .equals(other.getGroupsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2807,9 +2910,8 @@ public final class LogGroupServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse buildPartial() {
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse result = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (groupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             groups_ = java.util.Collections.unmodifiableList(groups_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2818,42 +2920,41 @@ public final class LogGroupServiceOuterClass {
           result.groups_ = groupsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2930,7 +3031,7 @@ public final class LogGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> groups_ =
         java.util.Collections.emptyList();
       private void ensureGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           groups_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>(groups_);
           bitField0_ |= 0x00000001;
          }
@@ -3231,7 +3332,7 @@ public final class LogGroupServiceOuterClass {
           groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Builder, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder>(
                   groups_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           groups_ = null;
@@ -3249,6 +3350,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3271,6 +3373,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3294,6 +3397,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -3314,6 +3419,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -3330,6 +3436,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3345,7 +3453,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3406,6 +3514,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -3415,6 +3524,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -3426,6 +3536,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3435,6 +3546,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3445,6 +3557,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -3453,6 +3566,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -3520,6 +3634,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 5;</code>
+     * @return Whether the retentionPeriod field is set.
      */
     boolean hasRetentionPeriod();
     /**
@@ -3531,6 +3646,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 5;</code>
+     * @return The retentionPeriod.
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
@@ -3551,6 +3667,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The dataStream.
      */
     java.lang.String getDataStream();
     /**
@@ -3559,6 +3676,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for dataStream.
      */
     com.google.protobuf.ByteString
         getDataStreamBytes();
@@ -3566,7 +3684,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.CreateLogGroupRequest}
    */
-  public  static final class CreateLogGroupRequest extends
+  public static final class CreateLogGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.CreateLogGroupRequest)
       CreateLogGroupRequestOrBuilder {
@@ -3580,6 +3698,13 @@ public final class LogGroupServiceOuterClass {
       name_ = "";
       description_ = "";
       dataStream_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateLogGroupRequest();
     }
 
     @java.lang.Override
@@ -3625,10 +3750,10 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3657,7 +3782,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3700,7 +3825,6 @@ public final class LogGroupServiceOuterClass {
               yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest.class, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -3710,7 +3834,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3730,7 +3856,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3754,7 +3882,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3774,7 +3904,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3797,7 +3929,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3816,7 +3950,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3865,14 +4001,16 @@ public final class LogGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3884,6 +4022,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3895,11 +4034,12 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3911,10 +4051,11 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3934,7 +4075,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 5;</code>
+     * @return Whether the retentionPeriod field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
     }
@@ -3947,7 +4090,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 5;</code>
+     * @return The retentionPeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
     }
@@ -3961,6 +4106,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
       return getRetentionPeriod();
     }
@@ -3973,7 +4119,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The dataStream.
      */
+    @java.lang.Override
     public java.lang.String getDataStream() {
       java.lang.Object ref = dataStream_;
       if (ref instanceof java.lang.String) {
@@ -3992,7 +4140,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for dataStream.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataStreamBytes() {
       java.lang.Object ref = dataStream_;
@@ -4021,13 +4171,13 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4039,7 +4189,7 @@ public final class LogGroupServiceOuterClass {
       if (retentionPeriod_ != null) {
         output.writeMessage(5, getRetentionPeriod());
       }
-      if (!getDataStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStream_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, dataStream_);
       }
       unknownFields.writeTo(output);
@@ -4051,13 +4201,13 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -4074,7 +4224,7 @@ public final class LogGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getRetentionPeriod());
       }
-      if (!getDataStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStream_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, dataStream_);
       }
       size += unknownFields.getSerializedSize();
@@ -4092,24 +4242,23 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasRetentionPeriod() == other.hasRetentionPeriod());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasRetentionPeriod() != other.hasRetentionPeriod()) return false;
       if (hasRetentionPeriod()) {
-        result = result && getRetentionPeriod()
-            .equals(other.getRetentionPeriod());
+        if (!getRetentionPeriod()
+            .equals(other.getRetentionPeriod())) return false;
       }
-      result = result && getDataStream()
-          .equals(other.getDataStream());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDataStream()
+          .equals(other.getDataStream())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4332,7 +4481,6 @@ public final class LogGroupServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest buildPartial() {
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest result = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -4344,42 +4492,41 @@ public final class LogGroupServiceOuterClass {
           result.retentionPeriod_ = retentionPeriodBuilder_.build();
         }
         result.dataStream_ = dataStream_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4452,6 +4599,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -4472,6 +4620,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -4493,6 +4642,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -4511,6 +4662,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -4525,6 +4677,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4546,6 +4700,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4566,6 +4721,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4587,6 +4743,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4605,6 +4763,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4619,6 +4778,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4639,6 +4800,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4658,6 +4820,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4678,6 +4841,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4695,6 +4860,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4708,6 +4874,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4755,14 +4923,16 @@ public final class LogGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4774,6 +4944,7 @@ public final class LogGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4785,11 +4956,12 @@ public final class LogGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4801,10 +4973,11 @@ public final class LogGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4828,7 +5001,7 @@ public final class LogGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4851,8 +5024,11 @@ public final class LogGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4872,7 +5048,7 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration retentionPeriod_ = null;
+      private com.google.protobuf.Duration retentionPeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
@@ -4884,6 +5060,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration retention_period = 5;</code>
+       * @return Whether the retentionPeriod field is set.
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
@@ -4897,6 +5074,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration retention_period = 5;</code>
+       * @return The retentionPeriod.
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -5059,6 +5237,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The dataStream.
        */
       public java.lang.String getDataStream() {
         java.lang.Object ref = dataStream_;
@@ -5078,6 +5257,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The bytes for dataStream.
        */
       public com.google.protobuf.ByteString
           getDataStreamBytes() {
@@ -5098,6 +5278,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The dataStream to set.
+       * @return This builder for chaining.
        */
       public Builder setDataStream(
           java.lang.String value) {
@@ -5115,6 +5297,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataStream() {
         
@@ -5128,6 +5311,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The bytes for dataStream to set.
+       * @return This builder for chaining.
        */
       public Builder setDataStreamBytes(
           com.google.protobuf.ByteString value) {
@@ -5143,7 +5328,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5203,6 +5388,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -5211,6 +5397,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -5218,7 +5405,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.CreateLogGroupMetadata}
    */
-  public  static final class CreateLogGroupMetadata extends
+  public static final class CreateLogGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.CreateLogGroupMetadata)
       CreateLogGroupMetadataOrBuilder {
@@ -5229,6 +5416,13 @@ public final class LogGroupServiceOuterClass {
     }
     private CreateLogGroupMetadata() {
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateLogGroupMetadata();
     }
 
     @java.lang.Override
@@ -5244,7 +5438,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5262,7 +5455,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5301,7 +5494,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -5320,7 +5515,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -5349,7 +5546,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -5361,7 +5558,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5379,11 +5576,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupMetadata other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5563,35 +5759,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5645,6 +5841,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -5664,6 +5861,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -5684,6 +5882,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -5701,6 +5901,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -5714,6 +5915,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5729,7 +5932,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5790,6 +5993,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -5799,6 +6003,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -5809,6 +6014,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5817,6 +6023,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5835,6 +6042,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5844,6 +6052,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5854,6 +6063,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5862,6 +6072,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5929,6 +6140,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
+     * @return Whether the retentionPeriod field is set.
      */
     boolean hasRetentionPeriod();
     /**
@@ -5940,6 +6152,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
+     * @return The retentionPeriod.
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
@@ -5960,6 +6173,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The dataStream.
      */
     java.lang.String getDataStream();
     /**
@@ -5968,6 +6182,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for dataStream.
      */
     com.google.protobuf.ByteString
         getDataStreamBytes();
@@ -5975,7 +6190,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.UpdateLogGroupRequest}
    */
-  public  static final class UpdateLogGroupRequest extends
+  public static final class UpdateLogGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.UpdateLogGroupRequest)
       UpdateLogGroupRequestOrBuilder {
@@ -5989,6 +6204,13 @@ public final class LogGroupServiceOuterClass {
       name_ = "";
       description_ = "";
       dataStream_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateLogGroupRequest();
     }
 
     @java.lang.Override
@@ -6047,10 +6269,10 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6079,7 +6301,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6122,7 +6344,6 @@ public final class LogGroupServiceOuterClass {
               yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest.class, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
@@ -6132,7 +6353,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -6152,7 +6375,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -6175,7 +6400,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -6185,7 +6412,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -6196,6 +6425,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -6209,7 +6439,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6229,7 +6461,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6252,7 +6486,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -6271,7 +6507,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -6320,14 +6558,16 @@ public final class LogGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -6339,6 +6579,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -6350,11 +6591,12 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6366,10 +6608,11 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -6389,7 +6632,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
+     * @return Whether the retentionPeriod field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
     }
@@ -6402,7 +6647,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
+     * @return The retentionPeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
     }
@@ -6416,6 +6663,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
       return getRetentionPeriod();
     }
@@ -6428,7 +6676,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The dataStream.
      */
+    @java.lang.Override
     public java.lang.String getDataStream() {
       java.lang.Object ref = dataStream_;
       if (ref instanceof java.lang.String) {
@@ -6447,7 +6697,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for dataStream.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataStreamBytes() {
       java.lang.Object ref = dataStream_;
@@ -6476,16 +6728,16 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -6497,7 +6749,7 @@ public final class LogGroupServiceOuterClass {
       if (retentionPeriod_ != null) {
         output.writeMessage(6, getRetentionPeriod());
       }
-      if (!getDataStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStream_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, dataStream_);
       }
       unknownFields.writeTo(output);
@@ -6509,17 +6761,17 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -6536,7 +6788,7 @@ public final class LogGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getRetentionPeriod());
       }
-      if (!getDataStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStream_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, dataStream_);
       }
       size += unknownFields.getSerializedSize();
@@ -6554,29 +6806,28 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasRetentionPeriod() == other.hasRetentionPeriod());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasRetentionPeriod() != other.hasRetentionPeriod()) return false;
       if (hasRetentionPeriod()) {
-        result = result && getRetentionPeriod()
-            .equals(other.getRetentionPeriod());
+        if (!getRetentionPeriod()
+            .equals(other.getRetentionPeriod())) return false;
       }
-      result = result && getDataStream()
-          .equals(other.getDataStream());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDataStream()
+          .equals(other.getDataStream())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6809,7 +7060,6 @@ public final class LogGroupServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest buildPartial() {
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest result = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.logGroupId_ = logGroupId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6826,42 +7076,41 @@ public final class LogGroupServiceOuterClass {
           result.retentionPeriod_ = retentionPeriodBuilder_.build();
         }
         result.dataStream_ = dataStream_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6937,6 +7186,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -6957,6 +7207,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -6978,6 +7229,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -6996,6 +7249,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -7010,6 +7264,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7023,7 +7279,7 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -7032,6 +7288,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -7042,6 +7299,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -7184,6 +7442,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7204,6 +7463,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7225,6 +7485,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7243,6 +7505,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7257,6 +7520,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7277,6 +7542,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -7296,6 +7562,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -7316,6 +7583,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -7333,6 +7602,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -7346,6 +7616,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -7393,14 +7665,16 @@ public final class LogGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -7412,6 +7686,7 @@ public final class LogGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -7423,11 +7698,12 @@ public final class LogGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7439,10 +7715,11 @@ public final class LogGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -7466,7 +7743,7 @@ public final class LogGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -7489,8 +7766,11 @@ public final class LogGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -7510,7 +7790,7 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration retentionPeriod_ = null;
+      private com.google.protobuf.Duration retentionPeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
@@ -7522,6 +7802,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
+       * @return Whether the retentionPeriod field is set.
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
@@ -7535,6 +7816,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
+       * @return The retentionPeriod.
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -7697,6 +7979,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The dataStream.
        */
       public java.lang.String getDataStream() {
         java.lang.Object ref = dataStream_;
@@ -7716,6 +7999,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The bytes for dataStream.
        */
       public com.google.protobuf.ByteString
           getDataStreamBytes() {
@@ -7736,6 +8020,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The dataStream to set.
+       * @return This builder for chaining.
        */
       public Builder setDataStream(
           java.lang.String value) {
@@ -7753,6 +8039,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataStream() {
         
@@ -7766,6 +8053,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The bytes for dataStream to set.
+       * @return This builder for chaining.
        */
       public Builder setDataStreamBytes(
           com.google.protobuf.ByteString value) {
@@ -7781,7 +8070,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7841,6 +8130,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -7849,6 +8139,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -7856,7 +8147,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.UpdateLogGroupMetadata}
    */
-  public  static final class UpdateLogGroupMetadata extends
+  public static final class UpdateLogGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.UpdateLogGroupMetadata)
       UpdateLogGroupMetadataOrBuilder {
@@ -7867,6 +8158,13 @@ public final class LogGroupServiceOuterClass {
     }
     private UpdateLogGroupMetadata() {
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateLogGroupMetadata();
     }
 
     @java.lang.Override
@@ -7882,7 +8180,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7900,7 +8197,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7939,7 +8236,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -7958,7 +8257,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -7987,7 +8288,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -7999,7 +8300,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8017,11 +8318,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupMetadata other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8201,35 +8501,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8283,6 +8583,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -8302,6 +8603,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -8322,6 +8624,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -8339,6 +8643,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -8352,6 +8657,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8367,7 +8674,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8428,6 +8735,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -8437,6 +8745,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -8444,7 +8753,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.DeleteLogGroupRequest}
    */
-  public  static final class DeleteLogGroupRequest extends
+  public static final class DeleteLogGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.DeleteLogGroupRequest)
       DeleteLogGroupRequestOrBuilder {
@@ -8455,6 +8764,13 @@ public final class LogGroupServiceOuterClass {
     }
     private DeleteLogGroupRequest() {
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteLogGroupRequest();
     }
 
     @java.lang.Override
@@ -8470,7 +8786,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8488,7 +8803,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8528,7 +8843,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -8548,7 +8865,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -8577,7 +8896,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -8589,7 +8908,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8607,11 +8926,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8791,35 +9109,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8874,6 +9192,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -8894,6 +9213,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -8915,6 +9235,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -8933,6 +9255,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -8947,6 +9270,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8962,7 +9287,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9022,6 +9347,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -9030,6 +9356,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -9037,7 +9364,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.DeleteLogGroupMetadata}
    */
-  public  static final class DeleteLogGroupMetadata extends
+  public static final class DeleteLogGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.DeleteLogGroupMetadata)
       DeleteLogGroupMetadataOrBuilder {
@@ -9048,6 +9375,13 @@ public final class LogGroupServiceOuterClass {
     }
     private DeleteLogGroupMetadata() {
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteLogGroupMetadata();
     }
 
     @java.lang.Override
@@ -9063,7 +9397,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9081,7 +9414,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9120,7 +9453,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -9139,7 +9474,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -9168,7 +9505,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -9180,7 +9517,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9198,11 +9535,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupMetadata other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9382,35 +9718,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9464,6 +9800,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -9483,6 +9820,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -9503,6 +9841,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -9520,6 +9860,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -9533,6 +9874,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9548,7 +9891,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9609,6 +9952,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -9618,6 +9962,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -9629,6 +9974,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -9638,6 +9984,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -9645,7 +9992,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ListResourcesRequest}
    */
-  public  static final class ListResourcesRequest extends
+  public static final class ListResourcesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListResourcesRequest)
       ListResourcesRequestOrBuilder {
@@ -9657,6 +10004,13 @@ public final class LogGroupServiceOuterClass {
     private ListResourcesRequest() {
       logGroupId_ = "";
       type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResourcesRequest();
     }
 
     @java.lang.Override
@@ -9672,7 +10026,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9696,7 +10049,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9736,7 +10089,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -9756,7 +10111,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -9780,7 +10137,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -9800,7 +10159,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -9829,10 +10190,10 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
       unknownFields.writeTo(output);
@@ -9844,10 +10205,10 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
       size += unknownFields.getSerializedSize();
@@ -9865,13 +10226,12 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10056,35 +10416,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10143,6 +10503,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -10163,6 +10524,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -10184,6 +10546,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -10202,6 +10566,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -10216,6 +10581,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10237,6 +10604,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -10257,6 +10625,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -10278,6 +10647,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -10296,6 +10667,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -10310,6 +10682,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -10325,7 +10699,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10426,7 +10800,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ListResourcesResponse}
    */
-  public  static final class ListResourcesResponse extends
+  public static final class ListResourcesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListResourcesResponse)
       ListResourcesResponseOrBuilder {
@@ -10437,6 +10811,13 @@ public final class LogGroupServiceOuterClass {
     }
     private ListResourcesResponse() {
       resources_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResourcesResponse();
     }
 
     @java.lang.Override
@@ -10464,7 +10845,7 @@ public final class LogGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 resources_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogResource.LogGroupResource>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -10473,7 +10854,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10487,7 +10868,7 @@ public final class LogGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           resources_ = java.util.Collections.unmodifiableList(resources_);
         }
         this.unknownFields = unknownFields.build();
@@ -10516,6 +10897,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource> getResourcesList() {
       return resources_;
     }
@@ -10526,6 +10908,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder> 
         getResourcesOrBuilderList() {
       return resources_;
@@ -10537,6 +10920,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
+    @java.lang.Override
     public int getResourcesCount() {
       return resources_.size();
     }
@@ -10547,6 +10931,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogResource.LogGroupResource getResources(int index) {
       return resources_.get(index);
     }
@@ -10557,6 +10942,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder getResourcesOrBuilder(
         int index) {
       return resources_.get(index);
@@ -10607,11 +10993,10 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse) obj;
 
-      boolean result = true;
-      result = result && getResourcesList()
-          .equals(other.getResourcesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcesList()
+          .equals(other.getResourcesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10793,7 +11178,7 @@ public final class LogGroupServiceOuterClass {
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse result = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse(this);
         int from_bitField0_ = bitField0_;
         if (resourcesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             resources_ = java.util.Collections.unmodifiableList(resources_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -10807,35 +11192,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10908,7 +11293,7 @@ public final class LogGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource> resources_ =
         java.util.Collections.emptyList();
       private void ensureResourcesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           resources_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.LogResource.LogGroupResource>(resources_);
           bitField0_ |= 0x00000001;
          }
@@ -11209,7 +11594,7 @@ public final class LogGroupServiceOuterClass {
           resourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.logging.v1.LogResource.LogGroupResource, yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder, yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder>(
                   resources_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           resources_ = null;
@@ -11219,7 +11604,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11280,6 +11665,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -11289,6 +11675,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -11302,6 +11689,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -11312,6 +11700,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -11321,6 +11710,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -11336,6 +11726,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -11349,6 +11740,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -11356,7 +11748,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ListOperationsRequest}
    */
-  public  static final class ListOperationsRequest extends
+  public static final class ListOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListOperationsRequest)
       ListOperationsRequestOrBuilder {
@@ -11367,9 +11759,15 @@ public final class LogGroupServiceOuterClass {
     }
     private ListOperationsRequest() {
       logGroupId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOperationsRequest();
     }
 
     @java.lang.Override
@@ -11385,7 +11783,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11420,7 +11817,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11460,7 +11857,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -11480,7 +11879,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -11506,7 +11907,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -11520,7 +11923,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -11540,7 +11945,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -11568,7 +11975,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -11592,7 +12001,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -11621,16 +12032,16 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -11642,17 +12053,17 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -11670,17 +12081,16 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11876,35 +12286,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11970,6 +12380,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -11990,6 +12401,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -12011,6 +12423,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -12029,6 +12443,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -12043,6 +12458,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12066,7 +12483,9 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -12079,6 +12498,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -12095,6 +12516,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -12111,6 +12533,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -12131,6 +12554,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -12152,6 +12576,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -12170,6 +12596,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -12184,6 +12611,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12209,6 +12638,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -12233,6 +12663,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -12258,6 +12689,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -12280,6 +12713,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -12298,6 +12732,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -12313,7 +12749,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12420,6 +12856,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -12431,6 +12868,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -12438,7 +12876,7 @@ public final class LogGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.ListOperationsResponse}
    */
-  public  static final class ListOperationsResponse extends
+  public static final class ListOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListOperationsResponse)
       ListOperationsResponseOrBuilder {
@@ -12450,6 +12888,13 @@ public final class LogGroupServiceOuterClass {
     private ListOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOperationsResponse();
     }
 
     @java.lang.Override
@@ -12477,7 +12922,7 @@ public final class LogGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -12492,7 +12937,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12506,7 +12951,7 @@ public final class LogGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -12526,7 +12971,6 @@ public final class LogGroupServiceOuterClass {
               yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse.class, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -12536,6 +12980,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -12546,6 +12991,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -12557,6 +13003,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -12567,6 +13014,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -12577,6 +13025,7 @@ public final class LogGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -12593,7 +13042,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -12615,7 +13066,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -12647,7 +13100,7 @@ public final class LogGroupServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -12663,7 +13116,7 @@ public final class LogGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -12681,13 +13134,12 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12872,9 +13324,8 @@ public final class LogGroupServiceOuterClass {
       public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse buildPartial() {
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse result = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -12883,42 +13334,41 @@ public final class LogGroupServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12995,7 +13445,7 @@ public final class LogGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -13296,7 +13746,7 @@ public final class LogGroupServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -13314,6 +13764,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -13336,6 +13787,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -13359,6 +13811,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -13379,6 +13833,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -13395,6 +13850,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -13410,7 +13867,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13470,6 +13927,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -13478,6 +13936,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -13488,6 +13947,7 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 bytes = 2;</code>
+     * @return The bytes.
      */
     long getBytes();
 
@@ -13497,13 +13957,14 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 records = 3;</code>
+     * @return The records.
      */
     long getRecords();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.GetLogGroupStatsResponse}
    */
-  public  static final class GetLogGroupStatsResponse extends
+  public static final class GetLogGroupStatsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.GetLogGroupStatsResponse)
       GetLogGroupStatsResponseOrBuilder {
@@ -13514,8 +13975,13 @@ public final class LogGroupServiceOuterClass {
     }
     private GetLogGroupStatsResponse() {
       logGroupId_ = "";
-      bytes_ = 0L;
-      records_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLogGroupStatsResponse();
     }
 
     @java.lang.Override
@@ -13531,7 +13997,6 @@ public final class LogGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13559,7 +14024,7 @@ public final class LogGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13598,7 +14063,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -13617,7 +14084,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 1;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -13640,7 +14109,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 bytes = 2;</code>
+     * @return The bytes.
      */
+    @java.lang.Override
     public long getBytes() {
       return bytes_;
     }
@@ -13653,7 +14124,9 @@ public final class LogGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 records = 3;</code>
+     * @return The records.
      */
+    @java.lang.Override
     public long getRecords() {
       return records_;
     }
@@ -13672,7 +14145,7 @@ public final class LogGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
       }
       if (bytes_ != 0L) {
@@ -13690,7 +14163,7 @@ public final class LogGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
       }
       if (bytes_ != 0L) {
@@ -13716,15 +14189,14 @@ public final class LogGroupServiceOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse) obj;
 
-      boolean result = true;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && (getBytes()
-          == other.getBytes());
-      result = result && (getRecords()
-          == other.getRecords());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (getBytes()
+          != other.getBytes()) return false;
+      if (getRecords()
+          != other.getRecords()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13916,35 +14388,35 @@ public final class LogGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14004,6 +14476,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -14023,6 +14496,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -14043,6 +14517,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -14060,6 +14536,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -14073,6 +14550,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14093,7 +14572,9 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 bytes = 2;</code>
+       * @return The bytes.
        */
+      @java.lang.Override
       public long getBytes() {
         return bytes_;
       }
@@ -14103,6 +14584,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 bytes = 2;</code>
+       * @param value The bytes to set.
+       * @return This builder for chaining.
        */
       public Builder setBytes(long value) {
         
@@ -14116,6 +14599,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 bytes = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBytes() {
         
@@ -14131,7 +14615,9 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 records = 3;</code>
+       * @return The records.
        */
+      @java.lang.Override
       public long getRecords() {
         return records_;
       }
@@ -14141,6 +14627,8 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 records = 3;</code>
+       * @param value The records to set.
+       * @return This builder for chaining.
        */
       public Builder setRecords(long value) {
         
@@ -14154,6 +14642,7 @@ public final class LogGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 records = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRecords() {
         
@@ -14164,7 +14653,7 @@ public final class LogGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14421,15 +14910,7 @@ public final class LogGroupServiceOuterClass {
       "ndex-cloud/go-genproto/yandex/cloud/logg" +
       "ing/v1;loggingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -14441,7 +14922,7 @@ public final class LogGroupServiceOuterClass {
           yandex.cloud.api.logging.v1.LogResource.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_logging_v1_GetLogGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_logging_v1_GetLogGroupRequest_fieldAccessorTable = new

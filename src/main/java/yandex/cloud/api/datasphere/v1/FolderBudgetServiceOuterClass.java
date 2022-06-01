@@ -24,6 +24,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -32,6 +33,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -39,7 +41,7 @@ public final class FolderBudgetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.GetFolderBudgetRequest}
    */
-  public  static final class GetFolderBudgetRequest extends
+  public static final class GetFolderBudgetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetFolderBudgetRequest)
       GetFolderBudgetRequestOrBuilder {
@@ -50,6 +52,13 @@ public final class FolderBudgetServiceOuterClass {
     }
     private GetFolderBudgetRequest() {
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFolderBudgetRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class FolderBudgetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,7 +91,7 @@ public final class FolderBudgetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -122,7 +130,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -141,7 +151,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -170,7 +182,7 @@ public final class FolderBudgetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       unknownFields.writeTo(output);
@@ -182,7 +194,7 @@ public final class FolderBudgetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -200,11 +212,10 @@ public final class FolderBudgetServiceOuterClass {
       }
       yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest other = (yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -384,35 +395,35 @@ public final class FolderBudgetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -466,6 +477,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -485,6 +497,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -505,6 +518,8 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -522,6 +537,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -535,6 +551,8 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -550,7 +568,7 @@ public final class FolderBudgetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -610,6 +628,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     * @return Whether the unitBalance field is set.
      */
     boolean hasUnitBalance();
     /**
@@ -618,6 +637,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     * @return The unitBalance.
      */
     com.google.protobuf.Int64Value getUnitBalance();
     /**
@@ -635,6 +655,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+     * @return Whether the maxUnitsPerHour field is set.
      */
     boolean hasMaxUnitsPerHour();
     /**
@@ -643,6 +664,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+     * @return The maxUnitsPerHour.
      */
     com.google.protobuf.Int64Value getMaxUnitsPerHour();
     /**
@@ -660,6 +682,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+     * @return Whether the maxUnitsPerExecution field is set.
      */
     boolean hasMaxUnitsPerExecution();
     /**
@@ -668,6 +691,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+     * @return The maxUnitsPerExecution.
      */
     com.google.protobuf.Int64Value getMaxUnitsPerExecution();
     /**
@@ -682,7 +706,7 @@ public final class FolderBudgetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.GetFolderBudgetResponse}
    */
-  public  static final class GetFolderBudgetResponse extends
+  public static final class GetFolderBudgetResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetFolderBudgetResponse)
       GetFolderBudgetResponseOrBuilder {
@@ -692,6 +716,13 @@ public final class FolderBudgetServiceOuterClass {
       super(builder);
     }
     private GetFolderBudgetResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFolderBudgetResponse();
     }
 
     @java.lang.Override
@@ -707,7 +738,6 @@ public final class FolderBudgetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -758,7 +788,7 @@ public final class FolderBudgetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -797,7 +827,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     * @return Whether the unitBalance field is set.
      */
+    @java.lang.Override
     public boolean hasUnitBalance() {
       return unitBalance_ != null;
     }
@@ -807,7 +839,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     * @return The unitBalance.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getUnitBalance() {
       return unitBalance_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
     }
@@ -818,6 +852,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder() {
       return getUnitBalance();
     }
@@ -830,7 +865,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+     * @return Whether the maxUnitsPerHour field is set.
      */
+    @java.lang.Override
     public boolean hasMaxUnitsPerHour() {
       return maxUnitsPerHour_ != null;
     }
@@ -840,7 +877,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+     * @return The maxUnitsPerHour.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxUnitsPerHour() {
       return maxUnitsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerHour_;
     }
@@ -851,6 +890,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerHourOrBuilder() {
       return getMaxUnitsPerHour();
     }
@@ -863,7 +903,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+     * @return Whether the maxUnitsPerExecution field is set.
      */
+    @java.lang.Override
     public boolean hasMaxUnitsPerExecution() {
       return maxUnitsPerExecution_ != null;
     }
@@ -873,7 +915,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+     * @return The maxUnitsPerExecution.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxUnitsPerExecution() {
       return maxUnitsPerExecution_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerExecution_;
     }
@@ -884,6 +928,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerExecutionOrBuilder() {
       return getMaxUnitsPerExecution();
     }
@@ -947,24 +992,23 @@ public final class FolderBudgetServiceOuterClass {
       }
       yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse other = (yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.GetFolderBudgetResponse) obj;
 
-      boolean result = true;
-      result = result && (hasUnitBalance() == other.hasUnitBalance());
+      if (hasUnitBalance() != other.hasUnitBalance()) return false;
       if (hasUnitBalance()) {
-        result = result && getUnitBalance()
-            .equals(other.getUnitBalance());
+        if (!getUnitBalance()
+            .equals(other.getUnitBalance())) return false;
       }
-      result = result && (hasMaxUnitsPerHour() == other.hasMaxUnitsPerHour());
+      if (hasMaxUnitsPerHour() != other.hasMaxUnitsPerHour()) return false;
       if (hasMaxUnitsPerHour()) {
-        result = result && getMaxUnitsPerHour()
-            .equals(other.getMaxUnitsPerHour());
+        if (!getMaxUnitsPerHour()
+            .equals(other.getMaxUnitsPerHour())) return false;
       }
-      result = result && (hasMaxUnitsPerExecution() == other.hasMaxUnitsPerExecution());
+      if (hasMaxUnitsPerExecution() != other.hasMaxUnitsPerExecution()) return false;
       if (hasMaxUnitsPerExecution()) {
-        result = result && getMaxUnitsPerExecution()
-            .equals(other.getMaxUnitsPerExecution());
+        if (!getMaxUnitsPerExecution()
+            .equals(other.getMaxUnitsPerExecution())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1184,35 +1228,35 @@ public final class FolderBudgetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1264,7 +1308,7 @@ public final class FolderBudgetServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value unitBalance_ = null;
+      private com.google.protobuf.Int64Value unitBalance_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> unitBalanceBuilder_;
       /**
@@ -1273,6 +1317,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       * @return Whether the unitBalance field is set.
        */
       public boolean hasUnitBalance() {
         return unitBalanceBuilder_ != null || unitBalance_ != null;
@@ -1283,6 +1328,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       * @return The unitBalance.
        */
       public com.google.protobuf.Int64Value getUnitBalance() {
         if (unitBalanceBuilder_ == null) {
@@ -1417,7 +1463,7 @@ public final class FolderBudgetServiceOuterClass {
         return unitBalanceBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxUnitsPerHour_ = null;
+      private com.google.protobuf.Int64Value maxUnitsPerHour_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerHourBuilder_;
       /**
@@ -1426,6 +1472,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       * @return Whether the maxUnitsPerHour field is set.
        */
       public boolean hasMaxUnitsPerHour() {
         return maxUnitsPerHourBuilder_ != null || maxUnitsPerHour_ != null;
@@ -1436,6 +1483,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       * @return The maxUnitsPerHour.
        */
       public com.google.protobuf.Int64Value getMaxUnitsPerHour() {
         if (maxUnitsPerHourBuilder_ == null) {
@@ -1570,7 +1618,7 @@ public final class FolderBudgetServiceOuterClass {
         return maxUnitsPerHourBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxUnitsPerExecution_ = null;
+      private com.google.protobuf.Int64Value maxUnitsPerExecution_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerExecutionBuilder_;
       /**
@@ -1579,6 +1627,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       * @return Whether the maxUnitsPerExecution field is set.
        */
       public boolean hasMaxUnitsPerExecution() {
         return maxUnitsPerExecutionBuilder_ != null || maxUnitsPerExecution_ != null;
@@ -1589,6 +1638,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       * @return The maxUnitsPerExecution.
        */
       public com.google.protobuf.Int64Value getMaxUnitsPerExecution() {
         if (maxUnitsPerExecutionBuilder_ == null) {
@@ -1725,7 +1775,7 @@ public final class FolderBudgetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1785,6 +1835,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1793,6 +1844,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1803,6 +1855,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask set_mask = 2;</code>
+     * @return Whether the setMask field is set.
      */
     boolean hasSetMask();
     /**
@@ -1811,6 +1864,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask set_mask = 2;</code>
+     * @return The setMask.
      */
     com.google.protobuf.FieldMask getSetMask();
     /**
@@ -1828,6 +1882,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
+     * @return Whether the unitBalance field is set.
      */
     boolean hasUnitBalance();
     /**
@@ -1836,6 +1891,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
+     * @return The unitBalance.
      */
     com.google.protobuf.Int64Value getUnitBalance();
     /**
@@ -1853,6 +1909,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
+     * @return Whether the maxUnitsPerHour field is set.
      */
     boolean hasMaxUnitsPerHour();
     /**
@@ -1861,6 +1918,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
+     * @return The maxUnitsPerHour.
      */
     com.google.protobuf.Int64Value getMaxUnitsPerHour();
     /**
@@ -1878,6 +1936,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
+     * @return Whether the maxUnitsPerExecution field is set.
      */
     boolean hasMaxUnitsPerExecution();
     /**
@@ -1886,6 +1945,7 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
+     * @return The maxUnitsPerExecution.
      */
     com.google.protobuf.Int64Value getMaxUnitsPerExecution();
     /**
@@ -1900,7 +1960,7 @@ public final class FolderBudgetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.SetFolderBudgetRequest}
    */
-  public  static final class SetFolderBudgetRequest extends
+  public static final class SetFolderBudgetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.SetFolderBudgetRequest)
       SetFolderBudgetRequestOrBuilder {
@@ -1911,6 +1971,13 @@ public final class FolderBudgetServiceOuterClass {
     }
     private SetFolderBudgetRequest() {
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetFolderBudgetRequest();
     }
 
     @java.lang.Override
@@ -1926,7 +1993,6 @@ public final class FolderBudgetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1996,7 +2062,7 @@ public final class FolderBudgetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2035,7 +2101,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -2054,7 +2122,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -2077,7 +2147,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask set_mask = 2;</code>
+     * @return Whether the setMask field is set.
      */
+    @java.lang.Override
     public boolean hasSetMask() {
       return setMask_ != null;
     }
@@ -2087,7 +2159,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask set_mask = 2;</code>
+     * @return The setMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getSetMask() {
       return setMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : setMask_;
     }
@@ -2098,6 +2172,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask set_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getSetMaskOrBuilder() {
       return getSetMask();
     }
@@ -2110,7 +2185,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
+     * @return Whether the unitBalance field is set.
      */
+    @java.lang.Override
     public boolean hasUnitBalance() {
       return unitBalance_ != null;
     }
@@ -2120,7 +2197,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
+     * @return The unitBalance.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getUnitBalance() {
       return unitBalance_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
     }
@@ -2131,6 +2210,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder() {
       return getUnitBalance();
     }
@@ -2143,7 +2223,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
+     * @return Whether the maxUnitsPerHour field is set.
      */
+    @java.lang.Override
     public boolean hasMaxUnitsPerHour() {
       return maxUnitsPerHour_ != null;
     }
@@ -2153,7 +2235,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
+     * @return The maxUnitsPerHour.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxUnitsPerHour() {
       return maxUnitsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerHour_;
     }
@@ -2164,6 +2248,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerHourOrBuilder() {
       return getMaxUnitsPerHour();
     }
@@ -2176,7 +2261,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
+     * @return Whether the maxUnitsPerExecution field is set.
      */
+    @java.lang.Override
     public boolean hasMaxUnitsPerExecution() {
       return maxUnitsPerExecution_ != null;
     }
@@ -2186,7 +2273,9 @@ public final class FolderBudgetServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
+     * @return The maxUnitsPerExecution.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxUnitsPerExecution() {
       return maxUnitsPerExecution_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerExecution_;
     }
@@ -2197,6 +2286,7 @@ public final class FolderBudgetServiceOuterClass {
      *
      * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerExecutionOrBuilder() {
       return getMaxUnitsPerExecution();
     }
@@ -2215,7 +2305,7 @@ public final class FolderBudgetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (setMask_ != null) {
@@ -2239,7 +2329,7 @@ public final class FolderBudgetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (setMask_ != null) {
@@ -2273,31 +2363,30 @@ public final class FolderBudgetServiceOuterClass {
       }
       yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest other = (yandex.cloud.api.datasphere.v1.FolderBudgetServiceOuterClass.SetFolderBudgetRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasSetMask() == other.hasSetMask());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasSetMask() != other.hasSetMask()) return false;
       if (hasSetMask()) {
-        result = result && getSetMask()
-            .equals(other.getSetMask());
+        if (!getSetMask()
+            .equals(other.getSetMask())) return false;
       }
-      result = result && (hasUnitBalance() == other.hasUnitBalance());
+      if (hasUnitBalance() != other.hasUnitBalance()) return false;
       if (hasUnitBalance()) {
-        result = result && getUnitBalance()
-            .equals(other.getUnitBalance());
+        if (!getUnitBalance()
+            .equals(other.getUnitBalance())) return false;
       }
-      result = result && (hasMaxUnitsPerHour() == other.hasMaxUnitsPerHour());
+      if (hasMaxUnitsPerHour() != other.hasMaxUnitsPerHour()) return false;
       if (hasMaxUnitsPerHour()) {
-        result = result && getMaxUnitsPerHour()
-            .equals(other.getMaxUnitsPerHour());
+        if (!getMaxUnitsPerHour()
+            .equals(other.getMaxUnitsPerHour())) return false;
       }
-      result = result && (hasMaxUnitsPerExecution() == other.hasMaxUnitsPerExecution());
+      if (hasMaxUnitsPerExecution() != other.hasMaxUnitsPerExecution()) return false;
       if (hasMaxUnitsPerExecution()) {
-        result = result && getMaxUnitsPerExecution()
-            .equals(other.getMaxUnitsPerExecution());
+        if (!getMaxUnitsPerExecution()
+            .equals(other.getMaxUnitsPerExecution())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2537,35 +2626,35 @@ public final class FolderBudgetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2631,6 +2720,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2650,6 +2740,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2670,6 +2761,8 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2687,6 +2780,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2700,6 +2794,8 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2713,7 +2809,7 @@ public final class FolderBudgetServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask setMask_ = null;
+      private com.google.protobuf.FieldMask setMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> setMaskBuilder_;
       /**
@@ -2722,6 +2818,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask set_mask = 2;</code>
+       * @return Whether the setMask field is set.
        */
       public boolean hasSetMask() {
         return setMaskBuilder_ != null || setMask_ != null;
@@ -2732,6 +2829,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask set_mask = 2;</code>
+       * @return The setMask.
        */
       public com.google.protobuf.FieldMask getSetMask() {
         if (setMaskBuilder_ == null) {
@@ -2866,7 +2964,7 @@ public final class FolderBudgetServiceOuterClass {
         return setMaskBuilder_;
       }
 
-      private com.google.protobuf.Int64Value unitBalance_ = null;
+      private com.google.protobuf.Int64Value unitBalance_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> unitBalanceBuilder_;
       /**
@@ -2875,6 +2973,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
+       * @return Whether the unitBalance field is set.
        */
       public boolean hasUnitBalance() {
         return unitBalanceBuilder_ != null || unitBalance_ != null;
@@ -2885,6 +2984,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value unit_balance = 3;</code>
+       * @return The unitBalance.
        */
       public com.google.protobuf.Int64Value getUnitBalance() {
         if (unitBalanceBuilder_ == null) {
@@ -3019,7 +3119,7 @@ public final class FolderBudgetServiceOuterClass {
         return unitBalanceBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxUnitsPerHour_ = null;
+      private com.google.protobuf.Int64Value maxUnitsPerHour_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerHourBuilder_;
       /**
@@ -3028,6 +3128,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
+       * @return Whether the maxUnitsPerHour field is set.
        */
       public boolean hasMaxUnitsPerHour() {
         return maxUnitsPerHourBuilder_ != null || maxUnitsPerHour_ != null;
@@ -3038,6 +3139,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_hour = 4;</code>
+       * @return The maxUnitsPerHour.
        */
       public com.google.protobuf.Int64Value getMaxUnitsPerHour() {
         if (maxUnitsPerHourBuilder_ == null) {
@@ -3172,7 +3274,7 @@ public final class FolderBudgetServiceOuterClass {
         return maxUnitsPerHourBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxUnitsPerExecution_ = null;
+      private com.google.protobuf.Int64Value maxUnitsPerExecution_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerExecutionBuilder_;
       /**
@@ -3181,6 +3283,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
+       * @return Whether the maxUnitsPerExecution field is set.
        */
       public boolean hasMaxUnitsPerExecution() {
         return maxUnitsPerExecutionBuilder_ != null || maxUnitsPerExecution_ != null;
@@ -3191,6 +3294,7 @@ public final class FolderBudgetServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_units_per_execution = 5;</code>
+       * @return The maxUnitsPerExecution.
        */
       public com.google.protobuf.Int64Value getMaxUnitsPerExecution() {
         if (maxUnitsPerExecutionBuilder_ == null) {
@@ -3327,7 +3431,7 @@ public final class FolderBudgetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3433,15 +3537,7 @@ public final class FolderBudgetServiceOuterClass {
       "o-genproto/yandex/cloud/datasphere/v1;da" +
       "tasphereb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -3449,7 +3545,7 @@ public final class FolderBudgetServiceOuterClass {
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_datasphere_v1_GetFolderBudgetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datasphere_v1_GetFolderBudgetRequest_fieldAccessorTable = new

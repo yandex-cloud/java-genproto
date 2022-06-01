@@ -1,25 +1,13 @@
 package yandex.cloud.api.cdn.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/cdn/v1/raw_logs_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RawLogsServiceGrpc {
 
   private RawLogsServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class RawLogsServiceGrpc {
     if ((getActivateMethod = RawLogsServiceGrpc.getActivateMethod) == null) {
       synchronized (RawLogsServiceGrpc.class) {
         if ((getActivateMethod = RawLogsServiceGrpc.getActivateMethod) == null) {
-          RawLogsServiceGrpc.getActivateMethod = getActivateMethod = 
+          RawLogsServiceGrpc.getActivateMethod = getActivateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.RawLogsService", "Activate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Activate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Activate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Activate"))
+              .build();
         }
-     }
-     return getActivateMethod;
+      }
+    }
+    return getActivateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest,
@@ -73,22 +60,21 @@ public final class RawLogsServiceGrpc {
     if ((getDeactivateMethod = RawLogsServiceGrpc.getDeactivateMethod) == null) {
       synchronized (RawLogsServiceGrpc.class) {
         if ((getDeactivateMethod = RawLogsServiceGrpc.getDeactivateMethod) == null) {
-          RawLogsServiceGrpc.getDeactivateMethod = getDeactivateMethod = 
+          RawLogsServiceGrpc.getDeactivateMethod = getDeactivateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.RawLogsService", "Deactivate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Deactivate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Deactivate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Deactivate"))
+              .build();
         }
-     }
-     return getDeactivateMethod;
+      }
+    }
+    return getDeactivateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest,
@@ -105,22 +91,21 @@ public final class RawLogsServiceGrpc {
     if ((getGetMethod = RawLogsServiceGrpc.getGetMethod) == null) {
       synchronized (RawLogsServiceGrpc.class) {
         if ((getGetMethod = RawLogsServiceGrpc.getGetMethod) == null) {
-          RawLogsServiceGrpc.getGetMethod = getGetMethod = 
+          RawLogsServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest, yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.RawLogsService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest,
@@ -137,29 +122,35 @@ public final class RawLogsServiceGrpc {
     if ((getUpdateMethod = RawLogsServiceGrpc.getUpdateMethod) == null) {
       synchronized (RawLogsServiceGrpc.class) {
         if ((getUpdateMethod = RawLogsServiceGrpc.getUpdateMethod) == null) {
-          RawLogsServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          RawLogsServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.RawLogsService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawLogsServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RawLogsServiceStub newStub(io.grpc.Channel channel) {
-    return new RawLogsServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RawLogsServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RawLogsServiceStub>() {
+        @java.lang.Override
+        public RawLogsServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RawLogsServiceStub(channel, callOptions);
+        }
+      };
+    return RawLogsServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -167,7 +158,14 @@ public final class RawLogsServiceGrpc {
    */
   public static RawLogsServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RawLogsServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RawLogsServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RawLogsServiceBlockingStub>() {
+        @java.lang.Override
+        public RawLogsServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RawLogsServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RawLogsServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -175,7 +173,14 @@ public final class RawLogsServiceGrpc {
    */
   public static RawLogsServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RawLogsServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RawLogsServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RawLogsServiceFutureStub>() {
+        @java.lang.Override
+        public RawLogsServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RawLogsServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RawLogsServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -186,56 +191,56 @@ public final class RawLogsServiceGrpc {
      */
     public void activate(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
     }
 
     /**
      */
     public void deactivate(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeactivateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeactivateMethod(), responseObserver);
     }
 
     /**
      */
     public void get(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void update(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getActivateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ACTIVATE)))
           .addMethod(
             getDeactivateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DEACTIVATE)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest,
                 yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -246,19 +251,15 @@ public final class RawLogsServiceGrpc {
 
   /**
    */
-  public static final class RawLogsServiceStub extends io.grpc.stub.AbstractStub<RawLogsServiceStub> {
-    private RawLogsServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RawLogsServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RawLogsServiceStub extends io.grpc.stub.AbstractAsyncStub<RawLogsServiceStub> {
+    private RawLogsServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RawLogsServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RawLogsServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RawLogsServiceStub(channel, callOptions);
     }
 
@@ -266,7 +267,7 @@ public final class RawLogsServiceGrpc {
      */
     public void activate(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getActivateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -274,7 +275,7 @@ public final class RawLogsServiceGrpc {
      */
     public void deactivate(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeactivateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -282,7 +283,7 @@ public final class RawLogsServiceGrpc {
      */
     public void get(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -290,73 +291,65 @@ public final class RawLogsServiceGrpc {
      */
     public void update(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class RawLogsServiceBlockingStub extends io.grpc.stub.AbstractStub<RawLogsServiceBlockingStub> {
-    private RawLogsServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RawLogsServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RawLogsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RawLogsServiceBlockingStub> {
+    private RawLogsServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RawLogsServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RawLogsServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RawLogsServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation activate(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getActivateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deactivate(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeactivateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse get(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class RawLogsServiceFutureStub extends io.grpc.stub.AbstractStub<RawLogsServiceFutureStub> {
-    private RawLogsServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RawLogsServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RawLogsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RawLogsServiceFutureStub> {
+    private RawLogsServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RawLogsServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RawLogsServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RawLogsServiceFutureStub(channel, callOptions);
     }
 
@@ -364,7 +357,7 @@ public final class RawLogsServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> activate(
         yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.ActivateRawLogsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getActivateMethod(), getCallOptions()), request);
     }
 
@@ -372,7 +365,7 @@ public final class RawLogsServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deactivate(
         yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.DeactivateRawLogsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeactivateMethod(), getCallOptions()), request);
     }
 
@@ -380,7 +373,7 @@ public final class RawLogsServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsResponse> get(
         yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.GetRawLogsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -388,7 +381,7 @@ public final class RawLogsServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.cdn.v1.RawLogsServiceOuterClass.UpdateRawLogsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
   }

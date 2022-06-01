@@ -1,25 +1,13 @@
 package yandex.cloud.api.vpc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/vpc/v1/security_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SecurityGroupServiceGrpc {
 
   private SecurityGroupServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getGetMethod = SecurityGroupServiceGrpc.getGetMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getGetMethod = SecurityGroupServiceGrpc.getGetMethod) == null) {
-          SecurityGroupServiceGrpc.getGetMethod = getGetMethod = 
+          SecurityGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest,
@@ -73,22 +60,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getListMethod = SecurityGroupServiceGrpc.getListMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getListMethod = SecurityGroupServiceGrpc.getListMethod) == null) {
-          SecurityGroupServiceGrpc.getListMethod = getListMethod = 
+          SecurityGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest,
@@ -105,22 +91,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getCreateMethod = SecurityGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getCreateMethod = SecurityGroupServiceGrpc.getCreateMethod) == null) {
-          SecurityGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          SecurityGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest,
@@ -137,22 +122,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getUpdateMethod = SecurityGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getUpdateMethod = SecurityGroupServiceGrpc.getUpdateMethod) == null) {
-          SecurityGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          SecurityGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest,
@@ -169,22 +153,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getUpdateRulesMethod = SecurityGroupServiceGrpc.getUpdateRulesMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getUpdateRulesMethod = SecurityGroupServiceGrpc.getUpdateRulesMethod) == null) {
-          SecurityGroupServiceGrpc.getUpdateRulesMethod = getUpdateRulesMethod = 
+          SecurityGroupServiceGrpc.getUpdateRulesMethod = getUpdateRulesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "UpdateRules"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRules"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("UpdateRules"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("UpdateRules"))
+              .build();
         }
-     }
-     return getUpdateRulesMethod;
+      }
+    }
+    return getUpdateRulesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest,
@@ -201,22 +184,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getUpdateRuleMethod = SecurityGroupServiceGrpc.getUpdateRuleMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getUpdateRuleMethod = SecurityGroupServiceGrpc.getUpdateRuleMethod) == null) {
-          SecurityGroupServiceGrpc.getUpdateRuleMethod = getUpdateRuleMethod = 
+          SecurityGroupServiceGrpc.getUpdateRuleMethod = getUpdateRuleMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "UpdateRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("UpdateRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("UpdateRule"))
+              .build();
         }
-     }
-     return getUpdateRuleMethod;
+      }
+    }
+    return getUpdateRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest,
@@ -233,22 +215,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getDeleteMethod = SecurityGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getDeleteMethod = SecurityGroupServiceGrpc.getDeleteMethod) == null) {
-          SecurityGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          SecurityGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest,
@@ -265,22 +246,21 @@ public final class SecurityGroupServiceGrpc {
     if ((getMoveMethod = SecurityGroupServiceGrpc.getMoveMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getMoveMethod = SecurityGroupServiceGrpc.getMoveMethod) == null) {
-          SecurityGroupServiceGrpc.getMoveMethod = getMoveMethod = 
+          SecurityGroupServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest,
@@ -297,29 +277,35 @@ public final class SecurityGroupServiceGrpc {
     if ((getListOperationsMethod = SecurityGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (SecurityGroupServiceGrpc.class) {
         if ((getListOperationsMethod = SecurityGroupServiceGrpc.getListOperationsMethod) == null) {
-          SecurityGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          SecurityGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SecurityGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SecurityGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SecurityGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new SecurityGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SecurityGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SecurityGroupServiceStub>() {
+        @java.lang.Override
+        public SecurityGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SecurityGroupServiceStub(channel, callOptions);
+        }
+      };
+    return SecurityGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -327,7 +313,14 @@ public final class SecurityGroupServiceGrpc {
    */
   public static SecurityGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SecurityGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SecurityGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SecurityGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public SecurityGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SecurityGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SecurityGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -335,7 +328,14 @@ public final class SecurityGroupServiceGrpc {
    */
   public static SecurityGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SecurityGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SecurityGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SecurityGroupServiceFutureStub>() {
+        @java.lang.Override
+        public SecurityGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SecurityGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SecurityGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -346,35 +346,35 @@ public final class SecurityGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void list(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
      */
     public void create(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     public void update(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void updateRules(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateRulesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRulesMethod(), responseObserver);
     }
 
     /**
@@ -384,91 +384,91 @@ public final class SecurityGroupServiceGrpc {
      */
     public void updateRule(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRuleMethod(), responseObserver);
     }
 
     /**
      */
     public void delete(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
      */
     public void move(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     /**
      */
     public void listOperations(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest,
                 yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest,
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getUpdateRulesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_RULES)))
           .addMethod(
             getUpdateRuleMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_RULE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest,
                 yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse>(
@@ -479,19 +479,15 @@ public final class SecurityGroupServiceGrpc {
 
   /**
    */
-  public static final class SecurityGroupServiceStub extends io.grpc.stub.AbstractStub<SecurityGroupServiceStub> {
-    private SecurityGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SecurityGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SecurityGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<SecurityGroupServiceStub> {
+    private SecurityGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecurityGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SecurityGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SecurityGroupServiceStub(channel, callOptions);
     }
 
@@ -499,7 +495,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -507,7 +503,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -515,7 +511,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -523,7 +519,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -531,7 +527,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void updateRules(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateRulesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -542,7 +538,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void updateRule(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -550,7 +546,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -558,7 +554,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -566,61 +562,57 @@ public final class SecurityGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class SecurityGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<SecurityGroupServiceBlockingStub> {
-    private SecurityGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SecurityGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SecurityGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SecurityGroupServiceBlockingStub> {
+    private SecurityGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecurityGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SecurityGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SecurityGroupServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup get(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse list(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRules(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateRulesMethod(), getCallOptions(), request);
     }
 
@@ -630,47 +622,43 @@ public final class SecurityGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRule(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateRuleMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse listOperations(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class SecurityGroupServiceFutureStub extends io.grpc.stub.AbstractStub<SecurityGroupServiceFutureStub> {
-    private SecurityGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SecurityGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SecurityGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SecurityGroupServiceFutureStub> {
+    private SecurityGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecurityGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SecurityGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SecurityGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -678,7 +666,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> get(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -686,7 +674,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse> list(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -694,7 +682,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -702,7 +690,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -710,7 +698,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRules(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateRulesMethod(), getCallOptions()), request);
     }
 
@@ -721,7 +709,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRule(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateRuleMethod(), getCallOptions()), request);
     }
 
@@ -729,7 +717,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -737,7 +725,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
 
@@ -745,7 +733,7 @@ public final class SecurityGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

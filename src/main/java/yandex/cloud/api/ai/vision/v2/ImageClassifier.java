@@ -24,6 +24,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -32,6 +33,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -42,6 +44,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -50,6 +53,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -61,7 +65,7 @@ public final class ImageClassifier {
    *
    * Protobuf type {@code yandex.cloud.ai.vision.v2.Label}
    */
-  public  static final class Label extends
+  public static final class Label extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v2.Label)
       LabelOrBuilder {
@@ -73,6 +77,13 @@ public final class ImageClassifier {
     private Label() {
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Label();
     }
 
     @java.lang.Override
@@ -88,7 +99,6 @@ public final class ImageClassifier {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,7 +122,7 @@ public final class ImageClassifier {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -151,7 +161,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -170,7 +182,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -193,7 +207,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -212,7 +228,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -241,10 +259,10 @@ public final class ImageClassifier {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       unknownFields.writeTo(output);
@@ -256,10 +274,10 @@ public final class ImageClassifier {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       size += unknownFields.getSerializedSize();
@@ -277,13 +295,12 @@ public final class ImageClassifier {
       }
       yandex.cloud.api.ai.vision.v2.ImageClassifier.Label other = (yandex.cloud.api.ai.vision.v2.ImageClassifier.Label) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -472,35 +489,35 @@ public final class ImageClassifier {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -558,6 +575,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -577,6 +595,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -597,6 +616,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -614,6 +635,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -627,6 +649,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -647,6 +671,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -666,6 +691,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -686,6 +712,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -703,6 +731,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -716,6 +745,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -731,7 +762,7 @@ public final class ImageClassifier {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -791,6 +822,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
+     * @return Whether the label field is set.
      */
     boolean hasLabel();
     /**
@@ -799,6 +831,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
+     * @return The label.
      */
     yandex.cloud.api.ai.vision.v2.ImageClassifier.Label getLabel();
     /**
@@ -816,6 +849,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>double confidence = 2;</code>
+     * @return The confidence.
      */
     double getConfidence();
   }
@@ -826,7 +860,7 @@ public final class ImageClassifier {
    *
    * Protobuf type {@code yandex.cloud.ai.vision.v2.ClassAnnotation}
    */
-  public  static final class ClassAnnotation extends
+  public static final class ClassAnnotation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v2.ClassAnnotation)
       ClassAnnotationOrBuilder {
@@ -836,7 +870,13 @@ public final class ImageClassifier {
       super(builder);
     }
     private ClassAnnotation() {
-      confidence_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassAnnotation();
     }
 
     @java.lang.Override
@@ -852,7 +892,6 @@ public final class ImageClassifier {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -882,7 +921,7 @@ public final class ImageClassifier {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -921,7 +960,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
+     * @return Whether the label field is set.
      */
+    @java.lang.Override
     public boolean hasLabel() {
       return label_ != null;
     }
@@ -931,7 +972,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
+     * @return The label.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.Label getLabel() {
       return label_ == null ? yandex.cloud.api.ai.vision.v2.ImageClassifier.Label.getDefaultInstance() : label_;
     }
@@ -942,6 +985,7 @@ public final class ImageClassifier {
      *
      * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.LabelOrBuilder getLabelOrBuilder() {
       return getLabel();
     }
@@ -954,7 +998,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>double confidence = 2;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public double getConfidence() {
       return confidence_;
     }
@@ -976,7 +1022,7 @@ public final class ImageClassifier {
       if (label_ != null) {
         output.writeMessage(1, getLabel());
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         output.writeDouble(2, confidence_);
       }
       unknownFields.writeTo(output);
@@ -992,7 +1038,7 @@ public final class ImageClassifier {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLabel());
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, confidence_);
       }
@@ -1011,18 +1057,16 @@ public final class ImageClassifier {
       }
       yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation other = (yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation) obj;
 
-      boolean result = true;
-      result = result && (hasLabel() == other.hasLabel());
+      if (hasLabel() != other.hasLabel()) return false;
       if (hasLabel()) {
-        result = result && getLabel()
-            .equals(other.getLabel());
+        if (!getLabel()
+            .equals(other.getLabel())) return false;
       }
-      result = result && (
-          java.lang.Double.doubleToLongBits(getConfidence())
-          == java.lang.Double.doubleToLongBits(
-              other.getConfidence()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (java.lang.Double.doubleToLongBits(getConfidence())
+          != java.lang.Double.doubleToLongBits(
+              other.getConfidence())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1222,35 +1266,35 @@ public final class ImageClassifier {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1299,7 +1343,7 @@ public final class ImageClassifier {
         return this;
       }
 
-      private yandex.cloud.api.ai.vision.v2.ImageClassifier.Label label_ = null;
+      private yandex.cloud.api.ai.vision.v2.ImageClassifier.Label label_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.vision.v2.ImageClassifier.Label, yandex.cloud.api.ai.vision.v2.ImageClassifier.Label.Builder, yandex.cloud.api.ai.vision.v2.ImageClassifier.LabelOrBuilder> labelBuilder_;
       /**
@@ -1308,6 +1352,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
+       * @return Whether the label field is set.
        */
       public boolean hasLabel() {
         return labelBuilder_ != null || label_ != null;
@@ -1318,6 +1363,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Label label = 1;</code>
+       * @return The label.
        */
       public yandex.cloud.api.ai.vision.v2.ImageClassifier.Label getLabel() {
         if (labelBuilder_ == null) {
@@ -1459,7 +1505,9 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>double confidence = 2;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public double getConfidence() {
         return confidence_;
       }
@@ -1469,6 +1517,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>double confidence = 2;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
        */
       public Builder setConfidence(double value) {
         
@@ -1482,6 +1532,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>double confidence = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -1492,7 +1543,7 @@ public final class ImageClassifier {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1596,6 +1647,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+     * @return The enum numeric value on the wire for classificationType.
      */
     int getClassificationTypeValue();
     /**
@@ -1604,6 +1656,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+     * @return The classificationType.
      */
     yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType getClassificationType();
   }
@@ -1614,7 +1667,7 @@ public final class ImageClassifier {
    *
    * Protobuf type {@code yandex.cloud.ai.vision.v2.ClassifierSpecification}
    */
-  public  static final class ClassifierSpecification extends
+  public static final class ClassifierSpecification extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v2.ClassifierSpecification)
       ClassifierSpecificationOrBuilder {
@@ -1626,6 +1679,13 @@ public final class ImageClassifier {
     private ClassifierSpecification() {
       labels_ = java.util.Collections.emptyList();
       classificationType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassifierSpecification();
     }
 
     @java.lang.Override
@@ -1653,7 +1713,7 @@ public final class ImageClassifier {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v2.ImageClassifier.Label>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1668,7 +1728,7 @@ public final class ImageClassifier {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1682,7 +1742,7 @@ public final class ImageClassifier {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
         }
         this.unknownFields = unknownFields.build();
@@ -1745,6 +1805,8 @@ public final class ImageClassifier {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1752,6 +1814,10 @@ public final class ImageClassifier {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ClassificationType forNumber(int value) {
         switch (value) {
           case 0: return CLASSIFICATION_TYPE_UNSPECIFIED;
@@ -1775,6 +1841,10 @@ public final class ImageClassifier {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1809,7 +1879,6 @@ public final class ImageClassifier {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType)
     }
 
-    private int bitField0_;
     public static final int LABELS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.vision.v2.ImageClassifier.Label> labels_;
     /**
@@ -1819,6 +1888,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.Label labels = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v2.ImageClassifier.Label> getLabelsList() {
       return labels_;
     }
@@ -1829,6 +1899,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.Label labels = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v2.ImageClassifier.LabelOrBuilder> 
         getLabelsOrBuilderList() {
       return labels_;
@@ -1840,6 +1911,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.Label labels = 1;</code>
      */
+    @java.lang.Override
     public int getLabelsCount() {
       return labels_.size();
     }
@@ -1850,6 +1922,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.Label labels = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.Label getLabels(int index) {
       return labels_.get(index);
     }
@@ -1860,6 +1933,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.Label labels = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.LabelOrBuilder getLabelsOrBuilder(
         int index) {
       return labels_.get(index);
@@ -1873,8 +1947,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+     * @return The enum numeric value on the wire for classificationType.
      */
-    public int getClassificationTypeValue() {
+    @java.lang.Override public int getClassificationTypeValue() {
       return classificationType_;
     }
     /**
@@ -1883,8 +1958,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+     * @return The classificationType.
      */
-    public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType getClassificationType() {
+    @java.lang.Override public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType getClassificationType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType result = yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType.valueOf(classificationType_);
       return result == null ? yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType.UNRECOGNIZED : result;
@@ -1942,12 +2018,11 @@ public final class ImageClassifier {
       }
       yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification other = (yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification) obj;
 
-      boolean result = true;
-      result = result && getLabelsList()
-          .equals(other.getLabelsList());
-      result = result && classificationType_ == other.classificationType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLabelsList()
+          .equals(other.getLabelsList())) return false;
+      if (classificationType_ != other.classificationType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2136,9 +2211,8 @@ public final class ImageClassifier {
       public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification buildPartial() {
         yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification result = new yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (labelsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             labels_ = java.util.Collections.unmodifiableList(labels_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2147,42 +2221,41 @@ public final class ImageClassifier {
           result.labels_ = labelsBuilder_.build();
         }
         result.classificationType_ = classificationType_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2258,7 +2331,7 @@ public final class ImageClassifier {
       private java.util.List<yandex.cloud.api.ai.vision.v2.ImageClassifier.Label> labels_ =
         java.util.Collections.emptyList();
       private void ensureLabelsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           labels_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v2.ImageClassifier.Label>(labels_);
           bitField0_ |= 0x00000001;
          }
@@ -2559,7 +2632,7 @@ public final class ImageClassifier {
           labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v2.ImageClassifier.Label, yandex.cloud.api.ai.vision.v2.ImageClassifier.Label.Builder, yandex.cloud.api.ai.vision.v2.ImageClassifier.LabelOrBuilder>(
                   labels_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           labels_ = null;
@@ -2574,8 +2647,9 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+       * @return The enum numeric value on the wire for classificationType.
        */
-      public int getClassificationTypeValue() {
+      @java.lang.Override public int getClassificationTypeValue() {
         return classificationType_;
       }
       /**
@@ -2584,8 +2658,11 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+       * @param value The enum numeric value on the wire for classificationType to set.
+       * @return This builder for chaining.
        */
       public Builder setClassificationTypeValue(int value) {
+        
         classificationType_ = value;
         onChanged();
         return this;
@@ -2596,7 +2673,9 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+       * @return The classificationType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType getClassificationType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType result = yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType.valueOf(classificationType_);
@@ -2608,6 +2687,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+       * @param value The classificationType to set.
+       * @return This builder for chaining.
        */
       public Builder setClassificationType(yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.ClassificationType value) {
         if (value == null) {
@@ -2624,6 +2705,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification.ClassificationType classification_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClassificationType() {
         
@@ -2634,7 +2716,7 @@ public final class ImageClassifier {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2694,6 +2776,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string request_id = 1;</code>
+     * @return The requestId.
      */
     java.lang.String getRequestId();
     /**
@@ -2702,6 +2785,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string request_id = 1;</code>
+     * @return The bytes for requestId.
      */
     com.google.protobuf.ByteString
         getRequestIdBytes();
@@ -2712,6 +2796,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
+     * @return Whether the classifierSpecification field is set.
      */
     boolean hasClassifierSpecification();
     /**
@@ -2720,6 +2805,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
+     * @return The classifierSpecification.
      */
     yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification getClassifierSpecification();
     /**
@@ -2781,7 +2867,7 @@ public final class ImageClassifier {
    *
    * Protobuf type {@code yandex.cloud.ai.vision.v2.AnnotationResponse}
    */
-  public  static final class AnnotationResponse extends
+  public static final class AnnotationResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v2.AnnotationResponse)
       AnnotationResponseOrBuilder {
@@ -2793,6 +2879,13 @@ public final class ImageClassifier {
     private AnnotationResponse() {
       requestId_ = "";
       annotations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnnotationResponse();
     }
 
     @java.lang.Override
@@ -2839,16 +2932,16 @@ public final class ImageClassifier {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 annotations_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               annotations_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2862,7 +2955,7 @@ public final class ImageClassifier {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           annotations_ = java.util.Collections.unmodifiableList(annotations_);
         }
         this.unknownFields = unknownFields.build();
@@ -2882,7 +2975,6 @@ public final class ImageClassifier {
               yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse.class, yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REQUEST_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object requestId_;
     /**
@@ -2891,7 +2983,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string request_id = 1;</code>
+     * @return The requestId.
      */
+    @java.lang.Override
     public java.lang.String getRequestId() {
       java.lang.Object ref = requestId_;
       if (ref instanceof java.lang.String) {
@@ -2910,7 +3004,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>string request_id = 1;</code>
+     * @return The bytes for requestId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRequestIdBytes() {
       java.lang.Object ref = requestId_;
@@ -2933,7 +3029,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
+     * @return Whether the classifierSpecification field is set.
      */
+    @java.lang.Override
     public boolean hasClassifierSpecification() {
       return classifierSpecification_ != null;
     }
@@ -2943,7 +3041,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
+     * @return The classifierSpecification.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification getClassifierSpecification() {
       return classifierSpecification_ == null ? yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.getDefaultInstance() : classifierSpecification_;
     }
@@ -2954,6 +3054,7 @@ public final class ImageClassifier {
      *
      * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecificationOrBuilder getClassifierSpecificationOrBuilder() {
       return getClassifierSpecification();
     }
@@ -2967,6 +3068,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.ClassAnnotation annotations = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation> getAnnotationsList() {
       return annotations_;
     }
@@ -2977,6 +3079,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.ClassAnnotation annotations = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotationOrBuilder> 
         getAnnotationsOrBuilderList() {
       return annotations_;
@@ -2988,6 +3091,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.ClassAnnotation annotations = 3;</code>
      */
+    @java.lang.Override
     public int getAnnotationsCount() {
       return annotations_.size();
     }
@@ -2998,6 +3102,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.ClassAnnotation annotations = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation getAnnotations(int index) {
       return annotations_.get(index);
     }
@@ -3008,6 +3113,7 @@ public final class ImageClassifier {
      *
      * <code>repeated .yandex.cloud.ai.vision.v2.ClassAnnotation annotations = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotationOrBuilder getAnnotationsOrBuilder(
         int index) {
       return annotations_.get(index);
@@ -3027,7 +3133,7 @@ public final class ImageClassifier {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRequestIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
       }
       if (classifierSpecification_ != null) {
@@ -3045,7 +3151,7 @@ public final class ImageClassifier {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRequestIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
       }
       if (classifierSpecification_ != null) {
@@ -3071,18 +3177,17 @@ public final class ImageClassifier {
       }
       yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse other = (yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse) obj;
 
-      boolean result = true;
-      result = result && getRequestId()
-          .equals(other.getRequestId());
-      result = result && (hasClassifierSpecification() == other.hasClassifierSpecification());
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (hasClassifierSpecification() != other.hasClassifierSpecification()) return false;
       if (hasClassifierSpecification()) {
-        result = result && getClassifierSpecification()
-            .equals(other.getClassifierSpecification());
+        if (!getClassifierSpecification()
+            .equals(other.getClassifierSpecification())) return false;
       }
-      result = result && getAnnotationsList()
-          .equals(other.getAnnotationsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAnnotationsList()
+          .equals(other.getAnnotationsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3249,7 +3354,7 @@ public final class ImageClassifier {
         }
         if (annotationsBuilder_ == null) {
           annotations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           annotationsBuilder_.clear();
         }
@@ -3280,7 +3385,6 @@ public final class ImageClassifier {
       public yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse buildPartial() {
         yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse result = new yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.requestId_ = requestId_;
         if (classifierSpecificationBuilder_ == null) {
           result.classifierSpecification_ = classifierSpecification_;
@@ -3288,50 +3392,49 @@ public final class ImageClassifier {
           result.classifierSpecification_ = classifierSpecificationBuilder_.build();
         }
         if (annotationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             annotations_ = java.util.Collections.unmodifiableList(annotations_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.annotations_ = annotations_;
         } else {
           result.annotations_ = annotationsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3356,7 +3459,7 @@ public final class ImageClassifier {
           if (!other.annotations_.isEmpty()) {
             if (annotations_.isEmpty()) {
               annotations_ = other.annotations_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureAnnotationsIsMutable();
               annotations_.addAll(other.annotations_);
@@ -3369,7 +3472,7 @@ public final class ImageClassifier {
               annotationsBuilder_.dispose();
               annotationsBuilder_ = null;
               annotations_ = other.annotations_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               annotationsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAnnotationsFieldBuilder() : null;
@@ -3415,6 +3518,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string request_id = 1;</code>
+       * @return The requestId.
        */
       public java.lang.String getRequestId() {
         java.lang.Object ref = requestId_;
@@ -3434,6 +3538,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string request_id = 1;</code>
+       * @return The bytes for requestId.
        */
       public com.google.protobuf.ByteString
           getRequestIdBytes() {
@@ -3454,6 +3559,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string request_id = 1;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
        */
       public Builder setRequestId(
           java.lang.String value) {
@@ -3471,6 +3578,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string request_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequestId() {
         
@@ -3484,6 +3592,8 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>string request_id = 1;</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
        */
       public Builder setRequestIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3497,7 +3607,7 @@ public final class ImageClassifier {
         return this;
       }
 
-      private yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification classifierSpecification_ = null;
+      private yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification classifierSpecification_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification, yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification.Builder, yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecificationOrBuilder> classifierSpecificationBuilder_;
       /**
@@ -3506,6 +3616,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
+       * @return Whether the classifierSpecification field is set.
        */
       public boolean hasClassifierSpecification() {
         return classifierSpecificationBuilder_ != null || classifierSpecification_ != null;
@@ -3516,6 +3627,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.ClassifierSpecification classifier_specification = 2;</code>
+       * @return The classifierSpecification.
        */
       public yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassifierSpecification getClassifierSpecification() {
         if (classifierSpecificationBuilder_ == null) {
@@ -3653,9 +3765,9 @@ public final class ImageClassifier {
       private java.util.List<yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation> annotations_ =
         java.util.Collections.emptyList();
       private void ensureAnnotationsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           annotations_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation>(annotations_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -3849,7 +3961,7 @@ public final class ImageClassifier {
       public Builder clearAnnotations() {
         if (annotationsBuilder_ == null) {
           annotations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           annotationsBuilder_.clear();
@@ -3954,7 +4066,7 @@ public final class ImageClassifier {
           annotationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation, yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotation.Builder, yandex.cloud.api.ai.vision.v2.ImageClassifier.ClassAnnotationOrBuilder>(
                   annotations_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           annotations_ = null;
@@ -3964,7 +4076,7 @@ public final class ImageClassifier {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4024,6 +4136,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
+     * @return Whether the image field is set.
      */
     boolean hasImage();
     /**
@@ -4032,6 +4145,7 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
+     * @return The image.
      */
     yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image getImage();
     /**
@@ -4050,7 +4164,7 @@ public final class ImageClassifier {
    *
    * Protobuf type {@code yandex.cloud.ai.vision.v2.AnnotationRequest}
    */
-  public  static final class AnnotationRequest extends
+  public static final class AnnotationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v2.AnnotationRequest)
       AnnotationRequestOrBuilder {
@@ -4060,6 +4174,13 @@ public final class ImageClassifier {
       super(builder);
     }
     private AnnotationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnnotationRequest();
     }
 
     @java.lang.Override
@@ -4075,7 +4196,6 @@ public final class ImageClassifier {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4100,7 +4220,7 @@ public final class ImageClassifier {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4139,7 +4259,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
+     * @return Whether the image field is set.
      */
+    @java.lang.Override
     public boolean hasImage() {
       return image_ != null;
     }
@@ -4149,7 +4271,9 @@ public final class ImageClassifier {
      * </pre>
      *
      * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
+     * @return The image.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image getImage() {
       return image_ == null ? yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.getDefaultInstance() : image_;
     }
@@ -4160,6 +4284,7 @@ public final class ImageClassifier {
      *
      * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v2.ImageOuterClass.ImageOrBuilder getImageOrBuilder() {
       return getImage();
     }
@@ -4209,14 +4334,13 @@ public final class ImageClassifier {
       }
       yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest other = (yandex.cloud.api.ai.vision.v2.ImageClassifier.AnnotationRequest) obj;
 
-      boolean result = true;
-      result = result && (hasImage() == other.hasImage());
+      if (hasImage() != other.hasImage()) return false;
       if (hasImage()) {
-        result = result && getImage()
-            .equals(other.getImage());
+        if (!getImage()
+            .equals(other.getImage())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4410,35 +4534,35 @@ public final class ImageClassifier {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4484,7 +4608,7 @@ public final class ImageClassifier {
         return this;
       }
 
-      private yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image image_ = null;
+      private yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image image_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image, yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image.Builder, yandex.cloud.api.ai.vision.v2.ImageOuterClass.ImageOrBuilder> imageBuilder_;
       /**
@@ -4493,6 +4617,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
+       * @return Whether the image field is set.
        */
       public boolean hasImage() {
         return imageBuilder_ != null || image_ != null;
@@ -4503,6 +4628,7 @@ public final class ImageClassifier {
        * </pre>
        *
        * <code>.yandex.cloud.ai.vision.v2.Image image = 1;</code>
+       * @return The image.
        */
       public yandex.cloud.api.ai.vision.v2.ImageOuterClass.Image getImage() {
         if (imageBuilder_ == null) {
@@ -4639,7 +4765,7 @@ public final class ImageClassifier {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4747,19 +4873,11 @@ public final class ImageClassifier {
       "d/go-genproto/yandex/cloud/ai/vision/v2;" +
       "visionb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.vision.v2.ImageOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_vision_v2_Label_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v2_Label_fieldAccessorTable = new

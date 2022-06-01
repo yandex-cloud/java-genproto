@@ -1,19 +1,6 @@
 package yandex.cloud.api.iam.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iam/v1/api_key_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ApiKeyServiceGrpc {
 
   private ApiKeyServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ApiKeyServiceGrpc {
     if ((getListMethod = ApiKeyServiceGrpc.getListMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getListMethod = ApiKeyServiceGrpc.getListMethod) == null) {
-          ApiKeyServiceGrpc.getListMethod = getListMethod = 
+          ApiKeyServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.ApiKeyService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest,
@@ -76,22 +63,21 @@ public final class ApiKeyServiceGrpc {
     if ((getGetMethod = ApiKeyServiceGrpc.getGetMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getGetMethod = ApiKeyServiceGrpc.getGetMethod) == null) {
-          ApiKeyServiceGrpc.getGetMethod = getGetMethod = 
+          ApiKeyServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest, yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.ApiKeyService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest,
@@ -108,22 +94,21 @@ public final class ApiKeyServiceGrpc {
     if ((getCreateMethod = ApiKeyServiceGrpc.getCreateMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getCreateMethod = ApiKeyServiceGrpc.getCreateMethod) == null) {
-          ApiKeyServiceGrpc.getCreateMethod = getCreateMethod = 
+          ApiKeyServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.ApiKeyService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest,
@@ -140,22 +125,21 @@ public final class ApiKeyServiceGrpc {
     if ((getUpdateMethod = ApiKeyServiceGrpc.getUpdateMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getUpdateMethod = ApiKeyServiceGrpc.getUpdateMethod) == null) {
-          ApiKeyServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          ApiKeyServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.ApiKeyService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest,
@@ -172,22 +156,21 @@ public final class ApiKeyServiceGrpc {
     if ((getDeleteMethod = ApiKeyServiceGrpc.getDeleteMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getDeleteMethod = ApiKeyServiceGrpc.getDeleteMethod) == null) {
-          ApiKeyServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          ApiKeyServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.ApiKeyService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest,
@@ -204,29 +187,35 @@ public final class ApiKeyServiceGrpc {
     if ((getListOperationsMethod = ApiKeyServiceGrpc.getListOperationsMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getListOperationsMethod = ApiKeyServiceGrpc.getListOperationsMethod) == null) {
-          ApiKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          ApiKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.ApiKeyService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ApiKeyServiceStub newStub(io.grpc.Channel channel) {
-    return new ApiKeyServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ApiKeyServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ApiKeyServiceStub>() {
+        @java.lang.Override
+        public ApiKeyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ApiKeyServiceStub(channel, callOptions);
+        }
+      };
+    return ApiKeyServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class ApiKeyServiceGrpc {
    */
   public static ApiKeyServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ApiKeyServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ApiKeyServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ApiKeyServiceBlockingStub>() {
+        @java.lang.Override
+        public ApiKeyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ApiKeyServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ApiKeyServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class ApiKeyServiceGrpc {
    */
   public static ApiKeyServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ApiKeyServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ApiKeyServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ApiKeyServiceFutureStub>() {
+        @java.lang.Override
+        public ApiKeyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ApiKeyServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ApiKeyServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -259,7 +262,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void create(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +293,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void update(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -300,7 +303,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -310,49 +313,49 @@ public final class ApiKeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest,
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest,
                 yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey>(
                   this, METHODID_GET)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest,
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest,
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse>(
@@ -366,19 +369,15 @@ public final class ApiKeyServiceGrpc {
    * A set of methods for managing API keys.
    * </pre>
    */
-  public static final class ApiKeyServiceStub extends io.grpc.stub.AbstractStub<ApiKeyServiceStub> {
-    private ApiKeyServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ApiKeyServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ApiKeyServiceStub extends io.grpc.stub.AbstractAsyncStub<ApiKeyServiceStub> {
+    private ApiKeyServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ApiKeyServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ApiKeyServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ApiKeyServiceStub(channel, callOptions);
     }
 
@@ -389,7 +388,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -401,7 +400,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -412,7 +411,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void create(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -423,7 +422,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void update(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -434,7 +433,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -445,7 +444,7 @@ public final class ApiKeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -455,19 +454,15 @@ public final class ApiKeyServiceGrpc {
    * A set of methods for managing API keys.
    * </pre>
    */
-  public static final class ApiKeyServiceBlockingStub extends io.grpc.stub.AbstractStub<ApiKeyServiceBlockingStub> {
-    private ApiKeyServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ApiKeyServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ApiKeyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ApiKeyServiceBlockingStub> {
+    private ApiKeyServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ApiKeyServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ApiKeyServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ApiKeyServiceBlockingStub(channel, callOptions);
     }
 
@@ -477,7 +472,7 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse list(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -488,7 +483,7 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey get(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -498,7 +493,7 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse create(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -508,7 +503,7 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -518,7 +513,7 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -528,7 +523,7 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse listOperations(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -538,19 +533,15 @@ public final class ApiKeyServiceGrpc {
    * A set of methods for managing API keys.
    * </pre>
    */
-  public static final class ApiKeyServiceFutureStub extends io.grpc.stub.AbstractStub<ApiKeyServiceFutureStub> {
-    private ApiKeyServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ApiKeyServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ApiKeyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ApiKeyServiceFutureStub> {
+    private ApiKeyServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ApiKeyServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ApiKeyServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ApiKeyServiceFutureStub(channel, callOptions);
     }
 
@@ -561,7 +552,7 @@ public final class ApiKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysResponse> list(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeysRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -573,7 +564,7 @@ public final class ApiKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ApiKeyOuterClass.ApiKey> get(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.GetApiKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -584,7 +575,7 @@ public final class ApiKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyResponse> create(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.CreateApiKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -595,7 +586,7 @@ public final class ApiKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.UpdateApiKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -606,7 +597,7 @@ public final class ApiKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -617,7 +608,7 @@ public final class ApiKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> listOperations(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

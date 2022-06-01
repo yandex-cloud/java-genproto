@@ -73,6 +73,8 @@ public final class IpPermissionOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -80,6 +82,10 @@ public final class IpPermissionOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static IpPermissionAction forNumber(int value) {
       switch (value) {
         case 0: return IP_PERMISSION_ACTION_UNSPECIFIED;
@@ -103,6 +109,10 @@ public final class IpPermissionOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -143,19 +153,23 @@ public final class IpPermissionOuterClass {
 
     /**
      * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+     * @return The enum numeric value on the wire for action.
      */
     int getActionValue();
     /**
      * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+     * @return The action.
      */
     yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction();
 
     /**
      * <code>string ip = 2;</code>
+     * @return The ip.
      */
     java.lang.String getIp();
     /**
      * <code>string ip = 2;</code>
+     * @return The bytes for ip.
      */
     com.google.protobuf.ByteString
         getIpBytes();
@@ -163,7 +177,7 @@ public final class IpPermissionOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.IpPermission}
    */
-  public  static final class IpPermission extends
+  public static final class IpPermission extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.IpPermission)
       IpPermissionOrBuilder {
@@ -175,6 +189,13 @@ public final class IpPermissionOuterClass {
     private IpPermission() {
       action_ = 0;
       ip_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IpPermission();
     }
 
     @java.lang.Override
@@ -190,7 +211,6 @@ public final class IpPermissionOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -214,7 +234,7 @@ public final class IpPermissionOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -288,6 +308,8 @@ public final class IpPermissionOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -295,6 +317,10 @@ public final class IpPermissionOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Action forNumber(int value) {
         switch (value) {
           case 0: return ACTION_UNSPECIFIED;
@@ -318,6 +344,10 @@ public final class IpPermissionOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -356,14 +386,16 @@ public final class IpPermissionOuterClass {
     private int action_;
     /**
      * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+     * @return The enum numeric value on the wire for action.
      */
-    public int getActionValue() {
+    @java.lang.Override public int getActionValue() {
       return action_;
     }
     /**
      * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+     * @return The action.
      */
-    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action result = yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action.valueOf(action_);
       return result == null ? yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action.UNRECOGNIZED : result;
@@ -373,7 +405,9 @@ public final class IpPermissionOuterClass {
     private volatile java.lang.Object ip_;
     /**
      * <code>string ip = 2;</code>
+     * @return The ip.
      */
+    @java.lang.Override
     public java.lang.String getIp() {
       java.lang.Object ref = ip_;
       if (ref instanceof java.lang.String) {
@@ -388,7 +422,9 @@ public final class IpPermissionOuterClass {
     }
     /**
      * <code>string ip = 2;</code>
+     * @return The bytes for ip.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIpBytes() {
       java.lang.Object ref = ip_;
@@ -420,7 +456,7 @@ public final class IpPermissionOuterClass {
       if (action_ != yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action.ACTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, action_);
       }
-      if (!getIpBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ip_);
       }
       unknownFields.writeTo(output);
@@ -436,7 +472,7 @@ public final class IpPermissionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, action_);
       }
-      if (!getIpBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ip_);
       }
       size += unknownFields.getSerializedSize();
@@ -454,12 +490,11 @@ public final class IpPermissionOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission other = (yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission) obj;
 
-      boolean result = true;
-      result = result && action_ == other.action_;
-      result = result && getIp()
-          .equals(other.getIp());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (action_ != other.action_) return false;
+      if (!getIp()
+          .equals(other.getIp())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -644,35 +679,35 @@ public final class IpPermissionOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -725,21 +760,27 @@ public final class IpPermissionOuterClass {
       private int action_ = 0;
       /**
        * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+       * @return The enum numeric value on the wire for action.
        */
-      public int getActionValue() {
+      @java.lang.Override public int getActionValue() {
         return action_;
       }
       /**
        * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
        */
       public Builder setActionValue(int value) {
+        
         action_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+       * @return The action.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action getAction() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action result = yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action.valueOf(action_);
@@ -747,6 +788,8 @@ public final class IpPermissionOuterClass {
       }
       /**
        * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
        */
       public Builder setAction(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Action value) {
         if (value == null) {
@@ -759,6 +802,7 @@ public final class IpPermissionOuterClass {
       }
       /**
        * <code>.yandex.cloud.containerregistry.v1.IpPermission.Action action = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAction() {
         
@@ -770,6 +814,7 @@ public final class IpPermissionOuterClass {
       private java.lang.Object ip_ = "";
       /**
        * <code>string ip = 2;</code>
+       * @return The ip.
        */
       public java.lang.String getIp() {
         java.lang.Object ref = ip_;
@@ -785,6 +830,7 @@ public final class IpPermissionOuterClass {
       }
       /**
        * <code>string ip = 2;</code>
+       * @return The bytes for ip.
        */
       public com.google.protobuf.ByteString
           getIpBytes() {
@@ -801,6 +847,8 @@ public final class IpPermissionOuterClass {
       }
       /**
        * <code>string ip = 2;</code>
+       * @param value The ip to set.
+       * @return This builder for chaining.
        */
       public Builder setIp(
           java.lang.String value) {
@@ -814,6 +862,7 @@ public final class IpPermissionOuterClass {
       }
       /**
        * <code>string ip = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIp() {
         
@@ -823,6 +872,8 @@ public final class IpPermissionOuterClass {
       }
       /**
        * <code>string ip = 2;</code>
+       * @param value The bytes for ip to set.
+       * @return This builder for chaining.
        */
       public Builder setIpBytes(
           com.google.protobuf.ByteString value) {
@@ -838,7 +889,7 @@ public final class IpPermissionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -898,6 +949,7 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for action.
      */
     int getActionValue();
     /**
@@ -906,6 +958,7 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The action.
      */
     yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction getAction();
 
@@ -915,6 +968,7 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the ipPermission field is set.
      */
     boolean hasIpPermission();
     /**
@@ -923,6 +977,7 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The ipPermission.
      */
     yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission();
     /**
@@ -937,7 +992,7 @@ public final class IpPermissionOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.IpPermissionDelta}
    */
-  public  static final class IpPermissionDelta extends
+  public static final class IpPermissionDelta extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.IpPermissionDelta)
       IpPermissionDeltaOrBuilder {
@@ -948,6 +1003,13 @@ public final class IpPermissionOuterClass {
     }
     private IpPermissionDelta() {
       action_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IpPermissionDelta();
     }
 
     @java.lang.Override
@@ -963,7 +1025,6 @@ public final class IpPermissionOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -994,7 +1055,7 @@ public final class IpPermissionOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1033,8 +1094,9 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for action.
      */
-    public int getActionValue() {
+    @java.lang.Override public int getActionValue() {
       return action_;
     }
     /**
@@ -1043,8 +1105,9 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The action.
      */
-    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction getAction() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction getAction() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction result = yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction.valueOf(action_);
       return result == null ? yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction.UNRECOGNIZED : result;
@@ -1058,7 +1121,9 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the ipPermission field is set.
      */
+    @java.lang.Override
     public boolean hasIpPermission() {
       return ipPermission_ != null;
     }
@@ -1068,7 +1133,9 @@ public final class IpPermissionOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The ipPermission.
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission() {
       return ipPermission_ == null ? yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
     }
@@ -1079,6 +1146,7 @@ public final class IpPermissionOuterClass {
      *
      * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder() {
       return getIpPermission();
     }
@@ -1135,15 +1203,14 @@ public final class IpPermissionOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionDelta other = (yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionDelta) obj;
 
-      boolean result = true;
-      result = result && action_ == other.action_;
-      result = result && (hasIpPermission() == other.hasIpPermission());
+      if (action_ != other.action_) return false;
+      if (hasIpPermission() != other.hasIpPermission()) return false;
       if (hasIpPermission()) {
-        result = result && getIpPermission()
-            .equals(other.getIpPermission());
+        if (!getIpPermission()
+            .equals(other.getIpPermission())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1338,35 +1405,35 @@ public final class IpPermissionOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1422,8 +1489,9 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for action.
        */
-      public int getActionValue() {
+      @java.lang.Override public int getActionValue() {
         return action_;
       }
       /**
@@ -1432,8 +1500,11 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
        */
       public Builder setActionValue(int value) {
+        
         action_ = value;
         onChanged();
         return this;
@@ -1444,7 +1515,9 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The action.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction getAction() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction result = yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction.valueOf(action_);
@@ -1456,6 +1529,8 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
        */
       public Builder setAction(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionAction value) {
         if (value == null) {
@@ -1472,6 +1547,7 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAction() {
         
@@ -1480,7 +1556,7 @@ public final class IpPermissionOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission ipPermission_ = null;
+      private yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission ipPermission_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> ipPermissionBuilder_;
       /**
@@ -1489,6 +1565,7 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the ipPermission field is set.
        */
       public boolean hasIpPermission() {
         return ipPermissionBuilder_ != null || ipPermission_ != null;
@@ -1499,6 +1576,7 @@ public final class IpPermissionOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The ipPermission.
        */
       public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission() {
         if (ipPermissionBuilder_ == null) {
@@ -1635,7 +1713,7 @@ public final class IpPermissionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1722,19 +1800,11 @@ public final class IpPermissionOuterClass {
       "d/go-genproto/yandex/cloud/containerregi" +
       "stry/v1;containerregistryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_IpPermission_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_IpPermission_fieldAccessorTable = new

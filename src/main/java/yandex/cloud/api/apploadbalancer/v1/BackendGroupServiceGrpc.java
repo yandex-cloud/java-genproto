@@ -1,19 +1,6 @@
 package yandex.cloud.api.apploadbalancer.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/apploadbalancer/v1/backend_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class BackendGroupServiceGrpc {
 
   private BackendGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class BackendGroupServiceGrpc {
     if ((getGetMethod = BackendGroupServiceGrpc.getGetMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getGetMethod = BackendGroupServiceGrpc.getGetMethod) == null) {
-          BackendGroupServiceGrpc.getGetMethod = getGetMethod = 
+          BackendGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest,
@@ -76,22 +63,21 @@ public final class BackendGroupServiceGrpc {
     if ((getListMethod = BackendGroupServiceGrpc.getListMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getListMethod = BackendGroupServiceGrpc.getListMethod) == null) {
-          BackendGroupServiceGrpc.getListMethod = getListMethod = 
+          BackendGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest, yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest,
@@ -108,22 +94,21 @@ public final class BackendGroupServiceGrpc {
     if ((getCreateMethod = BackendGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getCreateMethod = BackendGroupServiceGrpc.getCreateMethod) == null) {
-          BackendGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          BackendGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest,
@@ -140,22 +125,21 @@ public final class BackendGroupServiceGrpc {
     if ((getUpdateMethod = BackendGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getUpdateMethod = BackendGroupServiceGrpc.getUpdateMethod) == null) {
-          BackendGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          BackendGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest,
@@ -172,22 +156,21 @@ public final class BackendGroupServiceGrpc {
     if ((getDeleteMethod = BackendGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getDeleteMethod = BackendGroupServiceGrpc.getDeleteMethod) == null) {
-          BackendGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          BackendGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest,
@@ -204,22 +187,21 @@ public final class BackendGroupServiceGrpc {
     if ((getAddBackendMethod = BackendGroupServiceGrpc.getAddBackendMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getAddBackendMethod = BackendGroupServiceGrpc.getAddBackendMethod) == null) {
-          BackendGroupServiceGrpc.getAddBackendMethod = getAddBackendMethod = 
+          BackendGroupServiceGrpc.getAddBackendMethod = getAddBackendMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "AddBackend"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBackend"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("AddBackend"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("AddBackend"))
+              .build();
         }
-     }
-     return getAddBackendMethod;
+      }
+    }
+    return getAddBackendMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest,
@@ -236,22 +218,21 @@ public final class BackendGroupServiceGrpc {
     if ((getRemoveBackendMethod = BackendGroupServiceGrpc.getRemoveBackendMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getRemoveBackendMethod = BackendGroupServiceGrpc.getRemoveBackendMethod) == null) {
-          BackendGroupServiceGrpc.getRemoveBackendMethod = getRemoveBackendMethod = 
+          BackendGroupServiceGrpc.getRemoveBackendMethod = getRemoveBackendMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "RemoveBackend"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveBackend"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("RemoveBackend"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("RemoveBackend"))
+              .build();
         }
-     }
-     return getRemoveBackendMethod;
+      }
+    }
+    return getRemoveBackendMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest,
@@ -268,22 +249,21 @@ public final class BackendGroupServiceGrpc {
     if ((getUpdateBackendMethod = BackendGroupServiceGrpc.getUpdateBackendMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getUpdateBackendMethod = BackendGroupServiceGrpc.getUpdateBackendMethod) == null) {
-          BackendGroupServiceGrpc.getUpdateBackendMethod = getUpdateBackendMethod = 
+          BackendGroupServiceGrpc.getUpdateBackendMethod = getUpdateBackendMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "UpdateBackend"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBackend"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("UpdateBackend"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("UpdateBackend"))
+              .build();
         }
-     }
-     return getUpdateBackendMethod;
+      }
+    }
+    return getUpdateBackendMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest,
@@ -300,29 +280,35 @@ public final class BackendGroupServiceGrpc {
     if ((getListOperationsMethod = BackendGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (BackendGroupServiceGrpc.class) {
         if ((getListOperationsMethod = BackendGroupServiceGrpc.getListOperationsMethod) == null) {
-          BackendGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          BackendGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest, yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.BackendGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BackendGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BackendGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new BackendGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BackendGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BackendGroupServiceStub>() {
+        @java.lang.Override
+        public BackendGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BackendGroupServiceStub(channel, callOptions);
+        }
+      };
+    return BackendGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -330,7 +316,14 @@ public final class BackendGroupServiceGrpc {
    */
   public static BackendGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BackendGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BackendGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BackendGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public BackendGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BackendGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BackendGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -338,7 +331,14 @@ public final class BackendGroupServiceGrpc {
    */
   public static BackendGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BackendGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BackendGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BackendGroupServiceFutureStub>() {
+        @java.lang.Override
+        public BackendGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BackendGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BackendGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -356,7 +356,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -366,7 +366,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -376,7 +376,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -386,7 +386,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -396,7 +396,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -406,7 +406,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void addBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddBackendMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddBackendMethod(), responseObserver);
     }
 
     /**
@@ -416,7 +416,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void removeBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveBackendMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveBackendMethod(), responseObserver);
     }
 
     /**
@@ -426,7 +426,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void updateBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateBackendMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBackendMethod(), responseObserver);
     }
 
     /**
@@ -436,70 +436,70 @@ public final class BackendGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest,
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest,
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getAddBackendMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_BACKEND)))
           .addMethod(
             getRemoveBackendMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_BACKEND)))
           .addMethod(
             getUpdateBackendMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_BACKEND)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest,
                 yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse>(
@@ -513,19 +513,15 @@ public final class BackendGroupServiceGrpc {
    * A set of methods for managing backend groups.
    * </pre>
    */
-  public static final class BackendGroupServiceStub extends io.grpc.stub.AbstractStub<BackendGroupServiceStub> {
-    private BackendGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BackendGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BackendGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<BackendGroupServiceStub> {
+    private BackendGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BackendGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BackendGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BackendGroupServiceStub(channel, callOptions);
     }
 
@@ -537,7 +533,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -548,7 +544,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -559,7 +555,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -570,7 +566,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -581,7 +577,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -592,7 +588,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void addBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddBackendMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -603,7 +599,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void removeBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveBackendMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -614,7 +610,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void updateBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBackendMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -625,7 +621,7 @@ public final class BackendGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -635,19 +631,15 @@ public final class BackendGroupServiceGrpc {
    * A set of methods for managing backend groups.
    * </pre>
    */
-  public static final class BackendGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<BackendGroupServiceBlockingStub> {
-    private BackendGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BackendGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BackendGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BackendGroupServiceBlockingStub> {
+    private BackendGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BackendGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BackendGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BackendGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -658,7 +650,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup get(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -668,7 +660,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse list(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -678,7 +670,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -688,7 +680,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -698,7 +690,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -708,7 +700,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddBackendMethod(), getCallOptions(), request);
     }
 
@@ -718,7 +710,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveBackendMethod(), getCallOptions(), request);
     }
 
@@ -728,7 +720,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBackendMethod(), getCallOptions(), request);
     }
 
@@ -738,7 +730,7 @@ public final class BackendGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -748,19 +740,15 @@ public final class BackendGroupServiceGrpc {
    * A set of methods for managing backend groups.
    * </pre>
    */
-  public static final class BackendGroupServiceFutureStub extends io.grpc.stub.AbstractStub<BackendGroupServiceFutureStub> {
-    private BackendGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BackendGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BackendGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BackendGroupServiceFutureStub> {
+    private BackendGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BackendGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BackendGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BackendGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -772,7 +760,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> get(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -783,7 +771,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse> list(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -794,7 +782,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -805,7 +793,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -816,7 +804,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -827,7 +815,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addBackend(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddBackendMethod(), getCallOptions()), request);
     }
 
@@ -838,7 +826,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeBackend(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveBackendMethod(), getCallOptions()), request);
     }
 
@@ -849,7 +837,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateBackend(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateBackendMethod(), getCallOptions()), request);
     }
 
@@ -860,7 +848,7 @@ public final class BackendGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsResponse> listOperations(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

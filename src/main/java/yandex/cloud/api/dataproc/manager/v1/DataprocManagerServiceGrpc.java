@@ -1,19 +1,6 @@
 package yandex.cloud.api.dataproc.manager.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/dataproc/manager/v1/manager_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DataprocManagerServiceGrpc {
 
   private DataprocManagerServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class DataprocManagerServiceGrpc {
     if ((getReportMethod = DataprocManagerServiceGrpc.getReportMethod) == null) {
       synchronized (DataprocManagerServiceGrpc.class) {
         if ((getReportMethod = DataprocManagerServiceGrpc.getReportMethod) == null) {
-          DataprocManagerServiceGrpc.getReportMethod = getReportMethod = 
+          DataprocManagerServiceGrpc.getReportMethod = getReportMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest, yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.manager.v1.DataprocManagerService", "Report"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Report"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply.getDefaultInstance()))
-                  .setSchemaDescriptor(new DataprocManagerServiceMethodDescriptorSupplier("Report"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DataprocManagerServiceMethodDescriptorSupplier("Report"))
+              .build();
         }
-     }
-     return getReportMethod;
+      }
+    }
+    return getReportMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DataprocManagerServiceStub newStub(io.grpc.Channel channel) {
-    return new DataprocManagerServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DataprocManagerServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataprocManagerServiceStub>() {
+        @java.lang.Override
+        public DataprocManagerServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataprocManagerServiceStub(channel, callOptions);
+        }
+      };
+    return DataprocManagerServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class DataprocManagerServiceGrpc {
    */
   public static DataprocManagerServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DataprocManagerServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DataprocManagerServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataprocManagerServiceBlockingStub>() {
+        @java.lang.Override
+        public DataprocManagerServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataprocManagerServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DataprocManagerServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class DataprocManagerServiceGrpc {
    */
   public static DataprocManagerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DataprocManagerServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DataprocManagerServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataprocManagerServiceFutureStub>() {
+        @java.lang.Override
+        public DataprocManagerServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataprocManagerServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DataprocManagerServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class DataprocManagerServiceGrpc {
      */
     public void report(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply> responseObserver) {
-      asyncUnimplementedUnaryCall(getReportMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReportMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getReportMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest,
                 yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply>(
@@ -120,19 +128,15 @@ public final class DataprocManagerServiceGrpc {
    * Data Proc manager service definition.
    * </pre>
    */
-  public static final class DataprocManagerServiceStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceStub> {
-    private DataprocManagerServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DataprocManagerServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DataprocManagerServiceStub extends io.grpc.stub.AbstractAsyncStub<DataprocManagerServiceStub> {
+    private DataprocManagerServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DataprocManagerServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DataprocManagerServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataprocManagerServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class DataprocManagerServiceGrpc {
      */
     public void report(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReportMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class DataprocManagerServiceGrpc {
    * Data Proc manager service definition.
    * </pre>
    */
-  public static final class DataprocManagerServiceBlockingStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceBlockingStub> {
-    private DataprocManagerServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DataprocManagerServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DataprocManagerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataprocManagerServiceBlockingStub> {
+    private DataprocManagerServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DataprocManagerServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DataprocManagerServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataprocManagerServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class DataprocManagerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply report(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReportMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class DataprocManagerServiceGrpc {
    * Data Proc manager service definition.
    * </pre>
    */
-  public static final class DataprocManagerServiceFutureStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceFutureStub> {
-    private DataprocManagerServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DataprocManagerServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DataprocManagerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataprocManagerServiceFutureStub> {
+    private DataprocManagerServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DataprocManagerServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DataprocManagerServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataprocManagerServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class DataprocManagerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply> report(
         yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReportMethod(), getCallOptions()), request);
     }
   }

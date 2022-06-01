@@ -24,6 +24,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
      * </pre>
      *
      * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The login.
      */
     java.lang.String getLogin();
     /**
@@ -32,6 +33,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
      * </pre>
      *
      * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for login.
      */
     com.google.protobuf.ByteString
         getLoginBytes();
@@ -39,7 +41,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.iam.v1.GetUserAccountByLoginRequest}
    */
-  public  static final class GetUserAccountByLoginRequest extends
+  public static final class GetUserAccountByLoginRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.GetUserAccountByLoginRequest)
       GetUserAccountByLoginRequestOrBuilder {
@@ -50,6 +52,13 @@ public final class YandexPassportUserAccountServiceOuterClass {
     }
     private GetUserAccountByLoginRequest() {
       login_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetUserAccountByLoginRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class YandexPassportUserAccountServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,7 +91,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -122,7 +130,9 @@ public final class YandexPassportUserAccountServiceOuterClass {
      * </pre>
      *
      * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The login.
      */
+    @java.lang.Override
     public java.lang.String getLogin() {
       java.lang.Object ref = login_;
       if (ref instanceof java.lang.String) {
@@ -141,7 +151,9 @@ public final class YandexPassportUserAccountServiceOuterClass {
      * </pre>
      *
      * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for login.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoginBytes() {
       java.lang.Object ref = login_;
@@ -170,7 +182,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoginBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(login_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, login_);
       }
       unknownFields.writeTo(output);
@@ -182,7 +194,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoginBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(login_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, login_);
       }
       size += unknownFields.getSerializedSize();
@@ -200,11 +212,10 @@ public final class YandexPassportUserAccountServiceOuterClass {
       }
       yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest other = (yandex.cloud.api.iam.v1.YandexPassportUserAccountServiceOuterClass.GetUserAccountByLoginRequest) obj;
 
-      boolean result = true;
-      result = result && getLogin()
-          .equals(other.getLogin());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogin()
+          .equals(other.getLogin())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -384,35 +395,35 @@ public final class YandexPassportUserAccountServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -466,6 +477,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
        * </pre>
        *
        * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The login.
        */
       public java.lang.String getLogin() {
         java.lang.Object ref = login_;
@@ -485,6 +497,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
        * </pre>
        *
        * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for login.
        */
       public com.google.protobuf.ByteString
           getLoginBytes() {
@@ -505,6 +518,8 @@ public final class YandexPassportUserAccountServiceOuterClass {
        * </pre>
        *
        * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The login to set.
+       * @return This builder for chaining.
        */
       public Builder setLogin(
           java.lang.String value) {
@@ -522,6 +537,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
        * </pre>
        *
        * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogin() {
         
@@ -535,6 +551,8 @@ public final class YandexPassportUserAccountServiceOuterClass {
        * </pre>
        *
        * <code>string login = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for login to set.
+       * @return This builder for chaining.
        */
       public Builder setLoginBytes(
           com.google.protobuf.ByteString value) {
@@ -550,7 +568,7 @@ public final class YandexPassportUserAccountServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -629,21 +647,13 @@ public final class YandexPassportUserAccountServiceOuterClass {
       "/go-genproto/yandex/cloud/iam/v1;iamb\006pr" +
       "oto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.iam.v1.UserAccountOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iam_v1_GetUserAccountByLoginRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iam_v1_GetUserAccountByLoginRequest_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.resourcemanager.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/resourcemanager/v1/folder_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FolderServiceGrpc {
 
   private FolderServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class FolderServiceGrpc {
     if ((getGetMethod = FolderServiceGrpc.getGetMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getGetMethod = FolderServiceGrpc.getGetMethod) == null) {
-          FolderServiceGrpc.getGetMethod = getGetMethod = 
+          FolderServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest, yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest,
@@ -76,22 +63,21 @@ public final class FolderServiceGrpc {
     if ((getListMethod = FolderServiceGrpc.getListMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getListMethod = FolderServiceGrpc.getListMethod) == null) {
-          FolderServiceGrpc.getListMethod = getListMethod = 
+          FolderServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest, yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest,
@@ -108,22 +94,21 @@ public final class FolderServiceGrpc {
     if ((getCreateMethod = FolderServiceGrpc.getCreateMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getCreateMethod = FolderServiceGrpc.getCreateMethod) == null) {
-          FolderServiceGrpc.getCreateMethod = getCreateMethod = 
+          FolderServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest,
@@ -140,22 +125,21 @@ public final class FolderServiceGrpc {
     if ((getUpdateMethod = FolderServiceGrpc.getUpdateMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getUpdateMethod = FolderServiceGrpc.getUpdateMethod) == null) {
-          FolderServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          FolderServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest,
@@ -172,22 +156,21 @@ public final class FolderServiceGrpc {
     if ((getDeleteMethod = FolderServiceGrpc.getDeleteMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getDeleteMethod = FolderServiceGrpc.getDeleteMethod) == null) {
-          FolderServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          FolderServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest,
@@ -204,22 +187,21 @@ public final class FolderServiceGrpc {
     if ((getListOperationsMethod = FolderServiceGrpc.getListOperationsMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getListOperationsMethod = FolderServiceGrpc.getListOperationsMethod) == null) {
-          FolderServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          FolderServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest, yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -236,22 +218,21 @@ public final class FolderServiceGrpc {
     if ((getListAccessBindingsMethod = FolderServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getListAccessBindingsMethod = FolderServiceGrpc.getListAccessBindingsMethod) == null) {
-          FolderServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          FolderServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -268,22 +249,21 @@ public final class FolderServiceGrpc {
     if ((getSetAccessBindingsMethod = FolderServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = FolderServiceGrpc.getSetAccessBindingsMethod) == null) {
-          FolderServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          FolderServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -300,29 +280,35 @@ public final class FolderServiceGrpc {
     if ((getUpdateAccessBindingsMethod = FolderServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (FolderServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = FolderServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          FolderServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          FolderServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.resourcemanager.v1.FolderService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FolderServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FolderServiceStub newStub(io.grpc.Channel channel) {
-    return new FolderServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FolderServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FolderServiceStub>() {
+        @java.lang.Override
+        public FolderServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FolderServiceStub(channel, callOptions);
+        }
+      };
+    return FolderServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -330,7 +316,14 @@ public final class FolderServiceGrpc {
    */
   public static FolderServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FolderServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FolderServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FolderServiceBlockingStub>() {
+        @java.lang.Override
+        public FolderServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FolderServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FolderServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -338,7 +331,14 @@ public final class FolderServiceGrpc {
    */
   public static FolderServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FolderServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FolderServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FolderServiceFutureStub>() {
+        @java.lang.Override
+        public FolderServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FolderServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FolderServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -356,7 +356,7 @@ public final class FolderServiceGrpc {
      */
     public void get(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -366,7 +366,7 @@ public final class FolderServiceGrpc {
      */
     public void list(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -376,7 +376,7 @@ public final class FolderServiceGrpc {
      */
     public void create(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -386,7 +386,7 @@ public final class FolderServiceGrpc {
      */
     public void update(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -396,7 +396,7 @@ public final class FolderServiceGrpc {
      */
     public void delete(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -406,7 +406,7 @@ public final class FolderServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -416,7 +416,7 @@ public final class FolderServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -426,7 +426,7 @@ public final class FolderServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -436,70 +436,70 @@ public final class FolderServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest,
                 yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest,
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest,
                 yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -513,19 +513,15 @@ public final class FolderServiceGrpc {
    * A set of methods for managing Folder resources.
    * </pre>
    */
-  public static final class FolderServiceStub extends io.grpc.stub.AbstractStub<FolderServiceStub> {
-    private FolderServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FolderServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FolderServiceStub extends io.grpc.stub.AbstractAsyncStub<FolderServiceStub> {
+    private FolderServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FolderServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FolderServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FolderServiceStub(channel, callOptions);
     }
 
@@ -537,7 +533,7 @@ public final class FolderServiceGrpc {
      */
     public void get(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -548,7 +544,7 @@ public final class FolderServiceGrpc {
      */
     public void list(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -559,7 +555,7 @@ public final class FolderServiceGrpc {
      */
     public void create(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -570,7 +566,7 @@ public final class FolderServiceGrpc {
      */
     public void update(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -581,7 +577,7 @@ public final class FolderServiceGrpc {
      */
     public void delete(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -592,7 +588,7 @@ public final class FolderServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -603,7 +599,7 @@ public final class FolderServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -614,7 +610,7 @@ public final class FolderServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -625,7 +621,7 @@ public final class FolderServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -635,19 +631,15 @@ public final class FolderServiceGrpc {
    * A set of methods for managing Folder resources.
    * </pre>
    */
-  public static final class FolderServiceBlockingStub extends io.grpc.stub.AbstractStub<FolderServiceBlockingStub> {
-    private FolderServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FolderServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FolderServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FolderServiceBlockingStub> {
+    private FolderServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FolderServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FolderServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FolderServiceBlockingStub(channel, callOptions);
     }
 
@@ -658,7 +650,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder get(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -668,7 +660,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse list(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -678,7 +670,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -688,7 +680,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -698,7 +690,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -708,7 +700,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse listOperations(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -718,7 +710,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -728,7 +720,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -738,7 +730,7 @@ public final class FolderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
@@ -748,19 +740,15 @@ public final class FolderServiceGrpc {
    * A set of methods for managing Folder resources.
    * </pre>
    */
-  public static final class FolderServiceFutureStub extends io.grpc.stub.AbstractStub<FolderServiceFutureStub> {
-    private FolderServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FolderServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FolderServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FolderServiceFutureStub> {
+    private FolderServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FolderServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FolderServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FolderServiceFutureStub(channel, callOptions);
     }
 
@@ -772,7 +760,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.resourcemanager.v1.FolderOuterClass.Folder> get(
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.GetFolderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -783,7 +771,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersResponse> list(
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFoldersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -794,7 +782,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.CreateFolderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -805,7 +793,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.UpdateFolderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -816,7 +804,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -827,7 +815,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsResponse> listOperations(
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.ListFolderOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -838,7 +826,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -849,7 +837,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -860,7 +848,7 @@ public final class FolderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

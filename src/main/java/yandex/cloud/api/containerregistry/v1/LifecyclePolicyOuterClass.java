@@ -24,6 +24,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -50,6 +53,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -61,6 +65,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string repository_id = 3;</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
@@ -70,6 +75,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string repository_id = 3;</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -81,6 +87,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -90,6 +97,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -100,6 +108,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -108,6 +117,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+     * @return The status.
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus();
 
@@ -117,6 +127,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -125,6 +136,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -183,7 +195,7 @@ public final class LifecyclePolicyOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.LifecyclePolicy}
    */
-  public  static final class LifecyclePolicy extends
+  public static final class LifecyclePolicy extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.LifecyclePolicy)
       LifecyclePolicyOrBuilder {
@@ -199,6 +211,13 @@ public final class LifecyclePolicyOuterClass {
       description_ = "";
       status_ = 0;
       rules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LifecyclePolicy();
     }
 
     @java.lang.Override
@@ -269,16 +288,16 @@ public final class LifecyclePolicyOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 rules_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               rules_.add(
                   input.readMessage(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -292,7 +311,7 @@ public final class LifecyclePolicyOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           rules_ = java.util.Collections.unmodifiableList(rules_);
         }
         this.unknownFields = unknownFields.build();
@@ -373,6 +392,8 @@ public final class LifecyclePolicyOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -380,6 +401,10 @@ public final class LifecyclePolicyOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -403,6 +428,10 @@ public final class LifecyclePolicyOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -437,7 +466,6 @@ public final class LifecyclePolicyOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.containerregistry.v1.LifecyclePolicy.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -446,7 +474,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -465,7 +495,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -488,7 +520,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -507,7 +541,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -531,7 +567,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string repository_id = 3;</code>
+     * @return The repositoryId.
      */
+    @java.lang.Override
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = repositoryId_;
       if (ref instanceof java.lang.String) {
@@ -551,7 +589,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string repository_id = 3;</code>
+     * @return The bytes for repositoryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
       java.lang.Object ref = repositoryId_;
@@ -575,7 +615,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -595,7 +637,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 4;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -618,8 +662,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -628,8 +673,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status result = yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.UNRECOGNIZED : result;
@@ -643,7 +689,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -653,7 +701,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -664,6 +714,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -677,6 +728,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
       return rules_;
     }
@@ -687,6 +739,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList() {
       return rules_;
@@ -698,6 +751,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
+    @java.lang.Override
     public int getRulesCount() {
       return rules_.size();
     }
@@ -708,6 +762,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
@@ -718,6 +773,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
         int index) {
       return rules_.get(index);
@@ -737,16 +793,16 @@ public final class LifecyclePolicyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, repositoryId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       if (status_ != yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -767,16 +823,16 @@ public final class LifecyclePolicyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getRepositoryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repositoryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, repositoryId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       if (status_ != yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -806,25 +862,24 @@ public final class LifecyclePolicyOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getRepositoryId()
-          .equals(other.getRepositoryId());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && status_ == other.status_;
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getRepositoryId()
+          .equals(other.getRepositoryId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getRulesList()
-          .equals(other.getRulesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRulesList()
+          .equals(other.getRulesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1004,7 +1059,7 @@ public final class LifecyclePolicyOuterClass {
         }
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           rulesBuilder_.clear();
         }
@@ -1035,7 +1090,6 @@ public final class LifecyclePolicyOuterClass {
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy buildPartial() {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.name_ = name_;
         result.repositoryId_ = repositoryId_;
@@ -1047,50 +1101,49 @@ public final class LifecyclePolicyOuterClass {
           result.createdAt_ = createdAtBuilder_.build();
         }
         if (rulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             rules_ = java.util.Collections.unmodifiableList(rules_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.rules_ = rules_;
         } else {
           result.rules_ = rulesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1130,7 +1183,7 @@ public final class LifecyclePolicyOuterClass {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureRulesIsMutable();
               rules_.addAll(other.rules_);
@@ -1143,7 +1196,7 @@ public final class LifecyclePolicyOuterClass {
               rulesBuilder_.dispose();
               rulesBuilder_ = null;
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
               rulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRulesFieldBuilder() : null;
@@ -1189,6 +1242,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1208,6 +1262,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1228,6 +1283,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1245,6 +1302,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1258,6 +1316,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1278,6 +1338,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1297,6 +1358,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1317,6 +1379,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1334,6 +1398,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1347,6 +1412,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1368,6 +1435,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string repository_id = 3;</code>
+       * @return The repositoryId.
        */
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = repositoryId_;
@@ -1388,6 +1456,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string repository_id = 3;</code>
+       * @return The bytes for repositoryId.
        */
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
@@ -1409,6 +1478,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string repository_id = 3;</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -1427,6 +1498,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string repository_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         
@@ -1441,6 +1513,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string repository_id = 3;</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1462,6 +1536,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1482,6 +1557,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1503,6 +1579,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1521,6 +1599,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1535,6 +1614,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 4;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1555,8 +1636,9 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -1565,8 +1647,11 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -1577,7 +1662,9 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status result = yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.valueOf(status_);
@@ -1589,6 +1676,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status value) {
         if (value == null) {
@@ -1605,6 +1694,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -1613,7 +1703,7 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1622,6 +1712,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1632,6 +1723,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1769,9 +1861,9 @@ public final class LifecyclePolicyOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_ =
         java.util.Collections.emptyList();
       private void ensureRulesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           rules_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule>(rules_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1965,7 +2057,7 @@ public final class LifecyclePolicyOuterClass {
       public Builder clearRules() {
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           rulesBuilder_.clear();
@@ -2070,7 +2162,7 @@ public final class LifecyclePolicyOuterClass {
           rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder>(
                   rules_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           rules_ = null;
@@ -2080,7 +2172,7 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2140,6 +2232,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2148,6 +2241,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2159,6 +2253,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
+     * @return Whether the expirePeriod field is set.
      */
     boolean hasExpirePeriod();
     /**
@@ -2168,6 +2263,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
+     * @return The expirePeriod.
      */
     com.google.protobuf.Duration getExpirePeriod();
     /**
@@ -2186,6 +2282,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The tagRegexp.
      */
     java.lang.String getTagRegexp();
     /**
@@ -2194,6 +2291,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for tagRegexp.
      */
     com.google.protobuf.ByteString
         getTagRegexpBytes();
@@ -2204,6 +2302,7 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>bool untagged = 4;</code>
+     * @return The untagged.
      */
     boolean getUntagged();
 
@@ -2213,13 +2312,14 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The retainedTop.
      */
     long getRetainedTop();
   }
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.LifecycleRule}
    */
-  public  static final class LifecycleRule extends
+  public static final class LifecycleRule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.LifecycleRule)
       LifecycleRuleOrBuilder {
@@ -2231,8 +2331,13 @@ public final class LifecyclePolicyOuterClass {
     private LifecycleRule() {
       description_ = "";
       tagRegexp_ = "";
-      untagged_ = false;
-      retainedTop_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LifecycleRule();
     }
 
     @java.lang.Override
@@ -2248,7 +2353,6 @@ public final class LifecyclePolicyOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2295,7 +2399,7 @@ public final class LifecyclePolicyOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2334,7 +2438,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2353,7 +2459,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -2377,7 +2485,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
+     * @return Whether the expirePeriod field is set.
      */
+    @java.lang.Override
     public boolean hasExpirePeriod() {
       return expirePeriod_ != null;
     }
@@ -2388,7 +2498,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
+     * @return The expirePeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getExpirePeriod() {
       return expirePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : expirePeriod_;
     }
@@ -2400,6 +2512,7 @@ public final class LifecyclePolicyOuterClass {
      *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder() {
       return getExpirePeriod();
     }
@@ -2412,7 +2525,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The tagRegexp.
      */
+    @java.lang.Override
     public java.lang.String getTagRegexp() {
       java.lang.Object ref = tagRegexp_;
       if (ref instanceof java.lang.String) {
@@ -2431,7 +2546,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for tagRegexp.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagRegexpBytes() {
       java.lang.Object ref = tagRegexp_;
@@ -2454,7 +2571,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>bool untagged = 4;</code>
+     * @return The untagged.
      */
+    @java.lang.Override
     public boolean getUntagged() {
       return untagged_;
     }
@@ -2467,7 +2586,9 @@ public final class LifecyclePolicyOuterClass {
      * </pre>
      *
      * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The retainedTop.
      */
+    @java.lang.Override
     public long getRetainedTop() {
       return retainedTop_;
     }
@@ -2486,13 +2607,13 @@ public final class LifecyclePolicyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
       if (expirePeriod_ != null) {
         output.writeMessage(2, getExpirePeriod());
       }
-      if (!getTagRegexpBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tagRegexp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tagRegexp_);
       }
       if (untagged_ != false) {
@@ -2510,14 +2631,14 @@ public final class LifecyclePolicyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
       if (expirePeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExpirePeriod());
       }
-      if (!getTagRegexpBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tagRegexp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tagRegexp_);
       }
       if (untagged_ != false) {
@@ -2543,22 +2664,21 @@ public final class LifecyclePolicyOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule) obj;
 
-      boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasExpirePeriod() == other.hasExpirePeriod());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasExpirePeriod() != other.hasExpirePeriod()) return false;
       if (hasExpirePeriod()) {
-        result = result && getExpirePeriod()
-            .equals(other.getExpirePeriod());
+        if (!getExpirePeriod()
+            .equals(other.getExpirePeriod())) return false;
       }
-      result = result && getTagRegexp()
-          .equals(other.getTagRegexp());
-      result = result && (getUntagged()
-          == other.getUntagged());
-      result = result && (getRetainedTop()
-          == other.getRetainedTop());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTagRegexp()
+          .equals(other.getTagRegexp())) return false;
+      if (getUntagged()
+          != other.getUntagged()) return false;
+      if (getRetainedTop()
+          != other.getRetainedTop()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2770,35 +2890,35 @@ public final class LifecyclePolicyOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2865,6 +2985,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2884,6 +3005,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2904,6 +3026,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2921,6 +3045,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2934,6 +3059,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2947,7 +3074,7 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration expirePeriod_ = null;
+      private com.google.protobuf.Duration expirePeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> expirePeriodBuilder_;
       /**
@@ -2957,6 +3084,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
+       * @return Whether the expirePeriod field is set.
        */
       public boolean hasExpirePeriod() {
         return expirePeriodBuilder_ != null || expirePeriod_ != null;
@@ -2968,6 +3096,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
+       * @return The expirePeriod.
        */
       public com.google.protobuf.Duration getExpirePeriod() {
         if (expirePeriodBuilder_ == null) {
@@ -3116,6 +3245,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The tagRegexp.
        */
       public java.lang.String getTagRegexp() {
         java.lang.Object ref = tagRegexp_;
@@ -3135,6 +3265,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for tagRegexp.
        */
       public com.google.protobuf.ByteString
           getTagRegexpBytes() {
@@ -3155,6 +3286,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The tagRegexp to set.
+       * @return This builder for chaining.
        */
       public Builder setTagRegexp(
           java.lang.String value) {
@@ -3172,6 +3305,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTagRegexp() {
         
@@ -3185,6 +3319,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for tagRegexp to set.
+       * @return This builder for chaining.
        */
       public Builder setTagRegexpBytes(
           com.google.protobuf.ByteString value) {
@@ -3205,7 +3341,9 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>bool untagged = 4;</code>
+       * @return The untagged.
        */
+      @java.lang.Override
       public boolean getUntagged() {
         return untagged_;
       }
@@ -3215,6 +3353,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>bool untagged = 4;</code>
+       * @param value The untagged to set.
+       * @return This builder for chaining.
        */
       public Builder setUntagged(boolean value) {
         
@@ -3228,6 +3368,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>bool untagged = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUntagged() {
         
@@ -3243,7 +3384,9 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The retainedTop.
        */
+      @java.lang.Override
       public long getRetainedTop() {
         return retainedTop_;
       }
@@ -3253,6 +3396,8 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @param value The retainedTop to set.
+       * @return This builder for chaining.
        */
       public Builder setRetainedTop(long value) {
         
@@ -3266,6 +3411,7 @@ public final class LifecyclePolicyOuterClass {
        * </pre>
        *
        * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRetainedTop() {
         
@@ -3276,7 +3422,7 @@ public final class LifecyclePolicyOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3368,21 +3514,13 @@ public final class LifecyclePolicyOuterClass {
       "ndex/cloud/containerregistry/v1;containe" +
       "rregistryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_LifecyclePolicy_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_LifecyclePolicy_fieldAccessorTable = new

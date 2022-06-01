@@ -1,25 +1,13 @@
 package yandex.cloud.api.endpoint;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/endpoint/api_endpoint_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ApiEndpointServiceGrpc {
 
   private ApiEndpointServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class ApiEndpointServiceGrpc {
     if ((getGetMethod = ApiEndpointServiceGrpc.getGetMethod) == null) {
       synchronized (ApiEndpointServiceGrpc.class) {
         if ((getGetMethod = ApiEndpointServiceGrpc.getGetMethod) == null) {
-          ApiEndpointServiceGrpc.getGetMethod = getGetMethod = 
+          ApiEndpointServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest, yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.endpoint.ApiEndpointService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiEndpointServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiEndpointServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest,
@@ -73,29 +60,35 @@ public final class ApiEndpointServiceGrpc {
     if ((getListMethod = ApiEndpointServiceGrpc.getListMethod) == null) {
       synchronized (ApiEndpointServiceGrpc.class) {
         if ((getListMethod = ApiEndpointServiceGrpc.getListMethod) == null) {
-          ApiEndpointServiceGrpc.getListMethod = getListMethod = 
+          ApiEndpointServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest, yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.endpoint.ApiEndpointService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ApiEndpointServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ApiEndpointServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ApiEndpointServiceStub newStub(io.grpc.Channel channel) {
-    return new ApiEndpointServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ApiEndpointServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ApiEndpointServiceStub>() {
+        @java.lang.Override
+        public ApiEndpointServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ApiEndpointServiceStub(channel, callOptions);
+        }
+      };
+    return ApiEndpointServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +96,14 @@ public final class ApiEndpointServiceGrpc {
    */
   public static ApiEndpointServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ApiEndpointServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ApiEndpointServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ApiEndpointServiceBlockingStub>() {
+        @java.lang.Override
+        public ApiEndpointServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ApiEndpointServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ApiEndpointServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +111,14 @@ public final class ApiEndpointServiceGrpc {
    */
   public static ApiEndpointServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ApiEndpointServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ApiEndpointServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ApiEndpointServiceFutureStub>() {
+        @java.lang.Override
+        public ApiEndpointServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ApiEndpointServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ApiEndpointServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -122,28 +129,28 @@ public final class ApiEndpointServiceGrpc {
      */
     public void get(yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void list(yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest,
                 yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest,
                 yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse>(
@@ -154,19 +161,15 @@ public final class ApiEndpointServiceGrpc {
 
   /**
    */
-  public static final class ApiEndpointServiceStub extends io.grpc.stub.AbstractStub<ApiEndpointServiceStub> {
-    private ApiEndpointServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ApiEndpointServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ApiEndpointServiceStub extends io.grpc.stub.AbstractAsyncStub<ApiEndpointServiceStub> {
+    private ApiEndpointServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ApiEndpointServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ApiEndpointServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ApiEndpointServiceStub(channel, callOptions);
     }
 
@@ -174,7 +177,7 @@ public final class ApiEndpointServiceGrpc {
      */
     public void get(yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -182,59 +185,51 @@ public final class ApiEndpointServiceGrpc {
      */
     public void list(yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class ApiEndpointServiceBlockingStub extends io.grpc.stub.AbstractStub<ApiEndpointServiceBlockingStub> {
-    private ApiEndpointServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ApiEndpointServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ApiEndpointServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ApiEndpointServiceBlockingStub> {
+    private ApiEndpointServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ApiEndpointServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ApiEndpointServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ApiEndpointServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint get(yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse list(yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class ApiEndpointServiceFutureStub extends io.grpc.stub.AbstractStub<ApiEndpointServiceFutureStub> {
-    private ApiEndpointServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ApiEndpointServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ApiEndpointServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ApiEndpointServiceFutureStub> {
+    private ApiEndpointServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ApiEndpointServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ApiEndpointServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ApiEndpointServiceFutureStub(channel, callOptions);
     }
 
@@ -242,7 +237,7 @@ public final class ApiEndpointServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint> get(
         yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.GetApiEndpointRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -250,7 +245,7 @@ public final class ApiEndpointServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsResponse> list(
         yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass.ListApiEndpointsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

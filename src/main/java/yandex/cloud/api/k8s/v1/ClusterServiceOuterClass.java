@@ -24,6 +24,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -39,7 +41,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.GetClusterRequest}
    */
-  public  static final class GetClusterRequest extends
+  public static final class GetClusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.GetClusterRequest)
       GetClusterRequestOrBuilder {
@@ -50,6 +52,13 @@ public final class ClusterServiceOuterClass {
     }
     private GetClusterRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetClusterRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,7 +91,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -122,7 +130,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -141,7 +151,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -170,7 +182,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -182,7 +194,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -200,11 +212,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.GetClusterRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.GetClusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -384,35 +395,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -466,6 +477,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -485,6 +497,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -505,6 +518,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -522,6 +537,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -535,6 +551,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -550,7 +568,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -611,6 +629,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -620,6 +639,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -634,6 +654,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -644,6 +665,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -653,6 +675,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -667,6 +690,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -679,6 +703,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -686,7 +711,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClustersRequest}
    */
-  public  static final class ListClustersRequest extends
+  public static final class ListClustersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClustersRequest)
       ListClustersRequestOrBuilder {
@@ -697,9 +722,15 @@ public final class ClusterServiceOuterClass {
     }
     private ListClustersRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClustersRequest();
     }
 
     @java.lang.Override
@@ -715,7 +746,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -750,7 +780,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -790,7 +820,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -810,7 +842,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -837,7 +871,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -851,7 +887,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -871,7 +909,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -898,7 +938,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -921,7 +963,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -950,16 +994,16 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -971,17 +1015,17 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -999,17 +1043,16 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1205,35 +1248,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1299,6 +1342,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1319,6 +1363,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1340,6 +1385,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1358,6 +1405,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1372,6 +1420,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1396,7 +1446,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1410,6 +1462,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1427,6 +1481,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1443,6 +1498,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1463,6 +1519,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1484,6 +1541,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1502,6 +1561,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1516,6 +1576,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1540,6 +1602,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1563,6 +1626,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1587,6 +1651,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1608,6 +1674,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1625,6 +1692,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1640,7 +1709,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1749,6 +1818,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1762,6 +1832,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1769,7 +1840,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClustersResponse}
    */
-  public  static final class ListClustersResponse extends
+  public static final class ListClustersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClustersResponse)
       ListClustersResponseOrBuilder {
@@ -1781,6 +1852,13 @@ public final class ClusterServiceOuterClass {
     private ListClustersResponse() {
       clusters_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClustersResponse();
     }
 
     @java.lang.Override
@@ -1808,7 +1886,7 @@ public final class ClusterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 clusters_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1823,7 +1901,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1837,7 +1915,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           clusters_ = java.util.Collections.unmodifiableList(clusters_);
         }
         this.unknownFields = unknownFields.build();
@@ -1857,7 +1935,6 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLUSTERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster> clusters_;
     /**
@@ -1867,6 +1944,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Cluster clusters = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster> getClustersList() {
       return clusters_;
     }
@@ -1877,6 +1955,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Cluster clusters = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterOuterClass.ClusterOrBuilder> 
         getClustersOrBuilderList() {
       return clusters_;
@@ -1888,6 +1967,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Cluster clusters = 1;</code>
      */
+    @java.lang.Override
     public int getClustersCount() {
       return clusters_.size();
     }
@@ -1898,6 +1978,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Cluster clusters = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster getClusters(int index) {
       return clusters_.get(index);
     }
@@ -1908,6 +1989,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Cluster clusters = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.ClusterOrBuilder getClustersOrBuilder(
         int index) {
       return clusters_.get(index);
@@ -1926,7 +2008,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1950,7 +2034,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1982,7 +2068,7 @@ public final class ClusterServiceOuterClass {
       for (int i = 0; i < clusters_.size(); i++) {
         output.writeMessage(1, clusters_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1998,7 +2084,7 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, clusters_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2016,13 +2102,12 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse) obj;
 
-      boolean result = true;
-      result = result && getClustersList()
-          .equals(other.getClustersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClustersList()
+          .equals(other.getClustersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2207,9 +2292,8 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClustersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (clustersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             clusters_ = java.util.Collections.unmodifiableList(clusters_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2218,42 +2302,41 @@ public final class ClusterServiceOuterClass {
           result.clusters_ = clustersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2330,7 +2413,7 @@ public final class ClusterServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster> clusters_ =
         java.util.Collections.emptyList();
       private void ensureClustersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           clusters_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster>(clusters_);
           bitField0_ |= 0x00000001;
          }
@@ -2631,7 +2714,7 @@ public final class ClusterServiceOuterClass {
           clustersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.ClusterOrBuilder>(
                   clusters_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           clusters_ = null;
@@ -2651,6 +2734,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2675,6 +2759,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2700,6 +2785,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2722,6 +2809,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2740,6 +2828,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2755,7 +2845,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2816,6 +2906,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2825,6 +2916,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2832,7 +2924,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.DeleteClusterRequest}
    */
-  public  static final class DeleteClusterRequest extends
+  public static final class DeleteClusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.DeleteClusterRequest)
       DeleteClusterRequestOrBuilder {
@@ -2843,6 +2935,13 @@ public final class ClusterServiceOuterClass {
     }
     private DeleteClusterRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteClusterRequest();
     }
 
     @java.lang.Override
@@ -2858,7 +2957,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2876,7 +2974,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2916,7 +3014,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2936,7 +3036,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2965,7 +3067,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -2977,7 +3079,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2995,11 +3097,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.DeleteClusterRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.DeleteClusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3179,35 +3280,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3262,6 +3363,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3282,6 +3384,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3303,6 +3406,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3321,6 +3426,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3335,6 +3441,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3350,7 +3458,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3410,6 +3518,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -3418,6 +3527,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -3425,7 +3535,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.DeleteClusterMetadata}
    */
-  public  static final class DeleteClusterMetadata extends
+  public static final class DeleteClusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.DeleteClusterMetadata)
       DeleteClusterMetadataOrBuilder {
@@ -3436,6 +3546,13 @@ public final class ClusterServiceOuterClass {
     }
     private DeleteClusterMetadata() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteClusterMetadata();
     }
 
     @java.lang.Override
@@ -3451,7 +3568,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3469,7 +3585,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3508,7 +3624,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3527,7 +3645,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3556,7 +3676,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -3568,7 +3688,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3586,11 +3706,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.DeleteClusterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.DeleteClusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3770,35 +3889,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3852,6 +3971,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3871,6 +3991,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3891,6 +4012,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3908,6 +4031,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3921,6 +4045,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3936,7 +4062,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3997,6 +4123,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4006,6 +4133,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4013,7 +4141,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.StopClusterRequest}
    */
-  public  static final class StopClusterRequest extends
+  public static final class StopClusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.StopClusterRequest)
       StopClusterRequestOrBuilder {
@@ -4024,6 +4152,13 @@ public final class ClusterServiceOuterClass {
     }
     private StopClusterRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StopClusterRequest();
     }
 
     @java.lang.Override
@@ -4039,7 +4174,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4057,7 +4191,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4097,7 +4231,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4117,7 +4253,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4146,7 +4284,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -4158,7 +4296,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4176,11 +4314,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4360,35 +4497,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4443,6 +4580,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4463,6 +4601,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4484,6 +4623,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4502,6 +4643,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4516,6 +4658,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4531,7 +4675,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4591,6 +4735,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4599,6 +4744,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4606,7 +4752,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.StopClusterMetadata}
    */
-  public  static final class StopClusterMetadata extends
+  public static final class StopClusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.StopClusterMetadata)
       StopClusterMetadataOrBuilder {
@@ -4617,6 +4763,13 @@ public final class ClusterServiceOuterClass {
     }
     private StopClusterMetadata() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StopClusterMetadata();
     }
 
     @java.lang.Override
@@ -4632,7 +4785,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4650,7 +4802,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4689,7 +4841,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4708,7 +4862,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4737,7 +4893,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -4749,7 +4905,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4767,11 +4923,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4951,35 +5106,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5033,6 +5188,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5052,6 +5208,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5072,6 +5229,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5089,6 +5248,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5102,6 +5262,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5117,7 +5279,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5178,6 +5340,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5187,6 +5350,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5194,7 +5358,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.StartClusterRequest}
    */
-  public  static final class StartClusterRequest extends
+  public static final class StartClusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.StartClusterRequest)
       StartClusterRequestOrBuilder {
@@ -5205,6 +5369,13 @@ public final class ClusterServiceOuterClass {
     }
     private StartClusterRequest() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartClusterRequest();
     }
 
     @java.lang.Override
@@ -5220,7 +5391,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5238,7 +5408,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5278,7 +5448,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5298,7 +5470,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5327,7 +5501,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -5339,7 +5513,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5357,11 +5531,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5541,35 +5714,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5624,6 +5797,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5644,6 +5818,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5665,6 +5840,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5683,6 +5860,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5697,6 +5875,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5712,7 +5892,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5772,6 +5952,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5780,6 +5961,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5787,7 +5969,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.StartClusterMetadata}
    */
-  public  static final class StartClusterMetadata extends
+  public static final class StartClusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.StartClusterMetadata)
       StartClusterMetadataOrBuilder {
@@ -5798,6 +5980,13 @@ public final class ClusterServiceOuterClass {
     }
     private StartClusterMetadata() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartClusterMetadata();
     }
 
     @java.lang.Override
@@ -5813,7 +6002,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5831,7 +6019,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5870,7 +6058,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5889,7 +6079,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5918,7 +6110,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -5930,7 +6122,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5948,11 +6140,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6132,35 +6323,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6214,6 +6405,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6233,6 +6425,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6253,6 +6446,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6270,6 +6465,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6283,6 +6479,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6298,7 +6496,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6359,6 +6557,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6368,16 +6567,19 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -6392,6 +6594,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -6401,6 +6604,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6411,6 +6615,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -6419,6 +6624,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -6488,6 +6694,16 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+     * @return Whether the gatewayIpv4Address field is set.
+     */
+    boolean hasGatewayIpv4Address();
+    /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
+     * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+     * @return The gatewayIpv4Address.
      */
     java.lang.String getGatewayIpv4Address();
     /**
@@ -6496,6 +6712,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+     * @return The bytes for gatewayIpv4Address.
      */
     com.google.protobuf.ByteString
         getGatewayIpv4AddressBytes();
@@ -6506,6 +6723,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
+     * @return Whether the masterSpec field is set.
      */
     boolean hasMasterSpec();
     /**
@@ -6514,6 +6732,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
+     * @return The masterSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec getMasterSpec();
     /**
@@ -6533,6 +6752,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -6543,6 +6763,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -6554,6 +6775,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 8;</code>
+     * @return The nodeServiceAccountId.
      */
     java.lang.String getNodeServiceAccountId();
     /**
@@ -6563,16 +6785,19 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 8;</code>
+     * @return The bytes for nodeServiceAccountId.
      */
     com.google.protobuf.ByteString
         getNodeServiceAccountIdBytes();
 
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     * @return Whether the networkPolicy field is set.
      */
     boolean hasNetworkPolicy();
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     * @return The networkPolicy.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy();
     /**
@@ -6582,10 +6807,12 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     * @return Whether the ipAllocationPolicy field is set.
      */
     boolean hasIpAllocationPolicy();
     /**
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     * @return The ipAllocationPolicy.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy();
     /**
@@ -6598,7 +6825,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.UpdateClusterRequest}
    */
-  public  static final class UpdateClusterRequest extends
+  public static final class UpdateClusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.UpdateClusterRequest)
       UpdateClusterRequestOrBuilder {
@@ -6613,6 +6840,13 @@ public final class ClusterServiceOuterClass {
       description_ = "";
       serviceAccountId_ = "";
       nodeServiceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateClusterRequest();
     }
 
     @java.lang.Override
@@ -6671,10 +6905,10 @@ public final class ClusterServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6741,7 +6975,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6784,11 +7018,11 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int internetGatewayCase_ = 0;
     private java.lang.Object internetGateway_;
     public enum InternetGatewayCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       GATEWAY_IPV4_ADDRESS(6),
       INTERNETGATEWAY_NOT_SET(0);
       private final int value;
@@ -6796,6 +7030,8 @@ public final class ClusterServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -6830,7 +7066,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6850,7 +7088,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6869,19 +7109,24 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -6895,7 +7140,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6915,7 +7162,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6938,7 +7187,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -6957,7 +7208,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -7007,14 +7260,16 @@ public final class ClusterServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -7027,6 +7282,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -7039,11 +7295,12 @@ public final class ClusterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7056,10 +7313,11 @@ public final class ClusterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -7075,6 +7333,18 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+     * @return Whether the gatewayIpv4Address field is set.
+     */
+    public boolean hasGatewayIpv4Address() {
+      return internetGatewayCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
+     * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+     * @return The gatewayIpv4Address.
      */
     public java.lang.String getGatewayIpv4Address() {
       java.lang.Object ref = "";
@@ -7099,6 +7369,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+     * @return The bytes for gatewayIpv4Address.
      */
     public com.google.protobuf.ByteString
         getGatewayIpv4AddressBytes() {
@@ -7127,7 +7398,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
+     * @return Whether the masterSpec field is set.
      */
+    @java.lang.Override
     public boolean hasMasterSpec() {
       return masterSpec_ != null;
     }
@@ -7137,7 +7410,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
+     * @return The masterSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec getMasterSpec() {
       return masterSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.getDefaultInstance() : masterSpec_;
     }
@@ -7148,6 +7423,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpecOrBuilder getMasterSpecOrBuilder() {
       return getMasterSpec();
     }
@@ -7162,7 +7438,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -7183,7 +7461,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -7207,7 +7487,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 8;</code>
+     * @return The nodeServiceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getNodeServiceAccountId() {
       java.lang.Object ref = nodeServiceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -7227,7 +7509,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 8;</code>
+     * @return The bytes for nodeServiceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNodeServiceAccountIdBytes() {
       java.lang.Object ref = nodeServiceAccountId_;
@@ -7246,19 +7530,24 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     * @return Whether the networkPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasNetworkPolicy() {
       return networkPolicy_ != null;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     * @return The networkPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
       return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
       return getNetworkPolicy();
     }
@@ -7267,19 +7556,24 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_;
     /**
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     * @return Whether the ipAllocationPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasIpAllocationPolicy() {
       return ipAllocationPolicy_ != null;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     * @return The ipAllocationPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy() {
       return ipAllocationPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.getDefaultInstance() : ipAllocationPolicy_;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder getIpAllocationPolicyOrBuilder() {
       return getIpAllocationPolicy();
     }
@@ -7298,16 +7592,16 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -7322,10 +7616,10 @@ public final class ClusterServiceOuterClass {
       if (masterSpec_ != null) {
         output.writeMessage(7, getMasterSpec());
       }
-      if (!getNodeServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeServiceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, nodeServiceAccountId_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, serviceAccountId_);
       }
       if (networkPolicy_ != null) {
@@ -7343,17 +7637,17 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -7373,10 +7667,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getMasterSpec());
       }
-      if (!getNodeServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeServiceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, nodeServiceAccountId_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, serviceAccountId_);
       }
       if (networkPolicy_ != null) {
@@ -7402,52 +7696,49 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasMasterSpec() == other.hasMasterSpec());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasMasterSpec() != other.hasMasterSpec()) return false;
       if (hasMasterSpec()) {
-        result = result && getMasterSpec()
-            .equals(other.getMasterSpec());
+        if (!getMasterSpec()
+            .equals(other.getMasterSpec())) return false;
       }
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && getNodeServiceAccountId()
-          .equals(other.getNodeServiceAccountId());
-      result = result && (hasNetworkPolicy() == other.hasNetworkPolicy());
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!getNodeServiceAccountId()
+          .equals(other.getNodeServiceAccountId())) return false;
+      if (hasNetworkPolicy() != other.hasNetworkPolicy()) return false;
       if (hasNetworkPolicy()) {
-        result = result && getNetworkPolicy()
-            .equals(other.getNetworkPolicy());
+        if (!getNetworkPolicy()
+            .equals(other.getNetworkPolicy())) return false;
       }
-      result = result && (hasIpAllocationPolicy() == other.hasIpAllocationPolicy());
+      if (hasIpAllocationPolicy() != other.hasIpAllocationPolicy()) return false;
       if (hasIpAllocationPolicy()) {
-        result = result && getIpAllocationPolicy()
-            .equals(other.getIpAllocationPolicy());
+        if (!getIpAllocationPolicy()
+            .equals(other.getIpAllocationPolicy())) return false;
       }
-      result = result && getInternetGatewayCase().equals(
-          other.getInternetGatewayCase());
-      if (!result) return false;
+      if (!getInternetGatewayCase().equals(other.getInternetGatewayCase())) return false;
       switch (internetGatewayCase_) {
         case 6:
-          result = result && getGatewayIpv4Address()
-              .equals(other.getGatewayIpv4Address());
+          if (!getGatewayIpv4Address()
+              .equals(other.getGatewayIpv4Address())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7714,7 +8005,6 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -7745,7 +8035,6 @@ public final class ClusterServiceOuterClass {
         } else {
           result.ipAllocationPolicy_ = ipAllocationPolicyBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
         onBuilt();
         return result;
@@ -7753,35 +8042,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7893,6 +8182,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7913,6 +8203,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7934,6 +8225,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7952,6 +8245,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7966,6 +8260,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7979,17 +8275,19 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -8104,6 +8402,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8124,6 +8423,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8145,6 +8445,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8163,6 +8465,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8177,6 +8480,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8197,6 +8502,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8216,6 +8522,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8236,6 +8543,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8253,6 +8562,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8266,6 +8576,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8314,14 +8626,16 @@ public final class ClusterServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -8334,6 +8648,7 @@ public final class ClusterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -8346,11 +8661,12 @@ public final class ClusterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8363,10 +8679,11 @@ public final class ClusterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -8391,7 +8708,7 @@ public final class ClusterServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -8415,8 +8732,11 @@ public final class ClusterServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -8443,7 +8763,21 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+       * @return Whether the gatewayIpv4Address field is set.
        */
+      @java.lang.Override
+      public boolean hasGatewayIpv4Address() {
+        return internetGatewayCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
+       * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+       * @return The gatewayIpv4Address.
+       */
+      @java.lang.Override
       public java.lang.String getGatewayIpv4Address() {
         java.lang.Object ref = "";
         if (internetGatewayCase_ == 6) {
@@ -8467,7 +8801,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+       * @return The bytes for gatewayIpv4Address.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getGatewayIpv4AddressBytes() {
         java.lang.Object ref = "";
@@ -8492,6 +8828,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+       * @param value The gatewayIpv4Address to set.
+       * @return This builder for chaining.
        */
       public Builder setGatewayIpv4Address(
           java.lang.String value) {
@@ -8509,6 +8847,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearGatewayIpv4Address() {
         if (internetGatewayCase_ == 6) {
@@ -8524,6 +8863,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
+       * @param value The bytes for gatewayIpv4Address to set.
+       * @return This builder for chaining.
        */
       public Builder setGatewayIpv4AddressBytes(
           com.google.protobuf.ByteString value) {
@@ -8537,7 +8878,7 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec masterSpec_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec masterSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpecOrBuilder> masterSpecBuilder_;
       /**
@@ -8546,6 +8887,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
+       * @return Whether the masterSpec field is set.
        */
       public boolean hasMasterSpec() {
         return masterSpecBuilder_ != null || masterSpec_ != null;
@@ -8556,6 +8898,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
+       * @return The masterSpec.
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec getMasterSpec() {
         if (masterSpecBuilder_ == null) {
@@ -8699,6 +9042,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -8720,6 +9064,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -8742,6 +9087,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -8761,6 +9108,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -8776,6 +9124,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8797,6 +9147,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 8;</code>
+       * @return The nodeServiceAccountId.
        */
       public java.lang.String getNodeServiceAccountId() {
         java.lang.Object ref = nodeServiceAccountId_;
@@ -8817,6 +9168,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 8;</code>
+       * @return The bytes for nodeServiceAccountId.
        */
       public com.google.protobuf.ByteString
           getNodeServiceAccountIdBytes() {
@@ -8838,6 +9190,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 8;</code>
+       * @param value The nodeServiceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setNodeServiceAccountId(
           java.lang.String value) {
@@ -8856,6 +9210,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNodeServiceAccountId() {
         
@@ -8870,6 +9225,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 8;</code>
+       * @param value The bytes for nodeServiceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setNodeServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8883,17 +9240,19 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> networkPolicyBuilder_;
       /**
        * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       * @return Whether the networkPolicy field is set.
        */
       public boolean hasNetworkPolicy() {
         return networkPolicyBuilder_ != null || networkPolicy_ != null;
       }
       /**
        * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       * @return The networkPolicy.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
         if (networkPolicyBuilder_ == null) {
@@ -9000,17 +9359,19 @@ public final class ClusterServiceOuterClass {
         return networkPolicyBuilder_;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder> ipAllocationPolicyBuilder_;
       /**
        * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       * @return Whether the ipAllocationPolicy field is set.
        */
       public boolean hasIpAllocationPolicy() {
         return ipAllocationPolicyBuilder_ != null || ipAllocationPolicy_ != null;
       }
       /**
        * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       * @return The ipAllocationPolicy.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy() {
         if (ipAllocationPolicyBuilder_ == null) {
@@ -9119,7 +9480,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9179,6 +9540,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
+     * @return Whether the version field is set.
      */
     boolean hasVersion();
     /**
@@ -9187,6 +9549,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
+     * @return The version.
      */
     yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion();
     /**
@@ -9204,6 +9567,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
+     * @return Whether the maintenancePolicy field is set.
      */
     boolean hasMaintenancePolicy();
     /**
@@ -9212,6 +9576,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
+     * @return The maintenancePolicy.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy();
     /**
@@ -9229,6 +9594,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @return A list containing the securityGroupIds.
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
@@ -9238,6 +9604,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @return The count of securityGroupIds.
      */
     int getSecurityGroupIdsCount();
     /**
@@ -9246,6 +9613,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
@@ -9254,6 +9623,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
@@ -9261,7 +9632,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterUpdateSpec}
    */
-  public  static final class MasterUpdateSpec extends
+  public static final class MasterUpdateSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.MasterUpdateSpec)
       MasterUpdateSpecOrBuilder {
@@ -9272,6 +9643,13 @@ public final class ClusterServiceOuterClass {
     }
     private MasterUpdateSpec() {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MasterUpdateSpec();
     }
 
     @java.lang.Override
@@ -9326,15 +9704,15 @@ public final class ClusterServiceOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               securityGroupIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9348,7 +9726,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -9368,7 +9746,6 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_;
     /**
@@ -9377,7 +9754,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
+     * @return Whether the version field is set.
      */
+    @java.lang.Override
     public boolean hasVersion() {
       return version_ != null;
     }
@@ -9387,7 +9766,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
+     * @return The version.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion() {
       return version_ == null ? yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.getDefaultInstance() : version_;
     }
@@ -9398,6 +9779,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder() {
       return getVersion();
     }
@@ -9410,7 +9792,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
+     * @return Whether the maintenancePolicy field is set.
      */
+    @java.lang.Override
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
@@ -9420,7 +9804,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
+     * @return The maintenancePolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
@@ -9431,6 +9817,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
       return getMaintenancePolicy();
     }
@@ -9443,6 +9830,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @return A list containing the securityGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupIdsList() {
@@ -9454,6 +9842,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @return The count of securityGroupIds.
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
@@ -9464,6 +9853,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
@@ -9474,6 +9865,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index) {
@@ -9543,21 +9936,20 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec) obj;
 
-      boolean result = true;
-      result = result && (hasVersion() == other.hasVersion());
+      if (hasVersion() != other.hasVersion()) return false;
       if (hasVersion()) {
-        result = result && getVersion()
-            .equals(other.getVersion());
+        if (!getVersion()
+            .equals(other.getVersion())) return false;
       }
-      result = result && (hasMaintenancePolicy() == other.hasMaintenancePolicy());
+      if (hasMaintenancePolicy() != other.hasMaintenancePolicy()) return false;
       if (hasMaintenancePolicy()) {
-        result = result && getMaintenancePolicy()
-            .equals(other.getMaintenancePolicy());
+        if (!getMaintenancePolicy()
+            .equals(other.getMaintenancePolicy())) return false;
       }
-      result = result && getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9725,7 +10117,7 @@ public final class ClusterServiceOuterClass {
           maintenancePolicyBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -9753,7 +10145,6 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (versionBuilder_ == null) {
           result.version_ = version_;
         } else {
@@ -9764,47 +10155,46 @@ public final class ClusterServiceOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroupIds_ = securityGroupIds_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9827,7 +10217,7 @@ public final class ClusterServiceOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -9864,7 +10254,7 @@ public final class ClusterServiceOuterClass {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_ = null;
+      private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.Builder, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder> versionBuilder_;
       /**
@@ -9873,6 +10263,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
+       * @return Whether the version field is set.
        */
       public boolean hasVersion() {
         return versionBuilder_ != null || version_ != null;
@@ -9883,6 +10274,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
+       * @return The version.
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion() {
         if (versionBuilder_ == null) {
@@ -10017,7 +10409,7 @@ public final class ClusterServiceOuterClass {
         return versionBuilder_;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
@@ -10026,6 +10418,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
+       * @return Whether the maintenancePolicy field is set.
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
@@ -10036,6 +10429,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
+       * @return The maintenancePolicy.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
         if (maintenancePolicyBuilder_ == null) {
@@ -10172,9 +10566,9 @@ public final class ClusterServiceOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -10183,6 +10577,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @return A list containing the securityGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupIdsList() {
@@ -10194,6 +10589,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @return The count of securityGroupIds.
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
@@ -10204,6 +10600,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
@@ -10214,6 +10612,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdsBytes(int index) {
@@ -10225,6 +10625,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIds(
           int index, java.lang.String value) {
@@ -10242,6 +10645,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIds(
           java.lang.String value) {
@@ -10259,6 +10664,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -10274,10 +10681,11 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10287,6 +10695,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 3;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -10302,7 +10712,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10362,6 +10772,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -10370,6 +10781,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -10377,7 +10789,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.UpdateClusterMetadata}
    */
-  public  static final class UpdateClusterMetadata extends
+  public static final class UpdateClusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.UpdateClusterMetadata)
       UpdateClusterMetadataOrBuilder {
@@ -10388,6 +10800,13 @@ public final class ClusterServiceOuterClass {
     }
     private UpdateClusterMetadata() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateClusterMetadata();
     }
 
     @java.lang.Override
@@ -10403,7 +10822,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10421,7 +10839,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10460,7 +10878,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -10479,7 +10899,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -10508,7 +10930,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -10520,7 +10942,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10538,11 +10960,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10722,35 +11143,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10804,6 +11225,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -10823,6 +11245,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -10843,6 +11266,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -10860,6 +11285,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -10873,6 +11299,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10888,7 +11316,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10949,6 +11377,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -10958,6 +11387,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -10969,6 +11399,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -10978,6 +11409,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -10988,6 +11420,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -10996,6 +11429,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -11060,6 +11494,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -11068,6 +11503,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -11078,6 +11514,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the masterSpec field is set.
      */
     boolean hasMasterSpec();
     /**
@@ -11086,6 +11523,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The masterSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec getMasterSpec();
     /**
@@ -11103,6 +11541,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
+     * @return Whether the ipAllocationPolicy field is set.
      */
     boolean hasIpAllocationPolicy();
     /**
@@ -11111,6 +11550,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
+     * @return The ipAllocationPolicy.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy();
     /**
@@ -11128,6 +11568,16 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 8;</code>
+     * @return Whether the gatewayIpv4Address field is set.
+     */
+    boolean hasGatewayIpv4Address();
+    /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
+     * <code>string gateway_ipv4_address = 8;</code>
+     * @return The gatewayIpv4Address.
      */
     java.lang.String getGatewayIpv4Address();
     /**
@@ -11136,6 +11586,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 8;</code>
+     * @return The bytes for gatewayIpv4Address.
      */
     com.google.protobuf.ByteString
         getGatewayIpv4AddressBytes();
@@ -11148,6 +11599,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -11158,6 +11610,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -11168,6 +11621,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+     * @return The nodeServiceAccountId.
      */
     java.lang.String getNodeServiceAccountId();
     /**
@@ -11176,6 +11630,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for nodeServiceAccountId.
      */
     com.google.protobuf.ByteString
         getNodeServiceAccountIdBytes();
@@ -11186,6 +11641,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+     * @return The enum numeric value on the wire for releaseChannel.
      */
     int getReleaseChannelValue();
     /**
@@ -11194,15 +11650,18 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+     * @return The releaseChannel.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
 
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     * @return Whether the networkPolicy field is set.
      */
     boolean hasNetworkPolicy();
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     * @return The networkPolicy.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy();
     /**
@@ -11216,6 +11675,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     * @return Whether the kmsProvider field is set.
      */
     boolean hasKmsProvider();
     /**
@@ -11224,6 +11684,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     * @return The kmsProvider.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider();
     /**
@@ -11237,10 +11698,12 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
+     * @return Whether the cilium field is set.
      */
     boolean hasCilium();
     /**
      * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
+     * @return The cilium.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getCilium();
     /**
@@ -11255,7 +11718,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.CreateClusterRequest}
    */
-  public  static final class CreateClusterRequest extends
+  public static final class CreateClusterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.CreateClusterRequest)
       CreateClusterRequestOrBuilder {
@@ -11272,6 +11735,13 @@ public final class ClusterServiceOuterClass {
       serviceAccountId_ = "";
       nodeServiceAccountId_ = "";
       releaseChannel_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateClusterRequest();
     }
 
     @java.lang.Override
@@ -11317,10 +11787,10 @@ public final class ClusterServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -11426,7 +11896,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11469,11 +11939,11 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int internetGatewayCase_ = 0;
     private java.lang.Object internetGateway_;
     public enum InternetGatewayCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       GATEWAY_IPV4_ADDRESS(8),
       INTERNETGATEWAY_NOT_SET(0);
       private final int value;
@@ -11481,6 +11951,8 @@ public final class ClusterServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -11509,7 +11981,8 @@ public final class ClusterServiceOuterClass {
     private int networkImplementationCase_ = 0;
     private java.lang.Object networkImplementation_;
     public enum NetworkImplementationCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CILIUM(14),
       NETWORKIMPLEMENTATION_NOT_SET(0);
       private final int value;
@@ -11517,6 +11990,8 @@ public final class ClusterServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -11551,7 +12026,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -11571,7 +12048,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -11595,7 +12074,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -11615,7 +12096,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -11638,7 +12121,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -11657,7 +12142,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -11706,14 +12193,16 @@ public final class ClusterServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -11725,6 +12214,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -11736,11 +12226,12 @@ public final class ClusterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11752,10 +12243,11 @@ public final class ClusterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -11772,7 +12264,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -11791,7 +12285,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -11814,7 +12310,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the masterSpec field is set.
      */
+    @java.lang.Override
     public boolean hasMasterSpec() {
       return masterSpec_ != null;
     }
@@ -11824,7 +12322,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The masterSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec getMasterSpec() {
       return masterSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.getDefaultInstance() : masterSpec_;
     }
@@ -11835,6 +12335,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpecOrBuilder getMasterSpecOrBuilder() {
       return getMasterSpec();
     }
@@ -11847,7 +12348,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
+     * @return Whether the ipAllocationPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasIpAllocationPolicy() {
       return ipAllocationPolicy_ != null;
     }
@@ -11857,7 +12360,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
+     * @return The ipAllocationPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy() {
       return ipAllocationPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.getDefaultInstance() : ipAllocationPolicy_;
     }
@@ -11868,6 +12373,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder getIpAllocationPolicyOrBuilder() {
       return getIpAllocationPolicy();
     }
@@ -11879,6 +12385,18 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 8;</code>
+     * @return Whether the gatewayIpv4Address field is set.
+     */
+    public boolean hasGatewayIpv4Address() {
+      return internetGatewayCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
+     * <code>string gateway_ipv4_address = 8;</code>
+     * @return The gatewayIpv4Address.
      */
     public java.lang.String getGatewayIpv4Address() {
       java.lang.Object ref = "";
@@ -11903,6 +12421,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string gateway_ipv4_address = 8;</code>
+     * @return The bytes for gatewayIpv4Address.
      */
     public com.google.protobuf.ByteString
         getGatewayIpv4AddressBytes() {
@@ -11933,7 +12452,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -11954,7 +12475,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -11977,7 +12500,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+     * @return The nodeServiceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getNodeServiceAccountId() {
       java.lang.Object ref = nodeServiceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -11996,7 +12521,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for nodeServiceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNodeServiceAccountIdBytes() {
       java.lang.Object ref = nodeServiceAccountId_;
@@ -12019,8 +12546,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+     * @return The enum numeric value on the wire for releaseChannel.
      */
-    public int getReleaseChannelValue() {
+    @java.lang.Override public int getReleaseChannelValue() {
       return releaseChannel_;
     }
     /**
@@ -12029,8 +12557,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+     * @return The releaseChannel.
      */
-    public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
+    @java.lang.Override public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel result = yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.valueOf(releaseChannel_);
       return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
@@ -12040,19 +12569,24 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     * @return Whether the networkPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasNetworkPolicy() {
       return networkPolicy_ != null;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     * @return The networkPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
       return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
       return getNetworkPolicy();
     }
@@ -12065,7 +12599,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     * @return Whether the kmsProvider field is set.
      */
+    @java.lang.Override
     public boolean hasKmsProvider() {
       return kmsProvider_ != null;
     }
@@ -12075,7 +12611,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     * @return The kmsProvider.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider() {
       return kmsProvider_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
     }
@@ -12086,6 +12624,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder() {
       return getKmsProvider();
     }
@@ -12093,13 +12632,17 @@ public final class ClusterServiceOuterClass {
     public static final int CILIUM_FIELD_NUMBER = 14;
     /**
      * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
+     * @return Whether the cilium field is set.
      */
+    @java.lang.Override
     public boolean hasCilium() {
       return networkImplementationCase_ == 14;
     }
     /**
      * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
+     * @return The cilium.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getCilium() {
       if (networkImplementationCase_ == 14) {
          return (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_;
@@ -12109,6 +12652,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder() {
       if (networkImplementationCase_ == 14) {
          return (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_;
@@ -12130,13 +12674,13 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -12145,7 +12689,7 @@ public final class ClusterServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, networkId_);
       }
       if (masterSpec_ != null) {
@@ -12157,10 +12701,10 @@ public final class ClusterServiceOuterClass {
       if (internetGatewayCase_ == 8) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, internetGateway_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, serviceAccountId_);
       }
-      if (!getNodeServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeServiceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nodeServiceAccountId_);
       }
       if (releaseChannel_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.RELEASE_CHANNEL_UNSPECIFIED.getNumber()) {
@@ -12184,13 +12728,13 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -12203,7 +12747,7 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, networkId_);
       }
       if (masterSpec_ != null) {
@@ -12217,10 +12761,10 @@ public final class ClusterServiceOuterClass {
       if (internetGatewayCase_ == 8) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, internetGateway_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, serviceAccountId_);
       }
-      if (!getNodeServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeServiceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nodeServiceAccountId_);
       }
       if (releaseChannel_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.RELEASE_CHANNEL_UNSPECIFIED.getNumber()) {
@@ -12254,66 +12798,61 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && (hasMasterSpec() == other.hasMasterSpec());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (hasMasterSpec() != other.hasMasterSpec()) return false;
       if (hasMasterSpec()) {
-        result = result && getMasterSpec()
-            .equals(other.getMasterSpec());
+        if (!getMasterSpec()
+            .equals(other.getMasterSpec())) return false;
       }
-      result = result && (hasIpAllocationPolicy() == other.hasIpAllocationPolicy());
+      if (hasIpAllocationPolicy() != other.hasIpAllocationPolicy()) return false;
       if (hasIpAllocationPolicy()) {
-        result = result && getIpAllocationPolicy()
-            .equals(other.getIpAllocationPolicy());
+        if (!getIpAllocationPolicy()
+            .equals(other.getIpAllocationPolicy())) return false;
       }
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && getNodeServiceAccountId()
-          .equals(other.getNodeServiceAccountId());
-      result = result && releaseChannel_ == other.releaseChannel_;
-      result = result && (hasNetworkPolicy() == other.hasNetworkPolicy());
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!getNodeServiceAccountId()
+          .equals(other.getNodeServiceAccountId())) return false;
+      if (releaseChannel_ != other.releaseChannel_) return false;
+      if (hasNetworkPolicy() != other.hasNetworkPolicy()) return false;
       if (hasNetworkPolicy()) {
-        result = result && getNetworkPolicy()
-            .equals(other.getNetworkPolicy());
+        if (!getNetworkPolicy()
+            .equals(other.getNetworkPolicy())) return false;
       }
-      result = result && (hasKmsProvider() == other.hasKmsProvider());
+      if (hasKmsProvider() != other.hasKmsProvider()) return false;
       if (hasKmsProvider()) {
-        result = result && getKmsProvider()
-            .equals(other.getKmsProvider());
+        if (!getKmsProvider()
+            .equals(other.getKmsProvider())) return false;
       }
-      result = result && getInternetGatewayCase().equals(
-          other.getInternetGatewayCase());
-      if (!result) return false;
+      if (!getInternetGatewayCase().equals(other.getInternetGatewayCase())) return false;
       switch (internetGatewayCase_) {
         case 8:
-          result = result && getGatewayIpv4Address()
-              .equals(other.getGatewayIpv4Address());
+          if (!getGatewayIpv4Address()
+              .equals(other.getGatewayIpv4Address())) return false;
           break;
         case 0:
         default:
       }
-      result = result && getNetworkImplementationCase().equals(
-          other.getNetworkImplementationCase());
-      if (!result) return false;
+      if (!getNetworkImplementationCase().equals(other.getNetworkImplementationCase())) return false;
       switch (networkImplementationCase_) {
         case 14:
-          result = result && getCilium()
-              .equals(other.getCilium());
+          if (!getCilium()
+              .equals(other.getCilium())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12598,7 +13137,6 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -12638,7 +13176,6 @@ public final class ClusterServiceOuterClass {
             result.networkImplementation_ = ciliumBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
         result.networkImplementationCase_ = networkImplementationCase_;
         onBuilt();
@@ -12647,35 +13184,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12818,6 +13355,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -12838,6 +13376,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -12859,6 +13398,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -12877,6 +13418,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -12891,6 +13433,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12912,6 +13456,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -12932,6 +13477,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -12953,6 +13499,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -12971,6 +13519,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -12985,6 +13534,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -13005,6 +13556,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -13024,6 +13576,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -13044,6 +13597,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -13061,6 +13616,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -13074,6 +13630,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -13121,14 +13679,16 @@ public final class ClusterServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -13140,6 +13700,7 @@ public final class ClusterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -13151,11 +13712,12 @@ public final class ClusterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13167,10 +13729,11 @@ public final class ClusterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -13194,7 +13757,7 @@ public final class ClusterServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -13217,8 +13780,11 @@ public final class ClusterServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -13245,6 +13811,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -13264,6 +13831,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -13284,6 +13852,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -13301,6 +13871,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -13314,6 +13885,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13327,7 +13900,7 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec masterSpec_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec masterSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpecOrBuilder> masterSpecBuilder_;
       /**
@@ -13336,6 +13909,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the masterSpec field is set.
        */
       public boolean hasMasterSpec() {
         return masterSpecBuilder_ != null || masterSpec_ != null;
@@ -13346,6 +13920,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterSpec master_spec = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The masterSpec.
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec getMasterSpec() {
         if (masterSpecBuilder_ == null) {
@@ -13480,7 +14055,7 @@ public final class ClusterServiceOuterClass {
         return masterSpecBuilder_;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder> ipAllocationPolicyBuilder_;
       /**
@@ -13489,6 +14064,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
+       * @return Whether the ipAllocationPolicy field is set.
        */
       public boolean hasIpAllocationPolicy() {
         return ipAllocationPolicyBuilder_ != null || ipAllocationPolicy_ != null;
@@ -13499,6 +14075,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 7;</code>
+       * @return The ipAllocationPolicy.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy() {
         if (ipAllocationPolicyBuilder_ == null) {
@@ -13639,7 +14216,21 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 8;</code>
+       * @return Whether the gatewayIpv4Address field is set.
        */
+      @java.lang.Override
+      public boolean hasGatewayIpv4Address() {
+        return internetGatewayCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
+       * <code>string gateway_ipv4_address = 8;</code>
+       * @return The gatewayIpv4Address.
+       */
+      @java.lang.Override
       public java.lang.String getGatewayIpv4Address() {
         java.lang.Object ref = "";
         if (internetGatewayCase_ == 8) {
@@ -13663,7 +14254,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 8;</code>
+       * @return The bytes for gatewayIpv4Address.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getGatewayIpv4AddressBytes() {
         java.lang.Object ref = "";
@@ -13688,6 +14281,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 8;</code>
+       * @param value The gatewayIpv4Address to set.
+       * @return This builder for chaining.
        */
       public Builder setGatewayIpv4Address(
           java.lang.String value) {
@@ -13705,6 +14300,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGatewayIpv4Address() {
         if (internetGatewayCase_ == 8) {
@@ -13720,6 +14316,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string gateway_ipv4_address = 8;</code>
+       * @param value The bytes for gatewayIpv4Address to set.
+       * @return This builder for chaining.
        */
       public Builder setGatewayIpv4AddressBytes(
           com.google.protobuf.ByteString value) {
@@ -13742,6 +14340,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -13763,6 +14362,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -13785,6 +14385,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -13804,6 +14406,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -13819,6 +14422,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 9 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13839,6 +14444,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+       * @return The nodeServiceAccountId.
        */
       public java.lang.String getNodeServiceAccountId() {
         java.lang.Object ref = nodeServiceAccountId_;
@@ -13858,6 +14464,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for nodeServiceAccountId.
        */
       public com.google.protobuf.ByteString
           getNodeServiceAccountIdBytes() {
@@ -13878,6 +14485,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+       * @param value The nodeServiceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setNodeServiceAccountId(
           java.lang.String value) {
@@ -13895,6 +14504,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNodeServiceAccountId() {
         
@@ -13908,6 +14518,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string node_service_account_id = 10 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for nodeServiceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setNodeServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13928,8 +14540,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+       * @return The enum numeric value on the wire for releaseChannel.
        */
-      public int getReleaseChannelValue() {
+      @java.lang.Override public int getReleaseChannelValue() {
         return releaseChannel_;
       }
       /**
@@ -13938,8 +14551,11 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+       * @param value The enum numeric value on the wire for releaseChannel to set.
+       * @return This builder for chaining.
        */
       public Builder setReleaseChannelValue(int value) {
+        
         releaseChannel_ = value;
         onChanged();
         return this;
@@ -13950,7 +14566,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+       * @return The releaseChannel.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel result = yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.valueOf(releaseChannel_);
@@ -13962,6 +14580,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+       * @param value The releaseChannel to set.
+       * @return This builder for chaining.
        */
       public Builder setReleaseChannel(yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel value) {
         if (value == null) {
@@ -13978,6 +14598,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReleaseChannel() {
         
@@ -13986,17 +14607,19 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> networkPolicyBuilder_;
       /**
        * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       * @return Whether the networkPolicy field is set.
        */
       public boolean hasNetworkPolicy() {
         return networkPolicyBuilder_ != null || networkPolicy_ != null;
       }
       /**
        * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       * @return The networkPolicy.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
         if (networkPolicyBuilder_ == null) {
@@ -14103,7 +14726,7 @@ public final class ClusterServiceOuterClass {
         return networkPolicyBuilder_;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider kmsProvider_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider kmsProvider_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder> kmsProviderBuilder_;
       /**
@@ -14112,6 +14735,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       * @return Whether the kmsProvider field is set.
        */
       public boolean hasKmsProvider() {
         return kmsProviderBuilder_ != null || kmsProvider_ != null;
@@ -14122,6 +14746,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       * @return The kmsProvider.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider() {
         if (kmsProviderBuilder_ == null) {
@@ -14260,13 +14885,17 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder> ciliumBuilder_;
       /**
        * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
+       * @return Whether the cilium field is set.
        */
+      @java.lang.Override
       public boolean hasCilium() {
         return networkImplementationCase_ == 14;
       }
       /**
        * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
+       * @return The cilium.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getCilium() {
         if (ciliumBuilder_ == null) {
           if (networkImplementationCase_ == 14) {
@@ -14360,6 +14989,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <code>.yandex.cloud.k8s.v1.Cilium cilium = 14;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder() {
         if ((networkImplementationCase_ == 14) && (ciliumBuilder_ != null)) {
           return ciliumBuilder_.getMessageOrBuilder();
@@ -14394,7 +15024,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14454,6 +15084,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -14462,6 +15093,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -14469,7 +15101,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.CreateClusterMetadata}
    */
-  public  static final class CreateClusterMetadata extends
+  public static final class CreateClusterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.CreateClusterMetadata)
       CreateClusterMetadataOrBuilder {
@@ -14480,6 +15112,13 @@ public final class ClusterServiceOuterClass {
     }
     private CreateClusterMetadata() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateClusterMetadata();
     }
 
     @java.lang.Override
@@ -14495,7 +15134,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14513,7 +15151,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14552,7 +15190,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -14571,7 +15211,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -14600,7 +15242,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -14612,7 +15254,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -14630,11 +15272,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14814,35 +15455,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14896,6 +15537,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -14915,6 +15557,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -14935,6 +15578,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -14952,6 +15597,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -14965,6 +15611,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14980,7 +15628,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15040,6 +15688,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -15048,6 +15697,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -15055,7 +15705,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata}
    */
-  public  static final class AutoUpgradeMasterMetadata extends
+  public static final class AutoUpgradeMasterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata)
       AutoUpgradeMasterMetadataOrBuilder {
@@ -15066,6 +15716,13 @@ public final class ClusterServiceOuterClass {
     }
     private AutoUpgradeMasterMetadata() {
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AutoUpgradeMasterMetadata();
     }
 
     @java.lang.Override
@@ -15081,7 +15738,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15099,7 +15755,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15138,7 +15794,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -15157,7 +15815,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -15186,7 +15846,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -15198,7 +15858,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -15216,11 +15876,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15400,35 +16059,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15482,6 +16141,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -15501,6 +16161,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -15521,6 +16182,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -15538,6 +16201,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -15551,6 +16215,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15566,7 +16232,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15626,6 +16292,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -15634,6 +16301,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -15647,6 +16315,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -15657,6 +16326,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -15666,6 +16336,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -15677,6 +16348,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -15686,6 +16358,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -15693,7 +16366,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClusterOperationsRequest}
    */
-  public  static final class ListClusterOperationsRequest extends
+  public static final class ListClusterOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClusterOperationsRequest)
       ListClusterOperationsRequestOrBuilder {
@@ -15704,9 +16377,15 @@ public final class ClusterServiceOuterClass {
     }
     private ListClusterOperationsRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClusterOperationsRequest();
     }
 
     @java.lang.Override
@@ -15722,7 +16401,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15757,7 +16435,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15796,7 +16474,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -15815,7 +16495,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -15841,7 +16523,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -15855,7 +16539,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -15875,7 +16561,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -15899,7 +16587,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -15919,7 +16609,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -15948,16 +16640,16 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -15969,17 +16661,17 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -15997,17 +16689,16 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16203,35 +16894,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16296,6 +16987,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -16315,6 +17007,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -16335,6 +17028,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -16352,6 +17047,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -16365,6 +17061,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16388,7 +17086,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -16401,6 +17101,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -16417,6 +17119,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -16433,6 +17136,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -16453,6 +17157,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -16474,6 +17179,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -16492,6 +17199,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -16506,6 +17214,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -16527,6 +17237,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -16547,6 +17258,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -16568,6 +17280,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -16586,6 +17300,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -16600,6 +17315,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -16615,7 +17332,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16722,6 +17439,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -16733,6 +17451,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -16740,7 +17459,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClusterOperationsResponse}
    */
-  public  static final class ListClusterOperationsResponse extends
+  public static final class ListClusterOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClusterOperationsResponse)
       ListClusterOperationsResponseOrBuilder {
@@ -16752,6 +17471,13 @@ public final class ClusterServiceOuterClass {
     private ListClusterOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClusterOperationsResponse();
     }
 
     @java.lang.Override
@@ -16779,7 +17505,7 @@ public final class ClusterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -16794,7 +17520,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16808,7 +17534,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -16828,7 +17554,6 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -16838,6 +17563,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -16848,6 +17574,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -16859,6 +17586,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -16869,6 +17597,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -16879,6 +17608,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -16895,7 +17625,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -16917,7 +17649,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -16949,7 +17683,7 @@ public final class ClusterServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -16965,7 +17699,7 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -16983,13 +17717,12 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17174,9 +17907,8 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -17185,42 +17917,41 @@ public final class ClusterServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17297,7 +18028,7 @@ public final class ClusterServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -17598,7 +18329,7 @@ public final class ClusterServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -17616,6 +18347,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -17638,6 +18370,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -17661,6 +18394,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -17681,6 +18416,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -17697,6 +18433,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -17712,7 +18450,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17773,6 +18511,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -17782,6 +18521,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -17796,6 +18536,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -17806,6 +18547,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -17815,6 +18557,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -17826,6 +18569,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -17835,6 +18579,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -17842,7 +18587,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClusterNodeGroupsRequest}
    */
-  public  static final class ListClusterNodeGroupsRequest extends
+  public static final class ListClusterNodeGroupsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClusterNodeGroupsRequest)
       ListClusterNodeGroupsRequestOrBuilder {
@@ -17853,9 +18598,15 @@ public final class ClusterServiceOuterClass {
     }
     private ListClusterNodeGroupsRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClusterNodeGroupsRequest();
     }
 
     @java.lang.Override
@@ -17871,7 +18622,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17906,7 +18656,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17946,7 +18696,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -17966,7 +18718,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -17993,7 +18747,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -18007,7 +18763,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -18027,7 +18785,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -18051,7 +18811,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -18071,7 +18833,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -18100,16 +18864,16 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -18121,17 +18885,17 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -18149,17 +18913,16 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18355,35 +19118,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18449,6 +19212,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -18469,6 +19233,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -18490,6 +19255,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -18508,6 +19275,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -18522,6 +19290,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18546,7 +19316,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -18560,6 +19332,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -18577,6 +19351,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -18593,6 +19368,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -18613,6 +19389,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -18634,6 +19411,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -18652,6 +19431,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -18666,6 +19446,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -18687,6 +19469,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -18707,6 +19490,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -18728,6 +19512,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -18746,6 +19532,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -18760,6 +19547,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -18775,7 +19564,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18884,6 +19673,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -18897,6 +19687,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -18904,7 +19695,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClusterNodeGroupsResponse}
    */
-  public  static final class ListClusterNodeGroupsResponse extends
+  public static final class ListClusterNodeGroupsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClusterNodeGroupsResponse)
       ListClusterNodeGroupsResponseOrBuilder {
@@ -18916,6 +19707,13 @@ public final class ClusterServiceOuterClass {
     private ListClusterNodeGroupsResponse() {
       nodeGroups_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClusterNodeGroupsResponse();
     }
 
     @java.lang.Override
@@ -18943,7 +19741,7 @@ public final class ClusterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 nodeGroups_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -18958,7 +19756,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18972,7 +19770,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           nodeGroups_ = java.util.Collections.unmodifiableList(nodeGroups_);
         }
         this.unknownFields = unknownFields.build();
@@ -18992,7 +19790,6 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NODE_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup> nodeGroups_;
     /**
@@ -19002,6 +19799,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.NodeGroup node_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup> getNodeGroupsList() {
       return nodeGroups_;
     }
@@ -19012,6 +19810,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.NodeGroup node_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupOrBuilder> 
         getNodeGroupsOrBuilderList() {
       return nodeGroups_;
@@ -19023,6 +19822,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.NodeGroup node_groups = 1;</code>
      */
+    @java.lang.Override
     public int getNodeGroupsCount() {
       return nodeGroups_.size();
     }
@@ -19033,6 +19833,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.NodeGroup node_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup getNodeGroups(int index) {
       return nodeGroups_.get(index);
     }
@@ -19043,6 +19844,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.NodeGroup node_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupOrBuilder getNodeGroupsOrBuilder(
         int index) {
       return nodeGroups_.get(index);
@@ -19061,7 +19863,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -19085,7 +19889,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -19117,7 +19923,7 @@ public final class ClusterServiceOuterClass {
       for (int i = 0; i < nodeGroups_.size(); i++) {
         output.writeMessage(1, nodeGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -19133,7 +19939,7 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, nodeGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -19151,13 +19957,12 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse) obj;
 
-      boolean result = true;
-      result = result && getNodeGroupsList()
-          .equals(other.getNodeGroupsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNodeGroupsList()
+          .equals(other.getNodeGroupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19342,9 +20147,8 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodeGroupsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (nodeGroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             nodeGroups_ = java.util.Collections.unmodifiableList(nodeGroups_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -19353,42 +20157,41 @@ public final class ClusterServiceOuterClass {
           result.nodeGroups_ = nodeGroupsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19465,7 +20268,7 @@ public final class ClusterServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup> nodeGroups_ =
         java.util.Collections.emptyList();
       private void ensureNodeGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           nodeGroups_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup>(nodeGroups_);
           bitField0_ |= 0x00000001;
          }
@@ -19766,7 +20569,7 @@ public final class ClusterServiceOuterClass {
           nodeGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroup.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupOrBuilder>(
                   nodeGroups_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           nodeGroups_ = null;
@@ -19786,6 +20589,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -19810,6 +20614,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -19835,6 +20640,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -19857,6 +20664,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -19875,6 +20683,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -19890,7 +20700,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19951,6 +20761,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -19960,6 +20771,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -19974,6 +20786,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -19984,6 +20797,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -19993,6 +20807,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -20000,7 +20815,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClusterNodesRequest}
    */
-  public  static final class ListClusterNodesRequest extends
+  public static final class ListClusterNodesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClusterNodesRequest)
       ListClusterNodesRequestOrBuilder {
@@ -20011,8 +20826,14 @@ public final class ClusterServiceOuterClass {
     }
     private ListClusterNodesRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClusterNodesRequest();
     }
 
     @java.lang.Override
@@ -20028,7 +20849,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20057,7 +20877,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20097,7 +20917,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -20117,7 +20939,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -20144,7 +20968,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -20158,7 +20984,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -20178,7 +21006,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -20207,13 +21037,13 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -20225,14 +21055,14 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -20250,15 +21080,14 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20449,35 +21278,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20539,6 +21368,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -20559,6 +21389,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -20580,6 +21411,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -20598,6 +21431,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -20612,6 +21446,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20636,7 +21472,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -20650,6 +21488,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -20667,6 +21507,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -20683,6 +21524,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -20703,6 +21545,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -20724,6 +21567,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -20742,6 +21587,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -20756,6 +21602,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -20771,7 +21619,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20880,6 +21728,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -20893,6 +21742,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -20900,7 +21750,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ListClusterNodesResponse}
    */
-  public  static final class ListClusterNodesResponse extends
+  public static final class ListClusterNodesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ListClusterNodesResponse)
       ListClusterNodesResponseOrBuilder {
@@ -20912,6 +21762,13 @@ public final class ClusterServiceOuterClass {
     private ListClusterNodesResponse() {
       nodes_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListClusterNodesResponse();
     }
 
     @java.lang.Override
@@ -20939,7 +21796,7 @@ public final class ClusterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 nodes_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.Node>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -20954,7 +21811,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20968,7 +21825,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           nodes_ = java.util.Collections.unmodifiableList(nodes_);
         }
         this.unknownFields = unknownFields.build();
@@ -20988,7 +21845,6 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NODES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.Node> nodes_;
     /**
@@ -20998,6 +21854,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Node nodes = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.Node> getNodesList() {
       return nodes_;
     }
@@ -21008,6 +21865,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Node nodes = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.k8s.v1.NodeOuterClass.NodeOrBuilder> 
         getNodesOrBuilderList() {
       return nodes_;
@@ -21019,6 +21877,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Node nodes = 1;</code>
      */
+    @java.lang.Override
     public int getNodesCount() {
       return nodes_.size();
     }
@@ -21029,6 +21888,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Node nodes = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.NodeOuterClass.Node getNodes(int index) {
       return nodes_.get(index);
     }
@@ -21039,6 +21899,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.Node nodes = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeOrBuilder getNodesOrBuilder(
         int index) {
       return nodes_.get(index);
@@ -21057,7 +21918,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -21081,7 +21944,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -21113,7 +21978,7 @@ public final class ClusterServiceOuterClass {
       for (int i = 0; i < nodes_.size(); i++) {
         output.writeMessage(1, nodes_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -21129,7 +21994,7 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, nodes_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -21147,13 +22012,12 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse) obj;
 
-      boolean result = true;
-      result = result && getNodesList()
-          .equals(other.getNodesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNodesList()
+          .equals(other.getNodesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21338,9 +22202,8 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (nodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             nodes_ = java.util.Collections.unmodifiableList(nodes_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -21349,42 +22212,41 @@ public final class ClusterServiceOuterClass {
           result.nodes_ = nodesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21461,7 +22323,7 @@ public final class ClusterServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.Node> nodes_ =
         java.util.Collections.emptyList();
       private void ensureNodesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           nodes_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.Node>(nodes_);
           bitField0_ |= 0x00000001;
          }
@@ -21762,7 +22624,7 @@ public final class ClusterServiceOuterClass {
           nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.NodeOuterClass.Node, yandex.cloud.api.k8s.v1.NodeOuterClass.Node.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeOrBuilder>(
                   nodes_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           nodes_ = null;
@@ -21782,6 +22644,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -21806,6 +22669,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -21831,6 +22695,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -21853,6 +22719,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -21871,6 +22738,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -21886,7 +22755,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21946,6 +22815,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
+     * @return Whether the zonalMasterSpec field is set.
      */
     boolean hasZonalMasterSpec();
     /**
@@ -21954,6 +22824,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
+     * @return The zonalMasterSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec getZonalMasterSpec();
     /**
@@ -21971,6 +22842,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
+     * @return Whether the regionalMasterSpec field is set.
      */
     boolean hasRegionalMasterSpec();
     /**
@@ -21979,6 +22851,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
+     * @return The regionalMasterSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec getRegionalMasterSpec();
     /**
@@ -21996,6 +22869,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string version = 3;</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
@@ -22004,6 +22878,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string version = 3;</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
@@ -22014,6 +22889,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
+     * @return Whether the maintenancePolicy field is set.
      */
     boolean hasMaintenancePolicy();
     /**
@@ -22022,6 +22898,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
+     * @return The maintenancePolicy.
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy();
     /**
@@ -22039,6 +22916,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @return A list containing the securityGroupIds.
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
@@ -22048,6 +22926,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @return The count of securityGroupIds.
      */
     int getSecurityGroupIdsCount();
     /**
@@ -22056,6 +22935,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
@@ -22064,6 +22945,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
@@ -22073,7 +22956,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterSpec}
    */
-  public  static final class MasterSpec extends
+  public static final class MasterSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.MasterSpec)
       MasterSpecOrBuilder {
@@ -22085,6 +22968,13 @@ public final class ClusterServiceOuterClass {
     private MasterSpec() {
       version_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MasterSpec();
     }
 
     @java.lang.Override
@@ -22160,15 +23050,15 @@ public final class ClusterServiceOuterClass {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               securityGroupIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22182,7 +23072,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -22202,11 +23092,11 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.Builder.class);
     }
 
-    private int bitField0_;
     private int masterTypeCase_ = 0;
     private java.lang.Object masterType_;
     public enum MasterTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       ZONAL_MASTER_SPEC(1),
       REGIONAL_MASTER_SPEC(2),
       MASTERTYPE_NOT_SET(0);
@@ -22215,6 +23105,8 @@ public final class ClusterServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -22248,7 +23140,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
+     * @return Whether the zonalMasterSpec field is set.
      */
+    @java.lang.Override
     public boolean hasZonalMasterSpec() {
       return masterTypeCase_ == 1;
     }
@@ -22258,7 +23152,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
+     * @return The zonalMasterSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec getZonalMasterSpec() {
       if (masterTypeCase_ == 1) {
          return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec) masterType_;
@@ -22272,6 +23168,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpecOrBuilder getZonalMasterSpecOrBuilder() {
       if (masterTypeCase_ == 1) {
          return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec) masterType_;
@@ -22286,7 +23183,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
+     * @return Whether the regionalMasterSpec field is set.
      */
+    @java.lang.Override
     public boolean hasRegionalMasterSpec() {
       return masterTypeCase_ == 2;
     }
@@ -22296,7 +23195,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
+     * @return The regionalMasterSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec getRegionalMasterSpec() {
       if (masterTypeCase_ == 2) {
          return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec) masterType_;
@@ -22310,6 +23211,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpecOrBuilder getRegionalMasterSpecOrBuilder() {
       if (masterTypeCase_ == 2) {
          return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec) masterType_;
@@ -22325,7 +23227,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string version = 3;</code>
+     * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -22344,7 +23248,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string version = 3;</code>
+     * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -22367,7 +23273,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
+     * @return Whether the maintenancePolicy field is set.
      */
+    @java.lang.Override
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
@@ -22377,7 +23285,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
+     * @return The maintenancePolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
@@ -22388,6 +23298,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
       return getMaintenancePolicy();
     }
@@ -22400,6 +23311,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @return A list containing the securityGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupIdsList() {
@@ -22411,6 +23323,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @return The count of securityGroupIds.
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
@@ -22421,6 +23334,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
@@ -22431,6 +23346,8 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index) {
@@ -22457,7 +23374,7 @@ public final class ClusterServiceOuterClass {
       if (masterTypeCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec) masterType_);
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
       }
       if (maintenancePolicy_ != null) {
@@ -22483,7 +23400,7 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec) masterType_);
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
       }
       if (maintenancePolicy_ != null) {
@@ -22513,33 +23430,30 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec) obj;
 
-      boolean result = true;
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && (hasMaintenancePolicy() == other.hasMaintenancePolicy());
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (hasMaintenancePolicy() != other.hasMaintenancePolicy()) return false;
       if (hasMaintenancePolicy()) {
-        result = result && getMaintenancePolicy()
-            .equals(other.getMaintenancePolicy());
+        if (!getMaintenancePolicy()
+            .equals(other.getMaintenancePolicy())) return false;
       }
-      result = result && getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList());
-      result = result && getMasterTypeCase().equals(
-          other.getMasterTypeCase());
-      if (!result) return false;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (!getMasterTypeCase().equals(other.getMasterTypeCase())) return false;
       switch (masterTypeCase_) {
         case 1:
-          result = result && getZonalMasterSpec()
-              .equals(other.getZonalMasterSpec());
+          if (!getZonalMasterSpec()
+              .equals(other.getZonalMasterSpec())) return false;
           break;
         case 2:
-          result = result && getRegionalMasterSpec()
-              .equals(other.getRegionalMasterSpec());
+          if (!getRegionalMasterSpec()
+              .equals(other.getRegionalMasterSpec())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22713,7 +23627,7 @@ public final class ClusterServiceOuterClass {
           maintenancePolicyBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         masterTypeCase_ = 0;
         masterType_ = null;
         return this;
@@ -22743,7 +23657,6 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (masterTypeCase_ == 1) {
           if (zonalMasterSpecBuilder_ == null) {
             result.masterType_ = masterType_;
@@ -22764,12 +23677,11 @@ public final class ClusterServiceOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroupIds_ = securityGroupIds_;
-        result.bitField0_ = to_bitField0_;
         result.masterTypeCase_ = masterTypeCase_;
         onBuilt();
         return result;
@@ -22777,35 +23689,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22829,7 +23741,7 @@ public final class ClusterServiceOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -22902,7 +23814,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
+       * @return Whether the zonalMasterSpec field is set.
        */
+      @java.lang.Override
       public boolean hasZonalMasterSpec() {
         return masterTypeCase_ == 1;
       }
@@ -22912,7 +23826,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
+       * @return The zonalMasterSpec.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec getZonalMasterSpec() {
         if (zonalMasterSpecBuilder_ == null) {
           if (masterTypeCase_ == 1) {
@@ -23030,6 +23946,7 @@ public final class ClusterServiceOuterClass {
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpecOrBuilder getZonalMasterSpecOrBuilder() {
         if ((masterTypeCase_ == 1) && (zonalMasterSpecBuilder_ != null)) {
           return zonalMasterSpecBuilder_.getMessageOrBuilder();
@@ -23074,7 +23991,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
+       * @return Whether the regionalMasterSpec field is set.
        */
+      @java.lang.Override
       public boolean hasRegionalMasterSpec() {
         return masterTypeCase_ == 2;
       }
@@ -23084,7 +24003,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
+       * @return The regionalMasterSpec.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec getRegionalMasterSpec() {
         if (regionalMasterSpecBuilder_ == null) {
           if (masterTypeCase_ == 2) {
@@ -23202,6 +24123,7 @@ public final class ClusterServiceOuterClass {
        *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpecOrBuilder getRegionalMasterSpecOrBuilder() {
         if ((masterTypeCase_ == 2) && (regionalMasterSpecBuilder_ != null)) {
           return regionalMasterSpecBuilder_.getMessageOrBuilder();
@@ -23245,6 +24167,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string version = 3;</code>
+       * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -23264,6 +24187,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string version = 3;</code>
+       * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -23284,6 +24208,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string version = 3;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -23301,6 +24227,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string version = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -23314,6 +24241,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string version = 3;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -23327,7 +24256,7 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
@@ -23336,6 +24265,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
+       * @return Whether the maintenancePolicy field is set.
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
@@ -23346,6 +24276,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
+       * @return The maintenancePolicy.
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
         if (maintenancePolicyBuilder_ == null) {
@@ -23482,9 +24413,9 @@ public final class ClusterServiceOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -23493,6 +24424,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @return A list containing the securityGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupIdsList() {
@@ -23504,6 +24436,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @return The count of securityGroupIds.
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
@@ -23514,6 +24447,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
@@ -23524,6 +24459,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdsBytes(int index) {
@@ -23535,6 +24472,9 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIds(
           int index, java.lang.String value) {
@@ -23552,6 +24492,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIds(
           java.lang.String value) {
@@ -23569,6 +24511,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -23584,10 +24528,11 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -23597,6 +24542,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 6;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -23612,7 +24559,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -23672,6 +24619,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -23680,6 +24628,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -23690,6 +24639,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return Whether the internalV4AddressSpec field is set.
      */
     boolean hasInternalV4AddressSpec();
     /**
@@ -23698,6 +24648,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return The internalV4AddressSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec getInternalV4AddressSpec();
     /**
@@ -23715,6 +24666,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return Whether the externalV4AddressSpec field is set.
      */
     boolean hasExternalV4AddressSpec();
     /**
@@ -23723,6 +24675,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return The externalV4AddressSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec();
     /**
@@ -23737,7 +24690,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ZonalMasterSpec}
    */
-  public  static final class ZonalMasterSpec extends
+  public static final class ZonalMasterSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ZonalMasterSpec)
       ZonalMasterSpecOrBuilder {
@@ -23748,6 +24701,13 @@ public final class ClusterServiceOuterClass {
     }
     private ZonalMasterSpec() {
       zoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ZonalMasterSpec();
     }
 
     @java.lang.Override
@@ -23763,7 +24723,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -23807,7 +24766,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -23846,7 +24805,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -23865,7 +24826,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -23888,7 +24851,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return Whether the internalV4AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasInternalV4AddressSpec() {
       return internalV4AddressSpec_ != null;
     }
@@ -23898,7 +24863,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return The internalV4AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec getInternalV4AddressSpec() {
       return internalV4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec.getDefaultInstance() : internalV4AddressSpec_;
     }
@@ -23909,6 +24876,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpecOrBuilder getInternalV4AddressSpecOrBuilder() {
       return getInternalV4AddressSpec();
     }
@@ -23921,7 +24889,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return Whether the externalV4AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasExternalV4AddressSpec() {
       return externalV4AddressSpec_ != null;
     }
@@ -23931,7 +24901,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return The externalV4AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec() {
       return externalV4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.getDefaultInstance() : externalV4AddressSpec_;
     }
@@ -23942,6 +24914,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder getExternalV4AddressSpecOrBuilder() {
       return getExternalV4AddressSpec();
     }
@@ -23960,7 +24933,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, zoneId_);
       }
       if (internalV4AddressSpec_ != null) {
@@ -23978,7 +24951,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, zoneId_);
       }
       if (internalV4AddressSpec_ != null) {
@@ -24004,21 +24977,20 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec) obj;
 
-      boolean result = true;
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && (hasInternalV4AddressSpec() == other.hasInternalV4AddressSpec());
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (hasInternalV4AddressSpec() != other.hasInternalV4AddressSpec()) return false;
       if (hasInternalV4AddressSpec()) {
-        result = result && getInternalV4AddressSpec()
-            .equals(other.getInternalV4AddressSpec());
+        if (!getInternalV4AddressSpec()
+            .equals(other.getInternalV4AddressSpec())) return false;
       }
-      result = result && (hasExternalV4AddressSpec() == other.hasExternalV4AddressSpec());
+      if (hasExternalV4AddressSpec() != other.hasExternalV4AddressSpec()) return false;
       if (hasExternalV4AddressSpec()) {
-        result = result && getExternalV4AddressSpec()
-            .equals(other.getExternalV4AddressSpec());
+        if (!getExternalV4AddressSpec()
+            .equals(other.getExternalV4AddressSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -24228,35 +25200,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24316,6 +25288,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -24335,6 +25308,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -24355,6 +25329,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -24372,6 +25348,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -24385,6 +25362,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -24398,7 +25377,7 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec internalV4AddressSpec_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec internalV4AddressSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpecOrBuilder> internalV4AddressSpecBuilder_;
       /**
@@ -24407,6 +25386,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+       * @return Whether the internalV4AddressSpec field is set.
        */
       public boolean hasInternalV4AddressSpec() {
         return internalV4AddressSpecBuilder_ != null || internalV4AddressSpec_ != null;
@@ -24417,6 +25397,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+       * @return The internalV4AddressSpec.
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec getInternalV4AddressSpec() {
         if (internalV4AddressSpecBuilder_ == null) {
@@ -24551,7 +25532,7 @@ public final class ClusterServiceOuterClass {
         return internalV4AddressSpecBuilder_;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV4AddressSpec_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV4AddressSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder> externalV4AddressSpecBuilder_;
       /**
@@ -24560,6 +25541,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+       * @return Whether the externalV4AddressSpec field is set.
        */
       public boolean hasExternalV4AddressSpec() {
         return externalV4AddressSpecBuilder_ != null || externalV4AddressSpec_ != null;
@@ -24570,6 +25552,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+       * @return The externalV4AddressSpec.
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec() {
         if (externalV4AddressSpecBuilder_ == null) {
@@ -24706,7 +25689,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24766,6 +25749,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The regionId.
      */
     java.lang.String getRegionId();
     /**
@@ -24774,6 +25758,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for regionId.
      */
     com.google.protobuf.ByteString
         getRegionIdBytes();
@@ -24828,6 +25813,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return Whether the externalV4AddressSpec field is set.
      */
     boolean hasExternalV4AddressSpec();
     /**
@@ -24836,6 +25822,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return The externalV4AddressSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec();
     /**
@@ -24850,7 +25837,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.RegionalMasterSpec}
    */
-  public  static final class RegionalMasterSpec extends
+  public static final class RegionalMasterSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.RegionalMasterSpec)
       RegionalMasterSpecOrBuilder {
@@ -24862,6 +25849,13 @@ public final class ClusterServiceOuterClass {
     private RegionalMasterSpec() {
       regionId_ = "";
       locations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegionalMasterSpec();
     }
 
     @java.lang.Override
@@ -24895,9 +25889,9 @@ public final class ClusterServiceOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               locations_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.parser(), extensionRegistry));
@@ -24917,7 +25911,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24931,7 +25925,7 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           locations_ = java.util.Collections.unmodifiableList(locations_);
         }
         this.unknownFields = unknownFields.build();
@@ -24951,7 +25945,6 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REGION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object regionId_;
     /**
@@ -24960,7 +25953,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The regionId.
      */
+    @java.lang.Override
     public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -24979,7 +25974,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for regionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
@@ -25003,6 +26000,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation> getLocationsList() {
       return locations_;
     }
@@ -25013,6 +26011,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder> 
         getLocationsOrBuilderList() {
       return locations_;
@@ -25024,6 +26023,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
+    @java.lang.Override
     public int getLocationsCount() {
       return locations_.size();
     }
@@ -25034,6 +26034,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation getLocations(int index) {
       return locations_.get(index);
     }
@@ -25044,6 +26045,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder getLocationsOrBuilder(
         int index) {
       return locations_.get(index);
@@ -25057,7 +26059,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return Whether the externalV4AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasExternalV4AddressSpec() {
       return externalV4AddressSpec_ != null;
     }
@@ -25067,7 +26071,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+     * @return The externalV4AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec() {
       return externalV4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.getDefaultInstance() : externalV4AddressSpec_;
     }
@@ -25078,6 +26084,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder getExternalV4AddressSpecOrBuilder() {
       return getExternalV4AddressSpec();
     }
@@ -25096,7 +26103,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regionId_);
       }
       for (int i = 0; i < locations_.size(); i++) {
@@ -25114,7 +26121,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regionId_);
       }
       for (int i = 0; i < locations_.size(); i++) {
@@ -25140,18 +26147,17 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec) obj;
 
-      boolean result = true;
-      result = result && getRegionId()
-          .equals(other.getRegionId());
-      result = result && getLocationsList()
-          .equals(other.getLocationsList());
-      result = result && (hasExternalV4AddressSpec() == other.hasExternalV4AddressSpec());
+      if (!getRegionId()
+          .equals(other.getRegionId())) return false;
+      if (!getLocationsList()
+          .equals(other.getLocationsList())) return false;
+      if (hasExternalV4AddressSpec() != other.hasExternalV4AddressSpec()) return false;
       if (hasExternalV4AddressSpec()) {
-        result = result && getExternalV4AddressSpec()
-            .equals(other.getExternalV4AddressSpec());
+        if (!getExternalV4AddressSpec()
+            .equals(other.getExternalV4AddressSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25309,7 +26315,7 @@ public final class ClusterServiceOuterClass {
 
         if (locationsBuilder_ == null) {
           locations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           locationsBuilder_.clear();
         }
@@ -25346,12 +26352,11 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.regionId_ = regionId_;
         if (locationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             locations_ = java.util.Collections.unmodifiableList(locations_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.locations_ = locations_;
         } else {
@@ -25362,42 +26367,41 @@ public final class ClusterServiceOuterClass {
         } else {
           result.externalV4AddressSpec_ = externalV4AddressSpecBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25419,7 +26423,7 @@ public final class ClusterServiceOuterClass {
           if (!other.locations_.isEmpty()) {
             if (locations_.isEmpty()) {
               locations_ = other.locations_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLocationsIsMutable();
               locations_.addAll(other.locations_);
@@ -25432,7 +26436,7 @@ public final class ClusterServiceOuterClass {
               locationsBuilder_.dispose();
               locationsBuilder_ = null;
               locations_ = other.locations_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               locationsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLocationsFieldBuilder() : null;
@@ -25481,6 +26485,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The regionId.
        */
       public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
@@ -25500,6 +26505,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for regionId.
        */
       public com.google.protobuf.ByteString
           getRegionIdBytes() {
@@ -25520,6 +26526,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The regionId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegionId(
           java.lang.String value) {
@@ -25537,6 +26545,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegionId() {
         
@@ -25550,6 +26559,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for regionId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25566,9 +26577,9 @@ public final class ClusterServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation> locations_ =
         java.util.Collections.emptyList();
       private void ensureLocationsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation>(locations_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -25762,7 +26773,7 @@ public final class ClusterServiceOuterClass {
       public Builder clearLocations() {
         if (locationsBuilder_ == null) {
           locations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           locationsBuilder_.clear();
@@ -25867,7 +26878,7 @@ public final class ClusterServiceOuterClass {
           locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder>(
                   locations_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           locations_ = null;
@@ -25875,7 +26886,7 @@ public final class ClusterServiceOuterClass {
         return locationsBuilder_;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV4AddressSpec_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV4AddressSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder> externalV4AddressSpecBuilder_;
       /**
@@ -25884,6 +26895,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+       * @return Whether the externalV4AddressSpec field is set.
        */
       public boolean hasExternalV4AddressSpec() {
         return externalV4AddressSpecBuilder_ != null || externalV4AddressSpec_ != null;
@@ -25894,6 +26906,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
+       * @return The externalV4AddressSpec.
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec() {
         if (externalV4AddressSpecBuilder_ == null) {
@@ -26030,7 +27043,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26090,6 +27103,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -26098,6 +27112,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -26105,7 +27120,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.InternalAddressSpec}
    */
-  public  static final class InternalAddressSpec extends
+  public static final class InternalAddressSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.InternalAddressSpec)
       InternalAddressSpecOrBuilder {
@@ -26116,6 +27131,13 @@ public final class ClusterServiceOuterClass {
     }
     private InternalAddressSpec() {
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InternalAddressSpec();
     }
 
     @java.lang.Override
@@ -26131,7 +27153,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -26149,7 +27170,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26188,7 +27209,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -26207,7 +27230,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -26236,7 +27261,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
       }
       unknownFields.writeTo(output);
@@ -26248,7 +27273,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -26266,11 +27291,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26450,35 +27474,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26532,6 +27556,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -26551,6 +27576,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -26571,6 +27597,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -26588,6 +27616,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -26601,6 +27630,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -26616,7 +27647,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26673,7 +27704,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ExternalAddressSpec}
    */
-  public  static final class ExternalAddressSpec extends
+  public static final class ExternalAddressSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.ExternalAddressSpec)
       ExternalAddressSpecOrBuilder {
@@ -26683,6 +27714,13 @@ public final class ClusterServiceOuterClass {
       super(builder);
     }
     private ExternalAddressSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalAddressSpec();
     }
 
     @java.lang.Override
@@ -26709,7 +27747,7 @@ public final class ClusterServiceOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26778,9 +27816,8 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26955,35 +27992,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27028,7 +28065,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27088,6 +28125,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -27096,6 +28134,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -27107,6 +28146,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return Whether the internalV4AddressSpec field is set.
      */
     boolean hasInternalV4AddressSpec();
     /**
@@ -27116,6 +28156,7 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return The internalV4AddressSpec.
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec getInternalV4AddressSpec();
     /**
@@ -27131,7 +28172,7 @@ public final class ClusterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterLocation}
    */
-  public  static final class MasterLocation extends
+  public static final class MasterLocation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.MasterLocation)
       MasterLocationOrBuilder {
@@ -27142,6 +28183,13 @@ public final class ClusterServiceOuterClass {
     }
     private MasterLocation() {
       zoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MasterLocation();
     }
 
     @java.lang.Override
@@ -27157,7 +28205,6 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -27188,7 +28235,7 @@ public final class ClusterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -27227,7 +28274,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -27246,7 +28295,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -27270,7 +28321,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return Whether the internalV4AddressSpec field is set.
      */
+    @java.lang.Override
     public boolean hasInternalV4AddressSpec() {
       return internalV4AddressSpec_ != null;
     }
@@ -27281,7 +28334,9 @@ public final class ClusterServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+     * @return The internalV4AddressSpec.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec getInternalV4AddressSpec() {
       return internalV4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec.getDefaultInstance() : internalV4AddressSpec_;
     }
@@ -27293,6 +28348,7 @@ public final class ClusterServiceOuterClass {
      *
      * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpecOrBuilder getInternalV4AddressSpecOrBuilder() {
       return getInternalV4AddressSpec();
     }
@@ -27311,7 +28367,7 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, zoneId_);
       }
       if (internalV4AddressSpec_ != null) {
@@ -27326,7 +28382,7 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, zoneId_);
       }
       if (internalV4AddressSpec_ != null) {
@@ -27348,16 +28404,15 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation) obj;
 
-      boolean result = true;
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && (hasInternalV4AddressSpec() == other.hasInternalV4AddressSpec());
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (hasInternalV4AddressSpec() != other.hasInternalV4AddressSpec()) return false;
       if (hasInternalV4AddressSpec()) {
-        result = result && getInternalV4AddressSpec()
-            .equals(other.getInternalV4AddressSpec());
+        if (!getInternalV4AddressSpec()
+            .equals(other.getInternalV4AddressSpec())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27552,35 +28607,35 @@ public final class ClusterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27637,6 +28692,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -27656,6 +28712,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -27676,6 +28733,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -27693,6 +28752,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -27706,6 +28766,8 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27719,7 +28781,7 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec internalV4AddressSpec_ = null;
+      private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec internalV4AddressSpec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpecOrBuilder> internalV4AddressSpecBuilder_;
       /**
@@ -27729,6 +28791,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+       * @return Whether the internalV4AddressSpec field is set.
        */
       public boolean hasInternalV4AddressSpec() {
         return internalV4AddressSpecBuilder_ != null || internalV4AddressSpec_ != null;
@@ -27740,6 +28803,7 @@ public final class ClusterServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.InternalAddressSpec internal_v4_address_spec = 2;</code>
+       * @return The internalV4AddressSpec.
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.InternalAddressSpec getInternalV4AddressSpec() {
         if (internalV4AddressSpecBuilder_ == null) {
@@ -27883,7 +28947,7 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -28244,15 +29308,7 @@ public final class ClusterServiceOuterClass {
       "com/yandex-cloud/go-genproto/yandex/clou" +
       "d/k8s/v1;k8sb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -28264,7 +29320,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.k8s.v1.Version.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_k8s_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_GetClusterRequest_fieldAccessorTable = new

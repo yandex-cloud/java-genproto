@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.kafka.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/kafka/v1/topic_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class TopicServiceGrpc {
 
   private TopicServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class TopicServiceGrpc {
     if ((getGetMethod = TopicServiceGrpc.getGetMethod) == null) {
       synchronized (TopicServiceGrpc.class) {
         if ((getGetMethod = TopicServiceGrpc.getGetMethod) == null) {
-          TopicServiceGrpc.getGetMethod = getGetMethod = 
+          TopicServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.kafka.v1.TopicService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest,
@@ -76,22 +63,21 @@ public final class TopicServiceGrpc {
     if ((getListMethod = TopicServiceGrpc.getListMethod) == null) {
       synchronized (TopicServiceGrpc.class) {
         if ((getListMethod = TopicServiceGrpc.getListMethod) == null) {
-          TopicServiceGrpc.getListMethod = getListMethod = 
+          TopicServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest, yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.kafka.v1.TopicService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest,
@@ -108,22 +94,21 @@ public final class TopicServiceGrpc {
     if ((getCreateMethod = TopicServiceGrpc.getCreateMethod) == null) {
       synchronized (TopicServiceGrpc.class) {
         if ((getCreateMethod = TopicServiceGrpc.getCreateMethod) == null) {
-          TopicServiceGrpc.getCreateMethod = getCreateMethod = 
+          TopicServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.kafka.v1.TopicService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest,
@@ -140,22 +125,21 @@ public final class TopicServiceGrpc {
     if ((getUpdateMethod = TopicServiceGrpc.getUpdateMethod) == null) {
       synchronized (TopicServiceGrpc.class) {
         if ((getUpdateMethod = TopicServiceGrpc.getUpdateMethod) == null) {
-          TopicServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          TopicServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.kafka.v1.TopicService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest,
@@ -172,29 +156,35 @@ public final class TopicServiceGrpc {
     if ((getDeleteMethod = TopicServiceGrpc.getDeleteMethod) == null) {
       synchronized (TopicServiceGrpc.class) {
         if ((getDeleteMethod = TopicServiceGrpc.getDeleteMethod) == null) {
-          TopicServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          TopicServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.kafka.v1.TopicService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TopicServiceStub newStub(io.grpc.Channel channel) {
-    return new TopicServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicServiceStub>() {
+        @java.lang.Override
+        public TopicServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicServiceStub(channel, callOptions);
+        }
+      };
+    return TopicServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -202,7 +192,14 @@ public final class TopicServiceGrpc {
    */
   public static TopicServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TopicServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicServiceBlockingStub>() {
+        @java.lang.Override
+        public TopicServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return TopicServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -210,7 +207,14 @@ public final class TopicServiceGrpc {
    */
   public static TopicServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TopicServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicServiceFutureStub>() {
+        @java.lang.Override
+        public TopicServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicServiceFutureStub(channel, callOptions);
+        }
+      };
+    return TopicServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -228,7 +232,7 @@ public final class TopicServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -238,7 +242,7 @@ public final class TopicServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -248,7 +252,7 @@ public final class TopicServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -258,7 +262,7 @@ public final class TopicServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -268,42 +272,42 @@ public final class TopicServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest,
                 yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest,
                 yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -317,19 +321,15 @@ public final class TopicServiceGrpc {
    * A set of methods for managing Kafka topics.
    * </pre>
    */
-  public static final class TopicServiceStub extends io.grpc.stub.AbstractStub<TopicServiceStub> {
-    private TopicServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicServiceStub extends io.grpc.stub.AbstractAsyncStub<TopicServiceStub> {
+    private TopicServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicServiceStub(channel, callOptions);
     }
 
@@ -341,7 +341,7 @@ public final class TopicServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -352,7 +352,7 @@ public final class TopicServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -363,7 +363,7 @@ public final class TopicServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -374,7 +374,7 @@ public final class TopicServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -385,7 +385,7 @@ public final class TopicServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -395,19 +395,15 @@ public final class TopicServiceGrpc {
    * A set of methods for managing Kafka topics.
    * </pre>
    */
-  public static final class TopicServiceBlockingStub extends io.grpc.stub.AbstractStub<TopicServiceBlockingStub> {
-    private TopicServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TopicServiceBlockingStub> {
+    private TopicServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicServiceBlockingStub(channel, callOptions);
     }
 
@@ -418,7 +414,7 @@ public final class TopicServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic get(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -428,7 +424,7 @@ public final class TopicServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse list(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -438,7 +434,7 @@ public final class TopicServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -448,7 +444,7 @@ public final class TopicServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -458,7 +454,7 @@ public final class TopicServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
@@ -468,19 +464,15 @@ public final class TopicServiceGrpc {
    * A set of methods for managing Kafka topics.
    * </pre>
    */
-  public static final class TopicServiceFutureStub extends io.grpc.stub.AbstractStub<TopicServiceFutureStub> {
-    private TopicServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TopicServiceFutureStub> {
+    private TopicServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicServiceFutureStub(channel, callOptions);
     }
 
@@ -492,7 +484,7 @@ public final class TopicServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic> get(
         yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.GetTopicRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -503,7 +495,7 @@ public final class TopicServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsResponse> list(
         yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.ListTopicsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -514,7 +506,7 @@ public final class TopicServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.CreateTopicRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -525,7 +517,7 @@ public final class TopicServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.UpdateTopicRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -536,7 +528,7 @@ public final class TopicServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.kafka.v1.TopicServiceOuterClass.DeleteTopicRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.dns.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/dns/v1/dns_zone_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DnsZoneServiceGrpc {
 
   private DnsZoneServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class DnsZoneServiceGrpc {
     if ((getGetMethod = DnsZoneServiceGrpc.getGetMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getGetMethod = DnsZoneServiceGrpc.getGetMethod) == null) {
-          DnsZoneServiceGrpc.getGetMethod = getGetMethod = 
+          DnsZoneServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest, yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest,
@@ -76,22 +63,21 @@ public final class DnsZoneServiceGrpc {
     if ((getListMethod = DnsZoneServiceGrpc.getListMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getListMethod = DnsZoneServiceGrpc.getListMethod) == null) {
-          DnsZoneServiceGrpc.getListMethod = getListMethod = 
+          DnsZoneServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest,
@@ -108,22 +94,21 @@ public final class DnsZoneServiceGrpc {
     if ((getCreateMethod = DnsZoneServiceGrpc.getCreateMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getCreateMethod = DnsZoneServiceGrpc.getCreateMethod) == null) {
-          DnsZoneServiceGrpc.getCreateMethod = getCreateMethod = 
+          DnsZoneServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest,
@@ -140,22 +125,21 @@ public final class DnsZoneServiceGrpc {
     if ((getUpdateMethod = DnsZoneServiceGrpc.getUpdateMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getUpdateMethod = DnsZoneServiceGrpc.getUpdateMethod) == null) {
-          DnsZoneServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          DnsZoneServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest,
@@ -172,22 +156,21 @@ public final class DnsZoneServiceGrpc {
     if ((getDeleteMethod = DnsZoneServiceGrpc.getDeleteMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getDeleteMethod = DnsZoneServiceGrpc.getDeleteMethod) == null) {
-          DnsZoneServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          DnsZoneServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest,
@@ -204,22 +187,21 @@ public final class DnsZoneServiceGrpc {
     if ((getGetRecordSetMethod = DnsZoneServiceGrpc.getGetRecordSetMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getGetRecordSetMethod = DnsZoneServiceGrpc.getGetRecordSetMethod) == null) {
-          DnsZoneServiceGrpc.getGetRecordSetMethod = getGetRecordSetMethod = 
+          DnsZoneServiceGrpc.getGetRecordSetMethod = getGetRecordSetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "GetRecordSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRecordSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("GetRecordSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("GetRecordSet"))
+              .build();
         }
-     }
-     return getGetRecordSetMethod;
+      }
+    }
+    return getGetRecordSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest,
@@ -236,22 +218,21 @@ public final class DnsZoneServiceGrpc {
     if ((getListRecordSetsMethod = DnsZoneServiceGrpc.getListRecordSetsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getListRecordSetsMethod = DnsZoneServiceGrpc.getListRecordSetsMethod) == null) {
-          DnsZoneServiceGrpc.getListRecordSetsMethod = getListRecordSetsMethod = 
+          DnsZoneServiceGrpc.getListRecordSetsMethod = getListRecordSetsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "ListRecordSets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRecordSets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("ListRecordSets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("ListRecordSets"))
+              .build();
         }
-     }
-     return getListRecordSetsMethod;
+      }
+    }
+    return getListRecordSetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest,
@@ -268,22 +249,21 @@ public final class DnsZoneServiceGrpc {
     if ((getUpdateRecordSetsMethod = DnsZoneServiceGrpc.getUpdateRecordSetsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getUpdateRecordSetsMethod = DnsZoneServiceGrpc.getUpdateRecordSetsMethod) == null) {
-          DnsZoneServiceGrpc.getUpdateRecordSetsMethod = getUpdateRecordSetsMethod = 
+          DnsZoneServiceGrpc.getUpdateRecordSetsMethod = getUpdateRecordSetsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "UpdateRecordSets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRecordSets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpdateRecordSets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpdateRecordSets"))
+              .build();
         }
-     }
-     return getUpdateRecordSetsMethod;
+      }
+    }
+    return getUpdateRecordSetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest,
@@ -300,22 +280,21 @@ public final class DnsZoneServiceGrpc {
     if ((getUpsertRecordSetsMethod = DnsZoneServiceGrpc.getUpsertRecordSetsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getUpsertRecordSetsMethod = DnsZoneServiceGrpc.getUpsertRecordSetsMethod) == null) {
-          DnsZoneServiceGrpc.getUpsertRecordSetsMethod = getUpsertRecordSetsMethod = 
+          DnsZoneServiceGrpc.getUpsertRecordSetsMethod = getUpsertRecordSetsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "UpsertRecordSets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertRecordSets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpsertRecordSets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpsertRecordSets"))
+              .build();
         }
-     }
-     return getUpsertRecordSetsMethod;
+      }
+    }
+    return getUpsertRecordSetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest,
@@ -332,22 +311,21 @@ public final class DnsZoneServiceGrpc {
     if ((getListOperationsMethod = DnsZoneServiceGrpc.getListOperationsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getListOperationsMethod = DnsZoneServiceGrpc.getListOperationsMethod) == null) {
-          DnsZoneServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          DnsZoneServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -364,22 +342,21 @@ public final class DnsZoneServiceGrpc {
     if ((getListAccessBindingsMethod = DnsZoneServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getListAccessBindingsMethod = DnsZoneServiceGrpc.getListAccessBindingsMethod) == null) {
-          DnsZoneServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          DnsZoneServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -396,22 +373,21 @@ public final class DnsZoneServiceGrpc {
     if ((getSetAccessBindingsMethod = DnsZoneServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = DnsZoneServiceGrpc.getSetAccessBindingsMethod) == null) {
-          DnsZoneServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          DnsZoneServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -428,29 +404,35 @@ public final class DnsZoneServiceGrpc {
     if ((getUpdateAccessBindingsMethod = DnsZoneServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (DnsZoneServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = DnsZoneServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          DnsZoneServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          DnsZoneServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dns.v1.DnsZoneService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DnsZoneServiceStub newStub(io.grpc.Channel channel) {
-    return new DnsZoneServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DnsZoneServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DnsZoneServiceStub>() {
+        @java.lang.Override
+        public DnsZoneServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DnsZoneServiceStub(channel, callOptions);
+        }
+      };
+    return DnsZoneServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -458,7 +440,14 @@ public final class DnsZoneServiceGrpc {
    */
   public static DnsZoneServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DnsZoneServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DnsZoneServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DnsZoneServiceBlockingStub>() {
+        @java.lang.Override
+        public DnsZoneServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DnsZoneServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DnsZoneServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -466,7 +455,14 @@ public final class DnsZoneServiceGrpc {
    */
   public static DnsZoneServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DnsZoneServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DnsZoneServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DnsZoneServiceFutureStub>() {
+        @java.lang.Override
+        public DnsZoneServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DnsZoneServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DnsZoneServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -484,7 +480,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void get(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -494,7 +490,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void list(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -504,7 +500,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void create(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -514,7 +510,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void update(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -524,7 +520,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void delete(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -534,7 +530,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void getRecordSet(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetRecordSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRecordSetMethod(), responseObserver);
     }
 
     /**
@@ -544,7 +540,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void listRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListRecordSetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRecordSetsMethod(), responseObserver);
     }
 
     /**
@@ -559,7 +555,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateRecordSetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRecordSetsMethod(), responseObserver);
     }
 
     /**
@@ -570,7 +566,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertRecordSetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertRecordSetsMethod(), responseObserver);
     }
 
     /**
@@ -580,7 +576,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -590,7 +586,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -600,7 +596,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -610,98 +606,98 @@ public final class DnsZoneServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest,
                 yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest,
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getGetRecordSetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest,
                 yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(
                   this, METHODID_GET_RECORD_SET)))
           .addMethod(
             getListRecordSetsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest,
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse>(
                   this, METHODID_LIST_RECORD_SETS)))
           .addMethod(
             getUpdateRecordSetsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_RECORD_SETS)))
           .addMethod(
             getUpsertRecordSetsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPSERT_RECORD_SETS)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest,
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -715,19 +711,15 @@ public final class DnsZoneServiceGrpc {
    * A set of methods for managing DNS zones.
    * </pre>
    */
-  public static final class DnsZoneServiceStub extends io.grpc.stub.AbstractStub<DnsZoneServiceStub> {
-    private DnsZoneServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DnsZoneServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DnsZoneServiceStub extends io.grpc.stub.AbstractAsyncStub<DnsZoneServiceStub> {
+    private DnsZoneServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DnsZoneServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DnsZoneServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DnsZoneServiceStub(channel, callOptions);
     }
 
@@ -739,7 +731,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void get(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -750,7 +742,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void list(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -761,7 +753,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void create(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -772,7 +764,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void update(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -783,7 +775,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void delete(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -794,7 +786,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void getRecordSet(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetRecordSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -805,7 +797,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void listRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRecordSetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -821,7 +813,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateRecordSetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -833,7 +825,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertRecordSetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -844,7 +836,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -855,7 +847,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -866,7 +858,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -877,7 +869,7 @@ public final class DnsZoneServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -887,19 +879,15 @@ public final class DnsZoneServiceGrpc {
    * A set of methods for managing DNS zones.
    * </pre>
    */
-  public static final class DnsZoneServiceBlockingStub extends io.grpc.stub.AbstractStub<DnsZoneServiceBlockingStub> {
-    private DnsZoneServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DnsZoneServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DnsZoneServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DnsZoneServiceBlockingStub> {
+    private DnsZoneServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DnsZoneServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DnsZoneServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DnsZoneServiceBlockingStub(channel, callOptions);
     }
 
@@ -910,7 +898,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone get(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -920,7 +908,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse list(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -930,7 +918,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -940,7 +928,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -950,7 +938,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -960,7 +948,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getRecordSet(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRecordSetMethod(), getCallOptions(), request);
     }
 
@@ -970,7 +958,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse listRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRecordSetsMethod(), getCallOptions(), request);
     }
 
@@ -985,7 +973,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateRecordSetsMethod(), getCallOptions(), request);
     }
 
@@ -996,7 +984,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertRecordSetsMethod(), getCallOptions(), request);
     }
 
@@ -1006,7 +994,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse listOperations(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -1016,7 +1004,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1026,7 +1014,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -1036,7 +1024,7 @@ public final class DnsZoneServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
@@ -1046,19 +1034,15 @@ public final class DnsZoneServiceGrpc {
    * A set of methods for managing DNS zones.
    * </pre>
    */
-  public static final class DnsZoneServiceFutureStub extends io.grpc.stub.AbstractStub<DnsZoneServiceFutureStub> {
-    private DnsZoneServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DnsZoneServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DnsZoneServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DnsZoneServiceFutureStub> {
+    private DnsZoneServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DnsZoneServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DnsZoneServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DnsZoneServiceFutureStub(channel, callOptions);
     }
 
@@ -1070,7 +1054,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> get(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1081,7 +1065,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse> list(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1092,7 +1076,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1103,7 +1087,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1114,7 +1098,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1125,7 +1109,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getRecordSet(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetRecordSetMethod(), getCallOptions()), request);
     }
 
@@ -1136,7 +1120,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse> listRecordSets(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRecordSetsMethod(), getCallOptions()), request);
     }
 
@@ -1152,7 +1136,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRecordSets(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateRecordSetsMethod(), getCallOptions()), request);
     }
 
@@ -1164,7 +1148,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> upsertRecordSets(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertRecordSetsMethod(), getCallOptions()), request);
     }
 
@@ -1175,7 +1159,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse> listOperations(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -1186,7 +1170,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1197,7 +1181,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1208,7 +1192,7 @@ public final class DnsZoneServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

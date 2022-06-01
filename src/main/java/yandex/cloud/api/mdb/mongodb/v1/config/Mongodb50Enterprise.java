@@ -24,6 +24,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return Whether the storage field is set.
      */
     boolean hasStorage();
     /**
@@ -32,6 +33,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return The storage.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage getStorage();
     /**
@@ -49,6 +51,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return Whether the operationProfiling field is set.
      */
     boolean hasOperationProfiling();
     /**
@@ -57,6 +60,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return The operationProfiling.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling getOperationProfiling();
     /**
@@ -74,6 +78,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
+     * @return Whether the net field is set.
      */
     boolean hasNet();
     /**
@@ -82,6 +87,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
+     * @return The net.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network getNet();
     /**
@@ -99,6 +105,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     * @return Whether the security field is set.
      */
     boolean hasSecurity();
     /**
@@ -107,6 +114,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     * @return The security.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getSecurity();
     /**
@@ -124,6 +132,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
      */
     boolean hasAuditLog();
     /**
@@ -132,6 +141,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     * @return The auditLog.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getAuditLog();
     /**
@@ -149,6 +159,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     * @return Whether the setParameter field is set.
      */
     boolean hasSetParameter();
     /**
@@ -157,6 +168,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     * @return The setParameter.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getSetParameter();
     /**
@@ -176,7 +188,7 @@ public final class Mongodb50Enterprise {
    *
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise}
    */
-  public  static final class MongodConfig5_0_enterprise extends
+  public static final class MongodConfig5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise)
       MongodConfig5_0_enterpriseOrBuilder {
@@ -186,6 +198,13 @@ public final class Mongodb50Enterprise {
       super(builder);
     }
     private MongodConfig5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongodConfig5_0_enterprise();
     }
 
     @java.lang.Override
@@ -201,7 +220,6 @@ public final class Mongodb50Enterprise {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -291,7 +309,7 @@ public final class Mongodb50Enterprise {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -332,6 +350,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return Whether the wiredTiger field is set.
        */
       boolean hasWiredTiger();
       /**
@@ -340,6 +359,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return The wiredTiger.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger getWiredTiger();
       /**
@@ -357,6 +377,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
+       * @return Whether the journal field is set.
        */
       boolean hasJournal();
       /**
@@ -365,6 +386,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
+       * @return The journal.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal getJournal();
       /**
@@ -379,7 +401,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage}
      */
-    public  static final class Storage extends
+    public static final class Storage extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage)
         StorageOrBuilder {
@@ -389,6 +411,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private Storage() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Storage();
       }
 
       @java.lang.Override
@@ -404,7 +433,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -442,7 +470,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -483,6 +511,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return Whether the engineConfig field is set.
          */
         boolean hasEngineConfig();
         /**
@@ -491,6 +520,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return The engineConfig.
          */
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig getEngineConfig();
         /**
@@ -508,6 +538,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
+         * @return Whether the collectionConfig field is set.
          */
         boolean hasCollectionConfig();
         /**
@@ -516,6 +547,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
+         * @return The collectionConfig.
          */
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig getCollectionConfig();
         /**
@@ -534,7 +566,7 @@ public final class Mongodb50Enterprise {
        *
        * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger}
        */
-      public  static final class WiredTiger extends
+      public static final class WiredTiger extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger)
           WiredTigerOrBuilder {
@@ -544,6 +576,13 @@ public final class Mongodb50Enterprise {
           super(builder);
         }
         private WiredTiger() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new WiredTiger();
         }
 
         @java.lang.Override
@@ -559,7 +598,6 @@ public final class Mongodb50Enterprise {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -597,7 +635,7 @@ public final class Mongodb50Enterprise {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -638,6 +676,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return Whether the cacheSizeGb field is set.
            */
           boolean hasCacheSizeGb();
           /**
@@ -646,6 +685,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return The cacheSizeGb.
            */
           com.google.protobuf.DoubleValue getCacheSizeGb();
           /**
@@ -660,7 +700,7 @@ public final class Mongodb50Enterprise {
         /**
          * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig}
          */
-        public  static final class EngineConfig extends
+        public static final class EngineConfig extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig)
             EngineConfigOrBuilder {
@@ -670,6 +710,13 @@ public final class Mongodb50Enterprise {
             super(builder);
           }
           private EngineConfig() {
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new EngineConfig();
           }
 
           @java.lang.Override
@@ -685,7 +732,6 @@ public final class Mongodb50Enterprise {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -710,7 +756,7 @@ public final class Mongodb50Enterprise {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -749,7 +795,9 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return Whether the cacheSizeGb field is set.
            */
+          @java.lang.Override
           public boolean hasCacheSizeGb() {
             return cacheSizeGb_ != null;
           }
@@ -759,7 +807,9 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return The cacheSizeGb.
            */
+          @java.lang.Override
           public com.google.protobuf.DoubleValue getCacheSizeGb() {
             return cacheSizeGb_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSizeGb_;
           }
@@ -770,6 +820,7 @@ public final class Mongodb50Enterprise {
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
            */
+          @java.lang.Override
           public com.google.protobuf.DoubleValueOrBuilder getCacheSizeGbOrBuilder() {
             return getCacheSizeGb();
           }
@@ -819,14 +870,13 @@ public final class Mongodb50Enterprise {
             }
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig) obj;
 
-            boolean result = true;
-            result = result && (hasCacheSizeGb() == other.hasCacheSizeGb());
+            if (hasCacheSizeGb() != other.hasCacheSizeGb()) return false;
             if (hasCacheSizeGb()) {
-              result = result && getCacheSizeGb()
-                  .equals(other.getCacheSizeGb());
+              if (!getCacheSizeGb()
+                  .equals(other.getCacheSizeGb())) return false;
             }
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -1016,35 +1066,35 @@ public final class Mongodb50Enterprise {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1090,7 +1140,7 @@ public final class Mongodb50Enterprise {
               return this;
             }
 
-            private com.google.protobuf.DoubleValue cacheSizeGb_ = null;
+            private com.google.protobuf.DoubleValue cacheSizeGb_;
             private com.google.protobuf.SingleFieldBuilderV3<
                 com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> cacheSizeGbBuilder_;
             /**
@@ -1099,6 +1149,7 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+             * @return Whether the cacheSizeGb field is set.
              */
             public boolean hasCacheSizeGb() {
               return cacheSizeGbBuilder_ != null || cacheSizeGb_ != null;
@@ -1109,6 +1160,7 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+             * @return The cacheSizeGb.
              */
             public com.google.protobuf.DoubleValue getCacheSizeGb() {
               if (cacheSizeGbBuilder_ == null) {
@@ -1245,7 +1297,7 @@ public final class Mongodb50Enterprise {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -1305,6 +1357,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+           * @return The enum numeric value on the wire for blockCompressor.
            */
           int getBlockCompressorValue();
           /**
@@ -1313,13 +1366,14 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+           * @return The blockCompressor.
            */
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor getBlockCompressor();
         }
         /**
          * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig}
          */
-        public  static final class CollectionConfig extends
+        public static final class CollectionConfig extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig)
             CollectionConfigOrBuilder {
@@ -1330,6 +1384,13 @@ public final class Mongodb50Enterprise {
           }
           private CollectionConfig() {
             blockCompressor_ = 0;
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new CollectionConfig();
           }
 
           @java.lang.Override
@@ -1345,7 +1406,6 @@ public final class Mongodb50Enterprise {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -1363,7 +1423,7 @@ public final class Mongodb50Enterprise {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -1469,6 +1529,8 @@ public final class Mongodb50Enterprise {
             }
 
             /**
+             * @param value The numeric wire value of the corresponding enum entry.
+             * @return The enum associated with the given numeric wire value.
              * @deprecated Use {@link #forNumber(int)} instead.
              */
             @java.lang.Deprecated
@@ -1476,6 +1538,10 @@ public final class Mongodb50Enterprise {
               return forNumber(value);
             }
 
+            /**
+             * @param value The numeric wire value of the corresponding enum entry.
+             * @return The enum associated with the given numeric wire value.
+             */
             public static Compressor forNumber(int value) {
               switch (value) {
                 case 0: return COMPRESSOR_UNSPECIFIED;
@@ -1500,6 +1566,10 @@ public final class Mongodb50Enterprise {
 
             public final com.google.protobuf.Descriptors.EnumValueDescriptor
                 getValueDescriptor() {
+              if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalStateException(
+                    "Can't get the descriptor of an unrecognized enum value.");
+              }
               return getDescriptor().getValues().get(ordinal());
             }
             public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1542,8 +1612,9 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+           * @return The enum numeric value on the wire for blockCompressor.
            */
-          public int getBlockCompressorValue() {
+          @java.lang.Override public int getBlockCompressorValue() {
             return blockCompressor_;
           }
           /**
@@ -1552,8 +1623,9 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+           * @return The blockCompressor.
            */
-          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor getBlockCompressor() {
+          @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor getBlockCompressor() {
             @SuppressWarnings("deprecation")
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor.valueOf(blockCompressor_);
             return result == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor.UNRECOGNIZED : result;
@@ -1604,10 +1676,9 @@ public final class Mongodb50Enterprise {
             }
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig) obj;
 
-            boolean result = true;
-            result = result && blockCompressor_ == other.blockCompressor_;
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (blockCompressor_ != other.blockCompressor_) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -1787,35 +1858,35 @@ public final class Mongodb50Enterprise {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1868,8 +1939,9 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+             * @return The enum numeric value on the wire for blockCompressor.
              */
-            public int getBlockCompressorValue() {
+            @java.lang.Override public int getBlockCompressorValue() {
               return blockCompressor_;
             }
             /**
@@ -1878,8 +1950,11 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+             * @param value The enum numeric value on the wire for blockCompressor to set.
+             * @return This builder for chaining.
              */
             public Builder setBlockCompressorValue(int value) {
+              
               blockCompressor_ = value;
               onChanged();
               return this;
@@ -1890,7 +1965,9 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+             * @return The blockCompressor.
              */
+            @java.lang.Override
             public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor getBlockCompressor() {
               @SuppressWarnings("deprecation")
               yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor.valueOf(blockCompressor_);
@@ -1902,6 +1979,8 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+             * @param value The blockCompressor to set.
+             * @return This builder for chaining.
              */
             public Builder setBlockCompressor(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor value) {
               if (value == null) {
@@ -1918,6 +1997,7 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Compressor block_compressor = 1;</code>
+             * @return This builder for chaining.
              */
             public Builder clearBlockCompressor() {
               
@@ -1928,7 +2008,7 @@ public final class Mongodb50Enterprise {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -1986,7 +2066,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return Whether the engineConfig field is set.
          */
+        @java.lang.Override
         public boolean hasEngineConfig() {
           return engineConfig_ != null;
         }
@@ -1996,7 +2078,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return The engineConfig.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig getEngineConfig() {
           return engineConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig.getDefaultInstance() : engineConfig_;
         }
@@ -2007,6 +2091,7 @@ public final class Mongodb50Enterprise {
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfigOrBuilder getEngineConfigOrBuilder() {
           return getEngineConfig();
         }
@@ -2019,7 +2104,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
+         * @return Whether the collectionConfig field is set.
          */
+        @java.lang.Override
         public boolean hasCollectionConfig() {
           return collectionConfig_ != null;
         }
@@ -2029,7 +2116,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
+         * @return The collectionConfig.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig getCollectionConfig() {
           return collectionConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.getDefaultInstance() : collectionConfig_;
         }
@@ -2040,6 +2129,7 @@ public final class Mongodb50Enterprise {
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfigOrBuilder getCollectionConfigOrBuilder() {
           return getCollectionConfig();
         }
@@ -2096,19 +2186,18 @@ public final class Mongodb50Enterprise {
           }
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger) obj;
 
-          boolean result = true;
-          result = result && (hasEngineConfig() == other.hasEngineConfig());
+          if (hasEngineConfig() != other.hasEngineConfig()) return false;
           if (hasEngineConfig()) {
-            result = result && getEngineConfig()
-                .equals(other.getEngineConfig());
+            if (!getEngineConfig()
+                .equals(other.getEngineConfig())) return false;
           }
-          result = result && (hasCollectionConfig() == other.hasCollectionConfig());
+          if (hasCollectionConfig() != other.hasCollectionConfig()) return false;
           if (hasCollectionConfig()) {
-            result = result && getCollectionConfig()
-                .equals(other.getCollectionConfig());
+            if (!getCollectionConfig()
+                .equals(other.getCollectionConfig())) return false;
           }
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -2317,35 +2406,35 @@ public final class Mongodb50Enterprise {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2394,7 +2483,7 @@ public final class Mongodb50Enterprise {
             return this;
           }
 
-          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engineConfig_ = null;
+          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engineConfig_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfigOrBuilder> engineConfigBuilder_;
           /**
@@ -2403,6 +2492,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+           * @return Whether the engineConfig field is set.
            */
           public boolean hasEngineConfig() {
             return engineConfigBuilder_ != null || engineConfig_ != null;
@@ -2413,6 +2503,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+           * @return The engineConfig.
            */
           public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.EngineConfig getEngineConfig() {
             if (engineConfigBuilder_ == null) {
@@ -2547,7 +2638,7 @@ public final class Mongodb50Enterprise {
             return engineConfigBuilder_;
           }
 
-          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collectionConfig_ = null;
+          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collectionConfig_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfigOrBuilder> collectionConfigBuilder_;
           /**
@@ -2556,6 +2647,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
+           * @return Whether the collectionConfig field is set.
            */
           public boolean hasCollectionConfig() {
             return collectionConfigBuilder_ != null || collectionConfig_ != null;
@@ -2566,6 +2658,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig collection_config = 2;</code>
+           * @return The collectionConfig.
            */
           public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.CollectionConfig getCollectionConfig() {
             if (collectionConfigBuilder_ == null) {
@@ -2702,7 +2795,7 @@ public final class Mongodb50Enterprise {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -2763,6 +2856,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
+         * @return Whether the commitInterval field is set.
          */
         boolean hasCommitInterval();
         /**
@@ -2772,6 +2866,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
+         * @return The commitInterval.
          */
         com.google.protobuf.Int64Value getCommitInterval();
         /**
@@ -2787,7 +2882,7 @@ public final class Mongodb50Enterprise {
       /**
        * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal}
        */
-      public  static final class Journal extends
+      public static final class Journal extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal)
           JournalOrBuilder {
@@ -2797,6 +2892,13 @@ public final class Mongodb50Enterprise {
           super(builder);
         }
         private Journal() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Journal();
         }
 
         @java.lang.Override
@@ -2812,7 +2914,6 @@ public final class Mongodb50Enterprise {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -2837,7 +2938,7 @@ public final class Mongodb50Enterprise {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -2877,7 +2978,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
+         * @return Whether the commitInterval field is set.
          */
+        @java.lang.Override
         public boolean hasCommitInterval() {
           return commitInterval_ != null;
         }
@@ -2888,7 +2991,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
+         * @return The commitInterval.
          */
+        @java.lang.Override
         public com.google.protobuf.Int64Value getCommitInterval() {
           return commitInterval_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : commitInterval_;
         }
@@ -2900,6 +3005,7 @@ public final class Mongodb50Enterprise {
          *
          * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
          */
+        @java.lang.Override
         public com.google.protobuf.Int64ValueOrBuilder getCommitIntervalOrBuilder() {
           return getCommitInterval();
         }
@@ -2949,14 +3055,13 @@ public final class Mongodb50Enterprise {
           }
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal) obj;
 
-          boolean result = true;
-          result = result && (hasCommitInterval() == other.hasCommitInterval());
+          if (hasCommitInterval() != other.hasCommitInterval()) return false;
           if (hasCommitInterval()) {
-            result = result && getCommitInterval()
-                .equals(other.getCommitInterval());
+            if (!getCommitInterval()
+                .equals(other.getCommitInterval())) return false;
           }
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -3146,35 +3251,35 @@ public final class Mongodb50Enterprise {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3220,7 +3325,7 @@ public final class Mongodb50Enterprise {
             return this;
           }
 
-          private com.google.protobuf.Int64Value commitInterval_ = null;
+          private com.google.protobuf.Int64Value commitInterval_;
           private com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> commitIntervalBuilder_;
           /**
@@ -3230,6 +3335,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
+           * @return Whether the commitInterval field is set.
            */
           public boolean hasCommitInterval() {
             return commitIntervalBuilder_ != null || commitInterval_ != null;
@@ -3241,6 +3347,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.Int64Value commit_interval = 1 [(.yandex.cloud.value) = "1-500"];</code>
+           * @return The commitInterval.
            */
           public com.google.protobuf.Int64Value getCommitInterval() {
             if (commitIntervalBuilder_ == null) {
@@ -3384,7 +3491,7 @@ public final class Mongodb50Enterprise {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -3442,7 +3549,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return Whether the wiredTiger field is set.
        */
+      @java.lang.Override
       public boolean hasWiredTiger() {
         return wiredTiger_ != null;
       }
@@ -3452,7 +3561,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return The wiredTiger.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger getWiredTiger() {
         return wiredTiger_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.getDefaultInstance() : wiredTiger_;
       }
@@ -3463,6 +3574,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTigerOrBuilder getWiredTigerOrBuilder() {
         return getWiredTiger();
       }
@@ -3475,7 +3587,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
+       * @return Whether the journal field is set.
        */
+      @java.lang.Override
       public boolean hasJournal() {
         return journal_ != null;
       }
@@ -3485,7 +3599,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
+       * @return The journal.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal getJournal() {
         return journal_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal.getDefaultInstance() : journal_;
       }
@@ -3496,6 +3612,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.JournalOrBuilder getJournalOrBuilder() {
         return getJournal();
       }
@@ -3552,19 +3669,18 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage) obj;
 
-        boolean result = true;
-        result = result && (hasWiredTiger() == other.hasWiredTiger());
+        if (hasWiredTiger() != other.hasWiredTiger()) return false;
         if (hasWiredTiger()) {
-          result = result && getWiredTiger()
-              .equals(other.getWiredTiger());
+          if (!getWiredTiger()
+              .equals(other.getWiredTiger())) return false;
         }
-        result = result && (hasJournal() == other.hasJournal());
+        if (hasJournal() != other.hasJournal()) return false;
         if (hasJournal()) {
-          result = result && getJournal()
-              .equals(other.getJournal());
+          if (!getJournal()
+              .equals(other.getJournal())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -3769,35 +3885,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3846,7 +3962,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger wiredTiger_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger wiredTiger_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTigerOrBuilder> wiredTigerBuilder_;
         /**
@@ -3855,6 +3971,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+         * @return Whether the wiredTiger field is set.
          */
         public boolean hasWiredTiger() {
           return wiredTigerBuilder_ != null || wiredTiger_ != null;
@@ -3865,6 +3982,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+         * @return The wiredTiger.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.WiredTiger getWiredTiger() {
           if (wiredTigerBuilder_ == null) {
@@ -3999,7 +4117,7 @@ public final class Mongodb50Enterprise {
           return wiredTigerBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal journal_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal journal_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.JournalOrBuilder> journalBuilder_;
         /**
@@ -4008,6 +4126,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
+         * @return Whether the journal field is set.
          */
         public boolean hasJournal() {
           return journalBuilder_ != null || journal_ != null;
@@ -4018,6 +4137,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage.Journal journal = 2;</code>
+         * @return The journal.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Journal getJournal() {
           if (journalBuilder_ == null) {
@@ -4154,7 +4274,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -4214,6 +4334,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
        */
       int getModeValue();
       /**
@@ -4222,6 +4343,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The mode.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode getMode();
 
@@ -4233,6 +4355,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the slowOpThreshold field is set.
        */
       boolean hasSlowOpThreshold();
       /**
@@ -4243,6 +4366,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The slowOpThreshold.
        */
       com.google.protobuf.Int64Value getSlowOpThreshold();
       /**
@@ -4259,7 +4383,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling}
      */
-    public  static final class OperationProfiling extends
+    public static final class OperationProfiling extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling)
         OperationProfilingOrBuilder {
@@ -4270,6 +4394,13 @@ public final class Mongodb50Enterprise {
       }
       private OperationProfiling() {
         mode_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new OperationProfiling();
       }
 
       @java.lang.Override
@@ -4285,7 +4416,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -4316,7 +4446,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4422,6 +4552,8 @@ public final class Mongodb50Enterprise {
         }
 
         /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -4429,6 +4561,10 @@ public final class Mongodb50Enterprise {
           return forNumber(value);
         }
 
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
         public static Mode forNumber(int value) {
           switch (value) {
             case 0: return MODE_UNSPECIFIED;
@@ -4453,6 +4589,10 @@ public final class Mongodb50Enterprise {
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
           return getDescriptor().getValues().get(ordinal());
         }
         public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -4495,8 +4635,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
        */
-      public int getModeValue() {
+      @java.lang.Override public int getModeValue() {
         return mode_;
       }
       /**
@@ -4505,8 +4646,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The mode.
        */
-      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode getMode() {
+      @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode getMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode.valueOf(mode_);
         return result == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode.UNRECOGNIZED : result;
@@ -4522,7 +4664,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the slowOpThreshold field is set.
        */
+      @java.lang.Override
       public boolean hasSlowOpThreshold() {
         return slowOpThreshold_ != null;
       }
@@ -4534,7 +4678,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The slowOpThreshold.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getSlowOpThreshold() {
         return slowOpThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowOpThreshold_;
       }
@@ -4547,6 +4693,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getSlowOpThresholdOrBuilder() {
         return getSlowOpThreshold();
       }
@@ -4603,15 +4750,14 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling) obj;
 
-        boolean result = true;
-        result = result && mode_ == other.mode_;
-        result = result && (hasSlowOpThreshold() == other.hasSlowOpThreshold());
+        if (mode_ != other.mode_) return false;
+        if (hasSlowOpThreshold() != other.hasSlowOpThreshold()) return false;
         if (hasSlowOpThreshold()) {
-          result = result && getSlowOpThreshold()
-              .equals(other.getSlowOpThreshold());
+          if (!getSlowOpThreshold()
+              .equals(other.getSlowOpThreshold())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4806,35 +4952,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4890,8 +5036,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @return The enum numeric value on the wire for mode.
          */
-        public int getModeValue() {
+        @java.lang.Override public int getModeValue() {
           return mode_;
         }
         /**
@@ -4900,8 +5047,11 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @param value The enum numeric value on the wire for mode to set.
+         * @return This builder for chaining.
          */
         public Builder setModeValue(int value) {
+          
           mode_ = value;
           onChanged();
           return this;
@@ -4912,7 +5062,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @return The mode.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode getMode() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode.valueOf(mode_);
@@ -4924,6 +5076,8 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @param value The mode to set.
+         * @return This builder for chaining.
          */
         public Builder setMode(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Mode value) {
           if (value == null) {
@@ -4940,6 +5094,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMode() {
           
@@ -4948,7 +5103,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.Int64Value slowOpThreshold_ = null;
+        private com.google.protobuf.Int64Value slowOpThreshold_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slowOpThresholdBuilder_;
         /**
@@ -4959,6 +5114,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return Whether the slowOpThreshold field is set.
          */
         public boolean hasSlowOpThreshold() {
           return slowOpThresholdBuilder_ != null || slowOpThreshold_ != null;
@@ -4971,6 +5127,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return The slowOpThreshold.
          */
         public com.google.protobuf.Int64Value getSlowOpThreshold() {
           if (slowOpThresholdBuilder_ == null) {
@@ -5121,7 +5278,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5181,6 +5338,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxIncomingConnections field is set.
        */
       boolean hasMaxIncomingConnections();
       /**
@@ -5189,6 +5347,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxIncomingConnections.
        */
       com.google.protobuf.Int64Value getMaxIncomingConnections();
       /**
@@ -5203,7 +5362,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network}
      */
-    public  static final class Network extends
+    public static final class Network extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network)
         NetworkOrBuilder {
@@ -5213,6 +5372,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private Network() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Network();
       }
 
       @java.lang.Override
@@ -5228,7 +5394,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5253,7 +5418,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5292,7 +5457,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxIncomingConnections field is set.
        */
+      @java.lang.Override
       public boolean hasMaxIncomingConnections() {
         return maxIncomingConnections_ != null;
       }
@@ -5302,7 +5469,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxIncomingConnections.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getMaxIncomingConnections() {
         return maxIncomingConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncomingConnections_;
       }
@@ -5313,6 +5482,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
         return getMaxIncomingConnections();
       }
@@ -5362,14 +5532,13 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network) obj;
 
-        boolean result = true;
-        result = result && (hasMaxIncomingConnections() == other.hasMaxIncomingConnections());
+        if (hasMaxIncomingConnections() != other.hasMaxIncomingConnections()) return false;
         if (hasMaxIncomingConnections()) {
-          result = result && getMaxIncomingConnections()
-              .equals(other.getMaxIncomingConnections());
+          if (!getMaxIncomingConnections()
+              .equals(other.getMaxIncomingConnections())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5559,35 +5728,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5633,7 +5802,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.Int64Value maxIncomingConnections_ = null;
+        private com.google.protobuf.Int64Value maxIncomingConnections_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxIncomingConnectionsBuilder_;
         /**
@@ -5642,6 +5811,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * @return Whether the maxIncomingConnections field is set.
          */
         public boolean hasMaxIncomingConnections() {
           return maxIncomingConnectionsBuilder_ != null || maxIncomingConnections_ != null;
@@ -5652,6 +5822,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * @return The maxIncomingConnections.
          */
         public com.google.protobuf.Int64Value getMaxIncomingConnections() {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -5788,7 +5959,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5848,6 +6019,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       * @return Whether the enableEncryption field is set.
        */
       boolean hasEnableEncryption();
       /**
@@ -5856,6 +6028,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       * @return The enableEncryption.
        */
       com.google.protobuf.BoolValue getEnableEncryption();
       /**
@@ -5873,6 +6046,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       * @return Whether the kmip field is set.
        */
       boolean hasKmip();
       /**
@@ -5881,6 +6055,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       * @return The kmip.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getKmip();
       /**
@@ -5895,7 +6070,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security}
      */
-    public  static final class Security extends
+    public static final class Security extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security)
         SecurityOrBuilder {
@@ -5905,6 +6080,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private Security() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Security();
       }
 
       @java.lang.Override
@@ -5920,7 +6102,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5958,7 +6139,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5999,6 +6180,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_name = 1;</code>
+         * @return The serverName.
          */
         java.lang.String getServerName();
         /**
@@ -6007,6 +6189,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_name = 1;</code>
+         * @return The bytes for serverName.
          */
         com.google.protobuf.ByteString
             getServerNameBytes();
@@ -6017,6 +6200,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value port = 2;</code>
+         * @return Whether the port field is set.
          */
         boolean hasPort();
         /**
@@ -6025,6 +6209,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value port = 2;</code>
+         * @return The port.
          */
         com.google.protobuf.Int64Value getPort();
         /**
@@ -6042,6 +6227,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_ca = 3;</code>
+         * @return The serverCa.
          */
         java.lang.String getServerCa();
         /**
@@ -6050,6 +6236,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_ca = 3;</code>
+         * @return The bytes for serverCa.
          */
         com.google.protobuf.ByteString
             getServerCaBytes();
@@ -6060,6 +6247,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string client_certificate = 4;</code>
+         * @return The clientCertificate.
          */
         java.lang.String getClientCertificate();
         /**
@@ -6068,6 +6256,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string client_certificate = 4;</code>
+         * @return The bytes for clientCertificate.
          */
         com.google.protobuf.ByteString
             getClientCertificateBytes();
@@ -6078,6 +6267,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string key_identifier = 5;</code>
+         * @return The keyIdentifier.
          */
         java.lang.String getKeyIdentifier();
         /**
@@ -6086,6 +6276,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string key_identifier = 5;</code>
+         * @return The bytes for keyIdentifier.
          */
         com.google.protobuf.ByteString
             getKeyIdentifierBytes();
@@ -6093,7 +6284,7 @@ public final class Mongodb50Enterprise {
       /**
        * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP}
        */
-      public  static final class KMIP extends
+      public static final class KMIP extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP)
           KMIPOrBuilder {
@@ -6110,6 +6301,13 @@ public final class Mongodb50Enterprise {
         }
 
         @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new KMIP();
+        }
+
+        @java.lang.Override
         public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
           return this.unknownFields;
@@ -6122,7 +6320,6 @@ public final class Mongodb50Enterprise {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -6171,7 +6368,7 @@ public final class Mongodb50Enterprise {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -6210,7 +6407,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_name = 1;</code>
+         * @return The serverName.
          */
+        @java.lang.Override
         public java.lang.String getServerName() {
           java.lang.Object ref = serverName_;
           if (ref instanceof java.lang.String) {
@@ -6229,7 +6428,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_name = 1;</code>
+         * @return The bytes for serverName.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getServerNameBytes() {
           java.lang.Object ref = serverName_;
@@ -6252,7 +6453,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value port = 2;</code>
+         * @return Whether the port field is set.
          */
+        @java.lang.Override
         public boolean hasPort() {
           return port_ != null;
         }
@@ -6262,7 +6465,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value port = 2;</code>
+         * @return The port.
          */
+        @java.lang.Override
         public com.google.protobuf.Int64Value getPort() {
           return port_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : port_;
         }
@@ -6273,6 +6478,7 @@ public final class Mongodb50Enterprise {
          *
          * <code>.google.protobuf.Int64Value port = 2;</code>
          */
+        @java.lang.Override
         public com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder() {
           return getPort();
         }
@@ -6285,7 +6491,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_ca = 3;</code>
+         * @return The serverCa.
          */
+        @java.lang.Override
         public java.lang.String getServerCa() {
           java.lang.Object ref = serverCa_;
           if (ref instanceof java.lang.String) {
@@ -6304,7 +6512,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string server_ca = 3;</code>
+         * @return The bytes for serverCa.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getServerCaBytes() {
           java.lang.Object ref = serverCa_;
@@ -6327,7 +6537,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string client_certificate = 4;</code>
+         * @return The clientCertificate.
          */
+        @java.lang.Override
         public java.lang.String getClientCertificate() {
           java.lang.Object ref = clientCertificate_;
           if (ref instanceof java.lang.String) {
@@ -6346,7 +6558,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string client_certificate = 4;</code>
+         * @return The bytes for clientCertificate.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getClientCertificateBytes() {
           java.lang.Object ref = clientCertificate_;
@@ -6369,7 +6583,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string key_identifier = 5;</code>
+         * @return The keyIdentifier.
          */
+        @java.lang.Override
         public java.lang.String getKeyIdentifier() {
           java.lang.Object ref = keyIdentifier_;
           if (ref instanceof java.lang.String) {
@@ -6388,7 +6604,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string key_identifier = 5;</code>
+         * @return The bytes for keyIdentifier.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getKeyIdentifierBytes() {
           java.lang.Object ref = keyIdentifier_;
@@ -6417,19 +6635,19 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getServerNameBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverName_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serverName_);
           }
           if (port_ != null) {
             output.writeMessage(2, getPort());
           }
-          if (!getServerCaBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverCa_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverCa_);
           }
-          if (!getClientCertificateBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientCertificate_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientCertificate_);
           }
-          if (!getKeyIdentifierBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyIdentifier_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 5, keyIdentifier_);
           }
           unknownFields.writeTo(output);
@@ -6441,20 +6659,20 @@ public final class Mongodb50Enterprise {
           if (size != -1) return size;
 
           size = 0;
-          if (!getServerNameBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverName_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serverName_);
           }
           if (port_ != null) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(2, getPort());
           }
-          if (!getServerCaBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverCa_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverCa_);
           }
-          if (!getClientCertificateBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientCertificate_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientCertificate_);
           }
-          if (!getKeyIdentifierBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyIdentifier_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, keyIdentifier_);
           }
           size += unknownFields.getSerializedSize();
@@ -6472,22 +6690,21 @@ public final class Mongodb50Enterprise {
           }
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP) obj;
 
-          boolean result = true;
-          result = result && getServerName()
-              .equals(other.getServerName());
-          result = result && (hasPort() == other.hasPort());
+          if (!getServerName()
+              .equals(other.getServerName())) return false;
+          if (hasPort() != other.hasPort()) return false;
           if (hasPort()) {
-            result = result && getPort()
-                .equals(other.getPort());
+            if (!getPort()
+                .equals(other.getPort())) return false;
           }
-          result = result && getServerCa()
-              .equals(other.getServerCa());
-          result = result && getClientCertificate()
-              .equals(other.getClientCertificate());
-          result = result && getKeyIdentifier()
-              .equals(other.getKeyIdentifier());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getServerCa()
+              .equals(other.getServerCa())) return false;
+          if (!getClientCertificate()
+              .equals(other.getClientCertificate())) return false;
+          if (!getKeyIdentifier()
+              .equals(other.getKeyIdentifier())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -6697,35 +6914,35 @@ public final class Mongodb50Enterprise {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6794,6 +7011,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_name = 1;</code>
+           * @return The serverName.
            */
           public java.lang.String getServerName() {
             java.lang.Object ref = serverName_;
@@ -6813,6 +7031,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_name = 1;</code>
+           * @return The bytes for serverName.
            */
           public com.google.protobuf.ByteString
               getServerNameBytes() {
@@ -6833,6 +7052,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_name = 1;</code>
+           * @param value The serverName to set.
+           * @return This builder for chaining.
            */
           public Builder setServerName(
               java.lang.String value) {
@@ -6850,6 +7071,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_name = 1;</code>
+           * @return This builder for chaining.
            */
           public Builder clearServerName() {
             
@@ -6863,6 +7085,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_name = 1;</code>
+           * @param value The bytes for serverName to set.
+           * @return This builder for chaining.
            */
           public Builder setServerNameBytes(
               com.google.protobuf.ByteString value) {
@@ -6876,7 +7100,7 @@ public final class Mongodb50Enterprise {
             return this;
           }
 
-          private com.google.protobuf.Int64Value port_ = null;
+          private com.google.protobuf.Int64Value port_;
           private com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> portBuilder_;
           /**
@@ -6885,6 +7109,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.Int64Value port = 2;</code>
+           * @return Whether the port field is set.
            */
           public boolean hasPort() {
             return portBuilder_ != null || port_ != null;
@@ -6895,6 +7120,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.Int64Value port = 2;</code>
+           * @return The port.
            */
           public com.google.protobuf.Int64Value getPort() {
             if (portBuilder_ == null) {
@@ -7036,6 +7262,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_ca = 3;</code>
+           * @return The serverCa.
            */
           public java.lang.String getServerCa() {
             java.lang.Object ref = serverCa_;
@@ -7055,6 +7282,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_ca = 3;</code>
+           * @return The bytes for serverCa.
            */
           public com.google.protobuf.ByteString
               getServerCaBytes() {
@@ -7075,6 +7303,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_ca = 3;</code>
+           * @param value The serverCa to set.
+           * @return This builder for chaining.
            */
           public Builder setServerCa(
               java.lang.String value) {
@@ -7092,6 +7322,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_ca = 3;</code>
+           * @return This builder for chaining.
            */
           public Builder clearServerCa() {
             
@@ -7105,6 +7336,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string server_ca = 3;</code>
+           * @param value The bytes for serverCa to set.
+           * @return This builder for chaining.
            */
           public Builder setServerCaBytes(
               com.google.protobuf.ByteString value) {
@@ -7125,6 +7358,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string client_certificate = 4;</code>
+           * @return The clientCertificate.
            */
           public java.lang.String getClientCertificate() {
             java.lang.Object ref = clientCertificate_;
@@ -7144,6 +7378,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string client_certificate = 4;</code>
+           * @return The bytes for clientCertificate.
            */
           public com.google.protobuf.ByteString
               getClientCertificateBytes() {
@@ -7164,6 +7399,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string client_certificate = 4;</code>
+           * @param value The clientCertificate to set.
+           * @return This builder for chaining.
            */
           public Builder setClientCertificate(
               java.lang.String value) {
@@ -7181,6 +7418,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string client_certificate = 4;</code>
+           * @return This builder for chaining.
            */
           public Builder clearClientCertificate() {
             
@@ -7194,6 +7432,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string client_certificate = 4;</code>
+           * @param value The bytes for clientCertificate to set.
+           * @return This builder for chaining.
            */
           public Builder setClientCertificateBytes(
               com.google.protobuf.ByteString value) {
@@ -7214,6 +7454,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string key_identifier = 5;</code>
+           * @return The keyIdentifier.
            */
           public java.lang.String getKeyIdentifier() {
             java.lang.Object ref = keyIdentifier_;
@@ -7233,6 +7474,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string key_identifier = 5;</code>
+           * @return The bytes for keyIdentifier.
            */
           public com.google.protobuf.ByteString
               getKeyIdentifierBytes() {
@@ -7253,6 +7495,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string key_identifier = 5;</code>
+           * @param value The keyIdentifier to set.
+           * @return This builder for chaining.
            */
           public Builder setKeyIdentifier(
               java.lang.String value) {
@@ -7270,6 +7514,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string key_identifier = 5;</code>
+           * @return This builder for chaining.
            */
           public Builder clearKeyIdentifier() {
             
@@ -7283,6 +7528,8 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>string key_identifier = 5;</code>
+           * @param value The bytes for keyIdentifier to set.
+           * @return This builder for chaining.
            */
           public Builder setKeyIdentifierBytes(
               com.google.protobuf.ByteString value) {
@@ -7298,7 +7545,7 @@ public final class Mongodb50Enterprise {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -7356,7 +7603,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       * @return Whether the enableEncryption field is set.
        */
+      @java.lang.Override
       public boolean hasEnableEncryption() {
         return enableEncryption_ != null;
       }
@@ -7366,7 +7615,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       * @return The enableEncryption.
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValue getEnableEncryption() {
         return enableEncryption_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableEncryption_;
       }
@@ -7377,6 +7628,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValueOrBuilder getEnableEncryptionOrBuilder() {
         return getEnableEncryption();
       }
@@ -7389,7 +7641,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       * @return Whether the kmip field is set.
        */
+      @java.lang.Override
       public boolean hasKmip() {
         return kmip_ != null;
       }
@@ -7399,7 +7653,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       * @return The kmip.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getKmip() {
         return kmip_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.getDefaultInstance() : kmip_;
       }
@@ -7410,6 +7666,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder getKmipOrBuilder() {
         return getKmip();
       }
@@ -7466,19 +7723,18 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security) obj;
 
-        boolean result = true;
-        result = result && (hasEnableEncryption() == other.hasEnableEncryption());
+        if (hasEnableEncryption() != other.hasEnableEncryption()) return false;
         if (hasEnableEncryption()) {
-          result = result && getEnableEncryption()
-              .equals(other.getEnableEncryption());
+          if (!getEnableEncryption()
+              .equals(other.getEnableEncryption())) return false;
         }
-        result = result && (hasKmip() == other.hasKmip());
+        if (hasKmip() != other.hasKmip()) return false;
         if (hasKmip()) {
-          result = result && getKmip()
-              .equals(other.getKmip());
+          if (!getKmip()
+              .equals(other.getKmip())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7683,35 +7939,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7760,7 +8016,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.BoolValue enableEncryption_ = null;
+        private com.google.protobuf.BoolValue enableEncryption_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableEncryptionBuilder_;
         /**
@@ -7769,6 +8025,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         * @return Whether the enableEncryption field is set.
          */
         public boolean hasEnableEncryption() {
           return enableEncryptionBuilder_ != null || enableEncryption_ != null;
@@ -7779,6 +8036,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         * @return The enableEncryption.
          */
         public com.google.protobuf.BoolValue getEnableEncryption() {
           if (enableEncryptionBuilder_ == null) {
@@ -7913,7 +8171,7 @@ public final class Mongodb50Enterprise {
           return enableEncryptionBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP kmip_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP kmip_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder> kmipBuilder_;
         /**
@@ -7922,6 +8180,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         * @return Whether the kmip field is set.
          */
         public boolean hasKmip() {
           return kmipBuilder_ != null || kmip_ != null;
@@ -7932,6 +8191,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         * @return The kmip.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getKmip() {
           if (kmipBuilder_ == null) {
@@ -8068,7 +8328,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -8128,6 +8388,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>string filter = 1;</code>
+       * @return The filter.
        */
       java.lang.String getFilter();
       /**
@@ -8136,6 +8397,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>string filter = 1;</code>
+       * @return The bytes for filter.
        */
       com.google.protobuf.ByteString
           getFilterBytes();
@@ -8146,6 +8408,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       * @return Whether the runtimeConfiguration field is set.
        */
       boolean hasRuntimeConfiguration();
       /**
@@ -8154,6 +8417,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       * @return The runtimeConfiguration.
        */
       com.google.protobuf.BoolValue getRuntimeConfiguration();
       /**
@@ -8168,7 +8432,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog}
      */
-    public  static final class AuditLog extends
+    public static final class AuditLog extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog)
         AuditLogOrBuilder {
@@ -8179,6 +8443,13 @@ public final class Mongodb50Enterprise {
       }
       private AuditLog() {
         filter_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AuditLog();
       }
 
       @java.lang.Override
@@ -8194,7 +8465,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -8225,7 +8495,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -8264,7 +8534,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>string filter = 1;</code>
+       * @return The filter.
        */
+      @java.lang.Override
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
         if (ref instanceof java.lang.String) {
@@ -8283,7 +8555,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>string filter = 1;</code>
+       * @return The bytes for filter.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFilterBytes() {
         java.lang.Object ref = filter_;
@@ -8306,7 +8580,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       * @return Whether the runtimeConfiguration field is set.
        */
+      @java.lang.Override
       public boolean hasRuntimeConfiguration() {
         return runtimeConfiguration_ != null;
       }
@@ -8316,7 +8592,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       * @return The runtimeConfiguration.
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValue getRuntimeConfiguration() {
         return runtimeConfiguration_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : runtimeConfiguration_;
       }
@@ -8327,6 +8605,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValueOrBuilder getRuntimeConfigurationOrBuilder() {
         return getRuntimeConfiguration();
       }
@@ -8345,7 +8624,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getFilterBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filter_);
         }
         if (runtimeConfiguration_ != null) {
@@ -8360,7 +8639,7 @@ public final class Mongodb50Enterprise {
         if (size != -1) return size;
 
         size = 0;
-        if (!getFilterBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filter_);
         }
         if (runtimeConfiguration_ != null) {
@@ -8382,16 +8661,15 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog) obj;
 
-        boolean result = true;
-        result = result && getFilter()
-            .equals(other.getFilter());
-        result = result && (hasRuntimeConfiguration() == other.hasRuntimeConfiguration());
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+        if (hasRuntimeConfiguration() != other.hasRuntimeConfiguration()) return false;
         if (hasRuntimeConfiguration()) {
-          result = result && getRuntimeConfiguration()
-              .equals(other.getRuntimeConfiguration());
+          if (!getRuntimeConfiguration()
+              .equals(other.getRuntimeConfiguration())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -8586,35 +8864,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8671,6 +8949,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string filter = 1;</code>
+         * @return The filter.
          */
         public java.lang.String getFilter() {
           java.lang.Object ref = filter_;
@@ -8690,6 +8969,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string filter = 1;</code>
+         * @return The bytes for filter.
          */
         public com.google.protobuf.ByteString
             getFilterBytes() {
@@ -8710,6 +8990,8 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string filter = 1;</code>
+         * @param value The filter to set.
+         * @return This builder for chaining.
          */
         public Builder setFilter(
             java.lang.String value) {
@@ -8727,6 +9009,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string filter = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearFilter() {
           
@@ -8740,6 +9023,8 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>string filter = 1;</code>
+         * @param value The bytes for filter to set.
+         * @return This builder for chaining.
          */
         public Builder setFilterBytes(
             com.google.protobuf.ByteString value) {
@@ -8753,7 +9038,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.BoolValue runtimeConfiguration_ = null;
+        private com.google.protobuf.BoolValue runtimeConfiguration_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> runtimeConfigurationBuilder_;
         /**
@@ -8762,6 +9047,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         * @return Whether the runtimeConfiguration field is set.
          */
         public boolean hasRuntimeConfiguration() {
           return runtimeConfigurationBuilder_ != null || runtimeConfiguration_ != null;
@@ -8772,6 +9058,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         * @return The runtimeConfiguration.
          */
         public com.google.protobuf.BoolValue getRuntimeConfiguration() {
           if (runtimeConfigurationBuilder_ == null) {
@@ -8908,7 +9195,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -8968,6 +9255,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return Whether the auditAuthorizationSuccess field is set.
        */
       boolean hasAuditAuthorizationSuccess();
       /**
@@ -8976,6 +9264,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return The auditAuthorizationSuccess.
        */
       com.google.protobuf.BoolValue getAuditAuthorizationSuccess();
       /**
@@ -8990,7 +9279,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter}
      */
-    public  static final class SetParameter extends
+    public static final class SetParameter extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter)
         SetParameterOrBuilder {
@@ -9000,6 +9289,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private SetParameter() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SetParameter();
       }
 
       @java.lang.Override
@@ -9015,7 +9311,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -9040,7 +9335,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -9079,7 +9374,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return Whether the auditAuthorizationSuccess field is set.
        */
+      @java.lang.Override
       public boolean hasAuditAuthorizationSuccess() {
         return auditAuthorizationSuccess_ != null;
       }
@@ -9089,7 +9386,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       * @return The auditAuthorizationSuccess.
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
         return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
       }
@@ -9100,6 +9399,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
         return getAuditAuthorizationSuccess();
       }
@@ -9149,14 +9449,13 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter) obj;
 
-        boolean result = true;
-        result = result && (hasAuditAuthorizationSuccess() == other.hasAuditAuthorizationSuccess());
+        if (hasAuditAuthorizationSuccess() != other.hasAuditAuthorizationSuccess()) return false;
         if (hasAuditAuthorizationSuccess()) {
-          result = result && getAuditAuthorizationSuccess()
-              .equals(other.getAuditAuthorizationSuccess());
+          if (!getAuditAuthorizationSuccess()
+              .equals(other.getAuditAuthorizationSuccess())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -9346,35 +9645,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9420,7 +9719,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.BoolValue auditAuthorizationSuccess_ = null;
+        private com.google.protobuf.BoolValue auditAuthorizationSuccess_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> auditAuthorizationSuccessBuilder_;
         /**
@@ -9429,6 +9728,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         * @return Whether the auditAuthorizationSuccess field is set.
          */
         public boolean hasAuditAuthorizationSuccess() {
           return auditAuthorizationSuccessBuilder_ != null || auditAuthorizationSuccess_ != null;
@@ -9439,6 +9739,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         * @return The auditAuthorizationSuccess.
          */
         public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
           if (auditAuthorizationSuccessBuilder_ == null) {
@@ -9575,7 +9876,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -9633,7 +9934,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return Whether the storage field is set.
      */
+    @java.lang.Override
     public boolean hasStorage() {
       return storage_ != null;
     }
@@ -9643,7 +9946,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return The storage.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage getStorage() {
       return storage_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.getDefaultInstance() : storage_;
     }
@@ -9654,6 +9959,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.StorageOrBuilder getStorageOrBuilder() {
       return getStorage();
     }
@@ -9666,7 +9972,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return Whether the operationProfiling field is set.
      */
+    @java.lang.Override
     public boolean hasOperationProfiling() {
       return operationProfiling_ != null;
     }
@@ -9676,7 +9984,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return The operationProfiling.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling getOperationProfiling() {
       return operationProfiling_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.getDefaultInstance() : operationProfiling_;
     }
@@ -9687,6 +9997,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfilingOrBuilder getOperationProfilingOrBuilder() {
       return getOperationProfiling();
     }
@@ -9699,7 +10010,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
+     * @return Whether the net field is set.
      */
+    @java.lang.Override
     public boolean hasNet() {
       return net_ != null;
     }
@@ -9709,7 +10022,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
+     * @return The net.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network getNet() {
       return net_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network.getDefaultInstance() : net_;
     }
@@ -9720,6 +10035,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.NetworkOrBuilder getNetOrBuilder() {
       return getNet();
     }
@@ -9732,7 +10048,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     * @return Whether the security field is set.
      */
+    @java.lang.Override
     public boolean hasSecurity() {
       return security_ != null;
     }
@@ -9742,7 +10060,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     * @return The security.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getSecurity() {
       return security_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.getDefaultInstance() : security_;
     }
@@ -9753,6 +10073,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder getSecurityOrBuilder() {
       return getSecurity();
     }
@@ -9765,7 +10086,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     * @return Whether the auditLog field is set.
      */
+    @java.lang.Override
     public boolean hasAuditLog() {
       return auditLog_ != null;
     }
@@ -9775,7 +10098,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     * @return The auditLog.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getAuditLog() {
       return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.getDefaultInstance() : auditLog_;
     }
@@ -9786,6 +10111,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder getAuditLogOrBuilder() {
       return getAuditLog();
     }
@@ -9798,7 +10124,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     * @return Whether the setParameter field is set.
      */
+    @java.lang.Override
     public boolean hasSetParameter() {
       return setParameter_ != null;
     }
@@ -9808,7 +10136,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     * @return The setParameter.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getSetParameter() {
       return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.getDefaultInstance() : setParameter_;
     }
@@ -9819,6 +10149,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder getSetParameterOrBuilder() {
       return getSetParameter();
     }
@@ -9903,39 +10234,38 @@ public final class Mongodb50Enterprise {
       }
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasStorage() == other.hasStorage());
+      if (hasStorage() != other.hasStorage()) return false;
       if (hasStorage()) {
-        result = result && getStorage()
-            .equals(other.getStorage());
+        if (!getStorage()
+            .equals(other.getStorage())) return false;
       }
-      result = result && (hasOperationProfiling() == other.hasOperationProfiling());
+      if (hasOperationProfiling() != other.hasOperationProfiling()) return false;
       if (hasOperationProfiling()) {
-        result = result && getOperationProfiling()
-            .equals(other.getOperationProfiling());
+        if (!getOperationProfiling()
+            .equals(other.getOperationProfiling())) return false;
       }
-      result = result && (hasNet() == other.hasNet());
+      if (hasNet() != other.hasNet()) return false;
       if (hasNet()) {
-        result = result && getNet()
-            .equals(other.getNet());
+        if (!getNet()
+            .equals(other.getNet())) return false;
       }
-      result = result && (hasSecurity() == other.hasSecurity());
+      if (hasSecurity() != other.hasSecurity()) return false;
       if (hasSecurity()) {
-        result = result && getSecurity()
-            .equals(other.getSecurity());
+        if (!getSecurity()
+            .equals(other.getSecurity())) return false;
       }
-      result = result && (hasAuditLog() == other.hasAuditLog());
+      if (hasAuditLog() != other.hasAuditLog()) return false;
       if (hasAuditLog()) {
-        result = result && getAuditLog()
-            .equals(other.getAuditLog());
+        if (!getAuditLog()
+            .equals(other.getAuditLog())) return false;
       }
-      result = result && (hasSetParameter() == other.hasSetParameter());
+      if (hasSetParameter() != other.hasSetParameter()) return false;
       if (hasSetParameter()) {
-        result = result && getSetParameter()
-            .equals(other.getSetParameter());
+        if (!getSetParameter()
+            .equals(other.getSetParameter())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10205,35 +10535,35 @@ public final class Mongodb50Enterprise {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10294,7 +10624,7 @@ public final class Mongodb50Enterprise {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage storage_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage storage_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.StorageOrBuilder> storageBuilder_;
       /**
@@ -10303,6 +10633,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
+       * @return Whether the storage field is set.
        */
       public boolean hasStorage() {
         return storageBuilder_ != null || storage_ != null;
@@ -10313,6 +10644,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Storage storage = 1;</code>
+       * @return The storage.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage getStorage() {
         if (storageBuilder_ == null) {
@@ -10447,7 +10779,7 @@ public final class Mongodb50Enterprise {
         return storageBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling operationProfiling_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling operationProfiling_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfilingOrBuilder> operationProfilingBuilder_;
       /**
@@ -10456,6 +10788,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+       * @return Whether the operationProfiling field is set.
        */
       public boolean hasOperationProfiling() {
         return operationProfilingBuilder_ != null || operationProfiling_ != null;
@@ -10466,6 +10799,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+       * @return The operationProfiling.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.OperationProfiling getOperationProfiling() {
         if (operationProfilingBuilder_ == null) {
@@ -10600,7 +10934,7 @@ public final class Mongodb50Enterprise {
         return operationProfilingBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network net_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network net_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.NetworkOrBuilder> netBuilder_;
       /**
@@ -10609,6 +10943,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
+       * @return Whether the net field is set.
        */
       public boolean hasNet() {
         return netBuilder_ != null || net_ != null;
@@ -10619,6 +10954,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
+       * @return The net.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Network getNet() {
         if (netBuilder_ == null) {
@@ -10753,7 +11089,7 @@ public final class Mongodb50Enterprise {
         return netBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security security_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security security_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder> securityBuilder_;
       /**
@@ -10762,6 +11098,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       * @return Whether the security field is set.
        */
       public boolean hasSecurity() {
         return securityBuilder_ != null || security_ != null;
@@ -10772,6 +11109,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       * @return The security.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getSecurity() {
         if (securityBuilder_ == null) {
@@ -10906,7 +11244,7 @@ public final class Mongodb50Enterprise {
         return securityBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog auditLog_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog auditLog_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder> auditLogBuilder_;
       /**
@@ -10915,6 +11253,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       * @return Whether the auditLog field is set.
        */
       public boolean hasAuditLog() {
         return auditLogBuilder_ != null || auditLog_ != null;
@@ -10925,6 +11264,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       * @return The auditLog.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getAuditLog() {
         if (auditLogBuilder_ == null) {
@@ -11059,7 +11399,7 @@ public final class Mongodb50Enterprise {
         return auditLogBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter setParameter_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter setParameter_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder> setParameterBuilder_;
       /**
@@ -11068,6 +11408,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       * @return Whether the setParameter field is set.
        */
       public boolean hasSetParameter() {
         return setParameterBuilder_ != null || setParameter_ != null;
@@ -11078,6 +11419,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       * @return The setParameter.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getSetParameter() {
         if (setParameterBuilder_ == null) {
@@ -11214,7 +11556,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11274,6 +11616,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return Whether the storage field is set.
      */
     boolean hasStorage();
     /**
@@ -11282,6 +11625,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return The storage.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage getStorage();
     /**
@@ -11299,6 +11643,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return Whether the operationProfiling field is set.
      */
     boolean hasOperationProfiling();
     /**
@@ -11307,6 +11652,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return The operationProfiling.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling getOperationProfiling();
     /**
@@ -11324,6 +11670,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
+     * @return Whether the net field is set.
      */
     boolean hasNet();
     /**
@@ -11332,6 +11679,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
+     * @return The net.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network getNet();
     /**
@@ -11346,7 +11694,7 @@ public final class Mongodb50Enterprise {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise}
    */
-  public  static final class MongoCfgConfig5_0_enterprise extends
+  public static final class MongoCfgConfig5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise)
       MongoCfgConfig5_0_enterpriseOrBuilder {
@@ -11356,6 +11704,13 @@ public final class Mongodb50Enterprise {
       super(builder);
     }
     private MongoCfgConfig5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongoCfgConfig5_0_enterprise();
     }
 
     @java.lang.Override
@@ -11371,7 +11726,6 @@ public final class Mongodb50Enterprise {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11422,7 +11776,7 @@ public final class Mongodb50Enterprise {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11463,6 +11817,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return Whether the wiredTiger field is set.
        */
       boolean hasWiredTiger();
       /**
@@ -11471,6 +11826,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return The wiredTiger.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger getWiredTiger();
       /**
@@ -11485,7 +11841,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage}
      */
-    public  static final class Storage extends
+    public static final class Storage extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage)
         StorageOrBuilder {
@@ -11495,6 +11851,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private Storage() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Storage();
       }
 
       @java.lang.Override
@@ -11510,7 +11873,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -11535,7 +11897,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -11576,6 +11938,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return Whether the engineConfig field is set.
          */
         boolean hasEngineConfig();
         /**
@@ -11584,6 +11947,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return The engineConfig.
          */
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig getEngineConfig();
         /**
@@ -11602,7 +11966,7 @@ public final class Mongodb50Enterprise {
        *
        * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger}
        */
-      public  static final class WiredTiger extends
+      public static final class WiredTiger extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger)
           WiredTigerOrBuilder {
@@ -11612,6 +11976,13 @@ public final class Mongodb50Enterprise {
           super(builder);
         }
         private WiredTiger() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new WiredTiger();
         }
 
         @java.lang.Override
@@ -11627,7 +11998,6 @@ public final class Mongodb50Enterprise {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -11652,7 +12022,7 @@ public final class Mongodb50Enterprise {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -11693,6 +12063,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return Whether the cacheSizeGb field is set.
            */
           boolean hasCacheSizeGb();
           /**
@@ -11701,6 +12072,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return The cacheSizeGb.
            */
           com.google.protobuf.DoubleValue getCacheSizeGb();
           /**
@@ -11715,7 +12087,7 @@ public final class Mongodb50Enterprise {
         /**
          * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig}
          */
-        public  static final class EngineConfig extends
+        public static final class EngineConfig extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig)
             EngineConfigOrBuilder {
@@ -11725,6 +12097,13 @@ public final class Mongodb50Enterprise {
             super(builder);
           }
           private EngineConfig() {
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new EngineConfig();
           }
 
           @java.lang.Override
@@ -11740,7 +12119,6 @@ public final class Mongodb50Enterprise {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -11765,7 +12143,7 @@ public final class Mongodb50Enterprise {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -11804,7 +12182,9 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return Whether the cacheSizeGb field is set.
            */
+          @java.lang.Override
           public boolean hasCacheSizeGb() {
             return cacheSizeGb_ != null;
           }
@@ -11814,7 +12194,9 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+           * @return The cacheSizeGb.
            */
+          @java.lang.Override
           public com.google.protobuf.DoubleValue getCacheSizeGb() {
             return cacheSizeGb_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : cacheSizeGb_;
           }
@@ -11825,6 +12207,7 @@ public final class Mongodb50Enterprise {
            *
            * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
            */
+          @java.lang.Override
           public com.google.protobuf.DoubleValueOrBuilder getCacheSizeGbOrBuilder() {
             return getCacheSizeGb();
           }
@@ -11874,14 +12257,13 @@ public final class Mongodb50Enterprise {
             }
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig) obj;
 
-            boolean result = true;
-            result = result && (hasCacheSizeGb() == other.hasCacheSizeGb());
+            if (hasCacheSizeGb() != other.hasCacheSizeGb()) return false;
             if (hasCacheSizeGb()) {
-              result = result && getCacheSizeGb()
-                  .equals(other.getCacheSizeGb());
+              if (!getCacheSizeGb()
+                  .equals(other.getCacheSizeGb())) return false;
             }
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -12071,35 +12453,35 @@ public final class Mongodb50Enterprise {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12145,7 +12527,7 @@ public final class Mongodb50Enterprise {
               return this;
             }
 
-            private com.google.protobuf.DoubleValue cacheSizeGb_ = null;
+            private com.google.protobuf.DoubleValue cacheSizeGb_;
             private com.google.protobuf.SingleFieldBuilderV3<
                 com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> cacheSizeGbBuilder_;
             /**
@@ -12154,6 +12536,7 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+             * @return Whether the cacheSizeGb field is set.
              */
             public boolean hasCacheSizeGb() {
               return cacheSizeGbBuilder_ != null || cacheSizeGb_ != null;
@@ -12164,6 +12547,7 @@ public final class Mongodb50Enterprise {
              * </pre>
              *
              * <code>.google.protobuf.DoubleValue cache_size_gb = 1;</code>
+             * @return The cacheSizeGb.
              */
             public com.google.protobuf.DoubleValue getCacheSizeGb() {
               if (cacheSizeGbBuilder_ == null) {
@@ -12300,7 +12684,7 @@ public final class Mongodb50Enterprise {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -12358,7 +12742,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return Whether the engineConfig field is set.
          */
+        @java.lang.Override
         public boolean hasEngineConfig() {
           return engineConfig_ != null;
         }
@@ -12368,7 +12754,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+         * @return The engineConfig.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig getEngineConfig() {
           return engineConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig.getDefaultInstance() : engineConfig_;
         }
@@ -12379,6 +12767,7 @@ public final class Mongodb50Enterprise {
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfigOrBuilder getEngineConfigOrBuilder() {
           return getEngineConfig();
         }
@@ -12428,14 +12817,13 @@ public final class Mongodb50Enterprise {
           }
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger) obj;
 
-          boolean result = true;
-          result = result && (hasEngineConfig() == other.hasEngineConfig());
+          if (hasEngineConfig() != other.hasEngineConfig()) return false;
           if (hasEngineConfig()) {
-            result = result && getEngineConfig()
-                .equals(other.getEngineConfig());
+            if (!getEngineConfig()
+                .equals(other.getEngineConfig())) return false;
           }
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -12629,35 +13017,35 @@ public final class Mongodb50Enterprise {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12703,7 +13091,7 @@ public final class Mongodb50Enterprise {
             return this;
           }
 
-          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engineConfig_ = null;
+          private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engineConfig_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfigOrBuilder> engineConfigBuilder_;
           /**
@@ -12712,6 +13100,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+           * @return Whether the engineConfig field is set.
            */
           public boolean hasEngineConfig() {
             return engineConfigBuilder_ != null || engineConfig_ != null;
@@ -12722,6 +13111,7 @@ public final class Mongodb50Enterprise {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig engine_config = 1;</code>
+           * @return The engineConfig.
            */
           public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.EngineConfig getEngineConfig() {
             if (engineConfigBuilder_ == null) {
@@ -12858,7 +13248,7 @@ public final class Mongodb50Enterprise {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -12916,7 +13306,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return Whether the wiredTiger field is set.
        */
+      @java.lang.Override
       public boolean hasWiredTiger() {
         return wiredTiger_ != null;
       }
@@ -12926,7 +13318,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+       * @return The wiredTiger.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger getWiredTiger() {
         return wiredTiger_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.getDefaultInstance() : wiredTiger_;
       }
@@ -12937,6 +13331,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTigerOrBuilder getWiredTigerOrBuilder() {
         return getWiredTiger();
       }
@@ -12986,14 +13381,13 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage) obj;
 
-        boolean result = true;
-        result = result && (hasWiredTiger() == other.hasWiredTiger());
+        if (hasWiredTiger() != other.hasWiredTiger()) return false;
         if (hasWiredTiger()) {
-          result = result && getWiredTiger()
-              .equals(other.getWiredTiger());
+          if (!getWiredTiger()
+              .equals(other.getWiredTiger())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -13183,35 +13577,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13257,7 +13651,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wiredTiger_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wiredTiger_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTigerOrBuilder> wiredTigerBuilder_;
         /**
@@ -13266,6 +13660,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+         * @return Whether the wiredTiger field is set.
          */
         public boolean hasWiredTiger() {
           return wiredTigerBuilder_ != null || wiredTiger_ != null;
@@ -13276,6 +13671,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage.WiredTiger wired_tiger = 1;</code>
+         * @return The wiredTiger.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.WiredTiger getWiredTiger() {
           if (wiredTigerBuilder_ == null) {
@@ -13412,7 +13808,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -13472,6 +13868,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
        */
       int getModeValue();
       /**
@@ -13480,6 +13877,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The mode.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode getMode();
 
@@ -13491,6 +13889,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the slowOpThreshold field is set.
        */
       boolean hasSlowOpThreshold();
       /**
@@ -13501,6 +13900,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The slowOpThreshold.
        */
       com.google.protobuf.Int64Value getSlowOpThreshold();
       /**
@@ -13517,7 +13917,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling}
      */
-    public  static final class OperationProfiling extends
+    public static final class OperationProfiling extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling)
         OperationProfilingOrBuilder {
@@ -13528,6 +13928,13 @@ public final class Mongodb50Enterprise {
       }
       private OperationProfiling() {
         mode_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new OperationProfiling();
       }
 
       @java.lang.Override
@@ -13543,7 +13950,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -13574,7 +13980,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -13680,6 +14086,8 @@ public final class Mongodb50Enterprise {
         }
 
         /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -13687,6 +14095,10 @@ public final class Mongodb50Enterprise {
           return forNumber(value);
         }
 
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
         public static Mode forNumber(int value) {
           switch (value) {
             case 0: return MODE_UNSPECIFIED;
@@ -13711,6 +14123,10 @@ public final class Mongodb50Enterprise {
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
           return getDescriptor().getValues().get(ordinal());
         }
         public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -13753,8 +14169,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
        */
-      public int getModeValue() {
+      @java.lang.Override public int getModeValue() {
         return mode_;
       }
       /**
@@ -13763,8 +14180,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+       * @return The mode.
        */
-      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode getMode() {
+      @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode getMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode.valueOf(mode_);
         return result == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode.UNRECOGNIZED : result;
@@ -13780,7 +14198,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the slowOpThreshold field is set.
        */
+      @java.lang.Override
       public boolean hasSlowOpThreshold() {
         return slowOpThreshold_ != null;
       }
@@ -13792,7 +14212,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The slowOpThreshold.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getSlowOpThreshold() {
         return slowOpThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowOpThreshold_;
       }
@@ -13805,6 +14227,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getSlowOpThresholdOrBuilder() {
         return getSlowOpThreshold();
       }
@@ -13861,15 +14284,14 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling) obj;
 
-        boolean result = true;
-        result = result && mode_ == other.mode_;
-        result = result && (hasSlowOpThreshold() == other.hasSlowOpThreshold());
+        if (mode_ != other.mode_) return false;
+        if (hasSlowOpThreshold() != other.hasSlowOpThreshold()) return false;
         if (hasSlowOpThreshold()) {
-          result = result && getSlowOpThreshold()
-              .equals(other.getSlowOpThreshold());
+          if (!getSlowOpThreshold()
+              .equals(other.getSlowOpThreshold())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14064,35 +14486,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14148,8 +14570,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @return The enum numeric value on the wire for mode.
          */
-        public int getModeValue() {
+        @java.lang.Override public int getModeValue() {
           return mode_;
         }
         /**
@@ -14158,8 +14581,11 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @param value The enum numeric value on the wire for mode to set.
+         * @return This builder for chaining.
          */
         public Builder setModeValue(int value) {
+          
           mode_ = value;
           onChanged();
           return this;
@@ -14170,7 +14596,9 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @return The mode.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode getMode() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode result = yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode.valueOf(mode_);
@@ -14182,6 +14610,8 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @param value The mode to set.
+         * @return This builder for chaining.
          */
         public Builder setMode(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode value) {
           if (value == null) {
@@ -14198,6 +14628,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling.Mode mode = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMode() {
           
@@ -14206,7 +14637,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.Int64Value slowOpThreshold_ = null;
+        private com.google.protobuf.Int64Value slowOpThreshold_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slowOpThresholdBuilder_;
         /**
@@ -14217,6 +14648,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return Whether the slowOpThreshold field is set.
          */
         public boolean hasSlowOpThreshold() {
           return slowOpThresholdBuilder_ != null || slowOpThreshold_ != null;
@@ -14229,6 +14661,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value slow_op_threshold = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return The slowOpThreshold.
          */
         public com.google.protobuf.Int64Value getSlowOpThreshold() {
           if (slowOpThresholdBuilder_ == null) {
@@ -14379,7 +14812,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -14439,6 +14872,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxIncomingConnections field is set.
        */
       boolean hasMaxIncomingConnections();
       /**
@@ -14447,6 +14881,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxIncomingConnections.
        */
       com.google.protobuf.Int64Value getMaxIncomingConnections();
       /**
@@ -14461,7 +14896,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network}
      */
-    public  static final class Network extends
+    public static final class Network extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network)
         NetworkOrBuilder {
@@ -14471,6 +14906,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private Network() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Network();
       }
 
       @java.lang.Override
@@ -14486,7 +14928,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -14511,7 +14952,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -14550,7 +14991,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxIncomingConnections field is set.
        */
+      @java.lang.Override
       public boolean hasMaxIncomingConnections() {
         return maxIncomingConnections_ != null;
       }
@@ -14560,7 +15003,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxIncomingConnections.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getMaxIncomingConnections() {
         return maxIncomingConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncomingConnections_;
       }
@@ -14571,6 +15016,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
         return getMaxIncomingConnections();
       }
@@ -14620,14 +15066,13 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network) obj;
 
-        boolean result = true;
-        result = result && (hasMaxIncomingConnections() == other.hasMaxIncomingConnections());
+        if (hasMaxIncomingConnections() != other.hasMaxIncomingConnections()) return false;
         if (hasMaxIncomingConnections()) {
-          result = result && getMaxIncomingConnections()
-              .equals(other.getMaxIncomingConnections());
+          if (!getMaxIncomingConnections()
+              .equals(other.getMaxIncomingConnections())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14817,35 +15262,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14891,7 +15336,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.Int64Value maxIncomingConnections_ = null;
+        private com.google.protobuf.Int64Value maxIncomingConnections_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxIncomingConnectionsBuilder_;
         /**
@@ -14900,6 +15345,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * @return Whether the maxIncomingConnections field is set.
          */
         public boolean hasMaxIncomingConnections() {
           return maxIncomingConnectionsBuilder_ != null || maxIncomingConnections_ != null;
@@ -14910,6 +15356,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * @return The maxIncomingConnections.
          */
         public com.google.protobuf.Int64Value getMaxIncomingConnections() {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -15046,7 +15493,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -15104,7 +15551,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return Whether the storage field is set.
      */
+    @java.lang.Override
     public boolean hasStorage() {
       return storage_ != null;
     }
@@ -15114,7 +15563,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
+     * @return The storage.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage getStorage() {
       return storage_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.getDefaultInstance() : storage_;
     }
@@ -15125,6 +15576,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.StorageOrBuilder getStorageOrBuilder() {
       return getStorage();
     }
@@ -15137,7 +15589,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return Whether the operationProfiling field is set.
      */
+    @java.lang.Override
     public boolean hasOperationProfiling() {
       return operationProfiling_ != null;
     }
@@ -15147,7 +15601,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+     * @return The operationProfiling.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling getOperationProfiling() {
       return operationProfiling_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.getDefaultInstance() : operationProfiling_;
     }
@@ -15158,6 +15614,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfilingOrBuilder getOperationProfilingOrBuilder() {
       return getOperationProfiling();
     }
@@ -15170,7 +15627,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
+     * @return Whether the net field is set.
      */
+    @java.lang.Override
     public boolean hasNet() {
       return net_ != null;
     }
@@ -15180,7 +15639,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
+     * @return The net.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network getNet() {
       return net_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network.getDefaultInstance() : net_;
     }
@@ -15191,6 +15652,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.NetworkOrBuilder getNetOrBuilder() {
       return getNet();
     }
@@ -15254,24 +15716,23 @@ public final class Mongodb50Enterprise {
       }
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasStorage() == other.hasStorage());
+      if (hasStorage() != other.hasStorage()) return false;
       if (hasStorage()) {
-        result = result && getStorage()
-            .equals(other.getStorage());
+        if (!getStorage()
+            .equals(other.getStorage())) return false;
       }
-      result = result && (hasOperationProfiling() == other.hasOperationProfiling());
+      if (hasOperationProfiling() != other.hasOperationProfiling()) return false;
       if (hasOperationProfiling()) {
-        result = result && getOperationProfiling()
-            .equals(other.getOperationProfiling());
+        if (!getOperationProfiling()
+            .equals(other.getOperationProfiling())) return false;
       }
-      result = result && (hasNet() == other.hasNet());
+      if (hasNet() != other.hasNet()) return false;
       if (hasNet()) {
-        result = result && getNet()
-            .equals(other.getNet());
+        if (!getNet()
+            .equals(other.getNet())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15491,35 +15952,35 @@ public final class Mongodb50Enterprise {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15571,7 +16032,7 @@ public final class Mongodb50Enterprise {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage storage_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage storage_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.StorageOrBuilder> storageBuilder_;
       /**
@@ -15580,6 +16041,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
+       * @return Whether the storage field is set.
        */
       public boolean hasStorage() {
         return storageBuilder_ != null || storage_ != null;
@@ -15590,6 +16052,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Storage storage = 1;</code>
+       * @return The storage.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Storage getStorage() {
         if (storageBuilder_ == null) {
@@ -15724,7 +16187,7 @@ public final class Mongodb50Enterprise {
         return storageBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling operationProfiling_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling operationProfiling_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfilingOrBuilder> operationProfilingBuilder_;
       /**
@@ -15733,6 +16196,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+       * @return Whether the operationProfiling field is set.
        */
       public boolean hasOperationProfiling() {
         return operationProfilingBuilder_ != null || operationProfiling_ != null;
@@ -15743,6 +16207,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.OperationProfiling operation_profiling = 2;</code>
+       * @return The operationProfiling.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.OperationProfiling getOperationProfiling() {
         if (operationProfilingBuilder_ == null) {
@@ -15877,7 +16342,7 @@ public final class Mongodb50Enterprise {
         return operationProfilingBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network net_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network net_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.NetworkOrBuilder> netBuilder_;
       /**
@@ -15886,6 +16351,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
+       * @return Whether the net field is set.
        */
       public boolean hasNet() {
         return netBuilder_ != null || net_ != null;
@@ -15896,6 +16362,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise.Network net = 3;</code>
+       * @return The net.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Network getNet() {
         if (netBuilder_ == null) {
@@ -16032,7 +16499,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16092,6 +16559,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
+     * @return Whether the net field is set.
      */
     boolean hasNet();
     /**
@@ -16100,6 +16568,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
+     * @return The net.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network getNet();
     /**
@@ -16114,7 +16583,7 @@ public final class Mongodb50Enterprise {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise}
    */
-  public  static final class MongosConfig5_0_enterprise extends
+  public static final class MongosConfig5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise)
       MongosConfig5_0_enterpriseOrBuilder {
@@ -16124,6 +16593,13 @@ public final class Mongodb50Enterprise {
       super(builder);
     }
     private MongosConfig5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongosConfig5_0_enterprise();
     }
 
     @java.lang.Override
@@ -16139,7 +16615,6 @@ public final class Mongodb50Enterprise {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16164,7 +16639,7 @@ public final class Mongodb50Enterprise {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16205,6 +16680,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxIncomingConnections field is set.
        */
       boolean hasMaxIncomingConnections();
       /**
@@ -16213,6 +16689,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxIncomingConnections.
        */
       com.google.protobuf.Int64Value getMaxIncomingConnections();
       /**
@@ -16227,7 +16704,7 @@ public final class Mongodb50Enterprise {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network}
      */
-    public  static final class Network extends
+    public static final class Network extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network)
         NetworkOrBuilder {
@@ -16237,6 +16714,13 @@ public final class Mongodb50Enterprise {
         super(builder);
       }
       private Network() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Network();
       }
 
       @java.lang.Override
@@ -16252,7 +16736,6 @@ public final class Mongodb50Enterprise {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -16277,7 +16760,7 @@ public final class Mongodb50Enterprise {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -16316,7 +16799,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return Whether the maxIncomingConnections field is set.
        */
+      @java.lang.Override
       public boolean hasMaxIncomingConnections() {
         return maxIncomingConnections_ != null;
       }
@@ -16326,7 +16811,9 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * @return The maxIncomingConnections.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getMaxIncomingConnections() {
         return maxIncomingConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncomingConnections_;
       }
@@ -16337,6 +16824,7 @@ public final class Mongodb50Enterprise {
        *
        * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
         return getMaxIncomingConnections();
       }
@@ -16386,14 +16874,13 @@ public final class Mongodb50Enterprise {
         }
         yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network) obj;
 
-        boolean result = true;
-        result = result && (hasMaxIncomingConnections() == other.hasMaxIncomingConnections());
+        if (hasMaxIncomingConnections() != other.hasMaxIncomingConnections()) return false;
         if (hasMaxIncomingConnections()) {
-          result = result && getMaxIncomingConnections()
-              .equals(other.getMaxIncomingConnections());
+          if (!getMaxIncomingConnections()
+              .equals(other.getMaxIncomingConnections())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -16583,35 +17070,35 @@ public final class Mongodb50Enterprise {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16657,7 +17144,7 @@ public final class Mongodb50Enterprise {
           return this;
         }
 
-        private com.google.protobuf.Int64Value maxIncomingConnections_ = null;
+        private com.google.protobuf.Int64Value maxIncomingConnections_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxIncomingConnectionsBuilder_;
         /**
@@ -16666,6 +17153,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * @return Whether the maxIncomingConnections field is set.
          */
         public boolean hasMaxIncomingConnections() {
           return maxIncomingConnectionsBuilder_ != null || maxIncomingConnections_ != null;
@@ -16676,6 +17164,7 @@ public final class Mongodb50Enterprise {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * @return The maxIncomingConnections.
          */
         public com.google.protobuf.Int64Value getMaxIncomingConnections() {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -16812,7 +17301,7 @@ public final class Mongodb50Enterprise {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -16870,7 +17359,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
+     * @return Whether the net field is set.
      */
+    @java.lang.Override
     public boolean hasNet() {
       return net_ != null;
     }
@@ -16880,7 +17371,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
+     * @return The net.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network getNet() {
       return net_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network.getDefaultInstance() : net_;
     }
@@ -16891,6 +17384,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.NetworkOrBuilder getNetOrBuilder() {
       return getNet();
     }
@@ -16940,14 +17434,13 @@ public final class Mongodb50Enterprise {
       }
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasNet() == other.hasNet());
+      if (hasNet() != other.hasNet()) return false;
       if (hasNet()) {
-        result = result && getNet()
-            .equals(other.getNet());
+        if (!getNet()
+            .equals(other.getNet())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17137,35 +17630,35 @@ public final class Mongodb50Enterprise {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17211,7 +17704,7 @@ public final class Mongodb50Enterprise {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network net_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network net_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.NetworkOrBuilder> netBuilder_;
       /**
@@ -17220,6 +17713,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
+       * @return Whether the net field is set.
        */
       public boolean hasNet() {
         return netBuilder_ != null || net_ != null;
@@ -17230,6 +17724,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise.Network net = 1;</code>
+       * @return The net.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Network getNet() {
         if (netBuilder_ == null) {
@@ -17366,7 +17861,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17427,6 +17922,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -17436,6 +17932,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getEffectiveConfig();
     /**
@@ -17454,6 +17951,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -17462,6 +17960,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getUserConfig();
     /**
@@ -17479,6 +17978,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -17487,6 +17987,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getDefaultConfig();
     /**
@@ -17501,7 +18002,7 @@ public final class Mongodb50Enterprise {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise}
    */
-  public  static final class MongodConfigSet5_0_enterprise extends
+  public static final class MongodConfigSet5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise)
       MongodConfigSet5_0_enterpriseOrBuilder {
@@ -17511,6 +18012,13 @@ public final class Mongodb50Enterprise {
       super(builder);
     }
     private MongodConfigSet5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongodConfigSet5_0_enterprise();
     }
 
     @java.lang.Override
@@ -17526,7 +18034,6 @@ public final class Mongodb50Enterprise {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17577,7 +18084,7 @@ public final class Mongodb50Enterprise {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17617,7 +18124,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -17628,7 +18137,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.getDefaultInstance() : effectiveConfig_;
     }
@@ -17640,6 +18151,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterpriseOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -17652,7 +18164,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -17662,7 +18176,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.getDefaultInstance() : userConfig_;
     }
@@ -17673,6 +18189,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterpriseOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -17685,7 +18202,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -17695,7 +18214,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.getDefaultInstance() : defaultConfig_;
     }
@@ -17706,6 +18227,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterpriseOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -17769,24 +18291,23 @@ public final class Mongodb50Enterprise {
       }
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18006,35 +18527,35 @@ public final class Mongodb50Enterprise {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18086,7 +18607,7 @@ public final class Mongodb50Enterprise {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterpriseOrBuilder> effectiveConfigBuilder_;
       /**
@@ -18096,6 +18617,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -18107,6 +18629,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -18248,7 +18771,7 @@ public final class Mongodb50Enterprise {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise userConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterpriseOrBuilder> userConfigBuilder_;
       /**
@@ -18257,6 +18780,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -18267,6 +18791,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -18401,7 +18926,7 @@ public final class Mongodb50Enterprise {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise defaultConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterpriseOrBuilder> defaultConfigBuilder_;
       /**
@@ -18410,6 +18935,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -18420,6 +18946,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -18556,7 +19083,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18617,6 +19144,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -18626,6 +19154,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getEffectiveConfig();
     /**
@@ -18644,6 +19173,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -18652,6 +19182,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getUserConfig();
     /**
@@ -18669,6 +19200,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -18677,6 +19209,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getDefaultConfig();
     /**
@@ -18691,7 +19224,7 @@ public final class Mongodb50Enterprise {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise}
    */
-  public  static final class MongoCfgConfigSet5_0_enterprise extends
+  public static final class MongoCfgConfigSet5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise)
       MongoCfgConfigSet5_0_enterpriseOrBuilder {
@@ -18701,6 +19234,13 @@ public final class Mongodb50Enterprise {
       super(builder);
     }
     private MongoCfgConfigSet5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongoCfgConfigSet5_0_enterprise();
     }
 
     @java.lang.Override
@@ -18716,7 +19256,6 @@ public final class Mongodb50Enterprise {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18767,7 +19306,7 @@ public final class Mongodb50Enterprise {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18807,7 +19346,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -18818,7 +19359,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.getDefaultInstance() : effectiveConfig_;
     }
@@ -18830,6 +19373,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterpriseOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -18842,7 +19386,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -18852,7 +19398,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.getDefaultInstance() : userConfig_;
     }
@@ -18863,6 +19411,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterpriseOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -18875,7 +19424,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -18885,7 +19436,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.getDefaultInstance() : defaultConfig_;
     }
@@ -18896,6 +19449,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterpriseOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -18959,24 +19513,23 @@ public final class Mongodb50Enterprise {
       }
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19196,35 +19749,35 @@ public final class Mongodb50Enterprise {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19276,7 +19829,7 @@ public final class Mongodb50Enterprise {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterpriseOrBuilder> effectiveConfigBuilder_;
       /**
@@ -19286,6 +19839,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -19297,6 +19851,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -19438,7 +19993,7 @@ public final class Mongodb50Enterprise {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise userConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterpriseOrBuilder> userConfigBuilder_;
       /**
@@ -19447,6 +20002,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -19457,6 +20013,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -19591,7 +20148,7 @@ public final class Mongodb50Enterprise {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise defaultConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterpriseOrBuilder> defaultConfigBuilder_;
       /**
@@ -19600,6 +20157,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -19610,6 +20168,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfig5_0_enterprise default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfig5_0_enterprise getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -19746,7 +20305,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19807,6 +20366,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -19816,6 +20376,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getEffectiveConfig();
     /**
@@ -19834,6 +20395,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -19842,6 +20404,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getUserConfig();
     /**
@@ -19859,6 +20422,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -19867,6 +20431,7 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getDefaultConfig();
     /**
@@ -19881,7 +20446,7 @@ public final class Mongodb50Enterprise {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise}
    */
-  public  static final class MongosConfigSet5_0_enterprise extends
+  public static final class MongosConfigSet5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise)
       MongosConfigSet5_0_enterpriseOrBuilder {
@@ -19891,6 +20456,13 @@ public final class Mongodb50Enterprise {
       super(builder);
     }
     private MongosConfigSet5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MongosConfigSet5_0_enterprise();
     }
 
     @java.lang.Override
@@ -19906,7 +20478,6 @@ public final class Mongodb50Enterprise {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19957,7 +20528,7 @@ public final class Mongodb50Enterprise {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19997,7 +20568,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -20008,7 +20581,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.getDefaultInstance() : effectiveConfig_;
     }
@@ -20020,6 +20595,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterpriseOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -20032,7 +20608,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -20042,7 +20620,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.getDefaultInstance() : userConfig_;
     }
@@ -20053,6 +20633,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterpriseOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -20065,7 +20646,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -20075,7 +20658,9 @@ public final class Mongodb50Enterprise {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.getDefaultInstance() : defaultConfig_;
     }
@@ -20086,6 +20671,7 @@ public final class Mongodb50Enterprise {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterpriseOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -20149,24 +20735,23 @@ public final class Mongodb50Enterprise {
       }
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20386,35 +20971,35 @@ public final class Mongodb50Enterprise {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20466,7 +21051,7 @@ public final class Mongodb50Enterprise {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterpriseOrBuilder> effectiveConfigBuilder_;
       /**
@@ -20476,6 +21061,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -20487,6 +21073,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -20628,7 +21215,7 @@ public final class Mongodb50Enterprise {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise userConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterpriseOrBuilder> userConfigBuilder_;
       /**
@@ -20637,6 +21224,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -20647,6 +21235,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -20781,7 +21370,7 @@ public final class Mongodb50Enterprise {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise defaultConfig_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterpriseOrBuilder> defaultConfigBuilder_;
       /**
@@ -20790,6 +21379,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -20800,6 +21390,7 @@ public final class Mongodb50Enterprise {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfig5_0_enterprise default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfig5_0_enterprise getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -20936,7 +21527,7 @@ public final class Mongodb50Enterprise {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21228,20 +21819,12 @@ public final class Mongodb50Enterprise {
       "ex/cloud/mdb/mongodb/v1/config;mongodbb\006" +
       "proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_fieldAccessorTable = new

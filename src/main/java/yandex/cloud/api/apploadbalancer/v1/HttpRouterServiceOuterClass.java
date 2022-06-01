@@ -25,6 +25,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -34,6 +35,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -41,7 +43,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GetHttpRouterRequest}
    */
-  public  static final class GetHttpRouterRequest extends
+  public static final class GetHttpRouterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GetHttpRouterRequest)
       GetHttpRouterRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class HttpRouterServiceOuterClass {
     }
     private GetHttpRouterRequest() {
       httpRouterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetHttpRouterRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -174,7 +186,7 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -491,6 +503,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -512,6 +525,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -544,6 +560,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -652,6 +673,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -661,6 +683,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -676,6 +699,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -689,6 +713,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -696,7 +721,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListHttpRoutersRequest}
    */
-  public  static final class ListHttpRoutersRequest extends
+  public static final class ListHttpRoutersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListHttpRoutersRequest)
       ListHttpRoutersRequestOrBuilder {
@@ -707,9 +732,15 @@ public final class HttpRouterServiceOuterClass {
     }
     private ListHttpRoutersRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListHttpRoutersRequest();
     }
 
     @java.lang.Override
@@ -725,7 +756,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -760,7 +790,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -800,7 +830,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -820,7 +852,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -846,7 +880,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -860,7 +896,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -880,7 +918,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -908,7 +948,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -932,7 +974,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -961,16 +1005,16 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -982,17 +1026,17 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1010,17 +1054,16 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1216,35 +1259,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1310,6 +1353,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1330,6 +1374,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1351,6 +1396,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1369,6 +1416,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1383,6 +1431,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1406,7 +1456,9 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1419,6 +1471,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1435,6 +1489,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1451,6 +1506,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1471,6 +1527,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1492,6 +1549,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1510,6 +1569,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1524,6 +1584,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1549,6 +1611,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1573,6 +1636,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1598,6 +1662,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1620,6 +1686,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1638,6 +1705,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1653,7 +1722,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1760,6 +1829,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1771,6 +1841,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1778,7 +1849,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListHttpRoutersResponse}
    */
-  public  static final class ListHttpRoutersResponse extends
+  public static final class ListHttpRoutersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListHttpRoutersResponse)
       ListHttpRoutersResponseOrBuilder {
@@ -1790,6 +1861,13 @@ public final class HttpRouterServiceOuterClass {
     private ListHttpRoutersResponse() {
       httpRouters_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListHttpRoutersResponse();
     }
 
     @java.lang.Override
@@ -1817,7 +1895,7 @@ public final class HttpRouterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 httpRouters_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1832,7 +1910,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1846,7 +1924,7 @@ public final class HttpRouterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           httpRouters_ = java.util.Collections.unmodifiableList(httpRouters_);
         }
         this.unknownFields = unknownFields.build();
@@ -1866,7 +1944,6 @@ public final class HttpRouterServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse.class, yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HTTP_ROUTERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> httpRouters_;
     /**
@@ -1876,6 +1953,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> getHttpRoutersList() {
       return httpRouters_;
     }
@@ -1886,6 +1964,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder> 
         getHttpRoutersOrBuilderList() {
       return httpRouters_;
@@ -1897,6 +1976,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
+    @java.lang.Override
     public int getHttpRoutersCount() {
       return httpRouters_.size();
     }
@@ -1907,6 +1987,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter getHttpRouters(int index) {
       return httpRouters_.get(index);
     }
@@ -1917,6 +1998,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder getHttpRoutersOrBuilder(
         int index) {
       return httpRouters_.get(index);
@@ -1933,7 +2015,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1955,7 +2039,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1987,7 +2073,7 @@ public final class HttpRouterServiceOuterClass {
       for (int i = 0; i < httpRouters_.size(); i++) {
         output.writeMessage(1, httpRouters_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2003,7 +2089,7 @@ public final class HttpRouterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, httpRouters_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2021,13 +2107,12 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse) obj;
 
-      boolean result = true;
-      result = result && getHttpRoutersList()
-          .equals(other.getHttpRoutersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRoutersList()
+          .equals(other.getHttpRoutersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2212,9 +2297,8 @@ public final class HttpRouterServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse result = new yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (httpRoutersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             httpRouters_ = java.util.Collections.unmodifiableList(httpRouters_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2223,42 +2307,41 @@ public final class HttpRouterServiceOuterClass {
           result.httpRouters_ = httpRoutersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2335,7 +2418,7 @@ public final class HttpRouterServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> httpRouters_ =
         java.util.Collections.emptyList();
       private void ensureHttpRoutersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           httpRouters_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter>(httpRouters_);
           bitField0_ |= 0x00000001;
          }
@@ -2636,7 +2719,7 @@ public final class HttpRouterServiceOuterClass {
           httpRoutersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter, yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.Builder, yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder>(
                   httpRouters_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           httpRouters_ = null;
@@ -2654,6 +2737,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2676,6 +2760,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2699,6 +2784,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2719,6 +2806,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2735,6 +2823,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2750,7 +2840,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2811,6 +2901,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -2820,6 +2911,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -2827,7 +2919,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DeleteHttpRouterRequest}
    */
-  public  static final class DeleteHttpRouterRequest extends
+  public static final class DeleteHttpRouterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DeleteHttpRouterRequest)
       DeleteHttpRouterRequestOrBuilder {
@@ -2838,6 +2930,13 @@ public final class HttpRouterServiceOuterClass {
     }
     private DeleteHttpRouterRequest() {
       httpRouterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteHttpRouterRequest();
     }
 
     @java.lang.Override
@@ -2853,7 +2952,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2871,7 +2969,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2911,7 +3009,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -2931,7 +3031,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -2960,7 +3062,7 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       unknownFields.writeTo(output);
@@ -2972,7 +3074,7 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2990,11 +3092,10 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3174,35 +3275,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3257,6 +3358,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -3277,6 +3379,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -3298,6 +3401,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -3316,6 +3421,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -3330,6 +3436,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3345,7 +3453,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3405,6 +3513,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -3413,6 +3522,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -3420,7 +3530,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DeleteHttpRouterMetadata}
    */
-  public  static final class DeleteHttpRouterMetadata extends
+  public static final class DeleteHttpRouterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.DeleteHttpRouterMetadata)
       DeleteHttpRouterMetadataOrBuilder {
@@ -3431,6 +3541,13 @@ public final class HttpRouterServiceOuterClass {
     }
     private DeleteHttpRouterMetadata() {
       httpRouterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteHttpRouterMetadata();
     }
 
     @java.lang.Override
@@ -3446,7 +3563,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3464,7 +3580,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3503,7 +3619,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -3522,7 +3640,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -3551,7 +3671,7 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       unknownFields.writeTo(output);
@@ -3563,7 +3683,7 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3581,11 +3701,10 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterMetadata other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3765,35 +3884,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3847,6 +3966,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -3866,6 +3986,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -3886,6 +4007,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -3903,6 +4026,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -3916,6 +4040,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3931,7 +4057,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3992,6 +4118,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -4001,6 +4128,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -4011,6 +4139,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -4019,6 +4148,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4037,6 +4167,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4046,6 +4177,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4056,6 +4188,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4064,6 +4197,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4219,7 +4353,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateHttpRouterRequest}
    */
-  public  static final class UpdateHttpRouterRequest extends
+  public static final class UpdateHttpRouterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateHttpRouterRequest)
       UpdateHttpRouterRequestOrBuilder {
@@ -4233,6 +4367,13 @@ public final class HttpRouterServiceOuterClass {
       name_ = "";
       description_ = "";
       virtualHosts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateHttpRouterRequest();
     }
 
     @java.lang.Override
@@ -4291,10 +4432,10 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -4304,16 +4445,16 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 virtualHosts_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               virtualHosts_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4327,7 +4468,7 @@ public final class HttpRouterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           virtualHosts_ = java.util.Collections.unmodifiableList(virtualHosts_);
         }
         this.unknownFields = unknownFields.build();
@@ -4359,7 +4500,6 @@ public final class HttpRouterServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest.class, yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
@@ -4369,7 +4509,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -4389,7 +4531,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -4412,7 +4556,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -4422,7 +4568,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -4433,6 +4581,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4446,7 +4595,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4466,7 +4617,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4489,7 +4642,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4508,7 +4663,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4563,14 +4720,16 @@ public final class HttpRouterServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -4588,6 +4747,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -4605,11 +4765,12 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4627,10 +4788,11 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -4652,6 +4814,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
       return virtualHosts_;
     }
@@ -4666,6 +4829,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
         getVirtualHostsOrBuilderList() {
       return virtualHosts_;
@@ -4681,6 +4845,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
+    @java.lang.Override
     public int getVirtualHostsCount() {
       return virtualHosts_.size();
     }
@@ -4695,6 +4860,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
       return virtualHosts_.get(index);
     }
@@ -4709,6 +4875,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
         int index) {
       return virtualHosts_.get(index);
@@ -4728,16 +4895,16 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4758,17 +4925,17 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -4800,24 +4967,23 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getVirtualHostsList()
-          .equals(other.getVirtualHostsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getVirtualHostsList()
+          .equals(other.getVirtualHostsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5016,7 +5182,7 @@ public final class HttpRouterServiceOuterClass {
         internalGetMutableLabels().clear();
         if (virtualHostsBuilder_ == null) {
           virtualHosts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           virtualHostsBuilder_.clear();
         }
@@ -5047,7 +5213,6 @@ public final class HttpRouterServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest result = new yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.httpRouterId_ = httpRouterId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5059,50 +5224,49 @@ public final class HttpRouterServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (virtualHostsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             virtualHosts_ = java.util.Collections.unmodifiableList(virtualHosts_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.virtualHosts_ = virtualHosts_;
         } else {
           result.virtualHosts_ = virtualHostsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5137,7 +5301,7 @@ public final class HttpRouterServiceOuterClass {
           if (!other.virtualHosts_.isEmpty()) {
             if (virtualHosts_.isEmpty()) {
               virtualHosts_ = other.virtualHosts_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureVirtualHostsIsMutable();
               virtualHosts_.addAll(other.virtualHosts_);
@@ -5150,7 +5314,7 @@ public final class HttpRouterServiceOuterClass {
               virtualHostsBuilder_.dispose();
               virtualHostsBuilder_ = null;
               virtualHosts_ = other.virtualHosts_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
               virtualHostsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getVirtualHostsFieldBuilder() : null;
@@ -5197,6 +5361,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -5217,6 +5382,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -5238,6 +5404,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -5256,6 +5424,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -5270,6 +5439,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5283,7 +5454,7 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -5292,6 +5463,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -5302,6 +5474,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5444,6 +5617,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5464,6 +5638,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5485,6 +5660,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5503,6 +5680,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5517,6 +5695,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5537,6 +5717,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5556,6 +5737,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5576,6 +5758,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5593,6 +5777,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5606,6 +5791,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5659,14 +5846,16 @@ public final class HttpRouterServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -5684,6 +5873,7 @@ public final class HttpRouterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -5701,11 +5891,12 @@ public final class HttpRouterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5723,10 +5914,11 @@ public final class HttpRouterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -5756,7 +5948,7 @@ public final class HttpRouterServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -5785,8 +5977,11 @@ public final class HttpRouterServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -5815,9 +6010,9 @@ public final class HttpRouterServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_ =
         java.util.Collections.emptyList();
       private void ensureVirtualHostsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           virtualHosts_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>(virtualHosts_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -6055,7 +6250,7 @@ public final class HttpRouterServiceOuterClass {
       public Builder clearVirtualHosts() {
         if (virtualHostsBuilder_ == null) {
           virtualHosts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           virtualHostsBuilder_.clear();
@@ -6188,7 +6383,7 @@ public final class HttpRouterServiceOuterClass {
           virtualHostsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder>(
                   virtualHosts_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           virtualHosts_ = null;
@@ -6198,7 +6393,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6258,6 +6453,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -6266,6 +6462,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -6273,7 +6470,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateHttpRouterMetadata}
    */
-  public  static final class UpdateHttpRouterMetadata extends
+  public static final class UpdateHttpRouterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.UpdateHttpRouterMetadata)
       UpdateHttpRouterMetadataOrBuilder {
@@ -6284,6 +6481,13 @@ public final class HttpRouterServiceOuterClass {
     }
     private UpdateHttpRouterMetadata() {
       httpRouterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateHttpRouterMetadata();
     }
 
     @java.lang.Override
@@ -6299,7 +6503,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6317,7 +6520,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6356,7 +6559,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -6375,7 +6580,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -6404,7 +6611,7 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       unknownFields.writeTo(output);
@@ -6416,7 +6623,7 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6434,11 +6641,10 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterMetadata other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6618,35 +6824,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6700,6 +6906,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -6719,6 +6926,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -6739,6 +6947,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -6756,6 +6966,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -6769,6 +6980,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6784,7 +6997,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6845,6 +7058,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -6854,6 +7068,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -6865,6 +7080,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -6874,6 +7090,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6884,6 +7101,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -6892,6 +7110,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -7012,7 +7231,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateHttpRouterRequest}
    */
-  public  static final class CreateHttpRouterRequest extends
+  public static final class CreateHttpRouterRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CreateHttpRouterRequest)
       CreateHttpRouterRequestOrBuilder {
@@ -7026,6 +7245,13 @@ public final class HttpRouterServiceOuterClass {
       name_ = "";
       description_ = "";
       virtualHosts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateHttpRouterRequest();
     }
 
     @java.lang.Override
@@ -7071,10 +7297,10 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -7084,16 +7310,16 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 virtualHosts_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               virtualHosts_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7107,7 +7333,7 @@ public final class HttpRouterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           virtualHosts_ = java.util.Collections.unmodifiableList(virtualHosts_);
         }
         this.unknownFields = unknownFields.build();
@@ -7139,7 +7365,6 @@ public final class HttpRouterServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest.class, yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -7149,7 +7374,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -7169,7 +7396,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -7193,7 +7422,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7213,7 +7444,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7236,7 +7469,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -7255,7 +7490,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -7305,14 +7542,16 @@ public final class HttpRouterServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -7325,6 +7564,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -7337,11 +7577,12 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7354,10 +7595,11 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -7377,6 +7619,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
       return virtualHosts_;
     }
@@ -7389,6 +7632,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
         getVirtualHostsOrBuilderList() {
       return virtualHosts_;
@@ -7402,6 +7646,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
+    @java.lang.Override
     public int getVirtualHostsCount() {
       return virtualHosts_.size();
     }
@@ -7414,6 +7659,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
       return virtualHosts_.get(index);
     }
@@ -7426,6 +7672,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
         int index) {
       return virtualHosts_.get(index);
@@ -7445,13 +7692,13 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -7472,13 +7719,13 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -7510,19 +7757,18 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getVirtualHostsList()
-          .equals(other.getVirtualHostsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getVirtualHostsList()
+          .equals(other.getVirtualHostsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7711,7 +7957,7 @@ public final class HttpRouterServiceOuterClass {
         internalGetMutableLabels().clear();
         if (virtualHostsBuilder_ == null) {
           virtualHosts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           virtualHostsBuilder_.clear();
         }
@@ -7742,57 +7988,55 @@ public final class HttpRouterServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest result = new yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         if (virtualHostsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             virtualHosts_ = java.util.Collections.unmodifiableList(virtualHosts_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.virtualHosts_ = virtualHosts_;
         } else {
           result.virtualHosts_ = virtualHostsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7824,7 +8068,7 @@ public final class HttpRouterServiceOuterClass {
           if (!other.virtualHosts_.isEmpty()) {
             if (virtualHosts_.isEmpty()) {
               virtualHosts_ = other.virtualHosts_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureVirtualHostsIsMutable();
               virtualHosts_.addAll(other.virtualHosts_);
@@ -7837,7 +8081,7 @@ public final class HttpRouterServiceOuterClass {
               virtualHostsBuilder_.dispose();
               virtualHostsBuilder_ = null;
               virtualHosts_ = other.virtualHosts_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000002);
               virtualHostsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getVirtualHostsFieldBuilder() : null;
@@ -7884,6 +8128,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -7904,6 +8149,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -7925,6 +8171,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -7943,6 +8191,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -7957,6 +8206,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7978,6 +8229,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7998,6 +8250,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8019,6 +8272,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8037,6 +8292,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8051,6 +8307,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8071,6 +8329,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8090,6 +8349,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8110,6 +8370,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8127,6 +8389,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8140,6 +8403,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8188,14 +8453,16 @@ public final class HttpRouterServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -8208,6 +8475,7 @@ public final class HttpRouterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -8220,11 +8488,12 @@ public final class HttpRouterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8237,10 +8506,11 @@ public final class HttpRouterServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -8265,7 +8535,7 @@ public final class HttpRouterServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -8289,8 +8559,11 @@ public final class HttpRouterServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -8314,9 +8587,9 @@ public final class HttpRouterServiceOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_ =
         java.util.Collections.emptyList();
       private void ensureVirtualHostsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           virtualHosts_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost>(virtualHosts_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -8532,7 +8805,7 @@ public final class HttpRouterServiceOuterClass {
       public Builder clearVirtualHosts() {
         if (virtualHostsBuilder_ == null) {
           virtualHosts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           virtualHostsBuilder_.clear();
@@ -8651,7 +8924,7 @@ public final class HttpRouterServiceOuterClass {
           virtualHostsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder>(
                   virtualHosts_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           virtualHosts_ = null;
@@ -8661,7 +8934,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8721,6 +8994,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -8729,6 +9003,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -8736,7 +9011,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateHttpRouterMetadata}
    */
-  public  static final class CreateHttpRouterMetadata extends
+  public static final class CreateHttpRouterMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CreateHttpRouterMetadata)
       CreateHttpRouterMetadataOrBuilder {
@@ -8747,6 +9022,13 @@ public final class HttpRouterServiceOuterClass {
     }
     private CreateHttpRouterMetadata() {
       httpRouterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateHttpRouterMetadata();
     }
 
     @java.lang.Override
@@ -8762,7 +9044,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8780,7 +9061,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8819,7 +9100,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -8838,7 +9121,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -8867,7 +9152,7 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       unknownFields.writeTo(output);
@@ -8879,7 +9164,7 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8897,11 +9182,10 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterMetadata other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterMetadata) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9081,35 +9365,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9163,6 +9447,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -9182,6 +9467,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -9202,6 +9488,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -9219,6 +9507,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -9232,6 +9521,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9247,7 +9538,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9308,6 +9599,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The httpRouterId.
      */
     java.lang.String getHttpRouterId();
     /**
@@ -9317,6 +9609,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for httpRouterId.
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
@@ -9330,6 +9623,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -9340,6 +9634,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -9349,6 +9644,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -9356,7 +9652,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListHttpRouterOperationsRequest}
    */
-  public  static final class ListHttpRouterOperationsRequest extends
+  public static final class ListHttpRouterOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListHttpRouterOperationsRequest)
       ListHttpRouterOperationsRequestOrBuilder {
@@ -9367,8 +9663,14 @@ public final class HttpRouterServiceOuterClass {
     }
     private ListHttpRouterOperationsRequest() {
       httpRouterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListHttpRouterOperationsRequest();
     }
 
     @java.lang.Override
@@ -9384,7 +9686,6 @@ public final class HttpRouterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9413,7 +9714,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9453,7 +9754,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The httpRouterId.
      */
+    @java.lang.Override
     public java.lang.String getHttpRouterId() {
       java.lang.Object ref = httpRouterId_;
       if (ref instanceof java.lang.String) {
@@ -9473,7 +9776,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for httpRouterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpRouterIdBytes() {
       java.lang.Object ref = httpRouterId_;
@@ -9499,7 +9804,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -9513,7 +9820,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -9533,7 +9842,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -9562,13 +9873,13 @@ public final class HttpRouterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpRouterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -9580,14 +9891,14 @@ public final class HttpRouterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHttpRouterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpRouterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpRouterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -9605,15 +9916,14 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getHttpRouterId()
-          .equals(other.getHttpRouterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHttpRouterId()
+          .equals(other.getHttpRouterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9804,35 +10114,35 @@ public final class HttpRouterServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9894,6 +10204,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The httpRouterId.
        */
       public java.lang.String getHttpRouterId() {
         java.lang.Object ref = httpRouterId_;
@@ -9914,6 +10225,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for httpRouterId.
        */
       public com.google.protobuf.ByteString
           getHttpRouterIdBytes() {
@@ -9935,6 +10247,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterId(
           java.lang.String value) {
@@ -9953,6 +10267,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHttpRouterId() {
         
@@ -9967,6 +10282,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for httpRouterId to set.
+       * @return This builder for chaining.
        */
       public Builder setHttpRouterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9990,7 +10307,9 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -10003,6 +10322,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -10019,6 +10340,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -10035,6 +10357,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -10055,6 +10378,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -10076,6 +10400,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -10094,6 +10420,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -10108,6 +10435,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -10123,7 +10452,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10230,6 +10559,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -10241,6 +10571,7 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -10248,7 +10579,7 @@ public final class HttpRouterServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ListHttpRouterOperationsResponse}
    */
-  public  static final class ListHttpRouterOperationsResponse extends
+  public static final class ListHttpRouterOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ListHttpRouterOperationsResponse)
       ListHttpRouterOperationsResponseOrBuilder {
@@ -10260,6 +10591,13 @@ public final class HttpRouterServiceOuterClass {
     private ListHttpRouterOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListHttpRouterOperationsResponse();
     }
 
     @java.lang.Override
@@ -10287,7 +10625,7 @@ public final class HttpRouterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -10302,7 +10640,7 @@ public final class HttpRouterServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10316,7 +10654,7 @@ public final class HttpRouterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -10336,7 +10674,6 @@ public final class HttpRouterServiceOuterClass {
               yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse.class, yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -10346,6 +10683,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -10356,6 +10694,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -10367,6 +10706,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -10377,6 +10717,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -10387,6 +10728,7 @@ public final class HttpRouterServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -10403,7 +10745,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -10425,7 +10769,9 @@ public final class HttpRouterServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -10457,7 +10803,7 @@ public final class HttpRouterServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -10473,7 +10819,7 @@ public final class HttpRouterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -10491,13 +10837,12 @@ public final class HttpRouterServiceOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse other = (yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10682,9 +11027,8 @@ public final class HttpRouterServiceOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse result = new yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -10693,42 +11037,41 @@ public final class HttpRouterServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10805,7 +11148,7 @@ public final class HttpRouterServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -11106,7 +11449,7 @@ public final class HttpRouterServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -11124,6 +11467,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -11146,6 +11490,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -11169,6 +11514,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -11189,6 +11536,7 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -11205,6 +11553,8 @@ public final class HttpRouterServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -11220,7 +11570,7 @@ public final class HttpRouterServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11429,15 +11779,7 @@ public final class HttpRouterServiceOuterClass {
       "ndex-cloud/go-genproto/yandex/cloud/appl" +
       "oadbalancer/v1;apploadbalancerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -11447,7 +11789,7 @@ public final class HttpRouterServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_apploadbalancer_v1_GetHttpRouterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_GetHttpRouterRequest_fieldAccessorTable = new

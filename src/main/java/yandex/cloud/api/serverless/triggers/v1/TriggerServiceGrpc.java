@@ -1,19 +1,6 @@
 package yandex.cloud.api.serverless.triggers.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/serverless/triggers/v1/trigger_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class TriggerServiceGrpc {
 
   private TriggerServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class TriggerServiceGrpc {
     if ((getGetMethod = TriggerServiceGrpc.getGetMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getGetMethod = TriggerServiceGrpc.getGetMethod) == null) {
-          TriggerServiceGrpc.getGetMethod = getGetMethod = 
+          TriggerServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest,
@@ -76,22 +63,21 @@ public final class TriggerServiceGrpc {
     if ((getListMethod = TriggerServiceGrpc.getListMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getListMethod = TriggerServiceGrpc.getListMethod) == null) {
-          TriggerServiceGrpc.getListMethod = getListMethod = 
+          TriggerServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest,
@@ -108,22 +94,21 @@ public final class TriggerServiceGrpc {
     if ((getCreateMethod = TriggerServiceGrpc.getCreateMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getCreateMethod = TriggerServiceGrpc.getCreateMethod) == null) {
-          TriggerServiceGrpc.getCreateMethod = getCreateMethod = 
+          TriggerServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest,
@@ -140,22 +125,21 @@ public final class TriggerServiceGrpc {
     if ((getUpdateMethod = TriggerServiceGrpc.getUpdateMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getUpdateMethod = TriggerServiceGrpc.getUpdateMethod) == null) {
-          TriggerServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          TriggerServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest,
@@ -172,22 +156,21 @@ public final class TriggerServiceGrpc {
     if ((getDeleteMethod = TriggerServiceGrpc.getDeleteMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getDeleteMethod = TriggerServiceGrpc.getDeleteMethod) == null) {
-          TriggerServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          TriggerServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest,
@@ -204,22 +187,21 @@ public final class TriggerServiceGrpc {
     if ((getPauseMethod = TriggerServiceGrpc.getPauseMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getPauseMethod = TriggerServiceGrpc.getPauseMethod) == null) {
-          TriggerServiceGrpc.getPauseMethod = getPauseMethod = 
+          TriggerServiceGrpc.getPauseMethod = getPauseMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Pause"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Pause"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Pause"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Pause"))
+              .build();
         }
-     }
-     return getPauseMethod;
+      }
+    }
+    return getPauseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest,
@@ -236,22 +218,21 @@ public final class TriggerServiceGrpc {
     if ((getResumeMethod = TriggerServiceGrpc.getResumeMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getResumeMethod = TriggerServiceGrpc.getResumeMethod) == null) {
-          TriggerServiceGrpc.getResumeMethod = getResumeMethod = 
+          TriggerServiceGrpc.getResumeMethod = getResumeMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Resume"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Resume"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Resume"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Resume"))
+              .build();
         }
-     }
-     return getResumeMethod;
+      }
+    }
+    return getResumeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest,
@@ -268,29 +249,35 @@ public final class TriggerServiceGrpc {
     if ((getListOperationsMethod = TriggerServiceGrpc.getListOperationsMethod) == null) {
       synchronized (TriggerServiceGrpc.class) {
         if ((getListOperationsMethod = TriggerServiceGrpc.getListOperationsMethod) == null) {
-          TriggerServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          TriggerServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.serverless.triggers.v1.TriggerService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TriggerServiceStub newStub(io.grpc.Channel channel) {
-    return new TriggerServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TriggerServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TriggerServiceStub>() {
+        @java.lang.Override
+        public TriggerServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TriggerServiceStub(channel, callOptions);
+        }
+      };
+    return TriggerServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -298,7 +285,14 @@ public final class TriggerServiceGrpc {
    */
   public static TriggerServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TriggerServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TriggerServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TriggerServiceBlockingStub>() {
+        @java.lang.Override
+        public TriggerServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TriggerServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return TriggerServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -306,7 +300,14 @@ public final class TriggerServiceGrpc {
    */
   public static TriggerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TriggerServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TriggerServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TriggerServiceFutureStub>() {
+        @java.lang.Override
+        public TriggerServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TriggerServiceFutureStub(channel, callOptions);
+        }
+      };
+    return TriggerServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -324,7 +325,7 @@ public final class TriggerServiceGrpc {
      */
     public void get(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -334,7 +335,7 @@ public final class TriggerServiceGrpc {
      */
     public void list(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -344,7 +345,7 @@ public final class TriggerServiceGrpc {
      */
     public void create(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -354,7 +355,7 @@ public final class TriggerServiceGrpc {
      */
     public void update(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -364,7 +365,7 @@ public final class TriggerServiceGrpc {
      */
     public void delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -374,7 +375,7 @@ public final class TriggerServiceGrpc {
      */
     public void pause(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getPauseMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPauseMethod(), responseObserver);
     }
 
     /**
@@ -384,7 +385,7 @@ public final class TriggerServiceGrpc {
      */
     public void resume(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getResumeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResumeMethod(), responseObserver);
     }
 
     /**
@@ -394,63 +395,63 @@ public final class TriggerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest,
                 yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest,
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getPauseMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_PAUSE)))
           .addMethod(
             getResumeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESUME)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest,
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse>(
@@ -464,19 +465,15 @@ public final class TriggerServiceGrpc {
    * A set of methods for managing triggers for serverless functions.
    * </pre>
    */
-  public static final class TriggerServiceStub extends io.grpc.stub.AbstractStub<TriggerServiceStub> {
-    private TriggerServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TriggerServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TriggerServiceStub extends io.grpc.stub.AbstractAsyncStub<TriggerServiceStub> {
+    private TriggerServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TriggerServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TriggerServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TriggerServiceStub(channel, callOptions);
     }
 
@@ -488,7 +485,7 @@ public final class TriggerServiceGrpc {
      */
     public void get(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -499,7 +496,7 @@ public final class TriggerServiceGrpc {
      */
     public void list(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -510,7 +507,7 @@ public final class TriggerServiceGrpc {
      */
     public void create(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -521,7 +518,7 @@ public final class TriggerServiceGrpc {
      */
     public void update(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -532,7 +529,7 @@ public final class TriggerServiceGrpc {
      */
     public void delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -543,7 +540,7 @@ public final class TriggerServiceGrpc {
      */
     public void pause(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPauseMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -554,7 +551,7 @@ public final class TriggerServiceGrpc {
      */
     public void resume(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getResumeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -565,7 +562,7 @@ public final class TriggerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -575,19 +572,15 @@ public final class TriggerServiceGrpc {
    * A set of methods for managing triggers for serverless functions.
    * </pre>
    */
-  public static final class TriggerServiceBlockingStub extends io.grpc.stub.AbstractStub<TriggerServiceBlockingStub> {
-    private TriggerServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TriggerServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TriggerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TriggerServiceBlockingStub> {
+    private TriggerServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TriggerServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TriggerServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TriggerServiceBlockingStub(channel, callOptions);
     }
 
@@ -598,7 +591,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger get(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -608,7 +601,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse list(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -618,7 +611,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -628,7 +621,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -638,7 +631,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -648,7 +641,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation pause(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPauseMethod(), getCallOptions(), request);
     }
 
@@ -658,7 +651,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation resume(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getResumeMethod(), getCallOptions(), request);
     }
 
@@ -668,7 +661,7 @@ public final class TriggerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse listOperations(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -678,19 +671,15 @@ public final class TriggerServiceGrpc {
    * A set of methods for managing triggers for serverless functions.
    * </pre>
    */
-  public static final class TriggerServiceFutureStub extends io.grpc.stub.AbstractStub<TriggerServiceFutureStub> {
-    private TriggerServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TriggerServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TriggerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TriggerServiceFutureStub> {
+    private TriggerServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TriggerServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TriggerServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TriggerServiceFutureStub(channel, callOptions);
     }
 
@@ -702,7 +691,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> get(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -713,7 +702,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse> list(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -724,7 +713,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -735,7 +724,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -746,7 +735,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -757,7 +746,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> pause(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPauseMethod(), getCallOptions()), request);
     }
 
@@ -768,7 +757,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resume(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getResumeMethod(), getCallOptions()), request);
     }
 
@@ -779,7 +768,7 @@ public final class TriggerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> listOperations(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

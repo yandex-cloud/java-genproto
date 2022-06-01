@@ -25,6 +25,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -34,6 +35,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -41,7 +43,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.GetImageRequest}
    */
-  public  static final class GetImageRequest extends
+  public static final class GetImageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GetImageRequest)
       GetImageRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class ImageServiceOuterClass {
     }
     private GetImageRequest() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetImageRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -174,7 +186,7 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -491,6 +503,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -512,6 +525,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -544,6 +560,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -639,6 +659,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The family.
      */
     java.lang.String getFamily();
     /**
@@ -647,6 +668,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for family.
      */
     com.google.protobuf.ByteString
         getFamilyBytes();
@@ -654,7 +676,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.GetImageLatestByFamilyRequest}
    */
-  public  static final class GetImageLatestByFamilyRequest extends
+  public static final class GetImageLatestByFamilyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GetImageLatestByFamilyRequest)
       GetImageLatestByFamilyRequestOrBuilder {
@@ -666,6 +688,13 @@ public final class ImageServiceOuterClass {
     private GetImageLatestByFamilyRequest() {
       folderId_ = "";
       family_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetImageLatestByFamilyRequest();
     }
 
     @java.lang.Override
@@ -681,7 +710,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -705,7 +733,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -745,7 +773,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -765,7 +795,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -788,7 +820,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The family.
      */
+    @java.lang.Override
     public java.lang.String getFamily() {
       java.lang.Object ref = family_;
       if (ref instanceof java.lang.String) {
@@ -807,7 +841,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for family.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFamilyBytes() {
       java.lang.Object ref = family_;
@@ -836,10 +872,10 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getFamilyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(family_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, family_);
       }
       unknownFields.writeTo(output);
@@ -851,10 +887,10 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getFamilyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(family_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, family_);
       }
       size += unknownFields.getSerializedSize();
@@ -872,13 +908,12 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getFamily()
-          .equals(other.getFamily());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getFamily()
+          .equals(other.getFamily())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1063,35 +1098,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1150,6 +1185,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1170,6 +1206,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1191,6 +1228,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1209,6 +1248,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1223,6 +1263,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1243,6 +1285,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The family.
        */
       public java.lang.String getFamily() {
         java.lang.Object ref = family_;
@@ -1262,6 +1305,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for family.
        */
       public com.google.protobuf.ByteString
           getFamilyBytes() {
@@ -1282,6 +1326,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The family to set.
+       * @return This builder for chaining.
        */
       public Builder setFamily(
           java.lang.String value) {
@@ -1299,6 +1345,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFamily() {
         
@@ -1312,6 +1359,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for family to set.
+       * @return This builder for chaining.
        */
       public Builder setFamilyBytes(
           com.google.protobuf.ByteString value) {
@@ -1327,7 +1376,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1388,6 +1437,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -1397,6 +1447,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -1410,6 +1461,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -1420,6 +1472,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -1429,6 +1482,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -1443,6 +1497,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -1455,6 +1510,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -1462,7 +1518,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListImagesRequest}
    */
-  public  static final class ListImagesRequest extends
+  public static final class ListImagesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListImagesRequest)
       ListImagesRequestOrBuilder {
@@ -1473,9 +1529,15 @@ public final class ImageServiceOuterClass {
     }
     private ListImagesRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListImagesRequest();
     }
 
     @java.lang.Override
@@ -1491,7 +1553,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1526,7 +1587,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1566,7 +1627,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1586,7 +1649,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1612,7 +1677,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1626,7 +1693,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1646,7 +1715,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1673,7 +1744,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -1696,7 +1769,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -1725,16 +1800,16 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -1746,17 +1821,17 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1774,17 +1849,16 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1980,35 +2054,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2074,6 +2148,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2094,6 +2169,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2115,6 +2191,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2133,6 +2211,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2147,6 +2226,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2170,7 +2251,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2183,6 +2266,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2199,6 +2284,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2215,6 +2301,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2235,6 +2322,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2256,6 +2344,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2274,6 +2364,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2288,6 +2379,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2312,6 +2405,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -2335,6 +2429,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -2359,6 +2454,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -2380,6 +2477,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -2397,6 +2495,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -2412,7 +2512,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2521,6 +2621,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -2534,6 +2635,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -2541,7 +2643,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListImagesResponse}
    */
-  public  static final class ListImagesResponse extends
+  public static final class ListImagesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListImagesResponse)
       ListImagesResponseOrBuilder {
@@ -2553,6 +2655,13 @@ public final class ImageServiceOuterClass {
     private ListImagesResponse() {
       images_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListImagesResponse();
     }
 
     @java.lang.Override
@@ -2580,7 +2689,7 @@ public final class ImageServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 images_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.ImageOuterClass.Image>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2595,7 +2704,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2609,7 +2718,7 @@ public final class ImageServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           images_ = java.util.Collections.unmodifiableList(images_);
         }
         this.unknownFields = unknownFields.build();
@@ -2629,7 +2738,6 @@ public final class ImageServiceOuterClass {
               yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse.class, yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int IMAGES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.ImageOuterClass.Image> images_;
     /**
@@ -2639,6 +2747,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Image images = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.ImageOuterClass.Image> getImagesList() {
       return images_;
     }
@@ -2649,6 +2758,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Image images = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.ImageOuterClass.ImageOrBuilder> 
         getImagesOrBuilderList() {
       return images_;
@@ -2660,6 +2770,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Image images = 1;</code>
      */
+    @java.lang.Override
     public int getImagesCount() {
       return images_.size();
     }
@@ -2670,6 +2781,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Image images = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.ImageOuterClass.Image getImages(int index) {
       return images_.get(index);
     }
@@ -2680,6 +2792,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Image images = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.ImageOuterClass.ImageOrBuilder getImagesOrBuilder(
         int index) {
       return images_.get(index);
@@ -2698,7 +2811,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2722,7 +2837,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2754,7 +2871,7 @@ public final class ImageServiceOuterClass {
       for (int i = 0; i < images_.size(); i++) {
         output.writeMessage(1, images_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2770,7 +2887,7 @@ public final class ImageServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, images_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2788,13 +2905,12 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse) obj;
 
-      boolean result = true;
-      result = result && getImagesList()
-          .equals(other.getImagesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImagesList()
+          .equals(other.getImagesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2979,9 +3095,8 @@ public final class ImageServiceOuterClass {
       public yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse buildPartial() {
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse result = new yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (imagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             images_ = java.util.Collections.unmodifiableList(images_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2990,42 +3105,41 @@ public final class ImageServiceOuterClass {
           result.images_ = imagesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3102,7 +3216,7 @@ public final class ImageServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.ImageOuterClass.Image> images_ =
         java.util.Collections.emptyList();
       private void ensureImagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           images_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.ImageOuterClass.Image>(images_);
           bitField0_ |= 0x00000001;
          }
@@ -3403,7 +3517,7 @@ public final class ImageServiceOuterClass {
           imagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.ImageOuterClass.Image, yandex.cloud.api.compute.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.compute.v1.ImageOuterClass.ImageOrBuilder>(
                   images_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           images_ = null;
@@ -3423,6 +3537,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3447,6 +3562,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3472,6 +3588,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -3494,6 +3612,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -3512,6 +3631,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3527,7 +3648,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3588,6 +3709,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -3597,6 +3719,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -3607,6 +3730,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3615,6 +3739,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3625,6 +3750,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -3633,6 +3759,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -3698,6 +3825,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The family.
      */
     java.lang.String getFamily();
     /**
@@ -3707,6 +3835,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for family.
      */
     com.google.protobuf.ByteString
         getFamilyBytes();
@@ -3718,6 +3847,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 min_disk_size = 6 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+     * @return The minDiskSize.
      */
     long getMinDiskSize();
 
@@ -3732,6 +3862,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the productIds.
      */
     java.util.List<java.lang.String>
         getProductIdsList();
@@ -3746,6 +3877,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of productIds.
      */
     int getProductIdsCount();
     /**
@@ -3759,6 +3891,8 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The productIds at the given index.
      */
     java.lang.String getProductIds(int index);
     /**
@@ -3772,6 +3906,8 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the productIds at the given index.
      */
     com.google.protobuf.ByteString
         getProductIdsBytes(int index);
@@ -3782,6 +3918,16 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the imageId field is set.
+     */
+    boolean hasImageId();
+    /**
+     * <pre>
+     * ID of the source image to create the new image from.
+     * </pre>
+     *
+     * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -3790,6 +3936,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -3800,6 +3947,16 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the diskId field is set.
+     */
+    boolean hasDiskId();
+    /**
+     * <pre>
+     * ID of the disk to create the image from.
+     * </pre>
+     *
+     * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskId.
      */
     java.lang.String getDiskId();
     /**
@@ -3808,6 +3965,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskId.
      */
     com.google.protobuf.ByteString
         getDiskIdBytes();
@@ -3818,6 +3976,16 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the snapshotId field is set.
+     */
+    boolean hasSnapshotId();
+    /**
+     * <pre>
+     * ID of the snapshot to create the image from.
+     * </pre>
+     *
+     * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
     java.lang.String getSnapshotId();
     /**
@@ -3826,6 +3994,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
@@ -3838,6 +4007,18 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 11;</code>
+     * @return Whether the uri field is set.
+     */
+    boolean hasUri();
+    /**
+     * <pre>
+     * URI of the source image to create the new image from.
+     * Currently only supports links to images that are stored in Yandex Object Storage.
+     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * </pre>
+     *
+     * <code>string uri = 11;</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
@@ -3848,6 +4029,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 11;</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -3859,6 +4041,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
+     * @return Whether the os field is set.
      */
     boolean hasOs();
     /**
@@ -3868,6 +4051,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
+     * @return The os.
      */
     yandex.cloud.api.compute.v1.ImageOuterClass.Os getOs();
     /**
@@ -3886,6 +4070,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>bool pooled = 17;</code>
+     * @return The pooled.
      */
     boolean getPooled();
 
@@ -3894,7 +4079,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateImageRequest}
    */
-  public  static final class CreateImageRequest extends
+  public static final class CreateImageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateImageRequest)
       CreateImageRequestOrBuilder {
@@ -3908,9 +4093,14 @@ public final class ImageServiceOuterClass {
       name_ = "";
       description_ = "";
       family_ = "";
-      minDiskSize_ = 0L;
       productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      pooled_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateImageRequest();
     }
 
     @java.lang.Override
@@ -3956,10 +4146,10 @@ public final class ImageServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3981,9 +4171,9 @@ public final class ImageServiceOuterClass {
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 productIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000002;
               }
               productIds_.add(s);
               break;
@@ -4031,7 +4221,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4045,7 +4235,7 @@ public final class ImageServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           productIds_ = productIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4077,11 +4267,11 @@ public final class ImageServiceOuterClass {
               yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest.class, yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int sourceCase_ = 0;
     private java.lang.Object source_;
     public enum SourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       IMAGE_ID(8),
       DISK_ID(9),
       SNAPSHOT_ID(10),
@@ -4092,6 +4282,8 @@ public final class ImageServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4129,7 +4321,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -4149,7 +4343,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -4172,7 +4368,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4191,7 +4389,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4214,7 +4414,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4233,7 +4435,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4282,14 +4486,16 @@ public final class ImageServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -4301,6 +4507,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -4312,11 +4519,12 @@ public final class ImageServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4328,10 +4536,11 @@ public final class ImageServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -4349,7 +4558,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The family.
      */
+    @java.lang.Override
     public java.lang.String getFamily() {
       java.lang.Object ref = family_;
       if (ref instanceof java.lang.String) {
@@ -4369,7 +4580,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for family.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFamilyBytes() {
       java.lang.Object ref = family_;
@@ -4393,7 +4606,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 min_disk_size = 6 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+     * @return The minDiskSize.
      */
+    @java.lang.Override
     public long getMinDiskSize() {
       return minDiskSize_;
     }
@@ -4411,6 +4626,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the productIds.
      */
     public com.google.protobuf.ProtocolStringList
         getProductIdsList() {
@@ -4427,6 +4643,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of productIds.
      */
     public int getProductIdsCount() {
       return productIds_.size();
@@ -4442,6 +4659,8 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The productIds at the given index.
      */
     public java.lang.String getProductIds(int index) {
       return productIds_.get(index);
@@ -4457,6 +4676,8 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the productIds at the given index.
      */
     public com.google.protobuf.ByteString
         getProductIdsBytes(int index) {
@@ -4470,6 +4691,18 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the imageId field is set.
+     */
+    public boolean hasImageId() {
+      return sourceCase_ == 8;
+    }
+    /**
+     * <pre>
+     * ID of the source image to create the new image from.
+     * </pre>
+     *
+     * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     public java.lang.String getImageId() {
       java.lang.Object ref = "";
@@ -4494,6 +4727,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     public com.google.protobuf.ByteString
         getImageIdBytes() {
@@ -4521,6 +4755,18 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the diskId field is set.
+     */
+    public boolean hasDiskId() {
+      return sourceCase_ == 9;
+    }
+    /**
+     * <pre>
+     * ID of the disk to create the image from.
+     * </pre>
+     *
+     * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskId.
      */
     public java.lang.String getDiskId() {
       java.lang.Object ref = "";
@@ -4545,6 +4791,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskId.
      */
     public com.google.protobuf.ByteString
         getDiskIdBytes() {
@@ -4572,6 +4819,18 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the snapshotId field is set.
+     */
+    public boolean hasSnapshotId() {
+      return sourceCase_ == 10;
+    }
+    /**
+     * <pre>
+     * ID of the snapshot to create the image from.
+     * </pre>
+     *
+     * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The snapshotId.
      */
     public java.lang.String getSnapshotId() {
       java.lang.Object ref = "";
@@ -4596,6 +4855,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for snapshotId.
      */
     public com.google.protobuf.ByteString
         getSnapshotIdBytes() {
@@ -4625,6 +4885,20 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 11;</code>
+     * @return Whether the uri field is set.
+     */
+    public boolean hasUri() {
+      return sourceCase_ == 11;
+    }
+    /**
+     * <pre>
+     * URI of the source image to create the new image from.
+     * Currently only supports links to images that are stored in Yandex Object Storage.
+     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * </pre>
+     *
+     * <code>string uri = 11;</code>
+     * @return The uri.
      */
     public java.lang.String getUri() {
       java.lang.Object ref = "";
@@ -4651,6 +4925,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 11;</code>
+     * @return The bytes for uri.
      */
     public com.google.protobuf.ByteString
         getUriBytes() {
@@ -4680,7 +4955,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
+     * @return Whether the os field is set.
      */
+    @java.lang.Override
     public boolean hasOs() {
       return os_ != null;
     }
@@ -4691,7 +4968,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
+     * @return The os.
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.ImageOuterClass.Os getOs() {
       return os_ == null ? yandex.cloud.api.compute.v1.ImageOuterClass.Os.getDefaultInstance() : os_;
     }
@@ -4703,6 +4982,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.ImageOuterClass.OsOrBuilder getOsOrBuilder() {
       return getOs();
     }
@@ -4715,7 +4995,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>bool pooled = 17;</code>
+     * @return The pooled.
      */
+    @java.lang.Override
     public boolean getPooled() {
       return pooled_;
     }
@@ -4734,13 +5016,13 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4749,7 +5031,7 @@ public final class ImageServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getFamilyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(family_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, family_);
       }
       if (minDiskSize_ != 0L) {
@@ -4785,13 +5067,13 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -4804,7 +5086,7 @@ public final class ImageServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getFamilyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(family_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, family_);
       }
       if (minDiskSize_ != 0L) {
@@ -4854,53 +5136,50 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getFamily()
-          .equals(other.getFamily());
-      result = result && (getMinDiskSize()
-          == other.getMinDiskSize());
-      result = result && getProductIdsList()
-          .equals(other.getProductIdsList());
-      result = result && (hasOs() == other.hasOs());
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getFamily()
+          .equals(other.getFamily())) return false;
+      if (getMinDiskSize()
+          != other.getMinDiskSize()) return false;
+      if (!getProductIdsList()
+          .equals(other.getProductIdsList())) return false;
+      if (hasOs() != other.hasOs()) return false;
       if (hasOs()) {
-        result = result && getOs()
-            .equals(other.getOs());
+        if (!getOs()
+            .equals(other.getOs())) return false;
       }
-      result = result && (getPooled()
-          == other.getPooled());
-      result = result && getSourceCase().equals(
-          other.getSourceCase());
-      if (!result) return false;
+      if (getPooled()
+          != other.getPooled()) return false;
+      if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
         case 8:
-          result = result && getImageId()
-              .equals(other.getImageId());
+          if (!getImageId()
+              .equals(other.getImageId())) return false;
           break;
         case 9:
-          result = result && getDiskId()
-              .equals(other.getDiskId());
+          if (!getDiskId()
+              .equals(other.getDiskId())) return false;
           break;
         case 10:
-          result = result && getSnapshotId()
-              .equals(other.getSnapshotId());
+          if (!getSnapshotId()
+              .equals(other.getSnapshotId())) return false;
           break;
         case 11:
-          result = result && getUri()
-              .equals(other.getUri());
+          if (!getUri()
+              .equals(other.getUri())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5123,7 +5402,7 @@ public final class ImageServiceOuterClass {
         minDiskSize_ = 0L;
 
         productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (osBuilder_ == null) {
           os_ = null;
         } else {
@@ -5161,7 +5440,6 @@ public final class ImageServiceOuterClass {
       public yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest buildPartial() {
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest result = new yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -5169,9 +5447,9 @@ public final class ImageServiceOuterClass {
         result.labels_.makeImmutable();
         result.family_ = family_;
         result.minDiskSize_ = minDiskSize_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           productIds_ = productIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.productIds_ = productIds_;
         if (sourceCase_ == 8) {
@@ -5192,7 +5470,6 @@ public final class ImageServiceOuterClass {
           result.os_ = osBuilder_.build();
         }
         result.pooled_ = pooled_;
-        result.bitField0_ = to_bitField0_;
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -5200,35 +5477,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5266,7 +5543,7 @@ public final class ImageServiceOuterClass {
         if (!other.productIds_.isEmpty()) {
           if (productIds_.isEmpty()) {
             productIds_ = other.productIds_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureProductIdsIsMutable();
             productIds_.addAll(other.productIds_);
@@ -5361,6 +5638,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -5381,6 +5659,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -5402,6 +5681,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -5420,6 +5701,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -5434,6 +5716,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5454,6 +5738,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5473,6 +5758,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5493,6 +5779,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5510,6 +5798,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5523,6 +5812,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5543,6 +5834,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5562,6 +5854,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5582,6 +5875,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5599,6 +5894,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5612,6 +5908,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5659,14 +5957,16 @@ public final class ImageServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -5678,6 +5978,7 @@ public final class ImageServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -5689,11 +5990,12 @@ public final class ImageServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5705,10 +6007,11 @@ public final class ImageServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -5732,7 +6035,7 @@ public final class ImageServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -5755,8 +6058,11 @@ public final class ImageServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -5784,6 +6090,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The family.
        */
       public java.lang.String getFamily() {
         java.lang.Object ref = family_;
@@ -5804,6 +6111,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for family.
        */
       public com.google.protobuf.ByteString
           getFamilyBytes() {
@@ -5825,6 +6133,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The family to set.
+       * @return This builder for chaining.
        */
       public Builder setFamily(
           java.lang.String value) {
@@ -5843,6 +6153,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFamily() {
         
@@ -5857,6 +6168,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string family = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for family to set.
+       * @return This builder for chaining.
        */
       public Builder setFamilyBytes(
           com.google.protobuf.ByteString value) {
@@ -5878,7 +6191,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 min_disk_size = 6 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * @return The minDiskSize.
        */
+      @java.lang.Override
       public long getMinDiskSize() {
         return minDiskSize_;
       }
@@ -5889,6 +6204,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 min_disk_size = 6 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * @param value The minDiskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setMinDiskSize(long value) {
         
@@ -5903,6 +6220,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 min_disk_size = 6 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinDiskSize() {
         
@@ -5913,9 +6231,9 @@ public final class ImageServiceOuterClass {
 
       private com.google.protobuf.LazyStringList productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProductIdsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           productIds_ = new com.google.protobuf.LazyStringArrayList(productIds_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -5929,6 +6247,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the productIds.
        */
       public com.google.protobuf.ProtocolStringList
           getProductIdsList() {
@@ -5945,6 +6264,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of productIds.
        */
       public int getProductIdsCount() {
         return productIds_.size();
@@ -5960,6 +6280,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The productIds at the given index.
        */
       public java.lang.String getProductIds(int index) {
         return productIds_.get(index);
@@ -5975,6 +6297,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the productIds at the given index.
        */
       public com.google.protobuf.ByteString
           getProductIdsBytes(int index) {
@@ -5991,6 +6315,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The productIds to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIds(
           int index, java.lang.String value) {
@@ -6013,6 +6340,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addProductIds(
           java.lang.String value) {
@@ -6035,6 +6364,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllProductIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -6055,10 +6386,11 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductIds() {
         productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6073,6 +6405,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 7 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addProductIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -6092,7 +6426,21 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the imageId field is set.
        */
+      @java.lang.Override
+      public boolean hasImageId() {
+        return sourceCase_ == 8;
+      }
+      /**
+       * <pre>
+       * ID of the source image to create the new image from.
+       * </pre>
+       *
+       * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
+       */
+      @java.lang.Override
       public java.lang.String getImageId() {
         java.lang.Object ref = "";
         if (sourceCase_ == 8) {
@@ -6116,7 +6464,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getImageIdBytes() {
         java.lang.Object ref = "";
@@ -6141,6 +6491,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -6158,6 +6510,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         if (sourceCase_ == 8) {
@@ -6173,6 +6526,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 8 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6192,7 +6547,21 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the diskId field is set.
        */
+      @java.lang.Override
+      public boolean hasDiskId() {
+        return sourceCase_ == 9;
+      }
+      /**
+       * <pre>
+       * ID of the disk to create the image from.
+       * </pre>
+       *
+       * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskId.
+       */
+      @java.lang.Override
       public java.lang.String getDiskId() {
         java.lang.Object ref = "";
         if (sourceCase_ == 9) {
@@ -6216,7 +6585,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDiskIdBytes() {
         java.lang.Object ref = "";
@@ -6241,6 +6612,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskId(
           java.lang.String value) {
@@ -6258,6 +6631,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskId() {
         if (sourceCase_ == 9) {
@@ -6273,6 +6647,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string disk_id = 9 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6292,7 +6668,21 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the snapshotId field is set.
        */
+      @java.lang.Override
+      public boolean hasSnapshotId() {
+        return sourceCase_ == 10;
+      }
+      /**
+       * <pre>
+       * ID of the snapshot to create the image from.
+       * </pre>
+       *
+       * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The snapshotId.
+       */
+      @java.lang.Override
       public java.lang.String getSnapshotId() {
         java.lang.Object ref = "";
         if (sourceCase_ == 10) {
@@ -6316,7 +6706,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for snapshotId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSnapshotIdBytes() {
         java.lang.Object ref = "";
@@ -6341,6 +6733,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotId(
           java.lang.String value) {
@@ -6358,6 +6752,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapshotId() {
         if (sourceCase_ == 10) {
@@ -6373,6 +6768,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string snapshot_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for snapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6394,7 +6791,23 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 11;</code>
+       * @return Whether the uri field is set.
        */
+      @java.lang.Override
+      public boolean hasUri() {
+        return sourceCase_ == 11;
+      }
+      /**
+       * <pre>
+       * URI of the source image to create the new image from.
+       * Currently only supports links to images that are stored in Yandex Object Storage.
+       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * </pre>
+       *
+       * <code>string uri = 11;</code>
+       * @return The uri.
+       */
+      @java.lang.Override
       public java.lang.String getUri() {
         java.lang.Object ref = "";
         if (sourceCase_ == 11) {
@@ -6420,7 +6833,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 11;</code>
+       * @return The bytes for uri.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUriBytes() {
         java.lang.Object ref = "";
@@ -6447,6 +6862,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 11;</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -6466,6 +6883,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         if (sourceCase_ == 11) {
@@ -6483,6 +6901,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 11;</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -6496,7 +6916,7 @@ public final class ImageServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.compute.v1.ImageOuterClass.Os os_ = null;
+      private yandex.cloud.api.compute.v1.ImageOuterClass.Os os_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.ImageOuterClass.Os, yandex.cloud.api.compute.v1.ImageOuterClass.Os.Builder, yandex.cloud.api.compute.v1.ImageOuterClass.OsOrBuilder> osBuilder_;
       /**
@@ -6506,6 +6926,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
+       * @return Whether the os field is set.
        */
       public boolean hasOs() {
         return osBuilder_ != null || os_ != null;
@@ -6517,6 +6938,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
+       * @return The os.
        */
       public yandex.cloud.api.compute.v1.ImageOuterClass.Os getOs() {
         if (osBuilder_ == null) {
@@ -6665,7 +7087,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>bool pooled = 17;</code>
+       * @return The pooled.
        */
+      @java.lang.Override
       public boolean getPooled() {
         return pooled_;
       }
@@ -6675,6 +7099,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>bool pooled = 17;</code>
+       * @param value The pooled to set.
+       * @return This builder for chaining.
        */
       public Builder setPooled(boolean value) {
         
@@ -6688,6 +7114,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>bool pooled = 17;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPooled() {
         
@@ -6698,7 +7125,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6758,6 +7185,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -6766,6 +7194,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -6773,7 +7202,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateImageMetadata}
    */
-  public  static final class CreateImageMetadata extends
+  public static final class CreateImageMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateImageMetadata)
       CreateImageMetadataOrBuilder {
@@ -6784,6 +7213,13 @@ public final class ImageServiceOuterClass {
     }
     private CreateImageMetadata() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateImageMetadata();
     }
 
     @java.lang.Override
@@ -6799,7 +7235,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6817,7 +7252,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6856,7 +7291,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -6875,7 +7312,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -6904,7 +7343,7 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -6916,7 +7355,7 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6934,11 +7373,10 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageMetadata other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageMetadata) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7118,35 +7556,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7200,6 +7638,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -7219,6 +7658,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -7239,6 +7679,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -7256,6 +7698,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -7269,6 +7712,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7284,7 +7729,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7345,6 +7790,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -7354,6 +7800,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -7364,6 +7811,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -7372,6 +7820,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -7389,6 +7838,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7397,6 +7847,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7407,6 +7858,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -7415,6 +7867,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -7426,6 +7879,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 min_disk_size = 5 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+     * @return The minDiskSize.
      */
     long getMinDiskSize();
 
@@ -7491,7 +7945,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateImageRequest}
    */
-  public  static final class UpdateImageRequest extends
+  public static final class UpdateImageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateImageRequest)
       UpdateImageRequestOrBuilder {
@@ -7504,7 +7958,13 @@ public final class ImageServiceOuterClass {
       imageId_ = "";
       name_ = "";
       description_ = "";
-      minDiskSize_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateImageRequest();
     }
 
     @java.lang.Override
@@ -7568,10 +8028,10 @@ public final class ImageServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -7581,7 +8041,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7624,7 +8084,6 @@ public final class ImageServiceOuterClass {
               yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest.class, yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int IMAGE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object imageId_;
     /**
@@ -7634,7 +8093,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -7654,7 +8115,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -7677,7 +8140,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -7687,7 +8152,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -7698,6 +8165,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -7710,7 +8178,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7729,7 +8199,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7752,7 +8224,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -7771,7 +8245,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -7795,7 +8271,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 min_disk_size = 5 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+     * @return The minDiskSize.
      */
+    @java.lang.Override
     public long getMinDiskSize() {
       return minDiskSize_;
     }
@@ -7835,14 +8313,16 @@ public final class ImageServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -7855,6 +8335,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -7867,11 +8348,12 @@ public final class ImageServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7884,10 +8366,11 @@ public final class ImageServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -7910,16 +8393,16 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       if (minDiskSize_ != 0L) {
@@ -7940,17 +8423,17 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       if (minDiskSize_ != 0L) {
@@ -7982,24 +8465,23 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (getMinDiskSize()
-          == other.getMinDiskSize());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (getMinDiskSize()
+          != other.getMinDiskSize()) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8223,7 +8705,6 @@ public final class ImageServiceOuterClass {
       public yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest buildPartial() {
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest result = new yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.imageId_ = imageId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -8235,42 +8716,41 @@ public final class ImageServiceOuterClass {
         result.minDiskSize_ = minDiskSize_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8342,6 +8822,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -8362,6 +8843,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -8383,6 +8865,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -8401,6 +8885,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -8415,6 +8900,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8428,7 +8915,7 @@ public final class ImageServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -8437,6 +8924,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -8447,6 +8935,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -8588,6 +9077,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8607,6 +9097,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8627,6 +9118,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8644,6 +9137,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8657,6 +9151,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8677,6 +9173,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8696,6 +9193,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8716,6 +9214,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8733,6 +9233,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8746,6 +9247,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8767,7 +9270,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 min_disk_size = 5 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * @return The minDiskSize.
        */
+      @java.lang.Override
       public long getMinDiskSize() {
         return minDiskSize_;
       }
@@ -8778,6 +9283,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 min_disk_size = 5 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * @param value The minDiskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setMinDiskSize(long value) {
         
@@ -8792,6 +9299,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 min_disk_size = 5 [(.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinDiskSize() {
         
@@ -8835,14 +9343,16 @@ public final class ImageServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -8855,6 +9365,7 @@ public final class ImageServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -8867,11 +9378,12 @@ public final class ImageServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8884,10 +9396,11 @@ public final class ImageServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -8912,7 +9425,7 @@ public final class ImageServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -8936,8 +9449,11 @@ public final class ImageServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -8960,7 +9476,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9020,6 +9536,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -9028,6 +9545,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -9035,7 +9553,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateImageMetadata}
    */
-  public  static final class UpdateImageMetadata extends
+  public static final class UpdateImageMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateImageMetadata)
       UpdateImageMetadataOrBuilder {
@@ -9046,6 +9564,13 @@ public final class ImageServiceOuterClass {
     }
     private UpdateImageMetadata() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateImageMetadata();
     }
 
     @java.lang.Override
@@ -9061,7 +9586,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9079,7 +9603,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9118,7 +9642,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -9137,7 +9663,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -9166,7 +9694,7 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -9178,7 +9706,7 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9196,11 +9724,10 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageMetadata other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageMetadata) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9380,35 +9907,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9462,6 +9989,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -9481,6 +10009,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -9501,6 +10030,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -9518,6 +10049,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -9531,6 +10063,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9546,7 +10080,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9607,6 +10141,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -9616,6 +10151,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -9623,7 +10159,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteImageRequest}
    */
-  public  static final class DeleteImageRequest extends
+  public static final class DeleteImageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteImageRequest)
       DeleteImageRequestOrBuilder {
@@ -9634,6 +10170,13 @@ public final class ImageServiceOuterClass {
     }
     private DeleteImageRequest() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteImageRequest();
     }
 
     @java.lang.Override
@@ -9649,7 +10192,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9667,7 +10209,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9707,7 +10249,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -9727,7 +10271,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -9756,7 +10302,7 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -9768,7 +10314,7 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9786,11 +10332,10 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9970,35 +10515,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10053,6 +10598,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -10073,6 +10619,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -10094,6 +10641,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -10112,6 +10661,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -10126,6 +10676,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10141,7 +10693,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10201,6 +10753,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -10209,6 +10762,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -10216,7 +10770,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteImageMetadata}
    */
-  public  static final class DeleteImageMetadata extends
+  public static final class DeleteImageMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteImageMetadata)
       DeleteImageMetadataOrBuilder {
@@ -10227,6 +10781,13 @@ public final class ImageServiceOuterClass {
     }
     private DeleteImageMetadata() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteImageMetadata();
     }
 
     @java.lang.Override
@@ -10242,7 +10803,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10260,7 +10820,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10299,7 +10859,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -10318,7 +10880,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1;</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -10347,7 +10911,7 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -10359,7 +10923,7 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -10377,11 +10941,10 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageMetadata other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageMetadata) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10561,35 +11124,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10643,6 +11206,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -10662,6 +11226,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -10682,6 +11247,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -10699,6 +11266,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -10712,6 +11280,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1;</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10727,7 +11297,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10787,6 +11357,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -10795,6 +11366,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -10807,6 +11379,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -10817,6 +11390,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -10826,6 +11400,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -10833,7 +11408,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListImageOperationsRequest}
    */
-  public  static final class ListImageOperationsRequest extends
+  public static final class ListImageOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListImageOperationsRequest)
       ListImageOperationsRequestOrBuilder {
@@ -10844,8 +11419,14 @@ public final class ImageServiceOuterClass {
     }
     private ListImageOperationsRequest() {
       imageId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListImageOperationsRequest();
     }
 
     @java.lang.Override
@@ -10861,7 +11442,6 @@ public final class ImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10890,7 +11470,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10929,7 +11509,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -10948,7 +11530,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -10973,7 +11557,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -10987,7 +11573,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -11007,7 +11595,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -11036,13 +11626,13 @@ public final class ImageServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -11054,14 +11644,14 @@ public final class ImageServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -11079,15 +11669,14 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11278,35 +11867,35 @@ public final class ImageServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11367,6 +11956,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -11386,6 +11976,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -11406,6 +11997,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -11423,6 +12016,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -11436,6 +12030,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11458,7 +12054,9 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -11470,6 +12068,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -11485,6 +12085,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -11501,6 +12102,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -11521,6 +12123,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -11542,6 +12145,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -11560,6 +12165,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -11574,6 +12180,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -11589,7 +12197,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11696,6 +12304,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -11707,6 +12316,7 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -11714,7 +12324,7 @@ public final class ImageServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListImageOperationsResponse}
    */
-  public  static final class ListImageOperationsResponse extends
+  public static final class ListImageOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListImageOperationsResponse)
       ListImageOperationsResponseOrBuilder {
@@ -11726,6 +12336,13 @@ public final class ImageServiceOuterClass {
     private ListImageOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListImageOperationsResponse();
     }
 
     @java.lang.Override
@@ -11753,7 +12370,7 @@ public final class ImageServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -11768,7 +12385,7 @@ public final class ImageServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11782,7 +12399,7 @@ public final class ImageServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -11802,7 +12419,6 @@ public final class ImageServiceOuterClass {
               yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse.class, yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -11812,6 +12428,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -11822,6 +12439,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -11833,6 +12451,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -11843,6 +12462,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -11853,6 +12473,7 @@ public final class ImageServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -11869,7 +12490,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -11891,7 +12514,9 @@ public final class ImageServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -11923,7 +12548,7 @@ public final class ImageServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -11939,7 +12564,7 @@ public final class ImageServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -11957,13 +12582,12 @@ public final class ImageServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse other = (yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12148,9 +12772,8 @@ public final class ImageServiceOuterClass {
       public yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse buildPartial() {
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse result = new yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -12159,42 +12782,41 @@ public final class ImageServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12271,7 +12893,7 @@ public final class ImageServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -12572,7 +13194,7 @@ public final class ImageServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -12590,6 +13212,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -12612,6 +13235,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -12635,6 +13259,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -12655,6 +13281,7 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -12671,6 +13298,8 @@ public final class ImageServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12686,7 +13315,7 @@ public final class ImageServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12901,15 +13530,7 @@ public final class ImageServiceOuterClass {
       "o-genproto/yandex/cloud/compute/v1;compu" +
       "teb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -12918,7 +13539,7 @@ public final class ImageServiceOuterClass {
           yandex.cloud.api.compute.v1.ImageOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_GetImageRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_GetImageRequest_fieldAccessorTable = new

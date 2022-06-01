@@ -75,7 +75,7 @@ public final class Classification {
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.ClassAnnotation}
    */
-  public  static final class ClassAnnotation extends
+  public static final class ClassAnnotation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.ClassAnnotation)
       ClassAnnotationOrBuilder {
@@ -86,6 +86,13 @@ public final class Classification {
     }
     private ClassAnnotation() {
       properties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassAnnotation();
     }
 
     @java.lang.Override
@@ -113,7 +120,7 @@ public final class Classification {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 properties_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.Classification.Property>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -122,7 +129,7 @@ public final class Classification {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -136,7 +143,7 @@ public final class Classification {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           properties_ = java.util.Collections.unmodifiableList(properties_);
         }
         this.unknownFields = unknownFields.build();
@@ -167,6 +174,7 @@ public final class Classification {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Property properties = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.vision.v1.Classification.Property> getPropertiesList() {
       return properties_;
     }
@@ -179,6 +187,7 @@ public final class Classification {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Property properties = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.vision.v1.Classification.PropertyOrBuilder> 
         getPropertiesOrBuilderList() {
       return properties_;
@@ -192,6 +201,7 @@ public final class Classification {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Property properties = 1;</code>
      */
+    @java.lang.Override
     public int getPropertiesCount() {
       return properties_.size();
     }
@@ -204,6 +214,7 @@ public final class Classification {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Property properties = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Classification.Property getProperties(int index) {
       return properties_.get(index);
     }
@@ -216,6 +227,7 @@ public final class Classification {
      *
      * <code>repeated .yandex.cloud.ai.vision.v1.Property properties = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.Classification.PropertyOrBuilder getPropertiesOrBuilder(
         int index) {
       return properties_.get(index);
@@ -266,11 +278,10 @@ public final class Classification {
       }
       yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation other = (yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation) obj;
 
-      boolean result = true;
-      result = result && getPropertiesList()
-          .equals(other.getPropertiesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPropertiesList()
+          .equals(other.getPropertiesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -452,7 +463,7 @@ public final class Classification {
         yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation result = new yandex.cloud.api.ai.vision.v1.Classification.ClassAnnotation(this);
         int from_bitField0_ = bitField0_;
         if (propertiesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             properties_ = java.util.Collections.unmodifiableList(properties_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -466,35 +477,35 @@ public final class Classification {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -567,7 +578,7 @@ public final class Classification {
       private java.util.List<yandex.cloud.api.ai.vision.v1.Classification.Property> properties_ =
         java.util.Collections.emptyList();
       private void ensurePropertiesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           properties_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.Classification.Property>(properties_);
           bitField0_ |= 0x00000001;
          }
@@ -904,7 +915,7 @@ public final class Classification {
           propertiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.Classification.Property, yandex.cloud.api.ai.vision.v1.Classification.Property.Builder, yandex.cloud.api.ai.vision.v1.Classification.PropertyOrBuilder>(
                   properties_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           properties_ = null;
@@ -914,7 +925,7 @@ public final class Classification {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -974,6 +985,7 @@ public final class Classification {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -982,6 +994,7 @@ public final class Classification {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -992,13 +1005,14 @@ public final class Classification {
      * </pre>
      *
      * <code>double probability = 2;</code>
+     * @return The probability.
      */
     double getProbability();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Property}
    */
-  public  static final class Property extends
+  public static final class Property extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Property)
       PropertyOrBuilder {
@@ -1009,7 +1023,13 @@ public final class Classification {
     }
     private Property() {
       name_ = "";
-      probability_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Property();
     }
 
     @java.lang.Override
@@ -1025,7 +1045,6 @@ public final class Classification {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1048,7 +1067,7 @@ public final class Classification {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1087,7 +1106,9 @@ public final class Classification {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1106,7 +1127,9 @@ public final class Classification {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1129,7 +1152,9 @@ public final class Classification {
      * </pre>
      *
      * <code>double probability = 2;</code>
+     * @return The probability.
      */
+    @java.lang.Override
     public double getProbability() {
       return probability_;
     }
@@ -1148,10 +1173,10 @@ public final class Classification {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (probability_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(probability_) != 0) {
         output.writeDouble(2, probability_);
       }
       unknownFields.writeTo(output);
@@ -1163,10 +1188,10 @@ public final class Classification {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (probability_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(probability_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, probability_);
       }
@@ -1185,15 +1210,13 @@ public final class Classification {
       }
       yandex.cloud.api.ai.vision.v1.Classification.Property other = (yandex.cloud.api.ai.vision.v1.Classification.Property) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getProbability())
-          == java.lang.Double.doubleToLongBits(
-              other.getProbability()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (java.lang.Double.doubleToLongBits(getProbability())
+          != java.lang.Double.doubleToLongBits(
+              other.getProbability())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1379,35 +1402,35 @@ public final class Classification {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1464,6 +1487,7 @@ public final class Classification {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1483,6 +1507,7 @@ public final class Classification {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1503,6 +1528,8 @@ public final class Classification {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1520,6 +1547,7 @@ public final class Classification {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1533,6 +1561,8 @@ public final class Classification {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1553,7 +1583,9 @@ public final class Classification {
        * </pre>
        *
        * <code>double probability = 2;</code>
+       * @return The probability.
        */
+      @java.lang.Override
       public double getProbability() {
         return probability_;
       }
@@ -1563,6 +1595,8 @@ public final class Classification {
        * </pre>
        *
        * <code>double probability = 2;</code>
+       * @param value The probability to set.
+       * @return This builder for chaining.
        */
       public Builder setProbability(double value) {
         
@@ -1576,6 +1610,7 @@ public final class Classification {
        * </pre>
        *
        * <code>double probability = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProbability() {
         
@@ -1586,7 +1621,7 @@ public final class Classification {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1664,18 +1699,10 @@ public final class Classification {
       "com/yandex-cloud/go-genproto/yandex/clou" +
       "d/ai/vision/v1;visionb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_vision_v1_ClassAnnotation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v1_ClassAnnotation_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.cdn.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/cdn/v1/cache_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class CacheServiceGrpc {
 
   private CacheServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class CacheServiceGrpc {
     if ((getPurgeMethod = CacheServiceGrpc.getPurgeMethod) == null) {
       synchronized (CacheServiceGrpc.class) {
         if ((getPurgeMethod = CacheServiceGrpc.getPurgeMethod) == null) {
-          CacheServiceGrpc.getPurgeMethod = getPurgeMethod = 
+          CacheServiceGrpc.getPurgeMethod = getPurgeMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.CacheService", "Purge"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Purge"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CacheServiceMethodDescriptorSupplier("Purge"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CacheServiceMethodDescriptorSupplier("Purge"))
+              .build();
         }
-     }
-     return getPurgeMethod;
+      }
+    }
+    return getPurgeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest,
@@ -76,29 +63,35 @@ public final class CacheServiceGrpc {
     if ((getPrefetchMethod = CacheServiceGrpc.getPrefetchMethod) == null) {
       synchronized (CacheServiceGrpc.class) {
         if ((getPrefetchMethod = CacheServiceGrpc.getPrefetchMethod) == null) {
-          CacheServiceGrpc.getPrefetchMethod = getPrefetchMethod = 
+          CacheServiceGrpc.getPrefetchMethod = getPrefetchMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.CacheService", "Prefetch"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Prefetch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CacheServiceMethodDescriptorSupplier("Prefetch"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CacheServiceMethodDescriptorSupplier("Prefetch"))
+              .build();
         }
-     }
-     return getPrefetchMethod;
+      }
+    }
+    return getPrefetchMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CacheServiceStub newStub(io.grpc.Channel channel) {
-    return new CacheServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CacheServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CacheServiceStub>() {
+        @java.lang.Override
+        public CacheServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CacheServiceStub(channel, callOptions);
+        }
+      };
+    return CacheServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class CacheServiceGrpc {
    */
   public static CacheServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CacheServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CacheServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CacheServiceBlockingStub>() {
+        @java.lang.Override
+        public CacheServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CacheServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CacheServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class CacheServiceGrpc {
    */
   public static CacheServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CacheServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CacheServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CacheServiceFutureStub>() {
+        @java.lang.Override
+        public CacheServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CacheServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CacheServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -132,7 +139,7 @@ public final class CacheServiceGrpc {
      */
     public void purge(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getPurgeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPurgeMethod(), responseObserver);
     }
 
     /**
@@ -142,21 +149,21 @@ public final class CacheServiceGrpc {
      */
     public void prefetch(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getPrefetchMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPrefetchMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getPurgeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_PURGE)))
           .addMethod(
             getPrefetchMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -170,19 +177,15 @@ public final class CacheServiceGrpc {
    * A set of methods for managing Cache Service resources.
    * </pre>
    */
-  public static final class CacheServiceStub extends io.grpc.stub.AbstractStub<CacheServiceStub> {
-    private CacheServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CacheServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CacheServiceStub extends io.grpc.stub.AbstractAsyncStub<CacheServiceStub> {
+    private CacheServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CacheServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CacheServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CacheServiceStub(channel, callOptions);
     }
 
@@ -194,7 +197,7 @@ public final class CacheServiceGrpc {
      */
     public void purge(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPurgeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -205,7 +208,7 @@ public final class CacheServiceGrpc {
      */
     public void prefetch(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPrefetchMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -215,19 +218,15 @@ public final class CacheServiceGrpc {
    * A set of methods for managing Cache Service resources.
    * </pre>
    */
-  public static final class CacheServiceBlockingStub extends io.grpc.stub.AbstractStub<CacheServiceBlockingStub> {
-    private CacheServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CacheServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CacheServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CacheServiceBlockingStub> {
+    private CacheServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CacheServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CacheServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CacheServiceBlockingStub(channel, callOptions);
     }
 
@@ -238,7 +237,7 @@ public final class CacheServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation purge(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPurgeMethod(), getCallOptions(), request);
     }
 
@@ -248,7 +247,7 @@ public final class CacheServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation prefetch(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPrefetchMethod(), getCallOptions(), request);
     }
   }
@@ -258,19 +257,15 @@ public final class CacheServiceGrpc {
    * A set of methods for managing Cache Service resources.
    * </pre>
    */
-  public static final class CacheServiceFutureStub extends io.grpc.stub.AbstractStub<CacheServiceFutureStub> {
-    private CacheServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CacheServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CacheServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CacheServiceFutureStub> {
+    private CacheServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CacheServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CacheServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CacheServiceFutureStub(channel, callOptions);
     }
 
@@ -282,7 +277,7 @@ public final class CacheServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> purge(
         yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPurgeMethod(), getCallOptions()), request);
     }
 
@@ -293,7 +288,7 @@ public final class CacheServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> prefetch(
         yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PrefetchCacheRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPrefetchMethod(), getCallOptions()), request);
     }
   }

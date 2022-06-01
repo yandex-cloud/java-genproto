@@ -24,6 +24,7 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The secretId.
      */
     java.lang.String getSecretId();
     /**
@@ -32,6 +33,7 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for secretId.
      */
     com.google.protobuf.ByteString
         getSecretIdBytes();
@@ -42,6 +44,7 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -50,6 +53,7 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -57,7 +61,7 @@ public final class PayloadServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.lockbox.v1.GetPayloadRequest}
    */
-  public  static final class GetPayloadRequest extends
+  public static final class GetPayloadRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.GetPayloadRequest)
       GetPayloadRequestOrBuilder {
@@ -69,6 +73,13 @@ public final class PayloadServiceOuterClass {
     private GetPayloadRequest() {
       secretId_ = "";
       versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPayloadRequest();
     }
 
     @java.lang.Override
@@ -84,7 +95,6 @@ public final class PayloadServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -108,7 +118,7 @@ public final class PayloadServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -147,7 +157,9 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The secretId.
      */
+    @java.lang.Override
     public java.lang.String getSecretId() {
       java.lang.Object ref = secretId_;
       if (ref instanceof java.lang.String) {
@@ -166,7 +178,9 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for secretId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecretIdBytes() {
       java.lang.Object ref = secretId_;
@@ -189,7 +203,9 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The versionId.
      */
+    @java.lang.Override
     public java.lang.String getVersionId() {
       java.lang.Object ref = versionId_;
       if (ref instanceof java.lang.String) {
@@ -208,7 +224,9 @@ public final class PayloadServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for versionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
       java.lang.Object ref = versionId_;
@@ -237,10 +255,10 @@ public final class PayloadServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSecretIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, secretId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
       unknownFields.writeTo(output);
@@ -252,10 +270,10 @@ public final class PayloadServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSecretIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, secretId_);
       }
-      if (!getVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -273,13 +291,12 @@ public final class PayloadServiceOuterClass {
       }
       yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest other = (yandex.cloud.api.lockbox.v1.PayloadServiceOuterClass.GetPayloadRequest) obj;
 
-      boolean result = true;
-      result = result && getSecretId()
-          .equals(other.getSecretId());
-      result = result && getVersionId()
-          .equals(other.getVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecretId()
+          .equals(other.getSecretId())) return false;
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -464,35 +481,35 @@ public final class PayloadServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -550,6 +567,7 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The secretId.
        */
       public java.lang.String getSecretId() {
         java.lang.Object ref = secretId_;
@@ -569,6 +587,7 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for secretId.
        */
       public com.google.protobuf.ByteString
           getSecretIdBytes() {
@@ -589,6 +608,8 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The secretId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecretId(
           java.lang.String value) {
@@ -606,6 +627,7 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecretId() {
         
@@ -619,6 +641,8 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string secret_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for secretId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecretIdBytes(
           com.google.protobuf.ByteString value) {
@@ -639,6 +663,7 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The versionId.
        */
       public java.lang.String getVersionId() {
         java.lang.Object ref = versionId_;
@@ -658,6 +683,7 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for versionId.
        */
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
@@ -678,6 +704,8 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -695,6 +723,7 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         
@@ -708,6 +737,8 @@ public final class PayloadServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -723,7 +754,7 @@ public final class PayloadServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -801,21 +832,13 @@ public final class PayloadServiceOuterClass {
       "1ZCgithub.com/yandex-cloud/go-genproto/y" +
       "andex/cloud/lockbox/v1;lockboxb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.lockbox.v1.PayloadOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_lockbox_v1_GetPayloadRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_GetPayloadRequest_fieldAccessorTable = new

@@ -25,6 +25,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
@@ -34,6 +35,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourcePresetId.
      */
     com.google.protobuf.ByteString
         getResourcePresetIdBytes();
@@ -41,7 +43,7 @@ public final class ResourcePresetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.GetResourcePresetRequest}
    */
-  public  static final class GetResourcePresetRequest extends
+  public static final class GetResourcePresetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.GetResourcePresetRequest)
       GetResourcePresetRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class ResourcePresetServiceOuterClass {
     }
     private GetResourcePresetRequest() {
       resourcePresetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetResourcePresetRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class ResourcePresetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class ResourcePresetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The resourcePresetId.
      */
+    @java.lang.Override
     public java.lang.String getResourcePresetId() {
       java.lang.Object ref = resourcePresetId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourcePresetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourcePresetIdBytes() {
       java.lang.Object ref = resourcePresetId_;
@@ -174,7 +186,7 @@ public final class ResourcePresetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class ResourcePresetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class ResourcePresetServiceOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest other = (yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest) obj;
 
-      boolean result = true;
-      result = result && getResourcePresetId()
-          .equals(other.getResourcePresetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcePresetId()
+          .equals(other.getResourcePresetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class ResourcePresetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The resourcePresetId.
        */
       public java.lang.String getResourcePresetId() {
         java.lang.Object ref = resourcePresetId_;
@@ -491,6 +503,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for resourcePresetId.
        */
       public com.google.protobuf.ByteString
           getResourcePresetIdBytes() {
@@ -512,6 +525,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourcePresetId() {
         
@@ -544,6 +560,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class ResourcePresetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 1 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -630,6 +649,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -639,6 +659,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -646,7 +667,7 @@ public final class ResourcePresetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ListResourcePresetsRequest}
    */
-  public  static final class ListResourcePresetsRequest extends
+  public static final class ListResourcePresetsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ListResourcePresetsRequest)
       ListResourcePresetsRequestOrBuilder {
@@ -656,8 +677,14 @@ public final class ResourcePresetServiceOuterClass {
       super(builder);
     }
     private ListResourcePresetsRequest() {
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResourcePresetsRequest();
     }
 
     @java.lang.Override
@@ -673,7 +700,6 @@ public final class ResourcePresetServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -696,7 +722,7 @@ public final class ResourcePresetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -736,7 +762,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 1 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -750,7 +778,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -770,7 +800,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -802,7 +834,7 @@ public final class ResourcePresetServiceOuterClass {
       if (pageSize_ != 0L) {
         output.writeInt64(1, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -818,7 +850,7 @@ public final class ResourcePresetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -836,13 +868,12 @@ public final class ResourcePresetServiceOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest other = (yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest) obj;
 
-      boolean result = true;
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1028,35 +1059,35 @@ public final class ResourcePresetServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1114,7 +1145,9 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1125,6 +1158,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1139,6 +1174,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1155,6 +1191,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1175,6 +1212,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1196,6 +1234,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1214,6 +1254,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1228,6 +1269,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1243,7 +1286,7 @@ public final class ResourcePresetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1349,6 +1392,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1359,6 +1403,7 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1366,7 +1411,7 @@ public final class ResourcePresetServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ListResourcePresetsResponse}
    */
-  public  static final class ListResourcePresetsResponse extends
+  public static final class ListResourcePresetsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ListResourcePresetsResponse)
       ListResourcePresetsResponseOrBuilder {
@@ -1378,6 +1423,13 @@ public final class ResourcePresetServiceOuterClass {
     private ListResourcePresetsResponse() {
       resourcePresets_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResourcePresetsResponse();
     }
 
     @java.lang.Override
@@ -1405,7 +1457,7 @@ public final class ResourcePresetServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 resourcePresets_ = new java.util.ArrayList<yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1420,7 +1472,7 @@ public final class ResourcePresetServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1434,7 +1486,7 @@ public final class ResourcePresetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           resourcePresets_ = java.util.Collections.unmodifiableList(resourcePresets_);
         }
         this.unknownFields = unknownFields.build();
@@ -1454,7 +1506,6 @@ public final class ResourcePresetServiceOuterClass {
               yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.class, yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RESOURCE_PRESETS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset> resourcePresets_;
     /**
@@ -1464,6 +1515,7 @@ public final class ResourcePresetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.ResourcePreset resource_presets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset> getResourcePresetsList() {
       return resourcePresets_;
     }
@@ -1474,6 +1526,7 @@ public final class ResourcePresetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.ResourcePreset resource_presets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePresetOrBuilder> 
         getResourcePresetsOrBuilderList() {
       return resourcePresets_;
@@ -1485,6 +1538,7 @@ public final class ResourcePresetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.ResourcePreset resource_presets = 1;</code>
      */
+    @java.lang.Override
     public int getResourcePresetsCount() {
       return resourcePresets_.size();
     }
@@ -1495,6 +1549,7 @@ public final class ResourcePresetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.ResourcePreset resource_presets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset getResourcePresets(int index) {
       return resourcePresets_.get(index);
     }
@@ -1505,6 +1560,7 @@ public final class ResourcePresetServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.ResourcePreset resource_presets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePresetOrBuilder getResourcePresetsOrBuilder(
         int index) {
       return resourcePresets_.get(index);
@@ -1520,7 +1576,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1541,7 +1599,9 @@ public final class ResourcePresetServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1573,7 +1633,7 @@ public final class ResourcePresetServiceOuterClass {
       for (int i = 0; i < resourcePresets_.size(); i++) {
         output.writeMessage(1, resourcePresets_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1589,7 +1649,7 @@ public final class ResourcePresetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, resourcePresets_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1607,13 +1667,12 @@ public final class ResourcePresetServiceOuterClass {
       }
       yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse other = (yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse) obj;
 
-      boolean result = true;
-      result = result && getResourcePresetsList()
-          .equals(other.getResourcePresetsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcePresetsList()
+          .equals(other.getResourcePresetsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1798,9 +1857,8 @@ public final class ResourcePresetServiceOuterClass {
       public yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse result = new yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (resourcePresetsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             resourcePresets_ = java.util.Collections.unmodifiableList(resourcePresets_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1809,42 +1867,41 @@ public final class ResourcePresetServiceOuterClass {
           result.resourcePresets_ = resourcePresetsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1921,7 +1978,7 @@ public final class ResourcePresetServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset> resourcePresets_ =
         java.util.Collections.emptyList();
       private void ensureResourcePresetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           resourcePresets_ = new java.util.ArrayList<yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset>(resourcePresets_);
           bitField0_ |= 0x00000001;
          }
@@ -2222,7 +2279,7 @@ public final class ResourcePresetServiceOuterClass {
           resourcePresetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset, yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePreset.Builder, yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.ResourcePresetOrBuilder>(
                   resourcePresets_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           resourcePresets_ = null;
@@ -2239,6 +2296,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2260,6 +2318,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2282,6 +2341,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2301,6 +2362,7 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2316,6 +2378,8 @@ public final class ResourcePresetServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2331,7 +2395,7 @@ public final class ResourcePresetServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2430,21 +2494,13 @@ public final class ResourcePresetServiceOuterClass {
       "hub.com/yandex-cloud/go-genproto/yandex/" +
       "cloud/mdb/kafka/v1;kafkab\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.ResourcePresetOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_kafka_v1_GetResourcePresetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_GetResourcePresetRequest_fieldAccessorTable = new

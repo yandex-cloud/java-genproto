@@ -24,6 +24,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -60,6 +64,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -93,6 +100,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -103,6 +111,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -111,6 +120,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -175,6 +185,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string kms_key_id = 7;</code>
+     * @return The kmsKeyId.
      */
     java.lang.String getKmsKeyId();
     /**
@@ -183,6 +194,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string kms_key_id = 7;</code>
+     * @return The bytes for kmsKeyId.
      */
     com.google.protobuf.ByteString
         getKmsKeyIdBytes();
@@ -193,6 +205,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -201,6 +214,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+     * @return The status.
      */
     yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status getStatus();
 
@@ -210,6 +224,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
+     * @return Whether the currentVersion field is set.
      */
     boolean hasCurrentVersion();
     /**
@@ -218,6 +233,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
+     * @return The currentVersion.
      */
     yandex.cloud.api.lockbox.v1.SecretOuterClass.Version getCurrentVersion();
     /**
@@ -235,6 +251,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 10;</code>
+     * @return The deletionProtection.
      */
     boolean getDeletionProtection();
   }
@@ -245,7 +262,7 @@ public final class SecretOuterClass {
    *
    * Protobuf type {@code yandex.cloud.lockbox.v1.Secret}
    */
-  public  static final class Secret extends
+  public static final class Secret extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.Secret)
       SecretOrBuilder {
@@ -261,7 +278,13 @@ public final class SecretOuterClass {
       description_ = "";
       kmsKeyId_ = "";
       status_ = 0;
-      deletionProtection_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Secret();
     }
 
     @java.lang.Override
@@ -326,10 +349,10 @@ public final class SecretOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -369,7 +392,7 @@ public final class SecretOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -491,6 +514,8 @@ public final class SecretOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -498,6 +523,10 @@ public final class SecretOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -522,6 +551,10 @@ public final class SecretOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -556,7 +589,6 @@ public final class SecretOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.lockbox.v1.Secret.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -565,7 +597,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -584,7 +618,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -607,7 +643,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -626,7 +664,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -649,7 +689,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -659,7 +701,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -670,6 +714,7 @@ public final class SecretOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -682,7 +727,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -701,7 +748,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -724,7 +773,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -743,7 +794,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -792,14 +845,16 @@ public final class SecretOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -811,6 +866,7 @@ public final class SecretOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -822,11 +878,12 @@ public final class SecretOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -838,10 +895,11 @@ public final class SecretOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -858,7 +916,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string kms_key_id = 7;</code>
+     * @return The kmsKeyId.
      */
+    @java.lang.Override
     public java.lang.String getKmsKeyId() {
       java.lang.Object ref = kmsKeyId_;
       if (ref instanceof java.lang.String) {
@@ -877,7 +937,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string kms_key_id = 7;</code>
+     * @return The bytes for kmsKeyId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKmsKeyIdBytes() {
       java.lang.Object ref = kmsKeyId_;
@@ -900,8 +962,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -910,8 +973,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status result = yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status.UNRECOGNIZED : result;
@@ -925,7 +989,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
+     * @return Whether the currentVersion field is set.
      */
+    @java.lang.Override
     public boolean hasCurrentVersion() {
       return currentVersion_ != null;
     }
@@ -935,7 +1001,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
+     * @return The currentVersion.
      */
+    @java.lang.Override
     public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version getCurrentVersion() {
       return currentVersion_ == null ? yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.getDefaultInstance() : currentVersion_;
     }
@@ -946,6 +1014,7 @@ public final class SecretOuterClass {
      *
      * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.lockbox.v1.SecretOuterClass.VersionOrBuilder getCurrentVersionOrBuilder() {
       return getCurrentVersion();
     }
@@ -958,7 +1027,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 10;</code>
+     * @return The deletionProtection.
      */
+    @java.lang.Override
     public boolean getDeletionProtection() {
       return deletionProtection_;
     }
@@ -977,19 +1048,19 @@ public final class SecretOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -998,7 +1069,7 @@ public final class SecretOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!getKmsKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kmsKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, kmsKeyId_);
       }
       if (status_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -1019,20 +1090,20 @@ public final class SecretOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1045,7 +1116,7 @@ public final class SecretOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!getKmsKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kmsKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, kmsKeyId_);
       }
       if (status_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -1075,34 +1146,33 @@ public final class SecretOuterClass {
       }
       yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret other = (yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getKmsKeyId()
-          .equals(other.getKmsKeyId());
-      result = result && status_ == other.status_;
-      result = result && (hasCurrentVersion() == other.hasCurrentVersion());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getKmsKeyId()
+          .equals(other.getKmsKeyId())) return false;
+      if (status_ != other.status_) return false;
+      if (hasCurrentVersion() != other.hasCurrentVersion()) return false;
       if (hasCurrentVersion()) {
-        result = result && getCurrentVersion()
-            .equals(other.getCurrentVersion());
+        if (!getCurrentVersion()
+            .equals(other.getCurrentVersion())) return false;
       }
-      result = result && (getDeletionProtection()
-          == other.getDeletionProtection());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1352,7 +1422,6 @@ public final class SecretOuterClass {
       public yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret buildPartial() {
         yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret result = new yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1372,42 +1441,41 @@ public final class SecretOuterClass {
           result.currentVersion_ = currentVersionBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1492,6 +1560,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1511,6 +1580,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1531,6 +1601,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1548,6 +1620,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1561,6 +1634,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1581,6 +1656,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1600,6 +1676,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1620,6 +1697,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1637,6 +1716,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1650,6 +1730,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1663,7 +1745,7 @@ public final class SecretOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1672,6 +1754,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1682,6 +1765,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1823,6 +1907,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1842,6 +1927,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1862,6 +1948,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1879,6 +1967,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1892,6 +1981,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1912,6 +2003,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1931,6 +2023,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1951,6 +2044,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1968,6 +2063,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1981,6 +2077,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2028,14 +2126,16 @@ public final class SecretOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2047,6 +2147,7 @@ public final class SecretOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2058,11 +2159,12 @@ public final class SecretOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2074,10 +2176,11 @@ public final class SecretOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2101,7 +2204,7 @@ public final class SecretOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2124,8 +2227,11 @@ public final class SecretOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2152,6 +2258,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string kms_key_id = 7;</code>
+       * @return The kmsKeyId.
        */
       public java.lang.String getKmsKeyId() {
         java.lang.Object ref = kmsKeyId_;
@@ -2171,6 +2278,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string kms_key_id = 7;</code>
+       * @return The bytes for kmsKeyId.
        */
       public com.google.protobuf.ByteString
           getKmsKeyIdBytes() {
@@ -2191,6 +2299,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string kms_key_id = 7;</code>
+       * @param value The kmsKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKmsKeyId(
           java.lang.String value) {
@@ -2208,6 +2318,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string kms_key_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKmsKeyId() {
         
@@ -2221,6 +2332,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string kms_key_id = 7;</code>
+       * @param value The bytes for kmsKeyId to set.
+       * @return This builder for chaining.
        */
       public Builder setKmsKeyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2241,8 +2354,9 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2251,8 +2365,11 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2263,7 +2380,9 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status result = yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status.valueOf(status_);
@@ -2275,6 +2394,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.Status value) {
         if (value == null) {
@@ -2291,6 +2412,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Secret.Status status = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2299,7 +2421,7 @@ public final class SecretOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.lockbox.v1.SecretOuterClass.Version currentVersion_ = null;
+      private yandex.cloud.api.lockbox.v1.SecretOuterClass.Version currentVersion_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.lockbox.v1.SecretOuterClass.Version, yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.VersionOrBuilder> currentVersionBuilder_;
       /**
@@ -2308,6 +2430,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
+       * @return Whether the currentVersion field is set.
        */
       public boolean hasCurrentVersion() {
         return currentVersionBuilder_ != null || currentVersion_ != null;
@@ -2318,6 +2441,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version current_version = 9;</code>
+       * @return The currentVersion.
        */
       public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version getCurrentVersion() {
         if (currentVersionBuilder_ == null) {
@@ -2459,7 +2583,9 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 10;</code>
+       * @return The deletionProtection.
        */
+      @java.lang.Override
       public boolean getDeletionProtection() {
         return deletionProtection_;
       }
@@ -2469,6 +2595,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 10;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
        */
       public Builder setDeletionProtection(boolean value) {
         
@@ -2482,6 +2610,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeletionProtection() {
         
@@ -2492,7 +2621,7 @@ public final class SecretOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2552,6 +2681,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -2560,6 +2690,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -2570,6 +2701,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string secret_id = 2;</code>
+     * @return The secretId.
      */
     java.lang.String getSecretId();
     /**
@@ -2578,6 +2710,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string secret_id = 2;</code>
+     * @return The bytes for secretId.
      */
     com.google.protobuf.ByteString
         getSecretIdBytes();
@@ -2588,6 +2721,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -2596,6 +2730,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -2614,6 +2749,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
+     * @return Whether the destroyAt field is set.
      */
     boolean hasDestroyAt();
     /**
@@ -2623,6 +2759,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
+     * @return The destroyAt.
      */
     com.google.protobuf.Timestamp getDestroyAt();
     /**
@@ -2641,6 +2778,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2649,6 +2787,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2659,6 +2798,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -2667,6 +2807,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+     * @return The status.
      */
     yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status getStatus();
 
@@ -2676,6 +2817,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @return A list containing the payloadEntryKeys.
      */
     java.util.List<java.lang.String>
         getPayloadEntryKeysList();
@@ -2685,6 +2827,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @return The count of payloadEntryKeys.
      */
     int getPayloadEntryKeysCount();
     /**
@@ -2693,6 +2836,8 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @param index The index of the element to return.
+     * @return The payloadEntryKeys at the given index.
      */
     java.lang.String getPayloadEntryKeys(int index);
     /**
@@ -2701,6 +2846,8 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the payloadEntryKeys at the given index.
      */
     com.google.protobuf.ByteString
         getPayloadEntryKeysBytes(int index);
@@ -2708,7 +2855,7 @@ public final class SecretOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.lockbox.v1.Version}
    */
-  public  static final class Version extends
+  public static final class Version extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.Version)
       VersionOrBuilder {
@@ -2723,6 +2870,13 @@ public final class SecretOuterClass {
       description_ = "";
       status_ = 0;
       payloadEntryKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Version();
     }
 
     @java.lang.Override
@@ -2801,15 +2955,15 @@ public final class SecretOuterClass {
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 payloadEntryKeys_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               payloadEntryKeys_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2823,7 +2977,7 @@ public final class SecretOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           payloadEntryKeys_ = payloadEntryKeys_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -2920,6 +3074,8 @@ public final class SecretOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2927,6 +3083,10 @@ public final class SecretOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -2951,6 +3111,10 @@ public final class SecretOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2985,7 +3149,6 @@ public final class SecretOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.lockbox.v1.Version.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -2994,7 +3157,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -3013,7 +3178,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3036,7 +3203,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string secret_id = 2;</code>
+     * @return The secretId.
      */
+    @java.lang.Override
     public java.lang.String getSecretId() {
       java.lang.Object ref = secretId_;
       if (ref instanceof java.lang.String) {
@@ -3055,7 +3224,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string secret_id = 2;</code>
+     * @return The bytes for secretId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSecretIdBytes() {
       java.lang.Object ref = secretId_;
@@ -3078,7 +3249,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -3088,7 +3261,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -3099,6 +3274,7 @@ public final class SecretOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -3112,7 +3288,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
+     * @return Whether the destroyAt field is set.
      */
+    @java.lang.Override
     public boolean hasDestroyAt() {
       return destroyAt_ != null;
     }
@@ -3123,7 +3301,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
+     * @return The destroyAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getDestroyAt() {
       return destroyAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : destroyAt_;
     }
@@ -3135,6 +3315,7 @@ public final class SecretOuterClass {
      *
      * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getDestroyAtOrBuilder() {
       return getDestroyAt();
     }
@@ -3147,7 +3328,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3166,7 +3349,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3189,8 +3374,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3199,8 +3385,9 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status result = yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status.UNRECOGNIZED : result;
@@ -3214,6 +3401,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @return A list containing the payloadEntryKeys.
      */
     public com.google.protobuf.ProtocolStringList
         getPayloadEntryKeysList() {
@@ -3225,6 +3413,7 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @return The count of payloadEntryKeys.
      */
     public int getPayloadEntryKeysCount() {
       return payloadEntryKeys_.size();
@@ -3235,6 +3424,8 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @param index The index of the element to return.
+     * @return The payloadEntryKeys at the given index.
      */
     public java.lang.String getPayloadEntryKeys(int index) {
       return payloadEntryKeys_.get(index);
@@ -3245,6 +3436,8 @@ public final class SecretOuterClass {
      * </pre>
      *
      * <code>repeated string payload_entry_keys = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the payloadEntryKeys at the given index.
      */
     public com.google.protobuf.ByteString
         getPayloadEntryKeysBytes(int index) {
@@ -3265,10 +3458,10 @@ public final class SecretOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getSecretIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretId_);
       }
       if (createdAt_ != null) {
@@ -3277,7 +3470,7 @@ public final class SecretOuterClass {
       if (destroyAt_ != null) {
         output.writeMessage(4, getDestroyAt());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       if (status_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -3295,10 +3488,10 @@ public final class SecretOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getSecretIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretId_);
       }
       if (createdAt_ != null) {
@@ -3309,7 +3502,7 @@ public final class SecretOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDestroyAt());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       if (status_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -3339,28 +3532,27 @@ public final class SecretOuterClass {
       }
       yandex.cloud.api.lockbox.v1.SecretOuterClass.Version other = (yandex.cloud.api.lockbox.v1.SecretOuterClass.Version) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getSecretId()
-          .equals(other.getSecretId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getSecretId()
+          .equals(other.getSecretId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasDestroyAt() == other.hasDestroyAt());
+      if (hasDestroyAt() != other.hasDestroyAt()) return false;
       if (hasDestroyAt()) {
-        result = result && getDestroyAt()
-            .equals(other.getDestroyAt());
+        if (!getDestroyAt()
+            .equals(other.getDestroyAt())) return false;
       }
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && status_ == other.status_;
-      result = result && getPayloadEntryKeysList()
-          .equals(other.getPayloadEntryKeysList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (!getPayloadEntryKeysList()
+          .equals(other.getPayloadEntryKeysList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3544,7 +3736,7 @@ public final class SecretOuterClass {
         status_ = 0;
 
         payloadEntryKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -3572,7 +3764,6 @@ public final class SecretOuterClass {
       public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version buildPartial() {
         yandex.cloud.api.lockbox.v1.SecretOuterClass.Version result = new yandex.cloud.api.lockbox.v1.SecretOuterClass.Version(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.secretId_ = secretId_;
         if (createdAtBuilder_ == null) {
@@ -3587,47 +3778,46 @@ public final class SecretOuterClass {
         }
         result.description_ = description_;
         result.status_ = status_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           payloadEntryKeys_ = payloadEntryKeys_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.payloadEntryKeys_ = payloadEntryKeys_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3665,7 +3855,7 @@ public final class SecretOuterClass {
         if (!other.payloadEntryKeys_.isEmpty()) {
           if (payloadEntryKeys_.isEmpty()) {
             payloadEntryKeys_ = other.payloadEntryKeys_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePayloadEntryKeysIsMutable();
             payloadEntryKeys_.addAll(other.payloadEntryKeys_);
@@ -3709,6 +3899,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -3728,6 +3919,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -3748,6 +3940,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -3765,6 +3959,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -3778,6 +3973,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3798,6 +3995,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string secret_id = 2;</code>
+       * @return The secretId.
        */
       public java.lang.String getSecretId() {
         java.lang.Object ref = secretId_;
@@ -3817,6 +4015,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string secret_id = 2;</code>
+       * @return The bytes for secretId.
        */
       public com.google.protobuf.ByteString
           getSecretIdBytes() {
@@ -3837,6 +4036,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string secret_id = 2;</code>
+       * @param value The secretId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecretId(
           java.lang.String value) {
@@ -3854,6 +4055,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string secret_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecretId() {
         
@@ -3867,6 +4069,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string secret_id = 2;</code>
+       * @param value The bytes for secretId to set.
+       * @return This builder for chaining.
        */
       public Builder setSecretIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3880,7 +4084,7 @@ public final class SecretOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -3889,6 +4093,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -3899,6 +4104,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -4033,7 +4239,7 @@ public final class SecretOuterClass {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp destroyAt_ = null;
+      private com.google.protobuf.Timestamp destroyAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> destroyAtBuilder_;
       /**
@@ -4043,6 +4249,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
+       * @return Whether the destroyAt field is set.
        */
       public boolean hasDestroyAt() {
         return destroyAtBuilder_ != null || destroyAt_ != null;
@@ -4054,6 +4261,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp destroy_at = 4;</code>
+       * @return The destroyAt.
        */
       public com.google.protobuf.Timestamp getDestroyAt() {
         if (destroyAtBuilder_ == null) {
@@ -4202,6 +4410,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4221,6 +4430,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4241,6 +4451,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4258,6 +4470,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4271,6 +4484,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4291,8 +4506,9 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -4301,8 +4517,11 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -4313,7 +4532,9 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status result = yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status.valueOf(status_);
@@ -4325,6 +4546,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.Status value) {
         if (value == null) {
@@ -4341,6 +4564,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.lockbox.v1.Version.Status status = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -4351,9 +4575,9 @@ public final class SecretOuterClass {
 
       private com.google.protobuf.LazyStringList payloadEntryKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePayloadEntryKeysIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           payloadEntryKeys_ = new com.google.protobuf.LazyStringArrayList(payloadEntryKeys_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -4362,6 +4586,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @return A list containing the payloadEntryKeys.
        */
       public com.google.protobuf.ProtocolStringList
           getPayloadEntryKeysList() {
@@ -4373,6 +4598,7 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @return The count of payloadEntryKeys.
        */
       public int getPayloadEntryKeysCount() {
         return payloadEntryKeys_.size();
@@ -4383,6 +4609,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @param index The index of the element to return.
+       * @return The payloadEntryKeys at the given index.
        */
       public java.lang.String getPayloadEntryKeys(int index) {
         return payloadEntryKeys_.get(index);
@@ -4393,6 +4621,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the payloadEntryKeys at the given index.
        */
       public com.google.protobuf.ByteString
           getPayloadEntryKeysBytes(int index) {
@@ -4404,6 +4634,9 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The payloadEntryKeys to set.
+       * @return This builder for chaining.
        */
       public Builder setPayloadEntryKeys(
           int index, java.lang.String value) {
@@ -4421,6 +4654,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @param value The payloadEntryKeys to add.
+       * @return This builder for chaining.
        */
       public Builder addPayloadEntryKeys(
           java.lang.String value) {
@@ -4438,6 +4673,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @param values The payloadEntryKeys to add.
+       * @return This builder for chaining.
        */
       public Builder addAllPayloadEntryKeys(
           java.lang.Iterable<java.lang.String> values) {
@@ -4453,10 +4690,11 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPayloadEntryKeys() {
         payloadEntryKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4466,6 +4704,8 @@ public final class SecretOuterClass {
        * </pre>
        *
        * <code>repeated string payload_entry_keys = 7;</code>
+       * @param value The bytes of the payloadEntryKeys to add.
+       * @return This builder for chaining.
        */
       public Builder addPayloadEntryKeysBytes(
           com.google.protobuf.ByteString value) {
@@ -4481,7 +4721,7 @@ public final class SecretOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4582,19 +4822,11 @@ public final class SecretOuterClass {
       "/go-genproto/yandex/cloud/lockbox/v1;loc" +
       "kboxb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_lockbox_v1_Secret_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_Secret_fieldAccessorTable = new

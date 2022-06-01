@@ -1,19 +1,6 @@
 package yandex.cloud.api.billing.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/billing/v1/customer_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerServiceGrpc {
 
   private CustomerServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class CustomerServiceGrpc {
     if ((getListMethod = CustomerServiceGrpc.getListMethod) == null) {
       synchronized (CustomerServiceGrpc.class) {
         if ((getListMethod = CustomerServiceGrpc.getListMethod) == null) {
-          CustomerServiceGrpc.getListMethod = getListMethod = 
+          CustomerServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest, yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.CustomerService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest,
@@ -76,22 +63,21 @@ public final class CustomerServiceGrpc {
     if ((getInviteMethod = CustomerServiceGrpc.getInviteMethod) == null) {
       synchronized (CustomerServiceGrpc.class) {
         if ((getInviteMethod = CustomerServiceGrpc.getInviteMethod) == null) {
-          CustomerServiceGrpc.getInviteMethod = getInviteMethod = 
+          CustomerServiceGrpc.getInviteMethod = getInviteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.CustomerService", "Invite"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Invite"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("Invite"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("Invite"))
+              .build();
         }
-     }
-     return getInviteMethod;
+      }
+    }
+    return getInviteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest,
@@ -108,22 +94,21 @@ public final class CustomerServiceGrpc {
     if ((getActivateMethod = CustomerServiceGrpc.getActivateMethod) == null) {
       synchronized (CustomerServiceGrpc.class) {
         if ((getActivateMethod = CustomerServiceGrpc.getActivateMethod) == null) {
-          CustomerServiceGrpc.getActivateMethod = getActivateMethod = 
+          CustomerServiceGrpc.getActivateMethod = getActivateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.CustomerService", "Activate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Activate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("Activate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("Activate"))
+              .build();
         }
-     }
-     return getActivateMethod;
+      }
+    }
+    return getActivateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest,
@@ -140,29 +125,35 @@ public final class CustomerServiceGrpc {
     if ((getSuspendMethod = CustomerServiceGrpc.getSuspendMethod) == null) {
       synchronized (CustomerServiceGrpc.class) {
         if ((getSuspendMethod = CustomerServiceGrpc.getSuspendMethod) == null) {
-          CustomerServiceGrpc.getSuspendMethod = getSuspendMethod = 
+          CustomerServiceGrpc.getSuspendMethod = getSuspendMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.CustomerService", "Suspend"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Suspend"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("Suspend"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("Suspend"))
+              .build();
         }
-     }
-     return getSuspendMethod;
+      }
+    }
+    return getSuspendMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CustomerServiceStub newStub(io.grpc.Channel channel) {
-    return new CustomerServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerServiceStub>() {
+        @java.lang.Override
+        public CustomerServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerServiceStub(channel, callOptions);
+        }
+      };
+    return CustomerServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -170,7 +161,14 @@ public final class CustomerServiceGrpc {
    */
   public static CustomerServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CustomerServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerServiceBlockingStub>() {
+        @java.lang.Override
+        public CustomerServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CustomerServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -178,7 +176,14 @@ public final class CustomerServiceGrpc {
    */
   public static CustomerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CustomerServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomerServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerServiceFutureStub>() {
+        @java.lang.Override
+        public CustomerServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CustomerServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -195,7 +200,7 @@ public final class CustomerServiceGrpc {
      */
     public void list(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -205,7 +210,7 @@ public final class CustomerServiceGrpc {
      */
     public void invite(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getInviteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInviteMethod(), responseObserver);
     }
 
     /**
@@ -215,7 +220,7 @@ public final class CustomerServiceGrpc {
      */
     public void activate(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
     }
 
     /**
@@ -225,35 +230,35 @@ public final class CustomerServiceGrpc {
      */
     public void suspend(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSuspendMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuspendMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest,
                 yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getInviteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_INVITE)))
           .addMethod(
             getActivateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ACTIVATE)))
           .addMethod(
             getSuspendMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -267,19 +272,15 @@ public final class CustomerServiceGrpc {
    * A set of methods for managing Customer resources.
    * </pre>
    */
-  public static final class CustomerServiceStub extends io.grpc.stub.AbstractStub<CustomerServiceStub> {
-    private CustomerServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerServiceStub> {
+    private CustomerServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerServiceStub(channel, callOptions);
     }
 
@@ -290,7 +291,7 @@ public final class CustomerServiceGrpc {
      */
     public void list(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -301,7 +302,7 @@ public final class CustomerServiceGrpc {
      */
     public void invite(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInviteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -312,7 +313,7 @@ public final class CustomerServiceGrpc {
      */
     public void activate(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getActivateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -323,7 +324,7 @@ public final class CustomerServiceGrpc {
      */
     public void suspend(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSuspendMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -333,19 +334,15 @@ public final class CustomerServiceGrpc {
    * A set of methods for managing Customer resources.
    * </pre>
    */
-  public static final class CustomerServiceBlockingStub extends io.grpc.stub.AbstractStub<CustomerServiceBlockingStub> {
-    private CustomerServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerServiceBlockingStub> {
+    private CustomerServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerServiceBlockingStub(channel, callOptions);
     }
 
@@ -355,7 +352,7 @@ public final class CustomerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse list(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -365,7 +362,7 @@ public final class CustomerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation invite(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInviteMethod(), getCallOptions(), request);
     }
 
@@ -375,7 +372,7 @@ public final class CustomerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation activate(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getActivateMethod(), getCallOptions(), request);
     }
 
@@ -385,7 +382,7 @@ public final class CustomerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation suspend(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSuspendMethod(), getCallOptions(), request);
     }
   }
@@ -395,19 +392,15 @@ public final class CustomerServiceGrpc {
    * A set of methods for managing Customer resources.
    * </pre>
    */
-  public static final class CustomerServiceFutureStub extends io.grpc.stub.AbstractStub<CustomerServiceFutureStub> {
-    private CustomerServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomerServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerServiceFutureStub> {
+    private CustomerServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomerServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomerServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomerServiceFutureStub(channel, callOptions);
     }
 
@@ -418,7 +411,7 @@ public final class CustomerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersResponse> list(
         yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ListCustomersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -429,7 +422,7 @@ public final class CustomerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> invite(
         yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInviteMethod(), getCallOptions()), request);
     }
 
@@ -440,7 +433,7 @@ public final class CustomerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> activate(
         yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getActivateMethod(), getCallOptions()), request);
     }
 
@@ -451,7 +444,7 @@ public final class CustomerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> suspend(
         yandex.cloud.api.billing.v1.CustomerServiceOuterClass.SuspendCustomerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSuspendMethod(), getCallOptions()), request);
     }
   }

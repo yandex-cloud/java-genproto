@@ -1,19 +1,6 @@
 package yandex.cloud.api.certificatemanager.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/certificatemanager/v1/certificate_content_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class CertificateContentServiceGrpc {
 
   private CertificateContentServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class CertificateContentServiceGrpc {
     if ((getGetMethod = CertificateContentServiceGrpc.getGetMethod) == null) {
       synchronized (CertificateContentServiceGrpc.class) {
         if ((getGetMethod = CertificateContentServiceGrpc.getGetMethod) == null) {
-          CertificateContentServiceGrpc.getGetMethod = getGetMethod = 
+          CertificateContentServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest, yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.certificatemanager.v1.CertificateContentService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificateContentServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificateContentServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CertificateContentServiceStub newStub(io.grpc.Channel channel) {
-    return new CertificateContentServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificateContentServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificateContentServiceStub>() {
+        @java.lang.Override
+        public CertificateContentServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificateContentServiceStub(channel, callOptions);
+        }
+      };
+    return CertificateContentServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class CertificateContentServiceGrpc {
    */
   public static CertificateContentServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CertificateContentServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificateContentServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificateContentServiceBlockingStub>() {
+        @java.lang.Override
+        public CertificateContentServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificateContentServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CertificateContentServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class CertificateContentServiceGrpc {
    */
   public static CertificateContentServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CertificateContentServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificateContentServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificateContentServiceFutureStub>() {
+        @java.lang.Override
+        public CertificateContentServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificateContentServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CertificateContentServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class CertificateContentServiceGrpc {
      */
     public void get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest,
                 yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse>(
@@ -120,19 +128,15 @@ public final class CertificateContentServiceGrpc {
    * A set of methods for managing certificate content.
    * </pre>
    */
-  public static final class CertificateContentServiceStub extends io.grpc.stub.AbstractStub<CertificateContentServiceStub> {
-    private CertificateContentServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificateContentServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificateContentServiceStub extends io.grpc.stub.AbstractAsyncStub<CertificateContentServiceStub> {
+    private CertificateContentServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificateContentServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificateContentServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificateContentServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class CertificateContentServiceGrpc {
      */
     public void get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class CertificateContentServiceGrpc {
    * A set of methods for managing certificate content.
    * </pre>
    */
-  public static final class CertificateContentServiceBlockingStub extends io.grpc.stub.AbstractStub<CertificateContentServiceBlockingStub> {
-    private CertificateContentServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificateContentServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificateContentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CertificateContentServiceBlockingStub> {
+    private CertificateContentServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificateContentServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificateContentServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificateContentServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class CertificateContentServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class CertificateContentServiceGrpc {
    * A set of methods for managing certificate content.
    * </pre>
    */
-  public static final class CertificateContentServiceFutureStub extends io.grpc.stub.AbstractStub<CertificateContentServiceFutureStub> {
-    private CertificateContentServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificateContentServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificateContentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CertificateContentServiceFutureStub> {
+    private CertificateContentServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificateContentServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificateContentServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificateContentServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class CertificateContentServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse> get(
         yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
   }

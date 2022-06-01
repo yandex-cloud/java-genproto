@@ -1,19 +1,6 @@
 package yandex.cloud.api.containerregistry.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/containerregistry/v1/repository_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RepositoryServiceGrpc {
 
   private RepositoryServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class RepositoryServiceGrpc {
     if ((getGetMethod = RepositoryServiceGrpc.getGetMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getGetMethod = RepositoryServiceGrpc.getGetMethod) == null) {
-          RepositoryServiceGrpc.getGetMethod = getGetMethod = 
+          RepositoryServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest, yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest,
@@ -76,22 +63,21 @@ public final class RepositoryServiceGrpc {
     if ((getGetByNameMethod = RepositoryServiceGrpc.getGetByNameMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getGetByNameMethod = RepositoryServiceGrpc.getGetByNameMethod) == null) {
-          RepositoryServiceGrpc.getGetByNameMethod = getGetByNameMethod = 
+          RepositoryServiceGrpc.getGetByNameMethod = getGetByNameMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest, yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "GetByName"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetByName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("GetByName"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("GetByName"))
+              .build();
         }
-     }
-     return getGetByNameMethod;
+      }
+    }
+    return getGetByNameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest,
@@ -108,22 +94,21 @@ public final class RepositoryServiceGrpc {
     if ((getListMethod = RepositoryServiceGrpc.getListMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getListMethod = RepositoryServiceGrpc.getListMethod) == null) {
-          RepositoryServiceGrpc.getListMethod = getListMethod = 
+          RepositoryServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -140,22 +125,21 @@ public final class RepositoryServiceGrpc {
     if ((getListAccessBindingsMethod = RepositoryServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getListAccessBindingsMethod = RepositoryServiceGrpc.getListAccessBindingsMethod) == null) {
-          RepositoryServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          RepositoryServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest,
@@ -172,22 +156,21 @@ public final class RepositoryServiceGrpc {
     if ((getUpsertMethod = RepositoryServiceGrpc.getUpsertMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getUpsertMethod = RepositoryServiceGrpc.getUpsertMethod) == null) {
-          RepositoryServiceGrpc.getUpsertMethod = getUpsertMethod = 
+          RepositoryServiceGrpc.getUpsertMethod = getUpsertMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "Upsert"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Upsert"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Upsert"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Upsert"))
+              .build();
         }
-     }
-     return getUpsertMethod;
+      }
+    }
+    return getUpsertMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest,
@@ -204,22 +187,21 @@ public final class RepositoryServiceGrpc {
     if ((getDeleteMethod = RepositoryServiceGrpc.getDeleteMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getDeleteMethod = RepositoryServiceGrpc.getDeleteMethod) == null) {
-          RepositoryServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          RepositoryServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -236,22 +218,21 @@ public final class RepositoryServiceGrpc {
     if ((getSetAccessBindingsMethod = RepositoryServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = RepositoryServiceGrpc.getSetAccessBindingsMethod) == null) {
-          RepositoryServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          RepositoryServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -268,29 +249,35 @@ public final class RepositoryServiceGrpc {
     if ((getUpdateAccessBindingsMethod = RepositoryServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = RepositoryServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          RepositoryServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          RepositoryServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RepositoryServiceStub newStub(io.grpc.Channel channel) {
-    return new RepositoryServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RepositoryServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RepositoryServiceStub>() {
+        @java.lang.Override
+        public RepositoryServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RepositoryServiceStub(channel, callOptions);
+        }
+      };
+    return RepositoryServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -298,7 +285,14 @@ public final class RepositoryServiceGrpc {
    */
   public static RepositoryServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RepositoryServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RepositoryServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RepositoryServiceBlockingStub>() {
+        @java.lang.Override
+        public RepositoryServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RepositoryServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return RepositoryServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -306,7 +300,14 @@ public final class RepositoryServiceGrpc {
    */
   public static RepositoryServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RepositoryServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RepositoryServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RepositoryServiceFutureStub>() {
+        @java.lang.Override
+        public RepositoryServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RepositoryServiceFutureStub(channel, callOptions);
+        }
+      };
+    return RepositoryServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -324,7 +325,7 @@ public final class RepositoryServiceGrpc {
      */
     public void get(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -335,7 +336,7 @@ public final class RepositoryServiceGrpc {
      */
     public void getByName(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
     }
 
     /**
@@ -345,7 +346,7 @@ public final class RepositoryServiceGrpc {
      */
     public void list(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -355,7 +356,7 @@ public final class RepositoryServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -365,7 +366,7 @@ public final class RepositoryServiceGrpc {
      */
     public void upsert(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
     }
 
     /**
@@ -375,7 +376,7 @@ public final class RepositoryServiceGrpc {
      */
     public void delete(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -385,7 +386,7 @@ public final class RepositoryServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -395,63 +396,63 @@ public final class RepositoryServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest,
                 yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository>(
                   this, METHODID_GET)))
           .addMethod(
             getGetByNameMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest,
                 yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository>(
                   this, METHODID_GET_BY_NAME)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest,
                 yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getUpsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPSERT)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -465,19 +466,15 @@ public final class RepositoryServiceGrpc {
    * A set of methods for managing Repository resources.
    * </pre>
    */
-  public static final class RepositoryServiceStub extends io.grpc.stub.AbstractStub<RepositoryServiceStub> {
-    private RepositoryServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RepositoryServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RepositoryServiceStub extends io.grpc.stub.AbstractAsyncStub<RepositoryServiceStub> {
+    private RepositoryServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RepositoryServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RepositoryServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RepositoryServiceStub(channel, callOptions);
     }
 
@@ -489,7 +486,7 @@ public final class RepositoryServiceGrpc {
      */
     public void get(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -501,7 +498,7 @@ public final class RepositoryServiceGrpc {
      */
     public void getByName(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -512,7 +509,7 @@ public final class RepositoryServiceGrpc {
      */
     public void list(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -523,7 +520,7 @@ public final class RepositoryServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -534,7 +531,7 @@ public final class RepositoryServiceGrpc {
      */
     public void upsert(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -545,7 +542,7 @@ public final class RepositoryServiceGrpc {
      */
     public void delete(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -556,7 +553,7 @@ public final class RepositoryServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -567,7 +564,7 @@ public final class RepositoryServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -577,19 +574,15 @@ public final class RepositoryServiceGrpc {
    * A set of methods for managing Repository resources.
    * </pre>
    */
-  public static final class RepositoryServiceBlockingStub extends io.grpc.stub.AbstractStub<RepositoryServiceBlockingStub> {
-    private RepositoryServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RepositoryServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RepositoryServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RepositoryServiceBlockingStub> {
+    private RepositoryServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RepositoryServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RepositoryServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RepositoryServiceBlockingStub(channel, callOptions);
     }
 
@@ -600,7 +593,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository get(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -611,7 +604,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository getByName(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetByNameMethod(), getCallOptions(), request);
     }
 
@@ -621,7 +614,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse list(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -631,7 +624,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -641,7 +634,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation upsert(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertMethod(), getCallOptions(), request);
     }
 
@@ -651,7 +644,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -661,7 +654,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -671,7 +664,7 @@ public final class RepositoryServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
@@ -681,19 +674,15 @@ public final class RepositoryServiceGrpc {
    * A set of methods for managing Repository resources.
    * </pre>
    */
-  public static final class RepositoryServiceFutureStub extends io.grpc.stub.AbstractStub<RepositoryServiceFutureStub> {
-    private RepositoryServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RepositoryServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RepositoryServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RepositoryServiceFutureStub> {
+    private RepositoryServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RepositoryServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RepositoryServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RepositoryServiceFutureStub(channel, callOptions);
     }
 
@@ -705,7 +694,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> get(
         yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -717,7 +706,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.RepositoryOuterClass.Repository> getByName(
         yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.GetRepositoryByNameRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetByNameMethod(), getCallOptions()), request);
     }
 
@@ -728,7 +717,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesResponse> list(
         yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.ListRepositoriesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -739,7 +728,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -750,7 +739,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> upsert(
         yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertMethod(), getCallOptions()), request);
     }
 
@@ -761,7 +750,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -772,7 +761,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -783,7 +772,7 @@ public final class RepositoryServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

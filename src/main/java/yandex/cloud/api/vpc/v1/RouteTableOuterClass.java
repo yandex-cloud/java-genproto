@@ -24,6 +24,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -60,6 +64,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -93,6 +100,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -103,6 +111,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -111,6 +120,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -175,6 +185,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -183,6 +194,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -238,7 +250,7 @@ public final class RouteTableOuterClass {
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.RouteTable}
    */
-  public  static final class RouteTable extends
+  public static final class RouteTable extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RouteTable)
       RouteTableOrBuilder {
@@ -254,6 +266,13 @@ public final class RouteTableOuterClass {
       description_ = "";
       networkId_ = "";
       staticRoutes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RouteTable();
     }
 
     @java.lang.Override
@@ -318,10 +337,10 @@ public final class RouteTableOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -337,16 +356,16 @@ public final class RouteTableOuterClass {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000002;
               }
               staticRoutes_.add(
                   input.readMessage(yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -360,7 +379,7 @@ public final class RouteTableOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
         }
         this.unknownFields = unknownFields.build();
@@ -392,7 +411,6 @@ public final class RouteTableOuterClass {
               yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.class, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -401,7 +419,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -420,7 +440,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -443,7 +465,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -462,7 +486,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -485,7 +511,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -495,7 +523,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -506,6 +536,7 @@ public final class RouteTableOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -518,7 +549,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -537,7 +570,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -560,7 +595,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -579,7 +616,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -628,14 +667,16 @@ public final class RouteTableOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -647,6 +688,7 @@ public final class RouteTableOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -658,11 +700,12 @@ public final class RouteTableOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -674,10 +717,11 @@ public final class RouteTableOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -694,7 +738,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -713,7 +759,9 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string network_id = 7;</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -737,6 +785,7 @@ public final class RouteTableOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.StaticRoute static_routes = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute> getStaticRoutesList() {
       return staticRoutes_;
     }
@@ -747,6 +796,7 @@ public final class RouteTableOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.StaticRoute static_routes = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRouteOrBuilder> 
         getStaticRoutesOrBuilderList() {
       return staticRoutes_;
@@ -758,6 +808,7 @@ public final class RouteTableOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.StaticRoute static_routes = 8;</code>
      */
+    @java.lang.Override
     public int getStaticRoutesCount() {
       return staticRoutes_.size();
     }
@@ -768,6 +819,7 @@ public final class RouteTableOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.StaticRoute static_routes = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute getStaticRoutes(int index) {
       return staticRoutes_.get(index);
     }
@@ -778,6 +830,7 @@ public final class RouteTableOuterClass {
      *
      * <code>repeated .yandex.cloud.vpc.v1.StaticRoute static_routes = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
         int index) {
       return staticRoutes_.get(index);
@@ -797,19 +850,19 @@ public final class RouteTableOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -818,7 +871,7 @@ public final class RouteTableOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, networkId_);
       }
       for (int i = 0; i < staticRoutes_.size(); i++) {
@@ -833,20 +886,20 @@ public final class RouteTableOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -859,7 +912,7 @@ public final class RouteTableOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, networkId_);
       }
       for (int i = 0; i < staticRoutes_.size(); i++) {
@@ -881,28 +934,27 @@ public final class RouteTableOuterClass {
       }
       yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable other = (yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && getStaticRoutesList()
-          .equals(other.getStaticRoutesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (!getStaticRoutesList()
+          .equals(other.getStaticRoutesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1113,7 +1165,7 @@ public final class RouteTableOuterClass {
 
         if (staticRoutesBuilder_ == null) {
           staticRoutes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           staticRoutesBuilder_.clear();
         }
@@ -1144,7 +1196,6 @@ public final class RouteTableOuterClass {
       public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable buildPartial() {
         yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable result = new yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1158,50 +1209,49 @@ public final class RouteTableOuterClass {
         result.labels_.makeImmutable();
         result.networkId_ = networkId_;
         if (staticRoutesBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.staticRoutes_ = staticRoutes_;
         } else {
           result.staticRoutes_ = staticRoutesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1244,7 +1294,7 @@ public final class RouteTableOuterClass {
           if (!other.staticRoutes_.isEmpty()) {
             if (staticRoutes_.isEmpty()) {
               staticRoutes_ = other.staticRoutes_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureStaticRoutesIsMutable();
               staticRoutes_.addAll(other.staticRoutes_);
@@ -1257,7 +1307,7 @@ public final class RouteTableOuterClass {
               staticRoutesBuilder_.dispose();
               staticRoutesBuilder_ = null;
               staticRoutes_ = other.staticRoutes_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
               staticRoutesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStaticRoutesFieldBuilder() : null;
@@ -1303,6 +1353,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1322,6 +1373,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1342,6 +1394,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1359,6 +1413,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1372,6 +1427,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1392,6 +1449,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1411,6 +1469,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1431,6 +1490,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1448,6 +1509,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1461,6 +1523,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1474,7 +1538,7 @@ public final class RouteTableOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1483,6 +1547,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1493,6 +1558,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1634,6 +1700,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1653,6 +1720,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1673,6 +1741,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1690,6 +1760,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1703,6 +1774,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1723,6 +1796,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1742,6 +1816,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1762,6 +1837,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1779,6 +1856,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1792,6 +1870,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1839,14 +1919,16 @@ public final class RouteTableOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -1858,6 +1940,7 @@ public final class RouteTableOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -1869,11 +1952,12 @@ public final class RouteTableOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1885,10 +1969,11 @@ public final class RouteTableOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -1912,7 +1997,7 @@ public final class RouteTableOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -1935,8 +2020,11 @@ public final class RouteTableOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -1963,6 +2051,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -1982,6 +2071,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -2002,6 +2092,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -2019,6 +2111,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -2032,6 +2125,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string network_id = 7;</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2048,9 +2143,9 @@ public final class RouteTableOuterClass {
       private java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute> staticRoutes_ =
         java.util.Collections.emptyList();
       private void ensureStaticRoutesIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute>(staticRoutes_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2244,7 +2339,7 @@ public final class RouteTableOuterClass {
       public Builder clearStaticRoutes() {
         if (staticRoutesBuilder_ == null) {
           staticRoutes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           staticRoutesBuilder_.clear();
@@ -2349,7 +2444,7 @@ public final class RouteTableOuterClass {
           staticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute, yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute.Builder, yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRouteOrBuilder>(
                   staticRoutes_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           staticRoutes_ = null;
@@ -2359,7 +2454,7 @@ public final class RouteTableOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2419,6 +2514,16 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string destination_prefix = 1;</code>
+     * @return Whether the destinationPrefix field is set.
+     */
+    boolean hasDestinationPrefix();
+    /**
+     * <pre>
+     * Destination subnet in CIDR notation
+     * </pre>
+     *
+     * <code>string destination_prefix = 1;</code>
+     * @return The destinationPrefix.
      */
     java.lang.String getDestinationPrefix();
     /**
@@ -2427,6 +2532,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string destination_prefix = 1;</code>
+     * @return The bytes for destinationPrefix.
      */
     com.google.protobuf.ByteString
         getDestinationPrefixBytes();
@@ -2437,6 +2543,16 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string next_hop_address = 2;</code>
+     * @return Whether the nextHopAddress field is set.
+     */
+    boolean hasNextHopAddress();
+    /**
+     * <pre>
+     * Next hop IP address
+     * </pre>
+     *
+     * <code>string next_hop_address = 2;</code>
+     * @return The nextHopAddress.
      */
     java.lang.String getNextHopAddress();
     /**
@@ -2445,6 +2561,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string next_hop_address = 2;</code>
+     * @return The bytes for nextHopAddress.
      */
     com.google.protobuf.ByteString
         getNextHopAddressBytes();
@@ -2514,7 +2631,7 @@ public final class RouteTableOuterClass {
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.StaticRoute}
    */
-  public  static final class StaticRoute extends
+  public static final class StaticRoute extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.StaticRoute)
       StaticRouteOrBuilder {
@@ -2524,6 +2641,13 @@ public final class RouteTableOuterClass {
       super(builder);
     }
     private StaticRoute() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StaticRoute();
     }
 
     @java.lang.Override
@@ -2563,10 +2687,10 @@ public final class RouteTableOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -2576,7 +2700,7 @@ public final class RouteTableOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2619,11 +2743,11 @@ public final class RouteTableOuterClass {
               yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute.class, yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute.Builder.class);
     }
 
-    private int bitField0_;
     private int destinationCase_ = 0;
     private java.lang.Object destination_;
     public enum DestinationCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DESTINATION_PREFIX(1),
       DESTINATION_NOT_SET(0);
       private final int value;
@@ -2631,6 +2755,8 @@ public final class RouteTableOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2659,7 +2785,8 @@ public final class RouteTableOuterClass {
     private int nextHopCase_ = 0;
     private java.lang.Object nextHop_;
     public enum NextHopCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       NEXT_HOP_ADDRESS(2),
       NEXTHOP_NOT_SET(0);
       private final int value;
@@ -2667,6 +2794,8 @@ public final class RouteTableOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2699,6 +2828,18 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string destination_prefix = 1;</code>
+     * @return Whether the destinationPrefix field is set.
+     */
+    public boolean hasDestinationPrefix() {
+      return destinationCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Destination subnet in CIDR notation
+     * </pre>
+     *
+     * <code>string destination_prefix = 1;</code>
+     * @return The destinationPrefix.
      */
     public java.lang.String getDestinationPrefix() {
       java.lang.Object ref = "";
@@ -2723,6 +2864,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string destination_prefix = 1;</code>
+     * @return The bytes for destinationPrefix.
      */
     public com.google.protobuf.ByteString
         getDestinationPrefixBytes() {
@@ -2750,6 +2892,18 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string next_hop_address = 2;</code>
+     * @return Whether the nextHopAddress field is set.
+     */
+    public boolean hasNextHopAddress() {
+      return nextHopCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Next hop IP address
+     * </pre>
+     *
+     * <code>string next_hop_address = 2;</code>
+     * @return The nextHopAddress.
      */
     public java.lang.String getNextHopAddress() {
       java.lang.Object ref = "";
@@ -2774,6 +2928,7 @@ public final class RouteTableOuterClass {
      * </pre>
      *
      * <code>string next_hop_address = 2;</code>
+     * @return The bytes for nextHopAddress.
      */
     public com.google.protobuf.ByteString
         getNextHopAddressBytes() {
@@ -2828,14 +2983,16 @@ public final class RouteTableOuterClass {
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -2847,6 +3004,7 @@ public final class RouteTableOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -2858,11 +3016,12 @@ public final class RouteTableOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2874,10 +3033,11 @@ public final class RouteTableOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 3;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -2952,33 +3112,28 @@ public final class RouteTableOuterClass {
       }
       yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute other = (yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute) obj;
 
-      boolean result = true;
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getDestinationCase().equals(
-          other.getDestinationCase());
-      if (!result) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getDestinationCase().equals(other.getDestinationCase())) return false;
       switch (destinationCase_) {
         case 1:
-          result = result && getDestinationPrefix()
-              .equals(other.getDestinationPrefix());
+          if (!getDestinationPrefix()
+              .equals(other.getDestinationPrefix())) return false;
           break;
         case 0:
         default:
       }
-      result = result && getNextHopCase().equals(
-          other.getNextHopCase());
-      if (!result) return false;
+      if (!getNextHopCase().equals(other.getNextHopCase())) return false;
       switch (nextHopCase_) {
         case 2:
-          result = result && getNextHopAddress()
-              .equals(other.getNextHopAddress());
+          if (!getNextHopAddress()
+              .equals(other.getNextHopAddress())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3199,7 +3354,6 @@ public final class RouteTableOuterClass {
       public yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute buildPartial() {
         yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute result = new yandex.cloud.api.vpc.v1.RouteTableOuterClass.StaticRoute(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (destinationCase_ == 1) {
           result.destination_ = destination_;
         }
@@ -3208,7 +3362,6 @@ public final class RouteTableOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         result.destinationCase_ = destinationCase_;
         result.nextHopCase_ = nextHopCase_;
         onBuilt();
@@ -3217,35 +3370,35 @@ public final class RouteTableOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3349,7 +3502,21 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string destination_prefix = 1;</code>
+       * @return Whether the destinationPrefix field is set.
        */
+      @java.lang.Override
+      public boolean hasDestinationPrefix() {
+        return destinationCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Destination subnet in CIDR notation
+       * </pre>
+       *
+       * <code>string destination_prefix = 1;</code>
+       * @return The destinationPrefix.
+       */
+      @java.lang.Override
       public java.lang.String getDestinationPrefix() {
         java.lang.Object ref = "";
         if (destinationCase_ == 1) {
@@ -3373,7 +3540,9 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string destination_prefix = 1;</code>
+       * @return The bytes for destinationPrefix.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDestinationPrefixBytes() {
         java.lang.Object ref = "";
@@ -3398,6 +3567,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string destination_prefix = 1;</code>
+       * @param value The destinationPrefix to set.
+       * @return This builder for chaining.
        */
       public Builder setDestinationPrefix(
           java.lang.String value) {
@@ -3415,6 +3586,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string destination_prefix = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDestinationPrefix() {
         if (destinationCase_ == 1) {
@@ -3430,6 +3602,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string destination_prefix = 1;</code>
+       * @param value The bytes for destinationPrefix to set.
+       * @return This builder for chaining.
        */
       public Builder setDestinationPrefixBytes(
           com.google.protobuf.ByteString value) {
@@ -3449,7 +3623,21 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string next_hop_address = 2;</code>
+       * @return Whether the nextHopAddress field is set.
        */
+      @java.lang.Override
+      public boolean hasNextHopAddress() {
+        return nextHopCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Next hop IP address
+       * </pre>
+       *
+       * <code>string next_hop_address = 2;</code>
+       * @return The nextHopAddress.
+       */
+      @java.lang.Override
       public java.lang.String getNextHopAddress() {
         java.lang.Object ref = "";
         if (nextHopCase_ == 2) {
@@ -3473,7 +3661,9 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string next_hop_address = 2;</code>
+       * @return The bytes for nextHopAddress.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNextHopAddressBytes() {
         java.lang.Object ref = "";
@@ -3498,6 +3688,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string next_hop_address = 2;</code>
+       * @param value The nextHopAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setNextHopAddress(
           java.lang.String value) {
@@ -3515,6 +3707,7 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string next_hop_address = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextHopAddress() {
         if (nextHopCase_ == 2) {
@@ -3530,6 +3723,8 @@ public final class RouteTableOuterClass {
        * </pre>
        *
        * <code>string next_hop_address = 2;</code>
+       * @param value The bytes for nextHopAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setNextHopAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -3577,14 +3772,16 @@ public final class RouteTableOuterClass {
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -3596,6 +3793,7 @@ public final class RouteTableOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -3607,11 +3805,12 @@ public final class RouteTableOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3623,10 +3822,11 @@ public final class RouteTableOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 3;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3650,7 +3850,7 @@ public final class RouteTableOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3673,8 +3873,11 @@ public final class RouteTableOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3696,7 +3899,7 @@ public final class RouteTableOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3794,19 +3997,11 @@ public final class RouteTableOuterClass {
       "c.v1Z;github.com/yandex-cloud/go-genprot" +
       "o/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_vpc_v1_RouteTable_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_RouteTable_fieldAccessorTable = new

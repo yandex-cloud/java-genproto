@@ -1,19 +1,6 @@
 package yandex.cloud.api.billing.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/billing/v1/billing_account_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class BillingAccountServiceGrpc {
 
   private BillingAccountServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class BillingAccountServiceGrpc {
     if ((getGetMethod = BillingAccountServiceGrpc.getGetMethod) == null) {
       synchronized (BillingAccountServiceGrpc.class) {
         if ((getGetMethod = BillingAccountServiceGrpc.getGetMethod) == null) {
-          BillingAccountServiceGrpc.getGetMethod = getGetMethod = 
+          BillingAccountServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest, yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.BillingAccountService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest,
@@ -76,22 +63,21 @@ public final class BillingAccountServiceGrpc {
     if ((getListMethod = BillingAccountServiceGrpc.getListMethod) == null) {
       synchronized (BillingAccountServiceGrpc.class) {
         if ((getListMethod = BillingAccountServiceGrpc.getListMethod) == null) {
-          BillingAccountServiceGrpc.getListMethod = getListMethod = 
+          BillingAccountServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest, yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.BillingAccountService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest,
@@ -108,22 +94,21 @@ public final class BillingAccountServiceGrpc {
     if ((getListBillableObjectBindingsMethod = BillingAccountServiceGrpc.getListBillableObjectBindingsMethod) == null) {
       synchronized (BillingAccountServiceGrpc.class) {
         if ((getListBillableObjectBindingsMethod = BillingAccountServiceGrpc.getListBillableObjectBindingsMethod) == null) {
-          BillingAccountServiceGrpc.getListBillableObjectBindingsMethod = getListBillableObjectBindingsMethod = 
+          BillingAccountServiceGrpc.getListBillableObjectBindingsMethod = getListBillableObjectBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest, yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.BillingAccountService", "ListBillableObjectBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBillableObjectBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("ListBillableObjectBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("ListBillableObjectBindings"))
+              .build();
         }
-     }
-     return getListBillableObjectBindingsMethod;
+      }
+    }
+    return getListBillableObjectBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest,
@@ -140,22 +125,21 @@ public final class BillingAccountServiceGrpc {
     if ((getBindBillableObjectMethod = BillingAccountServiceGrpc.getBindBillableObjectMethod) == null) {
       synchronized (BillingAccountServiceGrpc.class) {
         if ((getBindBillableObjectMethod = BillingAccountServiceGrpc.getBindBillableObjectMethod) == null) {
-          BillingAccountServiceGrpc.getBindBillableObjectMethod = getBindBillableObjectMethod = 
+          BillingAccountServiceGrpc.getBindBillableObjectMethod = getBindBillableObjectMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.BillingAccountService", "BindBillableObject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BindBillableObject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("BindBillableObject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("BindBillableObject"))
+              .build();
         }
-     }
-     return getBindBillableObjectMethod;
+      }
+    }
+    return getBindBillableObjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -172,22 +156,21 @@ public final class BillingAccountServiceGrpc {
     if ((getListAccessBindingsMethod = BillingAccountServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (BillingAccountServiceGrpc.class) {
         if ((getListAccessBindingsMethod = BillingAccountServiceGrpc.getListAccessBindingsMethod) == null) {
-          BillingAccountServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          BillingAccountServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.BillingAccountService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -204,29 +187,35 @@ public final class BillingAccountServiceGrpc {
     if ((getUpdateAccessBindingsMethod = BillingAccountServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (BillingAccountServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = BillingAccountServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          BillingAccountServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          BillingAccountServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.billing.v1.BillingAccountService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingAccountServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BillingAccountServiceStub newStub(io.grpc.Channel channel) {
-    return new BillingAccountServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BillingAccountServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingAccountServiceStub>() {
+        @java.lang.Override
+        public BillingAccountServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingAccountServiceStub(channel, callOptions);
+        }
+      };
+    return BillingAccountServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class BillingAccountServiceGrpc {
    */
   public static BillingAccountServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BillingAccountServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BillingAccountServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingAccountServiceBlockingStub>() {
+        @java.lang.Override
+        public BillingAccountServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingAccountServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BillingAccountServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class BillingAccountServiceGrpc {
    */
   public static BillingAccountServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BillingAccountServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BillingAccountServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingAccountServiceFutureStub>() {
+        @java.lang.Override
+        public BillingAccountServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingAccountServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BillingAccountServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -259,7 +262,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void get(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -269,7 +272,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void list(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -279,7 +282,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void listBillableObjectBindings(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListBillableObjectBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBillableObjectBindingsMethod(), responseObserver);
     }
 
     /**
@@ -289,7 +292,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void bindBillableObject(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getBindBillableObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBindBillableObjectMethod(), responseObserver);
     }
 
     /**
@@ -299,7 +302,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -309,49 +312,49 @@ public final class BillingAccountServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest,
                 yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest,
                 yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getListBillableObjectBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest,
                 yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse>(
                   this, METHODID_LIST_BILLABLE_OBJECT_BINDINGS)))
           .addMethod(
             getBindBillableObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_BIND_BILLABLE_OBJECT)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -365,19 +368,15 @@ public final class BillingAccountServiceGrpc {
    * A set of methods for managing BillingAccount resources.
    * </pre>
    */
-  public static final class BillingAccountServiceStub extends io.grpc.stub.AbstractStub<BillingAccountServiceStub> {
-    private BillingAccountServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BillingAccountServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BillingAccountServiceStub extends io.grpc.stub.AbstractAsyncStub<BillingAccountServiceStub> {
+    private BillingAccountServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BillingAccountServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BillingAccountServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingAccountServiceStub(channel, callOptions);
     }
 
@@ -388,7 +387,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void get(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -399,7 +398,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void list(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -410,7 +409,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void listBillableObjectBindings(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListBillableObjectBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -421,7 +420,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void bindBillableObject(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBindBillableObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -432,7 +431,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -443,7 +442,7 @@ public final class BillingAccountServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -453,19 +452,15 @@ public final class BillingAccountServiceGrpc {
    * A set of methods for managing BillingAccount resources.
    * </pre>
    */
-  public static final class BillingAccountServiceBlockingStub extends io.grpc.stub.AbstractStub<BillingAccountServiceBlockingStub> {
-    private BillingAccountServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BillingAccountServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BillingAccountServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BillingAccountServiceBlockingStub> {
+    private BillingAccountServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BillingAccountServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BillingAccountServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingAccountServiceBlockingStub(channel, callOptions);
     }
 
@@ -475,7 +470,7 @@ public final class BillingAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount get(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -485,7 +480,7 @@ public final class BillingAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse list(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -495,7 +490,7 @@ public final class BillingAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse listBillableObjectBindings(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListBillableObjectBindingsMethod(), getCallOptions(), request);
     }
 
@@ -505,7 +500,7 @@ public final class BillingAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation bindBillableObject(yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBindBillableObjectMethod(), getCallOptions(), request);
     }
 
@@ -515,7 +510,7 @@ public final class BillingAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -525,7 +520,7 @@ public final class BillingAccountServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
@@ -535,19 +530,15 @@ public final class BillingAccountServiceGrpc {
    * A set of methods for managing BillingAccount resources.
    * </pre>
    */
-  public static final class BillingAccountServiceFutureStub extends io.grpc.stub.AbstractStub<BillingAccountServiceFutureStub> {
-    private BillingAccountServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BillingAccountServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BillingAccountServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BillingAccountServiceFutureStub> {
+    private BillingAccountServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BillingAccountServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BillingAccountServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingAccountServiceFutureStub(channel, callOptions);
     }
 
@@ -558,7 +549,7 @@ public final class BillingAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount> get(
         yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.GetBillingAccountRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -569,7 +560,7 @@ public final class BillingAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsResponse> list(
         yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillingAccountsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -580,7 +571,7 @@ public final class BillingAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsResponse> listBillableObjectBindings(
         yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.ListBillableObjectBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListBillableObjectBindingsMethod(), getCallOptions()), request);
     }
 
@@ -591,7 +582,7 @@ public final class BillingAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> bindBillableObject(
         yandex.cloud.api.billing.v1.BillingAccountServiceOuterClass.BindBillableObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBindBillableObjectMethod(), getCallOptions()), request);
     }
 
@@ -602,7 +593,7 @@ public final class BillingAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -613,7 +604,7 @@ public final class BillingAccountServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

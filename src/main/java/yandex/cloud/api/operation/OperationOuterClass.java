@@ -24,6 +24,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -50,6 +53,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -60,6 +64,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string created_by = 4;</code>
+     * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
@@ -93,6 +100,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string created_by = 4;</code>
+     * @return The bytes for createdBy.
      */
     com.google.protobuf.ByteString
         getCreatedByBytes();
@@ -103,6 +111,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp modified_at = 5;</code>
+     * @return Whether the modifiedAt field is set.
      */
     boolean hasModifiedAt();
     /**
@@ -111,6 +120,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp modified_at = 5;</code>
+     * @return The modifiedAt.
      */
     com.google.protobuf.Timestamp getModifiedAt();
     /**
@@ -129,6 +139,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>bool done = 6;</code>
+     * @return The done.
      */
     boolean getDone();
 
@@ -140,6 +151,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any metadata = 7;</code>
+     * @return Whether the metadata field is set.
      */
     boolean hasMetadata();
     /**
@@ -150,6 +162,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any metadata = 7;</code>
+     * @return The metadata.
      */
     com.google.protobuf.Any getMetadata();
     /**
@@ -169,6 +182,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 8;</code>
+     * @return Whether the error field is set.
      */
     boolean hasError();
     /**
@@ -177,6 +191,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 8;</code>
+     * @return The error.
      */
     com.google.rpc.Status getError();
     /**
@@ -199,6 +214,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any response = 9;</code>
+     * @return Whether the response field is set.
      */
     boolean hasResponse();
     /**
@@ -212,6 +228,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any response = 9;</code>
+     * @return The response.
      */
     com.google.protobuf.Any getResponse();
     /**
@@ -237,7 +254,7 @@ public final class OperationOuterClass {
    *
    * Protobuf type {@code yandex.cloud.operation.Operation}
    */
-  public  static final class Operation extends
+  public static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.operation.Operation)
       OperationOrBuilder {
@@ -250,7 +267,13 @@ public final class OperationOuterClass {
       id_ = "";
       description_ = "";
       createdBy_ = "";
-      done_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Operation();
     }
 
     @java.lang.Override
@@ -266,7 +289,6 @@ public final class OperationOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -368,7 +390,7 @@ public final class OperationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -402,7 +424,8 @@ public final class OperationOuterClass {
     private int resultCase_ = 0;
     private java.lang.Object result_;
     public enum ResultCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       ERROR(8),
       RESPONSE(9),
       RESULT_NOT_SET(0);
@@ -411,6 +434,8 @@ public final class OperationOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -445,7 +470,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -464,7 +491,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -487,7 +516,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -506,7 +537,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -529,7 +562,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -539,7 +574,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -550,6 +587,7 @@ public final class OperationOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -562,7 +600,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string created_by = 4;</code>
+     * @return The createdBy.
      */
+    @java.lang.Override
     public java.lang.String getCreatedBy() {
       java.lang.Object ref = createdBy_;
       if (ref instanceof java.lang.String) {
@@ -581,7 +621,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string created_by = 4;</code>
+     * @return The bytes for createdBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCreatedByBytes() {
       java.lang.Object ref = createdBy_;
@@ -604,7 +646,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp modified_at = 5;</code>
+     * @return Whether the modifiedAt field is set.
      */
+    @java.lang.Override
     public boolean hasModifiedAt() {
       return modifiedAt_ != null;
     }
@@ -614,7 +658,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp modified_at = 5;</code>
+     * @return The modifiedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getModifiedAt() {
       return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
     }
@@ -625,6 +671,7 @@ public final class OperationOuterClass {
      *
      * <code>.google.protobuf.Timestamp modified_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
       return getModifiedAt();
     }
@@ -638,7 +685,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>bool done = 6;</code>
+     * @return The done.
      */
+    @java.lang.Override
     public boolean getDone() {
       return done_;
     }
@@ -653,7 +702,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any metadata = 7;</code>
+     * @return Whether the metadata field is set.
      */
+    @java.lang.Override
     public boolean hasMetadata() {
       return metadata_ != null;
     }
@@ -665,7 +716,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any metadata = 7;</code>
+     * @return The metadata.
      */
+    @java.lang.Override
     public com.google.protobuf.Any getMetadata() {
       return metadata_ == null ? com.google.protobuf.Any.getDefaultInstance() : metadata_;
     }
@@ -678,6 +731,7 @@ public final class OperationOuterClass {
      *
      * <code>.google.protobuf.Any metadata = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getMetadataOrBuilder() {
       return getMetadata();
     }
@@ -689,7 +743,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 8;</code>
+     * @return Whether the error field is set.
      */
+    @java.lang.Override
     public boolean hasError() {
       return resultCase_ == 8;
     }
@@ -699,7 +755,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.rpc.Status error = 8;</code>
+     * @return The error.
      */
+    @java.lang.Override
     public com.google.rpc.Status getError() {
       if (resultCase_ == 8) {
          return (com.google.rpc.Status) result_;
@@ -713,6 +771,7 @@ public final class OperationOuterClass {
      *
      * <code>.google.rpc.Status error = 8;</code>
      */
+    @java.lang.Override
     public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
       if (resultCase_ == 8) {
          return (com.google.rpc.Status) result_;
@@ -732,7 +791,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any response = 9;</code>
+     * @return Whether the response field is set.
      */
+    @java.lang.Override
     public boolean hasResponse() {
       return resultCase_ == 9;
     }
@@ -747,7 +808,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Any response = 9;</code>
+     * @return The response.
      */
+    @java.lang.Override
     public com.google.protobuf.Any getResponse() {
       if (resultCase_ == 9) {
          return (com.google.protobuf.Any) result_;
@@ -766,6 +829,7 @@ public final class OperationOuterClass {
      *
      * <code>.google.protobuf.Any response = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getResponseOrBuilder() {
       if (resultCase_ == 9) {
          return (com.google.protobuf.Any) result_;
@@ -787,16 +851,16 @@ public final class OperationOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getCreatedByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, createdBy_);
       }
       if (modifiedAt_ != null) {
@@ -823,17 +887,17 @@ public final class OperationOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getCreatedByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, createdBy_);
       }
       if (modifiedAt_ != null) {
@@ -871,47 +935,44 @@ public final class OperationOuterClass {
       }
       yandex.cloud.api.operation.OperationOuterClass.Operation other = (yandex.cloud.api.operation.OperationOuterClass.Operation) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getCreatedBy()
-          .equals(other.getCreatedBy());
-      result = result && (hasModifiedAt() == other.hasModifiedAt());
+      if (!getCreatedBy()
+          .equals(other.getCreatedBy())) return false;
+      if (hasModifiedAt() != other.hasModifiedAt()) return false;
       if (hasModifiedAt()) {
-        result = result && getModifiedAt()
-            .equals(other.getModifiedAt());
+        if (!getModifiedAt()
+            .equals(other.getModifiedAt())) return false;
       }
-      result = result && (getDone()
-          == other.getDone());
-      result = result && (hasMetadata() == other.hasMetadata());
+      if (getDone()
+          != other.getDone()) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
       if (hasMetadata()) {
-        result = result && getMetadata()
-            .equals(other.getMetadata());
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
       }
-      result = result && getResultCase().equals(
-          other.getResultCase());
-      if (!result) return false;
+      if (!getResultCase().equals(other.getResultCase())) return false;
       switch (resultCase_) {
         case 8:
-          result = result && getError()
-              .equals(other.getError());
+          if (!getError()
+              .equals(other.getError())) return false;
           break;
         case 9:
-          result = result && getResponse()
-              .equals(other.getResponse());
+          if (!getResponse()
+              .equals(other.getResponse())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1185,35 +1246,35 @@ public final class OperationOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1315,6 +1376,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1334,6 +1396,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1354,6 +1417,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1371,6 +1436,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1384,6 +1450,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1404,6 +1472,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1423,6 +1492,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1443,6 +1513,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1460,6 +1532,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1473,6 +1546,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1486,7 +1561,7 @@ public final class OperationOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1495,6 +1570,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1505,6 +1581,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1646,6 +1723,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string created_by = 4;</code>
+       * @return The createdBy.
        */
       public java.lang.String getCreatedBy() {
         java.lang.Object ref = createdBy_;
@@ -1665,6 +1743,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string created_by = 4;</code>
+       * @return The bytes for createdBy.
        */
       public com.google.protobuf.ByteString
           getCreatedByBytes() {
@@ -1685,6 +1764,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string created_by = 4;</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
        */
       public Builder setCreatedBy(
           java.lang.String value) {
@@ -1702,6 +1783,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string created_by = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCreatedBy() {
         
@@ -1715,6 +1797,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string created_by = 4;</code>
+       * @param value The bytes for createdBy to set.
+       * @return This builder for chaining.
        */
       public Builder setCreatedByBytes(
           com.google.protobuf.ByteString value) {
@@ -1728,7 +1812,7 @@ public final class OperationOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp modifiedAt_ = null;
+      private com.google.protobuf.Timestamp modifiedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifiedAtBuilder_;
       /**
@@ -1737,6 +1821,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp modified_at = 5;</code>
+       * @return Whether the modifiedAt field is set.
        */
       public boolean hasModifiedAt() {
         return modifiedAtBuilder_ != null || modifiedAt_ != null;
@@ -1747,6 +1832,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp modified_at = 5;</code>
+       * @return The modifiedAt.
        */
       public com.google.protobuf.Timestamp getModifiedAt() {
         if (modifiedAtBuilder_ == null) {
@@ -1889,7 +1975,9 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>bool done = 6;</code>
+       * @return The done.
        */
+      @java.lang.Override
       public boolean getDone() {
         return done_;
       }
@@ -1900,6 +1988,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>bool done = 6;</code>
+       * @param value The done to set.
+       * @return This builder for chaining.
        */
       public Builder setDone(boolean value) {
         
@@ -1914,6 +2004,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>bool done = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDone() {
         
@@ -1922,7 +2013,7 @@ public final class OperationOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Any metadata_ = null;
+      private com.google.protobuf.Any metadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> metadataBuilder_;
       /**
@@ -1933,6 +2024,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Any metadata = 7;</code>
+       * @return Whether the metadata field is set.
        */
       public boolean hasMetadata() {
         return metadataBuilder_ != null || metadata_ != null;
@@ -1945,6 +2037,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Any metadata = 7;</code>
+       * @return The metadata.
        */
       public com.google.protobuf.Any getMetadata() {
         if (metadataBuilder_ == null) {
@@ -2101,7 +2194,9 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.rpc.Status error = 8;</code>
+       * @return Whether the error field is set.
        */
+      @java.lang.Override
       public boolean hasError() {
         return resultCase_ == 8;
       }
@@ -2111,7 +2206,9 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.rpc.Status error = 8;</code>
+       * @return The error.
        */
+      @java.lang.Override
       public com.google.rpc.Status getError() {
         if (errorBuilder_ == null) {
           if (resultCase_ == 8) {
@@ -2229,6 +2326,7 @@ public final class OperationOuterClass {
        *
        * <code>.google.rpc.Status error = 8;</code>
        */
+      @java.lang.Override
       public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
         if ((resultCase_ == 8) && (errorBuilder_ != null)) {
           return errorBuilder_.getMessageOrBuilder();
@@ -2278,7 +2376,9 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Any response = 9;</code>
+       * @return Whether the response field is set.
        */
+      @java.lang.Override
       public boolean hasResponse() {
         return resultCase_ == 9;
       }
@@ -2293,7 +2393,9 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Any response = 9;</code>
+       * @return The response.
        */
+      @java.lang.Override
       public com.google.protobuf.Any getResponse() {
         if (responseBuilder_ == null) {
           if (resultCase_ == 9) {
@@ -2441,6 +2543,7 @@ public final class OperationOuterClass {
        *
        * <code>.google.protobuf.Any response = 9;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.AnyOrBuilder getResponseOrBuilder() {
         if ((resultCase_ == 9) && (responseBuilder_ != null)) {
           return responseBuilder_.getMessageOrBuilder();
@@ -2484,7 +2587,7 @@ public final class OperationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2564,21 +2667,13 @@ public final class OperationOuterClass {
       "oto/yandex/cloud/operation;operationb\006pr" +
       "oto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.AnyProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_operation_Operation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_operation_Operation_fieldAccessorTable = new

@@ -24,6 +24,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
+     * @return Whether the yandexPassportUserAccount field is set.
      */
     boolean hasYandexPassportUserAccount();
     /**
@@ -50,6 +53,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
+     * @return The yandexPassportUserAccount.
      */
     yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount getYandexPassportUserAccount();
     /**
@@ -67,6 +71,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
+     * @return Whether the samlUserAccount field is set.
      */
     boolean hasSamlUserAccount();
     /**
@@ -75,6 +80,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
+     * @return The samlUserAccount.
      */
     yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount getSamlUserAccount();
     /**
@@ -95,7 +101,7 @@ public final class UserAccountOuterClass {
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.UserAccount}
    */
-  public  static final class UserAccount extends
+  public static final class UserAccount extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.UserAccount)
       UserAccountOrBuilder {
@@ -106,6 +112,13 @@ public final class UserAccountOuterClass {
     }
     private UserAccount() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserAccount();
     }
 
     @java.lang.Override
@@ -121,7 +134,6 @@ public final class UserAccountOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -167,7 +179,7 @@ public final class UserAccountOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -201,7 +213,8 @@ public final class UserAccountOuterClass {
     private int userAccountCase_ = 0;
     private java.lang.Object userAccount_;
     public enum UserAccountCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       YANDEX_PASSPORT_USER_ACCOUNT(2),
       SAML_USER_ACCOUNT(3),
       USERACCOUNT_NOT_SET(0);
@@ -210,6 +223,8 @@ public final class UserAccountOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -244,7 +259,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -263,7 +280,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -285,7 +304,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
+     * @return Whether the yandexPassportUserAccount field is set.
      */
+    @java.lang.Override
     public boolean hasYandexPassportUserAccount() {
       return userAccountCase_ == 2;
     }
@@ -295,7 +316,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
+     * @return The yandexPassportUserAccount.
      */
+    @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount getYandexPassportUserAccount() {
       if (userAccountCase_ == 2) {
          return (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount) userAccount_;
@@ -309,6 +332,7 @@ public final class UserAccountOuterClass {
      *
      * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccountOrBuilder getYandexPassportUserAccountOrBuilder() {
       if (userAccountCase_ == 2) {
          return (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount) userAccount_;
@@ -323,7 +347,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
+     * @return Whether the samlUserAccount field is set.
      */
+    @java.lang.Override
     public boolean hasSamlUserAccount() {
       return userAccountCase_ == 3;
     }
@@ -333,7 +359,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
+     * @return The samlUserAccount.
      */
+    @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount getSamlUserAccount() {
       if (userAccountCase_ == 3) {
          return (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount) userAccount_;
@@ -347,6 +375,7 @@ public final class UserAccountOuterClass {
      *
      * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccountOrBuilder getSamlUserAccountOrBuilder() {
       if (userAccountCase_ == 3) {
          return (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount) userAccount_;
@@ -368,7 +397,7 @@ public final class UserAccountOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (userAccountCase_ == 2) {
@@ -386,7 +415,7 @@ public final class UserAccountOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (userAccountCase_ == 2) {
@@ -412,26 +441,23 @@ public final class UserAccountOuterClass {
       }
       yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.UserAccount other = (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.UserAccount) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getUserAccountCase().equals(
-          other.getUserAccountCase());
-      if (!result) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUserAccountCase().equals(other.getUserAccountCase())) return false;
       switch (userAccountCase_) {
         case 2:
-          result = result && getYandexPassportUserAccount()
-              .equals(other.getYandexPassportUserAccount());
+          if (!getYandexPassportUserAccount()
+              .equals(other.getYandexPassportUserAccount())) return false;
           break;
         case 3:
-          result = result && getSamlUserAccount()
-              .equals(other.getSamlUserAccount());
+          if (!getSamlUserAccount()
+              .equals(other.getSamlUserAccount())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -644,35 +670,35 @@ public final class UserAccountOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -754,6 +780,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -773,6 +800,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -793,6 +821,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -810,6 +840,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -823,6 +854,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -844,7 +877,9 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
+       * @return Whether the yandexPassportUserAccount field is set.
        */
+      @java.lang.Override
       public boolean hasYandexPassportUserAccount() {
         return userAccountCase_ == 2;
       }
@@ -854,7 +889,9 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
+       * @return The yandexPassportUserAccount.
        */
+      @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount getYandexPassportUserAccount() {
         if (yandexPassportUserAccountBuilder_ == null) {
           if (userAccountCase_ == 2) {
@@ -972,6 +1009,7 @@ public final class UserAccountOuterClass {
        *
        * <code>.yandex.cloud.organizationmanager.v1.YandexPassportUserAccount yandex_passport_user_account = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccountOrBuilder getYandexPassportUserAccountOrBuilder() {
         if ((userAccountCase_ == 2) && (yandexPassportUserAccountBuilder_ != null)) {
           return yandexPassportUserAccountBuilder_.getMessageOrBuilder();
@@ -1016,7 +1054,9 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
+       * @return Whether the samlUserAccount field is set.
        */
+      @java.lang.Override
       public boolean hasSamlUserAccount() {
         return userAccountCase_ == 3;
       }
@@ -1026,7 +1066,9 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
+       * @return The samlUserAccount.
        */
+      @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount getSamlUserAccount() {
         if (samlUserAccountBuilder_ == null) {
           if (userAccountCase_ == 3) {
@@ -1144,6 +1186,7 @@ public final class UserAccountOuterClass {
        *
        * <code>.yandex.cloud.organizationmanager.v1.SamlUserAccount saml_user_account = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccountOrBuilder getSamlUserAccountOrBuilder() {
         if ((userAccountCase_ == 3) && (samlUserAccountBuilder_ != null)) {
           return samlUserAccountBuilder_.getMessageOrBuilder();
@@ -1182,7 +1225,7 @@ public final class UserAccountOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1242,6 +1285,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string login = 1;</code>
+     * @return The login.
      */
     java.lang.String getLogin();
     /**
@@ -1250,6 +1294,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string login = 1;</code>
+     * @return The bytes for login.
      */
     com.google.protobuf.ByteString
         getLoginBytes();
@@ -1260,6 +1305,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string default_email = 2;</code>
+     * @return The defaultEmail.
      */
     java.lang.String getDefaultEmail();
     /**
@@ -1268,6 +1314,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string default_email = 2;</code>
+     * @return The bytes for defaultEmail.
      */
     com.google.protobuf.ByteString
         getDefaultEmailBytes();
@@ -1280,7 +1327,7 @@ public final class UserAccountOuterClass {
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.YandexPassportUserAccount}
    */
-  public  static final class YandexPassportUserAccount extends
+  public static final class YandexPassportUserAccount extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.YandexPassportUserAccount)
       YandexPassportUserAccountOrBuilder {
@@ -1292,6 +1339,13 @@ public final class UserAccountOuterClass {
     private YandexPassportUserAccount() {
       login_ = "";
       defaultEmail_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new YandexPassportUserAccount();
     }
 
     @java.lang.Override
@@ -1307,7 +1361,6 @@ public final class UserAccountOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1331,7 +1384,7 @@ public final class UserAccountOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1370,7 +1423,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string login = 1;</code>
+     * @return The login.
      */
+    @java.lang.Override
     public java.lang.String getLogin() {
       java.lang.Object ref = login_;
       if (ref instanceof java.lang.String) {
@@ -1389,7 +1444,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string login = 1;</code>
+     * @return The bytes for login.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLoginBytes() {
       java.lang.Object ref = login_;
@@ -1412,7 +1469,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string default_email = 2;</code>
+     * @return The defaultEmail.
      */
+    @java.lang.Override
     public java.lang.String getDefaultEmail() {
       java.lang.Object ref = defaultEmail_;
       if (ref instanceof java.lang.String) {
@@ -1431,7 +1490,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string default_email = 2;</code>
+     * @return The bytes for defaultEmail.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDefaultEmailBytes() {
       java.lang.Object ref = defaultEmail_;
@@ -1460,10 +1521,10 @@ public final class UserAccountOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLoginBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(login_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, login_);
       }
-      if (!getDefaultEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEmail_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, defaultEmail_);
       }
       unknownFields.writeTo(output);
@@ -1475,10 +1536,10 @@ public final class UserAccountOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLoginBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(login_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, login_);
       }
-      if (!getDefaultEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEmail_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, defaultEmail_);
       }
       size += unknownFields.getSerializedSize();
@@ -1496,13 +1557,12 @@ public final class UserAccountOuterClass {
       }
       yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount other = (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.YandexPassportUserAccount) obj;
 
-      boolean result = true;
-      result = result && getLogin()
-          .equals(other.getLogin());
-      result = result && getDefaultEmail()
-          .equals(other.getDefaultEmail());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLogin()
+          .equals(other.getLogin())) return false;
+      if (!getDefaultEmail()
+          .equals(other.getDefaultEmail())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1692,35 +1752,35 @@ public final class UserAccountOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1778,6 +1838,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string login = 1;</code>
+       * @return The login.
        */
       public java.lang.String getLogin() {
         java.lang.Object ref = login_;
@@ -1797,6 +1858,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string login = 1;</code>
+       * @return The bytes for login.
        */
       public com.google.protobuf.ByteString
           getLoginBytes() {
@@ -1817,6 +1879,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string login = 1;</code>
+       * @param value The login to set.
+       * @return This builder for chaining.
        */
       public Builder setLogin(
           java.lang.String value) {
@@ -1834,6 +1898,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string login = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogin() {
         
@@ -1847,6 +1912,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string login = 1;</code>
+       * @param value The bytes for login to set.
+       * @return This builder for chaining.
        */
       public Builder setLoginBytes(
           com.google.protobuf.ByteString value) {
@@ -1867,6 +1934,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string default_email = 2;</code>
+       * @return The defaultEmail.
        */
       public java.lang.String getDefaultEmail() {
         java.lang.Object ref = defaultEmail_;
@@ -1886,6 +1954,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string default_email = 2;</code>
+       * @return The bytes for defaultEmail.
        */
       public com.google.protobuf.ByteString
           getDefaultEmailBytes() {
@@ -1906,6 +1975,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string default_email = 2;</code>
+       * @param value The defaultEmail to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultEmail(
           java.lang.String value) {
@@ -1923,6 +1994,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string default_email = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultEmail() {
         
@@ -1936,6 +2008,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string default_email = 2;</code>
+       * @param value The bytes for defaultEmail to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -1951,7 +2025,7 @@ public final class UserAccountOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2011,6 +2085,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
      */
     java.lang.String getFederationId();
     /**
@@ -2019,6 +2094,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
      */
     com.google.protobuf.ByteString
         getFederationIdBytes();
@@ -2030,6 +2106,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+     * @return The nameId.
      */
     java.lang.String getNameId();
     /**
@@ -2039,6 +2116,7 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for nameId.
      */
     com.google.protobuf.ByteString
         getNameIdBytes();
@@ -2105,7 +2183,7 @@ public final class UserAccountOuterClass {
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.SamlUserAccount}
    */
-  public  static final class SamlUserAccount extends
+  public static final class SamlUserAccount extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.SamlUserAccount)
       SamlUserAccountOrBuilder {
@@ -2117,6 +2195,13 @@ public final class UserAccountOuterClass {
     private SamlUserAccount() {
       federationId_ = "";
       nameId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SamlUserAccount();
     }
 
     @java.lang.Override
@@ -2156,10 +2241,10 @@ public final class UserAccountOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 attributes_ = com.google.protobuf.MapField.newMapField(
                     AttributesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
               attributes__ = input.readMessage(
@@ -2169,7 +2254,7 @@ public final class UserAccountOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2218,19 +2303,25 @@ public final class UserAccountOuterClass {
 
       /**
        * <code>repeated string value = 1;</code>
+       * @return A list containing the value.
        */
       java.util.List<java.lang.String>
           getValueList();
       /**
        * <code>repeated string value = 1;</code>
+       * @return The count of value.
        */
       int getValueCount();
       /**
        * <code>repeated string value = 1;</code>
+       * @param index The index of the element to return.
+       * @return The value at the given index.
        */
       java.lang.String getValue(int index);
       /**
        * <code>repeated string value = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the value at the given index.
        */
       com.google.protobuf.ByteString
           getValueBytes(int index);
@@ -2238,7 +2329,7 @@ public final class UserAccountOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute}
      */
-    public  static final class Attribute extends
+    public static final class Attribute extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute)
         AttributeOrBuilder {
@@ -2249,6 +2340,13 @@ public final class UserAccountOuterClass {
       }
       private Attribute() {
         value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Attribute();
       }
 
       @java.lang.Override
@@ -2277,7 +2375,7 @@ public final class UserAccountOuterClass {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   value_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -2285,7 +2383,7 @@ public final class UserAccountOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -2299,7 +2397,7 @@ public final class UserAccountOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             value_ = value_.getUnmodifiableView();
           }
           this.unknownFields = unknownFields.build();
@@ -2323,6 +2421,7 @@ public final class UserAccountOuterClass {
       private com.google.protobuf.LazyStringList value_;
       /**
        * <code>repeated string value = 1;</code>
+       * @return A list containing the value.
        */
       public com.google.protobuf.ProtocolStringList
           getValueList() {
@@ -2330,18 +2429,23 @@ public final class UserAccountOuterClass {
       }
       /**
        * <code>repeated string value = 1;</code>
+       * @return The count of value.
        */
       public int getValueCount() {
         return value_.size();
       }
       /**
        * <code>repeated string value = 1;</code>
+       * @param index The index of the element to return.
+       * @return The value at the given index.
        */
       public java.lang.String getValue(int index) {
         return value_.get(index);
       }
       /**
        * <code>repeated string value = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the value at the given index.
        */
       public com.google.protobuf.ByteString
           getValueBytes(int index) {
@@ -2397,11 +2501,10 @@ public final class UserAccountOuterClass {
         }
         yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute other = (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute) obj;
 
-        boolean result = true;
-        result = result && getValueList()
-            .equals(other.getValueList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getValueList()
+            .equals(other.getValueList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -2577,7 +2680,7 @@ public final class UserAccountOuterClass {
         public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute buildPartial() {
           yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute result = new yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute(this);
           int from_bitField0_ = bitField0_;
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             value_ = value_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2588,35 +2691,35 @@ public final class UserAccountOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2672,13 +2775,14 @@ public final class UserAccountOuterClass {
 
         private com.google.protobuf.LazyStringList value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         private void ensureValueIsMutable() {
-          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             value_ = new com.google.protobuf.LazyStringArrayList(value_);
             bitField0_ |= 0x00000001;
            }
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @return A list containing the value.
          */
         public com.google.protobuf.ProtocolStringList
             getValueList() {
@@ -2686,18 +2790,23 @@ public final class UserAccountOuterClass {
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @return The count of value.
          */
         public int getValueCount() {
           return value_.size();
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @param index The index of the element to return.
+         * @return The value at the given index.
          */
         public java.lang.String getValue(int index) {
           return value_.get(index);
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the value at the given index.
          */
         public com.google.protobuf.ByteString
             getValueBytes(int index) {
@@ -2705,6 +2814,9 @@ public final class UserAccountOuterClass {
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The value to set.
+         * @return This builder for chaining.
          */
         public Builder setValue(
             int index, java.lang.String value) {
@@ -2718,6 +2830,8 @@ public final class UserAccountOuterClass {
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @param value The value to add.
+         * @return This builder for chaining.
          */
         public Builder addValue(
             java.lang.String value) {
@@ -2731,6 +2845,8 @@ public final class UserAccountOuterClass {
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @param values The value to add.
+         * @return This builder for chaining.
          */
         public Builder addAllValue(
             java.lang.Iterable<java.lang.String> values) {
@@ -2742,6 +2858,7 @@ public final class UserAccountOuterClass {
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearValue() {
           value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -2751,6 +2868,8 @@ public final class UserAccountOuterClass {
         }
         /**
          * <code>repeated string value = 1;</code>
+         * @param value The bytes of the value to add.
+         * @return This builder for chaining.
          */
         public Builder addValueBytes(
             com.google.protobuf.ByteString value) {
@@ -2766,7 +2885,7 @@ public final class UserAccountOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -2816,7 +2935,6 @@ public final class UserAccountOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int FEDERATION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object federationId_;
     /**
@@ -2825,7 +2943,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
      */
+    @java.lang.Override
     public java.lang.String getFederationId() {
       java.lang.Object ref = federationId_;
       if (ref instanceof java.lang.String) {
@@ -2844,7 +2964,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFederationIdBytes() {
       java.lang.Object ref = federationId_;
@@ -2868,7 +2990,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+     * @return The nameId.
      */
+    @java.lang.Override
     public java.lang.String getNameId() {
       java.lang.Object ref = nameId_;
       if (ref instanceof java.lang.String) {
@@ -2888,7 +3012,9 @@ public final class UserAccountOuterClass {
      * </pre>
      *
      * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for nameId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameIdBytes() {
       java.lang.Object ref = nameId_;
@@ -2937,14 +3063,16 @@ public final class UserAccountOuterClass {
      * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
      */
 
+    @java.lang.Override
     public boolean containsAttributes(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetAttributes().getMap().containsKey(key);
     }
     /**
      * Use {@link #getAttributesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributes() {
       return getAttributesMap();
@@ -2956,6 +3084,7 @@ public final class UserAccountOuterClass {
      *
      * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributesMap() {
       return internalGetAttributes().getMap();
@@ -2967,11 +3096,12 @@ public final class UserAccountOuterClass {
      *
      * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
      */
+    @java.lang.Override
 
     public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrDefault(
         java.lang.String key,
         yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
           internalGetAttributes().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2983,10 +3113,11 @@ public final class UserAccountOuterClass {
      *
      * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
      */
+    @java.lang.Override
 
     public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
           internalGetAttributes().getMap();
       if (!map.containsKey(key)) {
@@ -3009,10 +3140,10 @@ public final class UserAccountOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFederationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
       }
-      if (!getNameIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nameId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nameId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3030,10 +3161,10 @@ public final class UserAccountOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFederationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
       }
-      if (!getNameIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nameId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nameId_);
       }
       for (java.util.Map.Entry<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> entry
@@ -3061,15 +3192,14 @@ public final class UserAccountOuterClass {
       }
       yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount other = (yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount) obj;
 
-      boolean result = true;
-      result = result && getFederationId()
-          .equals(other.getFederationId());
-      result = result && getNameId()
-          .equals(other.getNameId());
-      result = result && internalGetAttributes().equals(
-          other.internalGetAttributes());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getNameId()
+          .equals(other.getNameId())) return false;
+      if (!internalGetAttributes().equals(
+          other.internalGetAttributes())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3279,47 +3409,45 @@ public final class UserAccountOuterClass {
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount buildPartial() {
         yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount result = new yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.federationId_ = federationId_;
         result.nameId_ = nameId_;
         result.attributes_ = internalGetAttributes();
         result.attributes_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3380,6 +3508,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
        */
       public java.lang.String getFederationId() {
         java.lang.Object ref = federationId_;
@@ -3399,6 +3528,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
        */
       public com.google.protobuf.ByteString
           getFederationIdBytes() {
@@ -3419,6 +3549,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
        */
       public Builder setFederationId(
           java.lang.String value) {
@@ -3436,6 +3568,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFederationId() {
         
@@ -3449,6 +3582,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
        */
       public Builder setFederationIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3470,6 +3605,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+       * @return The nameId.
        */
       public java.lang.String getNameId() {
         java.lang.Object ref = nameId_;
@@ -3490,6 +3626,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+       * @return The bytes for nameId.
        */
       public com.google.protobuf.ByteString
           getNameIdBytes() {
@@ -3511,6 +3648,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+       * @param value The nameId to set.
+       * @return This builder for chaining.
        */
       public Builder setNameId(
           java.lang.String value) {
@@ -3529,6 +3668,7 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNameId() {
         
@@ -3543,6 +3683,8 @@ public final class UserAccountOuterClass {
        * </pre>
        *
        * <code>string name_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-256"];</code>
+       * @param value The bytes for nameId to set.
+       * @return This builder for chaining.
        */
       public Builder setNameIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3590,14 +3732,16 @@ public final class UserAccountOuterClass {
        * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
        */
 
+      @java.lang.Override
       public boolean containsAttributes(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetAttributes().getMap().containsKey(key);
       }
       /**
        * Use {@link #getAttributesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributes() {
         return getAttributesMap();
@@ -3609,6 +3753,7 @@ public final class UserAccountOuterClass {
        *
        * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributesMap() {
         return internalGetAttributes().getMap();
@@ -3620,11 +3765,12 @@ public final class UserAccountOuterClass {
        *
        * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
        */
+      @java.lang.Override
 
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrDefault(
           java.lang.String key,
           yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
             internalGetAttributes().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3636,10 +3782,11 @@ public final class UserAccountOuterClass {
        *
        * <code>map&lt;string, .yandex.cloud.organizationmanager.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
        */
+      @java.lang.Override
 
       public yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
             internalGetAttributes().getMap();
         if (!map.containsKey(key)) {
@@ -3663,7 +3810,7 @@ public final class UserAccountOuterClass {
 
       public Builder removeAttributes(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableAttributes().getMutableMap()
             .remove(key);
         return this;
@@ -3686,8 +3833,11 @@ public final class UserAccountOuterClass {
       public Builder putAttributes(
           java.lang.String key,
           yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.SamlUserAccount.Attribute value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableAttributes().getMutableMap()
             .put(key, value);
         return this;
@@ -3709,7 +3859,7 @@ public final class UserAccountOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3817,19 +3967,11 @@ public final class UserAccountOuterClass {
       "loud/organizationmanager/v1;organization" +
       "managerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_organizationmanager_v1_UserAccount_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_organizationmanager_v1_UserAccount_fieldAccessorTable = new

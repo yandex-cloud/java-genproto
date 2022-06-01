@@ -24,6 +24,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -43,6 +45,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -52,6 +55,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
@@ -59,7 +63,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.GetMlModelRequest}
    */
-  public  static final class GetMlModelRequest extends
+  public static final class GetMlModelRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.GetMlModelRequest)
       GetMlModelRequestOrBuilder {
@@ -71,6 +75,13 @@ public final class MlModelServiceOuterClass {
     private GetMlModelRequest() {
       clusterId_ = "";
       mlModelName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetMlModelRequest();
     }
 
     @java.lang.Override
@@ -86,7 +97,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -110,7 +120,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -149,7 +159,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -168,7 +180,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -192,7 +206,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -212,7 +228,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -241,10 +259,10 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       unknownFields.writeTo(output);
@@ -256,10 +274,10 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       size += unknownFields.getSerializedSize();
@@ -277,13 +295,12 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -468,35 +485,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -554,6 +571,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -573,6 +591,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -593,6 +612,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -610,6 +631,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -623,6 +645,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -644,6 +668,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -664,6 +689,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -685,6 +711,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -703,6 +731,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -717,6 +746,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -732,7 +763,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -792,6 +823,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -800,6 +832,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -813,6 +846,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -823,6 +857,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -832,6 +867,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -839,7 +875,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListMlModelsRequest}
    */
-  public  static final class ListMlModelsRequest extends
+  public static final class ListMlModelsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListMlModelsRequest)
       ListMlModelsRequestOrBuilder {
@@ -850,8 +886,14 @@ public final class MlModelServiceOuterClass {
     }
     private ListMlModelsRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListMlModelsRequest();
     }
 
     @java.lang.Override
@@ -867,7 +909,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -896,7 +937,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -935,7 +976,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -954,7 +997,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -980,7 +1025,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -994,7 +1041,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1014,7 +1063,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1043,13 +1094,13 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -1061,14 +1112,14 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1086,15 +1137,14 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1285,35 +1335,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1374,6 +1424,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1393,6 +1444,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1413,6 +1465,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1430,6 +1484,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1443,6 +1498,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1466,7 +1523,9 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1479,6 +1538,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1495,6 +1556,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1511,6 +1573,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1531,6 +1594,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1552,6 +1616,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1570,6 +1636,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1584,6 +1651,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1599,7 +1668,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1706,6 +1775,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1717,6 +1787,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1724,7 +1795,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListMlModelsResponse}
    */
-  public  static final class ListMlModelsResponse extends
+  public static final class ListMlModelsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListMlModelsResponse)
       ListMlModelsResponseOrBuilder {
@@ -1736,6 +1807,13 @@ public final class MlModelServiceOuterClass {
     private ListMlModelsResponse() {
       mlModels_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListMlModelsResponse();
     }
 
     @java.lang.Override
@@ -1763,7 +1841,7 @@ public final class MlModelServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 mlModels_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1778,7 +1856,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1792,7 +1870,7 @@ public final class MlModelServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           mlModels_ = java.util.Collections.unmodifiableList(mlModels_);
         }
         this.unknownFields = unknownFields.build();
@@ -1812,7 +1890,6 @@ public final class MlModelServiceOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse.class, yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ML_MODELS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> mlModels_;
     /**
@@ -1822,6 +1899,7 @@ public final class MlModelServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> getMlModelsList() {
       return mlModels_;
     }
@@ -1832,6 +1910,7 @@ public final class MlModelServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder> 
         getMlModelsOrBuilderList() {
       return mlModels_;
@@ -1843,6 +1922,7 @@ public final class MlModelServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
+    @java.lang.Override
     public int getMlModelsCount() {
       return mlModels_.size();
     }
@@ -1853,6 +1933,7 @@ public final class MlModelServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel getMlModels(int index) {
       return mlModels_.get(index);
     }
@@ -1863,6 +1944,7 @@ public final class MlModelServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder getMlModelsOrBuilder(
         int index) {
       return mlModels_.get(index);
@@ -1879,7 +1961,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1901,7 +1985,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1933,7 +2019,7 @@ public final class MlModelServiceOuterClass {
       for (int i = 0; i < mlModels_.size(); i++) {
         output.writeMessage(1, mlModels_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1949,7 +2035,7 @@ public final class MlModelServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, mlModels_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1967,13 +2053,12 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse) obj;
 
-      boolean result = true;
-      result = result && getMlModelsList()
-          .equals(other.getMlModelsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getMlModelsList()
+          .equals(other.getMlModelsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2158,9 +2243,8 @@ public final class MlModelServiceOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse result = new yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (mlModelsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             mlModels_ = java.util.Collections.unmodifiableList(mlModels_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2169,42 +2253,41 @@ public final class MlModelServiceOuterClass {
           result.mlModels_ = mlModelsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2281,7 +2364,7 @@ public final class MlModelServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> mlModels_ =
         java.util.Collections.emptyList();
       private void ensureMlModelsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           mlModels_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel>(mlModels_);
           bitField0_ |= 0x00000001;
          }
@@ -2582,7 +2665,7 @@ public final class MlModelServiceOuterClass {
           mlModelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel, yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.Builder, yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder>(
                   mlModels_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           mlModels_ = null;
@@ -2600,6 +2683,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2622,6 +2706,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2645,6 +2730,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2665,6 +2752,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2681,6 +2769,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2696,7 +2786,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2757,6 +2847,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2766,6 +2857,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2776,6 +2868,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -2784,6 +2877,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
@@ -2794,6 +2888,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -2802,6 +2897,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType();
 
@@ -2811,6 +2907,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
@@ -2819,6 +2916,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -2826,7 +2924,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateMlModelRequest}
    */
-  public  static final class CreateMlModelRequest extends
+  public static final class CreateMlModelRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CreateMlModelRequest)
       CreateMlModelRequestOrBuilder {
@@ -2843,6 +2941,13 @@ public final class MlModelServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateMlModelRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2855,7 +2960,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2891,7 +2995,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2931,7 +3035,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2951,7 +3057,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2974,7 +3082,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -2993,7 +3103,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -3016,8 +3128,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -3026,8 +3139,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType result = yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.UNRECOGNIZED : result;
@@ -3041,7 +3155,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The uri.
      */
+    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -3060,7 +3176,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for uri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -3089,16 +3207,16 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       if (type_ != yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.ML_MODEL_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, type_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uri_);
       }
       unknownFields.writeTo(output);
@@ -3110,17 +3228,17 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       if (type_ != yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.ML_MODEL_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, type_);
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uri_);
       }
       size += unknownFields.getSerializedSize();
@@ -3138,16 +3256,15 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && type_ == other.type_;
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (type_ != other.type_) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3342,35 +3459,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3436,6 +3553,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3456,6 +3574,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3477,6 +3596,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3495,6 +3616,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -3509,6 +3631,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3529,6 +3653,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -3548,6 +3673,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -3568,6 +3694,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -3585,6 +3713,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -3598,6 +3727,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3618,8 +3749,9 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -3628,8 +3760,11 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -3640,7 +3775,9 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType result = yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.valueOf(type_);
@@ -3652,6 +3789,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType value) {
         if (value == null) {
@@ -3668,6 +3807,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3683,6 +3823,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The uri.
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -3702,6 +3843,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for uri.
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -3722,6 +3864,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -3739,6 +3883,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         
@@ -3752,6 +3897,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -3767,7 +3914,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3827,6 +3974,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -3835,6 +3983,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -3845,6 +3994,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -3853,6 +4003,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
@@ -3860,7 +4011,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateMlModelMetadata}
    */
-  public  static final class CreateMlModelMetadata extends
+  public static final class CreateMlModelMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CreateMlModelMetadata)
       CreateMlModelMetadataOrBuilder {
@@ -3872,6 +4023,13 @@ public final class MlModelServiceOuterClass {
     private CreateMlModelMetadata() {
       clusterId_ = "";
       mlModelName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateMlModelMetadata();
     }
 
     @java.lang.Override
@@ -3887,7 +4045,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3911,7 +4068,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3950,7 +4107,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3969,7 +4128,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3992,7 +4153,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -4011,7 +4174,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -4040,10 +4205,10 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       unknownFields.writeTo(output);
@@ -4055,10 +4220,10 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       size += unknownFields.getSerializedSize();
@@ -4076,13 +4241,12 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4267,35 +4431,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4353,6 +4517,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4372,6 +4537,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4392,6 +4558,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4409,6 +4577,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4422,6 +4591,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4442,6 +4613,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -4461,6 +4633,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -4481,6 +4654,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -4498,6 +4673,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -4511,6 +4687,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4526,7 +4704,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4587,6 +4765,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4596,6 +4775,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4606,6 +4786,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -4614,16 +4795,19 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
 
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -4637,6 +4821,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4;</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
@@ -4645,6 +4830,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4;</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -4652,7 +4838,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateMlModelRequest}
    */
-  public  static final class UpdateMlModelRequest extends
+  public static final class UpdateMlModelRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UpdateMlModelRequest)
       UpdateMlModelRequestOrBuilder {
@@ -4668,6 +4854,13 @@ public final class MlModelServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateMlModelRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4680,7 +4873,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4723,7 +4915,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4763,7 +4955,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -4783,7 +4977,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -4806,7 +5002,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -4825,7 +5023,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -4844,19 +5044,24 @@ public final class MlModelServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -4869,7 +5074,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4;</code>
+     * @return The uri.
      */
+    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -4888,7 +5095,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string uri = 4;</code>
+     * @return The bytes for uri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -4917,16 +5126,16 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       if (updateMask_ != null) {
         output.writeMessage(3, getUpdateMask());
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uri_);
       }
       unknownFields.writeTo(output);
@@ -4938,17 +5147,17 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdateMask());
       }
-      if (!getUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uri_);
       }
       size += unknownFields.getSerializedSize();
@@ -4966,20 +5175,19 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5184,35 +5392,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5278,6 +5486,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5298,6 +5507,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5319,6 +5529,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5337,6 +5549,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5351,6 +5564,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5371,6 +5586,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -5390,6 +5606,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -5410,6 +5627,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -5427,6 +5646,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -5440,6 +5660,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5453,17 +5675,19 @@ public final class MlModelServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -5577,6 +5801,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4;</code>
+       * @return The uri.
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -5596,6 +5821,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4;</code>
+       * @return The bytes for uri.
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -5616,6 +5842,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4;</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -5633,6 +5861,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         
@@ -5646,6 +5875,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string uri = 4;</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -5661,7 +5892,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5721,6 +5952,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5729,6 +5961,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5739,6 +5972,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -5747,6 +5981,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
@@ -5754,7 +5989,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateMlModelMetadata}
    */
-  public  static final class UpdateMlModelMetadata extends
+  public static final class UpdateMlModelMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UpdateMlModelMetadata)
       UpdateMlModelMetadataOrBuilder {
@@ -5766,6 +6001,13 @@ public final class MlModelServiceOuterClass {
     private UpdateMlModelMetadata() {
       clusterId_ = "";
       mlModelName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateMlModelMetadata();
     }
 
     @java.lang.Override
@@ -5781,7 +6023,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5805,7 +6046,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5844,7 +6085,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5863,7 +6106,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5886,7 +6131,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -5905,7 +6152,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -5934,10 +6183,10 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       unknownFields.writeTo(output);
@@ -5949,10 +6198,10 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       size += unknownFields.getSerializedSize();
@@ -5970,13 +6219,12 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6161,35 +6409,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6247,6 +6495,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6266,6 +6515,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6286,6 +6536,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6303,6 +6555,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6316,6 +6569,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6336,6 +6591,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -6355,6 +6611,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -6375,6 +6632,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -6392,6 +6651,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -6405,6 +6665,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6420,7 +6682,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6481,6 +6743,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6490,6 +6753,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -6500,6 +6764,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -6508,6 +6773,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
@@ -6515,7 +6781,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteMlModelRequest}
    */
-  public  static final class DeleteMlModelRequest extends
+  public static final class DeleteMlModelRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.DeleteMlModelRequest)
       DeleteMlModelRequestOrBuilder {
@@ -6527,6 +6793,13 @@ public final class MlModelServiceOuterClass {
     private DeleteMlModelRequest() {
       clusterId_ = "";
       mlModelName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteMlModelRequest();
     }
 
     @java.lang.Override
@@ -6542,7 +6815,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6566,7 +6838,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6606,7 +6878,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6626,7 +6900,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6649,7 +6925,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -6668,7 +6946,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -6697,10 +6977,10 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       unknownFields.writeTo(output);
@@ -6712,10 +6992,10 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       size += unknownFields.getSerializedSize();
@@ -6733,13 +7013,12 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6924,35 +7203,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7011,6 +7290,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7031,6 +7311,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7052,6 +7333,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7070,6 +7353,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7084,6 +7368,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7104,6 +7390,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -7123,6 +7410,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -7143,6 +7431,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -7160,6 +7450,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -7173,6 +7464,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7188,7 +7481,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7248,6 +7541,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -7256,6 +7550,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -7266,6 +7561,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The mlModelName.
      */
     java.lang.String getMlModelName();
     /**
@@ -7274,6 +7570,7 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The bytes for mlModelName.
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
@@ -7281,7 +7578,7 @@ public final class MlModelServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteMlModelMetadata}
    */
-  public  static final class DeleteMlModelMetadata extends
+  public static final class DeleteMlModelMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.DeleteMlModelMetadata)
       DeleteMlModelMetadataOrBuilder {
@@ -7293,6 +7590,13 @@ public final class MlModelServiceOuterClass {
     private DeleteMlModelMetadata() {
       clusterId_ = "";
       mlModelName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteMlModelMetadata();
     }
 
     @java.lang.Override
@@ -7308,7 +7612,6 @@ public final class MlModelServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7332,7 +7635,7 @@ public final class MlModelServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7371,7 +7674,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -7390,7 +7695,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -7413,7 +7720,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The mlModelName.
      */
+    @java.lang.Override
     public java.lang.String getMlModelName() {
       java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
@@ -7432,7 +7741,9 @@ public final class MlModelServiceOuterClass {
      * </pre>
      *
      * <code>string ml_model_name = 2;</code>
+     * @return The bytes for mlModelName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMlModelNameBytes() {
       java.lang.Object ref = mlModelName_;
@@ -7461,10 +7772,10 @@ public final class MlModelServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       unknownFields.writeTo(output);
@@ -7476,10 +7787,10 @@ public final class MlModelServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModelNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mlModelName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       size += unknownFields.getSerializedSize();
@@ -7497,13 +7808,12 @@ public final class MlModelServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getMlModelName()
-          .equals(other.getMlModelName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getMlModelName()
+          .equals(other.getMlModelName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7688,35 +7998,35 @@ public final class MlModelServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7774,6 +8084,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7793,6 +8104,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7813,6 +8125,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7830,6 +8144,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7843,6 +8158,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7863,6 +8180,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return The mlModelName.
        */
       public java.lang.String getMlModelName() {
         java.lang.Object ref = mlModelName_;
@@ -7882,6 +8200,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return The bytes for mlModelName.
        */
       public com.google.protobuf.ByteString
           getMlModelNameBytes() {
@@ -7902,6 +8221,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @param value The mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelName(
           java.lang.String value) {
@@ -7919,6 +8240,7 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMlModelName() {
         
@@ -7932,6 +8254,8 @@ public final class MlModelServiceOuterClass {
        * </pre>
        *
        * <code>string ml_model_name = 2;</code>
+       * @param value The bytes for mlModelName to set.
+       * @return This builder for chaining.
        */
       public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7947,7 +8271,7 @@ public final class MlModelServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8115,15 +8439,7 @@ public final class MlModelServiceOuterClass {
       "/cloud/mdb/clickhouse/v1;clickhouseb\006pro" +
       "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -8132,7 +8448,7 @@ public final class MlModelServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetMlModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetMlModelRequest_fieldAccessorTable = new

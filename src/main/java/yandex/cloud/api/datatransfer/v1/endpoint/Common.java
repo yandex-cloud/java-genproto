@@ -65,6 +65,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -72,6 +74,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static ObjectTransferStage forNumber(int value) {
       switch (value) {
         case 0: return OBJECT_TRANSFER_STAGE_UNSPECIFIED;
@@ -96,6 +102,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -181,6 +191,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -188,6 +200,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CleanupPolicy forNumber(int value) {
       switch (value) {
         case 0: return CLEANUP_POLICY_UNSPECIFIED;
@@ -212,6 +228,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -256,6 +276,7 @@ public final class Common {
      * </pre>
      *
      * <code>string from_name = 1;</code>
+     * @return The fromName.
      */
     java.lang.String getFromName();
     /**
@@ -264,6 +285,7 @@ public final class Common {
      * </pre>
      *
      * <code>string from_name = 1;</code>
+     * @return The bytes for fromName.
      */
     com.google.protobuf.ByteString
         getFromNameBytes();
@@ -274,6 +296,7 @@ public final class Common {
      * </pre>
      *
      * <code>string to_name = 2;</code>
+     * @return The toName.
      */
     java.lang.String getToName();
     /**
@@ -282,6 +305,7 @@ public final class Common {
      * </pre>
      *
      * <code>string to_name = 2;</code>
+     * @return The bytes for toName.
      */
     com.google.protobuf.ByteString
         getToNameBytes();
@@ -289,7 +313,7 @@ public final class Common {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.AltName}
    */
-  public  static final class AltName extends
+  public static final class AltName extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.AltName)
       AltNameOrBuilder {
@@ -301,6 +325,13 @@ public final class Common {
     private AltName() {
       fromName_ = "";
       toName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AltName();
     }
 
     @java.lang.Override
@@ -316,7 +347,6 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -340,7 +370,7 @@ public final class Common {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -379,7 +409,9 @@ public final class Common {
      * </pre>
      *
      * <code>string from_name = 1;</code>
+     * @return The fromName.
      */
+    @java.lang.Override
     public java.lang.String getFromName() {
       java.lang.Object ref = fromName_;
       if (ref instanceof java.lang.String) {
@@ -398,7 +430,9 @@ public final class Common {
      * </pre>
      *
      * <code>string from_name = 1;</code>
+     * @return The bytes for fromName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFromNameBytes() {
       java.lang.Object ref = fromName_;
@@ -421,7 +455,9 @@ public final class Common {
      * </pre>
      *
      * <code>string to_name = 2;</code>
+     * @return The toName.
      */
+    @java.lang.Override
     public java.lang.String getToName() {
       java.lang.Object ref = toName_;
       if (ref instanceof java.lang.String) {
@@ -440,7 +476,9 @@ public final class Common {
      * </pre>
      *
      * <code>string to_name = 2;</code>
+     * @return The bytes for toName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToNameBytes() {
       java.lang.Object ref = toName_;
@@ -469,10 +507,10 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFromNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fromName_);
       }
-      if (!getToNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, toName_);
       }
       unknownFields.writeTo(output);
@@ -484,10 +522,10 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFromNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fromName_);
       }
-      if (!getToNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, toName_);
       }
       size += unknownFields.getSerializedSize();
@@ -505,13 +543,12 @@ public final class Common {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName) obj;
 
-      boolean result = true;
-      result = result && getFromName()
-          .equals(other.getFromName());
-      result = result && getToName()
-          .equals(other.getToName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFromName()
+          .equals(other.getFromName())) return false;
+      if (!getToName()
+          .equals(other.getToName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -696,35 +733,35 @@ public final class Common {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -782,6 +819,7 @@ public final class Common {
        * </pre>
        *
        * <code>string from_name = 1;</code>
+       * @return The fromName.
        */
       public java.lang.String getFromName() {
         java.lang.Object ref = fromName_;
@@ -801,6 +839,7 @@ public final class Common {
        * </pre>
        *
        * <code>string from_name = 1;</code>
+       * @return The bytes for fromName.
        */
       public com.google.protobuf.ByteString
           getFromNameBytes() {
@@ -821,6 +860,8 @@ public final class Common {
        * </pre>
        *
        * <code>string from_name = 1;</code>
+       * @param value The fromName to set.
+       * @return This builder for chaining.
        */
       public Builder setFromName(
           java.lang.String value) {
@@ -838,6 +879,7 @@ public final class Common {
        * </pre>
        *
        * <code>string from_name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFromName() {
         
@@ -851,6 +893,8 @@ public final class Common {
        * </pre>
        *
        * <code>string from_name = 1;</code>
+       * @param value The bytes for fromName to set.
+       * @return This builder for chaining.
        */
       public Builder setFromNameBytes(
           com.google.protobuf.ByteString value) {
@@ -871,6 +915,7 @@ public final class Common {
        * </pre>
        *
        * <code>string to_name = 2;</code>
+       * @return The toName.
        */
       public java.lang.String getToName() {
         java.lang.Object ref = toName_;
@@ -890,6 +935,7 @@ public final class Common {
        * </pre>
        *
        * <code>string to_name = 2;</code>
+       * @return The bytes for toName.
        */
       public com.google.protobuf.ByteString
           getToNameBytes() {
@@ -910,6 +956,8 @@ public final class Common {
        * </pre>
        *
        * <code>string to_name = 2;</code>
+       * @param value The toName to set.
+       * @return This builder for chaining.
        */
       public Builder setToName(
           java.lang.String value) {
@@ -927,6 +975,7 @@ public final class Common {
        * </pre>
        *
        * <code>string to_name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearToName() {
         
@@ -940,6 +989,8 @@ public final class Common {
        * </pre>
        *
        * <code>string to_name = 2;</code>
+       * @param value The bytes for toName to set.
+       * @return This builder for chaining.
        */
       public Builder setToNameBytes(
           com.google.protobuf.ByteString value) {
@@ -955,7 +1006,7 @@ public final class Common {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1015,6 +1066,16 @@ public final class Common {
      * </pre>
      *
      * <code>string raw = 1;</code>
+     * @return Whether the raw field is set.
+     */
+    boolean hasRaw();
+    /**
+     * <pre>
+     * Password
+     * </pre>
+     *
+     * <code>string raw = 1;</code>
+     * @return The raw.
      */
     java.lang.String getRaw();
     /**
@@ -1023,6 +1084,7 @@ public final class Common {
      * </pre>
      *
      * <code>string raw = 1;</code>
+     * @return The bytes for raw.
      */
     com.google.protobuf.ByteString
         getRawBytes();
@@ -1032,7 +1094,7 @@ public final class Common {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.Secret}
    */
-  public  static final class Secret extends
+  public static final class Secret extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.Secret)
       SecretOrBuilder {
@@ -1042,6 +1104,13 @@ public final class Common {
       super(builder);
     }
     private Secret() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Secret();
     }
 
     @java.lang.Override
@@ -1057,7 +1126,6 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1075,7 +1143,7 @@ public final class Common {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1109,7 +1177,8 @@ public final class Common {
     private int valueCase_ = 0;
     private java.lang.Object value_;
     public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RAW(1),
       VALUE_NOT_SET(0);
       private final int value;
@@ -1117,6 +1186,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1149,6 +1220,18 @@ public final class Common {
      * </pre>
      *
      * <code>string raw = 1;</code>
+     * @return Whether the raw field is set.
+     */
+    public boolean hasRaw() {
+      return valueCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Password
+     * </pre>
+     *
+     * <code>string raw = 1;</code>
+     * @return The raw.
      */
     public java.lang.String getRaw() {
       java.lang.Object ref = "";
@@ -1173,6 +1256,7 @@ public final class Common {
      * </pre>
      *
      * <code>string raw = 1;</code>
+     * @return The bytes for raw.
      */
     public com.google.protobuf.ByteString
         getRawBytes() {
@@ -1237,20 +1321,17 @@ public final class Common {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret) obj;
 
-      boolean result = true;
-      result = result && getValueCase().equals(
-          other.getValueCase());
-      if (!result) return false;
+      if (!getValueCase().equals(other.getValueCase())) return false;
       switch (valueCase_) {
         case 1:
-          result = result && getRaw()
-              .equals(other.getRaw());
+          if (!getRaw()
+              .equals(other.getRaw())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1439,35 +1520,35 @@ public final class Common {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1542,7 +1623,21 @@ public final class Common {
        * </pre>
        *
        * <code>string raw = 1;</code>
+       * @return Whether the raw field is set.
        */
+      @java.lang.Override
+      public boolean hasRaw() {
+        return valueCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Password
+       * </pre>
+       *
+       * <code>string raw = 1;</code>
+       * @return The raw.
+       */
+      @java.lang.Override
       public java.lang.String getRaw() {
         java.lang.Object ref = "";
         if (valueCase_ == 1) {
@@ -1566,7 +1661,9 @@ public final class Common {
        * </pre>
        *
        * <code>string raw = 1;</code>
+       * @return The bytes for raw.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRawBytes() {
         java.lang.Object ref = "";
@@ -1591,6 +1688,8 @@ public final class Common {
        * </pre>
        *
        * <code>string raw = 1;</code>
+       * @param value The raw to set.
+       * @return This builder for chaining.
        */
       public Builder setRaw(
           java.lang.String value) {
@@ -1608,6 +1707,7 @@ public final class Common {
        * </pre>
        *
        * <code>string raw = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRaw() {
         if (valueCase_ == 1) {
@@ -1623,6 +1723,8 @@ public final class Common {
        * </pre>
        *
        * <code>string raw = 1;</code>
+       * @param value The bytes for raw to set.
+       * @return This builder for chaining.
        */
       public Builder setRawBytes(
           com.google.protobuf.ByteString value) {
@@ -1638,7 +1740,7 @@ public final class Common {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1694,10 +1796,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Empty disabled = 1;</code>
+     * @return Whether the disabled field is set.
      */
     boolean hasDisabled();
     /**
      * <code>.google.protobuf.Empty disabled = 1;</code>
+     * @return The disabled.
      */
     com.google.protobuf.Empty getDisabled();
     /**
@@ -1707,10 +1811,12 @@ public final class Common {
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
+     * @return Whether the enabled field is set.
      */
     boolean hasEnabled();
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
+     * @return The enabled.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig getEnabled();
     /**
@@ -1723,7 +1829,7 @@ public final class Common {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.TLSMode}
    */
-  public  static final class TLSMode extends
+  public static final class TLSMode extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.TLSMode)
       TLSModeOrBuilder {
@@ -1733,6 +1839,13 @@ public final class Common {
       super(builder);
     }
     private TLSMode() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TLSMode();
     }
 
     @java.lang.Override
@@ -1748,7 +1861,6 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1788,7 +1900,7 @@ public final class Common {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1822,7 +1934,8 @@ public final class Common {
     private int tlsModeCase_ = 0;
     private java.lang.Object tlsMode_;
     public enum TlsModeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DISABLED(1),
       ENABLED(2),
       TLSMODE_NOT_SET(0);
@@ -1831,6 +1944,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1860,13 +1975,17 @@ public final class Common {
     public static final int DISABLED_FIELD_NUMBER = 1;
     /**
      * <code>.google.protobuf.Empty disabled = 1;</code>
+     * @return Whether the disabled field is set.
      */
+    @java.lang.Override
     public boolean hasDisabled() {
       return tlsModeCase_ == 1;
     }
     /**
      * <code>.google.protobuf.Empty disabled = 1;</code>
+     * @return The disabled.
      */
+    @java.lang.Override
     public com.google.protobuf.Empty getDisabled() {
       if (tlsModeCase_ == 1) {
          return (com.google.protobuf.Empty) tlsMode_;
@@ -1876,6 +1995,7 @@ public final class Common {
     /**
      * <code>.google.protobuf.Empty disabled = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.EmptyOrBuilder getDisabledOrBuilder() {
       if (tlsModeCase_ == 1) {
          return (com.google.protobuf.Empty) tlsMode_;
@@ -1886,13 +2006,17 @@ public final class Common {
     public static final int ENABLED_FIELD_NUMBER = 2;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
+     * @return Whether the enabled field is set.
      */
+    @java.lang.Override
     public boolean hasEnabled() {
       return tlsModeCase_ == 2;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
+     * @return The enabled.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig getEnabled() {
       if (tlsModeCase_ == 2) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig) tlsMode_;
@@ -1902,6 +2026,7 @@ public final class Common {
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfigOrBuilder getEnabledOrBuilder() {
       if (tlsModeCase_ == 2) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig) tlsMode_;
@@ -1961,24 +2086,21 @@ public final class Common {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode) obj;
 
-      boolean result = true;
-      result = result && getTlsModeCase().equals(
-          other.getTlsModeCase());
-      if (!result) return false;
+      if (!getTlsModeCase().equals(other.getTlsModeCase())) return false;
       switch (tlsModeCase_) {
         case 1:
-          result = result && getDisabled()
-              .equals(other.getDisabled());
+          if (!getDisabled()
+              .equals(other.getDisabled())) return false;
           break;
         case 2:
-          result = result && getEnabled()
-              .equals(other.getEnabled());
+          if (!getEnabled()
+              .equals(other.getEnabled())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2182,35 +2304,35 @@ public final class Common {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2285,13 +2407,17 @@ public final class Common {
           com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> disabledBuilder_;
       /**
        * <code>.google.protobuf.Empty disabled = 1;</code>
+       * @return Whether the disabled field is set.
        */
+      @java.lang.Override
       public boolean hasDisabled() {
         return tlsModeCase_ == 1;
       }
       /**
        * <code>.google.protobuf.Empty disabled = 1;</code>
+       * @return The disabled.
        */
+      @java.lang.Override
       public com.google.protobuf.Empty getDisabled() {
         if (disabledBuilder_ == null) {
           if (tlsModeCase_ == 1) {
@@ -2385,6 +2511,7 @@ public final class Common {
       /**
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.EmptyOrBuilder getDisabledOrBuilder() {
         if ((tlsModeCase_ == 1) && (disabledBuilder_ != null)) {
           return disabledBuilder_.getMessageOrBuilder();
@@ -2421,13 +2548,17 @@ public final class Common {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfigOrBuilder> enabledBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
+       * @return Whether the enabled field is set.
        */
+      @java.lang.Override
       public boolean hasEnabled() {
         return tlsModeCase_ == 2;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
+       * @return The enabled.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig getEnabled() {
         if (enabledBuilder_ == null) {
           if (tlsModeCase_ == 2) {
@@ -2521,6 +2652,7 @@ public final class Common {
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfigOrBuilder getEnabledOrBuilder() {
         if ((tlsModeCase_ == 2) && (enabledBuilder_ != null)) {
           return enabledBuilder_.getMessageOrBuilder();
@@ -2555,7 +2687,7 @@ public final class Common {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2619,6 +2751,7 @@ public final class Common {
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
+     * @return The caCertificate.
      */
     java.lang.String getCaCertificate();
     /**
@@ -2631,6 +2764,7 @@ public final class Common {
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
+     * @return The bytes for caCertificate.
      */
     com.google.protobuf.ByteString
         getCaCertificateBytes();
@@ -2638,7 +2772,7 @@ public final class Common {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.TLSConfig}
    */
-  public  static final class TLSConfig extends
+  public static final class TLSConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.TLSConfig)
       TLSConfigOrBuilder {
@@ -2649,6 +2783,13 @@ public final class Common {
     }
     private TLSConfig() {
       caCertificate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TLSConfig();
     }
 
     @java.lang.Override
@@ -2664,7 +2805,6 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2682,7 +2822,7 @@ public final class Common {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2725,7 +2865,9 @@ public final class Common {
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
+     * @return The caCertificate.
      */
+    @java.lang.Override
     public java.lang.String getCaCertificate() {
       java.lang.Object ref = caCertificate_;
       if (ref instanceof java.lang.String) {
@@ -2748,7 +2890,9 @@ public final class Common {
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
+     * @return The bytes for caCertificate.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCaCertificateBytes() {
       java.lang.Object ref = caCertificate_;
@@ -2777,7 +2921,7 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCaCertificateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCertificate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, caCertificate_);
       }
       unknownFields.writeTo(output);
@@ -2789,7 +2933,7 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCaCertificateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCertificate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, caCertificate_);
       }
       size += unknownFields.getSerializedSize();
@@ -2807,11 +2951,10 @@ public final class Common {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig) obj;
 
-      boolean result = true;
-      result = result && getCaCertificate()
-          .equals(other.getCaCertificate());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCaCertificate()
+          .equals(other.getCaCertificate())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2991,35 +3134,35 @@ public final class Common {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3077,6 +3220,7 @@ public final class Common {
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
+       * @return The caCertificate.
        */
       public java.lang.String getCaCertificate() {
         java.lang.Object ref = caCertificate_;
@@ -3100,6 +3244,7 @@ public final class Common {
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
+       * @return The bytes for caCertificate.
        */
       public com.google.protobuf.ByteString
           getCaCertificateBytes() {
@@ -3124,6 +3269,8 @@ public final class Common {
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
+       * @param value The caCertificate to set.
+       * @return This builder for chaining.
        */
       public Builder setCaCertificate(
           java.lang.String value) {
@@ -3145,6 +3292,7 @@ public final class Common {
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCaCertificate() {
         
@@ -3162,6 +3310,8 @@ public final class Common {
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
+       * @param value The bytes for caCertificate to set.
+       * @return This builder for chaining.
        */
       public Builder setCaCertificateBytes(
           com.google.protobuf.ByteString value) {
@@ -3177,7 +3327,7 @@ public final class Common {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3233,10 +3383,17 @@ public final class Common {
 
     /**
      * <code>string string_value = 1;</code>
+     * @return Whether the stringValue field is set.
+     */
+    boolean hasStringValue();
+    /**
+     * <code>string string_value = 1;</code>
+     * @return The stringValue.
      */
     java.lang.String getStringValue();
     /**
      * <code>string string_value = 1;</code>
+     * @return The bytes for stringValue.
      */
     com.google.protobuf.ByteString
         getStringValueBytes();
@@ -3246,7 +3403,7 @@ public final class Common {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ColumnValue}
    */
-  public  static final class ColumnValue extends
+  public static final class ColumnValue extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.ColumnValue)
       ColumnValueOrBuilder {
@@ -3256,6 +3413,13 @@ public final class Common {
       super(builder);
     }
     private ColumnValue() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ColumnValue();
     }
 
     @java.lang.Override
@@ -3271,7 +3435,6 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3289,7 +3452,7 @@ public final class Common {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3323,7 +3486,8 @@ public final class Common {
     private int valueCase_ = 0;
     private java.lang.Object value_;
     public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       STRING_VALUE(1),
       VALUE_NOT_SET(0);
       private final int value;
@@ -3331,6 +3495,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3359,6 +3525,14 @@ public final class Common {
     public static final int STRING_VALUE_FIELD_NUMBER = 1;
     /**
      * <code>string string_value = 1;</code>
+     * @return Whether the stringValue field is set.
+     */
+    public boolean hasStringValue() {
+      return valueCase_ == 1;
+    }
+    /**
+     * <code>string string_value = 1;</code>
+     * @return The stringValue.
      */
     public java.lang.String getStringValue() {
       java.lang.Object ref = "";
@@ -3379,6 +3553,7 @@ public final class Common {
     }
     /**
      * <code>string string_value = 1;</code>
+     * @return The bytes for stringValue.
      */
     public com.google.protobuf.ByteString
         getStringValueBytes() {
@@ -3443,20 +3618,17 @@ public final class Common {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue) obj;
 
-      boolean result = true;
-      result = result && getValueCase().equals(
-          other.getValueCase());
-      if (!result) return false;
+      if (!getValueCase().equals(other.getValueCase())) return false;
       switch (valueCase_) {
         case 1:
-          result = result && getStringValue()
-              .equals(other.getStringValue());
+          if (!getStringValue()
+              .equals(other.getStringValue())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3645,35 +3817,35 @@ public final class Common {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3744,7 +3916,17 @@ public final class Common {
 
       /**
        * <code>string string_value = 1;</code>
+       * @return Whether the stringValue field is set.
        */
+      @java.lang.Override
+      public boolean hasStringValue() {
+        return valueCase_ == 1;
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       * @return The stringValue.
+       */
+      @java.lang.Override
       public java.lang.String getStringValue() {
         java.lang.Object ref = "";
         if (valueCase_ == 1) {
@@ -3764,7 +3946,9 @@ public final class Common {
       }
       /**
        * <code>string string_value = 1;</code>
+       * @return The bytes for stringValue.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getStringValueBytes() {
         java.lang.Object ref = "";
@@ -3785,6 +3969,8 @@ public final class Common {
       }
       /**
        * <code>string string_value = 1;</code>
+       * @param value The stringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringValue(
           java.lang.String value) {
@@ -3798,6 +3984,7 @@ public final class Common {
       }
       /**
        * <code>string string_value = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStringValue() {
         if (valueCase_ == 1) {
@@ -3809,6 +3996,8 @@ public final class Common {
       }
       /**
        * <code>string string_value = 1;</code>
+       * @param value The bytes for stringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringValueBytes(
           com.google.protobuf.ByteString value) {
@@ -3824,7 +4013,7 @@ public final class Common {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3929,19 +4118,11 @@ public final class Common {
       "nsfer/v1/endpoint;endpoint\252\002%Yandex.Clou" +
       "d.Datatransfer.V1.EndPointb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.EmptyProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_AltName_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_AltName_fieldAccessorTable = new

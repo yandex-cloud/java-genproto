@@ -24,6 +24,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -43,6 +45,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
     java.lang.String getJobId();
     /**
@@ -52,6 +55,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
     com.google.protobuf.ByteString
         getJobIdBytes();
@@ -59,7 +63,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.GetJobRequest}
    */
-  public  static final class GetJobRequest extends
+  public static final class GetJobRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.GetJobRequest)
       GetJobRequestOrBuilder {
@@ -71,6 +75,13 @@ public final class PHJS {
     private GetJobRequest() {
       clusterId_ = "";
       jobId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetJobRequest();
     }
 
     @java.lang.Override
@@ -86,7 +97,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -110,7 +120,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -149,7 +159,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -168,7 +180,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -192,7 +206,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
+    @java.lang.Override
     public java.lang.String getJobId() {
       java.lang.Object ref = jobId_;
       if (ref instanceof java.lang.String) {
@@ -212,7 +228,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJobIdBytes() {
       java.lang.Object ref = jobId_;
@@ -241,10 +259,10 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jobId_);
       }
       unknownFields.writeTo(output);
@@ -256,10 +274,10 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jobId_);
       }
       size += unknownFields.getSerializedSize();
@@ -277,13 +295,12 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest other = (yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getJobId()
-          .equals(other.getJobId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -468,35 +485,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -554,6 +571,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -573,6 +591,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -593,6 +612,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -610,6 +631,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -623,6 +645,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -644,6 +668,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The jobId.
        */
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
@@ -664,6 +689,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for jobId.
        */
       public com.google.protobuf.ByteString
           getJobIdBytes() {
@@ -685,6 +711,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobId(
           java.lang.String value) {
@@ -703,6 +731,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearJobId() {
         
@@ -717,6 +746,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
@@ -732,7 +763,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -792,6 +823,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -800,6 +832,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -813,6 +846,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -823,6 +857,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -832,6 +867,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -847,6 +883,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -860,6 +897,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -867,7 +905,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ListJobsRequest}
    */
-  public  static final class ListJobsRequest extends
+  public static final class ListJobsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ListJobsRequest)
       ListJobsRequestOrBuilder {
@@ -878,9 +916,15 @@ public final class PHJS {
     }
     private ListJobsRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListJobsRequest();
     }
 
     @java.lang.Override
@@ -896,7 +940,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -931,7 +974,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -970,7 +1013,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -989,7 +1034,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -1015,7 +1062,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -1029,7 +1078,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -1049,7 +1100,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -1077,7 +1130,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -1101,7 +1156,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -1130,16 +1187,16 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -1151,17 +1208,17 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1179,17 +1236,16 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest other = (yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1385,35 +1441,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1478,6 +1534,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1497,6 +1554,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1517,6 +1575,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1534,6 +1594,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -1547,6 +1608,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1570,7 +1633,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1583,6 +1648,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1599,6 +1666,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1615,6 +1683,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1635,6 +1704,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1656,6 +1726,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1674,6 +1746,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1688,6 +1761,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1713,6 +1788,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1737,6 +1813,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1762,6 +1839,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1784,6 +1863,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1802,6 +1882,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1817,7 +1899,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1924,6 +2006,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1935,6 +2018,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1942,7 +2026,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ListJobsResponse}
    */
-  public  static final class ListJobsResponse extends
+  public static final class ListJobsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ListJobsResponse)
       ListJobsResponseOrBuilder {
@@ -1954,6 +2038,13 @@ public final class PHJS {
     private ListJobsResponse() {
       jobs_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListJobsResponse();
     }
 
     @java.lang.Override
@@ -1981,7 +2072,7 @@ public final class PHJS {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 jobs_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.PHJ.Job>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1996,7 +2087,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2010,7 +2101,7 @@ public final class PHJS {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           jobs_ = java.util.Collections.unmodifiableList(jobs_);
         }
         this.unknownFields = unknownFields.build();
@@ -2030,7 +2121,6 @@ public final class PHJS {
               yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse.class, yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int JOBS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dataproc.v1.PHJ.Job> jobs_;
     /**
@@ -2040,6 +2130,7 @@ public final class PHJS {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.v1.PHJ.Job> getJobsList() {
       return jobs_;
     }
@@ -2050,6 +2141,7 @@ public final class PHJS {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.v1.PHJ.JobOrBuilder> 
         getJobsOrBuilderList() {
       return jobs_;
@@ -2061,6 +2153,7 @@ public final class PHJS {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public int getJobsCount() {
       return jobs_.size();
     }
@@ -2071,6 +2164,7 @@ public final class PHJS {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.Job getJobs(int index) {
       return jobs_.get(index);
     }
@@ -2081,6 +2175,7 @@ public final class PHJS {
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.JobOrBuilder getJobsOrBuilder(
         int index) {
       return jobs_.get(index);
@@ -2097,7 +2192,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -2119,7 +2216,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -2151,7 +2250,7 @@ public final class PHJS {
       for (int i = 0; i < jobs_.size(); i++) {
         output.writeMessage(1, jobs_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2167,7 +2266,7 @@ public final class PHJS {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, jobs_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2185,13 +2284,12 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse other = (yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse) obj;
 
-      boolean result = true;
-      result = result && getJobsList()
-          .equals(other.getJobsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getJobsList()
+          .equals(other.getJobsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2376,9 +2474,8 @@ public final class PHJS {
       public yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse buildPartial() {
         yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse result = new yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (jobsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             jobs_ = java.util.Collections.unmodifiableList(jobs_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2387,42 +2484,41 @@ public final class PHJS {
           result.jobs_ = jobsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2499,7 +2595,7 @@ public final class PHJS {
       private java.util.List<yandex.cloud.api.dataproc.v1.PHJ.Job> jobs_ =
         java.util.Collections.emptyList();
       private void ensureJobsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           jobs_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.PHJ.Job>(jobs_);
           bitField0_ |= 0x00000001;
          }
@@ -2800,7 +2896,7 @@ public final class PHJS {
           jobsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.v1.PHJ.Job, yandex.cloud.api.dataproc.v1.PHJ.Job.Builder, yandex.cloud.api.dataproc.v1.PHJ.JobOrBuilder>(
                   jobs_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           jobs_ = null;
@@ -2818,6 +2914,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2840,6 +2937,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2863,6 +2961,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2883,6 +2983,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2899,6 +3000,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2914,7 +3017,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2974,6 +3077,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2982,6 +3086,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2992,6 +3097,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3000,6 +3106,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3010,6 +3117,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
+     * @return Whether the mapreduceJob field is set.
      */
     boolean hasMapreduceJob();
     /**
@@ -3018,6 +3126,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
+     * @return The mapreduceJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob();
     /**
@@ -3035,6 +3144,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
+     * @return Whether the sparkJob field is set.
      */
     boolean hasSparkJob();
     /**
@@ -3043,6 +3153,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
+     * @return The sparkJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob();
     /**
@@ -3060,6 +3171,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
+     * @return Whether the pysparkJob field is set.
      */
     boolean hasPysparkJob();
     /**
@@ -3068,6 +3180,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
+     * @return The pysparkJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob();
     /**
@@ -3085,6 +3198,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
+     * @return Whether the hiveJob field is set.
      */
     boolean hasHiveJob();
     /**
@@ -3093,6 +3207,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
+     * @return The hiveJob.
      */
     yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob();
     /**
@@ -3109,7 +3224,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.CreateJobRequest}
    */
-  public  static final class CreateJobRequest extends
+  public static final class CreateJobRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.CreateJobRequest)
       CreateJobRequestOrBuilder {
@@ -3121,6 +3236,13 @@ public final class PHJS {
     private CreateJobRequest() {
       clusterId_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateJobRequest();
     }
 
     @java.lang.Override
@@ -3136,7 +3258,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3216,7 +3337,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3250,7 +3371,8 @@ public final class PHJS {
     private int jobSpecCase_ = 0;
     private java.lang.Object jobSpec_;
     public enum JobSpecCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MAPREDUCE_JOB(3),
       SPARK_JOB(4),
       PYSPARK_JOB(5),
@@ -3261,6 +3383,8 @@ public final class PHJS {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3297,7 +3421,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -3316,7 +3442,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -3339,7 +3467,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3358,7 +3488,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3380,7 +3512,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
+     * @return Whether the mapreduceJob field is set.
      */
+    @java.lang.Override
     public boolean hasMapreduceJob() {
       return jobSpecCase_ == 3;
     }
@@ -3390,7 +3524,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
+     * @return The mapreduceJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
       if (jobSpecCase_ == 3) {
          return (yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob) jobSpec_;
@@ -3404,6 +3540,7 @@ public final class PHJS {
      *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
       if (jobSpecCase_ == 3) {
          return (yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob) jobSpec_;
@@ -3418,7 +3555,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
+     * @return Whether the sparkJob field is set.
      */
+    @java.lang.Override
     public boolean hasSparkJob() {
       return jobSpecCase_ == 4;
     }
@@ -3428,7 +3567,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
+     * @return The sparkJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
       if (jobSpecCase_ == 4) {
          return (yandex.cloud.api.dataproc.v1.PHJ.SparkJob) jobSpec_;
@@ -3442,6 +3583,7 @@ public final class PHJS {
      *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
       if (jobSpecCase_ == 4) {
          return (yandex.cloud.api.dataproc.v1.PHJ.SparkJob) jobSpec_;
@@ -3456,7 +3598,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
+     * @return Whether the pysparkJob field is set.
      */
+    @java.lang.Override
     public boolean hasPysparkJob() {
       return jobSpecCase_ == 5;
     }
@@ -3466,7 +3610,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
+     * @return The pysparkJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
       if (jobSpecCase_ == 5) {
          return (yandex.cloud.api.dataproc.v1.PHJ.PysparkJob) jobSpec_;
@@ -3480,6 +3626,7 @@ public final class PHJS {
      *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
       if (jobSpecCase_ == 5) {
          return (yandex.cloud.api.dataproc.v1.PHJ.PysparkJob) jobSpec_;
@@ -3494,7 +3641,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
+     * @return Whether the hiveJob field is set.
      */
+    @java.lang.Override
     public boolean hasHiveJob() {
       return jobSpecCase_ == 6;
     }
@@ -3504,7 +3653,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
+     * @return The hiveJob.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
       if (jobSpecCase_ == 6) {
          return (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_;
@@ -3518,6 +3669,7 @@ public final class PHJS {
      *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
       if (jobSpecCase_ == 6) {
          return (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_;
@@ -3539,10 +3691,10 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (jobSpecCase_ == 3) {
@@ -3566,10 +3718,10 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (jobSpecCase_ == 3) {
@@ -3603,36 +3755,33 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest other = (yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getJobSpecCase().equals(
-          other.getJobSpecCase());
-      if (!result) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getJobSpecCase().equals(other.getJobSpecCase())) return false;
       switch (jobSpecCase_) {
         case 3:
-          result = result && getMapreduceJob()
-              .equals(other.getMapreduceJob());
+          if (!getMapreduceJob()
+              .equals(other.getMapreduceJob())) return false;
           break;
         case 4:
-          result = result && getSparkJob()
-              .equals(other.getSparkJob());
+          if (!getSparkJob()
+              .equals(other.getSparkJob())) return false;
           break;
         case 5:
-          result = result && getPysparkJob()
-              .equals(other.getPysparkJob());
+          if (!getPysparkJob()
+              .equals(other.getPysparkJob())) return false;
           break;
         case 6:
-          result = result && getHiveJob()
-              .equals(other.getHiveJob());
+          if (!getHiveJob()
+              .equals(other.getHiveJob())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3868,35 +4017,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3990,6 +4139,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -4009,6 +4159,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -4029,6 +4180,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -4046,6 +4199,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -4059,6 +4213,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4079,6 +4235,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4098,6 +4255,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4118,6 +4276,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4135,6 +4295,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4148,6 +4309,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4169,7 +4332,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
+       * @return Whether the mapreduceJob field is set.
        */
+      @java.lang.Override
       public boolean hasMapreduceJob() {
         return jobSpecCase_ == 3;
       }
@@ -4179,7 +4344,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
+       * @return The mapreduceJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
         if (mapreduceJobBuilder_ == null) {
           if (jobSpecCase_ == 3) {
@@ -4297,6 +4464,7 @@ public final class PHJS {
        *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
         if ((jobSpecCase_ == 3) && (mapreduceJobBuilder_ != null)) {
           return mapreduceJobBuilder_.getMessageOrBuilder();
@@ -4341,7 +4509,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
+       * @return Whether the sparkJob field is set.
        */
+      @java.lang.Override
       public boolean hasSparkJob() {
         return jobSpecCase_ == 4;
       }
@@ -4351,7 +4521,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
+       * @return The sparkJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
         if (sparkJobBuilder_ == null) {
           if (jobSpecCase_ == 4) {
@@ -4469,6 +4641,7 @@ public final class PHJS {
        *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
         if ((jobSpecCase_ == 4) && (sparkJobBuilder_ != null)) {
           return sparkJobBuilder_.getMessageOrBuilder();
@@ -4513,7 +4686,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
+       * @return Whether the pysparkJob field is set.
        */
+      @java.lang.Override
       public boolean hasPysparkJob() {
         return jobSpecCase_ == 5;
       }
@@ -4523,7 +4698,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
+       * @return The pysparkJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
         if (pysparkJobBuilder_ == null) {
           if (jobSpecCase_ == 5) {
@@ -4641,6 +4818,7 @@ public final class PHJS {
        *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
         if ((jobSpecCase_ == 5) && (pysparkJobBuilder_ != null)) {
           return pysparkJobBuilder_.getMessageOrBuilder();
@@ -4685,7 +4863,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
+       * @return Whether the hiveJob field is set.
        */
+      @java.lang.Override
       public boolean hasHiveJob() {
         return jobSpecCase_ == 6;
       }
@@ -4695,7 +4875,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
+       * @return The hiveJob.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
         if (hiveJobBuilder_ == null) {
           if (jobSpecCase_ == 6) {
@@ -4813,6 +4995,7 @@ public final class PHJS {
        *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
         if ((jobSpecCase_ == 6) && (hiveJobBuilder_ != null)) {
           return hiveJobBuilder_.getMessageOrBuilder();
@@ -4851,7 +5034,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4911,6 +5094,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -4919,6 +5103,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -4929,6 +5114,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
     java.lang.String getJobId();
     /**
@@ -4937,6 +5123,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
     com.google.protobuf.ByteString
         getJobIdBytes();
@@ -4944,7 +5131,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.CreateJobMetadata}
    */
-  public  static final class CreateJobMetadata extends
+  public static final class CreateJobMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.CreateJobMetadata)
       CreateJobMetadataOrBuilder {
@@ -4956,6 +5143,13 @@ public final class PHJS {
     private CreateJobMetadata() {
       clusterId_ = "";
       jobId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateJobMetadata();
     }
 
     @java.lang.Override
@@ -4971,7 +5165,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4995,7 +5188,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5034,7 +5227,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5053,7 +5248,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5076,7 +5273,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
+    @java.lang.Override
     public java.lang.String getJobId() {
       java.lang.Object ref = jobId_;
       if (ref instanceof java.lang.String) {
@@ -5095,7 +5294,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJobIdBytes() {
       java.lang.Object ref = jobId_;
@@ -5124,10 +5325,10 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jobId_);
       }
       unknownFields.writeTo(output);
@@ -5139,10 +5340,10 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jobId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5160,13 +5361,12 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.CreateJobMetadata other = (yandex.cloud.api.dataproc.v1.PHJS.CreateJobMetadata) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getJobId()
-          .equals(other.getJobId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5351,35 +5551,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5437,6 +5637,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -5456,6 +5657,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -5476,6 +5678,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -5493,6 +5697,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -5506,6 +5711,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5526,6 +5733,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The jobId.
        */
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
@@ -5545,6 +5753,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for jobId.
        */
       public com.google.protobuf.ByteString
           getJobIdBytes() {
@@ -5565,6 +5774,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobId(
           java.lang.String value) {
@@ -5582,6 +5793,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearJobId() {
         
@@ -5595,6 +5807,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5610,7 +5824,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5670,6 +5884,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -5678,6 +5893,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -5688,6 +5904,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
     java.lang.String getJobId();
     /**
@@ -5696,6 +5913,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
     com.google.protobuf.ByteString
         getJobIdBytes();
@@ -5703,7 +5921,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.CancelJobRequest}
    */
-  public  static final class CancelJobRequest extends
+  public static final class CancelJobRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.CancelJobRequest)
       CancelJobRequestOrBuilder {
@@ -5715,6 +5933,13 @@ public final class PHJS {
     private CancelJobRequest() {
       clusterId_ = "";
       jobId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelJobRequest();
     }
 
     @java.lang.Override
@@ -5730,7 +5955,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5754,7 +5978,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5793,7 +6017,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -5812,7 +6038,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -5835,7 +6063,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
+    @java.lang.Override
     public java.lang.String getJobId() {
       java.lang.Object ref = jobId_;
       if (ref instanceof java.lang.String) {
@@ -5854,7 +6084,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJobIdBytes() {
       java.lang.Object ref = jobId_;
@@ -5883,10 +6115,10 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jobId_);
       }
       unknownFields.writeTo(output);
@@ -5898,10 +6130,10 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jobId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5919,13 +6151,12 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest other = (yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getJobId()
-          .equals(other.getJobId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6110,35 +6341,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6196,6 +6427,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -6215,6 +6447,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -6235,6 +6468,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -6252,6 +6487,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -6265,6 +6501,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6285,6 +6523,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The jobId.
        */
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
@@ -6304,6 +6543,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for jobId.
        */
       public com.google.protobuf.ByteString
           getJobIdBytes() {
@@ -6324,6 +6564,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobId(
           java.lang.String value) {
@@ -6341,6 +6583,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearJobId() {
         
@@ -6354,6 +6597,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6369,7 +6614,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6429,6 +6674,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -6437,6 +6683,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -6447,6 +6694,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
     java.lang.String getJobId();
     /**
@@ -6455,6 +6703,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
     com.google.protobuf.ByteString
         getJobIdBytes();
@@ -6468,6 +6717,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1048576"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -6478,6 +6728,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -6487,6 +6738,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -6494,7 +6746,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ListJobLogRequest}
    */
-  public  static final class ListJobLogRequest extends
+  public static final class ListJobLogRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ListJobLogRequest)
       ListJobLogRequestOrBuilder {
@@ -6506,8 +6758,14 @@ public final class PHJS {
     private ListJobLogRequest() {
       clusterId_ = "";
       jobId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListJobLogRequest();
     }
 
     @java.lang.Override
@@ -6523,7 +6781,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6558,7 +6815,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6597,7 +6854,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -6616,7 +6875,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -6639,7 +6900,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
+    @java.lang.Override
     public java.lang.String getJobId() {
       java.lang.Object ref = jobId_;
       if (ref instanceof java.lang.String) {
@@ -6658,7 +6921,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJobIdBytes() {
       java.lang.Object ref = jobId_;
@@ -6684,7 +6949,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1048576"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -6698,7 +6965,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -6718,7 +6987,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -6747,16 +7018,16 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jobId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -6768,17 +7039,17 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jobId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -6796,17 +7067,16 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest other = (yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getJobId()
-          .equals(other.getJobId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7002,35 +7272,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7095,6 +7365,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -7114,6 +7385,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -7134,6 +7406,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -7151,6 +7425,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -7164,6 +7439,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7184,6 +7461,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The jobId.
        */
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
@@ -7203,6 +7481,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for jobId.
        */
       public com.google.protobuf.ByteString
           getJobIdBytes() {
@@ -7223,6 +7502,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobId(
           java.lang.String value) {
@@ -7240,6 +7521,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearJobId() {
         
@@ -7253,6 +7535,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7276,7 +7560,9 @@ public final class PHJS {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1048576"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -7289,6 +7575,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1048576"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -7305,6 +7593,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "&lt;=1048576"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -7321,6 +7610,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -7341,6 +7631,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -7362,6 +7653,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -7380,6 +7673,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -7394,6 +7688,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -7409,7 +7705,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7469,6 +7765,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string content = 1;</code>
+     * @return The content.
      */
     java.lang.String getContent();
     /**
@@ -7477,6 +7774,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string content = 1;</code>
+     * @return The bytes for content.
      */
     com.google.protobuf.ByteString
         getContentBytes();
@@ -7491,6 +7789,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -7503,6 +7802,7 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -7510,7 +7810,7 @@ public final class PHJS {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.ListJobLogResponse}
    */
-  public  static final class ListJobLogResponse extends
+  public static final class ListJobLogResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.ListJobLogResponse)
       ListJobLogResponseOrBuilder {
@@ -7522,6 +7822,13 @@ public final class PHJS {
     private ListJobLogResponse() {
       content_ = "";
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListJobLogResponse();
     }
 
     @java.lang.Override
@@ -7537,7 +7844,6 @@ public final class PHJS {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7561,7 +7867,7 @@ public final class PHJS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7600,7 +7906,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string content = 1;</code>
+     * @return The content.
      */
+    @java.lang.Override
     public java.lang.String getContent() {
       java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
@@ -7619,7 +7927,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string content = 1;</code>
+     * @return The bytes for content.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContentBytes() {
       java.lang.Object ref = content_;
@@ -7646,7 +7956,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -7669,7 +7981,9 @@ public final class PHJS {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -7698,10 +8012,10 @@ public final class PHJS {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -7713,10 +8027,10 @@ public final class PHJS {
       if (size != -1) return size;
 
       size = 0;
-      if (!getContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -7734,13 +8048,12 @@ public final class PHJS {
       }
       yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse other = (yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse) obj;
 
-      boolean result = true;
-      result = result && getContent()
-          .equals(other.getContent());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getContent()
+          .equals(other.getContent())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7925,35 +8238,35 @@ public final class PHJS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8011,6 +8324,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string content = 1;</code>
+       * @return The content.
        */
       public java.lang.String getContent() {
         java.lang.Object ref = content_;
@@ -8030,6 +8344,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string content = 1;</code>
+       * @return The bytes for content.
        */
       public com.google.protobuf.ByteString
           getContentBytes() {
@@ -8050,6 +8365,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string content = 1;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(
           java.lang.String value) {
@@ -8067,6 +8384,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string content = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         
@@ -8080,6 +8398,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string content = 1;</code>
+       * @param value The bytes for content to set.
+       * @return This builder for chaining.
        */
       public Builder setContentBytes(
           com.google.protobuf.ByteString value) {
@@ -8104,6 +8424,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -8127,6 +8448,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -8151,6 +8473,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -8172,6 +8496,7 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -8189,6 +8514,8 @@ public final class PHJS {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -8204,7 +8531,7 @@ public final class PHJS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8360,15 +8687,7 @@ public final class PHJS {
       "dex-cloud/go-genproto/yandex/cloud/datap" +
       "roc/v1;dataprocb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -8376,7 +8695,7 @@ public final class PHJS {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_dataproc_v1_GetJobRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_GetJobRequest_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/host_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class HostGroupServiceGrpc {
 
   private HostGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class HostGroupServiceGrpc {
     if ((getGetMethod = HostGroupServiceGrpc.getGetMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getGetMethod = HostGroupServiceGrpc.getGetMethod) == null) {
-          HostGroupServiceGrpc.getGetMethod = getGetMethod = 
+          HostGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest, yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest,
@@ -76,22 +63,21 @@ public final class HostGroupServiceGrpc {
     if ((getListMethod = HostGroupServiceGrpc.getListMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getListMethod = HostGroupServiceGrpc.getListMethod) == null) {
-          HostGroupServiceGrpc.getListMethod = getListMethod = 
+          HostGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest,
@@ -108,22 +94,21 @@ public final class HostGroupServiceGrpc {
     if ((getCreateMethod = HostGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getCreateMethod = HostGroupServiceGrpc.getCreateMethod) == null) {
-          HostGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          HostGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest,
@@ -140,22 +125,21 @@ public final class HostGroupServiceGrpc {
     if ((getUpdateMethod = HostGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getUpdateMethod = HostGroupServiceGrpc.getUpdateMethod) == null) {
-          HostGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          HostGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest,
@@ -172,22 +156,21 @@ public final class HostGroupServiceGrpc {
     if ((getDeleteMethod = HostGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getDeleteMethod = HostGroupServiceGrpc.getDeleteMethod) == null) {
-          HostGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          HostGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest,
@@ -204,22 +187,21 @@ public final class HostGroupServiceGrpc {
     if ((getListOperationsMethod = HostGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getListOperationsMethod = HostGroupServiceGrpc.getListOperationsMethod) == null) {
-          HostGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          HostGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest,
@@ -236,22 +218,21 @@ public final class HostGroupServiceGrpc {
     if ((getListInstancesMethod = HostGroupServiceGrpc.getListInstancesMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getListInstancesMethod = HostGroupServiceGrpc.getListInstancesMethod) == null) {
-          HostGroupServiceGrpc.getListInstancesMethod = getListInstancesMethod = 
+          HostGroupServiceGrpc.getListInstancesMethod = getListInstancesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "ListInstances"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInstances"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("ListInstances"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("ListInstances"))
+              .build();
         }
-     }
-     return getListInstancesMethod;
+      }
+    }
+    return getListInstancesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest,
@@ -268,29 +249,35 @@ public final class HostGroupServiceGrpc {
     if ((getListHostsMethod = HostGroupServiceGrpc.getListHostsMethod) == null) {
       synchronized (HostGroupServiceGrpc.class) {
         if ((getListHostsMethod = HostGroupServiceGrpc.getListHostsMethod) == null) {
-          HostGroupServiceGrpc.getListHostsMethod = getListHostsMethod = 
+          HostGroupServiceGrpc.getListHostsMethod = getListHostsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.HostGroupService", "ListHosts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHosts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("ListHosts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new HostGroupServiceMethodDescriptorSupplier("ListHosts"))
+              .build();
         }
-     }
-     return getListHostsMethod;
+      }
+    }
+    return getListHostsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static HostGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new HostGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HostGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HostGroupServiceStub>() {
+        @java.lang.Override
+        public HostGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HostGroupServiceStub(channel, callOptions);
+        }
+      };
+    return HostGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -298,7 +285,14 @@ public final class HostGroupServiceGrpc {
    */
   public static HostGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new HostGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HostGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HostGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public HostGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HostGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return HostGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -306,7 +300,14 @@ public final class HostGroupServiceGrpc {
    */
   public static HostGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new HostGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HostGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HostGroupServiceFutureStub>() {
+        @java.lang.Override
+        public HostGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HostGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return HostGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -323,7 +324,7 @@ public final class HostGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -333,7 +334,7 @@ public final class HostGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -343,7 +344,7 @@ public final class HostGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -353,7 +354,7 @@ public final class HostGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -363,7 +364,7 @@ public final class HostGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -373,7 +374,7 @@ public final class HostGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -383,7 +384,7 @@ public final class HostGroupServiceGrpc {
      */
     public void listInstances(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInstancesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInstancesMethod(), responseObserver);
     }
 
     /**
@@ -393,63 +394,63 @@ public final class HostGroupServiceGrpc {
      */
     public void listHosts(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHostsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHostsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest,
                 yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest,
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest,
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListInstancesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest,
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse>(
                   this, METHODID_LIST_INSTANCES)))
           .addMethod(
             getListHostsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest,
                 yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse>(
@@ -463,19 +464,15 @@ public final class HostGroupServiceGrpc {
    * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
-  public static final class HostGroupServiceStub extends io.grpc.stub.AbstractStub<HostGroupServiceStub> {
-    private HostGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HostGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HostGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<HostGroupServiceStub> {
+    private HostGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HostGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HostGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HostGroupServiceStub(channel, callOptions);
     }
 
@@ -486,7 +483,7 @@ public final class HostGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -497,7 +494,7 @@ public final class HostGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -508,7 +505,7 @@ public final class HostGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -519,7 +516,7 @@ public final class HostGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -530,7 +527,7 @@ public final class HostGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -541,7 +538,7 @@ public final class HostGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -552,7 +549,7 @@ public final class HostGroupServiceGrpc {
      */
     public void listInstances(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInstancesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -563,7 +560,7 @@ public final class HostGroupServiceGrpc {
      */
     public void listHosts(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -573,19 +570,15 @@ public final class HostGroupServiceGrpc {
    * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
-  public static final class HostGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<HostGroupServiceBlockingStub> {
-    private HostGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HostGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HostGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<HostGroupServiceBlockingStub> {
+    private HostGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HostGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HostGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HostGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -595,7 +588,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup get(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -605,7 +598,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse list(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -615,7 +608,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -625,7 +618,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -635,7 +628,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -645,7 +638,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse listOperations(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -655,7 +648,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse listInstances(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInstancesMethod(), getCallOptions(), request);
     }
 
@@ -665,7 +658,7 @@ public final class HostGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse listHosts(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHostsMethod(), getCallOptions(), request);
     }
   }
@@ -675,19 +668,15 @@ public final class HostGroupServiceGrpc {
    * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
-  public static final class HostGroupServiceFutureStub extends io.grpc.stub.AbstractStub<HostGroupServiceFutureStub> {
-    private HostGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HostGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HostGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<HostGroupServiceFutureStub> {
+    private HostGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HostGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HostGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HostGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -698,7 +687,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup> get(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -709,7 +698,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse> list(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -720,7 +709,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.CreateHostGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -731,7 +720,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -742,7 +731,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.DeleteHostGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -753,7 +742,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse> listOperations(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -764,7 +753,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse> listInstances(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInstancesMethod(), getCallOptions()), request);
     }
 
@@ -775,7 +764,7 @@ public final class HostGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse> listHosts(
         yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request);
     }
   }

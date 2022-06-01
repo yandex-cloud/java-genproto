@@ -1,19 +1,6 @@
 package yandex.cloud.api.apploadbalancer.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/apploadbalancer/v1/load_balancer_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class LoadBalancerServiceGrpc {
 
   private LoadBalancerServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getGetMethod = LoadBalancerServiceGrpc.getGetMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getGetMethod = LoadBalancerServiceGrpc.getGetMethod) == null) {
-          LoadBalancerServiceGrpc.getGetMethod = getGetMethod = 
+          LoadBalancerServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest,
@@ -76,22 +63,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getListMethod = LoadBalancerServiceGrpc.getListMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getListMethod = LoadBalancerServiceGrpc.getListMethod) == null) {
-          LoadBalancerServiceGrpc.getListMethod = getListMethod = 
+          LoadBalancerServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest,
@@ -108,22 +94,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getCreateMethod = LoadBalancerServiceGrpc.getCreateMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getCreateMethod = LoadBalancerServiceGrpc.getCreateMethod) == null) {
-          LoadBalancerServiceGrpc.getCreateMethod = getCreateMethod = 
+          LoadBalancerServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest,
@@ -140,22 +125,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getUpdateMethod = LoadBalancerServiceGrpc.getUpdateMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getUpdateMethod = LoadBalancerServiceGrpc.getUpdateMethod) == null) {
-          LoadBalancerServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          LoadBalancerServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest,
@@ -172,22 +156,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getDeleteMethod = LoadBalancerServiceGrpc.getDeleteMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getDeleteMethod = LoadBalancerServiceGrpc.getDeleteMethod) == null) {
-          LoadBalancerServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          LoadBalancerServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest,
@@ -204,22 +187,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getStartMethod = LoadBalancerServiceGrpc.getStartMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getStartMethod = LoadBalancerServiceGrpc.getStartMethod) == null) {
-          LoadBalancerServiceGrpc.getStartMethod = getStartMethod = 
+          LoadBalancerServiceGrpc.getStartMethod = getStartMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "Start"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Start"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Start"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Start"))
+              .build();
         }
-     }
-     return getStartMethod;
+      }
+    }
+    return getStartMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest,
@@ -236,22 +218,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getStopMethod = LoadBalancerServiceGrpc.getStopMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getStopMethod = LoadBalancerServiceGrpc.getStopMethod) == null) {
-          LoadBalancerServiceGrpc.getStopMethod = getStopMethod = 
+          LoadBalancerServiceGrpc.getStopMethod = getStopMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "Stop"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Stop"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("Stop"))
+              .build();
         }
-     }
-     return getStopMethod;
+      }
+    }
+    return getStopMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest,
@@ -268,22 +249,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getAddListenerMethod = LoadBalancerServiceGrpc.getAddListenerMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getAddListenerMethod = LoadBalancerServiceGrpc.getAddListenerMethod) == null) {
-          LoadBalancerServiceGrpc.getAddListenerMethod = getAddListenerMethod = 
+          LoadBalancerServiceGrpc.getAddListenerMethod = getAddListenerMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "AddListener"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddListener"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("AddListener"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("AddListener"))
+              .build();
         }
-     }
-     return getAddListenerMethod;
+      }
+    }
+    return getAddListenerMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest,
@@ -300,22 +280,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getRemoveListenerMethod = LoadBalancerServiceGrpc.getRemoveListenerMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getRemoveListenerMethod = LoadBalancerServiceGrpc.getRemoveListenerMethod) == null) {
-          LoadBalancerServiceGrpc.getRemoveListenerMethod = getRemoveListenerMethod = 
+          LoadBalancerServiceGrpc.getRemoveListenerMethod = getRemoveListenerMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "RemoveListener"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveListener"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("RemoveListener"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("RemoveListener"))
+              .build();
         }
-     }
-     return getRemoveListenerMethod;
+      }
+    }
+    return getRemoveListenerMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest,
@@ -332,22 +311,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getUpdateListenerMethod = LoadBalancerServiceGrpc.getUpdateListenerMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getUpdateListenerMethod = LoadBalancerServiceGrpc.getUpdateListenerMethod) == null) {
-          LoadBalancerServiceGrpc.getUpdateListenerMethod = getUpdateListenerMethod = 
+          LoadBalancerServiceGrpc.getUpdateListenerMethod = getUpdateListenerMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "UpdateListener"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateListener"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("UpdateListener"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("UpdateListener"))
+              .build();
         }
-     }
-     return getUpdateListenerMethod;
+      }
+    }
+    return getUpdateListenerMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest,
@@ -364,22 +342,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getAddSniMatchMethod = LoadBalancerServiceGrpc.getAddSniMatchMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getAddSniMatchMethod = LoadBalancerServiceGrpc.getAddSniMatchMethod) == null) {
-          LoadBalancerServiceGrpc.getAddSniMatchMethod = getAddSniMatchMethod = 
+          LoadBalancerServiceGrpc.getAddSniMatchMethod = getAddSniMatchMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "AddSniMatch"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddSniMatch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("AddSniMatch"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("AddSniMatch"))
+              .build();
         }
-     }
-     return getAddSniMatchMethod;
+      }
+    }
+    return getAddSniMatchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest,
@@ -396,22 +373,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getUpdateSniMatchMethod = LoadBalancerServiceGrpc.getUpdateSniMatchMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getUpdateSniMatchMethod = LoadBalancerServiceGrpc.getUpdateSniMatchMethod) == null) {
-          LoadBalancerServiceGrpc.getUpdateSniMatchMethod = getUpdateSniMatchMethod = 
+          LoadBalancerServiceGrpc.getUpdateSniMatchMethod = getUpdateSniMatchMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "UpdateSniMatch"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSniMatch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("UpdateSniMatch"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("UpdateSniMatch"))
+              .build();
         }
-     }
-     return getUpdateSniMatchMethod;
+      }
+    }
+    return getUpdateSniMatchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest,
@@ -428,22 +404,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getRemoveSniMatchMethod = LoadBalancerServiceGrpc.getRemoveSniMatchMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getRemoveSniMatchMethod = LoadBalancerServiceGrpc.getRemoveSniMatchMethod) == null) {
-          LoadBalancerServiceGrpc.getRemoveSniMatchMethod = getRemoveSniMatchMethod = 
+          LoadBalancerServiceGrpc.getRemoveSniMatchMethod = getRemoveSniMatchMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "RemoveSniMatch"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveSniMatch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("RemoveSniMatch"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("RemoveSniMatch"))
+              .build();
         }
-     }
-     return getRemoveSniMatchMethod;
+      }
+    }
+    return getRemoveSniMatchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest,
@@ -460,22 +435,21 @@ public final class LoadBalancerServiceGrpc {
     if ((getGetTargetStatesMethod = LoadBalancerServiceGrpc.getGetTargetStatesMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getGetTargetStatesMethod = LoadBalancerServiceGrpc.getGetTargetStatesMethod) == null) {
-          LoadBalancerServiceGrpc.getGetTargetStatesMethod = getGetTargetStatesMethod = 
+          LoadBalancerServiceGrpc.getGetTargetStatesMethod = getGetTargetStatesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "GetTargetStates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTargetStates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("GetTargetStates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("GetTargetStates"))
+              .build();
         }
-     }
-     return getGetTargetStatesMethod;
+      }
+    }
+    return getGetTargetStatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest,
@@ -492,29 +466,35 @@ public final class LoadBalancerServiceGrpc {
     if ((getListOperationsMethod = LoadBalancerServiceGrpc.getListOperationsMethod) == null) {
       synchronized (LoadBalancerServiceGrpc.class) {
         if ((getListOperationsMethod = LoadBalancerServiceGrpc.getListOperationsMethod) == null) {
-          LoadBalancerServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          LoadBalancerServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.apploadbalancer.v1.LoadBalancerService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LoadBalancerServiceStub newStub(io.grpc.Channel channel) {
-    return new LoadBalancerServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LoadBalancerServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LoadBalancerServiceStub>() {
+        @java.lang.Override
+        public LoadBalancerServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LoadBalancerServiceStub(channel, callOptions);
+        }
+      };
+    return LoadBalancerServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -522,7 +502,14 @@ public final class LoadBalancerServiceGrpc {
    */
   public static LoadBalancerServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LoadBalancerServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LoadBalancerServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LoadBalancerServiceBlockingStub>() {
+        @java.lang.Override
+        public LoadBalancerServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LoadBalancerServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LoadBalancerServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -530,7 +517,14 @@ public final class LoadBalancerServiceGrpc {
    */
   public static LoadBalancerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LoadBalancerServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LoadBalancerServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LoadBalancerServiceFutureStub>() {
+        @java.lang.Override
+        public LoadBalancerServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LoadBalancerServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LoadBalancerServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -548,7 +542,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -558,7 +552,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -568,7 +562,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -578,7 +572,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -588,7 +582,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -598,7 +592,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void start(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
     }
 
     /**
@@ -608,7 +602,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void stop(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
 
     /**
@@ -618,7 +612,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void addListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddListenerMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddListenerMethod(), responseObserver);
     }
 
     /**
@@ -628,7 +622,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void removeListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveListenerMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveListenerMethod(), responseObserver);
     }
 
     /**
@@ -638,7 +632,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void updateListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateListenerMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateListenerMethod(), responseObserver);
     }
 
     /**
@@ -649,7 +643,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void addSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddSniMatchMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddSniMatchMethod(), responseObserver);
     }
 
     /**
@@ -660,7 +654,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void updateSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSniMatchMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSniMatchMethod(), responseObserver);
     }
 
     /**
@@ -671,7 +665,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void removeSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveSniMatchMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveSniMatchMethod(), responseObserver);
     }
 
     /**
@@ -681,7 +675,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void getTargetStates(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTargetStatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTargetStatesMethod(), responseObserver);
     }
 
     /**
@@ -691,112 +685,112 @@ public final class LoadBalancerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest,
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest,
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getStartMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_START)))
           .addMethod(
             getStopMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
           .addMethod(
             getAddListenerMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_LISTENER)))
           .addMethod(
             getRemoveListenerMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_LISTENER)))
           .addMethod(
             getUpdateListenerMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_LISTENER)))
           .addMethod(
             getAddSniMatchMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_SNI_MATCH)))
           .addMethod(
             getUpdateSniMatchMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_SNI_MATCH)))
           .addMethod(
             getRemoveSniMatchMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_SNI_MATCH)))
           .addMethod(
             getGetTargetStatesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest,
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse>(
                   this, METHODID_GET_TARGET_STATES)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest,
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse>(
@@ -810,19 +804,15 @@ public final class LoadBalancerServiceGrpc {
    * A set of methods for managing application load balancers.
    * </pre>
    */
-  public static final class LoadBalancerServiceStub extends io.grpc.stub.AbstractStub<LoadBalancerServiceStub> {
-    private LoadBalancerServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LoadBalancerServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LoadBalancerServiceStub extends io.grpc.stub.AbstractAsyncStub<LoadBalancerServiceStub> {
+    private LoadBalancerServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LoadBalancerServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LoadBalancerServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LoadBalancerServiceStub(channel, callOptions);
     }
 
@@ -834,7 +824,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -845,7 +835,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -856,7 +846,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -867,7 +857,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -878,7 +868,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -889,7 +879,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void start(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -900,7 +890,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void stop(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -911,7 +901,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void addListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddListenerMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -922,7 +912,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void removeListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveListenerMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -933,7 +923,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void updateListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateListenerMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -945,7 +935,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void addSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddSniMatchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -957,7 +947,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void updateSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSniMatchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -969,7 +959,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void removeSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveSniMatchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -980,7 +970,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void getTargetStates(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTargetStatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -991,7 +981,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -1001,19 +991,15 @@ public final class LoadBalancerServiceGrpc {
    * A set of methods for managing application load balancers.
    * </pre>
    */
-  public static final class LoadBalancerServiceBlockingStub extends io.grpc.stub.AbstractStub<LoadBalancerServiceBlockingStub> {
-    private LoadBalancerServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LoadBalancerServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LoadBalancerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LoadBalancerServiceBlockingStub> {
+    private LoadBalancerServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LoadBalancerServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LoadBalancerServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LoadBalancerServiceBlockingStub(channel, callOptions);
     }
 
@@ -1024,7 +1010,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer get(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -1034,7 +1020,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse list(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -1044,7 +1030,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -1054,7 +1040,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -1064,7 +1050,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -1074,7 +1060,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStartMethod(), getCallOptions(), request);
     }
 
@@ -1084,7 +1070,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopMethod(), getCallOptions(), request);
     }
 
@@ -1094,7 +1080,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddListenerMethod(), getCallOptions(), request);
     }
 
@@ -1104,7 +1090,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveListenerMethod(), getCallOptions(), request);
     }
 
@@ -1114,7 +1100,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateListenerMethod(), getCallOptions(), request);
     }
 
@@ -1125,7 +1111,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddSniMatchMethod(), getCallOptions(), request);
     }
 
@@ -1136,7 +1122,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSniMatchMethod(), getCallOptions(), request);
     }
 
@@ -1147,7 +1133,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveSniMatchMethod(), getCallOptions(), request);
     }
 
@@ -1157,7 +1143,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse getTargetStates(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTargetStatesMethod(), getCallOptions(), request);
     }
 
@@ -1167,7 +1153,7 @@ public final class LoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -1177,19 +1163,15 @@ public final class LoadBalancerServiceGrpc {
    * A set of methods for managing application load balancers.
    * </pre>
    */
-  public static final class LoadBalancerServiceFutureStub extends io.grpc.stub.AbstractStub<LoadBalancerServiceFutureStub> {
-    private LoadBalancerServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LoadBalancerServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LoadBalancerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LoadBalancerServiceFutureStub> {
+    private LoadBalancerServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LoadBalancerServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LoadBalancerServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LoadBalancerServiceFutureStub(channel, callOptions);
     }
 
@@ -1201,7 +1183,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> get(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1212,7 +1194,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse> list(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1223,7 +1205,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1234,7 +1216,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1245,7 +1227,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1256,7 +1238,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request);
     }
 
@@ -1267,7 +1249,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request);
     }
 
@@ -1278,7 +1260,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addListener(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddListenerMethod(), getCallOptions()), request);
     }
 
@@ -1289,7 +1271,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeListener(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveListenerMethod(), getCallOptions()), request);
     }
 
@@ -1300,7 +1282,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateListener(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateListenerMethod(), getCallOptions()), request);
     }
 
@@ -1312,7 +1294,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addSniMatch(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddSniMatchMethod(), getCallOptions()), request);
     }
 
@@ -1324,7 +1306,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateSniMatch(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSniMatchMethod(), getCallOptions()), request);
     }
 
@@ -1336,7 +1318,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeSniMatch(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveSniMatchMethod(), getCallOptions()), request);
     }
 
@@ -1347,7 +1329,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse> getTargetStates(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTargetStatesMethod(), getCallOptions()), request);
     }
 
@@ -1358,7 +1340,7 @@ public final class LoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse> listOperations(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

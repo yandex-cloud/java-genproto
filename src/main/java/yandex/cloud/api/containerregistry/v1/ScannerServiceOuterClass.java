@@ -24,6 +24,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -32,6 +33,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -39,7 +41,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ScanRequest}
    */
-  public  static final class ScanRequest extends
+  public static final class ScanRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ScanRequest)
       ScanRequestOrBuilder {
@@ -50,6 +52,13 @@ public final class ScannerServiceOuterClass {
     }
     private ScanRequest() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScanRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class ScannerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,7 +91,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -122,7 +130,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -141,7 +151,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -170,7 +182,7 @@ public final class ScannerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -182,7 +194,7 @@ public final class ScannerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -200,11 +212,10 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ScanRequest other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ScanRequest) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -384,35 +395,35 @@ public final class ScannerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -466,6 +477,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -485,6 +497,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -505,6 +518,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -522,6 +537,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -535,6 +551,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -550,7 +568,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -610,6 +628,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1;</code>
+     * @return The scanResultId.
      */
     java.lang.String getScanResultId();
     /**
@@ -618,6 +637,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1;</code>
+     * @return The bytes for scanResultId.
      */
     com.google.protobuf.ByteString
         getScanResultIdBytes();
@@ -625,7 +645,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ScanMetadata}
    */
-  public  static final class ScanMetadata extends
+  public static final class ScanMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ScanMetadata)
       ScanMetadataOrBuilder {
@@ -636,6 +656,13 @@ public final class ScannerServiceOuterClass {
     }
     private ScanMetadata() {
       scanResultId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScanMetadata();
     }
 
     @java.lang.Override
@@ -651,7 +678,6 @@ public final class ScannerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -669,7 +695,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -708,7 +734,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1;</code>
+     * @return The scanResultId.
      */
+    @java.lang.Override
     public java.lang.String getScanResultId() {
       java.lang.Object ref = scanResultId_;
       if (ref instanceof java.lang.String) {
@@ -727,7 +755,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1;</code>
+     * @return The bytes for scanResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getScanResultIdBytes() {
       java.lang.Object ref = scanResultId_;
@@ -756,7 +786,7 @@ public final class ScannerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getScanResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scanResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scanResultId_);
       }
       unknownFields.writeTo(output);
@@ -768,7 +798,7 @@ public final class ScannerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getScanResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scanResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scanResultId_);
       }
       size += unknownFields.getSerializedSize();
@@ -786,11 +816,10 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ScanMetadata other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ScanMetadata) obj;
 
-      boolean result = true;
-      result = result && getScanResultId()
-          .equals(other.getScanResultId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScanResultId()
+          .equals(other.getScanResultId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -970,35 +999,35 @@ public final class ScannerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1052,6 +1081,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1;</code>
+       * @return The scanResultId.
        */
       public java.lang.String getScanResultId() {
         java.lang.Object ref = scanResultId_;
@@ -1071,6 +1101,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1;</code>
+       * @return The bytes for scanResultId.
        */
       public com.google.protobuf.ByteString
           getScanResultIdBytes() {
@@ -1091,6 +1122,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1;</code>
+       * @param value The scanResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setScanResultId(
           java.lang.String value) {
@@ -1108,6 +1141,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearScanResultId() {
         
@@ -1121,6 +1155,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1;</code>
+       * @param value The bytes for scanResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setScanResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1136,7 +1172,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1196,6 +1232,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The scanResultId.
      */
     java.lang.String getScanResultId();
     /**
@@ -1204,6 +1241,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for scanResultId.
      */
     com.google.protobuf.ByteString
         getScanResultIdBytes();
@@ -1211,7 +1249,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.GetScanResultRequest}
    */
-  public  static final class GetScanResultRequest extends
+  public static final class GetScanResultRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetScanResultRequest)
       GetScanResultRequestOrBuilder {
@@ -1222,6 +1260,13 @@ public final class ScannerServiceOuterClass {
     }
     private GetScanResultRequest() {
       scanResultId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetScanResultRequest();
     }
 
     @java.lang.Override
@@ -1237,7 +1282,6 @@ public final class ScannerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1255,7 +1299,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1294,7 +1338,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The scanResultId.
      */
+    @java.lang.Override
     public java.lang.String getScanResultId() {
       java.lang.Object ref = scanResultId_;
       if (ref instanceof java.lang.String) {
@@ -1313,7 +1359,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for scanResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getScanResultIdBytes() {
       java.lang.Object ref = scanResultId_;
@@ -1342,7 +1390,7 @@ public final class ScannerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getScanResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scanResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scanResultId_);
       }
       unknownFields.writeTo(output);
@@ -1354,7 +1402,7 @@ public final class ScannerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getScanResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scanResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scanResultId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1372,11 +1420,10 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.GetScanResultRequest other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.GetScanResultRequest) obj;
 
-      boolean result = true;
-      result = result && getScanResultId()
-          .equals(other.getScanResultId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScanResultId()
+          .equals(other.getScanResultId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1556,35 +1603,35 @@ public final class ScannerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1638,6 +1685,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The scanResultId.
        */
       public java.lang.String getScanResultId() {
         java.lang.Object ref = scanResultId_;
@@ -1657,6 +1705,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for scanResultId.
        */
       public com.google.protobuf.ByteString
           getScanResultIdBytes() {
@@ -1677,6 +1726,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The scanResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setScanResultId(
           java.lang.String value) {
@@ -1694,6 +1745,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearScanResultId() {
         
@@ -1707,6 +1759,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for scanResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setScanResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1722,7 +1776,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1782,6 +1836,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -1790,6 +1845,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -1797,7 +1853,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.GetLastScanResultRequest}
    */
-  public  static final class GetLastScanResultRequest extends
+  public static final class GetLastScanResultRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetLastScanResultRequest)
       GetLastScanResultRequestOrBuilder {
@@ -1808,6 +1864,13 @@ public final class ScannerServiceOuterClass {
     }
     private GetLastScanResultRequest() {
       imageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLastScanResultRequest();
     }
 
     @java.lang.Override
@@ -1823,7 +1886,6 @@ public final class ScannerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1841,7 +1903,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1880,7 +1942,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -1899,7 +1963,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -1928,7 +1994,7 @@ public final class ScannerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageId_);
       }
       unknownFields.writeTo(output);
@@ -1940,7 +2006,7 @@ public final class ScannerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1958,11 +2024,10 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.GetLastScanResultRequest other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.GetLastScanResultRequest) obj;
 
-      boolean result = true;
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2142,35 +2207,35 @@ public final class ScannerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2224,6 +2289,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -2243,6 +2309,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -2263,6 +2330,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -2280,6 +2349,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -2293,6 +2363,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2308,7 +2380,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2364,20 +2436,34 @@ public final class ScannerServiceOuterClass {
 
     /**
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the imageId field is set.
+     */
+    boolean hasImageId();
+    /**
+     * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
 
     /**
      * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the repositoryId field is set.
+     */
+    boolean hasRepositoryId();
+    /**
+     * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     java.lang.String getRepositoryId();
     /**
      * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
@@ -2392,6 +2478,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -2402,6 +2489,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -2411,6 +2499,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -2425,6 +2514,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -2437,6 +2527,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -2450,6 +2541,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
@@ -2461,6 +2553,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
@@ -2470,7 +2563,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListScanResultsRequest}
    */
-  public  static final class ListScanResultsRequest extends
+  public static final class ListScanResultsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListScanResultsRequest)
       ListScanResultsRequestOrBuilder {
@@ -2480,10 +2573,16 @@ public final class ScannerServiceOuterClass {
       super(builder);
     }
     private ListScanResultsRequest() {
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
       orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListScanResultsRequest();
     }
 
     @java.lang.Override
@@ -2499,7 +2598,6 @@ public final class ScannerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2546,7 +2644,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2580,7 +2678,8 @@ public final class ScannerServiceOuterClass {
     private int idCase_ = 0;
     private java.lang.Object id_;
     public enum IdCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       IMAGE_ID(1),
       REPOSITORY_ID(2),
       ID_NOT_SET(0);
@@ -2589,6 +2688,8 @@ public final class ScannerServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2618,6 +2719,14 @@ public final class ScannerServiceOuterClass {
     public static final int IMAGE_ID_FIELD_NUMBER = 1;
     /**
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the imageId field is set.
+     */
+    public boolean hasImageId() {
+      return idCase_ == 1;
+    }
+    /**
+     * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The imageId.
      */
     public java.lang.String getImageId() {
       java.lang.Object ref = "";
@@ -2638,6 +2747,7 @@ public final class ScannerServiceOuterClass {
     }
     /**
      * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for imageId.
      */
     public com.google.protobuf.ByteString
         getImageIdBytes() {
@@ -2661,6 +2771,14 @@ public final class ScannerServiceOuterClass {
     public static final int REPOSITORY_ID_FIELD_NUMBER = 2;
     /**
      * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return Whether the repositoryId field is set.
+     */
+    public boolean hasRepositoryId() {
+      return idCase_ == 2;
+    }
+    /**
+     * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The repositoryId.
      */
     public java.lang.String getRepositoryId() {
       java.lang.Object ref = "";
@@ -2681,6 +2799,7 @@ public final class ScannerServiceOuterClass {
     }
     /**
      * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for repositoryId.
      */
     public com.google.protobuf.ByteString
         getRepositoryIdBytes() {
@@ -2713,7 +2832,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -2727,7 +2848,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -2747,7 +2870,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -2774,7 +2899,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -2797,7 +2924,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -2823,7 +2952,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
+    @java.lang.Override
     public java.lang.String getOrderBy() {
       java.lang.Object ref = orderBy_;
       if (ref instanceof java.lang.String) {
@@ -2845,7 +2976,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrderByBytes() {
       java.lang.Object ref = orderBy_;
@@ -2883,13 +3016,13 @@ public final class ScannerServiceOuterClass {
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, orderBy_);
       }
       unknownFields.writeTo(output);
@@ -2911,13 +3044,13 @@ public final class ScannerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, orderBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -2935,32 +3068,29 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsRequest other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsRequest) obj;
 
-      boolean result = true;
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getOrderBy()
-          .equals(other.getOrderBy());
-      result = result && getIdCase().equals(
-          other.getIdCase());
-      if (!result) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
-          result = result && getImageId()
-              .equals(other.getImageId());
+          if (!getImageId()
+              .equals(other.getImageId())) return false;
           break;
         case 2:
-          result = result && getRepositoryId()
-              .equals(other.getRepositoryId());
+          if (!getRepositoryId()
+              .equals(other.getRepositoryId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3177,35 +3307,35 @@ public final class ScannerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3297,7 +3427,17 @@ public final class ScannerServiceOuterClass {
 
       /**
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the imageId field is set.
        */
+      @java.lang.Override
+      public boolean hasImageId() {
+        return idCase_ == 1;
+      }
+      /**
+       * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The imageId.
+       */
+      @java.lang.Override
       public java.lang.String getImageId() {
         java.lang.Object ref = "";
         if (idCase_ == 1) {
@@ -3317,7 +3457,9 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for imageId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getImageIdBytes() {
         java.lang.Object ref = "";
@@ -3338,6 +3480,8 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -3351,6 +3495,7 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         if (idCase_ == 1) {
@@ -3362,6 +3507,8 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string image_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3377,7 +3524,17 @@ public final class ScannerServiceOuterClass {
 
       /**
        * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return Whether the repositoryId field is set.
        */
+      @java.lang.Override
+      public boolean hasRepositoryId() {
+        return idCase_ == 2;
+      }
+      /**
+       * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The repositoryId.
+       */
+      @java.lang.Override
       public java.lang.String getRepositoryId() {
         java.lang.Object ref = "";
         if (idCase_ == 2) {
@@ -3397,7 +3554,9 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for repositoryId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRepositoryIdBytes() {
         java.lang.Object ref = "";
@@ -3418,6 +3577,8 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryId(
           java.lang.String value) {
@@ -3431,6 +3592,7 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRepositoryId() {
         if (idCase_ == 2) {
@@ -3442,6 +3604,8 @@ public final class ScannerServiceOuterClass {
       }
       /**
        * <code>string repository_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for repositoryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRepositoryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3466,7 +3630,9 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -3480,6 +3646,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -3497,6 +3665,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -3513,6 +3682,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -3533,6 +3703,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -3554,6 +3725,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -3572,6 +3745,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -3586,6 +3760,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3610,6 +3786,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -3633,6 +3810,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -3657,6 +3835,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -3678,6 +3858,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -3695,6 +3876,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -3718,6 +3901,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
         java.lang.Object ref = orderBy_;
@@ -3740,6 +3924,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
           getOrderByBytes() {
@@ -3763,6 +3948,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderBy(
           java.lang.String value) {
@@ -3783,6 +3970,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
@@ -3799,6 +3987,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
@@ -3814,7 +4004,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3923,6 +4113,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -3936,6 +4127,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -3943,7 +4135,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListScanResultsResponse}
    */
-  public  static final class ListScanResultsResponse extends
+  public static final class ListScanResultsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListScanResultsResponse)
       ListScanResultsResponseOrBuilder {
@@ -3955,6 +4147,13 @@ public final class ScannerServiceOuterClass {
     private ListScanResultsResponse() {
       scanResults_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListScanResultsResponse();
     }
 
     @java.lang.Override
@@ -3982,7 +4181,7 @@ public final class ScannerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 scanResults_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.Scanner.ScanResult>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3997,7 +4196,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4011,7 +4210,7 @@ public final class ScannerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           scanResults_ = java.util.Collections.unmodifiableList(scanResults_);
         }
         this.unknownFields = unknownFields.build();
@@ -4031,7 +4230,6 @@ public final class ScannerServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse.class, yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCAN_RESULTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.Scanner.ScanResult> scanResults_;
     /**
@@ -4041,6 +4239,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.ScanResult scan_results = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.Scanner.ScanResult> getScanResultsList() {
       return scanResults_;
     }
@@ -4051,6 +4250,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.ScanResult scan_results = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.Scanner.ScanResultOrBuilder> 
         getScanResultsOrBuilderList() {
       return scanResults_;
@@ -4062,6 +4262,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.ScanResult scan_results = 1;</code>
      */
+    @java.lang.Override
     public int getScanResultsCount() {
       return scanResults_.size();
     }
@@ -4072,6 +4273,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.ScanResult scan_results = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.ScanResult getScanResults(int index) {
       return scanResults_.get(index);
     }
@@ -4082,6 +4284,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.ScanResult scan_results = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.ScanResultOrBuilder getScanResultsOrBuilder(
         int index) {
       return scanResults_.get(index);
@@ -4100,7 +4303,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -4124,7 +4329,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -4156,7 +4363,7 @@ public final class ScannerServiceOuterClass {
       for (int i = 0; i < scanResults_.size(); i++) {
         output.writeMessage(1, scanResults_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -4172,7 +4379,7 @@ public final class ScannerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, scanResults_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -4190,13 +4397,12 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse) obj;
 
-      boolean result = true;
-      result = result && getScanResultsList()
-          .equals(other.getScanResultsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScanResultsList()
+          .equals(other.getScanResultsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4381,9 +4587,8 @@ public final class ScannerServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse buildPartial() {
         yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse result = new yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListScanResultsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (scanResultsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             scanResults_ = java.util.Collections.unmodifiableList(scanResults_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4392,42 +4597,41 @@ public final class ScannerServiceOuterClass {
           result.scanResults_ = scanResultsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4504,7 +4708,7 @@ public final class ScannerServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.Scanner.ScanResult> scanResults_ =
         java.util.Collections.emptyList();
       private void ensureScanResultsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           scanResults_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.Scanner.ScanResult>(scanResults_);
           bitField0_ |= 0x00000001;
          }
@@ -4805,7 +5009,7 @@ public final class ScannerServiceOuterClass {
           scanResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.Scanner.ScanResult, yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Builder, yandex.cloud.api.containerregistry.v1.Scanner.ScanResultOrBuilder>(
                   scanResults_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           scanResults_ = null;
@@ -4825,6 +5029,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -4849,6 +5054,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -4874,6 +5080,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -4896,6 +5104,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -4914,6 +5123,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -4929,7 +5140,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4989,6 +5200,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The scanResultId.
      */
     java.lang.String getScanResultId();
     /**
@@ -4997,6 +5209,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for scanResultId.
      */
     com.google.protobuf.ByteString
         getScanResultIdBytes();
@@ -5011,6 +5224,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -5021,6 +5235,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -5030,6 +5245,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -5044,6 +5260,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -5056,6 +5273,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -5069,6 +5287,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
@@ -5080,6 +5299,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
@@ -5087,7 +5307,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListVulnerabilitiesRequest}
    */
-  public  static final class ListVulnerabilitiesRequest extends
+  public static final class ListVulnerabilitiesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListVulnerabilitiesRequest)
       ListVulnerabilitiesRequestOrBuilder {
@@ -5098,10 +5318,16 @@ public final class ScannerServiceOuterClass {
     }
     private ListVulnerabilitiesRequest() {
       scanResultId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
       orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVulnerabilitiesRequest();
     }
 
     @java.lang.Override
@@ -5117,7 +5343,6 @@ public final class ScannerServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5158,7 +5383,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5197,7 +5422,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The scanResultId.
      */
+    @java.lang.Override
     public java.lang.String getScanResultId() {
       java.lang.Object ref = scanResultId_;
       if (ref instanceof java.lang.String) {
@@ -5216,7 +5443,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for scanResultId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getScanResultIdBytes() {
       java.lang.Object ref = scanResultId_;
@@ -5243,7 +5472,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -5257,7 +5488,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -5277,7 +5510,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -5304,7 +5539,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -5327,7 +5564,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -5353,7 +5592,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
      */
+    @java.lang.Override
     public java.lang.String getOrderBy() {
       java.lang.Object ref = orderBy_;
       if (ref instanceof java.lang.String) {
@@ -5375,7 +5616,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOrderByBytes() {
       java.lang.Object ref = orderBy_;
@@ -5404,19 +5647,19 @@ public final class ScannerServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getScanResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scanResultId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scanResultId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
       }
       unknownFields.writeTo(output);
@@ -5428,20 +5671,20 @@ public final class ScannerServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getScanResultIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scanResultId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scanResultId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -5459,19 +5702,18 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesRequest other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesRequest) obj;
 
-      boolean result = true;
-      result = result && getScanResultId()
-          .equals(other.getScanResultId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getOrderBy()
-          .equals(other.getOrderBy());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScanResultId()
+          .equals(other.getScanResultId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5672,35 +5914,35 @@ public final class ScannerServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5769,6 +6011,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The scanResultId.
        */
       public java.lang.String getScanResultId() {
         java.lang.Object ref = scanResultId_;
@@ -5788,6 +6031,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for scanResultId.
        */
       public com.google.protobuf.ByteString
           getScanResultIdBytes() {
@@ -5808,6 +6052,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The scanResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setScanResultId(
           java.lang.String value) {
@@ -5825,6 +6071,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearScanResultId() {
         
@@ -5838,6 +6085,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string scan_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for scanResultId to set.
+       * @return This builder for chaining.
        */
       public Builder setScanResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5862,7 +6111,9 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -5876,6 +6127,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -5893,6 +6146,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -5909,6 +6163,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -5929,6 +6184,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -5950,6 +6206,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -5968,6 +6226,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -5982,6 +6241,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -6006,6 +6267,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -6029,6 +6291,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -6053,6 +6316,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -6074,6 +6339,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -6091,6 +6357,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -6114,6 +6382,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
         java.lang.Object ref = orderBy_;
@@ -6136,6 +6405,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
           getOrderByBytes() {
@@ -6159,6 +6429,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderBy(
           java.lang.String value) {
@@ -6179,6 +6451,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
@@ -6195,6 +6468,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
@@ -6210,7 +6485,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6319,6 +6594,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -6332,6 +6608,7 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -6339,7 +6616,7 @@ public final class ScannerServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ListVulnerabilitiesResponse}
    */
-  public  static final class ListVulnerabilitiesResponse extends
+  public static final class ListVulnerabilitiesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListVulnerabilitiesResponse)
       ListVulnerabilitiesResponseOrBuilder {
@@ -6351,6 +6628,13 @@ public final class ScannerServiceOuterClass {
     private ListVulnerabilitiesResponse() {
       vulnerabilities_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVulnerabilitiesResponse();
     }
 
     @java.lang.Override
@@ -6378,7 +6662,7 @@ public final class ScannerServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 vulnerabilities_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6393,7 +6677,7 @@ public final class ScannerServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6407,7 +6691,7 @@ public final class ScannerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           vulnerabilities_ = java.util.Collections.unmodifiableList(vulnerabilities_);
         }
         this.unknownFields = unknownFields.build();
@@ -6427,7 +6711,6 @@ public final class ScannerServiceOuterClass {
               yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse.class, yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VULNERABILITIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability> vulnerabilities_;
     /**
@@ -6437,6 +6720,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Vulnerability vulnerabilities = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability> getVulnerabilitiesList() {
       return vulnerabilities_;
     }
@@ -6447,6 +6731,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Vulnerability vulnerabilities = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityOrBuilder> 
         getVulnerabilitiesOrBuilderList() {
       return vulnerabilities_;
@@ -6458,6 +6743,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Vulnerability vulnerabilities = 1;</code>
      */
+    @java.lang.Override
     public int getVulnerabilitiesCount() {
       return vulnerabilities_.size();
     }
@@ -6468,6 +6754,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Vulnerability vulnerabilities = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability getVulnerabilities(int index) {
       return vulnerabilities_.get(index);
     }
@@ -6478,6 +6765,7 @@ public final class ScannerServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Vulnerability vulnerabilities = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityOrBuilder getVulnerabilitiesOrBuilder(
         int index) {
       return vulnerabilities_.get(index);
@@ -6496,7 +6784,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -6520,7 +6810,9 @@ public final class ScannerServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -6552,7 +6844,7 @@ public final class ScannerServiceOuterClass {
       for (int i = 0; i < vulnerabilities_.size(); i++) {
         output.writeMessage(1, vulnerabilities_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -6568,7 +6860,7 @@ public final class ScannerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, vulnerabilities_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -6586,13 +6878,12 @@ public final class ScannerServiceOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse other = (yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse) obj;
 
-      boolean result = true;
-      result = result && getVulnerabilitiesList()
-          .equals(other.getVulnerabilitiesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVulnerabilitiesList()
+          .equals(other.getVulnerabilitiesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6777,9 +7068,8 @@ public final class ScannerServiceOuterClass {
       public yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse buildPartial() {
         yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse result = new yandex.cloud.api.containerregistry.v1.ScannerServiceOuterClass.ListVulnerabilitiesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (vulnerabilitiesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             vulnerabilities_ = java.util.Collections.unmodifiableList(vulnerabilities_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6788,42 +7078,41 @@ public final class ScannerServiceOuterClass {
           result.vulnerabilities_ = vulnerabilitiesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6900,7 +7189,7 @@ public final class ScannerServiceOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability> vulnerabilities_ =
         java.util.Collections.emptyList();
       private void ensureVulnerabilitiesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           vulnerabilities_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability>(vulnerabilities_);
           bitField0_ |= 0x00000001;
          }
@@ -7201,7 +7490,7 @@ public final class ScannerServiceOuterClass {
           vulnerabilitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability, yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Builder, yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityOrBuilder>(
                   vulnerabilities_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           vulnerabilities_ = null;
@@ -7221,6 +7510,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -7245,6 +7535,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -7270,6 +7561,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -7292,6 +7585,7 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -7310,6 +7604,8 @@ public final class ScannerServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -7325,7 +7621,7 @@ public final class ScannerServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7481,15 +7777,7 @@ public final class ScannerServiceOuterClass {
       "oud/containerregistry/v1;containerregist" +
       "ryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -7497,7 +7785,7 @@ public final class ScannerServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_ScanRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_ScanRequest_fieldAccessorTable = new

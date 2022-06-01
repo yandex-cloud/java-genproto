@@ -93,6 +93,8 @@ public final class RawLogs {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -100,6 +102,10 @@ public final class RawLogs {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static RawLogsStatus forNumber(int value) {
       switch (value) {
         case 0: return RAW_LOGS_STATUS_UNSPECIFIED;
@@ -124,6 +130,10 @@ public final class RawLogs {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -168,6 +178,7 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bucketName.
      */
     java.lang.String getBucketName();
     /**
@@ -176,6 +187,7 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for bucketName.
      */
     com.google.protobuf.ByteString
         getBucketNameBytes();
@@ -186,6 +198,7 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bucketRegion.
      */
     java.lang.String getBucketRegion();
     /**
@@ -194,6 +207,7 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for bucketRegion.
      */
     com.google.protobuf.ByteString
         getBucketRegionBytes();
@@ -208,6 +222,7 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filePrefix.
      */
     java.lang.String getFilePrefix();
     /**
@@ -220,6 +235,7 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filePrefix.
      */
     com.google.protobuf.ByteString
         getFilePrefixBytes();
@@ -231,7 +247,7 @@ public final class RawLogs {
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.RawLogsSettings}
    */
-  public  static final class RawLogsSettings extends
+  public static final class RawLogsSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.RawLogsSettings)
       RawLogsSettingsOrBuilder {
@@ -247,6 +263,13 @@ public final class RawLogs {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RawLogsSettings();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -259,7 +282,6 @@ public final class RawLogs {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -289,7 +311,7 @@ public final class RawLogs {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -328,7 +350,9 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bucketName.
      */
+    @java.lang.Override
     public java.lang.String getBucketName() {
       java.lang.Object ref = bucketName_;
       if (ref instanceof java.lang.String) {
@@ -347,7 +371,9 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for bucketName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBucketNameBytes() {
       java.lang.Object ref = bucketName_;
@@ -370,7 +396,9 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bucketRegion.
      */
+    @java.lang.Override
     public java.lang.String getBucketRegion() {
       java.lang.Object ref = bucketRegion_;
       if (ref instanceof java.lang.String) {
@@ -389,7 +417,9 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for bucketRegion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBucketRegionBytes() {
       java.lang.Object ref = bucketRegion_;
@@ -416,7 +446,9 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filePrefix.
      */
+    @java.lang.Override
     public java.lang.String getFilePrefix() {
       java.lang.Object ref = filePrefix_;
       if (ref instanceof java.lang.String) {
@@ -439,7 +471,9 @@ public final class RawLogs {
      * </pre>
      *
      * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filePrefix.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilePrefixBytes() {
       java.lang.Object ref = filePrefix_;
@@ -468,13 +502,13 @@ public final class RawLogs {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBucketNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucketName_);
       }
-      if (!getBucketRegionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketRegion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bucketRegion_);
       }
-      if (!getFilePrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filePrefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filePrefix_);
       }
       unknownFields.writeTo(output);
@@ -486,13 +520,13 @@ public final class RawLogs {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBucketNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucketName_);
       }
-      if (!getBucketRegionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketRegion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bucketRegion_);
       }
-      if (!getFilePrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filePrefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filePrefix_);
       }
       size += unknownFields.getSerializedSize();
@@ -510,15 +544,14 @@ public final class RawLogs {
       }
       yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings other = (yandex.cloud.api.cdn.v1.RawLogs.RawLogsSettings) obj;
 
-      boolean result = true;
-      result = result && getBucketName()
-          .equals(other.getBucketName());
-      result = result && getBucketRegion()
-          .equals(other.getBucketRegion());
-      result = result && getFilePrefix()
-          .equals(other.getFilePrefix());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBucketName()
+          .equals(other.getBucketName())) return false;
+      if (!getBucketRegion()
+          .equals(other.getBucketRegion())) return false;
+      if (!getFilePrefix()
+          .equals(other.getFilePrefix())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -712,35 +745,35 @@ public final class RawLogs {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -802,6 +835,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bucketName.
        */
       public java.lang.String getBucketName() {
         java.lang.Object ref = bucketName_;
@@ -821,6 +855,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for bucketName.
        */
       public com.google.protobuf.ByteString
           getBucketNameBytes() {
@@ -841,6 +876,8 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bucketName to set.
+       * @return This builder for chaining.
        */
       public Builder setBucketName(
           java.lang.String value) {
@@ -858,6 +895,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBucketName() {
         
@@ -871,6 +909,8 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for bucketName to set.
+       * @return This builder for chaining.
        */
       public Builder setBucketNameBytes(
           com.google.protobuf.ByteString value) {
@@ -891,6 +931,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bucketRegion.
        */
       public java.lang.String getBucketRegion() {
         java.lang.Object ref = bucketRegion_;
@@ -910,6 +951,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for bucketRegion.
        */
       public com.google.protobuf.ByteString
           getBucketRegionBytes() {
@@ -930,6 +972,8 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bucketRegion to set.
+       * @return This builder for chaining.
        */
       public Builder setBucketRegion(
           java.lang.String value) {
@@ -947,6 +991,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBucketRegion() {
         
@@ -960,6 +1005,8 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string bucket_region = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for bucketRegion to set.
+       * @return This builder for chaining.
        */
       public Builder setBucketRegionBytes(
           com.google.protobuf.ByteString value) {
@@ -984,6 +1031,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The filePrefix.
        */
       public java.lang.String getFilePrefix() {
         java.lang.Object ref = filePrefix_;
@@ -1007,6 +1055,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for filePrefix.
        */
       public com.google.protobuf.ByteString
           getFilePrefixBytes() {
@@ -1031,6 +1080,8 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The filePrefix to set.
+       * @return This builder for chaining.
        */
       public Builder setFilePrefix(
           java.lang.String value) {
@@ -1052,6 +1103,7 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilePrefix() {
         
@@ -1069,6 +1121,8 @@ public final class RawLogs {
        * </pre>
        *
        * <code>string file_prefix = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for filePrefix to set.
+       * @return This builder for chaining.
        */
       public Builder setFilePrefixBytes(
           com.google.protobuf.ByteString value) {
@@ -1084,7 +1138,7 @@ public final class RawLogs {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1161,19 +1215,11 @@ public final class RawLogs {
       "o-genproto/yandex/cloud/cdn/v1;cdnb\006prot" +
       "o3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_cdn_v1_RawLogsSettings_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_RawLogsSettings_fieldAccessorTable = new

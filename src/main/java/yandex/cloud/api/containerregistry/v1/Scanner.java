@@ -24,6 +24,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string image_id = 2;</code>
+     * @return The imageId.
      */
     java.lang.String getImageId();
     /**
@@ -50,6 +53,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string image_id = 2;</code>
+     * @return The bytes for imageId.
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -60,6 +64,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
+     * @return Whether the scannedAt field is set.
      */
     boolean hasScannedAt();
     /**
@@ -68,6 +73,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
+     * @return The scannedAt.
      */
     com.google.protobuf.Timestamp getScannedAt();
     /**
@@ -85,6 +91,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -93,6 +100,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+     * @return The status.
      */
     yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status getStatus();
 
@@ -102,6 +110,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
+     * @return Whether the vulnerabilities field is set.
      */
     boolean hasVulnerabilities();
     /**
@@ -110,6 +119,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
+     * @return The vulnerabilities.
      */
     yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats getVulnerabilities();
     /**
@@ -128,7 +138,7 @@ public final class Scanner {
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.ScanResult}
    */
-  public  static final class ScanResult extends
+  public static final class ScanResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ScanResult)
       ScanResultOrBuilder {
@@ -144,6 +154,13 @@ public final class Scanner {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScanResult();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -156,7 +173,6 @@ public final class Scanner {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -212,7 +228,7 @@ public final class Scanner {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -318,6 +334,8 @@ public final class Scanner {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -325,6 +343,10 @@ public final class Scanner {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -349,6 +371,10 @@ public final class Scanner {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -391,7 +417,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -410,7 +438,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -433,7 +463,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string image_id = 2;</code>
+     * @return The imageId.
      */
+    @java.lang.Override
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
       if (ref instanceof java.lang.String) {
@@ -452,7 +484,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string image_id = 2;</code>
+     * @return The bytes for imageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getImageIdBytes() {
       java.lang.Object ref = imageId_;
@@ -475,7 +509,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
+     * @return Whether the scannedAt field is set.
      */
+    @java.lang.Override
     public boolean hasScannedAt() {
       return scannedAt_ != null;
     }
@@ -485,7 +521,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
+     * @return The scannedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getScannedAt() {
       return scannedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scannedAt_;
     }
@@ -496,6 +534,7 @@ public final class Scanner {
      *
      * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getScannedAtOrBuilder() {
       return getScannedAt();
     }
@@ -508,8 +547,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -518,8 +558,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status result = yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status.UNRECOGNIZED : result;
@@ -533,7 +574,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
+     * @return Whether the vulnerabilities field is set.
      */
+    @java.lang.Override
     public boolean hasVulnerabilities() {
       return vulnerabilities_ != null;
     }
@@ -543,7 +586,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
+     * @return The vulnerabilities.
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats getVulnerabilities() {
       return vulnerabilities_ == null ? yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats.getDefaultInstance() : vulnerabilities_;
     }
@@ -554,6 +599,7 @@ public final class Scanner {
      *
      * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStatsOrBuilder getVulnerabilitiesOrBuilder() {
       return getVulnerabilities();
     }
@@ -572,10 +618,10 @@ public final class Scanner {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, imageId_);
       }
       if (scannedAt_ != null) {
@@ -596,10 +642,10 @@ public final class Scanner {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getImageIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, imageId_);
       }
       if (scannedAt_ != null) {
@@ -629,24 +675,23 @@ public final class Scanner {
       }
       yandex.cloud.api.containerregistry.v1.Scanner.ScanResult other = (yandex.cloud.api.containerregistry.v1.Scanner.ScanResult) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getImageId()
-          .equals(other.getImageId());
-      result = result && (hasScannedAt() == other.hasScannedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getImageId()
+          .equals(other.getImageId())) return false;
+      if (hasScannedAt() != other.hasScannedAt()) return false;
       if (hasScannedAt()) {
-        result = result && getScannedAt()
-            .equals(other.getScannedAt());
+        if (!getScannedAt()
+            .equals(other.getScannedAt())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && (hasVulnerabilities() == other.hasVulnerabilities());
+      if (status_ != other.status_) return false;
+      if (hasVulnerabilities() != other.hasVulnerabilities()) return false;
       if (hasVulnerabilities()) {
-        result = result && getVulnerabilities()
-            .equals(other.getVulnerabilities());
+        if (!getVulnerabilities()
+            .equals(other.getVulnerabilities())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -870,35 +915,35 @@ public final class Scanner {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -965,6 +1010,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -984,6 +1030,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1004,6 +1051,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1021,6 +1070,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1034,6 +1084,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1054,6 +1106,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string image_id = 2;</code>
+       * @return The imageId.
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -1073,6 +1126,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string image_id = 2;</code>
+       * @return The bytes for imageId.
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -1093,6 +1147,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string image_id = 2;</code>
+       * @param value The imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -1110,6 +1166,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string image_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImageId() {
         
@@ -1123,6 +1180,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string image_id = 2;</code>
+       * @param value The bytes for imageId to set.
+       * @return This builder for chaining.
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1136,7 +1195,7 @@ public final class Scanner {
         return this;
       }
 
-      private com.google.protobuf.Timestamp scannedAt_ = null;
+      private com.google.protobuf.Timestamp scannedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> scannedAtBuilder_;
       /**
@@ -1145,6 +1204,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
+       * @return Whether the scannedAt field is set.
        */
       public boolean hasScannedAt() {
         return scannedAtBuilder_ != null || scannedAt_ != null;
@@ -1155,6 +1215,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp scanned_at = 3;</code>
+       * @return The scannedAt.
        */
       public com.google.protobuf.Timestamp getScannedAt() {
         if (scannedAtBuilder_ == null) {
@@ -1296,8 +1357,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -1306,8 +1368,11 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -1318,7 +1383,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status result = yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status.valueOf(status_);
@@ -1330,6 +1397,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.Scanner.ScanResult.Status value) {
         if (value == null) {
@@ -1346,6 +1415,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.ScanResult.Status status = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -1354,7 +1424,7 @@ public final class Scanner {
         return this;
       }
 
-      private yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats vulnerabilities_ = null;
+      private yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats vulnerabilities_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats, yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats.Builder, yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStatsOrBuilder> vulnerabilitiesBuilder_;
       /**
@@ -1363,6 +1433,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
+       * @return Whether the vulnerabilities field is set.
        */
       public boolean hasVulnerabilities() {
         return vulnerabilitiesBuilder_ != null || vulnerabilities_ != null;
@@ -1373,6 +1444,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.VulnerabilityStats vulnerabilities = 5;</code>
+       * @return The vulnerabilities.
        */
       public yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats getVulnerabilities() {
         if (vulnerabilitiesBuilder_ == null) {
@@ -1509,7 +1581,7 @@ public final class Scanner {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1569,6 +1641,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 critical = 1;</code>
+     * @return The critical.
      */
     long getCritical();
 
@@ -1578,6 +1651,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 high = 2;</code>
+     * @return The high.
      */
     long getHigh();
 
@@ -1587,6 +1661,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 medium = 3;</code>
+     * @return The medium.
      */
     long getMedium();
 
@@ -1596,6 +1671,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 low = 4;</code>
+     * @return The low.
      */
     long getLow();
 
@@ -1605,6 +1681,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 negligible = 5;</code>
+     * @return The negligible.
      */
     long getNegligible();
 
@@ -1614,6 +1691,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 undefined = 6;</code>
+     * @return The undefined.
      */
     long getUndefined();
   }
@@ -1624,7 +1702,7 @@ public final class Scanner {
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.VulnerabilityStats}
    */
-  public  static final class VulnerabilityStats extends
+  public static final class VulnerabilityStats extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.VulnerabilityStats)
       VulnerabilityStatsOrBuilder {
@@ -1634,12 +1712,13 @@ public final class Scanner {
       super(builder);
     }
     private VulnerabilityStats() {
-      critical_ = 0L;
-      high_ = 0L;
-      medium_ = 0L;
-      low_ = 0L;
-      negligible_ = 0L;
-      undefined_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VulnerabilityStats();
     }
 
     @java.lang.Override
@@ -1655,7 +1734,6 @@ public final class Scanner {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1697,7 +1775,7 @@ public final class Scanner {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1736,7 +1814,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 critical = 1;</code>
+     * @return The critical.
      */
+    @java.lang.Override
     public long getCritical() {
       return critical_;
     }
@@ -1749,7 +1829,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 high = 2;</code>
+     * @return The high.
      */
+    @java.lang.Override
     public long getHigh() {
       return high_;
     }
@@ -1762,7 +1844,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 medium = 3;</code>
+     * @return The medium.
      */
+    @java.lang.Override
     public long getMedium() {
       return medium_;
     }
@@ -1775,7 +1859,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 low = 4;</code>
+     * @return The low.
      */
+    @java.lang.Override
     public long getLow() {
       return low_;
     }
@@ -1788,7 +1874,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 negligible = 5;</code>
+     * @return The negligible.
      */
+    @java.lang.Override
     public long getNegligible() {
       return negligible_;
     }
@@ -1801,7 +1889,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>int64 undefined = 6;</code>
+     * @return The undefined.
      */
+    @java.lang.Override
     public long getUndefined() {
       return undefined_;
     }
@@ -1886,21 +1976,20 @@ public final class Scanner {
       }
       yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats other = (yandex.cloud.api.containerregistry.v1.Scanner.VulnerabilityStats) obj;
 
-      boolean result = true;
-      result = result && (getCritical()
-          == other.getCritical());
-      result = result && (getHigh()
-          == other.getHigh());
-      result = result && (getMedium()
-          == other.getMedium());
-      result = result && (getLow()
-          == other.getLow());
-      result = result && (getNegligible()
-          == other.getNegligible());
-      result = result && (getUndefined()
-          == other.getUndefined());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getCritical()
+          != other.getCritical()) return false;
+      if (getHigh()
+          != other.getHigh()) return false;
+      if (getMedium()
+          != other.getMedium()) return false;
+      if (getLow()
+          != other.getLow()) return false;
+      if (getNegligible()
+          != other.getNegligible()) return false;
+      if (getUndefined()
+          != other.getUndefined()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2115,35 +2204,35 @@ public final class Scanner {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2211,7 +2300,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 critical = 1;</code>
+       * @return The critical.
        */
+      @java.lang.Override
       public long getCritical() {
         return critical_;
       }
@@ -2221,6 +2312,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 critical = 1;</code>
+       * @param value The critical to set.
+       * @return This builder for chaining.
        */
       public Builder setCritical(long value) {
         
@@ -2234,6 +2327,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 critical = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCritical() {
         
@@ -2249,7 +2343,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 high = 2;</code>
+       * @return The high.
        */
+      @java.lang.Override
       public long getHigh() {
         return high_;
       }
@@ -2259,6 +2355,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 high = 2;</code>
+       * @param value The high to set.
+       * @return This builder for chaining.
        */
       public Builder setHigh(long value) {
         
@@ -2272,6 +2370,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 high = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHigh() {
         
@@ -2287,7 +2386,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 medium = 3;</code>
+       * @return The medium.
        */
+      @java.lang.Override
       public long getMedium() {
         return medium_;
       }
@@ -2297,6 +2398,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 medium = 3;</code>
+       * @param value The medium to set.
+       * @return This builder for chaining.
        */
       public Builder setMedium(long value) {
         
@@ -2310,6 +2413,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 medium = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMedium() {
         
@@ -2325,7 +2429,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 low = 4;</code>
+       * @return The low.
        */
+      @java.lang.Override
       public long getLow() {
         return low_;
       }
@@ -2335,6 +2441,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 low = 4;</code>
+       * @param value The low to set.
+       * @return This builder for chaining.
        */
       public Builder setLow(long value) {
         
@@ -2348,6 +2456,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 low = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLow() {
         
@@ -2363,7 +2472,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 negligible = 5;</code>
+       * @return The negligible.
        */
+      @java.lang.Override
       public long getNegligible() {
         return negligible_;
       }
@@ -2373,6 +2484,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 negligible = 5;</code>
+       * @param value The negligible to set.
+       * @return This builder for chaining.
        */
       public Builder setNegligible(long value) {
         
@@ -2386,6 +2499,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 negligible = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNegligible() {
         
@@ -2401,7 +2515,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 undefined = 6;</code>
+       * @return The undefined.
        */
+      @java.lang.Override
       public long getUndefined() {
         return undefined_;
       }
@@ -2411,6 +2527,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 undefined = 6;</code>
+       * @param value The undefined to set.
+       * @return This builder for chaining.
        */
       public Builder setUndefined(long value) {
         
@@ -2424,6 +2542,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>int64 undefined = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUndefined() {
         
@@ -2434,7 +2553,7 @@ public final class Scanner {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2494,6 +2613,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+     * @return The enum numeric value on the wire for severity.
      */
     int getSeverityValue();
     /**
@@ -2502,15 +2622,18 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+     * @return The severity.
      */
     yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity getSeverity();
 
     /**
      * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
+     * @return Whether the package field is set.
      */
     boolean hasPackage();
     /**
      * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
+     * @return The package.
      */
     yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability getPackage();
     /**
@@ -2527,7 +2650,7 @@ public final class Scanner {
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.Vulnerability}
    */
-  public  static final class Vulnerability extends
+  public static final class Vulnerability extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.Vulnerability)
       VulnerabilityOrBuilder {
@@ -2538,6 +2661,13 @@ public final class Scanner {
     }
     private Vulnerability() {
       severity_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Vulnerability();
     }
 
     @java.lang.Override
@@ -2553,7 +2683,6 @@ public final class Scanner {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2585,7 +2714,7 @@ public final class Scanner {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2757,6 +2886,8 @@ public final class Scanner {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2764,6 +2895,10 @@ public final class Scanner {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Severity forNumber(int value) {
         switch (value) {
           case 0: return SEVERITY_UNSPECIFIED;
@@ -2791,6 +2926,10 @@ public final class Scanner {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2828,7 +2967,8 @@ public final class Scanner {
     private int vulnerabilityCase_ = 0;
     private java.lang.Object vulnerability_;
     public enum VulnerabilityCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PACKAGE(2),
       VULNERABILITY_NOT_SET(0);
       private final int value;
@@ -2836,6 +2976,8 @@ public final class Scanner {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2869,8 +3011,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+     * @return The enum numeric value on the wire for severity.
      */
-    public int getSeverityValue() {
+    @java.lang.Override public int getSeverityValue() {
       return severity_;
     }
     /**
@@ -2879,8 +3022,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+     * @return The severity.
      */
-    public yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity getSeverity() {
+    @java.lang.Override public yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity getSeverity() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity result = yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity.valueOf(severity_);
       return result == null ? yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity.UNRECOGNIZED : result;
@@ -2889,13 +3033,17 @@ public final class Scanner {
     public static final int PACKAGE_FIELD_NUMBER = 2;
     /**
      * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
+     * @return Whether the package field is set.
      */
+    @java.lang.Override
     public boolean hasPackage() {
       return vulnerabilityCase_ == 2;
     }
     /**
      * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
+     * @return The package.
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability getPackage() {
       if (vulnerabilityCase_ == 2) {
          return (yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability) vulnerability_;
@@ -2905,6 +3053,7 @@ public final class Scanner {
     /**
      * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerabilityOrBuilder getPackageOrBuilder() {
       if (vulnerabilityCase_ == 2) {
          return (yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability) vulnerability_;
@@ -2964,21 +3113,18 @@ public final class Scanner {
       }
       yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability other = (yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability) obj;
 
-      boolean result = true;
-      result = result && severity_ == other.severity_;
-      result = result && getVulnerabilityCase().equals(
-          other.getVulnerabilityCase());
-      if (!result) return false;
+      if (severity_ != other.severity_) return false;
+      if (!getVulnerabilityCase().equals(other.getVulnerabilityCase())) return false;
       switch (vulnerabilityCase_) {
         case 2:
-          result = result && getPackage()
-              .equals(other.getPackage());
+          if (!getPackage()
+              .equals(other.getPackage())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3180,35 +3326,35 @@ public final class Scanner {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3285,8 +3431,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+       * @return The enum numeric value on the wire for severity.
        */
-      public int getSeverityValue() {
+      @java.lang.Override public int getSeverityValue() {
         return severity_;
       }
       /**
@@ -3295,8 +3442,11 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+       * @param value The enum numeric value on the wire for severity to set.
+       * @return This builder for chaining.
        */
       public Builder setSeverityValue(int value) {
+        
         severity_ = value;
         onChanged();
         return this;
@@ -3307,7 +3457,9 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+       * @return The severity.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity getSeverity() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity result = yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity.valueOf(severity_);
@@ -3319,6 +3471,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+       * @param value The severity to set.
+       * @return This builder for chaining.
        */
       public Builder setSeverity(yandex.cloud.api.containerregistry.v1.Scanner.Vulnerability.Severity value) {
         if (value == null) {
@@ -3335,6 +3489,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Vulnerability.Severity severity = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSeverity() {
         
@@ -3347,13 +3502,17 @@ public final class Scanner {
           yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability, yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability.Builder, yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerabilityOrBuilder> packageBuilder_;
       /**
        * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
+       * @return Whether the package field is set.
        */
+      @java.lang.Override
       public boolean hasPackage() {
         return vulnerabilityCase_ == 2;
       }
       /**
        * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
+       * @return The package.
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability getPackage() {
         if (packageBuilder_ == null) {
           if (vulnerabilityCase_ == 2) {
@@ -3447,6 +3606,7 @@ public final class Scanner {
       /**
        * <code>.yandex.cloud.containerregistry.v1.PackageVulnerability package = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerabilityOrBuilder getPackageOrBuilder() {
         if ((vulnerabilityCase_ == 2) && (packageBuilder_ != null)) {
           return packageBuilder_.getMessageOrBuilder();
@@ -3481,7 +3641,7 @@ public final class Scanner {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3541,6 +3701,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -3549,6 +3710,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3559,6 +3721,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string link = 2;</code>
+     * @return The link.
      */
     java.lang.String getLink();
     /**
@@ -3567,6 +3730,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string link = 2;</code>
+     * @return The bytes for link.
      */
     com.google.protobuf.ByteString
         getLinkBytes();
@@ -3577,6 +3741,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string package = 3;</code>
+     * @return The package.
      */
     java.lang.String getPackage();
     /**
@@ -3585,6 +3750,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string package = 3;</code>
+     * @return The bytes for package.
      */
     com.google.protobuf.ByteString
         getPackageBytes();
@@ -3595,6 +3761,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string source = 4;</code>
+     * @return The source.
      */
     java.lang.String getSource();
     /**
@@ -3603,6 +3770,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string source = 4;</code>
+     * @return The bytes for source.
      */
     com.google.protobuf.ByteString
         getSourceBytes();
@@ -3613,6 +3781,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string version = 5;</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
@@ -3621,6 +3790,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string version = 5;</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
@@ -3631,6 +3801,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string fixed_by = 6;</code>
+     * @return The fixedBy.
      */
     java.lang.String getFixedBy();
     /**
@@ -3639,6 +3810,7 @@ public final class Scanner {
      * </pre>
      *
      * <code>string fixed_by = 6;</code>
+     * @return The bytes for fixedBy.
      */
     com.google.protobuf.ByteString
         getFixedByBytes();
@@ -3650,7 +3822,7 @@ public final class Scanner {
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.PackageVulnerability}
    */
-  public  static final class PackageVulnerability extends
+  public static final class PackageVulnerability extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.PackageVulnerability)
       PackageVulnerabilityOrBuilder {
@@ -3669,6 +3841,13 @@ public final class Scanner {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PackageVulnerability();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3681,7 +3860,6 @@ public final class Scanner {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3729,7 +3907,7 @@ public final class Scanner {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3768,7 +3946,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3787,7 +3967,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3810,7 +3992,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string link = 2;</code>
+     * @return The link.
      */
+    @java.lang.Override
     public java.lang.String getLink() {
       java.lang.Object ref = link_;
       if (ref instanceof java.lang.String) {
@@ -3829,7 +4013,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string link = 2;</code>
+     * @return The bytes for link.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLinkBytes() {
       java.lang.Object ref = link_;
@@ -3852,7 +4038,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string package = 3;</code>
+     * @return The package.
      */
+    @java.lang.Override
     public java.lang.String getPackage() {
       java.lang.Object ref = package_;
       if (ref instanceof java.lang.String) {
@@ -3871,7 +4059,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string package = 3;</code>
+     * @return The bytes for package.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPackageBytes() {
       java.lang.Object ref = package_;
@@ -3894,7 +4084,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string source = 4;</code>
+     * @return The source.
      */
+    @java.lang.Override
     public java.lang.String getSource() {
       java.lang.Object ref = source_;
       if (ref instanceof java.lang.String) {
@@ -3913,7 +4105,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string source = 4;</code>
+     * @return The bytes for source.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceBytes() {
       java.lang.Object ref = source_;
@@ -3936,7 +4130,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string version = 5;</code>
+     * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -3955,7 +4151,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string version = 5;</code>
+     * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -3978,7 +4176,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string fixed_by = 6;</code>
+     * @return The fixedBy.
      */
+    @java.lang.Override
     public java.lang.String getFixedBy() {
       java.lang.Object ref = fixedBy_;
       if (ref instanceof java.lang.String) {
@@ -3997,7 +4197,9 @@ public final class Scanner {
      * </pre>
      *
      * <code>string fixed_by = 6;</code>
+     * @return The bytes for fixedBy.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFixedByBytes() {
       java.lang.Object ref = fixedBy_;
@@ -4026,22 +4228,22 @@ public final class Scanner {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, link_);
       }
-      if (!getPackageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(package_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, package_);
       }
-      if (!getSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, source_);
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, version_);
       }
-      if (!getFixedByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fixedBy_);
       }
       unknownFields.writeTo(output);
@@ -4053,22 +4255,22 @@ public final class Scanner {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, link_);
       }
-      if (!getPackageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(package_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, package_);
       }
-      if (!getSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, source_);
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, version_);
       }
-      if (!getFixedByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fixedBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -4086,21 +4288,20 @@ public final class Scanner {
       }
       yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability other = (yandex.cloud.api.containerregistry.v1.Scanner.PackageVulnerability) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getLink()
-          .equals(other.getLink());
-      result = result && getPackage()
-          .equals(other.getPackage());
-      result = result && getSource()
-          .equals(other.getSource());
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && getFixedBy()
-          .equals(other.getFixedBy());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getLink()
+          .equals(other.getLink())) return false;
+      if (!getPackage()
+          .equals(other.getPackage())) return false;
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!getFixedBy()
+          .equals(other.getFixedBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4309,35 +4510,35 @@ public final class Scanner {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4411,6 +4612,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4430,6 +4632,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4450,6 +4653,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4467,6 +4672,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4480,6 +4686,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4500,6 +4708,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string link = 2;</code>
+       * @return The link.
        */
       public java.lang.String getLink() {
         java.lang.Object ref = link_;
@@ -4519,6 +4728,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string link = 2;</code>
+       * @return The bytes for link.
        */
       public com.google.protobuf.ByteString
           getLinkBytes() {
@@ -4539,6 +4749,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string link = 2;</code>
+       * @param value The link to set.
+       * @return This builder for chaining.
        */
       public Builder setLink(
           java.lang.String value) {
@@ -4556,6 +4768,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string link = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLink() {
         
@@ -4569,6 +4782,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string link = 2;</code>
+       * @param value The bytes for link to set.
+       * @return This builder for chaining.
        */
       public Builder setLinkBytes(
           com.google.protobuf.ByteString value) {
@@ -4589,6 +4804,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string package = 3;</code>
+       * @return The package.
        */
       public java.lang.String getPackage() {
         java.lang.Object ref = package_;
@@ -4608,6 +4824,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string package = 3;</code>
+       * @return The bytes for package.
        */
       public com.google.protobuf.ByteString
           getPackageBytes() {
@@ -4628,6 +4845,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string package = 3;</code>
+       * @param value The package to set.
+       * @return This builder for chaining.
        */
       public Builder setPackage(
           java.lang.String value) {
@@ -4645,6 +4864,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string package = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPackage() {
         
@@ -4658,6 +4878,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string package = 3;</code>
+       * @param value The bytes for package to set.
+       * @return This builder for chaining.
        */
       public Builder setPackageBytes(
           com.google.protobuf.ByteString value) {
@@ -4678,6 +4900,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string source = 4;</code>
+       * @return The source.
        */
       public java.lang.String getSource() {
         java.lang.Object ref = source_;
@@ -4697,6 +4920,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string source = 4;</code>
+       * @return The bytes for source.
        */
       public com.google.protobuf.ByteString
           getSourceBytes() {
@@ -4717,6 +4941,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string source = 4;</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
        */
       public Builder setSource(
           java.lang.String value) {
@@ -4734,6 +4960,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string source = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSource() {
         
@@ -4747,6 +4974,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string source = 4;</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceBytes(
           com.google.protobuf.ByteString value) {
@@ -4767,6 +4996,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string version = 5;</code>
+       * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -4786,6 +5016,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string version = 5;</code>
+       * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -4806,6 +5037,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string version = 5;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -4823,6 +5056,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string version = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -4836,6 +5070,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string version = 5;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -4856,6 +5092,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string fixed_by = 6;</code>
+       * @return The fixedBy.
        */
       public java.lang.String getFixedBy() {
         java.lang.Object ref = fixedBy_;
@@ -4875,6 +5112,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string fixed_by = 6;</code>
+       * @return The bytes for fixedBy.
        */
       public com.google.protobuf.ByteString
           getFixedByBytes() {
@@ -4895,6 +5133,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string fixed_by = 6;</code>
+       * @param value The fixedBy to set.
+       * @return This builder for chaining.
        */
       public Builder setFixedBy(
           java.lang.String value) {
@@ -4912,6 +5152,7 @@ public final class Scanner {
        * </pre>
        *
        * <code>string fixed_by = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFixedBy() {
         
@@ -4925,6 +5166,8 @@ public final class Scanner {
        * </pre>
        *
        * <code>string fixed_by = 6;</code>
+       * @param value The bytes for fixedBy to set.
+       * @return This builder for chaining.
        */
       public Builder setFixedByBytes(
           com.google.protobuf.ByteString value) {
@@ -4940,7 +5183,7 @@ public final class Scanner {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5049,20 +5292,12 @@ public final class Scanner {
       "-genproto/yandex/cloud/containerregistry" +
       "/v1;containerregistryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_ScanResult_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_ScanResult_fieldAccessorTable = new

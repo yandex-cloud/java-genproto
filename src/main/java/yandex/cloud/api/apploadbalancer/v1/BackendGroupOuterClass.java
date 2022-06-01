@@ -127,6 +127,8 @@ public final class BackendGroupOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -134,6 +136,10 @@ public final class BackendGroupOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static LoadBalancingMode forNumber(int value) {
       switch (value) {
         case 0: return ROUND_ROBIN;
@@ -158,6 +164,10 @@ public final class BackendGroupOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -202,6 +212,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -210,6 +221,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -220,6 +232,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -228,6 +241,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -238,6 +252,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -246,6 +261,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -256,6 +272,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 4;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -264,6 +281,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 4;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -338,6 +356,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
+     * @return Whether the http field is set.
      */
     boolean hasHttp();
     /**
@@ -346,6 +365,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
+     * @return The http.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp();
     /**
@@ -363,6 +383,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
+     * @return Whether the grpc field is set.
      */
     boolean hasGrpc();
     /**
@@ -371,6 +392,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
+     * @return The grpc.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc();
     /**
@@ -388,6 +410,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
+     * @return Whether the stream field is set.
      */
     boolean hasStream();
     /**
@@ -396,6 +419,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
+     * @return The stream.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream();
     /**
@@ -413,6 +437,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -421,6 +446,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -442,7 +468,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.BackendGroup}
    */
-  public  static final class BackendGroup extends
+  public static final class BackendGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.BackendGroup)
       BackendGroupOrBuilder {
@@ -456,6 +482,13 @@ public final class BackendGroupOuterClass {
       name_ = "";
       description_ = "";
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackendGroup();
     }
 
     @java.lang.Override
@@ -507,10 +540,10 @@ public final class BackendGroupOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -575,7 +608,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -618,11 +651,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.Builder.class);
     }
 
-    private int bitField0_;
     private int backendCase_ = 0;
     private java.lang.Object backend_;
     public enum BackendCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       HTTP(6),
       GRPC(7),
       STREAM(10),
@@ -632,6 +665,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -667,7 +702,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -686,7 +723,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -709,7 +748,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -728,7 +769,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -751,7 +794,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -770,7 +815,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -793,7 +840,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 4;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -812,7 +861,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 4;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -863,14 +914,16 @@ public final class BackendGroupOuterClass {
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -884,6 +937,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -897,11 +951,12 @@ public final class BackendGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -915,10 +970,11 @@ public final class BackendGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -934,7 +990,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
+     * @return Whether the http field is set.
      */
+    @java.lang.Override
     public boolean hasHttp() {
       return backendCase_ == 6;
     }
@@ -944,7 +1002,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
+     * @return The http.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp() {
       if (backendCase_ == 6) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup) backend_;
@@ -958,6 +1018,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder() {
       if (backendCase_ == 6) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup) backend_;
@@ -972,7 +1033,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
+     * @return Whether the grpc field is set.
      */
+    @java.lang.Override
     public boolean hasGrpc() {
       return backendCase_ == 7;
     }
@@ -982,7 +1045,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
+     * @return The grpc.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc() {
       if (backendCase_ == 7) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) backend_;
@@ -996,6 +1061,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder() {
       if (backendCase_ == 7) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) backend_;
@@ -1010,7 +1076,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
+     * @return Whether the stream field is set.
      */
+    @java.lang.Override
     public boolean hasStream() {
       return backendCase_ == 10;
     }
@@ -1020,7 +1088,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
+     * @return The stream.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream() {
       if (backendCase_ == 10) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
@@ -1034,6 +1104,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder() {
       if (backendCase_ == 10) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
@@ -1049,7 +1120,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -1059,7 +1132,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -1070,6 +1145,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -1088,16 +1164,16 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, folderId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1127,16 +1203,16 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, folderId_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1180,43 +1256,40 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getBackendCase().equals(
-          other.getBackendCase());
-      if (!result) return false;
+      if (!getBackendCase().equals(other.getBackendCase())) return false;
       switch (backendCase_) {
         case 6:
-          result = result && getHttp()
-              .equals(other.getHttp());
+          if (!getHttp()
+              .equals(other.getHttp())) return false;
           break;
         case 7:
-          result = result && getGrpc()
-              .equals(other.getGrpc());
+          if (!getGrpc()
+              .equals(other.getGrpc())) return false;
           break;
         case 10:
-          result = result && getStream()
-              .equals(other.getStream());
+          if (!getStream()
+              .equals(other.getStream())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1462,7 +1535,6 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.name_ = name_;
         result.description_ = description_;
@@ -1495,7 +1567,6 @@ public final class BackendGroupOuterClass {
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.backendCase_ = backendCase_;
         onBuilt();
         return result;
@@ -1503,35 +1574,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1635,6 +1706,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1654,6 +1726,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1674,6 +1747,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1691,6 +1766,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1704,6 +1780,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1724,6 +1802,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1743,6 +1822,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1763,6 +1843,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1780,6 +1862,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1793,6 +1876,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1813,6 +1898,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1832,6 +1918,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1852,6 +1939,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1869,6 +1958,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1882,6 +1972,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1902,6 +1994,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 4;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1921,6 +2014,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 4;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1941,6 +2035,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 4;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1958,6 +2054,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1971,6 +2068,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 4;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2020,14 +2119,16 @@ public final class BackendGroupOuterClass {
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2041,6 +2142,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2054,11 +2156,12 @@ public final class BackendGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2072,10 +2175,11 @@ public final class BackendGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2101,7 +2205,7 @@ public final class BackendGroupOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2126,8 +2230,11 @@ public final class BackendGroupOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2157,7 +2264,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
+       * @return Whether the http field is set.
        */
+      @java.lang.Override
       public boolean hasHttp() {
         return backendCase_ == 6;
       }
@@ -2167,7 +2276,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
+       * @return The http.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp() {
         if (httpBuilder_ == null) {
           if (backendCase_ == 6) {
@@ -2285,6 +2396,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder() {
         if ((backendCase_ == 6) && (httpBuilder_ != null)) {
           return httpBuilder_.getMessageOrBuilder();
@@ -2329,7 +2441,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
+       * @return Whether the grpc field is set.
        */
+      @java.lang.Override
       public boolean hasGrpc() {
         return backendCase_ == 7;
       }
@@ -2339,7 +2453,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
+       * @return The grpc.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc() {
         if (grpcBuilder_ == null) {
           if (backendCase_ == 7) {
@@ -2457,6 +2573,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder() {
         if ((backendCase_ == 7) && (grpcBuilder_ != null)) {
           return grpcBuilder_.getMessageOrBuilder();
@@ -2501,7 +2618,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
+       * @return Whether the stream field is set.
        */
+      @java.lang.Override
       public boolean hasStream() {
         return backendCase_ == 10;
       }
@@ -2511,7 +2630,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
+       * @return The stream.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream() {
         if (streamBuilder_ == null) {
           if (backendCase_ == 10) {
@@ -2629,6 +2750,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder() {
         if ((backendCase_ == 10) && (streamBuilder_ != null)) {
           return streamBuilder_.getMessageOrBuilder();
@@ -2665,7 +2787,7 @@ public final class BackendGroupOuterClass {
         return streamBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2674,6 +2796,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2684,6 +2807,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2820,7 +2944,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2925,6 +3049,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
@@ -2934,6 +3059,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return The connection.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
     /**
@@ -2955,7 +3081,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamBackendGroup}
    */
-  public  static final class StreamBackendGroup extends
+  public static final class StreamBackendGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StreamBackendGroup)
       StreamBackendGroupOrBuilder {
@@ -2966,6 +3092,13 @@ public final class BackendGroupOuterClass {
     }
     private StreamBackendGroup() {
       backends_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamBackendGroup();
     }
 
     @java.lang.Override
@@ -2993,7 +3126,7 @@ public final class BackendGroupOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 backends_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3016,7 +3149,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3030,7 +3163,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           backends_ = java.util.Collections.unmodifiableList(backends_);
         }
         this.unknownFields = unknownFields.build();
@@ -3050,11 +3183,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder.class);
     }
 
-    private int bitField0_;
     private int sessionAffinityCase_ = 0;
     private java.lang.Object sessionAffinity_;
     public enum SessionAffinityCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTION(2),
       SESSIONAFFINITY_NOT_SET(0);
       private final int value;
@@ -3062,6 +3195,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3096,6 +3231,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend> getBackendsList() {
       return backends_;
     }
@@ -3106,6 +3242,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder> 
         getBackendsOrBuilderList() {
       return backends_;
@@ -3117,6 +3254,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
+    @java.lang.Override
     public int getBackendsCount() {
       return backends_.size();
     }
@@ -3127,6 +3265,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend getBackends(int index) {
       return backends_.get(index);
     }
@@ -3137,6 +3276,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder getBackendsOrBuilder(
         int index) {
       return backends_.get(index);
@@ -3150,7 +3290,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return Whether the connection field is set.
      */
+    @java.lang.Override
     public boolean hasConnection() {
       return sessionAffinityCase_ == 2;
     }
@@ -3161,7 +3303,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return The connection.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
       if (sessionAffinityCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
@@ -3176,6 +3320,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
       if (sessionAffinityCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
@@ -3235,22 +3380,19 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) obj;
 
-      boolean result = true;
-      result = result && getBackendsList()
-          .equals(other.getBackendsList());
-      result = result && getSessionAffinityCase().equals(
-          other.getSessionAffinityCase());
-      if (!result) return false;
+      if (!getBackendsList()
+          .equals(other.getBackendsList())) return false;
+      if (!getSessionAffinityCase().equals(other.getSessionAffinityCase())) return false;
       switch (sessionAffinityCase_) {
         case 2:
-          result = result && getConnection()
-              .equals(other.getConnection());
+          if (!getConnection()
+              .equals(other.getConnection())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3445,9 +3587,8 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (backendsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             backends_ = java.util.Collections.unmodifiableList(backends_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3462,7 +3603,6 @@ public final class BackendGroupOuterClass {
             result.sessionAffinity_ = connectionBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.sessionAffinityCase_ = sessionAffinityCase_;
         onBuilt();
         return result;
@@ -3470,35 +3610,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3595,7 +3735,7 @@ public final class BackendGroupOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend> backends_ =
         java.util.Collections.emptyList();
       private void ensureBackendsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           backends_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend>(backends_);
           bitField0_ |= 0x00000001;
          }
@@ -3896,7 +4036,7 @@ public final class BackendGroupOuterClass {
           backendsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder>(
                   backends_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           backends_ = null;
@@ -3913,7 +4053,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       * @return Whether the connection field is set.
        */
+      @java.lang.Override
       public boolean hasConnection() {
         return sessionAffinityCase_ == 2;
       }
@@ -3924,7 +4066,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       * @return The connection.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
         if (connectionBuilder_ == null) {
           if (sessionAffinityCase_ == 2) {
@@ -4048,6 +4192,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
         if ((sessionAffinityCase_ == 2) && (connectionBuilder_ != null)) {
           return connectionBuilder_.getMessageOrBuilder();
@@ -4087,7 +4232,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4192,6 +4337,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
@@ -4201,6 +4347,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return The connection.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
     /**
@@ -4219,6 +4366,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return Whether the header field is set.
      */
     boolean hasHeader();
     /**
@@ -4227,6 +4375,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return The header.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader();
     /**
@@ -4244,6 +4393,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return Whether the cookie field is set.
      */
     boolean hasCookie();
     /**
@@ -4252,6 +4402,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return The cookie.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie();
     /**
@@ -4272,7 +4423,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpBackendGroup}
    */
-  public  static final class HttpBackendGroup extends
+  public static final class HttpBackendGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HttpBackendGroup)
       HttpBackendGroupOrBuilder {
@@ -4283,6 +4434,13 @@ public final class BackendGroupOuterClass {
     }
     private HttpBackendGroup() {
       backends_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HttpBackendGroup();
     }
 
     @java.lang.Override
@@ -4310,7 +4468,7 @@ public final class BackendGroupOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 backends_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4361,7 +4519,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4375,7 +4533,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           backends_ = java.util.Collections.unmodifiableList(backends_);
         }
         this.unknownFields = unknownFields.build();
@@ -4395,11 +4553,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.Builder.class);
     }
 
-    private int bitField0_;
     private int sessionAffinityCase_ = 0;
     private java.lang.Object sessionAffinity_;
     public enum SessionAffinityCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTION(2),
       HEADER(3),
       COOKIE(4),
@@ -4409,6 +4567,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4445,6 +4605,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpBackend backends = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend> getBackendsList() {
       return backends_;
     }
@@ -4455,6 +4616,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpBackend backends = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder> 
         getBackendsOrBuilderList() {
       return backends_;
@@ -4466,6 +4628,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpBackend backends = 1;</code>
      */
+    @java.lang.Override
     public int getBackendsCount() {
       return backends_.size();
     }
@@ -4476,6 +4639,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpBackend backends = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getBackends(int index) {
       return backends_.get(index);
     }
@@ -4486,6 +4650,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpBackend backends = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getBackendsOrBuilder(
         int index) {
       return backends_.get(index);
@@ -4499,7 +4664,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return Whether the connection field is set.
      */
+    @java.lang.Override
     public boolean hasConnection() {
       return sessionAffinityCase_ == 2;
     }
@@ -4510,7 +4677,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return The connection.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
       if (sessionAffinityCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
@@ -4525,6 +4694,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
       if (sessionAffinityCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
@@ -4539,7 +4709,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return Whether the header field is set.
      */
+    @java.lang.Override
     public boolean hasHeader() {
       return sessionAffinityCase_ == 3;
     }
@@ -4549,7 +4721,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return The header.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
       if (sessionAffinityCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
@@ -4563,6 +4737,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
       if (sessionAffinityCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
@@ -4577,7 +4752,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return Whether the cookie field is set.
      */
+    @java.lang.Override
     public boolean hasCookie() {
       return sessionAffinityCase_ == 4;
     }
@@ -4587,7 +4764,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return The cookie.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
       if (sessionAffinityCase_ == 4) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
@@ -4601,6 +4780,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
       if (sessionAffinityCase_ == 4) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
@@ -4674,30 +4854,27 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup) obj;
 
-      boolean result = true;
-      result = result && getBackendsList()
-          .equals(other.getBackendsList());
-      result = result && getSessionAffinityCase().equals(
-          other.getSessionAffinityCase());
-      if (!result) return false;
+      if (!getBackendsList()
+          .equals(other.getBackendsList())) return false;
+      if (!getSessionAffinityCase().equals(other.getSessionAffinityCase())) return false;
       switch (sessionAffinityCase_) {
         case 2:
-          result = result && getConnection()
-              .equals(other.getConnection());
+          if (!getConnection()
+              .equals(other.getConnection())) return false;
           break;
         case 3:
-          result = result && getHeader()
-              .equals(other.getHeader());
+          if (!getHeader()
+              .equals(other.getHeader())) return false;
           break;
         case 4:
-          result = result && getCookie()
-              .equals(other.getCookie());
+          if (!getCookie()
+              .equals(other.getCookie())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4900,9 +5077,8 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (backendsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             backends_ = java.util.Collections.unmodifiableList(backends_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4931,7 +5107,6 @@ public final class BackendGroupOuterClass {
             result.sessionAffinity_ = cookieBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.sessionAffinityCase_ = sessionAffinityCase_;
         onBuilt();
         return result;
@@ -4939,35 +5114,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5072,7 +5247,7 @@ public final class BackendGroupOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend> backends_ =
         java.util.Collections.emptyList();
       private void ensureBackendsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           backends_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend>(backends_);
           bitField0_ |= 0x00000001;
          }
@@ -5373,7 +5548,7 @@ public final class BackendGroupOuterClass {
           backendsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder>(
                   backends_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           backends_ = null;
@@ -5390,7 +5565,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       * @return Whether the connection field is set.
        */
+      @java.lang.Override
       public boolean hasConnection() {
         return sessionAffinityCase_ == 2;
       }
@@ -5401,7 +5578,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       * @return The connection.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
         if (connectionBuilder_ == null) {
           if (sessionAffinityCase_ == 2) {
@@ -5525,6 +5704,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
         if ((sessionAffinityCase_ == 2) && (connectionBuilder_ != null)) {
           return connectionBuilder_.getMessageOrBuilder();
@@ -5570,7 +5750,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       * @return Whether the header field is set.
        */
+      @java.lang.Override
       public boolean hasHeader() {
         return sessionAffinityCase_ == 3;
       }
@@ -5580,7 +5762,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       * @return The header.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
         if (headerBuilder_ == null) {
           if (sessionAffinityCase_ == 3) {
@@ -5698,6 +5882,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
         if ((sessionAffinityCase_ == 3) && (headerBuilder_ != null)) {
           return headerBuilder_.getMessageOrBuilder();
@@ -5742,7 +5927,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       * @return Whether the cookie field is set.
        */
+      @java.lang.Override
       public boolean hasCookie() {
         return sessionAffinityCase_ == 4;
       }
@@ -5752,7 +5939,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       * @return The cookie.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
         if (cookieBuilder_ == null) {
           if (sessionAffinityCase_ == 4) {
@@ -5870,6 +6059,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
         if ((sessionAffinityCase_ == 4) && (cookieBuilder_ != null)) {
           return cookieBuilder_.getMessageOrBuilder();
@@ -5908,7 +6098,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6013,6 +6203,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
@@ -6022,6 +6213,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return The connection.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
     /**
@@ -6040,6 +6232,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return Whether the header field is set.
      */
     boolean hasHeader();
     /**
@@ -6048,6 +6241,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return The header.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader();
     /**
@@ -6065,6 +6259,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return Whether the cookie field is set.
      */
     boolean hasCookie();
     /**
@@ -6073,6 +6268,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return The cookie.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie();
     /**
@@ -6093,7 +6289,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcBackendGroup}
    */
-  public  static final class GrpcBackendGroup extends
+  public static final class GrpcBackendGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GrpcBackendGroup)
       GrpcBackendGroupOrBuilder {
@@ -6104,6 +6300,13 @@ public final class BackendGroupOuterClass {
     }
     private GrpcBackendGroup() {
       backends_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GrpcBackendGroup();
     }
 
     @java.lang.Override
@@ -6131,7 +6334,7 @@ public final class BackendGroupOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 backends_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6182,7 +6385,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6196,7 +6399,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           backends_ = java.util.Collections.unmodifiableList(backends_);
         }
         this.unknownFields = unknownFields.build();
@@ -6216,11 +6419,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.Builder.class);
     }
 
-    private int bitField0_;
     private int sessionAffinityCase_ = 0;
     private java.lang.Object sessionAffinity_;
     public enum SessionAffinityCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONNECTION(2),
       HEADER(3),
       COOKIE(4),
@@ -6230,6 +6433,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -6266,6 +6471,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.GrpcBackend backends = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend> getBackendsList() {
       return backends_;
     }
@@ -6276,6 +6482,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.GrpcBackend backends = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder> 
         getBackendsOrBuilderList() {
       return backends_;
@@ -6287,6 +6494,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.GrpcBackend backends = 1;</code>
      */
+    @java.lang.Override
     public int getBackendsCount() {
       return backends_.size();
     }
@@ -6297,6 +6505,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.GrpcBackend backends = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getBackends(int index) {
       return backends_.get(index);
     }
@@ -6307,6 +6516,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.GrpcBackend backends = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getBackendsOrBuilder(
         int index) {
       return backends_.get(index);
@@ -6320,7 +6530,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return Whether the connection field is set.
      */
+    @java.lang.Override
     public boolean hasConnection() {
       return sessionAffinityCase_ == 2;
     }
@@ -6331,7 +6543,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     * @return The connection.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
       if (sessionAffinityCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
@@ -6346,6 +6560,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
       if (sessionAffinityCase_ == 2) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
@@ -6360,7 +6575,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return Whether the header field is set.
      */
+    @java.lang.Override
     public boolean hasHeader() {
       return sessionAffinityCase_ == 3;
     }
@@ -6370,7 +6587,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     * @return The header.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
       if (sessionAffinityCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
@@ -6384,6 +6603,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
       if (sessionAffinityCase_ == 3) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
@@ -6398,7 +6618,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return Whether the cookie field is set.
      */
+    @java.lang.Override
     public boolean hasCookie() {
       return sessionAffinityCase_ == 4;
     }
@@ -6408,7 +6630,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     * @return The cookie.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
       if (sessionAffinityCase_ == 4) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
@@ -6422,6 +6646,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
       if (sessionAffinityCase_ == 4) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
@@ -6495,30 +6720,27 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) obj;
 
-      boolean result = true;
-      result = result && getBackendsList()
-          .equals(other.getBackendsList());
-      result = result && getSessionAffinityCase().equals(
-          other.getSessionAffinityCase());
-      if (!result) return false;
+      if (!getBackendsList()
+          .equals(other.getBackendsList())) return false;
+      if (!getSessionAffinityCase().equals(other.getSessionAffinityCase())) return false;
       switch (sessionAffinityCase_) {
         case 2:
-          result = result && getConnection()
-              .equals(other.getConnection());
+          if (!getConnection()
+              .equals(other.getConnection())) return false;
           break;
         case 3:
-          result = result && getHeader()
-              .equals(other.getHeader());
+          if (!getHeader()
+              .equals(other.getHeader())) return false;
           break;
         case 4:
-          result = result && getCookie()
-              .equals(other.getCookie());
+          if (!getCookie()
+              .equals(other.getCookie())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6721,9 +6943,8 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (backendsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             backends_ = java.util.Collections.unmodifiableList(backends_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6752,7 +6973,6 @@ public final class BackendGroupOuterClass {
             result.sessionAffinity_ = cookieBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.sessionAffinityCase_ = sessionAffinityCase_;
         onBuilt();
         return result;
@@ -6760,35 +6980,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6893,7 +7113,7 @@ public final class BackendGroupOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend> backends_ =
         java.util.Collections.emptyList();
       private void ensureBackendsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           backends_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend>(backends_);
           bitField0_ |= 0x00000001;
          }
@@ -7194,7 +7414,7 @@ public final class BackendGroupOuterClass {
           backendsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder>(
                   backends_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           backends_ = null;
@@ -7211,7 +7431,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       * @return Whether the connection field is set.
        */
+      @java.lang.Override
       public boolean hasConnection() {
         return sessionAffinityCase_ == 2;
       }
@@ -7222,7 +7444,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       * @return The connection.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
         if (connectionBuilder_ == null) {
           if (sessionAffinityCase_ == 2) {
@@ -7346,6 +7570,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
         if ((sessionAffinityCase_ == 2) && (connectionBuilder_ != null)) {
           return connectionBuilder_.getMessageOrBuilder();
@@ -7391,7 +7616,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       * @return Whether the header field is set.
        */
+      @java.lang.Override
       public boolean hasHeader() {
         return sessionAffinityCase_ == 3;
       }
@@ -7401,7 +7628,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       * @return The header.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
         if (headerBuilder_ == null) {
           if (sessionAffinityCase_ == 3) {
@@ -7519,6 +7748,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
         if ((sessionAffinityCase_ == 3) && (headerBuilder_ != null)) {
           return headerBuilder_.getMessageOrBuilder();
@@ -7563,7 +7793,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       * @return Whether the cookie field is set.
        */
+      @java.lang.Override
       public boolean hasCookie() {
         return sessionAffinityCase_ == 4;
       }
@@ -7573,7 +7805,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       * @return The cookie.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
         if (cookieBuilder_ == null) {
           if (sessionAffinityCase_ == 4) {
@@ -7691,6 +7925,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
         if ((sessionAffinityCase_ == 4) && (cookieBuilder_ != null)) {
           return cookieBuilder_.getMessageOrBuilder();
@@ -7729,7 +7964,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7789,6 +8024,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The headerName.
      */
     java.lang.String getHeaderName();
     /**
@@ -7797,6 +8033,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for headerName.
      */
     com.google.protobuf.ByteString
         getHeaderNameBytes();
@@ -7808,7 +8045,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity}
    */
-  public  static final class HeaderSessionAffinity extends
+  public static final class HeaderSessionAffinity extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity)
       HeaderSessionAffinityOrBuilder {
@@ -7819,6 +8056,13 @@ public final class BackendGroupOuterClass {
     }
     private HeaderSessionAffinity() {
       headerName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HeaderSessionAffinity();
     }
 
     @java.lang.Override
@@ -7834,7 +8078,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7852,7 +8095,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7891,7 +8134,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The headerName.
      */
+    @java.lang.Override
     public java.lang.String getHeaderName() {
       java.lang.Object ref = headerName_;
       if (ref instanceof java.lang.String) {
@@ -7910,7 +8155,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for headerName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHeaderNameBytes() {
       java.lang.Object ref = headerName_;
@@ -7939,7 +8186,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHeaderNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, headerName_);
       }
       unknownFields.writeTo(output);
@@ -7951,7 +8198,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHeaderNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, headerName_);
       }
       size += unknownFields.getSerializedSize();
@@ -7969,11 +8216,10 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) obj;
 
-      boolean result = true;
-      result = result && getHeaderName()
-          .equals(other.getHeaderName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getHeaderName()
+          .equals(other.getHeaderName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8157,35 +8403,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8239,6 +8485,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @return The headerName.
        */
       public java.lang.String getHeaderName() {
         java.lang.Object ref = headerName_;
@@ -8258,6 +8505,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @return The bytes for headerName.
        */
       public com.google.protobuf.ByteString
           getHeaderNameBytes() {
@@ -8278,6 +8526,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @param value The headerName to set.
+       * @return This builder for chaining.
        */
       public Builder setHeaderName(
           java.lang.String value) {
@@ -8295,6 +8545,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHeaderName() {
         
@@ -8308,6 +8559,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @param value The bytes for headerName to set.
+       * @return This builder for chaining.
        */
       public Builder setHeaderNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8323,7 +8576,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8383,6 +8636,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -8391,6 +8645,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -8404,6 +8659,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
+     * @return Whether the ttl field is set.
      */
     boolean hasTtl();
     /**
@@ -8415,6 +8671,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
+     * @return The ttl.
      */
     com.google.protobuf.Duration getTtl();
     /**
@@ -8436,7 +8693,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CookieSessionAffinity}
    */
-  public  static final class CookieSessionAffinity extends
+  public static final class CookieSessionAffinity extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CookieSessionAffinity)
       CookieSessionAffinityOrBuilder {
@@ -8447,6 +8704,13 @@ public final class BackendGroupOuterClass {
     }
     private CookieSessionAffinity() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CookieSessionAffinity();
     }
 
     @java.lang.Override
@@ -8462,7 +8726,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8493,7 +8756,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8532,7 +8795,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8551,7 +8816,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8577,7 +8844,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
+     * @return Whether the ttl field is set.
      */
+    @java.lang.Override
     public boolean hasTtl() {
       return ttl_ != null;
     }
@@ -8590,7 +8859,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
+     * @return The ttl.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getTtl() {
       return ttl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : ttl_;
     }
@@ -8604,6 +8875,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getTtlOrBuilder() {
       return getTtl();
     }
@@ -8622,7 +8894,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (ttl_ != null) {
@@ -8637,7 +8909,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (ttl_ != null) {
@@ -8659,16 +8931,15 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasTtl() == other.hasTtl());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasTtl() != other.hasTtl()) return false;
       if (hasTtl()) {
-        result = result && getTtl()
-            .equals(other.getTtl());
+        if (!getTtl()
+            .equals(other.getTtl())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8867,35 +9138,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8952,6 +9223,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8971,6 +9243,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8991,6 +9264,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9008,6 +9283,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9021,6 +9297,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9034,7 +9312,7 @@ public final class BackendGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration ttl_ = null;
+      private com.google.protobuf.Duration ttl_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ttlBuilder_;
       /**
@@ -9046,6 +9324,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
+       * @return Whether the ttl field is set.
        */
       public boolean hasTtl() {
         return ttlBuilder_ != null || ttl_ != null;
@@ -9059,6 +9338,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
+       * @return The ttl.
        */
       public com.google.protobuf.Duration getTtl() {
         if (ttlBuilder_ == null) {
@@ -9216,7 +9496,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9276,6 +9556,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool source_ip = 1;</code>
+     * @return The sourceIp.
      */
     boolean getSourceIp();
   }
@@ -9286,7 +9567,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity}
    */
-  public  static final class ConnectionSessionAffinity extends
+  public static final class ConnectionSessionAffinity extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity)
       ConnectionSessionAffinityOrBuilder {
@@ -9296,7 +9577,13 @@ public final class BackendGroupOuterClass {
       super(builder);
     }
     private ConnectionSessionAffinity() {
-      sourceIp_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectionSessionAffinity();
     }
 
     @java.lang.Override
@@ -9312,7 +9599,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9329,7 +9615,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9368,7 +9654,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool source_ip = 1;</code>
+     * @return The sourceIp.
      */
+    @java.lang.Override
     public boolean getSourceIp() {
       return sourceIp_;
     }
@@ -9418,11 +9706,10 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) obj;
 
-      boolean result = true;
-      result = result && (getSourceIp()
-          == other.getSourceIp());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSourceIp()
+          != other.getSourceIp()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9607,35 +9894,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9688,7 +9975,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool source_ip = 1;</code>
+       * @return The sourceIp.
        */
+      @java.lang.Override
       public boolean getSourceIp() {
         return sourceIp_;
       }
@@ -9698,6 +9987,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool source_ip = 1;</code>
+       * @param value The sourceIp to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceIp(boolean value) {
         
@@ -9711,6 +10002,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool source_ip = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceIp() {
         
@@ -9721,7 +10013,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9787,6 +10079,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 panic_threshold = 1 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The panicThreshold.
      */
     long getPanicThreshold();
 
@@ -9802,6 +10095,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 locality_aware_routing_percent = 2 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The localityAwareRoutingPercent.
      */
     long getLocalityAwareRoutingPercent();
 
@@ -9817,6 +10111,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool strict_locality = 3;</code>
+     * @return The strictLocality.
      */
     boolean getStrictLocality();
 
@@ -9828,6 +10123,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     * @return The enum numeric value on the wire for mode.
      */
     int getModeValue();
     /**
@@ -9838,6 +10134,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     * @return The mode.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode();
   }
@@ -9848,7 +10145,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.LoadBalancingConfig}
    */
-  public  static final class LoadBalancingConfig extends
+  public static final class LoadBalancingConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.LoadBalancingConfig)
       LoadBalancingConfigOrBuilder {
@@ -9858,10 +10155,14 @@ public final class BackendGroupOuterClass {
       super(builder);
     }
     private LoadBalancingConfig() {
-      panicThreshold_ = 0L;
-      localityAwareRoutingPercent_ = 0L;
-      strictLocality_ = false;
       mode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LoadBalancingConfig();
     }
 
     @java.lang.Override
@@ -9877,7 +10178,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9910,7 +10210,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9955,7 +10255,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 panic_threshold = 1 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The panicThreshold.
      */
+    @java.lang.Override
     public long getPanicThreshold() {
       return panicThreshold_;
     }
@@ -9974,7 +10276,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 locality_aware_routing_percent = 2 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The localityAwareRoutingPercent.
      */
+    @java.lang.Override
     public long getLocalityAwareRoutingPercent() {
       return localityAwareRoutingPercent_;
     }
@@ -9993,7 +10297,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool strict_locality = 3;</code>
+     * @return The strictLocality.
      */
+    @java.lang.Override
     public boolean getStrictLocality() {
       return strictLocality_;
     }
@@ -10008,8 +10314,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     * @return The enum numeric value on the wire for mode.
      */
-    public int getModeValue() {
+    @java.lang.Override public int getModeValue() {
       return mode_;
     }
     /**
@@ -10020,8 +10327,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     * @return The mode.
      */
-    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode() {
+    @java.lang.Override public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode result = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.valueOf(mode_);
       return result == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.UNRECOGNIZED : result;
@@ -10093,16 +10401,15 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig) obj;
 
-      boolean result = true;
-      result = result && (getPanicThreshold()
-          == other.getPanicThreshold());
-      result = result && (getLocalityAwareRoutingPercent()
-          == other.getLocalityAwareRoutingPercent());
-      result = result && (getStrictLocality()
-          == other.getStrictLocality());
-      result = result && mode_ == other.mode_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getPanicThreshold()
+          != other.getPanicThreshold()) return false;
+      if (getLocalityAwareRoutingPercent()
+          != other.getLocalityAwareRoutingPercent()) return false;
+      if (getStrictLocality()
+          != other.getStrictLocality()) return false;
+      if (mode_ != other.mode_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10304,35 +10611,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10400,7 +10707,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 panic_threshold = 1 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return The panicThreshold.
        */
+      @java.lang.Override
       public long getPanicThreshold() {
         return panicThreshold_;
       }
@@ -10416,6 +10725,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 panic_threshold = 1 [(.yandex.cloud.value) = "0-100"];</code>
+       * @param value The panicThreshold to set.
+       * @return This builder for chaining.
        */
       public Builder setPanicThreshold(long value) {
         
@@ -10435,6 +10746,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 panic_threshold = 1 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPanicThreshold() {
         
@@ -10456,7 +10768,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 locality_aware_routing_percent = 2 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return The localityAwareRoutingPercent.
        */
+      @java.lang.Override
       public long getLocalityAwareRoutingPercent() {
         return localityAwareRoutingPercent_;
       }
@@ -10472,6 +10786,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 locality_aware_routing_percent = 2 [(.yandex.cloud.value) = "0-100"];</code>
+       * @param value The localityAwareRoutingPercent to set.
+       * @return This builder for chaining.
        */
       public Builder setLocalityAwareRoutingPercent(long value) {
         
@@ -10491,6 +10807,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 locality_aware_routing_percent = 2 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearLocalityAwareRoutingPercent() {
         
@@ -10512,7 +10829,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool strict_locality = 3;</code>
+       * @return The strictLocality.
        */
+      @java.lang.Override
       public boolean getStrictLocality() {
         return strictLocality_;
       }
@@ -10528,6 +10847,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool strict_locality = 3;</code>
+       * @param value The strictLocality to set.
+       * @return This builder for chaining.
        */
       public Builder setStrictLocality(boolean value) {
         
@@ -10547,6 +10868,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool strict_locality = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStrictLocality() {
         
@@ -10564,8 +10886,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       * @return The enum numeric value on the wire for mode.
        */
-      public int getModeValue() {
+      @java.lang.Override public int getModeValue() {
         return mode_;
       }
       /**
@@ -10576,8 +10899,11 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
        */
       public Builder setModeValue(int value) {
+        
         mode_ = value;
         onChanged();
         return this;
@@ -10590,7 +10916,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       * @return The mode.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode result = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.valueOf(mode_);
@@ -10604,6 +10932,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
        */
       public Builder setMode(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode value) {
         if (value == null) {
@@ -10622,6 +10952,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMode() {
         
@@ -10632,7 +10963,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10692,6 +11023,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -10700,6 +11032,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -10713,6 +11046,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return Whether the backendWeight field is set.
      */
     boolean hasBackendWeight();
     /**
@@ -10724,6 +11058,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return The backendWeight.
      */
     com.google.protobuf.Int64Value getBackendWeight();
     /**
@@ -10744,6 +11079,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return Whether the loadBalancingConfig field is set.
      */
     boolean hasLoadBalancingConfig();
     /**
@@ -10752,6 +11088,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return The loadBalancingConfig.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig();
     /**
@@ -10769,6 +11106,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The port.
      */
     long getPort();
 
@@ -10779,6 +11117,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return Whether the targetGroups field is set.
      */
     boolean hasTargetGroups();
     /**
@@ -10788,6 +11127,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return The targetGroups.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups();
     /**
@@ -10863,6 +11203,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return Whether the tls field is set.
      */
     boolean hasTls();
     /**
@@ -10874,6 +11215,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return The tls.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls();
     /**
@@ -10894,6 +11236,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool enable_proxy_protocol = 8;</code>
+     * @return The enableProxyProtocol.
      */
     boolean getEnableProxyProtocol();
 
@@ -10906,7 +11249,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamBackend}
    */
-  public  static final class StreamBackend extends
+  public static final class StreamBackend extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StreamBackend)
       StreamBackendOrBuilder {
@@ -10917,9 +11260,14 @@ public final class BackendGroupOuterClass {
     }
     private StreamBackend() {
       name_ = "";
-      port_ = 0L;
       healthchecks_ = java.util.Collections.emptyList();
-      enableProxyProtocol_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamBackend();
     }
 
     @java.lang.Override
@@ -10998,9 +11346,9 @@ public final class BackendGroupOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               healthchecks_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.parser(), extensionRegistry));
@@ -11025,7 +11373,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11039,7 +11387,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
         }
         this.unknownFields = unknownFields.build();
@@ -11059,11 +11407,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder.class);
     }
 
-    private int bitField0_;
     private int backendTypeCase_ = 0;
     private java.lang.Object backendType_;
     public enum BackendTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TARGET_GROUPS(5),
       BACKENDTYPE_NOT_SET(0);
       private final int value;
@@ -11071,6 +11419,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -11104,7 +11454,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -11123,7 +11475,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -11149,7 +11503,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return Whether the backendWeight field is set.
      */
+    @java.lang.Override
     public boolean hasBackendWeight() {
       return backendWeight_ != null;
     }
@@ -11162,7 +11518,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return The backendWeight.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackendWeight() {
       return backendWeight_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backendWeight_;
     }
@@ -11176,6 +11534,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackendWeightOrBuilder() {
       return getBackendWeight();
     }
@@ -11188,7 +11547,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return Whether the loadBalancingConfig field is set.
      */
+    @java.lang.Override
     public boolean hasLoadBalancingConfig() {
       return loadBalancingConfig_ != null;
     }
@@ -11198,7 +11559,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return The loadBalancingConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
       return loadBalancingConfig_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.getDefaultInstance() : loadBalancingConfig_;
     }
@@ -11209,6 +11572,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder getLoadBalancingConfigOrBuilder() {
       return getLoadBalancingConfig();
     }
@@ -11221,7 +11585,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The port.
      */
+    @java.lang.Override
     public long getPort() {
       return port_;
     }
@@ -11234,7 +11600,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return Whether the targetGroups field is set.
      */
+    @java.lang.Override
     public boolean hasTargetGroups() {
       return backendTypeCase_ == 5;
     }
@@ -11245,7 +11613,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return The targetGroups.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
       if (backendTypeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) backendType_;
@@ -11260,6 +11630,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
       if (backendTypeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) backendType_;
@@ -11278,6 +11649,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> getHealthchecksList() {
       return healthchecks_;
     }
@@ -11290,6 +11662,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> 
         getHealthchecksOrBuilderList() {
       return healthchecks_;
@@ -11303,6 +11676,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public int getHealthchecksCount() {
       return healthchecks_.size();
     }
@@ -11315,6 +11689,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck getHealthchecks(int index) {
       return healthchecks_.get(index);
     }
@@ -11327,6 +11702,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder getHealthchecksOrBuilder(
         int index) {
       return healthchecks_.get(index);
@@ -11343,7 +11719,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return Whether the tls field is set.
      */
+    @java.lang.Override
     public boolean hasTls() {
       return tls_ != null;
     }
@@ -11356,7 +11734,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return The tls.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
       return tls_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.getDefaultInstance() : tls_;
     }
@@ -11370,6 +11750,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder getTlsOrBuilder() {
       return getTls();
     }
@@ -11382,7 +11763,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool enable_proxy_protocol = 8;</code>
+     * @return The enableProxyProtocol.
      */
+    @java.lang.Override
     public boolean getEnableProxyProtocol() {
       return enableProxyProtocol_;
     }
@@ -11401,7 +11784,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (backendWeight_ != null) {
@@ -11434,7 +11817,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (backendWeight_ != null) {
@@ -11480,43 +11863,40 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasBackendWeight() == other.hasBackendWeight());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasBackendWeight() != other.hasBackendWeight()) return false;
       if (hasBackendWeight()) {
-        result = result && getBackendWeight()
-            .equals(other.getBackendWeight());
+        if (!getBackendWeight()
+            .equals(other.getBackendWeight())) return false;
       }
-      result = result && (hasLoadBalancingConfig() == other.hasLoadBalancingConfig());
+      if (hasLoadBalancingConfig() != other.hasLoadBalancingConfig()) return false;
       if (hasLoadBalancingConfig()) {
-        result = result && getLoadBalancingConfig()
-            .equals(other.getLoadBalancingConfig());
+        if (!getLoadBalancingConfig()
+            .equals(other.getLoadBalancingConfig())) return false;
       }
-      result = result && (getPort()
-          == other.getPort());
-      result = result && getHealthchecksList()
-          .equals(other.getHealthchecksList());
-      result = result && (hasTls() == other.hasTls());
+      if (getPort()
+          != other.getPort()) return false;
+      if (!getHealthchecksList()
+          .equals(other.getHealthchecksList())) return false;
+      if (hasTls() != other.hasTls()) return false;
       if (hasTls()) {
-        result = result && getTls()
-            .equals(other.getTls());
+        if (!getTls()
+            .equals(other.getTls())) return false;
       }
-      result = result && (getEnableProxyProtocol()
-          == other.getEnableProxyProtocol());
-      result = result && getBackendTypeCase().equals(
-          other.getBackendTypeCase());
-      if (!result) return false;
+      if (getEnableProxyProtocol()
+          != other.getEnableProxyProtocol()) return false;
+      if (!getBackendTypeCase().equals(other.getBackendTypeCase())) return false;
       switch (backendTypeCase_) {
         case 5:
-          result = result && getTargetGroups()
-              .equals(other.getTargetGroups());
+          if (!getTargetGroups()
+              .equals(other.getTargetGroups())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11714,7 +12094,7 @@ public final class BackendGroupOuterClass {
 
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           healthchecksBuilder_.clear();
         }
@@ -11755,7 +12135,6 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (backendWeightBuilder_ == null) {
           result.backendWeight_ = backendWeight_;
@@ -11776,9 +12155,9 @@ public final class BackendGroupOuterClass {
           }
         }
         if (healthchecksBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.healthchecks_ = healthchecks_;
         } else {
@@ -11790,7 +12169,6 @@ public final class BackendGroupOuterClass {
           result.tls_ = tlsBuilder_.build();
         }
         result.enableProxyProtocol_ = enableProxyProtocol_;
-        result.bitField0_ = to_bitField0_;
         result.backendTypeCase_ = backendTypeCase_;
         onBuilt();
         return result;
@@ -11798,35 +12176,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11857,7 +12235,7 @@ public final class BackendGroupOuterClass {
           if (!other.healthchecks_.isEmpty()) {
             if (healthchecks_.isEmpty()) {
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHealthchecksIsMutable();
               healthchecks_.addAll(other.healthchecks_);
@@ -11870,7 +12248,7 @@ public final class BackendGroupOuterClass {
               healthchecksBuilder_.dispose();
               healthchecksBuilder_ = null;
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               healthchecksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHealthchecksFieldBuilder() : null;
@@ -11946,6 +12324,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -11965,6 +12344,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -11985,6 +12365,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -12002,6 +12384,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -12015,6 +12398,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -12028,7 +12413,7 @@ public final class BackendGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value backendWeight_ = null;
+      private com.google.protobuf.Int64Value backendWeight_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backendWeightBuilder_;
       /**
@@ -12040,6 +12425,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+       * @return Whether the backendWeight field is set.
        */
       public boolean hasBackendWeight() {
         return backendWeightBuilder_ != null || backendWeight_ != null;
@@ -12053,6 +12439,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+       * @return The backendWeight.
        */
       public com.google.protobuf.Int64Value getBackendWeight() {
         if (backendWeightBuilder_ == null) {
@@ -12208,7 +12595,7 @@ public final class BackendGroupOuterClass {
         return backendWeightBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder> loadBalancingConfigBuilder_;
       /**
@@ -12217,6 +12604,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+       * @return Whether the loadBalancingConfig field is set.
        */
       public boolean hasLoadBalancingConfig() {
         return loadBalancingConfigBuilder_ != null || loadBalancingConfig_ != null;
@@ -12227,6 +12615,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+       * @return The loadBalancingConfig.
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
         if (loadBalancingConfigBuilder_ == null) {
@@ -12368,7 +12757,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -12378,6 +12769,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
        */
       public Builder setPort(long value) {
         
@@ -12391,6 +12784,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPort() {
         
@@ -12408,7 +12802,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+       * @return Whether the targetGroups field is set.
        */
+      @java.lang.Override
       public boolean hasTargetGroups() {
         return backendTypeCase_ == 5;
       }
@@ -12419,7 +12815,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+       * @return The targetGroups.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
         if (targetGroupsBuilder_ == null) {
           if (backendTypeCase_ == 5) {
@@ -12543,6 +12941,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
         if ((backendTypeCase_ == 5) && (targetGroupsBuilder_ != null)) {
           return targetGroupsBuilder_.getMessageOrBuilder();
@@ -12583,9 +12982,9 @@ public final class BackendGroupOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> healthchecks_ =
         java.util.Collections.emptyList();
       private void ensureHealthchecksIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>(healthchecks_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -12801,7 +13200,7 @@ public final class BackendGroupOuterClass {
       public Builder clearHealthchecks() {
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           healthchecksBuilder_.clear();
@@ -12920,7 +13319,7 @@ public final class BackendGroupOuterClass {
           healthchecksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder>(
                   healthchecks_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           healthchecks_ = null;
@@ -12928,7 +13327,7 @@ public final class BackendGroupOuterClass {
         return healthchecksBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder> tlsBuilder_;
       /**
@@ -12940,6 +13339,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+       * @return Whether the tls field is set.
        */
       public boolean hasTls() {
         return tlsBuilder_ != null || tls_ != null;
@@ -12953,6 +13353,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+       * @return The tls.
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
         if (tlsBuilder_ == null) {
@@ -13115,7 +13516,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool enable_proxy_protocol = 8;</code>
+       * @return The enableProxyProtocol.
        */
+      @java.lang.Override
       public boolean getEnableProxyProtocol() {
         return enableProxyProtocol_;
       }
@@ -13125,6 +13528,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool enable_proxy_protocol = 8;</code>
+       * @param value The enableProxyProtocol to set.
+       * @return This builder for chaining.
        */
       public Builder setEnableProxyProtocol(boolean value) {
         
@@ -13138,6 +13543,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool enable_proxy_protocol = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEnableProxyProtocol() {
         
@@ -13148,7 +13554,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13208,6 +13614,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -13216,6 +13623,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -13229,6 +13637,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return Whether the backendWeight field is set.
      */
     boolean hasBackendWeight();
     /**
@@ -13240,6 +13649,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return The backendWeight.
      */
     com.google.protobuf.Int64Value getBackendWeight();
     /**
@@ -13260,6 +13670,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return Whether the loadBalancingConfig field is set.
      */
     boolean hasLoadBalancingConfig();
     /**
@@ -13268,6 +13679,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return The loadBalancingConfig.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig();
     /**
@@ -13285,6 +13697,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The port.
      */
     long getPort();
 
@@ -13295,6 +13708,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return Whether the targetGroups field is set.
      */
     boolean hasTargetGroups();
     /**
@@ -13304,6 +13718,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return The targetGroups.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups();
     /**
@@ -13325,6 +13740,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     * @return Whether the storageBucket field is set.
      */
     boolean hasStorageBucket();
     /**
@@ -13336,6 +13752,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     * @return The storageBucket.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket();
     /**
@@ -13413,6 +13830,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return Whether the tls field is set.
      */
     boolean hasTls();
     /**
@@ -13424,6 +13842,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return The tls.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls();
     /**
@@ -13445,6 +13864,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool use_http2 = 8;</code>
+     * @return The useHttp2.
      */
     boolean getUseHttp2();
 
@@ -13457,7 +13877,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpBackend}
    */
-  public  static final class HttpBackend extends
+  public static final class HttpBackend extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HttpBackend)
       HttpBackendOrBuilder {
@@ -13468,9 +13888,14 @@ public final class BackendGroupOuterClass {
     }
     private HttpBackend() {
       name_ = "";
-      port_ = 0L;
       healthchecks_ = java.util.Collections.emptyList();
-      useHttp2_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HttpBackend();
     }
 
     @java.lang.Override
@@ -13549,9 +13974,9 @@ public final class BackendGroupOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               healthchecks_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.parser(), extensionRegistry));
@@ -13590,7 +14015,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13604,7 +14029,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
         }
         this.unknownFields = unknownFields.build();
@@ -13624,11 +14049,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.Builder.class);
     }
 
-    private int bitField0_;
     private int backendTypeCase_ = 0;
     private java.lang.Object backendType_;
     public enum BackendTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TARGET_GROUPS(5),
       STORAGE_BUCKET(9),
       BACKENDTYPE_NOT_SET(0);
@@ -13637,6 +14062,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -13671,7 +14098,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -13690,7 +14119,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -13716,7 +14147,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return Whether the backendWeight field is set.
      */
+    @java.lang.Override
     public boolean hasBackendWeight() {
       return backendWeight_ != null;
     }
@@ -13729,7 +14162,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return The backendWeight.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackendWeight() {
       return backendWeight_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backendWeight_;
     }
@@ -13743,6 +14178,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackendWeightOrBuilder() {
       return getBackendWeight();
     }
@@ -13755,7 +14191,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return Whether the loadBalancingConfig field is set.
      */
+    @java.lang.Override
     public boolean hasLoadBalancingConfig() {
       return loadBalancingConfig_ != null;
     }
@@ -13765,7 +14203,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return The loadBalancingConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
       return loadBalancingConfig_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.getDefaultInstance() : loadBalancingConfig_;
     }
@@ -13776,6 +14216,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder getLoadBalancingConfigOrBuilder() {
       return getLoadBalancingConfig();
     }
@@ -13788,7 +14229,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The port.
      */
+    @java.lang.Override
     public long getPort() {
       return port_;
     }
@@ -13801,7 +14244,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return Whether the targetGroups field is set.
      */
+    @java.lang.Override
     public boolean hasTargetGroups() {
       return backendTypeCase_ == 5;
     }
@@ -13812,7 +14257,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return The targetGroups.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
       if (backendTypeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) backendType_;
@@ -13827,6 +14274,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
       if (backendTypeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) backendType_;
@@ -13844,7 +14292,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     * @return Whether the storageBucket field is set.
      */
+    @java.lang.Override
     public boolean hasStorageBucket() {
       return backendTypeCase_ == 9;
     }
@@ -13857,7 +14307,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     * @return The storageBucket.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket() {
       if (backendTypeCase_ == 9) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_;
@@ -13874,6 +14326,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder getStorageBucketOrBuilder() {
       if (backendTypeCase_ == 9) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_;
@@ -13892,6 +14345,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> getHealthchecksList() {
       return healthchecks_;
     }
@@ -13904,6 +14358,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> 
         getHealthchecksOrBuilderList() {
       return healthchecks_;
@@ -13917,6 +14372,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public int getHealthchecksCount() {
       return healthchecks_.size();
     }
@@ -13929,6 +14385,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck getHealthchecks(int index) {
       return healthchecks_.get(index);
     }
@@ -13941,6 +14398,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder getHealthchecksOrBuilder(
         int index) {
       return healthchecks_.get(index);
@@ -13957,7 +14415,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return Whether the tls field is set.
      */
+    @java.lang.Override
     public boolean hasTls() {
       return tls_ != null;
     }
@@ -13970,7 +14430,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+     * @return The tls.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
       return tls_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.getDefaultInstance() : tls_;
     }
@@ -13984,6 +14446,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder getTlsOrBuilder() {
       return getTls();
     }
@@ -13997,7 +14460,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>bool use_http2 = 8;</code>
+     * @return The useHttp2.
      */
+    @java.lang.Override
     public boolean getUseHttp2() {
       return useHttp2_;
     }
@@ -14016,7 +14481,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (backendWeight_ != null) {
@@ -14052,7 +14517,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (backendWeight_ != null) {
@@ -14102,47 +14567,44 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasBackendWeight() == other.hasBackendWeight());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasBackendWeight() != other.hasBackendWeight()) return false;
       if (hasBackendWeight()) {
-        result = result && getBackendWeight()
-            .equals(other.getBackendWeight());
+        if (!getBackendWeight()
+            .equals(other.getBackendWeight())) return false;
       }
-      result = result && (hasLoadBalancingConfig() == other.hasLoadBalancingConfig());
+      if (hasLoadBalancingConfig() != other.hasLoadBalancingConfig()) return false;
       if (hasLoadBalancingConfig()) {
-        result = result && getLoadBalancingConfig()
-            .equals(other.getLoadBalancingConfig());
+        if (!getLoadBalancingConfig()
+            .equals(other.getLoadBalancingConfig())) return false;
       }
-      result = result && (getPort()
-          == other.getPort());
-      result = result && getHealthchecksList()
-          .equals(other.getHealthchecksList());
-      result = result && (hasTls() == other.hasTls());
+      if (getPort()
+          != other.getPort()) return false;
+      if (!getHealthchecksList()
+          .equals(other.getHealthchecksList())) return false;
+      if (hasTls() != other.hasTls()) return false;
       if (hasTls()) {
-        result = result && getTls()
-            .equals(other.getTls());
+        if (!getTls()
+            .equals(other.getTls())) return false;
       }
-      result = result && (getUseHttp2()
-          == other.getUseHttp2());
-      result = result && getBackendTypeCase().equals(
-          other.getBackendTypeCase());
-      if (!result) return false;
+      if (getUseHttp2()
+          != other.getUseHttp2()) return false;
+      if (!getBackendTypeCase().equals(other.getBackendTypeCase())) return false;
       switch (backendTypeCase_) {
         case 5:
-          result = result && getTargetGroups()
-              .equals(other.getTargetGroups());
+          if (!getTargetGroups()
+              .equals(other.getTargetGroups())) return false;
           break;
         case 9:
-          result = result && getStorageBucket()
-              .equals(other.getStorageBucket());
+          if (!getStorageBucket()
+              .equals(other.getStorageBucket())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14344,7 +14806,7 @@ public final class BackendGroupOuterClass {
 
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           healthchecksBuilder_.clear();
         }
@@ -14385,7 +14847,6 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (backendWeightBuilder_ == null) {
           result.backendWeight_ = backendWeight_;
@@ -14413,9 +14874,9 @@ public final class BackendGroupOuterClass {
           }
         }
         if (healthchecksBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.healthchecks_ = healthchecks_;
         } else {
@@ -14427,7 +14888,6 @@ public final class BackendGroupOuterClass {
           result.tls_ = tlsBuilder_.build();
         }
         result.useHttp2_ = useHttp2_;
-        result.bitField0_ = to_bitField0_;
         result.backendTypeCase_ = backendTypeCase_;
         onBuilt();
         return result;
@@ -14435,35 +14895,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14494,7 +14954,7 @@ public final class BackendGroupOuterClass {
           if (!other.healthchecks_.isEmpty()) {
             if (healthchecks_.isEmpty()) {
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHealthchecksIsMutable();
               healthchecks_.addAll(other.healthchecks_);
@@ -14507,7 +14967,7 @@ public final class BackendGroupOuterClass {
               healthchecksBuilder_.dispose();
               healthchecksBuilder_ = null;
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
               healthchecksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHealthchecksFieldBuilder() : null;
@@ -14587,6 +15047,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -14606,6 +15067,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -14626,6 +15088,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -14643,6 +15107,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -14656,6 +15121,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14669,7 +15136,7 @@ public final class BackendGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value backendWeight_ = null;
+      private com.google.protobuf.Int64Value backendWeight_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backendWeightBuilder_;
       /**
@@ -14681,6 +15148,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+       * @return Whether the backendWeight field is set.
        */
       public boolean hasBackendWeight() {
         return backendWeightBuilder_ != null || backendWeight_ != null;
@@ -14694,6 +15162,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+       * @return The backendWeight.
        */
       public com.google.protobuf.Int64Value getBackendWeight() {
         if (backendWeightBuilder_ == null) {
@@ -14849,7 +15318,7 @@ public final class BackendGroupOuterClass {
         return backendWeightBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder> loadBalancingConfigBuilder_;
       /**
@@ -14858,6 +15327,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+       * @return Whether the loadBalancingConfig field is set.
        */
       public boolean hasLoadBalancingConfig() {
         return loadBalancingConfigBuilder_ != null || loadBalancingConfig_ != null;
@@ -14868,6 +15338,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+       * @return The loadBalancingConfig.
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
         if (loadBalancingConfigBuilder_ == null) {
@@ -15009,7 +15480,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -15019,6 +15492,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
        */
       public Builder setPort(long value) {
         
@@ -15032,6 +15507,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPort() {
         
@@ -15049,7 +15525,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+       * @return Whether the targetGroups field is set.
        */
+      @java.lang.Override
       public boolean hasTargetGroups() {
         return backendTypeCase_ == 5;
       }
@@ -15060,7 +15538,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+       * @return The targetGroups.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
         if (targetGroupsBuilder_ == null) {
           if (backendTypeCase_ == 5) {
@@ -15184,6 +15664,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
         if ((backendTypeCase_ == 5) && (targetGroupsBuilder_ != null)) {
           return targetGroupsBuilder_.getMessageOrBuilder();
@@ -15232,7 +15713,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       * @return Whether the storageBucket field is set.
        */
+      @java.lang.Override
       public boolean hasStorageBucket() {
         return backendTypeCase_ == 9;
       }
@@ -15245,7 +15728,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       * @return The storageBucket.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket() {
         if (storageBucketBuilder_ == null) {
           if (backendTypeCase_ == 9) {
@@ -15381,6 +15866,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder getStorageBucketOrBuilder() {
         if ((backendTypeCase_ == 9) && (storageBucketBuilder_ != null)) {
           return storageBucketBuilder_.getMessageOrBuilder();
@@ -15423,9 +15909,9 @@ public final class BackendGroupOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> healthchecks_ =
         java.util.Collections.emptyList();
       private void ensureHealthchecksIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>(healthchecks_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -15641,7 +16127,7 @@ public final class BackendGroupOuterClass {
       public Builder clearHealthchecks() {
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           healthchecksBuilder_.clear();
@@ -15760,7 +16246,7 @@ public final class BackendGroupOuterClass {
           healthchecksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder>(
                   healthchecks_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           healthchecks_ = null;
@@ -15768,7 +16254,7 @@ public final class BackendGroupOuterClass {
         return healthchecksBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder> tlsBuilder_;
       /**
@@ -15780,6 +16266,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+       * @return Whether the tls field is set.
        */
       public boolean hasTls() {
         return tlsBuilder_ != null || tls_ != null;
@@ -15793,6 +16280,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
+       * @return The tls.
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
         if (tlsBuilder_ == null) {
@@ -15956,7 +16444,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool use_http2 = 8;</code>
+       * @return The useHttp2.
        */
+      @java.lang.Override
       public boolean getUseHttp2() {
         return useHttp2_;
       }
@@ -15967,6 +16457,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool use_http2 = 8;</code>
+       * @param value The useHttp2 to set.
+       * @return This builder for chaining.
        */
       public Builder setUseHttp2(boolean value) {
         
@@ -15981,6 +16473,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool use_http2 = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUseHttp2() {
         
@@ -15991,7 +16484,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16051,6 +16544,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -16059,6 +16553,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -16072,6 +16567,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return Whether the backendWeight field is set.
      */
     boolean hasBackendWeight();
     /**
@@ -16083,6 +16579,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return The backendWeight.
      */
     com.google.protobuf.Int64Value getBackendWeight();
     /**
@@ -16103,6 +16600,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return Whether the loadBalancingConfig field is set.
      */
     boolean hasLoadBalancingConfig();
     /**
@@ -16111,6 +16609,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return The loadBalancingConfig.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig();
     /**
@@ -16128,6 +16627,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The port.
      */
     long getPort();
 
@@ -16137,6 +16637,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return Whether the targetGroups field is set.
      */
     boolean hasTargetGroups();
     /**
@@ -16145,6 +16646,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return The targetGroups.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups();
     /**
@@ -16219,6 +16721,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
+     * @return Whether the tls field is set.
      */
     boolean hasTls();
     /**
@@ -16230,6 +16733,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
+     * @return The tls.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls();
     /**
@@ -16253,7 +16757,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcBackend}
    */
-  public  static final class GrpcBackend extends
+  public static final class GrpcBackend extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.GrpcBackend)
       GrpcBackendOrBuilder {
@@ -16264,8 +16768,14 @@ public final class BackendGroupOuterClass {
     }
     private GrpcBackend() {
       name_ = "";
-      port_ = 0L;
       healthchecks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GrpcBackend();
     }
 
     @java.lang.Override
@@ -16344,9 +16854,9 @@ public final class BackendGroupOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               healthchecks_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.parser(), extensionRegistry));
@@ -16366,7 +16876,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16380,7 +16890,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
         }
         this.unknownFields = unknownFields.build();
@@ -16400,11 +16910,11 @@ public final class BackendGroupOuterClass {
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.Builder.class);
     }
 
-    private int bitField0_;
     private int backendTypeCase_ = 0;
     private java.lang.Object backendType_;
     public enum BackendTypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TARGET_GROUPS(5),
       BACKENDTYPE_NOT_SET(0);
       private final int value;
@@ -16412,6 +16922,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -16445,7 +16957,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -16464,7 +16978,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -16490,7 +17006,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return Whether the backendWeight field is set.
      */
+    @java.lang.Override
     public boolean hasBackendWeight() {
       return backendWeight_ != null;
     }
@@ -16503,7 +17021,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+     * @return The backendWeight.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackendWeight() {
       return backendWeight_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backendWeight_;
     }
@@ -16517,6 +17037,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackendWeightOrBuilder() {
       return getBackendWeight();
     }
@@ -16529,7 +17050,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return Whether the loadBalancingConfig field is set.
      */
+    @java.lang.Override
     public boolean hasLoadBalancingConfig() {
       return loadBalancingConfig_ != null;
     }
@@ -16539,7 +17062,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+     * @return The loadBalancingConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
       return loadBalancingConfig_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.getDefaultInstance() : loadBalancingConfig_;
     }
@@ -16550,6 +17075,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder getLoadBalancingConfigOrBuilder() {
       return getLoadBalancingConfig();
     }
@@ -16562,7 +17088,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The port.
      */
+    @java.lang.Override
     public long getPort() {
       return port_;
     }
@@ -16574,7 +17102,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return Whether the targetGroups field is set.
      */
+    @java.lang.Override
     public boolean hasTargetGroups() {
       return backendTypeCase_ == 5;
     }
@@ -16584,7 +17114,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+     * @return The targetGroups.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
       if (backendTypeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) backendType_;
@@ -16598,6 +17130,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
       if (backendTypeCase_ == 5) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) backendType_;
@@ -16616,6 +17149,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> getHealthchecksList() {
       return healthchecks_;
     }
@@ -16628,6 +17162,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> 
         getHealthchecksOrBuilderList() {
       return healthchecks_;
@@ -16641,6 +17176,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 7;</code>
      */
+    @java.lang.Override
     public int getHealthchecksCount() {
       return healthchecks_.size();
     }
@@ -16653,6 +17189,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck getHealthchecks(int index) {
       return healthchecks_.get(index);
     }
@@ -16665,6 +17202,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder getHealthchecksOrBuilder(
         int index) {
       return healthchecks_.get(index);
@@ -16681,7 +17219,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
+     * @return Whether the tls field is set.
      */
+    @java.lang.Override
     public boolean hasTls() {
       return tls_ != null;
     }
@@ -16694,7 +17234,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
+     * @return The tls.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
       return tls_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.getDefaultInstance() : tls_;
     }
@@ -16708,6 +17250,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder getTlsOrBuilder() {
       return getTls();
     }
@@ -16726,7 +17269,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (backendWeight_ != null) {
@@ -16756,7 +17299,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (backendWeight_ != null) {
@@ -16798,41 +17341,38 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasBackendWeight() == other.hasBackendWeight());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasBackendWeight() != other.hasBackendWeight()) return false;
       if (hasBackendWeight()) {
-        result = result && getBackendWeight()
-            .equals(other.getBackendWeight());
+        if (!getBackendWeight()
+            .equals(other.getBackendWeight())) return false;
       }
-      result = result && (hasLoadBalancingConfig() == other.hasLoadBalancingConfig());
+      if (hasLoadBalancingConfig() != other.hasLoadBalancingConfig()) return false;
       if (hasLoadBalancingConfig()) {
-        result = result && getLoadBalancingConfig()
-            .equals(other.getLoadBalancingConfig());
+        if (!getLoadBalancingConfig()
+            .equals(other.getLoadBalancingConfig())) return false;
       }
-      result = result && (getPort()
-          == other.getPort());
-      result = result && getHealthchecksList()
-          .equals(other.getHealthchecksList());
-      result = result && (hasTls() == other.hasTls());
+      if (getPort()
+          != other.getPort()) return false;
+      if (!getHealthchecksList()
+          .equals(other.getHealthchecksList())) return false;
+      if (hasTls() != other.hasTls()) return false;
       if (hasTls()) {
-        result = result && getTls()
-            .equals(other.getTls());
+        if (!getTls()
+            .equals(other.getTls())) return false;
       }
-      result = result && getBackendTypeCase().equals(
-          other.getBackendTypeCase());
-      if (!result) return false;
+      if (!getBackendTypeCase().equals(other.getBackendTypeCase())) return false;
       switch (backendTypeCase_) {
         case 5:
-          result = result && getTargetGroups()
-              .equals(other.getTargetGroups());
+          if (!getTargetGroups()
+              .equals(other.getTargetGroups())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17027,7 +17567,7 @@ public final class BackendGroupOuterClass {
 
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           healthchecksBuilder_.clear();
         }
@@ -17066,7 +17606,6 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (backendWeightBuilder_ == null) {
           result.backendWeight_ = backendWeight_;
@@ -17087,9 +17626,9 @@ public final class BackendGroupOuterClass {
           }
         }
         if (healthchecksBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.healthchecks_ = healthchecks_;
         } else {
@@ -17100,7 +17639,6 @@ public final class BackendGroupOuterClass {
         } else {
           result.tls_ = tlsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.backendTypeCase_ = backendTypeCase_;
         onBuilt();
         return result;
@@ -17108,35 +17646,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17167,7 +17705,7 @@ public final class BackendGroupOuterClass {
           if (!other.healthchecks_.isEmpty()) {
             if (healthchecks_.isEmpty()) {
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHealthchecksIsMutable();
               healthchecks_.addAll(other.healthchecks_);
@@ -17180,7 +17718,7 @@ public final class BackendGroupOuterClass {
               healthchecksBuilder_.dispose();
               healthchecksBuilder_ = null;
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               healthchecksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHealthchecksFieldBuilder() : null;
@@ -17253,6 +17791,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -17272,6 +17811,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -17292,6 +17832,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -17309,6 +17851,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -17322,6 +17865,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -17335,7 +17880,7 @@ public final class BackendGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value backendWeight_ = null;
+      private com.google.protobuf.Int64Value backendWeight_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backendWeightBuilder_;
       /**
@@ -17347,6 +17892,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+       * @return Whether the backendWeight field is set.
        */
       public boolean hasBackendWeight() {
         return backendWeightBuilder_ != null || backendWeight_ != null;
@@ -17360,6 +17906,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
+       * @return The backendWeight.
        */
       public com.google.protobuf.Int64Value getBackendWeight() {
         if (backendWeightBuilder_ == null) {
@@ -17515,7 +18062,7 @@ public final class BackendGroupOuterClass {
         return backendWeightBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder> loadBalancingConfigBuilder_;
       /**
@@ -17524,6 +18071,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+       * @return Whether the loadBalancingConfig field is set.
        */
       public boolean hasLoadBalancingConfig() {
         return loadBalancingConfigBuilder_ != null || loadBalancingConfig_ != null;
@@ -17534,6 +18082,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
+       * @return The loadBalancingConfig.
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
         if (loadBalancingConfigBuilder_ == null) {
@@ -17675,7 +18224,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -17685,6 +18236,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
        */
       public Builder setPort(long value) {
         
@@ -17698,6 +18251,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPort() {
         
@@ -17714,7 +18268,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+       * @return Whether the targetGroups field is set.
        */
+      @java.lang.Override
       public boolean hasTargetGroups() {
         return backendTypeCase_ == 5;
       }
@@ -17724,7 +18280,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
+       * @return The targetGroups.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
         if (targetGroupsBuilder_ == null) {
           if (backendTypeCase_ == 5) {
@@ -17842,6 +18400,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
         if ((backendTypeCase_ == 5) && (targetGroupsBuilder_ != null)) {
           return targetGroupsBuilder_.getMessageOrBuilder();
@@ -17881,9 +18440,9 @@ public final class BackendGroupOuterClass {
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> healthchecks_ =
         java.util.Collections.emptyList();
       private void ensureHealthchecksIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>(healthchecks_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -18099,7 +18658,7 @@ public final class BackendGroupOuterClass {
       public Builder clearHealthchecks() {
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           healthchecksBuilder_.clear();
@@ -18218,7 +18777,7 @@ public final class BackendGroupOuterClass {
           healthchecksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder>(
                   healthchecks_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           healthchecks_ = null;
@@ -18226,7 +18785,7 @@ public final class BackendGroupOuterClass {
         return healthchecksBuilder_;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder> tlsBuilder_;
       /**
@@ -18238,6 +18797,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
+       * @return Whether the tls field is set.
        */
       public boolean hasTls() {
         return tlsBuilder_ != null || tls_ != null;
@@ -18251,6 +18811,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 8;</code>
+       * @return The tls.
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
         if (tlsBuilder_ == null) {
@@ -18408,7 +18969,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18469,6 +19030,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the targetGroupIds.
      */
     java.util.List<java.lang.String>
         getTargetGroupIdsList();
@@ -18479,6 +19041,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of targetGroupIds.
      */
     int getTargetGroupIdsCount();
     /**
@@ -18488,6 +19051,8 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The targetGroupIds at the given index.
      */
     java.lang.String getTargetGroupIds(int index);
     /**
@@ -18497,6 +19062,8 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targetGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getTargetGroupIdsBytes(int index);
@@ -18508,7 +19075,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetGroupsBackend}
    */
-  public  static final class TargetGroupsBackend extends
+  public static final class TargetGroupsBackend extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.TargetGroupsBackend)
       TargetGroupsBackendOrBuilder {
@@ -18519,6 +19086,13 @@ public final class BackendGroupOuterClass {
     }
     private TargetGroupsBackend() {
       targetGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TargetGroupsBackend();
     }
 
     @java.lang.Override
@@ -18547,7 +19121,7 @@ public final class BackendGroupOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 targetGroupIds_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -18555,7 +19129,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18569,7 +19143,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           targetGroupIds_ = targetGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -18598,6 +19172,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the targetGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getTargetGroupIdsList() {
@@ -18610,6 +19185,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of targetGroupIds.
      */
     public int getTargetGroupIdsCount() {
       return targetGroupIds_.size();
@@ -18621,6 +19197,8 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The targetGroupIds at the given index.
      */
     public java.lang.String getTargetGroupIds(int index) {
       return targetGroupIds_.get(index);
@@ -18632,6 +19210,8 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targetGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getTargetGroupIdsBytes(int index) {
@@ -18687,11 +19267,10 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend) obj;
 
-      boolean result = true;
-      result = result && getTargetGroupIdsList()
-          .equals(other.getTargetGroupIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTargetGroupIdsList()
+          .equals(other.getTargetGroupIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18871,7 +19450,7 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           targetGroupIds_ = targetGroupIds_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -18882,35 +19461,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18966,7 +19545,7 @@ public final class BackendGroupOuterClass {
 
       private com.google.protobuf.LazyStringList targetGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           targetGroupIds_ = new com.google.protobuf.LazyStringArrayList(targetGroupIds_);
           bitField0_ |= 0x00000001;
          }
@@ -18978,6 +19557,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the targetGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getTargetGroupIdsList() {
@@ -18990,6 +19570,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of targetGroupIds.
        */
       public int getTargetGroupIdsCount() {
         return targetGroupIds_.size();
@@ -19001,6 +19582,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The targetGroupIds at the given index.
        */
       public java.lang.String getTargetGroupIds(int index) {
         return targetGroupIds_.get(index);
@@ -19012,6 +19595,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targetGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getTargetGroupIdsBytes(int index) {
@@ -19024,6 +19609,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The targetGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetGroupIds(
           int index, java.lang.String value) {
@@ -19042,6 +19630,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The targetGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addTargetGroupIds(
           java.lang.String value) {
@@ -19060,6 +19650,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The targetGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTargetGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -19076,6 +19668,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetGroupIds() {
         targetGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -19090,6 +19683,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>repeated string target_group_ids = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the targetGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addTargetGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -19105,7 +19700,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19166,7 +19761,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings}
    */
-  public  static final class PlaintextTransportSettings extends
+  public static final class PlaintextTransportSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings)
       PlaintextTransportSettingsOrBuilder {
@@ -19176,6 +19771,13 @@ public final class BackendGroupOuterClass {
       super(builder);
     }
     private PlaintextTransportSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlaintextTransportSettings();
     }
 
     @java.lang.Override
@@ -19202,7 +19804,7 @@ public final class BackendGroupOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19271,9 +19873,8 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19452,35 +20053,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19525,7 +20126,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19585,6 +20186,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The sni.
      */
     java.lang.String getSni();
     /**
@@ -19593,6 +20195,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The bytes for sni.
      */
     com.google.protobuf.ByteString
         getSniBytes();
@@ -19603,6 +20206,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return Whether the validationContext field is set.
      */
     boolean hasValidationContext();
     /**
@@ -19611,6 +20215,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return The validationContext.
      */
     yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext getValidationContext();
     /**
@@ -19629,7 +20234,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.SecureTransportSettings}
    */
-  public  static final class SecureTransportSettings extends
+  public static final class SecureTransportSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.SecureTransportSettings)
       SecureTransportSettingsOrBuilder {
@@ -19640,6 +20245,13 @@ public final class BackendGroupOuterClass {
     }
     private SecureTransportSettings() {
       sni_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecureTransportSettings();
     }
 
     @java.lang.Override
@@ -19655,7 +20267,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19686,7 +20297,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19725,7 +20336,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The sni.
      */
+    @java.lang.Override
     public java.lang.String getSni() {
       java.lang.Object ref = sni_;
       if (ref instanceof java.lang.String) {
@@ -19744,7 +20357,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The bytes for sni.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSniBytes() {
       java.lang.Object ref = sni_;
@@ -19767,7 +20382,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return Whether the validationContext field is set.
      */
+    @java.lang.Override
     public boolean hasValidationContext() {
       return validationContext_ != null;
     }
@@ -19777,7 +20394,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return The validationContext.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext getValidationContext() {
       return validationContext_ == null ? yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext.getDefaultInstance() : validationContext_;
     }
@@ -19788,6 +20407,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContextOrBuilder getValidationContextOrBuilder() {
       return getValidationContext();
     }
@@ -19806,7 +20426,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSniBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sni_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sni_);
       }
       if (validationContext_ != null) {
@@ -19821,7 +20441,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSniBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sni_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sni_);
       }
       if (validationContext_ != null) {
@@ -19843,16 +20463,15 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings) obj;
 
-      boolean result = true;
-      result = result && getSni()
-          .equals(other.getSni());
-      result = result && (hasValidationContext() == other.hasValidationContext());
+      if (!getSni()
+          .equals(other.getSni())) return false;
+      if (hasValidationContext() != other.hasValidationContext()) return false;
       if (hasValidationContext()) {
-        result = result && getValidationContext()
-            .equals(other.getValidationContext());
+        if (!getValidationContext()
+            .equals(other.getValidationContext())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20051,35 +20670,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20136,6 +20755,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @return The sni.
        */
       public java.lang.String getSni() {
         java.lang.Object ref = sni_;
@@ -20155,6 +20775,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @return The bytes for sni.
        */
       public com.google.protobuf.ByteString
           getSniBytes() {
@@ -20175,6 +20796,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @param value The sni to set.
+       * @return This builder for chaining.
        */
       public Builder setSni(
           java.lang.String value) {
@@ -20192,6 +20815,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSni() {
         
@@ -20205,6 +20829,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @param value The bytes for sni to set.
+       * @return This builder for chaining.
        */
       public Builder setSniBytes(
           com.google.protobuf.ByteString value) {
@@ -20218,7 +20844,7 @@ public final class BackendGroupOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext validationContext_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext validationContext_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext, yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext.Builder, yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContextOrBuilder> validationContextBuilder_;
       /**
@@ -20227,6 +20853,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+       * @return Whether the validationContext field is set.
        */
       public boolean hasValidationContext() {
         return validationContextBuilder_ != null || validationContext_ != null;
@@ -20237,6 +20864,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+       * @return The validationContext.
        */
       public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext getValidationContext() {
         if (validationContextBuilder_ == null) {
@@ -20373,7 +21001,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20433,6 +21061,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The sni.
      */
     java.lang.String getSni();
     /**
@@ -20441,6 +21070,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The bytes for sni.
      */
     com.google.protobuf.ByteString
         getSniBytes();
@@ -20451,6 +21081,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return Whether the validationContext field is set.
      */
     boolean hasValidationContext();
     /**
@@ -20459,6 +21090,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return The validationContext.
      */
     yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext getValidationContext();
     /**
@@ -20477,7 +21109,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.BackendTls}
    */
-  public  static final class BackendTls extends
+  public static final class BackendTls extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.BackendTls)
       BackendTlsOrBuilder {
@@ -20488,6 +21120,13 @@ public final class BackendGroupOuterClass {
     }
     private BackendTls() {
       sni_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackendTls();
     }
 
     @java.lang.Override
@@ -20503,7 +21142,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20534,7 +21172,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20573,7 +21211,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The sni.
      */
+    @java.lang.Override
     public java.lang.String getSni() {
       java.lang.Object ref = sni_;
       if (ref instanceof java.lang.String) {
@@ -20592,7 +21232,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string sni = 1;</code>
+     * @return The bytes for sni.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSniBytes() {
       java.lang.Object ref = sni_;
@@ -20615,7 +21257,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return Whether the validationContext field is set.
      */
+    @java.lang.Override
     public boolean hasValidationContext() {
       return validationContext_ != null;
     }
@@ -20625,7 +21269,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+     * @return The validationContext.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext getValidationContext() {
       return validationContext_ == null ? yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext.getDefaultInstance() : validationContext_;
     }
@@ -20636,6 +21282,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContextOrBuilder getValidationContextOrBuilder() {
       return getValidationContext();
     }
@@ -20654,7 +21301,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSniBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sni_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sni_);
       }
       if (validationContext_ != null) {
@@ -20669,7 +21316,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSniBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sni_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sni_);
       }
       if (validationContext_ != null) {
@@ -20691,16 +21338,15 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls) obj;
 
-      boolean result = true;
-      result = result && getSni()
-          .equals(other.getSni());
-      result = result && (hasValidationContext() == other.hasValidationContext());
+      if (!getSni()
+          .equals(other.getSni())) return false;
+      if (hasValidationContext() != other.hasValidationContext()) return false;
       if (hasValidationContext()) {
-        result = result && getValidationContext()
-            .equals(other.getValidationContext());
+        if (!getValidationContext()
+            .equals(other.getValidationContext())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20899,35 +21545,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20984,6 +21630,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @return The sni.
        */
       public java.lang.String getSni() {
         java.lang.Object ref = sni_;
@@ -21003,6 +21650,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @return The bytes for sni.
        */
       public com.google.protobuf.ByteString
           getSniBytes() {
@@ -21023,6 +21671,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @param value The sni to set.
+       * @return This builder for chaining.
        */
       public Builder setSni(
           java.lang.String value) {
@@ -21040,6 +21690,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSni() {
         
@@ -21053,6 +21704,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string sni = 1;</code>
+       * @param value The bytes for sni to set.
+       * @return This builder for chaining.
        */
       public Builder setSniBytes(
           com.google.protobuf.ByteString value) {
@@ -21066,7 +21719,7 @@ public final class BackendGroupOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext validationContext_ = null;
+      private yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext validationContext_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext, yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext.Builder, yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContextOrBuilder> validationContextBuilder_;
       /**
@@ -21075,6 +21728,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+       * @return Whether the validationContext field is set.
        */
       public boolean hasValidationContext() {
         return validationContextBuilder_ != null || validationContext_ != null;
@@ -21085,6 +21739,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.ValidationContext validation_context = 3;</code>
+       * @return The validationContext.
        */
       public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext getValidationContext() {
         if (validationContextBuilder_ == null) {
@@ -21221,7 +21876,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21281,6 +21936,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bucket.
      */
     java.lang.String getBucket();
     /**
@@ -21289,6 +21945,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for bucket.
      */
     com.google.protobuf.ByteString
         getBucketBytes();
@@ -21301,7 +21958,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StorageBucketBackend}
    */
-  public  static final class StorageBucketBackend extends
+  public static final class StorageBucketBackend extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StorageBucketBackend)
       StorageBucketBackendOrBuilder {
@@ -21312,6 +21969,13 @@ public final class BackendGroupOuterClass {
     }
     private StorageBucketBackend() {
       bucket_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StorageBucketBackend();
     }
 
     @java.lang.Override
@@ -21327,7 +21991,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21345,7 +22008,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21384,7 +22047,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bucket.
      */
+    @java.lang.Override
     public java.lang.String getBucket() {
       java.lang.Object ref = bucket_;
       if (ref instanceof java.lang.String) {
@@ -21403,7 +22068,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for bucket.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBucketBytes() {
       java.lang.Object ref = bucket_;
@@ -21432,7 +22099,7 @@ public final class BackendGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBucketBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
       }
       unknownFields.writeTo(output);
@@ -21444,7 +22111,7 @@ public final class BackendGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBucketBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
       }
       size += unknownFields.getSerializedSize();
@@ -21462,11 +22129,10 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) obj;
 
-      boolean result = true;
-      result = result && getBucket()
-          .equals(other.getBucket());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBucket()
+          .equals(other.getBucket())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21651,35 +22317,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21733,6 +22399,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucket.
        */
       public java.lang.String getBucket() {
         java.lang.Object ref = bucket_;
@@ -21752,6 +22419,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for bucket.
        */
       public com.google.protobuf.ByteString
           getBucketBytes() {
@@ -21772,6 +22440,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
        */
       public Builder setBucket(
           java.lang.String value) {
@@ -21789,6 +22459,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBucket() {
         
@@ -21802,6 +22473,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for bucket to set.
+       * @return This builder for chaining.
        */
       public Builder setBucketBytes(
           com.google.protobuf.ByteString value) {
@@ -21817,7 +22490,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21879,6 +22552,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timeout field is set.
      */
     boolean hasTimeout();
     /**
@@ -21889,6 +22563,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The timeout.
      */
     com.google.protobuf.Duration getTimeout();
     /**
@@ -21908,6 +22583,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the interval field is set.
      */
     boolean hasInterval();
     /**
@@ -21916,6 +22592,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The interval.
      */
     com.google.protobuf.Duration getInterval();
     /**
@@ -21929,6 +22606,7 @@ public final class BackendGroupOuterClass {
 
     /**
      * <code>double interval_jitter_percent = 3;</code>
+     * @return The intervalJitterPercent.
      */
     double getIntervalJitterPercent();
 
@@ -21941,6 +22619,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 healthy_threshold = 4;</code>
+     * @return The healthyThreshold.
      */
     long getHealthyThreshold();
 
@@ -21954,6 +22633,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 unhealthy_threshold = 5;</code>
+     * @return The unhealthyThreshold.
      */
     long getUnhealthyThreshold();
 
@@ -21964,6 +22644,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 healthcheck_port = 6 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The healthcheckPort.
      */
     long getHealthcheckPort();
 
@@ -21973,6 +22654,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
+     * @return Whether the stream field is set.
      */
     boolean hasStream();
     /**
@@ -21981,6 +22663,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
+     * @return The stream.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck getStream();
     /**
@@ -21998,6 +22681,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
+     * @return Whether the http field is set.
      */
     boolean hasHttp();
     /**
@@ -22006,6 +22690,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
+     * @return The http.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck getHttp();
     /**
@@ -22023,6 +22708,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
+     * @return Whether the grpc field is set.
      */
     boolean hasGrpc();
     /**
@@ -22031,6 +22717,7 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
+     * @return The grpc.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck getGrpc();
     /**
@@ -22044,10 +22731,12 @@ public final class BackendGroupOuterClass {
 
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
+     * @return Whether the plaintext field is set.
      */
     boolean hasPlaintext();
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
+     * @return The plaintext.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings getPlaintext();
     /**
@@ -22057,10 +22746,12 @@ public final class BackendGroupOuterClass {
 
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
+     * @return Whether the tls field is set.
      */
     boolean hasTls();
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
+     * @return The tls.
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings getTls();
     /**
@@ -22080,7 +22771,7 @@ public final class BackendGroupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HealthCheck}
    */
-  public  static final class HealthCheck extends
+  public static final class HealthCheck extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HealthCheck)
       HealthCheckOrBuilder {
@@ -22090,10 +22781,13 @@ public final class BackendGroupOuterClass {
       super(builder);
     }
     private HealthCheck() {
-      intervalJitterPercent_ = 0D;
-      healthyThreshold_ = 0L;
-      unhealthyThreshold_ = 0L;
-      healthcheckPort_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HealthCheck();
     }
 
     @java.lang.Override
@@ -22109,7 +22803,6 @@ public final class BackendGroupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -22237,7 +22930,7 @@ public final class BackendGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22279,6 +22972,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
+       * @return Whether the send field is set.
        */
       boolean hasSend();
       /**
@@ -22288,6 +22982,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
+       * @return The send.
        */
       yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getSend();
       /**
@@ -22307,6 +23002,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
+       * @return Whether the receive field is set.
        */
       boolean hasReceive();
       /**
@@ -22316,6 +23012,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
+       * @return The receive.
        */
       yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getReceive();
       /**
@@ -22335,7 +23032,7 @@ public final class BackendGroupOuterClass {
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck}
      */
-    public  static final class StreamHealthCheck extends
+    public static final class StreamHealthCheck extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck)
         StreamHealthCheckOrBuilder {
@@ -22345,6 +23042,13 @@ public final class BackendGroupOuterClass {
         super(builder);
       }
       private StreamHealthCheck() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StreamHealthCheck();
       }
 
       @java.lang.Override
@@ -22360,7 +23064,6 @@ public final class BackendGroupOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -22398,7 +23101,7 @@ public final class BackendGroupOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -22438,7 +23141,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
+       * @return Whether the send field is set.
        */
+      @java.lang.Override
       public boolean hasSend() {
         return send_ != null;
       }
@@ -22449,7 +23154,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
+       * @return The send.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getSend() {
         return send_ == null ? yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload.getDefaultInstance() : send_;
       }
@@ -22461,6 +23168,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.PayloadOrBuilder getSendOrBuilder() {
         return getSend();
       }
@@ -22474,7 +23182,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
+       * @return Whether the receive field is set.
        */
+      @java.lang.Override
       public boolean hasReceive() {
         return receive_ != null;
       }
@@ -22485,7 +23195,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
+       * @return The receive.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getReceive() {
         return receive_ == null ? yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload.getDefaultInstance() : receive_;
       }
@@ -22497,6 +23209,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.PayloadOrBuilder getReceiveOrBuilder() {
         return getReceive();
       }
@@ -22553,19 +23266,18 @@ public final class BackendGroupOuterClass {
         }
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck) obj;
 
-        boolean result = true;
-        result = result && (hasSend() == other.hasSend());
+        if (hasSend() != other.hasSend()) return false;
         if (hasSend()) {
-          result = result && getSend()
-              .equals(other.getSend());
+          if (!getSend()
+              .equals(other.getSend())) return false;
         }
-        result = result && (hasReceive() == other.hasReceive());
+        if (hasReceive() != other.hasReceive()) return false;
         if (hasReceive()) {
-          result = result && getReceive()
-              .equals(other.getReceive());
+          if (!getReceive()
+              .equals(other.getReceive())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -22774,35 +23486,35 @@ public final class BackendGroupOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22851,7 +23563,7 @@ public final class BackendGroupOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload send_ = null;
+        private yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload send_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload, yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload.Builder, yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.PayloadOrBuilder> sendBuilder_;
         /**
@@ -22861,6 +23573,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
+         * @return Whether the send field is set.
          */
         public boolean hasSend() {
           return sendBuilder_ != null || send_ != null;
@@ -22872,6 +23585,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.Payload send = 1;</code>
+         * @return The send.
          */
         public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getSend() {
           if (sendBuilder_ == null) {
@@ -23013,7 +23727,7 @@ public final class BackendGroupOuterClass {
           return sendBuilder_;
         }
 
-        private yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload receive_ = null;
+        private yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload receive_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload, yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload.Builder, yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.PayloadOrBuilder> receiveBuilder_;
         /**
@@ -23023,6 +23737,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
+         * @return Whether the receive field is set.
          */
         public boolean hasReceive() {
           return receiveBuilder_ != null || receive_ != null;
@@ -23034,6 +23749,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.Payload receive = 2;</code>
+         * @return The receive.
          */
         public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getReceive() {
           if (receiveBuilder_ == null) {
@@ -23177,7 +23893,7 @@ public final class BackendGroupOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -23237,6 +23953,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string host = 1;</code>
+       * @return The host.
        */
       java.lang.String getHost();
       /**
@@ -23245,6 +23962,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string host = 1;</code>
+       * @return The bytes for host.
        */
       com.google.protobuf.ByteString
           getHostBytes();
@@ -23256,6 +23974,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The path.
        */
       java.lang.String getPath();
       /**
@@ -23265,6 +23984,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for path.
        */
       com.google.protobuf.ByteString
           getPathBytes();
@@ -23276,6 +23996,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool use_http2 = 3;</code>
+       * @return The useHttp2.
        */
       boolean getUseHttp2();
     }
@@ -23286,7 +24007,7 @@ public final class BackendGroupOuterClass {
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck}
      */
-    public  static final class HttpHealthCheck extends
+    public static final class HttpHealthCheck extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck)
         HttpHealthCheckOrBuilder {
@@ -23298,7 +24019,13 @@ public final class BackendGroupOuterClass {
       private HttpHealthCheck() {
         host_ = "";
         path_ = "";
-        useHttp2_ = false;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HttpHealthCheck();
       }
 
       @java.lang.Override
@@ -23314,7 +24041,6 @@ public final class BackendGroupOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -23343,7 +24069,7 @@ public final class BackendGroupOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -23382,7 +24108,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string host = 1;</code>
+       * @return The host.
        */
+      @java.lang.Override
       public java.lang.String getHost() {
         java.lang.Object ref = host_;
         if (ref instanceof java.lang.String) {
@@ -23401,7 +24129,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string host = 1;</code>
+       * @return The bytes for host.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getHostBytes() {
         java.lang.Object ref = host_;
@@ -23425,7 +24155,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The path.
        */
+      @java.lang.Override
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
         if (ref instanceof java.lang.String) {
@@ -23445,7 +24177,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for path.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPathBytes() {
         java.lang.Object ref = path_;
@@ -23469,7 +24203,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>bool use_http2 = 3;</code>
+       * @return The useHttp2.
        */
+      @java.lang.Override
       public boolean getUseHttp2() {
         return useHttp2_;
       }
@@ -23488,10 +24224,10 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getHostBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, host_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, path_);
         }
         if (useHttp2_ != false) {
@@ -23506,10 +24242,10 @@ public final class BackendGroupOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getHostBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, host_);
         }
-        if (!getPathBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, path_);
         }
         if (useHttp2_ != false) {
@@ -23531,15 +24267,14 @@ public final class BackendGroupOuterClass {
         }
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck) obj;
 
-        boolean result = true;
-        result = result && getHost()
-            .equals(other.getHost());
-        result = result && getPath()
-            .equals(other.getPath());
-        result = result && (getUseHttp2()
-            == other.getUseHttp2());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getHost()
+            .equals(other.getHost())) return false;
+        if (!getPath()
+            .equals(other.getPath())) return false;
+        if (getUseHttp2()
+            != other.getUseHttp2()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -23734,35 +24469,35 @@ public final class BackendGroupOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23823,6 +24558,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string host = 1;</code>
+         * @return The host.
          */
         public java.lang.String getHost() {
           java.lang.Object ref = host_;
@@ -23842,6 +24578,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string host = 1;</code>
+         * @return The bytes for host.
          */
         public com.google.protobuf.ByteString
             getHostBytes() {
@@ -23862,6 +24599,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string host = 1;</code>
+         * @param value The host to set.
+         * @return This builder for chaining.
          */
         public Builder setHost(
             java.lang.String value) {
@@ -23879,6 +24618,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string host = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearHost() {
           
@@ -23892,6 +24632,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string host = 1;</code>
+         * @param value The bytes for host to set.
+         * @return This builder for chaining.
          */
         public Builder setHostBytes(
             com.google.protobuf.ByteString value) {
@@ -23913,6 +24655,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The path.
          */
         public java.lang.String getPath() {
           java.lang.Object ref = path_;
@@ -23933,6 +24676,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for path.
          */
         public com.google.protobuf.ByteString
             getPathBytes() {
@@ -23954,6 +24698,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The path to set.
+         * @return This builder for chaining.
          */
         public Builder setPath(
             java.lang.String value) {
@@ -23972,6 +24718,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearPath() {
           
@@ -23986,6 +24733,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for path to set.
+         * @return This builder for chaining.
          */
         public Builder setPathBytes(
             com.google.protobuf.ByteString value) {
@@ -24007,7 +24756,9 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>bool use_http2 = 3;</code>
+         * @return The useHttp2.
          */
+        @java.lang.Override
         public boolean getUseHttp2() {
           return useHttp2_;
         }
@@ -24018,6 +24769,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>bool use_http2 = 3;</code>
+         * @param value The useHttp2 to set.
+         * @return This builder for chaining.
          */
         public Builder setUseHttp2(boolean value) {
           
@@ -24032,6 +24785,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>bool use_http2 = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearUseHttp2() {
           
@@ -24042,7 +24796,7 @@ public final class BackendGroupOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -24104,6 +24858,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string service_name = 1;</code>
+       * @return The serviceName.
        */
       java.lang.String getServiceName();
       /**
@@ -24114,6 +24869,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string service_name = 1;</code>
+       * @return The bytes for serviceName.
        */
       com.google.protobuf.ByteString
           getServiceNameBytes();
@@ -24125,7 +24881,7 @@ public final class BackendGroupOuterClass {
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck}
      */
-    public  static final class GrpcHealthCheck extends
+    public static final class GrpcHealthCheck extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck)
         GrpcHealthCheckOrBuilder {
@@ -24136,6 +24892,13 @@ public final class BackendGroupOuterClass {
       }
       private GrpcHealthCheck() {
         serviceName_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GrpcHealthCheck();
       }
 
       @java.lang.Override
@@ -24151,7 +24914,6 @@ public final class BackendGroupOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -24169,7 +24931,7 @@ public final class BackendGroupOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -24210,7 +24972,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string service_name = 1;</code>
+       * @return The serviceName.
        */
+      @java.lang.Override
       public java.lang.String getServiceName() {
         java.lang.Object ref = serviceName_;
         if (ref instanceof java.lang.String) {
@@ -24231,7 +24995,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>string service_name = 1;</code>
+       * @return The bytes for serviceName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getServiceNameBytes() {
         java.lang.Object ref = serviceName_;
@@ -24260,7 +25026,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getServiceNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
         }
         unknownFields.writeTo(output);
@@ -24272,7 +25038,7 @@ public final class BackendGroupOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getServiceNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
         }
         size += unknownFields.getSerializedSize();
@@ -24290,11 +25056,10 @@ public final class BackendGroupOuterClass {
         }
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck) obj;
 
-        boolean result = true;
-        result = result && getServiceName()
-            .equals(other.getServiceName());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getServiceName()
+            .equals(other.getServiceName())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -24478,35 +25243,35 @@ public final class BackendGroupOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24562,6 +25327,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string service_name = 1;</code>
+         * @return The serviceName.
          */
         public java.lang.String getServiceName() {
           java.lang.Object ref = serviceName_;
@@ -24583,6 +25349,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string service_name = 1;</code>
+         * @return The bytes for serviceName.
          */
         public com.google.protobuf.ByteString
             getServiceNameBytes() {
@@ -24605,6 +25372,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string service_name = 1;</code>
+         * @param value The serviceName to set.
+         * @return This builder for chaining.
          */
         public Builder setServiceName(
             java.lang.String value) {
@@ -24624,6 +25393,7 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string service_name = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearServiceName() {
           
@@ -24639,6 +25409,8 @@ public final class BackendGroupOuterClass {
          * </pre>
          *
          * <code>string service_name = 1;</code>
+         * @param value The bytes for serviceName to set.
+         * @return This builder for chaining.
          */
         public Builder setServiceNameBytes(
             com.google.protobuf.ByteString value) {
@@ -24654,7 +25426,7 @@ public final class BackendGroupOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -24707,7 +25479,8 @@ public final class BackendGroupOuterClass {
     private int healthcheckCase_ = 0;
     private java.lang.Object healthcheck_;
     public enum HealthcheckCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       STREAM(7),
       HTTP(8),
       GRPC(9),
@@ -24717,6 +25490,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -24747,7 +25522,8 @@ public final class BackendGroupOuterClass {
     private int transportSettingsCase_ = 0;
     private java.lang.Object transportSettings_;
     public enum TransportSettingsCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PLAINTEXT(10),
       TLS(11),
       TRANSPORTSETTINGS_NOT_SET(0);
@@ -24756,6 +25532,8 @@ public final class BackendGroupOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -24792,7 +25570,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timeout field is set.
      */
+    @java.lang.Override
     public boolean hasTimeout() {
       return timeout_ != null;
     }
@@ -24804,7 +25584,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The timeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getTimeout() {
       return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
     }
@@ -24817,6 +25599,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
       return getTimeout();
     }
@@ -24829,7 +25612,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the interval field is set.
      */
+    @java.lang.Override
     public boolean hasInterval() {
       return interval_ != null;
     }
@@ -24839,7 +25624,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The interval.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getInterval() {
       return interval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : interval_;
     }
@@ -24850,6 +25637,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
       return getInterval();
     }
@@ -24858,7 +25646,9 @@ public final class BackendGroupOuterClass {
     private double intervalJitterPercent_;
     /**
      * <code>double interval_jitter_percent = 3;</code>
+     * @return The intervalJitterPercent.
      */
+    @java.lang.Override
     public double getIntervalJitterPercent() {
       return intervalJitterPercent_;
     }
@@ -24874,7 +25664,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 healthy_threshold = 4;</code>
+     * @return The healthyThreshold.
      */
+    @java.lang.Override
     public long getHealthyThreshold() {
       return healthyThreshold_;
     }
@@ -24891,7 +25683,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 unhealthy_threshold = 5;</code>
+     * @return The unhealthyThreshold.
      */
+    @java.lang.Override
     public long getUnhealthyThreshold() {
       return unhealthyThreshold_;
     }
@@ -24905,7 +25699,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>int64 healthcheck_port = 6 [(.yandex.cloud.value) = "0-65535"];</code>
+     * @return The healthcheckPort.
      */
+    @java.lang.Override
     public long getHealthcheckPort() {
       return healthcheckPort_;
     }
@@ -24917,7 +25713,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
+     * @return Whether the stream field is set.
      */
+    @java.lang.Override
     public boolean hasStream() {
       return healthcheckCase_ == 7;
     }
@@ -24927,7 +25725,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
+     * @return The stream.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck getStream() {
       if (healthcheckCase_ == 7) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck) healthcheck_;
@@ -24941,6 +25741,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheckOrBuilder getStreamOrBuilder() {
       if (healthcheckCase_ == 7) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck) healthcheck_;
@@ -24955,7 +25756,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
+     * @return Whether the http field is set.
      */
+    @java.lang.Override
     public boolean hasHttp() {
       return healthcheckCase_ == 8;
     }
@@ -24965,7 +25768,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
+     * @return The http.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck getHttp() {
       if (healthcheckCase_ == 8) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck) healthcheck_;
@@ -24979,6 +25784,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheckOrBuilder getHttpOrBuilder() {
       if (healthcheckCase_ == 8) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck) healthcheck_;
@@ -24993,7 +25799,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
+     * @return Whether the grpc field is set.
      */
+    @java.lang.Override
     public boolean hasGrpc() {
       return healthcheckCase_ == 9;
     }
@@ -25003,7 +25811,9 @@ public final class BackendGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
+     * @return The grpc.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck getGrpc() {
       if (healthcheckCase_ == 9) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck) healthcheck_;
@@ -25017,6 +25827,7 @@ public final class BackendGroupOuterClass {
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheckOrBuilder getGrpcOrBuilder() {
       if (healthcheckCase_ == 9) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck) healthcheck_;
@@ -25027,13 +25838,17 @@ public final class BackendGroupOuterClass {
     public static final int PLAINTEXT_FIELD_NUMBER = 10;
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
+     * @return Whether the plaintext field is set.
      */
+    @java.lang.Override
     public boolean hasPlaintext() {
       return transportSettingsCase_ == 10;
     }
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
+     * @return The plaintext.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings getPlaintext() {
       if (transportSettingsCase_ == 10) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings) transportSettings_;
@@ -25043,6 +25858,7 @@ public final class BackendGroupOuterClass {
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettingsOrBuilder getPlaintextOrBuilder() {
       if (transportSettingsCase_ == 10) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings) transportSettings_;
@@ -25053,13 +25869,17 @@ public final class BackendGroupOuterClass {
     public static final int TLS_FIELD_NUMBER = 11;
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
+     * @return Whether the tls field is set.
      */
+    @java.lang.Override
     public boolean hasTls() {
       return transportSettingsCase_ == 11;
     }
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
+     * @return The tls.
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings getTls() {
       if (transportSettingsCase_ == 11) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings) transportSettings_;
@@ -25069,6 +25889,7 @@ public final class BackendGroupOuterClass {
     /**
      * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettingsOrBuilder getTlsOrBuilder() {
       if (transportSettingsCase_ == 11) {
          return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings) transportSettings_;
@@ -25096,7 +25917,7 @@ public final class BackendGroupOuterClass {
       if (interval_ != null) {
         output.writeMessage(2, getInterval());
       }
-      if (intervalJitterPercent_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(intervalJitterPercent_) != 0) {
         output.writeDouble(3, intervalJitterPercent_);
       }
       if (healthyThreshold_ != 0L) {
@@ -25140,7 +25961,7 @@ public final class BackendGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInterval());
       }
-      if (intervalJitterPercent_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(intervalJitterPercent_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, intervalJitterPercent_);
       }
@@ -25191,63 +26012,57 @@ public final class BackendGroupOuterClass {
       }
       yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck) obj;
 
-      boolean result = true;
-      result = result && (hasTimeout() == other.hasTimeout());
+      if (hasTimeout() != other.hasTimeout()) return false;
       if (hasTimeout()) {
-        result = result && getTimeout()
-            .equals(other.getTimeout());
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
       }
-      result = result && (hasInterval() == other.hasInterval());
+      if (hasInterval() != other.hasInterval()) return false;
       if (hasInterval()) {
-        result = result && getInterval()
-            .equals(other.getInterval());
+        if (!getInterval()
+            .equals(other.getInterval())) return false;
       }
-      result = result && (
-          java.lang.Double.doubleToLongBits(getIntervalJitterPercent())
-          == java.lang.Double.doubleToLongBits(
-              other.getIntervalJitterPercent()));
-      result = result && (getHealthyThreshold()
-          == other.getHealthyThreshold());
-      result = result && (getUnhealthyThreshold()
-          == other.getUnhealthyThreshold());
-      result = result && (getHealthcheckPort()
-          == other.getHealthcheckPort());
-      result = result && getHealthcheckCase().equals(
-          other.getHealthcheckCase());
-      if (!result) return false;
+      if (java.lang.Double.doubleToLongBits(getIntervalJitterPercent())
+          != java.lang.Double.doubleToLongBits(
+              other.getIntervalJitterPercent())) return false;
+      if (getHealthyThreshold()
+          != other.getHealthyThreshold()) return false;
+      if (getUnhealthyThreshold()
+          != other.getUnhealthyThreshold()) return false;
+      if (getHealthcheckPort()
+          != other.getHealthcheckPort()) return false;
+      if (!getHealthcheckCase().equals(other.getHealthcheckCase())) return false;
       switch (healthcheckCase_) {
         case 7:
-          result = result && getStream()
-              .equals(other.getStream());
+          if (!getStream()
+              .equals(other.getStream())) return false;
           break;
         case 8:
-          result = result && getHttp()
-              .equals(other.getHttp());
+          if (!getHttp()
+              .equals(other.getHttp())) return false;
           break;
         case 9:
-          result = result && getGrpc()
-              .equals(other.getGrpc());
+          if (!getGrpc()
+              .equals(other.getGrpc())) return false;
           break;
         case 0:
         default:
       }
-      result = result && getTransportSettingsCase().equals(
-          other.getTransportSettingsCase());
-      if (!result) return false;
+      if (!getTransportSettingsCase().equals(other.getTransportSettingsCase())) return false;
       switch (transportSettingsCase_) {
         case 10:
-          result = result && getPlaintext()
-              .equals(other.getPlaintext());
+          if (!getPlaintext()
+              .equals(other.getPlaintext())) return false;
           break;
         case 11:
-          result = result && getTls()
-              .equals(other.getTls());
+          if (!getTls()
+              .equals(other.getTls())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25550,35 +26365,35 @@ public final class BackendGroupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25699,7 +26514,7 @@ public final class BackendGroupOuterClass {
       }
 
 
-      private com.google.protobuf.Duration timeout_ = null;
+      private com.google.protobuf.Duration timeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
       /**
@@ -25710,6 +26525,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the timeout field is set.
        */
       public boolean hasTimeout() {
         return timeoutBuilder_ != null || timeout_ != null;
@@ -25722,6 +26538,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The timeout.
        */
       public com.google.protobuf.Duration getTimeout() {
         if (timeoutBuilder_ == null) {
@@ -25870,7 +26687,7 @@ public final class BackendGroupOuterClass {
         return timeoutBuilder_;
       }
 
-      private com.google.protobuf.Duration interval_ = null;
+      private com.google.protobuf.Duration interval_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> intervalBuilder_;
       /**
@@ -25879,6 +26696,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the interval field is set.
        */
       public boolean hasInterval() {
         return intervalBuilder_ != null || interval_ != null;
@@ -25889,6 +26707,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The interval.
        */
       public com.google.protobuf.Duration getInterval() {
         if (intervalBuilder_ == null) {
@@ -26026,12 +26845,16 @@ public final class BackendGroupOuterClass {
       private double intervalJitterPercent_ ;
       /**
        * <code>double interval_jitter_percent = 3;</code>
+       * @return The intervalJitterPercent.
        */
+      @java.lang.Override
       public double getIntervalJitterPercent() {
         return intervalJitterPercent_;
       }
       /**
        * <code>double interval_jitter_percent = 3;</code>
+       * @param value The intervalJitterPercent to set.
+       * @return This builder for chaining.
        */
       public Builder setIntervalJitterPercent(double value) {
         
@@ -26041,6 +26864,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <code>double interval_jitter_percent = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIntervalJitterPercent() {
         
@@ -26059,7 +26883,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 healthy_threshold = 4;</code>
+       * @return The healthyThreshold.
        */
+      @java.lang.Override
       public long getHealthyThreshold() {
         return healthyThreshold_;
       }
@@ -26072,6 +26898,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 healthy_threshold = 4;</code>
+       * @param value The healthyThreshold to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthyThreshold(long value) {
         
@@ -26088,6 +26916,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 healthy_threshold = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealthyThreshold() {
         
@@ -26107,7 +26936,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 unhealthy_threshold = 5;</code>
+       * @return The unhealthyThreshold.
        */
+      @java.lang.Override
       public long getUnhealthyThreshold() {
         return unhealthyThreshold_;
       }
@@ -26121,6 +26952,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 unhealthy_threshold = 5;</code>
+       * @param value The unhealthyThreshold to set.
+       * @return This builder for chaining.
        */
       public Builder setUnhealthyThreshold(long value) {
         
@@ -26138,6 +26971,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 unhealthy_threshold = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUnhealthyThreshold() {
         
@@ -26154,7 +26988,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 healthcheck_port = 6 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return The healthcheckPort.
        */
+      @java.lang.Override
       public long getHealthcheckPort() {
         return healthcheckPort_;
       }
@@ -26165,6 +27001,8 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 healthcheck_port = 6 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @param value The healthcheckPort to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthcheckPort(long value) {
         
@@ -26179,6 +27017,7 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>int64 healthcheck_port = 6 [(.yandex.cloud.value) = "0-65535"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealthcheckPort() {
         
@@ -26195,7 +27034,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
+       * @return Whether the stream field is set.
        */
+      @java.lang.Override
       public boolean hasStream() {
         return healthcheckCase_ == 7;
       }
@@ -26205,7 +27046,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
+       * @return The stream.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheck getStream() {
         if (streamBuilder_ == null) {
           if (healthcheckCase_ == 7) {
@@ -26323,6 +27166,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.StreamHealthCheck stream = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.StreamHealthCheckOrBuilder getStreamOrBuilder() {
         if ((healthcheckCase_ == 7) && (streamBuilder_ != null)) {
           return streamBuilder_.getMessageOrBuilder();
@@ -26367,7 +27211,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
+       * @return Whether the http field is set.
        */
+      @java.lang.Override
       public boolean hasHttp() {
         return healthcheckCase_ == 8;
       }
@@ -26377,7 +27223,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
+       * @return The http.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheck getHttp() {
         if (httpBuilder_ == null) {
           if (healthcheckCase_ == 8) {
@@ -26495,6 +27343,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.HttpHealthCheck http = 8;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.HttpHealthCheckOrBuilder getHttpOrBuilder() {
         if ((healthcheckCase_ == 8) && (httpBuilder_ != null)) {
           return httpBuilder_.getMessageOrBuilder();
@@ -26539,7 +27388,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
+       * @return Whether the grpc field is set.
        */
+      @java.lang.Override
       public boolean hasGrpc() {
         return healthcheckCase_ == 9;
       }
@@ -26549,7 +27400,9 @@ public final class BackendGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
+       * @return The grpc.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheck getGrpc() {
         if (grpcBuilder_ == null) {
           if (healthcheckCase_ == 9) {
@@ -26667,6 +27520,7 @@ public final class BackendGroupOuterClass {
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HealthCheck.GrpcHealthCheck grpc = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.GrpcHealthCheckOrBuilder getGrpcOrBuilder() {
         if ((healthcheckCase_ == 9) && (grpcBuilder_ != null)) {
           return grpcBuilder_.getMessageOrBuilder();
@@ -26707,13 +27561,17 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettingsOrBuilder> plaintextBuilder_;
       /**
        * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
+       * @return Whether the plaintext field is set.
        */
+      @java.lang.Override
       public boolean hasPlaintext() {
         return transportSettingsCase_ == 10;
       }
       /**
        * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
+       * @return The plaintext.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettings getPlaintext() {
         if (plaintextBuilder_ == null) {
           if (transportSettingsCase_ == 10) {
@@ -26807,6 +27665,7 @@ public final class BackendGroupOuterClass {
       /**
        * <code>.yandex.cloud.apploadbalancer.v1.PlaintextTransportSettings plaintext = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.PlaintextTransportSettingsOrBuilder getPlaintextOrBuilder() {
         if ((transportSettingsCase_ == 10) && (plaintextBuilder_ != null)) {
           return plaintextBuilder_.getMessageOrBuilder();
@@ -26843,13 +27702,17 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettingsOrBuilder> tlsBuilder_;
       /**
        * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
+       * @return Whether the tls field is set.
        */
+      @java.lang.Override
       public boolean hasTls() {
         return transportSettingsCase_ == 11;
       }
       /**
        * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
+       * @return The tls.
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettings getTls() {
         if (tlsBuilder_ == null) {
           if (transportSettingsCase_ == 11) {
@@ -26943,6 +27806,7 @@ public final class BackendGroupOuterClass {
       /**
        * <code>.yandex.cloud.apploadbalancer.v1.SecureTransportSettings tls = 11;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.SecureTransportSettingsOrBuilder getTlsOrBuilder() {
         if ((transportSettingsCase_ == 11) && (tlsBuilder_ != null)) {
           return tlsBuilder_.getMessageOrBuilder();
@@ -26977,7 +27841,7 @@ public final class BackendGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27269,15 +28133,7 @@ public final class BackendGroupOuterClass {
       "/cloud/apploadbalancer/v1;apploadbalance" +
       "rb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
@@ -27286,7 +28142,7 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.Tls.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_apploadbalancer_v1_BackendGroup_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_BackendGroup_fieldAccessorTable = new

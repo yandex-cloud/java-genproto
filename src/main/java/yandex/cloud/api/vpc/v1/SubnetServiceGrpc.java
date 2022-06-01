@@ -1,19 +1,6 @@
 package yandex.cloud.api.vpc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/vpc/v1/subnet_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SubnetServiceGrpc {
 
   private SubnetServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class SubnetServiceGrpc {
     if ((getGetMethod = SubnetServiceGrpc.getGetMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getGetMethod = SubnetServiceGrpc.getGetMethod) == null) {
-          SubnetServiceGrpc.getGetMethod = getGetMethod = 
+          SubnetServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest, yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest,
@@ -76,22 +63,21 @@ public final class SubnetServiceGrpc {
     if ((getListMethod = SubnetServiceGrpc.getListMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getListMethod = SubnetServiceGrpc.getListMethod) == null) {
-          SubnetServiceGrpc.getListMethod = getListMethod = 
+          SubnetServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest,
@@ -108,22 +94,21 @@ public final class SubnetServiceGrpc {
     if ((getCreateMethod = SubnetServiceGrpc.getCreateMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getCreateMethod = SubnetServiceGrpc.getCreateMethod) == null) {
-          SubnetServiceGrpc.getCreateMethod = getCreateMethod = 
+          SubnetServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest,
@@ -140,22 +125,21 @@ public final class SubnetServiceGrpc {
     if ((getUpdateMethod = SubnetServiceGrpc.getUpdateMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getUpdateMethod = SubnetServiceGrpc.getUpdateMethod) == null) {
-          SubnetServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          SubnetServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest,
@@ -172,22 +156,21 @@ public final class SubnetServiceGrpc {
     if ((getAddCidrBlocksMethod = SubnetServiceGrpc.getAddCidrBlocksMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getAddCidrBlocksMethod = SubnetServiceGrpc.getAddCidrBlocksMethod) == null) {
-          SubnetServiceGrpc.getAddCidrBlocksMethod = getAddCidrBlocksMethod = 
+          SubnetServiceGrpc.getAddCidrBlocksMethod = getAddCidrBlocksMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "AddCidrBlocks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddCidrBlocks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("AddCidrBlocks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("AddCidrBlocks"))
+              .build();
         }
-     }
-     return getAddCidrBlocksMethod;
+      }
+    }
+    return getAddCidrBlocksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest,
@@ -204,22 +187,21 @@ public final class SubnetServiceGrpc {
     if ((getRemoveCidrBlocksMethod = SubnetServiceGrpc.getRemoveCidrBlocksMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getRemoveCidrBlocksMethod = SubnetServiceGrpc.getRemoveCidrBlocksMethod) == null) {
-          SubnetServiceGrpc.getRemoveCidrBlocksMethod = getRemoveCidrBlocksMethod = 
+          SubnetServiceGrpc.getRemoveCidrBlocksMethod = getRemoveCidrBlocksMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "RemoveCidrBlocks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveCidrBlocks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("RemoveCidrBlocks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("RemoveCidrBlocks"))
+              .build();
         }
-     }
-     return getRemoveCidrBlocksMethod;
+      }
+    }
+    return getRemoveCidrBlocksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest,
@@ -236,22 +218,21 @@ public final class SubnetServiceGrpc {
     if ((getDeleteMethod = SubnetServiceGrpc.getDeleteMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getDeleteMethod = SubnetServiceGrpc.getDeleteMethod) == null) {
-          SubnetServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          SubnetServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest,
@@ -268,22 +249,21 @@ public final class SubnetServiceGrpc {
     if ((getListOperationsMethod = SubnetServiceGrpc.getListOperationsMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getListOperationsMethod = SubnetServiceGrpc.getListOperationsMethod) == null) {
-          SubnetServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          SubnetServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest,
@@ -300,22 +280,21 @@ public final class SubnetServiceGrpc {
     if ((getMoveMethod = SubnetServiceGrpc.getMoveMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getMoveMethod = SubnetServiceGrpc.getMoveMethod) == null) {
-          SubnetServiceGrpc.getMoveMethod = getMoveMethod = 
+          SubnetServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest,
@@ -332,29 +311,35 @@ public final class SubnetServiceGrpc {
     if ((getListUsedAddressesMethod = SubnetServiceGrpc.getListUsedAddressesMethod) == null) {
       synchronized (SubnetServiceGrpc.class) {
         if ((getListUsedAddressesMethod = SubnetServiceGrpc.getListUsedAddressesMethod) == null) {
-          SubnetServiceGrpc.getListUsedAddressesMethod = getListUsedAddressesMethod = 
+          SubnetServiceGrpc.getListUsedAddressesMethod = getListUsedAddressesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.SubnetService", "ListUsedAddresses"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUsedAddresses"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("ListUsedAddresses"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("ListUsedAddresses"))
+              .build();
         }
-     }
-     return getListUsedAddressesMethod;
+      }
+    }
+    return getListUsedAddressesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SubnetServiceStub newStub(io.grpc.Channel channel) {
-    return new SubnetServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubnetServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubnetServiceStub>() {
+        @java.lang.Override
+        public SubnetServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubnetServiceStub(channel, callOptions);
+        }
+      };
+    return SubnetServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -362,7 +347,14 @@ public final class SubnetServiceGrpc {
    */
   public static SubnetServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SubnetServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubnetServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubnetServiceBlockingStub>() {
+        @java.lang.Override
+        public SubnetServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubnetServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SubnetServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -370,7 +362,14 @@ public final class SubnetServiceGrpc {
    */
   public static SubnetServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SubnetServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubnetServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubnetServiceFutureStub>() {
+        @java.lang.Override
+        public SubnetServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubnetServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SubnetServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -388,7 +387,7 @@ public final class SubnetServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -398,7 +397,7 @@ public final class SubnetServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -409,7 +408,7 @@ public final class SubnetServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -420,7 +419,7 @@ public final class SubnetServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -431,7 +430,7 @@ public final class SubnetServiceGrpc {
      */
     public void addCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddCidrBlocksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddCidrBlocksMethod(), responseObserver);
     }
 
     /**
@@ -442,7 +441,7 @@ public final class SubnetServiceGrpc {
      */
     public void removeCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveCidrBlocksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveCidrBlocksMethod(), responseObserver);
     }
 
     /**
@@ -452,7 +451,7 @@ public final class SubnetServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -462,7 +461,7 @@ public final class SubnetServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -472,7 +471,7 @@ public final class SubnetServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     /**
@@ -482,77 +481,77 @@ public final class SubnetServiceGrpc {
      */
     public void listUsedAddresses(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListUsedAddressesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsedAddressesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest,
                 yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest,
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getAddCidrBlocksMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_CIDR_BLOCKS)))
           .addMethod(
             getRemoveCidrBlocksMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_CIDR_BLOCKS)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest,
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
           .addMethod(
             getListUsedAddressesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest,
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse>(
@@ -566,19 +565,15 @@ public final class SubnetServiceGrpc {
    * A set of methods for managing Subnet resources.
    * </pre>
    */
-  public static final class SubnetServiceStub extends io.grpc.stub.AbstractStub<SubnetServiceStub> {
-    private SubnetServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubnetServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubnetServiceStub extends io.grpc.stub.AbstractAsyncStub<SubnetServiceStub> {
+    private SubnetServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubnetServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubnetServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubnetServiceStub(channel, callOptions);
     }
 
@@ -590,7 +585,7 @@ public final class SubnetServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -601,7 +596,7 @@ public final class SubnetServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -613,7 +608,7 @@ public final class SubnetServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -625,7 +620,7 @@ public final class SubnetServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -637,7 +632,7 @@ public final class SubnetServiceGrpc {
      */
     public void addCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddCidrBlocksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -649,7 +644,7 @@ public final class SubnetServiceGrpc {
      */
     public void removeCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveCidrBlocksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -660,7 +655,7 @@ public final class SubnetServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -671,7 +666,7 @@ public final class SubnetServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -682,7 +677,7 @@ public final class SubnetServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -693,7 +688,7 @@ public final class SubnetServiceGrpc {
      */
     public void listUsedAddresses(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUsedAddressesMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -703,19 +698,15 @@ public final class SubnetServiceGrpc {
    * A set of methods for managing Subnet resources.
    * </pre>
    */
-  public static final class SubnetServiceBlockingStub extends io.grpc.stub.AbstractStub<SubnetServiceBlockingStub> {
-    private SubnetServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubnetServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubnetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SubnetServiceBlockingStub> {
+    private SubnetServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubnetServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubnetServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubnetServiceBlockingStub(channel, callOptions);
     }
 
@@ -726,7 +717,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet get(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -736,7 +727,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse list(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -747,7 +738,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -758,7 +749,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -769,7 +760,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddCidrBlocksMethod(), getCallOptions(), request);
     }
 
@@ -780,7 +771,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveCidrBlocksMethod(), getCallOptions(), request);
     }
 
@@ -790,7 +781,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -800,7 +791,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse listOperations(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -810,7 +801,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
@@ -820,7 +811,7 @@ public final class SubnetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse listUsedAddresses(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUsedAddressesMethod(), getCallOptions(), request);
     }
   }
@@ -830,19 +821,15 @@ public final class SubnetServiceGrpc {
    * A set of methods for managing Subnet resources.
    * </pre>
    */
-  public static final class SubnetServiceFutureStub extends io.grpc.stub.AbstractStub<SubnetServiceFutureStub> {
-    private SubnetServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubnetServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubnetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SubnetServiceFutureStub> {
+    private SubnetServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubnetServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubnetServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubnetServiceFutureStub(channel, callOptions);
     }
 
@@ -854,7 +841,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SubnetOuterClass.Subnet> get(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.GetSubnetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -865,7 +852,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsResponse> list(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -877,7 +864,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.CreateSubnetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -889,7 +876,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -901,7 +888,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addCidrBlocks(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddCidrBlocksMethod(), getCallOptions()), request);
     }
 
@@ -913,7 +900,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeCidrBlocks(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveCidrBlocksMethod(), getCallOptions()), request);
     }
 
@@ -924,7 +911,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -935,7 +922,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListSubnetOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -946,7 +933,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
 
@@ -957,7 +944,7 @@ public final class SubnetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse> listUsedAddresses(
         yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUsedAddressesMethod(), getCallOptions()), request);
     }
   }

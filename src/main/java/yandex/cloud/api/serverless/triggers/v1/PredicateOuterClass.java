@@ -20,10 +20,12 @@ public final class PredicateOuterClass {
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
+     * @return Whether the andPredicate field is set.
      */
     boolean hasAndPredicate();
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
+     * @return The andPredicate.
      */
     yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate getAndPredicate();
     /**
@@ -33,10 +35,12 @@ public final class PredicateOuterClass {
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
+     * @return Whether the fieldValuePredicate field is set.
      */
     boolean hasFieldValuePredicate();
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
+     * @return The fieldValuePredicate.
      */
     yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate getFieldValuePredicate();
     /**
@@ -49,7 +53,7 @@ public final class PredicateOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Predicate}
    */
-  public  static final class Predicate extends
+  public static final class Predicate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Predicate)
       PredicateOrBuilder {
@@ -59,6 +63,13 @@ public final class PredicateOuterClass {
       super(builder);
     }
     private Predicate() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Predicate();
     }
 
     @java.lang.Override
@@ -74,7 +85,6 @@ public final class PredicateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -114,7 +124,7 @@ public final class PredicateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -148,7 +158,8 @@ public final class PredicateOuterClass {
     private int predicateCase_ = 0;
     private java.lang.Object predicate_;
     public enum PredicateCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       AND_PREDICATE(2),
       FIELD_VALUE_PREDICATE(4),
       PREDICATE_NOT_SET(0);
@@ -157,6 +168,8 @@ public final class PredicateOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -186,13 +199,17 @@ public final class PredicateOuterClass {
     public static final int AND_PREDICATE_FIELD_NUMBER = 2;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
+     * @return Whether the andPredicate field is set.
      */
+    @java.lang.Override
     public boolean hasAndPredicate() {
       return predicateCase_ == 2;
     }
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
+     * @return The andPredicate.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate getAndPredicate() {
       if (predicateCase_ == 2) {
          return (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate) predicate_;
@@ -202,6 +219,7 @@ public final class PredicateOuterClass {
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicateOrBuilder getAndPredicateOrBuilder() {
       if (predicateCase_ == 2) {
          return (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate) predicate_;
@@ -212,13 +230,17 @@ public final class PredicateOuterClass {
     public static final int FIELD_VALUE_PREDICATE_FIELD_NUMBER = 4;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
+     * @return Whether the fieldValuePredicate field is set.
      */
+    @java.lang.Override
     public boolean hasFieldValuePredicate() {
       return predicateCase_ == 4;
     }
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
+     * @return The fieldValuePredicate.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate getFieldValuePredicate() {
       if (predicateCase_ == 4) {
          return (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate) predicate_;
@@ -228,6 +250,7 @@ public final class PredicateOuterClass {
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicateOrBuilder getFieldValuePredicateOrBuilder() {
       if (predicateCase_ == 4) {
          return (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate) predicate_;
@@ -287,24 +310,21 @@ public final class PredicateOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate other = (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate) obj;
 
-      boolean result = true;
-      result = result && getPredicateCase().equals(
-          other.getPredicateCase());
-      if (!result) return false;
+      if (!getPredicateCase().equals(other.getPredicateCase())) return false;
       switch (predicateCase_) {
         case 2:
-          result = result && getAndPredicate()
-              .equals(other.getAndPredicate());
+          if (!getAndPredicate()
+              .equals(other.getAndPredicate())) return false;
           break;
         case 4:
-          result = result && getFieldValuePredicate()
-              .equals(other.getFieldValuePredicate());
+          if (!getFieldValuePredicate()
+              .equals(other.getFieldValuePredicate())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -508,35 +528,35 @@ public final class PredicateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -611,13 +631,17 @@ public final class PredicateOuterClass {
           yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate, yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate.Builder, yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicateOrBuilder> andPredicateBuilder_;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
+       * @return Whether the andPredicate field is set.
        */
+      @java.lang.Override
       public boolean hasAndPredicate() {
         return predicateCase_ == 2;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
+       * @return The andPredicate.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate getAndPredicate() {
         if (andPredicateBuilder_ == null) {
           if (predicateCase_ == 2) {
@@ -711,6 +735,7 @@ public final class PredicateOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.AndPredicate and_predicate = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicateOrBuilder getAndPredicateOrBuilder() {
         if ((predicateCase_ == 2) && (andPredicateBuilder_ != null)) {
           return andPredicateBuilder_.getMessageOrBuilder();
@@ -747,13 +772,17 @@ public final class PredicateOuterClass {
           yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate, yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate.Builder, yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicateOrBuilder> fieldValuePredicateBuilder_;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
+       * @return Whether the fieldValuePredicate field is set.
        */
+      @java.lang.Override
       public boolean hasFieldValuePredicate() {
         return predicateCase_ == 4;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
+       * @return The fieldValuePredicate.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate getFieldValuePredicate() {
         if (fieldValuePredicateBuilder_ == null) {
           if (predicateCase_ == 4) {
@@ -847,6 +876,7 @@ public final class PredicateOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.FieldValuePredicate field_value_predicate = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicateOrBuilder getFieldValuePredicateOrBuilder() {
         if ((predicateCase_ == 4) && (fieldValuePredicateBuilder_ != null)) {
           return fieldValuePredicateBuilder_.getMessageOrBuilder();
@@ -881,7 +911,7 @@ public final class PredicateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -962,7 +992,7 @@ public final class PredicateOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.AndPredicate}
    */
-  public  static final class AndPredicate extends
+  public static final class AndPredicate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.AndPredicate)
       AndPredicateOrBuilder {
@@ -973,6 +1003,13 @@ public final class PredicateOuterClass {
     }
     private AndPredicate() {
       predicate_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AndPredicate();
     }
 
     @java.lang.Override
@@ -1000,7 +1037,7 @@ public final class PredicateOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 predicate_ = new java.util.ArrayList<yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1009,7 +1046,7 @@ public final class PredicateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1023,7 +1060,7 @@ public final class PredicateOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           predicate_ = java.util.Collections.unmodifiableList(predicate_);
         }
         this.unknownFields = unknownFields.build();
@@ -1048,12 +1085,14 @@ public final class PredicateOuterClass {
     /**
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Predicate predicate = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate> getPredicateList() {
       return predicate_;
     }
     /**
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Predicate predicate = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.PredicateOrBuilder> 
         getPredicateOrBuilderList() {
       return predicate_;
@@ -1061,18 +1100,21 @@ public final class PredicateOuterClass {
     /**
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Predicate predicate = 1;</code>
      */
+    @java.lang.Override
     public int getPredicateCount() {
       return predicate_.size();
     }
     /**
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Predicate predicate = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate getPredicate(int index) {
       return predicate_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Predicate predicate = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.PredicateOrBuilder getPredicateOrBuilder(
         int index) {
       return predicate_.get(index);
@@ -1123,11 +1165,10 @@ public final class PredicateOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate other = (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate) obj;
 
-      boolean result = true;
-      result = result && getPredicateList()
-          .equals(other.getPredicateList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPredicateList()
+          .equals(other.getPredicateList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1309,7 +1350,7 @@ public final class PredicateOuterClass {
         yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate result = new yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.AndPredicate(this);
         int from_bitField0_ = bitField0_;
         if (predicateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             predicate_ = java.util.Collections.unmodifiableList(predicate_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1323,35 +1364,35 @@ public final class PredicateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1424,7 +1465,7 @@ public final class PredicateOuterClass {
       private java.util.List<yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate> predicate_ =
         java.util.Collections.emptyList();
       private void ensurePredicateIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           predicate_ = new java.util.ArrayList<yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate>(predicate_);
           bitField0_ |= 0x00000001;
          }
@@ -1653,7 +1694,7 @@ public final class PredicateOuterClass {
           predicateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate, yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.Predicate.Builder, yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.PredicateOrBuilder>(
                   predicate_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           predicate_ = null;
@@ -1663,7 +1704,7 @@ public final class PredicateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1719,10 +1760,12 @@ public final class PredicateOuterClass {
 
     /**
      * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The fieldPath.
      */
     java.lang.String getFieldPath();
     /**
      * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for fieldPath.
      */
     com.google.protobuf.ByteString
         getFieldPathBytes();
@@ -1733,6 +1776,16 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string exact = 3;</code>
+     * @return Whether the exact field is set.
+     */
+    boolean hasExact();
+    /**
+     * <pre>
+     * string representation of the value matches exactly to the given string
+     * </pre>
+     *
+     * <code>string exact = 3;</code>
+     * @return The exact.
      */
     java.lang.String getExact();
     /**
@@ -1741,6 +1794,7 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string exact = 3;</code>
+     * @return The bytes for exact.
      */
     com.google.protobuf.ByteString
         getExactBytes();
@@ -1751,6 +1805,16 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string prefix = 8;</code>
+     * @return Whether the prefix field is set.
+     */
+    boolean hasPrefix();
+    /**
+     * <pre>
+     * value has given prefix
+     * </pre>
+     *
+     * <code>string prefix = 8;</code>
+     * @return The prefix.
      */
     java.lang.String getPrefix();
     /**
@@ -1759,6 +1823,7 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string prefix = 8;</code>
+     * @return The bytes for prefix.
      */
     com.google.protobuf.ByteString
         getPrefixBytes();
@@ -1769,6 +1834,16 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string suffix = 9;</code>
+     * @return Whether the suffix field is set.
+     */
+    boolean hasSuffix();
+    /**
+     * <pre>
+     * value has given suffix
+     * </pre>
+     *
+     * <code>string suffix = 9;</code>
+     * @return The suffix.
      */
     java.lang.String getSuffix();
     /**
@@ -1777,6 +1852,7 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string suffix = 9;</code>
+     * @return The bytes for suffix.
      */
     com.google.protobuf.ByteString
         getSuffixBytes();
@@ -1786,7 +1862,7 @@ public final class PredicateOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.FieldValuePredicate}
    */
-  public  static final class FieldValuePredicate extends
+  public static final class FieldValuePredicate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.FieldValuePredicate)
       FieldValuePredicateOrBuilder {
@@ -1797,6 +1873,13 @@ public final class PredicateOuterClass {
     }
     private FieldValuePredicate() {
       fieldPath_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FieldValuePredicate();
     }
 
     @java.lang.Override
@@ -1812,7 +1895,6 @@ public final class PredicateOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1848,7 +1930,7 @@ public final class PredicateOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1882,7 +1964,8 @@ public final class PredicateOuterClass {
     private int valueCase_ = 0;
     private java.lang.Object value_;
     public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       EXACT(3),
       PREFIX(8),
       SUFFIX(9),
@@ -1892,6 +1975,8 @@ public final class PredicateOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1923,7 +2008,9 @@ public final class PredicateOuterClass {
     private volatile java.lang.Object fieldPath_;
     /**
      * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The fieldPath.
      */
+    @java.lang.Override
     public java.lang.String getFieldPath() {
       java.lang.Object ref = fieldPath_;
       if (ref instanceof java.lang.String) {
@@ -1938,7 +2025,9 @@ public final class PredicateOuterClass {
     }
     /**
      * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for fieldPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFieldPathBytes() {
       java.lang.Object ref = fieldPath_;
@@ -1960,6 +2049,18 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string exact = 3;</code>
+     * @return Whether the exact field is set.
+     */
+    public boolean hasExact() {
+      return valueCase_ == 3;
+    }
+    /**
+     * <pre>
+     * string representation of the value matches exactly to the given string
+     * </pre>
+     *
+     * <code>string exact = 3;</code>
+     * @return The exact.
      */
     public java.lang.String getExact() {
       java.lang.Object ref = "";
@@ -1984,6 +2085,7 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string exact = 3;</code>
+     * @return The bytes for exact.
      */
     public com.google.protobuf.ByteString
         getExactBytes() {
@@ -2011,6 +2113,18 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string prefix = 8;</code>
+     * @return Whether the prefix field is set.
+     */
+    public boolean hasPrefix() {
+      return valueCase_ == 8;
+    }
+    /**
+     * <pre>
+     * value has given prefix
+     * </pre>
+     *
+     * <code>string prefix = 8;</code>
+     * @return The prefix.
      */
     public java.lang.String getPrefix() {
       java.lang.Object ref = "";
@@ -2035,6 +2149,7 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string prefix = 8;</code>
+     * @return The bytes for prefix.
      */
     public com.google.protobuf.ByteString
         getPrefixBytes() {
@@ -2062,6 +2177,18 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string suffix = 9;</code>
+     * @return Whether the suffix field is set.
+     */
+    public boolean hasSuffix() {
+      return valueCase_ == 9;
+    }
+    /**
+     * <pre>
+     * value has given suffix
+     * </pre>
+     *
+     * <code>string suffix = 9;</code>
+     * @return The suffix.
      */
     public java.lang.String getSuffix() {
       java.lang.Object ref = "";
@@ -2086,6 +2213,7 @@ public final class PredicateOuterClass {
      * </pre>
      *
      * <code>string suffix = 9;</code>
+     * @return The bytes for suffix.
      */
     public com.google.protobuf.ByteString
         getSuffixBytes() {
@@ -2120,7 +2248,7 @@ public final class PredicateOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFieldPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldPath_);
       }
       if (valueCase_ == 3) {
@@ -2141,7 +2269,7 @@ public final class PredicateOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFieldPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldPath_);
       }
       if (valueCase_ == 3) {
@@ -2168,30 +2296,27 @@ public final class PredicateOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate other = (yandex.cloud.api.serverless.triggers.v1.PredicateOuterClass.FieldValuePredicate) obj;
 
-      boolean result = true;
-      result = result && getFieldPath()
-          .equals(other.getFieldPath());
-      result = result && getValueCase().equals(
-          other.getValueCase());
-      if (!result) return false;
+      if (!getFieldPath()
+          .equals(other.getFieldPath())) return false;
+      if (!getValueCase().equals(other.getValueCase())) return false;
       switch (valueCase_) {
         case 3:
-          result = result && getExact()
-              .equals(other.getExact());
+          if (!getExact()
+              .equals(other.getExact())) return false;
           break;
         case 8:
-          result = result && getPrefix()
-              .equals(other.getPrefix());
+          if (!getPrefix()
+              .equals(other.getPrefix())) return false;
           break;
         case 9:
-          result = result && getSuffix()
-              .equals(other.getSuffix());
+          if (!getSuffix()
+              .equals(other.getSuffix())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2399,35 +2524,35 @@ public final class PredicateOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2515,6 +2640,7 @@ public final class PredicateOuterClass {
       private java.lang.Object fieldPath_ = "";
       /**
        * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The fieldPath.
        */
       public java.lang.String getFieldPath() {
         java.lang.Object ref = fieldPath_;
@@ -2530,6 +2656,7 @@ public final class PredicateOuterClass {
       }
       /**
        * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for fieldPath.
        */
       public com.google.protobuf.ByteString
           getFieldPathBytes() {
@@ -2546,6 +2673,8 @@ public final class PredicateOuterClass {
       }
       /**
        * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The fieldPath to set.
+       * @return This builder for chaining.
        */
       public Builder setFieldPath(
           java.lang.String value) {
@@ -2559,6 +2688,7 @@ public final class PredicateOuterClass {
       }
       /**
        * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFieldPath() {
         
@@ -2568,6 +2698,8 @@ public final class PredicateOuterClass {
       }
       /**
        * <code>string field_path = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for fieldPath to set.
+       * @return This builder for chaining.
        */
       public Builder setFieldPathBytes(
           com.google.protobuf.ByteString value) {
@@ -2587,7 +2719,21 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string exact = 3;</code>
+       * @return Whether the exact field is set.
        */
+      @java.lang.Override
+      public boolean hasExact() {
+        return valueCase_ == 3;
+      }
+      /**
+       * <pre>
+       * string representation of the value matches exactly to the given string
+       * </pre>
+       *
+       * <code>string exact = 3;</code>
+       * @return The exact.
+       */
+      @java.lang.Override
       public java.lang.String getExact() {
         java.lang.Object ref = "";
         if (valueCase_ == 3) {
@@ -2611,7 +2757,9 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string exact = 3;</code>
+       * @return The bytes for exact.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getExactBytes() {
         java.lang.Object ref = "";
@@ -2636,6 +2784,8 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string exact = 3;</code>
+       * @param value The exact to set.
+       * @return This builder for chaining.
        */
       public Builder setExact(
           java.lang.String value) {
@@ -2653,6 +2803,7 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string exact = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearExact() {
         if (valueCase_ == 3) {
@@ -2668,6 +2819,8 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string exact = 3;</code>
+       * @param value The bytes for exact to set.
+       * @return This builder for chaining.
        */
       public Builder setExactBytes(
           com.google.protobuf.ByteString value) {
@@ -2687,7 +2840,21 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string prefix = 8;</code>
+       * @return Whether the prefix field is set.
        */
+      @java.lang.Override
+      public boolean hasPrefix() {
+        return valueCase_ == 8;
+      }
+      /**
+       * <pre>
+       * value has given prefix
+       * </pre>
+       *
+       * <code>string prefix = 8;</code>
+       * @return The prefix.
+       */
+      @java.lang.Override
       public java.lang.String getPrefix() {
         java.lang.Object ref = "";
         if (valueCase_ == 8) {
@@ -2711,7 +2878,9 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string prefix = 8;</code>
+       * @return The bytes for prefix.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPrefixBytes() {
         java.lang.Object ref = "";
@@ -2736,6 +2905,8 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string prefix = 8;</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
        */
       public Builder setPrefix(
           java.lang.String value) {
@@ -2753,6 +2924,7 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string prefix = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPrefix() {
         if (valueCase_ == 8) {
@@ -2768,6 +2940,8 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string prefix = 8;</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
        */
       public Builder setPrefixBytes(
           com.google.protobuf.ByteString value) {
@@ -2787,7 +2961,21 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string suffix = 9;</code>
+       * @return Whether the suffix field is set.
        */
+      @java.lang.Override
+      public boolean hasSuffix() {
+        return valueCase_ == 9;
+      }
+      /**
+       * <pre>
+       * value has given suffix
+       * </pre>
+       *
+       * <code>string suffix = 9;</code>
+       * @return The suffix.
+       */
+      @java.lang.Override
       public java.lang.String getSuffix() {
         java.lang.Object ref = "";
         if (valueCase_ == 9) {
@@ -2811,7 +2999,9 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string suffix = 9;</code>
+       * @return The bytes for suffix.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSuffixBytes() {
         java.lang.Object ref = "";
@@ -2836,6 +3026,8 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string suffix = 9;</code>
+       * @param value The suffix to set.
+       * @return This builder for chaining.
        */
       public Builder setSuffix(
           java.lang.String value) {
@@ -2853,6 +3045,7 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string suffix = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSuffix() {
         if (valueCase_ == 9) {
@@ -2868,6 +3061,8 @@ public final class PredicateOuterClass {
        * </pre>
        *
        * <code>string suffix = 9;</code>
+       * @param value The bytes for suffix to set.
+       * @return This builder for chaining.
        */
       public Builder setSuffixBytes(
           com.google.protobuf.ByteString value) {
@@ -2883,7 +3078,7 @@ public final class PredicateOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2975,19 +3170,11 @@ public final class PredicateOuterClass {
       "o/yandex/cloud/serverless/triggers/v1;tr" +
       "iggersb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_serverless_triggers_v1_Predicate_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_serverless_triggers_v1_Predicate_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.elasticsearch.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/elasticsearch/v1/auth_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AuthServiceGrpc {
 
   private AuthServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class AuthServiceGrpc {
     if ((getListProvidersMethod = AuthServiceGrpc.getListProvidersMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getListProvidersMethod = AuthServiceGrpc.getListProvidersMethod) == null) {
-          AuthServiceGrpc.getListProvidersMethod = getListProvidersMethod = 
+          AuthServiceGrpc.getListProvidersMethod = getListProvidersMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest, yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "ListProviders"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListProviders"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("ListProviders"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("ListProviders"))
+              .build();
         }
-     }
-     return getListProvidersMethod;
+      }
+    }
+    return getListProvidersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest,
@@ -76,22 +63,21 @@ public final class AuthServiceGrpc {
     if ((getGetProviderMethod = AuthServiceGrpc.getGetProviderMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getGetProviderMethod = AuthServiceGrpc.getGetProviderMethod) == null) {
-          AuthServiceGrpc.getGetProviderMethod = getGetProviderMethod = 
+          AuthServiceGrpc.getGetProviderMethod = getGetProviderMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest, yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "GetProvider"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProvider"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("GetProvider"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("GetProvider"))
+              .build();
         }
-     }
-     return getGetProviderMethod;
+      }
+    }
+    return getGetProviderMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest,
@@ -108,22 +94,21 @@ public final class AuthServiceGrpc {
     if ((getAddProvidersMethod = AuthServiceGrpc.getAddProvidersMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getAddProvidersMethod = AuthServiceGrpc.getAddProvidersMethod) == null) {
-          AuthServiceGrpc.getAddProvidersMethod = getAddProvidersMethod = 
+          AuthServiceGrpc.getAddProvidersMethod = getAddProvidersMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "AddProviders"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddProviders"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("AddProviders"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("AddProviders"))
+              .build();
         }
-     }
-     return getAddProvidersMethod;
+      }
+    }
+    return getAddProvidersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest,
@@ -140,22 +125,21 @@ public final class AuthServiceGrpc {
     if ((getUpdateProvidersMethod = AuthServiceGrpc.getUpdateProvidersMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getUpdateProvidersMethod = AuthServiceGrpc.getUpdateProvidersMethod) == null) {
-          AuthServiceGrpc.getUpdateProvidersMethod = getUpdateProvidersMethod = 
+          AuthServiceGrpc.getUpdateProvidersMethod = getUpdateProvidersMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "UpdateProviders"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProviders"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("UpdateProviders"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("UpdateProviders"))
+              .build();
         }
-     }
-     return getUpdateProvidersMethod;
+      }
+    }
+    return getUpdateProvidersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest,
@@ -172,22 +156,21 @@ public final class AuthServiceGrpc {
     if ((getDeleteProvidersMethod = AuthServiceGrpc.getDeleteProvidersMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getDeleteProvidersMethod = AuthServiceGrpc.getDeleteProvidersMethod) == null) {
-          AuthServiceGrpc.getDeleteProvidersMethod = getDeleteProvidersMethod = 
+          AuthServiceGrpc.getDeleteProvidersMethod = getDeleteProvidersMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "DeleteProviders"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteProviders"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("DeleteProviders"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("DeleteProviders"))
+              .build();
         }
-     }
-     return getDeleteProvidersMethod;
+      }
+    }
+    return getDeleteProvidersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest,
@@ -204,22 +187,21 @@ public final class AuthServiceGrpc {
     if ((getUpdateProviderMethod = AuthServiceGrpc.getUpdateProviderMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getUpdateProviderMethod = AuthServiceGrpc.getUpdateProviderMethod) == null) {
-          AuthServiceGrpc.getUpdateProviderMethod = getUpdateProviderMethod = 
+          AuthServiceGrpc.getUpdateProviderMethod = getUpdateProviderMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "UpdateProvider"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProvider"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("UpdateProvider"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("UpdateProvider"))
+              .build();
         }
-     }
-     return getUpdateProviderMethod;
+      }
+    }
+    return getUpdateProviderMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest,
@@ -236,29 +218,35 @@ public final class AuthServiceGrpc {
     if ((getDeleteProviderMethod = AuthServiceGrpc.getDeleteProviderMethod) == null) {
       synchronized (AuthServiceGrpc.class) {
         if ((getDeleteProviderMethod = AuthServiceGrpc.getDeleteProviderMethod) == null) {
-          AuthServiceGrpc.getDeleteProviderMethod = getDeleteProviderMethod = 
+          AuthServiceGrpc.getDeleteProviderMethod = getDeleteProviderMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.AuthService", "DeleteProvider"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteProvider"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("DeleteProvider"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AuthServiceMethodDescriptorSupplier("DeleteProvider"))
+              .build();
         }
-     }
-     return getDeleteProviderMethod;
+      }
+    }
+    return getDeleteProviderMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AuthServiceStub newStub(io.grpc.Channel channel) {
-    return new AuthServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AuthServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthServiceStub>() {
+        @java.lang.Override
+        public AuthServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthServiceStub(channel, callOptions);
+        }
+      };
+    return AuthServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class AuthServiceGrpc {
    */
   public static AuthServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AuthServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AuthServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthServiceBlockingStub>() {
+        @java.lang.Override
+        public AuthServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AuthServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class AuthServiceGrpc {
    */
   public static AuthServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AuthServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AuthServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthServiceFutureStub>() {
+        @java.lang.Override
+        public AuthServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AuthServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -291,7 +293,7 @@ public final class AuthServiceGrpc {
      */
     public void listProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListProvidersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProvidersMethod(), responseObserver);
     }
 
     /**
@@ -301,7 +303,7 @@ public final class AuthServiceGrpc {
      */
     public void getProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProviderMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProviderMethod(), responseObserver);
     }
 
     /**
@@ -311,7 +313,7 @@ public final class AuthServiceGrpc {
      */
     public void addProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddProvidersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddProvidersMethod(), responseObserver);
     }
 
     /**
@@ -321,7 +323,7 @@ public final class AuthServiceGrpc {
      */
     public void updateProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateProvidersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProvidersMethod(), responseObserver);
     }
 
     /**
@@ -331,7 +333,7 @@ public final class AuthServiceGrpc {
      */
     public void deleteProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteProvidersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProvidersMethod(), responseObserver);
     }
 
     /**
@@ -341,7 +343,7 @@ public final class AuthServiceGrpc {
      */
     public void updateProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateProviderMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProviderMethod(), responseObserver);
     }
 
     /**
@@ -351,56 +353,56 @@ public final class AuthServiceGrpc {
      */
     public void deleteProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteProviderMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProviderMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListProvidersMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse>(
                   this, METHODID_LIST_PROVIDERS)))
           .addMethod(
             getGetProviderMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider>(
                   this, METHODID_GET_PROVIDER)))
           .addMethod(
             getAddProvidersMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_PROVIDERS)))
           .addMethod(
             getUpdateProvidersMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_PROVIDERS)))
           .addMethod(
             getDeleteProvidersMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_PROVIDERS)))
           .addMethod(
             getUpdateProviderMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_PROVIDER)))
           .addMethod(
             getDeleteProviderMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -414,19 +416,15 @@ public final class AuthServiceGrpc {
    * A set of methods for managing Elasticsearch Authentication resources.
    * </pre>
    */
-  public static final class AuthServiceStub extends io.grpc.stub.AbstractStub<AuthServiceStub> {
-    private AuthServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AuthServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AuthServiceStub extends io.grpc.stub.AbstractAsyncStub<AuthServiceStub> {
+    private AuthServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AuthServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AuthServiceStub(channel, callOptions);
     }
 
@@ -437,7 +435,7 @@ public final class AuthServiceGrpc {
      */
     public void listProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListProvidersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -448,7 +446,7 @@ public final class AuthServiceGrpc {
      */
     public void getProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProviderMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -459,7 +457,7 @@ public final class AuthServiceGrpc {
      */
     public void addProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddProvidersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -470,7 +468,7 @@ public final class AuthServiceGrpc {
      */
     public void updateProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateProvidersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -481,7 +479,7 @@ public final class AuthServiceGrpc {
      */
     public void deleteProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteProvidersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -492,7 +490,7 @@ public final class AuthServiceGrpc {
      */
     public void updateProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateProviderMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -503,7 +501,7 @@ public final class AuthServiceGrpc {
      */
     public void deleteProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteProviderMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -513,19 +511,15 @@ public final class AuthServiceGrpc {
    * A set of methods for managing Elasticsearch Authentication resources.
    * </pre>
    */
-  public static final class AuthServiceBlockingStub extends io.grpc.stub.AbstractStub<AuthServiceBlockingStub> {
-    private AuthServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AuthServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AuthServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AuthServiceBlockingStub> {
+    private AuthServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AuthServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AuthServiceBlockingStub(channel, callOptions);
     }
 
@@ -535,7 +529,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse listProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListProvidersMethod(), getCallOptions(), request);
     }
 
@@ -545,7 +539,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider getProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProviderMethod(), getCallOptions(), request);
     }
 
@@ -555,7 +549,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddProvidersMethod(), getCallOptions(), request);
     }
 
@@ -565,7 +559,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProvidersMethod(), getCallOptions(), request);
     }
 
@@ -575,7 +569,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteProviders(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteProvidersMethod(), getCallOptions(), request);
     }
 
@@ -585,7 +579,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProviderMethod(), getCallOptions(), request);
     }
 
@@ -595,7 +589,7 @@ public final class AuthServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteProvider(yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteProviderMethod(), getCallOptions(), request);
     }
   }
@@ -605,19 +599,15 @@ public final class AuthServiceGrpc {
    * A set of methods for managing Elasticsearch Authentication resources.
    * </pre>
    */
-  public static final class AuthServiceFutureStub extends io.grpc.stub.AbstractStub<AuthServiceFutureStub> {
-    private AuthServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AuthServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AuthServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AuthServiceFutureStub> {
+    private AuthServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AuthServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AuthServiceFutureStub(channel, callOptions);
     }
 
@@ -628,7 +618,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersResponse> listProviders(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.ListAuthProvidersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListProvidersMethod(), getCallOptions()), request);
     }
 
@@ -639,7 +629,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.Auth.AuthProvider> getProvider(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.GetAuthProviderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProviderMethod(), getCallOptions()), request);
     }
 
@@ -650,7 +640,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addProviders(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.AddAuthProvidersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddProvidersMethod(), getCallOptions()), request);
     }
 
@@ -661,7 +651,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateProviders(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProvidersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateProvidersMethod(), getCallOptions()), request);
     }
 
@@ -672,7 +662,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteProviders(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProvidersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteProvidersMethod(), getCallOptions()), request);
     }
 
@@ -683,7 +673,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateProvider(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.UpdateAuthProviderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateProviderMethod(), getCallOptions()), request);
     }
 
@@ -694,7 +684,7 @@ public final class AuthServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteProvider(
         yandex.cloud.api.mdb.elasticsearch.v1.AuthServiceOuterClass.DeleteAuthProviderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteProviderMethod(), getCallOptions()), request);
     }
   }

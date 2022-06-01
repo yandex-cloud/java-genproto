@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/image_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ImageServiceGrpc {
 
   private ImageServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ImageServiceGrpc {
     if ((getGetMethod = ImageServiceGrpc.getGetMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getGetMethod = ImageServiceGrpc.getGetMethod) == null) {
-          ImageServiceGrpc.getGetMethod = getGetMethod = 
+          ImageServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest, yandex.cloud.api.compute.v1.ImageOuterClass.Image>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageOuterClass.Image.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest,
@@ -76,22 +63,21 @@ public final class ImageServiceGrpc {
     if ((getGetLatestByFamilyMethod = ImageServiceGrpc.getGetLatestByFamilyMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getGetLatestByFamilyMethod = ImageServiceGrpc.getGetLatestByFamilyMethod) == null) {
-          ImageServiceGrpc.getGetLatestByFamilyMethod = getGetLatestByFamilyMethod = 
+          ImageServiceGrpc.getGetLatestByFamilyMethod = getGetLatestByFamilyMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest, yandex.cloud.api.compute.v1.ImageOuterClass.Image>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "GetLatestByFamily"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLatestByFamily"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageOuterClass.Image.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("GetLatestByFamily"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("GetLatestByFamily"))
+              .build();
         }
-     }
-     return getGetLatestByFamilyMethod;
+      }
+    }
+    return getGetLatestByFamilyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest,
@@ -108,22 +94,21 @@ public final class ImageServiceGrpc {
     if ((getListMethod = ImageServiceGrpc.getListMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getListMethod = ImageServiceGrpc.getListMethod) == null) {
-          ImageServiceGrpc.getListMethod = getListMethod = 
+          ImageServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest, yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest,
@@ -140,22 +125,21 @@ public final class ImageServiceGrpc {
     if ((getCreateMethod = ImageServiceGrpc.getCreateMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getCreateMethod = ImageServiceGrpc.getCreateMethod) == null) {
-          ImageServiceGrpc.getCreateMethod = getCreateMethod = 
+          ImageServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest,
@@ -172,22 +156,21 @@ public final class ImageServiceGrpc {
     if ((getUpdateMethod = ImageServiceGrpc.getUpdateMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getUpdateMethod = ImageServiceGrpc.getUpdateMethod) == null) {
-          ImageServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          ImageServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest,
@@ -204,22 +187,21 @@ public final class ImageServiceGrpc {
     if ((getDeleteMethod = ImageServiceGrpc.getDeleteMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getDeleteMethod = ImageServiceGrpc.getDeleteMethod) == null) {
-          ImageServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          ImageServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest,
@@ -236,29 +218,35 @@ public final class ImageServiceGrpc {
     if ((getListOperationsMethod = ImageServiceGrpc.getListOperationsMethod) == null) {
       synchronized (ImageServiceGrpc.class) {
         if ((getListOperationsMethod = ImageServiceGrpc.getListOperationsMethod) == null) {
-          ImageServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          ImageServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest, yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.ImageService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ImageServiceStub newStub(io.grpc.Channel channel) {
-    return new ImageServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageServiceStub>() {
+        @java.lang.Override
+        public ImageServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageServiceStub(channel, callOptions);
+        }
+      };
+    return ImageServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class ImageServiceGrpc {
    */
   public static ImageServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ImageServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageServiceBlockingStub>() {
+        @java.lang.Override
+        public ImageServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ImageServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class ImageServiceGrpc {
    */
   public static ImageServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ImageServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageServiceFutureStub>() {
+        @java.lang.Override
+        public ImageServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ImageServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class ImageServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageOuterClass.Image> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class ImageServiceGrpc {
      */
     public void getLatestByFamily(yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageOuterClass.Image> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLatestByFamilyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLatestByFamilyMethod(), responseObserver);
     }
 
     /**
@@ -312,7 +314,7 @@ public final class ImageServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -324,7 +326,7 @@ public final class ImageServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -334,7 +336,7 @@ public final class ImageServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -345,7 +347,7 @@ public final class ImageServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -355,56 +357,56 @@ public final class ImageServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest,
                 yandex.cloud.api.compute.v1.ImageOuterClass.Image>(
                   this, METHODID_GET)))
           .addMethod(
             getGetLatestByFamilyMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest,
                 yandex.cloud.api.compute.v1.ImageOuterClass.Image>(
                   this, METHODID_GET_LATEST_BY_FAMILY)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest,
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest,
                 yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse>(
@@ -418,19 +420,15 @@ public final class ImageServiceGrpc {
    * A set of methods for managing Image resources.
    * </pre>
    */
-  public static final class ImageServiceStub extends io.grpc.stub.AbstractStub<ImageServiceStub> {
-    private ImageServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageServiceStub extends io.grpc.stub.AbstractAsyncStub<ImageServiceStub> {
+    private ImageServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageServiceStub(channel, callOptions);
     }
 
@@ -442,7 +440,7 @@ public final class ImageServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageOuterClass.Image> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -453,7 +451,7 @@ public final class ImageServiceGrpc {
      */
     public void getLatestByFamily(yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageOuterClass.Image> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLatestByFamilyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -464,7 +462,7 @@ public final class ImageServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -477,7 +475,7 @@ public final class ImageServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -488,7 +486,7 @@ public final class ImageServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -500,7 +498,7 @@ public final class ImageServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -511,7 +509,7 @@ public final class ImageServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -521,19 +519,15 @@ public final class ImageServiceGrpc {
    * A set of methods for managing Image resources.
    * </pre>
    */
-  public static final class ImageServiceBlockingStub extends io.grpc.stub.AbstractStub<ImageServiceBlockingStub> {
-    private ImageServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ImageServiceBlockingStub> {
+    private ImageServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageServiceBlockingStub(channel, callOptions);
     }
 
@@ -544,7 +538,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.ImageOuterClass.Image get(yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -554,7 +548,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.ImageOuterClass.Image getLatestByFamily(yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLatestByFamilyMethod(), getCallOptions(), request);
     }
 
@@ -564,7 +558,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse list(yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -576,7 +570,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -586,7 +580,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -597,7 +591,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -607,7 +601,7 @@ public final class ImageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse listOperations(yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -617,19 +611,15 @@ public final class ImageServiceGrpc {
    * A set of methods for managing Image resources.
    * </pre>
    */
-  public static final class ImageServiceFutureStub extends io.grpc.stub.AbstractStub<ImageServiceFutureStub> {
-    private ImageServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ImageServiceFutureStub> {
+    private ImageServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageServiceFutureStub(channel, callOptions);
     }
 
@@ -641,7 +631,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ImageOuterClass.Image> get(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -652,7 +642,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ImageOuterClass.Image> getLatestByFamily(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.GetImageLatestByFamilyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLatestByFamilyMethod(), getCallOptions()), request);
     }
 
@@ -663,7 +653,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesResponse> list(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImagesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -676,7 +666,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.CreateImageRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -687,7 +677,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.UpdateImageRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -699,7 +689,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.DeleteImageRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -710,7 +700,7 @@ public final class ImageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsResponse> listOperations(
         yandex.cloud.api.compute.v1.ImageServiceOuterClass.ListImageOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

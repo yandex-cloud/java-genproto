@@ -1,19 +1,6 @@
 package yandex.cloud.api.loadbalancer.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/loadbalancer/v1/network_load_balancer_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class NetworkLoadBalancerServiceGrpc {
 
   private NetworkLoadBalancerServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getGetMethod = NetworkLoadBalancerServiceGrpc.getGetMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getGetMethod = NetworkLoadBalancerServiceGrpc.getGetMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getGetMethod = getGetMethod = 
+          NetworkLoadBalancerServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest,
@@ -76,22 +63,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getListMethod = NetworkLoadBalancerServiceGrpc.getListMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getListMethod = NetworkLoadBalancerServiceGrpc.getListMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getListMethod = getListMethod = 
+          NetworkLoadBalancerServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest,
@@ -108,22 +94,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getCreateMethod = NetworkLoadBalancerServiceGrpc.getCreateMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getCreateMethod = NetworkLoadBalancerServiceGrpc.getCreateMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getCreateMethod = getCreateMethod = 
+          NetworkLoadBalancerServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest,
@@ -140,22 +125,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getUpdateMethod = NetworkLoadBalancerServiceGrpc.getUpdateMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getUpdateMethod = NetworkLoadBalancerServiceGrpc.getUpdateMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          NetworkLoadBalancerServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest,
@@ -172,22 +156,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getDeleteMethod = NetworkLoadBalancerServiceGrpc.getDeleteMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getDeleteMethod = NetworkLoadBalancerServiceGrpc.getDeleteMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          NetworkLoadBalancerServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest,
@@ -204,22 +187,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getStartMethod = NetworkLoadBalancerServiceGrpc.getStartMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getStartMethod = NetworkLoadBalancerServiceGrpc.getStartMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getStartMethod = getStartMethod = 
+          NetworkLoadBalancerServiceGrpc.getStartMethod = getStartMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "Start"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Start"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Start"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Start"))
+              .build();
         }
-     }
-     return getStartMethod;
+      }
+    }
+    return getStartMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest,
@@ -236,22 +218,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getStopMethod = NetworkLoadBalancerServiceGrpc.getStopMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getStopMethod = NetworkLoadBalancerServiceGrpc.getStopMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getStopMethod = getStopMethod = 
+          NetworkLoadBalancerServiceGrpc.getStopMethod = getStopMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "Stop"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Stop"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("Stop"))
+              .build();
         }
-     }
-     return getStopMethod;
+      }
+    }
+    return getStopMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest,
@@ -268,22 +249,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getAttachTargetGroupMethod = NetworkLoadBalancerServiceGrpc.getAttachTargetGroupMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getAttachTargetGroupMethod = NetworkLoadBalancerServiceGrpc.getAttachTargetGroupMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getAttachTargetGroupMethod = getAttachTargetGroupMethod = 
+          NetworkLoadBalancerServiceGrpc.getAttachTargetGroupMethod = getAttachTargetGroupMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "AttachTargetGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AttachTargetGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("AttachTargetGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("AttachTargetGroup"))
+              .build();
         }
-     }
-     return getAttachTargetGroupMethod;
+      }
+    }
+    return getAttachTargetGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest,
@@ -300,22 +280,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getDetachTargetGroupMethod = NetworkLoadBalancerServiceGrpc.getDetachTargetGroupMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getDetachTargetGroupMethod = NetworkLoadBalancerServiceGrpc.getDetachTargetGroupMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getDetachTargetGroupMethod = getDetachTargetGroupMethod = 
+          NetworkLoadBalancerServiceGrpc.getDetachTargetGroupMethod = getDetachTargetGroupMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "DetachTargetGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DetachTargetGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("DetachTargetGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("DetachTargetGroup"))
+              .build();
         }
-     }
-     return getDetachTargetGroupMethod;
+      }
+    }
+    return getDetachTargetGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest,
@@ -332,22 +311,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getGetTargetStatesMethod = NetworkLoadBalancerServiceGrpc.getGetTargetStatesMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getGetTargetStatesMethod = NetworkLoadBalancerServiceGrpc.getGetTargetStatesMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getGetTargetStatesMethod = getGetTargetStatesMethod = 
+          NetworkLoadBalancerServiceGrpc.getGetTargetStatesMethod = getGetTargetStatesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "GetTargetStates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTargetStates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("GetTargetStates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("GetTargetStates"))
+              .build();
         }
-     }
-     return getGetTargetStatesMethod;
+      }
+    }
+    return getGetTargetStatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest,
@@ -364,22 +342,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getAddListenerMethod = NetworkLoadBalancerServiceGrpc.getAddListenerMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getAddListenerMethod = NetworkLoadBalancerServiceGrpc.getAddListenerMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getAddListenerMethod = getAddListenerMethod = 
+          NetworkLoadBalancerServiceGrpc.getAddListenerMethod = getAddListenerMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "AddListener"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddListener"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("AddListener"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("AddListener"))
+              .build();
         }
-     }
-     return getAddListenerMethod;
+      }
+    }
+    return getAddListenerMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest,
@@ -396,22 +373,21 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getRemoveListenerMethod = NetworkLoadBalancerServiceGrpc.getRemoveListenerMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getRemoveListenerMethod = NetworkLoadBalancerServiceGrpc.getRemoveListenerMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getRemoveListenerMethod = getRemoveListenerMethod = 
+          NetworkLoadBalancerServiceGrpc.getRemoveListenerMethod = getRemoveListenerMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "RemoveListener"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveListener"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("RemoveListener"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("RemoveListener"))
+              .build();
         }
-     }
-     return getRemoveListenerMethod;
+      }
+    }
+    return getRemoveListenerMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest,
@@ -428,29 +404,35 @@ public final class NetworkLoadBalancerServiceGrpc {
     if ((getListOperationsMethod = NetworkLoadBalancerServiceGrpc.getListOperationsMethod) == null) {
       synchronized (NetworkLoadBalancerServiceGrpc.class) {
         if ((getListOperationsMethod = NetworkLoadBalancerServiceGrpc.getListOperationsMethod) == null) {
-          NetworkLoadBalancerServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          NetworkLoadBalancerServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.loadbalancer.v1.NetworkLoadBalancerService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NetworkLoadBalancerServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static NetworkLoadBalancerServiceStub newStub(io.grpc.Channel channel) {
-    return new NetworkLoadBalancerServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NetworkLoadBalancerServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NetworkLoadBalancerServiceStub>() {
+        @java.lang.Override
+        public NetworkLoadBalancerServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NetworkLoadBalancerServiceStub(channel, callOptions);
+        }
+      };
+    return NetworkLoadBalancerServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -458,7 +440,14 @@ public final class NetworkLoadBalancerServiceGrpc {
    */
   public static NetworkLoadBalancerServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new NetworkLoadBalancerServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NetworkLoadBalancerServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NetworkLoadBalancerServiceBlockingStub>() {
+        @java.lang.Override
+        public NetworkLoadBalancerServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NetworkLoadBalancerServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return NetworkLoadBalancerServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -466,7 +455,14 @@ public final class NetworkLoadBalancerServiceGrpc {
    */
   public static NetworkLoadBalancerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new NetworkLoadBalancerServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NetworkLoadBalancerServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NetworkLoadBalancerServiceFutureStub>() {
+        @java.lang.Override
+        public NetworkLoadBalancerServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NetworkLoadBalancerServiceFutureStub(channel, callOptions);
+        }
+      };
+    return NetworkLoadBalancerServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -484,7 +480,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void get(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -494,7 +490,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void list(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -504,7 +500,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void create(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -514,7 +510,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void update(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -524,7 +520,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void delete(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -535,7 +531,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void start(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
     }
 
     /**
@@ -546,7 +542,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void stop(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
 
     /**
@@ -556,7 +552,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void attachTargetGroup(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAttachTargetGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAttachTargetGroupMethod(), responseObserver);
     }
 
     /**
@@ -566,7 +562,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void detachTargetGroup(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDetachTargetGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDetachTargetGroupMethod(), responseObserver);
     }
 
     /**
@@ -576,7 +572,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void getTargetStates(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTargetStatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTargetStatesMethod(), responseObserver);
     }
 
     /**
@@ -586,7 +582,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void addListener(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddListenerMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddListenerMethod(), responseObserver);
     }
 
     /**
@@ -596,7 +592,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void removeListener(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveListenerMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveListenerMethod(), responseObserver);
     }
 
     /**
@@ -606,98 +602,98 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest,
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest,
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getStartMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_START)))
           .addMethod(
             getStopMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
           .addMethod(
             getAttachTargetGroupMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ATTACH_TARGET_GROUP)))
           .addMethod(
             getDetachTargetGroupMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DETACH_TARGET_GROUP)))
           .addMethod(
             getGetTargetStatesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest,
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse>(
                   this, METHODID_GET_TARGET_STATES)))
           .addMethod(
             getAddListenerMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_LISTENER)))
           .addMethod(
             getRemoveListenerMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_LISTENER)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest,
                 yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse>(
@@ -711,19 +707,15 @@ public final class NetworkLoadBalancerServiceGrpc {
    * A set of methods for managing NetworkLoadBalancer resources.
    * </pre>
    */
-  public static final class NetworkLoadBalancerServiceStub extends io.grpc.stub.AbstractStub<NetworkLoadBalancerServiceStub> {
-    private NetworkLoadBalancerServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NetworkLoadBalancerServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NetworkLoadBalancerServiceStub extends io.grpc.stub.AbstractAsyncStub<NetworkLoadBalancerServiceStub> {
+    private NetworkLoadBalancerServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NetworkLoadBalancerServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NetworkLoadBalancerServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NetworkLoadBalancerServiceStub(channel, callOptions);
     }
 
@@ -735,7 +727,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void get(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -746,7 +738,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void list(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -757,7 +749,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void create(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -768,7 +760,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void update(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -779,7 +771,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void delete(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -791,7 +783,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void start(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -803,7 +795,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void stop(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -814,7 +806,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void attachTargetGroup(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAttachTargetGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -825,7 +817,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void detachTargetGroup(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDetachTargetGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -836,7 +828,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void getTargetStates(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTargetStatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -847,7 +839,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void addListener(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddListenerMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -858,7 +850,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void removeListener(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveListenerMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -869,7 +861,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -879,19 +871,15 @@ public final class NetworkLoadBalancerServiceGrpc {
    * A set of methods for managing NetworkLoadBalancer resources.
    * </pre>
    */
-  public static final class NetworkLoadBalancerServiceBlockingStub extends io.grpc.stub.AbstractStub<NetworkLoadBalancerServiceBlockingStub> {
-    private NetworkLoadBalancerServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NetworkLoadBalancerServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NetworkLoadBalancerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<NetworkLoadBalancerServiceBlockingStub> {
+    private NetworkLoadBalancerServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NetworkLoadBalancerServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NetworkLoadBalancerServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NetworkLoadBalancerServiceBlockingStub(channel, callOptions);
     }
 
@@ -902,7 +890,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer get(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -912,7 +900,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse list(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -922,7 +910,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -932,7 +920,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -942,7 +930,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -953,7 +941,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStartMethod(), getCallOptions(), request);
     }
 
@@ -964,7 +952,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopMethod(), getCallOptions(), request);
     }
 
@@ -974,7 +962,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation attachTargetGroup(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAttachTargetGroupMethod(), getCallOptions(), request);
     }
 
@@ -984,7 +972,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation detachTargetGroup(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDetachTargetGroupMethod(), getCallOptions(), request);
     }
 
@@ -994,7 +982,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse getTargetStates(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTargetStatesMethod(), getCallOptions(), request);
     }
 
@@ -1004,7 +992,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addListener(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddListenerMethod(), getCallOptions(), request);
     }
 
@@ -1014,7 +1002,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeListener(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveListenerMethod(), getCallOptions(), request);
     }
 
@@ -1024,7 +1012,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse listOperations(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -1034,19 +1022,15 @@ public final class NetworkLoadBalancerServiceGrpc {
    * A set of methods for managing NetworkLoadBalancer resources.
    * </pre>
    */
-  public static final class NetworkLoadBalancerServiceFutureStub extends io.grpc.stub.AbstractStub<NetworkLoadBalancerServiceFutureStub> {
-    private NetworkLoadBalancerServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NetworkLoadBalancerServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NetworkLoadBalancerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<NetworkLoadBalancerServiceFutureStub> {
+    private NetworkLoadBalancerServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NetworkLoadBalancerServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NetworkLoadBalancerServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NetworkLoadBalancerServiceFutureStub(channel, callOptions);
     }
 
@@ -1058,7 +1042,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer> get(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetNetworkLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1069,7 +1053,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersResponse> list(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1080,7 +1064,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.CreateNetworkLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1091,7 +1075,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.UpdateNetworkLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1102,7 +1086,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DeleteNetworkLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1114,7 +1098,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StartNetworkLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request);
     }
 
@@ -1126,7 +1110,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.StopNetworkLoadBalancerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request);
     }
 
@@ -1137,7 +1121,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> attachTargetGroup(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AttachNetworkLoadBalancerTargetGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAttachTargetGroupMethod(), getCallOptions()), request);
     }
 
@@ -1148,7 +1132,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> detachTargetGroup(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.DetachNetworkLoadBalancerTargetGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDetachTargetGroupMethod(), getCallOptions()), request);
     }
 
@@ -1159,7 +1143,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesResponse> getTargetStates(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.GetTargetStatesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTargetStatesMethod(), getCallOptions()), request);
     }
 
@@ -1170,7 +1154,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addListener(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.AddNetworkLoadBalancerListenerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddListenerMethod(), getCallOptions()), request);
     }
 
@@ -1181,7 +1165,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeListener(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.RemoveNetworkLoadBalancerListenerRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveListenerMethod(), getCallOptions()), request);
     }
 
@@ -1192,7 +1176,7 @@ public final class NetworkLoadBalancerServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsResponse> listOperations(
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ListNetworkLoadBalancerOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

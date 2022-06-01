@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.elasticsearch.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/elasticsearch/v1/resource_preset_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ResourcePresetServiceGrpc {
 
   private ResourcePresetServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ResourcePresetServiceGrpc {
     if ((getGetMethod = ResourcePresetServiceGrpc.getGetMethod) == null) {
       synchronized (ResourcePresetServiceGrpc.class) {
         if ((getGetMethod = ResourcePresetServiceGrpc.getGetMethod) == null) {
-          ResourcePresetServiceGrpc.getGetMethod = getGetMethod = 
+          ResourcePresetServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest, yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ResourcePresetService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset.getDefaultInstance()))
-                  .setSchemaDescriptor(new ResourcePresetServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ResourcePresetServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
@@ -76,29 +63,35 @@ public final class ResourcePresetServiceGrpc {
     if ((getListMethod = ResourcePresetServiceGrpc.getListMethod) == null) {
       synchronized (ResourcePresetServiceGrpc.class) {
         if ((getListMethod = ResourcePresetServiceGrpc.getListMethod) == null) {
-          ResourcePresetServiceGrpc.getListMethod = getListMethod = 
+          ResourcePresetServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ResourcePresetService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ResourcePresetServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ResourcePresetServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ResourcePresetServiceStub newStub(io.grpc.Channel channel) {
-    return new ResourcePresetServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ResourcePresetServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ResourcePresetServiceStub>() {
+        @java.lang.Override
+        public ResourcePresetServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ResourcePresetServiceStub(channel, callOptions);
+        }
+      };
+    return ResourcePresetServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class ResourcePresetServiceGrpc {
    */
   public static ResourcePresetServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ResourcePresetServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ResourcePresetServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ResourcePresetServiceBlockingStub>() {
+        @java.lang.Override
+        public ResourcePresetServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ResourcePresetServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ResourcePresetServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class ResourcePresetServiceGrpc {
    */
   public static ResourcePresetServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ResourcePresetServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ResourcePresetServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ResourcePresetServiceFutureStub>() {
+        @java.lang.Override
+        public ResourcePresetServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ResourcePresetServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ResourcePresetServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -132,7 +139,7 @@ public final class ResourcePresetServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -142,21 +149,21 @@ public final class ResourcePresetServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>(
@@ -170,19 +177,15 @@ public final class ResourcePresetServiceGrpc {
    * A set of methods for managing Elasticsearch resource presets.
    * </pre>
    */
-  public static final class ResourcePresetServiceStub extends io.grpc.stub.AbstractStub<ResourcePresetServiceStub> {
-    private ResourcePresetServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ResourcePresetServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ResourcePresetServiceStub extends io.grpc.stub.AbstractAsyncStub<ResourcePresetServiceStub> {
+    private ResourcePresetServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcePresetServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ResourcePresetServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ResourcePresetServiceStub(channel, callOptions);
     }
 
@@ -194,7 +197,7 @@ public final class ResourcePresetServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -205,7 +208,7 @@ public final class ResourcePresetServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -215,19 +218,15 @@ public final class ResourcePresetServiceGrpc {
    * A set of methods for managing Elasticsearch resource presets.
    * </pre>
    */
-  public static final class ResourcePresetServiceBlockingStub extends io.grpc.stub.AbstractStub<ResourcePresetServiceBlockingStub> {
-    private ResourcePresetServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ResourcePresetServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ResourcePresetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ResourcePresetServiceBlockingStub> {
+    private ResourcePresetServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcePresetServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ResourcePresetServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ResourcePresetServiceBlockingStub(channel, callOptions);
     }
 
@@ -238,7 +237,7 @@ public final class ResourcePresetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset get(yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -248,7 +247,7 @@ public final class ResourcePresetServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse list(yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -258,19 +257,15 @@ public final class ResourcePresetServiceGrpc {
    * A set of methods for managing Elasticsearch resource presets.
    * </pre>
    */
-  public static final class ResourcePresetServiceFutureStub extends io.grpc.stub.AbstractStub<ResourcePresetServiceFutureStub> {
-    private ResourcePresetServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ResourcePresetServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ResourcePresetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ResourcePresetServiceFutureStub> {
+    private ResourcePresetServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcePresetServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ResourcePresetServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ResourcePresetServiceFutureStub(channel, callOptions);
     }
 
@@ -282,7 +277,7 @@ public final class ResourcePresetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetOuterClass.ResourcePreset> get(
         yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -293,7 +288,7 @@ public final class ResourcePresetServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> list(
         yandex.cloud.api.mdb.elasticsearch.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

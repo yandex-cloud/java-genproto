@@ -24,6 +24,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,16 +53,19 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -73,6 +79,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -81,6 +88,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -91,6 +99,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -99,6 +108,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -163,6 +173,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string type_id = 7;</code>
+     * @return The typeId.
      */
     java.lang.String getTypeId();
     /**
@@ -171,6 +182,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string type_id = 7;</code>
+     * @return The bytes for typeId.
      */
     com.google.protobuf.ByteString
         getTypeIdBytes();
@@ -181,6 +193,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -189,6 +202,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -199,6 +213,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>int64 size = 9;</code>
+     * @return The size.
      */
     long getSize();
 
@@ -208,6 +223,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>int64 block_size = 15;</code>
+     * @return The blockSize.
      */
     long getBlockSize();
 
@@ -222,6 +238,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @return A list containing the productIds.
      */
     java.util.List<java.lang.String>
         getProductIdsList();
@@ -236,6 +253,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @return The count of productIds.
      */
     int getProductIdsCount();
     /**
@@ -249,6 +267,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @param index The index of the element to return.
+     * @return The productIds at the given index.
      */
     java.lang.String getProductIds(int index);
     /**
@@ -262,6 +282,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the productIds at the given index.
      */
     com.google.protobuf.ByteString
         getProductIdsBytes(int index);
@@ -272,6 +294,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -280,6 +303,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+     * @return The status.
      */
     yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status getStatus();
 
@@ -289,6 +313,16 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_image_id = 12;</code>
+     * @return Whether the sourceImageId field is set.
+     */
+    boolean hasSourceImageId();
+    /**
+     * <pre>
+     * ID of the image that was used for disk creation.
+     * </pre>
+     *
+     * <code>string source_image_id = 12;</code>
+     * @return The sourceImageId.
      */
     java.lang.String getSourceImageId();
     /**
@@ -297,6 +331,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_image_id = 12;</code>
+     * @return The bytes for sourceImageId.
      */
     com.google.protobuf.ByteString
         getSourceImageIdBytes();
@@ -307,6 +342,16 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_snapshot_id = 13;</code>
+     * @return Whether the sourceSnapshotId field is set.
+     */
+    boolean hasSourceSnapshotId();
+    /**
+     * <pre>
+     * ID of the snapshot that was used for disk creation.
+     * </pre>
+     *
+     * <code>string source_snapshot_id = 13;</code>
+     * @return The sourceSnapshotId.
      */
     java.lang.String getSourceSnapshotId();
     /**
@@ -315,6 +360,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_snapshot_id = 13;</code>
+     * @return The bytes for sourceSnapshotId.
      */
     com.google.protobuf.ByteString
         getSourceSnapshotIdBytes();
@@ -325,6 +371,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @return A list containing the instanceIds.
      */
     java.util.List<java.lang.String>
         getInstanceIdsList();
@@ -334,6 +381,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @return The count of instanceIds.
      */
     int getInstanceIdsCount();
     /**
@@ -342,6 +390,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @param index The index of the element to return.
+     * @return The instanceIds at the given index.
      */
     java.lang.String getInstanceIds(int index);
     /**
@@ -350,6 +400,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the instanceIds at the given index.
      */
     com.google.protobuf.ByteString
         getInstanceIdsBytes(int index);
@@ -360,6 +412,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     * @return Whether the diskPlacementPolicy field is set.
      */
     boolean hasDiskPlacementPolicy();
     /**
@@ -368,6 +421,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     * @return The diskPlacementPolicy.
      */
     yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy();
     /**
@@ -388,7 +442,7 @@ public final class DiskOuterClass {
    *
    * Protobuf type {@code yandex.cloud.compute.v1.Disk}
    */
-  public  static final class Disk extends
+  public static final class Disk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.Disk)
       DiskOrBuilder {
@@ -404,11 +458,16 @@ public final class DiskOuterClass {
       description_ = "";
       typeId_ = "";
       zoneId_ = "";
-      size_ = 0L;
-      blockSize_ = 0L;
       productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       status_ = 0;
       instanceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Disk();
     }
 
     @java.lang.Override
@@ -473,10 +532,10 @@ public final class DiskOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -504,9 +563,9 @@ public final class DiskOuterClass {
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 productIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000002;
               }
               productIds_.add(s);
               break;
@@ -531,9 +590,9 @@ public final class DiskOuterClass {
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 instanceIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00000004;
               }
               instanceIds_.add(s);
               break;
@@ -557,7 +616,7 @@ public final class DiskOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -571,10 +630,10 @@ public final class DiskOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           productIds_ = productIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           instanceIds_ = instanceIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -697,6 +756,8 @@ public final class DiskOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -704,6 +765,10 @@ public final class DiskOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -729,6 +794,10 @@ public final class DiskOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -763,11 +832,11 @@ public final class DiskOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.Disk.Status)
     }
 
-    private int bitField0_;
     private int sourceCase_ = 0;
     private java.lang.Object source_;
     public enum SourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SOURCE_IMAGE_ID(12),
       SOURCE_SNAPSHOT_ID(13),
       SOURCE_NOT_SET(0);
@@ -776,6 +845,8 @@ public final class DiskOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -810,7 +881,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -829,7 +902,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -852,7 +927,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -871,7 +948,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -890,19 +969,24 @@ public final class DiskOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -915,7 +999,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -934,7 +1020,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -957,7 +1045,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -976,7 +1066,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1025,14 +1117,16 @@ public final class DiskOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -1044,6 +1138,7 @@ public final class DiskOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -1055,11 +1150,12 @@ public final class DiskOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1071,10 +1167,11 @@ public final class DiskOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1091,7 +1188,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string type_id = 7;</code>
+     * @return The typeId.
      */
+    @java.lang.Override
     public java.lang.String getTypeId() {
       java.lang.Object ref = typeId_;
       if (ref instanceof java.lang.String) {
@@ -1110,7 +1209,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string type_id = 7;</code>
+     * @return The bytes for typeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeIdBytes() {
       java.lang.Object ref = typeId_;
@@ -1133,7 +1234,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -1152,7 +1255,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string zone_id = 8;</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -1175,7 +1280,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>int64 size = 9;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -1188,7 +1295,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>int64 block_size = 15;</code>
+     * @return The blockSize.
      */
+    @java.lang.Override
     public long getBlockSize() {
       return blockSize_;
     }
@@ -1206,6 +1315,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @return A list containing the productIds.
      */
     public com.google.protobuf.ProtocolStringList
         getProductIdsList() {
@@ -1222,6 +1332,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @return The count of productIds.
      */
     public int getProductIdsCount() {
       return productIds_.size();
@@ -1237,6 +1348,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @param index The index of the element to return.
+     * @return The productIds at the given index.
      */
     public java.lang.String getProductIds(int index) {
       return productIds_.get(index);
@@ -1252,6 +1365,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string product_ids = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the productIds at the given index.
      */
     public com.google.protobuf.ByteString
         getProductIdsBytes(int index) {
@@ -1266,8 +1381,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1276,8 +1392,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status result = yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status.UNRECOGNIZED : result;
@@ -1290,6 +1407,18 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_image_id = 12;</code>
+     * @return Whether the sourceImageId field is set.
+     */
+    public boolean hasSourceImageId() {
+      return sourceCase_ == 12;
+    }
+    /**
+     * <pre>
+     * ID of the image that was used for disk creation.
+     * </pre>
+     *
+     * <code>string source_image_id = 12;</code>
+     * @return The sourceImageId.
      */
     public java.lang.String getSourceImageId() {
       java.lang.Object ref = "";
@@ -1314,6 +1443,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_image_id = 12;</code>
+     * @return The bytes for sourceImageId.
      */
     public com.google.protobuf.ByteString
         getSourceImageIdBytes() {
@@ -1341,6 +1471,18 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_snapshot_id = 13;</code>
+     * @return Whether the sourceSnapshotId field is set.
+     */
+    public boolean hasSourceSnapshotId() {
+      return sourceCase_ == 13;
+    }
+    /**
+     * <pre>
+     * ID of the snapshot that was used for disk creation.
+     * </pre>
+     *
+     * <code>string source_snapshot_id = 13;</code>
+     * @return The sourceSnapshotId.
      */
     public java.lang.String getSourceSnapshotId() {
       java.lang.Object ref = "";
@@ -1365,6 +1507,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string source_snapshot_id = 13;</code>
+     * @return The bytes for sourceSnapshotId.
      */
     public com.google.protobuf.ByteString
         getSourceSnapshotIdBytes() {
@@ -1393,6 +1536,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @return A list containing the instanceIds.
      */
     public com.google.protobuf.ProtocolStringList
         getInstanceIdsList() {
@@ -1404,6 +1548,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @return The count of instanceIds.
      */
     public int getInstanceIdsCount() {
       return instanceIds_.size();
@@ -1414,6 +1559,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @param index The index of the element to return.
+     * @return The instanceIds at the given index.
      */
     public java.lang.String getInstanceIds(int index) {
       return instanceIds_.get(index);
@@ -1424,6 +1571,8 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>repeated string instance_ids = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the instanceIds at the given index.
      */
     public com.google.protobuf.ByteString
         getInstanceIdsBytes(int index) {
@@ -1438,7 +1587,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     * @return Whether the diskPlacementPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasDiskPlacementPolicy() {
       return diskPlacementPolicy_ != null;
     }
@@ -1448,7 +1599,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     * @return The diskPlacementPolicy.
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
       return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
     }
@@ -1459,6 +1612,7 @@ public final class DiskOuterClass {
      *
      * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
       return getDiskPlacementPolicy();
     }
@@ -1477,19 +1631,19 @@ public final class DiskOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1498,10 +1652,10 @@ public final class DiskOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!getTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, typeId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, zoneId_);
       }
       if (size_ != 0L) {
@@ -1537,20 +1691,20 @@ public final class DiskOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1563,10 +1717,10 @@ public final class DiskOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!getTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, typeId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, zoneId_);
       }
       if (size_ != 0L) {
@@ -1622,57 +1776,54 @@ public final class DiskOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskOuterClass.Disk other = (yandex.cloud.api.compute.v1.DiskOuterClass.Disk) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getTypeId()
-          .equals(other.getTypeId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (getBlockSize()
-          == other.getBlockSize());
-      result = result && getProductIdsList()
-          .equals(other.getProductIdsList());
-      result = result && status_ == other.status_;
-      result = result && getInstanceIdsList()
-          .equals(other.getInstanceIdsList());
-      result = result && (hasDiskPlacementPolicy() == other.hasDiskPlacementPolicy());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getTypeId()
+          .equals(other.getTypeId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (getBlockSize()
+          != other.getBlockSize()) return false;
+      if (!getProductIdsList()
+          .equals(other.getProductIdsList())) return false;
+      if (status_ != other.status_) return false;
+      if (!getInstanceIdsList()
+          .equals(other.getInstanceIdsList())) return false;
+      if (hasDiskPlacementPolicy() != other.hasDiskPlacementPolicy()) return false;
       if (hasDiskPlacementPolicy()) {
-        result = result && getDiskPlacementPolicy()
-            .equals(other.getDiskPlacementPolicy());
+        if (!getDiskPlacementPolicy()
+            .equals(other.getDiskPlacementPolicy())) return false;
       }
-      result = result && getSourceCase().equals(
-          other.getSourceCase());
-      if (!result) return false;
+      if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
         case 12:
-          result = result && getSourceImageId()
-              .equals(other.getSourceImageId());
+          if (!getSourceImageId()
+              .equals(other.getSourceImageId())) return false;
           break;
         case 13:
-          result = result && getSourceSnapshotId()
-              .equals(other.getSourceSnapshotId());
+          if (!getSourceSnapshotId()
+              .equals(other.getSourceSnapshotId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1917,11 +2068,11 @@ public final class DiskOuterClass {
         blockSize_ = 0L;
 
         productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0;
 
         instanceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (diskPlacementPolicyBuilder_ == null) {
           diskPlacementPolicy_ = null;
         } else {
@@ -1957,7 +2108,6 @@ public final class DiskOuterClass {
       public yandex.cloud.api.compute.v1.DiskOuterClass.Disk buildPartial() {
         yandex.cloud.api.compute.v1.DiskOuterClass.Disk result = new yandex.cloud.api.compute.v1.DiskOuterClass.Disk(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1973,9 +2123,9 @@ public final class DiskOuterClass {
         result.zoneId_ = zoneId_;
         result.size_ = size_;
         result.blockSize_ = blockSize_;
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           productIds_ = productIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.productIds_ = productIds_;
         result.status_ = status_;
@@ -1985,9 +2135,9 @@ public final class DiskOuterClass {
         if (sourceCase_ == 13) {
           result.source_ = source_;
         }
-        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           instanceIds_ = instanceIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.instanceIds_ = instanceIds_;
         if (diskPlacementPolicyBuilder_ == null) {
@@ -1995,7 +2145,6 @@ public final class DiskOuterClass {
         } else {
           result.diskPlacementPolicy_ = diskPlacementPolicyBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -2003,35 +2152,35 @@ public final class DiskOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2083,7 +2232,7 @@ public final class DiskOuterClass {
         if (!other.productIds_.isEmpty()) {
           if (productIds_.isEmpty()) {
             productIds_ = other.productIds_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureProductIdsIsMutable();
             productIds_.addAll(other.productIds_);
@@ -2096,7 +2245,7 @@ public final class DiskOuterClass {
         if (!other.instanceIds_.isEmpty()) {
           if (instanceIds_.isEmpty()) {
             instanceIds_ = other.instanceIds_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureInstanceIdsIsMutable();
             instanceIds_.addAll(other.instanceIds_);
@@ -2175,6 +2324,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2194,6 +2344,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2214,6 +2365,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2231,6 +2384,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2244,6 +2398,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2264,6 +2420,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2283,6 +2440,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2303,6 +2461,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2320,6 +2480,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2333,6 +2494,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2346,17 +2509,19 @@ public final class DiskOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2470,6 +2635,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2489,6 +2655,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2509,6 +2676,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2526,6 +2695,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2539,6 +2709,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2559,6 +2731,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2578,6 +2751,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2598,6 +2772,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2615,6 +2791,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2628,6 +2805,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2675,14 +2854,16 @@ public final class DiskOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2694,6 +2875,7 @@ public final class DiskOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2705,11 +2887,12 @@ public final class DiskOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2721,10 +2904,11 @@ public final class DiskOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2748,7 +2932,7 @@ public final class DiskOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2771,8 +2955,11 @@ public final class DiskOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2799,6 +2986,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string type_id = 7;</code>
+       * @return The typeId.
        */
       public java.lang.String getTypeId() {
         java.lang.Object ref = typeId_;
@@ -2818,6 +3006,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string type_id = 7;</code>
+       * @return The bytes for typeId.
        */
       public com.google.protobuf.ByteString
           getTypeIdBytes() {
@@ -2838,6 +3027,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string type_id = 7;</code>
+       * @param value The typeId to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeId(
           java.lang.String value) {
@@ -2855,6 +3046,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string type_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTypeId() {
         
@@ -2868,6 +3060,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string type_id = 7;</code>
+       * @param value The bytes for typeId to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2888,6 +3082,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -2907,6 +3102,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -2927,6 +3123,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -2944,6 +3142,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -2957,6 +3156,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string zone_id = 8;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2977,7 +3178,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>int64 size = 9;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -2987,6 +3190,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>int64 size = 9;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -3000,6 +3205,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>int64 size = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -3015,7 +3221,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>int64 block_size = 15;</code>
+       * @return The blockSize.
        */
+      @java.lang.Override
       public long getBlockSize() {
         return blockSize_;
       }
@@ -3025,6 +3233,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>int64 block_size = 15;</code>
+       * @param value The blockSize to set.
+       * @return This builder for chaining.
        */
       public Builder setBlockSize(long value) {
         
@@ -3038,6 +3248,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>int64 block_size = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBlockSize() {
         
@@ -3048,9 +3259,9 @@ public final class DiskOuterClass {
 
       private com.google.protobuf.LazyStringList productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProductIdsIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           productIds_ = new com.google.protobuf.LazyStringArrayList(productIds_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -3064,6 +3275,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @return A list containing the productIds.
        */
       public com.google.protobuf.ProtocolStringList
           getProductIdsList() {
@@ -3080,6 +3292,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @return The count of productIds.
        */
       public int getProductIdsCount() {
         return productIds_.size();
@@ -3095,6 +3308,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @param index The index of the element to return.
+       * @return The productIds at the given index.
        */
       public java.lang.String getProductIds(int index) {
         return productIds_.get(index);
@@ -3110,6 +3325,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the productIds at the given index.
        */
       public com.google.protobuf.ByteString
           getProductIdsBytes(int index) {
@@ -3126,6 +3343,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The productIds to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIds(
           int index, java.lang.String value) {
@@ -3148,6 +3368,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @param value The productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addProductIds(
           java.lang.String value) {
@@ -3170,6 +3392,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @param values The productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllProductIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -3190,10 +3414,11 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductIds() {
         productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3208,6 +3433,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string product_ids = 10;</code>
+       * @param value The bytes of the productIds to add.
+       * @return This builder for chaining.
        */
       public Builder addProductIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -3228,8 +3455,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3238,8 +3466,11 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3250,7 +3481,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status result = yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status.valueOf(status_);
@@ -3262,6 +3495,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Status value) {
         if (value == null) {
@@ -3278,6 +3513,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.Disk.Status status = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3292,7 +3528,21 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_image_id = 12;</code>
+       * @return Whether the sourceImageId field is set.
        */
+      @java.lang.Override
+      public boolean hasSourceImageId() {
+        return sourceCase_ == 12;
+      }
+      /**
+       * <pre>
+       * ID of the image that was used for disk creation.
+       * </pre>
+       *
+       * <code>string source_image_id = 12;</code>
+       * @return The sourceImageId.
+       */
+      @java.lang.Override
       public java.lang.String getSourceImageId() {
         java.lang.Object ref = "";
         if (sourceCase_ == 12) {
@@ -3316,7 +3566,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_image_id = 12;</code>
+       * @return The bytes for sourceImageId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSourceImageIdBytes() {
         java.lang.Object ref = "";
@@ -3341,6 +3593,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_image_id = 12;</code>
+       * @param value The sourceImageId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceImageId(
           java.lang.String value) {
@@ -3358,6 +3612,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_image_id = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceImageId() {
         if (sourceCase_ == 12) {
@@ -3373,6 +3628,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_image_id = 12;</code>
+       * @param value The bytes for sourceImageId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3392,7 +3649,21 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_snapshot_id = 13;</code>
+       * @return Whether the sourceSnapshotId field is set.
        */
+      @java.lang.Override
+      public boolean hasSourceSnapshotId() {
+        return sourceCase_ == 13;
+      }
+      /**
+       * <pre>
+       * ID of the snapshot that was used for disk creation.
+       * </pre>
+       *
+       * <code>string source_snapshot_id = 13;</code>
+       * @return The sourceSnapshotId.
+       */
+      @java.lang.Override
       public java.lang.String getSourceSnapshotId() {
         java.lang.Object ref = "";
         if (sourceCase_ == 13) {
@@ -3416,7 +3687,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_snapshot_id = 13;</code>
+       * @return The bytes for sourceSnapshotId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSourceSnapshotIdBytes() {
         java.lang.Object ref = "";
@@ -3441,6 +3714,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_snapshot_id = 13;</code>
+       * @param value The sourceSnapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceSnapshotId(
           java.lang.String value) {
@@ -3458,6 +3733,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_snapshot_id = 13;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceSnapshotId() {
         if (sourceCase_ == 13) {
@@ -3473,6 +3749,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string source_snapshot_id = 13;</code>
+       * @param value The bytes for sourceSnapshotId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceSnapshotIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3488,9 +3766,9 @@ public final class DiskOuterClass {
 
       private com.google.protobuf.LazyStringList instanceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureInstanceIdsIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           instanceIds_ = new com.google.protobuf.LazyStringArrayList(instanceIds_);
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -3499,6 +3777,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @return A list containing the instanceIds.
        */
       public com.google.protobuf.ProtocolStringList
           getInstanceIdsList() {
@@ -3510,6 +3789,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @return The count of instanceIds.
        */
       public int getInstanceIdsCount() {
         return instanceIds_.size();
@@ -3520,6 +3800,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @param index The index of the element to return.
+       * @return The instanceIds at the given index.
        */
       public java.lang.String getInstanceIds(int index) {
         return instanceIds_.get(index);
@@ -3530,6 +3812,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the instanceIds at the given index.
        */
       public com.google.protobuf.ByteString
           getInstanceIdsBytes(int index) {
@@ -3541,6 +3825,9 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @param index The index to set the value at.
+       * @param value The instanceIds to set.
+       * @return This builder for chaining.
        */
       public Builder setInstanceIds(
           int index, java.lang.String value) {
@@ -3558,6 +3845,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @param value The instanceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addInstanceIds(
           java.lang.String value) {
@@ -3575,6 +3864,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @param values The instanceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllInstanceIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -3590,10 +3881,11 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearInstanceIds() {
         instanceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3603,6 +3895,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>repeated string instance_ids = 14;</code>
+       * @param value The bytes of the instanceIds to add.
+       * @return This builder for chaining.
        */
       public Builder addInstanceIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -3616,7 +3910,7 @@ public final class DiskOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_ = null;
+      private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> diskPlacementPolicyBuilder_;
       /**
@@ -3625,6 +3919,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       * @return Whether the diskPlacementPolicy field is set.
        */
       public boolean hasDiskPlacementPolicy() {
         return diskPlacementPolicyBuilder_ != null || diskPlacementPolicy_ != null;
@@ -3635,6 +3930,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       * @return The diskPlacementPolicy.
        */
       public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
         if (diskPlacementPolicyBuilder_ == null) {
@@ -3771,7 +4067,7 @@ public final class DiskOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3831,6 +4127,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
     java.lang.String getPlacementGroupId();
     /**
@@ -3839,6 +4136,7 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
@@ -3846,7 +4144,7 @@ public final class DiskOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DiskPlacementPolicy}
    */
-  public  static final class DiskPlacementPolicy extends
+  public static final class DiskPlacementPolicy extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DiskPlacementPolicy)
       DiskPlacementPolicyOrBuilder {
@@ -3857,6 +4155,13 @@ public final class DiskOuterClass {
     }
     private DiskPlacementPolicy() {
       placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiskPlacementPolicy();
     }
 
     @java.lang.Override
@@ -3872,7 +4177,6 @@ public final class DiskOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3890,7 +4194,7 @@ public final class DiskOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3929,7 +4233,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The placementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getPlacementGroupId() {
       java.lang.Object ref = placementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -3948,7 +4254,9 @@ public final class DiskOuterClass {
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
+     * @return The bytes for placementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPlacementGroupIdBytes() {
       java.lang.Object ref = placementGroupId_;
@@ -3977,7 +4285,7 @@ public final class DiskOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -3989,7 +4297,7 @@ public final class DiskOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4007,11 +4315,10 @@ public final class DiskOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy other = (yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy) obj;
 
-      boolean result = true;
-      result = result && getPlacementGroupId()
-          .equals(other.getPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPlacementGroupId()
+          .equals(other.getPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4191,35 +4498,35 @@ public final class DiskOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4273,6 +4580,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The placementGroupId.
        */
       public java.lang.String getPlacementGroupId() {
         java.lang.Object ref = placementGroupId_;
@@ -4292,6 +4600,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return The bytes for placementGroupId.
        */
       public com.google.protobuf.ByteString
           getPlacementGroupIdBytes() {
@@ -4312,6 +4621,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupId(
           java.lang.String value) {
@@ -4329,6 +4640,7 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlacementGroupId() {
         
@@ -4342,6 +4654,8 @@ public final class DiskOuterClass {
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
+       * @param value The bytes for placementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4357,7 +4671,7 @@ public final class DiskOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4454,19 +4768,11 @@ public final class DiskOuterClass {
       "github.com/yandex-cloud/go-genproto/yand" +
       "ex/cloud/compute/v1;computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_Disk_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Disk_fieldAccessorTable = new

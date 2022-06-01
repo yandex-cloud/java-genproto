@@ -25,6 +25,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -34,6 +35,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -44,6 +46,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -52,6 +55,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -62,6 +66,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -70,6 +75,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -88,6 +94,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -97,6 +104,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -107,6 +115,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -115,6 +124,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -179,6 +189,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+     * @return The enum numeric value on the wire for environment.
      */
     int getEnvironmentValue();
     /**
@@ -187,6 +198,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+     * @return The environment.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment getEnvironment();
 
@@ -240,6 +252,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
+     * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
@@ -248,6 +261,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
+     * @return The config.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig getConfig();
     /**
@@ -265,6 +279,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
@@ -273,6 +288,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The bytes for networkId.
      */
     com.google.protobuf.ByteString
         getNetworkIdBytes();
@@ -283,6 +299,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -291,6 +308,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health getHealth();
 
@@ -300,6 +318,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -308,6 +327,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+     * @return The status.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status getStatus();
 
@@ -317,6 +337,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool sharded = 13;</code>
+     * @return The sharded.
      */
     boolean getSharded();
 
@@ -326,6 +347,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return Whether the maintenanceWindow field is set.
      */
     boolean hasMaintenanceWindow();
     /**
@@ -334,6 +356,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return The maintenanceWindow.
      */
     yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
@@ -351,6 +374,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
+     * @return Whether the plannedOperation field is set.
      */
     boolean hasPlannedOperation();
     /**
@@ -359,6 +383,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
+     * @return The plannedOperation.
      */
     yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation getPlannedOperation();
     /**
@@ -376,6 +401,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @return A list containing the securityGroupIds.
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
@@ -385,6 +411,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @return The count of securityGroupIds.
      */
     int getSecurityGroupIdsCount();
     /**
@@ -393,6 +420,8 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
@@ -401,6 +430,8 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
@@ -411,6 +442,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 17;</code>
+     * @return The deletionProtection.
      */
     boolean getDeletionProtection();
   }
@@ -421,7 +453,7 @@ public final class ClusterOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Cluster}
    */
-  public  static final class Cluster extends
+  public static final class Cluster extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Cluster)
       ClusterOrBuilder {
@@ -440,9 +472,14 @@ public final class ClusterOuterClass {
       networkId_ = "";
       health_ = 0;
       status_ = 0;
-      sharded_ = false;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      deletionProtection_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Cluster();
     }
 
     @java.lang.Override
@@ -507,10 +544,10 @@ public final class ClusterOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -526,9 +563,9 @@ public final class ClusterOuterClass {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 monitoring_ = new java.util.ArrayList<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000002;
               }
               monitoring_.add(
                   input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring.parser(), extensionRegistry));
@@ -598,9 +635,9 @@ public final class ClusterOuterClass {
             }
             case 130: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00008000;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroupIds_.add(s);
               break;
@@ -611,7 +648,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -625,10 +662,10 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
         }
-        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -723,6 +760,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -730,6 +769,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Environment forNumber(int value) {
         switch (value) {
           case 0: return ENVIRONMENT_UNSPECIFIED;
@@ -753,6 +796,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -870,6 +917,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -877,6 +926,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -901,6 +954,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1082,6 +1139,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1089,6 +1148,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNKNOWN;
@@ -1117,6 +1180,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1151,7 +1218,6 @@ public final class ClusterOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mongodb.v1.Cluster.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -1161,7 +1227,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1181,7 +1249,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1204,7 +1274,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1223,7 +1295,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1246,7 +1320,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -1256,7 +1332,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -1267,6 +1345,7 @@ public final class ClusterOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -1280,7 +1359,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1300,7 +1381,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1323,7 +1406,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1342,7 +1427,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1391,14 +1478,16 @@ public final class ClusterOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -1410,6 +1499,7 @@ public final class ClusterOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -1421,11 +1511,12 @@ public final class ClusterOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1437,10 +1528,11 @@ public final class ClusterOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1457,8 +1549,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+     * @return The enum numeric value on the wire for environment.
      */
-    public int getEnvironmentValue() {
+    @java.lang.Override public int getEnvironmentValue() {
       return environment_;
     }
     /**
@@ -1467,8 +1560,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+     * @return The environment.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment getEnvironment() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment getEnvironment() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment.valueOf(environment_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment.UNRECOGNIZED : result;
@@ -1483,6 +1577,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring> getMonitoringList() {
       return monitoring_;
     }
@@ -1493,6 +1588,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.MonitoringOrBuilder> 
         getMonitoringOrBuilderList() {
       return monitoring_;
@@ -1504,6 +1600,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public int getMonitoringCount() {
       return monitoring_.size();
     }
@@ -1514,6 +1611,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring getMonitoring(int index) {
       return monitoring_.get(index);
     }
@@ -1524,6 +1622,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Monitoring monitoring = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.MonitoringOrBuilder getMonitoringOrBuilder(
         int index) {
       return monitoring_.get(index);
@@ -1537,7 +1636,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
+     * @return Whether the config field is set.
      */
+    @java.lang.Override
     public boolean hasConfig() {
       return config_ != null;
     }
@@ -1547,7 +1648,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
+     * @return The config.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig getConfig() {
       return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig.getDefaultInstance() : config_;
     }
@@ -1558,6 +1661,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfigOrBuilder getConfigOrBuilder() {
       return getConfig();
     }
@@ -1570,7 +1674,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The networkId.
      */
+    @java.lang.Override
     public java.lang.String getNetworkId() {
       java.lang.Object ref = networkId_;
       if (ref instanceof java.lang.String) {
@@ -1589,7 +1695,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string network_id = 10;</code>
+     * @return The bytes for networkId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNetworkIdBytes() {
       java.lang.Object ref = networkId_;
@@ -1612,8 +1720,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -1622,8 +1731,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health.UNRECOGNIZED : result;
@@ -1637,8 +1747,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1647,8 +1758,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status.UNRECOGNIZED : result;
@@ -1662,7 +1774,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool sharded = 13;</code>
+     * @return The sharded.
      */
+    @java.lang.Override
     public boolean getSharded() {
       return sharded_;
     }
@@ -1675,7 +1789,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return Whether the maintenanceWindow field is set.
      */
+    @java.lang.Override
     public boolean hasMaintenanceWindow() {
       return maintenanceWindow_ != null;
     }
@@ -1685,7 +1801,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
+     * @return The maintenanceWindow.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
       return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
     }
@@ -1696,6 +1814,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
       return getMaintenanceWindow();
     }
@@ -1708,7 +1827,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
+     * @return Whether the plannedOperation field is set.
      */
+    @java.lang.Override
     public boolean hasPlannedOperation() {
       return plannedOperation_ != null;
     }
@@ -1718,7 +1839,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
+     * @return The plannedOperation.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
       return plannedOperation_ == null ? yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
     }
@@ -1729,6 +1852,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
       return getPlannedOperation();
     }
@@ -1741,6 +1865,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @return A list containing the securityGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupIdsList() {
@@ -1752,6 +1877,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @return The count of securityGroupIds.
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
@@ -1762,6 +1888,8 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
@@ -1772,6 +1900,8 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>repeated string security_group_ids = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index) {
@@ -1786,7 +1916,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool deletion_protection = 17;</code>
+     * @return The deletionProtection.
      */
+    @java.lang.Override
     public boolean getDeletionProtection() {
       return deletionProtection_;
     }
@@ -1805,19 +1937,19 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1835,7 +1967,7 @@ public final class ClusterOuterClass {
       if (config_ != null) {
         output.writeMessage(9, getConfig());
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, networkId_);
       }
       if (health_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health.HEALTH_UNKNOWN.getNumber()) {
@@ -1868,20 +2000,20 @@ public final class ClusterOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1906,7 +2038,7 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getConfig());
       }
-      if (!getNetworkIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, networkId_);
       }
       if (health_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health.HEALTH_UNKNOWN.getNumber()) {
@@ -1956,52 +2088,51 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && environment_ == other.environment_;
-      result = result && getMonitoringList()
-          .equals(other.getMonitoringList());
-      result = result && (hasConfig() == other.hasConfig());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (environment_ != other.environment_) return false;
+      if (!getMonitoringList()
+          .equals(other.getMonitoringList())) return false;
+      if (hasConfig() != other.hasConfig()) return false;
       if (hasConfig()) {
-        result = result && getConfig()
-            .equals(other.getConfig());
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
       }
-      result = result && getNetworkId()
-          .equals(other.getNetworkId());
-      result = result && health_ == other.health_;
-      result = result && status_ == other.status_;
-      result = result && (getSharded()
-          == other.getSharded());
-      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
+      if (health_ != other.health_) return false;
+      if (status_ != other.status_) return false;
+      if (getSharded()
+          != other.getSharded()) return false;
+      if (hasMaintenanceWindow() != other.hasMaintenanceWindow()) return false;
       if (hasMaintenanceWindow()) {
-        result = result && getMaintenanceWindow()
-            .equals(other.getMaintenanceWindow());
+        if (!getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow())) return false;
       }
-      result = result && (hasPlannedOperation() == other.hasPlannedOperation());
+      if (hasPlannedOperation() != other.hasPlannedOperation()) return false;
       if (hasPlannedOperation()) {
-        result = result && getPlannedOperation()
-            .equals(other.getPlannedOperation());
+        if (!getPlannedOperation()
+            .equals(other.getPlannedOperation())) return false;
       }
-      result = result && getSecurityGroupIdsList()
-          .equals(other.getSecurityGroupIdsList());
-      result = result && (getDeletionProtection()
-          == other.getDeletionProtection());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2240,7 +2371,7 @@ public final class ClusterOuterClass {
 
         if (monitoringBuilder_ == null) {
           monitoring_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           monitoringBuilder_.clear();
         }
@@ -2271,7 +2402,7 @@ public final class ClusterOuterClass {
           plannedOperationBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         deletionProtection_ = false;
 
         return this;
@@ -2301,7 +2432,6 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster buildPartial() {
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -2315,9 +2445,9 @@ public final class ClusterOuterClass {
         result.labels_.makeImmutable();
         result.environment_ = environment_;
         if (monitoringBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.monitoring_ = monitoring_;
         } else {
@@ -2342,48 +2472,47 @@ public final class ClusterOuterClass {
         } else {
           result.plannedOperation_ = plannedOperationBuilder_.build();
         }
-        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2425,7 +2554,7 @@ public final class ClusterOuterClass {
           if (!other.monitoring_.isEmpty()) {
             if (monitoring_.isEmpty()) {
               monitoring_ = other.monitoring_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureMonitoringIsMutable();
               monitoring_.addAll(other.monitoring_);
@@ -2438,7 +2567,7 @@ public final class ClusterOuterClass {
               monitoringBuilder_.dispose();
               monitoringBuilder_ = null;
               monitoring_ = other.monitoring_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
               monitoringBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getMonitoringFieldBuilder() : null;
@@ -2472,7 +2601,7 @@ public final class ClusterOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -2520,6 +2649,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2540,6 +2670,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2561,6 +2692,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2579,6 +2712,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2593,6 +2727,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2613,6 +2749,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2632,6 +2769,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2652,6 +2790,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2669,6 +2809,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2682,6 +2823,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2695,7 +2838,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2704,6 +2847,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2714,6 +2858,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2856,6 +3001,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2876,6 +3022,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2897,6 +3044,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2915,6 +3064,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2929,6 +3079,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2949,6 +3101,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2968,6 +3121,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2988,6 +3142,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3005,6 +3161,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -3018,6 +3175,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3065,14 +3224,16 @@ public final class ClusterOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -3084,6 +3245,7 @@ public final class ClusterOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -3095,11 +3257,12 @@ public final class ClusterOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3111,10 +3274,11 @@ public final class ClusterOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3138,7 +3302,7 @@ public final class ClusterOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3161,8 +3325,11 @@ public final class ClusterOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3189,8 +3356,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+       * @return The enum numeric value on the wire for environment.
        */
-      public int getEnvironmentValue() {
+      @java.lang.Override public int getEnvironmentValue() {
         return environment_;
       }
       /**
@@ -3199,8 +3367,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+       * @param value The enum numeric value on the wire for environment to set.
+       * @return This builder for chaining.
        */
       public Builder setEnvironmentValue(int value) {
+        
         environment_ = value;
         onChanged();
         return this;
@@ -3211,7 +3382,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+       * @return The environment.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment getEnvironment() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment.valueOf(environment_);
@@ -3223,6 +3396,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+       * @param value The environment to set.
+       * @return This builder for chaining.
        */
       public Builder setEnvironment(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Environment value) {
         if (value == null) {
@@ -3239,6 +3414,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Environment environment = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEnvironment() {
         
@@ -3250,9 +3426,9 @@ public final class ClusterOuterClass {
       private java.util.List<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring> monitoring_ =
         java.util.Collections.emptyList();
       private void ensureMonitoringIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           monitoring_ = new java.util.ArrayList<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring>(monitoring_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3446,7 +3622,7 @@ public final class ClusterOuterClass {
       public Builder clearMonitoring() {
         if (monitoringBuilder_ == null) {
           monitoring_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           monitoringBuilder_.clear();
@@ -3551,7 +3727,7 @@ public final class ClusterOuterClass {
           monitoringBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.MonitoringOrBuilder>(
                   monitoring_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           monitoring_ = null;
@@ -3559,7 +3735,7 @@ public final class ClusterOuterClass {
         return monitoringBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig config_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig config_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfigOrBuilder> configBuilder_;
       /**
@@ -3568,6 +3744,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
+       * @return Whether the config field is set.
        */
       public boolean hasConfig() {
         return configBuilder_ != null || config_ != null;
@@ -3578,6 +3755,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.ClusterConfig config = 9;</code>
+       * @return The config.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig getConfig() {
         if (configBuilder_ == null) {
@@ -3719,6 +3897,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @return The networkId.
        */
       public java.lang.String getNetworkId() {
         java.lang.Object ref = networkId_;
@@ -3738,6 +3917,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @return The bytes for networkId.
        */
       public com.google.protobuf.ByteString
           getNetworkIdBytes() {
@@ -3758,6 +3938,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkId(
           java.lang.String value) {
@@ -3775,6 +3957,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNetworkId() {
         
@@ -3788,6 +3971,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string network_id = 10;</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
        */
       public Builder setNetworkIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3808,8 +3993,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -3818,8 +4004,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -3830,7 +4019,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health.valueOf(health_);
@@ -3842,6 +4033,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Health value) {
         if (value == null) {
@@ -3858,6 +4051,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Health health = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -3873,8 +4067,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3883,8 +4078,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3895,7 +4093,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status.valueOf(status_);
@@ -3907,6 +4107,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Cluster.Status value) {
         if (value == null) {
@@ -3923,6 +4125,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Cluster.Status status = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3938,7 +4141,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool sharded = 13;</code>
+       * @return The sharded.
        */
+      @java.lang.Override
       public boolean getSharded() {
         return sharded_;
       }
@@ -3948,6 +4153,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool sharded = 13;</code>
+       * @param value The sharded to set.
+       * @return This builder for chaining.
        */
       public Builder setSharded(boolean value) {
         
@@ -3961,6 +4168,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool sharded = 13;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSharded() {
         
@@ -3969,7 +4177,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
@@ -3978,6 +4186,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
+       * @return Whether the maintenanceWindow field is set.
        */
       public boolean hasMaintenanceWindow() {
         return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
@@ -3988,6 +4197,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 14;</code>
+       * @return The maintenanceWindow.
        */
       public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
         if (maintenanceWindowBuilder_ == null) {
@@ -4122,7 +4332,7 @@ public final class ClusterOuterClass {
         return maintenanceWindowBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation plannedOperation_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation plannedOperation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
       /**
@@ -4131,6 +4341,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
+       * @return Whether the plannedOperation field is set.
        */
       public boolean hasPlannedOperation() {
         return plannedOperationBuilder_ != null || plannedOperation_ != null;
@@ -4141,6 +4352,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
+       * @return The plannedOperation.
        */
       public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
         if (plannedOperationBuilder_ == null) {
@@ -4277,9 +4489,9 @@ public final class ClusterOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -4288,6 +4500,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @return A list containing the securityGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupIdsList() {
@@ -4299,6 +4512,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @return The count of securityGroupIds.
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
@@ -4309,6 +4523,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
@@ -4319,6 +4535,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupIdsBytes(int index) {
@@ -4330,6 +4548,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroupIds(
           int index, java.lang.String value) {
@@ -4347,6 +4568,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIds(
           java.lang.String value) {
@@ -4364,6 +4587,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroupIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -4379,10 +4604,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4392,6 +4618,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>repeated string security_group_ids = 16;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4412,7 +4640,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 17;</code>
+       * @return The deletionProtection.
        */
+      @java.lang.Override
       public boolean getDeletionProtection() {
         return deletionProtection_;
       }
@@ -4422,6 +4652,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 17;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
        */
       public Builder setDeletionProtection(boolean value) {
         
@@ -4435,6 +4667,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool deletion_protection = 17;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeletionProtection() {
         
@@ -4445,7 +4678,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4505,6 +4738,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4513,6 +4747,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4523,6 +4758,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4531,6 +4767,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4541,6 +4778,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The link.
      */
     java.lang.String getLink();
     /**
@@ -4549,6 +4787,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The bytes for link.
      */
     com.google.protobuf.ByteString
         getLinkBytes();
@@ -4560,7 +4799,7 @@ public final class ClusterOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Monitoring}
    */
-  public  static final class Monitoring extends
+  public static final class Monitoring extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Monitoring)
       MonitoringOrBuilder {
@@ -4576,6 +4815,13 @@ public final class ClusterOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Monitoring();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4588,7 +4834,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4618,7 +4863,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4657,7 +4902,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4676,7 +4923,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4699,7 +4948,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4718,7 +4969,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4741,7 +4994,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The link.
      */
+    @java.lang.Override
     public java.lang.String getLink() {
       java.lang.Object ref = link_;
       if (ref instanceof java.lang.String) {
@@ -4760,7 +5015,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string link = 3;</code>
+     * @return The bytes for link.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLinkBytes() {
       java.lang.Object ref = link_;
@@ -4789,13 +5046,13 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, link_);
       }
       unknownFields.writeTo(output);
@@ -4807,13 +5064,13 @@ public final class ClusterOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, link_);
       }
       size += unknownFields.getSerializedSize();
@@ -4831,15 +5088,14 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Monitoring) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getLink()
-          .equals(other.getLink());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getLink()
+          .equals(other.getLink())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5033,35 +5289,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5123,6 +5379,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5142,6 +5399,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5162,6 +5420,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5179,6 +5439,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5192,6 +5453,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5212,6 +5475,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5231,6 +5495,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5251,6 +5516,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5268,6 +5535,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5281,6 +5549,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5301,6 +5571,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @return The link.
        */
       public java.lang.String getLink() {
         java.lang.Object ref = link_;
@@ -5320,6 +5591,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @return The bytes for link.
        */
       public com.google.protobuf.ByteString
           getLinkBytes() {
@@ -5340,6 +5612,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @param value The link to set.
+       * @return This builder for chaining.
        */
       public Builder setLink(
           java.lang.String value) {
@@ -5357,6 +5631,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLink() {
         
@@ -5370,6 +5645,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string link = 3;</code>
+       * @param value The bytes for link to set.
+       * @return This builder for chaining.
        */
       public Builder setLinkBytes(
           com.google.protobuf.ByteString value) {
@@ -5385,7 +5662,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5445,6 +5722,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
@@ -5453,6 +5731,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
@@ -5469,6 +5748,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
+     * @return The featureCompatibilityVersion.
      */
     java.lang.String getFeatureCompatibilityVersion();
     /**
@@ -5483,6 +5763,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
+     * @return The bytes for featureCompatibilityVersion.
      */
     com.google.protobuf.ByteString
         getFeatureCompatibilityVersionBytes();
@@ -5492,7 +5773,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
+     * @return Whether the mongodb36 field is set.
      */
     boolean hasMongodb36();
     /**
@@ -5500,7 +5782,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
+     * @return The mongodb36.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6 getMongodb36();
     /**
@@ -5508,7 +5791,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6OrBuilder getMongodb36OrBuilder();
 
@@ -5517,7 +5800,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
+     * @return Whether the mongodb40 field is set.
      */
     boolean hasMongodb40();
     /**
@@ -5525,7 +5809,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
+     * @return The mongodb40.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0 getMongodb40();
     /**
@@ -5533,7 +5818,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0OrBuilder getMongodb40OrBuilder();
 
@@ -5542,7 +5827,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
+     * @return Whether the mongodb42 field is set.
      */
     boolean hasMongodb42();
     /**
@@ -5550,7 +5836,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
+     * @return The mongodb42.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2 getMongodb42();
     /**
@@ -5558,7 +5845,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2OrBuilder getMongodb42OrBuilder();
 
@@ -5567,7 +5854,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
+     * @return Whether the mongodb44 field is set.
      */
     boolean hasMongodb44();
     /**
@@ -5575,7 +5863,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
+     * @return The mongodb44.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4 getMongodb44();
     /**
@@ -5583,7 +5872,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4OrBuilder getMongodb44OrBuilder();
 
@@ -5592,7 +5881,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
+     * @return Whether the mongodb50 field is set.
      */
     boolean hasMongodb50();
     /**
@@ -5600,7 +5890,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
+     * @return The mongodb50.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0 getMongodb50();
     /**
@@ -5608,7 +5899,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0OrBuilder getMongodb50OrBuilder();
 
@@ -5617,7 +5908,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
+     * @return Whether the mongodb44Enterprise field is set.
      */
     boolean hasMongodb44Enterprise();
     /**
@@ -5625,7 +5917,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
+     * @return The mongodb44Enterprise.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise getMongodb44Enterprise();
     /**
@@ -5633,7 +5926,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterpriseOrBuilder getMongodb44EnterpriseOrBuilder();
 
@@ -5642,7 +5935,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
+     * @return Whether the mongodb50Enterprise field is set.
      */
     boolean hasMongodb50Enterprise();
     /**
@@ -5650,7 +5944,8 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
+     * @return The mongodb50Enterprise.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise getMongodb50Enterprise();
     /**
@@ -5658,7 +5953,7 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterpriseOrBuilder getMongodb50EnterpriseOrBuilder();
 
@@ -5668,6 +5963,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
+     * @return Whether the backupWindowStart field is set.
      */
     boolean hasBackupWindowStart();
     /**
@@ -5676,6 +5972,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
+     * @return The backupWindowStart.
      */
     com.google.type.TimeOfDay getBackupWindowStart();
     /**
@@ -5693,6 +5990,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
      */
     boolean hasBackupRetainPeriodDays();
     /**
@@ -5701,6 +5999,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
+     * @return The backupRetainPeriodDays.
      */
     com.google.protobuf.Int64Value getBackupRetainPeriodDays();
     /**
@@ -5718,6 +6017,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
+     * @return Whether the access field is set.
      */
     boolean hasAccess();
     /**
@@ -5726,6 +6026,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
+     * @return The access.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access getAccess();
     /**
@@ -5742,7 +6043,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.ClusterConfig}
    */
-  public  static final class ClusterConfig extends
+  public static final class ClusterConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.ClusterConfig)
       ClusterConfigOrBuilder {
@@ -5754,6 +6055,13 @@ public final class ClusterOuterClass {
     private ClusterConfig() {
       version_ = "";
       featureCompatibilityVersion_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClusterConfig();
     }
 
     @java.lang.Override
@@ -5769,7 +6077,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5930,7 +6237,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5964,7 +6271,8 @@ public final class ClusterOuterClass {
     private int mongodbCase_ = 0;
     private java.lang.Object mongodb_;
     public enum MongodbCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MONGODB_3_6(2),
       MONGODB_4_0(4),
       MONGODB_4_2(7),
@@ -5978,6 +6286,8 @@ public final class ClusterOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -6017,7 +6327,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -6036,7 +6348,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string version = 1;</code>
+     * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -6065,7 +6379,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
+     * @return The featureCompatibilityVersion.
      */
+    @java.lang.Override
     public java.lang.String getFeatureCompatibilityVersion() {
       java.lang.Object ref = featureCompatibilityVersion_;
       if (ref instanceof java.lang.String) {
@@ -6090,7 +6406,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
+     * @return The bytes for featureCompatibilityVersion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFeatureCompatibilityVersionBytes() {
       java.lang.Object ref = featureCompatibilityVersion_;
@@ -6111,8 +6429,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
+     * @return Whether the mongodb36 field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb36() {
       return mongodbCase_ == 2;
     }
@@ -6121,8 +6441,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
+     * @return The mongodb36.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6 getMongodb36() {
       if (mongodbCase_ == 2) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6) mongodb_;
@@ -6134,8 +6456,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6OrBuilder getMongodb36OrBuilder() {
       if (mongodbCase_ == 2) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6) mongodb_;
@@ -6149,8 +6472,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
+     * @return Whether the mongodb40 field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb40() {
       return mongodbCase_ == 4;
     }
@@ -6159,8 +6484,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
+     * @return The mongodb40.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0 getMongodb40() {
       if (mongodbCase_ == 4) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0) mongodb_;
@@ -6172,8 +6499,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0OrBuilder getMongodb40OrBuilder() {
       if (mongodbCase_ == 4) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0) mongodb_;
@@ -6187,8 +6515,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
+     * @return Whether the mongodb42 field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb42() {
       return mongodbCase_ == 7;
     }
@@ -6197,8 +6527,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
+     * @return The mongodb42.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2 getMongodb42() {
       if (mongodbCase_ == 7) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2) mongodb_;
@@ -6210,8 +6542,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2OrBuilder getMongodb42OrBuilder() {
       if (mongodbCase_ == 7) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2) mongodb_;
@@ -6225,8 +6558,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
+     * @return Whether the mongodb44 field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb44() {
       return mongodbCase_ == 8;
     }
@@ -6235,8 +6570,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
+     * @return The mongodb44.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4 getMongodb44() {
       if (mongodbCase_ == 8) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4) mongodb_;
@@ -6248,8 +6585,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4OrBuilder getMongodb44OrBuilder() {
       if (mongodbCase_ == 8) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4) mongodb_;
@@ -6263,8 +6601,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
+     * @return Whether the mongodb50 field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb50() {
       return mongodbCase_ == 10;
     }
@@ -6273,8 +6613,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
+     * @return The mongodb50.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0 getMongodb50() {
       if (mongodbCase_ == 10) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0) mongodb_;
@@ -6286,8 +6628,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0OrBuilder getMongodb50OrBuilder() {
       if (mongodbCase_ == 10) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0) mongodb_;
@@ -6301,8 +6644,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
+     * @return Whether the mongodb44Enterprise field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb44Enterprise() {
       return mongodbCase_ == 11;
     }
@@ -6311,8 +6656,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
+     * @return The mongodb44Enterprise.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise getMongodb44Enterprise() {
       if (mongodbCase_ == 11) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise) mongodb_;
@@ -6324,8 +6671,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterpriseOrBuilder getMongodb44EnterpriseOrBuilder() {
       if (mongodbCase_ == 11) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise) mongodb_;
@@ -6339,8 +6687,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
+     * @return Whether the mongodb50Enterprise field is set.
      */
+    @java.lang.Override
     public boolean hasMongodb50Enterprise() {
       return mongodbCase_ == 12;
     }
@@ -6349,8 +6699,10 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
+     * @return The mongodb50Enterprise.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise getMongodb50Enterprise() {
       if (mongodbCase_ == 12) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise) mongodb_;
@@ -6362,8 +6714,9 @@ public final class ClusterOuterClass {
      * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterpriseOrBuilder getMongodb50EnterpriseOrBuilder() {
       if (mongodbCase_ == 12) {
          return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise) mongodb_;
@@ -6379,7 +6732,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
+     * @return Whether the backupWindowStart field is set.
      */
+    @java.lang.Override
     public boolean hasBackupWindowStart() {
       return backupWindowStart_ != null;
     }
@@ -6389,7 +6744,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
+     * @return The backupWindowStart.
      */
+    @java.lang.Override
     public com.google.type.TimeOfDay getBackupWindowStart() {
       return backupWindowStart_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : backupWindowStart_;
     }
@@ -6400,6 +6757,7 @@ public final class ClusterOuterClass {
      *
      * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
      */
+    @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getBackupWindowStartOrBuilder() {
       return getBackupWindowStart();
     }
@@ -6412,7 +6770,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
      */
+    @java.lang.Override
     public boolean hasBackupRetainPeriodDays() {
       return backupRetainPeriodDays_ != null;
     }
@@ -6422,7 +6782,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
+     * @return The backupRetainPeriodDays.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
       return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
     }
@@ -6433,6 +6795,7 @@ public final class ClusterOuterClass {
      *
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
       return getBackupRetainPeriodDays();
     }
@@ -6445,7 +6808,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
+     * @return Whether the access field is set.
      */
+    @java.lang.Override
     public boolean hasAccess() {
       return access_ != null;
     }
@@ -6455,7 +6820,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
+     * @return The access.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access getAccess() {
       return access_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access.getDefaultInstance() : access_;
     }
@@ -6466,6 +6833,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder() {
       return getAccess();
     }
@@ -6484,7 +6852,7 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
       }
       if (mongodbCase_ == 2) {
@@ -6496,7 +6864,7 @@ public final class ClusterOuterClass {
       if (mongodbCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0) mongodb_);
       }
-      if (!getFeatureCompatibilityVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(featureCompatibilityVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, featureCompatibilityVersion_);
       }
       if (access_ != null) {
@@ -6529,7 +6897,7 @@ public final class ClusterOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
       }
       if (mongodbCase_ == 2) {
@@ -6544,7 +6912,7 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0) mongodb_);
       }
-      if (!getFeatureCompatibilityVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(featureCompatibilityVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, featureCompatibilityVersion_);
       }
       if (access_ != null) {
@@ -6590,63 +6958,60 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ClusterConfig) obj;
 
-      boolean result = true;
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && getFeatureCompatibilityVersion()
-          .equals(other.getFeatureCompatibilityVersion());
-      result = result && (hasBackupWindowStart() == other.hasBackupWindowStart());
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!getFeatureCompatibilityVersion()
+          .equals(other.getFeatureCompatibilityVersion())) return false;
+      if (hasBackupWindowStart() != other.hasBackupWindowStart()) return false;
       if (hasBackupWindowStart()) {
-        result = result && getBackupWindowStart()
-            .equals(other.getBackupWindowStart());
+        if (!getBackupWindowStart()
+            .equals(other.getBackupWindowStart())) return false;
       }
-      result = result && (hasBackupRetainPeriodDays() == other.hasBackupRetainPeriodDays());
+      if (hasBackupRetainPeriodDays() != other.hasBackupRetainPeriodDays()) return false;
       if (hasBackupRetainPeriodDays()) {
-        result = result && getBackupRetainPeriodDays()
-            .equals(other.getBackupRetainPeriodDays());
+        if (!getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays())) return false;
       }
-      result = result && (hasAccess() == other.hasAccess());
+      if (hasAccess() != other.hasAccess()) return false;
       if (hasAccess()) {
-        result = result && getAccess()
-            .equals(other.getAccess());
+        if (!getAccess()
+            .equals(other.getAccess())) return false;
       }
-      result = result && getMongodbCase().equals(
-          other.getMongodbCase());
-      if (!result) return false;
+      if (!getMongodbCase().equals(other.getMongodbCase())) return false;
       switch (mongodbCase_) {
         case 2:
-          result = result && getMongodb36()
-              .equals(other.getMongodb36());
+          if (!getMongodb36()
+              .equals(other.getMongodb36())) return false;
           break;
         case 4:
-          result = result && getMongodb40()
-              .equals(other.getMongodb40());
+          if (!getMongodb40()
+              .equals(other.getMongodb40())) return false;
           break;
         case 7:
-          result = result && getMongodb42()
-              .equals(other.getMongodb42());
+          if (!getMongodb42()
+              .equals(other.getMongodb42())) return false;
           break;
         case 8:
-          result = result && getMongodb44()
-              .equals(other.getMongodb44());
+          if (!getMongodb44()
+              .equals(other.getMongodb44())) return false;
           break;
         case 10:
-          result = result && getMongodb50()
-              .equals(other.getMongodb50());
+          if (!getMongodb50()
+              .equals(other.getMongodb50())) return false;
           break;
         case 11:
-          result = result && getMongodb44Enterprise()
-              .equals(other.getMongodb44Enterprise());
+          if (!getMongodb44Enterprise()
+              .equals(other.getMongodb44Enterprise())) return false;
           break;
         case 12:
-          result = result && getMongodb50Enterprise()
-              .equals(other.getMongodb50Enterprise());
+          if (!getMongodb50Enterprise()
+              .equals(other.getMongodb50Enterprise())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6960,35 +7325,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7103,6 +7468,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -7122,6 +7488,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -7142,6 +7509,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -7159,6 +7528,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -7172,6 +7542,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string version = 1;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -7198,6 +7570,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
+       * @return The featureCompatibilityVersion.
        */
       public java.lang.String getFeatureCompatibilityVersion() {
         java.lang.Object ref = featureCompatibilityVersion_;
@@ -7223,6 +7596,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
+       * @return The bytes for featureCompatibilityVersion.
        */
       public com.google.protobuf.ByteString
           getFeatureCompatibilityVersionBytes() {
@@ -7249,6 +7623,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
+       * @param value The featureCompatibilityVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFeatureCompatibilityVersion(
           java.lang.String value) {
@@ -7272,6 +7648,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFeatureCompatibilityVersion() {
         
@@ -7291,6 +7668,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
+       * @param value The bytes for featureCompatibilityVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFeatureCompatibilityVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -7311,8 +7690,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
+       * @return Whether the mongodb36 field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb36() {
         return mongodbCase_ == 2;
       }
@@ -7321,8 +7702,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
+       * @return The mongodb36.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6 getMongodb36() {
         if (mongodb36Builder_ == null) {
           if (mongodbCase_ == 2) {
@@ -7341,7 +7724,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
       public Builder setMongodb36(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6 value) {
         if (mongodb36Builder_ == null) {
@@ -7361,7 +7744,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
       public Builder setMongodb36(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Builder builderForValue) {
@@ -7379,7 +7762,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
       public Builder mergeMongodb36(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6 value) {
         if (mongodb36Builder_ == null) {
@@ -7405,7 +7788,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
       public Builder clearMongodb36() {
         if (mongodb36Builder_ == null) {
@@ -7428,7 +7811,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Builder getMongodb36Builder() {
         return getMongodb36FieldBuilder().getBuilder();
@@ -7438,8 +7821,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6OrBuilder getMongodb36OrBuilder() {
         if ((mongodbCase_ == 2) && (mongodb36Builder_ != null)) {
           return mongodb36Builder_.getMessageOrBuilder();
@@ -7455,7 +7839,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2[json_name = "mongodb_3_6"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6 mongodb_3_6 = 2 [json_name = "mongodb_3_6"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6OrBuilder> 
@@ -7483,8 +7867,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
+       * @return Whether the mongodb40 field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb40() {
         return mongodbCase_ == 4;
       }
@@ -7493,8 +7879,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
+       * @return The mongodb40.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0 getMongodb40() {
         if (mongodb40Builder_ == null) {
           if (mongodbCase_ == 4) {
@@ -7513,7 +7901,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
       public Builder setMongodb40(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0 value) {
         if (mongodb40Builder_ == null) {
@@ -7533,7 +7921,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
       public Builder setMongodb40(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Builder builderForValue) {
@@ -7551,7 +7939,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
       public Builder mergeMongodb40(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0 value) {
         if (mongodb40Builder_ == null) {
@@ -7577,7 +7965,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
       public Builder clearMongodb40() {
         if (mongodb40Builder_ == null) {
@@ -7600,7 +7988,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Builder getMongodb40Builder() {
         return getMongodb40FieldBuilder().getBuilder();
@@ -7610,8 +7998,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0OrBuilder getMongodb40OrBuilder() {
         if ((mongodbCase_ == 4) && (mongodb40Builder_ != null)) {
           return mongodb40Builder_.getMessageOrBuilder();
@@ -7627,7 +8016,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4[json_name = "mongodb_4_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0 mongodb_4_0 = 4 [json_name = "mongodb_4_0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0OrBuilder> 
@@ -7655,8 +8044,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
+       * @return Whether the mongodb42 field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb42() {
         return mongodbCase_ == 7;
       }
@@ -7665,8 +8056,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
+       * @return The mongodb42.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2 getMongodb42() {
         if (mongodb42Builder_ == null) {
           if (mongodbCase_ == 7) {
@@ -7685,7 +8078,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
       public Builder setMongodb42(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2 value) {
         if (mongodb42Builder_ == null) {
@@ -7705,7 +8098,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
       public Builder setMongodb42(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Builder builderForValue) {
@@ -7723,7 +8116,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
       public Builder mergeMongodb42(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2 value) {
         if (mongodb42Builder_ == null) {
@@ -7749,7 +8142,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
       public Builder clearMongodb42() {
         if (mongodb42Builder_ == null) {
@@ -7772,7 +8165,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Builder getMongodb42Builder() {
         return getMongodb42FieldBuilder().getBuilder();
@@ -7782,8 +8175,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2OrBuilder getMongodb42OrBuilder() {
         if ((mongodbCase_ == 7) && (mongodb42Builder_ != null)) {
           return mongodb42Builder_.getMessageOrBuilder();
@@ -7799,7 +8193,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7[json_name = "mongodb_4_2"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2 mongodb_4_2 = 7 [json_name = "mongodb_4_2"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2OrBuilder> 
@@ -7827,8 +8221,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
+       * @return Whether the mongodb44 field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb44() {
         return mongodbCase_ == 8;
       }
@@ -7837,8 +8233,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
+       * @return The mongodb44.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4 getMongodb44() {
         if (mongodb44Builder_ == null) {
           if (mongodbCase_ == 8) {
@@ -7857,7 +8255,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
       public Builder setMongodb44(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4 value) {
         if (mongodb44Builder_ == null) {
@@ -7877,7 +8275,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
       public Builder setMongodb44(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Builder builderForValue) {
@@ -7895,7 +8293,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
       public Builder mergeMongodb44(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4 value) {
         if (mongodb44Builder_ == null) {
@@ -7921,7 +8319,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
       public Builder clearMongodb44() {
         if (mongodb44Builder_ == null) {
@@ -7944,7 +8342,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Builder getMongodb44Builder() {
         return getMongodb44FieldBuilder().getBuilder();
@@ -7954,8 +8352,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4OrBuilder getMongodb44OrBuilder() {
         if ((mongodbCase_ == 8) && (mongodb44Builder_ != null)) {
           return mongodb44Builder_.getMessageOrBuilder();
@@ -7971,7 +8370,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8[json_name = "mongodb_4_4"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4 mongodb_4_4 = 8 [json_name = "mongodb_4_4"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4OrBuilder> 
@@ -7999,8 +8398,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
+       * @return Whether the mongodb50 field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb50() {
         return mongodbCase_ == 10;
       }
@@ -8009,8 +8410,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
+       * @return The mongodb50.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0 getMongodb50() {
         if (mongodb50Builder_ == null) {
           if (mongodbCase_ == 10) {
@@ -8029,7 +8432,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
       public Builder setMongodb50(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0 value) {
         if (mongodb50Builder_ == null) {
@@ -8049,7 +8452,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
       public Builder setMongodb50(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Builder builderForValue) {
@@ -8067,7 +8470,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
       public Builder mergeMongodb50(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0 value) {
         if (mongodb50Builder_ == null) {
@@ -8093,7 +8496,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
       public Builder clearMongodb50() {
         if (mongodb50Builder_ == null) {
@@ -8116,7 +8519,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Builder getMongodb50Builder() {
         return getMongodb50FieldBuilder().getBuilder();
@@ -8126,8 +8529,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0OrBuilder getMongodb50OrBuilder() {
         if ((mongodbCase_ == 10) && (mongodb50Builder_ != null)) {
           return mongodb50Builder_.getMessageOrBuilder();
@@ -8143,7 +8547,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10[json_name = "mongodb_5_0"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0 mongodb_5_0 = 10 [json_name = "mongodb_5_0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0OrBuilder> 
@@ -8171,8 +8575,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
+       * @return Whether the mongodb44Enterprise field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb44Enterprise() {
         return mongodbCase_ == 11;
       }
@@ -8181,8 +8587,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
+       * @return The mongodb44Enterprise.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise getMongodb44Enterprise() {
         if (mongodb44EnterpriseBuilder_ == null) {
           if (mongodbCase_ == 11) {
@@ -8201,7 +8609,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
       public Builder setMongodb44Enterprise(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise value) {
         if (mongodb44EnterpriseBuilder_ == null) {
@@ -8221,7 +8629,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
       public Builder setMongodb44Enterprise(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Builder builderForValue) {
@@ -8239,7 +8647,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
       public Builder mergeMongodb44Enterprise(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise value) {
         if (mongodb44EnterpriseBuilder_ == null) {
@@ -8265,7 +8673,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
       public Builder clearMongodb44Enterprise() {
         if (mongodb44EnterpriseBuilder_ == null) {
@@ -8288,7 +8696,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Builder getMongodb44EnterpriseBuilder() {
         return getMongodb44EnterpriseFieldBuilder().getBuilder();
@@ -8298,8 +8706,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterpriseOrBuilder getMongodb44EnterpriseOrBuilder() {
         if ((mongodbCase_ == 11) && (mongodb44EnterpriseBuilder_ != null)) {
           return mongodb44EnterpriseBuilder_.getMessageOrBuilder();
@@ -8315,7 +8724,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11[json_name = "mongodb_4_4_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise mongodb_4_4_enterprise = 11 [json_name = "mongodb_4_4_enterprise"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterpriseOrBuilder> 
@@ -8343,8 +8752,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
+       * @return Whether the mongodb50Enterprise field is set.
        */
+      @java.lang.Override
       public boolean hasMongodb50Enterprise() {
         return mongodbCase_ == 12;
       }
@@ -8353,8 +8764,10 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
+       * @return The mongodb50Enterprise.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise getMongodb50Enterprise() {
         if (mongodb50EnterpriseBuilder_ == null) {
           if (mongodbCase_ == 12) {
@@ -8373,7 +8786,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
       public Builder setMongodb50Enterprise(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise value) {
         if (mongodb50EnterpriseBuilder_ == null) {
@@ -8393,7 +8806,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
       public Builder setMongodb50Enterprise(
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Builder builderForValue) {
@@ -8411,7 +8824,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
       public Builder mergeMongodb50Enterprise(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise value) {
         if (mongodb50EnterpriseBuilder_ == null) {
@@ -8437,7 +8850,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
       public Builder clearMongodb50Enterprise() {
         if (mongodb50EnterpriseBuilder_ == null) {
@@ -8460,7 +8873,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Builder getMongodb50EnterpriseBuilder() {
         return getMongodb50EnterpriseFieldBuilder().getBuilder();
@@ -8470,8 +8883,9 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterpriseOrBuilder getMongodb50EnterpriseOrBuilder() {
         if ((mongodbCase_ == 12) && (mongodb50EnterpriseBuilder_ != null)) {
           return mongodb50EnterpriseBuilder_.getMessageOrBuilder();
@@ -8487,7 +8901,7 @@ public final class ClusterOuterClass {
        * Configuration and resource allocation for a MongoDB 5.0 Enterprise cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12[json_name = "mongodb_5_0_enterprise"];</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise mongodb_5_0_enterprise = 12 [json_name = "mongodb_5_0_enterprise"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterpriseOrBuilder> 
@@ -8508,7 +8922,7 @@ public final class ClusterOuterClass {
         return mongodb50EnterpriseBuilder_;
       }
 
-      private com.google.type.TimeOfDay backupWindowStart_ = null;
+      private com.google.type.TimeOfDay backupWindowStart_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> backupWindowStartBuilder_;
       /**
@@ -8517,6 +8931,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
+       * @return Whether the backupWindowStart field is set.
        */
       public boolean hasBackupWindowStart() {
         return backupWindowStartBuilder_ != null || backupWindowStart_ != null;
@@ -8527,6 +8942,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 3;</code>
+       * @return The backupWindowStart.
        */
       public com.google.type.TimeOfDay getBackupWindowStart() {
         if (backupWindowStartBuilder_ == null) {
@@ -8661,7 +9077,7 @@ public final class ClusterOuterClass {
         return backupWindowStartBuilder_;
       }
 
-      private com.google.protobuf.Int64Value backupRetainPeriodDays_ = null;
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
       /**
@@ -8670,6 +9086,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
+       * @return Whether the backupRetainPeriodDays field is set.
        */
       public boolean hasBackupRetainPeriodDays() {
         return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
@@ -8680,6 +9097,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
+       * @return The backupRetainPeriodDays.
        */
       public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
         if (backupRetainPeriodDaysBuilder_ == null) {
@@ -8814,7 +9232,7 @@ public final class ClusterOuterClass {
         return backupRetainPeriodDaysBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access access_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access access_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.AccessOrBuilder> accessBuilder_;
       /**
@@ -8823,6 +9241,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
+       * @return Whether the access field is set.
        */
       public boolean hasAccess() {
         return accessBuilder_ != null || access_ != null;
@@ -8833,6 +9252,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Access access = 6;</code>
+       * @return The access.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access getAccess() {
         if (accessBuilder_ == null) {
@@ -8969,7 +9389,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9029,6 +9449,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -9037,6 +9458,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod getMongod();
     /**
@@ -9054,6 +9476,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -9062,6 +9485,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg getMongocfg();
     /**
@@ -9079,6 +9503,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -9087,6 +9512,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos getMongos();
     /**
@@ -9104,6 +9530,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -9112,6 +9539,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra getMongoinfra();
     /**
@@ -9126,7 +9554,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6}
    */
-  public  static final class Mongodb3_6 extends
+  public static final class Mongodb3_6 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb3_6)
       Mongodb3_6OrBuilder {
@@ -9136,6 +9564,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb3_6() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb3_6();
     }
 
     @java.lang.Override
@@ -9151,7 +9586,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9215,7 +9649,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9256,6 +9690,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -9264,6 +9699,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6 getConfig();
       /**
@@ -9281,6 +9717,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -9289,6 +9726,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -9303,7 +9741,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod)
         MongodOrBuilder {
@@ -9313,6 +9751,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -9328,7 +9773,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -9366,7 +9810,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -9405,7 +9849,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -9415,7 +9861,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6.getDefaultInstance() : config_;
       }
@@ -9426,6 +9874,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -9438,7 +9887,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -9448,7 +9899,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -9459,6 +9912,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -9515,19 +9969,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -9732,35 +10185,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9809,7 +10262,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6OrBuilder> configBuilder_;
         /**
@@ -9818,6 +10271,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -9828,6 +10282,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet3_6 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongodConfigSet3_6 getConfig() {
           if (configBuilder_ == null) {
@@ -9962,7 +10417,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -9971,6 +10426,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -9981,6 +10437,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -10117,7 +10574,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -10173,10 +10630,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 getConfig();
       /**
@@ -10190,6 +10649,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -10198,6 +10658,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -10212,7 +10673,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg)
         MongoCfgOrBuilder {
@@ -10222,6 +10683,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -10237,7 +10705,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -10275,7 +10742,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -10310,19 +10777,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 config_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6.getDefaultInstance() : config_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -10335,7 +10807,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -10345,7 +10819,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -10356,6 +10832,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -10412,19 +10889,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -10629,35 +11105,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10706,17 +11182,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6OrBuilder> configBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 getConfig() {
           if (configBuilder_ == null) {
@@ -10823,7 +11301,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -10832,6 +11310,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -10842,6 +11321,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -10978,7 +11458,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -11034,10 +11514,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 getConfig();
       /**
@@ -11051,6 +11533,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -11059,6 +11542,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -11073,7 +11557,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos)
         MongosOrBuilder {
@@ -11083,6 +11567,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -11098,7 +11589,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -11136,7 +11626,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -11171,19 +11661,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 config_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6.getDefaultInstance() : config_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -11196,7 +11691,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -11206,7 +11703,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -11217,6 +11716,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -11273,19 +11773,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -11490,35 +11989,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11567,17 +12066,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6OrBuilder> configBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 getConfig() {
           if (configBuilder_ == null) {
@@ -11684,7 +12185,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -11693,6 +12194,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -11703,6 +12205,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -11839,7 +12342,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -11895,10 +12398,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 getConfigMongos();
       /**
@@ -11908,10 +12413,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 getConfigMongocfg();
       /**
@@ -11925,6 +12432,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -11933,6 +12441,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -11947,7 +12456,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra)
         MongoInfraOrBuilder {
@@ -11957,6 +12466,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -11972,7 +12488,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -12023,7 +12538,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -12058,19 +12573,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6OrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -12079,19 +12599,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6OrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -12104,7 +12629,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -12114,7 +12641,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -12125,6 +12654,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -12188,24 +12718,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -12425,35 +12954,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12505,17 +13034,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6OrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet3_6 config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongosConfigSet3_6 getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -12622,17 +13153,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6OrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet3_6 config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.MongoCfgConfigSet3_6 getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -12739,7 +13272,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -12748,6 +13281,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -12758,6 +13292,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -12894,7 +13429,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -12952,7 +13487,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -12962,7 +13499,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod.getDefaultInstance() : mongod_;
     }
@@ -12973,6 +13512,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -12985,7 +13525,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -12995,7 +13537,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -13006,6 +13550,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -13018,7 +13563,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -13028,7 +13575,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos.getDefaultInstance() : mongos_;
     }
@@ -13039,6 +13588,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -13051,7 +13601,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -13061,7 +13613,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -13072,6 +13626,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -13142,29 +13697,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6 other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13399,35 +13953,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13482,7 +14036,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongodOrBuilder> mongodBuilder_;
       /**
@@ -13491,6 +14045,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -13501,6 +14056,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -13635,7 +14191,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -13644,6 +14200,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -13654,6 +14211,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -13788,7 +14346,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongosOrBuilder> mongosBuilder_;
       /**
@@ -13797,6 +14355,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -13807,6 +14366,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -13941,7 +14501,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -13950,6 +14510,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -13960,6 +14521,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb3_6.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -14096,7 +14658,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14156,6 +14718,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -14164,6 +14727,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod getMongod();
     /**
@@ -14181,6 +14745,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -14189,6 +14754,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg getMongocfg();
     /**
@@ -14206,6 +14772,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -14214,6 +14781,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos getMongos();
     /**
@@ -14231,6 +14799,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -14239,6 +14808,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra getMongoinfra();
     /**
@@ -14253,7 +14823,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0}
    */
-  public  static final class Mongodb4_0 extends
+  public static final class Mongodb4_0 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_0)
       Mongodb4_0OrBuilder {
@@ -14263,6 +14833,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb4_0() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb4_0();
     }
 
     @java.lang.Override
@@ -14278,7 +14855,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14342,7 +14918,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14383,6 +14959,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -14391,6 +14968,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0 getConfig();
       /**
@@ -14408,6 +14986,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -14416,6 +14995,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -14430,7 +15010,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod)
         MongodOrBuilder {
@@ -14440,6 +15020,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -14455,7 +15042,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -14493,7 +15079,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -14532,7 +15118,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -14542,7 +15130,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0.getDefaultInstance() : config_;
       }
@@ -14553,6 +15143,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -14565,7 +15156,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -14575,7 +15168,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -14586,6 +15181,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -14642,19 +15238,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14859,35 +15454,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14936,7 +15531,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0OrBuilder> configBuilder_;
         /**
@@ -14945,6 +15540,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -14955,6 +15551,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_0 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongodConfigSet4_0 getConfig() {
           if (configBuilder_ == null) {
@@ -15089,7 +15686,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -15098,6 +15695,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -15108,6 +15706,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -15244,7 +15843,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -15304,6 +15903,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -15312,6 +15912,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 getConfig();
       /**
@@ -15329,6 +15930,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -15337,6 +15939,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -15351,7 +15954,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg)
         MongoCfgOrBuilder {
@@ -15361,6 +15964,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -15376,7 +15986,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -15414,7 +16023,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -15453,7 +16062,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -15463,7 +16074,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0.getDefaultInstance() : config_;
       }
@@ -15474,6 +16087,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -15486,7 +16100,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -15496,7 +16112,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -15507,6 +16125,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -15563,19 +16182,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -15780,35 +16398,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15857,7 +16475,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0OrBuilder> configBuilder_;
         /**
@@ -15866,6 +16484,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -15876,6 +16495,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 getConfig() {
           if (configBuilder_ == null) {
@@ -16010,7 +16630,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -16019,6 +16639,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -16029,6 +16650,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -16165,7 +16787,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -16225,6 +16847,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -16233,6 +16856,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 getConfig();
       /**
@@ -16250,6 +16874,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -16258,6 +16883,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -16272,7 +16898,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos)
         MongosOrBuilder {
@@ -16282,6 +16908,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -16297,7 +16930,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -16335,7 +16967,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -16374,7 +17006,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -16384,7 +17018,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0.getDefaultInstance() : config_;
       }
@@ -16395,6 +17031,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -16407,7 +17044,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -16417,7 +17056,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -16428,6 +17069,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -16484,19 +17126,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -16701,35 +17342,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16778,7 +17419,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0OrBuilder> configBuilder_;
         /**
@@ -16787,6 +17428,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -16797,6 +17439,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 getConfig() {
           if (configBuilder_ == null) {
@@ -16931,7 +17574,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -16940,6 +17583,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -16950,6 +17594,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -17086,7 +17731,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -17142,10 +17787,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 getConfigMongos();
       /**
@@ -17155,10 +17802,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 getConfigMongocfg();
       /**
@@ -17172,6 +17821,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -17180,6 +17830,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -17194,7 +17845,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra)
         MongoInfraOrBuilder {
@@ -17204,6 +17855,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -17219,7 +17877,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -17270,7 +17927,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -17305,19 +17962,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0OrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -17326,19 +17988,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0OrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -17351,7 +18018,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -17361,7 +18030,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -17372,6 +18043,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -17435,24 +18107,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -17672,35 +18343,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17752,17 +18423,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0OrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_0 config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongosConfigSet4_0 getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -17869,17 +18542,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0OrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_0 config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.MongoCfgConfigSet4_0 getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -17986,7 +18661,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -17995,6 +18670,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -18005,6 +18681,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -18141,7 +18818,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -18199,7 +18876,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -18209,7 +18888,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod.getDefaultInstance() : mongod_;
     }
@@ -18220,6 +18901,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -18232,7 +18914,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -18242,7 +18926,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -18253,6 +18939,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -18265,7 +18952,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -18275,7 +18964,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos.getDefaultInstance() : mongos_;
     }
@@ -18286,6 +18977,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -18298,7 +18990,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -18308,7 +19002,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -18319,6 +19015,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -18389,29 +19086,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0 other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18646,35 +19342,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18729,7 +19425,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongodOrBuilder> mongodBuilder_;
       /**
@@ -18738,6 +19434,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -18748,6 +19445,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -18882,7 +19580,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -18891,6 +19589,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -18901,6 +19600,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -19035,7 +19735,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongosOrBuilder> mongosBuilder_;
       /**
@@ -19044,6 +19744,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -19054,6 +19755,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -19188,7 +19890,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -19197,6 +19899,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -19207,6 +19910,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_0.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -19343,7 +20047,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19403,6 +20107,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -19411,6 +20116,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod getMongod();
     /**
@@ -19428,6 +20134,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -19436,6 +20143,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg getMongocfg();
     /**
@@ -19453,6 +20161,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -19461,6 +20170,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos getMongos();
     /**
@@ -19478,6 +20188,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -19486,6 +20197,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra getMongoinfra();
     /**
@@ -19500,7 +20212,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2}
    */
-  public  static final class Mongodb4_2 extends
+  public static final class Mongodb4_2 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_2)
       Mongodb4_2OrBuilder {
@@ -19510,6 +20222,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb4_2() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb4_2();
     }
 
     @java.lang.Override
@@ -19525,7 +20244,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19589,7 +20307,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19630,6 +20348,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -19638,6 +20357,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2 getConfig();
       /**
@@ -19655,6 +20375,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -19663,6 +20384,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -19677,7 +20399,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod)
         MongodOrBuilder {
@@ -19687,6 +20409,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -19702,7 +20431,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -19740,7 +20468,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -19779,7 +20507,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -19789,7 +20519,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2.getDefaultInstance() : config_;
       }
@@ -19800,6 +20532,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -19812,7 +20545,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -19822,7 +20557,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -19833,6 +20570,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -19889,19 +20627,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -20106,35 +20843,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20183,7 +20920,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2OrBuilder> configBuilder_;
         /**
@@ -20192,6 +20929,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -20202,6 +20940,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_2 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfigSet4_2 getConfig() {
           if (configBuilder_ == null) {
@@ -20336,7 +21075,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -20345,6 +21084,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -20355,6 +21095,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -20491,7 +21232,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -20551,6 +21292,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -20559,6 +21301,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 getConfig();
       /**
@@ -20576,6 +21319,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -20584,6 +21328,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -20598,7 +21343,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg)
         MongoCfgOrBuilder {
@@ -20608,6 +21353,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -20623,7 +21375,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -20661,7 +21412,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -20700,7 +21451,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -20710,7 +21463,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2.getDefaultInstance() : config_;
       }
@@ -20721,6 +21476,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -20733,7 +21489,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -20743,7 +21501,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -20754,6 +21514,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -20810,19 +21571,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -21027,35 +21787,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21104,7 +21864,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2OrBuilder> configBuilder_;
         /**
@@ -21113,6 +21873,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -21123,6 +21884,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 getConfig() {
           if (configBuilder_ == null) {
@@ -21257,7 +22019,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -21266,6 +22028,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -21276,6 +22039,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -21412,7 +22176,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -21472,6 +22236,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -21480,6 +22245,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 getConfig();
       /**
@@ -21497,6 +22263,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -21505,6 +22272,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -21519,7 +22287,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos)
         MongosOrBuilder {
@@ -21529,6 +22297,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -21544,7 +22319,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -21582,7 +22356,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -21621,7 +22395,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -21631,7 +22407,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2.getDefaultInstance() : config_;
       }
@@ -21642,6 +22420,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -21654,7 +22433,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -21664,7 +22445,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -21675,6 +22458,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -21731,19 +22515,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -21948,35 +22731,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22025,7 +22808,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2OrBuilder> configBuilder_;
         /**
@@ -22034,6 +22817,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -22044,6 +22828,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 getConfig() {
           if (configBuilder_ == null) {
@@ -22178,7 +22963,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -22187,6 +22972,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -22197,6 +22983,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -22333,7 +23120,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -22389,10 +23176,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 getConfigMongos();
       /**
@@ -22402,10 +23191,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 getConfigMongocfg();
       /**
@@ -22419,6 +23210,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -22427,6 +23219,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -22441,7 +23234,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra)
         MongoInfraOrBuilder {
@@ -22451,6 +23244,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -22466,7 +23266,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -22517,7 +23316,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -22552,19 +23351,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2OrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -22573,19 +23377,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2OrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -22598,7 +23407,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -22608,7 +23419,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -22619,6 +23432,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -22682,24 +23496,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -22919,35 +23732,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22999,17 +23812,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2OrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_2 config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfigSet4_2 getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -23116,17 +23931,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2OrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_2 config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongoCfgConfigSet4_2 getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -23233,7 +24050,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -23242,6 +24059,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -23252,6 +24070,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -23388,7 +24207,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -23446,7 +24265,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -23456,7 +24277,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod.getDefaultInstance() : mongod_;
     }
@@ -23467,6 +24290,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -23479,7 +24303,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -23489,7 +24315,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -23500,6 +24328,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -23512,7 +24341,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -23522,7 +24353,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos.getDefaultInstance() : mongos_;
     }
@@ -23533,6 +24366,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -23545,7 +24379,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -23555,7 +24391,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -23566,6 +24404,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -23636,29 +24475,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2 other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23893,35 +24731,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23976,7 +24814,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongodOrBuilder> mongodBuilder_;
       /**
@@ -23985,6 +24823,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -23995,6 +24834,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -24129,7 +24969,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -24138,6 +24978,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -24148,6 +24989,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -24282,7 +25124,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongosOrBuilder> mongosBuilder_;
       /**
@@ -24291,6 +25133,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -24301,6 +25144,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -24435,7 +25279,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -24444,6 +25288,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -24454,6 +25299,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_2.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -24590,7 +25436,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24650,6 +25496,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -24658,6 +25505,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod getMongod();
     /**
@@ -24675,6 +25523,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -24683,6 +25532,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg getMongocfg();
     /**
@@ -24700,6 +25550,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -24708,6 +25559,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos getMongos();
     /**
@@ -24725,6 +25577,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -24733,6 +25586,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra getMongoinfra();
     /**
@@ -24747,7 +25601,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4}
    */
-  public  static final class Mongodb4_4 extends
+  public static final class Mongodb4_4 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4)
       Mongodb4_4OrBuilder {
@@ -24757,6 +25611,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb4_4() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb4_4();
     }
 
     @java.lang.Override
@@ -24772,7 +25633,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -24836,7 +25696,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24877,6 +25737,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -24885,6 +25746,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4 getConfig();
       /**
@@ -24902,6 +25764,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -24910,6 +25773,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -24924,7 +25788,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod)
         MongodOrBuilder {
@@ -24934,6 +25798,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -24949,7 +25820,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -24987,7 +25857,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -25026,7 +25896,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -25036,7 +25908,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4.getDefaultInstance() : config_;
       }
@@ -25047,6 +25921,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -25059,7 +25934,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -25069,7 +25946,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -25080,6 +25959,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -25136,19 +26016,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -25353,35 +26232,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25430,7 +26309,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4OrBuilder> configBuilder_;
         /**
@@ -25439,6 +26318,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -25449,6 +26329,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongodConfigSet4_4 getConfig() {
           if (configBuilder_ == null) {
@@ -25583,7 +26464,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -25592,6 +26473,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -25602,6 +26484,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -25738,7 +26621,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -25798,6 +26681,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -25806,6 +26690,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 getConfig();
       /**
@@ -25823,6 +26708,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -25831,6 +26717,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -25845,7 +26732,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg)
         MongoCfgOrBuilder {
@@ -25855,6 +26742,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -25870,7 +26764,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -25908,7 +26801,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -25947,7 +26840,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -25957,7 +26852,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4.getDefaultInstance() : config_;
       }
@@ -25968,6 +26865,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -25980,7 +26878,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -25990,7 +26890,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -26001,6 +26903,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -26057,19 +26960,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -26274,35 +27176,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26351,7 +27253,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4OrBuilder> configBuilder_;
         /**
@@ -26360,6 +27262,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -26370,6 +27273,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 getConfig() {
           if (configBuilder_ == null) {
@@ -26504,7 +27408,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -26513,6 +27417,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -26523,6 +27428,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -26659,7 +27565,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -26719,6 +27625,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -26727,6 +27634,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 getConfig();
       /**
@@ -26744,6 +27652,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -26752,6 +27661,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -26766,7 +27676,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos)
         MongosOrBuilder {
@@ -26776,6 +27686,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -26791,7 +27708,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -26829,7 +27745,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -26868,7 +27784,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -26878,7 +27796,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4.getDefaultInstance() : config_;
       }
@@ -26889,6 +27809,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -26901,7 +27822,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -26911,7 +27834,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -26922,6 +27847,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -26978,19 +27904,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -27195,35 +28120,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27272,7 +28197,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4OrBuilder> configBuilder_;
         /**
@@ -27281,6 +28206,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -27291,6 +28217,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 getConfig() {
           if (configBuilder_ == null) {
@@ -27425,7 +28352,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -27434,6 +28361,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -27444,6 +28372,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -27580,7 +28509,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -27636,10 +28565,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 getConfigMongos();
       /**
@@ -27649,10 +28580,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 getConfigMongocfg();
       /**
@@ -27666,6 +28599,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -27674,6 +28608,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -27688,7 +28623,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra)
         MongoInfraOrBuilder {
@@ -27698,6 +28633,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -27713,7 +28655,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -27764,7 +28705,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -27799,19 +28740,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4OrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -27820,19 +28766,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4OrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -27845,7 +28796,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -27855,7 +28808,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -27866,6 +28821,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -27929,24 +28885,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -28166,35 +29121,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -28246,17 +29201,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4OrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4 config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongosConfigSet4_4 getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -28363,17 +29320,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4OrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4 config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44.MongoCfgConfigSet4_4 getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -28480,7 +29439,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -28489,6 +29448,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -28499,6 +29459,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -28635,7 +29596,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -28693,7 +29654,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -28703,7 +29666,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod.getDefaultInstance() : mongod_;
     }
@@ -28714,6 +29679,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -28726,7 +29692,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -28736,7 +29704,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -28747,6 +29717,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -28759,7 +29730,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -28769,7 +29742,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos.getDefaultInstance() : mongos_;
     }
@@ -28780,6 +29755,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -28792,7 +29768,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -28802,7 +29780,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -28813,6 +29793,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -28883,29 +29864,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4 other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29140,35 +30120,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -29223,7 +30203,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongodOrBuilder> mongodBuilder_;
       /**
@@ -29232,6 +30212,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -29242,6 +30223,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -29376,7 +30358,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -29385,6 +30367,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -29395,6 +30378,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -29529,7 +30513,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongosOrBuilder> mongosBuilder_;
       /**
@@ -29538,6 +30522,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -29548,6 +30533,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -29682,7 +30668,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -29691,6 +30677,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -29701,6 +30688,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -29837,7 +30825,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -29897,6 +30885,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -29905,6 +30894,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod getMongod();
     /**
@@ -29922,6 +30912,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -29930,6 +30921,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg getMongocfg();
     /**
@@ -29947,6 +30939,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -29955,6 +30948,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos getMongos();
     /**
@@ -29972,6 +30966,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -29980,6 +30975,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra getMongoinfra();
     /**
@@ -29994,7 +30990,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise}
    */
-  public  static final class Mongodb4_4_enterprise extends
+  public static final class Mongodb4_4_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise)
       Mongodb4_4_enterpriseOrBuilder {
@@ -30004,6 +31000,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb4_4_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb4_4_enterprise();
     }
 
     @java.lang.Override
@@ -30019,7 +31022,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -30083,7 +31085,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -30124,6 +31126,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -30132,6 +31135,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise getConfig();
       /**
@@ -30149,6 +31153,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -30157,6 +31162,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -30171,7 +31177,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod)
         MongodOrBuilder {
@@ -30181,6 +31187,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -30196,7 +31209,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -30234,7 +31246,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -30273,7 +31285,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -30283,7 +31297,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise.getDefaultInstance() : config_;
       }
@@ -30294,6 +31310,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterpriseOrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -30306,7 +31323,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -30316,7 +31335,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -30327,6 +31348,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -30383,19 +31405,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -30600,35 +31621,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -30677,7 +31698,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterpriseOrBuilder> configBuilder_;
         /**
@@ -30686,6 +31707,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -30696,6 +31718,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet4_4_enterprise config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongodConfigSet4_4_enterprise getConfig() {
           if (configBuilder_ == null) {
@@ -30830,7 +31853,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -30839,6 +31862,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -30849,6 +31873,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -30985,7 +32010,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -31045,6 +32070,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -31053,6 +32079,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise getConfig();
       /**
@@ -31070,6 +32097,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -31078,6 +32106,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -31092,7 +32121,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg)
         MongoCfgOrBuilder {
@@ -31102,6 +32131,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -31117,7 +32153,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -31155,7 +32190,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -31194,7 +32229,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -31204,7 +32241,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise.getDefaultInstance() : config_;
       }
@@ -31215,6 +32254,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterpriseOrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -31227,7 +32267,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -31237,7 +32279,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -31248,6 +32292,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -31304,19 +32349,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -31521,35 +32565,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -31598,7 +32642,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterpriseOrBuilder> configBuilder_;
         /**
@@ -31607,6 +32651,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -31617,6 +32662,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise getConfig() {
           if (configBuilder_ == null) {
@@ -31751,7 +32797,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -31760,6 +32806,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -31770,6 +32817,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -31906,7 +32954,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -31966,6 +33014,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -31974,6 +33023,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise getConfig();
       /**
@@ -31991,6 +33041,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -31999,6 +33050,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -32013,7 +33065,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos)
         MongosOrBuilder {
@@ -32023,6 +33075,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -32038,7 +33097,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -32076,7 +33134,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -32115,7 +33173,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -32125,7 +33185,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise.getDefaultInstance() : config_;
       }
@@ -32136,6 +33198,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterpriseOrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -32148,7 +33211,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -32158,7 +33223,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -32169,6 +33236,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -32225,19 +33293,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -32442,35 +33509,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -32519,7 +33586,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterpriseOrBuilder> configBuilder_;
         /**
@@ -32528,6 +33595,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -32538,6 +33606,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise getConfig() {
           if (configBuilder_ == null) {
@@ -32672,7 +33741,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -32681,6 +33750,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -32691,6 +33761,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -32827,7 +33898,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -32883,10 +33954,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise getConfigMongos();
       /**
@@ -32896,10 +33969,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise getConfigMongocfg();
       /**
@@ -32913,6 +33988,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -32921,6 +33997,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -32935,7 +34012,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra)
         MongoInfraOrBuilder {
@@ -32945,6 +34022,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -32960,7 +34044,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -33011,7 +34094,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -33046,19 +34129,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterpriseOrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -33067,19 +34155,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterpriseOrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -33092,7 +34185,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -33102,7 +34197,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -33113,6 +34210,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -33176,24 +34274,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -33413,35 +34510,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -33493,17 +34590,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterpriseOrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet4_4_enterprise config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongosConfigSet4_4_enterprise getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -33610,17 +34709,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterpriseOrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet4_4_enterprise config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.MongoCfgConfigSet4_4_enterprise getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -33727,7 +34828,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -33736,6 +34837,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -33746,6 +34848,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -33882,7 +34985,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -33940,7 +35043,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -33950,7 +35055,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod.getDefaultInstance() : mongod_;
     }
@@ -33961,6 +35068,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -33973,7 +35081,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -33983,7 +35093,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -33994,6 +35106,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -34006,7 +35119,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -34016,7 +35131,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos.getDefaultInstance() : mongos_;
     }
@@ -34027,6 +35144,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -34039,7 +35157,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -34049,7 +35169,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -34060,6 +35182,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -34130,29 +35253,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -34387,35 +35509,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -34470,7 +35592,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongodOrBuilder> mongodBuilder_;
       /**
@@ -34479,6 +35601,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -34489,6 +35612,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -34623,7 +35747,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -34632,6 +35756,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -34642,6 +35767,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -34776,7 +35902,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongosOrBuilder> mongosBuilder_;
       /**
@@ -34785,6 +35911,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -34795,6 +35922,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -34929,7 +36057,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -34938,6 +36066,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -34948,6 +36077,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -35084,7 +36214,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -35144,6 +36274,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -35152,6 +36283,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod getMongod();
     /**
@@ -35169,6 +36301,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -35177,6 +36310,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg getMongocfg();
     /**
@@ -35194,6 +36328,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -35202,6 +36337,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos getMongos();
     /**
@@ -35219,6 +36355,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -35227,6 +36364,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra getMongoinfra();
     /**
@@ -35241,7 +36379,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0}
    */
-  public  static final class Mongodb5_0 extends
+  public static final class Mongodb5_0 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0)
       Mongodb5_0OrBuilder {
@@ -35251,6 +36389,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb5_0() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb5_0();
     }
 
     @java.lang.Override
@@ -35266,7 +36411,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -35330,7 +36474,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -35371,6 +36515,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -35379,6 +36524,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0 getConfig();
       /**
@@ -35396,6 +36542,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -35404,6 +36551,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -35418,7 +36566,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod)
         MongodOrBuilder {
@@ -35428,6 +36576,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -35443,7 +36598,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -35481,7 +36635,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -35520,7 +36674,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -35530,7 +36686,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0.getDefaultInstance() : config_;
       }
@@ -35541,6 +36699,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -35553,7 +36712,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -35563,7 +36724,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -35574,6 +36737,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -35630,19 +36794,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -35847,35 +37010,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -35924,7 +37087,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0OrBuilder> configBuilder_;
         /**
@@ -35933,6 +37096,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -35943,6 +37107,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongodConfigSet5_0 getConfig() {
           if (configBuilder_ == null) {
@@ -36077,7 +37242,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -36086,6 +37251,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -36096,6 +37262,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -36232,7 +37399,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -36292,6 +37459,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -36300,6 +37468,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 getConfig();
       /**
@@ -36317,6 +37486,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -36325,6 +37495,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -36339,7 +37510,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg)
         MongoCfgOrBuilder {
@@ -36349,6 +37520,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -36364,7 +37542,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -36402,7 +37579,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -36441,7 +37618,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -36451,7 +37630,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0.getDefaultInstance() : config_;
       }
@@ -36462,6 +37643,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -36474,7 +37656,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -36484,7 +37668,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -36495,6 +37681,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -36551,19 +37738,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -36768,35 +37954,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -36845,7 +38031,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0OrBuilder> configBuilder_;
         /**
@@ -36854,6 +38040,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -36864,6 +38051,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 getConfig() {
           if (configBuilder_ == null) {
@@ -36998,7 +38186,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -37007,6 +38195,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -37017,6 +38206,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -37153,7 +38343,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -37213,6 +38403,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -37221,6 +38412,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 getConfig();
       /**
@@ -37238,6 +38430,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -37246,6 +38439,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -37260,7 +38454,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos)
         MongosOrBuilder {
@@ -37270,6 +38464,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -37285,7 +38486,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -37323,7 +38523,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -37362,7 +38562,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -37372,7 +38574,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0.getDefaultInstance() : config_;
       }
@@ -37383,6 +38587,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0OrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -37395,7 +38600,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -37405,7 +38612,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -37416,6 +38625,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -37472,19 +38682,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -37689,35 +38898,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -37766,7 +38975,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0OrBuilder> configBuilder_;
         /**
@@ -37775,6 +38984,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -37785,6 +38995,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 getConfig() {
           if (configBuilder_ == null) {
@@ -37919,7 +39130,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -37928,6 +39139,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -37938,6 +39150,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -38074,7 +39287,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -38130,10 +39343,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 getConfigMongos();
       /**
@@ -38143,10 +39358,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 getConfigMongocfg();
       /**
@@ -38160,6 +39377,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -38168,6 +39386,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -38182,7 +39401,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra)
         MongoInfraOrBuilder {
@@ -38192,6 +39411,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -38207,7 +39433,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -38258,7 +39483,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -38293,19 +39518,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0OrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -38314,19 +39544,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0OrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -38339,7 +39574,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -38349,7 +39586,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -38360,6 +39599,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -38423,24 +39663,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -38660,35 +39899,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -38740,17 +39979,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0OrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0 config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongosConfigSet5_0 getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -38857,17 +40098,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0OrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0 config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.MongoCfgConfigSet5_0 getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -38974,7 +40217,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -38983,6 +40226,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -38993,6 +40237,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -39129,7 +40374,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -39187,7 +40432,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -39197,7 +40444,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod.getDefaultInstance() : mongod_;
     }
@@ -39208,6 +40457,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -39220,7 +40470,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -39230,7 +40482,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -39241,6 +40495,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -39253,7 +40508,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -39263,7 +40520,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos.getDefaultInstance() : mongos_;
     }
@@ -39274,6 +40533,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -39286,7 +40546,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -39296,7 +40558,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -39307,6 +40571,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -39377,29 +40642,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0 other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -39634,35 +40898,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -39717,7 +40981,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongodOrBuilder> mongodBuilder_;
       /**
@@ -39726,6 +40990,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -39736,6 +41001,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -39870,7 +41136,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -39879,6 +41145,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -39889,6 +41156,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -40023,7 +41291,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongosOrBuilder> mongosBuilder_;
       /**
@@ -40032,6 +41300,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -40042,6 +41311,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -40176,7 +41446,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -40185,6 +41455,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -40195,6 +41466,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -40331,7 +41603,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -40391,6 +41663,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
     boolean hasMongod();
     /**
@@ -40399,6 +41672,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod getMongod();
     /**
@@ -40416,6 +41690,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
     boolean hasMongocfg();
     /**
@@ -40424,6 +41699,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg getMongocfg();
     /**
@@ -40441,6 +41717,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
     boolean hasMongos();
     /**
@@ -40449,6 +41726,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos getMongos();
     /**
@@ -40466,6 +41744,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
     boolean hasMongoinfra();
     /**
@@ -40474,6 +41753,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra getMongoinfra();
     /**
@@ -40488,7 +41768,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise}
    */
-  public  static final class Mongodb5_0_enterprise extends
+  public static final class Mongodb5_0_enterprise extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise)
       Mongodb5_0_enterpriseOrBuilder {
@@ -40498,6 +41778,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Mongodb5_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb5_0_enterprise();
     }
 
     @java.lang.Override
@@ -40513,7 +41800,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -40577,7 +41863,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -40618,6 +41904,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -40626,6 +41913,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise getConfig();
       /**
@@ -40643,6 +41931,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -40651,6 +41940,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -40665,7 +41955,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod}
      */
-    public  static final class Mongod extends
+    public static final class Mongod extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod)
         MongodOrBuilder {
@@ -40675,6 +41965,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
       }
 
       @java.lang.Override
@@ -40690,7 +41987,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -40728,7 +42024,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -40767,7 +42063,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -40777,7 +42075,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise.getDefaultInstance() : config_;
       }
@@ -40788,6 +42088,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterpriseOrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -40800,7 +42101,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -40810,7 +42113,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -40821,6 +42126,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -40877,19 +42183,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -41094,35 +42399,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -41171,7 +42476,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterpriseOrBuilder> configBuilder_;
         /**
@@ -41180,6 +42485,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -41190,6 +42496,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet5_0_enterprise config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfigSet5_0_enterprise getConfig() {
           if (configBuilder_ == null) {
@@ -41324,7 +42631,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -41333,6 +42640,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -41343,6 +42651,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -41479,7 +42788,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -41539,6 +42848,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -41547,6 +42857,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise getConfig();
       /**
@@ -41564,6 +42875,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -41572,6 +42884,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -41586,7 +42899,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg}
      */
-    public  static final class MongoCfg extends
+    public static final class MongoCfg extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg)
         MongoCfgOrBuilder {
@@ -41596,6 +42909,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
       }
 
       @java.lang.Override
@@ -41611,7 +42931,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -41649,7 +42968,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -41688,7 +43007,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -41698,7 +43019,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise.getDefaultInstance() : config_;
       }
@@ -41709,6 +43032,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterpriseOrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -41721,7 +43045,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -41731,7 +43057,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -41742,6 +43070,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -41798,19 +43127,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -42015,35 +43343,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -42092,7 +43420,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterpriseOrBuilder> configBuilder_;
         /**
@@ -42101,6 +43429,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -42111,6 +43440,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise getConfig() {
           if (configBuilder_ == null) {
@@ -42245,7 +43575,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -42254,6 +43584,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -42264,6 +43595,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -42400,7 +43732,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -42460,6 +43792,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
       boolean hasConfig();
       /**
@@ -42468,6 +43801,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
+       * @return The config.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise getConfig();
       /**
@@ -42485,6 +43819,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -42493,6 +43828,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -42507,7 +43843,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos}
      */
-    public  static final class Mongos extends
+    public static final class Mongos extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos)
         MongosOrBuilder {
@@ -42517,6 +43853,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
       }
 
       @java.lang.Override
@@ -42532,7 +43875,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -42570,7 +43912,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -42609,7 +43951,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return config_ != null;
       }
@@ -42619,7 +43963,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise getConfig() {
         return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise.getDefaultInstance() : config_;
       }
@@ -42630,6 +43976,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterpriseOrBuilder getConfigOrBuilder() {
         return getConfig();
       }
@@ -42642,7 +43989,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -42652,7 +44001,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -42663,6 +44014,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -42719,19 +44071,18 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos) obj;
 
-        boolean result = true;
-        result = result && (hasConfig() == other.hasConfig());
+        if (hasConfig() != other.hasConfig()) return false;
         if (hasConfig()) {
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -42936,35 +44287,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -43013,7 +44364,7 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise config_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise config_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterpriseOrBuilder> configBuilder_;
         /**
@@ -43022,6 +44373,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
+         * @return Whether the config field is set.
          */
         public boolean hasConfig() {
           return configBuilder_ != null || config_ != null;
@@ -43032,6 +44384,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config = 1;</code>
+         * @return The config.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise getConfig() {
           if (configBuilder_ == null) {
@@ -43166,7 +44519,7 @@ public final class ClusterOuterClass {
           return configBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -43175,6 +44528,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -43185,6 +44539,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -43321,7 +44676,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -43377,10 +44732,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
       boolean hasConfigMongos();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
+       * @return The configMongos.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise getConfigMongos();
       /**
@@ -43390,10 +44747,12 @@ public final class ClusterOuterClass {
 
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
       boolean hasConfigMongocfg();
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
       yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise getConfigMongocfg();
       /**
@@ -43407,6 +44766,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
       boolean hasResources();
       /**
@@ -43415,6 +44775,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
@@ -43429,7 +44790,7 @@ public final class ClusterOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra}
      */
-    public  static final class MongoInfra extends
+    public static final class MongoInfra extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra)
         MongoInfraOrBuilder {
@@ -43439,6 +44800,13 @@ public final class ClusterOuterClass {
         super(builder);
       }
       private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
       }
 
       @java.lang.Override
@@ -43454,7 +44822,6 @@ public final class ClusterOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -43505,7 +44872,7 @@ public final class ClusterOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -43540,19 +44907,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise configMongos_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongos() {
         return configMongos_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
+       * @return The configMongos.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise getConfigMongos() {
         return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise.getDefaultInstance() : configMongos_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterpriseOrBuilder getConfigMongosOrBuilder() {
         return getConfigMongos();
       }
@@ -43561,19 +44933,24 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise configMongocfg_;
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
        */
+      @java.lang.Override
       public boolean hasConfigMongocfg() {
         return configMongocfg_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
+       * @return The configMongocfg.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise getConfigMongocfg() {
         return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise.getDefaultInstance() : configMongocfg_;
       }
       /**
        * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterpriseOrBuilder getConfigMongocfgOrBuilder() {
         return getConfigMongocfg();
       }
@@ -43586,7 +44963,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
        */
+      @java.lang.Override
       public boolean hasResources() {
         return resources_ != null;
       }
@@ -43596,7 +44975,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
       }
@@ -43607,6 +44988,7 @@ public final class ClusterOuterClass {
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
         return getResources();
       }
@@ -43670,24 +45052,23 @@ public final class ClusterOuterClass {
         }
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra) obj;
 
-        boolean result = true;
-        result = result && (hasConfigMongos() == other.hasConfigMongos());
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
         if (hasConfigMongos()) {
-          result = result && getConfigMongos()
-              .equals(other.getConfigMongos());
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
         }
-        result = result && (hasConfigMongocfg() == other.hasConfigMongocfg());
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
         if (hasConfigMongocfg()) {
-          result = result && getConfigMongocfg()
-              .equals(other.getConfigMongocfg());
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
         }
-        result = result && (hasResources() == other.hasResources());
+        if (hasResources() != other.hasResources()) return false;
         if (hasResources()) {
-          result = result && getResources()
-              .equals(other.getResources());
+          if (!getResources()
+              .equals(other.getResources())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -43907,35 +45288,35 @@ public final class ClusterOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -43987,17 +45368,19 @@ public final class ClusterOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise configMongos_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise configMongos_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterpriseOrBuilder> configMongosBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
          */
         public boolean hasConfigMongos() {
           return configMongosBuilder_ != null || configMongos_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet5_0_enterprise config_mongos = 1;</code>
+         * @return The configMongos.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongosConfigSet5_0_enterprise getConfigMongos() {
           if (configMongosBuilder_ == null) {
@@ -44104,17 +45487,19 @@ public final class ClusterOuterClass {
           return configMongosBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise configMongocfg_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise configMongocfg_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterpriseOrBuilder> configMongocfgBuilder_;
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
          */
         public boolean hasConfigMongocfg() {
           return configMongocfgBuilder_ != null || configMongocfg_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet5_0_enterprise config_mongocfg = 2;</code>
+         * @return The configMongocfg.
          */
         public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongoCfgConfigSet5_0_enterprise getConfigMongocfg() {
           if (configMongocfgBuilder_ == null) {
@@ -44221,7 +45606,7 @@ public final class ClusterOuterClass {
           return configMongocfgBuilder_;
         }
 
-        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
@@ -44230,6 +45615,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
          */
         public boolean hasResources() {
           return resourcesBuilder_ != null || resources_ != null;
@@ -44240,6 +45626,7 @@ public final class ClusterOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
          */
         public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
           if (resourcesBuilder_ == null) {
@@ -44376,7 +45763,7 @@ public final class ClusterOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -44434,7 +45821,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
      */
+    @java.lang.Override
     public boolean hasMongod() {
       return mongod_ != null;
     }
@@ -44444,7 +45833,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
+     * @return The mongod.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod getMongod() {
       return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod.getDefaultInstance() : mongod_;
     }
@@ -44455,6 +45846,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongodOrBuilder getMongodOrBuilder() {
       return getMongod();
     }
@@ -44467,7 +45859,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
      */
+    @java.lang.Override
     public boolean hasMongocfg() {
       return mongocfg_ != null;
     }
@@ -44477,7 +45871,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg getMongocfg() {
       return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg.getDefaultInstance() : mongocfg_;
     }
@@ -44488,6 +45884,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfgOrBuilder getMongocfgOrBuilder() {
       return getMongocfg();
     }
@@ -44500,7 +45897,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
      */
+    @java.lang.Override
     public boolean hasMongos() {
       return mongos_ != null;
     }
@@ -44510,7 +45909,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
+     * @return The mongos.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos getMongos() {
       return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos.getDefaultInstance() : mongos_;
     }
@@ -44521,6 +45922,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongosOrBuilder getMongosOrBuilder() {
       return getMongos();
     }
@@ -44533,7 +45935,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
      */
+    @java.lang.Override
     public boolean hasMongoinfra() {
       return mongoinfra_ != null;
     }
@@ -44543,7 +45947,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra getMongoinfra() {
       return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra.getDefaultInstance() : mongoinfra_;
     }
@@ -44554,6 +45960,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfraOrBuilder getMongoinfraOrBuilder() {
       return getMongoinfra();
     }
@@ -44624,29 +46031,28 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise) obj;
 
-      boolean result = true;
-      result = result && (hasMongod() == other.hasMongod());
+      if (hasMongod() != other.hasMongod()) return false;
       if (hasMongod()) {
-        result = result && getMongod()
-            .equals(other.getMongod());
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
       }
-      result = result && (hasMongocfg() == other.hasMongocfg());
+      if (hasMongocfg() != other.hasMongocfg()) return false;
       if (hasMongocfg()) {
-        result = result && getMongocfg()
-            .equals(other.getMongocfg());
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
       }
-      result = result && (hasMongos() == other.hasMongos());
+      if (hasMongos() != other.hasMongos()) return false;
       if (hasMongos()) {
-        result = result && getMongos()
-            .equals(other.getMongos());
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
       }
-      result = result && (hasMongoinfra() == other.hasMongoinfra());
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
       if (hasMongoinfra()) {
-        result = result && getMongoinfra()
-            .equals(other.getMongoinfra());
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -44881,35 +46287,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -44964,7 +46370,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod mongod_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod mongod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongodOrBuilder> mongodBuilder_;
       /**
@@ -44973,6 +46379,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
        */
       public boolean hasMongod() {
         return mongodBuilder_ != null || mongod_ != null;
@@ -44983,6 +46390,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod mongod = 1;</code>
+       * @return The mongod.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongod getMongod() {
         if (mongodBuilder_ == null) {
@@ -45117,7 +46525,7 @@ public final class ClusterOuterClass {
         return mongodBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg mongocfg_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg mongocfg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfgOrBuilder> mongocfgBuilder_;
       /**
@@ -45126,6 +46534,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
        */
       public boolean hasMongocfg() {
         return mongocfgBuilder_ != null || mongocfg_ != null;
@@ -45136,6 +46545,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoCfg getMongocfg() {
         if (mongocfgBuilder_ == null) {
@@ -45270,7 +46680,7 @@ public final class ClusterOuterClass {
         return mongocfgBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos mongos_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos mongos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongosOrBuilder> mongosBuilder_;
       /**
@@ -45279,6 +46689,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
        */
       public boolean hasMongos() {
         return mongosBuilder_ != null || mongos_ != null;
@@ -45289,6 +46700,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos mongos = 3;</code>
+       * @return The mongos.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.Mongos getMongos() {
         if (mongosBuilder_ == null) {
@@ -45423,7 +46835,7 @@ public final class ClusterOuterClass {
         return mongosBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra mongoinfra_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra mongoinfra_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfraOrBuilder> mongoinfraBuilder_;
       /**
@@ -45432,6 +46844,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
        */
       public boolean hasMongoinfra() {
         return mongoinfraBuilder_ != null || mongoinfra_ != null;
@@ -45442,6 +46855,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.MongoInfra getMongoinfra() {
         if (mongoinfraBuilder_ == null) {
@@ -45578,7 +46992,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -45638,6 +47052,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -45646,6 +47061,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -45656,6 +47072,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -45664,6 +47081,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -45671,7 +47089,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Shard}
    */
-  public  static final class Shard extends
+  public static final class Shard extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Shard)
       ShardOrBuilder {
@@ -45683,6 +47101,13 @@ public final class ClusterOuterClass {
     private Shard() {
       name_ = "";
       clusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Shard();
     }
 
     @java.lang.Override
@@ -45698,7 +47123,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -45722,7 +47146,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -45761,7 +47185,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -45780,7 +47206,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -45803,7 +47231,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -45822,7 +47252,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -45851,10 +47283,10 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
       unknownFields.writeTo(output);
@@ -45866,10 +47298,10 @@ public final class ClusterOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
       size += unknownFields.getSerializedSize();
@@ -45887,13 +47319,12 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Shard other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Shard) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -46078,35 +47509,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -46164,6 +47595,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -46183,6 +47615,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -46203,6 +47636,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -46220,6 +47655,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -46233,6 +47669,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -46253,6 +47691,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -46272,6 +47711,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -46292,6 +47732,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -46309,6 +47751,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -46322,6 +47765,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -46337,7 +47782,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -46399,6 +47844,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -46409,6 +47855,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -46419,6 +47866,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -46427,6 +47875,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -46437,6 +47886,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -46445,6 +47895,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -46455,6 +47906,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -46463,6 +47915,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
+     * @return The resources.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
     /**
@@ -46480,6 +47933,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+     * @return The enum numeric value on the wire for role.
      */
     int getRoleValue();
     /**
@@ -46488,6 +47942,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+     * @return The role.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role getRole();
 
@@ -46497,6 +47952,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -46505,6 +47961,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health getHealth();
 
@@ -46558,6 +48015,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -46566,6 +48024,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -46576,6 +48035,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool assign_public_ip = 9;</code>
+     * @return The assignPublicIp.
      */
     boolean getAssignPublicIp();
 
@@ -46585,6 +48045,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string shard_name = 10;</code>
+     * @return The shardName.
      */
     java.lang.String getShardName();
     /**
@@ -46593,6 +48054,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string shard_name = 10;</code>
+     * @return The bytes for shardName.
      */
     com.google.protobuf.ByteString
         getShardNameBytes();
@@ -46603,6 +48065,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -46611,13 +48074,14 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Host}
    */
-  public  static final class Host extends
+  public static final class Host extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Host)
       HostOrBuilder {
@@ -46634,9 +48098,15 @@ public final class ClusterOuterClass {
       health_ = 0;
       services_ = java.util.Collections.emptyList();
       subnetId_ = "";
-      assignPublicIp_ = false;
       shardName_ = "";
       type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Host();
     }
 
     @java.lang.Override
@@ -46707,9 +48177,9 @@ public final class ClusterOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 services_ = new java.util.ArrayList<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               services_.add(
                   input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.parser(), extensionRegistry));
@@ -46739,7 +48209,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -46753,7 +48223,7 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           services_ = java.util.Collections.unmodifiableList(services_);
         }
         this.unknownFields = unknownFields.build();
@@ -46864,6 +48334,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -46871,6 +48343,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -46896,6 +48372,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -46997,6 +48477,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -47004,6 +48486,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Role forNumber(int value) {
         switch (value) {
           case 0: return ROLE_UNKNOWN;
@@ -47027,6 +48513,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -47144,6 +48634,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -47151,6 +48643,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -47175,6 +48671,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -47209,7 +48709,6 @@ public final class ClusterOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mongodb.v1.Host.Health)
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -47220,7 +48719,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -47241,7 +48742,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -47264,7 +48767,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -47283,7 +48788,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -47306,7 +48813,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -47325,7 +48834,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string zone_id = 3;</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -47348,7 +48859,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -47358,7 +48871,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
     }
@@ -47369,6 +48884,7 @@ public final class ClusterOuterClass {
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -47381,8 +48897,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+     * @return The enum numeric value on the wire for role.
      */
-    public int getRoleValue() {
+    @java.lang.Override public int getRoleValue() {
       return role_;
     }
     /**
@@ -47391,8 +48908,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+     * @return The role.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role getRole() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role getRole() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role.valueOf(role_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role.UNRECOGNIZED : result;
@@ -47406,8 +48924,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -47416,8 +48935,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health.UNRECOGNIZED : result;
@@ -47432,6 +48952,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service> getServicesList() {
       return services_;
     }
@@ -47442,6 +48963,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ServiceOrBuilder> 
         getServicesOrBuilderList() {
       return services_;
@@ -47453,6 +48975,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public int getServicesCount() {
       return services_.size();
     }
@@ -47463,6 +48986,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service getServices(int index) {
       return services_.get(index);
     }
@@ -47473,6 +48997,7 @@ public final class ClusterOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Service services = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ServiceOrBuilder getServicesOrBuilder(
         int index) {
       return services_.get(index);
@@ -47486,7 +49011,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -47505,7 +49032,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 8;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -47528,7 +49057,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool assign_public_ip = 9;</code>
+     * @return The assignPublicIp.
      */
+    @java.lang.Override
     public boolean getAssignPublicIp() {
       return assignPublicIp_;
     }
@@ -47541,7 +49072,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string shard_name = 10;</code>
+     * @return The shardName.
      */
+    @java.lang.Override
     public java.lang.String getShardName() {
       java.lang.Object ref = shardName_;
       if (ref instanceof java.lang.String) {
@@ -47560,7 +49093,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string shard_name = 10;</code>
+     * @return The bytes for shardName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getShardNameBytes() {
       java.lang.Object ref = shardName_;
@@ -47583,8 +49118,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -47593,8 +49129,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.UNRECOGNIZED : result;
@@ -47614,13 +49151,13 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, zoneId_);
       }
       if (resources_ != null) {
@@ -47635,13 +49172,13 @@ public final class ClusterOuterClass {
       for (int i = 0; i < services_.size(); i++) {
         output.writeMessage(7, services_.get(i));
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, subnetId_);
       }
       if (assignPublicIp_ != false) {
         output.writeBool(9, assignPublicIp_);
       }
-      if (!getShardNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shardName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, shardName_);
       }
       if (type_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
@@ -47656,13 +49193,13 @@ public final class ClusterOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, zoneId_);
       }
       if (resources_ != null) {
@@ -47681,14 +49218,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, services_.get(i));
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, subnetId_);
       }
       if (assignPublicIp_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, assignPublicIp_);
       }
-      if (!getShardNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shardName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, shardName_);
       }
       if (type_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
@@ -47710,31 +49247,30 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && (hasResources() == other.hasResources());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && role_ == other.role_;
-      result = result && health_ == other.health_;
-      result = result && getServicesList()
-          .equals(other.getServicesList());
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && (getAssignPublicIp()
-          == other.getAssignPublicIp());
-      result = result && getShardName()
-          .equals(other.getShardName());
-      result = result && type_ == other.type_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (role_ != other.role_) return false;
+      if (health_ != other.health_) return false;
+      if (!getServicesList()
+          .equals(other.getServicesList())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (getAssignPublicIp()
+          != other.getAssignPublicIp()) return false;
+      if (!getShardName()
+          .equals(other.getShardName())) return false;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -47923,7 +49459,7 @@ public final class ClusterOuterClass {
 
         if (servicesBuilder_ == null) {
           services_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           servicesBuilder_.clear();
         }
@@ -47962,7 +49498,6 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host buildPartial() {
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.clusterId_ = clusterId_;
         result.zoneId_ = zoneId_;
@@ -47974,9 +49509,9 @@ public final class ClusterOuterClass {
         result.role_ = role_;
         result.health_ = health_;
         if (servicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             services_ = java.util.Collections.unmodifiableList(services_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.services_ = services_;
         } else {
@@ -47986,42 +49521,41 @@ public final class ClusterOuterClass {
         result.assignPublicIp_ = assignPublicIp_;
         result.shardName_ = shardName_;
         result.type_ = type_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -48060,7 +49594,7 @@ public final class ClusterOuterClass {
           if (!other.services_.isEmpty()) {
             if (services_.isEmpty()) {
               services_ = other.services_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureServicesIsMutable();
               services_.addAll(other.services_);
@@ -48073,7 +49607,7 @@ public final class ClusterOuterClass {
               servicesBuilder_.dispose();
               servicesBuilder_ = null;
               services_ = other.services_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
               servicesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getServicesFieldBuilder() : null;
@@ -48135,6 +49669,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -48156,6 +49691,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -48178,6 +49714,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -48197,6 +49735,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -48212,6 +49751,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -48232,6 +49773,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -48251,6 +49793,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -48271,6 +49814,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -48288,6 +49833,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -48301,6 +49847,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -48321,6 +49869,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -48340,6 +49889,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -48360,6 +49910,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -48377,6 +49929,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -48390,6 +49943,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string zone_id = 3;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -48403,7 +49958,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_ = null;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -48412,6 +49967,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -48422,6 +49978,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 4;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -48563,8 +50120,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+       * @return The enum numeric value on the wire for role.
        */
-      public int getRoleValue() {
+      @java.lang.Override public int getRoleValue() {
         return role_;
       }
       /**
@@ -48573,8 +50131,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+       * @param value The enum numeric value on the wire for role to set.
+       * @return This builder for chaining.
        */
       public Builder setRoleValue(int value) {
+        
         role_ = value;
         onChanged();
         return this;
@@ -48585,7 +50146,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+       * @return The role.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role getRole() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role.valueOf(role_);
@@ -48597,6 +50160,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
        */
       public Builder setRole(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Role value) {
         if (value == null) {
@@ -48613,6 +50178,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Role role = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRole() {
         
@@ -48628,8 +50194,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -48638,8 +50205,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -48650,7 +50220,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health.valueOf(health_);
@@ -48662,6 +50234,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Health value) {
         if (value == null) {
@@ -48678,6 +50252,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Health health = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -48689,9 +50264,9 @@ public final class ClusterOuterClass {
       private java.util.List<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service> services_ =
         java.util.Collections.emptyList();
       private void ensureServicesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           services_ = new java.util.ArrayList<yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service>(services_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -48885,7 +50460,7 @@ public final class ClusterOuterClass {
       public Builder clearServices() {
         if (servicesBuilder_ == null) {
           services_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           servicesBuilder_.clear();
@@ -48990,7 +50565,7 @@ public final class ClusterOuterClass {
           servicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ServiceOrBuilder>(
                   services_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           services_ = null;
@@ -49005,6 +50580,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -49024,6 +50600,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -49044,6 +50621,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -49061,6 +50640,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -49074,6 +50654,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 8;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -49094,7 +50676,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
+       * @return The assignPublicIp.
        */
+      @java.lang.Override
       public boolean getAssignPublicIp() {
         return assignPublicIp_;
       }
@@ -49104,6 +50688,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
+       * @param value The assignPublicIp to set.
+       * @return This builder for chaining.
        */
       public Builder setAssignPublicIp(boolean value) {
         
@@ -49117,6 +50703,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAssignPublicIp() {
         
@@ -49132,6 +50719,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string shard_name = 10;</code>
+       * @return The shardName.
        */
       public java.lang.String getShardName() {
         java.lang.Object ref = shardName_;
@@ -49151,6 +50739,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string shard_name = 10;</code>
+       * @return The bytes for shardName.
        */
       public com.google.protobuf.ByteString
           getShardNameBytes() {
@@ -49171,6 +50760,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string shard_name = 10;</code>
+       * @param value The shardName to set.
+       * @return This builder for chaining.
        */
       public Builder setShardName(
           java.lang.String value) {
@@ -49188,6 +50779,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string shard_name = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearShardName() {
         
@@ -49201,6 +50793,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string shard_name = 10;</code>
+       * @param value The bytes for shardName to set.
+       * @return This builder for chaining.
        */
       public Builder setShardNameBytes(
           com.google.protobuf.ByteString value) {
@@ -49221,8 +50815,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -49231,8 +50826,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -49243,7 +50841,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.valueOf(type_);
@@ -49255,6 +50855,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type value) {
         if (value == null) {
@@ -49271,6 +50873,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Host.Type type = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -49281,7 +50884,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -49341,6 +50944,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -49349,6 +50953,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type getType();
 
@@ -49358,6 +50963,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+     * @return The enum numeric value on the wire for health.
      */
     int getHealthValue();
     /**
@@ -49366,13 +50972,14 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+     * @return The health.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health getHealth();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Service}
    */
-  public  static final class Service extends
+  public static final class Service extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Service)
       ServiceOrBuilder {
@@ -49384,6 +50991,13 @@ public final class ClusterOuterClass {
     private Service() {
       type_ = 0;
       health_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Service();
     }
 
     @java.lang.Override
@@ -49399,7 +51013,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -49423,7 +51036,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -49529,6 +51142,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -49536,6 +51151,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -49560,6 +51179,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -49661,6 +51284,8 @@ public final class ClusterOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -49668,6 +51293,10 @@ public final class ClusterOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Health forNumber(int value) {
         switch (value) {
           case 0: return HEALTH_UNKNOWN;
@@ -49691,6 +51320,10 @@ public final class ClusterOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -49733,8 +51366,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -49743,8 +51377,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type.UNRECOGNIZED : result;
@@ -49758,8 +51393,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+     * @return The enum numeric value on the wire for health.
      */
-    public int getHealthValue() {
+    @java.lang.Override public int getHealthValue() {
       return health_;
     }
     /**
@@ -49768,8 +51404,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+     * @return The health.
      */
-    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health getHealth() {
+    @java.lang.Override public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health getHealth() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health.valueOf(health_);
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health.UNRECOGNIZED : result;
@@ -49827,11 +51464,10 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && health_ == other.health_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (health_ != other.health_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -50016,35 +51652,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -50100,8 +51736,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -50110,8 +51747,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -50122,7 +51762,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type.valueOf(type_);
@@ -50134,6 +51776,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Type value) {
         if (value == null) {
@@ -50150,6 +51794,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Type type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -50165,8 +51810,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+       * @return The enum numeric value on the wire for health.
        */
-      public int getHealthValue() {
+      @java.lang.Override public int getHealthValue() {
         return health_;
       }
       /**
@@ -50175,8 +51821,11 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+       * @param value The enum numeric value on the wire for health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealthValue(int value) {
+        
         health_ = value;
         onChanged();
         return this;
@@ -50187,7 +51836,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+       * @return The health.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health getHealth() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health result = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health.valueOf(health_);
@@ -50199,6 +51850,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+       * @param value The health to set.
+       * @return This builder for chaining.
        */
       public Builder setHealth(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Service.Health value) {
         if (value == null) {
@@ -50215,6 +51868,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Service.Health health = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHealth() {
         
@@ -50225,7 +51879,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -50286,6 +51940,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
@@ -50295,6 +51950,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
     com.google.protobuf.ByteString
         getResourcePresetIdBytes();
@@ -50305,6 +51961,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
+     * @return The diskSize.
      */
     long getDiskSize();
 
@@ -50318,6 +51975,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The diskTypeId.
      */
     java.lang.String getDiskTypeId();
     /**
@@ -50330,6 +51988,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The bytes for diskTypeId.
      */
     com.google.protobuf.ByteString
         getDiskTypeIdBytes();
@@ -50337,7 +51996,7 @@ public final class ClusterOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Resources}
    */
-  public  static final class Resources extends
+  public static final class Resources extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Resources)
       ResourcesOrBuilder {
@@ -50348,8 +52007,14 @@ public final class ClusterOuterClass {
     }
     private Resources() {
       resourcePresetId_ = "";
-      diskSize_ = 0L;
       diskTypeId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Resources();
     }
 
     @java.lang.Override
@@ -50365,7 +52030,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -50394,7 +52058,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -50434,7 +52098,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
+    @java.lang.Override
     public java.lang.String getResourcePresetId() {
       java.lang.Object ref = resourcePresetId_;
       if (ref instanceof java.lang.String) {
@@ -50454,7 +52120,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourcePresetIdBytes() {
       java.lang.Object ref = resourcePresetId_;
@@ -50477,7 +52145,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
+     * @return The diskSize.
      */
+    @java.lang.Override
     public long getDiskSize() {
       return diskSize_;
     }
@@ -50494,7 +52164,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The diskTypeId.
      */
+    @java.lang.Override
     public java.lang.String getDiskTypeId() {
       java.lang.Object ref = diskTypeId_;
       if (ref instanceof java.lang.String) {
@@ -50517,7 +52189,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The bytes for diskTypeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskTypeIdBytes() {
       java.lang.Object ref = diskTypeId_;
@@ -50546,13 +52220,13 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
       }
       if (diskSize_ != 0L) {
         output.writeInt64(2, diskSize_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, diskTypeId_);
       }
       unknownFields.writeTo(output);
@@ -50564,14 +52238,14 @@ public final class ClusterOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
       }
       if (diskSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, diskSize_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, diskTypeId_);
       }
       size += unknownFields.getSerializedSize();
@@ -50589,15 +52263,14 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources) obj;
 
-      boolean result = true;
-      result = result && getResourcePresetId()
-          .equals(other.getResourcePresetId());
-      result = result && (getDiskSize()
-          == other.getDiskSize());
-      result = result && getDiskTypeId()
-          .equals(other.getDiskTypeId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcePresetId()
+          .equals(other.getResourcePresetId())) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (!getDiskTypeId()
+          .equals(other.getDiskTypeId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -50788,35 +52461,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -50878,6 +52551,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The resourcePresetId.
        */
       public java.lang.String getResourcePresetId() {
         java.lang.Object ref = resourcePresetId_;
@@ -50898,6 +52572,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The bytes for resourcePresetId.
        */
       public com.google.protobuf.ByteString
           getResourcePresetIdBytes() {
@@ -50919,6 +52594,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetId(
           java.lang.String value) {
@@ -50937,6 +52614,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourcePresetId() {
         
@@ -50951,6 +52629,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The bytes for resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -50971,7 +52651,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @return The diskSize.
        */
+      @java.lang.Override
       public long getDiskSize() {
         return diskSize_;
       }
@@ -50981,6 +52663,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskSize(long value) {
         
@@ -50994,6 +52678,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskSize() {
         
@@ -51013,6 +52698,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return The diskTypeId.
        */
       public java.lang.String getDiskTypeId() {
         java.lang.Object ref = diskTypeId_;
@@ -51036,6 +52722,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return The bytes for diskTypeId.
        */
       public com.google.protobuf.ByteString
           getDiskTypeIdBytes() {
@@ -51060,6 +52747,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @param value The diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeId(
           java.lang.String value) {
@@ -51081,6 +52770,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskTypeId() {
         
@@ -51098,6 +52788,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @param value The bytes for diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -51113,7 +52805,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -51173,6 +52865,7 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
+     * @return The dataLens.
      */
     boolean getDataLens();
 
@@ -51182,13 +52875,14 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool data_transfer = 3;</code>
+     * @return The dataTransfer.
      */
     boolean getDataTransfer();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Access}
    */
-  public  static final class Access extends
+  public static final class Access extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Access)
       AccessOrBuilder {
@@ -51198,8 +52892,13 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Access() {
-      dataLens_ = false;
-      dataTransfer_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Access();
     }
 
     @java.lang.Override
@@ -51215,7 +52914,6 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -51237,7 +52935,7 @@ public final class ClusterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -51276,7 +52974,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
+     * @return The dataLens.
      */
+    @java.lang.Override
     public boolean getDataLens() {
       return dataLens_;
     }
@@ -51289,7 +52989,9 @@ public final class ClusterOuterClass {
      * </pre>
      *
      * <code>bool data_transfer = 3;</code>
+     * @return The dataTransfer.
      */
+    @java.lang.Override
     public boolean getDataTransfer() {
       return dataTransfer_;
     }
@@ -51346,13 +53048,12 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access) obj;
 
-      boolean result = true;
-      result = result && (getDataLens()
-          == other.getDataLens());
-      result = result && (getDataTransfer()
-          == other.getDataTransfer());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDataLens()
+          != other.getDataLens()) return false;
+      if (getDataTransfer()
+          != other.getDataTransfer()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -51539,35 +53240,35 @@ public final class ClusterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -51623,7 +53324,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
+       * @return The dataLens.
        */
+      @java.lang.Override
       public boolean getDataLens() {
         return dataLens_;
       }
@@ -51633,6 +53336,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
+       * @param value The dataLens to set.
+       * @return This builder for chaining.
        */
       public Builder setDataLens(boolean value) {
         
@@ -51646,6 +53351,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataLens() {
         
@@ -51661,7 +53367,9 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool data_transfer = 3;</code>
+       * @return The dataTransfer.
        */
+      @java.lang.Override
       public boolean getDataTransfer() {
         return dataTransfer_;
       }
@@ -51671,6 +53379,8 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool data_transfer = 3;</code>
+       * @param value The dataTransfer to set.
+       * @return This builder for chaining.
        */
       public Builder setDataTransfer(boolean value) {
         
@@ -51684,6 +53394,7 @@ public final class ClusterOuterClass {
        * </pre>
        *
        * <code>bool data_transfer = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataTransfer() {
         
@@ -51694,7 +53405,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -52240,15 +53951,7 @@ public final class ClusterOuterClass {
       "oto/yandex/cloud/mdb/mongodb/v1;mongodbb" +
       "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -52262,7 +53965,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.Maintenance.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_fieldAccessorTable = new

@@ -25,6 +25,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return Whether the innodbBufferPoolSize field is set.
      */
     boolean hasInnodbBufferPoolSize();
     /**
@@ -34,6 +35,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return The innodbBufferPoolSize.
      */
     com.google.protobuf.Int64Value getInnodbBufferPoolSize();
     /**
@@ -53,6 +55,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
     /**
@@ -62,6 +65,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
@@ -81,6 +85,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return Whether the longQueryTime field is set.
      */
     boolean hasLongQueryTime();
     /**
@@ -90,6 +95,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return The longQueryTime.
      */
     com.google.protobuf.DoubleValue getLongQueryTime();
     /**
@@ -109,7 +115,7 @@ public final class Mysql57 {
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7}
    */
-  public  static final class MysqlConfig5_7 extends
+  public static final class MysqlConfig5_7 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7)
       MysqlConfig5_7OrBuilder {
@@ -119,6 +125,13 @@ public final class Mysql57 {
       super(builder);
     }
     private MysqlConfig5_7() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConfig5_7();
     }
 
     @java.lang.Override
@@ -134,7 +147,6 @@ public final class Mysql57 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -185,7 +197,7 @@ public final class Mysql57 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -225,7 +237,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return Whether the innodbBufferPoolSize field is set.
      */
+    @java.lang.Override
     public boolean hasInnodbBufferPoolSize() {
       return innodbBufferPoolSize_ != null;
     }
@@ -236,7 +250,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+     * @return The innodbBufferPoolSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getInnodbBufferPoolSize() {
       return innodbBufferPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbBufferPoolSize_;
     }
@@ -248,6 +264,7 @@ public final class Mysql57 {
      *
      * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getInnodbBufferPoolSizeOrBuilder() {
       return getInnodbBufferPoolSize();
     }
@@ -261,7 +278,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return Whether the maxConnections field is set.
      */
+    @java.lang.Override
     public boolean hasMaxConnections() {
       return maxConnections_ != null;
     }
@@ -272,7 +291,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * @return The maxConnections.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxConnections() {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
     }
@@ -284,6 +305,7 @@ public final class Mysql57 {
      *
      * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
       return getMaxConnections();
     }
@@ -297,7 +319,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return Whether the longQueryTime field is set.
      */
+    @java.lang.Override
     public boolean hasLongQueryTime() {
       return longQueryTime_ != null;
     }
@@ -308,7 +332,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+     * @return The longQueryTime.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getLongQueryTime() {
       return longQueryTime_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : longQueryTime_;
     }
@@ -320,6 +346,7 @@ public final class Mysql57 {
      *
      * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getLongQueryTimeOrBuilder() {
       return getLongQueryTime();
     }
@@ -383,24 +410,23 @@ public final class Mysql57 {
       }
       yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 other = (yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7) obj;
 
-      boolean result = true;
-      result = result && (hasInnodbBufferPoolSize() == other.hasInnodbBufferPoolSize());
+      if (hasInnodbBufferPoolSize() != other.hasInnodbBufferPoolSize()) return false;
       if (hasInnodbBufferPoolSize()) {
-        result = result && getInnodbBufferPoolSize()
-            .equals(other.getInnodbBufferPoolSize());
+        if (!getInnodbBufferPoolSize()
+            .equals(other.getInnodbBufferPoolSize())) return false;
       }
-      result = result && (hasMaxConnections() == other.hasMaxConnections());
+      if (hasMaxConnections() != other.hasMaxConnections()) return false;
       if (hasMaxConnections()) {
-        result = result && getMaxConnections()
-            .equals(other.getMaxConnections());
+        if (!getMaxConnections()
+            .equals(other.getMaxConnections())) return false;
       }
-      result = result && (hasLongQueryTime() == other.hasLongQueryTime());
+      if (hasLongQueryTime() != other.hasLongQueryTime()) return false;
       if (hasLongQueryTime()) {
-        result = result && getLongQueryTime()
-            .equals(other.getLongQueryTime());
+        if (!getLongQueryTime()
+            .equals(other.getLongQueryTime())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -624,35 +650,35 @@ public final class Mysql57 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -704,7 +730,7 @@ public final class Mysql57 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value innodbBufferPoolSize_ = null;
+      private com.google.protobuf.Int64Value innodbBufferPoolSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbBufferPoolSizeBuilder_;
       /**
@@ -714,6 +740,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+       * @return Whether the innodbBufferPoolSize field is set.
        */
       public boolean hasInnodbBufferPoolSize() {
         return innodbBufferPoolSizeBuilder_ != null || innodbBufferPoolSize_ != null;
@@ -725,6 +752,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_buffer_pool_size = 1 [(.yandex.cloud.value) = "&gt;=5242880"];</code>
+       * @return The innodbBufferPoolSize.
        */
       public com.google.protobuf.Int64Value getInnodbBufferPoolSize() {
         if (innodbBufferPoolSizeBuilder_ == null) {
@@ -866,7 +894,7 @@ public final class Mysql57 {
         return innodbBufferPoolSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.Int64Value maxConnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
@@ -876,6 +904,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
@@ -887,6 +916,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -1028,7 +1058,7 @@ public final class Mysql57 {
         return maxConnectionsBuilder_;
       }
 
-      private com.google.protobuf.DoubleValue longQueryTime_ = null;
+      private com.google.protobuf.DoubleValue longQueryTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> longQueryTimeBuilder_;
       /**
@@ -1038,6 +1068,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+       * @return Whether the longQueryTime field is set.
        */
       public boolean hasLongQueryTime() {
         return longQueryTimeBuilder_ != null || longQueryTime_ != null;
@@ -1049,6 +1080,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue long_query_time = 3;</code>
+       * @return The longQueryTime.
        */
       public com.google.protobuf.DoubleValue getLongQueryTime() {
         if (longQueryTimeBuilder_ == null) {
@@ -1192,7 +1224,7 @@ public final class Mysql57 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1253,6 +1285,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -1262,6 +1295,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getEffectiveConfig();
     /**
@@ -1280,6 +1314,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -1288,6 +1323,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getUserConfig();
     /**
@@ -1305,6 +1341,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -1313,6 +1350,7 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getDefaultConfig();
     /**
@@ -1327,7 +1365,7 @@ public final class Mysql57 {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfigSet5_7}
    */
-  public  static final class MysqlConfigSet5_7 extends
+  public static final class MysqlConfigSet5_7 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfigSet5_7)
       MysqlConfigSet5_7OrBuilder {
@@ -1337,6 +1375,13 @@ public final class Mysql57 {
       super(builder);
     }
     private MysqlConfigSet5_7() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConfigSet5_7();
     }
 
     @java.lang.Override
@@ -1352,7 +1397,6 @@ public final class Mysql57 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1403,7 +1447,7 @@ public final class Mysql57 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1443,7 +1487,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -1454,7 +1500,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.getDefaultInstance() : effectiveConfig_;
     }
@@ -1466,6 +1514,7 @@ public final class Mysql57 {
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -1478,7 +1527,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -1488,7 +1539,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.getDefaultInstance() : userConfig_;
     }
@@ -1499,6 +1552,7 @@ public final class Mysql57 {
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -1511,7 +1565,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -1521,7 +1577,9 @@ public final class Mysql57 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.getDefaultInstance() : defaultConfig_;
     }
@@ -1532,6 +1590,7 @@ public final class Mysql57 {
      *
      * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -1595,24 +1654,23 @@ public final class Mysql57 {
       }
       yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfigSet5_7 other = (yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfigSet5_7) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1832,35 +1890,35 @@ public final class Mysql57 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1912,7 +1970,7 @@ public final class Mysql57 {
         return this;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.Builder, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder> effectiveConfigBuilder_;
       /**
@@ -1922,6 +1980,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -1933,6 +1992,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -2074,7 +2134,7 @@ public final class Mysql57 {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 userConfig_ = null;
+      private yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.Builder, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder> userConfigBuilder_;
       /**
@@ -2083,6 +2143,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -2093,6 +2154,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -2227,7 +2289,7 @@ public final class Mysql57 {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 defaultConfig_ = null;
+      private yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.Builder, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder> defaultConfigBuilder_;
       /**
@@ -2236,6 +2298,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -2246,6 +2309,7 @@ public final class Mysql57 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -2382,7 +2446,7 @@ public final class Mysql57 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2472,20 +2536,12 @@ public final class Mysql57 {
       "ex/cloud/mdb/mysql/v1alpha/config;mysqlb" +
       "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_mysql_v1alpha_config_MysqlConfig5_7_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1alpha_config_MysqlConfig5_7_fieldAccessorTable = new

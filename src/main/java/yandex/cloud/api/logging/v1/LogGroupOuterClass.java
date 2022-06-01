@@ -24,6 +24,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -60,6 +64,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 3;</code>
+     * @return The cloudId.
      */
     java.lang.String getCloudId();
     /**
@@ -68,6 +73,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 3;</code>
+     * @return The bytes for cloudId.
      */
     com.google.protobuf.ByteString
         getCloudIdBytes();
@@ -78,6 +84,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -86,6 +93,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -103,6 +111,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string name = 5;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -111,6 +120,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string name = 5;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -121,6 +131,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string description = 6;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -129,6 +140,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string description = 6;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -193,6 +205,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -201,6 +214,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+     * @return The status.
      */
     yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus();
 
@@ -211,6 +225,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
+     * @return Whether the retentionPeriod field is set.
      */
     boolean hasRetentionPeriod();
     /**
@@ -220,6 +235,7 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
+     * @return The retentionPeriod.
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
@@ -234,10 +250,12 @@ public final class LogGroupOuterClass {
 
     /**
      * <code>string data_stream = 10;</code>
+     * @return The dataStream.
      */
     java.lang.String getDataStream();
     /**
      * <code>string data_stream = 10;</code>
+     * @return The bytes for dataStream.
      */
     com.google.protobuf.ByteString
         getDataStreamBytes();
@@ -245,7 +263,7 @@ public final class LogGroupOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogGroup}
    */
-  public  static final class LogGroup extends
+  public static final class LogGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogGroup)
       LogGroupOrBuilder {
@@ -262,6 +280,13 @@ public final class LogGroupOuterClass {
       description_ = "";
       status_ = 0;
       dataStream_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogGroup();
     }
 
     @java.lang.Override
@@ -332,10 +357,10 @@ public final class LogGroupOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -370,7 +395,7 @@ public final class LogGroupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -520,6 +545,8 @@ public final class LogGroupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -527,6 +554,10 @@ public final class LogGroupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -552,6 +583,10 @@ public final class LogGroupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -586,7 +621,6 @@ public final class LogGroupOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.logging.v1.LogGroup.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -595,7 +629,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -614,7 +650,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -637,7 +675,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -656,7 +696,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -679,7 +721,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 3;</code>
+     * @return The cloudId.
      */
+    @java.lang.Override
     public java.lang.String getCloudId() {
       java.lang.Object ref = cloudId_;
       if (ref instanceof java.lang.String) {
@@ -698,7 +742,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string cloud_id = 3;</code>
+     * @return The bytes for cloudId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCloudIdBytes() {
       java.lang.Object ref = cloudId_;
@@ -721,7 +767,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -731,7 +779,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -742,6 +792,7 @@ public final class LogGroupOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -754,7 +805,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string name = 5;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -773,7 +826,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string name = 5;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -796,7 +851,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string description = 6;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -815,7 +872,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>string description = 6;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -864,14 +923,16 @@ public final class LogGroupOuterClass {
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -883,6 +944,7 @@ public final class LogGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -894,11 +956,12 @@ public final class LogGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -910,10 +973,11 @@ public final class LogGroupOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -930,8 +994,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -940,8 +1005,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status result = yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status.UNRECOGNIZED : result;
@@ -956,7 +1022,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
+     * @return Whether the retentionPeriod field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
     }
@@ -967,7 +1035,9 @@ public final class LogGroupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
+     * @return The retentionPeriod.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
     }
@@ -979,6 +1049,7 @@ public final class LogGroupOuterClass {
      *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
       return getRetentionPeriod();
     }
@@ -987,7 +1058,9 @@ public final class LogGroupOuterClass {
     private volatile java.lang.Object dataStream_;
     /**
      * <code>string data_stream = 10;</code>
+     * @return The dataStream.
      */
+    @java.lang.Override
     public java.lang.String getDataStream() {
       java.lang.Object ref = dataStream_;
       if (ref instanceof java.lang.String) {
@@ -1002,7 +1075,9 @@ public final class LogGroupOuterClass {
     }
     /**
      * <code>string data_stream = 10;</code>
+     * @return The bytes for dataStream.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataStreamBytes() {
       java.lang.Object ref = dataStream_;
@@ -1031,22 +1106,22 @@ public final class LogGroupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
-      if (!getCloudIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cloudId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(4, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1061,7 +1136,7 @@ public final class LogGroupOuterClass {
       if (retentionPeriod_ != null) {
         output.writeMessage(9, getRetentionPeriod());
       }
-      if (!getDataStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStream_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, dataStream_);
       }
       unknownFields.writeTo(output);
@@ -1073,23 +1148,23 @@ public final class LogGroupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
-      if (!getCloudIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cloudId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1110,7 +1185,7 @@ public final class LogGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRetentionPeriod());
       }
-      if (!getDataStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStream_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, dataStream_);
       }
       size += unknownFields.getSerializedSize();
@@ -1128,34 +1203,33 @@ public final class LogGroupOuterClass {
       }
       yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup other = (yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getCloudId()
-          .equals(other.getCloudId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getCloudId()
+          .equals(other.getCloudId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && status_ == other.status_;
-      result = result && (hasRetentionPeriod() == other.hasRetentionPeriod());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (status_ != other.status_) return false;
+      if (hasRetentionPeriod() != other.hasRetentionPeriod()) return false;
       if (hasRetentionPeriod()) {
-        result = result && getRetentionPeriod()
-            .equals(other.getRetentionPeriod());
+        if (!getRetentionPeriod()
+            .equals(other.getRetentionPeriod())) return false;
       }
-      result = result && getDataStream()
-          .equals(other.getDataStream());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDataStream()
+          .equals(other.getDataStream())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1400,7 +1474,6 @@ public final class LogGroupOuterClass {
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup buildPartial() {
         yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup result = new yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.cloudId_ = cloudId_;
@@ -1420,42 +1493,41 @@ public final class LogGroupOuterClass {
           result.retentionPeriod_ = retentionPeriodBuilder_.build();
         }
         result.dataStream_ = dataStream_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1541,6 +1613,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1560,6 +1633,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1580,6 +1654,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1597,6 +1673,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1610,6 +1687,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1630,6 +1709,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1649,6 +1729,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1669,6 +1750,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1686,6 +1769,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1699,6 +1783,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1719,6 +1805,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 3;</code>
+       * @return The cloudId.
        */
       public java.lang.String getCloudId() {
         java.lang.Object ref = cloudId_;
@@ -1738,6 +1825,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 3;</code>
+       * @return The bytes for cloudId.
        */
       public com.google.protobuf.ByteString
           getCloudIdBytes() {
@@ -1758,6 +1846,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 3;</code>
+       * @param value The cloudId to set.
+       * @return This builder for chaining.
        */
       public Builder setCloudId(
           java.lang.String value) {
@@ -1775,6 +1865,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCloudId() {
         
@@ -1788,6 +1879,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string cloud_id = 3;</code>
+       * @param value The bytes for cloudId to set.
+       * @return This builder for chaining.
        */
       public Builder setCloudIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1801,7 +1894,7 @@ public final class LogGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1810,6 +1903,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1820,6 +1914,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1961,6 +2056,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string name = 5;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1980,6 +2076,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string name = 5;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2000,6 +2097,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string name = 5;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2017,6 +2116,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string name = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2030,6 +2130,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string name = 5;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2050,6 +2152,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string description = 6;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2069,6 +2172,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string description = 6;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2089,6 +2193,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string description = 6;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2106,6 +2212,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string description = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2119,6 +2226,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>string description = 6;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2166,14 +2275,16 @@ public final class LogGroupOuterClass {
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2185,6 +2296,7 @@ public final class LogGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2196,11 +2308,12 @@ public final class LogGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2212,10 +2325,11 @@ public final class LogGroupOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2239,7 +2353,7 @@ public final class LogGroupOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2262,8 +2376,11 @@ public final class LogGroupOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2290,8 +2407,9 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2300,8 +2418,11 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2312,7 +2433,9 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status result = yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status.valueOf(status_);
@@ -2324,6 +2447,8 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status value) {
         if (value == null) {
@@ -2340,6 +2465,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2348,7 +2474,7 @@ public final class LogGroupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration retentionPeriod_ = null;
+      private com.google.protobuf.Duration retentionPeriod_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
@@ -2358,6 +2484,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
+       * @return Whether the retentionPeriod field is set.
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
@@ -2369,6 +2496,7 @@ public final class LogGroupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
+       * @return The retentionPeriod.
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -2513,6 +2641,7 @@ public final class LogGroupOuterClass {
       private java.lang.Object dataStream_ = "";
       /**
        * <code>string data_stream = 10;</code>
+       * @return The dataStream.
        */
       public java.lang.String getDataStream() {
         java.lang.Object ref = dataStream_;
@@ -2528,6 +2657,7 @@ public final class LogGroupOuterClass {
       }
       /**
        * <code>string data_stream = 10;</code>
+       * @return The bytes for dataStream.
        */
       public com.google.protobuf.ByteString
           getDataStreamBytes() {
@@ -2544,6 +2674,8 @@ public final class LogGroupOuterClass {
       }
       /**
        * <code>string data_stream = 10;</code>
+       * @param value The dataStream to set.
+       * @return This builder for chaining.
        */
       public Builder setDataStream(
           java.lang.String value) {
@@ -2557,6 +2689,7 @@ public final class LogGroupOuterClass {
       }
       /**
        * <code>string data_stream = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataStream() {
         
@@ -2566,6 +2699,8 @@ public final class LogGroupOuterClass {
       }
       /**
        * <code>string data_stream = 10;</code>
+       * @param value The bytes for dataStream to set.
+       * @return This builder for chaining.
        */
       public Builder setDataStreamBytes(
           com.google.protobuf.ByteString value) {
@@ -2581,7 +2716,7 @@ public final class LogGroupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2669,20 +2804,12 @@ public final class LogGroupOuterClass {
       "ub.com/yandex-cloud/go-genproto/yandex/c" +
       "loud/logging/v1;loggingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_logging_v1_LogGroup_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_logging_v1_LogGroup_fieldAccessorTable = new

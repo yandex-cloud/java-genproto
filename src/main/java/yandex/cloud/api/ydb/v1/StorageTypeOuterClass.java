@@ -20,30 +20,36 @@ public final class StorageTypeOuterClass {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string device_type = 2;</code>
+     * @return The deviceType.
      */
     java.lang.String getDeviceType();
     /**
      * <code>string device_type = 2;</code>
+     * @return The bytes for deviceType.
      */
     com.google.protobuf.ByteString
         getDeviceTypeBytes();
 
     /**
      * <code>string redundancy_type = 3;</code>
+     * @return The redundancyType.
      */
     java.lang.String getRedundancyType();
     /**
      * <code>string redundancy_type = 3;</code>
+     * @return The bytes for redundancyType.
      */
     com.google.protobuf.ByteString
         getRedundancyTypeBytes();
@@ -51,7 +57,7 @@ public final class StorageTypeOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.StorageType}
    */
-  public  static final class StorageType extends
+  public static final class StorageType extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.StorageType)
       StorageTypeOrBuilder {
@@ -67,6 +73,13 @@ public final class StorageTypeOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StorageType();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -79,7 +92,6 @@ public final class StorageTypeOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -109,7 +121,7 @@ public final class StorageTypeOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -144,7 +156,9 @@ public final class StorageTypeOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -159,7 +173,9 @@ public final class StorageTypeOuterClass {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -178,7 +194,9 @@ public final class StorageTypeOuterClass {
     private volatile java.lang.Object deviceType_;
     /**
      * <code>string device_type = 2;</code>
+     * @return The deviceType.
      */
+    @java.lang.Override
     public java.lang.String getDeviceType() {
       java.lang.Object ref = deviceType_;
       if (ref instanceof java.lang.String) {
@@ -193,7 +211,9 @@ public final class StorageTypeOuterClass {
     }
     /**
      * <code>string device_type = 2;</code>
+     * @return The bytes for deviceType.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceTypeBytes() {
       java.lang.Object ref = deviceType_;
@@ -212,7 +232,9 @@ public final class StorageTypeOuterClass {
     private volatile java.lang.Object redundancyType_;
     /**
      * <code>string redundancy_type = 3;</code>
+     * @return The redundancyType.
      */
+    @java.lang.Override
     public java.lang.String getRedundancyType() {
       java.lang.Object ref = redundancyType_;
       if (ref instanceof java.lang.String) {
@@ -227,7 +249,9 @@ public final class StorageTypeOuterClass {
     }
     /**
      * <code>string redundancy_type = 3;</code>
+     * @return The bytes for redundancyType.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRedundancyTypeBytes() {
       java.lang.Object ref = redundancyType_;
@@ -256,13 +280,13 @@ public final class StorageTypeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getDeviceTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceType_);
       }
-      if (!getRedundancyTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redundancyType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, redundancyType_);
       }
       unknownFields.writeTo(output);
@@ -274,13 +298,13 @@ public final class StorageTypeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getDeviceTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceType_);
       }
-      if (!getRedundancyTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redundancyType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, redundancyType_);
       }
       size += unknownFields.getSerializedSize();
@@ -298,15 +322,14 @@ public final class StorageTypeOuterClass {
       }
       yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType other = (yandex.cloud.api.ydb.v1.StorageTypeOuterClass.StorageType) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getDeviceType()
-          .equals(other.getDeviceType());
-      result = result && getRedundancyType()
-          .equals(other.getRedundancyType());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDeviceType()
+          .equals(other.getDeviceType())) return false;
+      if (!getRedundancyType()
+          .equals(other.getRedundancyType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -496,35 +519,35 @@ public final class StorageTypeOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -582,6 +605,7 @@ public final class StorageTypeOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -597,6 +621,7 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -613,6 +638,8 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -626,6 +653,7 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -635,6 +663,8 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -651,6 +681,7 @@ public final class StorageTypeOuterClass {
       private java.lang.Object deviceType_ = "";
       /**
        * <code>string device_type = 2;</code>
+       * @return The deviceType.
        */
       public java.lang.String getDeviceType() {
         java.lang.Object ref = deviceType_;
@@ -666,6 +697,7 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string device_type = 2;</code>
+       * @return The bytes for deviceType.
        */
       public com.google.protobuf.ByteString
           getDeviceTypeBytes() {
@@ -682,6 +714,8 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string device_type = 2;</code>
+       * @param value The deviceType to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceType(
           java.lang.String value) {
@@ -695,6 +729,7 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string device_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceType() {
         
@@ -704,6 +739,8 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string device_type = 2;</code>
+       * @param value The bytes for deviceType to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -720,6 +757,7 @@ public final class StorageTypeOuterClass {
       private java.lang.Object redundancyType_ = "";
       /**
        * <code>string redundancy_type = 3;</code>
+       * @return The redundancyType.
        */
       public java.lang.String getRedundancyType() {
         java.lang.Object ref = redundancyType_;
@@ -735,6 +773,7 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string redundancy_type = 3;</code>
+       * @return The bytes for redundancyType.
        */
       public com.google.protobuf.ByteString
           getRedundancyTypeBytes() {
@@ -751,6 +790,8 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string redundancy_type = 3;</code>
+       * @param value The redundancyType to set.
+       * @return This builder for chaining.
        */
       public Builder setRedundancyType(
           java.lang.String value) {
@@ -764,6 +805,7 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string redundancy_type = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRedundancyType() {
         
@@ -773,6 +815,8 @@ public final class StorageTypeOuterClass {
       }
       /**
        * <code>string redundancy_type = 3;</code>
+       * @param value The bytes for redundancyType to set.
+       * @return This builder for chaining.
        */
       public Builder setRedundancyTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -788,7 +832,7 @@ public final class StorageTypeOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -859,18 +903,10 @@ public final class StorageTypeOuterClass {
       "1Z;github.com/yandex-cloud/go-genproto/y" +
       "andex/cloud/ydb/v1;ydbb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_ydb_v1_StorageType_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_StorageType_fieldAccessorTable = new

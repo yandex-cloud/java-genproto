@@ -1,19 +1,6 @@
 package yandex.cloud.api.mdb.elasticsearch.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/mdb/elasticsearch/v1/cluster_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ClusterServiceGrpc {
 
   private ClusterServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ClusterServiceGrpc {
     if ((getGetMethod = ClusterServiceGrpc.getGetMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getGetMethod = ClusterServiceGrpc.getGetMethod) == null) {
-          ClusterServiceGrpc.getGetMethod = getGetMethod = 
+          ClusterServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest,
@@ -76,22 +63,21 @@ public final class ClusterServiceGrpc {
     if ((getListMethod = ClusterServiceGrpc.getListMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListMethod = ClusterServiceGrpc.getListMethod) == null) {
-          ClusterServiceGrpc.getListMethod = getListMethod = 
+          ClusterServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest,
@@ -108,22 +94,21 @@ public final class ClusterServiceGrpc {
     if ((getCreateMethod = ClusterServiceGrpc.getCreateMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getCreateMethod = ClusterServiceGrpc.getCreateMethod) == null) {
-          ClusterServiceGrpc.getCreateMethod = getCreateMethod = 
+          ClusterServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest,
@@ -140,22 +125,21 @@ public final class ClusterServiceGrpc {
     if ((getUpdateMethod = ClusterServiceGrpc.getUpdateMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getUpdateMethod = ClusterServiceGrpc.getUpdateMethod) == null) {
-          ClusterServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          ClusterServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest,
@@ -172,22 +156,21 @@ public final class ClusterServiceGrpc {
     if ((getDeleteMethod = ClusterServiceGrpc.getDeleteMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getDeleteMethod = ClusterServiceGrpc.getDeleteMethod) == null) {
-          ClusterServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          ClusterServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest,
@@ -204,22 +187,21 @@ public final class ClusterServiceGrpc {
     if ((getMoveMethod = ClusterServiceGrpc.getMoveMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getMoveMethod = ClusterServiceGrpc.getMoveMethod) == null) {
-          ClusterServiceGrpc.getMoveMethod = getMoveMethod = 
+          ClusterServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest,
@@ -236,22 +218,21 @@ public final class ClusterServiceGrpc {
     if ((getStartMethod = ClusterServiceGrpc.getStartMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getStartMethod = ClusterServiceGrpc.getStartMethod) == null) {
-          ClusterServiceGrpc.getStartMethod = getStartMethod = 
+          ClusterServiceGrpc.getStartMethod = getStartMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Start"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Start"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Start"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Start"))
+              .build();
         }
-     }
-     return getStartMethod;
+      }
+    }
+    return getStartMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest,
@@ -268,22 +249,21 @@ public final class ClusterServiceGrpc {
     if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
-          ClusterServiceGrpc.getStopMethod = getStopMethod = 
+          ClusterServiceGrpc.getStopMethod = getStopMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Stop"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Stop"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Stop"))
+              .build();
         }
-     }
-     return getStopMethod;
+      }
+    }
+    return getStopMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest,
@@ -300,22 +280,21 @@ public final class ClusterServiceGrpc {
     if ((getBackupMethod = ClusterServiceGrpc.getBackupMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getBackupMethod = ClusterServiceGrpc.getBackupMethod) == null) {
-          ClusterServiceGrpc.getBackupMethod = getBackupMethod = 
+          ClusterServiceGrpc.getBackupMethod = getBackupMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Backup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Backup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Backup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Backup"))
+              .build();
         }
-     }
-     return getBackupMethod;
+      }
+    }
+    return getBackupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest,
@@ -332,22 +311,21 @@ public final class ClusterServiceGrpc {
     if ((getListBackupsMethod = ClusterServiceGrpc.getListBackupsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListBackupsMethod = ClusterServiceGrpc.getListBackupsMethod) == null) {
-          ClusterServiceGrpc.getListBackupsMethod = getListBackupsMethod = 
+          ClusterServiceGrpc.getListBackupsMethod = getListBackupsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "ListBackups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBackups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListBackups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListBackups"))
+              .build();
         }
-     }
-     return getListBackupsMethod;
+      }
+    }
+    return getListBackupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest,
@@ -364,22 +342,21 @@ public final class ClusterServiceGrpc {
     if ((getRestoreMethod = ClusterServiceGrpc.getRestoreMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getRestoreMethod = ClusterServiceGrpc.getRestoreMethod) == null) {
-          ClusterServiceGrpc.getRestoreMethod = getRestoreMethod = 
+          ClusterServiceGrpc.getRestoreMethod = getRestoreMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "Restore"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Restore"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Restore"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Restore"))
+              .build();
         }
-     }
-     return getRestoreMethod;
+      }
+    }
+    return getRestoreMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
@@ -396,22 +373,21 @@ public final class ClusterServiceGrpc {
     if ((getListLogsMethod = ClusterServiceGrpc.getListLogsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListLogsMethod = ClusterServiceGrpc.getListLogsMethod) == null) {
-          ClusterServiceGrpc.getListLogsMethod = getListLogsMethod = 
+          ClusterServiceGrpc.getListLogsMethod = getListLogsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "ListLogs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLogs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListLogs"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListLogs"))
+              .build();
         }
-     }
-     return getListLogsMethod;
+      }
+    }
+    return getListLogsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
@@ -428,22 +404,21 @@ public final class ClusterServiceGrpc {
     if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
-          ClusterServiceGrpc.getStreamLogsMethod = getStreamLogsMethod = 
+          ClusterServiceGrpc.getStreamLogsMethod = getStreamLogsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamLogRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "StreamLogs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamLogs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StreamLogs"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StreamLogs"))
+              .build();
         }
-     }
-     return getStreamLogsMethod;
+      }
+    }
+    return getStreamLogsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
@@ -460,22 +435,21 @@ public final class ClusterServiceGrpc {
     if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
-          ClusterServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          ClusterServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
@@ -492,22 +466,21 @@ public final class ClusterServiceGrpc {
     if ((getListHostsMethod = ClusterServiceGrpc.getListHostsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListHostsMethod = ClusterServiceGrpc.getListHostsMethod) == null) {
-          ClusterServiceGrpc.getListHostsMethod = getListHostsMethod = 
+          ClusterServiceGrpc.getListHostsMethod = getListHostsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "ListHosts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHosts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListHosts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListHosts"))
+              .build();
         }
-     }
-     return getListHostsMethod;
+      }
+    }
+    return getListHostsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest,
@@ -524,22 +497,21 @@ public final class ClusterServiceGrpc {
     if ((getAddHostsMethod = ClusterServiceGrpc.getAddHostsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getAddHostsMethod = ClusterServiceGrpc.getAddHostsMethod) == null) {
-          ClusterServiceGrpc.getAddHostsMethod = getAddHostsMethod = 
+          ClusterServiceGrpc.getAddHostsMethod = getAddHostsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "AddHosts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddHosts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("AddHosts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("AddHosts"))
+              .build();
         }
-     }
-     return getAddHostsMethod;
+      }
+    }
+    return getAddHostsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
@@ -556,22 +528,21 @@ public final class ClusterServiceGrpc {
     if ((getDeleteHostsMethod = ClusterServiceGrpc.getDeleteHostsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getDeleteHostsMethod = ClusterServiceGrpc.getDeleteHostsMethod) == null) {
-          ClusterServiceGrpc.getDeleteHostsMethod = getDeleteHostsMethod = 
+          ClusterServiceGrpc.getDeleteHostsMethod = getDeleteHostsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "DeleteHosts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteHosts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("DeleteHosts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("DeleteHosts"))
+              .build();
         }
-     }
-     return getDeleteHostsMethod;
+      }
+    }
+    return getDeleteHostsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
@@ -588,29 +559,35 @@ public final class ClusterServiceGrpc {
     if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
-          ClusterServiceGrpc.getRescheduleMaintenanceMethod = getRescheduleMaintenanceMethod = 
+          ClusterServiceGrpc.getRescheduleMaintenanceMethod = getRescheduleMaintenanceMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "RescheduleMaintenance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RescheduleMaintenance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RescheduleMaintenance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RescheduleMaintenance"))
+              .build();
         }
-     }
-     return getRescheduleMaintenanceMethod;
+      }
+    }
+    return getRescheduleMaintenanceMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ClusterServiceStub newStub(io.grpc.Channel channel) {
-    return new ClusterServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ClusterServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ClusterServiceStub>() {
+        @java.lang.Override
+        public ClusterServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ClusterServiceStub(channel, callOptions);
+        }
+      };
+    return ClusterServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -618,7 +595,14 @@ public final class ClusterServiceGrpc {
    */
   public static ClusterServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ClusterServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ClusterServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ClusterServiceBlockingStub>() {
+        @java.lang.Override
+        public ClusterServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ClusterServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ClusterServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -626,7 +610,14 @@ public final class ClusterServiceGrpc {
    */
   public static ClusterServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ClusterServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ClusterServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ClusterServiceFutureStub>() {
+        @java.lang.Override
+        public ClusterServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ClusterServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ClusterServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -644,7 +635,7 @@ public final class ClusterServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -654,7 +645,7 @@ public final class ClusterServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -664,7 +655,7 @@ public final class ClusterServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -674,7 +665,7 @@ public final class ClusterServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -684,7 +675,7 @@ public final class ClusterServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -694,7 +685,7 @@ public final class ClusterServiceGrpc {
      */
     public void move(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     /**
@@ -704,7 +695,7 @@ public final class ClusterServiceGrpc {
      */
     public void start(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
     }
 
     /**
@@ -714,7 +705,7 @@ public final class ClusterServiceGrpc {
      */
     public void stop(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
 
     /**
@@ -724,7 +715,7 @@ public final class ClusterServiceGrpc {
      */
     public void backup(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getBackupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBackupMethod(), responseObserver);
     }
 
     /**
@@ -734,7 +725,7 @@ public final class ClusterServiceGrpc {
      */
     public void listBackups(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListBackupsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBackupsMethod(), responseObserver);
     }
 
     /**
@@ -744,7 +735,7 @@ public final class ClusterServiceGrpc {
      */
     public void restore(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRestoreMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestoreMethod(), responseObserver);
     }
 
     /**
@@ -755,7 +746,7 @@ public final class ClusterServiceGrpc {
      */
     public void listLogs(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListLogsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLogsMethod(), responseObserver);
     }
 
     /**
@@ -765,7 +756,7 @@ public final class ClusterServiceGrpc {
      */
     public void streamLogs(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamLogRecord> responseObserver) {
-      asyncUnimplementedUnaryCall(getStreamLogsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamLogsMethod(), responseObserver);
     }
 
     /**
@@ -775,7 +766,7 @@ public final class ClusterServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -785,7 +776,7 @@ public final class ClusterServiceGrpc {
      */
     public void listHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHostsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHostsMethod(), responseObserver);
     }
 
     /**
@@ -795,7 +786,7 @@ public final class ClusterServiceGrpc {
      */
     public void addHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddHostsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddHostsMethod(), responseObserver);
     }
 
     /**
@@ -805,7 +796,7 @@ public final class ClusterServiceGrpc {
      */
     public void deleteHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteHostsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHostsMethod(), responseObserver);
     }
 
     /**
@@ -815,133 +806,133 @@ public final class ClusterServiceGrpc {
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRescheduleMaintenanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRescheduleMaintenanceMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
           .addMethod(
             getStartMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_START)))
           .addMethod(
             getStopMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
           .addMethod(
             getBackupMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_BACKUP)))
           .addMethod(
             getListBackupsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse>(
                   this, METHODID_LIST_BACKUPS)))
           .addMethod(
             getRestoreMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESTORE)))
           .addMethod(
             getListLogsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse>(
                   this, METHODID_LIST_LOGS)))
           .addMethod(
             getStreamLogsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamLogRecord>(
                   this, METHODID_STREAM_LOGS)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListHostsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse>(
                   this, METHODID_LIST_HOSTS)))
           .addMethod(
             getAddHostsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_HOSTS)))
           .addMethod(
             getDeleteHostsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_HOSTS)))
           .addMethod(
             getRescheduleMaintenanceMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -955,19 +946,15 @@ public final class ClusterServiceGrpc {
    * A set of methods for managing Elasticsearch clusters.
    * </pre>
    */
-  public static final class ClusterServiceStub extends io.grpc.stub.AbstractStub<ClusterServiceStub> {
-    private ClusterServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ClusterServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ClusterServiceStub extends io.grpc.stub.AbstractAsyncStub<ClusterServiceStub> {
+    private ClusterServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ClusterServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ClusterServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ClusterServiceStub(channel, callOptions);
     }
 
@@ -979,7 +966,7 @@ public final class ClusterServiceGrpc {
      */
     public void get(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -990,7 +977,7 @@ public final class ClusterServiceGrpc {
      */
     public void list(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1001,7 +988,7 @@ public final class ClusterServiceGrpc {
      */
     public void create(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1012,7 +999,7 @@ public final class ClusterServiceGrpc {
      */
     public void update(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1023,7 +1010,7 @@ public final class ClusterServiceGrpc {
      */
     public void delete(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1034,7 +1021,7 @@ public final class ClusterServiceGrpc {
      */
     public void move(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1045,7 +1032,7 @@ public final class ClusterServiceGrpc {
      */
     public void start(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1056,7 +1043,7 @@ public final class ClusterServiceGrpc {
      */
     public void stop(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1067,7 +1054,7 @@ public final class ClusterServiceGrpc {
      */
     public void backup(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBackupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1078,7 +1065,7 @@ public final class ClusterServiceGrpc {
      */
     public void listBackups(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListBackupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1089,7 +1076,7 @@ public final class ClusterServiceGrpc {
      */
     public void restore(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRestoreMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1101,7 +1088,7 @@ public final class ClusterServiceGrpc {
      */
     public void listLogs(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListLogsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1112,7 +1099,7 @@ public final class ClusterServiceGrpc {
      */
     public void streamLogs(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamLogRecord> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getStreamLogsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1123,7 +1110,7 @@ public final class ClusterServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1134,7 +1121,7 @@ public final class ClusterServiceGrpc {
      */
     public void listHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1145,7 +1132,7 @@ public final class ClusterServiceGrpc {
      */
     public void addHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1156,7 +1143,7 @@ public final class ClusterServiceGrpc {
      */
     public void deleteHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1167,7 +1154,7 @@ public final class ClusterServiceGrpc {
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -1177,19 +1164,15 @@ public final class ClusterServiceGrpc {
    * A set of methods for managing Elasticsearch clusters.
    * </pre>
    */
-  public static final class ClusterServiceBlockingStub extends io.grpc.stub.AbstractStub<ClusterServiceBlockingStub> {
-    private ClusterServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ClusterServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ClusterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ClusterServiceBlockingStub> {
+    private ClusterServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ClusterServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ClusterServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ClusterServiceBlockingStub(channel, callOptions);
     }
 
@@ -1200,7 +1183,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -1210,7 +1193,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse list(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -1220,7 +1203,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -1230,7 +1213,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -1240,7 +1223,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -1250,7 +1233,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
@@ -1260,7 +1243,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStartMethod(), getCallOptions(), request);
     }
 
@@ -1270,7 +1253,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopMethod(), getCallOptions(), request);
     }
 
@@ -1280,7 +1263,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation backup(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBackupMethod(), getCallOptions(), request);
     }
 
@@ -1290,7 +1273,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse listBackups(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListBackupsMethod(), getCallOptions(), request);
     }
 
@@ -1300,7 +1283,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRestoreMethod(), getCallOptions(), request);
     }
 
@@ -1311,7 +1294,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListLogsMethod(), getCallOptions(), request);
     }
 
@@ -1322,7 +1305,7 @@ public final class ClusterServiceGrpc {
      */
     public java.util.Iterator<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamLogRecord> streamLogs(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getStreamLogsMethod(), getCallOptions(), request);
     }
 
@@ -1332,7 +1315,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse listOperations(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -1342,7 +1325,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse listHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHostsMethod(), getCallOptions(), request);
     }
 
@@ -1352,7 +1335,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddHostsMethod(), getCallOptions(), request);
     }
 
@@ -1362,7 +1345,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteHostsMethod(), getCallOptions(), request);
     }
 
@@ -1372,7 +1355,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRescheduleMaintenanceMethod(), getCallOptions(), request);
     }
   }
@@ -1382,19 +1365,15 @@ public final class ClusterServiceGrpc {
    * A set of methods for managing Elasticsearch clusters.
    * </pre>
    */
-  public static final class ClusterServiceFutureStub extends io.grpc.stub.AbstractStub<ClusterServiceFutureStub> {
-    private ClusterServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ClusterServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ClusterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ClusterServiceFutureStub> {
+    private ClusterServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ClusterServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ClusterServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ClusterServiceFutureStub(channel, callOptions);
     }
 
@@ -1406,7 +1385,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster> get(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.GetClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1417,7 +1396,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersResponse> list(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClustersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1428,7 +1407,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1439,7 +1418,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1450,7 +1429,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1461,7 +1440,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.MoveClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
 
@@ -1472,7 +1451,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StartClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request);
     }
 
@@ -1483,7 +1462,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.StopClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request);
     }
 
@@ -1494,7 +1473,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> backup(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBackupMethod(), getCallOptions()), request);
     }
 
@@ -1505,7 +1484,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse> listBackups(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListBackupsMethod(), getCallOptions()), request);
     }
 
@@ -1516,7 +1495,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restore(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRestoreMethod(), getCallOptions()), request);
     }
 
@@ -1528,7 +1507,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListLogsMethod(), getCallOptions()), request);
     }
 
@@ -1539,7 +1518,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> listOperations(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -1550,7 +1529,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsResponse> listHosts(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request);
     }
 
@@ -1561,7 +1540,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addHosts(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.AddClusterHostsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddHostsMethod(), getCallOptions()), request);
     }
 
@@ -1572,7 +1551,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteHosts(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteHostsMethod(), getCallOptions()), request);
     }
 
@@ -1583,7 +1562,7 @@ public final class ClusterServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(
         yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request);
     }
   }

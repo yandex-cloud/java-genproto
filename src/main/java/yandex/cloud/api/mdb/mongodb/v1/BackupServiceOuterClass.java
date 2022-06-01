@@ -25,6 +25,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
@@ -34,6 +35,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
      */
     com.google.protobuf.ByteString
         getBackupIdBytes();
@@ -41,7 +43,7 @@ public final class BackupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.GetBackupRequest}
    */
-  public  static final class GetBackupRequest extends
+  public static final class GetBackupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.GetBackupRequest)
       GetBackupRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class BackupServiceOuterClass {
     }
     private GetBackupRequest() {
       backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetBackupRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class BackupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class BackupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
      */
+    @java.lang.Override
     public java.lang.String getBackupId() {
       java.lang.Object ref = backupId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBackupIdBytes() {
       java.lang.Object ref = backupId_;
@@ -174,7 +186,7 @@ public final class BackupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBackupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class BackupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBackupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class BackupServiceOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.GetBackupRequest other = (yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.GetBackupRequest) obj;
 
-      boolean result = true;
-      result = result && getBackupId()
-          .equals(other.getBackupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class BackupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
        */
       public java.lang.String getBackupId() {
         java.lang.Object ref = backupId_;
@@ -491,6 +503,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
        */
       public com.google.protobuf.ByteString
           getBackupIdBytes() {
@@ -512,6 +525,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackupId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBackupId() {
         
@@ -544,6 +560,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class BackupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,12 +648,14 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -645,6 +666,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -654,6 +676,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -661,7 +684,7 @@ public final class BackupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.ListBackupsRequest}
    */
-  public  static final class ListBackupsRequest extends
+  public static final class ListBackupsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.ListBackupsRequest)
       ListBackupsRequestOrBuilder {
@@ -672,8 +695,14 @@ public final class BackupServiceOuterClass {
     }
     private ListBackupsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListBackupsRequest();
     }
 
     @java.lang.Override
@@ -689,7 +718,6 @@ public final class BackupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -718,7 +746,7 @@ public final class BackupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -758,7 +786,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -778,7 +808,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -797,7 +829,9 @@ public final class BackupServiceOuterClass {
     private long pageSize_;
     /**
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -811,7 +845,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -831,7 +867,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -860,13 +898,13 @@ public final class BackupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -878,14 +916,14 @@ public final class BackupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -903,15 +941,14 @@ public final class BackupServiceOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsRequest other = (yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1102,35 +1139,35 @@ public final class BackupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1192,6 +1229,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1212,6 +1250,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1233,6 +1272,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1251,6 +1292,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1265,6 +1307,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1281,12 +1325,16 @@ public final class BackupServiceOuterClass {
       private long pageSize_ ;
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1296,6 +1344,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1312,6 +1361,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1332,6 +1382,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1353,6 +1404,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1371,6 +1424,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1385,6 +1439,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1400,7 +1456,7 @@ public final class BackupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1507,6 +1563,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1518,6 +1575,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1525,7 +1583,7 @@ public final class BackupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.ListBackupsResponse}
    */
-  public  static final class ListBackupsResponse extends
+  public static final class ListBackupsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.ListBackupsResponse)
       ListBackupsResponseOrBuilder {
@@ -1537,6 +1595,13 @@ public final class BackupServiceOuterClass {
     private ListBackupsResponse() {
       backups_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListBackupsResponse();
     }
 
     @java.lang.Override
@@ -1564,7 +1629,7 @@ public final class BackupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 backups_ = new java.util.ArrayList<yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1579,7 +1644,7 @@ public final class BackupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1593,7 +1658,7 @@ public final class BackupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           backups_ = java.util.Collections.unmodifiableList(backups_);
         }
         this.unknownFields = unknownFields.build();
@@ -1613,7 +1678,6 @@ public final class BackupServiceOuterClass {
               yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse.class, yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BACKUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup> backups_;
     /**
@@ -1623,6 +1687,7 @@ public final class BackupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Backup backups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup> getBackupsList() {
       return backups_;
     }
@@ -1633,6 +1698,7 @@ public final class BackupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Backup backups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.BackupOrBuilder> 
         getBackupsOrBuilderList() {
       return backups_;
@@ -1644,6 +1710,7 @@ public final class BackupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Backup backups = 1;</code>
      */
+    @java.lang.Override
     public int getBackupsCount() {
       return backups_.size();
     }
@@ -1654,6 +1721,7 @@ public final class BackupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Backup backups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup getBackups(int index) {
       return backups_.get(index);
     }
@@ -1664,6 +1732,7 @@ public final class BackupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.mongodb.v1.Backup backups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.BackupOrBuilder getBackupsOrBuilder(
         int index) {
       return backups_.get(index);
@@ -1680,7 +1749,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1702,7 +1773,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1734,7 +1807,7 @@ public final class BackupServiceOuterClass {
       for (int i = 0; i < backups_.size(); i++) {
         output.writeMessage(1, backups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1750,7 +1823,7 @@ public final class BackupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, backups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1768,13 +1841,12 @@ public final class BackupServiceOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse other = (yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse) obj;
 
-      boolean result = true;
-      result = result && getBackupsList()
-          .equals(other.getBackupsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBackupsList()
+          .equals(other.getBackupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1959,9 +2031,8 @@ public final class BackupServiceOuterClass {
       public yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse buildPartial() {
         yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse result = new yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.ListBackupsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (backupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             backups_ = java.util.Collections.unmodifiableList(backups_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1970,42 +2041,41 @@ public final class BackupServiceOuterClass {
           result.backups_ = backupsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2082,7 +2152,7 @@ public final class BackupServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup> backups_ =
         java.util.Collections.emptyList();
       private void ensureBackupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           backups_ = new java.util.ArrayList<yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup>(backups_);
           bitField0_ |= 0x00000001;
          }
@@ -2383,7 +2453,7 @@ public final class BackupServiceOuterClass {
           backupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup, yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.Backup.Builder, yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.BackupOrBuilder>(
                   backups_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           backups_ = null;
@@ -2401,6 +2471,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2423,6 +2494,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2446,6 +2518,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2466,6 +2540,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2482,6 +2557,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2497,7 +2574,7 @@ public final class BackupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2557,6 +2634,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
@@ -2565,6 +2643,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
      */
     com.google.protobuf.ByteString
         getBackupIdBytes();
@@ -2572,7 +2651,7 @@ public final class BackupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.DeleteBackupRequest}
    */
-  public  static final class DeleteBackupRequest extends
+  public static final class DeleteBackupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.DeleteBackupRequest)
       DeleteBackupRequestOrBuilder {
@@ -2583,6 +2662,13 @@ public final class BackupServiceOuterClass {
     }
     private DeleteBackupRequest() {
       backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBackupRequest();
     }
 
     @java.lang.Override
@@ -2598,7 +2684,6 @@ public final class BackupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2616,7 +2701,7 @@ public final class BackupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2655,7 +2740,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
      */
+    @java.lang.Override
     public java.lang.String getBackupId() {
       java.lang.Object ref = backupId_;
       if (ref instanceof java.lang.String) {
@@ -2674,7 +2761,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBackupIdBytes() {
       java.lang.Object ref = backupId_;
@@ -2703,7 +2792,7 @@ public final class BackupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBackupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
       }
       unknownFields.writeTo(output);
@@ -2715,7 +2804,7 @@ public final class BackupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBackupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -2733,11 +2822,10 @@ public final class BackupServiceOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.DeleteBackupRequest other = (yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.DeleteBackupRequest) obj;
 
-      boolean result = true;
-      result = result && getBackupId()
-          .equals(other.getBackupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2917,35 +3005,35 @@ public final class BackupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2999,6 +3087,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
        */
       public java.lang.String getBackupId() {
         java.lang.Object ref = backupId_;
@@ -3018,6 +3107,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
        */
       public com.google.protobuf.ByteString
           getBackupIdBytes() {
@@ -3038,6 +3128,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackupId(
           java.lang.String value) {
@@ -3055,6 +3147,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBackupId() {
         
@@ -3068,6 +3161,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3083,7 +3178,7 @@ public final class BackupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3143,6 +3238,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1;</code>
+     * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
@@ -3151,6 +3247,7 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1;</code>
+     * @return The bytes for backupId.
      */
     com.google.protobuf.ByteString
         getBackupIdBytes();
@@ -3158,7 +3255,7 @@ public final class BackupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.DeleteBackupMetadata}
    */
-  public  static final class DeleteBackupMetadata extends
+  public static final class DeleteBackupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.DeleteBackupMetadata)
       DeleteBackupMetadataOrBuilder {
@@ -3169,6 +3266,13 @@ public final class BackupServiceOuterClass {
     }
     private DeleteBackupMetadata() {
       backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBackupMetadata();
     }
 
     @java.lang.Override
@@ -3184,7 +3288,6 @@ public final class BackupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3202,7 +3305,7 @@ public final class BackupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3241,7 +3344,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1;</code>
+     * @return The backupId.
      */
+    @java.lang.Override
     public java.lang.String getBackupId() {
       java.lang.Object ref = backupId_;
       if (ref instanceof java.lang.String) {
@@ -3260,7 +3365,9 @@ public final class BackupServiceOuterClass {
      * </pre>
      *
      * <code>string backup_id = 1;</code>
+     * @return The bytes for backupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBackupIdBytes() {
       java.lang.Object ref = backupId_;
@@ -3289,7 +3396,7 @@ public final class BackupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBackupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
       }
       unknownFields.writeTo(output);
@@ -3301,7 +3408,7 @@ public final class BackupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBackupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3319,11 +3426,10 @@ public final class BackupServiceOuterClass {
       }
       yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.DeleteBackupMetadata other = (yandex.cloud.api.mdb.mongodb.v1.BackupServiceOuterClass.DeleteBackupMetadata) obj;
 
-      boolean result = true;
-      result = result && getBackupId()
-          .equals(other.getBackupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3503,35 +3609,35 @@ public final class BackupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3585,6 +3691,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1;</code>
+       * @return The backupId.
        */
       public java.lang.String getBackupId() {
         java.lang.Object ref = backupId_;
@@ -3604,6 +3711,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1;</code>
+       * @return The bytes for backupId.
        */
       public com.google.protobuf.ByteString
           getBackupIdBytes() {
@@ -3624,6 +3732,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1;</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackupId(
           java.lang.String value) {
@@ -3641,6 +3751,7 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBackupId() {
         
@@ -3654,6 +3765,8 @@ public final class BackupServiceOuterClass {
        * </pre>
        *
        * <code>string backup_id = 1;</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
        */
       public Builder setBackupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3669,7 +3782,7 @@ public final class BackupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3785,15 +3898,7 @@ public final class BackupServiceOuterClass {
       "dex-cloud/go-genproto/yandex/cloud/mdb/m" +
       "ongodb/v1;mongodbb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -3801,7 +3906,7 @@ public final class BackupServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.BackupOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_mongodb_v1_GetBackupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_GetBackupRequest_fieldAccessorTable = new

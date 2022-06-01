@@ -1,19 +1,6 @@
 package yandex.cloud.api.cdn.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/cdn/v1/provider_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ProviderServiceGrpc {
 
   private ProviderServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class ProviderServiceGrpc {
     if ((getActivateMethod = ProviderServiceGrpc.getActivateMethod) == null) {
       synchronized (ProviderServiceGrpc.class) {
         if ((getActivateMethod = ProviderServiceGrpc.getActivateMethod) == null) {
-          ProviderServiceGrpc.getActivateMethod = getActivateMethod = 
+          ProviderServiceGrpc.getActivateMethod = getActivateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.ProviderService", "Activate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Activate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProviderServiceMethodDescriptorSupplier("Activate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProviderServiceMethodDescriptorSupplier("Activate"))
+              .build();
         }
-     }
-     return getActivateMethod;
+      }
+    }
+    return getActivateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest,
@@ -76,29 +63,35 @@ public final class ProviderServiceGrpc {
     if ((getListActivatedMethod = ProviderServiceGrpc.getListActivatedMethod) == null) {
       synchronized (ProviderServiceGrpc.class) {
         if ((getListActivatedMethod = ProviderServiceGrpc.getListActivatedMethod) == null) {
-          ProviderServiceGrpc.getListActivatedMethod = getListActivatedMethod = 
+          ProviderServiceGrpc.getListActivatedMethod = getListActivatedMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest, yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.cdn.v1.ProviderService", "ListActivated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListActivated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProviderServiceMethodDescriptorSupplier("ListActivated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProviderServiceMethodDescriptorSupplier("ListActivated"))
+              .build();
         }
-     }
-     return getListActivatedMethod;
+      }
+    }
+    return getListActivatedMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ProviderServiceStub newStub(io.grpc.Channel channel) {
-    return new ProviderServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProviderServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProviderServiceStub>() {
+        @java.lang.Override
+        public ProviderServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProviderServiceStub(channel, callOptions);
+        }
+      };
+    return ProviderServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class ProviderServiceGrpc {
    */
   public static ProviderServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ProviderServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProviderServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProviderServiceBlockingStub>() {
+        @java.lang.Override
+        public ProviderServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProviderServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ProviderServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class ProviderServiceGrpc {
    */
   public static ProviderServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ProviderServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProviderServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProviderServiceFutureStub>() {
+        @java.lang.Override
+        public ProviderServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProviderServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ProviderServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -131,7 +138,7 @@ public final class ProviderServiceGrpc {
      */
     public void activate(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
     }
 
     /**
@@ -141,21 +148,21 @@ public final class ProviderServiceGrpc {
      */
     public void listActivated(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListActivatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListActivatedMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getActivateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ACTIVATE)))
           .addMethod(
             getListActivatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest,
                 yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse>(
@@ -169,19 +176,15 @@ public final class ProviderServiceGrpc {
    * A set of methods for managing Provider Service resources.
    * </pre>
    */
-  public static final class ProviderServiceStub extends io.grpc.stub.AbstractStub<ProviderServiceStub> {
-    private ProviderServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProviderServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProviderServiceStub extends io.grpc.stub.AbstractAsyncStub<ProviderServiceStub> {
+    private ProviderServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProviderServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProviderServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProviderServiceStub(channel, callOptions);
     }
 
@@ -192,7 +195,7 @@ public final class ProviderServiceGrpc {
      */
     public void activate(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getActivateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -203,7 +206,7 @@ public final class ProviderServiceGrpc {
      */
     public void listActivated(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListActivatedMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -213,19 +216,15 @@ public final class ProviderServiceGrpc {
    * A set of methods for managing Provider Service resources.
    * </pre>
    */
-  public static final class ProviderServiceBlockingStub extends io.grpc.stub.AbstractStub<ProviderServiceBlockingStub> {
-    private ProviderServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProviderServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProviderServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProviderServiceBlockingStub> {
+    private ProviderServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProviderServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProviderServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProviderServiceBlockingStub(channel, callOptions);
     }
 
@@ -235,7 +234,7 @@ public final class ProviderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation activate(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getActivateMethod(), getCallOptions(), request);
     }
 
@@ -245,7 +244,7 @@ public final class ProviderServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse listActivated(yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListActivatedMethod(), getCallOptions(), request);
     }
   }
@@ -255,19 +254,15 @@ public final class ProviderServiceGrpc {
    * A set of methods for managing Provider Service resources.
    * </pre>
    */
-  public static final class ProviderServiceFutureStub extends io.grpc.stub.AbstractStub<ProviderServiceFutureStub> {
-    private ProviderServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProviderServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProviderServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProviderServiceFutureStub> {
+    private ProviderServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProviderServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProviderServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProviderServiceFutureStub(channel, callOptions);
     }
 
@@ -278,7 +273,7 @@ public final class ProviderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> activate(
         yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ActivateProviderRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getActivateMethod(), getCallOptions()), request);
     }
 
@@ -289,7 +284,7 @@ public final class ProviderServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersResponse> listActivated(
         yandex.cloud.api.cdn.v1.ProviderServiceOuterClass.ListActivatedProvidersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListActivatedMethod(), getCallOptions()), request);
     }
   }

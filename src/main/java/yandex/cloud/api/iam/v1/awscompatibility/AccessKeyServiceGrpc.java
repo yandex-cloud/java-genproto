@@ -1,19 +1,6 @@
 package yandex.cloud.api.iam.v1.awscompatibility;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iam/v1/awscompatibility/access_key_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AccessKeyServiceGrpc {
 
   private AccessKeyServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class AccessKeyServiceGrpc {
     if ((getListMethod = AccessKeyServiceGrpc.getListMethod) == null) {
       synchronized (AccessKeyServiceGrpc.class) {
         if ((getListMethod = AccessKeyServiceGrpc.getListMethod) == null) {
-          AccessKeyServiceGrpc.getListMethod = getListMethod = 
+          AccessKeyServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.awscompatibility.AccessKeyService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest,
@@ -76,22 +63,21 @@ public final class AccessKeyServiceGrpc {
     if ((getGetMethod = AccessKeyServiceGrpc.getGetMethod) == null) {
       synchronized (AccessKeyServiceGrpc.class) {
         if ((getGetMethod = AccessKeyServiceGrpc.getGetMethod) == null) {
-          AccessKeyServiceGrpc.getGetMethod = getGetMethod = 
+          AccessKeyServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.awscompatibility.AccessKeyService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest,
@@ -108,22 +94,21 @@ public final class AccessKeyServiceGrpc {
     if ((getCreateMethod = AccessKeyServiceGrpc.getCreateMethod) == null) {
       synchronized (AccessKeyServiceGrpc.class) {
         if ((getCreateMethod = AccessKeyServiceGrpc.getCreateMethod) == null) {
-          AccessKeyServiceGrpc.getCreateMethod = getCreateMethod = 
+          AccessKeyServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.awscompatibility.AccessKeyService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest,
@@ -140,22 +125,21 @@ public final class AccessKeyServiceGrpc {
     if ((getUpdateMethod = AccessKeyServiceGrpc.getUpdateMethod) == null) {
       synchronized (AccessKeyServiceGrpc.class) {
         if ((getUpdateMethod = AccessKeyServiceGrpc.getUpdateMethod) == null) {
-          AccessKeyServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          AccessKeyServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.awscompatibility.AccessKeyService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest,
@@ -172,22 +156,21 @@ public final class AccessKeyServiceGrpc {
     if ((getDeleteMethod = AccessKeyServiceGrpc.getDeleteMethod) == null) {
       synchronized (AccessKeyServiceGrpc.class) {
         if ((getDeleteMethod = AccessKeyServiceGrpc.getDeleteMethod) == null) {
-          AccessKeyServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          AccessKeyServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.awscompatibility.AccessKeyService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest,
@@ -204,29 +187,35 @@ public final class AccessKeyServiceGrpc {
     if ((getListOperationsMethod = AccessKeyServiceGrpc.getListOperationsMethod) == null) {
       synchronized (AccessKeyServiceGrpc.class) {
         if ((getListOperationsMethod = AccessKeyServiceGrpc.getListOperationsMethod) == null) {
-          AccessKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          AccessKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iam.v1.awscompatibility.AccessKeyService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AccessKeyServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AccessKeyServiceStub newStub(io.grpc.Channel channel) {
-    return new AccessKeyServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccessKeyServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccessKeyServiceStub>() {
+        @java.lang.Override
+        public AccessKeyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccessKeyServiceStub(channel, callOptions);
+        }
+      };
+    return AccessKeyServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class AccessKeyServiceGrpc {
    */
   public static AccessKeyServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccessKeyServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccessKeyServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccessKeyServiceBlockingStub>() {
+        @java.lang.Override
+        public AccessKeyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccessKeyServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AccessKeyServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class AccessKeyServiceGrpc {
    */
   public static AccessKeyServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccessKeyServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccessKeyServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccessKeyServiceFutureStub>() {
+        @java.lang.Override
+        public AccessKeyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccessKeyServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AccessKeyServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -259,7 +262,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void create(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +293,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void update(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -300,7 +303,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -310,49 +313,49 @@ public final class AccessKeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest,
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest,
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey>(
                   this, METHODID_GET)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest,
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest,
                 yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse>(
@@ -366,19 +369,15 @@ public final class AccessKeyServiceGrpc {
    * A set of methods for managing access keys.
    * </pre>
    */
-  public static final class AccessKeyServiceStub extends io.grpc.stub.AbstractStub<AccessKeyServiceStub> {
-    private AccessKeyServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccessKeyServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccessKeyServiceStub extends io.grpc.stub.AbstractAsyncStub<AccessKeyServiceStub> {
+    private AccessKeyServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccessKeyServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccessKeyServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccessKeyServiceStub(channel, callOptions);
     }
 
@@ -389,7 +388,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void list(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -401,7 +400,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void get(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -412,7 +411,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void create(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -423,7 +422,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void update(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -434,7 +433,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void delete(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -445,7 +444,7 @@ public final class AccessKeyServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -455,19 +454,15 @@ public final class AccessKeyServiceGrpc {
    * A set of methods for managing access keys.
    * </pre>
    */
-  public static final class AccessKeyServiceBlockingStub extends io.grpc.stub.AbstractStub<AccessKeyServiceBlockingStub> {
-    private AccessKeyServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccessKeyServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccessKeyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccessKeyServiceBlockingStub> {
+    private AccessKeyServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccessKeyServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccessKeyServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccessKeyServiceBlockingStub(channel, callOptions);
     }
 
@@ -477,7 +472,7 @@ public final class AccessKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse list(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -488,7 +483,7 @@ public final class AccessKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey get(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -498,7 +493,7 @@ public final class AccessKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse create(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -508,7 +503,7 @@ public final class AccessKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -518,7 +513,7 @@ public final class AccessKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -528,7 +523,7 @@ public final class AccessKeyServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse listOperations(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -538,19 +533,15 @@ public final class AccessKeyServiceGrpc {
    * A set of methods for managing access keys.
    * </pre>
    */
-  public static final class AccessKeyServiceFutureStub extends io.grpc.stub.AbstractStub<AccessKeyServiceFutureStub> {
-    private AccessKeyServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccessKeyServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccessKeyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AccessKeyServiceFutureStub> {
+    private AccessKeyServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccessKeyServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccessKeyServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccessKeyServiceFutureStub(channel, callOptions);
     }
 
@@ -561,7 +552,7 @@ public final class AccessKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysResponse> list(
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeysRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -573,7 +564,7 @@ public final class AccessKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.AccessKey> get(
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.GetAccessKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -584,7 +575,7 @@ public final class AccessKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyResponse> create(
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.CreateAccessKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -595,7 +586,7 @@ public final class AccessKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -606,7 +597,7 @@ public final class AccessKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.DeleteAccessKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -617,7 +608,7 @@ public final class AccessKeyServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsResponse> listOperations(
         yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.ListAccessKeyOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

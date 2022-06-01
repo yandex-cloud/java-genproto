@@ -24,6 +24,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
+     * @return Whether the anytime field is set.
      */
     boolean hasAnytime();
     /**
@@ -32,6 +33,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
+     * @return The anytime.
      */
     yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow getAnytime();
     /**
@@ -49,6 +51,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
+     * @return Whether the dailyMaintenanceWindow field is set.
      */
     boolean hasDailyMaintenanceWindow();
     /**
@@ -57,6 +60,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
+     * @return The dailyMaintenanceWindow.
      */
     yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow getDailyMaintenanceWindow();
     /**
@@ -74,6 +78,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
+     * @return Whether the weeklyMaintenanceWindow field is set.
      */
     boolean hasWeeklyMaintenanceWindow();
     /**
@@ -82,6 +87,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
+     * @return The weeklyMaintenanceWindow.
      */
     yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow();
     /**
@@ -98,7 +104,7 @@ public final class Maintenance {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MaintenanceWindow}
    */
-  public  static final class MaintenanceWindow extends
+  public static final class MaintenanceWindow extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.MaintenanceWindow)
       MaintenanceWindowOrBuilder {
@@ -108,6 +114,13 @@ public final class Maintenance {
       super(builder);
     }
     private MaintenanceWindow() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MaintenanceWindow();
     }
 
     @java.lang.Override
@@ -123,7 +136,6 @@ public final class Maintenance {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -177,7 +189,7 @@ public final class Maintenance {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -211,7 +223,8 @@ public final class Maintenance {
     private int policyCase_ = 0;
     private java.lang.Object policy_;
     public enum PolicyCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       ANYTIME(1),
       DAILY_MAINTENANCE_WINDOW(2),
       WEEKLY_MAINTENANCE_WINDOW(3),
@@ -221,6 +234,8 @@ public final class Maintenance {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -255,7 +270,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
+     * @return Whether the anytime field is set.
      */
+    @java.lang.Override
     public boolean hasAnytime() {
       return policyCase_ == 1;
     }
@@ -265,7 +282,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
+     * @return The anytime.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
       if (policyCase_ == 1) {
          return (yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow) policy_;
@@ -279,6 +298,7 @@ public final class Maintenance {
      *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
       if (policyCase_ == 1) {
          return (yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow) policy_;
@@ -293,7 +313,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
+     * @return Whether the dailyMaintenanceWindow field is set.
      */
+    @java.lang.Override
     public boolean hasDailyMaintenanceWindow() {
       return policyCase_ == 2;
     }
@@ -303,7 +325,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
+     * @return The dailyMaintenanceWindow.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow getDailyMaintenanceWindow() {
       if (policyCase_ == 2) {
          return (yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow) policy_;
@@ -317,6 +341,7 @@ public final class Maintenance {
      *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindowOrBuilder getDailyMaintenanceWindowOrBuilder() {
       if (policyCase_ == 2) {
          return (yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow) policy_;
@@ -331,7 +356,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
+     * @return Whether the weeklyMaintenanceWindow field is set.
      */
+    @java.lang.Override
     public boolean hasWeeklyMaintenanceWindow() {
       return policyCase_ == 3;
     }
@@ -341,7 +368,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
+     * @return The weeklyMaintenanceWindow.
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
       if (policyCase_ == 3) {
          return (yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow) policy_;
@@ -355,6 +384,7 @@ public final class Maintenance {
      *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
       if (policyCase_ == 3) {
          return (yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow) policy_;
@@ -421,28 +451,25 @@ public final class Maintenance {
       }
       yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow other = (yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow) obj;
 
-      boolean result = true;
-      result = result && getPolicyCase().equals(
-          other.getPolicyCase());
-      if (!result) return false;
+      if (!getPolicyCase().equals(other.getPolicyCase())) return false;
       switch (policyCase_) {
         case 1:
-          result = result && getAnytime()
-              .equals(other.getAnytime());
+          if (!getAnytime()
+              .equals(other.getAnytime())) return false;
           break;
         case 2:
-          result = result && getDailyMaintenanceWindow()
-              .equals(other.getDailyMaintenanceWindow());
+          if (!getDailyMaintenanceWindow()
+              .equals(other.getDailyMaintenanceWindow())) return false;
           break;
         case 3:
-          result = result && getWeeklyMaintenanceWindow()
-              .equals(other.getWeeklyMaintenanceWindow());
+          if (!getWeeklyMaintenanceWindow()
+              .equals(other.getWeeklyMaintenanceWindow())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -657,35 +684,35 @@ public final class Maintenance {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -768,7 +795,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
+       * @return Whether the anytime field is set.
        */
+      @java.lang.Override
       public boolean hasAnytime() {
         return policyCase_ == 1;
       }
@@ -778,7 +807,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
+       * @return The anytime.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
         if (anytimeBuilder_ == null) {
           if (policyCase_ == 1) {
@@ -896,6 +927,7 @@ public final class Maintenance {
        *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
         if ((policyCase_ == 1) && (anytimeBuilder_ != null)) {
           return anytimeBuilder_.getMessageOrBuilder();
@@ -940,7 +972,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
+       * @return Whether the dailyMaintenanceWindow field is set.
        */
+      @java.lang.Override
       public boolean hasDailyMaintenanceWindow() {
         return policyCase_ == 2;
       }
@@ -950,7 +984,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
+       * @return The dailyMaintenanceWindow.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow getDailyMaintenanceWindow() {
         if (dailyMaintenanceWindowBuilder_ == null) {
           if (policyCase_ == 2) {
@@ -1068,6 +1104,7 @@ public final class Maintenance {
        *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindowOrBuilder getDailyMaintenanceWindowOrBuilder() {
         if ((policyCase_ == 2) && (dailyMaintenanceWindowBuilder_ != null)) {
           return dailyMaintenanceWindowBuilder_.getMessageOrBuilder();
@@ -1112,7 +1149,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
+       * @return Whether the weeklyMaintenanceWindow field is set.
        */
+      @java.lang.Override
       public boolean hasWeeklyMaintenanceWindow() {
         return policyCase_ == 3;
       }
@@ -1122,7 +1161,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
+       * @return The weeklyMaintenanceWindow.
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
         if (weeklyMaintenanceWindowBuilder_ == null) {
           if (policyCase_ == 3) {
@@ -1240,6 +1281,7 @@ public final class Maintenance {
        *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
         if ((policyCase_ == 3) && (weeklyMaintenanceWindowBuilder_ != null)) {
           return weeklyMaintenanceWindowBuilder_.getMessageOrBuilder();
@@ -1278,7 +1320,7 @@ public final class Maintenance {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1335,7 +1377,7 @@ public final class Maintenance {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.AnytimeMaintenanceWindow}
    */
-  public  static final class AnytimeMaintenanceWindow extends
+  public static final class AnytimeMaintenanceWindow extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.AnytimeMaintenanceWindow)
       AnytimeMaintenanceWindowOrBuilder {
@@ -1345,6 +1387,13 @@ public final class Maintenance {
       super(builder);
     }
     private AnytimeMaintenanceWindow() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnytimeMaintenanceWindow();
     }
 
     @java.lang.Override
@@ -1371,7 +1420,7 @@ public final class Maintenance {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1440,9 +1489,8 @@ public final class Maintenance {
       }
       yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow other = (yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1617,35 +1665,35 @@ public final class Maintenance {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1690,7 +1738,7 @@ public final class Maintenance {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1750,6 +1798,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
@@ -1758,6 +1807,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The startTime.
      */
     com.google.type.TimeOfDay getStartTime();
     /**
@@ -1775,6 +1825,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return Whether the duration field is set.
      */
     boolean hasDuration();
     /**
@@ -1783,6 +1834,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return The duration.
      */
     com.google.protobuf.Duration getDuration();
     /**
@@ -1797,7 +1849,7 @@ public final class Maintenance {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.DailyMaintenanceWindow}
    */
-  public  static final class DailyMaintenanceWindow extends
+  public static final class DailyMaintenanceWindow extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.DailyMaintenanceWindow)
       DailyMaintenanceWindowOrBuilder {
@@ -1807,6 +1859,13 @@ public final class Maintenance {
       super(builder);
     }
     private DailyMaintenanceWindow() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DailyMaintenanceWindow();
     }
 
     @java.lang.Override
@@ -1822,7 +1881,6 @@ public final class Maintenance {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1860,7 +1918,7 @@ public final class Maintenance {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1899,7 +1957,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the startTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
@@ -1909,7 +1969,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public com.google.type.TimeOfDay getStartTime() {
       return startTime_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : startTime_;
     }
@@ -1920,6 +1982,7 @@ public final class Maintenance {
      *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -1932,7 +1995,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return Whether the duration field is set.
      */
+    @java.lang.Override
     public boolean hasDuration() {
       return duration_ != null;
     }
@@ -1942,7 +2007,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return The duration.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getDuration() {
       return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
     }
@@ -1953,6 +2020,7 @@ public final class Maintenance {
      *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
       return getDuration();
     }
@@ -2009,19 +2077,18 @@ public final class Maintenance {
       }
       yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow other = (yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow) obj;
 
-      boolean result = true;
-      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
-        result = result && getStartTime()
-            .equals(other.getStartTime());
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
       }
-      result = result && (hasDuration() == other.hasDuration());
+      if (hasDuration() != other.hasDuration()) return false;
       if (hasDuration()) {
-        result = result && getDuration()
-            .equals(other.getDuration());
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2226,35 +2293,35 @@ public final class Maintenance {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2303,7 +2370,7 @@ public final class Maintenance {
         return this;
       }
 
-      private com.google.type.TimeOfDay startTime_ = null;
+      private com.google.type.TimeOfDay startTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> startTimeBuilder_;
       /**
@@ -2312,6 +2379,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
@@ -2322,6 +2390,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The startTime.
        */
       public com.google.type.TimeOfDay getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -2456,7 +2525,7 @@ public final class Maintenance {
         return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Duration duration_ = null;
+      private com.google.protobuf.Duration duration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
@@ -2465,6 +2534,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
+       * @return Whether the duration field is set.
        */
       public boolean hasDuration() {
         return durationBuilder_ != null || duration_ != null;
@@ -2475,6 +2545,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
+       * @return The duration.
        */
       public com.google.protobuf.Duration getDuration() {
         if (durationBuilder_ == null) {
@@ -2611,7 +2682,7 @@ public final class Maintenance {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2671,6 +2742,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the days.
      */
     java.util.List<com.google.type.DayOfWeek> getDaysList();
     /**
@@ -2679,6 +2751,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return The count of days.
      */
     int getDaysCount();
     /**
@@ -2687,6 +2760,8 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the element to return.
+     * @return The days at the given index.
      */
     com.google.type.DayOfWeek getDays(int index);
     /**
@@ -2695,6 +2770,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the enum numeric values on the wire for days.
      */
     java.util.List<java.lang.Integer>
     getDaysValueList();
@@ -2704,6 +2780,8 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of days at the given index.
      */
     int getDaysValue(int index);
 
@@ -2713,6 +2791,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
@@ -2721,6 +2800,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The startTime.
      */
     com.google.type.TimeOfDay getStartTime();
     /**
@@ -2738,6 +2818,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return Whether the duration field is set.
      */
     boolean hasDuration();
     /**
@@ -2746,6 +2827,7 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return The duration.
      */
     com.google.protobuf.Duration getDuration();
     /**
@@ -2760,7 +2842,7 @@ public final class Maintenance {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow}
    */
-  public  static final class DaysOfWeekMaintenanceWindow extends
+  public static final class DaysOfWeekMaintenanceWindow extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow)
       DaysOfWeekMaintenanceWindowOrBuilder {
@@ -2771,6 +2853,13 @@ public final class Maintenance {
     }
     private DaysOfWeekMaintenanceWindow() {
       days_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DaysOfWeekMaintenanceWindow();
     }
 
     @java.lang.Override
@@ -2799,7 +2888,7 @@ public final class Maintenance {
               break;
             case 8: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 days_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2811,7 +2900,7 @@ public final class Maintenance {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   days_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -2847,7 +2936,7 @@ public final class Maintenance {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2861,7 +2950,7 @@ public final class Maintenance {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           days_ = java.util.Collections.unmodifiableList(days_);
         }
         this.unknownFields = unknownFields.build();
@@ -2881,7 +2970,6 @@ public final class Maintenance {
               yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.class, yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DAYS_FIELD_NUMBER = 1;
     private java.util.List<java.lang.Integer> days_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
@@ -2900,7 +2988,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the days.
      */
+    @java.lang.Override
     public java.util.List<com.google.type.DayOfWeek> getDaysList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, com.google.type.DayOfWeek>(days_, days_converter_);
@@ -2911,7 +3001,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return The count of days.
      */
+    @java.lang.Override
     public int getDaysCount() {
       return days_.size();
     }
@@ -2921,7 +3013,10 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the element to return.
+     * @return The days at the given index.
      */
+    @java.lang.Override
     public com.google.type.DayOfWeek getDays(int index) {
       return days_converter_.convert(days_.get(index));
     }
@@ -2931,7 +3026,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @return A list containing the enum numeric values on the wire for days.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getDaysValueList() {
       return days_;
@@ -2942,7 +3039,10 @@ public final class Maintenance {
      * </pre>
      *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of days at the given index.
      */
+    @java.lang.Override
     public int getDaysValue(int index) {
       return days_.get(index);
     }
@@ -2956,7 +3056,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the startTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
@@ -2966,7 +3068,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public com.google.type.TimeOfDay getStartTime() {
       return startTime_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : startTime_;
     }
@@ -2977,6 +3081,7 @@ public final class Maintenance {
      *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -2989,7 +3094,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return Whether the duration field is set.
      */
+    @java.lang.Override
     public boolean hasDuration() {
       return duration_ != null;
     }
@@ -2999,7 +3106,9 @@ public final class Maintenance {
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
+     * @return The duration.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getDuration() {
       return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
     }
@@ -3010,6 +3119,7 @@ public final class Maintenance {
      *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
       return getDuration();
     }
@@ -3086,20 +3196,19 @@ public final class Maintenance {
       }
       yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow other = (yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow) obj;
 
-      boolean result = true;
-      result = result && days_.equals(other.days_);
-      result = result && (hasStartTime() == other.hasStartTime());
+      if (!days_.equals(other.days_)) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
-        result = result && getStartTime()
-            .equals(other.getStartTime());
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
       }
-      result = result && (hasDuration() == other.hasDuration());
+      if (hasDuration() != other.hasDuration()) return false;
       if (hasDuration()) {
-        result = result && getDuration()
-            .equals(other.getDuration());
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3295,8 +3404,7 @@ public final class Maintenance {
       public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow buildPartial() {
         yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow result = new yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           days_ = java.util.Collections.unmodifiableList(days_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -3311,42 +3419,41 @@ public final class Maintenance {
         } else {
           result.duration_ = durationBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3409,7 +3516,7 @@ public final class Maintenance {
       private java.util.List<java.lang.Integer> days_ =
         java.util.Collections.emptyList();
       private void ensureDaysIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           days_ = new java.util.ArrayList<java.lang.Integer>(days_);
           bitField0_ |= 0x00000001;
         }
@@ -3420,6 +3527,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return A list containing the days.
        */
       public java.util.List<com.google.type.DayOfWeek> getDaysList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -3431,6 +3539,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return The count of days.
        */
       public int getDaysCount() {
         return days_.size();
@@ -3441,6 +3550,8 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index of the element to return.
+       * @return The days at the given index.
        */
       public com.google.type.DayOfWeek getDays(int index) {
         return days_converter_.convert(days_.get(index));
@@ -3451,6 +3562,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index to set the value at.
+       * @param value The days to set.
+       * @return This builder for chaining.
        */
       public Builder setDays(
           int index, com.google.type.DayOfWeek value) {
@@ -3468,6 +3582,8 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param value The days to add.
+       * @return This builder for chaining.
        */
       public Builder addDays(com.google.type.DayOfWeek value) {
         if (value == null) {
@@ -3484,6 +3600,8 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param values The days to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDays(
           java.lang.Iterable<? extends com.google.type.DayOfWeek> values) {
@@ -3500,6 +3618,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDays() {
         days_ = java.util.Collections.emptyList();
@@ -3513,6 +3632,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @return A list containing the enum numeric values on the wire for days.
        */
       public java.util.List<java.lang.Integer>
       getDaysValueList() {
@@ -3524,6 +3644,8 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of days at the given index.
        */
       public int getDaysValue(int index) {
         return days_.get(index);
@@ -3534,6 +3656,9 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of days at the given index.
+       * @return This builder for chaining.
        */
       public Builder setDaysValue(
           int index, int value) {
@@ -3548,6 +3673,8 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param value The enum numeric value on the wire for days to add.
+       * @return This builder for chaining.
        */
       public Builder addDaysValue(int value) {
         ensureDaysIsMutable();
@@ -3561,6 +3688,8 @@ public final class Maintenance {
        * </pre>
        *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
+       * @param values The enum numeric values on the wire for days to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDaysValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -3572,7 +3701,7 @@ public final class Maintenance {
         return this;
       }
 
-      private com.google.type.TimeOfDay startTime_ = null;
+      private com.google.type.TimeOfDay startTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> startTimeBuilder_;
       /**
@@ -3581,6 +3710,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
@@ -3591,6 +3721,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The startTime.
        */
       public com.google.type.TimeOfDay getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -3725,7 +3856,7 @@ public final class Maintenance {
         return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Duration duration_ = null;
+      private com.google.protobuf.Duration duration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
@@ -3734,6 +3865,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
+       * @return Whether the duration field is set.
        */
       public boolean hasDuration() {
         return durationBuilder_ != null || duration_ != null;
@@ -3744,6 +3876,7 @@ public final class Maintenance {
        * </pre>
        *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
+       * @return The duration.
        */
       public com.google.protobuf.Duration getDuration() {
         if (durationBuilder_ == null) {
@@ -3880,7 +4013,7 @@ public final class Maintenance {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3981,7 +4114,7 @@ public final class Maintenance {
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.WeeklyMaintenanceWindow}
    */
-  public  static final class WeeklyMaintenanceWindow extends
+  public static final class WeeklyMaintenanceWindow extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.WeeklyMaintenanceWindow)
       WeeklyMaintenanceWindowOrBuilder {
@@ -3992,6 +4125,13 @@ public final class Maintenance {
     }
     private WeeklyMaintenanceWindow() {
       daysOfWeek_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WeeklyMaintenanceWindow();
     }
 
     @java.lang.Override
@@ -4019,7 +4159,7 @@ public final class Maintenance {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 daysOfWeek_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4028,7 +4168,7 @@ public final class Maintenance {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4042,7 +4182,7 @@ public final class Maintenance {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           daysOfWeek_ = java.util.Collections.unmodifiableList(daysOfWeek_);
         }
         this.unknownFields = unknownFields.build();
@@ -4071,6 +4211,7 @@ public final class Maintenance {
      *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow> getDaysOfWeekList() {
       return daysOfWeek_;
     }
@@ -4081,6 +4222,7 @@ public final class Maintenance {
      *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder> 
         getDaysOfWeekOrBuilderList() {
       return daysOfWeek_;
@@ -4092,6 +4234,7 @@ public final class Maintenance {
      *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public int getDaysOfWeekCount() {
       return daysOfWeek_.size();
     }
@@ -4102,6 +4245,7 @@ public final class Maintenance {
      *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow getDaysOfWeek(int index) {
       return daysOfWeek_.get(index);
     }
@@ -4112,6 +4256,7 @@ public final class Maintenance {
      *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder getDaysOfWeekOrBuilder(
         int index) {
       return daysOfWeek_.get(index);
@@ -4162,11 +4307,10 @@ public final class Maintenance {
       }
       yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow other = (yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow) obj;
 
-      boolean result = true;
-      result = result && getDaysOfWeekList()
-          .equals(other.getDaysOfWeekList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDaysOfWeekList()
+          .equals(other.getDaysOfWeekList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4348,7 +4492,7 @@ public final class Maintenance {
         yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow result = new yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow(this);
         int from_bitField0_ = bitField0_;
         if (daysOfWeekBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             daysOfWeek_ = java.util.Collections.unmodifiableList(daysOfWeek_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4362,35 +4506,35 @@ public final class Maintenance {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4463,7 +4607,7 @@ public final class Maintenance {
       private java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow> daysOfWeek_ =
         java.util.Collections.emptyList();
       private void ensureDaysOfWeekIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           daysOfWeek_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow>(daysOfWeek_);
           bitField0_ |= 0x00000001;
          }
@@ -4764,7 +4908,7 @@ public final class Maintenance {
           daysOfWeekBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder>(
                   daysOfWeek_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           daysOfWeek_ = null;
@@ -4774,7 +4918,7 @@ public final class Maintenance {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4885,22 +5029,14 @@ public final class Maintenance {
       "-genproto/yandex/cloud/k8s/v1;k8sb\006proto" +
       "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.type.DayOfWeekProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_k8s_v1_MaintenanceWindow_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_MaintenanceWindow_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.iot.devices.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/iot/devices/v1/device_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DeviceServiceGrpc {
 
   private DeviceServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class DeviceServiceGrpc {
     if ((getGetMethod = DeviceServiceGrpc.getGetMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getGetMethod = DeviceServiceGrpc.getGetMethod) == null) {
-          DeviceServiceGrpc.getGetMethod = getGetMethod = 
+          DeviceServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest,
@@ -76,22 +63,21 @@ public final class DeviceServiceGrpc {
     if ((getGetByNameMethod = DeviceServiceGrpc.getGetByNameMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getGetByNameMethod = DeviceServiceGrpc.getGetByNameMethod) == null) {
-          DeviceServiceGrpc.getGetByNameMethod = getGetByNameMethod = 
+          DeviceServiceGrpc.getGetByNameMethod = getGetByNameMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "GetByName"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetByName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("GetByName"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("GetByName"))
+              .build();
         }
-     }
-     return getGetByNameMethod;
+      }
+    }
+    return getGetByNameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest,
@@ -108,22 +94,21 @@ public final class DeviceServiceGrpc {
     if ((getListMethod = DeviceServiceGrpc.getListMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getListMethod = DeviceServiceGrpc.getListMethod) == null) {
-          DeviceServiceGrpc.getListMethod = getListMethod = 
+          DeviceServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest,
@@ -140,22 +125,21 @@ public final class DeviceServiceGrpc {
     if ((getCreateMethod = DeviceServiceGrpc.getCreateMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getCreateMethod = DeviceServiceGrpc.getCreateMethod) == null) {
-          DeviceServiceGrpc.getCreateMethod = getCreateMethod = 
+          DeviceServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest,
@@ -172,22 +156,21 @@ public final class DeviceServiceGrpc {
     if ((getUpdateMethod = DeviceServiceGrpc.getUpdateMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getUpdateMethod = DeviceServiceGrpc.getUpdateMethod) == null) {
-          DeviceServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          DeviceServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest,
@@ -204,22 +187,21 @@ public final class DeviceServiceGrpc {
     if ((getDeleteMethod = DeviceServiceGrpc.getDeleteMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getDeleteMethod = DeviceServiceGrpc.getDeleteMethod) == null) {
-          DeviceServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          DeviceServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest,
@@ -236,22 +218,21 @@ public final class DeviceServiceGrpc {
     if ((getListCertificatesMethod = DeviceServiceGrpc.getListCertificatesMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getListCertificatesMethod = DeviceServiceGrpc.getListCertificatesMethod) == null) {
-          DeviceServiceGrpc.getListCertificatesMethod = getListCertificatesMethod = 
+          DeviceServiceGrpc.getListCertificatesMethod = getListCertificatesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "ListCertificates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCertificates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListCertificates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListCertificates"))
+              .build();
         }
-     }
-     return getListCertificatesMethod;
+      }
+    }
+    return getListCertificatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest,
@@ -268,22 +249,21 @@ public final class DeviceServiceGrpc {
     if ((getAddCertificateMethod = DeviceServiceGrpc.getAddCertificateMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getAddCertificateMethod = DeviceServiceGrpc.getAddCertificateMethod) == null) {
-          DeviceServiceGrpc.getAddCertificateMethod = getAddCertificateMethod = 
+          DeviceServiceGrpc.getAddCertificateMethod = getAddCertificateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "AddCertificate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddCertificate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("AddCertificate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("AddCertificate"))
+              .build();
         }
-     }
-     return getAddCertificateMethod;
+      }
+    }
+    return getAddCertificateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest,
@@ -300,22 +280,21 @@ public final class DeviceServiceGrpc {
     if ((getDeleteCertificateMethod = DeviceServiceGrpc.getDeleteCertificateMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getDeleteCertificateMethod = DeviceServiceGrpc.getDeleteCertificateMethod) == null) {
-          DeviceServiceGrpc.getDeleteCertificateMethod = getDeleteCertificateMethod = 
+          DeviceServiceGrpc.getDeleteCertificateMethod = getDeleteCertificateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "DeleteCertificate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCertificate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("DeleteCertificate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("DeleteCertificate"))
+              .build();
         }
-     }
-     return getDeleteCertificateMethod;
+      }
+    }
+    return getDeleteCertificateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest,
@@ -332,22 +311,21 @@ public final class DeviceServiceGrpc {
     if ((getListPasswordsMethod = DeviceServiceGrpc.getListPasswordsMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getListPasswordsMethod = DeviceServiceGrpc.getListPasswordsMethod) == null) {
-          DeviceServiceGrpc.getListPasswordsMethod = getListPasswordsMethod = 
+          DeviceServiceGrpc.getListPasswordsMethod = getListPasswordsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "ListPasswords"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPasswords"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListPasswords"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListPasswords"))
+              .build();
         }
-     }
-     return getListPasswordsMethod;
+      }
+    }
+    return getListPasswordsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest,
@@ -364,22 +342,21 @@ public final class DeviceServiceGrpc {
     if ((getAddPasswordMethod = DeviceServiceGrpc.getAddPasswordMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getAddPasswordMethod = DeviceServiceGrpc.getAddPasswordMethod) == null) {
-          DeviceServiceGrpc.getAddPasswordMethod = getAddPasswordMethod = 
+          DeviceServiceGrpc.getAddPasswordMethod = getAddPasswordMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "AddPassword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("AddPassword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("AddPassword"))
+              .build();
         }
-     }
-     return getAddPasswordMethod;
+      }
+    }
+    return getAddPasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest,
@@ -396,22 +373,21 @@ public final class DeviceServiceGrpc {
     if ((getDeletePasswordMethod = DeviceServiceGrpc.getDeletePasswordMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getDeletePasswordMethod = DeviceServiceGrpc.getDeletePasswordMethod) == null) {
-          DeviceServiceGrpc.getDeletePasswordMethod = getDeletePasswordMethod = 
+          DeviceServiceGrpc.getDeletePasswordMethod = getDeletePasswordMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "DeletePassword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("DeletePassword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("DeletePassword"))
+              .build();
         }
-     }
-     return getDeletePasswordMethod;
+      }
+    }
+    return getDeletePasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest,
@@ -428,29 +404,35 @@ public final class DeviceServiceGrpc {
     if ((getListOperationsMethod = DeviceServiceGrpc.getListOperationsMethod) == null) {
       synchronized (DeviceServiceGrpc.class) {
         if ((getListOperationsMethod = DeviceServiceGrpc.getListOperationsMethod) == null) {
-          DeviceServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          DeviceServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.iot.devices.v1.DeviceService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DeviceServiceStub newStub(io.grpc.Channel channel) {
-    return new DeviceServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceServiceStub>() {
+        @java.lang.Override
+        public DeviceServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceServiceStub(channel, callOptions);
+        }
+      };
+    return DeviceServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -458,7 +440,14 @@ public final class DeviceServiceGrpc {
    */
   public static DeviceServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DeviceServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceServiceBlockingStub>() {
+        @java.lang.Override
+        public DeviceServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DeviceServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -466,7 +455,14 @@ public final class DeviceServiceGrpc {
    */
   public static DeviceServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DeviceServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceServiceFutureStub>() {
+        @java.lang.Override
+        public DeviceServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DeviceServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -484,14 +480,14 @@ public final class DeviceServiceGrpc {
      */
     public void get(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
     public void getByName(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
     }
 
     /**
@@ -501,7 +497,7 @@ public final class DeviceServiceGrpc {
      */
     public void list(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -511,7 +507,7 @@ public final class DeviceServiceGrpc {
      */
     public void create(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -521,7 +517,7 @@ public final class DeviceServiceGrpc {
      */
     public void update(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -531,7 +527,7 @@ public final class DeviceServiceGrpc {
      */
     public void delete(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -541,7 +537,7 @@ public final class DeviceServiceGrpc {
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCertificatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCertificatesMethod(), responseObserver);
     }
 
     /**
@@ -551,7 +547,7 @@ public final class DeviceServiceGrpc {
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddCertificateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddCertificateMethod(), responseObserver);
     }
 
     /**
@@ -561,7 +557,7 @@ public final class DeviceServiceGrpc {
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteCertificateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCertificateMethod(), responseObserver);
     }
 
     /**
@@ -571,7 +567,7 @@ public final class DeviceServiceGrpc {
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPasswordsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPasswordsMethod(), responseObserver);
     }
 
     /**
@@ -581,7 +577,7 @@ public final class DeviceServiceGrpc {
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddPasswordMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddPasswordMethod(), responseObserver);
     }
 
     /**
@@ -591,7 +587,7 @@ public final class DeviceServiceGrpc {
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePasswordMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePasswordMethod(), responseObserver);
     }
 
     /**
@@ -601,98 +597,98 @@ public final class DeviceServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>(
                   this, METHODID_GET)))
           .addMethod(
             getGetByNameMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>(
                   this, METHODID_GET_BY_NAME)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListCertificatesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse>(
                   this, METHODID_LIST_CERTIFICATES)))
           .addMethod(
             getAddCertificateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_CERTIFICATE)))
           .addMethod(
             getDeleteCertificateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_CERTIFICATE)))
           .addMethod(
             getListPasswordsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse>(
                   this, METHODID_LIST_PASSWORDS)))
           .addMethod(
             getAddPasswordMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_PASSWORD)))
           .addMethod(
             getDeletePasswordMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_PASSWORD)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest,
                 yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse>(
@@ -706,19 +702,15 @@ public final class DeviceServiceGrpc {
    * A set of methods for managing devices.
    * </pre>
    */
-  public static final class DeviceServiceStub extends io.grpc.stub.AbstractStub<DeviceServiceStub> {
-    private DeviceServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceServiceStub extends io.grpc.stub.AbstractAsyncStub<DeviceServiceStub> {
+    private DeviceServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceServiceStub(channel, callOptions);
     }
 
@@ -730,7 +722,7 @@ public final class DeviceServiceGrpc {
      */
     public void get(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -738,7 +730,7 @@ public final class DeviceServiceGrpc {
      */
     public void getByName(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -749,7 +741,7 @@ public final class DeviceServiceGrpc {
      */
     public void list(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -760,7 +752,7 @@ public final class DeviceServiceGrpc {
      */
     public void create(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -771,7 +763,7 @@ public final class DeviceServiceGrpc {
      */
     public void update(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -782,7 +774,7 @@ public final class DeviceServiceGrpc {
      */
     public void delete(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -793,7 +785,7 @@ public final class DeviceServiceGrpc {
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCertificatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -804,7 +796,7 @@ public final class DeviceServiceGrpc {
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddCertificateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -815,7 +807,7 @@ public final class DeviceServiceGrpc {
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCertificateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -826,7 +818,7 @@ public final class DeviceServiceGrpc {
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPasswordsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -837,7 +829,7 @@ public final class DeviceServiceGrpc {
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -848,7 +840,7 @@ public final class DeviceServiceGrpc {
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -859,7 +851,7 @@ public final class DeviceServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -869,19 +861,15 @@ public final class DeviceServiceGrpc {
    * A set of methods for managing devices.
    * </pre>
    */
-  public static final class DeviceServiceBlockingStub extends io.grpc.stub.AbstractStub<DeviceServiceBlockingStub> {
-    private DeviceServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DeviceServiceBlockingStub> {
+    private DeviceServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceServiceBlockingStub(channel, callOptions);
     }
 
@@ -892,14 +880,14 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device get(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device getByName(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetByNameMethod(), getCallOptions(), request);
     }
 
@@ -909,7 +897,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse list(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -919,7 +907,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -929,7 +917,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -939,7 +927,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -949,7 +937,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse listCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCertificatesMethod(), getCallOptions(), request);
     }
 
@@ -959,7 +947,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddCertificateMethod(), getCallOptions(), request);
     }
 
@@ -969,7 +957,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCertificateMethod(), getCallOptions(), request);
     }
 
@@ -979,7 +967,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse listPasswords(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPasswordsMethod(), getCallOptions(), request);
     }
 
@@ -989,7 +977,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addPassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddPasswordMethod(), getCallOptions(), request);
     }
 
@@ -999,7 +987,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deletePassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePasswordMethod(), getCallOptions(), request);
     }
 
@@ -1009,7 +997,7 @@ public final class DeviceServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse listOperations(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -1019,19 +1007,15 @@ public final class DeviceServiceGrpc {
    * A set of methods for managing devices.
    * </pre>
    */
-  public static final class DeviceServiceFutureStub extends io.grpc.stub.AbstractStub<DeviceServiceFutureStub> {
-    private DeviceServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DeviceServiceFutureStub> {
+    private DeviceServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceServiceFutureStub(channel, callOptions);
     }
 
@@ -1043,7 +1027,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> get(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -1051,7 +1035,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getByName(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetByNameMethod(), getCallOptions()), request);
     }
 
@@ -1062,7 +1046,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> list(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -1073,7 +1057,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -1084,7 +1068,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1095,7 +1079,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -1106,7 +1090,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse> listCertificates(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCertificatesMethod(), getCallOptions()), request);
     }
 
@@ -1117,7 +1101,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addCertificate(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddCertificateMethod(), getCallOptions()), request);
     }
 
@@ -1128,7 +1112,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteCertificate(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCertificateMethod(), getCallOptions()), request);
     }
 
@@ -1139,7 +1123,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse> listPasswords(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPasswordsMethod(), getCallOptions()), request);
     }
 
@@ -1150,7 +1134,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addPassword(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddPasswordMethod(), getCallOptions()), request);
     }
 
@@ -1161,7 +1145,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deletePassword(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePasswordMethod(), getCallOptions()), request);
     }
 
@@ -1172,7 +1156,7 @@ public final class DeviceServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse> listOperations(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

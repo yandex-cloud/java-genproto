@@ -20,10 +20,17 @@ public final class Tls {
 
     /**
      * <code>string trusted_ca_id = 1;</code>
+     * @return Whether the trustedCaId field is set.
+     */
+    boolean hasTrustedCaId();
+    /**
+     * <code>string trusted_ca_id = 1;</code>
+     * @return The trustedCaId.
      */
     java.lang.String getTrustedCaId();
     /**
      * <code>string trusted_ca_id = 1;</code>
+     * @return The bytes for trustedCaId.
      */
     com.google.protobuf.ByteString
         getTrustedCaIdBytes();
@@ -34,6 +41,16 @@ public final class Tls {
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
+     * @return Whether the trustedCaBytes field is set.
+     */
+    boolean hasTrustedCaBytes();
+    /**
+     * <pre>
+     * X.509 certificate contents in PEM format.
+     * </pre>
+     *
+     * <code>string trusted_ca_bytes = 2;</code>
+     * @return The trustedCaBytes.
      */
     java.lang.String getTrustedCaBytes();
     /**
@@ -42,6 +59,7 @@ public final class Tls {
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
+     * @return The bytes for trustedCaBytes.
      */
     com.google.protobuf.ByteString
         getTrustedCaBytesBytes();
@@ -55,7 +73,7 @@ public final class Tls {
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ValidationContext}
    */
-  public  static final class ValidationContext extends
+  public static final class ValidationContext extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ValidationContext)
       ValidationContextOrBuilder {
@@ -65,6 +83,13 @@ public final class Tls {
       super(builder);
     }
     private ValidationContext() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValidationContext();
     }
 
     @java.lang.Override
@@ -80,7 +105,6 @@ public final class Tls {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -104,7 +128,7 @@ public final class Tls {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -138,7 +162,8 @@ public final class Tls {
     private int trustedCaCase_ = 0;
     private java.lang.Object trustedCa_;
     public enum TrustedCaCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TRUSTED_CA_ID(1),
       TRUSTED_CA_BYTES(2),
       TRUSTEDCA_NOT_SET(0);
@@ -147,6 +172,8 @@ public final class Tls {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -176,6 +203,14 @@ public final class Tls {
     public static final int TRUSTED_CA_ID_FIELD_NUMBER = 1;
     /**
      * <code>string trusted_ca_id = 1;</code>
+     * @return Whether the trustedCaId field is set.
+     */
+    public boolean hasTrustedCaId() {
+      return trustedCaCase_ == 1;
+    }
+    /**
+     * <code>string trusted_ca_id = 1;</code>
+     * @return The trustedCaId.
      */
     public java.lang.String getTrustedCaId() {
       java.lang.Object ref = "";
@@ -196,6 +231,7 @@ public final class Tls {
     }
     /**
      * <code>string trusted_ca_id = 1;</code>
+     * @return The bytes for trustedCaId.
      */
     public com.google.protobuf.ByteString
         getTrustedCaIdBytes() {
@@ -223,6 +259,18 @@ public final class Tls {
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
+     * @return Whether the trustedCaBytes field is set.
+     */
+    public boolean hasTrustedCaBytes() {
+      return trustedCaCase_ == 2;
+    }
+    /**
+     * <pre>
+     * X.509 certificate contents in PEM format.
+     * </pre>
+     *
+     * <code>string trusted_ca_bytes = 2;</code>
+     * @return The trustedCaBytes.
      */
     public java.lang.String getTrustedCaBytes() {
       java.lang.Object ref = "";
@@ -247,6 +295,7 @@ public final class Tls {
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
+     * @return The bytes for trustedCaBytes.
      */
     public com.google.protobuf.ByteString
         getTrustedCaBytesBytes() {
@@ -317,24 +366,21 @@ public final class Tls {
       }
       yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext other = (yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext) obj;
 
-      boolean result = true;
-      result = result && getTrustedCaCase().equals(
-          other.getTrustedCaCase());
-      if (!result) return false;
+      if (!getTrustedCaCase().equals(other.getTrustedCaCase())) return false;
       switch (trustedCaCase_) {
         case 1:
-          result = result && getTrustedCaId()
-              .equals(other.getTrustedCaId());
+          if (!getTrustedCaId()
+              .equals(other.getTrustedCaId())) return false;
           break;
         case 2:
-          result = result && getTrustedCaBytes()
-              .equals(other.getTrustedCaBytes());
+          if (!getTrustedCaBytes()
+              .equals(other.getTrustedCaBytes())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -534,35 +580,35 @@ public final class Tls {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -639,7 +685,17 @@ public final class Tls {
 
       /**
        * <code>string trusted_ca_id = 1;</code>
+       * @return Whether the trustedCaId field is set.
        */
+      @java.lang.Override
+      public boolean hasTrustedCaId() {
+        return trustedCaCase_ == 1;
+      }
+      /**
+       * <code>string trusted_ca_id = 1;</code>
+       * @return The trustedCaId.
+       */
+      @java.lang.Override
       public java.lang.String getTrustedCaId() {
         java.lang.Object ref = "";
         if (trustedCaCase_ == 1) {
@@ -659,7 +715,9 @@ public final class Tls {
       }
       /**
        * <code>string trusted_ca_id = 1;</code>
+       * @return The bytes for trustedCaId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTrustedCaIdBytes() {
         java.lang.Object ref = "";
@@ -680,6 +738,8 @@ public final class Tls {
       }
       /**
        * <code>string trusted_ca_id = 1;</code>
+       * @param value The trustedCaId to set.
+       * @return This builder for chaining.
        */
       public Builder setTrustedCaId(
           java.lang.String value) {
@@ -693,6 +753,7 @@ public final class Tls {
       }
       /**
        * <code>string trusted_ca_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTrustedCaId() {
         if (trustedCaCase_ == 1) {
@@ -704,6 +765,8 @@ public final class Tls {
       }
       /**
        * <code>string trusted_ca_id = 1;</code>
+       * @param value The bytes for trustedCaId to set.
+       * @return This builder for chaining.
        */
       public Builder setTrustedCaIdBytes(
           com.google.protobuf.ByteString value) {
@@ -723,7 +786,21 @@ public final class Tls {
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
+       * @return Whether the trustedCaBytes field is set.
        */
+      @java.lang.Override
+      public boolean hasTrustedCaBytes() {
+        return trustedCaCase_ == 2;
+      }
+      /**
+       * <pre>
+       * X.509 certificate contents in PEM format.
+       * </pre>
+       *
+       * <code>string trusted_ca_bytes = 2;</code>
+       * @return The trustedCaBytes.
+       */
+      @java.lang.Override
       public java.lang.String getTrustedCaBytes() {
         java.lang.Object ref = "";
         if (trustedCaCase_ == 2) {
@@ -747,7 +824,9 @@ public final class Tls {
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
+       * @return The bytes for trustedCaBytes.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTrustedCaBytesBytes() {
         java.lang.Object ref = "";
@@ -772,6 +851,8 @@ public final class Tls {
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
+       * @param value The trustedCaBytes to set.
+       * @return This builder for chaining.
        */
       public Builder setTrustedCaBytes(
           java.lang.String value) {
@@ -789,6 +870,7 @@ public final class Tls {
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTrustedCaBytes() {
         if (trustedCaCase_ == 2) {
@@ -804,6 +886,8 @@ public final class Tls {
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
+       * @param value The bytes for trustedCaBytes to set.
+       * @return This builder for chaining.
        */
       public Builder setTrustedCaBytesBytes(
           com.google.protobuf.ByteString value) {
@@ -819,7 +903,7 @@ public final class Tls {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -893,19 +977,11 @@ public final class Tls {
       "ndex/cloud/apploadbalancer/v1;apploadbal" +
       "ancerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_apploadbalancer_v1_ValidationContext_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_ValidationContext_fieldAccessorTable = new

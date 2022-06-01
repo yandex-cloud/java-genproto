@@ -1,25 +1,13 @@
 package yandex.cloud.api.ydb.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ydb/v1/location_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class LocationServiceGrpc {
 
   private LocationServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class LocationServiceGrpc {
     if ((getGetMethod = LocationServiceGrpc.getGetMethod) == null) {
       synchronized (LocationServiceGrpc.class) {
         if ((getGetMethod = LocationServiceGrpc.getGetMethod) == null) {
-          LocationServiceGrpc.getGetMethod = getGetMethod = 
+          LocationServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest, yandex.cloud.api.ydb.v1.LocationOuterClass.Location>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ydb.v1.LocationService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.LocationOuterClass.Location.getDefaultInstance()))
-                  .setSchemaDescriptor(new LocationServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LocationServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest,
@@ -73,29 +60,35 @@ public final class LocationServiceGrpc {
     if ((getListMethod = LocationServiceGrpc.getListMethod) == null) {
       synchronized (LocationServiceGrpc.class) {
         if ((getListMethod = LocationServiceGrpc.getListMethod) == null) {
-          LocationServiceGrpc.getListMethod = getListMethod = 
+          LocationServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest, yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ydb.v1.LocationService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LocationServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LocationServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LocationServiceStub newStub(io.grpc.Channel channel) {
-    return new LocationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LocationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocationServiceStub>() {
+        @java.lang.Override
+        public LocationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocationServiceStub(channel, callOptions);
+        }
+      };
+    return LocationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +96,14 @@ public final class LocationServiceGrpc {
    */
   public static LocationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LocationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LocationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocationServiceBlockingStub>() {
+        @java.lang.Override
+        public LocationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LocationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +111,14 @@ public final class LocationServiceGrpc {
    */
   public static LocationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LocationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LocationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocationServiceFutureStub>() {
+        @java.lang.Override
+        public LocationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LocationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +132,7 @@ public final class LocationServiceGrpc {
      */
     public void get(yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.LocationOuterClass.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -135,21 +142,21 @@ public final class LocationServiceGrpc {
      */
     public void list(yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest,
                 yandex.cloud.api.ydb.v1.LocationOuterClass.Location>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest,
                 yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse>(
@@ -160,19 +167,15 @@ public final class LocationServiceGrpc {
 
   /**
    */
-  public static final class LocationServiceStub extends io.grpc.stub.AbstractStub<LocationServiceStub> {
-    private LocationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LocationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LocationServiceStub extends io.grpc.stub.AbstractAsyncStub<LocationServiceStub> {
+    private LocationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LocationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LocationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LocationServiceStub(channel, callOptions);
     }
 
@@ -183,7 +186,7 @@ public final class LocationServiceGrpc {
      */
     public void get(yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.LocationOuterClass.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -194,26 +197,22 @@ public final class LocationServiceGrpc {
      */
     public void list(yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class LocationServiceBlockingStub extends io.grpc.stub.AbstractStub<LocationServiceBlockingStub> {
-    private LocationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LocationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LocationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LocationServiceBlockingStub> {
+    private LocationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LocationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LocationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LocationServiceBlockingStub(channel, callOptions);
     }
 
@@ -223,7 +222,7 @@ public final class LocationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ydb.v1.LocationOuterClass.Location get(yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -233,26 +232,22 @@ public final class LocationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse list(yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class LocationServiceFutureStub extends io.grpc.stub.AbstractStub<LocationServiceFutureStub> {
-    private LocationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LocationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LocationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LocationServiceFutureStub> {
+    private LocationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LocationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LocationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LocationServiceFutureStub(channel, callOptions);
     }
 
@@ -263,7 +258,7 @@ public final class LocationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ydb.v1.LocationOuterClass.Location> get(
         yandex.cloud.api.ydb.v1.LocationServiceOuterClass.GetLocationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -274,7 +269,7 @@ public final class LocationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsResponse> list(
         yandex.cloud.api.ydb.v1.LocationServiceOuterClass.ListLocationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

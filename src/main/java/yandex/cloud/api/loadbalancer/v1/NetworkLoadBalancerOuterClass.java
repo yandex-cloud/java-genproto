@@ -78,6 +78,8 @@ public final class NetworkLoadBalancerOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -85,6 +87,10 @@ public final class NetworkLoadBalancerOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static IpVersion forNumber(int value) {
       switch (value) {
         case 0: return IP_VERSION_UNSPECIFIED;
@@ -108,6 +114,10 @@ public final class NetworkLoadBalancerOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -152,6 +162,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -160,6 +171,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -170,6 +182,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -178,6 +191,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -188,6 +202,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -196,6 +211,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -213,6 +229,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -221,6 +238,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -231,6 +249,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -239,6 +258,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -303,6 +323,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string region_id = 7;</code>
+     * @return The regionId.
      */
     java.lang.String getRegionId();
     /**
@@ -311,6 +332,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string region_id = 7;</code>
+     * @return The bytes for regionId.
      */
     com.google.protobuf.ByteString
         getRegionIdBytes();
@@ -321,6 +343,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -329,6 +352,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+     * @return The status.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status getStatus();
 
@@ -338,6 +362,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -346,6 +371,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+     * @return The type.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type getType();
 
@@ -355,6 +381,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+     * @return The enum numeric value on the wire for sessionAffinity.
      */
     int getSessionAffinityValue();
     /**
@@ -363,6 +390,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+     * @return The sessionAffinity.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity getSessionAffinity();
 
@@ -461,7 +489,7 @@ public final class NetworkLoadBalancerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.NetworkLoadBalancer}
    */
-  public  static final class NetworkLoadBalancer extends
+  public static final class NetworkLoadBalancer extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.NetworkLoadBalancer)
       NetworkLoadBalancerOrBuilder {
@@ -481,6 +509,13 @@ public final class NetworkLoadBalancerOuterClass {
       sessionAffinity_ = 0;
       listeners_ = java.util.Collections.emptyList();
       attachedTargetGroups_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NetworkLoadBalancer();
     }
 
     @java.lang.Override
@@ -545,10 +580,10 @@ public final class NetworkLoadBalancerOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -582,25 +617,25 @@ public final class NetworkLoadBalancerOuterClass {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 listeners_ = new java.util.ArrayList<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000002;
               }
               listeners_.add(
                   input.readMessage(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.parser(), extensionRegistry));
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 attachedTargetGroups_ = new java.util.ArrayList<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup>();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00000004;
               }
               attachedTargetGroups_.add(
                   input.readMessage(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -614,10 +649,10 @@ public final class NetworkLoadBalancerOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           listeners_ = java.util.Collections.unmodifiableList(listeners_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           attachedTargetGroups_ = java.util.Collections.unmodifiableList(attachedTargetGroups_);
         }
         this.unknownFields = unknownFields.build();
@@ -792,6 +827,8 @@ public final class NetworkLoadBalancerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -799,6 +836,10 @@ public final class NetworkLoadBalancerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -827,6 +868,10 @@ public final class NetworkLoadBalancerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -924,6 +969,8 @@ public final class NetworkLoadBalancerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -931,6 +978,10 @@ public final class NetworkLoadBalancerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -954,6 +1005,10 @@ public final class NetworkLoadBalancerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1036,6 +1091,8 @@ public final class NetworkLoadBalancerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1043,6 +1100,10 @@ public final class NetworkLoadBalancerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static SessionAffinity forNumber(int value) {
         switch (value) {
           case 0: return SESSION_AFFINITY_UNSPECIFIED;
@@ -1065,6 +1126,10 @@ public final class NetworkLoadBalancerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1099,7 +1164,6 @@ public final class NetworkLoadBalancerOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -1108,7 +1172,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1127,7 +1193,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1150,7 +1218,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1169,7 +1239,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1192,7 +1264,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -1202,7 +1276,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -1213,6 +1289,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -1225,7 +1302,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1244,7 +1323,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1267,7 +1348,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -1286,7 +1369,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -1335,14 +1420,16 @@ public final class NetworkLoadBalancerOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -1354,6 +1441,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -1365,11 +1453,12 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1381,10 +1470,11 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1401,7 +1491,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string region_id = 7;</code>
+     * @return The regionId.
      */
+    @java.lang.Override
     public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -1420,7 +1512,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string region_id = 7;</code>
+     * @return The bytes for regionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
@@ -1443,8 +1537,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1453,8 +1548,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status.UNRECOGNIZED : result;
@@ -1468,8 +1564,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1478,8 +1575,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type getType() {
+    @java.lang.Override public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type.UNRECOGNIZED : result;
@@ -1493,8 +1591,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+     * @return The enum numeric value on the wire for sessionAffinity.
      */
-    public int getSessionAffinityValue() {
+    @java.lang.Override public int getSessionAffinityValue() {
       return sessionAffinity_;
     }
     /**
@@ -1503,8 +1602,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+     * @return The sessionAffinity.
      */
-    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity getSessionAffinity() {
+    @java.lang.Override public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity getSessionAffinity() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity.valueOf(sessionAffinity_);
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity.UNRECOGNIZED : result;
@@ -1519,6 +1619,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.Listener listeners = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener> getListenersList() {
       return listeners_;
     }
@@ -1529,6 +1630,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.Listener listeners = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.ListenerOrBuilder> 
         getListenersOrBuilderList() {
       return listeners_;
@@ -1540,6 +1642,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.Listener listeners = 12;</code>
      */
+    @java.lang.Override
     public int getListenersCount() {
       return listeners_.size();
     }
@@ -1550,6 +1653,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.Listener listeners = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener getListeners(int index) {
       return listeners_.get(index);
     }
@@ -1560,6 +1664,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.Listener listeners = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.ListenerOrBuilder getListenersOrBuilder(
         int index) {
       return listeners_.get(index);
@@ -1574,6 +1679,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> getAttachedTargetGroupsList() {
       return attachedTargetGroups_;
     }
@@ -1584,6 +1690,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
         getAttachedTargetGroupsOrBuilderList() {
       return attachedTargetGroups_;
@@ -1595,6 +1702,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 13;</code>
      */
+    @java.lang.Override
     public int getAttachedTargetGroupsCount() {
       return attachedTargetGroups_.size();
     }
@@ -1605,6 +1713,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index) {
       return attachedTargetGroups_.get(index);
     }
@@ -1615,6 +1724,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
         int index) {
       return attachedTargetGroups_.get(index);
@@ -1634,19 +1744,19 @@ public final class NetworkLoadBalancerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1655,7 +1765,7 @@ public final class NetworkLoadBalancerOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, regionId_);
       }
       if (status_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -1682,20 +1792,20 @@ public final class NetworkLoadBalancerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1708,7 +1818,7 @@ public final class NetworkLoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, regionId_);
       }
       if (status_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -1746,33 +1856,32 @@ public final class NetworkLoadBalancerOuterClass {
       }
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer other = (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getRegionId()
-          .equals(other.getRegionId());
-      result = result && status_ == other.status_;
-      result = result && type_ == other.type_;
-      result = result && sessionAffinity_ == other.sessionAffinity_;
-      result = result && getListenersList()
-          .equals(other.getListenersList());
-      result = result && getAttachedTargetGroupsList()
-          .equals(other.getAttachedTargetGroupsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getRegionId()
+          .equals(other.getRegionId())) return false;
+      if (status_ != other.status_) return false;
+      if (type_ != other.type_) return false;
+      if (sessionAffinity_ != other.sessionAffinity_) return false;
+      if (!getListenersList()
+          .equals(other.getListenersList())) return false;
+      if (!getAttachedTargetGroupsList()
+          .equals(other.getAttachedTargetGroupsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2000,13 +2109,13 @@ public final class NetworkLoadBalancerOuterClass {
 
         if (listenersBuilder_ == null) {
           listeners_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           listenersBuilder_.clear();
         }
         if (attachedTargetGroupsBuilder_ == null) {
           attachedTargetGroups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           attachedTargetGroupsBuilder_.clear();
         }
@@ -2037,7 +2146,6 @@ public final class NetworkLoadBalancerOuterClass {
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer buildPartial() {
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer result = new yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -2054,59 +2162,58 @@ public final class NetworkLoadBalancerOuterClass {
         result.type_ = type_;
         result.sessionAffinity_ = sessionAffinity_;
         if (listenersBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             listeners_ = java.util.Collections.unmodifiableList(listeners_);
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.listeners_ = listeners_;
         } else {
           result.listeners_ = listenersBuilder_.build();
         }
         if (attachedTargetGroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             attachedTargetGroups_ = java.util.Collections.unmodifiableList(attachedTargetGroups_);
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.attachedTargetGroups_ = attachedTargetGroups_;
         } else {
           result.attachedTargetGroups_ = attachedTargetGroupsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2158,7 +2265,7 @@ public final class NetworkLoadBalancerOuterClass {
           if (!other.listeners_.isEmpty()) {
             if (listeners_.isEmpty()) {
               listeners_ = other.listeners_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureListenersIsMutable();
               listeners_.addAll(other.listeners_);
@@ -2171,7 +2278,7 @@ public final class NetworkLoadBalancerOuterClass {
               listenersBuilder_.dispose();
               listenersBuilder_ = null;
               listeners_ = other.listeners_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000002);
               listenersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getListenersFieldBuilder() : null;
@@ -2184,7 +2291,7 @@ public final class NetworkLoadBalancerOuterClass {
           if (!other.attachedTargetGroups_.isEmpty()) {
             if (attachedTargetGroups_.isEmpty()) {
               attachedTargetGroups_ = other.attachedTargetGroups_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureAttachedTargetGroupsIsMutable();
               attachedTargetGroups_.addAll(other.attachedTargetGroups_);
@@ -2197,7 +2304,7 @@ public final class NetworkLoadBalancerOuterClass {
               attachedTargetGroupsBuilder_.dispose();
               attachedTargetGroupsBuilder_ = null;
               attachedTargetGroups_ = other.attachedTargetGroups_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00000004);
               attachedTargetGroupsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAttachedTargetGroupsFieldBuilder() : null;
@@ -2243,6 +2350,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2262,6 +2370,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2282,6 +2391,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2299,6 +2410,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2312,6 +2424,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2332,6 +2446,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2351,6 +2466,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2371,6 +2487,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2388,6 +2506,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2401,6 +2520,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2414,7 +2535,7 @@ public final class NetworkLoadBalancerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2423,6 +2544,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2433,6 +2555,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2574,6 +2697,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2593,6 +2717,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2613,6 +2738,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2630,6 +2757,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2643,6 +2771,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2663,6 +2793,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2682,6 +2813,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2702,6 +2834,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2719,6 +2853,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -2732,6 +2867,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2779,14 +2916,16 @@ public final class NetworkLoadBalancerOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -2798,6 +2937,7 @@ public final class NetworkLoadBalancerOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -2809,11 +2949,12 @@ public final class NetworkLoadBalancerOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2825,10 +2966,11 @@ public final class NetworkLoadBalancerOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -2852,7 +2994,7 @@ public final class NetworkLoadBalancerOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -2875,8 +3017,11 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2903,6 +3048,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string region_id = 7;</code>
+       * @return The regionId.
        */
       public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
@@ -2922,6 +3068,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string region_id = 7;</code>
+       * @return The bytes for regionId.
        */
       public com.google.protobuf.ByteString
           getRegionIdBytes() {
@@ -2942,6 +3089,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string region_id = 7;</code>
+       * @param value The regionId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegionId(
           java.lang.String value) {
@@ -2959,6 +3108,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string region_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegionId() {
         
@@ -2972,6 +3122,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string region_id = 7;</code>
+       * @param value The bytes for regionId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2992,8 +3144,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3002,8 +3155,11 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3014,7 +3170,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status.valueOf(status_);
@@ -3026,6 +3184,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Status value) {
         if (value == null) {
@@ -3042,6 +3202,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Status status = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3057,8 +3218,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -3067,8 +3229,11 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -3079,7 +3244,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type.valueOf(type_);
@@ -3091,6 +3258,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.Type value) {
         if (value == null) {
@@ -3107,6 +3276,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3122,8 +3292,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+       * @return The enum numeric value on the wire for sessionAffinity.
        */
-      public int getSessionAffinityValue() {
+      @java.lang.Override public int getSessionAffinityValue() {
         return sessionAffinity_;
       }
       /**
@@ -3132,8 +3303,11 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+       * @param value The enum numeric value on the wire for sessionAffinity to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionAffinityValue(int value) {
+        
         sessionAffinity_ = value;
         onChanged();
         return this;
@@ -3144,7 +3318,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+       * @return The sessionAffinity.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity getSessionAffinity() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity.valueOf(sessionAffinity_);
@@ -3156,6 +3332,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+       * @param value The sessionAffinity to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionAffinity(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.NetworkLoadBalancer.SessionAffinity value) {
         if (value == null) {
@@ -3172,6 +3350,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity session_affinity = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSessionAffinity() {
         
@@ -3183,9 +3362,9 @@ public final class NetworkLoadBalancerOuterClass {
       private java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener> listeners_ =
         java.util.Collections.emptyList();
       private void ensureListenersIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           listeners_ = new java.util.ArrayList<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener>(listeners_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3379,7 +3558,7 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder clearListeners() {
         if (listenersBuilder_ == null) {
           listeners_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           listenersBuilder_.clear();
@@ -3484,7 +3663,7 @@ public final class NetworkLoadBalancerOuterClass {
           listenersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Builder, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.ListenerOrBuilder>(
                   listeners_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           listeners_ = null;
@@ -3495,9 +3674,9 @@ public final class NetworkLoadBalancerOuterClass {
       private java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> attachedTargetGroups_ =
         java.util.Collections.emptyList();
       private void ensureAttachedTargetGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           attachedTargetGroups_ = new java.util.ArrayList<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup>(attachedTargetGroups_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -3691,7 +3870,7 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder clearAttachedTargetGroups() {
         if (attachedTargetGroupsBuilder_ == null) {
           attachedTargetGroups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           attachedTargetGroupsBuilder_.clear();
@@ -3796,7 +3975,7 @@ public final class NetworkLoadBalancerOuterClass {
           attachedTargetGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder>(
                   attachedTargetGroups_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           attachedTargetGroups_ = null;
@@ -3806,7 +3985,7 @@ public final class NetworkLoadBalancerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3866,6 +4045,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The targetGroupId.
      */
     java.lang.String getTargetGroupId();
     /**
@@ -3874,6 +4054,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for targetGroupId.
      */
     com.google.protobuf.ByteString
         getTargetGroupIdBytes();
@@ -3934,7 +4115,7 @@ public final class NetworkLoadBalancerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.AttachedTargetGroup}
    */
-  public  static final class AttachedTargetGroup extends
+  public static final class AttachedTargetGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.AttachedTargetGroup)
       AttachedTargetGroupOrBuilder {
@@ -3946,6 +4127,13 @@ public final class NetworkLoadBalancerOuterClass {
     private AttachedTargetGroup() {
       targetGroupId_ = "";
       healthChecks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AttachedTargetGroup();
     }
 
     @java.lang.Override
@@ -3979,16 +4167,16 @@ public final class NetworkLoadBalancerOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 healthChecks_ = new java.util.ArrayList<yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               healthChecks_.add(
                   input.readMessage(yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4002,7 +4190,7 @@ public final class NetworkLoadBalancerOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           healthChecks_ = java.util.Collections.unmodifiableList(healthChecks_);
         }
         this.unknownFields = unknownFields.build();
@@ -4022,7 +4210,6 @@ public final class NetworkLoadBalancerOuterClass {
               yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.class, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
@@ -4031,7 +4218,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The targetGroupId.
      */
+    @java.lang.Override
     public java.lang.String getTargetGroupId() {
       java.lang.Object ref = targetGroupId_;
       if (ref instanceof java.lang.String) {
@@ -4050,7 +4239,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for targetGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTargetGroupIdBytes() {
       java.lang.Object ref = targetGroupId_;
@@ -4075,6 +4266,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.HealthCheck health_checks = 2 [(.yandex.cloud.size) = "1"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck> getHealthChecksList() {
       return healthChecks_;
     }
@@ -4086,6 +4278,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.HealthCheck health_checks = 2 [(.yandex.cloud.size) = "1"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheckOrBuilder> 
         getHealthChecksOrBuilderList() {
       return healthChecks_;
@@ -4098,6 +4291,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.HealthCheck health_checks = 2 [(.yandex.cloud.size) = "1"];</code>
      */
+    @java.lang.Override
     public int getHealthChecksCount() {
       return healthChecks_.size();
     }
@@ -4109,6 +4303,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.HealthCheck health_checks = 2 [(.yandex.cloud.size) = "1"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck getHealthChecks(int index) {
       return healthChecks_.get(index);
     }
@@ -4120,6 +4315,7 @@ public final class NetworkLoadBalancerOuterClass {
      *
      * <code>repeated .yandex.cloud.loadbalancer.v1.HealthCheck health_checks = 2 [(.yandex.cloud.size) = "1"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheckOrBuilder getHealthChecksOrBuilder(
         int index) {
       return healthChecks_.get(index);
@@ -4139,7 +4335,7 @@ public final class NetworkLoadBalancerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, targetGroupId_);
       }
       for (int i = 0; i < healthChecks_.size(); i++) {
@@ -4154,7 +4350,7 @@ public final class NetworkLoadBalancerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, targetGroupId_);
       }
       for (int i = 0; i < healthChecks_.size(); i++) {
@@ -4176,13 +4372,12 @@ public final class NetworkLoadBalancerOuterClass {
       }
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup other = (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup) obj;
 
-      boolean result = true;
-      result = result && getTargetGroupId()
-          .equals(other.getTargetGroupId());
-      result = result && getHealthChecksList()
-          .equals(other.getHealthChecksList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTargetGroupId()
+          .equals(other.getTargetGroupId())) return false;
+      if (!getHealthChecksList()
+          .equals(other.getHealthChecksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4340,7 +4535,7 @@ public final class NetworkLoadBalancerOuterClass {
 
         if (healthChecksBuilder_ == null) {
           healthChecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           healthChecksBuilder_.clear();
         }
@@ -4371,53 +4566,51 @@ public final class NetworkLoadBalancerOuterClass {
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup buildPartial() {
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup result = new yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.targetGroupId_ = targetGroupId_;
         if (healthChecksBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             healthChecks_ = java.util.Collections.unmodifiableList(healthChecks_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.healthChecks_ = healthChecks_;
         } else {
           result.healthChecks_ = healthChecksBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4439,7 +4632,7 @@ public final class NetworkLoadBalancerOuterClass {
           if (!other.healthChecks_.isEmpty()) {
             if (healthChecks_.isEmpty()) {
               healthChecks_ = other.healthChecks_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHealthChecksIsMutable();
               healthChecks_.addAll(other.healthChecks_);
@@ -4452,7 +4645,7 @@ public final class NetworkLoadBalancerOuterClass {
               healthChecksBuilder_.dispose();
               healthChecksBuilder_ = null;
               healthChecks_ = other.healthChecks_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               healthChecksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHealthChecksFieldBuilder() : null;
@@ -4498,6 +4691,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The targetGroupId.
        */
       public java.lang.String getTargetGroupId() {
         java.lang.Object ref = targetGroupId_;
@@ -4517,6 +4711,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for targetGroupId.
        */
       public com.google.protobuf.ByteString
           getTargetGroupIdBytes() {
@@ -4537,6 +4732,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The targetGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetGroupId(
           java.lang.String value) {
@@ -4554,6 +4751,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetGroupId() {
         
@@ -4567,6 +4765,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for targetGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4583,9 +4783,9 @@ public final class NetworkLoadBalancerOuterClass {
       private java.util.List<yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck> healthChecks_ =
         java.util.Collections.emptyList();
       private void ensureHealthChecksIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           healthChecks_ = new java.util.ArrayList<yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck>(healthChecks_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4790,7 +4990,7 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder clearHealthChecks() {
         if (healthChecksBuilder_ == null) {
           healthChecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           healthChecksBuilder_.clear();
@@ -4902,7 +5102,7 @@ public final class NetworkLoadBalancerOuterClass {
           healthChecksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck, yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheck.Builder, yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.HealthCheckOrBuilder>(
                   healthChecks_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           healthChecks_ = null;
@@ -4912,7 +5112,7 @@ public final class NetworkLoadBalancerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4972,6 +5172,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4980,6 +5181,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4990,6 +5192,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The address.
      */
     java.lang.String getAddress();
     /**
@@ -4998,6 +5201,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -5008,6 +5212,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>int64 port = 3;</code>
+     * @return The port.
      */
     long getPort();
 
@@ -5017,6 +5222,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+     * @return The enum numeric value on the wire for protocol.
      */
     int getProtocolValue();
     /**
@@ -5025,6 +5231,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+     * @return The protocol.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol getProtocol();
 
@@ -5034,6 +5241,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>int64 target_port = 5;</code>
+     * @return The targetPort.
      */
     long getTargetPort();
 
@@ -5043,6 +5251,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 6;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -5051,6 +5260,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 6;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -5061,6 +5271,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+     * @return The enum numeric value on the wire for ipVersion.
      */
     int getIpVersionValue();
     /**
@@ -5069,6 +5280,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+     * @return The ipVersion.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion();
   }
@@ -5079,7 +5291,7 @@ public final class NetworkLoadBalancerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.Listener}
    */
-  public  static final class Listener extends
+  public static final class Listener extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.Listener)
       ListenerOrBuilder {
@@ -5091,11 +5303,16 @@ public final class NetworkLoadBalancerOuterClass {
     private Listener() {
       name_ = "";
       address_ = "";
-      port_ = 0L;
       protocol_ = 0;
-      targetPort_ = 0L;
       subnetId_ = "";
       ipVersion_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Listener();
     }
 
     @java.lang.Override
@@ -5111,7 +5328,6 @@ public final class NetworkLoadBalancerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5163,7 +5379,7 @@ public final class NetworkLoadBalancerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5241,6 +5457,8 @@ public final class NetworkLoadBalancerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5248,6 +5466,10 @@ public final class NetworkLoadBalancerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Protocol forNumber(int value) {
         switch (value) {
           case 0: return PROTOCOL_UNSPECIFIED;
@@ -5271,6 +5493,10 @@ public final class NetworkLoadBalancerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -5313,7 +5539,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5332,7 +5560,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5355,7 +5585,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -5374,7 +5606,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -5397,7 +5631,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>int64 port = 3;</code>
+     * @return The port.
      */
+    @java.lang.Override
     public long getPort() {
       return port_;
     }
@@ -5410,8 +5646,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+     * @return The enum numeric value on the wire for protocol.
      */
-    public int getProtocolValue() {
+    @java.lang.Override public int getProtocolValue() {
       return protocol_;
     }
     /**
@@ -5420,8 +5657,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+     * @return The protocol.
      */
-    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol getProtocol() {
+    @java.lang.Override public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol getProtocol() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol.valueOf(protocol_);
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol.UNRECOGNIZED : result;
@@ -5435,7 +5673,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>int64 target_port = 5;</code>
+     * @return The targetPort.
      */
+    @java.lang.Override
     public long getTargetPort() {
       return targetPort_;
     }
@@ -5448,7 +5688,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 6;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -5467,7 +5709,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 6;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -5490,8 +5734,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+     * @return The enum numeric value on the wire for ipVersion.
      */
-    public int getIpVersionValue() {
+    @java.lang.Override public int getIpVersionValue() {
       return ipVersion_;
     }
     /**
@@ -5500,8 +5745,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+     * @return The ipVersion.
      */
-    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion() {
+    @java.lang.Override public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.valueOf(ipVersion_);
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.UNRECOGNIZED : result;
@@ -5521,10 +5767,10 @@ public final class NetworkLoadBalancerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
       }
       if (port_ != 0L) {
@@ -5536,7 +5782,7 @@ public final class NetworkLoadBalancerOuterClass {
       if (targetPort_ != 0L) {
         output.writeInt64(5, targetPort_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subnetId_);
       }
       if (ipVersion_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
@@ -5551,10 +5797,10 @@ public final class NetworkLoadBalancerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
       }
       if (port_ != 0L) {
@@ -5569,7 +5815,7 @@ public final class NetworkLoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, targetPort_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subnetId_);
       }
       if (ipVersion_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
@@ -5591,21 +5837,20 @@ public final class NetworkLoadBalancerOuterClass {
       }
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener other = (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getAddress()
-          .equals(other.getAddress());
-      result = result && (getPort()
-          == other.getPort());
-      result = result && protocol_ == other.protocol_;
-      result = result && (getTargetPort()
-          == other.getTargetPort());
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && ipVersion_ == other.ipVersion_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getPort()
+          != other.getPort()) return false;
+      if (protocol_ != other.protocol_) return false;
+      if (getTargetPort()
+          != other.getTargetPort()) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (ipVersion_ != other.ipVersion_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5821,35 +6066,35 @@ public final class NetworkLoadBalancerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5923,6 +6168,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5942,6 +6188,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5962,6 +6209,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5979,6 +6228,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5992,6 +6242,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6012,6 +6264,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -6031,6 +6284,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -6051,6 +6305,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -6068,6 +6324,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -6081,6 +6338,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -6101,7 +6360,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>int64 port = 3;</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -6111,6 +6372,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>int64 port = 3;</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
        */
       public Builder setPort(long value) {
         
@@ -6124,6 +6387,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>int64 port = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPort() {
         
@@ -6139,8 +6403,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+       * @return The enum numeric value on the wire for protocol.
        */
-      public int getProtocolValue() {
+      @java.lang.Override public int getProtocolValue() {
         return protocol_;
       }
       /**
@@ -6149,8 +6414,11 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+       * @param value The enum numeric value on the wire for protocol to set.
+       * @return This builder for chaining.
        */
       public Builder setProtocolValue(int value) {
+        
         protocol_ = value;
         onChanged();
         return this;
@@ -6161,7 +6429,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+       * @return The protocol.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol getProtocol() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol.valueOf(protocol_);
@@ -6173,6 +6443,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+       * @param value The protocol to set.
+       * @return This builder for chaining.
        */
       public Builder setProtocol(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.Listener.Protocol value) {
         if (value == null) {
@@ -6189,6 +6461,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.Listener.Protocol protocol = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProtocol() {
         
@@ -6204,7 +6477,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>int64 target_port = 5;</code>
+       * @return The targetPort.
        */
+      @java.lang.Override
       public long getTargetPort() {
         return targetPort_;
       }
@@ -6214,6 +6489,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>int64 target_port = 5;</code>
+       * @param value The targetPort to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetPort(long value) {
         
@@ -6227,6 +6504,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>int64 target_port = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetPort() {
         
@@ -6242,6 +6520,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 6;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -6261,6 +6540,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 6;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -6281,6 +6561,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 6;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -6298,6 +6580,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -6311,6 +6594,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 6;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6331,8 +6616,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+       * @return The enum numeric value on the wire for ipVersion.
        */
-      public int getIpVersionValue() {
+      @java.lang.Override public int getIpVersionValue() {
         return ipVersion_;
       }
       /**
@@ -6341,8 +6627,11 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+       * @param value The enum numeric value on the wire for ipVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setIpVersionValue(int value) {
+        
         ipVersion_ = value;
         onChanged();
         return this;
@@ -6353,7 +6642,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+       * @return The ipVersion.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.valueOf(ipVersion_);
@@ -6365,6 +6656,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+       * @param value The ipVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setIpVersion(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion value) {
         if (value == null) {
@@ -6381,6 +6674,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIpVersion() {
         
@@ -6391,7 +6685,7 @@ public final class NetworkLoadBalancerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6451,6 +6745,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -6459,6 +6754,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -6469,6 +6765,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The address.
      */
     java.lang.String getAddress();
     /**
@@ -6477,6 +6774,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -6487,6 +6785,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -6495,6 +6794,7 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+     * @return The status.
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status getStatus();
   }
@@ -6505,7 +6805,7 @@ public final class NetworkLoadBalancerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.TargetState}
    */
-  public  static final class TargetState extends
+  public static final class TargetState extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.TargetState)
       TargetStateOrBuilder {
@@ -6521,6 +6821,13 @@ public final class NetworkLoadBalancerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TargetState();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6533,7 +6840,6 @@ public final class NetworkLoadBalancerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6563,7 +6869,7 @@ public final class NetworkLoadBalancerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6705,6 +7011,8 @@ public final class NetworkLoadBalancerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -6712,6 +7020,10 @@ public final class NetworkLoadBalancerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -6738,6 +7050,10 @@ public final class NetworkLoadBalancerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -6780,7 +7096,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -6799,7 +7117,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -6822,7 +7142,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -6841,7 +7163,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>string address = 2;</code>
+     * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -6864,8 +7188,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -6874,8 +7199,9 @@ public final class NetworkLoadBalancerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.UNRECOGNIZED : result;
@@ -6895,10 +7221,10 @@ public final class NetworkLoadBalancerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
       }
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
       }
       if (status_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -6913,10 +7239,10 @@ public final class NetworkLoadBalancerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
       }
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
       }
       if (status_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -6938,14 +7264,13 @@ public final class NetworkLoadBalancerOuterClass {
       }
       yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState other = (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState) obj;
 
-      boolean result = true;
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && getAddress()
-          .equals(other.getAddress());
-      result = result && status_ == other.status_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (status_ != other.status_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7139,35 +7464,35 @@ public final class NetworkLoadBalancerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7228,6 +7553,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -7247,6 +7573,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -7267,6 +7594,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -7284,6 +7613,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -7297,6 +7627,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7317,6 +7649,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -7336,6 +7669,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -7356,6 +7690,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -7373,6 +7709,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -7386,6 +7723,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>string address = 2;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -7406,8 +7745,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -7416,8 +7756,11 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -7428,7 +7771,9 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status.valueOf(status_);
@@ -7440,6 +7785,8 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.TargetState.Status value) {
         if (value == null) {
@@ -7456,6 +7803,7 @@ public final class NetworkLoadBalancerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.TargetState.Status status = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -7466,7 +7814,7 @@ public final class NetworkLoadBalancerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7600,21 +7948,13 @@ public final class NetworkLoadBalancerOuterClass {
       "ndex-cloud/go-genproto/yandex/cloud/load" +
       "balancer/v1;loadbalancerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_fieldAccessorTable = new

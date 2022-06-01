@@ -1,25 +1,13 @@
 package yandex.cloud.api.ai.stt.v2;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ai/stt/v2/stt_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SttServiceGrpc {
 
   private SttServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class SttServiceGrpc {
     if ((getLongRunningRecognizeMethod = SttServiceGrpc.getLongRunningRecognizeMethod) == null) {
       synchronized (SttServiceGrpc.class) {
         if ((getLongRunningRecognizeMethod = SttServiceGrpc.getLongRunningRecognizeMethod) == null) {
-          SttServiceGrpc.getLongRunningRecognizeMethod = getLongRunningRecognizeMethod = 
+          SttServiceGrpc.getLongRunningRecognizeMethod = getLongRunningRecognizeMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.stt.v2.SttService", "LongRunningRecognize"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LongRunningRecognize"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new SttServiceMethodDescriptorSupplier("LongRunningRecognize"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SttServiceMethodDescriptorSupplier("LongRunningRecognize"))
+              .build();
         }
-     }
-     return getLongRunningRecognizeMethod;
+      }
+    }
+    return getLongRunningRecognizeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest,
@@ -73,29 +60,35 @@ public final class SttServiceGrpc {
     if ((getStreamingRecognizeMethod = SttServiceGrpc.getStreamingRecognizeMethod) == null) {
       synchronized (SttServiceGrpc.class) {
         if ((getStreamingRecognizeMethod = SttServiceGrpc.getStreamingRecognizeMethod) == null) {
-          SttServiceGrpc.getStreamingRecognizeMethod = getStreamingRecognizeMethod = 
+          SttServiceGrpc.getStreamingRecognizeMethod = getStreamingRecognizeMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.stt.v2.SttService", "StreamingRecognize"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamingRecognize"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SttServiceMethodDescriptorSupplier("StreamingRecognize"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SttServiceMethodDescriptorSupplier("StreamingRecognize"))
+              .build();
         }
-     }
-     return getStreamingRecognizeMethod;
+      }
+    }
+    return getStreamingRecognizeMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SttServiceStub newStub(io.grpc.Channel channel) {
-    return new SttServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SttServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SttServiceStub>() {
+        @java.lang.Override
+        public SttServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SttServiceStub(channel, callOptions);
+        }
+      };
+    return SttServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +96,14 @@ public final class SttServiceGrpc {
    */
   public static SttServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SttServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SttServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SttServiceBlockingStub>() {
+        @java.lang.Override
+        public SttServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SttServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SttServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +111,14 @@ public final class SttServiceGrpc {
    */
   public static SttServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SttServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SttServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SttServiceFutureStub>() {
+        @java.lang.Override
+        public SttServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SttServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SttServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -122,28 +129,28 @@ public final class SttServiceGrpc {
      */
     public void longRunningRecognize(yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getLongRunningRecognizeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLongRunningRecognizeMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest> streamingRecognize(
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamingRecognizeMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamingRecognizeMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getLongRunningRecognizeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_LONG_RUNNING_RECOGNIZE)))
           .addMethod(
             getStreamingRecognizeMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest,
                 yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse>(
@@ -154,19 +161,15 @@ public final class SttServiceGrpc {
 
   /**
    */
-  public static final class SttServiceStub extends io.grpc.stub.AbstractStub<SttServiceStub> {
-    private SttServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SttServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SttServiceStub extends io.grpc.stub.AbstractAsyncStub<SttServiceStub> {
+    private SttServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SttServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SttServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SttServiceStub(channel, callOptions);
     }
 
@@ -174,7 +177,7 @@ public final class SttServiceGrpc {
      */
     public void longRunningRecognize(yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLongRunningRecognizeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -182,52 +185,44 @@ public final class SttServiceGrpc {
      */
     public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest> streamingRecognize(
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamingRecognizeMethod(), getCallOptions()), responseObserver);
     }
   }
 
   /**
    */
-  public static final class SttServiceBlockingStub extends io.grpc.stub.AbstractStub<SttServiceBlockingStub> {
-    private SttServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SttServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SttServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SttServiceBlockingStub> {
+    private SttServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SttServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SttServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SttServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation longRunningRecognize(yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLongRunningRecognizeMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class SttServiceFutureStub extends io.grpc.stub.AbstractStub<SttServiceFutureStub> {
-    private SttServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SttServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SttServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SttServiceFutureStub> {
+    private SttServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SttServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SttServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SttServiceFutureStub(channel, callOptions);
     }
 
@@ -235,7 +230,7 @@ public final class SttServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> longRunningRecognize(
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLongRunningRecognizeMethod(), getCallOptions()), request);
     }
   }

@@ -24,6 +24,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -32,6 +33,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -45,6 +47,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -55,6 +58,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -64,6 +68,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -74,6 +79,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -82,6 +88,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -89,7 +96,7 @@ public final class JobServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ListJobsRequest}
    */
-  public  static final class ListJobsRequest extends
+  public static final class ListJobsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ListJobsRequest)
       ListJobsRequestOrBuilder {
@@ -100,9 +107,15 @@ public final class JobServiceOuterClass {
     }
     private ListJobsRequest() {
       clusterId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListJobsRequest();
     }
 
     @java.lang.Override
@@ -118,7 +131,6 @@ public final class JobServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -153,7 +165,7 @@ public final class JobServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -192,7 +204,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -211,7 +225,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -237,7 +253,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -251,7 +269,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -271,7 +291,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -294,7 +316,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -313,7 +337,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -342,16 +368,16 @@ public final class JobServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -363,17 +389,17 @@ public final class JobServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -391,17 +417,16 @@ public final class JobServiceOuterClass {
       }
       yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest other = (yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -597,35 +622,35 @@ public final class JobServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -690,6 +715,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -709,6 +735,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -729,6 +756,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -746,6 +775,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -759,6 +789,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -782,7 +814,9 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -795,6 +829,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -811,6 +847,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -827,6 +864,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -847,6 +885,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -868,6 +907,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -886,6 +927,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -900,6 +942,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -920,6 +964,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -939,6 +984,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -959,6 +1005,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -976,6 +1024,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -989,6 +1038,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1004,7 +1055,7 @@ public final class JobServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1112,6 +1163,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1124,6 +1176,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1131,7 +1184,7 @@ public final class JobServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ListJobsResponse}
    */
-  public  static final class ListJobsResponse extends
+  public static final class ListJobsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ListJobsResponse)
       ListJobsResponseOrBuilder {
@@ -1143,6 +1196,13 @@ public final class JobServiceOuterClass {
     private ListJobsResponse() {
       jobs_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListJobsResponse();
     }
 
     @java.lang.Override
@@ -1170,7 +1230,7 @@ public final class JobServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 jobs_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1185,7 +1245,7 @@ public final class JobServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1199,7 +1259,7 @@ public final class JobServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           jobs_ = java.util.Collections.unmodifiableList(jobs_);
         }
         this.unknownFields = unknownFields.build();
@@ -1219,7 +1279,6 @@ public final class JobServiceOuterClass {
               yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse.class, yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int JOBS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job> jobs_;
     /**
@@ -1229,6 +1288,7 @@ public final class JobServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job> getJobsList() {
       return jobs_;
     }
@@ -1239,6 +1299,7 @@ public final class JobServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.JobOuterClass.JobOrBuilder> 
         getJobsOrBuilderList() {
       return jobs_;
@@ -1250,6 +1311,7 @@ public final class JobServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public int getJobsCount() {
       return jobs_.size();
     }
@@ -1260,6 +1322,7 @@ public final class JobServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job getJobs(int index) {
       return jobs_.get(index);
     }
@@ -1270,6 +1333,7 @@ public final class JobServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.JobOrBuilder getJobsOrBuilder(
         int index) {
       return jobs_.get(index);
@@ -1287,7 +1351,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1310,7 +1376,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1342,7 +1410,7 @@ public final class JobServiceOuterClass {
       for (int i = 0; i < jobs_.size(); i++) {
         output.writeMessage(1, jobs_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1358,7 +1426,7 @@ public final class JobServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, jobs_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1376,13 +1444,12 @@ public final class JobServiceOuterClass {
       }
       yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse other = (yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse) obj;
 
-      boolean result = true;
-      result = result && getJobsList()
-          .equals(other.getJobsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getJobsList()
+          .equals(other.getJobsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1567,9 +1634,8 @@ public final class JobServiceOuterClass {
       public yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse buildPartial() {
         yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse result = new yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (jobsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             jobs_ = java.util.Collections.unmodifiableList(jobs_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1578,42 +1644,41 @@ public final class JobServiceOuterClass {
           result.jobs_ = jobsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1690,7 +1755,7 @@ public final class JobServiceOuterClass {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job> jobs_ =
         java.util.Collections.emptyList();
       private void ensureJobsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           jobs_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job>(jobs_);
           bitField0_ |= 0x00000001;
          }
@@ -1991,7 +2056,7 @@ public final class JobServiceOuterClass {
           jobsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.JobOrBuilder>(
                   jobs_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           jobs_ = null;
@@ -2010,6 +2075,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2033,6 +2099,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2057,6 +2124,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2078,6 +2147,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2095,6 +2165,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2110,7 +2182,7 @@ public final class JobServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2170,6 +2242,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
@@ -2178,6 +2251,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
@@ -2188,6 +2262,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
     java.lang.String getJobId();
     /**
@@ -2196,6 +2271,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
     com.google.protobuf.ByteString
         getJobIdBytes();
@@ -2206,6 +2282,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -2214,6 +2291,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+     * @return The status.
      */
     yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status getStatus();
 
@@ -2223,6 +2301,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
+     * @return Whether the applicationInfo field is set.
      */
     boolean hasApplicationInfo();
     /**
@@ -2231,6 +2310,7 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
+     * @return The applicationInfo.
      */
     yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getApplicationInfo();
     /**
@@ -2245,7 +2325,7 @@ public final class JobServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.UpdateJobStatusRequest}
    */
-  public  static final class UpdateJobStatusRequest extends
+  public static final class UpdateJobStatusRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.UpdateJobStatusRequest)
       UpdateJobStatusRequestOrBuilder {
@@ -2261,6 +2341,13 @@ public final class JobServiceOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateJobStatusRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2273,7 +2360,6 @@ public final class JobServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2316,7 +2402,7 @@ public final class JobServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2355,7 +2441,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -2374,7 +2462,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -2397,7 +2487,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The jobId.
      */
+    @java.lang.Override
     public java.lang.String getJobId() {
       java.lang.Object ref = jobId_;
       if (ref instanceof java.lang.String) {
@@ -2416,7 +2508,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for jobId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJobIdBytes() {
       java.lang.Object ref = jobId_;
@@ -2439,8 +2533,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -2449,8 +2544,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status result = yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status.UNRECOGNIZED : result;
@@ -2464,7 +2560,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
+     * @return Whether the applicationInfo field is set.
      */
+    @java.lang.Override
     public boolean hasApplicationInfo() {
       return applicationInfo_ != null;
     }
@@ -2474,7 +2572,9 @@ public final class JobServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
+     * @return The applicationInfo.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getApplicationInfo() {
       return applicationInfo_ == null ? yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.getDefaultInstance() : applicationInfo_;
     }
@@ -2485,6 +2585,7 @@ public final class JobServiceOuterClass {
      *
      * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder getApplicationInfoOrBuilder() {
       return getApplicationInfo();
     }
@@ -2503,10 +2604,10 @@ public final class JobServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jobId_);
       }
       if (status_ != yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -2524,10 +2625,10 @@ public final class JobServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getJobIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jobId_);
       }
       if (status_ != yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status.STATUS_UNSPECIFIED.getNumber()) {
@@ -2553,19 +2654,18 @@ public final class JobServiceOuterClass {
       }
       yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest other = (yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest) obj;
 
-      boolean result = true;
-      result = result && getClusterId()
-          .equals(other.getClusterId());
-      result = result && getJobId()
-          .equals(other.getJobId());
-      result = result && status_ == other.status_;
-      result = result && (hasApplicationInfo() == other.hasApplicationInfo());
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (status_ != other.status_) return false;
+      if (hasApplicationInfo() != other.hasApplicationInfo()) return false;
       if (hasApplicationInfo()) {
-        result = result && getApplicationInfo()
-            .equals(other.getApplicationInfo());
+        if (!getApplicationInfo()
+            .equals(other.getApplicationInfo())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2770,35 +2870,35 @@ public final class JobServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2862,6 +2962,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -2881,6 +2982,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -2901,6 +3003,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -2918,6 +3022,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
         
@@ -2931,6 +3036,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2951,6 +3058,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The jobId.
        */
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
@@ -2970,6 +3078,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for jobId.
        */
       public com.google.protobuf.ByteString
           getJobIdBytes() {
@@ -2990,6 +3099,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobId(
           java.lang.String value) {
@@ -3007,6 +3118,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearJobId() {
         
@@ -3020,6 +3132,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3040,8 +3154,9 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -3050,8 +3165,11 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -3062,7 +3180,9 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status result = yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status.valueOf(status_);
@@ -3074,6 +3194,8 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.Status value) {
         if (value == null) {
@@ -3090,6 +3212,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.Job.Status status = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -3098,7 +3221,7 @@ public final class JobServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo applicationInfo_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo applicationInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder> applicationInfoBuilder_;
       /**
@@ -3107,6 +3230,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
+       * @return Whether the applicationInfo field is set.
        */
       public boolean hasApplicationInfo() {
         return applicationInfoBuilder_ != null || applicationInfo_ != null;
@@ -3117,6 +3241,7 @@ public final class JobServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 4;</code>
+       * @return The applicationInfo.
        */
       public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getApplicationInfo() {
         if (applicationInfoBuilder_ == null) {
@@ -3253,7 +3378,7 @@ public final class JobServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3310,7 +3435,7 @@ public final class JobServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.UpdateJobStatusResponse}
    */
-  public  static final class UpdateJobStatusResponse extends
+  public static final class UpdateJobStatusResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.UpdateJobStatusResponse)
       UpdateJobStatusResponseOrBuilder {
@@ -3320,6 +3445,13 @@ public final class JobServiceOuterClass {
       super(builder);
     }
     private UpdateJobStatusResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateJobStatusResponse();
     }
 
     @java.lang.Override
@@ -3346,7 +3478,7 @@ public final class JobServiceOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3415,9 +3547,8 @@ public final class JobServiceOuterClass {
       }
       yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse other = (yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3592,35 +3723,35 @@ public final class JobServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3665,7 +3796,7 @@ public final class JobServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3772,20 +3903,12 @@ public final class JobServiceOuterClass {
       "ex/cloud/dataproc/manager/v1;dataproc_ma" +
       "nagerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.dataproc.manager.v1.JobOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_dataproc_manager_v1_ListJobsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dataproc_manager_v1_ListJobsRequest_fieldAccessorTable = new

@@ -20,10 +20,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return The config.
      */
     yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig getConfig();
     /**
@@ -33,10 +35,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
+     * @return Whether the audio field is set.
      */
     boolean hasAudio();
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
+     * @return The audio.
      */
     yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio getAudio();
     /**
@@ -47,7 +51,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.LongRunningRecognitionRequest}
    */
-  public  static final class LongRunningRecognitionRequest extends
+  public static final class LongRunningRecognitionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.LongRunningRecognitionRequest)
       LongRunningRecognitionRequestOrBuilder {
@@ -57,6 +61,13 @@ public final class SttServiceOuterClass {
       super(builder);
     }
     private LongRunningRecognitionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LongRunningRecognitionRequest();
     }
 
     @java.lang.Override
@@ -72,7 +83,6 @@ public final class SttServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -110,7 +120,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -145,19 +155,24 @@ public final class SttServiceOuterClass {
     private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig config_;
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return Whether the config field is set.
      */
+    @java.lang.Override
     public boolean hasConfig() {
       return config_ != null;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return The config.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig getConfig() {
       return config_ == null ? yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig.getDefaultInstance() : config_;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfigOrBuilder getConfigOrBuilder() {
       return getConfig();
     }
@@ -166,19 +181,24 @@ public final class SttServiceOuterClass {
     private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio audio_;
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
+     * @return Whether the audio field is set.
      */
+    @java.lang.Override
     public boolean hasAudio() {
       return audio_ != null;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
+     * @return The audio.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio getAudio() {
       return audio_ == null ? yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio.getDefaultInstance() : audio_;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudioOrBuilder getAudioOrBuilder() {
       return getAudio();
     }
@@ -235,19 +255,18 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionRequest) obj;
 
-      boolean result = true;
-      result = result && (hasConfig() == other.hasConfig());
+      if (hasConfig() != other.hasConfig()) return false;
       if (hasConfig()) {
-        result = result && getConfig()
-            .equals(other.getConfig());
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
       }
-      result = result && (hasAudio() == other.hasAudio());
+      if (hasAudio() != other.hasAudio()) return false;
       if (hasAudio()) {
-        result = result && getAudio()
-            .equals(other.getAudio());
+        if (!getAudio()
+            .equals(other.getAudio())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -452,35 +471,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -529,17 +548,19 @@ public final class SttServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig config_ = null;
+      private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig config_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfigOrBuilder> configBuilder_;
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+       * @return Whether the config field is set.
        */
       public boolean hasConfig() {
         return configBuilder_ != null || config_ != null;
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+       * @return The config.
        */
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig getConfig() {
         if (configBuilder_ == null) {
@@ -646,17 +667,19 @@ public final class SttServiceOuterClass {
         return configBuilder_;
       }
 
-      private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio audio_ = null;
+      private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio audio_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudioOrBuilder> audioBuilder_;
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
+       * @return Whether the audio field is set.
        */
       public boolean hasAudio() {
         return audioBuilder_ != null || audio_ != null;
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionAudio audio = 2;</code>
+       * @return The audio.
        */
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio getAudio() {
         if (audioBuilder_ == null) {
@@ -765,7 +788,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -846,7 +869,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.LongRunningRecognitionResponse}
    */
-  public  static final class LongRunningRecognitionResponse extends
+  public static final class LongRunningRecognitionResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.LongRunningRecognitionResponse)
       LongRunningRecognitionResponseOrBuilder {
@@ -857,6 +880,13 @@ public final class SttServiceOuterClass {
     }
     private LongRunningRecognitionResponse() {
       chunks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LongRunningRecognitionResponse();
     }
 
     @java.lang.Override
@@ -884,7 +914,7 @@ public final class SttServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 chunks_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -893,7 +923,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -907,7 +937,7 @@ public final class SttServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           chunks_ = java.util.Collections.unmodifiableList(chunks_);
         }
         this.unknownFields = unknownFields.build();
@@ -932,12 +962,14 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionResult chunks = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult> getChunksList() {
       return chunks_;
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionResult chunks = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResultOrBuilder> 
         getChunksOrBuilderList() {
       return chunks_;
@@ -945,18 +977,21 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionResult chunks = 1;</code>
      */
+    @java.lang.Override
     public int getChunksCount() {
       return chunks_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionResult chunks = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult getChunks(int index) {
       return chunks_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionResult chunks = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResultOrBuilder getChunksOrBuilder(
         int index) {
       return chunks_.get(index);
@@ -1007,11 +1042,10 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionResponse other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionResponse) obj;
 
-      boolean result = true;
-      result = result && getChunksList()
-          .equals(other.getChunksList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getChunksList()
+          .equals(other.getChunksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1193,7 +1227,7 @@ public final class SttServiceOuterClass {
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionResponse result = new yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.LongRunningRecognitionResponse(this);
         int from_bitField0_ = bitField0_;
         if (chunksBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             chunks_ = java.util.Collections.unmodifiableList(chunks_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1207,35 +1241,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1308,7 +1342,7 @@ public final class SttServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult> chunks_ =
         java.util.Collections.emptyList();
       private void ensureChunksIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           chunks_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult>(chunks_);
           bitField0_ |= 0x00000001;
          }
@@ -1537,7 +1571,7 @@ public final class SttServiceOuterClass {
           chunksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResultOrBuilder>(
                   chunks_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           chunks_ = null;
@@ -1547,7 +1581,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1603,10 +1637,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return The config.
      */
     yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig getConfig();
     /**
@@ -1616,6 +1652,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>bytes audio_content = 2;</code>
+     * @return Whether the audioContent field is set.
+     */
+    boolean hasAudioContent();
+    /**
+     * <code>bytes audio_content = 2;</code>
+     * @return The audioContent.
      */
     com.google.protobuf.ByteString getAudioContent();
 
@@ -1624,7 +1666,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.StreamingRecognitionRequest}
    */
-  public  static final class StreamingRecognitionRequest extends
+  public static final class StreamingRecognitionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.StreamingRecognitionRequest)
       StreamingRecognitionRequestOrBuilder {
@@ -1634,6 +1676,13 @@ public final class SttServiceOuterClass {
       super(builder);
     }
     private StreamingRecognitionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamingRecognitionRequest();
     }
 
     @java.lang.Override
@@ -1649,7 +1698,6 @@ public final class SttServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1675,12 +1723,12 @@ public final class SttServiceOuterClass {
               break;
             }
             case 18: {
-              streamingRequestCase_ = 2;
               streamingRequest_ = input.readBytes();
+              streamingRequestCase_ = 2;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1714,7 +1762,8 @@ public final class SttServiceOuterClass {
     private int streamingRequestCase_ = 0;
     private java.lang.Object streamingRequest_;
     public enum StreamingRequestCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONFIG(1),
       AUDIO_CONTENT(2),
       STREAMINGREQUEST_NOT_SET(0);
@@ -1723,6 +1772,8 @@ public final class SttServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1752,13 +1803,17 @@ public final class SttServiceOuterClass {
     public static final int CONFIG_FIELD_NUMBER = 1;
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return Whether the config field is set.
      */
+    @java.lang.Override
     public boolean hasConfig() {
       return streamingRequestCase_ == 1;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+     * @return The config.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig getConfig() {
       if (streamingRequestCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig) streamingRequest_;
@@ -1768,6 +1823,7 @@ public final class SttServiceOuterClass {
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfigOrBuilder getConfigOrBuilder() {
       if (streamingRequestCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig) streamingRequest_;
@@ -1778,7 +1834,17 @@ public final class SttServiceOuterClass {
     public static final int AUDIO_CONTENT_FIELD_NUMBER = 2;
     /**
      * <code>bytes audio_content = 2;</code>
+     * @return Whether the audioContent field is set.
      */
+    @java.lang.Override
+    public boolean hasAudioContent() {
+      return streamingRequestCase_ == 2;
+    }
+    /**
+     * <code>bytes audio_content = 2;</code>
+     * @return The audioContent.
+     */
+    @java.lang.Override
     public com.google.protobuf.ByteString getAudioContent() {
       if (streamingRequestCase_ == 2) {
         return (com.google.protobuf.ByteString) streamingRequest_;
@@ -1840,24 +1906,21 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionRequest) obj;
 
-      boolean result = true;
-      result = result && getStreamingRequestCase().equals(
-          other.getStreamingRequestCase());
-      if (!result) return false;
+      if (!getStreamingRequestCase().equals(other.getStreamingRequestCase())) return false;
       switch (streamingRequestCase_) {
         case 1:
-          result = result && getConfig()
-              .equals(other.getConfig());
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
           break;
         case 2:
-          result = result && getAudioContent()
-              .equals(other.getAudioContent());
+          if (!getAudioContent()
+              .equals(other.getAudioContent())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2057,35 +2120,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2160,13 +2223,17 @@ public final class SttServiceOuterClass {
           yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfigOrBuilder> configBuilder_;
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
         return streamingRequestCase_ == 1;
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
+       * @return The config.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig getConfig() {
         if (configBuilder_ == null) {
           if (streamingRequestCase_ == 1) {
@@ -2260,6 +2327,7 @@ public final class SttServiceOuterClass {
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionConfig config = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfigOrBuilder getConfigOrBuilder() {
         if ((streamingRequestCase_ == 1) && (configBuilder_ != null)) {
           return configBuilder_.getMessageOrBuilder();
@@ -2294,6 +2362,14 @@ public final class SttServiceOuterClass {
 
       /**
        * <code>bytes audio_content = 2;</code>
+       * @return Whether the audioContent field is set.
+       */
+      public boolean hasAudioContent() {
+        return streamingRequestCase_ == 2;
+      }
+      /**
+       * <code>bytes audio_content = 2;</code>
+       * @return The audioContent.
        */
       public com.google.protobuf.ByteString getAudioContent() {
         if (streamingRequestCase_ == 2) {
@@ -2303,6 +2379,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>bytes audio_content = 2;</code>
+       * @param value The audioContent to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2315,6 +2393,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>bytes audio_content = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioContent() {
         if (streamingRequestCase_ == 2) {
@@ -2327,7 +2406,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2408,7 +2487,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.StreamingRecognitionResponse}
    */
-  public  static final class StreamingRecognitionResponse extends
+  public static final class StreamingRecognitionResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.StreamingRecognitionResponse)
       StreamingRecognitionResponseOrBuilder {
@@ -2419,6 +2498,13 @@ public final class SttServiceOuterClass {
     }
     private StreamingRecognitionResponse() {
       chunks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamingRecognitionResponse();
     }
 
     @java.lang.Override
@@ -2446,7 +2532,7 @@ public final class SttServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 chunks_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2455,7 +2541,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2469,7 +2555,7 @@ public final class SttServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           chunks_ = java.util.Collections.unmodifiableList(chunks_);
         }
         this.unknownFields = unknownFields.build();
@@ -2494,12 +2580,14 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionChunk chunks = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk> getChunksList() {
       return chunks_;
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionChunk chunks = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunkOrBuilder> 
         getChunksOrBuilderList() {
       return chunks_;
@@ -2507,18 +2595,21 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionChunk chunks = 1;</code>
      */
+    @java.lang.Override
     public int getChunksCount() {
       return chunks_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionChunk chunks = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk getChunks(int index) {
       return chunks_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionChunk chunks = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunkOrBuilder getChunksOrBuilder(
         int index) {
       return chunks_.get(index);
@@ -2569,11 +2660,10 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse) obj;
 
-      boolean result = true;
-      result = result && getChunksList()
-          .equals(other.getChunksList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getChunksList()
+          .equals(other.getChunksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2755,7 +2845,7 @@ public final class SttServiceOuterClass {
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse result = new yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.StreamingRecognitionResponse(this);
         int from_bitField0_ = bitField0_;
         if (chunksBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             chunks_ = java.util.Collections.unmodifiableList(chunks_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2769,35 +2859,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2870,7 +2960,7 @@ public final class SttServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk> chunks_ =
         java.util.Collections.emptyList();
       private void ensureChunksIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           chunks_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk>(chunks_);
           bitField0_ |= 0x00000001;
          }
@@ -3099,7 +3189,7 @@ public final class SttServiceOuterClass {
           chunksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunkOrBuilder>(
                   chunks_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           chunks_ = null;
@@ -3109,7 +3199,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3165,15 +3255,28 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <code>bytes content = 1;</code>
+     * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
     /**
      * <code>string uri = 2;</code>
+     * @return Whether the uri field is set.
+     */
+    boolean hasUri();
+    /**
+     * <code>string uri = 2;</code>
+     * @return The uri.
      */
     java.lang.String getUri();
     /**
      * <code>string uri = 2;</code>
+     * @return The bytes for uri.
      */
     com.google.protobuf.ByteString
         getUriBytes();
@@ -3183,7 +3286,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.RecognitionAudio}
    */
-  public  static final class RecognitionAudio extends
+  public static final class RecognitionAudio extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.RecognitionAudio)
       RecognitionAudioOrBuilder {
@@ -3193,6 +3296,13 @@ public final class SttServiceOuterClass {
       super(builder);
     }
     private RecognitionAudio() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionAudio();
     }
 
     @java.lang.Override
@@ -3208,7 +3318,6 @@ public final class SttServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3220,8 +3329,8 @@ public final class SttServiceOuterClass {
               done = true;
               break;
             case 10: {
-              audioSourceCase_ = 1;
               audioSource_ = input.readBytes();
+              audioSourceCase_ = 1;
               break;
             }
             case 18: {
@@ -3231,7 +3340,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3265,7 +3374,8 @@ public final class SttServiceOuterClass {
     private int audioSourceCase_ = 0;
     private java.lang.Object audioSource_;
     public enum AudioSourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CONTENT(1),
       URI(2),
       AUDIOSOURCE_NOT_SET(0);
@@ -3274,6 +3384,8 @@ public final class SttServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3303,7 +3415,17 @@ public final class SttServiceOuterClass {
     public static final int CONTENT_FIELD_NUMBER = 1;
     /**
      * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
      */
+    @java.lang.Override
+    public boolean hasContent() {
+      return audioSourceCase_ == 1;
+    }
+    /**
+     * <code>bytes content = 1;</code>
+     * @return The content.
+     */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       if (audioSourceCase_ == 1) {
         return (com.google.protobuf.ByteString) audioSource_;
@@ -3314,6 +3436,14 @@ public final class SttServiceOuterClass {
     public static final int URI_FIELD_NUMBER = 2;
     /**
      * <code>string uri = 2;</code>
+     * @return Whether the uri field is set.
+     */
+    public boolean hasUri() {
+      return audioSourceCase_ == 2;
+    }
+    /**
+     * <code>string uri = 2;</code>
+     * @return The uri.
      */
     public java.lang.String getUri() {
       java.lang.Object ref = "";
@@ -3334,6 +3464,7 @@ public final class SttServiceOuterClass {
     }
     /**
      * <code>string uri = 2;</code>
+     * @return The bytes for uri.
      */
     public com.google.protobuf.ByteString
         getUriBytes() {
@@ -3407,24 +3538,21 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionAudio) obj;
 
-      boolean result = true;
-      result = result && getAudioSourceCase().equals(
-          other.getAudioSourceCase());
-      if (!result) return false;
+      if (!getAudioSourceCase().equals(other.getAudioSourceCase())) return false;
       switch (audioSourceCase_) {
         case 1:
-          result = result && getContent()
-              .equals(other.getContent());
+          if (!getContent()
+              .equals(other.getContent())) return false;
           break;
         case 2:
-          result = result && getUri()
-              .equals(other.getUri());
+          if (!getUri()
+              .equals(other.getUri())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3620,35 +3748,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3723,6 +3851,14 @@ public final class SttServiceOuterClass {
 
       /**
        * <code>bytes content = 1;</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return audioSourceCase_ == 1;
+      }
+      /**
+       * <code>bytes content = 1;</code>
+       * @return The content.
        */
       public com.google.protobuf.ByteString getContent() {
         if (audioSourceCase_ == 1) {
@@ -3732,6 +3868,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>bytes content = 1;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -3744,6 +3882,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>bytes content = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         if (audioSourceCase_ == 1) {
@@ -3756,7 +3895,17 @@ public final class SttServiceOuterClass {
 
       /**
        * <code>string uri = 2;</code>
+       * @return Whether the uri field is set.
        */
+      @java.lang.Override
+      public boolean hasUri() {
+        return audioSourceCase_ == 2;
+      }
+      /**
+       * <code>string uri = 2;</code>
+       * @return The uri.
+       */
+      @java.lang.Override
       public java.lang.String getUri() {
         java.lang.Object ref = "";
         if (audioSourceCase_ == 2) {
@@ -3776,7 +3925,9 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string uri = 2;</code>
+       * @return The bytes for uri.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUriBytes() {
         java.lang.Object ref = "";
@@ -3797,6 +3948,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string uri = 2;</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUri(
           java.lang.String value) {
@@ -3810,6 +3963,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string uri = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUri() {
         if (audioSourceCase_ == 2) {
@@ -3821,6 +3975,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string uri = 2;</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -3836,7 +3992,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3892,10 +4048,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
+     * @return Whether the specification field is set.
      */
     boolean hasSpecification();
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
+     * @return The specification.
      */
     yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec getSpecification();
     /**
@@ -3905,10 +4063,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -3916,7 +4076,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.RecognitionConfig}
    */
-  public  static final class RecognitionConfig extends
+  public static final class RecognitionConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.RecognitionConfig)
       RecognitionConfigOrBuilder {
@@ -3927,6 +4087,13 @@ public final class SttServiceOuterClass {
     }
     private RecognitionConfig() {
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionConfig();
     }
 
     @java.lang.Override
@@ -3942,7 +4109,6 @@ public final class SttServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3973,7 +4139,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4008,19 +4174,24 @@ public final class SttServiceOuterClass {
     private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec specification_;
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
+     * @return Whether the specification field is set.
      */
+    @java.lang.Override
     public boolean hasSpecification() {
       return specification_ != null;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
+     * @return The specification.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec getSpecification() {
       return specification_ == null ? yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.getDefaultInstance() : specification_;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpecOrBuilder getSpecificationOrBuilder() {
       return getSpecification();
     }
@@ -4029,7 +4200,9 @@ public final class SttServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -4044,7 +4217,9 @@ public final class SttServiceOuterClass {
     }
     /**
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -4076,7 +4251,7 @@ public final class SttServiceOuterClass {
       if (specification_ != null) {
         output.writeMessage(1, getSpecification());
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       unknownFields.writeTo(output);
@@ -4092,7 +4267,7 @@ public final class SttServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4110,16 +4285,15 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionConfig) obj;
 
-      boolean result = true;
-      result = result && (hasSpecification() == other.hasSpecification());
+      if (hasSpecification() != other.hasSpecification()) return false;
       if (hasSpecification()) {
-        result = result && getSpecification()
-            .equals(other.getSpecification());
+        if (!getSpecification()
+            .equals(other.getSpecification())) return false;
       }
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4314,35 +4488,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4392,17 +4566,19 @@ public final class SttServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec specification_ = null;
+      private yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec specification_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpecOrBuilder> specificationBuilder_;
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
+       * @return Whether the specification field is set.
        */
       public boolean hasSpecification() {
         return specificationBuilder_ != null || specification_ != null;
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec specification = 1;</code>
+       * @return The specification.
        */
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec getSpecification() {
         if (specificationBuilder_ == null) {
@@ -4512,6 +4688,7 @@ public final class SttServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -4527,6 +4704,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -4543,6 +4721,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -4556,6 +4736,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -4565,6 +4746,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4580,7 +4763,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4636,10 +4819,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+     * @return The enum numeric value on the wire for audioEncoding.
      */
     int getAudioEncodingValue();
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+     * @return The audioEncoding.
      */
     yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding getAudioEncoding();
 
@@ -4649,6 +4834,7 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
+     * @return The sampleRateHertz.
      */
     long getSampleRateHertz();
 
@@ -4658,6 +4844,7 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 3;</code>
+     * @return The languageCode.
      */
     java.lang.String getLanguageCode();
     /**
@@ -4666,21 +4853,25 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 3;</code>
+     * @return The bytes for languageCode.
      */
     com.google.protobuf.ByteString
         getLanguageCodeBytes();
 
     /**
      * <code>bool profanity_filter = 4;</code>
+     * @return The profanityFilter.
      */
     boolean getProfanityFilter();
 
     /**
      * <code>string model = 5;</code>
+     * @return The model.
      */
     java.lang.String getModel();
     /**
      * <code>string model = 5;</code>
+     * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
@@ -4693,11 +4884,13 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool partial_results = 7;</code>
+     * @return The partialResults.
      */
     boolean getPartialResults();
 
     /**
      * <code>bool single_utterance = 8;</code>
+     * @return The singleUtterance.
      */
     boolean getSingleUtterance();
 
@@ -4707,6 +4900,7 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>int64 audio_channel_count = 9;</code>
+     * @return The audioChannelCount.
      */
     long getAudioChannelCount();
 
@@ -4716,6 +4910,7 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool raw_results = 10;</code>
+     * @return The rawResults.
      */
     boolean getRawResults();
 
@@ -4725,13 +4920,14 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool literature_text = 11;</code>
+     * @return The literatureText.
      */
     boolean getLiteratureText();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.RecognitionSpec}
    */
-  public  static final class RecognitionSpec extends
+  public static final class RecognitionSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.RecognitionSpec)
       RecognitionSpecOrBuilder {
@@ -4742,15 +4938,15 @@ public final class SttServiceOuterClass {
     }
     private RecognitionSpec() {
       audioEncoding_ = 0;
-      sampleRateHertz_ = 0L;
       languageCode_ = "";
-      profanityFilter_ = false;
       model_ = "";
-      partialResults_ = false;
-      singleUtterance_ = false;
-      audioChannelCount_ = 0L;
-      rawResults_ = false;
-      literatureText_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionSpec();
     }
 
     @java.lang.Override
@@ -4766,7 +4962,6 @@ public final class SttServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4831,7 +5026,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4929,6 +5124,8 @@ public final class SttServiceOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4936,6 +5133,10 @@ public final class SttServiceOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static AudioEncoding forNumber(int value) {
         switch (value) {
           case 0: return AUDIO_ENCODING_UNSPECIFIED;
@@ -4960,6 +5161,10 @@ public final class SttServiceOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -4998,14 +5203,16 @@ public final class SttServiceOuterClass {
     private int audioEncoding_;
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+     * @return The enum numeric value on the wire for audioEncoding.
      */
-    public int getAudioEncodingValue() {
+    @java.lang.Override public int getAudioEncodingValue() {
       return audioEncoding_;
     }
     /**
      * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+     * @return The audioEncoding.
      */
-    public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding getAudioEncoding() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding getAudioEncoding() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding result = yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding.valueOf(audioEncoding_);
       return result == null ? yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding.UNRECOGNIZED : result;
@@ -5019,7 +5226,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
+     * @return The sampleRateHertz.
      */
+    @java.lang.Override
     public long getSampleRateHertz() {
       return sampleRateHertz_;
     }
@@ -5032,7 +5241,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 3;</code>
+     * @return The languageCode.
      */
+    @java.lang.Override
     public java.lang.String getLanguageCode() {
       java.lang.Object ref = languageCode_;
       if (ref instanceof java.lang.String) {
@@ -5051,7 +5262,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>string language_code = 3;</code>
+     * @return The bytes for languageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLanguageCodeBytes() {
       java.lang.Object ref = languageCode_;
@@ -5070,7 +5283,9 @@ public final class SttServiceOuterClass {
     private boolean profanityFilter_;
     /**
      * <code>bool profanity_filter = 4;</code>
+     * @return The profanityFilter.
      */
+    @java.lang.Override
     public boolean getProfanityFilter() {
       return profanityFilter_;
     }
@@ -5079,7 +5294,9 @@ public final class SttServiceOuterClass {
     private volatile java.lang.Object model_;
     /**
      * <code>string model = 5;</code>
+     * @return The model.
      */
+    @java.lang.Override
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
       if (ref instanceof java.lang.String) {
@@ -5094,7 +5311,9 @@ public final class SttServiceOuterClass {
     }
     /**
      * <code>string model = 5;</code>
+     * @return The bytes for model.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
       java.lang.Object ref = model_;
@@ -5119,7 +5338,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool partial_results = 7;</code>
+     * @return The partialResults.
      */
+    @java.lang.Override
     public boolean getPartialResults() {
       return partialResults_;
     }
@@ -5128,7 +5349,9 @@ public final class SttServiceOuterClass {
     private boolean singleUtterance_;
     /**
      * <code>bool single_utterance = 8;</code>
+     * @return The singleUtterance.
      */
+    @java.lang.Override
     public boolean getSingleUtterance() {
       return singleUtterance_;
     }
@@ -5141,7 +5364,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>int64 audio_channel_count = 9;</code>
+     * @return The audioChannelCount.
      */
+    @java.lang.Override
     public long getAudioChannelCount() {
       return audioChannelCount_;
     }
@@ -5154,7 +5379,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool raw_results = 10;</code>
+     * @return The rawResults.
      */
+    @java.lang.Override
     public boolean getRawResults() {
       return rawResults_;
     }
@@ -5167,7 +5394,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool literature_text = 11;</code>
+     * @return The literatureText.
      */
+    @java.lang.Override
     public boolean getLiteratureText() {
       return literatureText_;
     }
@@ -5192,13 +5421,13 @@ public final class SttServiceOuterClass {
       if (sampleRateHertz_ != 0L) {
         output.writeInt64(2, sampleRateHertz_);
       }
-      if (!getLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, languageCode_);
       }
       if (profanityFilter_ != false) {
         output.writeBool(4, profanityFilter_);
       }
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, model_);
       }
       if (partialResults_ != false) {
@@ -5233,14 +5462,14 @@ public final class SttServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, sampleRateHertz_);
       }
-      if (!getLanguageCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, languageCode_);
       }
       if (profanityFilter_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, profanityFilter_);
       }
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, model_);
       }
       if (partialResults_ != false) {
@@ -5278,28 +5507,27 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec) obj;
 
-      boolean result = true;
-      result = result && audioEncoding_ == other.audioEncoding_;
-      result = result && (getSampleRateHertz()
-          == other.getSampleRateHertz());
-      result = result && getLanguageCode()
-          .equals(other.getLanguageCode());
-      result = result && (getProfanityFilter()
-          == other.getProfanityFilter());
-      result = result && getModel()
-          .equals(other.getModel());
-      result = result && (getPartialResults()
-          == other.getPartialResults());
-      result = result && (getSingleUtterance()
-          == other.getSingleUtterance());
-      result = result && (getAudioChannelCount()
-          == other.getAudioChannelCount());
-      result = result && (getRawResults()
-          == other.getRawResults());
-      result = result && (getLiteratureText()
-          == other.getLiteratureText());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (audioEncoding_ != other.audioEncoding_) return false;
+      if (getSampleRateHertz()
+          != other.getSampleRateHertz()) return false;
+      if (!getLanguageCode()
+          .equals(other.getLanguageCode())) return false;
+      if (getProfanityFilter()
+          != other.getProfanityFilter()) return false;
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (getPartialResults()
+          != other.getPartialResults()) return false;
+      if (getSingleUtterance()
+          != other.getSingleUtterance()) return false;
+      if (getAudioChannelCount()
+          != other.getAudioChannelCount()) return false;
+      if (getRawResults()
+          != other.getRawResults()) return false;
+      if (getLiteratureText()
+          != other.getLiteratureText()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5531,35 +5759,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5637,21 +5865,27 @@ public final class SttServiceOuterClass {
       private int audioEncoding_ = 0;
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+       * @return The enum numeric value on the wire for audioEncoding.
        */
-      public int getAudioEncodingValue() {
+      @java.lang.Override public int getAudioEncodingValue() {
         return audioEncoding_;
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+       * @param value The enum numeric value on the wire for audioEncoding to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioEncodingValue(int value) {
+        
         audioEncoding_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+       * @return The audioEncoding.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding getAudioEncoding() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding result = yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding.valueOf(audioEncoding_);
@@ -5659,6 +5893,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+       * @param value The audioEncoding to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioEncoding(yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.RecognitionSpec.AudioEncoding value) {
         if (value == null) {
@@ -5671,6 +5907,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.ai.stt.v2.RecognitionSpec.AudioEncoding audio_encoding = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioEncoding() {
         
@@ -5686,7 +5923,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @return The sampleRateHertz.
        */
+      @java.lang.Override
       public long getSampleRateHertz() {
         return sampleRateHertz_;
       }
@@ -5696,6 +5935,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @param value The sampleRateHertz to set.
+       * @return This builder for chaining.
        */
       public Builder setSampleRateHertz(long value) {
         
@@ -5709,6 +5950,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSampleRateHertz() {
         
@@ -5724,6 +5966,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 3;</code>
+       * @return The languageCode.
        */
       public java.lang.String getLanguageCode() {
         java.lang.Object ref = languageCode_;
@@ -5743,6 +5986,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 3;</code>
+       * @return The bytes for languageCode.
        */
       public com.google.protobuf.ByteString
           getLanguageCodeBytes() {
@@ -5763,6 +6007,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 3;</code>
+       * @param value The languageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCode(
           java.lang.String value) {
@@ -5780,6 +6026,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLanguageCode() {
         
@@ -5793,6 +6040,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>string language_code = 3;</code>
+       * @param value The bytes for languageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -5809,12 +6058,16 @@ public final class SttServiceOuterClass {
       private boolean profanityFilter_ ;
       /**
        * <code>bool profanity_filter = 4;</code>
+       * @return The profanityFilter.
        */
+      @java.lang.Override
       public boolean getProfanityFilter() {
         return profanityFilter_;
       }
       /**
        * <code>bool profanity_filter = 4;</code>
+       * @param value The profanityFilter to set.
+       * @return This builder for chaining.
        */
       public Builder setProfanityFilter(boolean value) {
         
@@ -5824,6 +6077,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>bool profanity_filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProfanityFilter() {
         
@@ -5835,6 +6089,7 @@ public final class SttServiceOuterClass {
       private java.lang.Object model_ = "";
       /**
        * <code>string model = 5;</code>
+       * @return The model.
        */
       public java.lang.String getModel() {
         java.lang.Object ref = model_;
@@ -5850,6 +6105,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string model = 5;</code>
+       * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
           getModelBytes() {
@@ -5866,6 +6122,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string model = 5;</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
        */
       public Builder setModel(
           java.lang.String value) {
@@ -5879,6 +6137,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string model = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModel() {
         
@@ -5888,6 +6147,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string model = 5;</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
@@ -5910,7 +6171,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool partial_results = 7;</code>
+       * @return The partialResults.
        */
+      @java.lang.Override
       public boolean getPartialResults() {
         return partialResults_;
       }
@@ -5922,6 +6185,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool partial_results = 7;</code>
+       * @param value The partialResults to set.
+       * @return This builder for chaining.
        */
       public Builder setPartialResults(boolean value) {
         
@@ -5937,6 +6202,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool partial_results = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPartialResults() {
         
@@ -5948,12 +6214,16 @@ public final class SttServiceOuterClass {
       private boolean singleUtterance_ ;
       /**
        * <code>bool single_utterance = 8;</code>
+       * @return The singleUtterance.
        */
+      @java.lang.Override
       public boolean getSingleUtterance() {
         return singleUtterance_;
       }
       /**
        * <code>bool single_utterance = 8;</code>
+       * @param value The singleUtterance to set.
+       * @return This builder for chaining.
        */
       public Builder setSingleUtterance(boolean value) {
         
@@ -5963,6 +6233,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>bool single_utterance = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSingleUtterance() {
         
@@ -5978,7 +6249,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>int64 audio_channel_count = 9;</code>
+       * @return The audioChannelCount.
        */
+      @java.lang.Override
       public long getAudioChannelCount() {
         return audioChannelCount_;
       }
@@ -5988,6 +6261,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>int64 audio_channel_count = 9;</code>
+       * @param value The audioChannelCount to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioChannelCount(long value) {
         
@@ -6001,6 +6276,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>int64 audio_channel_count = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioChannelCount() {
         
@@ -6016,7 +6292,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool raw_results = 10;</code>
+       * @return The rawResults.
        */
+      @java.lang.Override
       public boolean getRawResults() {
         return rawResults_;
       }
@@ -6026,6 +6304,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool raw_results = 10;</code>
+       * @param value The rawResults to set.
+       * @return This builder for chaining.
        */
       public Builder setRawResults(boolean value) {
         
@@ -6039,6 +6319,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool raw_results = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRawResults() {
         
@@ -6054,7 +6335,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool literature_text = 11;</code>
+       * @return The literatureText.
        */
+      @java.lang.Override
       public boolean getLiteratureText() {
         return literatureText_;
       }
@@ -6064,6 +6347,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool literature_text = 11;</code>
+       * @param value The literatureText to set.
+       * @return This builder for chaining.
        */
       public Builder setLiteratureText(boolean value) {
         
@@ -6077,6 +6362,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool literature_text = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLiteratureText() {
         
@@ -6087,7 +6373,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6171,6 +6457,7 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool final = 2;</code>
+     * @return The final.
      */
     boolean getFinal();
 
@@ -6180,13 +6467,14 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool end_of_utterance = 3;</code>
+     * @return The endOfUtterance.
      */
     boolean getEndOfUtterance();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.SpeechRecognitionChunk}
    */
-  public  static final class SpeechRecognitionChunk extends
+  public static final class SpeechRecognitionChunk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.SpeechRecognitionChunk)
       SpeechRecognitionChunkOrBuilder {
@@ -6197,8 +6485,13 @@ public final class SttServiceOuterClass {
     }
     private SpeechRecognitionChunk() {
       alternatives_ = java.util.Collections.emptyList();
-      final_ = false;
-      endOfUtterance_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SpeechRecognitionChunk();
     }
 
     @java.lang.Override
@@ -6226,7 +6519,7 @@ public final class SttServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6245,7 +6538,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6259,7 +6552,7 @@ public final class SttServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
         }
         this.unknownFields = unknownFields.build();
@@ -6279,18 +6572,19 @@ public final class SttServiceOuterClass {
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk.class, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ALTERNATIVES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative> alternatives_;
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative> getAlternativesList() {
       return alternatives_;
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternativeOrBuilder> 
         getAlternativesOrBuilderList() {
       return alternatives_;
@@ -6298,18 +6592,21 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public int getAlternativesCount() {
       return alternatives_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative getAlternatives(int index) {
       return alternatives_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternativeOrBuilder getAlternativesOrBuilder(
         int index) {
       return alternatives_.get(index);
@@ -6323,7 +6620,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool final = 2;</code>
+     * @return The final.
      */
+    @java.lang.Override
     public boolean getFinal() {
       return final_;
     }
@@ -6336,7 +6635,9 @@ public final class SttServiceOuterClass {
      * </pre>
      *
      * <code>bool end_of_utterance = 3;</code>
+     * @return The endOfUtterance.
      */
+    @java.lang.Override
     public boolean getEndOfUtterance() {
       return endOfUtterance_;
     }
@@ -6400,15 +6701,14 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk) obj;
 
-      boolean result = true;
-      result = result && getAlternativesList()
-          .equals(other.getAlternativesList());
-      result = result && (getFinal()
-          == other.getFinal());
-      result = result && (getEndOfUtterance()
-          == other.getEndOfUtterance());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAlternativesList()
+          .equals(other.getAlternativesList())) return false;
+      if (getFinal()
+          != other.getFinal()) return false;
+      if (getEndOfUtterance()
+          != other.getEndOfUtterance()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6599,9 +6899,8 @@ public final class SttServiceOuterClass {
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk buildPartial() {
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk result = new yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionChunk(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (alternativesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6611,42 +6910,41 @@ public final class SttServiceOuterClass {
         }
         result.final_ = final_;
         result.endOfUtterance_ = endOfUtterance_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6725,7 +7023,7 @@ public final class SttServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative> alternatives_ =
         java.util.Collections.emptyList();
       private void ensureAlternativesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative>(alternatives_);
           bitField0_ |= 0x00000001;
          }
@@ -6954,7 +7252,7 @@ public final class SttServiceOuterClass {
           alternativesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternativeOrBuilder>(
                   alternatives_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           alternatives_ = null;
@@ -6969,7 +7267,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool final = 2;</code>
+       * @return The final.
        */
+      @java.lang.Override
       public boolean getFinal() {
         return final_;
       }
@@ -6979,6 +7279,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool final = 2;</code>
+       * @param value The final to set.
+       * @return This builder for chaining.
        */
       public Builder setFinal(boolean value) {
         
@@ -6992,6 +7294,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool final = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFinal() {
         
@@ -7007,7 +7310,9 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool end_of_utterance = 3;</code>
+       * @return The endOfUtterance.
        */
+      @java.lang.Override
       public boolean getEndOfUtterance() {
         return endOfUtterance_;
       }
@@ -7017,6 +7322,8 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool end_of_utterance = 3;</code>
+       * @param value The endOfUtterance to set.
+       * @return This builder for chaining.
        */
       public Builder setEndOfUtterance(boolean value) {
         
@@ -7030,6 +7337,7 @@ public final class SttServiceOuterClass {
        * </pre>
        *
        * <code>bool end_of_utterance = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndOfUtterance() {
         
@@ -7040,7 +7348,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7120,13 +7428,14 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>int64 channel_tag = 2;</code>
+     * @return The channelTag.
      */
     long getChannelTag();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.SpeechRecognitionResult}
    */
-  public  static final class SpeechRecognitionResult extends
+  public static final class SpeechRecognitionResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.SpeechRecognitionResult)
       SpeechRecognitionResultOrBuilder {
@@ -7137,7 +7446,13 @@ public final class SttServiceOuterClass {
     }
     private SpeechRecognitionResult() {
       alternatives_ = java.util.Collections.emptyList();
-      channelTag_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SpeechRecognitionResult();
     }
 
     @java.lang.Override
@@ -7165,7 +7480,7 @@ public final class SttServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -7179,7 +7494,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7193,7 +7508,7 @@ public final class SttServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
         }
         this.unknownFields = unknownFields.build();
@@ -7213,18 +7528,19 @@ public final class SttServiceOuterClass {
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult.class, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ALTERNATIVES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative> alternatives_;
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative> getAlternativesList() {
       return alternatives_;
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternativeOrBuilder> 
         getAlternativesOrBuilderList() {
       return alternatives_;
@@ -7232,18 +7548,21 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public int getAlternativesCount() {
       return alternatives_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative getAlternatives(int index) {
       return alternatives_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternativeOrBuilder getAlternativesOrBuilder(
         int index) {
       return alternatives_.get(index);
@@ -7253,7 +7572,9 @@ public final class SttServiceOuterClass {
     private long channelTag_;
     /**
      * <code>int64 channel_tag = 2;</code>
+     * @return The channelTag.
      */
+    @java.lang.Override
     public long getChannelTag() {
       return channelTag_;
     }
@@ -7310,13 +7631,12 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult) obj;
 
-      boolean result = true;
-      result = result && getAlternativesList()
-          .equals(other.getAlternativesList());
-      result = result && (getChannelTag()
-          == other.getChannelTag());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAlternativesList()
+          .equals(other.getAlternativesList())) return false;
+      if (getChannelTag()
+          != other.getChannelTag()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7502,9 +7822,8 @@ public final class SttServiceOuterClass {
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult buildPartial() {
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult result = new yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionResult(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (alternativesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -7513,42 +7832,41 @@ public final class SttServiceOuterClass {
           result.alternatives_ = alternativesBuilder_.build();
         }
         result.channelTag_ = channelTag_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7624,7 +7942,7 @@ public final class SttServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative> alternatives_ =
         java.util.Collections.emptyList();
       private void ensureAlternativesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative>(alternatives_);
           bitField0_ |= 0x00000001;
          }
@@ -7853,7 +8171,7 @@ public final class SttServiceOuterClass {
           alternativesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternativeOrBuilder>(
                   alternatives_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           alternatives_ = null;
@@ -7864,12 +8182,16 @@ public final class SttServiceOuterClass {
       private long channelTag_ ;
       /**
        * <code>int64 channel_tag = 2;</code>
+       * @return The channelTag.
        */
+      @java.lang.Override
       public long getChannelTag() {
         return channelTag_;
       }
       /**
        * <code>int64 channel_tag = 2;</code>
+       * @param value The channelTag to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelTag(long value) {
         
@@ -7879,6 +8201,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>int64 channel_tag = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannelTag() {
         
@@ -7889,7 +8212,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7945,16 +8268,19 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
      * <code>float confidence = 2;</code>
+     * @return The confidence.
      */
     float getConfidence();
 
@@ -7985,7 +8311,7 @@ public final class SttServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative}
    */
-  public  static final class SpeechRecognitionAlternative extends
+  public static final class SpeechRecognitionAlternative extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.SpeechRecognitionAlternative)
       SpeechRecognitionAlternativeOrBuilder {
@@ -7996,8 +8322,14 @@ public final class SttServiceOuterClass {
     }
     private SpeechRecognitionAlternative() {
       text_ = "";
-      confidence_ = 0F;
       words_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SpeechRecognitionAlternative();
     }
 
     @java.lang.Override
@@ -8036,16 +8368,16 @@ public final class SttServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 words_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               words_.add(
                   input.readMessage(yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8059,7 +8391,7 @@ public final class SttServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           words_ = java.util.Collections.unmodifiableList(words_);
         }
         this.unknownFields = unknownFields.build();
@@ -8079,12 +8411,13 @@ public final class SttServiceOuterClass {
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative.class, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TEXT_FIELD_NUMBER = 1;
     private volatile java.lang.Object text_;
     /**
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -8099,7 +8432,9 @@ public final class SttServiceOuterClass {
     }
     /**
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -8118,7 +8453,9 @@ public final class SttServiceOuterClass {
     private float confidence_;
     /**
      * <code>float confidence = 2;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -8128,12 +8465,14 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.WordInfo words = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo> getWordsList() {
       return words_;
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.WordInfo words = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfoOrBuilder> 
         getWordsOrBuilderList() {
       return words_;
@@ -8141,18 +8480,21 @@ public final class SttServiceOuterClass {
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.WordInfo words = 3;</code>
      */
+    @java.lang.Override
     public int getWordsCount() {
       return words_.size();
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.WordInfo words = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo getWords(int index) {
       return words_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.ai.stt.v2.WordInfo words = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfoOrBuilder getWordsOrBuilder(
         int index) {
       return words_.get(index);
@@ -8172,10 +8514,10 @@ public final class SttServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(2, confidence_);
       }
       for (int i = 0; i < words_.size(); i++) {
@@ -8190,10 +8532,10 @@ public final class SttServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, confidence_);
       }
@@ -8216,17 +8558,15 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (
-          java.lang.Float.floatToIntBits(getConfidence())
-          == java.lang.Float.floatToIntBits(
-              other.getConfidence()));
-      result = result && getWordsList()
-          .equals(other.getWordsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (java.lang.Float.floatToIntBits(getConfidence())
+          != java.lang.Float.floatToIntBits(
+              other.getConfidence())) return false;
+      if (!getWordsList()
+          .equals(other.getWordsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8385,7 +8725,7 @@ public final class SttServiceOuterClass {
 
         if (wordsBuilder_ == null) {
           words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           wordsBuilder_.clear();
         }
@@ -8416,54 +8756,52 @@ public final class SttServiceOuterClass {
       public yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative buildPartial() {
         yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative result = new yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.SpeechRecognitionAlternative(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.text_ = text_;
         result.confidence_ = confidence_;
         if (wordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             words_ = java.util.Collections.unmodifiableList(words_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.words_ = words_;
         } else {
           result.words_ = wordsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8488,7 +8826,7 @@ public final class SttServiceOuterClass {
           if (!other.words_.isEmpty()) {
             if (words_.isEmpty()) {
               words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureWordsIsMutable();
               words_.addAll(other.words_);
@@ -8501,7 +8839,7 @@ public final class SttServiceOuterClass {
               wordsBuilder_.dispose();
               wordsBuilder_ = null;
               words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               wordsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getWordsFieldBuilder() : null;
@@ -8543,6 +8881,7 @@ public final class SttServiceOuterClass {
       private java.lang.Object text_ = "";
       /**
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -8558,6 +8897,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -8574,6 +8914,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -8587,6 +8929,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -8596,6 +8939,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -8612,12 +8957,16 @@ public final class SttServiceOuterClass {
       private float confidence_ ;
       /**
        * <code>float confidence = 2;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
       /**
        * <code>float confidence = 2;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -8627,6 +8976,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>float confidence = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -8638,9 +8988,9 @@ public final class SttServiceOuterClass {
       private java.util.List<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo> words_ =
         java.util.Collections.emptyList();
       private void ensureWordsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           words_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo>(words_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -8790,7 +9140,7 @@ public final class SttServiceOuterClass {
       public Builder clearWords() {
         if (wordsBuilder_ == null) {
           words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           wordsBuilder_.clear();
@@ -8867,7 +9217,7 @@ public final class SttServiceOuterClass {
           wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo.Builder, yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfoOrBuilder>(
                   words_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           words_ = null;
@@ -8877,7 +9227,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8933,10 +9283,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.google.protobuf.Duration start_time = 1;</code>
+     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
      * <code>.google.protobuf.Duration start_time = 1;</code>
+     * @return The startTime.
      */
     com.google.protobuf.Duration getStartTime();
     /**
@@ -8946,10 +9298,12 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>.google.protobuf.Duration end_time = 2;</code>
+     * @return Whether the endTime field is set.
      */
     boolean hasEndTime();
     /**
      * <code>.google.protobuf.Duration end_time = 2;</code>
+     * @return The endTime.
      */
     com.google.protobuf.Duration getEndTime();
     /**
@@ -8959,23 +9313,26 @@ public final class SttServiceOuterClass {
 
     /**
      * <code>string word = 3;</code>
+     * @return The word.
      */
     java.lang.String getWord();
     /**
      * <code>string word = 3;</code>
+     * @return The bytes for word.
      */
     com.google.protobuf.ByteString
         getWordBytes();
 
     /**
      * <code>float confidence = 4;</code>
+     * @return The confidence.
      */
     float getConfidence();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.WordInfo}
    */
-  public  static final class WordInfo extends
+  public static final class WordInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.ai.stt.v2.WordInfo)
       WordInfoOrBuilder {
@@ -8986,7 +9343,13 @@ public final class SttServiceOuterClass {
     }
     private WordInfo() {
       word_ = "";
-      confidence_ = 0F;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WordInfo();
     }
 
     @java.lang.Override
@@ -9002,7 +9365,6 @@ public final class SttServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9051,7 +9413,7 @@ public final class SttServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9086,19 +9448,24 @@ public final class SttServiceOuterClass {
     private com.google.protobuf.Duration startTime_;
     /**
      * <code>.google.protobuf.Duration start_time = 1;</code>
+     * @return Whether the startTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Duration start_time = 1;</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getStartTime() {
       return startTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : startTime_;
     }
     /**
      * <code>.google.protobuf.Duration start_time = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -9107,19 +9474,24 @@ public final class SttServiceOuterClass {
     private com.google.protobuf.Duration endTime_;
     /**
      * <code>.google.protobuf.Duration end_time = 2;</code>
+     * @return Whether the endTime field is set.
      */
+    @java.lang.Override
     public boolean hasEndTime() {
       return endTime_ != null;
     }
     /**
      * <code>.google.protobuf.Duration end_time = 2;</code>
+     * @return The endTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getEndTime() {
       return endTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : endTime_;
     }
     /**
      * <code>.google.protobuf.Duration end_time = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getEndTimeOrBuilder() {
       return getEndTime();
     }
@@ -9128,7 +9500,9 @@ public final class SttServiceOuterClass {
     private volatile java.lang.Object word_;
     /**
      * <code>string word = 3;</code>
+     * @return The word.
      */
+    @java.lang.Override
     public java.lang.String getWord() {
       java.lang.Object ref = word_;
       if (ref instanceof java.lang.String) {
@@ -9143,7 +9517,9 @@ public final class SttServiceOuterClass {
     }
     /**
      * <code>string word = 3;</code>
+     * @return The bytes for word.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getWordBytes() {
       java.lang.Object ref = word_;
@@ -9162,7 +9538,9 @@ public final class SttServiceOuterClass {
     private float confidence_;
     /**
      * <code>float confidence = 4;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public float getConfidence() {
       return confidence_;
     }
@@ -9187,10 +9565,10 @@ public final class SttServiceOuterClass {
       if (endTime_ != null) {
         output.writeMessage(2, getEndTime());
       }
-      if (!getWordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(word_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, word_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         output.writeFloat(4, confidence_);
       }
       unknownFields.writeTo(output);
@@ -9210,10 +9588,10 @@ public final class SttServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEndTime());
       }
-      if (!getWordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(word_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, word_);
       }
-      if (confidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, confidence_);
       }
@@ -9232,25 +9610,23 @@ public final class SttServiceOuterClass {
       }
       yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo other = (yandex.cloud.api.ai.stt.v2.SttServiceOuterClass.WordInfo) obj;
 
-      boolean result = true;
-      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
-        result = result && getStartTime()
-            .equals(other.getStartTime());
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
       }
-      result = result && (hasEndTime() == other.hasEndTime());
+      if (hasEndTime() != other.hasEndTime()) return false;
       if (hasEndTime()) {
-        result = result && getEndTime()
-            .equals(other.getEndTime());
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
       }
-      result = result && getWord()
-          .equals(other.getWord());
-      result = result && (
-          java.lang.Float.floatToIntBits(getConfidence())
-          == java.lang.Float.floatToIntBits(
-              other.getConfidence()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getWord()
+          .equals(other.getWord())) return false;
+      if (java.lang.Float.floatToIntBits(getConfidence())
+          != java.lang.Float.floatToIntBits(
+              other.getConfidence())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9466,35 +9842,35 @@ public final class SttServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9550,17 +9926,19 @@ public final class SttServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration startTime_ = null;
+      private com.google.protobuf.Duration startTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> startTimeBuilder_;
       /**
        * <code>.google.protobuf.Duration start_time = 1;</code>
+       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
        * <code>.google.protobuf.Duration start_time = 1;</code>
+       * @return The startTime.
        */
       public com.google.protobuf.Duration getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -9667,17 +10045,19 @@ public final class SttServiceOuterClass {
         return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Duration endTime_ = null;
+      private com.google.protobuf.Duration endTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> endTimeBuilder_;
       /**
        * <code>.google.protobuf.Duration end_time = 2;</code>
+       * @return Whether the endTime field is set.
        */
       public boolean hasEndTime() {
         return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
        * <code>.google.protobuf.Duration end_time = 2;</code>
+       * @return The endTime.
        */
       public com.google.protobuf.Duration getEndTime() {
         if (endTimeBuilder_ == null) {
@@ -9787,6 +10167,7 @@ public final class SttServiceOuterClass {
       private java.lang.Object word_ = "";
       /**
        * <code>string word = 3;</code>
+       * @return The word.
        */
       public java.lang.String getWord() {
         java.lang.Object ref = word_;
@@ -9802,6 +10183,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string word = 3;</code>
+       * @return The bytes for word.
        */
       public com.google.protobuf.ByteString
           getWordBytes() {
@@ -9818,6 +10200,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string word = 3;</code>
+       * @param value The word to set.
+       * @return This builder for chaining.
        */
       public Builder setWord(
           java.lang.String value) {
@@ -9831,6 +10215,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string word = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearWord() {
         
@@ -9840,6 +10225,8 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>string word = 3;</code>
+       * @param value The bytes for word to set.
+       * @return This builder for chaining.
        */
       public Builder setWordBytes(
           com.google.protobuf.ByteString value) {
@@ -9856,12 +10243,16 @@ public final class SttServiceOuterClass {
       private float confidence_ ;
       /**
        * <code>float confidence = 4;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public float getConfidence() {
         return confidence_;
       }
       /**
        * <code>float confidence = 4;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
         
@@ -9871,6 +10262,7 @@ public final class SttServiceOuterClass {
       }
       /**
        * <code>float confidence = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -9881,7 +10273,7 @@ public final class SttServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10053,22 +10445,14 @@ public final class SttServiceOuterClass {
       ">github.com/yandex-cloud/go-genproto/yan" +
       "dex/cloud/ai/stt/v2;sttb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_ai_stt_v2_LongRunningRecognitionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_stt_v2_LongRunningRecognitionRequest_fieldAccessorTable = new

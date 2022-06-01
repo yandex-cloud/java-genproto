@@ -1,19 +1,6 @@
 package yandex.cloud.api.storage.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/storage/v1/bucket_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class BucketServiceGrpc {
 
   private BucketServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class BucketServiceGrpc {
     if ((getListMethod = BucketServiceGrpc.getListMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getListMethod = BucketServiceGrpc.getListMethod) == null) {
-          BucketServiceGrpc.getListMethod = getListMethod = 
+          BucketServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest, yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest,
@@ -76,22 +63,21 @@ public final class BucketServiceGrpc {
     if ((getGetMethod = BucketServiceGrpc.getGetMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getGetMethod = BucketServiceGrpc.getGetMethod) == null) {
-          BucketServiceGrpc.getGetMethod = getGetMethod = 
+          BucketServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest, yandex.cloud.api.storage.v1.BucketOuterClass.Bucket>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketOuterClass.Bucket.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest,
@@ -108,22 +94,21 @@ public final class BucketServiceGrpc {
     if ((getCreateMethod = BucketServiceGrpc.getCreateMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getCreateMethod = BucketServiceGrpc.getCreateMethod) == null) {
-          BucketServiceGrpc.getCreateMethod = getCreateMethod = 
+          BucketServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest,
@@ -140,22 +125,21 @@ public final class BucketServiceGrpc {
     if ((getUpdateMethod = BucketServiceGrpc.getUpdateMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getUpdateMethod = BucketServiceGrpc.getUpdateMethod) == null) {
-          BucketServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          BucketServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest,
@@ -172,22 +156,21 @@ public final class BucketServiceGrpc {
     if ((getDeleteMethod = BucketServiceGrpc.getDeleteMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getDeleteMethod = BucketServiceGrpc.getDeleteMethod) == null) {
-          BucketServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          BucketServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest,
@@ -204,22 +187,21 @@ public final class BucketServiceGrpc {
     if ((getGetStatsMethod = BucketServiceGrpc.getGetStatsMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getGetStatsMethod = BucketServiceGrpc.getGetStatsMethod) == null) {
-          BucketServiceGrpc.getGetStatsMethod = getGetStatsMethod = 
+          BucketServiceGrpc.getGetStatsMethod = getGetStatsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest, yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "GetStats"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStats"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("GetStats"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("GetStats"))
+              .build();
         }
-     }
-     return getGetStatsMethod;
+      }
+    }
+    return getGetStatsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest,
@@ -236,22 +218,21 @@ public final class BucketServiceGrpc {
     if ((getGetHTTPSConfigMethod = BucketServiceGrpc.getGetHTTPSConfigMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getGetHTTPSConfigMethod = BucketServiceGrpc.getGetHTTPSConfigMethod) == null) {
-          BucketServiceGrpc.getGetHTTPSConfigMethod = getGetHTTPSConfigMethod = 
+          BucketServiceGrpc.getGetHTTPSConfigMethod = getGetHTTPSConfigMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest, yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "GetHTTPSConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHTTPSConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("GetHTTPSConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("GetHTTPSConfig"))
+              .build();
         }
-     }
-     return getGetHTTPSConfigMethod;
+      }
+    }
+    return getGetHTTPSConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest,
@@ -268,22 +249,21 @@ public final class BucketServiceGrpc {
     if ((getSetHTTPSConfigMethod = BucketServiceGrpc.getSetHTTPSConfigMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getSetHTTPSConfigMethod = BucketServiceGrpc.getSetHTTPSConfigMethod) == null) {
-          BucketServiceGrpc.getSetHTTPSConfigMethod = getSetHTTPSConfigMethod = 
+          BucketServiceGrpc.getSetHTTPSConfigMethod = getSetHTTPSConfigMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "SetHTTPSConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetHTTPSConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("SetHTTPSConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("SetHTTPSConfig"))
+              .build();
         }
-     }
-     return getSetHTTPSConfigMethod;
+      }
+    }
+    return getSetHTTPSConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest,
@@ -300,29 +280,35 @@ public final class BucketServiceGrpc {
     if ((getDeleteHTTPSConfigMethod = BucketServiceGrpc.getDeleteHTTPSConfigMethod) == null) {
       synchronized (BucketServiceGrpc.class) {
         if ((getDeleteHTTPSConfigMethod = BucketServiceGrpc.getDeleteHTTPSConfigMethod) == null) {
-          BucketServiceGrpc.getDeleteHTTPSConfigMethod = getDeleteHTTPSConfigMethod = 
+          BucketServiceGrpc.getDeleteHTTPSConfigMethod = getDeleteHTTPSConfigMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.storage.v1.BucketService", "DeleteHTTPSConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteHTTPSConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("DeleteHTTPSConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("DeleteHTTPSConfig"))
+              .build();
         }
-     }
-     return getDeleteHTTPSConfigMethod;
+      }
+    }
+    return getDeleteHTTPSConfigMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BucketServiceStub newStub(io.grpc.Channel channel) {
-    return new BucketServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BucketServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BucketServiceStub>() {
+        @java.lang.Override
+        public BucketServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BucketServiceStub(channel, callOptions);
+        }
+      };
+    return BucketServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -330,7 +316,14 @@ public final class BucketServiceGrpc {
    */
   public static BucketServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BucketServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BucketServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BucketServiceBlockingStub>() {
+        @java.lang.Override
+        public BucketServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BucketServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BucketServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -338,7 +331,14 @@ public final class BucketServiceGrpc {
    */
   public static BucketServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BucketServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BucketServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BucketServiceFutureStub>() {
+        @java.lang.Override
+        public BucketServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BucketServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BucketServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -357,7 +357,7 @@ public final class BucketServiceGrpc {
      */
     public void list(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -368,7 +368,7 @@ public final class BucketServiceGrpc {
      */
     public void get(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -378,7 +378,7 @@ public final class BucketServiceGrpc {
      */
     public void create(yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -390,7 +390,7 @@ public final class BucketServiceGrpc {
      */
     public void update(yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -400,7 +400,7 @@ public final class BucketServiceGrpc {
      */
     public void delete(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -410,7 +410,7 @@ public final class BucketServiceGrpc {
      */
     public void getStats(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetStatsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatsMethod(), responseObserver);
     }
 
     /**
@@ -420,7 +420,7 @@ public final class BucketServiceGrpc {
      */
     public void getHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetHTTPSConfigMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHTTPSConfigMethod(), responseObserver);
     }
 
     /**
@@ -431,7 +431,7 @@ public final class BucketServiceGrpc {
      */
     public void setHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetHTTPSConfigMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetHTTPSConfigMethod(), responseObserver);
     }
 
     /**
@@ -441,70 +441,70 @@ public final class BucketServiceGrpc {
      */
     public void deleteHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteHTTPSConfigMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHTTPSConfigMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest,
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest,
                 yandex.cloud.api.storage.v1.BucketOuterClass.Bucket>(
                   this, METHODID_GET)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getGetStatsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest,
                 yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats>(
                   this, METHODID_GET_STATS)))
           .addMethod(
             getGetHTTPSConfigMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest,
                 yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig>(
                   this, METHODID_GET_HTTPSCONFIG)))
           .addMethod(
             getSetHTTPSConfigMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_HTTPSCONFIG)))
           .addMethod(
             getDeleteHTTPSConfigMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -518,19 +518,15 @@ public final class BucketServiceGrpc {
    * A set of methods for managing buckets.
    * </pre>
    */
-  public static final class BucketServiceStub extends io.grpc.stub.AbstractStub<BucketServiceStub> {
-    private BucketServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BucketServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BucketServiceStub extends io.grpc.stub.AbstractAsyncStub<BucketServiceStub> {
+    private BucketServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BucketServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BucketServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BucketServiceStub(channel, callOptions);
     }
 
@@ -543,7 +539,7 @@ public final class BucketServiceGrpc {
      */
     public void list(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -555,7 +551,7 @@ public final class BucketServiceGrpc {
      */
     public void get(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -566,7 +562,7 @@ public final class BucketServiceGrpc {
      */
     public void create(yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -579,7 +575,7 @@ public final class BucketServiceGrpc {
      */
     public void update(yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -590,7 +586,7 @@ public final class BucketServiceGrpc {
      */
     public void delete(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -601,7 +597,7 @@ public final class BucketServiceGrpc {
      */
     public void getStats(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetStatsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -612,7 +608,7 @@ public final class BucketServiceGrpc {
      */
     public void getHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetHTTPSConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -624,7 +620,7 @@ public final class BucketServiceGrpc {
      */
     public void setHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetHTTPSConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -635,7 +631,7 @@ public final class BucketServiceGrpc {
      */
     public void deleteHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteHTTPSConfigMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -645,19 +641,15 @@ public final class BucketServiceGrpc {
    * A set of methods for managing buckets.
    * </pre>
    */
-  public static final class BucketServiceBlockingStub extends io.grpc.stub.AbstractStub<BucketServiceBlockingStub> {
-    private BucketServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BucketServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BucketServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BucketServiceBlockingStub> {
+    private BucketServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BucketServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BucketServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BucketServiceBlockingStub(channel, callOptions);
     }
 
@@ -669,7 +661,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse list(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -680,7 +672,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.storage.v1.BucketOuterClass.Bucket get(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -690,7 +682,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -702,7 +694,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -712,7 +704,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -722,7 +714,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats getStats(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetStatsMethod(), getCallOptions(), request);
     }
 
@@ -732,7 +724,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig getHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetHTTPSConfigMethod(), getCallOptions(), request);
     }
 
@@ -743,7 +735,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetHTTPSConfigMethod(), getCallOptions(), request);
     }
 
@@ -753,7 +745,7 @@ public final class BucketServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteHTTPSConfigMethod(), getCallOptions(), request);
     }
   }
@@ -763,19 +755,15 @@ public final class BucketServiceGrpc {
    * A set of methods for managing buckets.
    * </pre>
    */
-  public static final class BucketServiceFutureStub extends io.grpc.stub.AbstractStub<BucketServiceFutureStub> {
-    private BucketServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BucketServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BucketServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BucketServiceFutureStub> {
+    private BucketServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BucketServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BucketServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BucketServiceFutureStub(channel, callOptions);
     }
 
@@ -788,7 +776,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse> list(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -800,7 +788,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket> get(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -811,7 +799,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -824,7 +812,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -835,7 +823,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -846,7 +834,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketOuterClass.BucketStats> getStats(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetStatsMethod(), getCallOptions()), request);
     }
 
@@ -857,7 +845,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketOuterClass.HTTPSConfig> getHTTPSConfig(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetHTTPSConfigMethod(), getCallOptions()), request);
     }
 
@@ -869,7 +857,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setHTTPSConfig(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetHTTPSConfigMethod(), getCallOptions()), request);
     }
 
@@ -880,7 +868,7 @@ public final class BucketServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteHTTPSConfig(
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteHTTPSConfigMethod(), getCallOptions()), request);
     }
   }

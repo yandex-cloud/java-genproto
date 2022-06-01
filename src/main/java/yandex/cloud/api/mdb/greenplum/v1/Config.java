@@ -73,6 +73,8 @@ public final class Config {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -80,6 +82,10 @@ public final class Config {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static LogStatement forNumber(int value) {
       switch (value) {
         case 0: return LOG_STATEMENT_UNSPECIFIED;
@@ -105,6 +111,10 @@ public final class Config {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -150,6 +160,7 @@ public final class Config {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
     java.lang.String getResourcePresetId();
     /**
@@ -159,6 +170,7 @@ public final class Config {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
     com.google.protobuf.ByteString
         getResourcePresetIdBytes();
@@ -169,6 +181,7 @@ public final class Config {
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
+     * @return The diskSize.
      */
     long getDiskSize();
 
@@ -178,6 +191,7 @@ public final class Config {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The diskTypeId.
      */
     java.lang.String getDiskTypeId();
     /**
@@ -186,6 +200,7 @@ public final class Config {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The bytes for diskTypeId.
      */
     com.google.protobuf.ByteString
         getDiskTypeIdBytes();
@@ -197,7 +212,7 @@ public final class Config {
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Resources}
    */
-  public  static final class Resources extends
+  public static final class Resources extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.Resources)
       ResourcesOrBuilder {
@@ -208,8 +223,14 @@ public final class Config {
     }
     private Resources() {
       resourcePresetId_ = "";
-      diskSize_ = 0L;
       diskTypeId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Resources();
     }
 
     @java.lang.Override
@@ -225,7 +246,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -254,7 +274,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -294,7 +314,9 @@ public final class Config {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The resourcePresetId.
      */
+    @java.lang.Override
     public java.lang.String getResourcePresetId() {
       java.lang.Object ref = resourcePresetId_;
       if (ref instanceof java.lang.String) {
@@ -314,7 +336,9 @@ public final class Config {
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
+     * @return The bytes for resourcePresetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourcePresetIdBytes() {
       java.lang.Object ref = resourcePresetId_;
@@ -337,7 +361,9 @@ public final class Config {
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
+     * @return The diskSize.
      */
+    @java.lang.Override
     public long getDiskSize() {
       return diskSize_;
     }
@@ -350,7 +376,9 @@ public final class Config {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The diskTypeId.
      */
+    @java.lang.Override
     public java.lang.String getDiskTypeId() {
       java.lang.Object ref = diskTypeId_;
       if (ref instanceof java.lang.String) {
@@ -369,7 +397,9 @@ public final class Config {
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
+     * @return The bytes for diskTypeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskTypeIdBytes() {
       java.lang.Object ref = diskTypeId_;
@@ -398,13 +428,13 @@ public final class Config {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
       }
       if (diskSize_ != 0L) {
         output.writeInt64(2, diskSize_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, diskTypeId_);
       }
       unknownFields.writeTo(output);
@@ -416,14 +446,14 @@ public final class Config {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourcePresetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
       }
       if (diskSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, diskSize_);
       }
-      if (!getDiskTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, diskTypeId_);
       }
       size += unknownFields.getSerializedSize();
@@ -441,15 +471,14 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.Resources other = (yandex.cloud.api.mdb.greenplum.v1.Config.Resources) obj;
 
-      boolean result = true;
-      result = result && getResourcePresetId()
-          .equals(other.getResourcePresetId());
-      result = result && (getDiskSize()
-          == other.getDiskSize());
-      result = result && getDiskTypeId()
-          .equals(other.getDiskTypeId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourcePresetId()
+          .equals(other.getResourcePresetId())) return false;
+      if (getDiskSize()
+          != other.getDiskSize()) return false;
+      if (!getDiskTypeId()
+          .equals(other.getDiskTypeId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -644,35 +673,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -734,6 +763,7 @@ public final class Config {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The resourcePresetId.
        */
       public java.lang.String getResourcePresetId() {
         java.lang.Object ref = resourcePresetId_;
@@ -754,6 +784,7 @@ public final class Config {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return The bytes for resourcePresetId.
        */
       public com.google.protobuf.ByteString
           getResourcePresetIdBytes() {
@@ -775,6 +806,8 @@ public final class Config {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetId(
           java.lang.String value) {
@@ -793,6 +826,7 @@ public final class Config {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourcePresetId() {
         
@@ -807,6 +841,8 @@ public final class Config {
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
+       * @param value The bytes for resourcePresetId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourcePresetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -827,7 +863,9 @@ public final class Config {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @return The diskSize.
        */
+      @java.lang.Override
       public long getDiskSize() {
         return diskSize_;
       }
@@ -837,6 +875,8 @@ public final class Config {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @param value The diskSize to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskSize(long value) {
         
@@ -850,6 +890,7 @@ public final class Config {
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskSize() {
         
@@ -865,6 +906,7 @@ public final class Config {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return The diskTypeId.
        */
       public java.lang.String getDiskTypeId() {
         java.lang.Object ref = diskTypeId_;
@@ -884,6 +926,7 @@ public final class Config {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return The bytes for diskTypeId.
        */
       public com.google.protobuf.ByteString
           getDiskTypeIdBytes() {
@@ -904,6 +947,8 @@ public final class Config {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @param value The diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeId(
           java.lang.String value) {
@@ -921,6 +966,7 @@ public final class Config {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskTypeId() {
         
@@ -934,6 +980,8 @@ public final class Config {
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
+       * @param value The bytes for diskTypeId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -949,7 +997,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1009,6 +1057,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     * @return The enum numeric value on the wire for mode.
      */
     int getModeValue();
     /**
@@ -1017,6 +1066,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     * @return The mode.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode getMode();
 
@@ -1027,6 +1077,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value size = 2;</code>
+     * @return Whether the size field is set.
      */
     boolean hasSize();
     /**
@@ -1036,6 +1087,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value size = 2;</code>
+     * @return The size.
      */
     com.google.protobuf.Int64Value getSize();
     /**
@@ -1055,6 +1107,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     * @return Whether the clientIdleTimeout field is set.
      */
     boolean hasClientIdleTimeout();
     /**
@@ -1064,6 +1117,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     * @return The clientIdleTimeout.
      */
     com.google.protobuf.Int64Value getClientIdleTimeout();
     /**
@@ -1083,7 +1137,7 @@ public final class Config {
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig}
    */
-  public  static final class ConnectionPoolerConfig extends
+  public static final class ConnectionPoolerConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig)
       ConnectionPoolerConfigOrBuilder {
@@ -1094,6 +1148,13 @@ public final class Config {
     }
     private ConnectionPoolerConfig() {
       mode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectionPoolerConfig();
     }
 
     @java.lang.Override
@@ -1109,7 +1170,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1153,7 +1213,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1247,6 +1307,8 @@ public final class Config {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1254,6 +1316,10 @@ public final class Config {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static PoolMode forNumber(int value) {
         switch (value) {
           case 0: return POOL_MODE_UNSPECIFIED;
@@ -1277,6 +1343,10 @@ public final class Config {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1319,8 +1389,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     * @return The enum numeric value on the wire for mode.
      */
-    public int getModeValue() {
+    @java.lang.Override public int getModeValue() {
       return mode_;
     }
     /**
@@ -1329,8 +1400,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     * @return The mode.
      */
-    public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode getMode() {
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode getMode() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode result = yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode.valueOf(mode_);
       return result == null ? yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode.UNRECOGNIZED : result;
@@ -1345,7 +1417,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value size = 2;</code>
+     * @return Whether the size field is set.
      */
+    @java.lang.Override
     public boolean hasSize() {
       return size_ != null;
     }
@@ -1356,7 +1430,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value size = 2;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSize() {
       return size_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : size_;
     }
@@ -1368,6 +1444,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value size = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSizeOrBuilder() {
       return getSize();
     }
@@ -1381,7 +1458,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     * @return Whether the clientIdleTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasClientIdleTimeout() {
       return clientIdleTimeout_ != null;
     }
@@ -1392,7 +1471,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     * @return The clientIdleTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getClientIdleTimeout() {
       return clientIdleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clientIdleTimeout_;
     }
@@ -1404,6 +1485,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getClientIdleTimeoutOrBuilder() {
       return getClientIdleTimeout();
     }
@@ -1467,20 +1549,19 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig other = (yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig) obj;
 
-      boolean result = true;
-      result = result && mode_ == other.mode_;
-      result = result && (hasSize() == other.hasSize());
+      if (mode_ != other.mode_) return false;
+      if (hasSize() != other.hasSize()) return false;
       if (hasSize()) {
-        result = result && getSize()
-            .equals(other.getSize());
+        if (!getSize()
+            .equals(other.getSize())) return false;
       }
-      result = result && (hasClientIdleTimeout() == other.hasClientIdleTimeout());
+      if (hasClientIdleTimeout() != other.hasClientIdleTimeout()) return false;
       if (hasClientIdleTimeout()) {
-        result = result && getClientIdleTimeout()
-            .equals(other.getClientIdleTimeout());
+        if (!getClientIdleTimeout()
+            .equals(other.getClientIdleTimeout())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1694,35 +1775,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1781,8 +1862,9 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
        */
-      public int getModeValue() {
+      @java.lang.Override public int getModeValue() {
         return mode_;
       }
       /**
@@ -1791,8 +1873,11 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
        */
       public Builder setModeValue(int value) {
+        
         mode_ = value;
         onChanged();
         return this;
@@ -1803,7 +1888,9 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       * @return The mode.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode getMode() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode result = yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode.valueOf(mode_);
@@ -1815,6 +1902,8 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
        */
       public Builder setMode(yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.PoolMode value) {
         if (value == null) {
@@ -1831,6 +1920,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMode() {
         
@@ -1839,7 +1929,7 @@ public final class Config {
         return this;
       }
 
-      private com.google.protobuf.Int64Value size_ = null;
+      private com.google.protobuf.Int64Value size_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sizeBuilder_;
       /**
@@ -1849,6 +1939,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value size = 2;</code>
+       * @return Whether the size field is set.
        */
       public boolean hasSize() {
         return sizeBuilder_ != null || size_ != null;
@@ -1860,6 +1951,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value size = 2;</code>
+       * @return The size.
        */
       public com.google.protobuf.Int64Value getSize() {
         if (sizeBuilder_ == null) {
@@ -2001,7 +2093,7 @@ public final class Config {
         return sizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value clientIdleTimeout_ = null;
+      private com.google.protobuf.Int64Value clientIdleTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> clientIdleTimeoutBuilder_;
       /**
@@ -2011,6 +2103,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       * @return Whether the clientIdleTimeout field is set.
        */
       public boolean hasClientIdleTimeout() {
         return clientIdleTimeoutBuilder_ != null || clientIdleTimeout_ != null;
@@ -2022,6 +2115,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       * @return The clientIdleTimeout.
        */
       public com.google.protobuf.Int64Value getClientIdleTimeout() {
         if (clientIdleTimeoutBuilder_ == null) {
@@ -2165,7 +2259,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2225,6 +2319,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -2233,6 +2328,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return The resources.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources();
     /**
@@ -2251,7 +2347,7 @@ public final class Config {
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfig}
    */
-  public  static final class MasterSubclusterConfig extends
+  public static final class MasterSubclusterConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfig)
       MasterSubclusterConfigOrBuilder {
@@ -2261,6 +2357,13 @@ public final class Config {
       super(builder);
     }
     private MasterSubclusterConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MasterSubclusterConfig();
     }
 
     @java.lang.Override
@@ -2276,7 +2379,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2301,7 +2403,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2340,7 +2442,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -2350,7 +2454,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.Resources.getDefaultInstance() : resources_;
     }
@@ -2361,6 +2467,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -2410,14 +2517,13 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.MasterSubclusterConfig other = (yandex.cloud.api.mdb.greenplum.v1.Config.MasterSubclusterConfig) obj;
 
-      boolean result = true;
-      result = result && (hasResources() == other.hasResources());
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2611,35 +2717,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2685,7 +2791,7 @@ public final class Config {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.Resources, yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -2694,6 +2800,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -2704,6 +2811,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -2840,7 +2948,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2900,6 +3008,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -2908,6 +3017,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return The resources.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources();
     /**
@@ -2926,7 +3036,7 @@ public final class Config {
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfig}
    */
-  public  static final class SegmentSubclusterConfig extends
+  public static final class SegmentSubclusterConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfig)
       SegmentSubclusterConfigOrBuilder {
@@ -2936,6 +3046,13 @@ public final class Config {
       super(builder);
     }
     private SegmentSubclusterConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SegmentSubclusterConfig();
     }
 
     @java.lang.Override
@@ -2951,7 +3068,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2976,7 +3092,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3015,7 +3131,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -3025,7 +3143,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.Resources.getDefaultInstance() : resources_;
     }
@@ -3036,6 +3156,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -3085,14 +3206,13 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.SegmentSubclusterConfig other = (yandex.cloud.api.mdb.greenplum.v1.Config.SegmentSubclusterConfig) obj;
 
-      boolean result = true;
-      result = result && (hasResources() == other.hasResources());
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3286,35 +3406,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3360,7 +3480,7 @@ public final class Config {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.Resources, yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -3369,6 +3489,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -3379,6 +3500,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 1;</code>
+       * @return The resources.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -3515,7 +3637,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3575,6 +3697,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
     /**
@@ -3583,6 +3706,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
@@ -3601,6 +3725,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return Whether the maxSlotWalKeepSize field is set.
      */
     boolean hasMaxSlotWalKeepSize();
     /**
@@ -3610,6 +3735,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return The maxSlotWalKeepSize.
      */
     com.google.protobuf.Int64Value getMaxSlotWalKeepSize();
     /**
@@ -3630,6 +3756,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return Whether the gpWorkfileLimitPerSegment field is set.
      */
     boolean hasGpWorkfileLimitPerSegment();
     /**
@@ -3640,6 +3767,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return The gpWorkfileLimitPerSegment.
      */
     com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment();
     /**
@@ -3661,6 +3789,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return Whether the gpWorkfileLimitPerQuery field is set.
      */
     boolean hasGpWorkfileLimitPerQuery();
     /**
@@ -3671,6 +3800,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return The gpWorkfileLimitPerQuery.
      */
     com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery();
     /**
@@ -3695,6 +3825,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
      */
     boolean hasGpWorkfileLimitFilesPerQuery();
     /**
@@ -3708,6 +3839,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return The gpWorkfileLimitFilesPerQuery.
      */
     com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery();
     /**
@@ -3731,6 +3863,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return Whether the maxPreparedTransactions field is set.
      */
     boolean hasMaxPreparedTransactions();
     /**
@@ -3740,6 +3873,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return The maxPreparedTransactions.
      */
     com.google.protobuf.Int64Value getMaxPreparedTransactions();
     /**
@@ -3759,6 +3893,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return Whether the gpWorkfileCompression field is set.
      */
     boolean hasGpWorkfileCompression();
     /**
@@ -3768,6 +3903,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return The gpWorkfileCompression.
      */
     com.google.protobuf.BoolValue getGpWorkfileCompression();
     /**
@@ -3783,7 +3919,7 @@ public final class Config {
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17}
    */
-  public  static final class GreenplumConfig6_17 extends
+  public static final class GreenplumConfig6_17 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17)
       GreenplumConfig6_17OrBuilder {
@@ -3793,6 +3929,13 @@ public final class Config {
       super(builder);
     }
     private GreenplumConfig6_17() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConfig6_17();
     }
 
     @java.lang.Override
@@ -3808,7 +3951,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3911,7 +4053,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3950,7 +4092,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return Whether the maxConnections field is set.
      */
+    @java.lang.Override
     public boolean hasMaxConnections() {
       return maxConnections_ != null;
     }
@@ -3960,7 +4104,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return The maxConnections.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxConnections() {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
     }
@@ -3971,6 +4117,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
       return getMaxConnections();
     }
@@ -3984,7 +4131,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return Whether the maxSlotWalKeepSize field is set.
      */
+    @java.lang.Override
     public boolean hasMaxSlotWalKeepSize() {
       return maxSlotWalKeepSize_ != null;
     }
@@ -3995,7 +4144,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return The maxSlotWalKeepSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
       return maxSlotWalKeepSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
     }
@@ -4007,6 +4158,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder() {
       return getMaxSlotWalKeepSize();
     }
@@ -4021,7 +4173,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return Whether the gpWorkfileLimitPerSegment field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileLimitPerSegment() {
       return gpWorkfileLimitPerSegment_ != null;
     }
@@ -4033,7 +4187,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return The gpWorkfileLimitPerSegment.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
       return gpWorkfileLimitPerSegment_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
     }
@@ -4046,6 +4202,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder() {
       return getGpWorkfileLimitPerSegment();
     }
@@ -4060,7 +4217,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return Whether the gpWorkfileLimitPerQuery field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileLimitPerQuery() {
       return gpWorkfileLimitPerQuery_ != null;
     }
@@ -4072,7 +4231,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return The gpWorkfileLimitPerQuery.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
       return gpWorkfileLimitPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
     }
@@ -4085,6 +4246,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder() {
       return getGpWorkfileLimitPerQuery();
     }
@@ -4102,7 +4264,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileLimitFilesPerQuery() {
       return gpWorkfileLimitFilesPerQuery_ != null;
     }
@@ -4117,7 +4281,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return The gpWorkfileLimitFilesPerQuery.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
       return gpWorkfileLimitFilesPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
     }
@@ -4133,6 +4299,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder() {
       return getGpWorkfileLimitFilesPerQuery();
     }
@@ -4146,7 +4313,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return Whether the maxPreparedTransactions field is set.
      */
+    @java.lang.Override
     public boolean hasMaxPreparedTransactions() {
       return maxPreparedTransactions_ != null;
     }
@@ -4157,7 +4326,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return The maxPreparedTransactions.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
       return maxPreparedTransactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
     }
@@ -4169,6 +4340,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder() {
       return getMaxPreparedTransactions();
     }
@@ -4182,7 +4354,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return Whether the gpWorkfileCompression field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileCompression() {
       return gpWorkfileCompression_ != null;
     }
@@ -4193,7 +4367,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return The gpWorkfileCompression.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getGpWorkfileCompression() {
       return gpWorkfileCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
     }
@@ -4205,6 +4381,7 @@ public final class Config {
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder() {
       return getGpWorkfileCompression();
     }
@@ -4296,44 +4473,43 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 other = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17) obj;
 
-      boolean result = true;
-      result = result && (hasMaxConnections() == other.hasMaxConnections());
+      if (hasMaxConnections() != other.hasMaxConnections()) return false;
       if (hasMaxConnections()) {
-        result = result && getMaxConnections()
-            .equals(other.getMaxConnections());
+        if (!getMaxConnections()
+            .equals(other.getMaxConnections())) return false;
       }
-      result = result && (hasMaxSlotWalKeepSize() == other.hasMaxSlotWalKeepSize());
+      if (hasMaxSlotWalKeepSize() != other.hasMaxSlotWalKeepSize()) return false;
       if (hasMaxSlotWalKeepSize()) {
-        result = result && getMaxSlotWalKeepSize()
-            .equals(other.getMaxSlotWalKeepSize());
+        if (!getMaxSlotWalKeepSize()
+            .equals(other.getMaxSlotWalKeepSize())) return false;
       }
-      result = result && (hasGpWorkfileLimitPerSegment() == other.hasGpWorkfileLimitPerSegment());
+      if (hasGpWorkfileLimitPerSegment() != other.hasGpWorkfileLimitPerSegment()) return false;
       if (hasGpWorkfileLimitPerSegment()) {
-        result = result && getGpWorkfileLimitPerSegment()
-            .equals(other.getGpWorkfileLimitPerSegment());
+        if (!getGpWorkfileLimitPerSegment()
+            .equals(other.getGpWorkfileLimitPerSegment())) return false;
       }
-      result = result && (hasGpWorkfileLimitPerQuery() == other.hasGpWorkfileLimitPerQuery());
+      if (hasGpWorkfileLimitPerQuery() != other.hasGpWorkfileLimitPerQuery()) return false;
       if (hasGpWorkfileLimitPerQuery()) {
-        result = result && getGpWorkfileLimitPerQuery()
-            .equals(other.getGpWorkfileLimitPerQuery());
+        if (!getGpWorkfileLimitPerQuery()
+            .equals(other.getGpWorkfileLimitPerQuery())) return false;
       }
-      result = result && (hasGpWorkfileLimitFilesPerQuery() == other.hasGpWorkfileLimitFilesPerQuery());
+      if (hasGpWorkfileLimitFilesPerQuery() != other.hasGpWorkfileLimitFilesPerQuery()) return false;
       if (hasGpWorkfileLimitFilesPerQuery()) {
-        result = result && getGpWorkfileLimitFilesPerQuery()
-            .equals(other.getGpWorkfileLimitFilesPerQuery());
+        if (!getGpWorkfileLimitFilesPerQuery()
+            .equals(other.getGpWorkfileLimitFilesPerQuery())) return false;
       }
-      result = result && (hasMaxPreparedTransactions() == other.hasMaxPreparedTransactions());
+      if (hasMaxPreparedTransactions() != other.hasMaxPreparedTransactions()) return false;
       if (hasMaxPreparedTransactions()) {
-        result = result && getMaxPreparedTransactions()
-            .equals(other.getMaxPreparedTransactions());
+        if (!getMaxPreparedTransactions()
+            .equals(other.getMaxPreparedTransactions())) return false;
       }
-      result = result && (hasGpWorkfileCompression() == other.hasGpWorkfileCompression());
+      if (hasGpWorkfileCompression() != other.hasGpWorkfileCompression()) return false;
       if (hasGpWorkfileCompression()) {
-        result = result && getGpWorkfileCompression()
-            .equals(other.getGpWorkfileCompression());
+        if (!getGpWorkfileCompression()
+            .equals(other.getGpWorkfileCompression())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4613,35 +4789,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4705,7 +4881,7 @@ public final class Config {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.Int64Value maxConnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
@@ -4714,6 +4890,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
@@ -4724,6 +4901,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -4858,7 +5036,7 @@ public final class Config {
         return maxConnectionsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxSlotWalKeepSize_ = null;
+      private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSlotWalKeepSizeBuilder_;
       /**
@@ -4868,6 +5046,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       * @return Whether the maxSlotWalKeepSize field is set.
        */
       public boolean hasMaxSlotWalKeepSize() {
         return maxSlotWalKeepSizeBuilder_ != null || maxSlotWalKeepSize_ != null;
@@ -4879,6 +5058,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       * @return The maxSlotWalKeepSize.
        */
       public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
         if (maxSlotWalKeepSizeBuilder_ == null) {
@@ -5020,7 +5200,7 @@ public final class Config {
         return maxSlotWalKeepSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_ = null;
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerSegmentBuilder_;
       /**
@@ -5031,6 +5211,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       * @return Whether the gpWorkfileLimitPerSegment field is set.
        */
       public boolean hasGpWorkfileLimitPerSegment() {
         return gpWorkfileLimitPerSegmentBuilder_ != null || gpWorkfileLimitPerSegment_ != null;
@@ -5043,6 +5224,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       * @return The gpWorkfileLimitPerSegment.
        */
       public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
         if (gpWorkfileLimitPerSegmentBuilder_ == null) {
@@ -5191,7 +5373,7 @@ public final class Config {
         return gpWorkfileLimitPerSegmentBuilder_;
       }
 
-      private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_ = null;
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerQueryBuilder_;
       /**
@@ -5202,6 +5384,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       * @return Whether the gpWorkfileLimitPerQuery field is set.
        */
       public boolean hasGpWorkfileLimitPerQuery() {
         return gpWorkfileLimitPerQueryBuilder_ != null || gpWorkfileLimitPerQuery_ != null;
@@ -5214,6 +5397,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       * @return The gpWorkfileLimitPerQuery.
        */
       public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
         if (gpWorkfileLimitPerQueryBuilder_ == null) {
@@ -5362,7 +5546,7 @@ public final class Config {
         return gpWorkfileLimitPerQueryBuilder_;
       }
 
-      private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_ = null;
+      private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitFilesPerQueryBuilder_;
       /**
@@ -5376,6 +5560,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
        */
       public boolean hasGpWorkfileLimitFilesPerQuery() {
         return gpWorkfileLimitFilesPerQueryBuilder_ != null || gpWorkfileLimitFilesPerQuery_ != null;
@@ -5391,6 +5576,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       * @return The gpWorkfileLimitFilesPerQuery.
        */
       public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
         if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
@@ -5560,7 +5746,7 @@ public final class Config {
         return gpWorkfileLimitFilesPerQueryBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxPreparedTransactions_ = null;
+      private com.google.protobuf.Int64Value maxPreparedTransactions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedTransactionsBuilder_;
       /**
@@ -5570,6 +5756,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       * @return Whether the maxPreparedTransactions field is set.
        */
       public boolean hasMaxPreparedTransactions() {
         return maxPreparedTransactionsBuilder_ != null || maxPreparedTransactions_ != null;
@@ -5581,6 +5768,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       * @return The maxPreparedTransactions.
        */
       public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
         if (maxPreparedTransactionsBuilder_ == null) {
@@ -5722,7 +5910,7 @@ public final class Config {
         return maxPreparedTransactionsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue gpWorkfileCompression_ = null;
+      private com.google.protobuf.BoolValue gpWorkfileCompression_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpWorkfileCompressionBuilder_;
       /**
@@ -5732,6 +5920,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       * @return Whether the gpWorkfileCompression field is set.
        */
       public boolean hasGpWorkfileCompression() {
         return gpWorkfileCompressionBuilder_ != null || gpWorkfileCompression_ != null;
@@ -5743,6 +5932,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       * @return The gpWorkfileCompression.
        */
       public com.google.protobuf.BoolValue getGpWorkfileCompression() {
         if (gpWorkfileCompressionBuilder_ == null) {
@@ -5886,7 +6076,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5946,6 +6136,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
     /**
@@ -5954,6 +6145,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
@@ -5972,6 +6164,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return Whether the maxSlotWalKeepSize field is set.
      */
     boolean hasMaxSlotWalKeepSize();
     /**
@@ -5981,6 +6174,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return The maxSlotWalKeepSize.
      */
     com.google.protobuf.Int64Value getMaxSlotWalKeepSize();
     /**
@@ -6001,6 +6195,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return Whether the gpWorkfileLimitPerSegment field is set.
      */
     boolean hasGpWorkfileLimitPerSegment();
     /**
@@ -6011,6 +6206,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return The gpWorkfileLimitPerSegment.
      */
     com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment();
     /**
@@ -6032,6 +6228,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return Whether the gpWorkfileLimitPerQuery field is set.
      */
     boolean hasGpWorkfileLimitPerQuery();
     /**
@@ -6042,6 +6239,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return The gpWorkfileLimitPerQuery.
      */
     com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery();
     /**
@@ -6066,6 +6264,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
      */
     boolean hasGpWorkfileLimitFilesPerQuery();
     /**
@@ -6079,6 +6278,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return The gpWorkfileLimitFilesPerQuery.
      */
     com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery();
     /**
@@ -6102,6 +6302,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return Whether the maxPreparedTransactions field is set.
      */
     boolean hasMaxPreparedTransactions();
     /**
@@ -6111,6 +6312,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return The maxPreparedTransactions.
      */
     com.google.protobuf.Int64Value getMaxPreparedTransactions();
     /**
@@ -6130,6 +6332,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return Whether the gpWorkfileCompression field is set.
      */
     boolean hasGpWorkfileCompression();
     /**
@@ -6139,6 +6342,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return The gpWorkfileCompression.
      */
     com.google.protobuf.BoolValue getGpWorkfileCompression();
     /**
@@ -6162,6 +6366,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return Whether the maxStatementMem field is set.
      */
     boolean hasMaxStatementMem();
     /**
@@ -6175,6 +6380,7 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return The maxStatementMem.
      */
     com.google.protobuf.Int64Value getMaxStatementMem();
     /**
@@ -6201,6 +6407,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The enum numeric value on the wire for logStatement.
      */
     int getLogStatementValue();
     /**
@@ -6213,13 +6420,14 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The logStatement.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19}
    */
-  public  static final class GreenplumConfig6_19 extends
+  public static final class GreenplumConfig6_19 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19)
       GreenplumConfig6_19OrBuilder {
@@ -6230,6 +6438,13 @@ public final class Config {
     }
     private GreenplumConfig6_19() {
       logStatement_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConfig6_19();
     }
 
     @java.lang.Override
@@ -6245,7 +6460,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6367,7 +6581,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6406,7 +6620,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return Whether the maxConnections field is set.
      */
+    @java.lang.Override
     public boolean hasMaxConnections() {
       return maxConnections_ != null;
     }
@@ -6416,7 +6632,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return The maxConnections.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxConnections() {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
     }
@@ -6427,6 +6645,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
       return getMaxConnections();
     }
@@ -6440,7 +6659,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return Whether the maxSlotWalKeepSize field is set.
      */
+    @java.lang.Override
     public boolean hasMaxSlotWalKeepSize() {
       return maxSlotWalKeepSize_ != null;
     }
@@ -6451,7 +6672,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return The maxSlotWalKeepSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
       return maxSlotWalKeepSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
     }
@@ -6463,6 +6686,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder() {
       return getMaxSlotWalKeepSize();
     }
@@ -6477,7 +6701,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return Whether the gpWorkfileLimitPerSegment field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileLimitPerSegment() {
       return gpWorkfileLimitPerSegment_ != null;
     }
@@ -6489,7 +6715,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return The gpWorkfileLimitPerSegment.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
       return gpWorkfileLimitPerSegment_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
     }
@@ -6502,6 +6730,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder() {
       return getGpWorkfileLimitPerSegment();
     }
@@ -6516,7 +6745,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return Whether the gpWorkfileLimitPerQuery field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileLimitPerQuery() {
       return gpWorkfileLimitPerQuery_ != null;
     }
@@ -6528,7 +6759,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return The gpWorkfileLimitPerQuery.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
       return gpWorkfileLimitPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
     }
@@ -6541,6 +6774,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder() {
       return getGpWorkfileLimitPerQuery();
     }
@@ -6558,7 +6792,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileLimitFilesPerQuery() {
       return gpWorkfileLimitFilesPerQuery_ != null;
     }
@@ -6573,7 +6809,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return The gpWorkfileLimitFilesPerQuery.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
       return gpWorkfileLimitFilesPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
     }
@@ -6589,6 +6827,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder() {
       return getGpWorkfileLimitFilesPerQuery();
     }
@@ -6602,7 +6841,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return Whether the maxPreparedTransactions field is set.
      */
+    @java.lang.Override
     public boolean hasMaxPreparedTransactions() {
       return maxPreparedTransactions_ != null;
     }
@@ -6613,7 +6854,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return The maxPreparedTransactions.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
       return maxPreparedTransactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
     }
@@ -6625,6 +6868,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder() {
       return getMaxPreparedTransactions();
     }
@@ -6638,7 +6882,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return Whether the gpWorkfileCompression field is set.
      */
+    @java.lang.Override
     public boolean hasGpWorkfileCompression() {
       return gpWorkfileCompression_ != null;
     }
@@ -6649,7 +6895,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return The gpWorkfileCompression.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getGpWorkfileCompression() {
       return gpWorkfileCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
     }
@@ -6661,6 +6909,7 @@ public final class Config {
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder() {
       return getGpWorkfileCompression();
     }
@@ -6678,7 +6927,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return Whether the maxStatementMem field is set.
      */
+    @java.lang.Override
     public boolean hasMaxStatementMem() {
       return maxStatementMem_ != null;
     }
@@ -6693,7 +6944,9 @@ public final class Config {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return The maxStatementMem.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxStatementMem() {
       return maxStatementMem_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
     }
@@ -6709,6 +6962,7 @@ public final class Config {
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder() {
       return getMaxStatementMem();
     }
@@ -6725,8 +6979,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The enum numeric value on the wire for logStatement.
      */
-    public int getLogStatementValue() {
+    @java.lang.Override public int getLogStatementValue() {
       return logStatement_;
     }
     /**
@@ -6739,8 +6994,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The logStatement.
      */
-    public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.valueOf(logStatement_);
       return result == null ? yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.UNRECOGNIZED : result;
@@ -6847,50 +7103,49 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 other = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19) obj;
 
-      boolean result = true;
-      result = result && (hasMaxConnections() == other.hasMaxConnections());
+      if (hasMaxConnections() != other.hasMaxConnections()) return false;
       if (hasMaxConnections()) {
-        result = result && getMaxConnections()
-            .equals(other.getMaxConnections());
+        if (!getMaxConnections()
+            .equals(other.getMaxConnections())) return false;
       }
-      result = result && (hasMaxSlotWalKeepSize() == other.hasMaxSlotWalKeepSize());
+      if (hasMaxSlotWalKeepSize() != other.hasMaxSlotWalKeepSize()) return false;
       if (hasMaxSlotWalKeepSize()) {
-        result = result && getMaxSlotWalKeepSize()
-            .equals(other.getMaxSlotWalKeepSize());
+        if (!getMaxSlotWalKeepSize()
+            .equals(other.getMaxSlotWalKeepSize())) return false;
       }
-      result = result && (hasGpWorkfileLimitPerSegment() == other.hasGpWorkfileLimitPerSegment());
+      if (hasGpWorkfileLimitPerSegment() != other.hasGpWorkfileLimitPerSegment()) return false;
       if (hasGpWorkfileLimitPerSegment()) {
-        result = result && getGpWorkfileLimitPerSegment()
-            .equals(other.getGpWorkfileLimitPerSegment());
+        if (!getGpWorkfileLimitPerSegment()
+            .equals(other.getGpWorkfileLimitPerSegment())) return false;
       }
-      result = result && (hasGpWorkfileLimitPerQuery() == other.hasGpWorkfileLimitPerQuery());
+      if (hasGpWorkfileLimitPerQuery() != other.hasGpWorkfileLimitPerQuery()) return false;
       if (hasGpWorkfileLimitPerQuery()) {
-        result = result && getGpWorkfileLimitPerQuery()
-            .equals(other.getGpWorkfileLimitPerQuery());
+        if (!getGpWorkfileLimitPerQuery()
+            .equals(other.getGpWorkfileLimitPerQuery())) return false;
       }
-      result = result && (hasGpWorkfileLimitFilesPerQuery() == other.hasGpWorkfileLimitFilesPerQuery());
+      if (hasGpWorkfileLimitFilesPerQuery() != other.hasGpWorkfileLimitFilesPerQuery()) return false;
       if (hasGpWorkfileLimitFilesPerQuery()) {
-        result = result && getGpWorkfileLimitFilesPerQuery()
-            .equals(other.getGpWorkfileLimitFilesPerQuery());
+        if (!getGpWorkfileLimitFilesPerQuery()
+            .equals(other.getGpWorkfileLimitFilesPerQuery())) return false;
       }
-      result = result && (hasMaxPreparedTransactions() == other.hasMaxPreparedTransactions());
+      if (hasMaxPreparedTransactions() != other.hasMaxPreparedTransactions()) return false;
       if (hasMaxPreparedTransactions()) {
-        result = result && getMaxPreparedTransactions()
-            .equals(other.getMaxPreparedTransactions());
+        if (!getMaxPreparedTransactions()
+            .equals(other.getMaxPreparedTransactions())) return false;
       }
-      result = result && (hasGpWorkfileCompression() == other.hasGpWorkfileCompression());
+      if (hasGpWorkfileCompression() != other.hasGpWorkfileCompression()) return false;
       if (hasGpWorkfileCompression()) {
-        result = result && getGpWorkfileCompression()
-            .equals(other.getGpWorkfileCompression());
+        if (!getGpWorkfileCompression()
+            .equals(other.getGpWorkfileCompression())) return false;
       }
-      result = result && (hasMaxStatementMem() == other.hasMaxStatementMem());
+      if (hasMaxStatementMem() != other.hasMaxStatementMem()) return false;
       if (hasMaxStatementMem()) {
-        result = result && getMaxStatementMem()
-            .equals(other.getMaxStatementMem());
+        if (!getMaxStatementMem()
+            .equals(other.getMaxStatementMem())) return false;
       }
-      result = result && logStatement_ == other.logStatement_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (logStatement_ != other.logStatement_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7190,35 +7445,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7288,7 +7543,7 @@ public final class Config {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.Int64Value maxConnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
@@ -7297,6 +7552,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
@@ -7307,6 +7563,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -7441,7 +7698,7 @@ public final class Config {
         return maxConnectionsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxSlotWalKeepSize_ = null;
+      private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSlotWalKeepSizeBuilder_;
       /**
@@ -7451,6 +7708,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       * @return Whether the maxSlotWalKeepSize field is set.
        */
       public boolean hasMaxSlotWalKeepSize() {
         return maxSlotWalKeepSizeBuilder_ != null || maxSlotWalKeepSize_ != null;
@@ -7462,6 +7720,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       * @return The maxSlotWalKeepSize.
        */
       public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
         if (maxSlotWalKeepSizeBuilder_ == null) {
@@ -7603,7 +7862,7 @@ public final class Config {
         return maxSlotWalKeepSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_ = null;
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerSegmentBuilder_;
       /**
@@ -7614,6 +7873,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       * @return Whether the gpWorkfileLimitPerSegment field is set.
        */
       public boolean hasGpWorkfileLimitPerSegment() {
         return gpWorkfileLimitPerSegmentBuilder_ != null || gpWorkfileLimitPerSegment_ != null;
@@ -7626,6 +7886,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       * @return The gpWorkfileLimitPerSegment.
        */
       public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
         if (gpWorkfileLimitPerSegmentBuilder_ == null) {
@@ -7774,7 +8035,7 @@ public final class Config {
         return gpWorkfileLimitPerSegmentBuilder_;
       }
 
-      private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_ = null;
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerQueryBuilder_;
       /**
@@ -7785,6 +8046,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       * @return Whether the gpWorkfileLimitPerQuery field is set.
        */
       public boolean hasGpWorkfileLimitPerQuery() {
         return gpWorkfileLimitPerQueryBuilder_ != null || gpWorkfileLimitPerQuery_ != null;
@@ -7797,6 +8059,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       * @return The gpWorkfileLimitPerQuery.
        */
       public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
         if (gpWorkfileLimitPerQueryBuilder_ == null) {
@@ -7945,7 +8208,7 @@ public final class Config {
         return gpWorkfileLimitPerQueryBuilder_;
       }
 
-      private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_ = null;
+      private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitFilesPerQueryBuilder_;
       /**
@@ -7959,6 +8222,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
        */
       public boolean hasGpWorkfileLimitFilesPerQuery() {
         return gpWorkfileLimitFilesPerQueryBuilder_ != null || gpWorkfileLimitFilesPerQuery_ != null;
@@ -7974,6 +8238,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       * @return The gpWorkfileLimitFilesPerQuery.
        */
       public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
         if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
@@ -8143,7 +8408,7 @@ public final class Config {
         return gpWorkfileLimitFilesPerQueryBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxPreparedTransactions_ = null;
+      private com.google.protobuf.Int64Value maxPreparedTransactions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedTransactionsBuilder_;
       /**
@@ -8153,6 +8418,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       * @return Whether the maxPreparedTransactions field is set.
        */
       public boolean hasMaxPreparedTransactions() {
         return maxPreparedTransactionsBuilder_ != null || maxPreparedTransactions_ != null;
@@ -8164,6 +8430,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       * @return The maxPreparedTransactions.
        */
       public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
         if (maxPreparedTransactionsBuilder_ == null) {
@@ -8305,7 +8572,7 @@ public final class Config {
         return maxPreparedTransactionsBuilder_;
       }
 
-      private com.google.protobuf.BoolValue gpWorkfileCompression_ = null;
+      private com.google.protobuf.BoolValue gpWorkfileCompression_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpWorkfileCompressionBuilder_;
       /**
@@ -8315,6 +8582,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       * @return Whether the gpWorkfileCompression field is set.
        */
       public boolean hasGpWorkfileCompression() {
         return gpWorkfileCompressionBuilder_ != null || gpWorkfileCompression_ != null;
@@ -8326,6 +8594,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       * @return The gpWorkfileCompression.
        */
       public com.google.protobuf.BoolValue getGpWorkfileCompression() {
         if (gpWorkfileCompressionBuilder_ == null) {
@@ -8467,7 +8736,7 @@ public final class Config {
         return gpWorkfileCompressionBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxStatementMem_ = null;
+      private com.google.protobuf.Int64Value maxStatementMem_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStatementMemBuilder_;
       /**
@@ -8481,6 +8750,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       * @return Whether the maxStatementMem field is set.
        */
       public boolean hasMaxStatementMem() {
         return maxStatementMemBuilder_ != null || maxStatementMem_ != null;
@@ -8496,6 +8766,7 @@ public final class Config {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       * @return The maxStatementMem.
        */
       public com.google.protobuf.Int64Value getMaxStatementMem() {
         if (maxStatementMemBuilder_ == null) {
@@ -8676,8 +8947,9 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @return The enum numeric value on the wire for logStatement.
        */
-      public int getLogStatementValue() {
+      @java.lang.Override public int getLogStatementValue() {
         return logStatement_;
       }
       /**
@@ -8690,8 +8962,11 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @param value The enum numeric value on the wire for logStatement to set.
+       * @return This builder for chaining.
        */
       public Builder setLogStatementValue(int value) {
+        
         logStatement_ = value;
         onChanged();
         return this;
@@ -8706,7 +8981,9 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @return The logStatement.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.valueOf(logStatement_);
@@ -8722,6 +8999,8 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @param value The logStatement to set.
+       * @return This builder for chaining.
        */
       public Builder setLogStatement(yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement value) {
         if (value == null) {
@@ -8742,6 +9021,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogStatement() {
         
@@ -8752,7 +9032,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8813,6 +9093,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -8822,6 +9103,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getEffectiveConfig();
     /**
@@ -8840,6 +9122,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -8848,6 +9131,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getUserConfig();
     /**
@@ -8865,6 +9149,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -8873,6 +9158,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getDefaultConfig();
     /**
@@ -8887,7 +9173,7 @@ public final class Config {
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_17}
    */
-  public  static final class GreenplumConfigSet6_17 extends
+  public static final class GreenplumConfigSet6_17 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_17)
       GreenplumConfigSet6_17OrBuilder {
@@ -8897,6 +9183,13 @@ public final class Config {
       super(builder);
     }
     private GreenplumConfigSet6_17() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConfigSet6_17();
     }
 
     @java.lang.Override
@@ -8912,7 +9205,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8963,7 +9255,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9003,7 +9295,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -9014,7 +9308,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.getDefaultInstance() : effectiveConfig_;
     }
@@ -9026,6 +9322,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -9038,7 +9335,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -9048,7 +9347,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.getDefaultInstance() : userConfig_;
     }
@@ -9059,6 +9360,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -9071,7 +9373,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -9081,7 +9385,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.getDefaultInstance() : defaultConfig_;
     }
@@ -9092,6 +9398,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -9155,24 +9462,23 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_17 other = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_17) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9392,35 +9698,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9472,7 +9778,7 @@ public final class Config {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> effectiveConfigBuilder_;
       /**
@@ -9482,6 +9788,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -9493,6 +9800,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -9634,7 +9942,7 @@ public final class Config {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 userConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> userConfigBuilder_;
       /**
@@ -9643,6 +9951,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -9653,6 +9962,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -9787,7 +10097,7 @@ public final class Config {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 defaultConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> defaultConfigBuilder_;
       /**
@@ -9796,6 +10106,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -9806,6 +10117,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -9942,7 +10254,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10003,6 +10315,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -10012,6 +10325,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getEffectiveConfig();
     /**
@@ -10030,6 +10344,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -10038,6 +10353,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getUserConfig();
     /**
@@ -10055,6 +10371,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -10063,6 +10380,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getDefaultConfig();
     /**
@@ -10077,7 +10395,7 @@ public final class Config {
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_19}
    */
-  public  static final class GreenplumConfigSet6_19 extends
+  public static final class GreenplumConfigSet6_19 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_19)
       GreenplumConfigSet6_19OrBuilder {
@@ -10087,6 +10405,13 @@ public final class Config {
       super(builder);
     }
     private GreenplumConfigSet6_19() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConfigSet6_19();
     }
 
     @java.lang.Override
@@ -10102,7 +10427,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10153,7 +10477,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10193,7 +10517,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -10204,7 +10530,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.getDefaultInstance() : effectiveConfig_;
     }
@@ -10216,6 +10544,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -10228,7 +10557,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -10238,7 +10569,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.getDefaultInstance() : userConfig_;
     }
@@ -10249,6 +10582,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -10261,7 +10595,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -10271,7 +10607,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.getDefaultInstance() : defaultConfig_;
     }
@@ -10282,6 +10620,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -10345,24 +10684,23 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_19 other = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_19) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10582,35 +10920,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10662,7 +11000,7 @@ public final class Config {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> effectiveConfigBuilder_;
       /**
@@ -10672,6 +11010,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -10683,6 +11022,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -10824,7 +11164,7 @@ public final class Config {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 userConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> userConfigBuilder_;
       /**
@@ -10833,6 +11173,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -10843,6 +11184,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -10977,7 +11319,7 @@ public final class Config {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 defaultConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> defaultConfigBuilder_;
       /**
@@ -10986,6 +11328,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -10996,6 +11339,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -11132,7 +11476,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11193,6 +11537,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -11202,6 +11547,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getEffectiveConfig();
     /**
@@ -11220,6 +11566,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -11228,6 +11575,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getUserConfig();
     /**
@@ -11245,6 +11593,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -11253,6 +11602,7 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getDefaultConfig();
     /**
@@ -11267,7 +11617,7 @@ public final class Config {
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet}
    */
-  public  static final class ConnectionPoolerConfigSet extends
+  public static final class ConnectionPoolerConfigSet extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet)
       ConnectionPoolerConfigSetOrBuilder {
@@ -11277,6 +11627,13 @@ public final class Config {
       super(builder);
     }
     private ConnectionPoolerConfigSet() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConnectionPoolerConfigSet();
     }
 
     @java.lang.Override
@@ -11292,7 +11649,6 @@ public final class Config {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11343,7 +11699,7 @@ public final class Config {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11383,7 +11739,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -11394,7 +11752,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.getDefaultInstance() : effectiveConfig_;
     }
@@ -11406,6 +11766,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -11418,7 +11779,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -11428,7 +11791,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.getDefaultInstance() : userConfig_;
     }
@@ -11439,6 +11804,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -11451,7 +11817,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -11461,7 +11829,9 @@ public final class Config {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.getDefaultInstance() : defaultConfig_;
     }
@@ -11472,6 +11842,7 @@ public final class Config {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -11535,24 +11906,23 @@ public final class Config {
       }
       yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet other = (yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11772,35 +12142,35 @@ public final class Config {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11852,7 +12222,7 @@ public final class Config {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> effectiveConfigBuilder_;
       /**
@@ -11862,6 +12232,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -11873,6 +12244,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -12014,7 +12386,7 @@ public final class Config {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig userConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> userConfigBuilder_;
       /**
@@ -12023,6 +12395,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -12033,6 +12406,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -12167,7 +12541,7 @@ public final class Config {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig defaultConfig_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> defaultConfigBuilder_;
       /**
@@ -12176,6 +12550,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -12186,6 +12561,7 @@ public final class Config {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -12322,7 +12698,7 @@ public final class Config {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12496,20 +12872,12 @@ public final class Config {
       "roto/yandex/cloud/mdb/greenplum/v1;green" +
       "plumb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_greenplum_v1_Resources_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_Resources_fieldAccessorTable = new

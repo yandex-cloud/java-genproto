@@ -171,6 +171,8 @@ public final class TriggerOuterClass {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -178,6 +180,10 @@ public final class TriggerOuterClass {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static TriggerType forNumber(int value) {
       switch (value) {
         case 0: return TRIGGER_TYPE_UNSPECIFIED;
@@ -208,6 +214,10 @@ public final class TriggerOuterClass {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -252,6 +262,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -260,6 +271,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -270,6 +282,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -278,6 +291,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -288,6 +302,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -296,6 +311,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -313,6 +329,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -321,6 +338,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -331,6 +349,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -339,6 +358,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -403,6 +423,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the rule field is set.
      */
     boolean hasRule();
     /**
@@ -411,6 +432,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
+     * @return The rule.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule();
     /**
@@ -428,6 +450,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -436,6 +459,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     * @return The status.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus();
   }
@@ -446,7 +470,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger}
    */
-  public  static final class Trigger extends
+  public static final class Trigger extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger)
       TriggerOrBuilder {
@@ -461,6 +485,13 @@ public final class TriggerOuterClass {
       name_ = "";
       description_ = "";
       status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Trigger();
     }
 
     @java.lang.Override
@@ -525,10 +556,10 @@ public final class TriggerOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -557,7 +588,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -651,6 +682,8 @@ public final class TriggerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -658,6 +691,10 @@ public final class TriggerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ObjectStorageEventType forNumber(int value) {
         switch (value) {
           case 0: return OBJECT_STORAGE_EVENT_TYPE_UNSPECIFIED;
@@ -682,6 +719,10 @@ public final class TriggerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -775,6 +816,8 @@ public final class TriggerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -782,6 +825,10 @@ public final class TriggerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ContainerRegistryEventType forNumber(int value) {
         switch (value) {
           case 0: return CONTAINER_REGISTRY_EVENT_TYPE_UNSPECIFIED;
@@ -807,6 +854,10 @@ public final class TriggerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -884,6 +935,8 @@ public final class TriggerOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -891,6 +944,10 @@ public final class TriggerOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -914,6 +971,10 @@ public final class TriggerOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -958,6 +1019,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
+       * @return Whether the timer field is set.
        */
       boolean hasTimer();
       /**
@@ -966,6 +1028,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
+       * @return The timer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer getTimer();
       /**
@@ -983,6 +1046,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
+       * @return Whether the messageQueue field is set.
        */
       boolean hasMessageQueue();
       /**
@@ -991,6 +1055,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
+       * @return The messageQueue.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue getMessageQueue();
       /**
@@ -1008,6 +1073,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
+       * @return Whether the iotMessage field is set.
        */
       boolean hasIotMessage();
       /**
@@ -1016,6 +1082,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
+       * @return The iotMessage.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage();
       /**
@@ -1029,10 +1096,12 @@ public final class TriggerOuterClass {
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
+       * @return Whether the objectStorage field is set.
        */
       boolean hasObjectStorage();
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
+       * @return The objectStorage.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage getObjectStorage();
       /**
@@ -1042,10 +1111,12 @@ public final class TriggerOuterClass {
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       * @return Whether the containerRegistry field is set.
        */
       boolean hasContainerRegistry();
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       * @return The containerRegistry.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry();
       /**
@@ -1055,10 +1126,12 @@ public final class TriggerOuterClass {
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
+       * @return Whether the cloudLogs field is set.
        */
       boolean hasCloudLogs();
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
+       * @return The cloudLogs.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs getCloudLogs();
       /**
@@ -1068,10 +1141,12 @@ public final class TriggerOuterClass {
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
+       * @return Whether the logging field is set.
        */
       boolean hasLogging();
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
+       * @return The logging.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging getLogging();
       /**
@@ -1081,10 +1156,12 @@ public final class TriggerOuterClass {
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
+       * @return Whether the billingBudget field is set.
        */
       boolean hasBillingBudget();
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
+       * @return The billingBudget.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget getBillingBudget();
       /**
@@ -1094,10 +1171,12 @@ public final class TriggerOuterClass {
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       * @return Whether the dataStream field is set.
        */
       boolean hasDataStream();
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       * @return The dataStream.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream();
       /**
@@ -1114,7 +1193,7 @@ public final class TriggerOuterClass {
      *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Rule}
      */
-    public  static final class Rule extends
+    public static final class Rule extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.Rule)
         RuleOrBuilder {
@@ -1124,6 +1203,13 @@ public final class TriggerOuterClass {
         super(builder);
       }
       private Rule() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Rule();
       }
 
       @java.lang.Override
@@ -1139,7 +1225,6 @@ public final class TriggerOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1277,7 +1362,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1311,7 +1396,8 @@ public final class TriggerOuterClass {
       private int ruleCase_ = 0;
       private java.lang.Object rule_;
       public enum RuleCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         TIMER(2),
         MESSAGE_QUEUE(3),
         IOT_MESSAGE(4),
@@ -1327,6 +1413,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -1367,7 +1455,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
+       * @return Whether the timer field is set.
        */
+      @java.lang.Override
       public boolean hasTimer() {
         return ruleCase_ == 2;
       }
@@ -1377,7 +1467,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
+       * @return The timer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer getTimer() {
         if (ruleCase_ == 2) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer) rule_;
@@ -1391,6 +1483,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.TimerOrBuilder getTimerOrBuilder() {
         if (ruleCase_ == 2) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer) rule_;
@@ -1405,7 +1498,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
+       * @return Whether the messageQueue field is set.
        */
+      @java.lang.Override
       public boolean hasMessageQueue() {
         return ruleCase_ == 3;
       }
@@ -1415,7 +1510,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
+       * @return The messageQueue.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue getMessageQueue() {
         if (ruleCase_ == 3) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue) rule_;
@@ -1429,6 +1526,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueueOrBuilder getMessageQueueOrBuilder() {
         if (ruleCase_ == 3) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue) rule_;
@@ -1443,7 +1541,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
+       * @return Whether the iotMessage field is set.
        */
+      @java.lang.Override
       public boolean hasIotMessage() {
         return ruleCase_ == 4;
       }
@@ -1453,7 +1553,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
+       * @return The iotMessage.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage() {
         if (ruleCase_ == 4) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage) rule_;
@@ -1467,6 +1569,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder getIotMessageOrBuilder() {
         if (ruleCase_ == 4) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage) rule_;
@@ -1477,13 +1580,17 @@ public final class TriggerOuterClass {
       public static final int OBJECT_STORAGE_FIELD_NUMBER = 5;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
+       * @return Whether the objectStorage field is set.
        */
+      @java.lang.Override
       public boolean hasObjectStorage() {
         return ruleCase_ == 5;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
+       * @return The objectStorage.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage getObjectStorage() {
         if (ruleCase_ == 5) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage) rule_;
@@ -1493,6 +1600,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageOrBuilder getObjectStorageOrBuilder() {
         if (ruleCase_ == 5) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage) rule_;
@@ -1503,13 +1611,17 @@ public final class TriggerOuterClass {
       public static final int CONTAINER_REGISTRY_FIELD_NUMBER = 6;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       * @return Whether the containerRegistry field is set.
        */
+      @java.lang.Override
       public boolean hasContainerRegistry() {
         return ruleCase_ == 6;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       * @return The containerRegistry.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry() {
         if (ruleCase_ == 6) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_;
@@ -1519,6 +1631,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder getContainerRegistryOrBuilder() {
         if (ruleCase_ == 6) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_;
@@ -1529,13 +1642,17 @@ public final class TriggerOuterClass {
       public static final int CLOUD_LOGS_FIELD_NUMBER = 9;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
+       * @return Whether the cloudLogs field is set.
        */
+      @java.lang.Override
       public boolean hasCloudLogs() {
         return ruleCase_ == 9;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
+       * @return The cloudLogs.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs getCloudLogs() {
         if (ruleCase_ == 9) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs) rule_;
@@ -1545,6 +1662,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogsOrBuilder getCloudLogsOrBuilder() {
         if (ruleCase_ == 9) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs) rule_;
@@ -1555,13 +1673,17 @@ public final class TriggerOuterClass {
       public static final int LOGGING_FIELD_NUMBER = 10;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
+       * @return Whether the logging field is set.
        */
+      @java.lang.Override
       public boolean hasLogging() {
         return ruleCase_ == 10;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
+       * @return The logging.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging getLogging() {
         if (ruleCase_ == 10) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging) rule_;
@@ -1571,6 +1693,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.LoggingOrBuilder getLoggingOrBuilder() {
         if (ruleCase_ == 10) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging) rule_;
@@ -1581,13 +1704,17 @@ public final class TriggerOuterClass {
       public static final int BILLING_BUDGET_FIELD_NUMBER = 11;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
+       * @return Whether the billingBudget field is set.
        */
+      @java.lang.Override
       public boolean hasBillingBudget() {
         return ruleCase_ == 11;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
+       * @return The billingBudget.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget getBillingBudget() {
         if (ruleCase_ == 11) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget) rule_;
@@ -1597,6 +1724,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudgetOrBuilder getBillingBudgetOrBuilder() {
         if (ruleCase_ == 11) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget) rule_;
@@ -1607,13 +1735,17 @@ public final class TriggerOuterClass {
       public static final int DATA_STREAM_FIELD_NUMBER = 12;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       * @return Whether the dataStream field is set.
        */
+      @java.lang.Override
       public boolean hasDataStream() {
         return ruleCase_ == 12;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       * @return The dataStream.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream() {
         if (ruleCase_ == 12) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_;
@@ -1623,6 +1755,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder getDataStreamOrBuilder() {
         if (ruleCase_ == 12) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_;
@@ -1731,52 +1864,49 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule) obj;
 
-        boolean result = true;
-        result = result && getRuleCase().equals(
-            other.getRuleCase());
-        if (!result) return false;
+        if (!getRuleCase().equals(other.getRuleCase())) return false;
         switch (ruleCase_) {
           case 2:
-            result = result && getTimer()
-                .equals(other.getTimer());
+            if (!getTimer()
+                .equals(other.getTimer())) return false;
             break;
           case 3:
-            result = result && getMessageQueue()
-                .equals(other.getMessageQueue());
+            if (!getMessageQueue()
+                .equals(other.getMessageQueue())) return false;
             break;
           case 4:
-            result = result && getIotMessage()
-                .equals(other.getIotMessage());
+            if (!getIotMessage()
+                .equals(other.getIotMessage())) return false;
             break;
           case 5:
-            result = result && getObjectStorage()
-                .equals(other.getObjectStorage());
+            if (!getObjectStorage()
+                .equals(other.getObjectStorage())) return false;
             break;
           case 6:
-            result = result && getContainerRegistry()
-                .equals(other.getContainerRegistry());
+            if (!getContainerRegistry()
+                .equals(other.getContainerRegistry())) return false;
             break;
           case 9:
-            result = result && getCloudLogs()
-                .equals(other.getCloudLogs());
+            if (!getCloudLogs()
+                .equals(other.getCloudLogs())) return false;
             break;
           case 10:
-            result = result && getLogging()
-                .equals(other.getLogging());
+            if (!getLogging()
+                .equals(other.getLogging())) return false;
             break;
           case 11:
-            result = result && getBillingBudget()
-                .equals(other.getBillingBudget());
+            if (!getBillingBudget()
+                .equals(other.getBillingBudget())) return false;
             break;
           case 12:
-            result = result && getDataStream()
-                .equals(other.getDataStream());
+            if (!getDataStream()
+                .equals(other.getDataStream())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -2061,35 +2191,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2196,7 +2326,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
+         * @return Whether the timer field is set.
          */
+        @java.lang.Override
         public boolean hasTimer() {
           return ruleCase_ == 2;
         }
@@ -2206,7 +2338,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
+         * @return The timer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer getTimer() {
           if (timerBuilder_ == null) {
             if (ruleCase_ == 2) {
@@ -2324,6 +2458,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.TimerOrBuilder getTimerOrBuilder() {
           if ((ruleCase_ == 2) && (timerBuilder_ != null)) {
             return timerBuilder_.getMessageOrBuilder();
@@ -2368,7 +2503,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
+         * @return Whether the messageQueue field is set.
          */
+        @java.lang.Override
         public boolean hasMessageQueue() {
           return ruleCase_ == 3;
         }
@@ -2378,7 +2515,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
+         * @return The messageQueue.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue getMessageQueue() {
           if (messageQueueBuilder_ == null) {
             if (ruleCase_ == 3) {
@@ -2496,6 +2635,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueueOrBuilder getMessageQueueOrBuilder() {
           if ((ruleCase_ == 3) && (messageQueueBuilder_ != null)) {
             return messageQueueBuilder_.getMessageOrBuilder();
@@ -2540,7 +2680,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
+         * @return Whether the iotMessage field is set.
          */
+        @java.lang.Override
         public boolean hasIotMessage() {
           return ruleCase_ == 4;
         }
@@ -2550,7 +2692,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
+         * @return The iotMessage.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage() {
           if (iotMessageBuilder_ == null) {
             if (ruleCase_ == 4) {
@@ -2668,6 +2812,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder getIotMessageOrBuilder() {
           if ((ruleCase_ == 4) && (iotMessageBuilder_ != null)) {
             return iotMessageBuilder_.getMessageOrBuilder();
@@ -2708,13 +2853,17 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageOrBuilder> objectStorageBuilder_;
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
+         * @return Whether the objectStorage field is set.
          */
+        @java.lang.Override
         public boolean hasObjectStorage() {
           return ruleCase_ == 5;
         }
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
+         * @return The objectStorage.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage getObjectStorage() {
           if (objectStorageBuilder_ == null) {
             if (ruleCase_ == 5) {
@@ -2808,6 +2957,7 @@ public final class TriggerOuterClass {
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage object_storage = 5;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageOrBuilder getObjectStorageOrBuilder() {
           if ((ruleCase_ == 5) && (objectStorageBuilder_ != null)) {
             return objectStorageBuilder_.getMessageOrBuilder();
@@ -2844,13 +2994,17 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder> containerRegistryBuilder_;
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         * @return Whether the containerRegistry field is set.
          */
+        @java.lang.Override
         public boolean hasContainerRegistry() {
           return ruleCase_ == 6;
         }
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         * @return The containerRegistry.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry() {
           if (containerRegistryBuilder_ == null) {
             if (ruleCase_ == 6) {
@@ -2944,6 +3098,7 @@ public final class TriggerOuterClass {
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder getContainerRegistryOrBuilder() {
           if ((ruleCase_ == 6) && (containerRegistryBuilder_ != null)) {
             return containerRegistryBuilder_.getMessageOrBuilder();
@@ -2980,13 +3135,17 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogsOrBuilder> cloudLogsBuilder_;
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
+         * @return Whether the cloudLogs field is set.
          */
+        @java.lang.Override
         public boolean hasCloudLogs() {
           return ruleCase_ == 9;
         }
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
+         * @return The cloudLogs.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs getCloudLogs() {
           if (cloudLogsBuilder_ == null) {
             if (ruleCase_ == 9) {
@@ -3080,6 +3239,7 @@ public final class TriggerOuterClass {
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs cloud_logs = 9;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogsOrBuilder getCloudLogsOrBuilder() {
           if ((ruleCase_ == 9) && (cloudLogsBuilder_ != null)) {
             return cloudLogsBuilder_.getMessageOrBuilder();
@@ -3116,13 +3276,17 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.LoggingOrBuilder> loggingBuilder_;
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
+         * @return Whether the logging field is set.
          */
+        @java.lang.Override
         public boolean hasLogging() {
           return ruleCase_ == 10;
         }
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
+         * @return The logging.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging getLogging() {
           if (loggingBuilder_ == null) {
             if (ruleCase_ == 10) {
@@ -3216,6 +3380,7 @@ public final class TriggerOuterClass {
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Logging logging = 10;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.LoggingOrBuilder getLoggingOrBuilder() {
           if ((ruleCase_ == 10) && (loggingBuilder_ != null)) {
             return loggingBuilder_.getMessageOrBuilder();
@@ -3252,13 +3417,17 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudgetOrBuilder> billingBudgetBuilder_;
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
+         * @return Whether the billingBudget field is set.
          */
+        @java.lang.Override
         public boolean hasBillingBudget() {
           return ruleCase_ == 11;
         }
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
+         * @return The billingBudget.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget getBillingBudget() {
           if (billingBudgetBuilder_ == null) {
             if (ruleCase_ == 11) {
@@ -3352,6 +3521,7 @@ public final class TriggerOuterClass {
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.BillingBudget billing_budget = 11;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudgetOrBuilder getBillingBudgetOrBuilder() {
           if ((ruleCase_ == 11) && (billingBudgetBuilder_ != null)) {
             return billingBudgetBuilder_.getMessageOrBuilder();
@@ -3388,13 +3558,17 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder> dataStreamBuilder_;
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         * @return Whether the dataStream field is set.
          */
+        @java.lang.Override
         public boolean hasDataStream() {
           return ruleCase_ == 12;
         }
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         * @return The dataStream.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream() {
           if (dataStreamBuilder_ == null) {
             if (ruleCase_ == 12) {
@@ -3488,6 +3662,7 @@ public final class TriggerOuterClass {
         /**
          * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder getDataStreamOrBuilder() {
           if ((ruleCase_ == 12) && (dataStreamBuilder_ != null)) {
             return dataStreamBuilder_.getMessageOrBuilder();
@@ -3522,7 +3697,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -3582,6 +3757,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The cronExpression.
        */
       java.lang.String getCronExpression();
       /**
@@ -3590,6 +3766,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for cronExpression.
        */
       com.google.protobuf.ByteString
           getCronExpressionBytes();
@@ -3600,6 +3777,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -3608,6 +3786,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction();
       /**
@@ -3625,6 +3804,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
+       * @return Whether the invokeFunctionWithRetry field is set.
        */
       boolean hasInvokeFunctionWithRetry();
       /**
@@ -3633,6 +3813,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
+       * @return The invokeFunctionWithRetry.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunctionWithRetry();
       /**
@@ -3650,6 +3831,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
+       * @return Whether the invokeContainerWithRetry field is set.
        */
       boolean hasInvokeContainerWithRetry();
       /**
@@ -3658,6 +3840,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
+       * @return The invokeContainerWithRetry.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainerWithRetry();
       /**
@@ -3678,7 +3861,7 @@ public final class TriggerOuterClass {
      *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Timer}
      */
-    public  static final class Timer extends
+    public static final class Timer extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.Timer)
         TimerOrBuilder {
@@ -3689,6 +3872,13 @@ public final class TriggerOuterClass {
       }
       private Timer() {
         cronExpression_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Timer();
       }
 
       @java.lang.Override
@@ -3704,7 +3894,6 @@ public final class TriggerOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -3764,7 +3953,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -3798,7 +3987,8 @@ public final class TriggerOuterClass {
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_FUNCTION_WITH_RETRY(103),
         INVOKE_CONTAINER_WITH_RETRY(104),
@@ -3808,6 +3998,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -3843,7 +4035,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The cronExpression.
        */
+      @java.lang.Override
       public java.lang.String getCronExpression() {
         java.lang.Object ref = cronExpression_;
         if (ref instanceof java.lang.String) {
@@ -3862,7 +4056,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for cronExpression.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCronExpressionBytes() {
         java.lang.Object ref = cronExpression_;
@@ -3884,7 +4080,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -3894,7 +4092,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
@@ -3908,6 +4108,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
@@ -3922,7 +4123,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
+       * @return Whether the invokeFunctionWithRetry field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunctionWithRetry() {
         return actionCase_ == 103;
       }
@@ -3932,7 +4135,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
+       * @return The invokeFunctionWithRetry.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunctionWithRetry() {
         if (actionCase_ == 103) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -3946,6 +4151,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionWithRetryOrBuilder() {
         if (actionCase_ == 103) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -3960,7 +4166,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
+       * @return Whether the invokeContainerWithRetry field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainerWithRetry() {
         return actionCase_ == 104;
       }
@@ -3970,7 +4178,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
+       * @return The invokeContainerWithRetry.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainerWithRetry() {
         if (actionCase_ == 104) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -3984,6 +4194,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerWithRetryOrBuilder() {
         if (actionCase_ == 104) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -4005,7 +4216,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getCronExpressionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cronExpression_);
         }
         if (actionCase_ == 101) {
@@ -4026,7 +4237,7 @@ public final class TriggerOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getCronExpressionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronExpression_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cronExpression_);
         }
         if (actionCase_ == 101) {
@@ -4056,30 +4267,27 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer) obj;
 
-        boolean result = true;
-        result = result && getCronExpression()
-            .equals(other.getCronExpression());
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!getCronExpression()
+            .equals(other.getCronExpression())) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 103:
-            result = result && getInvokeFunctionWithRetry()
-                .equals(other.getInvokeFunctionWithRetry());
+            if (!getInvokeFunctionWithRetry()
+                .equals(other.getInvokeFunctionWithRetry())) return false;
             break;
           case 104:
-            result = result && getInvokeContainerWithRetry()
-                .equals(other.getInvokeContainerWithRetry());
+            if (!getInvokeContainerWithRetry()
+                .equals(other.getInvokeContainerWithRetry())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4303,35 +4511,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4417,6 +4625,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+         * @return The cronExpression.
          */
         public java.lang.String getCronExpression() {
           java.lang.Object ref = cronExpression_;
@@ -4436,6 +4645,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+         * @return The bytes for cronExpression.
          */
         public com.google.protobuf.ByteString
             getCronExpressionBytes() {
@@ -4456,6 +4666,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+         * @param value The cronExpression to set.
+         * @return This builder for chaining.
          */
         public Builder setCronExpression(
             java.lang.String value) {
@@ -4473,6 +4685,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearCronExpression() {
           
@@ -4486,6 +4699,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+         * @param value The bytes for cronExpression to set.
+         * @return This builder for chaining.
          */
         public Builder setCronExpressionBytes(
             com.google.protobuf.ByteString value) {
@@ -4507,7 +4722,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -4517,7 +4734,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -4635,6 +4854,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -4679,7 +4899,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
+         * @return Whether the invokeFunctionWithRetry field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunctionWithRetry() {
           return actionCase_ == 103;
         }
@@ -4689,7 +4911,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
+         * @return The invokeFunctionWithRetry.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunctionWithRetry() {
           if (invokeFunctionWithRetryBuilder_ == null) {
             if (actionCase_ == 103) {
@@ -4807,6 +5031,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function_with_retry = 103;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionWithRetryOrBuilder() {
           if ((actionCase_ == 103) && (invokeFunctionWithRetryBuilder_ != null)) {
             return invokeFunctionWithRetryBuilder_.getMessageOrBuilder();
@@ -4851,7 +5076,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
+         * @return Whether the invokeContainerWithRetry field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainerWithRetry() {
           return actionCase_ == 104;
         }
@@ -4861,7 +5088,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
+         * @return The invokeContainerWithRetry.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainerWithRetry() {
           if (invokeContainerWithRetryBuilder_ == null) {
             if (actionCase_ == 104) {
@@ -4979,6 +5208,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container_with_retry = 104;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerWithRetryOrBuilder() {
           if ((actionCase_ == 104) && (invokeContainerWithRetryBuilder_ != null)) {
             return invokeContainerWithRetryBuilder_.getMessageOrBuilder();
@@ -5017,7 +5247,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5077,6 +5307,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+       * @return The queueId.
        */
       java.lang.String getQueueId();
       /**
@@ -5085,6 +5316,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for queueId.
        */
       com.google.protobuf.ByteString
           getQueueIdBytes();
@@ -5095,6 +5327,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
        */
       java.lang.String getServiceAccountId();
       /**
@@ -5103,6 +5336,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
        */
       com.google.protobuf.ByteString
           getServiceAccountIdBytes();
@@ -5113,6 +5347,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the batchSettings field is set.
        */
       boolean hasBatchSettings();
       /**
@@ -5121,6 +5356,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The batchSettings.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
       /**
@@ -5138,6 +5374,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
+       * @return Whether the visibilityTimeout field is set.
        */
       boolean hasVisibilityTimeout();
       /**
@@ -5146,6 +5383,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
+       * @return The visibilityTimeout.
        */
       com.google.protobuf.Duration getVisibilityTimeout();
       /**
@@ -5163,6 +5401,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -5171,6 +5410,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction();
       /**
@@ -5188,6 +5428,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
       boolean hasInvokeContainer();
       /**
@@ -5196,6 +5437,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce getInvokeContainer();
       /**
@@ -5216,7 +5458,7 @@ public final class TriggerOuterClass {
      *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue}
      */
-    public  static final class MessageQueue extends
+    public static final class MessageQueue extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue)
         MessageQueueOrBuilder {
@@ -5228,6 +5470,13 @@ public final class TriggerOuterClass {
       private MessageQueue() {
         queueId_ = "";
         serviceAccountId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MessageQueue();
       }
 
       @java.lang.Override
@@ -5243,7 +5492,6 @@ public final class TriggerOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5321,7 +5569,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5355,7 +5603,8 @@ public final class TriggerOuterClass {
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         ACTION_NOT_SET(0);
@@ -5364,6 +5613,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -5398,7 +5649,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+       * @return The queueId.
        */
+      @java.lang.Override
       public java.lang.String getQueueId() {
         java.lang.Object ref = queueId_;
         if (ref instanceof java.lang.String) {
@@ -5417,7 +5670,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for queueId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getQueueIdBytes() {
         java.lang.Object ref = queueId_;
@@ -5440,7 +5695,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
        */
+      @java.lang.Override
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
         if (ref instanceof java.lang.String) {
@@ -5459,7 +5716,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
         java.lang.Object ref = serviceAccountId_;
@@ -5482,7 +5741,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the batchSettings field is set.
        */
+      @java.lang.Override
       public boolean hasBatchSettings() {
         return batchSettings_ != null;
       }
@@ -5492,7 +5753,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The batchSettings.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
         return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
       }
@@ -5503,6 +5766,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
         return getBatchSettings();
       }
@@ -5515,7 +5779,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
+       * @return Whether the visibilityTimeout field is set.
        */
+      @java.lang.Override
       public boolean hasVisibilityTimeout() {
         return visibilityTimeout_ != null;
       }
@@ -5525,7 +5791,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
+       * @return The visibilityTimeout.
        */
+      @java.lang.Override
       public com.google.protobuf.Duration getVisibilityTimeout() {
         return visibilityTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : visibilityTimeout_;
       }
@@ -5536,6 +5804,7 @@ public final class TriggerOuterClass {
        *
        * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.DurationOrBuilder getVisibilityTimeoutOrBuilder() {
         return getVisibilityTimeout();
       }
@@ -5547,7 +5816,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -5557,7 +5828,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
@@ -5571,6 +5844,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) action_;
@@ -5585,7 +5859,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 102;
       }
@@ -5595,7 +5871,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce getInvokeContainer() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce) action_;
@@ -5609,6 +5887,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnceOrBuilder getInvokeContainerOrBuilder() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce) action_;
@@ -5630,7 +5909,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getServiceAccountIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceAccountId_);
         }
         if (batchSettings_ != null) {
@@ -5639,7 +5918,7 @@ public final class TriggerOuterClass {
         if (visibilityTimeout_ != null) {
           output.writeMessage(5, getVisibilityTimeout());
         }
-        if (!getQueueIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 11, queueId_);
         }
         if (actionCase_ == 101) {
@@ -5657,7 +5936,7 @@ public final class TriggerOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getServiceAccountIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceAccountId_);
         }
         if (batchSettings_ != null) {
@@ -5668,7 +5947,7 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, getVisibilityTimeout());
         }
-        if (!getQueueIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, queueId_);
         }
         if (actionCase_ == 101) {
@@ -5694,38 +5973,35 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue) obj;
 
-        boolean result = true;
-        result = result && getQueueId()
-            .equals(other.getQueueId());
-        result = result && getServiceAccountId()
-            .equals(other.getServiceAccountId());
-        result = result && (hasBatchSettings() == other.hasBatchSettings());
+        if (!getQueueId()
+            .equals(other.getQueueId())) return false;
+        if (!getServiceAccountId()
+            .equals(other.getServiceAccountId())) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
         if (hasBatchSettings()) {
-          result = result && getBatchSettings()
-              .equals(other.getBatchSettings());
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
         }
-        result = result && (hasVisibilityTimeout() == other.hasVisibilityTimeout());
+        if (hasVisibilityTimeout() != other.hasVisibilityTimeout()) return false;
         if (hasVisibilityTimeout()) {
-          result = result && getVisibilityTimeout()
-              .equals(other.getVisibilityTimeout());
+          if (!getVisibilityTimeout()
+              .equals(other.getVisibilityTimeout())) return false;
         }
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 102:
-            result = result && getInvokeContainer()
-                .equals(other.getInvokeContainer());
+            if (!getInvokeContainer()
+                .equals(other.getInvokeContainer())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5973,35 +6249,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6093,6 +6369,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+         * @return The queueId.
          */
         public java.lang.String getQueueId() {
           java.lang.Object ref = queueId_;
@@ -6112,6 +6389,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for queueId.
          */
         public com.google.protobuf.ByteString
             getQueueIdBytes() {
@@ -6132,6 +6410,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+         * @param value The queueId to set.
+         * @return This builder for chaining.
          */
         public Builder setQueueId(
             java.lang.String value) {
@@ -6149,6 +6429,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearQueueId() {
           
@@ -6162,6 +6443,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for queueId to set.
+         * @return This builder for chaining.
          */
         public Builder setQueueIdBytes(
             com.google.protobuf.ByteString value) {
@@ -6182,6 +6465,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The serviceAccountId.
          */
         public java.lang.String getServiceAccountId() {
           java.lang.Object ref = serviceAccountId_;
@@ -6201,6 +6485,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The bytes for serviceAccountId.
          */
         public com.google.protobuf.ByteString
             getServiceAccountIdBytes() {
@@ -6221,6 +6506,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The serviceAccountId to set.
+         * @return This builder for chaining.
          */
         public Builder setServiceAccountId(
             java.lang.String value) {
@@ -6238,6 +6525,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearServiceAccountId() {
           
@@ -6251,6 +6539,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The bytes for serviceAccountId to set.
+         * @return This builder for chaining.
          */
         public Builder setServiceAccountIdBytes(
             com.google.protobuf.ByteString value) {
@@ -6264,7 +6554,7 @@ public final class TriggerOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_ = null;
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
         /**
@@ -6273,6 +6563,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the batchSettings field is set.
          */
         public boolean hasBatchSettings() {
           return batchSettingsBuilder_ != null || batchSettings_ != null;
@@ -6283,6 +6574,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
+         * @return The batchSettings.
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
           if (batchSettingsBuilder_ == null) {
@@ -6417,7 +6709,7 @@ public final class TriggerOuterClass {
           return batchSettingsBuilder_;
         }
 
-        private com.google.protobuf.Duration visibilityTimeout_ = null;
+        private com.google.protobuf.Duration visibilityTimeout_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> visibilityTimeoutBuilder_;
         /**
@@ -6426,6 +6718,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
+         * @return Whether the visibilityTimeout field is set.
          */
         public boolean hasVisibilityTimeout() {
           return visibilityTimeoutBuilder_ != null || visibilityTimeout_ != null;
@@ -6436,6 +6729,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.google.protobuf.Duration visibility_timeout = 5 [(.yandex.cloud.value) = "&lt;=12h"];</code>
+         * @return The visibilityTimeout.
          */
         public com.google.protobuf.Duration getVisibilityTimeout() {
           if (visibilityTimeoutBuilder_ == null) {
@@ -6578,7 +6872,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -6588,7 +6884,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -6706,6 +7004,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -6750,7 +7049,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
+         * @return Whether the invokeContainer field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainer() {
           return actionCase_ == 102;
         }
@@ -6760,7 +7061,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
+         * @return The invokeContainer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce getInvokeContainer() {
           if (invokeContainerBuilder_ == null) {
             if (actionCase_ == 102) {
@@ -6878,6 +7181,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerOnce invoke_container = 102;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnceOrBuilder getInvokeContainerOrBuilder() {
           if ((actionCase_ == 102) && (invokeContainerBuilder_ != null)) {
             return invokeContainerBuilder_.getMessageOrBuilder();
@@ -6916,7 +7220,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6976,6 +7280,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
        */
       java.lang.String getRegistryId();
       /**
@@ -6984,6 +7289,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
        */
       com.google.protobuf.ByteString
           getRegistryIdBytes();
@@ -6994,6 +7300,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string device_id = 2;</code>
+       * @return The deviceId.
        */
       java.lang.String getDeviceId();
       /**
@@ -7002,6 +7309,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string device_id = 2;</code>
+       * @return The bytes for deviceId.
        */
       com.google.protobuf.ByteString
           getDeviceIdBytes();
@@ -7012,6 +7320,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string mqtt_topic = 3;</code>
+       * @return The mqttTopic.
        */
       java.lang.String getMqttTopic();
       /**
@@ -7020,6 +7329,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string mqtt_topic = 3;</code>
+       * @return The bytes for mqttTopic.
        */
       com.google.protobuf.ByteString
           getMqttTopicBytes();
@@ -7030,6 +7340,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -7038,6 +7349,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
       /**
@@ -7055,6 +7367,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
       boolean hasInvokeContainer();
       /**
@@ -7063,6 +7376,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
       /**
@@ -7083,7 +7397,7 @@ public final class TriggerOuterClass {
      *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage}
      */
-    public  static final class IoTMessage extends
+    public static final class IoTMessage extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage)
         IoTMessageOrBuilder {
@@ -7099,6 +7413,13 @@ public final class TriggerOuterClass {
       }
 
       @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new IoTMessage();
+      }
+
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
@@ -7111,7 +7432,6 @@ public final class TriggerOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -7169,7 +7489,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -7203,7 +7523,8 @@ public final class TriggerOuterClass {
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         ACTION_NOT_SET(0);
@@ -7212,6 +7533,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -7246,7 +7569,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
        */
+      @java.lang.Override
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
         if (ref instanceof java.lang.String) {
@@ -7265,7 +7590,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
         java.lang.Object ref = registryId_;
@@ -7288,7 +7615,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string device_id = 2;</code>
+       * @return The deviceId.
        */
+      @java.lang.Override
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
         if (ref instanceof java.lang.String) {
@@ -7307,7 +7636,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string device_id = 2;</code>
+       * @return The bytes for deviceId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
         java.lang.Object ref = deviceId_;
@@ -7330,7 +7661,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string mqtt_topic = 3;</code>
+       * @return The mqttTopic.
        */
+      @java.lang.Override
       public java.lang.String getMqttTopic() {
         java.lang.Object ref = mqttTopic_;
         if (ref instanceof java.lang.String) {
@@ -7349,7 +7682,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string mqtt_topic = 3;</code>
+       * @return The bytes for mqttTopic.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMqttTopicBytes() {
         java.lang.Object ref = mqttTopic_;
@@ -7371,7 +7706,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -7381,7 +7718,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -7395,6 +7734,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -7409,7 +7749,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 102;
       }
@@ -7419,7 +7761,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -7433,6 +7777,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -7454,13 +7799,13 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getRegistryIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
         }
-        if (!getDeviceIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceId_);
         }
-        if (!getMqttTopicBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopic_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mqttTopic_);
         }
         if (actionCase_ == 101) {
@@ -7478,13 +7823,13 @@ public final class TriggerOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getRegistryIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
         }
-        if (!getDeviceIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceId_);
         }
-        if (!getMqttTopicBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopic_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mqttTopic_);
         }
         if (actionCase_ == 101) {
@@ -7510,30 +7855,27 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage) obj;
 
-        boolean result = true;
-        result = result && getRegistryId()
-            .equals(other.getRegistryId());
-        result = result && getDeviceId()
-            .equals(other.getDeviceId());
-        result = result && getMqttTopic()
-            .equals(other.getMqttTopic());
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!getRegistryId()
+            .equals(other.getRegistryId())) return false;
+        if (!getDeviceId()
+            .equals(other.getDeviceId())) return false;
+        if (!getMqttTopic()
+            .equals(other.getMqttTopic())) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 102:
-            result = result && getInvokeContainer()
-                .equals(other.getInvokeContainer());
+            if (!getInvokeContainer()
+                .equals(other.getInvokeContainer())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7756,35 +8098,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7874,6 +8216,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The registryId.
          */
         public java.lang.String getRegistryId() {
           java.lang.Object ref = registryId_;
@@ -7893,6 +8236,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for registryId.
          */
         public com.google.protobuf.ByteString
             getRegistryIdBytes() {
@@ -7913,6 +8257,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The registryId to set.
+         * @return This builder for chaining.
          */
         public Builder setRegistryId(
             java.lang.String value) {
@@ -7930,6 +8276,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearRegistryId() {
           
@@ -7943,6 +8290,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for registryId to set.
+         * @return This builder for chaining.
          */
         public Builder setRegistryIdBytes(
             com.google.protobuf.ByteString value) {
@@ -7963,6 +8312,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string device_id = 2;</code>
+         * @return The deviceId.
          */
         public java.lang.String getDeviceId() {
           java.lang.Object ref = deviceId_;
@@ -7982,6 +8332,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string device_id = 2;</code>
+         * @return The bytes for deviceId.
          */
         public com.google.protobuf.ByteString
             getDeviceIdBytes() {
@@ -8002,6 +8353,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string device_id = 2;</code>
+         * @param value The deviceId to set.
+         * @return This builder for chaining.
          */
         public Builder setDeviceId(
             java.lang.String value) {
@@ -8019,6 +8372,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string device_id = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearDeviceId() {
           
@@ -8032,6 +8386,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string device_id = 2;</code>
+         * @param value The bytes for deviceId to set.
+         * @return This builder for chaining.
          */
         public Builder setDeviceIdBytes(
             com.google.protobuf.ByteString value) {
@@ -8052,6 +8408,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string mqtt_topic = 3;</code>
+         * @return The mqttTopic.
          */
         public java.lang.String getMqttTopic() {
           java.lang.Object ref = mqttTopic_;
@@ -8071,6 +8428,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string mqtt_topic = 3;</code>
+         * @return The bytes for mqttTopic.
          */
         public com.google.protobuf.ByteString
             getMqttTopicBytes() {
@@ -8091,6 +8449,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string mqtt_topic = 3;</code>
+         * @param value The mqttTopic to set.
+         * @return This builder for chaining.
          */
         public Builder setMqttTopic(
             java.lang.String value) {
@@ -8108,6 +8468,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string mqtt_topic = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMqttTopic() {
           
@@ -8121,6 +8482,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string mqtt_topic = 3;</code>
+         * @param value The bytes for mqttTopic to set.
+         * @return This builder for chaining.
          */
         public Builder setMqttTopicBytes(
             com.google.protobuf.ByteString value) {
@@ -8142,7 +8505,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -8152,7 +8517,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -8270,6 +8637,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -8314,7 +8682,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return Whether the invokeContainer field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainer() {
           return actionCase_ == 102;
         }
@@ -8324,7 +8694,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return The invokeContainer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
           if (invokeContainerBuilder_ == null) {
             if (actionCase_ == 102) {
@@ -8442,6 +8814,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
           if ((actionCase_ == 102) && (invokeContainerBuilder_ != null)) {
             return invokeContainerBuilder_.getMessageOrBuilder();
@@ -8480,7 +8853,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -8540,6 +8913,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the eventType.
        */
       java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType> getEventTypeList();
       /**
@@ -8548,6 +8922,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of eventType.
        */
       int getEventTypeCount();
       /**
@@ -8556,6 +8931,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The eventType at the given index.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType getEventType(int index);
       /**
@@ -8564,6 +8941,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the enum numeric values on the wire for eventType.
        */
       java.util.List<java.lang.Integer>
       getEventTypeValueList();
@@ -8573,6 +8951,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of eventType at the given index.
        */
       int getEventTypeValue(int index);
 
@@ -8582,6 +8962,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string bucket_id = 4;</code>
+       * @return The bucketId.
        */
       java.lang.String getBucketId();
       /**
@@ -8590,6 +8971,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string bucket_id = 4;</code>
+       * @return The bytes for bucketId.
        */
       com.google.protobuf.ByteString
           getBucketIdBytes();
@@ -8600,6 +8982,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string prefix = 6;</code>
+       * @return The prefix.
        */
       java.lang.String getPrefix();
       /**
@@ -8608,6 +8991,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string prefix = 6;</code>
+       * @return The bytes for prefix.
        */
       com.google.protobuf.ByteString
           getPrefixBytes();
@@ -8618,6 +9002,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string suffix = 7;</code>
+       * @return The suffix.
        */
       java.lang.String getSuffix();
       /**
@@ -8626,6 +9011,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string suffix = 7;</code>
+       * @return The bytes for suffix.
        */
       com.google.protobuf.ByteString
           getSuffixBytes();
@@ -8636,6 +9022,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -8644,6 +9031,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
       /**
@@ -8661,6 +9049,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
       boolean hasInvokeContainer();
       /**
@@ -8669,6 +9058,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
       /**
@@ -8685,7 +9075,7 @@ public final class TriggerOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage}
      */
-    public  static final class ObjectStorage extends
+    public static final class ObjectStorage extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorage)
         ObjectStorageOrBuilder {
@@ -8699,6 +9089,13 @@ public final class TriggerOuterClass {
         bucketId_ = "";
         prefix_ = "";
         suffix_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ObjectStorage();
       }
 
       @java.lang.Override
@@ -8727,7 +9124,7 @@ public final class TriggerOuterClass {
                 break;
               case 24: {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   eventType_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -8739,7 +9136,7 @@ public final class TriggerOuterClass {
                 int oldLimit = input.pushLimit(length);
                 while(input.getBytesUntilLimit() > 0) {
                   int rawValue = input.readEnum();
-                  if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     eventType_ = new java.util.ArrayList<java.lang.Integer>();
                     mutable_bitField0_ |= 0x00000001;
                   }
@@ -8795,7 +9192,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -8809,7 +9206,7 @@ public final class TriggerOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             eventType_ = java.util.Collections.unmodifiableList(eventType_);
           }
           this.unknownFields = unknownFields.build();
@@ -8829,11 +9226,11 @@ public final class TriggerOuterClass {
                 yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.Builder.class);
       }
 
-      private int bitField0_;
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         ACTION_NOT_SET(0);
@@ -8842,6 +9239,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -8886,7 +9285,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the eventType.
        */
+      @java.lang.Override
       public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType> getEventTypeList() {
         return new com.google.protobuf.Internal.ListAdapter<
             java.lang.Integer, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType>(eventType_, eventType_converter_);
@@ -8897,7 +9298,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of eventType.
        */
+      @java.lang.Override
       public int getEventTypeCount() {
         return eventType_.size();
       }
@@ -8907,7 +9310,10 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The eventType at the given index.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType getEventType(int index) {
         return eventType_converter_.convert(eventType_.get(index));
       }
@@ -8917,7 +9323,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the enum numeric values on the wire for eventType.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
       getEventTypeValueList() {
         return eventType_;
@@ -8928,7 +9336,10 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of eventType at the given index.
        */
+      @java.lang.Override
       public int getEventTypeValue(int index) {
         return eventType_.get(index);
       }
@@ -8942,7 +9353,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string bucket_id = 4;</code>
+       * @return The bucketId.
        */
+      @java.lang.Override
       public java.lang.String getBucketId() {
         java.lang.Object ref = bucketId_;
         if (ref instanceof java.lang.String) {
@@ -8961,7 +9374,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string bucket_id = 4;</code>
+       * @return The bytes for bucketId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getBucketIdBytes() {
         java.lang.Object ref = bucketId_;
@@ -8984,7 +9399,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string prefix = 6;</code>
+       * @return The prefix.
        */
+      @java.lang.Override
       public java.lang.String getPrefix() {
         java.lang.Object ref = prefix_;
         if (ref instanceof java.lang.String) {
@@ -9003,7 +9420,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string prefix = 6;</code>
+       * @return The bytes for prefix.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPrefixBytes() {
         java.lang.Object ref = prefix_;
@@ -9026,7 +9445,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string suffix = 7;</code>
+       * @return The suffix.
        */
+      @java.lang.Override
       public java.lang.String getSuffix() {
         java.lang.Object ref = suffix_;
         if (ref instanceof java.lang.String) {
@@ -9045,7 +9466,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string suffix = 7;</code>
+       * @return The bytes for suffix.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSuffixBytes() {
         java.lang.Object ref = suffix_;
@@ -9067,7 +9490,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -9077,7 +9502,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -9091,6 +9518,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -9105,7 +9533,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 102;
       }
@@ -9115,7 +9545,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -9129,6 +9561,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -9158,13 +9591,13 @@ public final class TriggerOuterClass {
         for (int i = 0; i < eventType_.size(); i++) {
           output.writeEnumNoTag(eventType_.get(i));
         }
-        if (!getBucketIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bucketId_);
         }
-        if (!getPrefixBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, prefix_);
         }
-        if (!getSuffixBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 7, suffix_);
         }
         if (actionCase_ == 101) {
@@ -9194,13 +9627,13 @@ public final class TriggerOuterClass {
               .computeUInt32SizeNoTag(dataSize);
           }eventTypeMemoizedSerializedSize = dataSize;
         }
-        if (!getBucketIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bucketId_);
         }
-        if (!getPrefixBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, prefix_);
         }
-        if (!getSuffixBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, suffix_);
         }
         if (actionCase_ == 101) {
@@ -9226,31 +9659,28 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage) obj;
 
-        boolean result = true;
-        result = result && eventType_.equals(other.eventType_);
-        result = result && getBucketId()
-            .equals(other.getBucketId());
-        result = result && getPrefix()
-            .equals(other.getPrefix());
-        result = result && getSuffix()
-            .equals(other.getSuffix());
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!eventType_.equals(other.eventType_)) return false;
+        if (!getBucketId()
+            .equals(other.getBucketId())) return false;
+        if (!getPrefix()
+            .equals(other.getPrefix())) return false;
+        if (!getSuffix()
+            .equals(other.getSuffix())) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 102:
-            result = result && getInvokeContainer()
-                .equals(other.getInvokeContainer());
+            if (!getInvokeContainer()
+                .equals(other.getInvokeContainer())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -9452,8 +9882,7 @@ public final class TriggerOuterClass {
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage buildPartial() {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             eventType_ = java.util.Collections.unmodifiableList(eventType_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -9475,7 +9904,6 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
-          result.bitField0_ = to_bitField0_;
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -9483,35 +9911,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9608,7 +10036,7 @@ public final class TriggerOuterClass {
         private java.util.List<java.lang.Integer> eventType_ =
           java.util.Collections.emptyList();
         private void ensureEventTypeIsMutable() {
-          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             eventType_ = new java.util.ArrayList<java.lang.Integer>(eventType_);
             bitField0_ |= 0x00000001;
           }
@@ -9619,6 +10047,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return A list containing the eventType.
          */
         public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType> getEventTypeList() {
           return new com.google.protobuf.Internal.ListAdapter<
@@ -9630,6 +10059,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return The count of eventType.
          */
         public int getEventTypeCount() {
           return eventType_.size();
@@ -9640,6 +10070,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the element to return.
+         * @return The eventType at the given index.
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType getEventType(int index) {
           return eventType_converter_.convert(eventType_.get(index));
@@ -9650,6 +10082,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index to set the value at.
+         * @param value The eventType to set.
+         * @return This builder for chaining.
          */
         public Builder setEventType(
             int index, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType value) {
@@ -9667,6 +10102,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param value The eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addEventType(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType value) {
           if (value == null) {
@@ -9683,6 +10120,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param values The eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addAllEventType(
             java.lang.Iterable<? extends yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageEventType> values) {
@@ -9699,6 +10138,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearEventType() {
           eventType_ = java.util.Collections.emptyList();
@@ -9712,6 +10152,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return A list containing the enum numeric values on the wire for eventType.
          */
         public java.util.List<java.lang.Integer>
         getEventTypeValueList() {
@@ -9723,6 +10164,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of eventType at the given index.
          */
         public int getEventTypeValue(int index) {
           return eventType_.get(index);
@@ -9733,6 +10176,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of eventType at the given index.
+         * @return This builder for chaining.
          */
         public Builder setEventTypeValue(
             int index, int value) {
@@ -9747,6 +10193,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param value The enum numeric value on the wire for eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addEventTypeValue(int value) {
           ensureEventTypeIsMutable();
@@ -9760,6 +10208,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ObjectStorageEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param values The enum numeric values on the wire for eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addAllEventTypeValue(
             java.lang.Iterable<java.lang.Integer> values) {
@@ -9778,6 +10228,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string bucket_id = 4;</code>
+         * @return The bucketId.
          */
         public java.lang.String getBucketId() {
           java.lang.Object ref = bucketId_;
@@ -9797,6 +10248,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string bucket_id = 4;</code>
+         * @return The bytes for bucketId.
          */
         public com.google.protobuf.ByteString
             getBucketIdBytes() {
@@ -9817,6 +10269,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string bucket_id = 4;</code>
+         * @param value The bucketId to set.
+         * @return This builder for chaining.
          */
         public Builder setBucketId(
             java.lang.String value) {
@@ -9834,6 +10288,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string bucket_id = 4;</code>
+         * @return This builder for chaining.
          */
         public Builder clearBucketId() {
           
@@ -9847,6 +10302,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string bucket_id = 4;</code>
+         * @param value The bytes for bucketId to set.
+         * @return This builder for chaining.
          */
         public Builder setBucketIdBytes(
             com.google.protobuf.ByteString value) {
@@ -9867,6 +10324,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string prefix = 6;</code>
+         * @return The prefix.
          */
         public java.lang.String getPrefix() {
           java.lang.Object ref = prefix_;
@@ -9886,6 +10344,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string prefix = 6;</code>
+         * @return The bytes for prefix.
          */
         public com.google.protobuf.ByteString
             getPrefixBytes() {
@@ -9906,6 +10365,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string prefix = 6;</code>
+         * @param value The prefix to set.
+         * @return This builder for chaining.
          */
         public Builder setPrefix(
             java.lang.String value) {
@@ -9923,6 +10384,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string prefix = 6;</code>
+         * @return This builder for chaining.
          */
         public Builder clearPrefix() {
           
@@ -9936,6 +10398,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string prefix = 6;</code>
+         * @param value The bytes for prefix to set.
+         * @return This builder for chaining.
          */
         public Builder setPrefixBytes(
             com.google.protobuf.ByteString value) {
@@ -9956,6 +10420,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string suffix = 7;</code>
+         * @return The suffix.
          */
         public java.lang.String getSuffix() {
           java.lang.Object ref = suffix_;
@@ -9975,6 +10440,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string suffix = 7;</code>
+         * @return The bytes for suffix.
          */
         public com.google.protobuf.ByteString
             getSuffixBytes() {
@@ -9995,6 +10461,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string suffix = 7;</code>
+         * @param value The suffix to set.
+         * @return This builder for chaining.
          */
         public Builder setSuffix(
             java.lang.String value) {
@@ -10012,6 +10480,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string suffix = 7;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSuffix() {
           
@@ -10025,6 +10494,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string suffix = 7;</code>
+         * @param value The bytes for suffix to set.
+         * @return This builder for chaining.
          */
         public Builder setSuffixBytes(
             com.google.protobuf.ByteString value) {
@@ -10046,7 +10517,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -10056,7 +10529,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -10174,6 +10649,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -10218,7 +10694,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return Whether the invokeContainer field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainer() {
           return actionCase_ == 102;
         }
@@ -10228,7 +10706,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return The invokeContainer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
           if (invokeContainerBuilder_ == null) {
             if (actionCase_ == 102) {
@@ -10346,6 +10826,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
           if ((actionCase_ == 102) && (invokeContainerBuilder_ != null)) {
             return invokeContainerBuilder_.getMessageOrBuilder();
@@ -10384,7 +10865,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -10444,6 +10925,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the eventType.
        */
       java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType> getEventTypeList();
       /**
@@ -10452,6 +10934,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of eventType.
        */
       int getEventTypeCount();
       /**
@@ -10460,6 +10943,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The eventType at the given index.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType getEventType(int index);
       /**
@@ -10468,6 +10953,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the enum numeric values on the wire for eventType.
        */
       java.util.List<java.lang.Integer>
       getEventTypeValueList();
@@ -10477,6 +10963,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of eventType at the given index.
        */
       int getEventTypeValue(int index);
 
@@ -10486,6 +10974,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 4;</code>
+       * @return The registryId.
        */
       java.lang.String getRegistryId();
       /**
@@ -10494,6 +10983,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 4;</code>
+       * @return The bytes for registryId.
        */
       com.google.protobuf.ByteString
           getRegistryIdBytes();
@@ -10504,6 +10994,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string image_name = 5;</code>
+       * @return The imageName.
        */
       java.lang.String getImageName();
       /**
@@ -10512,6 +11003,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string image_name = 5;</code>
+       * @return The bytes for imageName.
        */
       com.google.protobuf.ByteString
           getImageNameBytes();
@@ -10522,6 +11014,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string tag = 6;</code>
+       * @return The tag.
        */
       java.lang.String getTag();
       /**
@@ -10530,6 +11023,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string tag = 6;</code>
+       * @return The bytes for tag.
        */
       com.google.protobuf.ByteString
           getTagBytes();
@@ -10540,6 +11034,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -10548,6 +11043,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
       /**
@@ -10565,6 +11061,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
       boolean hasInvokeContainer();
       /**
@@ -10573,6 +11070,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
       /**
@@ -10589,7 +11087,7 @@ public final class TriggerOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry}
      */
-    public  static final class ContainerRegistry extends
+    public static final class ContainerRegistry extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry)
         ContainerRegistryOrBuilder {
@@ -10603,6 +11101,13 @@ public final class TriggerOuterClass {
         registryId_ = "";
         imageName_ = "";
         tag_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ContainerRegistry();
       }
 
       @java.lang.Override
@@ -10631,7 +11136,7 @@ public final class TriggerOuterClass {
                 break;
               case 24: {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   eventType_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -10643,7 +11148,7 @@ public final class TriggerOuterClass {
                 int oldLimit = input.pushLimit(length);
                 while(input.getBytesUntilLimit() > 0) {
                   int rawValue = input.readEnum();
-                  if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     eventType_ = new java.util.ArrayList<java.lang.Integer>();
                     mutable_bitField0_ |= 0x00000001;
                   }
@@ -10699,7 +11204,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -10713,7 +11218,7 @@ public final class TriggerOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             eventType_ = java.util.Collections.unmodifiableList(eventType_);
           }
           this.unknownFields = unknownFields.build();
@@ -10733,11 +11238,11 @@ public final class TriggerOuterClass {
                 yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder.class);
       }
 
-      private int bitField0_;
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         ACTION_NOT_SET(0);
@@ -10746,6 +11251,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -10790,7 +11297,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the eventType.
        */
+      @java.lang.Override
       public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType> getEventTypeList() {
         return new com.google.protobuf.Internal.ListAdapter<
             java.lang.Integer, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType>(eventType_, eventType_converter_);
@@ -10801,7 +11310,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of eventType.
        */
+      @java.lang.Override
       public int getEventTypeCount() {
         return eventType_.size();
       }
@@ -10811,7 +11322,10 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The eventType at the given index.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType getEventType(int index) {
         return eventType_converter_.convert(eventType_.get(index));
       }
@@ -10821,7 +11335,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the enum numeric values on the wire for eventType.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
       getEventTypeValueList() {
         return eventType_;
@@ -10832,7 +11348,10 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of eventType at the given index.
        */
+      @java.lang.Override
       public int getEventTypeValue(int index) {
         return eventType_.get(index);
       }
@@ -10846,7 +11365,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 4;</code>
+       * @return The registryId.
        */
+      @java.lang.Override
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
         if (ref instanceof java.lang.String) {
@@ -10865,7 +11386,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string registry_id = 4;</code>
+       * @return The bytes for registryId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
         java.lang.Object ref = registryId_;
@@ -10888,7 +11411,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string image_name = 5;</code>
+       * @return The imageName.
        */
+      @java.lang.Override
       public java.lang.String getImageName() {
         java.lang.Object ref = imageName_;
         if (ref instanceof java.lang.String) {
@@ -10907,7 +11432,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string image_name = 5;</code>
+       * @return The bytes for imageName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getImageNameBytes() {
         java.lang.Object ref = imageName_;
@@ -10930,7 +11457,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string tag = 6;</code>
+       * @return The tag.
        */
+      @java.lang.Override
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
         if (ref instanceof java.lang.String) {
@@ -10949,7 +11478,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string tag = 6;</code>
+       * @return The bytes for tag.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagBytes() {
         java.lang.Object ref = tag_;
@@ -10971,7 +11502,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -10981,7 +11514,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -10995,6 +11530,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -11009,7 +11545,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 102;
       }
@@ -11019,7 +11557,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -11033,6 +11573,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -11062,13 +11603,13 @@ public final class TriggerOuterClass {
         for (int i = 0; i < eventType_.size(); i++) {
           output.writeEnumNoTag(eventType_.get(i));
         }
-        if (!getRegistryIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, registryId_);
         }
-        if (!getImageNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, imageName_);
         }
-        if (!getTagBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tag_);
         }
         if (actionCase_ == 101) {
@@ -11098,13 +11639,13 @@ public final class TriggerOuterClass {
               .computeUInt32SizeNoTag(dataSize);
           }eventTypeMemoizedSerializedSize = dataSize;
         }
-        if (!getRegistryIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, registryId_);
         }
-        if (!getImageNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, imageName_);
         }
-        if (!getTagBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, tag_);
         }
         if (actionCase_ == 101) {
@@ -11130,31 +11671,28 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) obj;
 
-        boolean result = true;
-        result = result && eventType_.equals(other.eventType_);
-        result = result && getRegistryId()
-            .equals(other.getRegistryId());
-        result = result && getImageName()
-            .equals(other.getImageName());
-        result = result && getTag()
-            .equals(other.getTag());
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!eventType_.equals(other.eventType_)) return false;
+        if (!getRegistryId()
+            .equals(other.getRegistryId())) return false;
+        if (!getImageName()
+            .equals(other.getImageName())) return false;
+        if (!getTag()
+            .equals(other.getTag())) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 102:
-            result = result && getInvokeContainer()
-                .equals(other.getInvokeContainer());
+            if (!getInvokeContainer()
+                .equals(other.getInvokeContainer())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -11356,8 +11894,7 @@ public final class TriggerOuterClass {
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry buildPartial() {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             eventType_ = java.util.Collections.unmodifiableList(eventType_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -11379,7 +11916,6 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
-          result.bitField0_ = to_bitField0_;
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -11387,35 +11923,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11512,7 +12048,7 @@ public final class TriggerOuterClass {
         private java.util.List<java.lang.Integer> eventType_ =
           java.util.Collections.emptyList();
         private void ensureEventTypeIsMutable() {
-          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             eventType_ = new java.util.ArrayList<java.lang.Integer>(eventType_);
             bitField0_ |= 0x00000001;
           }
@@ -11523,6 +12059,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return A list containing the eventType.
          */
         public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType> getEventTypeList() {
           return new com.google.protobuf.Internal.ListAdapter<
@@ -11534,6 +12071,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return The count of eventType.
          */
         public int getEventTypeCount() {
           return eventType_.size();
@@ -11544,6 +12082,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the element to return.
+         * @return The eventType at the given index.
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType getEventType(int index) {
           return eventType_converter_.convert(eventType_.get(index));
@@ -11554,6 +12094,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index to set the value at.
+         * @param value The eventType to set.
+         * @return This builder for chaining.
          */
         public Builder setEventType(
             int index, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType value) {
@@ -11571,6 +12114,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param value The eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addEventType(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType value) {
           if (value == null) {
@@ -11587,6 +12132,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param values The eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addAllEventType(
             java.lang.Iterable<? extends yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryEventType> values) {
@@ -11603,6 +12150,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearEventType() {
           eventType_ = java.util.Collections.emptyList();
@@ -11616,6 +12164,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return A list containing the enum numeric values on the wire for eventType.
          */
         public java.util.List<java.lang.Integer>
         getEventTypeValueList() {
@@ -11627,6 +12176,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of eventType at the given index.
          */
         public int getEventTypeValue(int index) {
           return eventType_.get(index);
@@ -11637,6 +12188,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of eventType at the given index.
+         * @return This builder for chaining.
          */
         public Builder setEventTypeValue(
             int index, int value) {
@@ -11651,6 +12205,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param value The enum numeric value on the wire for eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addEventTypeValue(int value) {
           ensureEventTypeIsMutable();
@@ -11664,6 +12220,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType event_type = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param values The enum numeric values on the wire for eventType to add.
+         * @return This builder for chaining.
          */
         public Builder addAllEventTypeValue(
             java.lang.Iterable<java.lang.Integer> values) {
@@ -11682,6 +12240,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 4;</code>
+         * @return The registryId.
          */
         public java.lang.String getRegistryId() {
           java.lang.Object ref = registryId_;
@@ -11701,6 +12260,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 4;</code>
+         * @return The bytes for registryId.
          */
         public com.google.protobuf.ByteString
             getRegistryIdBytes() {
@@ -11721,6 +12281,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 4;</code>
+         * @param value The registryId to set.
+         * @return This builder for chaining.
          */
         public Builder setRegistryId(
             java.lang.String value) {
@@ -11738,6 +12300,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 4;</code>
+         * @return This builder for chaining.
          */
         public Builder clearRegistryId() {
           
@@ -11751,6 +12314,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string registry_id = 4;</code>
+         * @param value The bytes for registryId to set.
+         * @return This builder for chaining.
          */
         public Builder setRegistryIdBytes(
             com.google.protobuf.ByteString value) {
@@ -11771,6 +12336,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string image_name = 5;</code>
+         * @return The imageName.
          */
         public java.lang.String getImageName() {
           java.lang.Object ref = imageName_;
@@ -11790,6 +12356,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string image_name = 5;</code>
+         * @return The bytes for imageName.
          */
         public com.google.protobuf.ByteString
             getImageNameBytes() {
@@ -11810,6 +12377,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string image_name = 5;</code>
+         * @param value The imageName to set.
+         * @return This builder for chaining.
          */
         public Builder setImageName(
             java.lang.String value) {
@@ -11827,6 +12396,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string image_name = 5;</code>
+         * @return This builder for chaining.
          */
         public Builder clearImageName() {
           
@@ -11840,6 +12410,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string image_name = 5;</code>
+         * @param value The bytes for imageName to set.
+         * @return This builder for chaining.
          */
         public Builder setImageNameBytes(
             com.google.protobuf.ByteString value) {
@@ -11860,6 +12432,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string tag = 6;</code>
+         * @return The tag.
          */
         public java.lang.String getTag() {
           java.lang.Object ref = tag_;
@@ -11879,6 +12452,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string tag = 6;</code>
+         * @return The bytes for tag.
          */
         public com.google.protobuf.ByteString
             getTagBytes() {
@@ -11899,6 +12473,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string tag = 6;</code>
+         * @param value The tag to set.
+         * @return This builder for chaining.
          */
         public Builder setTag(
             java.lang.String value) {
@@ -11916,6 +12492,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string tag = 6;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTag() {
           
@@ -11929,6 +12506,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string tag = 6;</code>
+         * @param value The bytes for tag to set.
+         * @return This builder for chaining.
          */
         public Builder setTagBytes(
             com.google.protobuf.ByteString value) {
@@ -11950,7 +12529,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -11960,7 +12541,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -12078,6 +12661,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -12122,7 +12706,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return Whether the invokeContainer field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainer() {
           return actionCase_ == 102;
         }
@@ -12132,7 +12718,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return The invokeContainer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
           if (invokeContainerBuilder_ == null) {
             if (actionCase_ == 102) {
@@ -12250,6 +12838,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
           if ((actionCase_ == 102) && (invokeContainerBuilder_ != null)) {
             return invokeContainerBuilder_.getMessageOrBuilder();
@@ -12288,7 +12877,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -12348,6 +12937,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @return A list containing the logGroupId.
        */
       java.util.List<java.lang.String>
           getLogGroupIdList();
@@ -12357,6 +12947,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @return The count of logGroupId.
        */
       int getLogGroupIdCount();
       /**
@@ -12365,6 +12956,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @param index The index of the element to return.
+       * @return The logGroupId at the given index.
        */
       java.lang.String getLogGroupId(int index);
       /**
@@ -12373,6 +12966,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the logGroupId at the given index.
        */
       com.google.protobuf.ByteString
           getLogGroupIdBytes(int index);
@@ -12383,6 +12978,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the batchSettings field is set.
        */
       boolean hasBatchSettings();
       /**
@@ -12391,6 +12987,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The batchSettings.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings getBatchSettings();
       /**
@@ -12408,6 +13005,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -12416,6 +13014,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
       /**
@@ -12433,6 +13032,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
       boolean hasInvokeContainer();
       /**
@@ -12441,6 +13041,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
       /**
@@ -12457,7 +13058,7 @@ public final class TriggerOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs}
      */
-    public  static final class CloudLogs extends
+    public static final class CloudLogs extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.CloudLogs)
         CloudLogsOrBuilder {
@@ -12468,6 +13069,13 @@ public final class TriggerOuterClass {
       }
       private CloudLogs() {
         logGroupId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CloudLogs();
       }
 
       @java.lang.Override
@@ -12496,7 +13104,7 @@ public final class TriggerOuterClass {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   logGroupId_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -12545,7 +13153,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -12559,7 +13167,7 @@ public final class TriggerOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             logGroupId_ = logGroupId_.getUnmodifiableView();
           }
           this.unknownFields = unknownFields.build();
@@ -12579,11 +13187,11 @@ public final class TriggerOuterClass {
                 yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs.Builder.class);
       }
 
-      private int bitField0_;
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
         ACTION_NOT_SET(0);
@@ -12592,6 +13200,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -12626,6 +13236,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @return A list containing the logGroupId.
        */
       public com.google.protobuf.ProtocolStringList
           getLogGroupIdList() {
@@ -12637,6 +13248,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @return The count of logGroupId.
        */
       public int getLogGroupIdCount() {
         return logGroupId_.size();
@@ -12647,6 +13259,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @param index The index of the element to return.
+       * @return The logGroupId at the given index.
        */
       public java.lang.String getLogGroupId(int index) {
         return logGroupId_.get(index);
@@ -12657,6 +13271,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>repeated string log_group_id = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the logGroupId at the given index.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes(int index) {
@@ -12671,7 +13287,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the batchSettings field is set.
        */
+      @java.lang.Override
       public boolean hasBatchSettings() {
         return batchSettings_ != null;
       }
@@ -12681,7 +13299,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The batchSettings.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings getBatchSettings() {
         return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings.getDefaultInstance() : batchSettings_;
       }
@@ -12692,6 +13312,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettingsOrBuilder getBatchSettingsOrBuilder() {
         return getBatchSettings();
       }
@@ -12703,7 +13324,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -12713,7 +13336,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -12727,6 +13352,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -12741,7 +13367,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 102;
       }
@@ -12751,7 +13379,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -12765,6 +13395,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if (actionCase_ == 102) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -12842,31 +13473,28 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs) obj;
 
-        boolean result = true;
-        result = result && getLogGroupIdList()
-            .equals(other.getLogGroupIdList());
-        result = result && (hasBatchSettings() == other.hasBatchSettings());
+        if (!getLogGroupIdList()
+            .equals(other.getLogGroupIdList())) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
         if (hasBatchSettings()) {
-          result = result && getBatchSettings()
-              .equals(other.getBatchSettings());
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
         }
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 102:
-            result = result && getInvokeContainer()
-                .equals(other.getInvokeContainer());
+            if (!getInvokeContainer()
+                .equals(other.getInvokeContainer())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -13066,8 +13694,7 @@ public final class TriggerOuterClass {
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs buildPartial() {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.CloudLogs(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             logGroupId_ = logGroupId_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -13091,7 +13718,6 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
-          result.bitField0_ = to_bitField0_;
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -13099,35 +13725,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13214,7 +13840,7 @@ public final class TriggerOuterClass {
 
         private com.google.protobuf.LazyStringList logGroupId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         private void ensureLogGroupIdIsMutable() {
-          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             logGroupId_ = new com.google.protobuf.LazyStringArrayList(logGroupId_);
             bitField0_ |= 0x00000001;
            }
@@ -13225,6 +13851,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @return A list containing the logGroupId.
          */
         public com.google.protobuf.ProtocolStringList
             getLogGroupIdList() {
@@ -13236,6 +13863,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @return The count of logGroupId.
          */
         public int getLogGroupIdCount() {
           return logGroupId_.size();
@@ -13246,6 +13874,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @param index The index of the element to return.
+         * @return The logGroupId at the given index.
          */
         public java.lang.String getLogGroupId(int index) {
           return logGroupId_.get(index);
@@ -13256,6 +13886,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the logGroupId at the given index.
          */
         public com.google.protobuf.ByteString
             getLogGroupIdBytes(int index) {
@@ -13267,6 +13899,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The logGroupId to set.
+         * @return This builder for chaining.
          */
         public Builder setLogGroupId(
             int index, java.lang.String value) {
@@ -13284,6 +13919,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @param value The logGroupId to add.
+         * @return This builder for chaining.
          */
         public Builder addLogGroupId(
             java.lang.String value) {
@@ -13301,6 +13938,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @param values The logGroupId to add.
+         * @return This builder for chaining.
          */
         public Builder addAllLogGroupId(
             java.lang.Iterable<java.lang.String> values) {
@@ -13316,6 +13955,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearLogGroupId() {
           logGroupId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -13329,6 +13969,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>repeated string log_group_id = 1;</code>
+         * @param value The bytes of the logGroupId to add.
+         * @return This builder for chaining.
          */
         public Builder addLogGroupIdBytes(
             com.google.protobuf.ByteString value) {
@@ -13342,7 +13984,7 @@ public final class TriggerOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings batchSettings_ = null;
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings batchSettings_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettingsOrBuilder> batchSettingsBuilder_;
         /**
@@ -13351,6 +13993,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the batchSettings field is set.
          */
         public boolean hasBatchSettings() {
           return batchSettingsBuilder_ != null || batchSettings_ != null;
@@ -13361,6 +14004,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings batch_settings = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The batchSettings.
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings getBatchSettings() {
           if (batchSettingsBuilder_ == null) {
@@ -13503,7 +14147,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -13513,7 +14159,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -13631,6 +14279,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -13675,7 +14324,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return Whether the invokeContainer field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainer() {
           return actionCase_ == 102;
         }
@@ -13685,7 +14336,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
+         * @return The invokeContainer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
           if (invokeContainerBuilder_ == null) {
             if (actionCase_ == 102) {
@@ -13803,6 +14456,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 102;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
           if ((actionCase_ == 102) && (invokeContainerBuilder_ != null)) {
             return invokeContainerBuilder_.getMessageOrBuilder();
@@ -13841,7 +14495,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -13901,6 +14555,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The logGroupId.
        */
       java.lang.String getLogGroupId();
       /**
@@ -13909,67 +14564,87 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for logGroupId.
        */
       com.google.protobuf.ByteString
           getLogGroupIdBytes();
 
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the resourceType.
        */
       java.util.List<java.lang.String>
           getResourceTypeList();
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of resourceType.
        */
       int getResourceTypeCount();
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The resourceType at the given index.
        */
       java.lang.String getResourceType(int index);
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceType at the given index.
        */
       com.google.protobuf.ByteString
           getResourceTypeBytes(int index);
 
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the resourceId.
        */
       java.util.List<java.lang.String>
           getResourceIdList();
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of resourceId.
        */
       int getResourceIdCount();
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The resourceId at the given index.
        */
       java.lang.String getResourceId(int index);
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceId at the given index.
        */
       com.google.protobuf.ByteString
           getResourceIdBytes(int index);
 
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return A list containing the levels.
        */
       java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList();
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return The count of levels.
        */
       int getLevelsCount();
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the element to return.
+       * @return The levels at the given index.
        */
       yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index);
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return A list containing the enum numeric values on the wire for levels.
        */
       java.util.List<java.lang.Integer>
       getLevelsValueList();
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of levels at the given index.
        */
       int getLevelsValue(int index);
 
@@ -13979,6 +14654,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the batchSettings field is set.
        */
       boolean hasBatchSettings();
       /**
@@ -13987,6 +14663,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The batchSettings.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings getBatchSettings();
       /**
@@ -14004,6 +14681,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
       boolean hasInvokeFunction();
       /**
@@ -14012,6 +14690,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
       /**
@@ -14029,6 +14708,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+       * @return Whether the invokeContainer field is set.
        */
       boolean hasInvokeContainer();
       /**
@@ -14037,6 +14717,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+       * @return The invokeContainer.
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
       /**
@@ -14053,7 +14734,7 @@ public final class TriggerOuterClass {
     /**
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Logging}
      */
-    public  static final class Logging extends
+    public static final class Logging extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.Trigger.Logging)
         LoggingOrBuilder {
@@ -14067,6 +14748,13 @@ public final class TriggerOuterClass {
         resourceType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         resourceId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         levels_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Logging();
       }
 
       @java.lang.Override
@@ -14101,27 +14789,27 @@ public final class TriggerOuterClass {
               }
               case 26: {
                 java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   resourceType_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 resourceType_.add(s);
                 break;
               }
               case 34: {
                 java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   resourceId_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000004;
+                  mutable_bitField0_ |= 0x00000002;
                 }
                 resourceId_.add(s);
                 break;
               }
               case 40: {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   levels_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000008;
+                  mutable_bitField0_ |= 0x00000004;
                 }
                 levels_.add(rawValue);
                 break;
@@ -14131,9 +14819,9 @@ public final class TriggerOuterClass {
                 int oldLimit = input.pushLimit(length);
                 while(input.getBytesUntilLimit() > 0) {
                   int rawValue = input.readEnum();
-                  if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                     levels_ = new java.util.ArrayList<java.lang.Integer>();
-                    mutable_bitField0_ |= 0x00000008;
+                    mutable_bitField0_ |= 0x00000004;
                   }
                   levels_.add(rawValue);
                 }
@@ -14182,7 +14870,7 @@ public final class TriggerOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -14196,13 +14884,13 @@ public final class TriggerOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             resourceType_ = resourceType_.getUnmodifiableView();
           }
-          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
             resourceId_ = resourceId_.getUnmodifiableView();
           }
-          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((mutable_bitField0_ & 0x00000004) != 0)) {
             levels_ = java.util.Collections.unmodifiableList(levels_);
           }
           this.unknownFields = unknownFields.build();
@@ -14222,11 +14910,11 @@ public final class TriggerOuterClass {
                 yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.Builder.class);
       }
 
-      private int bitField0_;
       private int actionCase_ = 0;
       private java.lang.Object action_;
       public enum ActionCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(103),
         ACTION_NOT_SET(0);
@@ -14235,6 +14923,8 @@ public final class TriggerOuterClass {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -14269,7 +14959,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The logGroupId.
        */
+      @java.lang.Override
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
         if (ref instanceof java.lang.String) {
@@ -14288,7 +14980,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for logGroupId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
         java.lang.Object ref = logGroupId_;
@@ -14307,6 +15001,7 @@ public final class TriggerOuterClass {
       private com.google.protobuf.LazyStringList resourceType_;
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the resourceType.
        */
       public com.google.protobuf.ProtocolStringList
           getResourceTypeList() {
@@ -14314,18 +15009,23 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of resourceType.
        */
       public int getResourceTypeCount() {
         return resourceType_.size();
       }
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The resourceType at the given index.
        */
       public java.lang.String getResourceType(int index) {
         return resourceType_.get(index);
       }
       /**
        * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceType at the given index.
        */
       public com.google.protobuf.ByteString
           getResourceTypeBytes(int index) {
@@ -14336,6 +15036,7 @@ public final class TriggerOuterClass {
       private com.google.protobuf.LazyStringList resourceId_;
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the resourceId.
        */
       public com.google.protobuf.ProtocolStringList
           getResourceIdList() {
@@ -14343,18 +15044,23 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of resourceId.
        */
       public int getResourceIdCount() {
         return resourceId_.size();
       }
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The resourceId at the given index.
        */
       public java.lang.String getResourceId(int index) {
         return resourceId_.get(index);
       }
       /**
        * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resourceId at the given index.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes(int index) {
@@ -14375,33 +15081,45 @@ public final class TriggerOuterClass {
               };
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return A list containing the levels.
        */
+      @java.lang.Override
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList() {
         return new com.google.protobuf.Internal.ListAdapter<
             java.lang.Integer, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level>(levels_, levels_converter_);
       }
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return The count of levels.
        */
+      @java.lang.Override
       public int getLevelsCount() {
         return levels_.size();
       }
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the element to return.
+       * @return The levels at the given index.
        */
+      @java.lang.Override
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index) {
         return levels_converter_.convert(levels_.get(index));
       }
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @return A list containing the enum numeric values on the wire for levels.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
       getLevelsValueList() {
         return levels_;
       }
       /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of levels at the given index.
        */
+      @java.lang.Override
       public int getLevelsValue(int index) {
         return levels_.get(index);
       }
@@ -14415,7 +15133,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the batchSettings field is set.
        */
+      @java.lang.Override
       public boolean hasBatchSettings() {
         return batchSettings_ != null;
       }
@@ -14425,7 +15145,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The batchSettings.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings getBatchSettings() {
         return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings.getDefaultInstance() : batchSettings_;
       }
@@ -14436,6 +15158,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettingsOrBuilder getBatchSettingsOrBuilder() {
         return getBatchSettings();
       }
@@ -14447,7 +15170,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
@@ -14457,7 +15182,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -14471,6 +15198,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if (actionCase_ == 101) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -14485,7 +15213,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 103;
       }
@@ -14495,7 +15225,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (actionCase_ == 103) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -14509,6 +15241,7 @@ public final class TriggerOuterClass {
        *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if (actionCase_ == 103) {
            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -14531,7 +15264,7 @@ public final class TriggerOuterClass {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
-        if (!getLogGroupIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, logGroupId_);
         }
         for (int i = 0; i < resourceType_.size(); i++) {
@@ -14565,7 +15298,7 @@ public final class TriggerOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getLogGroupIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, logGroupId_);
         }
         {
@@ -14623,36 +15356,33 @@ public final class TriggerOuterClass {
         }
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging) obj;
 
-        boolean result = true;
-        result = result && getLogGroupId()
-            .equals(other.getLogGroupId());
-        result = result && getResourceTypeList()
-            .equals(other.getResourceTypeList());
-        result = result && getResourceIdList()
-            .equals(other.getResourceIdList());
-        result = result && levels_.equals(other.levels_);
-        result = result && (hasBatchSettings() == other.hasBatchSettings());
+        if (!getLogGroupId()
+            .equals(other.getLogGroupId())) return false;
+        if (!getResourceTypeList()
+            .equals(other.getResourceTypeList())) return false;
+        if (!getResourceIdList()
+            .equals(other.getResourceIdList())) return false;
+        if (!levels_.equals(other.levels_)) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
         if (hasBatchSettings()) {
-          result = result && getBatchSettings()
-              .equals(other.getBatchSettings());
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
         }
-        result = result && getActionCase().equals(
-            other.getActionCase());
-        if (!result) return false;
+        if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
-            result = result && getInvokeFunction()
-                .equals(other.getInvokeFunction());
+            if (!getInvokeFunction()
+                .equals(other.getInvokeFunction())) return false;
             break;
           case 103:
-            result = result && getInvokeContainer()
-                .equals(other.getInvokeContainer());
+            if (!getInvokeContainer()
+                .equals(other.getInvokeContainer())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14828,11 +15558,11 @@ public final class TriggerOuterClass {
           logGroupId_ = "";
 
           resourceType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           resourceId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           levels_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
           if (batchSettingsBuilder_ == null) {
             batchSettings_ = null;
           } else {
@@ -14868,21 +15598,20 @@ public final class TriggerOuterClass {
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging buildPartial() {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.logGroupId_ = logGroupId_;
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             resourceType_ = resourceType_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.resourceType_ = resourceType_;
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             resourceId_ = resourceId_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.resourceId_ = resourceId_;
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             levels_ = java.util.Collections.unmodifiableList(levels_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.levels_ = levels_;
           if (batchSettingsBuilder_ == null) {
@@ -14904,7 +15633,6 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
-          result.bitField0_ = to_bitField0_;
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -14912,35 +15640,35 @@ public final class TriggerOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14961,7 +15689,7 @@ public final class TriggerOuterClass {
           if (!other.resourceType_.isEmpty()) {
             if (resourceType_.isEmpty()) {
               resourceType_ = other.resourceType_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureResourceTypeIsMutable();
               resourceType_.addAll(other.resourceType_);
@@ -14971,7 +15699,7 @@ public final class TriggerOuterClass {
           if (!other.resourceId_.isEmpty()) {
             if (resourceId_.isEmpty()) {
               resourceId_ = other.resourceId_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureResourceIdIsMutable();
               resourceId_.addAll(other.resourceId_);
@@ -14981,7 +15709,7 @@ public final class TriggerOuterClass {
           if (!other.levels_.isEmpty()) {
             if (levels_.isEmpty()) {
               levels_ = other.levels_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureLevelsIsMutable();
               levels_.addAll(other.levels_);
@@ -15056,6 +15784,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The logGroupId.
          */
         public java.lang.String getLogGroupId() {
           java.lang.Object ref = logGroupId_;
@@ -15075,6 +15804,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The bytes for logGroupId.
          */
         public com.google.protobuf.ByteString
             getLogGroupIdBytes() {
@@ -15095,6 +15825,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The logGroupId to set.
+         * @return This builder for chaining.
          */
         public Builder setLogGroupId(
             java.lang.String value) {
@@ -15112,6 +15844,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearLogGroupId() {
           
@@ -15125,6 +15858,8 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The bytes for logGroupId to set.
+         * @return This builder for chaining.
          */
         public Builder setLogGroupIdBytes(
             com.google.protobuf.ByteString value) {
@@ -15140,13 +15875,14 @@ public final class TriggerOuterClass {
 
         private com.google.protobuf.LazyStringList resourceType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         private void ensureResourceTypeIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             resourceType_ = new com.google.protobuf.LazyStringArrayList(resourceType_);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
            }
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return A list containing the resourceType.
          */
         public com.google.protobuf.ProtocolStringList
             getResourceTypeList() {
@@ -15154,18 +15890,23 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return The count of resourceType.
          */
         public int getResourceTypeCount() {
           return resourceType_.size();
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index of the element to return.
+         * @return The resourceType at the given index.
          */
         public java.lang.String getResourceType(int index) {
           return resourceType_.get(index);
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the resourceType at the given index.
          */
         public com.google.protobuf.ByteString
             getResourceTypeBytes(int index) {
@@ -15173,6 +15914,9 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index to set the value at.
+         * @param value The resourceType to set.
+         * @return This builder for chaining.
          */
         public Builder setResourceType(
             int index, java.lang.String value) {
@@ -15186,6 +15930,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param value The resourceType to add.
+         * @return This builder for chaining.
          */
         public Builder addResourceType(
             java.lang.String value) {
@@ -15199,6 +15945,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param values The resourceType to add.
+         * @return This builder for chaining.
          */
         public Builder addAllResourceType(
             java.lang.Iterable<java.lang.String> values) {
@@ -15210,15 +15958,18 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearResourceType() {
           resourceType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
         /**
          * <code>repeated string resource_type = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param value The bytes of the resourceType to add.
+         * @return This builder for chaining.
          */
         public Builder addResourceTypeBytes(
             com.google.protobuf.ByteString value) {
@@ -15234,13 +15985,14 @@ public final class TriggerOuterClass {
 
         private com.google.protobuf.LazyStringList resourceId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         private void ensureResourceIdIsMutable() {
-          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             resourceId_ = new com.google.protobuf.LazyStringArrayList(resourceId_);
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
            }
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return A list containing the resourceId.
          */
         public com.google.protobuf.ProtocolStringList
             getResourceIdList() {
@@ -15248,18 +16000,23 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return The count of resourceId.
          */
         public int getResourceIdCount() {
           return resourceId_.size();
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index of the element to return.
+         * @return The resourceId at the given index.
          */
         public java.lang.String getResourceId(int index) {
           return resourceId_.get(index);
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the resourceId at the given index.
          */
         public com.google.protobuf.ByteString
             getResourceIdBytes(int index) {
@@ -15267,6 +16024,9 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index to set the value at.
+         * @param value The resourceId to set.
+         * @return This builder for chaining.
          */
         public Builder setResourceId(
             int index, java.lang.String value) {
@@ -15280,6 +16040,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param value The resourceId to add.
+         * @return This builder for chaining.
          */
         public Builder addResourceId(
             java.lang.String value) {
@@ -15293,6 +16055,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param values The resourceId to add.
+         * @return This builder for chaining.
          */
         public Builder addAllResourceId(
             java.lang.Iterable<java.lang.String> values) {
@@ -15304,15 +16068,18 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearResourceId() {
           resourceId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
         /**
          * <code>repeated string resource_id = 4 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param value The bytes of the resourceId to add.
+         * @return This builder for chaining.
          */
         public Builder addResourceIdBytes(
             com.google.protobuf.ByteString value) {
@@ -15329,13 +16096,14 @@ public final class TriggerOuterClass {
         private java.util.List<java.lang.Integer> levels_ =
           java.util.Collections.emptyList();
         private void ensureLevelsIsMutable() {
-          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (!((bitField0_ & 0x00000004) != 0)) {
             levels_ = new java.util.ArrayList<java.lang.Integer>(levels_);
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000004;
           }
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @return A list containing the levels.
          */
         public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList() {
           return new com.google.protobuf.Internal.ListAdapter<
@@ -15343,18 +16111,24 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @return The count of levels.
          */
         public int getLevelsCount() {
           return levels_.size();
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param index The index of the element to return.
+         * @return The levels at the given index.
          */
         public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index) {
           return levels_converter_.convert(levels_.get(index));
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param index The index to set the value at.
+         * @param value The levels to set.
+         * @return This builder for chaining.
          */
         public Builder setLevels(
             int index, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
@@ -15368,6 +16142,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param value The levels to add.
+         * @return This builder for chaining.
          */
         public Builder addLevels(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
           if (value == null) {
@@ -15380,6 +16156,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param values The levels to add.
+         * @return This builder for chaining.
          */
         public Builder addAllLevels(
             java.lang.Iterable<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> values) {
@@ -15392,15 +16170,17 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearLevels() {
           levels_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @return A list containing the enum numeric values on the wire for levels.
          */
         public java.util.List<java.lang.Integer>
         getLevelsValueList() {
@@ -15408,12 +16188,17 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of levels at the given index.
          */
         public int getLevelsValue(int index) {
           return levels_.get(index);
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of levels at the given index.
+         * @return This builder for chaining.
          */
         public Builder setLevelsValue(
             int index, int value) {
@@ -15424,6 +16209,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param value The enum numeric value on the wire for levels to add.
+         * @return This builder for chaining.
          */
         public Builder addLevelsValue(int value) {
           ensureLevelsIsMutable();
@@ -15433,6 +16220,8 @@ public final class TriggerOuterClass {
         }
         /**
          * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
+         * @param values The enum numeric values on the wire for levels to add.
+         * @return This builder for chaining.
          */
         public Builder addAllLevelsValue(
             java.lang.Iterable<java.lang.Integer> values) {
@@ -15444,7 +16233,7 @@ public final class TriggerOuterClass {
           return this;
         }
 
-        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings batchSettings_ = null;
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings batchSettings_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettingsOrBuilder> batchSettingsBuilder_;
         /**
@@ -15453,6 +16242,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the batchSettings field is set.
          */
         public boolean hasBatchSettings() {
           return batchSettingsBuilder_ != null || batchSettings_ != null;
@@ -15463,6 +16253,7 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.LoggingBatchSettings batch_settings = 6 [(.yandex.cloud.required) = true];</code>
+         * @return The batchSettings.
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings getBatchSettings() {
           if (batchSettingsBuilder_ == null) {
@@ -15605,7 +16396,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return Whether the invokeFunction field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
@@ -15615,7 +16408,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+         * @return The invokeFunction.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
           if (invokeFunctionBuilder_ == null) {
             if (actionCase_ == 101) {
@@ -15733,6 +16528,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
           if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
             return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -15777,7 +16573,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+         * @return Whether the invokeContainer field is set.
          */
+        @java.lang.Override
         public boolean hasInvokeContainer() {
           return actionCase_ == 103;
         }
@@ -15787,7 +16585,9 @@ public final class TriggerOuterClass {
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+         * @return The invokeContainer.
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
           if (invokeContainerBuilder_ == null) {
             if (actionCase_ == 103) {
@@ -15905,6 +16705,7 @@ public final class TriggerOuterClass {
          *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
           if ((actionCase_ == 103) && (invokeContainerBuilder_ != null)) {
             return invokeContainerBuilder_.getMessageOrBuilder();
@@ -15943,7 +16744,7 @@ public final class TriggerOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -15993,7 +16794,6 @@ public final class TriggerOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -16002,7 +16802,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -16021,7 +16823,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -16044,7 +16848,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -16063,7 +16869,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -16086,7 +16894,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -16096,7 +16906,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -16107,6 +16919,7 @@ public final class TriggerOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -16119,7 +16932,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -16138,7 +16953,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -16161,7 +16978,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -16180,7 +16999,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -16229,14 +17050,16 @@ public final class TriggerOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -16248,6 +17071,7 @@ public final class TriggerOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -16259,11 +17083,12 @@ public final class TriggerOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16275,10 +17100,11 @@ public final class TriggerOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -16295,7 +17121,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the rule field is set.
      */
+    @java.lang.Override
     public boolean hasRule() {
       return rule_ != null;
     }
@@ -16305,7 +17133,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
+     * @return The rule.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule() {
       return rule_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.getDefaultInstance() : rule_;
     }
@@ -16316,6 +17146,7 @@ public final class TriggerOuterClass {
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder() {
       return getRule();
     }
@@ -16328,8 +17159,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -16338,8 +17170,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status result = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.UNRECOGNIZED : result;
@@ -16359,19 +17192,19 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -16395,20 +17228,20 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -16444,30 +17277,29 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (hasRule() == other.hasRule());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasRule() != other.hasRule()) return false;
       if (hasRule()) {
-        result = result && getRule()
-            .equals(other.getRule());
+        if (!getRule()
+            .equals(other.getRule())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (status_ != other.status_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16708,7 +17540,6 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger buildPartial() {
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -16726,42 +17557,41 @@ public final class TriggerOuterClass {
           result.rule_ = ruleBuilder_.build();
         }
         result.status_ = status_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16839,6 +17669,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -16858,6 +17689,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -16878,6 +17710,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -16895,6 +17729,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -16908,6 +17743,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16928,6 +17765,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -16947,6 +17785,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -16967,6 +17806,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -16984,6 +17825,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -16997,6 +17839,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17010,7 +17854,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -17019,6 +17863,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -17029,6 +17874,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -17170,6 +18016,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -17189,6 +18036,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -17209,6 +18057,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -17226,6 +18076,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -17239,6 +18090,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -17259,6 +18112,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -17278,6 +18132,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -17298,6 +18153,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -17315,6 +18172,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -17328,6 +18186,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -17375,14 +18235,16 @@ public final class TriggerOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -17394,6 +18256,7 @@ public final class TriggerOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -17405,11 +18268,12 @@ public final class TriggerOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -17421,10 +18285,11 @@ public final class TriggerOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -17448,7 +18313,7 @@ public final class TriggerOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -17471,8 +18336,11 @@ public final class TriggerOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -17492,7 +18360,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule rule_ = null;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule rule_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder> ruleBuilder_;
       /**
@@ -17501,6 +18369,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the rule field is set.
        */
       public boolean hasRule() {
         return ruleBuilder_ != null || rule_ != null;
@@ -17511,6 +18380,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
+       * @return The rule.
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule() {
         if (ruleBuilder_ == null) {
@@ -17652,8 +18522,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -17662,8 +18533,11 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -17674,7 +18548,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status result = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.valueOf(status_);
@@ -17686,6 +18562,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status value) {
         if (value == null) {
@@ -17702,6 +18580,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -17712,7 +18591,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17772,6 +18651,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -17780,6 +18660,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -17790,6 +18671,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The functionTag.
      */
     java.lang.String getFunctionTag();
     /**
@@ -17798,6 +18680,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The bytes for functionTag.
      */
     com.google.protobuf.ByteString
         getFunctionTagBytes();
@@ -17808,6 +18691,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -17816,6 +18700,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -17827,7 +18712,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce}
    */
-  public  static final class InvokeFunctionOnce extends
+  public static final class InvokeFunctionOnce extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce)
       InvokeFunctionOnceOrBuilder {
@@ -17843,6 +18728,13 @@ public final class TriggerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InvokeFunctionOnce();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -17855,7 +18747,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17885,7 +18776,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17924,7 +18815,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -17943,7 +18836,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -17966,7 +18861,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The functionTag.
      */
+    @java.lang.Override
     public java.lang.String getFunctionTag() {
       java.lang.Object ref = functionTag_;
       if (ref instanceof java.lang.String) {
@@ -17985,7 +18882,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The bytes for functionTag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionTagBytes() {
       java.lang.Object ref = functionTag_;
@@ -18008,7 +18907,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -18027,7 +18928,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -18056,13 +18959,13 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getFunctionTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionTag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, functionTag_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceAccountId_);
       }
       unknownFields.writeTo(output);
@@ -18074,13 +18977,13 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getFunctionTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionTag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, functionTag_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceAccountId_);
       }
       size += unknownFields.getSerializedSize();
@@ -18098,15 +19001,14 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getFunctionTag()
-          .equals(other.getFunctionTag());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getFunctionTag()
+          .equals(other.getFunctionTag())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18300,35 +19202,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18390,6 +19292,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -18409,6 +19312,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -18429,6 +19333,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -18446,6 +19352,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -18459,6 +19366,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18479,6 +19388,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @return The functionTag.
        */
       public java.lang.String getFunctionTag() {
         java.lang.Object ref = functionTag_;
@@ -18498,6 +19408,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @return The bytes for functionTag.
        */
       public com.google.protobuf.ByteString
           getFunctionTagBytes() {
@@ -18518,6 +19429,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @param value The functionTag to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionTag(
           java.lang.String value) {
@@ -18535,6 +19448,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionTag() {
         
@@ -18548,6 +19462,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @param value The bytes for functionTag to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionTagBytes(
           com.google.protobuf.ByteString value) {
@@ -18568,6 +19484,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -18587,6 +19504,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -18607,6 +19525,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -18624,6 +19544,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -18637,6 +19558,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18652,7 +19575,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18712,6 +19635,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -18720,6 +19644,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -18730,6 +19655,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The functionTag.
      */
     java.lang.String getFunctionTag();
     /**
@@ -18738,6 +19664,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The bytes for functionTag.
      */
     com.google.protobuf.ByteString
         getFunctionTagBytes();
@@ -18748,6 +19675,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -18756,6 +19684,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -18766,6 +19695,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
+     * @return Whether the retrySettings field is set.
      */
     boolean hasRetrySettings();
     /**
@@ -18774,6 +19704,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
+     * @return The retrySettings.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings();
     /**
@@ -18791,6 +19722,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
+     * @return Whether the deadLetterQueue field is set.
      */
     boolean hasDeadLetterQueue();
     /**
@@ -18799,6 +19731,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
+     * @return The deadLetterQueue.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue();
     /**
@@ -18817,7 +19750,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry}
    */
-  public  static final class InvokeFunctionWithRetry extends
+  public static final class InvokeFunctionWithRetry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry)
       InvokeFunctionWithRetryOrBuilder {
@@ -18833,6 +19766,13 @@ public final class TriggerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InvokeFunctionWithRetry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -18845,7 +19785,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18901,7 +19840,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18940,7 +19879,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -18959,7 +19900,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -18982,7 +19925,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The functionTag.
      */
+    @java.lang.Override
     public java.lang.String getFunctionTag() {
       java.lang.Object ref = functionTag_;
       if (ref instanceof java.lang.String) {
@@ -19001,7 +19946,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string function_tag = 2;</code>
+     * @return The bytes for functionTag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionTagBytes() {
       java.lang.Object ref = functionTag_;
@@ -19024,7 +19971,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -19043,7 +19992,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -19066,7 +20017,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
+     * @return Whether the retrySettings field is set.
      */
+    @java.lang.Override
     public boolean hasRetrySettings() {
       return retrySettings_ != null;
     }
@@ -19076,7 +20029,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
+     * @return The retrySettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings() {
       return retrySettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.getDefaultInstance() : retrySettings_;
     }
@@ -19087,6 +20042,7 @@ public final class TriggerOuterClass {
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder getRetrySettingsOrBuilder() {
       return getRetrySettings();
     }
@@ -19099,7 +20055,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
+     * @return Whether the deadLetterQueue field is set.
      */
+    @java.lang.Override
     public boolean hasDeadLetterQueue() {
       return deadLetterQueue_ != null;
     }
@@ -19109,7 +20067,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
+     * @return The deadLetterQueue.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue() {
       return deadLetterQueue_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.getDefaultInstance() : deadLetterQueue_;
     }
@@ -19120,6 +20080,7 @@ public final class TriggerOuterClass {
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder getDeadLetterQueueOrBuilder() {
       return getDeadLetterQueue();
     }
@@ -19138,13 +20099,13 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getFunctionTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionTag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, functionTag_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceAccountId_);
       }
       if (retrySettings_ != null) {
@@ -19162,13 +20123,13 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getFunctionTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionTag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, functionTag_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceAccountId_);
       }
       if (retrySettings_ != null) {
@@ -19194,25 +20155,24 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getFunctionTag()
-          .equals(other.getFunctionTag());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && (hasRetrySettings() == other.hasRetrySettings());
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getFunctionTag()
+          .equals(other.getFunctionTag())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasRetrySettings() != other.hasRetrySettings()) return false;
       if (hasRetrySettings()) {
-        result = result && getRetrySettings()
-            .equals(other.getRetrySettings());
+        if (!getRetrySettings()
+            .equals(other.getRetrySettings())) return false;
       }
-      result = result && (hasDeadLetterQueue() == other.hasDeadLetterQueue());
+      if (hasDeadLetterQueue() != other.hasDeadLetterQueue()) return false;
       if (hasDeadLetterQueue()) {
-        result = result && getDeadLetterQueue()
-            .equals(other.getDeadLetterQueue());
+        if (!getDeadLetterQueue()
+            .equals(other.getDeadLetterQueue())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19436,35 +20396,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19532,6 +20492,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -19551,6 +20512,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -19571,6 +20533,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -19588,6 +20552,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -19601,6 +20566,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -19621,6 +20588,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @return The functionTag.
        */
       public java.lang.String getFunctionTag() {
         java.lang.Object ref = functionTag_;
@@ -19640,6 +20608,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @return The bytes for functionTag.
        */
       public com.google.protobuf.ByteString
           getFunctionTagBytes() {
@@ -19660,6 +20629,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @param value The functionTag to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionTag(
           java.lang.String value) {
@@ -19677,6 +20648,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionTag() {
         
@@ -19690,6 +20662,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string function_tag = 2;</code>
+       * @param value The bytes for functionTag to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionTagBytes(
           com.google.protobuf.ByteString value) {
@@ -19710,6 +20684,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -19729,6 +20704,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -19749,6 +20725,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -19766,6 +20744,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -19779,6 +20758,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -19792,7 +20773,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_ = null;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder> retrySettingsBuilder_;
       /**
@@ -19801,6 +20782,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
+       * @return Whether the retrySettings field is set.
        */
       public boolean hasRetrySettings() {
         return retrySettingsBuilder_ != null || retrySettings_ != null;
@@ -19811,6 +20793,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
+       * @return The retrySettings.
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings() {
         if (retrySettingsBuilder_ == null) {
@@ -19945,7 +20928,7 @@ public final class TriggerOuterClass {
         return retrySettingsBuilder_;
       }
 
-      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_ = null;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder> deadLetterQueueBuilder_;
       /**
@@ -19954,6 +20937,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
+       * @return Whether the deadLetterQueue field is set.
        */
       public boolean hasDeadLetterQueue() {
         return deadLetterQueueBuilder_ != null || deadLetterQueue_ != null;
@@ -19964,6 +20948,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
+       * @return The deadLetterQueue.
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue() {
         if (deadLetterQueueBuilder_ == null) {
@@ -20100,7 +21085,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20160,6 +21145,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
@@ -20168,6 +21154,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for containerId.
      */
     com.google.protobuf.ByteString
         getContainerIdBytes();
@@ -20178,6 +21165,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The path.
      */
     java.lang.String getPath();
     /**
@@ -20186,6 +21174,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The bytes for path.
      */
     com.google.protobuf.ByteString
         getPathBytes();
@@ -20196,6 +21185,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -20204,6 +21194,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -20215,7 +21206,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeContainerOnce}
    */
-  public  static final class InvokeContainerOnce extends
+  public static final class InvokeContainerOnce extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.InvokeContainerOnce)
       InvokeContainerOnceOrBuilder {
@@ -20231,6 +21222,13 @@ public final class TriggerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InvokeContainerOnce();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -20243,7 +21241,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20273,7 +21270,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20312,7 +21309,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The containerId.
      */
+    @java.lang.Override
     public java.lang.String getContainerId() {
       java.lang.Object ref = containerId_;
       if (ref instanceof java.lang.String) {
@@ -20331,7 +21330,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for containerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContainerIdBytes() {
       java.lang.Object ref = containerId_;
@@ -20354,7 +21355,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The path.
      */
+    @java.lang.Override
     public java.lang.String getPath() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
@@ -20373,7 +21376,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The bytes for path.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPathBytes() {
       java.lang.Object ref = path_;
@@ -20396,7 +21401,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -20415,7 +21422,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -20444,13 +21453,13 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getContainerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(containerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, containerId_);
       }
-      if (!getPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, path_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceAccountId_);
       }
       unknownFields.writeTo(output);
@@ -20462,13 +21471,13 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getContainerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(containerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, containerId_);
       }
-      if (!getPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, path_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceAccountId_);
       }
       size += unknownFields.getSerializedSize();
@@ -20486,15 +21495,14 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce) obj;
 
-      boolean result = true;
-      result = result && getContainerId()
-          .equals(other.getContainerId());
-      result = result && getPath()
-          .equals(other.getPath());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getContainerId()
+          .equals(other.getContainerId())) return false;
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20688,35 +21696,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20778,6 +21786,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The containerId.
        */
       public java.lang.String getContainerId() {
         java.lang.Object ref = containerId_;
@@ -20797,6 +21806,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for containerId.
        */
       public com.google.protobuf.ByteString
           getContainerIdBytes() {
@@ -20817,6 +21827,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The containerId to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerId(
           java.lang.String value) {
@@ -20834,6 +21846,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearContainerId() {
         
@@ -20847,6 +21860,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for containerId to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20867,6 +21882,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @return The path.
        */
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
@@ -20886,6 +21902,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @return The bytes for path.
        */
       public com.google.protobuf.ByteString
           getPathBytes() {
@@ -20906,6 +21923,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
        */
       public Builder setPath(
           java.lang.String value) {
@@ -20923,6 +21942,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPath() {
         
@@ -20936,6 +21956,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
        */
       public Builder setPathBytes(
           com.google.protobuf.ByteString value) {
@@ -20956,6 +21978,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -20975,6 +21998,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -20995,6 +22019,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -21012,6 +22038,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -21025,6 +22052,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -21040,7 +22069,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21100,6 +22129,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
@@ -21108,6 +22138,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for containerId.
      */
     com.google.protobuf.ByteString
         getContainerIdBytes();
@@ -21118,6 +22149,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The path.
      */
     java.lang.String getPath();
     /**
@@ -21126,6 +22158,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The bytes for path.
      */
     com.google.protobuf.ByteString
         getPathBytes();
@@ -21136,6 +22169,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -21144,6 +22178,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -21154,6 +22189,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
+     * @return Whether the retrySettings field is set.
      */
     boolean hasRetrySettings();
     /**
@@ -21162,6 +22198,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
+     * @return The retrySettings.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings();
     /**
@@ -21179,6 +22216,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
+     * @return Whether the deadLetterQueue field is set.
      */
     boolean hasDeadLetterQueue();
     /**
@@ -21187,6 +22225,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
+     * @return The deadLetterQueue.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue();
     /**
@@ -21205,7 +22244,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry}
    */
-  public  static final class InvokeContainerWithRetry extends
+  public static final class InvokeContainerWithRetry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry)
       InvokeContainerWithRetryOrBuilder {
@@ -21221,6 +22260,13 @@ public final class TriggerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InvokeContainerWithRetry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -21233,7 +22279,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21289,7 +22334,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21328,7 +22373,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The containerId.
      */
+    @java.lang.Override
     public java.lang.String getContainerId() {
       java.lang.Object ref = containerId_;
       if (ref instanceof java.lang.String) {
@@ -21347,7 +22394,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for containerId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContainerIdBytes() {
       java.lang.Object ref = containerId_;
@@ -21370,7 +22419,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The path.
      */
+    @java.lang.Override
     public java.lang.String getPath() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
@@ -21389,7 +22440,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string path = 3;</code>
+     * @return The bytes for path.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPathBytes() {
       java.lang.Object ref = path_;
@@ -21412,7 +22465,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -21431,7 +22486,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -21454,7 +22511,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
+     * @return Whether the retrySettings field is set.
      */
+    @java.lang.Override
     public boolean hasRetrySettings() {
       return retrySettings_ != null;
     }
@@ -21464,7 +22523,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
+     * @return The retrySettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings() {
       return retrySettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.getDefaultInstance() : retrySettings_;
     }
@@ -21475,6 +22536,7 @@ public final class TriggerOuterClass {
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder getRetrySettingsOrBuilder() {
       return getRetrySettings();
     }
@@ -21487,7 +22549,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
+     * @return Whether the deadLetterQueue field is set.
      */
+    @java.lang.Override
     public boolean hasDeadLetterQueue() {
       return deadLetterQueue_ != null;
     }
@@ -21497,7 +22561,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
+     * @return The deadLetterQueue.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue() {
       return deadLetterQueue_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.getDefaultInstance() : deadLetterQueue_;
     }
@@ -21508,6 +22574,7 @@ public final class TriggerOuterClass {
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder getDeadLetterQueueOrBuilder() {
       return getDeadLetterQueue();
     }
@@ -21526,13 +22593,13 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getContainerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(containerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, containerId_);
       }
-      if (!getPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, path_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceAccountId_);
       }
       if (retrySettings_ != null) {
@@ -21550,13 +22617,13 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getContainerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(containerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, containerId_);
       }
-      if (!getPathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, path_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceAccountId_);
       }
       if (retrySettings_ != null) {
@@ -21582,25 +22649,24 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) obj;
 
-      boolean result = true;
-      result = result && getContainerId()
-          .equals(other.getContainerId());
-      result = result && getPath()
-          .equals(other.getPath());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && (hasRetrySettings() == other.hasRetrySettings());
+      if (!getContainerId()
+          .equals(other.getContainerId())) return false;
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasRetrySettings() != other.hasRetrySettings()) return false;
       if (hasRetrySettings()) {
-        result = result && getRetrySettings()
-            .equals(other.getRetrySettings());
+        if (!getRetrySettings()
+            .equals(other.getRetrySettings())) return false;
       }
-      result = result && (hasDeadLetterQueue() == other.hasDeadLetterQueue());
+      if (hasDeadLetterQueue() != other.hasDeadLetterQueue()) return false;
       if (hasDeadLetterQueue()) {
-        result = result && getDeadLetterQueue()
-            .equals(other.getDeadLetterQueue());
+        if (!getDeadLetterQueue()
+            .equals(other.getDeadLetterQueue())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21824,35 +22890,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21920,6 +22986,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The containerId.
        */
       public java.lang.String getContainerId() {
         java.lang.Object ref = containerId_;
@@ -21939,6 +23006,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for containerId.
        */
       public com.google.protobuf.ByteString
           getContainerIdBytes() {
@@ -21959,6 +23027,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The containerId to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerId(
           java.lang.String value) {
@@ -21976,6 +23046,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearContainerId() {
         
@@ -21989,6 +23060,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for containerId to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerIdBytes(
           com.google.protobuf.ByteString value) {
@@ -22009,6 +23082,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @return The path.
        */
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
@@ -22028,6 +23102,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @return The bytes for path.
        */
       public com.google.protobuf.ByteString
           getPathBytes() {
@@ -22048,6 +23123,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
        */
       public Builder setPath(
           java.lang.String value) {
@@ -22065,6 +23142,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPath() {
         
@@ -22078,6 +23156,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string path = 3;</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
        */
       public Builder setPathBytes(
           com.google.protobuf.ByteString value) {
@@ -22098,6 +23178,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -22117,6 +23198,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -22137,6 +23219,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -22154,6 +23238,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -22167,6 +23252,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -22180,7 +23267,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_ = null;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder> retrySettingsBuilder_;
       /**
@@ -22189,6 +23276,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
+       * @return Whether the retrySettings field is set.
        */
       public boolean hasRetrySettings() {
         return retrySettingsBuilder_ != null || retrySettings_ != null;
@@ -22199,6 +23287,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 5;</code>
+       * @return The retrySettings.
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings() {
         if (retrySettingsBuilder_ == null) {
@@ -22333,7 +23422,7 @@ public final class TriggerOuterClass {
         return retrySettingsBuilder_;
       }
 
-      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_ = null;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder> deadLetterQueueBuilder_;
       /**
@@ -22342,6 +23431,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
+       * @return Whether the deadLetterQueue field is set.
        */
       public boolean hasDeadLetterQueue() {
         return deadLetterQueueBuilder_ != null || deadLetterQueue_ != null;
@@ -22352,6 +23442,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 6;</code>
+       * @return The deadLetterQueue.
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue() {
         if (deadLetterQueueBuilder_ == null) {
@@ -22488,7 +23579,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22548,6 +23639,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string queue_id = 11;</code>
+     * @return The queueId.
      */
     java.lang.String getQueueId();
     /**
@@ -22556,6 +23648,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string queue_id = 11;</code>
+     * @return The bytes for queueId.
      */
     com.google.protobuf.ByteString
         getQueueIdBytes();
@@ -22566,6 +23659,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -22574,6 +23668,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -22581,7 +23676,7 @@ public final class TriggerOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.PutQueueMessage}
    */
-  public  static final class PutQueueMessage extends
+  public static final class PutQueueMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.PutQueueMessage)
       PutQueueMessageOrBuilder {
@@ -22593,6 +23688,13 @@ public final class TriggerOuterClass {
     private PutQueueMessage() {
       queueId_ = "";
       serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PutQueueMessage();
     }
 
     @java.lang.Override
@@ -22608,7 +23710,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -22632,7 +23733,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22671,7 +23772,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string queue_id = 11;</code>
+     * @return The queueId.
      */
+    @java.lang.Override
     public java.lang.String getQueueId() {
       java.lang.Object ref = queueId_;
       if (ref instanceof java.lang.String) {
@@ -22690,7 +23793,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string queue_id = 11;</code>
+     * @return The bytes for queueId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getQueueIdBytes() {
       java.lang.Object ref = queueId_;
@@ -22713,7 +23818,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -22732,7 +23839,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -22761,10 +23870,10 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceAccountId_);
       }
-      if (!getQueueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, queueId_);
       }
       unknownFields.writeTo(output);
@@ -22776,10 +23885,10 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceAccountId_);
       }
-      if (!getQueueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, queueId_);
       }
       size += unknownFields.getSerializedSize();
@@ -22797,13 +23906,12 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage) obj;
 
-      boolean result = true;
-      result = result && getQueueId()
-          .equals(other.getQueueId());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getQueueId()
+          .equals(other.getQueueId())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22988,35 +24096,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23074,6 +24182,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11;</code>
+       * @return The queueId.
        */
       public java.lang.String getQueueId() {
         java.lang.Object ref = queueId_;
@@ -23093,6 +24202,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11;</code>
+       * @return The bytes for queueId.
        */
       public com.google.protobuf.ByteString
           getQueueIdBytes() {
@@ -23113,6 +24223,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11;</code>
+       * @param value The queueId to set.
+       * @return This builder for chaining.
        */
       public Builder setQueueId(
           java.lang.String value) {
@@ -23130,6 +24242,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQueueId() {
         
@@ -23143,6 +24256,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string queue_id = 11;</code>
+       * @param value The bytes for queueId to set.
+       * @return This builder for chaining.
        */
       public Builder setQueueIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23163,6 +24278,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -23182,6 +24298,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -23202,6 +24319,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -23219,6 +24338,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -23232,6 +24352,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23247,7 +24369,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -23308,6 +24430,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+     * @return The size.
      */
     long getSize();
 
@@ -23318,6 +24441,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the cutoff field is set.
      */
     boolean hasCutoff();
     /**
@@ -23327,6 +24451,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The cutoff.
      */
     com.google.protobuf.Duration getCutoff();
     /**
@@ -23346,7 +24471,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.BatchSettings}
    */
-  public  static final class BatchSettings extends
+  public static final class BatchSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.BatchSettings)
       BatchSettingsOrBuilder {
@@ -23356,7 +24481,13 @@ public final class TriggerOuterClass {
       super(builder);
     }
     private BatchSettings() {
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchSettings();
     }
 
     @java.lang.Override
@@ -23372,7 +24503,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -23402,7 +24532,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -23442,7 +24572,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -23456,7 +24588,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the cutoff field is set.
      */
+    @java.lang.Override
     public boolean hasCutoff() {
       return cutoff_ != null;
     }
@@ -23467,7 +24601,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The cutoff.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getCutoff() {
       return cutoff_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
     }
@@ -23479,6 +24615,7 @@ public final class TriggerOuterClass {
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getCutoffOrBuilder() {
       return getCutoff();
     }
@@ -23535,16 +24672,15 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings) obj;
 
-      boolean result = true;
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (hasCutoff() == other.hasCutoff());
+      if (getSize()
+          != other.getSize()) return false;
+      if (hasCutoff() != other.hasCutoff()) return false;
       if (hasCutoff()) {
-        result = result && getCutoff()
-            .equals(other.getCutoff());
+        if (!getCutoff()
+            .equals(other.getCutoff())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23744,35 +24880,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23829,7 +24965,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -23840,6 +24978,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -23854,6 +24994,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -23862,7 +25003,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration cutoff_ = null;
+      private com.google.protobuf.Duration cutoff_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
@@ -23872,6 +25013,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the cutoff field is set.
        */
       public boolean hasCutoff() {
         return cutoffBuilder_ != null || cutoff_ != null;
@@ -23883,6 +25025,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The cutoff.
        */
       public com.google.protobuf.Duration getCutoff() {
         if (cutoffBuilder_ == null) {
@@ -24026,7 +25169,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24087,6 +25230,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The size.
      */
     long getSize();
 
@@ -24097,6 +25241,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return Whether the cutoff field is set.
      */
     boolean hasCutoff();
     /**
@@ -24106,6 +25251,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return The cutoff.
      */
     com.google.protobuf.Duration getCutoff();
     /**
@@ -24121,7 +25267,7 @@ public final class TriggerOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings}
    */
-  public  static final class CloudLogsBatchSettings extends
+  public static final class CloudLogsBatchSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.CloudLogsBatchSettings)
       CloudLogsBatchSettingsOrBuilder {
@@ -24131,7 +25277,13 @@ public final class TriggerOuterClass {
       super(builder);
     }
     private CloudLogsBatchSettings() {
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CloudLogsBatchSettings();
     }
 
     @java.lang.Override
@@ -24147,7 +25299,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -24177,7 +25328,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24217,7 +25368,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -24231,7 +25384,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return Whether the cutoff field is set.
      */
+    @java.lang.Override
     public boolean hasCutoff() {
       return cutoff_ != null;
     }
@@ -24242,7 +25397,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return The cutoff.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getCutoff() {
       return cutoff_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
     }
@@ -24254,6 +25411,7 @@ public final class TriggerOuterClass {
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getCutoffOrBuilder() {
       return getCutoff();
     }
@@ -24310,16 +25468,15 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.CloudLogsBatchSettings) obj;
 
-      boolean result = true;
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (hasCutoff() == other.hasCutoff());
+      if (getSize()
+          != other.getSize()) return false;
+      if (hasCutoff() != other.hasCutoff()) return false;
       if (hasCutoff()) {
-        result = result && getCutoff()
-            .equals(other.getCutoff());
+        if (!getCutoff()
+            .equals(other.getCutoff())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -24515,35 +25672,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24600,7 +25757,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -24611,6 +25770,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -24625,6 +25786,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -24633,7 +25795,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration cutoff_ = null;
+      private com.google.protobuf.Duration cutoff_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
@@ -24643,6 +25805,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       * @return Whether the cutoff field is set.
        */
       public boolean hasCutoff() {
         return cutoffBuilder_ != null || cutoff_ != null;
@@ -24654,6 +25817,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       * @return The cutoff.
        */
       public com.google.protobuf.Duration getCutoff() {
         if (cutoffBuilder_ == null) {
@@ -24797,7 +25961,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24858,6 +26022,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+     * @return The size.
      */
     long getSize();
 
@@ -24868,6 +26033,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return Whether the cutoff field is set.
      */
     boolean hasCutoff();
     /**
@@ -24877,6 +26043,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return The cutoff.
      */
     com.google.protobuf.Duration getCutoff();
     /**
@@ -24892,7 +26059,7 @@ public final class TriggerOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.LoggingBatchSettings}
    */
-  public  static final class LoggingBatchSettings extends
+  public static final class LoggingBatchSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.LoggingBatchSettings)
       LoggingBatchSettingsOrBuilder {
@@ -24902,7 +26069,13 @@ public final class TriggerOuterClass {
       super(builder);
     }
     private LoggingBatchSettings() {
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LoggingBatchSettings();
     }
 
     @java.lang.Override
@@ -24918,7 +26091,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -24948,7 +26120,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24988,7 +26160,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -25002,7 +26176,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return Whether the cutoff field is set.
      */
+    @java.lang.Override
     public boolean hasCutoff() {
       return cutoff_ != null;
     }
@@ -25013,7 +26189,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return The cutoff.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getCutoff() {
       return cutoff_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
     }
@@ -25025,6 +26203,7 @@ public final class TriggerOuterClass {
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getCutoffOrBuilder() {
       return getCutoff();
     }
@@ -25081,16 +26260,15 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.LoggingBatchSettings) obj;
 
-      boolean result = true;
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (hasCutoff() == other.hasCutoff());
+      if (getSize()
+          != other.getSize()) return false;
+      if (hasCutoff() != other.hasCutoff()) return false;
       if (hasCutoff()) {
-        result = result && getCutoff()
-            .equals(other.getCutoff());
+        if (!getCutoff()
+            .equals(other.getCutoff())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25286,35 +26464,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25371,7 +26549,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -25382,6 +26562,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -25396,6 +26578,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -25404,7 +26587,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration cutoff_ = null;
+      private com.google.protobuf.Duration cutoff_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
@@ -25414,6 +26597,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       * @return Whether the cutoff field is set.
        */
       public boolean hasCutoff() {
         return cutoffBuilder_ != null || cutoff_ != null;
@@ -25425,6 +26609,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       * @return The cutoff.
        */
       public com.google.protobuf.Duration getCutoff() {
         if (cutoffBuilder_ == null) {
@@ -25568,7 +26753,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -25628,6 +26813,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
+     * @return The retryAttempts.
      */
     long getRetryAttempts();
 
@@ -25637,6 +26823,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the interval field is set.
      */
     boolean hasInterval();
     /**
@@ -25645,6 +26832,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The interval.
      */
     com.google.protobuf.Duration getInterval();
     /**
@@ -25663,7 +26851,7 @@ public final class TriggerOuterClass {
    *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.RetrySettings}
    */
-  public  static final class RetrySettings extends
+  public static final class RetrySettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.RetrySettings)
       RetrySettingsOrBuilder {
@@ -25673,7 +26861,13 @@ public final class TriggerOuterClass {
       super(builder);
     }
     private RetrySettings() {
-      retryAttempts_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RetrySettings();
     }
 
     @java.lang.Override
@@ -25689,7 +26883,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -25719,7 +26912,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -25758,7 +26951,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
+     * @return The retryAttempts.
      */
+    @java.lang.Override
     public long getRetryAttempts() {
       return retryAttempts_;
     }
@@ -25771,7 +26966,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the interval field is set.
      */
+    @java.lang.Override
     public boolean hasInterval() {
       return interval_ != null;
     }
@@ -25781,7 +26978,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The interval.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getInterval() {
       return interval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : interval_;
     }
@@ -25792,6 +26991,7 @@ public final class TriggerOuterClass {
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
       return getInterval();
     }
@@ -25848,16 +27048,15 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings) obj;
 
-      boolean result = true;
-      result = result && (getRetryAttempts()
-          == other.getRetryAttempts());
-      result = result && (hasInterval() == other.hasInterval());
+      if (getRetryAttempts()
+          != other.getRetryAttempts()) return false;
+      if (hasInterval() != other.hasInterval()) return false;
       if (hasInterval()) {
-        result = result && getInterval()
-            .equals(other.getInterval());
+        if (!getInterval()
+            .equals(other.getInterval())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26057,35 +27256,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26141,7 +27340,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
+       * @return The retryAttempts.
        */
+      @java.lang.Override
       public long getRetryAttempts() {
         return retryAttempts_;
       }
@@ -26151,6 +27352,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
+       * @param value The retryAttempts to set.
+       * @return This builder for chaining.
        */
       public Builder setRetryAttempts(long value) {
         
@@ -26164,6 +27367,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRetryAttempts() {
         
@@ -26172,7 +27376,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration interval_ = null;
+      private com.google.protobuf.Duration interval_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> intervalBuilder_;
       /**
@@ -26181,6 +27385,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the interval field is set.
        */
       public boolean hasInterval() {
         return intervalBuilder_ != null || interval_ != null;
@@ -26191,6 +27396,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The interval.
        */
       public com.google.protobuf.Duration getInterval() {
         if (intervalBuilder_ == null) {
@@ -26327,7 +27533,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26383,30 +27589,36 @@ public final class TriggerOuterClass {
 
     /**
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The billingAccountId.
      */
     java.lang.String getBillingAccountId();
     /**
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for billingAccountId.
      */
     com.google.protobuf.ByteString
         getBillingAccountIdBytes();
 
     /**
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The budgetId.
      */
     java.lang.String getBudgetId();
     /**
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for budgetId.
      */
     com.google.protobuf.ByteString
         getBudgetIdBytes();
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+     * @return Whether the invokeFunction field is set.
      */
     boolean hasInvokeFunction();
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+     * @return The invokeFunction.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
     /**
@@ -26416,10 +27628,12 @@ public final class TriggerOuterClass {
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+     * @return Whether the invokeContainer field is set.
      */
     boolean hasInvokeContainer();
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+     * @return The invokeContainer.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
     /**
@@ -26432,7 +27646,7 @@ public final class TriggerOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.BillingBudget}
    */
-  public  static final class BillingBudget extends
+  public static final class BillingBudget extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.BillingBudget)
       BillingBudgetOrBuilder {
@@ -26444,6 +27658,13 @@ public final class TriggerOuterClass {
     private BillingBudget() {
       billingAccountId_ = "";
       budgetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BillingBudget();
     }
 
     @java.lang.Override
@@ -26459,7 +27680,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -26511,7 +27731,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26545,7 +27765,8 @@ public final class TriggerOuterClass {
     private int actionCase_ = 0;
     private java.lang.Object action_;
     public enum ActionCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INVOKE_FUNCTION(101),
       INVOKE_CONTAINER(103),
       ACTION_NOT_SET(0);
@@ -26554,6 +27775,8 @@ public final class TriggerOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -26584,7 +27807,9 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object billingAccountId_;
     /**
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The billingAccountId.
      */
+    @java.lang.Override
     public java.lang.String getBillingAccountId() {
       java.lang.Object ref = billingAccountId_;
       if (ref instanceof java.lang.String) {
@@ -26599,7 +27824,9 @@ public final class TriggerOuterClass {
     }
     /**
      * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for billingAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBillingAccountIdBytes() {
       java.lang.Object ref = billingAccountId_;
@@ -26618,7 +27845,9 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object budgetId_;
     /**
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The budgetId.
      */
+    @java.lang.Override
     public java.lang.String getBudgetId() {
       java.lang.Object ref = budgetId_;
       if (ref instanceof java.lang.String) {
@@ -26633,7 +27862,9 @@ public final class TriggerOuterClass {
     }
     /**
      * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for budgetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBudgetIdBytes() {
       java.lang.Object ref = budgetId_;
@@ -26651,13 +27882,17 @@ public final class TriggerOuterClass {
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+     * @return Whether the invokeFunction field is set.
      */
+    @java.lang.Override
     public boolean hasInvokeFunction() {
       return actionCase_ == 101;
     }
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+     * @return The invokeFunction.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
       if (actionCase_ == 101) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -26667,6 +27902,7 @@ public final class TriggerOuterClass {
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
       if (actionCase_ == 101) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -26677,13 +27913,17 @@ public final class TriggerOuterClass {
     public static final int INVOKE_CONTAINER_FIELD_NUMBER = 103;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+     * @return Whether the invokeContainer field is set.
      */
+    @java.lang.Override
     public boolean hasInvokeContainer() {
       return actionCase_ == 103;
     }
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+     * @return The invokeContainer.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
       if (actionCase_ == 103) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -26693,6 +27933,7 @@ public final class TriggerOuterClass {
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
       if (actionCase_ == 103) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -26714,10 +27955,10 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBillingAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, billingAccountId_);
       }
-      if (!getBudgetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(budgetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, budgetId_);
       }
       if (actionCase_ == 101) {
@@ -26735,10 +27976,10 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBillingAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, billingAccountId_);
       }
-      if (!getBudgetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(budgetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, budgetId_);
       }
       if (actionCase_ == 101) {
@@ -26764,28 +28005,25 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget) obj;
 
-      boolean result = true;
-      result = result && getBillingAccountId()
-          .equals(other.getBillingAccountId());
-      result = result && getBudgetId()
-          .equals(other.getBudgetId());
-      result = result && getActionCase().equals(
-          other.getActionCase());
-      if (!result) return false;
+      if (!getBillingAccountId()
+          .equals(other.getBillingAccountId())) return false;
+      if (!getBudgetId()
+          .equals(other.getBudgetId())) return false;
+      if (!getActionCase().equals(other.getActionCase())) return false;
       switch (actionCase_) {
         case 101:
-          result = result && getInvokeFunction()
-              .equals(other.getInvokeFunction());
+          if (!getInvokeFunction()
+              .equals(other.getInvokeFunction())) return false;
           break;
         case 103:
-          result = result && getInvokeContainer()
-              .equals(other.getInvokeContainer());
+          if (!getInvokeContainer()
+              .equals(other.getInvokeContainer())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26999,35 +28237,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27109,6 +28347,7 @@ public final class TriggerOuterClass {
       private java.lang.Object billingAccountId_ = "";
       /**
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The billingAccountId.
        */
       public java.lang.String getBillingAccountId() {
         java.lang.Object ref = billingAccountId_;
@@ -27124,6 +28363,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for billingAccountId.
        */
       public com.google.protobuf.ByteString
           getBillingAccountIdBytes() {
@@ -27140,6 +28380,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The billingAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setBillingAccountId(
           java.lang.String value) {
@@ -27153,6 +28395,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBillingAccountId() {
         
@@ -27162,6 +28405,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string billing_account_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for billingAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setBillingAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27178,6 +28423,7 @@ public final class TriggerOuterClass {
       private java.lang.Object budgetId_ = "";
       /**
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The budgetId.
        */
       public java.lang.String getBudgetId() {
         java.lang.Object ref = budgetId_;
@@ -27193,6 +28439,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for budgetId.
        */
       public com.google.protobuf.ByteString
           getBudgetIdBytes() {
@@ -27209,6 +28456,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The budgetId to set.
+       * @return This builder for chaining.
        */
       public Builder setBudgetId(
           java.lang.String value) {
@@ -27222,6 +28471,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBudgetId() {
         
@@ -27231,6 +28481,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <code>string budget_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for budgetId to set.
+       * @return This builder for chaining.
        */
       public Builder setBudgetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27248,13 +28500,17 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (invokeFunctionBuilder_ == null) {
           if (actionCase_ == 101) {
@@ -27348,6 +28604,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if ((actionCase_ == 101) && (invokeFunctionBuilder_ != null)) {
           return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -27384,13 +28641,17 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> invokeContainerBuilder_;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 103;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (invokeContainerBuilder_ == null) {
           if (actionCase_ == 103) {
@@ -27484,6 +28745,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 103;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if ((actionCase_ == 103) && (invokeContainerBuilder_ != null)) {
           return invokeContainerBuilder_.getMessageOrBuilder();
@@ -27518,7 +28780,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27579,6 +28841,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+     * @return The size.
      */
     long getSize();
 
@@ -27589,6 +28852,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return Whether the cutoff field is set.
      */
     boolean hasCutoff();
     /**
@@ -27598,6 +28862,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return The cutoff.
      */
     com.google.protobuf.Duration getCutoff();
     /**
@@ -27613,7 +28878,7 @@ public final class TriggerOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings}
    */
-  public  static final class DataStreamBatchSettings extends
+  public static final class DataStreamBatchSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings)
       DataStreamBatchSettingsOrBuilder {
@@ -27623,7 +28888,13 @@ public final class TriggerOuterClass {
       super(builder);
     }
     private DataStreamBatchSettings() {
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataStreamBatchSettings();
     }
 
     @java.lang.Override
@@ -27639,7 +28910,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -27669,7 +28939,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -27709,7 +28979,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -27723,7 +28995,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return Whether the cutoff field is set.
      */
+    @java.lang.Override
     public boolean hasCutoff() {
       return cutoff_ != null;
     }
@@ -27734,7 +29008,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     * @return The cutoff.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getCutoff() {
       return cutoff_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
     }
@@ -27746,6 +29022,7 @@ public final class TriggerOuterClass {
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getCutoffOrBuilder() {
       return getCutoff();
     }
@@ -27802,16 +29079,15 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings) obj;
 
-      boolean result = true;
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (hasCutoff() == other.hasCutoff());
+      if (getSize()
+          != other.getSize()) return false;
+      if (hasCutoff() != other.hasCutoff()) return false;
       if (hasCutoff()) {
-        result = result && getCutoff()
-            .equals(other.getCutoff());
+        if (!getCutoff()
+            .equals(other.getCutoff())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -28007,35 +29283,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -28092,7 +29368,9 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -28103,6 +29381,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -28117,6 +29397,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -28125,7 +29406,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Duration cutoff_ = null;
+      private com.google.protobuf.Duration cutoff_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
@@ -28135,6 +29416,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       * @return Whether the cutoff field is set.
        */
       public boolean hasCutoff() {
         return cutoffBuilder_ != null || cutoff_ != null;
@@ -28146,6 +29428,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       * @return The cutoff.
        */
       public com.google.protobuf.Duration getCutoff() {
         if (cutoffBuilder_ == null) {
@@ -28289,7 +29572,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -28349,6 +29632,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string endpoint = 1;</code>
+     * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
@@ -28357,6 +29641,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string endpoint = 1;</code>
+     * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString
         getEndpointBytes();
@@ -28367,6 +29652,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The database.
      */
     java.lang.String getDatabase();
     /**
@@ -28375,6 +29661,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The bytes for database.
      */
     com.google.protobuf.ByteString
         getDatabaseBytes();
@@ -28385,6 +29672,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string stream = 3;</code>
+     * @return The stream.
      */
     java.lang.String getStream();
     /**
@@ -28393,6 +29681,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string stream = 3;</code>
+     * @return The bytes for stream.
      */
     com.google.protobuf.ByteString
         getStreamBytes();
@@ -28403,6 +29692,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -28411,6 +29701,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -28421,6 +29712,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     * @return Whether the batchSettings field is set.
      */
     boolean hasBatchSettings();
     /**
@@ -28429,6 +29721,7 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     * @return The batchSettings.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getBatchSettings();
     /**
@@ -28442,10 +29735,12 @@ public final class TriggerOuterClass {
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     * @return Whether the invokeFunction field is set.
      */
     boolean hasInvokeFunction();
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     * @return The invokeFunction.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
     /**
@@ -28455,10 +29750,12 @@ public final class TriggerOuterClass {
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     * @return Whether the invokeContainer field is set.
      */
     boolean hasInvokeContainer();
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     * @return The invokeContainer.
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
     /**
@@ -28471,7 +29768,7 @@ public final class TriggerOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.DataStream}
    */
-  public  static final class DataStream extends
+  public static final class DataStream extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.DataStream)
       DataStreamOrBuilder {
@@ -28488,6 +29785,13 @@ public final class TriggerOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataStream();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -28500,7 +29804,6 @@ public final class TriggerOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -28577,7 +29880,7 @@ public final class TriggerOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -28611,7 +29914,8 @@ public final class TriggerOuterClass {
     private int actionCase_ = 0;
     private java.lang.Object action_;
     public enum ActionCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INVOKE_FUNCTION(13),
       INVOKE_CONTAINER(15),
       ACTION_NOT_SET(0);
@@ -28620,6 +29924,8 @@ public final class TriggerOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -28654,7 +29960,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string endpoint = 1;</code>
+     * @return The endpoint.
      */
+    @java.lang.Override
     public java.lang.String getEndpoint() {
       java.lang.Object ref = endpoint_;
       if (ref instanceof java.lang.String) {
@@ -28673,7 +29981,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string endpoint = 1;</code>
+     * @return The bytes for endpoint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEndpointBytes() {
       java.lang.Object ref = endpoint_;
@@ -28696,7 +30006,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The database.
      */
+    @java.lang.Override
     public java.lang.String getDatabase() {
       java.lang.Object ref = database_;
       if (ref instanceof java.lang.String) {
@@ -28715,7 +30027,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The bytes for database.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseBytes() {
       java.lang.Object ref = database_;
@@ -28738,7 +30052,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string stream = 3;</code>
+     * @return The stream.
      */
+    @java.lang.Override
     public java.lang.String getStream() {
       java.lang.Object ref = stream_;
       if (ref instanceof java.lang.String) {
@@ -28757,7 +30073,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string stream = 3;</code>
+     * @return The bytes for stream.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStreamBytes() {
       java.lang.Object ref = stream_;
@@ -28780,7 +30098,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -28799,7 +30119,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 4;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -28822,7 +30144,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     * @return Whether the batchSettings field is set.
      */
+    @java.lang.Override
     public boolean hasBatchSettings() {
       return batchSettings_ != null;
     }
@@ -28832,7 +30156,9 @@ public final class TriggerOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     * @return The batchSettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getBatchSettings() {
       return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.getDefaultInstance() : batchSettings_;
     }
@@ -28843,6 +30169,7 @@ public final class TriggerOuterClass {
      *
      * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder getBatchSettingsOrBuilder() {
       return getBatchSettings();
     }
@@ -28850,13 +30177,17 @@ public final class TriggerOuterClass {
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 13;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     * @return Whether the invokeFunction field is set.
      */
+    @java.lang.Override
     public boolean hasInvokeFunction() {
       return actionCase_ == 13;
     }
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     * @return The invokeFunction.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
       if (actionCase_ == 13) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -28866,6 +30197,7 @@ public final class TriggerOuterClass {
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
       if (actionCase_ == 13) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
@@ -28876,13 +30208,17 @@ public final class TriggerOuterClass {
     public static final int INVOKE_CONTAINER_FIELD_NUMBER = 15;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     * @return Whether the invokeContainer field is set.
      */
+    @java.lang.Override
     public boolean hasInvokeContainer() {
       return actionCase_ == 15;
     }
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     * @return The invokeContainer.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
       if (actionCase_ == 15) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -28892,6 +30228,7 @@ public final class TriggerOuterClass {
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
       if (actionCase_ == 15) {
          return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
@@ -28913,16 +30250,16 @@ public final class TriggerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEndpointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, endpoint_);
       }
-      if (!getDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, database_);
       }
-      if (!getStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stream_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, stream_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceAccountId_);
       }
       if (batchSettings_ != null) {
@@ -28943,16 +30280,16 @@ public final class TriggerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEndpointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, endpoint_);
       }
-      if (!getDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, database_);
       }
-      if (!getStreamBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stream_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, stream_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceAccountId_);
       }
       if (batchSettings_ != null) {
@@ -28982,37 +30319,34 @@ public final class TriggerOuterClass {
       }
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) obj;
 
-      boolean result = true;
-      result = result && getEndpoint()
-          .equals(other.getEndpoint());
-      result = result && getDatabase()
-          .equals(other.getDatabase());
-      result = result && getStream()
-          .equals(other.getStream());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && (hasBatchSettings() == other.hasBatchSettings());
+      if (!getEndpoint()
+          .equals(other.getEndpoint())) return false;
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
+      if (!getStream()
+          .equals(other.getStream())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (hasBatchSettings() != other.hasBatchSettings()) return false;
       if (hasBatchSettings()) {
-        result = result && getBatchSettings()
-            .equals(other.getBatchSettings());
+        if (!getBatchSettings()
+            .equals(other.getBatchSettings())) return false;
       }
-      result = result && getActionCase().equals(
-          other.getActionCase());
-      if (!result) return false;
+      if (!getActionCase().equals(other.getActionCase())) return false;
       switch (actionCase_) {
         case 13:
-          result = result && getInvokeFunction()
-              .equals(other.getInvokeFunction());
+          if (!getInvokeFunction()
+              .equals(other.getInvokeFunction())) return false;
           break;
         case 15:
-          result = result && getInvokeContainer()
-              .equals(other.getInvokeContainer());
+          if (!getInvokeContainer()
+              .equals(other.getInvokeContainer())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29251,35 +30585,35 @@ public final class TriggerOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -29376,6 +30710,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string endpoint = 1;</code>
+       * @return The endpoint.
        */
       public java.lang.String getEndpoint() {
         java.lang.Object ref = endpoint_;
@@ -29395,6 +30730,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string endpoint = 1;</code>
+       * @return The bytes for endpoint.
        */
       public com.google.protobuf.ByteString
           getEndpointBytes() {
@@ -29415,6 +30751,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string endpoint = 1;</code>
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
        */
       public Builder setEndpoint(
           java.lang.String value) {
@@ -29432,6 +30770,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string endpoint = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndpoint() {
         
@@ -29445,6 +30784,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string endpoint = 1;</code>
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
        */
       public Builder setEndpointBytes(
           com.google.protobuf.ByteString value) {
@@ -29465,6 +30806,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return The database.
        */
       public java.lang.String getDatabase() {
         java.lang.Object ref = database_;
@@ -29484,6 +30826,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return The bytes for database.
        */
       public com.google.protobuf.ByteString
           getDatabaseBytes() {
@@ -29504,6 +30847,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabase(
           java.lang.String value) {
@@ -29521,6 +30866,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabase() {
         
@@ -29534,6 +30880,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseBytes(
           com.google.protobuf.ByteString value) {
@@ -29554,6 +30902,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string stream = 3;</code>
+       * @return The stream.
        */
       public java.lang.String getStream() {
         java.lang.Object ref = stream_;
@@ -29573,6 +30922,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string stream = 3;</code>
+       * @return The bytes for stream.
        */
       public com.google.protobuf.ByteString
           getStreamBytes() {
@@ -29593,6 +30943,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string stream = 3;</code>
+       * @param value The stream to set.
+       * @return This builder for chaining.
        */
       public Builder setStream(
           java.lang.String value) {
@@ -29610,6 +30962,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string stream = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStream() {
         
@@ -29623,6 +30976,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string stream = 3;</code>
+       * @param value The bytes for stream to set.
+       * @return This builder for chaining.
        */
       public Builder setStreamBytes(
           com.google.protobuf.ByteString value) {
@@ -29643,6 +30998,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -29662,6 +31018,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -29682,6 +31039,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -29699,6 +31058,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -29712,6 +31072,8 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 4;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29725,7 +31087,7 @@ public final class TriggerOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings batchSettings_ = null;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings batchSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder> batchSettingsBuilder_;
       /**
@@ -29734,6 +31096,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       * @return Whether the batchSettings field is set.
        */
       public boolean hasBatchSettings() {
         return batchSettingsBuilder_ != null || batchSettings_ != null;
@@ -29744,6 +31107,7 @@ public final class TriggerOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       * @return The batchSettings.
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getBatchSettings() {
         if (batchSettingsBuilder_ == null) {
@@ -29882,13 +31246,17 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       * @return Whether the invokeFunction field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeFunction() {
         return actionCase_ == 13;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       * @return The invokeFunction.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
         if (invokeFunctionBuilder_ == null) {
           if (actionCase_ == 13) {
@@ -29982,6 +31350,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
         if ((actionCase_ == 13) && (invokeFunctionBuilder_ != null)) {
           return invokeFunctionBuilder_.getMessageOrBuilder();
@@ -30018,13 +31387,17 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> invokeContainerBuilder_;
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       * @return Whether the invokeContainer field is set.
        */
+      @java.lang.Override
       public boolean hasInvokeContainer() {
         return actionCase_ == 15;
       }
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       * @return The invokeContainer.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
         if (invokeContainerBuilder_ == null) {
           if (actionCase_ == 15) {
@@ -30118,6 +31491,7 @@ public final class TriggerOuterClass {
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
         if ((actionCase_ == 15) && (invokeContainerBuilder_ != null)) {
           return invokeContainerBuilder_.getMessageOrBuilder();
@@ -30152,7 +31526,7 @@ public final class TriggerOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -30494,22 +31868,14 @@ public final class TriggerOuterClass {
       "ex-cloud/go-genproto/yandex/cloud/server" +
       "less/triggers/v1;triggersb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_fieldAccessorTable = new

@@ -1,19 +1,6 @@
 package yandex.cloud.api.logging.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/logging/v1/log_group_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class LogGroupServiceGrpc {
 
   private LogGroupServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class LogGroupServiceGrpc {
     if ((getGetMethod = LogGroupServiceGrpc.getGetMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getGetMethod = LogGroupServiceGrpc.getGetMethod) == null) {
-          LogGroupServiceGrpc.getGetMethod = getGetMethod = 
+          LogGroupServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest,
@@ -76,22 +63,21 @@ public final class LogGroupServiceGrpc {
     if ((getStatsMethod = LogGroupServiceGrpc.getStatsMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getStatsMethod = LogGroupServiceGrpc.getStatsMethod) == null) {
-          LogGroupServiceGrpc.getStatsMethod = getStatsMethod = 
+          LogGroupServiceGrpc.getStatsMethod = getStatsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "Stats"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stats"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Stats"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Stats"))
+              .build();
         }
-     }
-     return getStatsMethod;
+      }
+    }
+    return getStatsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest,
@@ -108,22 +94,21 @@ public final class LogGroupServiceGrpc {
     if ((getListMethod = LogGroupServiceGrpc.getListMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getListMethod = LogGroupServiceGrpc.getListMethod) == null) {
-          LogGroupServiceGrpc.getListMethod = getListMethod = 
+          LogGroupServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest,
@@ -140,22 +125,21 @@ public final class LogGroupServiceGrpc {
     if ((getCreateMethod = LogGroupServiceGrpc.getCreateMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getCreateMethod = LogGroupServiceGrpc.getCreateMethod) == null) {
-          LogGroupServiceGrpc.getCreateMethod = getCreateMethod = 
+          LogGroupServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest,
@@ -172,22 +156,21 @@ public final class LogGroupServiceGrpc {
     if ((getUpdateMethod = LogGroupServiceGrpc.getUpdateMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getUpdateMethod = LogGroupServiceGrpc.getUpdateMethod) == null) {
-          LogGroupServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          LogGroupServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest,
@@ -204,22 +187,21 @@ public final class LogGroupServiceGrpc {
     if ((getDeleteMethod = LogGroupServiceGrpc.getDeleteMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getDeleteMethod = LogGroupServiceGrpc.getDeleteMethod) == null) {
-          LogGroupServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          LogGroupServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest,
@@ -236,22 +218,21 @@ public final class LogGroupServiceGrpc {
     if ((getListResourcesMethod = LogGroupServiceGrpc.getListResourcesMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getListResourcesMethod = LogGroupServiceGrpc.getListResourcesMethod) == null) {
-          LogGroupServiceGrpc.getListResourcesMethod = getListResourcesMethod = 
+          LogGroupServiceGrpc.getListResourcesMethod = getListResourcesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "ListResources"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListResources"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("ListResources"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("ListResources"))
+              .build();
         }
-     }
-     return getListResourcesMethod;
+      }
+    }
+    return getListResourcesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest,
@@ -268,22 +249,21 @@ public final class LogGroupServiceGrpc {
     if ((getListOperationsMethod = LogGroupServiceGrpc.getListOperationsMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getListOperationsMethod = LogGroupServiceGrpc.getListOperationsMethod) == null) {
-          LogGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          LogGroupServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
@@ -300,22 +280,21 @@ public final class LogGroupServiceGrpc {
     if ((getListAccessBindingsMethod = LogGroupServiceGrpc.getListAccessBindingsMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getListAccessBindingsMethod = LogGroupServiceGrpc.getListAccessBindingsMethod) == null) {
-          LogGroupServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+          LogGroupServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "ListAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("ListAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
         }
-     }
-     return getListAccessBindingsMethod;
+      }
+    }
+    return getListAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
@@ -332,22 +311,21 @@ public final class LogGroupServiceGrpc {
     if ((getSetAccessBindingsMethod = LogGroupServiceGrpc.getSetAccessBindingsMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getSetAccessBindingsMethod = LogGroupServiceGrpc.getSetAccessBindingsMethod) == null) {
-          LogGroupServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+          LogGroupServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "SetAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("SetAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
         }
-     }
-     return getSetAccessBindingsMethod;
+      }
+    }
+    return getSetAccessBindingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
@@ -364,29 +342,35 @@ public final class LogGroupServiceGrpc {
     if ((getUpdateAccessBindingsMethod = LogGroupServiceGrpc.getUpdateAccessBindingsMethod) == null) {
       synchronized (LogGroupServiceGrpc.class) {
         if ((getUpdateAccessBindingsMethod = LogGroupServiceGrpc.getUpdateAccessBindingsMethod) == null) {
-          LogGroupServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+          LogGroupServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "UpdateAccessBindings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("UpdateAccessBindings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
         }
-     }
-     return getUpdateAccessBindingsMethod;
+      }
+    }
+    return getUpdateAccessBindingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LogGroupServiceStub newStub(io.grpc.Channel channel) {
-    return new LogGroupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogGroupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogGroupServiceStub>() {
+        @java.lang.Override
+        public LogGroupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogGroupServiceStub(channel, callOptions);
+        }
+      };
+    return LogGroupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -394,7 +378,14 @@ public final class LogGroupServiceGrpc {
    */
   public static LogGroupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LogGroupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogGroupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogGroupServiceBlockingStub>() {
+        @java.lang.Override
+        public LogGroupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogGroupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LogGroupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -402,7 +393,14 @@ public final class LogGroupServiceGrpc {
    */
   public static LogGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LogGroupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LogGroupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LogGroupServiceFutureStub>() {
+        @java.lang.Override
+        public LogGroupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LogGroupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LogGroupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -420,7 +418,7 @@ public final class LogGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -430,7 +428,7 @@ public final class LogGroupServiceGrpc {
      */
     public void stats(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getStatsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStatsMethod(), responseObserver);
     }
 
     /**
@@ -440,7 +438,7 @@ public final class LogGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -450,7 +448,7 @@ public final class LogGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -460,7 +458,7 @@ public final class LogGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -470,7 +468,7 @@ public final class LogGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -480,7 +478,7 @@ public final class LogGroupServiceGrpc {
      */
     public void listResources(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListResourcesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListResourcesMethod(), responseObserver);
     }
 
     /**
@@ -490,7 +488,7 @@ public final class LogGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -500,7 +498,7 @@ public final class LogGroupServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -510,7 +508,7 @@ public final class LogGroupServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
     }
 
     /**
@@ -520,84 +518,84 @@ public final class LogGroupServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest,
                 yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>(
                   this, METHODID_GET)))
           .addMethod(
             getStatsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest,
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse>(
                   this, METHODID_STATS)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest,
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListResourcesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest,
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse>(
                   this, METHODID_LIST_RESOURCES)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest,
                 yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
             getSetAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.SetAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_SET_ACCESS_BINDINGS)))
           .addMethod(
             getUpdateAccessBindingsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -611,19 +609,15 @@ public final class LogGroupServiceGrpc {
    * A set of methods for managing log groups.
    * </pre>
    */
-  public static final class LogGroupServiceStub extends io.grpc.stub.AbstractStub<LogGroupServiceStub> {
-    private LogGroupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogGroupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<LogGroupServiceStub> {
+    private LogGroupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogGroupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogGroupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogGroupServiceStub(channel, callOptions);
     }
 
@@ -635,7 +629,7 @@ public final class LogGroupServiceGrpc {
      */
     public void get(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -646,7 +640,7 @@ public final class LogGroupServiceGrpc {
      */
     public void stats(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStatsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -657,7 +651,7 @@ public final class LogGroupServiceGrpc {
      */
     public void list(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -668,7 +662,7 @@ public final class LogGroupServiceGrpc {
      */
     public void create(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -679,7 +673,7 @@ public final class LogGroupServiceGrpc {
      */
     public void update(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -690,7 +684,7 @@ public final class LogGroupServiceGrpc {
      */
     public void delete(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -701,7 +695,7 @@ public final class LogGroupServiceGrpc {
      */
     public void listResources(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListResourcesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -712,7 +706,7 @@ public final class LogGroupServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -723,7 +717,7 @@ public final class LogGroupServiceGrpc {
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -734,7 +728,7 @@ public final class LogGroupServiceGrpc {
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -745,7 +739,7 @@ public final class LogGroupServiceGrpc {
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -755,19 +749,15 @@ public final class LogGroupServiceGrpc {
    * A set of methods for managing log groups.
    * </pre>
    */
-  public static final class LogGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<LogGroupServiceBlockingStub> {
-    private LogGroupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogGroupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LogGroupServiceBlockingStub> {
+    private LogGroupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogGroupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogGroupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogGroupServiceBlockingStub(channel, callOptions);
     }
 
@@ -778,7 +768,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup get(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -788,7 +778,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse stats(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStatsMethod(), getCallOptions(), request);
     }
 
@@ -798,7 +788,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse list(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -808,7 +798,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -818,7 +808,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -828,7 +818,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -838,7 +828,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse listResources(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListResourcesMethod(), getCallOptions(), request);
     }
 
@@ -848,7 +838,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse listOperations(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -858,7 +848,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -868,7 +858,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
     }
 
@@ -878,7 +868,7 @@ public final class LogGroupServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
@@ -888,19 +878,15 @@ public final class LogGroupServiceGrpc {
    * A set of methods for managing log groups.
    * </pre>
    */
-  public static final class LogGroupServiceFutureStub extends io.grpc.stub.AbstractStub<LogGroupServiceFutureStub> {
-    private LogGroupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LogGroupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LogGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LogGroupServiceFutureStub> {
+    private LogGroupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LogGroupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LogGroupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LogGroupServiceFutureStub(channel, callOptions);
     }
 
@@ -912,7 +898,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> get(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -923,7 +909,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> stats(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStatsMethod(), getCallOptions()), request);
     }
 
@@ -934,7 +920,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse> list(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -945,7 +931,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -956,7 +942,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -967,7 +953,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -978,7 +964,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse> listResources(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListResourcesMethod(), getCallOptions()), request);
     }
 
@@ -989,7 +975,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse> listOperations(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -1000,7 +986,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1011,7 +997,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
     }
 
@@ -1022,7 +1008,7 @@ public final class LogGroupServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/filesystem_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FilesystemServiceGrpc {
 
   private FilesystemServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class FilesystemServiceGrpc {
     if ((getGetMethod = FilesystemServiceGrpc.getGetMethod) == null) {
       synchronized (FilesystemServiceGrpc.class) {
         if ((getGetMethod = FilesystemServiceGrpc.getGetMethod) == null) {
-          FilesystemServiceGrpc.getGetMethod = getGetMethod = 
+          FilesystemServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest, yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.FilesystemService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem.getDefaultInstance()))
-                  .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest,
@@ -76,22 +63,21 @@ public final class FilesystemServiceGrpc {
     if ((getListMethod = FilesystemServiceGrpc.getListMethod) == null) {
       synchronized (FilesystemServiceGrpc.class) {
         if ((getListMethod = FilesystemServiceGrpc.getListMethod) == null) {
-          FilesystemServiceGrpc.getListMethod = getListMethod = 
+          FilesystemServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest, yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.FilesystemService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest,
@@ -108,22 +94,21 @@ public final class FilesystemServiceGrpc {
     if ((getCreateMethod = FilesystemServiceGrpc.getCreateMethod) == null) {
       synchronized (FilesystemServiceGrpc.class) {
         if ((getCreateMethod = FilesystemServiceGrpc.getCreateMethod) == null) {
-          FilesystemServiceGrpc.getCreateMethod = getCreateMethod = 
+          FilesystemServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.FilesystemService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest,
@@ -140,22 +125,21 @@ public final class FilesystemServiceGrpc {
     if ((getUpdateMethod = FilesystemServiceGrpc.getUpdateMethod) == null) {
       synchronized (FilesystemServiceGrpc.class) {
         if ((getUpdateMethod = FilesystemServiceGrpc.getUpdateMethod) == null) {
-          FilesystemServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          FilesystemServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.FilesystemService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest,
@@ -172,22 +156,21 @@ public final class FilesystemServiceGrpc {
     if ((getDeleteMethod = FilesystemServiceGrpc.getDeleteMethod) == null) {
       synchronized (FilesystemServiceGrpc.class) {
         if ((getDeleteMethod = FilesystemServiceGrpc.getDeleteMethod) == null) {
-          FilesystemServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          FilesystemServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.FilesystemService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest,
@@ -204,29 +187,35 @@ public final class FilesystemServiceGrpc {
     if ((getListOperationsMethod = FilesystemServiceGrpc.getListOperationsMethod) == null) {
       synchronized (FilesystemServiceGrpc.class) {
         if ((getListOperationsMethod = FilesystemServiceGrpc.getListOperationsMethod) == null) {
-          FilesystemServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          FilesystemServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest, yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.FilesystemService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FilesystemServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FilesystemServiceStub newStub(io.grpc.Channel channel) {
-    return new FilesystemServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FilesystemServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FilesystemServiceStub>() {
+        @java.lang.Override
+        public FilesystemServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FilesystemServiceStub(channel, callOptions);
+        }
+      };
+    return FilesystemServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -234,7 +223,14 @@ public final class FilesystemServiceGrpc {
    */
   public static FilesystemServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FilesystemServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FilesystemServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FilesystemServiceBlockingStub>() {
+        @java.lang.Override
+        public FilesystemServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FilesystemServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FilesystemServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -242,7 +238,14 @@ public final class FilesystemServiceGrpc {
    */
   public static FilesystemServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FilesystemServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FilesystemServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FilesystemServiceFutureStub>() {
+        @java.lang.Override
+        public FilesystemServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FilesystemServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FilesystemServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -260,7 +263,7 @@ public final class FilesystemServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +273,7 @@ public final class FilesystemServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +283,7 @@ public final class FilesystemServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +293,7 @@ public final class FilesystemServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +305,7 @@ public final class FilesystemServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -312,49 +315,49 @@ public final class FilesystemServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest,
                 yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest,
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest,
                 yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse>(
@@ -368,19 +371,15 @@ public final class FilesystemServiceGrpc {
    * A set of methods for managing filesystems.
    * </pre>
    */
-  public static final class FilesystemServiceStub extends io.grpc.stub.AbstractStub<FilesystemServiceStub> {
-    private FilesystemServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FilesystemServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FilesystemServiceStub extends io.grpc.stub.AbstractAsyncStub<FilesystemServiceStub> {
+    private FilesystemServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FilesystemServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FilesystemServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FilesystemServiceStub(channel, callOptions);
     }
 
@@ -392,7 +391,7 @@ public final class FilesystemServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -403,7 +402,7 @@ public final class FilesystemServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -414,7 +413,7 @@ public final class FilesystemServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -425,7 +424,7 @@ public final class FilesystemServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -438,7 +437,7 @@ public final class FilesystemServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -449,7 +448,7 @@ public final class FilesystemServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -459,19 +458,15 @@ public final class FilesystemServiceGrpc {
    * A set of methods for managing filesystems.
    * </pre>
    */
-  public static final class FilesystemServiceBlockingStub extends io.grpc.stub.AbstractStub<FilesystemServiceBlockingStub> {
-    private FilesystemServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FilesystemServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FilesystemServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FilesystemServiceBlockingStub> {
+    private FilesystemServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FilesystemServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FilesystemServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FilesystemServiceBlockingStub(channel, callOptions);
     }
 
@@ -482,7 +477,7 @@ public final class FilesystemServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem get(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -492,7 +487,7 @@ public final class FilesystemServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse list(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -502,7 +497,7 @@ public final class FilesystemServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -512,7 +507,7 @@ public final class FilesystemServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -524,7 +519,7 @@ public final class FilesystemServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -534,7 +529,7 @@ public final class FilesystemServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse listOperations(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -544,19 +539,15 @@ public final class FilesystemServiceGrpc {
    * A set of methods for managing filesystems.
    * </pre>
    */
-  public static final class FilesystemServiceFutureStub extends io.grpc.stub.AbstractStub<FilesystemServiceFutureStub> {
-    private FilesystemServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FilesystemServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FilesystemServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FilesystemServiceFutureStub> {
+    private FilesystemServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FilesystemServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FilesystemServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FilesystemServiceFutureStub(channel, callOptions);
     }
 
@@ -568,7 +559,7 @@ public final class FilesystemServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> get(
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -579,7 +570,7 @@ public final class FilesystemServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse> list(
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -590,7 +581,7 @@ public final class FilesystemServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -601,7 +592,7 @@ public final class FilesystemServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -614,7 +605,7 @@ public final class FilesystemServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -625,7 +616,7 @@ public final class FilesystemServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse> listOperations(
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

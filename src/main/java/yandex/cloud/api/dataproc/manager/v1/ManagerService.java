@@ -20,33 +20,38 @@ public final class ManagerService {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>int64 requests = 2;</code>
+     * @return The requests.
      */
     long getRequests();
 
     /**
      * <code>int64 heap_size_mb = 3;</code>
+     * @return The heapSizeMb.
      */
     long getHeapSizeMb();
 
     /**
      * <code>int64 max_heap_size_mb = 4;</code>
+     * @return The maxHeapSizeMb.
      */
     long getMaxHeapSizeMb();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.HbaseNodeInfo}
    */
-  public  static final class HbaseNodeInfo extends
+  public static final class HbaseNodeInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.HbaseNodeInfo)
       HbaseNodeInfoOrBuilder {
@@ -57,9 +62,13 @@ public final class ManagerService {
     }
     private HbaseNodeInfo() {
       name_ = "";
-      requests_ = 0L;
-      heapSizeMb_ = 0L;
-      maxHeapSizeMb_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HbaseNodeInfo();
     }
 
     @java.lang.Override
@@ -75,7 +84,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -108,7 +116,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -143,7 +151,9 @@ public final class ManagerService {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -158,7 +168,9 @@ public final class ManagerService {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -177,7 +189,9 @@ public final class ManagerService {
     private long requests_;
     /**
      * <code>int64 requests = 2;</code>
+     * @return The requests.
      */
+    @java.lang.Override
     public long getRequests() {
       return requests_;
     }
@@ -186,7 +200,9 @@ public final class ManagerService {
     private long heapSizeMb_;
     /**
      * <code>int64 heap_size_mb = 3;</code>
+     * @return The heapSizeMb.
      */
+    @java.lang.Override
     public long getHeapSizeMb() {
       return heapSizeMb_;
     }
@@ -195,7 +211,9 @@ public final class ManagerService {
     private long maxHeapSizeMb_;
     /**
      * <code>int64 max_heap_size_mb = 4;</code>
+     * @return The maxHeapSizeMb.
      */
+    @java.lang.Override
     public long getMaxHeapSizeMb() {
       return maxHeapSizeMb_;
     }
@@ -214,7 +232,7 @@ public final class ManagerService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (requests_ != 0L) {
@@ -235,7 +253,7 @@ public final class ManagerService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (requests_ != 0L) {
@@ -265,17 +283,16 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getRequests()
-          == other.getRequests());
-      result = result && (getHeapSizeMb()
-          == other.getHeapSizeMb());
-      result = result && (getMaxHeapSizeMb()
-          == other.getMaxHeapSizeMb());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getRequests()
+          != other.getRequests()) return false;
+      if (getHeapSizeMb()
+          != other.getHeapSizeMb()) return false;
+      if (getMaxHeapSizeMb()
+          != other.getMaxHeapSizeMb()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -473,35 +490,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -560,6 +577,7 @@ public final class ManagerService {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -575,6 +593,7 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -591,6 +610,8 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -604,6 +625,7 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -613,6 +635,8 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -629,12 +653,16 @@ public final class ManagerService {
       private long requests_ ;
       /**
        * <code>int64 requests = 2;</code>
+       * @return The requests.
        */
+      @java.lang.Override
       public long getRequests() {
         return requests_;
       }
       /**
        * <code>int64 requests = 2;</code>
+       * @param value The requests to set.
+       * @return This builder for chaining.
        */
       public Builder setRequests(long value) {
         
@@ -644,6 +672,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 requests = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequests() {
         
@@ -655,12 +684,16 @@ public final class ManagerService {
       private long heapSizeMb_ ;
       /**
        * <code>int64 heap_size_mb = 3;</code>
+       * @return The heapSizeMb.
        */
+      @java.lang.Override
       public long getHeapSizeMb() {
         return heapSizeMb_;
       }
       /**
        * <code>int64 heap_size_mb = 3;</code>
+       * @param value The heapSizeMb to set.
+       * @return This builder for chaining.
        */
       public Builder setHeapSizeMb(long value) {
         
@@ -670,6 +703,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 heap_size_mb = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHeapSizeMb() {
         
@@ -681,12 +715,16 @@ public final class ManagerService {
       private long maxHeapSizeMb_ ;
       /**
        * <code>int64 max_heap_size_mb = 4;</code>
+       * @return The maxHeapSizeMb.
        */
+      @java.lang.Override
       public long getMaxHeapSizeMb() {
         return maxHeapSizeMb_;
       }
       /**
        * <code>int64 max_heap_size_mb = 4;</code>
+       * @param value The maxHeapSizeMb to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxHeapSizeMb(long value) {
         
@@ -696,6 +734,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 max_heap_size_mb = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxHeapSizeMb() {
         
@@ -706,7 +745,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -762,21 +801,25 @@ public final class ManagerService {
 
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
     boolean getAvailable();
 
     /**
      * <code>int64 regions = 2;</code>
+     * @return The regions.
      */
     long getRegions();
 
     /**
      * <code>int64 requests = 3;</code>
+     * @return The requests.
      */
     long getRequests();
 
     /**
      * <code>double average_load = 4;</code>
+     * @return The averageLoad.
      */
     double getAverageLoad();
 
@@ -831,7 +874,7 @@ public final class ManagerService {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.HbaseInfo}
    */
-  public  static final class HbaseInfo extends
+  public static final class HbaseInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.HbaseInfo)
       HbaseInfoOrBuilder {
@@ -841,12 +884,15 @@ public final class ManagerService {
       super(builder);
     }
     private HbaseInfo() {
-      available_ = false;
-      regions_ = 0L;
-      requests_ = 0L;
-      averageLoad_ = 0D;
       liveNodes_ = java.util.Collections.emptyList();
       deadNodes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HbaseInfo();
     }
 
     @java.lang.Override
@@ -894,25 +940,25 @@ public final class ManagerService {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 liveNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               liveNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo.parser(), extensionRegistry));
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 deadNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               deadNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -926,10 +972,10 @@ public final class ManagerService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           liveNodes_ = java.util.Collections.unmodifiableList(liveNodes_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           deadNodes_ = java.util.Collections.unmodifiableList(deadNodes_);
         }
         this.unknownFields = unknownFields.build();
@@ -949,12 +995,13 @@ public final class ManagerService {
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AVAILABLE_FIELD_NUMBER = 1;
     private boolean available_;
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
+    @java.lang.Override
     public boolean getAvailable() {
       return available_;
     }
@@ -963,7 +1010,9 @@ public final class ManagerService {
     private long regions_;
     /**
      * <code>int64 regions = 2;</code>
+     * @return The regions.
      */
+    @java.lang.Override
     public long getRegions() {
       return regions_;
     }
@@ -972,7 +1021,9 @@ public final class ManagerService {
     private long requests_;
     /**
      * <code>int64 requests = 3;</code>
+     * @return The requests.
      */
+    @java.lang.Override
     public long getRequests() {
       return requests_;
     }
@@ -981,7 +1032,9 @@ public final class ManagerService {
     private double averageLoad_;
     /**
      * <code>double average_load = 4;</code>
+     * @return The averageLoad.
      */
+    @java.lang.Override
     public double getAverageLoad() {
       return averageLoad_;
     }
@@ -991,12 +1044,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo live_nodes = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo> getLiveNodesList() {
       return liveNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo live_nodes = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfoOrBuilder> 
         getLiveNodesOrBuilderList() {
       return liveNodes_;
@@ -1004,18 +1059,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo live_nodes = 5;</code>
      */
+    @java.lang.Override
     public int getLiveNodesCount() {
       return liveNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo live_nodes = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo getLiveNodes(int index) {
       return liveNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo live_nodes = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfoOrBuilder getLiveNodesOrBuilder(
         int index) {
       return liveNodes_.get(index);
@@ -1026,12 +1084,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo dead_nodes = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo> getDeadNodesList() {
       return deadNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo dead_nodes = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfoOrBuilder> 
         getDeadNodesOrBuilderList() {
       return deadNodes_;
@@ -1039,18 +1099,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo dead_nodes = 6;</code>
      */
+    @java.lang.Override
     public int getDeadNodesCount() {
       return deadNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo dead_nodes = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo getDeadNodes(int index) {
       return deadNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HbaseNodeInfo dead_nodes = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfoOrBuilder getDeadNodesOrBuilder(
         int index) {
       return deadNodes_.get(index);
@@ -1079,7 +1142,7 @@ public final class ManagerService {
       if (requests_ != 0L) {
         output.writeInt64(3, requests_);
       }
-      if (averageLoad_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(averageLoad_) != 0) {
         output.writeDouble(4, averageLoad_);
       }
       for (int i = 0; i < liveNodes_.size(); i++) {
@@ -1109,7 +1172,7 @@ public final class ManagerService {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, requests_);
       }
-      if (averageLoad_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(averageLoad_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, averageLoad_);
       }
@@ -1136,23 +1199,21 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo) obj;
 
-      boolean result = true;
-      result = result && (getAvailable()
-          == other.getAvailable());
-      result = result && (getRegions()
-          == other.getRegions());
-      result = result && (getRequests()
-          == other.getRequests());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAverageLoad())
-          == java.lang.Double.doubleToLongBits(
-              other.getAverageLoad()));
-      result = result && getLiveNodesList()
-          .equals(other.getLiveNodesList());
-      result = result && getDeadNodesList()
-          .equals(other.getDeadNodesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAvailable()
+          != other.getAvailable()) return false;
+      if (getRegions()
+          != other.getRegions()) return false;
+      if (getRequests()
+          != other.getRequests()) return false;
+      if (java.lang.Double.doubleToLongBits(getAverageLoad())
+          != java.lang.Double.doubleToLongBits(
+              other.getAverageLoad())) return false;
+      if (!getLiveNodesList()
+          .equals(other.getLiveNodesList())) return false;
+      if (!getDeadNodesList()
+          .equals(other.getDeadNodesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1327,13 +1388,13 @@ public final class ManagerService {
 
         if (liveNodesBuilder_ == null) {
           liveNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           liveNodesBuilder_.clear();
         }
         if (deadNodesBuilder_ == null) {
           deadNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           deadNodesBuilder_.clear();
         }
@@ -1364,65 +1425,63 @@ public final class ManagerService {
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo buildPartial() {
         yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.available_ = available_;
         result.regions_ = regions_;
         result.requests_ = requests_;
         result.averageLoad_ = averageLoad_;
         if (liveNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             liveNodes_ = java.util.Collections.unmodifiableList(liveNodes_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.liveNodes_ = liveNodes_;
         } else {
           result.liveNodes_ = liveNodesBuilder_.build();
         }
         if (deadNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             deadNodes_ = java.util.Collections.unmodifiableList(deadNodes_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.deadNodes_ = deadNodes_;
         } else {
           result.deadNodes_ = deadNodesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1452,7 +1511,7 @@ public final class ManagerService {
           if (!other.liveNodes_.isEmpty()) {
             if (liveNodes_.isEmpty()) {
               liveNodes_ = other.liveNodes_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLiveNodesIsMutable();
               liveNodes_.addAll(other.liveNodes_);
@@ -1465,7 +1524,7 @@ public final class ManagerService {
               liveNodesBuilder_.dispose();
               liveNodesBuilder_ = null;
               liveNodes_ = other.liveNodes_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               liveNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLiveNodesFieldBuilder() : null;
@@ -1478,7 +1537,7 @@ public final class ManagerService {
           if (!other.deadNodes_.isEmpty()) {
             if (deadNodes_.isEmpty()) {
               deadNodes_ = other.deadNodes_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDeadNodesIsMutable();
               deadNodes_.addAll(other.deadNodes_);
@@ -1491,7 +1550,7 @@ public final class ManagerService {
               deadNodesBuilder_.dispose();
               deadNodesBuilder_ = null;
               deadNodes_ = other.deadNodes_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000002);
               deadNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDeadNodesFieldBuilder() : null;
@@ -1533,12 +1592,16 @@ public final class ManagerService {
       private boolean available_ ;
       /**
        * <code>bool available = 1;</code>
+       * @return The available.
        */
+      @java.lang.Override
       public boolean getAvailable() {
         return available_;
       }
       /**
        * <code>bool available = 1;</code>
+       * @param value The available to set.
+       * @return This builder for chaining.
        */
       public Builder setAvailable(boolean value) {
         
@@ -1548,6 +1611,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool available = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAvailable() {
         
@@ -1559,12 +1623,16 @@ public final class ManagerService {
       private long regions_ ;
       /**
        * <code>int64 regions = 2;</code>
+       * @return The regions.
        */
+      @java.lang.Override
       public long getRegions() {
         return regions_;
       }
       /**
        * <code>int64 regions = 2;</code>
+       * @param value The regions to set.
+       * @return This builder for chaining.
        */
       public Builder setRegions(long value) {
         
@@ -1574,6 +1642,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 regions = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegions() {
         
@@ -1585,12 +1654,16 @@ public final class ManagerService {
       private long requests_ ;
       /**
        * <code>int64 requests = 3;</code>
+       * @return The requests.
        */
+      @java.lang.Override
       public long getRequests() {
         return requests_;
       }
       /**
        * <code>int64 requests = 3;</code>
+       * @param value The requests to set.
+       * @return This builder for chaining.
        */
       public Builder setRequests(long value) {
         
@@ -1600,6 +1673,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 requests = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequests() {
         
@@ -1611,12 +1685,16 @@ public final class ManagerService {
       private double averageLoad_ ;
       /**
        * <code>double average_load = 4;</code>
+       * @return The averageLoad.
        */
+      @java.lang.Override
       public double getAverageLoad() {
         return averageLoad_;
       }
       /**
        * <code>double average_load = 4;</code>
+       * @param value The averageLoad to set.
+       * @return This builder for chaining.
        */
       public Builder setAverageLoad(double value) {
         
@@ -1626,6 +1704,7 @@ public final class ManagerService {
       }
       /**
        * <code>double average_load = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAverageLoad() {
         
@@ -1637,9 +1716,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo> liveNodes_ =
         java.util.Collections.emptyList();
       private void ensureLiveNodesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           liveNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo>(liveNodes_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1789,7 +1868,7 @@ public final class ManagerService {
       public Builder clearLiveNodes() {
         if (liveNodesBuilder_ == null) {
           liveNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           liveNodesBuilder_.clear();
@@ -1866,7 +1945,7 @@ public final class ManagerService {
           liveNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfoOrBuilder>(
                   liveNodes_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           liveNodes_ = null;
@@ -1877,9 +1956,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo> deadNodes_ =
         java.util.Collections.emptyList();
       private void ensureDeadNodesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           deadNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo>(deadNodes_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2029,7 +2108,7 @@ public final class ManagerService {
       public Builder clearDeadNodes() {
         if (deadNodesBuilder_ == null) {
           deadNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           deadNodesBuilder_.clear();
@@ -2106,7 +2185,7 @@ public final class ManagerService {
           deadNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseNodeInfoOrBuilder>(
                   deadNodes_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           deadNodes_ = null;
@@ -2116,7 +2195,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2172,40 +2251,48 @@ public final class ManagerService {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>int64 used = 2;</code>
+     * @return The used.
      */
     long getUsed();
 
     /**
      * <code>int64 remaining = 3;</code>
+     * @return The remaining.
      */
     long getRemaining();
 
     /**
      * <code>int64 capacity = 4;</code>
+     * @return The capacity.
      */
     long getCapacity();
 
     /**
      * <code>int64 num_blocks = 5;</code>
+     * @return The numBlocks.
      */
     long getNumBlocks();
 
     /**
      * <code>string state = 6;</code>
+     * @return The state.
      */
     java.lang.String getState();
     /**
      * <code>string state = 6;</code>
+     * @return The bytes for state.
      */
     com.google.protobuf.ByteString
         getStateBytes();
@@ -2213,7 +2300,7 @@ public final class ManagerService {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.HDFSNodeInfo}
    */
-  public  static final class HDFSNodeInfo extends
+  public static final class HDFSNodeInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.HDFSNodeInfo)
       HDFSNodeInfoOrBuilder {
@@ -2224,11 +2311,14 @@ public final class ManagerService {
     }
     private HDFSNodeInfo() {
       name_ = "";
-      used_ = 0L;
-      remaining_ = 0L;
-      capacity_ = 0L;
-      numBlocks_ = 0L;
       state_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HDFSNodeInfo();
     }
 
     @java.lang.Override
@@ -2244,7 +2334,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2288,7 +2377,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2323,7 +2412,9 @@ public final class ManagerService {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2338,7 +2429,9 @@ public final class ManagerService {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2357,7 +2450,9 @@ public final class ManagerService {
     private long used_;
     /**
      * <code>int64 used = 2;</code>
+     * @return The used.
      */
+    @java.lang.Override
     public long getUsed() {
       return used_;
     }
@@ -2366,7 +2461,9 @@ public final class ManagerService {
     private long remaining_;
     /**
      * <code>int64 remaining = 3;</code>
+     * @return The remaining.
      */
+    @java.lang.Override
     public long getRemaining() {
       return remaining_;
     }
@@ -2375,7 +2472,9 @@ public final class ManagerService {
     private long capacity_;
     /**
      * <code>int64 capacity = 4;</code>
+     * @return The capacity.
      */
+    @java.lang.Override
     public long getCapacity() {
       return capacity_;
     }
@@ -2384,7 +2483,9 @@ public final class ManagerService {
     private long numBlocks_;
     /**
      * <code>int64 num_blocks = 5;</code>
+     * @return The numBlocks.
      */
+    @java.lang.Override
     public long getNumBlocks() {
       return numBlocks_;
     }
@@ -2393,7 +2494,9 @@ public final class ManagerService {
     private volatile java.lang.Object state_;
     /**
      * <code>string state = 6;</code>
+     * @return The state.
      */
+    @java.lang.Override
     public java.lang.String getState() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
@@ -2408,7 +2511,9 @@ public final class ManagerService {
     }
     /**
      * <code>string state = 6;</code>
+     * @return The bytes for state.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStateBytes() {
       java.lang.Object ref = state_;
@@ -2437,7 +2542,7 @@ public final class ManagerService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (used_ != 0L) {
@@ -2452,7 +2557,7 @@ public final class ManagerService {
       if (numBlocks_ != 0L) {
         output.writeInt64(5, numBlocks_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, state_);
       }
       unknownFields.writeTo(output);
@@ -2464,7 +2569,7 @@ public final class ManagerService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (used_ != 0L) {
@@ -2483,7 +2588,7 @@ public final class ManagerService {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, numBlocks_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, state_);
       }
       size += unknownFields.getSerializedSize();
@@ -2501,21 +2606,20 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getUsed()
-          == other.getUsed());
-      result = result && (getRemaining()
-          == other.getRemaining());
-      result = result && (getCapacity()
-          == other.getCapacity());
-      result = result && (getNumBlocks()
-          == other.getNumBlocks());
-      result = result && getState()
-          .equals(other.getState());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getUsed()
+          != other.getUsed()) return false;
+      if (getRemaining()
+          != other.getRemaining()) return false;
+      if (getCapacity()
+          != other.getCapacity()) return false;
+      if (getNumBlocks()
+          != other.getNumBlocks()) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2724,35 +2828,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2818,6 +2922,7 @@ public final class ManagerService {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2833,6 +2938,7 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2849,6 +2955,8 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2862,6 +2970,7 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2871,6 +2980,8 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2887,12 +2998,16 @@ public final class ManagerService {
       private long used_ ;
       /**
        * <code>int64 used = 2;</code>
+       * @return The used.
        */
+      @java.lang.Override
       public long getUsed() {
         return used_;
       }
       /**
        * <code>int64 used = 2;</code>
+       * @param value The used to set.
+       * @return This builder for chaining.
        */
       public Builder setUsed(long value) {
         
@@ -2902,6 +3017,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 used = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUsed() {
         
@@ -2913,12 +3029,16 @@ public final class ManagerService {
       private long remaining_ ;
       /**
        * <code>int64 remaining = 3;</code>
+       * @return The remaining.
        */
+      @java.lang.Override
       public long getRemaining() {
         return remaining_;
       }
       /**
        * <code>int64 remaining = 3;</code>
+       * @param value The remaining to set.
+       * @return This builder for chaining.
        */
       public Builder setRemaining(long value) {
         
@@ -2928,6 +3048,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 remaining = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRemaining() {
         
@@ -2939,12 +3060,16 @@ public final class ManagerService {
       private long capacity_ ;
       /**
        * <code>int64 capacity = 4;</code>
+       * @return The capacity.
        */
+      @java.lang.Override
       public long getCapacity() {
         return capacity_;
       }
       /**
        * <code>int64 capacity = 4;</code>
+       * @param value The capacity to set.
+       * @return This builder for chaining.
        */
       public Builder setCapacity(long value) {
         
@@ -2954,6 +3079,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 capacity = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCapacity() {
         
@@ -2965,12 +3091,16 @@ public final class ManagerService {
       private long numBlocks_ ;
       /**
        * <code>int64 num_blocks = 5;</code>
+       * @return The numBlocks.
        */
+      @java.lang.Override
       public long getNumBlocks() {
         return numBlocks_;
       }
       /**
        * <code>int64 num_blocks = 5;</code>
+       * @param value The numBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setNumBlocks(long value) {
         
@@ -2980,6 +3110,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 num_blocks = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNumBlocks() {
         
@@ -2991,6 +3122,7 @@ public final class ManagerService {
       private java.lang.Object state_ = "";
       /**
        * <code>string state = 6;</code>
+       * @return The state.
        */
       public java.lang.String getState() {
         java.lang.Object ref = state_;
@@ -3006,6 +3138,7 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 6;</code>
+       * @return The bytes for state.
        */
       public com.google.protobuf.ByteString
           getStateBytes() {
@@ -3022,6 +3155,8 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 6;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
        */
       public Builder setState(
           java.lang.String value) {
@@ -3035,6 +3170,7 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearState() {
         
@@ -3044,6 +3180,8 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 6;</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
        */
       public Builder setStateBytes(
           com.google.protobuf.ByteString value) {
@@ -3059,7 +3197,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3115,36 +3253,43 @@ public final class ManagerService {
 
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
     boolean getAvailable();
 
     /**
      * <code>double percent_remaining = 2;</code>
+     * @return The percentRemaining.
      */
     double getPercentRemaining();
 
     /**
      * <code>int64 used = 3;</code>
+     * @return The used.
      */
     long getUsed();
 
     /**
      * <code>int64 free = 4;</code>
+     * @return The free.
      */
     long getFree();
 
     /**
      * <code>int64 total_blocks = 5;</code>
+     * @return The totalBlocks.
      */
     long getTotalBlocks();
 
     /**
      * <code>int64 missing_blocks = 6;</code>
+     * @return The missingBlocks.
      */
     long getMissingBlocks();
 
     /**
      * <code>int64 missing_blocks_replica_one = 7;</code>
+     * @return The missingBlocksReplicaOne.
      */
     long getMissingBlocksReplicaOne();
 
@@ -3198,10 +3343,12 @@ public final class ManagerService {
 
     /**
      * <code>string safemode = 11;</code>
+     * @return The safemode.
      */
     java.lang.String getSafemode();
     /**
      * <code>string safemode = 11;</code>
+     * @return The bytes for safemode.
      */
     com.google.protobuf.ByteString
         getSafemodeBytes();
@@ -3260,6 +3407,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @return A list containing the requestedDecommissionHosts.
      */
     java.util.List<java.lang.String>
         getRequestedDecommissionHostsList();
@@ -3269,6 +3417,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @return The count of requestedDecommissionHosts.
      */
     int getRequestedDecommissionHostsCount();
     /**
@@ -3277,6 +3426,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @param index The index of the element to return.
+     * @return The requestedDecommissionHosts at the given index.
      */
     java.lang.String getRequestedDecommissionHosts(int index);
     /**
@@ -3285,6 +3436,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requestedDecommissionHosts at the given index.
      */
     com.google.protobuf.ByteString
         getRequestedDecommissionHostsBytes(int index);
@@ -3292,7 +3445,7 @@ public final class ManagerService {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.HDFSInfo}
    */
-  public  static final class HDFSInfo extends
+  public static final class HDFSInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.HDFSInfo)
       HDFSInfoOrBuilder {
@@ -3302,19 +3455,19 @@ public final class ManagerService {
       super(builder);
     }
     private HDFSInfo() {
-      available_ = false;
-      percentRemaining_ = 0D;
-      used_ = 0L;
-      free_ = 0L;
-      totalBlocks_ = 0L;
-      missingBlocks_ = 0L;
-      missingBlocksReplicaOne_ = 0L;
       liveNodes_ = java.util.Collections.emptyList();
       deadNodes_ = java.util.Collections.emptyList();
       safemode_ = "";
       decommissioningNodes_ = java.util.Collections.emptyList();
       decommissionedNodes_ = java.util.Collections.emptyList();
       requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HDFSInfo();
     }
 
     @java.lang.Override
@@ -3377,18 +3530,18 @@ public final class ManagerService {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 liveNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000001;
               }
               liveNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 deadNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000002;
               }
               deadNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
@@ -3401,18 +3554,18 @@ public final class ManagerService {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 decommissioningNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000004;
               }
               decommissioningNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 decommissionedNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00000008;
               }
               decommissionedNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
@@ -3420,15 +3573,15 @@ public final class ManagerService {
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 requestedDecommissionHosts_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00001000;
+                mutable_bitField0_ |= 0x00000010;
               }
               requestedDecommissionHosts_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3442,19 +3595,19 @@ public final class ManagerService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           liveNodes_ = java.util.Collections.unmodifiableList(liveNodes_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           deadNodes_ = java.util.Collections.unmodifiableList(deadNodes_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           decommissioningNodes_ = java.util.Collections.unmodifiableList(decommissioningNodes_);
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           decommissionedNodes_ = java.util.Collections.unmodifiableList(decommissionedNodes_);
         }
-        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           requestedDecommissionHosts_ = requestedDecommissionHosts_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -3474,12 +3627,13 @@ public final class ManagerService {
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AVAILABLE_FIELD_NUMBER = 1;
     private boolean available_;
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
+    @java.lang.Override
     public boolean getAvailable() {
       return available_;
     }
@@ -3488,7 +3642,9 @@ public final class ManagerService {
     private double percentRemaining_;
     /**
      * <code>double percent_remaining = 2;</code>
+     * @return The percentRemaining.
      */
+    @java.lang.Override
     public double getPercentRemaining() {
       return percentRemaining_;
     }
@@ -3497,7 +3653,9 @@ public final class ManagerService {
     private long used_;
     /**
      * <code>int64 used = 3;</code>
+     * @return The used.
      */
+    @java.lang.Override
     public long getUsed() {
       return used_;
     }
@@ -3506,7 +3664,9 @@ public final class ManagerService {
     private long free_;
     /**
      * <code>int64 free = 4;</code>
+     * @return The free.
      */
+    @java.lang.Override
     public long getFree() {
       return free_;
     }
@@ -3515,7 +3675,9 @@ public final class ManagerService {
     private long totalBlocks_;
     /**
      * <code>int64 total_blocks = 5;</code>
+     * @return The totalBlocks.
      */
+    @java.lang.Override
     public long getTotalBlocks() {
       return totalBlocks_;
     }
@@ -3524,7 +3686,9 @@ public final class ManagerService {
     private long missingBlocks_;
     /**
      * <code>int64 missing_blocks = 6;</code>
+     * @return The missingBlocks.
      */
+    @java.lang.Override
     public long getMissingBlocks() {
       return missingBlocks_;
     }
@@ -3533,7 +3697,9 @@ public final class ManagerService {
     private long missingBlocksReplicaOne_;
     /**
      * <code>int64 missing_blocks_replica_one = 7;</code>
+     * @return The missingBlocksReplicaOne.
      */
+    @java.lang.Override
     public long getMissingBlocksReplicaOne() {
       return missingBlocksReplicaOne_;
     }
@@ -3543,12 +3709,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo live_nodes = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getLiveNodesList() {
       return liveNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo live_nodes = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
         getLiveNodesOrBuilderList() {
       return liveNodes_;
@@ -3556,18 +3724,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo live_nodes = 8;</code>
      */
+    @java.lang.Override
     public int getLiveNodesCount() {
       return liveNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo live_nodes = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getLiveNodes(int index) {
       return liveNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo live_nodes = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getLiveNodesOrBuilder(
         int index) {
       return liveNodes_.get(index);
@@ -3578,12 +3749,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo dead_nodes = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDeadNodesList() {
       return deadNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo dead_nodes = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
         getDeadNodesOrBuilderList() {
       return deadNodes_;
@@ -3591,18 +3764,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo dead_nodes = 9;</code>
      */
+    @java.lang.Override
     public int getDeadNodesCount() {
       return deadNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo dead_nodes = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDeadNodes(int index) {
       return deadNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo dead_nodes = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDeadNodesOrBuilder(
         int index) {
       return deadNodes_.get(index);
@@ -3612,7 +3788,9 @@ public final class ManagerService {
     private volatile java.lang.Object safemode_;
     /**
      * <code>string safemode = 11;</code>
+     * @return The safemode.
      */
+    @java.lang.Override
     public java.lang.String getSafemode() {
       java.lang.Object ref = safemode_;
       if (ref instanceof java.lang.String) {
@@ -3627,7 +3805,9 @@ public final class ManagerService {
     }
     /**
      * <code>string safemode = 11;</code>
+     * @return The bytes for safemode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSafemodeBytes() {
       java.lang.Object ref = safemode_;
@@ -3647,12 +3827,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecommissioningNodesList() {
       return decommissioningNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
         getDecommissioningNodesOrBuilderList() {
       return decommissioningNodes_;
@@ -3660,18 +3842,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
+    @java.lang.Override
     public int getDecommissioningNodesCount() {
       return decommissioningNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissioningNodes(int index) {
       return decommissioningNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissioningNodesOrBuilder(
         int index) {
       return decommissioningNodes_.get(index);
@@ -3682,12 +3867,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecommissionedNodesList() {
       return decommissionedNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
         getDecommissionedNodesOrBuilderList() {
       return decommissionedNodes_;
@@ -3695,18 +3882,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
      */
+    @java.lang.Override
     public int getDecommissionedNodesCount() {
       return decommissionedNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissionedNodes(int index) {
       return decommissionedNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissionedNodesOrBuilder(
         int index) {
       return decommissionedNodes_.get(index);
@@ -3720,6 +3910,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @return A list containing the requestedDecommissionHosts.
      */
     public com.google.protobuf.ProtocolStringList
         getRequestedDecommissionHostsList() {
@@ -3731,6 +3922,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @return The count of requestedDecommissionHosts.
      */
     public int getRequestedDecommissionHostsCount() {
       return requestedDecommissionHosts_.size();
@@ -3741,6 +3933,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @param index The index of the element to return.
+     * @return The requestedDecommissionHosts at the given index.
      */
     public java.lang.String getRequestedDecommissionHosts(int index) {
       return requestedDecommissionHosts_.get(index);
@@ -3751,6 +3945,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requestedDecommissionHosts at the given index.
      */
     public com.google.protobuf.ByteString
         getRequestedDecommissionHostsBytes(int index) {
@@ -3774,7 +3970,7 @@ public final class ManagerService {
       if (available_ != false) {
         output.writeBool(1, available_);
       }
-      if (percentRemaining_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(percentRemaining_) != 0) {
         output.writeDouble(2, percentRemaining_);
       }
       if (used_ != 0L) {
@@ -3798,7 +3994,7 @@ public final class ManagerService {
       for (int i = 0; i < deadNodes_.size(); i++) {
         output.writeMessage(9, deadNodes_.get(i));
       }
-      if (!getSafemodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(safemode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, safemode_);
       }
       for (int i = 0; i < decommissioningNodes_.size(); i++) {
@@ -3823,7 +4019,7 @@ public final class ManagerService {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, available_);
       }
-      if (percentRemaining_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(percentRemaining_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, percentRemaining_);
       }
@@ -3855,7 +4051,7 @@ public final class ManagerService {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, deadNodes_.get(i));
       }
-      if (!getSafemodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(safemode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, safemode_);
       }
       for (int i = 0; i < decommissioningNodes_.size(); i++) {
@@ -3889,37 +4085,35 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo) obj;
 
-      boolean result = true;
-      result = result && (getAvailable()
-          == other.getAvailable());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getPercentRemaining())
-          == java.lang.Double.doubleToLongBits(
-              other.getPercentRemaining()));
-      result = result && (getUsed()
-          == other.getUsed());
-      result = result && (getFree()
-          == other.getFree());
-      result = result && (getTotalBlocks()
-          == other.getTotalBlocks());
-      result = result && (getMissingBlocks()
-          == other.getMissingBlocks());
-      result = result && (getMissingBlocksReplicaOne()
-          == other.getMissingBlocksReplicaOne());
-      result = result && getLiveNodesList()
-          .equals(other.getLiveNodesList());
-      result = result && getDeadNodesList()
-          .equals(other.getDeadNodesList());
-      result = result && getSafemode()
-          .equals(other.getSafemode());
-      result = result && getDecommissioningNodesList()
-          .equals(other.getDecommissioningNodesList());
-      result = result && getDecommissionedNodesList()
-          .equals(other.getDecommissionedNodesList());
-      result = result && getRequestedDecommissionHostsList()
-          .equals(other.getRequestedDecommissionHostsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAvailable()
+          != other.getAvailable()) return false;
+      if (java.lang.Double.doubleToLongBits(getPercentRemaining())
+          != java.lang.Double.doubleToLongBits(
+              other.getPercentRemaining())) return false;
+      if (getUsed()
+          != other.getUsed()) return false;
+      if (getFree()
+          != other.getFree()) return false;
+      if (getTotalBlocks()
+          != other.getTotalBlocks()) return false;
+      if (getMissingBlocks()
+          != other.getMissingBlocks()) return false;
+      if (getMissingBlocksReplicaOne()
+          != other.getMissingBlocksReplicaOne()) return false;
+      if (!getLiveNodesList()
+          .equals(other.getLiveNodesList())) return false;
+      if (!getDeadNodesList()
+          .equals(other.getDeadNodesList())) return false;
+      if (!getSafemode()
+          .equals(other.getSafemode())) return false;
+      if (!getDecommissioningNodesList()
+          .equals(other.getDecommissioningNodesList())) return false;
+      if (!getDecommissionedNodesList()
+          .equals(other.getDecommissionedNodesList())) return false;
+      if (!getRequestedDecommissionHostsList()
+          .equals(other.getRequestedDecommissionHostsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4125,13 +4319,13 @@ public final class ManagerService {
 
         if (liveNodesBuilder_ == null) {
           liveNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           liveNodesBuilder_.clear();
         }
         if (deadNodesBuilder_ == null) {
           deadNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           deadNodesBuilder_.clear();
         }
@@ -4139,18 +4333,18 @@ public final class ManagerService {
 
         if (decommissioningNodesBuilder_ == null) {
           decommissioningNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           decommissioningNodesBuilder_.clear();
         }
         if (decommissionedNodesBuilder_ == null) {
           decommissionedNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           decommissionedNodesBuilder_.clear();
         }
         requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -4178,7 +4372,6 @@ public final class ManagerService {
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo buildPartial() {
         yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.available_ = available_;
         result.percentRemaining_ = percentRemaining_;
         result.used_ = used_;
@@ -4187,18 +4380,18 @@ public final class ManagerService {
         result.missingBlocks_ = missingBlocks_;
         result.missingBlocksReplicaOne_ = missingBlocksReplicaOne_;
         if (liveNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             liveNodes_ = java.util.Collections.unmodifiableList(liveNodes_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.liveNodes_ = liveNodes_;
         } else {
           result.liveNodes_ = liveNodesBuilder_.build();
         }
         if (deadNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             deadNodes_ = java.util.Collections.unmodifiableList(deadNodes_);
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.deadNodes_ = deadNodes_;
         } else {
@@ -4206,64 +4399,63 @@ public final class ManagerService {
         }
         result.safemode_ = safemode_;
         if (decommissioningNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             decommissioningNodes_ = java.util.Collections.unmodifiableList(decommissioningNodes_);
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.decommissioningNodes_ = decommissioningNodes_;
         } else {
           result.decommissioningNodes_ = decommissioningNodesBuilder_.build();
         }
         if (decommissionedNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             decommissionedNodes_ = java.util.Collections.unmodifiableList(decommissionedNodes_);
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.decommissionedNodes_ = decommissionedNodes_;
         } else {
           result.decommissionedNodes_ = decommissionedNodesBuilder_.build();
         }
-        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           requestedDecommissionHosts_ = requestedDecommissionHosts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.requestedDecommissionHosts_ = requestedDecommissionHosts_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4302,7 +4494,7 @@ public final class ManagerService {
           if (!other.liveNodes_.isEmpty()) {
             if (liveNodes_.isEmpty()) {
               liveNodes_ = other.liveNodes_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLiveNodesIsMutable();
               liveNodes_.addAll(other.liveNodes_);
@@ -4315,7 +4507,7 @@ public final class ManagerService {
               liveNodesBuilder_.dispose();
               liveNodesBuilder_ = null;
               liveNodes_ = other.liveNodes_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000001);
               liveNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLiveNodesFieldBuilder() : null;
@@ -4328,7 +4520,7 @@ public final class ManagerService {
           if (!other.deadNodes_.isEmpty()) {
             if (deadNodes_.isEmpty()) {
               deadNodes_ = other.deadNodes_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDeadNodesIsMutable();
               deadNodes_.addAll(other.deadNodes_);
@@ -4341,7 +4533,7 @@ public final class ManagerService {
               deadNodesBuilder_.dispose();
               deadNodesBuilder_ = null;
               deadNodes_ = other.deadNodes_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000002);
               deadNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDeadNodesFieldBuilder() : null;
@@ -4358,7 +4550,7 @@ public final class ManagerService {
           if (!other.decommissioningNodes_.isEmpty()) {
             if (decommissioningNodes_.isEmpty()) {
               decommissioningNodes_ = other.decommissioningNodes_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureDecommissioningNodesIsMutable();
               decommissioningNodes_.addAll(other.decommissioningNodes_);
@@ -4371,7 +4563,7 @@ public final class ManagerService {
               decommissioningNodesBuilder_.dispose();
               decommissioningNodesBuilder_ = null;
               decommissioningNodes_ = other.decommissioningNodes_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000004);
               decommissioningNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDecommissioningNodesFieldBuilder() : null;
@@ -4384,7 +4576,7 @@ public final class ManagerService {
           if (!other.decommissionedNodes_.isEmpty()) {
             if (decommissionedNodes_.isEmpty()) {
               decommissionedNodes_ = other.decommissionedNodes_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureDecommissionedNodesIsMutable();
               decommissionedNodes_.addAll(other.decommissionedNodes_);
@@ -4397,7 +4589,7 @@ public final class ManagerService {
               decommissionedNodesBuilder_.dispose();
               decommissionedNodesBuilder_ = null;
               decommissionedNodes_ = other.decommissionedNodes_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00000008);
               decommissionedNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDecommissionedNodesFieldBuilder() : null;
@@ -4409,7 +4601,7 @@ public final class ManagerService {
         if (!other.requestedDecommissionHosts_.isEmpty()) {
           if (requestedDecommissionHosts_.isEmpty()) {
             requestedDecommissionHosts_ = other.requestedDecommissionHosts_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureRequestedDecommissionHostsIsMutable();
             requestedDecommissionHosts_.addAll(other.requestedDecommissionHosts_);
@@ -4449,12 +4641,16 @@ public final class ManagerService {
       private boolean available_ ;
       /**
        * <code>bool available = 1;</code>
+       * @return The available.
        */
+      @java.lang.Override
       public boolean getAvailable() {
         return available_;
       }
       /**
        * <code>bool available = 1;</code>
+       * @param value The available to set.
+       * @return This builder for chaining.
        */
       public Builder setAvailable(boolean value) {
         
@@ -4464,6 +4660,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool available = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAvailable() {
         
@@ -4475,12 +4672,16 @@ public final class ManagerService {
       private double percentRemaining_ ;
       /**
        * <code>double percent_remaining = 2;</code>
+       * @return The percentRemaining.
        */
+      @java.lang.Override
       public double getPercentRemaining() {
         return percentRemaining_;
       }
       /**
        * <code>double percent_remaining = 2;</code>
+       * @param value The percentRemaining to set.
+       * @return This builder for chaining.
        */
       public Builder setPercentRemaining(double value) {
         
@@ -4490,6 +4691,7 @@ public final class ManagerService {
       }
       /**
        * <code>double percent_remaining = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPercentRemaining() {
         
@@ -4501,12 +4703,16 @@ public final class ManagerService {
       private long used_ ;
       /**
        * <code>int64 used = 3;</code>
+       * @return The used.
        */
+      @java.lang.Override
       public long getUsed() {
         return used_;
       }
       /**
        * <code>int64 used = 3;</code>
+       * @param value The used to set.
+       * @return This builder for chaining.
        */
       public Builder setUsed(long value) {
         
@@ -4516,6 +4722,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 used = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUsed() {
         
@@ -4527,12 +4734,16 @@ public final class ManagerService {
       private long free_ ;
       /**
        * <code>int64 free = 4;</code>
+       * @return The free.
        */
+      @java.lang.Override
       public long getFree() {
         return free_;
       }
       /**
        * <code>int64 free = 4;</code>
+       * @param value The free to set.
+       * @return This builder for chaining.
        */
       public Builder setFree(long value) {
         
@@ -4542,6 +4753,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 free = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFree() {
         
@@ -4553,12 +4765,16 @@ public final class ManagerService {
       private long totalBlocks_ ;
       /**
        * <code>int64 total_blocks = 5;</code>
+       * @return The totalBlocks.
        */
+      @java.lang.Override
       public long getTotalBlocks() {
         return totalBlocks_;
       }
       /**
        * <code>int64 total_blocks = 5;</code>
+       * @param value The totalBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setTotalBlocks(long value) {
         
@@ -4568,6 +4784,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 total_blocks = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTotalBlocks() {
         
@@ -4579,12 +4796,16 @@ public final class ManagerService {
       private long missingBlocks_ ;
       /**
        * <code>int64 missing_blocks = 6;</code>
+       * @return The missingBlocks.
        */
+      @java.lang.Override
       public long getMissingBlocks() {
         return missingBlocks_;
       }
       /**
        * <code>int64 missing_blocks = 6;</code>
+       * @param value The missingBlocks to set.
+       * @return This builder for chaining.
        */
       public Builder setMissingBlocks(long value) {
         
@@ -4594,6 +4815,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 missing_blocks = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMissingBlocks() {
         
@@ -4605,12 +4827,16 @@ public final class ManagerService {
       private long missingBlocksReplicaOne_ ;
       /**
        * <code>int64 missing_blocks_replica_one = 7;</code>
+       * @return The missingBlocksReplicaOne.
        */
+      @java.lang.Override
       public long getMissingBlocksReplicaOne() {
         return missingBlocksReplicaOne_;
       }
       /**
        * <code>int64 missing_blocks_replica_one = 7;</code>
+       * @param value The missingBlocksReplicaOne to set.
+       * @return This builder for chaining.
        */
       public Builder setMissingBlocksReplicaOne(long value) {
         
@@ -4620,6 +4846,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 missing_blocks_replica_one = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMissingBlocksReplicaOne() {
         
@@ -4631,9 +4858,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> liveNodes_ =
         java.util.Collections.emptyList();
       private void ensureLiveNodesIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           liveNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(liveNodes_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4783,7 +5010,7 @@ public final class ManagerService {
       public Builder clearLiveNodes() {
         if (liveNodesBuilder_ == null) {
           liveNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           liveNodesBuilder_.clear();
@@ -4860,7 +5087,7 @@ public final class ManagerService {
           liveNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder>(
                   liveNodes_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           liveNodes_ = null;
@@ -4871,9 +5098,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> deadNodes_ =
         java.util.Collections.emptyList();
       private void ensureDeadNodesIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           deadNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(deadNodes_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -5023,7 +5250,7 @@ public final class ManagerService {
       public Builder clearDeadNodes() {
         if (deadNodesBuilder_ == null) {
           deadNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           deadNodesBuilder_.clear();
@@ -5100,7 +5327,7 @@ public final class ManagerService {
           deadNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder>(
                   deadNodes_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           deadNodes_ = null;
@@ -5111,6 +5338,7 @@ public final class ManagerService {
       private java.lang.Object safemode_ = "";
       /**
        * <code>string safemode = 11;</code>
+       * @return The safemode.
        */
       public java.lang.String getSafemode() {
         java.lang.Object ref = safemode_;
@@ -5126,6 +5354,7 @@ public final class ManagerService {
       }
       /**
        * <code>string safemode = 11;</code>
+       * @return The bytes for safemode.
        */
       public com.google.protobuf.ByteString
           getSafemodeBytes() {
@@ -5142,6 +5371,8 @@ public final class ManagerService {
       }
       /**
        * <code>string safemode = 11;</code>
+       * @param value The safemode to set.
+       * @return This builder for chaining.
        */
       public Builder setSafemode(
           java.lang.String value) {
@@ -5155,6 +5386,7 @@ public final class ManagerService {
       }
       /**
        * <code>string safemode = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSafemode() {
         
@@ -5164,6 +5396,8 @@ public final class ManagerService {
       }
       /**
        * <code>string safemode = 11;</code>
+       * @param value The bytes for safemode to set.
+       * @return This builder for chaining.
        */
       public Builder setSafemodeBytes(
           com.google.protobuf.ByteString value) {
@@ -5180,9 +5414,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decommissioningNodes_ =
         java.util.Collections.emptyList();
       private void ensureDecommissioningNodesIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           decommissioningNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(decommissioningNodes_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -5332,7 +5566,7 @@ public final class ManagerService {
       public Builder clearDecommissioningNodes() {
         if (decommissioningNodesBuilder_ == null) {
           decommissioningNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           decommissioningNodesBuilder_.clear();
@@ -5409,7 +5643,7 @@ public final class ManagerService {
           decommissioningNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder>(
                   decommissioningNodes_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           decommissioningNodes_ = null;
@@ -5420,9 +5654,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decommissionedNodes_ =
         java.util.Collections.emptyList();
       private void ensureDecommissionedNodesIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           decommissionedNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(decommissionedNodes_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -5572,7 +5806,7 @@ public final class ManagerService {
       public Builder clearDecommissionedNodes() {
         if (decommissionedNodesBuilder_ == null) {
           decommissionedNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           decommissionedNodesBuilder_.clear();
@@ -5649,7 +5883,7 @@ public final class ManagerService {
           decommissionedNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder>(
                   decommissionedNodes_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           decommissionedNodes_ = null;
@@ -5659,9 +5893,9 @@ public final class ManagerService {
 
       private com.google.protobuf.LazyStringList requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRequestedDecommissionHostsIsMutable() {
-        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           requestedDecommissionHosts_ = new com.google.protobuf.LazyStringArrayList(requestedDecommissionHosts_);
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -5670,6 +5904,7 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @return A list containing the requestedDecommissionHosts.
        */
       public com.google.protobuf.ProtocolStringList
           getRequestedDecommissionHostsList() {
@@ -5681,6 +5916,7 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @return The count of requestedDecommissionHosts.
        */
       public int getRequestedDecommissionHostsCount() {
         return requestedDecommissionHosts_.size();
@@ -5691,6 +5927,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @param index The index of the element to return.
+       * @return The requestedDecommissionHosts at the given index.
        */
       public java.lang.String getRequestedDecommissionHosts(int index) {
         return requestedDecommissionHosts_.get(index);
@@ -5701,6 +5939,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the requestedDecommissionHosts at the given index.
        */
       public com.google.protobuf.ByteString
           getRequestedDecommissionHostsBytes(int index) {
@@ -5712,6 +5952,9 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @param index The index to set the value at.
+       * @param value The requestedDecommissionHosts to set.
+       * @return This builder for chaining.
        */
       public Builder setRequestedDecommissionHosts(
           int index, java.lang.String value) {
@@ -5729,6 +5972,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @param value The requestedDecommissionHosts to add.
+       * @return This builder for chaining.
        */
       public Builder addRequestedDecommissionHosts(
           java.lang.String value) {
@@ -5746,6 +5991,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @param values The requestedDecommissionHosts to add.
+       * @return This builder for chaining.
        */
       public Builder addAllRequestedDecommissionHosts(
           java.lang.Iterable<java.lang.String> values) {
@@ -5761,10 +6008,11 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequestedDecommissionHosts() {
         requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -5774,6 +6022,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 14;</code>
+       * @param value The bytes of the requestedDecommissionHosts to add.
+       * @return This builder for chaining.
        */
       public Builder addRequestedDecommissionHostsBytes(
           com.google.protobuf.ByteString value) {
@@ -5789,7 +6039,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5845,38 +6095,44 @@ public final class ManagerService {
 
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
     boolean getAvailable();
 
     /**
      * <code>int64 queries_succeeded = 2;</code>
+     * @return The queriesSucceeded.
      */
     long getQueriesSucceeded();
 
     /**
      * <code>int64 queries_failed = 3;</code>
+     * @return The queriesFailed.
      */
     long getQueriesFailed();
 
     /**
      * <code>int64 queries_executing = 4;</code>
+     * @return The queriesExecuting.
      */
     long getQueriesExecuting();
 
     /**
      * <code>int64 sessions_open = 5;</code>
+     * @return The sessionsOpen.
      */
     long getSessionsOpen();
 
     /**
      * <code>int64 sessions_active = 6;</code>
+     * @return The sessionsActive.
      */
     long getSessionsActive();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.HiveInfo}
    */
-  public  static final class HiveInfo extends
+  public static final class HiveInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.HiveInfo)
       HiveInfoOrBuilder {
@@ -5886,12 +6142,13 @@ public final class ManagerService {
       super(builder);
     }
     private HiveInfo() {
-      available_ = false;
-      queriesSucceeded_ = 0L;
-      queriesFailed_ = 0L;
-      queriesExecuting_ = 0L;
-      sessionsOpen_ = 0L;
-      sessionsActive_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HiveInfo();
     }
 
     @java.lang.Override
@@ -5907,7 +6164,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5949,7 +6205,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5984,7 +6240,9 @@ public final class ManagerService {
     private boolean available_;
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
+    @java.lang.Override
     public boolean getAvailable() {
       return available_;
     }
@@ -5993,7 +6251,9 @@ public final class ManagerService {
     private long queriesSucceeded_;
     /**
      * <code>int64 queries_succeeded = 2;</code>
+     * @return The queriesSucceeded.
      */
+    @java.lang.Override
     public long getQueriesSucceeded() {
       return queriesSucceeded_;
     }
@@ -6002,7 +6262,9 @@ public final class ManagerService {
     private long queriesFailed_;
     /**
      * <code>int64 queries_failed = 3;</code>
+     * @return The queriesFailed.
      */
+    @java.lang.Override
     public long getQueriesFailed() {
       return queriesFailed_;
     }
@@ -6011,7 +6273,9 @@ public final class ManagerService {
     private long queriesExecuting_;
     /**
      * <code>int64 queries_executing = 4;</code>
+     * @return The queriesExecuting.
      */
+    @java.lang.Override
     public long getQueriesExecuting() {
       return queriesExecuting_;
     }
@@ -6020,7 +6284,9 @@ public final class ManagerService {
     private long sessionsOpen_;
     /**
      * <code>int64 sessions_open = 5;</code>
+     * @return The sessionsOpen.
      */
+    @java.lang.Override
     public long getSessionsOpen() {
       return sessionsOpen_;
     }
@@ -6029,7 +6295,9 @@ public final class ManagerService {
     private long sessionsActive_;
     /**
      * <code>int64 sessions_active = 6;</code>
+     * @return The sessionsActive.
      */
+    @java.lang.Override
     public long getSessionsActive() {
       return sessionsActive_;
     }
@@ -6114,21 +6382,20 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo) obj;
 
-      boolean result = true;
-      result = result && (getAvailable()
-          == other.getAvailable());
-      result = result && (getQueriesSucceeded()
-          == other.getQueriesSucceeded());
-      result = result && (getQueriesFailed()
-          == other.getQueriesFailed());
-      result = result && (getQueriesExecuting()
-          == other.getQueriesExecuting());
-      result = result && (getSessionsOpen()
-          == other.getSessionsOpen());
-      result = result && (getSessionsActive()
-          == other.getSessionsActive());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAvailable()
+          != other.getAvailable()) return false;
+      if (getQueriesSucceeded()
+          != other.getQueriesSucceeded()) return false;
+      if (getQueriesFailed()
+          != other.getQueriesFailed()) return false;
+      if (getQueriesExecuting()
+          != other.getQueriesExecuting()) return false;
+      if (getSessionsOpen()
+          != other.getSessionsOpen()) return false;
+      if (getSessionsActive()
+          != other.getSessionsActive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6339,35 +6606,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6431,12 +6698,16 @@ public final class ManagerService {
       private boolean available_ ;
       /**
        * <code>bool available = 1;</code>
+       * @return The available.
        */
+      @java.lang.Override
       public boolean getAvailable() {
         return available_;
       }
       /**
        * <code>bool available = 1;</code>
+       * @param value The available to set.
+       * @return This builder for chaining.
        */
       public Builder setAvailable(boolean value) {
         
@@ -6446,6 +6717,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool available = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAvailable() {
         
@@ -6457,12 +6729,16 @@ public final class ManagerService {
       private long queriesSucceeded_ ;
       /**
        * <code>int64 queries_succeeded = 2;</code>
+       * @return The queriesSucceeded.
        */
+      @java.lang.Override
       public long getQueriesSucceeded() {
         return queriesSucceeded_;
       }
       /**
        * <code>int64 queries_succeeded = 2;</code>
+       * @param value The queriesSucceeded to set.
+       * @return This builder for chaining.
        */
       public Builder setQueriesSucceeded(long value) {
         
@@ -6472,6 +6748,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 queries_succeeded = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQueriesSucceeded() {
         
@@ -6483,12 +6760,16 @@ public final class ManagerService {
       private long queriesFailed_ ;
       /**
        * <code>int64 queries_failed = 3;</code>
+       * @return The queriesFailed.
        */
+      @java.lang.Override
       public long getQueriesFailed() {
         return queriesFailed_;
       }
       /**
        * <code>int64 queries_failed = 3;</code>
+       * @param value The queriesFailed to set.
+       * @return This builder for chaining.
        */
       public Builder setQueriesFailed(long value) {
         
@@ -6498,6 +6779,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 queries_failed = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQueriesFailed() {
         
@@ -6509,12 +6791,16 @@ public final class ManagerService {
       private long queriesExecuting_ ;
       /**
        * <code>int64 queries_executing = 4;</code>
+       * @return The queriesExecuting.
        */
+      @java.lang.Override
       public long getQueriesExecuting() {
         return queriesExecuting_;
       }
       /**
        * <code>int64 queries_executing = 4;</code>
+       * @param value The queriesExecuting to set.
+       * @return This builder for chaining.
        */
       public Builder setQueriesExecuting(long value) {
         
@@ -6524,6 +6810,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 queries_executing = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearQueriesExecuting() {
         
@@ -6535,12 +6822,16 @@ public final class ManagerService {
       private long sessionsOpen_ ;
       /**
        * <code>int64 sessions_open = 5;</code>
+       * @return The sessionsOpen.
        */
+      @java.lang.Override
       public long getSessionsOpen() {
         return sessionsOpen_;
       }
       /**
        * <code>int64 sessions_open = 5;</code>
+       * @param value The sessionsOpen to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionsOpen(long value) {
         
@@ -6550,6 +6841,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 sessions_open = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSessionsOpen() {
         
@@ -6561,12 +6853,16 @@ public final class ManagerService {
       private long sessionsActive_ ;
       /**
        * <code>int64 sessions_active = 6;</code>
+       * @return The sessionsActive.
        */
+      @java.lang.Override
       public long getSessionsActive() {
         return sessionsActive_;
       }
       /**
        * <code>int64 sessions_active = 6;</code>
+       * @param value The sessionsActive to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionsActive(long value) {
         
@@ -6576,6 +6872,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 sessions_active = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSessionsActive() {
         
@@ -6586,7 +6883,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6642,48 +6939,56 @@ public final class ManagerService {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string state = 2;</code>
+     * @return The state.
      */
     java.lang.String getState();
     /**
      * <code>string state = 2;</code>
+     * @return The bytes for state.
      */
     com.google.protobuf.ByteString
         getStateBytes();
 
     /**
      * <code>int64 num_containers = 3;</code>
+     * @return The numContainers.
      */
     long getNumContainers();
 
     /**
      * <code>int64 used_memory_mb = 4;</code>
+     * @return The usedMemoryMb.
      */
     long getUsedMemoryMb();
 
     /**
      * <code>int64 available_memory_mb = 5;</code>
+     * @return The availableMemoryMb.
      */
     long getAvailableMemoryMb();
 
     /**
      * <code>int64 update_time = 6;</code>
+     * @return The updateTime.
      */
     long getUpdateTime();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.YarnNodeInfo}
    */
-  public  static final class YarnNodeInfo extends
+  public static final class YarnNodeInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.YarnNodeInfo)
       YarnNodeInfoOrBuilder {
@@ -6695,10 +7000,13 @@ public final class ManagerService {
     private YarnNodeInfo() {
       name_ = "";
       state_ = "";
-      numContainers_ = 0L;
-      usedMemoryMb_ = 0L;
-      availableMemoryMb_ = 0L;
-      updateTime_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new YarnNodeInfo();
     }
 
     @java.lang.Override
@@ -6714,7 +7022,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6758,7 +7065,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6793,7 +7100,9 @@ public final class ManagerService {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6808,7 +7117,9 @@ public final class ManagerService {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6827,7 +7138,9 @@ public final class ManagerService {
     private volatile java.lang.Object state_;
     /**
      * <code>string state = 2;</code>
+     * @return The state.
      */
+    @java.lang.Override
     public java.lang.String getState() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
@@ -6842,7 +7155,9 @@ public final class ManagerService {
     }
     /**
      * <code>string state = 2;</code>
+     * @return The bytes for state.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStateBytes() {
       java.lang.Object ref = state_;
@@ -6861,7 +7176,9 @@ public final class ManagerService {
     private long numContainers_;
     /**
      * <code>int64 num_containers = 3;</code>
+     * @return The numContainers.
      */
+    @java.lang.Override
     public long getNumContainers() {
       return numContainers_;
     }
@@ -6870,7 +7187,9 @@ public final class ManagerService {
     private long usedMemoryMb_;
     /**
      * <code>int64 used_memory_mb = 4;</code>
+     * @return The usedMemoryMb.
      */
+    @java.lang.Override
     public long getUsedMemoryMb() {
       return usedMemoryMb_;
     }
@@ -6879,7 +7198,9 @@ public final class ManagerService {
     private long availableMemoryMb_;
     /**
      * <code>int64 available_memory_mb = 5;</code>
+     * @return The availableMemoryMb.
      */
+    @java.lang.Override
     public long getAvailableMemoryMb() {
       return availableMemoryMb_;
     }
@@ -6888,7 +7209,9 @@ public final class ManagerService {
     private long updateTime_;
     /**
      * <code>int64 update_time = 6;</code>
+     * @return The updateTime.
      */
+    @java.lang.Override
     public long getUpdateTime() {
       return updateTime_;
     }
@@ -6907,10 +7230,10 @@ public final class ManagerService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, state_);
       }
       if (numContainers_ != 0L) {
@@ -6934,10 +7257,10 @@ public final class ManagerService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, state_);
       }
       if (numContainers_ != 0L) {
@@ -6971,21 +7294,20 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getState()
-          .equals(other.getState());
-      result = result && (getNumContainers()
-          == other.getNumContainers());
-      result = result && (getUsedMemoryMb()
-          == other.getUsedMemoryMb());
-      result = result && (getAvailableMemoryMb()
-          == other.getAvailableMemoryMb());
-      result = result && (getUpdateTime()
-          == other.getUpdateTime());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
+      if (getNumContainers()
+          != other.getNumContainers()) return false;
+      if (getUsedMemoryMb()
+          != other.getUsedMemoryMb()) return false;
+      if (getAvailableMemoryMb()
+          != other.getAvailableMemoryMb()) return false;
+      if (getUpdateTime()
+          != other.getUpdateTime()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7194,35 +7516,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7288,6 +7610,7 @@ public final class ManagerService {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7303,6 +7626,7 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7319,6 +7643,8 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7332,6 +7658,7 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7341,6 +7668,8 @@ public final class ManagerService {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7357,6 +7686,7 @@ public final class ManagerService {
       private java.lang.Object state_ = "";
       /**
        * <code>string state = 2;</code>
+       * @return The state.
        */
       public java.lang.String getState() {
         java.lang.Object ref = state_;
@@ -7372,6 +7702,7 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 2;</code>
+       * @return The bytes for state.
        */
       public com.google.protobuf.ByteString
           getStateBytes() {
@@ -7388,6 +7719,8 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 2;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
        */
       public Builder setState(
           java.lang.String value) {
@@ -7401,6 +7734,7 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearState() {
         
@@ -7410,6 +7744,8 @@ public final class ManagerService {
       }
       /**
        * <code>string state = 2;</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
        */
       public Builder setStateBytes(
           com.google.protobuf.ByteString value) {
@@ -7426,12 +7762,16 @@ public final class ManagerService {
       private long numContainers_ ;
       /**
        * <code>int64 num_containers = 3;</code>
+       * @return The numContainers.
        */
+      @java.lang.Override
       public long getNumContainers() {
         return numContainers_;
       }
       /**
        * <code>int64 num_containers = 3;</code>
+       * @param value The numContainers to set.
+       * @return This builder for chaining.
        */
       public Builder setNumContainers(long value) {
         
@@ -7441,6 +7781,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 num_containers = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNumContainers() {
         
@@ -7452,12 +7793,16 @@ public final class ManagerService {
       private long usedMemoryMb_ ;
       /**
        * <code>int64 used_memory_mb = 4;</code>
+       * @return The usedMemoryMb.
        */
+      @java.lang.Override
       public long getUsedMemoryMb() {
         return usedMemoryMb_;
       }
       /**
        * <code>int64 used_memory_mb = 4;</code>
+       * @param value The usedMemoryMb to set.
+       * @return This builder for chaining.
        */
       public Builder setUsedMemoryMb(long value) {
         
@@ -7467,6 +7812,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 used_memory_mb = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUsedMemoryMb() {
         
@@ -7478,12 +7824,16 @@ public final class ManagerService {
       private long availableMemoryMb_ ;
       /**
        * <code>int64 available_memory_mb = 5;</code>
+       * @return The availableMemoryMb.
        */
+      @java.lang.Override
       public long getAvailableMemoryMb() {
         return availableMemoryMb_;
       }
       /**
        * <code>int64 available_memory_mb = 5;</code>
+       * @param value The availableMemoryMb to set.
+       * @return This builder for chaining.
        */
       public Builder setAvailableMemoryMb(long value) {
         
@@ -7493,6 +7843,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 available_memory_mb = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAvailableMemoryMb() {
         
@@ -7504,12 +7855,16 @@ public final class ManagerService {
       private long updateTime_ ;
       /**
        * <code>int64 update_time = 6;</code>
+       * @return The updateTime.
        */
+      @java.lang.Override
       public long getUpdateTime() {
         return updateTime_;
       }
       /**
        * <code>int64 update_time = 6;</code>
+       * @param value The updateTime to set.
+       * @return This builder for chaining.
        */
       public Builder setUpdateTime(long value) {
         
@@ -7519,6 +7874,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 update_time = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUpdateTime() {
         
@@ -7529,7 +7885,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7585,6 +7941,7 @@ public final class ManagerService {
 
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
     boolean getAvailable();
 
@@ -7618,6 +7975,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @return A list containing the requestedDecommissionHosts.
      */
     java.util.List<java.lang.String>
         getRequestedDecommissionHostsList();
@@ -7627,6 +7985,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @return The count of requestedDecommissionHosts.
      */
     int getRequestedDecommissionHostsCount();
     /**
@@ -7635,6 +7994,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @param index The index of the element to return.
+     * @return The requestedDecommissionHosts at the given index.
      */
     java.lang.String getRequestedDecommissionHosts(int index);
     /**
@@ -7643,6 +8004,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requestedDecommissionHosts at the given index.
      */
     com.google.protobuf.ByteString
         getRequestedDecommissionHostsBytes(int index);
@@ -7650,7 +8013,7 @@ public final class ManagerService {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.YarnInfo}
    */
-  public  static final class YarnInfo extends
+  public static final class YarnInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.YarnInfo)
       YarnInfoOrBuilder {
@@ -7660,9 +8023,15 @@ public final class ManagerService {
       super(builder);
     }
     private YarnInfo() {
-      available_ = false;
       liveNodes_ = java.util.Collections.emptyList();
       requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new YarnInfo();
     }
 
     @java.lang.Override
@@ -7695,9 +8064,9 @@ public final class ManagerService {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 liveNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               liveNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo.parser(), extensionRegistry));
@@ -7705,15 +8074,15 @@ public final class ManagerService {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 requestedDecommissionHosts_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               requestedDecommissionHosts_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7727,10 +8096,10 @@ public final class ManagerService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           liveNodes_ = java.util.Collections.unmodifiableList(liveNodes_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           requestedDecommissionHosts_ = requestedDecommissionHosts_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -7750,12 +8119,13 @@ public final class ManagerService {
               yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AVAILABLE_FIELD_NUMBER = 1;
     private boolean available_;
     /**
      * <code>bool available = 1;</code>
+     * @return The available.
      */
+    @java.lang.Override
     public boolean getAvailable() {
       return available_;
     }
@@ -7765,12 +8135,14 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.YarnNodeInfo live_nodes = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo> getLiveNodesList() {
       return liveNodes_;
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.YarnNodeInfo live_nodes = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfoOrBuilder> 
         getLiveNodesOrBuilderList() {
       return liveNodes_;
@@ -7778,18 +8150,21 @@ public final class ManagerService {
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.YarnNodeInfo live_nodes = 2;</code>
      */
+    @java.lang.Override
     public int getLiveNodesCount() {
       return liveNodes_.size();
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.YarnNodeInfo live_nodes = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo getLiveNodes(int index) {
       return liveNodes_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.dataproc.manager.v1.YarnNodeInfo live_nodes = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfoOrBuilder getLiveNodesOrBuilder(
         int index) {
       return liveNodes_.get(index);
@@ -7803,6 +8178,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @return A list containing the requestedDecommissionHosts.
      */
     public com.google.protobuf.ProtocolStringList
         getRequestedDecommissionHostsList() {
@@ -7814,6 +8190,7 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @return The count of requestedDecommissionHosts.
      */
     public int getRequestedDecommissionHostsCount() {
       return requestedDecommissionHosts_.size();
@@ -7824,6 +8201,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @param index The index of the element to return.
+     * @return The requestedDecommissionHosts at the given index.
      */
     public java.lang.String getRequestedDecommissionHosts(int index) {
       return requestedDecommissionHosts_.get(index);
@@ -7834,6 +8213,8 @@ public final class ManagerService {
      * </pre>
      *
      * <code>repeated string requested_decommission_hosts = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requestedDecommissionHosts at the given index.
      */
     public com.google.protobuf.ByteString
         getRequestedDecommissionHostsBytes(int index) {
@@ -7903,15 +8284,14 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo) obj;
 
-      boolean result = true;
-      result = result && (getAvailable()
-          == other.getAvailable());
-      result = result && getLiveNodesList()
-          .equals(other.getLiveNodesList());
-      result = result && getRequestedDecommissionHostsList()
-          .equals(other.getRequestedDecommissionHostsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAvailable()
+          != other.getAvailable()) return false;
+      if (!getLiveNodesList()
+          .equals(other.getLiveNodesList())) return false;
+      if (!getRequestedDecommissionHostsList()
+          .equals(other.getRequestedDecommissionHostsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8070,12 +8450,12 @@ public final class ManagerService {
 
         if (liveNodesBuilder_ == null) {
           liveNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           liveNodesBuilder_.clear();
         }
         requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -8103,58 +8483,56 @@ public final class ManagerService {
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo buildPartial() {
         yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.available_ = available_;
         if (liveNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             liveNodes_ = java.util.Collections.unmodifiableList(liveNodes_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.liveNodes_ = liveNodes_;
         } else {
           result.liveNodes_ = liveNodesBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           requestedDecommissionHosts_ = requestedDecommissionHosts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.requestedDecommissionHosts_ = requestedDecommissionHosts_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8175,7 +8553,7 @@ public final class ManagerService {
           if (!other.liveNodes_.isEmpty()) {
             if (liveNodes_.isEmpty()) {
               liveNodes_ = other.liveNodes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLiveNodesIsMutable();
               liveNodes_.addAll(other.liveNodes_);
@@ -8188,7 +8566,7 @@ public final class ManagerService {
               liveNodesBuilder_.dispose();
               liveNodesBuilder_ = null;
               liveNodes_ = other.liveNodes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               liveNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLiveNodesFieldBuilder() : null;
@@ -8200,7 +8578,7 @@ public final class ManagerService {
         if (!other.requestedDecommissionHosts_.isEmpty()) {
           if (requestedDecommissionHosts_.isEmpty()) {
             requestedDecommissionHosts_ = other.requestedDecommissionHosts_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureRequestedDecommissionHostsIsMutable();
             requestedDecommissionHosts_.addAll(other.requestedDecommissionHosts_);
@@ -8240,12 +8618,16 @@ public final class ManagerService {
       private boolean available_ ;
       /**
        * <code>bool available = 1;</code>
+       * @return The available.
        */
+      @java.lang.Override
       public boolean getAvailable() {
         return available_;
       }
       /**
        * <code>bool available = 1;</code>
+       * @param value The available to set.
+       * @return This builder for chaining.
        */
       public Builder setAvailable(boolean value) {
         
@@ -8255,6 +8637,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool available = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAvailable() {
         
@@ -8266,9 +8649,9 @@ public final class ManagerService {
       private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo> liveNodes_ =
         java.util.Collections.emptyList();
       private void ensureLiveNodesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           liveNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo>(liveNodes_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -8418,7 +8801,7 @@ public final class ManagerService {
       public Builder clearLiveNodes() {
         if (liveNodesBuilder_ == null) {
           liveNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           liveNodesBuilder_.clear();
@@ -8495,7 +8878,7 @@ public final class ManagerService {
           liveNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnNodeInfoOrBuilder>(
                   liveNodes_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           liveNodes_ = null;
@@ -8505,9 +8888,9 @@ public final class ManagerService {
 
       private com.google.protobuf.LazyStringList requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRequestedDecommissionHostsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           requestedDecommissionHosts_ = new com.google.protobuf.LazyStringArrayList(requestedDecommissionHosts_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -8516,6 +8899,7 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @return A list containing the requestedDecommissionHosts.
        */
       public com.google.protobuf.ProtocolStringList
           getRequestedDecommissionHostsList() {
@@ -8527,6 +8911,7 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @return The count of requestedDecommissionHosts.
        */
       public int getRequestedDecommissionHostsCount() {
         return requestedDecommissionHosts_.size();
@@ -8537,6 +8922,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @param index The index of the element to return.
+       * @return The requestedDecommissionHosts at the given index.
        */
       public java.lang.String getRequestedDecommissionHosts(int index) {
         return requestedDecommissionHosts_.get(index);
@@ -8547,6 +8934,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the requestedDecommissionHosts at the given index.
        */
       public com.google.protobuf.ByteString
           getRequestedDecommissionHostsBytes(int index) {
@@ -8558,6 +8947,9 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The requestedDecommissionHosts to set.
+       * @return This builder for chaining.
        */
       public Builder setRequestedDecommissionHosts(
           int index, java.lang.String value) {
@@ -8575,6 +8967,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @param value The requestedDecommissionHosts to add.
+       * @return This builder for chaining.
        */
       public Builder addRequestedDecommissionHosts(
           java.lang.String value) {
@@ -8592,6 +8986,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @param values The requestedDecommissionHosts to add.
+       * @return This builder for chaining.
        */
       public Builder addAllRequestedDecommissionHosts(
           java.lang.Iterable<java.lang.String> values) {
@@ -8607,10 +9003,11 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequestedDecommissionHosts() {
         requestedDecommissionHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -8620,6 +9017,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>repeated string requested_decommission_hosts = 3;</code>
+       * @param value The bytes of the requestedDecommissionHosts to add.
+       * @return This builder for chaining.
        */
       public Builder addRequestedDecommissionHostsBytes(
           com.google.protobuf.ByteString value) {
@@ -8635,7 +9034,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8691,13 +9090,14 @@ public final class ManagerService {
 
     /**
      * <code>bool alive = 1;</code>
+     * @return The alive.
      */
     boolean getAlive();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ZookeeperInfo}
    */
-  public  static final class ZookeeperInfo extends
+  public static final class ZookeeperInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ZookeeperInfo)
       ZookeeperInfoOrBuilder {
@@ -8707,7 +9107,13 @@ public final class ManagerService {
       super(builder);
     }
     private ZookeeperInfo() {
-      alive_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ZookeeperInfo();
     }
 
     @java.lang.Override
@@ -8723,7 +9129,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8740,7 +9145,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8775,7 +9180,9 @@ public final class ManagerService {
     private boolean alive_;
     /**
      * <code>bool alive = 1;</code>
+     * @return The alive.
      */
+    @java.lang.Override
     public boolean getAlive() {
       return alive_;
     }
@@ -8825,11 +9232,10 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo) obj;
 
-      boolean result = true;
-      result = result && (getAlive()
-          == other.getAlive());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAlive()
+          != other.getAlive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9010,35 +9416,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9087,12 +9493,16 @@ public final class ManagerService {
       private boolean alive_ ;
       /**
        * <code>bool alive = 1;</code>
+       * @return The alive.
        */
+      @java.lang.Override
       public boolean getAlive() {
         return alive_;
       }
       /**
        * <code>bool alive = 1;</code>
+       * @param value The alive to set.
+       * @return This builder for chaining.
        */
       public Builder setAlive(boolean value) {
         
@@ -9102,6 +9512,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool alive = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlive() {
         
@@ -9112,7 +9523,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9168,13 +9579,14 @@ public final class ManagerService {
 
     /**
      * <code>bool alive = 1;</code>
+     * @return The alive.
      */
     boolean getAlive();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.OozieInfo}
    */
-  public  static final class OozieInfo extends
+  public static final class OozieInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.OozieInfo)
       OozieInfoOrBuilder {
@@ -9184,7 +9596,13 @@ public final class ManagerService {
       super(builder);
     }
     private OozieInfo() {
-      alive_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OozieInfo();
     }
 
     @java.lang.Override
@@ -9200,7 +9618,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9217,7 +9634,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9252,7 +9669,9 @@ public final class ManagerService {
     private boolean alive_;
     /**
      * <code>bool alive = 1;</code>
+     * @return The alive.
      */
+    @java.lang.Override
     public boolean getAlive() {
       return alive_;
     }
@@ -9302,11 +9721,10 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo) obj;
 
-      boolean result = true;
-      result = result && (getAlive()
-          == other.getAlive());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAlive()
+          != other.getAlive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9487,35 +9905,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9564,12 +9982,16 @@ public final class ManagerService {
       private boolean alive_ ;
       /**
        * <code>bool alive = 1;</code>
+       * @return The alive.
        */
+      @java.lang.Override
       public boolean getAlive() {
         return alive_;
       }
       /**
        * <code>bool alive = 1;</code>
+       * @param value The alive to set.
+       * @return This builder for chaining.
        */
       public Builder setAlive(boolean value) {
         
@@ -9579,6 +10001,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool alive = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlive() {
         
@@ -9589,7 +10012,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9645,13 +10068,14 @@ public final class ManagerService {
 
     /**
      * <code>bool alive = 1;</code>
+     * @return The alive.
      */
     boolean getAlive();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.LivyInfo}
    */
-  public  static final class LivyInfo extends
+  public static final class LivyInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.LivyInfo)
       LivyInfoOrBuilder {
@@ -9661,7 +10085,13 @@ public final class ManagerService {
       super(builder);
     }
     private LivyInfo() {
-      alive_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LivyInfo();
     }
 
     @java.lang.Override
@@ -9677,7 +10107,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9694,7 +10123,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9729,7 +10158,9 @@ public final class ManagerService {
     private boolean alive_;
     /**
      * <code>bool alive = 1;</code>
+     * @return The alive.
      */
+    @java.lang.Override
     public boolean getAlive() {
       return alive_;
     }
@@ -9779,11 +10210,10 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo) obj;
 
-      boolean result = true;
-      result = result && (getAlive()
-          == other.getAlive());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getAlive()
+          != other.getAlive()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9964,35 +10394,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10041,12 +10471,16 @@ public final class ManagerService {
       private boolean alive_ ;
       /**
        * <code>bool alive = 1;</code>
+       * @return The alive.
        */
+      @java.lang.Override
       public boolean getAlive() {
         return alive_;
       }
       /**
        * <code>bool alive = 1;</code>
+       * @param value The alive to set.
+       * @return This builder for chaining.
        */
       public Builder setAlive(boolean value) {
         
@@ -10056,6 +10490,7 @@ public final class ManagerService {
       }
       /**
        * <code>bool alive = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlive() {
         
@@ -10066,7 +10501,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10122,10 +10557,12 @@ public final class ManagerService {
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
+     * @return Whether the hdfs field is set.
      */
     boolean hasHdfs();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
+     * @return The hdfs.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo getHdfs();
     /**
@@ -10135,10 +10572,12 @@ public final class ManagerService {
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
+     * @return Whether the yarn field is set.
      */
     boolean hasYarn();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
+     * @return The yarn.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo getYarn();
     /**
@@ -10148,10 +10587,12 @@ public final class ManagerService {
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
+     * @return Whether the hive field is set.
      */
     boolean hasHive();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
+     * @return The hive.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo getHive();
     /**
@@ -10161,10 +10602,12 @@ public final class ManagerService {
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
+     * @return Whether the zookeeper field is set.
      */
     boolean hasZookeeper();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
+     * @return The zookeeper.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo getZookeeper();
     /**
@@ -10174,10 +10617,12 @@ public final class ManagerService {
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
+     * @return Whether the hbase field is set.
      */
     boolean hasHbase();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
+     * @return The hbase.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo getHbase();
     /**
@@ -10187,10 +10632,12 @@ public final class ManagerService {
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
+     * @return Whether the oozie field is set.
      */
     boolean hasOozie();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
+     * @return The oozie.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo getOozie();
     /**
@@ -10206,15 +10653,18 @@ public final class ManagerService {
      * </pre>
      *
      * <code>int64 report_count = 7;</code>
+     * @return The reportCount.
      */
     long getReportCount();
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     * @return Whether the livy field is set.
      */
     boolean hasLivy();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     * @return The livy.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getLivy();
     /**
@@ -10225,7 +10675,7 @@ public final class ManagerService {
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.Info}
    */
-  public  static final class Info extends
+  public static final class Info extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.Info)
       InfoOrBuilder {
@@ -10235,7 +10685,13 @@ public final class ManagerService {
       super(builder);
     }
     private Info() {
-      reportCount_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Info();
     }
 
     @java.lang.Override
@@ -10251,7 +10707,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10359,7 +10814,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10394,19 +10849,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo hdfs_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
+     * @return Whether the hdfs field is set.
      */
+    @java.lang.Override
     public boolean hasHdfs() {
       return hdfs_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
+     * @return The hdfs.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo getHdfs() {
       return hdfs_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo.getDefaultInstance() : hdfs_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfoOrBuilder getHdfsOrBuilder() {
       return getHdfs();
     }
@@ -10415,19 +10875,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo yarn_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
+     * @return Whether the yarn field is set.
      */
+    @java.lang.Override
     public boolean hasYarn() {
       return yarn_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
+     * @return The yarn.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo getYarn() {
       return yarn_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo.getDefaultInstance() : yarn_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfoOrBuilder getYarnOrBuilder() {
       return getYarn();
     }
@@ -10436,19 +10901,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo hive_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
+     * @return Whether the hive field is set.
      */
+    @java.lang.Override
     public boolean hasHive() {
       return hive_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
+     * @return The hive.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo getHive() {
       return hive_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo.getDefaultInstance() : hive_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfoOrBuilder getHiveOrBuilder() {
       return getHive();
     }
@@ -10457,19 +10927,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo zookeeper_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
+     * @return Whether the zookeeper field is set.
      */
+    @java.lang.Override
     public boolean hasZookeeper() {
       return zookeeper_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
+     * @return The zookeeper.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo getZookeeper() {
       return zookeeper_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo.getDefaultInstance() : zookeeper_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfoOrBuilder getZookeeperOrBuilder() {
       return getZookeeper();
     }
@@ -10478,19 +10953,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo hbase_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
+     * @return Whether the hbase field is set.
      */
+    @java.lang.Override
     public boolean hasHbase() {
       return hbase_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
+     * @return The hbase.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo getHbase() {
       return hbase_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo.getDefaultInstance() : hbase_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfoOrBuilder getHbaseOrBuilder() {
       return getHbase();
     }
@@ -10499,19 +10979,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo oozie_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
+     * @return Whether the oozie field is set.
      */
+    @java.lang.Override
     public boolean hasOozie() {
       return oozie_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
+     * @return The oozie.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo getOozie() {
       return oozie_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo.getDefaultInstance() : oozie_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfoOrBuilder getOozieOrBuilder() {
       return getOozie();
     }
@@ -10526,7 +11011,9 @@ public final class ManagerService {
      * </pre>
      *
      * <code>int64 report_count = 7;</code>
+     * @return The reportCount.
      */
+    @java.lang.Override
     public long getReportCount() {
       return reportCount_;
     }
@@ -10535,19 +11022,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo livy_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     * @return Whether the livy field is set.
      */
+    @java.lang.Override
     public boolean hasLivy() {
       return livy_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     * @return The livy.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getLivy() {
       return livy_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.getDefaultInstance() : livy_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder getLivyOrBuilder() {
       return getLivy();
     }
@@ -10646,46 +11138,45 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.Info other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.Info) obj;
 
-      boolean result = true;
-      result = result && (hasHdfs() == other.hasHdfs());
+      if (hasHdfs() != other.hasHdfs()) return false;
       if (hasHdfs()) {
-        result = result && getHdfs()
-            .equals(other.getHdfs());
+        if (!getHdfs()
+            .equals(other.getHdfs())) return false;
       }
-      result = result && (hasYarn() == other.hasYarn());
+      if (hasYarn() != other.hasYarn()) return false;
       if (hasYarn()) {
-        result = result && getYarn()
-            .equals(other.getYarn());
+        if (!getYarn()
+            .equals(other.getYarn())) return false;
       }
-      result = result && (hasHive() == other.hasHive());
+      if (hasHive() != other.hasHive()) return false;
       if (hasHive()) {
-        result = result && getHive()
-            .equals(other.getHive());
+        if (!getHive()
+            .equals(other.getHive())) return false;
       }
-      result = result && (hasZookeeper() == other.hasZookeeper());
+      if (hasZookeeper() != other.hasZookeeper()) return false;
       if (hasZookeeper()) {
-        result = result && getZookeeper()
-            .equals(other.getZookeeper());
+        if (!getZookeeper()
+            .equals(other.getZookeeper())) return false;
       }
-      result = result && (hasHbase() == other.hasHbase());
+      if (hasHbase() != other.hasHbase()) return false;
       if (hasHbase()) {
-        result = result && getHbase()
-            .equals(other.getHbase());
+        if (!getHbase()
+            .equals(other.getHbase())) return false;
       }
-      result = result && (hasOozie() == other.hasOozie());
+      if (hasOozie() != other.hasOozie()) return false;
       if (hasOozie()) {
-        result = result && getOozie()
-            .equals(other.getOozie());
+        if (!getOozie()
+            .equals(other.getOozie())) return false;
       }
-      result = result && (getReportCount()
-          == other.getReportCount());
-      result = result && (hasLivy() == other.hasLivy());
+      if (getReportCount()
+          != other.getReportCount()) return false;
+      if (hasLivy() != other.hasLivy()) return false;
       if (hasLivy()) {
-        result = result && getLivy()
-            .equals(other.getLivy());
+        if (!getLivy()
+            .equals(other.getLivy())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10971,35 +11462,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11066,17 +11557,19 @@ public final class ManagerService {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo hdfs_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo hdfs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfoOrBuilder> hdfsBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
+       * @return Whether the hdfs field is set.
        */
       public boolean hasHdfs() {
         return hdfsBuilder_ != null || hdfs_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.HDFSInfo hdfs = 1;</code>
+       * @return The hdfs.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSInfo getHdfs() {
         if (hdfsBuilder_ == null) {
@@ -11183,17 +11676,19 @@ public final class ManagerService {
         return hdfsBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo yarn_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo yarn_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfoOrBuilder> yarnBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
+       * @return Whether the yarn field is set.
        */
       public boolean hasYarn() {
         return yarnBuilder_ != null || yarn_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.YarnInfo yarn = 2;</code>
+       * @return The yarn.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.YarnInfo getYarn() {
         if (yarnBuilder_ == null) {
@@ -11300,17 +11795,19 @@ public final class ManagerService {
         return yarnBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo hive_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo hive_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfoOrBuilder> hiveBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
+       * @return Whether the hive field is set.
        */
       public boolean hasHive() {
         return hiveBuilder_ != null || hive_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.HiveInfo hive = 3;</code>
+       * @return The hive.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.HiveInfo getHive() {
         if (hiveBuilder_ == null) {
@@ -11417,17 +11914,19 @@ public final class ManagerService {
         return hiveBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo zookeeper_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo zookeeper_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfoOrBuilder> zookeeperBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
+       * @return Whether the zookeeper field is set.
        */
       public boolean hasZookeeper() {
         return zookeeperBuilder_ != null || zookeeper_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.ZookeeperInfo zookeeper = 4;</code>
+       * @return The zookeeper.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.ZookeeperInfo getZookeeper() {
         if (zookeeperBuilder_ == null) {
@@ -11534,17 +12033,19 @@ public final class ManagerService {
         return zookeeperBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo hbase_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo hbase_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfoOrBuilder> hbaseBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
+       * @return Whether the hbase field is set.
        */
       public boolean hasHbase() {
         return hbaseBuilder_ != null || hbase_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.HbaseInfo hbase = 5;</code>
+       * @return The hbase.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.HbaseInfo getHbase() {
         if (hbaseBuilder_ == null) {
@@ -11651,17 +12152,19 @@ public final class ManagerService {
         return hbaseBuilder_;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo oozie_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo oozie_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfoOrBuilder> oozieBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
+       * @return Whether the oozie field is set.
        */
       public boolean hasOozie() {
         return oozieBuilder_ != null || oozie_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.OozieInfo oozie = 6;</code>
+       * @return The oozie.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.OozieInfo getOozie() {
         if (oozieBuilder_ == null) {
@@ -11777,7 +12280,9 @@ public final class ManagerService {
        * </pre>
        *
        * <code>int64 report_count = 7;</code>
+       * @return The reportCount.
        */
+      @java.lang.Override
       public long getReportCount() {
         return reportCount_;
       }
@@ -11789,6 +12294,8 @@ public final class ManagerService {
        * </pre>
        *
        * <code>int64 report_count = 7;</code>
+       * @param value The reportCount to set.
+       * @return This builder for chaining.
        */
       public Builder setReportCount(long value) {
         
@@ -11804,6 +12311,7 @@ public final class ManagerService {
        * </pre>
        *
        * <code>int64 report_count = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReportCount() {
         
@@ -11812,17 +12320,19 @@ public final class ManagerService {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo livy_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo livy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder> livyBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       * @return Whether the livy field is set.
        */
       public boolean hasLivy() {
         return livyBuilder_ != null || livy_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       * @return The livy.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getLivy() {
         if (livyBuilder_ == null) {
@@ -11931,7 +12441,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11987,25 +12497,30 @@ public final class ManagerService {
 
     /**
      * <code>string cid = 1;</code>
+     * @return The cid.
      */
     java.lang.String getCid();
     /**
      * <code>string cid = 1;</code>
+     * @return The bytes for cid.
      */
     com.google.protobuf.ByteString
         getCidBytes();
 
     /**
      * <code>int64 topology_revision = 2;</code>
+     * @return The topologyRevision.
      */
     long getTopologyRevision();
 
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
+     * @return Whether the info field is set.
      */
     boolean hasInfo();
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
+     * @return The info.
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.Info getInfo();
     /**
@@ -12015,10 +12530,12 @@ public final class ManagerService {
 
     /**
      * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     * @return Whether the collectedAt field is set.
      */
     boolean hasCollectedAt();
     /**
      * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     * @return The collectedAt.
      */
     com.google.protobuf.Timestamp getCollectedAt();
     /**
@@ -12033,7 +12550,7 @@ public final class ManagerService {
    *
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ReportRequest}
    */
-  public  static final class ReportRequest extends
+  public static final class ReportRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ReportRequest)
       ReportRequestOrBuilder {
@@ -12044,7 +12561,13 @@ public final class ManagerService {
     }
     private ReportRequest() {
       cid_ = "";
-      topologyRevision_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReportRequest();
     }
 
     @java.lang.Override
@@ -12060,7 +12583,6 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12109,7 +12631,7 @@ public final class ManagerService {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12144,7 +12666,9 @@ public final class ManagerService {
     private volatile java.lang.Object cid_;
     /**
      * <code>string cid = 1;</code>
+     * @return The cid.
      */
+    @java.lang.Override
     public java.lang.String getCid() {
       java.lang.Object ref = cid_;
       if (ref instanceof java.lang.String) {
@@ -12159,7 +12683,9 @@ public final class ManagerService {
     }
     /**
      * <code>string cid = 1;</code>
+     * @return The bytes for cid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCidBytes() {
       java.lang.Object ref = cid_;
@@ -12178,7 +12704,9 @@ public final class ManagerService {
     private long topologyRevision_;
     /**
      * <code>int64 topology_revision = 2;</code>
+     * @return The topologyRevision.
      */
+    @java.lang.Override
     public long getTopologyRevision() {
       return topologyRevision_;
     }
@@ -12187,19 +12715,24 @@ public final class ManagerService {
     private yandex.cloud.api.dataproc.manager.v1.ManagerService.Info info_;
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
+     * @return Whether the info field is set.
      */
+    @java.lang.Override
     public boolean hasInfo() {
       return info_ != null;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
+     * @return The info.
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.Info getInfo() {
       return info_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.Info.getDefaultInstance() : info_;
     }
     /**
      * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.InfoOrBuilder getInfoOrBuilder() {
       return getInfo();
     }
@@ -12208,19 +12741,24 @@ public final class ManagerService {
     private com.google.protobuf.Timestamp collectedAt_;
     /**
      * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     * @return Whether the collectedAt field is set.
      */
+    @java.lang.Override
     public boolean hasCollectedAt() {
       return collectedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     * @return The collectedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCollectedAt() {
       return collectedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : collectedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp collected_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCollectedAtOrBuilder() {
       return getCollectedAt();
     }
@@ -12239,7 +12777,7 @@ public final class ManagerService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cid_);
       }
       if (topologyRevision_ != 0L) {
@@ -12260,7 +12798,7 @@ public final class ManagerService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cid_);
       }
       if (topologyRevision_ != 0L) {
@@ -12290,23 +12828,22 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest) obj;
 
-      boolean result = true;
-      result = result && getCid()
-          .equals(other.getCid());
-      result = result && (getTopologyRevision()
-          == other.getTopologyRevision());
-      result = result && (hasInfo() == other.hasInfo());
+      if (!getCid()
+          .equals(other.getCid())) return false;
+      if (getTopologyRevision()
+          != other.getTopologyRevision()) return false;
+      if (hasInfo() != other.hasInfo()) return false;
       if (hasInfo()) {
-        result = result && getInfo()
-            .equals(other.getInfo());
+        if (!getInfo()
+            .equals(other.getInfo())) return false;
       }
-      result = result && (hasCollectedAt() == other.hasCollectedAt());
+      if (hasCollectedAt() != other.hasCollectedAt()) return false;
       if (hasCollectedAt()) {
-        result = result && getCollectedAt()
-            .equals(other.getCollectedAt());
+        if (!getCollectedAt()
+            .equals(other.getCollectedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12526,35 +13063,35 @@ public final class ManagerService {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12613,6 +13150,7 @@ public final class ManagerService {
       private java.lang.Object cid_ = "";
       /**
        * <code>string cid = 1;</code>
+       * @return The cid.
        */
       public java.lang.String getCid() {
         java.lang.Object ref = cid_;
@@ -12628,6 +13166,7 @@ public final class ManagerService {
       }
       /**
        * <code>string cid = 1;</code>
+       * @return The bytes for cid.
        */
       public com.google.protobuf.ByteString
           getCidBytes() {
@@ -12644,6 +13183,8 @@ public final class ManagerService {
       }
       /**
        * <code>string cid = 1;</code>
+       * @param value The cid to set.
+       * @return This builder for chaining.
        */
       public Builder setCid(
           java.lang.String value) {
@@ -12657,6 +13198,7 @@ public final class ManagerService {
       }
       /**
        * <code>string cid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCid() {
         
@@ -12666,6 +13208,8 @@ public final class ManagerService {
       }
       /**
        * <code>string cid = 1;</code>
+       * @param value The bytes for cid to set.
+       * @return This builder for chaining.
        */
       public Builder setCidBytes(
           com.google.protobuf.ByteString value) {
@@ -12682,12 +13226,16 @@ public final class ManagerService {
       private long topologyRevision_ ;
       /**
        * <code>int64 topology_revision = 2;</code>
+       * @return The topologyRevision.
        */
+      @java.lang.Override
       public long getTopologyRevision() {
         return topologyRevision_;
       }
       /**
        * <code>int64 topology_revision = 2;</code>
+       * @param value The topologyRevision to set.
+       * @return This builder for chaining.
        */
       public Builder setTopologyRevision(long value) {
         
@@ -12697,6 +13245,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 topology_revision = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTopologyRevision() {
         
@@ -12705,17 +13254,19 @@ public final class ManagerService {
         return this;
       }
 
-      private yandex.cloud.api.dataproc.manager.v1.ManagerService.Info info_ = null;
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.Info info_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.Info, yandex.cloud.api.dataproc.manager.v1.ManagerService.Info.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.InfoOrBuilder> infoBuilder_;
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
+       * @return Whether the info field is set.
        */
       public boolean hasInfo() {
         return infoBuilder_ != null || info_ != null;
       }
       /**
        * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
+       * @return The info.
        */
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.Info getInfo() {
         if (infoBuilder_ == null) {
@@ -12822,17 +13373,19 @@ public final class ManagerService {
         return infoBuilder_;
       }
 
-      private com.google.protobuf.Timestamp collectedAt_ = null;
+      private com.google.protobuf.Timestamp collectedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> collectedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       * @return Whether the collectedAt field is set.
        */
       public boolean hasCollectedAt() {
         return collectedAtBuilder_ != null || collectedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       * @return The collectedAt.
        */
       public com.google.protobuf.Timestamp getCollectedAt() {
         if (collectedAtBuilder_ == null) {
@@ -12941,7 +13494,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12997,43 +13550,56 @@ public final class ManagerService {
 
     /**
      * <code>int64 decommission_timeout = 1;</code>
+     * @return The decommissionTimeout.
      */
     long getDecommissionTimeout();
 
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @return A list containing the yarnHostsToDecommission.
      */
     java.util.List<java.lang.String>
         getYarnHostsToDecommissionList();
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @return The count of yarnHostsToDecommission.
      */
     int getYarnHostsToDecommissionCount();
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @param index The index of the element to return.
+     * @return The yarnHostsToDecommission at the given index.
      */
     java.lang.String getYarnHostsToDecommission(int index);
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the yarnHostsToDecommission at the given index.
      */
     com.google.protobuf.ByteString
         getYarnHostsToDecommissionBytes(int index);
 
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @return A list containing the hdfsHostsToDecommission.
      */
     java.util.List<java.lang.String>
         getHdfsHostsToDecommissionList();
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @return The count of hdfsHostsToDecommission.
      */
     int getHdfsHostsToDecommissionCount();
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @param index The index of the element to return.
+     * @return The hdfsHostsToDecommission at the given index.
      */
     java.lang.String getHdfsHostsToDecommission(int index);
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hdfsHostsToDecommission at the given index.
      */
     com.google.protobuf.ByteString
         getHdfsHostsToDecommissionBytes(int index);
@@ -13045,7 +13611,7 @@ public final class ManagerService {
    *
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ReportReply}
    */
-  public  static final class ReportReply extends
+  public static final class ReportReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ReportReply)
       ReportReplyOrBuilder {
@@ -13055,9 +13621,15 @@ public final class ManagerService {
       super(builder);
     }
     private ReportReply() {
-      decommissionTimeout_ = 0L;
       yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReportReply();
     }
 
     @java.lang.Override
@@ -13091,24 +13663,24 @@ public final class ManagerService {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 yarnHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               yarnHostsToDecommission_.add(s);
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 hdfsHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               hdfsHostsToDecommission_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13122,10 +13694,10 @@ public final class ManagerService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           yarnHostsToDecommission_ = yarnHostsToDecommission_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           hdfsHostsToDecommission_ = hdfsHostsToDecommission_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -13145,12 +13717,13 @@ public final class ManagerService {
               yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DECOMMISSION_TIMEOUT_FIELD_NUMBER = 1;
     private long decommissionTimeout_;
     /**
      * <code>int64 decommission_timeout = 1;</code>
+     * @return The decommissionTimeout.
      */
+    @java.lang.Override
     public long getDecommissionTimeout() {
       return decommissionTimeout_;
     }
@@ -13159,6 +13732,7 @@ public final class ManagerService {
     private com.google.protobuf.LazyStringList yarnHostsToDecommission_;
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @return A list containing the yarnHostsToDecommission.
      */
     public com.google.protobuf.ProtocolStringList
         getYarnHostsToDecommissionList() {
@@ -13166,18 +13740,23 @@ public final class ManagerService {
     }
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @return The count of yarnHostsToDecommission.
      */
     public int getYarnHostsToDecommissionCount() {
       return yarnHostsToDecommission_.size();
     }
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @param index The index of the element to return.
+     * @return The yarnHostsToDecommission at the given index.
      */
     public java.lang.String getYarnHostsToDecommission(int index) {
       return yarnHostsToDecommission_.get(index);
     }
     /**
      * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the yarnHostsToDecommission at the given index.
      */
     public com.google.protobuf.ByteString
         getYarnHostsToDecommissionBytes(int index) {
@@ -13188,6 +13767,7 @@ public final class ManagerService {
     private com.google.protobuf.LazyStringList hdfsHostsToDecommission_;
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @return A list containing the hdfsHostsToDecommission.
      */
     public com.google.protobuf.ProtocolStringList
         getHdfsHostsToDecommissionList() {
@@ -13195,18 +13775,23 @@ public final class ManagerService {
     }
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @return The count of hdfsHostsToDecommission.
      */
     public int getHdfsHostsToDecommissionCount() {
       return hdfsHostsToDecommission_.size();
     }
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @param index The index of the element to return.
+     * @return The hdfsHostsToDecommission at the given index.
      */
     public java.lang.String getHdfsHostsToDecommission(int index) {
       return hdfsHostsToDecommission_.get(index);
     }
     /**
      * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hdfsHostsToDecommission at the given index.
      */
     public com.google.protobuf.ByteString
         getHdfsHostsToDecommissionBytes(int index) {
@@ -13280,15 +13865,14 @@ public final class ManagerService {
       }
       yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply) obj;
 
-      boolean result = true;
-      result = result && (getDecommissionTimeout()
-          == other.getDecommissionTimeout());
-      result = result && getYarnHostsToDecommissionList()
-          .equals(other.getYarnHostsToDecommissionList());
-      result = result && getHdfsHostsToDecommissionList()
-          .equals(other.getHdfsHostsToDecommissionList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDecommissionTimeout()
+          != other.getDecommissionTimeout()) return false;
+      if (!getYarnHostsToDecommissionList()
+          .equals(other.getYarnHostsToDecommissionList())) return false;
+      if (!getHdfsHostsToDecommissionList()
+          .equals(other.getHdfsHostsToDecommissionList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13449,9 +14033,9 @@ public final class ManagerService {
         decommissionTimeout_ = 0L;
 
         yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -13479,54 +14063,52 @@ public final class ManagerService {
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply buildPartial() {
         yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.decommissionTimeout_ = decommissionTimeout_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           yarnHostsToDecommission_ = yarnHostsToDecommission_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.yarnHostsToDecommission_ = yarnHostsToDecommission_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           hdfsHostsToDecommission_ = hdfsHostsToDecommission_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.hdfsHostsToDecommission_ = hdfsHostsToDecommission_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13546,7 +14128,7 @@ public final class ManagerService {
         if (!other.yarnHostsToDecommission_.isEmpty()) {
           if (yarnHostsToDecommission_.isEmpty()) {
             yarnHostsToDecommission_ = other.yarnHostsToDecommission_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureYarnHostsToDecommissionIsMutable();
             yarnHostsToDecommission_.addAll(other.yarnHostsToDecommission_);
@@ -13556,7 +14138,7 @@ public final class ManagerService {
         if (!other.hdfsHostsToDecommission_.isEmpty()) {
           if (hdfsHostsToDecommission_.isEmpty()) {
             hdfsHostsToDecommission_ = other.hdfsHostsToDecommission_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureHdfsHostsToDecommissionIsMutable();
             hdfsHostsToDecommission_.addAll(other.hdfsHostsToDecommission_);
@@ -13596,12 +14178,16 @@ public final class ManagerService {
       private long decommissionTimeout_ ;
       /**
        * <code>int64 decommission_timeout = 1;</code>
+       * @return The decommissionTimeout.
        */
+      @java.lang.Override
       public long getDecommissionTimeout() {
         return decommissionTimeout_;
       }
       /**
        * <code>int64 decommission_timeout = 1;</code>
+       * @param value The decommissionTimeout to set.
+       * @return This builder for chaining.
        */
       public Builder setDecommissionTimeout(long value) {
         
@@ -13611,6 +14197,7 @@ public final class ManagerService {
       }
       /**
        * <code>int64 decommission_timeout = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDecommissionTimeout() {
         
@@ -13621,13 +14208,14 @@ public final class ManagerService {
 
       private com.google.protobuf.LazyStringList yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureYarnHostsToDecommissionIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           yarnHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList(yarnHostsToDecommission_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @return A list containing the yarnHostsToDecommission.
        */
       public com.google.protobuf.ProtocolStringList
           getYarnHostsToDecommissionList() {
@@ -13635,18 +14223,23 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @return The count of yarnHostsToDecommission.
        */
       public int getYarnHostsToDecommissionCount() {
         return yarnHostsToDecommission_.size();
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @param index The index of the element to return.
+       * @return The yarnHostsToDecommission at the given index.
        */
       public java.lang.String getYarnHostsToDecommission(int index) {
         return yarnHostsToDecommission_.get(index);
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the yarnHostsToDecommission at the given index.
        */
       public com.google.protobuf.ByteString
           getYarnHostsToDecommissionBytes(int index) {
@@ -13654,6 +14247,9 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The yarnHostsToDecommission to set.
+       * @return This builder for chaining.
        */
       public Builder setYarnHostsToDecommission(
           int index, java.lang.String value) {
@@ -13667,6 +14263,8 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @param value The yarnHostsToDecommission to add.
+       * @return This builder for chaining.
        */
       public Builder addYarnHostsToDecommission(
           java.lang.String value) {
@@ -13680,6 +14278,8 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @param values The yarnHostsToDecommission to add.
+       * @return This builder for chaining.
        */
       public Builder addAllYarnHostsToDecommission(
           java.lang.Iterable<java.lang.String> values) {
@@ -13691,15 +14291,18 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearYarnHostsToDecommission() {
         yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       * @param value The bytes of the yarnHostsToDecommission to add.
+       * @return This builder for chaining.
        */
       public Builder addYarnHostsToDecommissionBytes(
           com.google.protobuf.ByteString value) {
@@ -13715,13 +14318,14 @@ public final class ManagerService {
 
       private com.google.protobuf.LazyStringList hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureHdfsHostsToDecommissionIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           hdfsHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList(hdfsHostsToDecommission_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @return A list containing the hdfsHostsToDecommission.
        */
       public com.google.protobuf.ProtocolStringList
           getHdfsHostsToDecommissionList() {
@@ -13729,18 +14333,23 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @return The count of hdfsHostsToDecommission.
        */
       public int getHdfsHostsToDecommissionCount() {
         return hdfsHostsToDecommission_.size();
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @param index The index of the element to return.
+       * @return The hdfsHostsToDecommission at the given index.
        */
       public java.lang.String getHdfsHostsToDecommission(int index) {
         return hdfsHostsToDecommission_.get(index);
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the hdfsHostsToDecommission at the given index.
        */
       public com.google.protobuf.ByteString
           getHdfsHostsToDecommissionBytes(int index) {
@@ -13748,6 +14357,9 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The hdfsHostsToDecommission to set.
+       * @return This builder for chaining.
        */
       public Builder setHdfsHostsToDecommission(
           int index, java.lang.String value) {
@@ -13761,6 +14373,8 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @param value The hdfsHostsToDecommission to add.
+       * @return This builder for chaining.
        */
       public Builder addHdfsHostsToDecommission(
           java.lang.String value) {
@@ -13774,6 +14388,8 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @param values The hdfsHostsToDecommission to add.
+       * @return This builder for chaining.
        */
       public Builder addAllHdfsHostsToDecommission(
           java.lang.Iterable<java.lang.String> values) {
@@ -13785,15 +14401,18 @@ public final class ManagerService {
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdfsHostsToDecommission() {
         hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       * @param value The bytes of the hdfsHostsToDecommission to add.
+       * @return This builder for chaining.
        */
       public Builder addHdfsHostsToDecommissionBytes(
           com.google.protobuf.ByteString value) {
@@ -13809,7 +14428,7 @@ public final class ManagerService {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14000,19 +14619,11 @@ public final class ManagerService {
       "ndex/cloud/dataproc/manager/v1;dataproc_" +
       "managerb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_dataproc_manager_v1_HbaseNodeInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_dataproc_manager_v1_HbaseNodeInfo_fieldAccessorTable = new

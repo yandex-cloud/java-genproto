@@ -1,25 +1,13 @@
 package yandex.cloud.api.dataproc.manager.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/dataproc/manager/v1/job_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class JobServiceGrpc {
 
   private JobServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class JobServiceGrpc {
     if ((getListActiveMethod = JobServiceGrpc.getListActiveMethod) == null) {
       synchronized (JobServiceGrpc.class) {
         if ((getListActiveMethod = JobServiceGrpc.getListActiveMethod) == null) {
-          JobServiceGrpc.getListActiveMethod = getListActiveMethod = 
+          JobServiceGrpc.getListActiveMethod = getListActiveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest, yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.manager.v1.JobService", "ListActive"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListActive"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("ListActive"))
-                  .build();
-          }
+              .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("ListActive"))
+              .build();
         }
-     }
-     return getListActiveMethod;
+      }
+    }
+    return getListActiveMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest,
@@ -73,29 +60,35 @@ public final class JobServiceGrpc {
     if ((getUpdateStatusMethod = JobServiceGrpc.getUpdateStatusMethod) == null) {
       synchronized (JobServiceGrpc.class) {
         if ((getUpdateStatusMethod = JobServiceGrpc.getUpdateStatusMethod) == null) {
-          JobServiceGrpc.getUpdateStatusMethod = getUpdateStatusMethod = 
+          JobServiceGrpc.getUpdateStatusMethod = getUpdateStatusMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest, yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.dataproc.manager.v1.JobService", "UpdateStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("UpdateStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("UpdateStatus"))
+              .build();
         }
-     }
-     return getUpdateStatusMethod;
+      }
+    }
+    return getUpdateStatusMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static JobServiceStub newStub(io.grpc.Channel channel) {
-    return new JobServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<JobServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JobServiceStub>() {
+        @java.lang.Override
+        public JobServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JobServiceStub(channel, callOptions);
+        }
+      };
+    return JobServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +96,14 @@ public final class JobServiceGrpc {
    */
   public static JobServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new JobServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<JobServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JobServiceBlockingStub>() {
+        @java.lang.Override
+        public JobServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JobServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return JobServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +111,14 @@ public final class JobServiceGrpc {
    */
   public static JobServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new JobServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<JobServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JobServiceFutureStub>() {
+        @java.lang.Override
+        public JobServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JobServiceFutureStub(channel, callOptions);
+        }
+      };
+    return JobServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +132,7 @@ public final class JobServiceGrpc {
      */
     public void listActive(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListActiveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListActiveMethod(), responseObserver);
     }
 
     /**
@@ -135,21 +142,21 @@ public final class JobServiceGrpc {
      */
     public void updateStatus(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateStatusMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateStatusMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListActiveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest,
                 yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse>(
                   this, METHODID_LIST_ACTIVE)))
           .addMethod(
             getUpdateStatusMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest,
                 yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse>(
@@ -160,19 +167,15 @@ public final class JobServiceGrpc {
 
   /**
    */
-  public static final class JobServiceStub extends io.grpc.stub.AbstractStub<JobServiceStub> {
-    private JobServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private JobServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class JobServiceStub extends io.grpc.stub.AbstractAsyncStub<JobServiceStub> {
+    private JobServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected JobServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected JobServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new JobServiceStub(channel, callOptions);
     }
 
@@ -183,7 +186,7 @@ public final class JobServiceGrpc {
      */
     public void listActive(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListActiveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -194,26 +197,22 @@ public final class JobServiceGrpc {
      */
     public void updateStatus(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateStatusMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class JobServiceBlockingStub extends io.grpc.stub.AbstractStub<JobServiceBlockingStub> {
-    private JobServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private JobServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class JobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<JobServiceBlockingStub> {
+    private JobServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected JobServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected JobServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new JobServiceBlockingStub(channel, callOptions);
     }
 
@@ -223,7 +222,7 @@ public final class JobServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse listActive(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListActiveMethod(), getCallOptions(), request);
     }
 
@@ -233,26 +232,22 @@ public final class JobServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse updateStatus(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateStatusMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class JobServiceFutureStub extends io.grpc.stub.AbstractStub<JobServiceFutureStub> {
-    private JobServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private JobServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class JobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<JobServiceFutureStub> {
+    private JobServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected JobServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected JobServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new JobServiceFutureStub(channel, callOptions);
     }
 
@@ -263,7 +258,7 @@ public final class JobServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse> listActive(
         yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListActiveMethod(), getCallOptions()), request);
     }
 
@@ -274,7 +269,7 @@ public final class JobServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusResponse> updateStatus(
         yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.UpdateJobStatusRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateStatusMethod(), getCallOptions()), request);
     }
   }

@@ -1,19 +1,6 @@
 package yandex.cloud.api.compute.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/compute/v1/disk_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DiskServiceGrpc {
 
   private DiskServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class DiskServiceGrpc {
     if ((getGetMethod = DiskServiceGrpc.getGetMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getGetMethod = DiskServiceGrpc.getGetMethod) == null) {
-          DiskServiceGrpc.getGetMethod = getGetMethod = 
+          DiskServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest, yandex.cloud.api.compute.v1.DiskOuterClass.Disk>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskOuterClass.Disk.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest,
@@ -76,22 +63,21 @@ public final class DiskServiceGrpc {
     if ((getListMethod = DiskServiceGrpc.getListMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getListMethod = DiskServiceGrpc.getListMethod) == null) {
-          DiskServiceGrpc.getListMethod = getListMethod = 
+          DiskServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest,
@@ -108,22 +94,21 @@ public final class DiskServiceGrpc {
     if ((getCreateMethod = DiskServiceGrpc.getCreateMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getCreateMethod = DiskServiceGrpc.getCreateMethod) == null) {
-          DiskServiceGrpc.getCreateMethod = getCreateMethod = 
+          DiskServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest,
@@ -140,22 +125,21 @@ public final class DiskServiceGrpc {
     if ((getUpdateMethod = DiskServiceGrpc.getUpdateMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getUpdateMethod = DiskServiceGrpc.getUpdateMethod) == null) {
-          DiskServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          DiskServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest,
@@ -172,22 +156,21 @@ public final class DiskServiceGrpc {
     if ((getDeleteMethod = DiskServiceGrpc.getDeleteMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getDeleteMethod = DiskServiceGrpc.getDeleteMethod) == null) {
-          DiskServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          DiskServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest,
@@ -204,22 +187,21 @@ public final class DiskServiceGrpc {
     if ((getListOperationsMethod = DiskServiceGrpc.getListOperationsMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getListOperationsMethod = DiskServiceGrpc.getListOperationsMethod) == null) {
-          DiskServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          DiskServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
@@ -236,29 +218,35 @@ public final class DiskServiceGrpc {
     if ((getMoveMethod = DiskServiceGrpc.getMoveMethod) == null) {
       synchronized (DiskServiceGrpc.class) {
         if ((getMoveMethod = DiskServiceGrpc.getMoveMethod) == null) {
-          DiskServiceGrpc.getMoveMethod = getMoveMethod = 
+          DiskServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.compute.v1.DiskService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DiskServiceStub newStub(io.grpc.Channel channel) {
-    return new DiskServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DiskServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiskServiceStub>() {
+        @java.lang.Override
+        public DiskServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiskServiceStub(channel, callOptions);
+        }
+      };
+    return DiskServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -266,7 +254,14 @@ public final class DiskServiceGrpc {
    */
   public static DiskServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DiskServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DiskServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiskServiceBlockingStub>() {
+        @java.lang.Override
+        public DiskServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiskServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DiskServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -274,7 +269,14 @@ public final class DiskServiceGrpc {
    */
   public static DiskServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DiskServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DiskServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiskServiceFutureStub>() {
+        @java.lang.Override
+        public DiskServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiskServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DiskServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -292,7 +294,7 @@ public final class DiskServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -302,7 +304,7 @@ public final class DiskServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -314,7 +316,7 @@ public final class DiskServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -324,7 +326,7 @@ public final class DiskServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -337,7 +339,7 @@ public final class DiskServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -347,7 +349,7 @@ public final class DiskServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -357,56 +359,56 @@ public final class DiskServiceGrpc {
      */
     public void move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest,
                 yandex.cloud.api.compute.v1.DiskOuterClass.Disk>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest,
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest,
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -420,19 +422,15 @@ public final class DiskServiceGrpc {
    * A set of methods for managing Disk resources.
    * </pre>
    */
-  public static final class DiskServiceStub extends io.grpc.stub.AbstractStub<DiskServiceStub> {
-    private DiskServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DiskServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DiskServiceStub extends io.grpc.stub.AbstractAsyncStub<DiskServiceStub> {
+    private DiskServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DiskServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DiskServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DiskServiceStub(channel, callOptions);
     }
 
@@ -444,7 +442,7 @@ public final class DiskServiceGrpc {
      */
     public void get(yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -455,7 +453,7 @@ public final class DiskServiceGrpc {
      */
     public void list(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -468,7 +466,7 @@ public final class DiskServiceGrpc {
      */
     public void create(yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -479,7 +477,7 @@ public final class DiskServiceGrpc {
      */
     public void update(yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -493,7 +491,7 @@ public final class DiskServiceGrpc {
      */
     public void delete(yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -504,7 +502,7 @@ public final class DiskServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -515,7 +513,7 @@ public final class DiskServiceGrpc {
      */
     public void move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -525,19 +523,15 @@ public final class DiskServiceGrpc {
    * A set of methods for managing Disk resources.
    * </pre>
    */
-  public static final class DiskServiceBlockingStub extends io.grpc.stub.AbstractStub<DiskServiceBlockingStub> {
-    private DiskServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DiskServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DiskServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DiskServiceBlockingStub> {
+    private DiskServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DiskServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DiskServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DiskServiceBlockingStub(channel, callOptions);
     }
 
@@ -548,7 +542,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.DiskOuterClass.Disk get(yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -558,7 +552,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse list(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -570,7 +564,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -580,7 +574,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -593,7 +587,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -603,7 +597,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse listOperations(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -613,7 +607,7 @@ public final class DiskServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
   }
@@ -623,19 +617,15 @@ public final class DiskServiceGrpc {
    * A set of methods for managing Disk resources.
    * </pre>
    */
-  public static final class DiskServiceFutureStub extends io.grpc.stub.AbstractStub<DiskServiceFutureStub> {
-    private DiskServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DiskServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DiskServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DiskServiceFutureStub> {
+    private DiskServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DiskServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DiskServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DiskServiceFutureStub(channel, callOptions);
     }
 
@@ -647,7 +637,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> get(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.GetDiskRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -658,7 +648,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksResponse> list(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDisksRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -671,7 +661,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -682,7 +672,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.UpdateDiskRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -696,7 +686,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.DeleteDiskRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -707,7 +697,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse> listOperations(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -718,7 +708,7 @@ public final class DiskServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
   }

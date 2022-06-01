@@ -24,6 +24,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -60,6 +64,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -93,6 +100,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -103,6 +111,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -111,6 +120,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -175,6 +185,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
@@ -183,6 +194,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+     * @return The status.
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status getStatus();
 
@@ -192,6 +204,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 8;</code>
+     * @return The logGroupId.
      */
     java.lang.String getLogGroupId();
     /**
@@ -200,6 +213,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 8;</code>
+     * @return The bytes for logGroupId.
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -211,7 +225,7 @@ public final class RegistryOuterClass {
    *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.Registry}
    */
-  public  static final class Registry extends
+  public static final class Registry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.Registry)
       RegistryOrBuilder {
@@ -227,6 +241,13 @@ public final class RegistryOuterClass {
       description_ = "";
       status_ = 0;
       logGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Registry();
     }
 
     @java.lang.Override
@@ -291,10 +312,10 @@ public final class RegistryOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -316,7 +337,7 @@ public final class RegistryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -434,6 +455,8 @@ public final class RegistryOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -441,6 +464,10 @@ public final class RegistryOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Status forNumber(int value) {
         switch (value) {
           case 0: return STATUS_UNSPECIFIED;
@@ -465,6 +492,10 @@ public final class RegistryOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -499,7 +530,6 @@ public final class RegistryOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.iot.devices.v1.Registry.Status)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -508,7 +538,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -527,7 +559,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -550,7 +584,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -569,7 +605,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -592,7 +630,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -602,7 +642,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -613,6 +655,7 @@ public final class RegistryOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -625,7 +668,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -644,7 +689,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -667,7 +714,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -686,7 +735,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string description = 5;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -735,14 +786,16 @@ public final class RegistryOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -754,6 +807,7 @@ public final class RegistryOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -765,11 +819,12 @@ public final class RegistryOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -781,10 +836,11 @@ public final class RegistryOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -801,8 +857,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -811,8 +868,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+     * @return The status.
      */
-    public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status getStatus() {
+    @java.lang.Override public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status getStatus() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status result = yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status.valueOf(status_);
       return result == null ? yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status.UNRECOGNIZED : result;
@@ -826,7 +884,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 8;</code>
+     * @return The logGroupId.
      */
+    @java.lang.Override
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = logGroupId_;
       if (ref instanceof java.lang.String) {
@@ -845,7 +905,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string log_group_id = 8;</code>
+     * @return The bytes for logGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
       java.lang.Object ref = logGroupId_;
@@ -874,19 +936,19 @@ public final class RegistryOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -898,7 +960,7 @@ public final class RegistryOuterClass {
       if (status_ != yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, status_);
       }
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, logGroupId_);
       }
       unknownFields.writeTo(output);
@@ -910,20 +972,20 @@ public final class RegistryOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -940,7 +1002,7 @@ public final class RegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, status_);
       }
-      if (!getLogGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, logGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -958,27 +1020,26 @@ public final class RegistryOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry other = (yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && status_ == other.status_;
-      result = result && getLogGroupId()
-          .equals(other.getLogGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (status_ != other.status_) return false;
+      if (!getLogGroupId()
+          .equals(other.getLogGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1213,7 +1274,6 @@ public final class RegistryOuterClass {
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry buildPartial() {
         yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry result = new yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -1227,42 +1287,41 @@ public final class RegistryOuterClass {
         result.labels_.makeImmutable();
         result.status_ = status_;
         result.logGroupId_ = logGroupId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1341,6 +1400,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1360,6 +1420,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1380,6 +1441,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1397,6 +1460,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1410,6 +1474,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1430,6 +1496,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1449,6 +1516,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1469,6 +1537,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1486,6 +1556,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1499,6 +1570,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1512,7 +1585,7 @@ public final class RegistryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1521,6 +1594,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1531,6 +1605,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1672,6 +1747,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1691,6 +1767,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1711,6 +1788,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1728,6 +1807,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1741,6 +1821,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1761,6 +1843,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1780,6 +1863,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1800,6 +1884,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1817,6 +1903,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1830,6 +1917,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1877,14 +1966,16 @@ public final class RegistryOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -1896,6 +1987,7 @@ public final class RegistryOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -1907,11 +1999,12 @@ public final class RegistryOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1923,10 +2016,11 @@ public final class RegistryOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -1950,7 +2044,7 @@ public final class RegistryOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -1973,8 +2067,11 @@ public final class RegistryOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -2001,8 +2098,9 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
@@ -2011,8 +2109,11 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
@@ -2023,7 +2124,9 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status getStatus() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status result = yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status.valueOf(status_);
@@ -2035,6 +2138,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Status value) {
         if (value == null) {
@@ -2051,6 +2156,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.iot.devices.v1.Registry.Status status = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -2066,6 +2172,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 8;</code>
+       * @return The logGroupId.
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = logGroupId_;
@@ -2085,6 +2192,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 8;</code>
+       * @return The bytes for logGroupId.
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -2105,6 +2213,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 8;</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -2122,6 +2232,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogGroupId() {
         
@@ -2135,6 +2246,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string log_group_id = 8;</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2150,7 +2263,7 @@ public final class RegistryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2210,6 +2323,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -2218,6 +2332,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -2228,6 +2343,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The fingerprint.
      */
     java.lang.String getFingerprint();
     /**
@@ -2236,6 +2352,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The bytes for fingerprint.
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
@@ -2246,6 +2363,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The certificateData.
      */
     java.lang.String getCertificateData();
     /**
@@ -2254,6 +2372,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The bytes for certificateData.
      */
     com.google.protobuf.ByteString
         getCertificateDataBytes();
@@ -2264,6 +2383,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -2272,6 +2392,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -2290,7 +2411,7 @@ public final class RegistryOuterClass {
    *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.RegistryCertificate}
    */
-  public  static final class RegistryCertificate extends
+  public static final class RegistryCertificate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.RegistryCertificate)
       RegistryCertificateOrBuilder {
@@ -2306,6 +2427,13 @@ public final class RegistryOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegistryCertificate();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2318,7 +2446,6 @@ public final class RegistryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2361,7 +2488,7 @@ public final class RegistryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2400,7 +2527,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -2419,7 +2548,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -2442,7 +2573,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The fingerprint.
      */
+    @java.lang.Override
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
@@ -2461,7 +2594,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string fingerprint = 2;</code>
+     * @return The bytes for fingerprint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
       java.lang.Object ref = fingerprint_;
@@ -2484,7 +2619,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The certificateData.
      */
+    @java.lang.Override
     public java.lang.String getCertificateData() {
       java.lang.Object ref = certificateData_;
       if (ref instanceof java.lang.String) {
@@ -2503,7 +2640,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string certificate_data = 3;</code>
+     * @return The bytes for certificateData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateDataBytes() {
       java.lang.Object ref = certificateData_;
@@ -2526,7 +2665,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -2536,7 +2677,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -2547,6 +2690,7 @@ public final class RegistryOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -2565,13 +2709,13 @@ public final class RegistryOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
-      if (!getCertificateDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, certificateData_);
       }
       if (createdAt_ != null) {
@@ -2586,13 +2730,13 @@ public final class RegistryOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getFingerprintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fingerprint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
       }
-      if (!getCertificateDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, certificateData_);
       }
       if (createdAt_ != null) {
@@ -2614,20 +2758,19 @@ public final class RegistryOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate other = (yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && getCertificateData()
-          .equals(other.getCertificateData());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!getCertificateData()
+          .equals(other.getCertificateData())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2836,35 +2979,35 @@ public final class RegistryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2929,6 +3072,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -2948,6 +3092,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -2968,6 +3113,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -2985,6 +3132,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -2998,6 +3146,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3018,6 +3168,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return The fingerprint.
        */
       public java.lang.String getFingerprint() {
         java.lang.Object ref = fingerprint_;
@@ -3037,6 +3188,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return The bytes for fingerprint.
        */
       public com.google.protobuf.ByteString
           getFingerprintBytes() {
@@ -3057,6 +3209,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @param value The fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprint(
           java.lang.String value) {
@@ -3074,6 +3228,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFingerprint() {
         
@@ -3087,6 +3242,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string fingerprint = 2;</code>
+       * @param value The bytes for fingerprint to set.
+       * @return This builder for chaining.
        */
       public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
@@ -3107,6 +3264,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return The certificateData.
        */
       public java.lang.String getCertificateData() {
         java.lang.Object ref = certificateData_;
@@ -3126,6 +3284,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return The bytes for certificateData.
        */
       public com.google.protobuf.ByteString
           getCertificateDataBytes() {
@@ -3146,6 +3305,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @param value The certificateData to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateData(
           java.lang.String value) {
@@ -3163,6 +3324,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateData() {
         
@@ -3176,6 +3338,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string certificate_data = 3;</code>
+       * @param value The bytes for certificateData to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateDataBytes(
           com.google.protobuf.ByteString value) {
@@ -3189,7 +3353,7 @@ public final class RegistryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -3198,6 +3362,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -3208,6 +3373,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -3344,7 +3510,7 @@ public final class RegistryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3404,6 +3570,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -3412,6 +3579,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -3422,6 +3590,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
+     * @return The topicPrefix.
      */
     java.lang.String getTopicPrefix();
     /**
@@ -3430,6 +3599,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
+     * @return The bytes for topicPrefix.
      */
     com.google.protobuf.ByteString
         getTopicPrefixBytes();
@@ -3440,6 +3610,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return The alias.
      */
     java.lang.String getAlias();
     /**
@@ -3448,6 +3619,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return The bytes for alias.
      */
     com.google.protobuf.ByteString
         getAliasBytes();
@@ -3460,7 +3632,7 @@ public final class RegistryOuterClass {
    *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeviceAlias}
    */
-  public  static final class DeviceAlias extends
+  public static final class DeviceAlias extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeviceAlias)
       DeviceAliasOrBuilder {
@@ -3476,6 +3648,13 @@ public final class RegistryOuterClass {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeviceAlias();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3488,7 +3667,6 @@ public final class RegistryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3518,7 +3696,7 @@ public final class RegistryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3557,7 +3735,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The deviceId.
      */
+    @java.lang.Override
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
       if (ref instanceof java.lang.String) {
@@ -3576,7 +3756,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string device_id = 1;</code>
+     * @return The bytes for deviceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
       java.lang.Object ref = deviceId_;
@@ -3599,7 +3781,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
+     * @return The topicPrefix.
      */
+    @java.lang.Override
     public java.lang.String getTopicPrefix() {
       java.lang.Object ref = topicPrefix_;
       if (ref instanceof java.lang.String) {
@@ -3618,7 +3802,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
+     * @return The bytes for topicPrefix.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicPrefixBytes() {
       java.lang.Object ref = topicPrefix_;
@@ -3641,7 +3827,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -3660,7 +3848,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -3689,13 +3879,13 @@ public final class RegistryOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!getTopicPrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicPrefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicPrefix_);
       }
-      if (!getAliasBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alias_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, alias_);
       }
       unknownFields.writeTo(output);
@@ -3707,13 +3897,13 @@ public final class RegistryOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!getTopicPrefixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicPrefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicPrefix_);
       }
-      if (!getAliasBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alias_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, alias_);
       }
       size += unknownFields.getSerializedSize();
@@ -3731,15 +3921,14 @@ public final class RegistryOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias other = (yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias) obj;
 
-      boolean result = true;
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getTopicPrefix()
-          .equals(other.getTopicPrefix());
-      result = result && getAlias()
-          .equals(other.getAlias());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getTopicPrefix()
+          .equals(other.getTopicPrefix())) return false;
+      if (!getAlias()
+          .equals(other.getAlias())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3934,35 +4123,35 @@ public final class RegistryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4024,6 +4213,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -4043,6 +4233,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -4063,6 +4254,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -4080,6 +4273,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -4093,6 +4287,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string device_id = 1;</code>
+       * @param value The bytes for deviceId to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4113,6 +4309,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
+       * @return The topicPrefix.
        */
       public java.lang.String getTopicPrefix() {
         java.lang.Object ref = topicPrefix_;
@@ -4132,6 +4329,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
+       * @return The bytes for topicPrefix.
        */
       public com.google.protobuf.ByteString
           getTopicPrefixBytes() {
@@ -4152,6 +4350,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
+       * @param value The topicPrefix to set.
+       * @return This builder for chaining.
        */
       public Builder setTopicPrefix(
           java.lang.String value) {
@@ -4169,6 +4369,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTopicPrefix() {
         
@@ -4182,6 +4383,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
+       * @param value The bytes for topicPrefix to set.
+       * @return This builder for chaining.
        */
       public Builder setTopicPrefixBytes(
           com.google.protobuf.ByteString value) {
@@ -4202,6 +4405,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string alias = 3;</code>
+       * @return The alias.
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -4221,6 +4425,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string alias = 3;</code>
+       * @return The bytes for alias.
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -4241,6 +4446,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string alias = 3;</code>
+       * @param value The alias to set.
+       * @return This builder for chaining.
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -4258,6 +4465,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string alias = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlias() {
         
@@ -4271,6 +4479,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string alias = 3;</code>
+       * @param value The bytes for alias to set.
+       * @return This builder for chaining.
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -4286,7 +4496,7 @@ public final class RegistryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4346,6 +4556,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
     java.lang.String getRegistryId();
     /**
@@ -4354,6 +4565,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
@@ -4364,6 +4576,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -4372,6 +4585,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -4382,6 +4596,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -4390,6 +4605,7 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -4408,7 +4624,7 @@ public final class RegistryOuterClass {
    *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.RegistryPassword}
    */
-  public  static final class RegistryPassword extends
+  public static final class RegistryPassword extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.RegistryPassword)
       RegistryPasswordOrBuilder {
@@ -4420,6 +4636,13 @@ public final class RegistryOuterClass {
     private RegistryPassword() {
       registryId_ = "";
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegistryPassword();
     }
 
     @java.lang.Override
@@ -4435,7 +4658,6 @@ public final class RegistryOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4472,7 +4694,7 @@ public final class RegistryOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4511,7 +4733,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The registryId.
      */
+    @java.lang.Override
     public java.lang.String getRegistryId() {
       java.lang.Object ref = registryId_;
       if (ref instanceof java.lang.String) {
@@ -4530,7 +4754,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRegistryIdBytes() {
       java.lang.Object ref = registryId_;
@@ -4553,7 +4779,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -4572,7 +4800,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -4595,7 +4825,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -4605,7 +4837,9 @@ public final class RegistryOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -4616,6 +4850,7 @@ public final class RegistryOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -4634,10 +4869,10 @@ public final class RegistryOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       if (createdAt_ != null) {
@@ -4652,10 +4887,10 @@ public final class RegistryOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRegistryIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       if (createdAt_ != null) {
@@ -4677,18 +4912,17 @@ public final class RegistryOuterClass {
       }
       yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword other = (yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword) obj;
 
-      boolean result = true;
-      result = result && getRegistryId()
-          .equals(other.getRegistryId());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4892,35 +5126,35 @@ public final class RegistryOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4981,6 +5215,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The registryId.
        */
       public java.lang.String getRegistryId() {
         java.lang.Object ref = registryId_;
@@ -5000,6 +5235,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
        */
       public com.google.protobuf.ByteString
           getRegistryIdBytes() {
@@ -5020,6 +5256,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryId(
           java.lang.String value) {
@@ -5037,6 +5275,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRegistryId() {
         
@@ -5050,6 +5289,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
        */
       public Builder setRegistryIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5070,6 +5311,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -5089,6 +5331,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -5109,6 +5352,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -5126,6 +5371,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -5139,6 +5385,8 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5152,7 +5400,7 @@ public final class RegistryOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -5161,6 +5409,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -5171,6 +5420,7 @@ public final class RegistryOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -5307,7 +5557,7 @@ public final class RegistryOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5416,19 +5666,11 @@ public final class RegistryOuterClass {
       "-genproto/yandex/cloud/iot/devices/v1;de" +
       "vicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_iot_devices_v1_Registry_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_Registry_fieldAccessorTable = new

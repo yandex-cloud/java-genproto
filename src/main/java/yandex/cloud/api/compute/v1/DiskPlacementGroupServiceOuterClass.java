@@ -25,6 +25,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -34,6 +35,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -41,7 +43,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.GetDiskPlacementGroupRequest}
    */
-  public  static final class GetDiskPlacementGroupRequest extends
+  public static final class GetDiskPlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GetDiskPlacementGroupRequest)
       GetDiskPlacementGroupRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private GetDiskPlacementGroupRequest() {
       diskPlacementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDiskPlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -174,7 +186,7 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.GetDiskPlacementGroupRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.GetDiskPlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -491,6 +503,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -512,6 +525,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -544,6 +560,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -653,6 +674,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -663,6 +685,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -674,6 +697,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -683,6 +707,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -690,7 +715,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupsRequest}
    */
-  public  static final class ListDiskPlacementGroupsRequest extends
+  public static final class ListDiskPlacementGroupsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskPlacementGroupsRequest)
       ListDiskPlacementGroupsRequestOrBuilder {
@@ -701,9 +726,15 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private ListDiskPlacementGroupsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskPlacementGroupsRequest();
     }
 
     @java.lang.Override
@@ -719,7 +750,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -754,7 +784,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -794,7 +824,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -814,7 +846,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -840,7 +874,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -855,7 +891,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -876,7 +914,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -900,7 +940,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -920,7 +962,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -949,16 +993,16 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -970,17 +1014,17 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -998,17 +1042,16 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1204,35 +1247,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1298,6 +1341,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1318,6 +1362,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1339,6 +1384,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1357,6 +1404,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1371,6 +1419,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1394,7 +1444,9 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1407,6 +1459,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1423,6 +1477,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1440,6 +1495,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1461,6 +1517,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1483,6 +1540,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1502,6 +1561,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1517,6 +1577,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1538,6 +1600,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1558,6 +1621,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1579,6 +1643,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1597,6 +1663,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1611,6 +1678,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1626,7 +1695,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1735,6 +1804,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1748,6 +1818,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1755,7 +1826,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupsResponse}
    */
-  public  static final class ListDiskPlacementGroupsResponse extends
+  public static final class ListDiskPlacementGroupsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskPlacementGroupsResponse)
       ListDiskPlacementGroupsResponseOrBuilder {
@@ -1767,6 +1838,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     private ListDiskPlacementGroupsResponse() {
       diskPlacementGroups_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskPlacementGroupsResponse();
     }
 
     @java.lang.Override
@@ -1794,7 +1872,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 diskPlacementGroups_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1809,7 +1887,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1823,7 +1901,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           diskPlacementGroups_ = java.util.Collections.unmodifiableList(diskPlacementGroups_);
         }
         this.unknownFields = unknownFields.build();
@@ -1843,7 +1921,6 @@ public final class DiskPlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse.class, yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DISK_PLACEMENT_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup> diskPlacementGroups_;
     /**
@@ -1853,6 +1930,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.DiskPlacementGroup disk_placement_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup> getDiskPlacementGroupsList() {
       return diskPlacementGroups_;
     }
@@ -1863,6 +1941,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.DiskPlacementGroup disk_placement_groups = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroupOrBuilder> 
         getDiskPlacementGroupsOrBuilderList() {
       return diskPlacementGroups_;
@@ -1874,6 +1953,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.DiskPlacementGroup disk_placement_groups = 1;</code>
      */
+    @java.lang.Override
     public int getDiskPlacementGroupsCount() {
       return diskPlacementGroups_.size();
     }
@@ -1884,6 +1964,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.DiskPlacementGroup disk_placement_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup getDiskPlacementGroups(int index) {
       return diskPlacementGroups_.get(index);
     }
@@ -1894,6 +1975,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.DiskPlacementGroup disk_placement_groups = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroupOrBuilder getDiskPlacementGroupsOrBuilder(
         int index) {
       return diskPlacementGroups_.get(index);
@@ -1912,7 +1994,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1936,7 +2020,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1968,7 +2054,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       for (int i = 0; i < diskPlacementGroups_.size(); i++) {
         output.writeMessage(1, diskPlacementGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1984,7 +2070,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, diskPlacementGroups_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2002,13 +2088,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupsList()
-          .equals(other.getDiskPlacementGroupsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupsList()
+          .equals(other.getDiskPlacementGroupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2193,9 +2278,8 @@ public final class DiskPlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse buildPartial() {
         yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse result = new yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (diskPlacementGroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             diskPlacementGroups_ = java.util.Collections.unmodifiableList(diskPlacementGroups_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2204,42 +2288,41 @@ public final class DiskPlacementGroupServiceOuterClass {
           result.diskPlacementGroups_ = diskPlacementGroupsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2316,7 +2399,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup> diskPlacementGroups_ =
         java.util.Collections.emptyList();
       private void ensureDiskPlacementGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           diskPlacementGroups_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup>(diskPlacementGroups_);
           bitField0_ |= 0x00000001;
          }
@@ -2617,7 +2700,7 @@ public final class DiskPlacementGroupServiceOuterClass {
           diskPlacementGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup, yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroup.Builder, yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskPlacementGroupOrBuilder>(
                   diskPlacementGroups_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           diskPlacementGroups_ = null;
@@ -2637,6 +2720,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2661,6 +2745,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2686,6 +2771,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2708,6 +2795,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2726,6 +2814,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2741,7 +2831,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2802,6 +2892,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2811,6 +2902,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2821,6 +2913,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2829,6 +2922,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2839,6 +2933,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2847,6 +2942,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2912,6 +3008,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -2921,6 +3018,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -2931,6 +3029,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
+     * @return Whether the spreadPlacementStrategy field is set.
      */
     boolean hasSpreadPlacementStrategy();
     /**
@@ -2939,6 +3038,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
+     * @return The spreadPlacementStrategy.
      */
     yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategy getSpreadPlacementStrategy();
     /**
@@ -2955,7 +3055,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateDiskPlacementGroupRequest}
    */
-  public  static final class CreateDiskPlacementGroupRequest extends
+  public static final class CreateDiskPlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateDiskPlacementGroupRequest)
       CreateDiskPlacementGroupRequestOrBuilder {
@@ -2969,6 +3069,13 @@ public final class DiskPlacementGroupServiceOuterClass {
       name_ = "";
       description_ = "";
       zoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDiskPlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -3014,10 +3121,10 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3047,7 +3154,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3090,11 +3197,11 @@ public final class DiskPlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest.class, yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int placementStrategyCase_ = 0;
     private java.lang.Object placementStrategy_;
     public enum PlacementStrategyCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SPREAD_PLACEMENT_STRATEGY(6),
       PLACEMENTSTRATEGY_NOT_SET(0);
       private final int value;
@@ -3102,6 +3209,8 @@ public final class DiskPlacementGroupServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3136,7 +3245,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3156,7 +3267,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3179,7 +3292,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3198,7 +3313,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3221,7 +3338,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3240,7 +3359,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3289,14 +3410,16 @@ public final class DiskPlacementGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3308,6 +3431,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3319,11 +3443,12 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3335,10 +3460,11 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3356,7 +3482,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -3376,7 +3504,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -3398,7 +3528,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
+     * @return Whether the spreadPlacementStrategy field is set.
      */
+    @java.lang.Override
     public boolean hasSpreadPlacementStrategy() {
       return placementStrategyCase_ == 6;
     }
@@ -3408,7 +3540,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
+     * @return The spreadPlacementStrategy.
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategy getSpreadPlacementStrategy() {
       if (placementStrategyCase_ == 6) {
          return (yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategy) placementStrategy_;
@@ -3422,6 +3556,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategyOrBuilder getSpreadPlacementStrategyOrBuilder() {
       if (placementStrategyCase_ == 6) {
          return (yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategy) placementStrategy_;
@@ -3443,13 +3578,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3458,7 +3593,7 @@ public final class DiskPlacementGroupServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, zoneId_);
       }
       if (placementStrategyCase_ == 6) {
@@ -3473,13 +3608,13 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3492,7 +3627,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, zoneId_);
       }
       if (placementStrategyCase_ == 6) {
@@ -3514,30 +3649,27 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && getPlacementStrategyCase().equals(
-          other.getPlacementStrategyCase());
-      if (!result) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (!getPlacementStrategyCase().equals(other.getPlacementStrategyCase())) return false;
       switch (placementStrategyCase_) {
         case 6:
-          result = result && getSpreadPlacementStrategy()
-              .equals(other.getSpreadPlacementStrategy());
+          if (!getSpreadPlacementStrategy()
+              .equals(other.getSpreadPlacementStrategy())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3760,7 +3892,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest buildPartial() {
         yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest result = new yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3774,7 +3905,6 @@ public final class DiskPlacementGroupServiceOuterClass {
             result.placementStrategy_ = spreadPlacementStrategyBuilder_.build();
           }
         }
-        result.bitField0_ = to_bitField0_;
         result.placementStrategyCase_ = placementStrategyCase_;
         onBuilt();
         return result;
@@ -3782,35 +3912,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3904,6 +4034,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3924,6 +4055,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3945,6 +4077,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3963,6 +4097,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3977,6 +4112,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3997,6 +4134,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4016,6 +4154,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4036,6 +4175,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4053,6 +4194,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4066,6 +4208,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4086,6 +4230,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4105,6 +4250,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4125,6 +4271,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4142,6 +4290,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4155,6 +4304,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4202,14 +4353,16 @@ public final class DiskPlacementGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4221,6 +4374,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4232,11 +4386,12 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4248,10 +4403,11 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4275,7 +4431,7 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4298,8 +4454,11 @@ public final class DiskPlacementGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4327,6 +4486,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -4347,6 +4507,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -4368,6 +4529,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -4386,6 +4549,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -4400,6 +4564,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4421,7 +4587,9 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
+       * @return Whether the spreadPlacementStrategy field is set.
        */
+      @java.lang.Override
       public boolean hasSpreadPlacementStrategy() {
         return placementStrategyCase_ == 6;
       }
@@ -4431,7 +4599,9 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
+       * @return The spreadPlacementStrategy.
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategy getSpreadPlacementStrategy() {
         if (spreadPlacementStrategyBuilder_ == null) {
           if (placementStrategyCase_ == 6) {
@@ -4549,6 +4719,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>.yandex.cloud.compute.v1.DiskSpreadPlacementStrategy spread_placement_strategy = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.DiskSpreadPlacementStrategyOrBuilder getSpreadPlacementStrategyOrBuilder() {
         if ((placementStrategyCase_ == 6) && (spreadPlacementStrategyBuilder_ != null)) {
           return spreadPlacementStrategyBuilder_.getMessageOrBuilder();
@@ -4587,7 +4758,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4647,6 +4818,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -4655,6 +4827,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -4662,7 +4835,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateDiskPlacementGroupMetadata}
    */
-  public  static final class CreateDiskPlacementGroupMetadata extends
+  public static final class CreateDiskPlacementGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateDiskPlacementGroupMetadata)
       CreateDiskPlacementGroupMetadataOrBuilder {
@@ -4673,6 +4846,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private CreateDiskPlacementGroupMetadata() {
       diskPlacementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateDiskPlacementGroupMetadata();
     }
 
     @java.lang.Override
@@ -4688,7 +4868,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4706,7 +4885,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4745,7 +4924,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -4764,7 +4945,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -4793,7 +4976,7 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -4805,7 +4988,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4823,11 +5006,10 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupMetadata other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.CreateDiskPlacementGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5007,35 +5189,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5089,6 +5271,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -5108,6 +5291,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -5128,6 +5312,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -5145,6 +5331,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -5158,6 +5345,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5173,7 +5362,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5234,6 +5423,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -5243,6 +5433,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -5253,6 +5444,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5261,6 +5453,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5278,6 +5471,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5286,6 +5480,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5296,6 +5491,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5304,6 +5500,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5370,7 +5567,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateDiskPlacementGroupRequest}
    */
-  public  static final class UpdateDiskPlacementGroupRequest extends
+  public static final class UpdateDiskPlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateDiskPlacementGroupRequest)
       UpdateDiskPlacementGroupRequestOrBuilder {
@@ -5383,6 +5580,13 @@ public final class DiskPlacementGroupServiceOuterClass {
       diskPlacementGroupId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDiskPlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -5441,10 +5645,10 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -5454,7 +5658,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5497,7 +5701,6 @@ public final class DiskPlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest.class, yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DISK_PLACEMENT_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object diskPlacementGroupId_;
     /**
@@ -5507,7 +5710,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -5527,7 +5732,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -5550,7 +5757,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5560,7 +5769,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5571,6 +5782,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5583,7 +5795,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5602,7 +5816,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5625,7 +5841,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5644,7 +5862,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5694,14 +5914,16 @@ public final class DiskPlacementGroupServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -5714,6 +5936,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -5726,11 +5949,12 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5743,10 +5967,11 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -5769,16 +5994,16 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -5796,17 +6021,17 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -5834,22 +6059,21 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6068,7 +6292,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest buildPartial() {
         yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest result = new yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.diskPlacementGroupId_ = diskPlacementGroupId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6079,42 +6302,41 @@ public final class DiskPlacementGroupServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6183,6 +6405,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -6203,6 +6426,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -6224,6 +6448,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -6242,6 +6468,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -6256,6 +6483,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6269,7 +6498,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6278,6 +6507,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6288,6 +6518,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6429,6 +6660,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6448,6 +6680,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6468,6 +6701,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6485,6 +6720,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6498,6 +6734,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6518,6 +6756,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6537,6 +6776,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6557,6 +6797,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6574,6 +6816,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6587,6 +6830,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6635,14 +6880,16 @@ public final class DiskPlacementGroupServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -6655,6 +6902,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -6667,11 +6915,12 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6684,10 +6933,11 @@ public final class DiskPlacementGroupServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -6712,7 +6962,7 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -6736,8 +6986,11 @@ public final class DiskPlacementGroupServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -6760,7 +7013,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6820,6 +7073,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -6828,6 +7082,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -6835,7 +7090,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateDiskPlacementGroupMetadata}
    */
-  public  static final class UpdateDiskPlacementGroupMetadata extends
+  public static final class UpdateDiskPlacementGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateDiskPlacementGroupMetadata)
       UpdateDiskPlacementGroupMetadataOrBuilder {
@@ -6846,6 +7101,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private UpdateDiskPlacementGroupMetadata() {
       diskPlacementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDiskPlacementGroupMetadata();
     }
 
     @java.lang.Override
@@ -6861,7 +7123,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6879,7 +7140,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6918,7 +7179,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -6937,7 +7200,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -6966,7 +7231,7 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -6978,7 +7243,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6996,11 +7261,10 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupMetadata other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.UpdateDiskPlacementGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7180,35 +7444,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7262,6 +7526,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -7281,6 +7546,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -7301,6 +7567,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -7318,6 +7586,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -7331,6 +7600,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7346,7 +7617,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7407,6 +7678,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -7416,6 +7688,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -7423,7 +7696,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteDiskPlacementGroupRequest}
    */
-  public  static final class DeleteDiskPlacementGroupRequest extends
+  public static final class DeleteDiskPlacementGroupRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteDiskPlacementGroupRequest)
       DeleteDiskPlacementGroupRequestOrBuilder {
@@ -7434,6 +7707,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private DeleteDiskPlacementGroupRequest() {
       diskPlacementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDiskPlacementGroupRequest();
     }
 
     @java.lang.Override
@@ -7449,7 +7729,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7467,7 +7746,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7507,7 +7786,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -7527,7 +7808,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -7556,7 +7839,7 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -7568,7 +7851,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7586,11 +7869,10 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.DeleteDiskPlacementGroupRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.DeleteDiskPlacementGroupRequest) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7770,35 +8052,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7853,6 +8135,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -7873,6 +8156,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -7894,6 +8178,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -7912,6 +8198,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -7926,6 +8213,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7941,7 +8230,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8001,6 +8290,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -8009,6 +8299,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -8016,7 +8307,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteDiskPlacementGroupMetadata}
    */
-  public  static final class DeleteDiskPlacementGroupMetadata extends
+  public static final class DeleteDiskPlacementGroupMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteDiskPlacementGroupMetadata)
       DeleteDiskPlacementGroupMetadataOrBuilder {
@@ -8027,6 +8318,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private DeleteDiskPlacementGroupMetadata() {
       diskPlacementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDiskPlacementGroupMetadata();
     }
 
     @java.lang.Override
@@ -8042,7 +8340,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8060,7 +8357,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8099,7 +8396,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -8118,7 +8417,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1;</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -8147,7 +8448,7 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       unknownFields.writeTo(output);
@@ -8159,7 +8460,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8177,11 +8478,10 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.DeleteDiskPlacementGroupMetadata other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.DeleteDiskPlacementGroupMetadata) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8361,35 +8661,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8443,6 +8743,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -8462,6 +8763,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -8482,6 +8784,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -8499,6 +8803,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -8512,6 +8817,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1;</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8527,7 +8834,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8588,6 +8895,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -8597,6 +8905,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -8610,6 +8919,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -8621,6 +8931,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -8631,6 +8942,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -8638,7 +8950,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupDisksRequest}
    */
-  public  static final class ListDiskPlacementGroupDisksRequest extends
+  public static final class ListDiskPlacementGroupDisksRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskPlacementGroupDisksRequest)
       ListDiskPlacementGroupDisksRequestOrBuilder {
@@ -8649,8 +8961,14 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private ListDiskPlacementGroupDisksRequest() {
       diskPlacementGroupId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskPlacementGroupDisksRequest();
     }
 
     @java.lang.Override
@@ -8666,7 +8984,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8695,7 +9012,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8735,7 +9052,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -8755,7 +9074,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -8781,7 +9102,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -8796,7 +9119,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -8817,7 +9142,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -8846,13 +9173,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -8864,14 +9191,14 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -8889,15 +9216,14 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksRequest) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9088,35 +9414,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9178,6 +9504,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -9198,6 +9525,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -9219,6 +9547,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -9237,6 +9567,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -9251,6 +9582,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9274,7 +9607,9 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -9287,6 +9622,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -9303,6 +9640,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -9320,6 +9658,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -9341,6 +9680,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -9363,6 +9703,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -9382,6 +9724,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -9397,6 +9740,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -9412,7 +9757,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9521,6 +9866,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -9534,6 +9880,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -9541,7 +9888,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupDisksResponse}
    */
-  public  static final class ListDiskPlacementGroupDisksResponse extends
+  public static final class ListDiskPlacementGroupDisksResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskPlacementGroupDisksResponse)
       ListDiskPlacementGroupDisksResponseOrBuilder {
@@ -9553,6 +9900,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     private ListDiskPlacementGroupDisksResponse() {
       disks_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskPlacementGroupDisksResponse();
     }
 
     @java.lang.Override
@@ -9580,7 +9934,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 disks_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.DiskOuterClass.Disk>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -9595,7 +9949,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9609,7 +9963,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           disks_ = java.util.Collections.unmodifiableList(disks_);
         }
         this.unknownFields = unknownFields.build();
@@ -9629,7 +9983,6 @@ public final class DiskPlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse.class, yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DISKS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> disks_;
     /**
@@ -9639,6 +9992,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> getDisksList() {
       return disks_;
     }
@@ -9649,6 +10003,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.DiskOuterClass.DiskOrBuilder> 
         getDisksOrBuilderList() {
       return disks_;
@@ -9660,6 +10015,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
      */
+    @java.lang.Override
     public int getDisksCount() {
       return disks_.size();
     }
@@ -9670,6 +10026,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskOuterClass.Disk getDisks(int index) {
       return disks_.get(index);
     }
@@ -9680,6 +10037,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.DiskOuterClass.DiskOrBuilder getDisksOrBuilder(
         int index) {
       return disks_.get(index);
@@ -9698,7 +10056,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -9722,7 +10082,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -9754,7 +10116,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       for (int i = 0; i < disks_.size(); i++) {
         output.writeMessage(1, disks_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -9770,7 +10132,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, disks_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -9788,13 +10150,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse) obj;
 
-      boolean result = true;
-      result = result && getDisksList()
-          .equals(other.getDisksList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDisksList()
+          .equals(other.getDisksList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9979,9 +10340,8 @@ public final class DiskPlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse buildPartial() {
         yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse result = new yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupDisksResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (disksBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             disks_ = java.util.Collections.unmodifiableList(disks_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -9990,42 +10350,41 @@ public final class DiskPlacementGroupServiceOuterClass {
           result.disks_ = disksBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10102,7 +10461,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> disks_ =
         java.util.Collections.emptyList();
       private void ensureDisksIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           disks_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.DiskOuterClass.Disk>(disks_);
           bitField0_ |= 0x00000001;
          }
@@ -10403,7 +10762,7 @@ public final class DiskPlacementGroupServiceOuterClass {
           disksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.DiskOuterClass.Disk, yandex.cloud.api.compute.v1.DiskOuterClass.Disk.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskOrBuilder>(
                   disks_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           disks_ = null;
@@ -10423,6 +10782,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -10447,6 +10807,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -10472,6 +10833,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -10494,6 +10857,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -10512,6 +10876,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -10527,7 +10893,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10588,6 +10954,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
     java.lang.String getDiskPlacementGroupId();
     /**
@@ -10597,6 +10964,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
     com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes();
@@ -10609,6 +10977,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -10619,6 +10988,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -10628,6 +10998,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -10635,7 +11006,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupOperationsRequest}
    */
-  public  static final class ListDiskPlacementGroupOperationsRequest extends
+  public static final class ListDiskPlacementGroupOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskPlacementGroupOperationsRequest)
       ListDiskPlacementGroupOperationsRequestOrBuilder {
@@ -10646,8 +11017,14 @@ public final class DiskPlacementGroupServiceOuterClass {
     }
     private ListDiskPlacementGroupOperationsRequest() {
       diskPlacementGroupId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskPlacementGroupOperationsRequest();
     }
 
     @java.lang.Override
@@ -10663,7 +11040,6 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10692,7 +11068,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10732,7 +11108,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The diskPlacementGroupId.
      */
+    @java.lang.Override
     public java.lang.String getDiskPlacementGroupId() {
       java.lang.Object ref = diskPlacementGroupId_;
       if (ref instanceof java.lang.String) {
@@ -10752,7 +11130,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for diskPlacementGroupId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiskPlacementGroupIdBytes() {
       java.lang.Object ref = diskPlacementGroupId_;
@@ -10777,7 +11157,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -10791,7 +11173,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -10811,7 +11195,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -10840,13 +11226,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskPlacementGroupId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -10858,14 +11244,14 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiskPlacementGroupIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskPlacementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskPlacementGroupId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -10883,15 +11269,14 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsRequest other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getDiskPlacementGroupId()
-          .equals(other.getDiskPlacementGroupId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDiskPlacementGroupId()
+          .equals(other.getDiskPlacementGroupId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11082,35 +11467,35 @@ public final class DiskPlacementGroupServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11172,6 +11557,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The diskPlacementGroupId.
        */
       public java.lang.String getDiskPlacementGroupId() {
         java.lang.Object ref = diskPlacementGroupId_;
@@ -11192,6 +11578,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for diskPlacementGroupId.
        */
       public com.google.protobuf.ByteString
           getDiskPlacementGroupIdBytes() {
@@ -11213,6 +11600,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupId(
           java.lang.String value) {
@@ -11231,6 +11620,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskPlacementGroupId() {
         
@@ -11245,6 +11635,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string disk_placement_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for diskPlacementGroupId to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskPlacementGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11267,7 +11659,9 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -11279,6 +11673,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -11294,6 +11690,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -11310,6 +11707,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -11330,6 +11728,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -11351,6 +11750,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -11369,6 +11770,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -11383,6 +11785,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -11398,7 +11802,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11505,6 +11909,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -11516,6 +11921,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -11523,7 +11929,7 @@ public final class DiskPlacementGroupServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupOperationsResponse}
    */
-  public  static final class ListDiskPlacementGroupOperationsResponse extends
+  public static final class ListDiskPlacementGroupOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskPlacementGroupOperationsResponse)
       ListDiskPlacementGroupOperationsResponseOrBuilder {
@@ -11535,6 +11941,13 @@ public final class DiskPlacementGroupServiceOuterClass {
     private ListDiskPlacementGroupOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskPlacementGroupOperationsResponse();
     }
 
     @java.lang.Override
@@ -11562,7 +11975,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -11577,7 +11990,7 @@ public final class DiskPlacementGroupServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11591,7 +12004,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -11611,7 +12024,6 @@ public final class DiskPlacementGroupServiceOuterClass {
               yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse.class, yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -11621,6 +12033,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -11631,6 +12044,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -11642,6 +12056,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -11652,6 +12067,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -11662,6 +12078,7 @@ public final class DiskPlacementGroupServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -11678,7 +12095,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -11700,7 +12119,9 @@ public final class DiskPlacementGroupServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -11732,7 +12153,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -11748,7 +12169,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -11766,13 +12187,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse other = (yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11957,9 +12377,8 @@ public final class DiskPlacementGroupServiceOuterClass {
       public yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse buildPartial() {
         yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse result = new yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -11968,42 +12387,41 @@ public final class DiskPlacementGroupServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12080,7 +12498,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -12381,7 +12799,7 @@ public final class DiskPlacementGroupServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -12399,6 +12817,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -12421,6 +12840,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -12444,6 +12864,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -12464,6 +12886,7 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -12480,6 +12903,8 @@ public final class DiskPlacementGroupServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12495,7 +12920,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12732,15 +13157,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       "dex-cloud/go-genproto/yandex/cloud/compu" +
       "te/v1;computeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -12750,7 +13167,7 @@ public final class DiskPlacementGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.DiskPlacementGroupOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_GetDiskPlacementGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_GetDiskPlacementGroupRequest_fieldAccessorTable = new

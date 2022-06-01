@@ -1,19 +1,6 @@
 package yandex.cloud.api.organizationmanager.v1.saml;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/organizationmanager/v1/saml/federation_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FederationServiceGrpc {
 
   private FederationServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class FederationServiceGrpc {
     if ((getGetMethod = FederationServiceGrpc.getGetMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getGetMethod = FederationServiceGrpc.getGetMethod) == null) {
-          FederationServiceGrpc.getGetMethod = getGetMethod = 
+          FederationServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest,
@@ -76,22 +63,21 @@ public final class FederationServiceGrpc {
     if ((getListMethod = FederationServiceGrpc.getListMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getListMethod = FederationServiceGrpc.getListMethod) == null) {
-          FederationServiceGrpc.getListMethod = getListMethod = 
+          FederationServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest,
@@ -108,22 +94,21 @@ public final class FederationServiceGrpc {
     if ((getCreateMethod = FederationServiceGrpc.getCreateMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getCreateMethod = FederationServiceGrpc.getCreateMethod) == null) {
-          FederationServiceGrpc.getCreateMethod = getCreateMethod = 
+          FederationServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest,
@@ -140,22 +125,21 @@ public final class FederationServiceGrpc {
     if ((getUpdateMethod = FederationServiceGrpc.getUpdateMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getUpdateMethod = FederationServiceGrpc.getUpdateMethod) == null) {
-          FederationServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          FederationServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest,
@@ -172,22 +156,21 @@ public final class FederationServiceGrpc {
     if ((getDeleteMethod = FederationServiceGrpc.getDeleteMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getDeleteMethod = FederationServiceGrpc.getDeleteMethod) == null) {
-          FederationServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          FederationServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest,
@@ -204,22 +187,21 @@ public final class FederationServiceGrpc {
     if ((getAddUserAccountsMethod = FederationServiceGrpc.getAddUserAccountsMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getAddUserAccountsMethod = FederationServiceGrpc.getAddUserAccountsMethod) == null) {
-          FederationServiceGrpc.getAddUserAccountsMethod = getAddUserAccountsMethod = 
+          FederationServiceGrpc.getAddUserAccountsMethod = getAddUserAccountsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "AddUserAccounts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddUserAccounts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("AddUserAccounts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("AddUserAccounts"))
+              .build();
         }
-     }
-     return getAddUserAccountsMethod;
+      }
+    }
+    return getAddUserAccountsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest,
@@ -236,22 +218,21 @@ public final class FederationServiceGrpc {
     if ((getListUserAccountsMethod = FederationServiceGrpc.getListUserAccountsMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getListUserAccountsMethod = FederationServiceGrpc.getListUserAccountsMethod) == null) {
-          FederationServiceGrpc.getListUserAccountsMethod = getListUserAccountsMethod = 
+          FederationServiceGrpc.getListUserAccountsMethod = getListUserAccountsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "ListUserAccounts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUserAccounts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ListUserAccounts"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ListUserAccounts"))
+              .build();
         }
-     }
-     return getListUserAccountsMethod;
+      }
+    }
+    return getListUserAccountsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest,
@@ -268,29 +249,35 @@ public final class FederationServiceGrpc {
     if ((getListOperationsMethod = FederationServiceGrpc.getListOperationsMethod) == null) {
       synchronized (FederationServiceGrpc.class) {
         if ((getListOperationsMethod = FederationServiceGrpc.getListOperationsMethod) == null) {
-          FederationServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          FederationServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.saml.FederationService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FederationServiceStub newStub(io.grpc.Channel channel) {
-    return new FederationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FederationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FederationServiceStub>() {
+        @java.lang.Override
+        public FederationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FederationServiceStub(channel, callOptions);
+        }
+      };
+    return FederationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -298,7 +285,14 @@ public final class FederationServiceGrpc {
    */
   public static FederationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FederationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FederationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FederationServiceBlockingStub>() {
+        @java.lang.Override
+        public FederationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FederationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FederationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -306,7 +300,14 @@ public final class FederationServiceGrpc {
    */
   public static FederationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FederationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FederationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FederationServiceFutureStub>() {
+        @java.lang.Override
+        public FederationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FederationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FederationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -324,7 +325,7 @@ public final class FederationServiceGrpc {
      */
     public void get(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -334,7 +335,7 @@ public final class FederationServiceGrpc {
      */
     public void list(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -344,7 +345,7 @@ public final class FederationServiceGrpc {
      */
     public void create(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -354,7 +355,7 @@ public final class FederationServiceGrpc {
      */
     public void update(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -364,7 +365,7 @@ public final class FederationServiceGrpc {
      */
     public void delete(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -374,7 +375,7 @@ public final class FederationServiceGrpc {
      */
     public void addUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddUserAccountsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddUserAccountsMethod(), responseObserver);
     }
 
     /**
@@ -384,7 +385,7 @@ public final class FederationServiceGrpc {
      */
     public void listUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListUserAccountsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserAccountsMethod(), responseObserver);
     }
 
     /**
@@ -394,63 +395,63 @@ public final class FederationServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getAddUserAccountsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_USER_ACCOUNTS)))
           .addMethod(
             getListUserAccountsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse>(
                   this, METHODID_LIST_USER_ACCOUNTS)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest,
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse>(
@@ -464,19 +465,15 @@ public final class FederationServiceGrpc {
    * A set of methods for managing federations.
    * </pre>
    */
-  public static final class FederationServiceStub extends io.grpc.stub.AbstractStub<FederationServiceStub> {
-    private FederationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FederationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FederationServiceStub extends io.grpc.stub.AbstractAsyncStub<FederationServiceStub> {
+    private FederationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FederationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FederationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FederationServiceStub(channel, callOptions);
     }
 
@@ -488,7 +485,7 @@ public final class FederationServiceGrpc {
      */
     public void get(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -499,7 +496,7 @@ public final class FederationServiceGrpc {
      */
     public void list(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -510,7 +507,7 @@ public final class FederationServiceGrpc {
      */
     public void create(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -521,7 +518,7 @@ public final class FederationServiceGrpc {
      */
     public void update(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -532,7 +529,7 @@ public final class FederationServiceGrpc {
      */
     public void delete(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -543,7 +540,7 @@ public final class FederationServiceGrpc {
      */
     public void addUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddUserAccountsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -554,7 +551,7 @@ public final class FederationServiceGrpc {
      */
     public void listUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUserAccountsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -565,7 +562,7 @@ public final class FederationServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -575,19 +572,15 @@ public final class FederationServiceGrpc {
    * A set of methods for managing federations.
    * </pre>
    */
-  public static final class FederationServiceBlockingStub extends io.grpc.stub.AbstractStub<FederationServiceBlockingStub> {
-    private FederationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FederationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FederationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FederationServiceBlockingStub> {
+    private FederationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FederationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FederationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FederationServiceBlockingStub(channel, callOptions);
     }
 
@@ -598,7 +591,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation get(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -608,7 +601,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse list(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -618,7 +611,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -628,7 +621,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -638,7 +631,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -648,7 +641,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddUserAccountsMethod(), getCallOptions(), request);
     }
 
@@ -658,7 +651,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse listUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUserAccountsMethod(), getCallOptions(), request);
     }
 
@@ -668,7 +661,7 @@ public final class FederationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse listOperations(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
@@ -678,19 +671,15 @@ public final class FederationServiceGrpc {
    * A set of methods for managing federations.
    * </pre>
    */
-  public static final class FederationServiceFutureStub extends io.grpc.stub.AbstractStub<FederationServiceFutureStub> {
-    private FederationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FederationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FederationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FederationServiceFutureStub> {
+    private FederationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FederationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FederationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FederationServiceFutureStub(channel, callOptions);
     }
 
@@ -702,7 +691,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation> get(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.GetFederationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -713,7 +702,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsResponse> list(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -724,7 +713,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -735,7 +724,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -746,7 +735,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -757,7 +746,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addUserAccounts(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddUserAccountsMethod(), getCallOptions()), request);
     }
 
@@ -768,7 +757,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse> listUserAccounts(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUserAccountsMethod(), getCallOptions()), request);
     }
 
@@ -779,7 +768,7 @@ public final class FederationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsResponse> listOperations(
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederationOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }

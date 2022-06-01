@@ -7,7 +7,7 @@ This repository contains generated Java packages for Yandex.Cloud API.
 <dependency>
     <groupId>com.yandex.cloud</groupId>
     <artifactId>java-genproto</artifactId>
-    <version>2.4.3</version>
+    <version>2.5.0</version>
 </dependency>
 ```
 

@@ -25,6 +25,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -34,6 +35,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -46,6 +48,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+     * @return The enum numeric value on the wire for view.
      */
     int getViewValue();
     /**
@@ -56,13 +59,14 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+     * @return The view.
      */
     yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View getView();
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.GetBucketRequest}
    */
-  public  static final class GetBucketRequest extends
+  public static final class GetBucketRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.GetBucketRequest)
       GetBucketRequestOrBuilder {
@@ -74,6 +78,13 @@ public final class BucketServiceOuterClass {
     private GetBucketRequest() {
       name_ = "";
       view_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetBucketRequest();
     }
 
     @java.lang.Override
@@ -89,7 +100,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -113,7 +123,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -225,6 +235,8 @@ public final class BucketServiceOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -232,6 +244,10 @@ public final class BucketServiceOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static View forNumber(int value) {
         switch (value) {
           case 0: return VIEW_UNSPECIFIED;
@@ -256,6 +272,10 @@ public final class BucketServiceOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -299,7 +319,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -319,7 +341,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -344,8 +368,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+     * @return The enum numeric value on the wire for view.
      */
-    public int getViewValue() {
+    @java.lang.Override public int getViewValue() {
       return view_;
     }
     /**
@@ -356,8 +381,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+     * @return The view.
      */
-    public yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View getView() {
+    @java.lang.Override public yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View getView() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View result = yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View.valueOf(view_);
       return result == null ? yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View.UNRECOGNIZED : result;
@@ -377,7 +403,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (view_ != yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View.VIEW_UNSPECIFIED.getNumber()) {
@@ -392,7 +418,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (view_ != yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View.VIEW_UNSPECIFIED.getNumber()) {
@@ -414,12 +440,11 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && view_ == other.view_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (view_ != other.view_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -604,35 +629,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -690,6 +715,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -710,6 +736,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -731,6 +758,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -749,6 +778,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -763,6 +793,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -785,8 +817,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+       * @return The enum numeric value on the wire for view.
        */
-      public int getViewValue() {
+      @java.lang.Override public int getViewValue() {
         return view_;
       }
       /**
@@ -797,8 +830,11 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+       * @param value The enum numeric value on the wire for view to set.
+       * @return This builder for chaining.
        */
       public Builder setViewValue(int value) {
+        
         view_ = value;
         onChanged();
         return this;
@@ -811,7 +847,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+       * @return The view.
        */
+      @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View getView() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View result = yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View.valueOf(view_);
@@ -825,6 +863,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+       * @param value The view to set.
+       * @return This builder for chaining.
        */
       public Builder setView(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketRequest.View value) {
         if (value == null) {
@@ -843,6 +883,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.GetBucketRequest.View view = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearView() {
         
@@ -853,7 +894,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -914,6 +955,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -923,6 +965,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -930,7 +973,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.ListBucketsRequest}
    */
-  public  static final class ListBucketsRequest extends
+  public static final class ListBucketsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.ListBucketsRequest)
       ListBucketsRequestOrBuilder {
@@ -941,6 +984,13 @@ public final class BucketServiceOuterClass {
     }
     private ListBucketsRequest() {
       folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListBucketsRequest();
     }
 
     @java.lang.Override
@@ -956,7 +1006,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -974,7 +1023,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1014,7 +1063,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -1034,7 +1085,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -1063,7 +1116,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       unknownFields.writeTo(output);
@@ -1075,7 +1128,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1093,11 +1146,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1277,35 +1329,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1360,6 +1412,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1380,6 +1433,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1401,6 +1455,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1419,6 +1475,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1433,6 +1490,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1448,7 +1507,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1549,7 +1608,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.ListBucketsResponse}
    */
-  public  static final class ListBucketsResponse extends
+  public static final class ListBucketsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.ListBucketsResponse)
       ListBucketsResponseOrBuilder {
@@ -1560,6 +1619,13 @@ public final class BucketServiceOuterClass {
     }
     private ListBucketsResponse() {
       buckets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListBucketsResponse();
     }
 
     @java.lang.Override
@@ -1587,7 +1653,7 @@ public final class BucketServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 buckets_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1596,7 +1662,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1610,7 +1676,7 @@ public final class BucketServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           buckets_ = java.util.Collections.unmodifiableList(buckets_);
         }
         this.unknownFields = unknownFields.build();
@@ -1639,6 +1705,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.Bucket buckets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket> getBucketsList() {
       return buckets_;
     }
@@ -1649,6 +1716,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.Bucket buckets = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.BucketOrBuilder> 
         getBucketsOrBuilderList() {
       return buckets_;
@@ -1660,6 +1728,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.Bucket buckets = 1;</code>
      */
+    @java.lang.Override
     public int getBucketsCount() {
       return buckets_.size();
     }
@@ -1670,6 +1739,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.Bucket buckets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.Bucket getBuckets(int index) {
       return buckets_.get(index);
     }
@@ -1680,6 +1750,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.Bucket buckets = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.BucketOrBuilder getBucketsOrBuilder(
         int index) {
       return buckets_.get(index);
@@ -1730,11 +1801,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse) obj;
 
-      boolean result = true;
-      result = result && getBucketsList()
-          .equals(other.getBucketsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBucketsList()
+          .equals(other.getBucketsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1916,7 +1986,7 @@ public final class BucketServiceOuterClass {
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse result = new yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse(this);
         int from_bitField0_ = bitField0_;
         if (bucketsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             buckets_ = java.util.Collections.unmodifiableList(buckets_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1930,35 +2000,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2031,7 +2101,7 @@ public final class BucketServiceOuterClass {
       private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket> buckets_ =
         java.util.Collections.emptyList();
       private void ensureBucketsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           buckets_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Bucket>(buckets_);
           bitField0_ |= 0x00000001;
          }
@@ -2332,7 +2402,7 @@ public final class BucketServiceOuterClass {
           bucketsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.storage.v1.BucketOuterClass.Bucket, yandex.cloud.api.storage.v1.BucketOuterClass.Bucket.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketOrBuilder>(
                   buckets_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           buckets_ = null;
@@ -2342,7 +2412,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2404,6 +2474,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2414,6 +2485,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2425,6 +2497,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2434,6 +2507,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2446,6 +2520,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The defaultStorageClass.
      */
     java.lang.String getDefaultStorageClass();
     /**
@@ -2456,6 +2531,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The bytes for defaultStorageClass.
      */
     com.google.protobuf.ByteString
         getDefaultStorageClassBytes();
@@ -2467,6 +2543,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>int64 max_size = 5;</code>
+     * @return The maxSize.
      */
     long getMaxSize();
 
@@ -2477,6 +2554,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
+     * @return Whether the anonymousAccessFlags field is set.
      */
     boolean hasAnonymousAccessFlags();
     /**
@@ -2486,6 +2564,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
+     * @return The anonymousAccessFlags.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags getAnonymousAccessFlags();
     /**
@@ -2505,6 +2584,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
+     * @return Whether the acl field is set.
      */
     boolean hasAcl();
     /**
@@ -2514,6 +2594,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
+     * @return The acl.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ACL getAcl();
     /**
@@ -2529,7 +2610,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.CreateBucketRequest}
    */
-  public  static final class CreateBucketRequest extends
+  public static final class CreateBucketRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.CreateBucketRequest)
       CreateBucketRequestOrBuilder {
@@ -2542,7 +2623,13 @@ public final class BucketServiceOuterClass {
       name_ = "";
       folderId_ = "";
       defaultStorageClass_ = "";
-      maxSize_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateBucketRequest();
     }
 
     @java.lang.Override
@@ -2558,7 +2645,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2619,7 +2705,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2660,7 +2746,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2681,7 +2769,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2705,7 +2795,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -2725,7 +2817,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -2750,7 +2844,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The defaultStorageClass.
      */
+    @java.lang.Override
     public java.lang.String getDefaultStorageClass() {
       java.lang.Object ref = defaultStorageClass_;
       if (ref instanceof java.lang.String) {
@@ -2771,7 +2867,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The bytes for defaultStorageClass.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDefaultStorageClassBytes() {
       java.lang.Object ref = defaultStorageClass_;
@@ -2795,7 +2893,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>int64 max_size = 5;</code>
+     * @return The maxSize.
      */
+    @java.lang.Override
     public long getMaxSize() {
       return maxSize_;
     }
@@ -2809,7 +2909,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
+     * @return Whether the anonymousAccessFlags field is set.
      */
+    @java.lang.Override
     public boolean hasAnonymousAccessFlags() {
       return anonymousAccessFlags_ != null;
     }
@@ -2820,7 +2922,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
+     * @return The anonymousAccessFlags.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags getAnonymousAccessFlags() {
       return anonymousAccessFlags_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags.getDefaultInstance() : anonymousAccessFlags_;
     }
@@ -2832,6 +2936,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlagsOrBuilder getAnonymousAccessFlagsOrBuilder() {
       return getAnonymousAccessFlags();
     }
@@ -2845,7 +2950,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
+     * @return Whether the acl field is set.
      */
+    @java.lang.Override
     public boolean hasAcl() {
       return acl_ != null;
     }
@@ -2856,7 +2963,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
+     * @return The acl.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.ACL getAcl() {
       return acl_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ACL.getDefaultInstance() : acl_;
     }
@@ -2868,6 +2977,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.ACLOrBuilder getAclOrBuilder() {
       return getAcl();
     }
@@ -2886,13 +2996,13 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
-      if (!getDefaultStorageClassBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultStorageClass_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, defaultStorageClass_);
       }
       if (maxSize_ != 0L) {
@@ -2913,13 +3023,13 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
-      if (!getDefaultStorageClassBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultStorageClass_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, defaultStorageClass_);
       }
       if (maxSize_ != 0L) {
@@ -2949,27 +3059,26 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getDefaultStorageClass()
-          .equals(other.getDefaultStorageClass());
-      result = result && (getMaxSize()
-          == other.getMaxSize());
-      result = result && (hasAnonymousAccessFlags() == other.hasAnonymousAccessFlags());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getDefaultStorageClass()
+          .equals(other.getDefaultStorageClass())) return false;
+      if (getMaxSize()
+          != other.getMaxSize()) return false;
+      if (hasAnonymousAccessFlags() != other.hasAnonymousAccessFlags()) return false;
       if (hasAnonymousAccessFlags()) {
-        result = result && getAnonymousAccessFlags()
-            .equals(other.getAnonymousAccessFlags());
+        if (!getAnonymousAccessFlags()
+            .equals(other.getAnonymousAccessFlags())) return false;
       }
-      result = result && (hasAcl() == other.hasAcl());
+      if (hasAcl() != other.hasAcl()) return false;
       if (hasAcl()) {
-        result = result && getAcl()
-            .equals(other.getAcl());
+        if (!getAcl()
+            .equals(other.getAcl())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3195,35 +3304,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3296,6 +3405,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3317,6 +3427,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3339,6 +3450,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3358,6 +3471,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3373,6 +3487,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3394,6 +3510,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3414,6 +3531,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3435,6 +3553,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3453,6 +3573,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -3467,6 +3588,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3489,6 +3612,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @return The defaultStorageClass.
        */
       public java.lang.String getDefaultStorageClass() {
         java.lang.Object ref = defaultStorageClass_;
@@ -3510,6 +3634,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @return The bytes for defaultStorageClass.
        */
       public com.google.protobuf.ByteString
           getDefaultStorageClassBytes() {
@@ -3532,6 +3657,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @param value The defaultStorageClass to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultStorageClass(
           java.lang.String value) {
@@ -3551,6 +3678,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultStorageClass() {
         
@@ -3566,6 +3694,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @param value The bytes for defaultStorageClass to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultStorageClassBytes(
           com.google.protobuf.ByteString value) {
@@ -3587,7 +3717,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_size = 5;</code>
+       * @return The maxSize.
        */
+      @java.lang.Override
       public long getMaxSize() {
         return maxSize_;
       }
@@ -3598,6 +3730,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_size = 5;</code>
+       * @param value The maxSize to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxSize(long value) {
         
@@ -3612,6 +3746,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_size = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxSize() {
         
@@ -3620,7 +3755,7 @@ public final class BucketServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags anonymousAccessFlags_ = null;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags anonymousAccessFlags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags, yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlagsOrBuilder> anonymousAccessFlagsBuilder_;
       /**
@@ -3630,6 +3765,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
+       * @return Whether the anonymousAccessFlags field is set.
        */
       public boolean hasAnonymousAccessFlags() {
         return anonymousAccessFlagsBuilder_ != null || anonymousAccessFlags_ != null;
@@ -3641,6 +3777,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 6;</code>
+       * @return The anonymousAccessFlags.
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags getAnonymousAccessFlags() {
         if (anonymousAccessFlagsBuilder_ == null) {
@@ -3782,7 +3919,7 @@ public final class BucketServiceOuterClass {
         return anonymousAccessFlagsBuilder_;
       }
 
-      private yandex.cloud.api.storage.v1.BucketOuterClass.ACL acl_ = null;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.ACL acl_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.storage.v1.BucketOuterClass.ACL, yandex.cloud.api.storage.v1.BucketOuterClass.ACL.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ACLOrBuilder> aclBuilder_;
       /**
@@ -3792,6 +3929,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
+       * @return Whether the acl field is set.
        */
       public boolean hasAcl() {
         return aclBuilder_ != null || acl_ != null;
@@ -3803,6 +3941,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
+       * @return The acl.
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.ACL getAcl() {
         if (aclBuilder_ == null) {
@@ -3946,7 +4085,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4006,6 +4145,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4014,6 +4154,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4021,7 +4162,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.CreateBucketMetadata}
    */
-  public  static final class CreateBucketMetadata extends
+  public static final class CreateBucketMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.CreateBucketMetadata)
       CreateBucketMetadataOrBuilder {
@@ -4032,6 +4173,13 @@ public final class BucketServiceOuterClass {
     }
     private CreateBucketMetadata() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateBucketMetadata();
     }
 
     @java.lang.Override
@@ -4047,7 +4195,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4065,7 +4212,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4104,7 +4251,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4123,7 +4272,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4152,7 +4303,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -4164,7 +4315,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -4182,11 +4333,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketMetadata other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketMetadata) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4366,35 +4516,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4448,6 +4598,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4467,6 +4618,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4487,6 +4639,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4504,6 +4658,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4517,6 +4672,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4532,7 +4689,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4594,6 +4751,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4604,6 +4762,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4614,6 +4773,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
     /**
@@ -4622,6 +4782,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
     /**
@@ -4640,6 +4801,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
+     * @return Whether the anonymousAccessFlags field is set.
      */
     boolean hasAnonymousAccessFlags();
     /**
@@ -4649,6 +4811,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
+     * @return The anonymousAccessFlags.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags getAnonymousAccessFlags();
     /**
@@ -4669,6 +4832,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The defaultStorageClass.
      */
     java.lang.String getDefaultStorageClass();
     /**
@@ -4679,6 +4843,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The bytes for defaultStorageClass.
      */
     com.google.protobuf.ByteString
         getDefaultStorageClassBytes();
@@ -4690,6 +4855,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>int64 max_size = 5;</code>
+     * @return The maxSize.
      */
     long getMaxSize();
 
@@ -4749,6 +4915,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
+     * @return Whether the websiteSettings field is set.
      */
     boolean hasWebsiteSettings();
     /**
@@ -4758,6 +4925,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
+     * @return The websiteSettings.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings getWebsiteSettings();
     /**
@@ -4777,6 +4945,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+     * @return The enum numeric value on the wire for versioning.
      */
     int getVersioningValue();
     /**
@@ -4786,6 +4955,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+     * @return The versioning.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning();
 
@@ -4845,6 +5015,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct policy = 10;</code>
+     * @return Whether the policy field is set.
      */
     boolean hasPolicy();
     /**
@@ -4854,6 +5025,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct policy = 10;</code>
+     * @return The policy.
      */
     com.google.protobuf.Struct getPolicy();
     /**
@@ -4873,6 +5045,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
+     * @return Whether the acl field is set.
      */
     boolean hasAcl();
     /**
@@ -4882,6 +5055,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
+     * @return The acl.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ACL getAcl();
     /**
@@ -4897,7 +5071,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.UpdateBucketRequest}
    */
-  public  static final class UpdateBucketRequest extends
+  public static final class UpdateBucketRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.UpdateBucketRequest)
       UpdateBucketRequestOrBuilder {
@@ -4909,10 +5083,16 @@ public final class BucketServiceOuterClass {
     private UpdateBucketRequest() {
       name_ = "";
       defaultStorageClass_ = "";
-      maxSize_ = 0L;
       cors_ = java.util.Collections.emptyList();
       versioning_ = 0;
       lifecycleRules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateBucketRequest();
     }
 
     @java.lang.Override
@@ -4983,9 +5163,9 @@ public final class BucketServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 cors_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               cors_.add(
                   input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule.parser(), extensionRegistry));
@@ -5011,9 +5191,9 @@ public final class BucketServiceOuterClass {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 lifecycleRules_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000002;
               }
               lifecycleRules_.add(
                   input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.parser(), extensionRegistry));
@@ -5046,7 +5226,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5060,10 +5240,10 @@ public final class BucketServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           cors_ = java.util.Collections.unmodifiableList(cors_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           lifecycleRules_ = java.util.Collections.unmodifiableList(lifecycleRules_);
         }
         this.unknownFields = unknownFields.build();
@@ -5083,7 +5263,6 @@ public final class BucketServiceOuterClass {
               yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest.class, yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -5094,7 +5273,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5115,7 +5296,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5138,7 +5321,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the fieldMask field is set.
      */
+    @java.lang.Override
     public boolean hasFieldMask() {
       return fieldMask_ != null;
     }
@@ -5148,7 +5333,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The fieldMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getFieldMask() {
       return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
     }
@@ -5159,6 +5346,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
       return getFieldMask();
     }
@@ -5172,7 +5360,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
+     * @return Whether the anonymousAccessFlags field is set.
      */
+    @java.lang.Override
     public boolean hasAnonymousAccessFlags() {
       return anonymousAccessFlags_ != null;
     }
@@ -5183,7 +5373,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
+     * @return The anonymousAccessFlags.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags getAnonymousAccessFlags() {
       return anonymousAccessFlags_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags.getDefaultInstance() : anonymousAccessFlags_;
     }
@@ -5195,6 +5387,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlagsOrBuilder getAnonymousAccessFlagsOrBuilder() {
       return getAnonymousAccessFlags();
     }
@@ -5209,7 +5402,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The defaultStorageClass.
      */
+    @java.lang.Override
     public java.lang.String getDefaultStorageClass() {
       java.lang.Object ref = defaultStorageClass_;
       if (ref instanceof java.lang.String) {
@@ -5230,7 +5425,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string default_storage_class = 4;</code>
+     * @return The bytes for defaultStorageClass.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDefaultStorageClassBytes() {
       java.lang.Object ref = defaultStorageClass_;
@@ -5254,7 +5451,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>int64 max_size = 5;</code>
+     * @return The maxSize.
      */
+    @java.lang.Override
     public long getMaxSize() {
       return maxSize_;
     }
@@ -5269,6 +5468,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.CorsRule cors = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule> getCorsList() {
       return cors_;
     }
@@ -5280,6 +5480,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.CorsRule cors = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.CorsRuleOrBuilder> 
         getCorsOrBuilderList() {
       return cors_;
@@ -5292,6 +5493,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.CorsRule cors = 6;</code>
      */
+    @java.lang.Override
     public int getCorsCount() {
       return cors_.size();
     }
@@ -5303,6 +5505,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.CorsRule cors = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule getCors(int index) {
       return cors_.get(index);
     }
@@ -5314,6 +5517,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.CorsRule cors = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.CorsRuleOrBuilder getCorsOrBuilder(
         int index) {
       return cors_.get(index);
@@ -5328,7 +5532,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
+     * @return Whether the websiteSettings field is set.
      */
+    @java.lang.Override
     public boolean hasWebsiteSettings() {
       return websiteSettings_ != null;
     }
@@ -5339,7 +5545,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
+     * @return The websiteSettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings getWebsiteSettings() {
       return websiteSettings_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings.getDefaultInstance() : websiteSettings_;
     }
@@ -5351,6 +5559,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettingsOrBuilder getWebsiteSettingsOrBuilder() {
       return getWebsiteSettings();
     }
@@ -5364,8 +5573,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+     * @return The enum numeric value on the wire for versioning.
      */
-    public int getVersioningValue() {
+    @java.lang.Override public int getVersioningValue() {
       return versioning_;
     }
     /**
@@ -5375,8 +5585,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+     * @return The versioning.
      */
-    public yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning() {
+    @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.storage.v1.BucketOuterClass.Versioning result = yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.valueOf(versioning_);
       return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.UNRECOGNIZED : result;
@@ -5392,6 +5603,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.LifecycleRule lifecycle_rules = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule> getLifecycleRulesList() {
       return lifecycleRules_;
     }
@@ -5403,6 +5615,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.LifecycleRule lifecycle_rules = 9;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRuleOrBuilder> 
         getLifecycleRulesOrBuilderList() {
       return lifecycleRules_;
@@ -5415,6 +5628,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.LifecycleRule lifecycle_rules = 9;</code>
      */
+    @java.lang.Override
     public int getLifecycleRulesCount() {
       return lifecycleRules_.size();
     }
@@ -5426,6 +5640,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.LifecycleRule lifecycle_rules = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule getLifecycleRules(int index) {
       return lifecycleRules_.get(index);
     }
@@ -5437,6 +5652,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.storage.v1.LifecycleRule lifecycle_rules = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRuleOrBuilder getLifecycleRulesOrBuilder(
         int index) {
       return lifecycleRules_.get(index);
@@ -5451,7 +5667,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct policy = 10;</code>
+     * @return Whether the policy field is set.
      */
+    @java.lang.Override
     public boolean hasPolicy() {
       return policy_ != null;
     }
@@ -5462,7 +5680,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Struct policy = 10;</code>
+     * @return The policy.
      */
+    @java.lang.Override
     public com.google.protobuf.Struct getPolicy() {
       return policy_ == null ? com.google.protobuf.Struct.getDefaultInstance() : policy_;
     }
@@ -5474,6 +5694,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.google.protobuf.Struct policy = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StructOrBuilder getPolicyOrBuilder() {
       return getPolicy();
     }
@@ -5487,7 +5708,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
+     * @return Whether the acl field is set.
      */
+    @java.lang.Override
     public boolean hasAcl() {
       return acl_ != null;
     }
@@ -5498,7 +5721,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
+     * @return The acl.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.ACL getAcl() {
       return acl_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ACL.getDefaultInstance() : acl_;
     }
@@ -5510,6 +5735,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.ACLOrBuilder getAclOrBuilder() {
       return getAcl();
     }
@@ -5528,7 +5754,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (fieldMask_ != null) {
@@ -5537,7 +5763,7 @@ public final class BucketServiceOuterClass {
       if (anonymousAccessFlags_ != null) {
         output.writeMessage(3, getAnonymousAccessFlags());
       }
-      if (!getDefaultStorageClassBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultStorageClass_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, defaultStorageClass_);
       }
       if (maxSize_ != 0L) {
@@ -5570,7 +5796,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (fieldMask_ != null) {
@@ -5581,7 +5807,7 @@ public final class BucketServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAnonymousAccessFlags());
       }
-      if (!getDefaultStorageClassBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultStorageClass_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, defaultStorageClass_);
       }
       if (maxSize_ != 0L) {
@@ -5627,45 +5853,44 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasFieldMask() == other.hasFieldMask());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasFieldMask() != other.hasFieldMask()) return false;
       if (hasFieldMask()) {
-        result = result && getFieldMask()
-            .equals(other.getFieldMask());
+        if (!getFieldMask()
+            .equals(other.getFieldMask())) return false;
       }
-      result = result && (hasAnonymousAccessFlags() == other.hasAnonymousAccessFlags());
+      if (hasAnonymousAccessFlags() != other.hasAnonymousAccessFlags()) return false;
       if (hasAnonymousAccessFlags()) {
-        result = result && getAnonymousAccessFlags()
-            .equals(other.getAnonymousAccessFlags());
+        if (!getAnonymousAccessFlags()
+            .equals(other.getAnonymousAccessFlags())) return false;
       }
-      result = result && getDefaultStorageClass()
-          .equals(other.getDefaultStorageClass());
-      result = result && (getMaxSize()
-          == other.getMaxSize());
-      result = result && getCorsList()
-          .equals(other.getCorsList());
-      result = result && (hasWebsiteSettings() == other.hasWebsiteSettings());
+      if (!getDefaultStorageClass()
+          .equals(other.getDefaultStorageClass())) return false;
+      if (getMaxSize()
+          != other.getMaxSize()) return false;
+      if (!getCorsList()
+          .equals(other.getCorsList())) return false;
+      if (hasWebsiteSettings() != other.hasWebsiteSettings()) return false;
       if (hasWebsiteSettings()) {
-        result = result && getWebsiteSettings()
-            .equals(other.getWebsiteSettings());
+        if (!getWebsiteSettings()
+            .equals(other.getWebsiteSettings())) return false;
       }
-      result = result && versioning_ == other.versioning_;
-      result = result && getLifecycleRulesList()
-          .equals(other.getLifecycleRulesList());
-      result = result && (hasPolicy() == other.hasPolicy());
+      if (versioning_ != other.versioning_) return false;
+      if (!getLifecycleRulesList()
+          .equals(other.getLifecycleRulesList())) return false;
+      if (hasPolicy() != other.hasPolicy()) return false;
       if (hasPolicy()) {
-        result = result && getPolicy()
-            .equals(other.getPolicy());
+        if (!getPolicy()
+            .equals(other.getPolicy())) return false;
       }
-      result = result && (hasAcl() == other.hasAcl());
+      if (hasAcl() != other.hasAcl()) return false;
       if (hasAcl()) {
-        result = result && getAcl()
-            .equals(other.getAcl());
+        if (!getAcl()
+            .equals(other.getAcl())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5867,7 +6092,7 @@ public final class BucketServiceOuterClass {
 
         if (corsBuilder_ == null) {
           cors_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           corsBuilder_.clear();
         }
@@ -5881,7 +6106,7 @@ public final class BucketServiceOuterClass {
 
         if (lifecycleRulesBuilder_ == null) {
           lifecycleRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           lifecycleRulesBuilder_.clear();
         }
@@ -5924,7 +6149,6 @@ public final class BucketServiceOuterClass {
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest buildPartial() {
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest result = new yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         if (fieldMaskBuilder_ == null) {
           result.fieldMask_ = fieldMask_;
@@ -5939,9 +6163,9 @@ public final class BucketServiceOuterClass {
         result.defaultStorageClass_ = defaultStorageClass_;
         result.maxSize_ = maxSize_;
         if (corsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             cors_ = java.util.Collections.unmodifiableList(cors_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.cors_ = cors_;
         } else {
@@ -5954,9 +6178,9 @@ public final class BucketServiceOuterClass {
         }
         result.versioning_ = versioning_;
         if (lifecycleRulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             lifecycleRules_ = java.util.Collections.unmodifiableList(lifecycleRules_);
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.lifecycleRules_ = lifecycleRules_;
         } else {
@@ -5972,42 +6196,41 @@ public final class BucketServiceOuterClass {
         } else {
           result.acl_ = aclBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6042,7 +6265,7 @@ public final class BucketServiceOuterClass {
           if (!other.cors_.isEmpty()) {
             if (cors_.isEmpty()) {
               cors_ = other.cors_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureCorsIsMutable();
               cors_.addAll(other.cors_);
@@ -6055,7 +6278,7 @@ public final class BucketServiceOuterClass {
               corsBuilder_.dispose();
               corsBuilder_ = null;
               cors_ = other.cors_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               corsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCorsFieldBuilder() : null;
@@ -6074,7 +6297,7 @@ public final class BucketServiceOuterClass {
           if (!other.lifecycleRules_.isEmpty()) {
             if (lifecycleRules_.isEmpty()) {
               lifecycleRules_ = other.lifecycleRules_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureLifecycleRulesIsMutable();
               lifecycleRules_.addAll(other.lifecycleRules_);
@@ -6087,7 +6310,7 @@ public final class BucketServiceOuterClass {
               lifecycleRulesBuilder_.dispose();
               lifecycleRulesBuilder_ = null;
               lifecycleRules_ = other.lifecycleRules_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000002);
               lifecycleRulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLifecycleRulesFieldBuilder() : null;
@@ -6141,6 +6364,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6162,6 +6386,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6184,6 +6409,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6203,6 +6430,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6218,6 +6446,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6231,7 +6461,7 @@ public final class BucketServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask fieldMask_ = null;
+      private com.google.protobuf.FieldMask fieldMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
@@ -6240,6 +6470,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the fieldMask field is set.
        */
       public boolean hasFieldMask() {
         return fieldMaskBuilder_ != null || fieldMask_ != null;
@@ -6250,6 +6481,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The fieldMask.
        */
       public com.google.protobuf.FieldMask getFieldMask() {
         if (fieldMaskBuilder_ == null) {
@@ -6384,7 +6616,7 @@ public final class BucketServiceOuterClass {
         return fieldMaskBuilder_;
       }
 
-      private yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags anonymousAccessFlags_ = null;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags anonymousAccessFlags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags, yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlagsOrBuilder> anonymousAccessFlagsBuilder_;
       /**
@@ -6394,6 +6626,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
+       * @return Whether the anonymousAccessFlags field is set.
        */
       public boolean hasAnonymousAccessFlags() {
         return anonymousAccessFlagsBuilder_ != null || anonymousAccessFlags_ != null;
@@ -6405,6 +6638,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.AnonymousAccessFlags anonymous_access_flags = 3;</code>
+       * @return The anonymousAccessFlags.
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags getAnonymousAccessFlags() {
         if (anonymousAccessFlagsBuilder_ == null) {
@@ -6555,6 +6789,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @return The defaultStorageClass.
        */
       public java.lang.String getDefaultStorageClass() {
         java.lang.Object ref = defaultStorageClass_;
@@ -6576,6 +6811,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @return The bytes for defaultStorageClass.
        */
       public com.google.protobuf.ByteString
           getDefaultStorageClassBytes() {
@@ -6598,6 +6834,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @param value The defaultStorageClass to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultStorageClass(
           java.lang.String value) {
@@ -6617,6 +6855,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefaultStorageClass() {
         
@@ -6632,6 +6871,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string default_storage_class = 4;</code>
+       * @param value The bytes for defaultStorageClass to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultStorageClassBytes(
           com.google.protobuf.ByteString value) {
@@ -6653,7 +6894,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_size = 5;</code>
+       * @return The maxSize.
        */
+      @java.lang.Override
       public long getMaxSize() {
         return maxSize_;
       }
@@ -6664,6 +6907,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_size = 5;</code>
+       * @param value The maxSize to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxSize(long value) {
         
@@ -6678,6 +6923,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>int64 max_size = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxSize() {
         
@@ -6689,9 +6935,9 @@ public final class BucketServiceOuterClass {
       private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule> cors_ =
         java.util.Collections.emptyList();
       private void ensureCorsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           cors_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule>(cors_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -6896,7 +7142,7 @@ public final class BucketServiceOuterClass {
       public Builder clearCors() {
         if (corsBuilder_ == null) {
           cors_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           corsBuilder_.clear();
@@ -7008,7 +7254,7 @@ public final class BucketServiceOuterClass {
           corsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule, yandex.cloud.api.storage.v1.BucketOuterClass.CorsRule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.CorsRuleOrBuilder>(
                   cors_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           cors_ = null;
@@ -7016,7 +7262,7 @@ public final class BucketServiceOuterClass {
         return corsBuilder_;
       }
 
-      private yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings websiteSettings_ = null;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings websiteSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings, yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettingsOrBuilder> websiteSettingsBuilder_;
       /**
@@ -7026,6 +7272,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
+       * @return Whether the websiteSettings field is set.
        */
       public boolean hasWebsiteSettings() {
         return websiteSettingsBuilder_ != null || websiteSettings_ != null;
@@ -7037,6 +7284,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.WebsiteSettings website_settings = 7;</code>
+       * @return The websiteSettings.
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.WebsiteSettings getWebsiteSettings() {
         if (websiteSettingsBuilder_ == null) {
@@ -7186,8 +7434,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+       * @return The enum numeric value on the wire for versioning.
        */
-      public int getVersioningValue() {
+      @java.lang.Override public int getVersioningValue() {
         return versioning_;
       }
       /**
@@ -7197,8 +7446,11 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+       * @param value The enum numeric value on the wire for versioning to set.
+       * @return This builder for chaining.
        */
       public Builder setVersioningValue(int value) {
+        
         versioning_ = value;
         onChanged();
         return this;
@@ -7210,7 +7462,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+       * @return The versioning.
        */
+      @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.storage.v1.BucketOuterClass.Versioning result = yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.valueOf(versioning_);
@@ -7223,6 +7477,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+       * @param value The versioning to set.
+       * @return This builder for chaining.
        */
       public Builder setVersioning(yandex.cloud.api.storage.v1.BucketOuterClass.Versioning value) {
         if (value == null) {
@@ -7240,6 +7496,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Versioning versioning = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersioning() {
         
@@ -7251,9 +7508,9 @@ public final class BucketServiceOuterClass {
       private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule> lifecycleRules_ =
         java.util.Collections.emptyList();
       private void ensureLifecycleRulesIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           lifecycleRules_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule>(lifecycleRules_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -7458,7 +7715,7 @@ public final class BucketServiceOuterClass {
       public Builder clearLifecycleRules() {
         if (lifecycleRulesBuilder_ == null) {
           lifecycleRules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           lifecycleRulesBuilder_.clear();
@@ -7570,7 +7827,7 @@ public final class BucketServiceOuterClass {
           lifecycleRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRuleOrBuilder>(
                   lifecycleRules_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           lifecycleRules_ = null;
@@ -7578,7 +7835,7 @@ public final class BucketServiceOuterClass {
         return lifecycleRulesBuilder_;
       }
 
-      private com.google.protobuf.Struct policy_ = null;
+      private com.google.protobuf.Struct policy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> policyBuilder_;
       /**
@@ -7588,6 +7845,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct policy = 10;</code>
+       * @return Whether the policy field is set.
        */
       public boolean hasPolicy() {
         return policyBuilder_ != null || policy_ != null;
@@ -7599,6 +7857,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Struct policy = 10;</code>
+       * @return The policy.
        */
       public com.google.protobuf.Struct getPolicy() {
         if (policyBuilder_ == null) {
@@ -7740,7 +7999,7 @@ public final class BucketServiceOuterClass {
         return policyBuilder_;
       }
 
-      private yandex.cloud.api.storage.v1.BucketOuterClass.ACL acl_ = null;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.ACL acl_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.storage.v1.BucketOuterClass.ACL, yandex.cloud.api.storage.v1.BucketOuterClass.ACL.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ACLOrBuilder> aclBuilder_;
       /**
@@ -7750,6 +8009,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
+       * @return Whether the acl field is set.
        */
       public boolean hasAcl() {
         return aclBuilder_ != null || acl_ != null;
@@ -7761,6 +8021,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
+       * @return The acl.
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.ACL getAcl() {
         if (aclBuilder_ == null) {
@@ -7904,7 +8165,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7964,6 +8225,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -7972,6 +8234,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7979,7 +8242,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.UpdateBucketMetadata}
    */
-  public  static final class UpdateBucketMetadata extends
+  public static final class UpdateBucketMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.UpdateBucketMetadata)
       UpdateBucketMetadataOrBuilder {
@@ -7990,6 +8253,13 @@ public final class BucketServiceOuterClass {
     }
     private UpdateBucketMetadata() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateBucketMetadata();
     }
 
     @java.lang.Override
@@ -8005,7 +8275,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8023,7 +8292,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8062,7 +8331,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8081,7 +8352,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8110,7 +8383,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -8122,7 +8395,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -8140,11 +8413,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketMetadata other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketMetadata) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8324,35 +8596,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8406,6 +8678,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8425,6 +8698,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8445,6 +8719,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -8462,6 +8738,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -8475,6 +8752,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8490,7 +8769,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8551,6 +8830,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -8560,6 +8840,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -8571,7 +8852,7 @@ public final class BucketServiceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.storage.v1.DeleteBucketRequest}
    */
-  public  static final class DeleteBucketRequest extends
+  public static final class DeleteBucketRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.DeleteBucketRequest)
       DeleteBucketRequestOrBuilder {
@@ -8582,6 +8863,13 @@ public final class BucketServiceOuterClass {
     }
     private DeleteBucketRequest() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBucketRequest();
     }
 
     @java.lang.Override
@@ -8597,7 +8885,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8615,7 +8902,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8655,7 +8942,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -8675,7 +8964,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -8704,7 +8995,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -8716,7 +9007,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -8734,11 +9025,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8922,35 +9212,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9005,6 +9295,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9025,6 +9316,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9046,6 +9338,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9064,6 +9358,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9078,6 +9373,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9093,7 +9390,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9153,6 +9450,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -9161,6 +9459,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -9168,7 +9467,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.DeleteBucketMetadata}
    */
-  public  static final class DeleteBucketMetadata extends
+  public static final class DeleteBucketMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.DeleteBucketMetadata)
       DeleteBucketMetadataOrBuilder {
@@ -9179,6 +9478,13 @@ public final class BucketServiceOuterClass {
     }
     private DeleteBucketMetadata() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBucketMetadata();
     }
 
     @java.lang.Override
@@ -9194,7 +9500,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9212,7 +9517,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9251,7 +9556,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -9270,7 +9577,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -9299,7 +9608,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -9311,7 +9620,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -9329,11 +9638,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketMetadata other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketMetadata) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9513,35 +9821,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9595,6 +9903,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9614,6 +9923,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9634,6 +9944,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9651,6 +9963,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9664,6 +9977,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9679,7 +9994,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9739,6 +10054,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -9747,6 +10063,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -9754,7 +10071,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.GetBucketStatsRequest}
    */
-  public  static final class GetBucketStatsRequest extends
+  public static final class GetBucketStatsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.GetBucketStatsRequest)
       GetBucketStatsRequestOrBuilder {
@@ -9765,6 +10082,13 @@ public final class BucketServiceOuterClass {
     }
     private GetBucketStatsRequest() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetBucketStatsRequest();
     }
 
     @java.lang.Override
@@ -9780,7 +10104,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9798,7 +10121,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9837,7 +10160,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -9856,7 +10181,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -9885,7 +10212,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -9897,7 +10224,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -9915,11 +10242,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketStatsRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10099,35 +10425,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10181,6 +10507,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -10200,6 +10527,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -10220,6 +10548,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -10237,6 +10567,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -10250,6 +10581,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10265,7 +10598,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10325,6 +10658,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -10333,6 +10667,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -10340,7 +10675,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.GetBucketHTTPSConfigRequest}
    */
-  public  static final class GetBucketHTTPSConfigRequest extends
+  public static final class GetBucketHTTPSConfigRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.GetBucketHTTPSConfigRequest)
       GetBucketHTTPSConfigRequestOrBuilder {
@@ -10351,6 +10686,13 @@ public final class BucketServiceOuterClass {
     }
     private GetBucketHTTPSConfigRequest() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetBucketHTTPSConfigRequest();
     }
 
     @java.lang.Override
@@ -10366,7 +10708,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10384,7 +10725,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10423,7 +10764,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -10442,7 +10785,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -10471,7 +10816,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -10483,7 +10828,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -10501,11 +10846,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketHTTPSConfigRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10685,35 +11029,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10767,6 +11111,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -10786,6 +11131,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -10806,6 +11152,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -10823,6 +11171,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -10836,6 +11185,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10851,7 +11202,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10911,6 +11262,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The certificatePem.
      */
     java.lang.String getCertificatePem();
     /**
@@ -10919,6 +11271,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The bytes for certificatePem.
      */
     com.google.protobuf.ByteString
         getCertificatePemBytes();
@@ -10929,6 +11282,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The privateKeyPem.
      */
     java.lang.String getPrivateKeyPem();
     /**
@@ -10937,6 +11291,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The bytes for privateKeyPem.
      */
     com.google.protobuf.ByteString
         getPrivateKeyPemBytes();
@@ -10944,7 +11299,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams}
    */
-  public  static final class SelfManagedHTTPSConfigParams extends
+  public static final class SelfManagedHTTPSConfigParams extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams)
       SelfManagedHTTPSConfigParamsOrBuilder {
@@ -10956,6 +11311,13 @@ public final class BucketServiceOuterClass {
     private SelfManagedHTTPSConfigParams() {
       certificatePem_ = "";
       privateKeyPem_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SelfManagedHTTPSConfigParams();
     }
 
     @java.lang.Override
@@ -10971,7 +11333,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10995,7 +11356,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11034,7 +11395,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The certificatePem.
      */
+    @java.lang.Override
     public java.lang.String getCertificatePem() {
       java.lang.Object ref = certificatePem_;
       if (ref instanceof java.lang.String) {
@@ -11053,7 +11416,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The bytes for certificatePem.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificatePemBytes() {
       java.lang.Object ref = certificatePem_;
@@ -11076,7 +11441,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The privateKeyPem.
      */
+    @java.lang.Override
     public java.lang.String getPrivateKeyPem() {
       java.lang.Object ref = privateKeyPem_;
       if (ref instanceof java.lang.String) {
@@ -11095,7 +11462,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+     * @return The bytes for privateKeyPem.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPrivateKeyPemBytes() {
       java.lang.Object ref = privateKeyPem_;
@@ -11124,10 +11493,10 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCertificatePemBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificatePem_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificatePem_);
       }
-      if (!getPrivateKeyPemBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyPem_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, privateKeyPem_);
       }
       unknownFields.writeTo(output);
@@ -11139,10 +11508,10 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCertificatePemBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificatePem_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificatePem_);
       }
-      if (!getPrivateKeyPemBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyPem_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, privateKeyPem_);
       }
       size += unknownFields.getSerializedSize();
@@ -11160,13 +11529,12 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams) obj;
 
-      boolean result = true;
-      result = result && getCertificatePem()
-          .equals(other.getCertificatePem());
-      result = result && getPrivateKeyPem()
-          .equals(other.getPrivateKeyPem());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCertificatePem()
+          .equals(other.getCertificatePem())) return false;
+      if (!getPrivateKeyPem()
+          .equals(other.getPrivateKeyPem())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11351,35 +11719,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11437,6 +11805,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return The certificatePem.
        */
       public java.lang.String getCertificatePem() {
         java.lang.Object ref = certificatePem_;
@@ -11456,6 +11825,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return The bytes for certificatePem.
        */
       public com.google.protobuf.ByteString
           getCertificatePemBytes() {
@@ -11476,6 +11846,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @param value The certificatePem to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificatePem(
           java.lang.String value) {
@@ -11493,6 +11865,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificatePem() {
         
@@ -11506,6 +11879,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_pem = 1 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @param value The bytes for certificatePem to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificatePemBytes(
           com.google.protobuf.ByteString value) {
@@ -11526,6 +11901,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return The privateKeyPem.
        */
       public java.lang.String getPrivateKeyPem() {
         java.lang.Object ref = privateKeyPem_;
@@ -11545,6 +11921,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return The bytes for privateKeyPem.
        */
       public com.google.protobuf.ByteString
           getPrivateKeyPemBytes() {
@@ -11565,6 +11942,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @param value The privateKeyPem to set.
+       * @return This builder for chaining.
        */
       public Builder setPrivateKeyPem(
           java.lang.String value) {
@@ -11582,6 +11961,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPrivateKeyPem() {
         
@@ -11595,6 +11975,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string private_key_pem = 2 [(.yandex.cloud.length) = "&lt;=3145728"];</code>
+       * @param value The bytes for privateKeyPem to set.
+       * @return This builder for chaining.
        */
       public Builder setPrivateKeyPemBytes(
           com.google.protobuf.ByteString value) {
@@ -11610,7 +11992,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11672,6 +12054,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The certificateId.
      */
     java.lang.String getCertificateId();
     /**
@@ -11682,6 +12065,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The bytes for certificateId.
      */
     com.google.protobuf.ByteString
         getCertificateIdBytes();
@@ -11693,7 +12077,7 @@ public final class BucketServiceOuterClass {
    *
    * Protobuf type {@code yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams}
    */
-  public  static final class CertificateManagerHTTPSConfigParams extends
+  public static final class CertificateManagerHTTPSConfigParams extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams)
       CertificateManagerHTTPSConfigParamsOrBuilder {
@@ -11704,6 +12088,13 @@ public final class BucketServiceOuterClass {
     }
     private CertificateManagerHTTPSConfigParams() {
       certificateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CertificateManagerHTTPSConfigParams();
     }
 
     @java.lang.Override
@@ -11719,7 +12110,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11737,7 +12127,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11778,7 +12168,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The certificateId.
      */
+    @java.lang.Override
     public java.lang.String getCertificateId() {
       java.lang.Object ref = certificateId_;
       if (ref instanceof java.lang.String) {
@@ -11799,7 +12191,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
+     * @return The bytes for certificateId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCertificateIdBytes() {
       java.lang.Object ref = certificateId_;
@@ -11828,7 +12222,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateId_);
       }
       unknownFields.writeTo(output);
@@ -11840,7 +12234,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateId_);
       }
       size += unknownFields.getSerializedSize();
@@ -11858,11 +12252,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams) obj;
 
-      boolean result = true;
-      result = result && getCertificateId()
-          .equals(other.getCertificateId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCertificateId()
+          .equals(other.getCertificateId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12046,35 +12439,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12130,6 +12523,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return The certificateId.
        */
       public java.lang.String getCertificateId() {
         java.lang.Object ref = certificateId_;
@@ -12151,6 +12545,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return The bytes for certificateId.
        */
       public com.google.protobuf.ByteString
           getCertificateIdBytes() {
@@ -12173,6 +12568,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @param value The certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateId(
           java.lang.String value) {
@@ -12192,6 +12589,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCertificateId() {
         
@@ -12207,6 +12605,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
+       * @param value The bytes for certificateId to set.
+       * @return This builder for chaining.
        */
       public Builder setCertificateIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12222,7 +12622,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12282,6 +12682,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -12290,6 +12691,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -12301,6 +12703,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
+     * @return Whether the selfManaged field is set.
      */
     boolean hasSelfManaged();
     /**
@@ -12310,6 +12713,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
+     * @return The selfManaged.
      */
     yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams getSelfManaged();
     /**
@@ -12330,6 +12734,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
+     * @return Whether the certificateManager field is set.
      */
     boolean hasCertificateManager();
     /**
@@ -12340,6 +12745,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
+     * @return The certificateManager.
      */
     yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams getCertificateManager();
     /**
@@ -12358,7 +12764,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.SetBucketHTTPSConfigRequest}
    */
-  public  static final class SetBucketHTTPSConfigRequest extends
+  public static final class SetBucketHTTPSConfigRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.SetBucketHTTPSConfigRequest)
       SetBucketHTTPSConfigRequestOrBuilder {
@@ -12369,6 +12775,13 @@ public final class BucketServiceOuterClass {
     }
     private SetBucketHTTPSConfigRequest() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetBucketHTTPSConfigRequest();
     }
 
     @java.lang.Override
@@ -12384,7 +12797,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12430,7 +12842,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12464,7 +12876,8 @@ public final class BucketServiceOuterClass {
     private int paramsCase_ = 0;
     private java.lang.Object params_;
     public enum ParamsCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SELF_MANAGED(2),
       CERTIFICATE_MANAGER(3),
       PARAMS_NOT_SET(0);
@@ -12473,6 +12886,8 @@ public final class BucketServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -12507,7 +12922,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -12526,7 +12943,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -12549,7 +12968,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
+     * @return Whether the selfManaged field is set.
      */
+    @java.lang.Override
     public boolean hasSelfManaged() {
       return paramsCase_ == 2;
     }
@@ -12560,7 +12981,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
+     * @return The selfManaged.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams getSelfManaged() {
       if (paramsCase_ == 2) {
          return (yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams) params_;
@@ -12575,6 +12998,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParamsOrBuilder getSelfManagedOrBuilder() {
       if (paramsCase_ == 2) {
          return (yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams) params_;
@@ -12591,7 +13015,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
+     * @return Whether the certificateManager field is set.
      */
+    @java.lang.Override
     public boolean hasCertificateManager() {
       return paramsCase_ == 3;
     }
@@ -12603,7 +13029,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
+     * @return The certificateManager.
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams getCertificateManager() {
       if (paramsCase_ == 3) {
          return (yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams) params_;
@@ -12619,6 +13047,7 @@ public final class BucketServiceOuterClass {
      *
      * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParamsOrBuilder getCertificateManagerOrBuilder() {
       if (paramsCase_ == 3) {
          return (yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams) params_;
@@ -12640,7 +13069,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (paramsCase_ == 2) {
@@ -12658,7 +13087,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (paramsCase_ == 2) {
@@ -12684,26 +13113,23 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getParamsCase().equals(
-          other.getParamsCase());
-      if (!result) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getParamsCase().equals(other.getParamsCase())) return false;
       switch (paramsCase_) {
         case 2:
-          result = result && getSelfManaged()
-              .equals(other.getSelfManaged());
+          if (!getSelfManaged()
+              .equals(other.getSelfManaged())) return false;
           break;
         case 3:
-          result = result && getCertificateManager()
-              .equals(other.getCertificateManager());
+          if (!getCertificateManager()
+              .equals(other.getCertificateManager())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12912,35 +13338,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13022,6 +13448,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -13041,6 +13468,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -13061,6 +13489,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -13078,6 +13508,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -13091,6 +13522,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -13113,7 +13546,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
+       * @return Whether the selfManaged field is set.
        */
+      @java.lang.Override
       public boolean hasSelfManaged() {
         return paramsCase_ == 2;
       }
@@ -13124,7 +13559,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
+       * @return The selfManaged.
        */
+      @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParams getSelfManaged() {
         if (selfManagedBuilder_ == null) {
           if (paramsCase_ == 2) {
@@ -13248,6 +13685,7 @@ public final class BucketServiceOuterClass {
        *
        * <code>.yandex.cloud.storage.v1.SelfManagedHTTPSConfigParams self_managed = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.SelfManagedHTTPSConfigParamsOrBuilder getSelfManagedOrBuilder() {
         if ((paramsCase_ == 2) && (selfManagedBuilder_ != null)) {
           return selfManagedBuilder_.getMessageOrBuilder();
@@ -13295,7 +13733,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
+       * @return Whether the certificateManager field is set.
        */
+      @java.lang.Override
       public boolean hasCertificateManager() {
         return paramsCase_ == 3;
       }
@@ -13307,7 +13747,9 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
+       * @return The certificateManager.
        */
+      @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams getCertificateManager() {
         if (certificateManagerBuilder_ == null) {
           if (paramsCase_ == 3) {
@@ -13437,6 +13879,7 @@ public final class BucketServiceOuterClass {
        *
        * <code>.yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams certificate_manager = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParamsOrBuilder getCertificateManagerOrBuilder() {
         if ((paramsCase_ == 3) && (certificateManagerBuilder_ != null)) {
           return certificateManagerBuilder_.getMessageOrBuilder();
@@ -13477,7 +13920,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13537,6 +13980,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -13545,6 +13989,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -13552,7 +13997,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.SetBucketHTTPSConfigMetadata}
    */
-  public  static final class SetBucketHTTPSConfigMetadata extends
+  public static final class SetBucketHTTPSConfigMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.SetBucketHTTPSConfigMetadata)
       SetBucketHTTPSConfigMetadataOrBuilder {
@@ -13563,6 +14008,13 @@ public final class BucketServiceOuterClass {
     }
     private SetBucketHTTPSConfigMetadata() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetBucketHTTPSConfigMetadata();
     }
 
     @java.lang.Override
@@ -13578,7 +14030,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13596,7 +14047,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13635,7 +14086,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -13654,7 +14107,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -13683,7 +14138,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -13695,7 +14150,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -13713,11 +14168,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigMetadata other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.SetBucketHTTPSConfigMetadata) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13897,35 +14351,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13979,6 +14433,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -13998,6 +14453,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -14018,6 +14474,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -14035,6 +14493,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -14048,6 +14507,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14063,7 +14524,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14123,6 +14584,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -14131,6 +14593,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -14138,7 +14601,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.DeleteBucketHTTPSConfigRequest}
    */
-  public  static final class DeleteBucketHTTPSConfigRequest extends
+  public static final class DeleteBucketHTTPSConfigRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.DeleteBucketHTTPSConfigRequest)
       DeleteBucketHTTPSConfigRequestOrBuilder {
@@ -14149,6 +14612,13 @@ public final class BucketServiceOuterClass {
     }
     private DeleteBucketHTTPSConfigRequest() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBucketHTTPSConfigRequest();
     }
 
     @java.lang.Override
@@ -14164,7 +14634,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14182,7 +14651,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14221,7 +14690,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -14240,7 +14711,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -14269,7 +14742,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -14281,7 +14754,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -14299,11 +14772,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14483,35 +14955,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14565,6 +15037,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -14584,6 +15057,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -14604,6 +15078,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -14621,6 +15097,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -14634,6 +15111,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14649,7 +15128,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14709,6 +15188,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -14717,6 +15197,7 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -14724,7 +15205,7 @@ public final class BucketServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.DeleteBucketHTTPSConfigMetadata}
    */
-  public  static final class DeleteBucketHTTPSConfigMetadata extends
+  public static final class DeleteBucketHTTPSConfigMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.DeleteBucketHTTPSConfigMetadata)
       DeleteBucketHTTPSConfigMetadataOrBuilder {
@@ -14735,6 +15216,13 @@ public final class BucketServiceOuterClass {
     }
     private DeleteBucketHTTPSConfigMetadata() {
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBucketHTTPSConfigMetadata();
     }
 
     @java.lang.Override
@@ -14750,7 +15238,6 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14768,7 +15255,7 @@ public final class BucketServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14807,7 +15294,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -14826,7 +15315,9 @@ public final class BucketServiceOuterClass {
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -14855,7 +15346,7 @@ public final class BucketServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
@@ -14867,7 +15358,7 @@ public final class BucketServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -14885,11 +15376,10 @@ public final class BucketServiceOuterClass {
       }
       yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigMetadata other = (yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigMetadata) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15069,35 +15559,35 @@ public final class BucketServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15151,6 +15641,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -15170,6 +15661,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -15190,6 +15682,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -15207,6 +15701,7 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -15220,6 +15715,8 @@ public final class BucketServiceOuterClass {
        * </pre>
        *
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -15235,7 +15732,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15477,15 +15974,7 @@ public final class BucketServiceOuterClass {
       "roto/yandex/cloud/storage/v1;storageb\006pr" +
       "oto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -15495,7 +15984,7 @@ public final class BucketServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.storage.v1.BucketOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_storage_v1_GetBucketRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_storage_v1_GetBucketRequest_fieldAccessorTable = new

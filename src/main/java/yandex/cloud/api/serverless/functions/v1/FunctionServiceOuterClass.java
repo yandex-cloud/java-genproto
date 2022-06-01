@@ -25,6 +25,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -34,6 +35,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -41,7 +43,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.GetFunctionRequest}
    */
-  public  static final class GetFunctionRequest extends
+  public static final class GetFunctionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.GetFunctionRequest)
       GetFunctionRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class FunctionServiceOuterClass {
     }
     private GetFunctionRequest() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFunctionRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -174,7 +186,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -491,6 +503,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -512,6 +525,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -544,6 +560,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
      */
     java.lang.String getFunctionVersionId();
     /**
@@ -629,6 +648,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
@@ -636,7 +656,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.GetFunctionVersionRequest}
    */
-  public  static final class GetFunctionVersionRequest extends
+  public static final class GetFunctionVersionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.GetFunctionVersionRequest)
       GetFunctionVersionRequestOrBuilder {
@@ -647,6 +667,13 @@ public final class FunctionServiceOuterClass {
     }
     private GetFunctionVersionRequest() {
       functionVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFunctionVersionRequest();
     }
 
     @java.lang.Override
@@ -662,7 +689,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -680,7 +706,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -720,7 +746,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionVersionId() {
       java.lang.Object ref = functionVersionId_;
       if (ref instanceof java.lang.String) {
@@ -740,7 +768,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionVersionIdBytes() {
       java.lang.Object ref = functionVersionId_;
@@ -769,7 +799,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionVersionId_);
       }
       unknownFields.writeTo(output);
@@ -781,7 +811,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionVersionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -799,11 +829,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionVersionId()
-          .equals(other.getFunctionVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -983,35 +1012,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1066,6 +1095,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionVersionId.
        */
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
@@ -1086,6 +1116,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionVersionId.
        */
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
@@ -1107,6 +1138,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionId(
           java.lang.String value) {
@@ -1125,6 +1158,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionVersionId() {
         
@@ -1139,6 +1173,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1154,7 +1190,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1215,6 +1251,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -1224,6 +1261,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -1235,6 +1273,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
@@ -1244,6 +1283,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -1251,7 +1291,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.GetFunctionVersionByTagRequest}
    */
-  public  static final class GetFunctionVersionByTagRequest extends
+  public static final class GetFunctionVersionByTagRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.GetFunctionVersionByTagRequest)
       GetFunctionVersionByTagRequestOrBuilder {
@@ -1263,6 +1303,13 @@ public final class FunctionServiceOuterClass {
     private GetFunctionVersionByTagRequest() {
       functionId_ = "";
       tag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFunctionVersionByTagRequest();
     }
 
     @java.lang.Override
@@ -1278,7 +1325,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1302,7 +1348,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1342,7 +1388,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -1362,7 +1410,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -1386,7 +1436,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
+    @java.lang.Override
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
@@ -1406,7 +1458,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagBytes() {
       java.lang.Object ref = tag_;
@@ -1435,10 +1489,10 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
       }
       unknownFields.writeTo(output);
@@ -1450,10 +1504,10 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
       }
       size += unknownFields.getSerializedSize();
@@ -1471,13 +1525,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getTag()
-          .equals(other.getTag());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1662,35 +1715,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1749,6 +1802,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -1769,6 +1823,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -1790,6 +1845,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -1808,6 +1865,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -1822,6 +1880,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1843,6 +1903,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The tag.
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -1863,6 +1924,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -1884,6 +1946,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -1902,6 +1966,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         
@@ -1916,6 +1981,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -1931,7 +1998,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1992,6 +2059,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2001,6 +2069,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2014,6 +2083,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -2024,6 +2094,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -2033,6 +2104,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -2048,6 +2120,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -2061,6 +2134,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -2068,7 +2142,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionsRequest}
    */
-  public  static final class ListFunctionsRequest extends
+  public static final class ListFunctionsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionsRequest)
       ListFunctionsRequestOrBuilder {
@@ -2079,9 +2153,15 @@ public final class FunctionServiceOuterClass {
     }
     private ListFunctionsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionsRequest();
     }
 
     @java.lang.Override
@@ -2097,7 +2177,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2132,7 +2211,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2172,7 +2251,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -2192,7 +2273,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -2218,7 +2301,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -2232,7 +2317,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -2252,7 +2339,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -2280,7 +2369,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -2304,7 +2395,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -2333,16 +2426,16 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -2354,17 +2447,17 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -2382,17 +2475,16 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2588,35 +2680,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2682,6 +2774,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -2702,6 +2795,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -2723,6 +2817,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -2741,6 +2837,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -2755,6 +2852,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2778,7 +2877,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2791,6 +2892,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2807,6 +2910,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2823,6 +2927,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2843,6 +2948,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2864,6 +2970,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2882,6 +2990,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2896,6 +3005,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2921,6 +3032,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -2945,6 +3057,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -2970,6 +3083,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -2992,6 +3107,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -3010,6 +3126,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -3025,7 +3143,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3132,6 +3250,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -3143,6 +3262,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -3150,7 +3270,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionsResponse}
    */
-  public  static final class ListFunctionsResponse extends
+  public static final class ListFunctionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionsResponse)
       ListFunctionsResponseOrBuilder {
@@ -3162,6 +3282,13 @@ public final class FunctionServiceOuterClass {
     private ListFunctionsResponse() {
       functions_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionsResponse();
     }
 
     @java.lang.Override
@@ -3189,7 +3316,7 @@ public final class FunctionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 functions_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3204,7 +3331,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3218,7 +3345,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           functions_ = java.util.Collections.unmodifiableList(functions_);
         }
         this.unknownFields = unknownFields.build();
@@ -3238,7 +3365,6 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FUNCTIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> functions_;
     /**
@@ -3248,6 +3374,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> getFunctionsList() {
       return functions_;
     }
@@ -3258,6 +3385,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder> 
         getFunctionsOrBuilderList() {
       return functions_;
@@ -3269,6 +3397,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
+    @java.lang.Override
     public int getFunctionsCount() {
       return functions_.size();
     }
@@ -3279,6 +3408,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function getFunctions(int index) {
       return functions_.get(index);
     }
@@ -3289,6 +3419,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder getFunctionsOrBuilder(
         int index) {
       return functions_.get(index);
@@ -3305,7 +3436,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -3327,7 +3460,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -3359,7 +3494,7 @@ public final class FunctionServiceOuterClass {
       for (int i = 0; i < functions_.size(); i++) {
         output.writeMessage(1, functions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -3375,7 +3510,7 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, functions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -3393,13 +3528,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse) obj;
 
-      boolean result = true;
-      result = result && getFunctionsList()
-          .equals(other.getFunctionsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionsList()
+          .equals(other.getFunctionsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3584,9 +3718,8 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (functionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             functions_ = java.util.Collections.unmodifiableList(functions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3595,42 +3728,41 @@ public final class FunctionServiceOuterClass {
           result.functions_ = functionsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3707,7 +3839,7 @@ public final class FunctionServiceOuterClass {
       private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> functions_ =
         java.util.Collections.emptyList();
       private void ensureFunctionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           functions_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function>(functions_);
           bitField0_ |= 0x00000001;
          }
@@ -4008,7 +4140,7 @@ public final class FunctionServiceOuterClass {
           functionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder>(
                   functions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           functions_ = null;
@@ -4026,6 +4158,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -4048,6 +4181,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -4071,6 +4205,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -4091,6 +4227,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -4107,6 +4244,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -4122,7 +4261,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4183,6 +4322,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -4192,6 +4332,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -4203,6 +4344,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -4212,6 +4354,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4222,6 +4365,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4230,6 +4374,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4291,7 +4436,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.CreateFunctionRequest}
    */
-  public  static final class CreateFunctionRequest extends
+  public static final class CreateFunctionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.CreateFunctionRequest)
       CreateFunctionRequestOrBuilder {
@@ -4304,6 +4449,13 @@ public final class FunctionServiceOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFunctionRequest();
     }
 
     @java.lang.Override
@@ -4349,10 +4501,10 @@ public final class FunctionServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -4362,7 +4514,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4405,7 +4557,6 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -4415,7 +4566,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -4435,7 +4588,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -4459,7 +4614,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4479,7 +4636,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4502,7 +4661,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -4521,7 +4682,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -4570,14 +4733,16 @@ public final class FunctionServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -4589,6 +4754,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -4600,11 +4766,12 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4616,10 +4783,11 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -4642,13 +4810,13 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4666,13 +4834,13 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -4700,17 +4868,16 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4919,48 +5086,46 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5026,6 +5191,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -5046,6 +5212,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -5067,6 +5234,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -5085,6 +5254,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -5099,6 +5269,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5120,6 +5292,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5140,6 +5313,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5161,6 +5335,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5179,6 +5355,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -5193,6 +5370,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5213,6 +5392,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -5232,6 +5412,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -5252,6 +5433,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -5269,6 +5452,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -5282,6 +5466,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -5329,14 +5515,16 @@ public final class FunctionServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -5348,6 +5536,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -5359,11 +5548,12 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5375,10 +5565,11 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -5402,7 +5593,7 @@ public final class FunctionServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -5425,8 +5616,11 @@ public final class FunctionServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -5448,7 +5642,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5508,6 +5702,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -5516,6 +5711,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -5523,7 +5719,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.CreateFunctionMetadata}
    */
-  public  static final class CreateFunctionMetadata extends
+  public static final class CreateFunctionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.CreateFunctionMetadata)
       CreateFunctionMetadataOrBuilder {
@@ -5534,6 +5730,13 @@ public final class FunctionServiceOuterClass {
     }
     private CreateFunctionMetadata() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFunctionMetadata();
     }
 
     @java.lang.Override
@@ -5549,7 +5752,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5567,7 +5769,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5606,7 +5808,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -5625,7 +5829,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -5654,7 +5860,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -5666,7 +5872,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5684,11 +5890,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5868,35 +6073,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5950,6 +6155,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -5969,6 +6175,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -5989,6 +6196,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -6006,6 +6215,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -6019,6 +6229,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6034,7 +6246,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6095,6 +6307,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -6104,6 +6317,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -6114,6 +6328,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -6122,6 +6337,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -6140,6 +6356,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -6149,6 +6366,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6159,6 +6377,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -6167,6 +6386,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -6238,7 +6458,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.UpdateFunctionRequest}
    */
-  public  static final class UpdateFunctionRequest extends
+  public static final class UpdateFunctionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.UpdateFunctionRequest)
       UpdateFunctionRequestOrBuilder {
@@ -6251,6 +6471,13 @@ public final class FunctionServiceOuterClass {
       functionId_ = "";
       name_ = "";
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFunctionRequest();
     }
 
     @java.lang.Override
@@ -6309,10 +6536,10 @@ public final class FunctionServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6322,7 +6549,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6365,7 +6592,6 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
@@ -6375,7 +6601,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -6395,7 +6623,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -6418,7 +6648,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -6428,7 +6660,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -6439,6 +6673,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -6452,7 +6687,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6472,7 +6709,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6495,7 +6734,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -6514,7 +6755,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -6565,14 +6808,16 @@ public final class FunctionServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -6586,6 +6831,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -6599,11 +6845,12 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6617,10 +6864,11 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -6643,16 +6891,16 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -6670,17 +6918,17 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -6708,22 +6956,21 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6942,7 +7189,6 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.functionId_ = functionId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6953,42 +7199,41 @@ public final class FunctionServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7057,6 +7302,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -7077,6 +7323,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -7098,6 +7345,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -7116,6 +7365,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -7130,6 +7380,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7143,7 +7395,7 @@ public final class FunctionServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -7152,6 +7404,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -7162,6 +7415,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -7304,6 +7558,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7324,6 +7579,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7345,6 +7601,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7363,6 +7621,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7377,6 +7636,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7397,6 +7658,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -7416,6 +7678,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -7436,6 +7699,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -7453,6 +7718,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -7466,6 +7732,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -7515,14 +7783,16 @@ public final class FunctionServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -7536,6 +7806,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -7549,11 +7820,12 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7567,10 +7839,11 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -7596,7 +7869,7 @@ public final class FunctionServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -7621,8 +7894,11 @@ public final class FunctionServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -7646,7 +7922,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7706,6 +7982,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -7714,6 +7991,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -7721,7 +7999,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.UpdateFunctionMetadata}
    */
-  public  static final class UpdateFunctionMetadata extends
+  public static final class UpdateFunctionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.UpdateFunctionMetadata)
       UpdateFunctionMetadataOrBuilder {
@@ -7732,6 +8010,13 @@ public final class FunctionServiceOuterClass {
     }
     private UpdateFunctionMetadata() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFunctionMetadata();
     }
 
     @java.lang.Override
@@ -7747,7 +8032,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7765,7 +8049,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7804,7 +8088,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -7823,7 +8109,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -7852,7 +8140,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -7864,7 +8152,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7882,11 +8170,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8066,35 +8353,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8148,6 +8435,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -8167,6 +8455,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -8187,6 +8476,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -8204,6 +8495,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -8217,6 +8509,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8232,7 +8526,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8293,6 +8587,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -8302,6 +8597,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -8309,7 +8605,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.DeleteFunctionRequest}
    */
-  public  static final class DeleteFunctionRequest extends
+  public static final class DeleteFunctionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.DeleteFunctionRequest)
       DeleteFunctionRequestOrBuilder {
@@ -8320,6 +8616,13 @@ public final class FunctionServiceOuterClass {
     }
     private DeleteFunctionRequest() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFunctionRequest();
     }
 
     @java.lang.Override
@@ -8335,7 +8638,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8353,7 +8655,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8393,7 +8695,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -8413,7 +8717,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -8442,7 +8748,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -8454,7 +8760,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8472,11 +8778,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8656,35 +8961,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8739,6 +9044,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -8759,6 +9065,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -8780,6 +9087,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -8798,6 +9107,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -8812,6 +9122,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8827,7 +9139,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8887,6 +9199,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -8895,6 +9208,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -8902,7 +9216,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.DeleteFunctionMetadata}
    */
-  public  static final class DeleteFunctionMetadata extends
+  public static final class DeleteFunctionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.DeleteFunctionMetadata)
       DeleteFunctionMetadataOrBuilder {
@@ -8913,6 +9227,13 @@ public final class FunctionServiceOuterClass {
     }
     private DeleteFunctionMetadata() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFunctionMetadata();
     }
 
     @java.lang.Override
@@ -8928,7 +9249,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8946,7 +9266,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8985,7 +9305,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -9004,7 +9326,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -9033,7 +9357,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -9045,7 +9369,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9063,11 +9387,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9247,35 +9570,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9329,6 +9652,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -9348,6 +9672,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -9368,6 +9693,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -9385,6 +9712,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -9398,6 +9726,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9413,7 +9743,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9470,7 +9800,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListRuntimesRequest}
    */
-  public  static final class ListRuntimesRequest extends
+  public static final class ListRuntimesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListRuntimesRequest)
       ListRuntimesRequestOrBuilder {
@@ -9480,6 +9810,13 @@ public final class FunctionServiceOuterClass {
       super(builder);
     }
     private ListRuntimesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRuntimesRequest();
     }
 
     @java.lang.Override
@@ -9506,7 +9843,7 @@ public final class FunctionServiceOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9575,9 +9912,8 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9752,35 +10088,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9825,7 +10161,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9885,6 +10221,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @return A list containing the runtimes.
      */
     java.util.List<java.lang.String>
         getRuntimesList();
@@ -9894,6 +10231,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @return The count of runtimes.
      */
     int getRuntimesCount();
     /**
@@ -9902,6 +10240,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @param index The index of the element to return.
+     * @return The runtimes at the given index.
      */
     java.lang.String getRuntimes(int index);
     /**
@@ -9910,6 +10250,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the runtimes at the given index.
      */
     com.google.protobuf.ByteString
         getRuntimesBytes(int index);
@@ -9917,7 +10259,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListRuntimesResponse}
    */
-  public  static final class ListRuntimesResponse extends
+  public static final class ListRuntimesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListRuntimesResponse)
       ListRuntimesResponseOrBuilder {
@@ -9928,6 +10270,13 @@ public final class FunctionServiceOuterClass {
     }
     private ListRuntimesResponse() {
       runtimes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRuntimesResponse();
     }
 
     @java.lang.Override
@@ -9956,7 +10305,7 @@ public final class FunctionServiceOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 runtimes_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -9964,7 +10313,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9978,7 +10327,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           runtimes_ = runtimes_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -10006,6 +10355,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @return A list containing the runtimes.
      */
     public com.google.protobuf.ProtocolStringList
         getRuntimesList() {
@@ -10017,6 +10367,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @return The count of runtimes.
      */
     public int getRuntimesCount() {
       return runtimes_.size();
@@ -10027,6 +10378,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @param index The index of the element to return.
+     * @return The runtimes at the given index.
      */
     public java.lang.String getRuntimes(int index) {
       return runtimes_.get(index);
@@ -10037,6 +10390,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string runtimes = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the runtimes at the given index.
      */
     public com.google.protobuf.ByteString
         getRuntimesBytes(int index) {
@@ -10092,11 +10447,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse) obj;
 
-      boolean result = true;
-      result = result && getRuntimesList()
-          .equals(other.getRuntimesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRuntimesList()
+          .equals(other.getRuntimesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10272,7 +10626,7 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           runtimes_ = runtimes_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -10283,35 +10637,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10367,7 +10721,7 @@ public final class FunctionServiceOuterClass {
 
       private com.google.protobuf.LazyStringList runtimes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRuntimesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           runtimes_ = new com.google.protobuf.LazyStringArrayList(runtimes_);
           bitField0_ |= 0x00000001;
          }
@@ -10378,6 +10732,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @return A list containing the runtimes.
        */
       public com.google.protobuf.ProtocolStringList
           getRuntimesList() {
@@ -10389,6 +10744,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @return The count of runtimes.
        */
       public int getRuntimesCount() {
         return runtimes_.size();
@@ -10399,6 +10755,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @param index The index of the element to return.
+       * @return The runtimes at the given index.
        */
       public java.lang.String getRuntimes(int index) {
         return runtimes_.get(index);
@@ -10409,6 +10767,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the runtimes at the given index.
        */
       public com.google.protobuf.ByteString
           getRuntimesBytes(int index) {
@@ -10420,6 +10780,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The runtimes to set.
+       * @return This builder for chaining.
        */
       public Builder setRuntimes(
           int index, java.lang.String value) {
@@ -10437,6 +10800,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @param value The runtimes to add.
+       * @return This builder for chaining.
        */
       public Builder addRuntimes(
           java.lang.String value) {
@@ -10454,6 +10819,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @param values The runtimes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllRuntimes(
           java.lang.Iterable<java.lang.String> values) {
@@ -10469,6 +10836,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRuntimes() {
         runtimes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -10482,6 +10850,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string runtimes = 1;</code>
+       * @param value The bytes of the runtimes to add.
+       * @return This builder for chaining.
        */
       public Builder addRuntimesBytes(
           com.google.protobuf.ByteString value) {
@@ -10497,7 +10867,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10558,6 +10928,17 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return Whether the folderId field is set.
+     */
+    boolean hasFolderId();
+    /**
+     * <pre>
+     * ID of the folder to list function versions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -10567,6 +10948,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -10578,6 +10960,17 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 2;</code>
+     * @return Whether the functionId field is set.
+     */
+    boolean hasFunctionId();
+    /**
+     * <pre>
+     * ID of the function to list versions for.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
+     * <code>string function_id = 2;</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -10587,6 +10980,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 2;</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -10600,6 +10994,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -10610,6 +11005,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -10619,6 +11015,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -10634,6 +11031,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -10647,6 +11045,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -10656,7 +11055,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionsVersionsRequest}
    */
-  public  static final class ListFunctionsVersionsRequest extends
+  public static final class ListFunctionsVersionsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionsVersionsRequest)
       ListFunctionsVersionsRequestOrBuilder {
@@ -10666,9 +11065,15 @@ public final class FunctionServiceOuterClass {
       super(builder);
     }
     private ListFunctionsVersionsRequest() {
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionsVersionsRequest();
     }
 
     @java.lang.Override
@@ -10684,7 +11089,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10725,7 +11129,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10759,7 +11163,8 @@ public final class FunctionServiceOuterClass {
     private int idCase_ = 0;
     private java.lang.Object id_;
     public enum IdCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       FOLDER_ID(1),
       FUNCTION_ID(2),
       ID_NOT_SET(0);
@@ -10768,6 +11173,8 @@ public final class FunctionServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10802,6 +11209,19 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return Whether the folderId field is set.
+     */
+    public boolean hasFolderId() {
+      return idCase_ == 1;
+    }
+    /**
+     * <pre>
+     * ID of the folder to list function versions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
      */
     public java.lang.String getFolderId() {
       java.lang.Object ref = "";
@@ -10827,6 +11247,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
      */
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
@@ -10855,6 +11276,19 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 2;</code>
+     * @return Whether the functionId field is set.
+     */
+    public boolean hasFunctionId() {
+      return idCase_ == 2;
+    }
+    /**
+     * <pre>
+     * ID of the function to list versions for.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
+     * <code>string function_id = 2;</code>
+     * @return The functionId.
      */
     public java.lang.String getFunctionId() {
       java.lang.Object ref = "";
@@ -10880,6 +11314,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 2;</code>
+     * @return The bytes for functionId.
      */
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
@@ -10911,7 +11346,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -10925,7 +11362,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -10945,7 +11384,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -10973,7 +11414,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -10997,7 +11440,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -11035,10 +11480,10 @@ public final class FunctionServiceOuterClass {
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filter_);
       }
       unknownFields.writeTo(output);
@@ -11060,10 +11505,10 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -11081,30 +11526,27 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest) obj;
 
-      boolean result = true;
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && getIdCase().equals(
-          other.getIdCase());
-      if (!result) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
-          result = result && getFolderId()
-              .equals(other.getFolderId());
+          if (!getFolderId()
+              .equals(other.getFolderId())) return false;
           break;
         case 2:
-          result = result && getFunctionId()
-              .equals(other.getFunctionId());
+          if (!getFunctionId()
+              .equals(other.getFunctionId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11316,35 +11758,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11437,7 +11879,22 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return Whether the folderId field is set.
        */
+      @java.lang.Override
+      public boolean hasFolderId() {
+        return idCase_ == 1;
+      }
+      /**
+       * <pre>
+       * ID of the folder to list function versions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
       public java.lang.String getFolderId() {
         java.lang.Object ref = "";
         if (idCase_ == 1) {
@@ -11462,7 +11919,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
         java.lang.Object ref = "";
@@ -11488,6 +11947,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -11506,6 +11967,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         if (idCase_ == 1) {
@@ -11522,6 +11984,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11542,7 +12006,22 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 2;</code>
+       * @return Whether the functionId field is set.
        */
+      @java.lang.Override
+      public boolean hasFunctionId() {
+        return idCase_ == 2;
+      }
+      /**
+       * <pre>
+       * ID of the function to list versions for.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
+       * <code>string function_id = 2;</code>
+       * @return The functionId.
+       */
+      @java.lang.Override
       public java.lang.String getFunctionId() {
         java.lang.Object ref = "";
         if (idCase_ == 2) {
@@ -11567,7 +12046,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 2;</code>
+       * @return The bytes for functionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
         java.lang.Object ref = "";
@@ -11593,6 +12074,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 2;</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -11611,6 +12094,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         if (idCase_ == 2) {
@@ -11627,6 +12111,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 2;</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11650,7 +12136,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -11663,6 +12151,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -11679,6 +12169,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -11695,6 +12186,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -11715,6 +12207,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -11736,6 +12229,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -11754,6 +12249,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -11768,6 +12264,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -11793,6 +12291,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -11817,6 +12316,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -11842,6 +12342,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -11864,6 +12366,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -11882,6 +12385,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -11897,7 +12402,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12004,6 +12509,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -12015,6 +12521,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -12022,7 +12529,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionsVersionsResponse}
    */
-  public  static final class ListFunctionsVersionsResponse extends
+  public static final class ListFunctionsVersionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionsVersionsResponse)
       ListFunctionsVersionsResponseOrBuilder {
@@ -12034,6 +12541,13 @@ public final class FunctionServiceOuterClass {
     private ListFunctionsVersionsResponse() {
       versions_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionsVersionsResponse();
     }
 
     @java.lang.Override
@@ -12061,7 +12575,7 @@ public final class FunctionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 versions_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -12076,7 +12590,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12090,7 +12604,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           versions_ = java.util.Collections.unmodifiableList(versions_);
         }
         this.unknownFields = unknownFields.build();
@@ -12110,7 +12624,6 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> versions_;
     /**
@@ -12120,6 +12633,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersionsList() {
       return versions_;
     }
@@ -12130,6 +12644,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder> 
         getVersionsOrBuilderList() {
       return versions_;
@@ -12141,6 +12656,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
+    @java.lang.Override
     public int getVersionsCount() {
       return versions_.size();
     }
@@ -12151,6 +12667,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersions(int index) {
       return versions_.get(index);
     }
@@ -12161,6 +12678,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder getVersionsOrBuilder(
         int index) {
       return versions_.get(index);
@@ -12177,7 +12695,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -12199,7 +12719,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -12231,7 +12753,7 @@ public final class FunctionServiceOuterClass {
       for (int i = 0; i < versions_.size(); i++) {
         output.writeMessage(1, versions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -12247,7 +12769,7 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, versions_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -12265,13 +12787,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse) obj;
 
-      boolean result = true;
-      result = result && getVersionsList()
-          .equals(other.getVersionsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVersionsList()
+          .equals(other.getVersionsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12456,9 +12977,8 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (versionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             versions_ = java.util.Collections.unmodifiableList(versions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -12467,42 +12987,41 @@ public final class FunctionServiceOuterClass {
           result.versions_ = versionsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12579,7 +13098,7 @@ public final class FunctionServiceOuterClass {
       private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> versions_ =
         java.util.Collections.emptyList();
       private void ensureVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           versions_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version>(versions_);
           bitField0_ |= 0x00000001;
          }
@@ -12880,7 +13399,7 @@ public final class FunctionServiceOuterClass {
           versionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder>(
                   versions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           versions_ = null;
@@ -12898,6 +13417,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -12920,6 +13440,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -12943,6 +13464,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -12963,6 +13486,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -12979,6 +13503,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -12994,7 +13520,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13054,6 +13580,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -13062,6 +13589,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -13075,6 +13603,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -13085,6 +13614,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -13094,6 +13624,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -13109,6 +13640,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -13122,6 +13654,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -13129,7 +13662,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionOperationsRequest}
    */
-  public  static final class ListFunctionOperationsRequest extends
+  public static final class ListFunctionOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionOperationsRequest)
       ListFunctionOperationsRequestOrBuilder {
@@ -13140,9 +13673,15 @@ public final class FunctionServiceOuterClass {
     }
     private ListFunctionOperationsRequest() {
       functionId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionOperationsRequest();
     }
 
     @java.lang.Override
@@ -13158,7 +13697,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13193,7 +13731,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13232,7 +13770,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -13251,7 +13791,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -13277,7 +13819,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -13291,7 +13835,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -13311,7 +13857,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -13339,7 +13887,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -13363,7 +13913,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -13392,16 +13944,16 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -13413,17 +13965,17 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -13441,17 +13993,16 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13647,35 +14198,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13740,6 +14291,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -13759,6 +14311,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -13779,6 +14332,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -13796,6 +14351,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -13809,6 +14365,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13832,7 +14390,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -13845,6 +14405,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -13861,6 +14423,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -13877,6 +14440,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -13897,6 +14461,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -13918,6 +14483,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -13936,6 +14503,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -13950,6 +14518,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -13975,6 +14545,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -13999,6 +14570,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -14024,6 +14596,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -14046,6 +14620,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -14064,6 +14639,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -14079,7 +14656,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14186,6 +14763,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -14197,6 +14775,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -14204,7 +14783,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionOperationsResponse}
    */
-  public  static final class ListFunctionOperationsResponse extends
+  public static final class ListFunctionOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionOperationsResponse)
       ListFunctionOperationsResponseOrBuilder {
@@ -14216,6 +14795,13 @@ public final class FunctionServiceOuterClass {
     private ListFunctionOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionOperationsResponse();
     }
 
     @java.lang.Override
@@ -14243,7 +14829,7 @@ public final class FunctionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -14258,7 +14844,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14272,7 +14858,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -14292,7 +14878,6 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -14302,6 +14887,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -14312,6 +14898,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -14323,6 +14910,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -14333,6 +14921,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -14343,6 +14932,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -14359,7 +14949,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -14381,7 +14973,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -14413,7 +15007,7 @@ public final class FunctionServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -14429,7 +15023,7 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -14447,13 +15041,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14638,9 +15231,8 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -14649,42 +15241,41 @@ public final class FunctionServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14761,7 +15352,7 @@ public final class FunctionServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -15062,7 +15653,7 @@ public final class FunctionServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -15080,6 +15671,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -15102,6 +15694,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -15125,6 +15718,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -15145,6 +15740,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -15161,6 +15757,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -15176,7 +15774,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15237,6 +15835,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -15246,6 +15845,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -15256,6 +15856,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The runtime.
      */
     java.lang.String getRuntime();
     /**
@@ -15264,6 +15865,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for runtime.
      */
     com.google.protobuf.ByteString
         getRuntimeBytes();
@@ -15274,6 +15876,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -15282,6 +15885,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -15292,6 +15896,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The entrypoint.
      */
     java.lang.String getEntrypoint();
     /**
@@ -15300,6 +15905,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for entrypoint.
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
@@ -15310,6 +15916,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
@@ -15318,6 +15925,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The resources.
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources();
     /**
@@ -15336,6 +15944,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the executionTimeout field is set.
      */
     boolean hasExecutionTimeout();
     /**
@@ -15345,6 +15954,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The executionTimeout.
      */
     com.google.protobuf.Duration getExecutionTimeout();
     /**
@@ -15363,6 +15973,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
+     * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
@@ -15371,6 +15982,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
+     * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
@@ -15381,6 +15993,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
+     * @return Whether the package field is set.
      */
     boolean hasPackage();
     /**
@@ -15389,6 +16002,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
+     * @return The package.
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package getPackage();
     /**
@@ -15406,6 +16020,16 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * Content of the deployment package.
+     * </pre>
+     *
+     * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+     * @return The content.
      */
     com.google.protobuf.ByteString getContent();
 
@@ -15416,6 +16040,17 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 11;</code>
+     * @return Whether the versionId field is set.
+     */
+    boolean hasVersionId();
+    /**
+     * <pre>
+     * ID of the version to be copied from. Source version must belong to the same folder as the created version
+     * and the user must have read permissions to the source version.
+     * </pre>
+     *
+     * <code>string version_id = 11;</code>
+     * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
@@ -15425,6 +16060,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 11;</code>
+     * @return The bytes for versionId.
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
@@ -15489,6 +16125,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return A list containing the tag.
      */
     java.util.List<java.lang.String>
         getTagList();
@@ -15498,6 +16135,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The count of tag.
      */
     int getTagCount();
     /**
@@ -15506,6 +16144,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @param index The index of the element to return.
+     * @return The tag at the given index.
      */
     java.lang.String getTag(int index);
     /**
@@ -15514,6 +16154,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tag at the given index.
      */
     com.google.protobuf.ByteString
         getTagBytes(int index);
@@ -15524,6 +16166,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
+     * @return Whether the connectivity field is set.
      */
     boolean hasConnectivity();
     /**
@@ -15532,6 +16175,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
+     * @return The connectivity.
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity getConnectivity();
     /**
@@ -15646,7 +16290,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.CreateFunctionVersionRequest}
    */
-  public  static final class CreateFunctionVersionRequest extends
+  public static final class CreateFunctionVersionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.CreateFunctionVersionRequest)
       CreateFunctionVersionRequestOrBuilder {
@@ -15663,6 +16307,13 @@ public final class FunctionServiceOuterClass {
       serviceAccountId_ = "";
       tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       secrets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFunctionVersionRequest();
     }
 
     @java.lang.Override
@@ -15760,8 +16411,8 @@ public final class FunctionServiceOuterClass {
               break;
             }
             case 82: {
-              packageSourceCase_ = 10;
               packageSource_ = input.readBytes();
+              packageSourceCase_ = 10;
               break;
             }
             case 90: {
@@ -15771,10 +16422,10 @@ public final class FunctionServiceOuterClass {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 environment_ = com.google.protobuf.MapField.newMapField(
                     EnvironmentDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               environment__ = input.readMessage(
@@ -15785,18 +16436,18 @@ public final class FunctionServiceOuterClass {
             }
             case 106: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 tag_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00000002;
               }
               tag_.add(s);
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 namedServiceAccounts_ = com.google.protobuf.MapField.newMapField(
                     NamedServiceAccountsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00002000;
+                mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               namedServiceAccounts__ = input.readMessage(
@@ -15819,16 +16470,16 @@ public final class FunctionServiceOuterClass {
               break;
             }
             case 146: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 secrets_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret>();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00000008;
               }
               secrets_.add(
                   input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15842,10 +16493,10 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           tag_ = tag_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           secrets_ = java.util.Collections.unmodifiableList(secrets_);
         }
         this.unknownFields = unknownFields.build();
@@ -15879,11 +16530,11 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int packageSourceCase_ = 0;
     private java.lang.Object packageSource_;
     public enum PackageSourceCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PACKAGE(9),
       CONTENT(10),
       VERSION_ID(11),
@@ -15893,6 +16544,8 @@ public final class FunctionServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -15929,7 +16582,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -15949,7 +16604,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -15972,7 +16629,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The runtime.
      */
+    @java.lang.Override
     public java.lang.String getRuntime() {
       java.lang.Object ref = runtime_;
       if (ref instanceof java.lang.String) {
@@ -15991,7 +16650,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for runtime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRuntimeBytes() {
       java.lang.Object ref = runtime_;
@@ -16014,7 +16675,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -16033,7 +16696,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -16056,7 +16721,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The entrypoint.
      */
+    @java.lang.Override
     public java.lang.String getEntrypoint() {
       java.lang.Object ref = entrypoint_;
       if (ref instanceof java.lang.String) {
@@ -16075,7 +16742,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for entrypoint.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEntrypointBytes() {
       java.lang.Object ref = entrypoint_;
@@ -16098,7 +16767,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the resources field is set.
      */
+    @java.lang.Override
     public boolean hasResources() {
       return resources_ != null;
     }
@@ -16108,7 +16779,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The resources.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.getDefaultInstance() : resources_;
     }
@@ -16119,6 +16792,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
@@ -16132,7 +16806,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the executionTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasExecutionTimeout() {
       return executionTimeout_ != null;
     }
@@ -16143,7 +16819,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The executionTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getExecutionTimeout() {
       return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
     }
@@ -16155,6 +16833,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
       return getExecutionTimeout();
     }
@@ -16167,7 +16846,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
+     * @return The serviceAccountId.
      */
+    @java.lang.Override
     public java.lang.String getServiceAccountId() {
       java.lang.Object ref = serviceAccountId_;
       if (ref instanceof java.lang.String) {
@@ -16186,7 +16867,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
+     * @return The bytes for serviceAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceAccountIdBytes() {
       java.lang.Object ref = serviceAccountId_;
@@ -16208,7 +16891,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
+     * @return Whether the package field is set.
      */
+    @java.lang.Override
     public boolean hasPackage() {
       return packageSourceCase_ == 9;
     }
@@ -16218,7 +16903,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
+     * @return The package.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package getPackage() {
       if (packageSourceCase_ == 9) {
          return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package) packageSource_;
@@ -16232,6 +16919,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.PackageOrBuilder getPackageOrBuilder() {
       if (packageSourceCase_ == 9) {
          return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package) packageSource_;
@@ -16246,7 +16934,21 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+     * @return Whether the content field is set.
      */
+    @java.lang.Override
+    public boolean hasContent() {
+      return packageSourceCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Content of the deployment package.
+     * </pre>
+     *
+     * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+     * @return The content.
+     */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       if (packageSourceCase_ == 10) {
         return (com.google.protobuf.ByteString) packageSource_;
@@ -16262,6 +16964,19 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 11;</code>
+     * @return Whether the versionId field is set.
+     */
+    public boolean hasVersionId() {
+      return packageSourceCase_ == 11;
+    }
+    /**
+     * <pre>
+     * ID of the version to be copied from. Source version must belong to the same folder as the created version
+     * and the user must have read permissions to the source version.
+     * </pre>
+     *
+     * <code>string version_id = 11;</code>
+     * @return The versionId.
      */
     public java.lang.String getVersionId() {
       java.lang.Object ref = "";
@@ -16287,6 +17002,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string version_id = 11;</code>
+     * @return The bytes for versionId.
      */
     public com.google.protobuf.ByteString
         getVersionIdBytes() {
@@ -16341,14 +17057,16 @@ public final class FunctionServiceOuterClass {
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsEnvironment(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetEnvironment().getMap().containsKey(key);
     }
     /**
      * Use {@link #getEnvironmentMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getEnvironment() {
       return getEnvironmentMap();
@@ -16360,6 +17078,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getEnvironmentMap() {
       return internalGetEnvironment().getMap();
@@ -16371,11 +17090,12 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getEnvironmentOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetEnvironment().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16387,10 +17107,11 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getEnvironmentOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetEnvironment().getMap();
       if (!map.containsKey(key)) {
@@ -16407,6 +17128,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return A list containing the tag.
      */
     public com.google.protobuf.ProtocolStringList
         getTagList() {
@@ -16418,6 +17140,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The count of tag.
      */
     public int getTagCount() {
       return tag_.size();
@@ -16428,6 +17151,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @param index The index of the element to return.
+     * @return The tag at the given index.
      */
     public java.lang.String getTag(int index) {
       return tag_.get(index);
@@ -16438,6 +17163,8 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tag at the given index.
      */
     public com.google.protobuf.ByteString
         getTagBytes(int index) {
@@ -16452,7 +17179,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
+     * @return Whether the connectivity field is set.
      */
+    @java.lang.Override
     public boolean hasConnectivity() {
       return connectivity_ != null;
     }
@@ -16462,7 +17191,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
+     * @return The connectivity.
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity getConnectivity() {
       return connectivity_ == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity.getDefaultInstance() : connectivity_;
     }
@@ -16473,6 +17204,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder() {
       return getConnectivity();
     }
@@ -16511,14 +17243,16 @@ public final class FunctionServiceOuterClass {
      * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
      */
 
+    @java.lang.Override
     public boolean containsNamedServiceAccounts(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetNamedServiceAccounts().getMap().containsKey(key);
     }
     /**
      * Use {@link #getNamedServiceAccountsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccounts() {
       return getNamedServiceAccountsMap();
@@ -16530,6 +17264,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccountsMap() {
       return internalGetNamedServiceAccounts().getMap();
@@ -16541,11 +17276,12 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getNamedServiceAccountsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetNamedServiceAccounts().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16557,10 +17293,11 @@ public final class FunctionServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getNamedServiceAccountsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetNamedServiceAccounts().getMap();
       if (!map.containsKey(key)) {
@@ -16578,6 +17315,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> getSecretsList() {
       return secrets_;
     }
@@ -16588,6 +17326,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder> 
         getSecretsOrBuilderList() {
       return secrets_;
@@ -16599,6 +17338,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
      */
+    @java.lang.Override
     public int getSecretsCount() {
       return secrets_.size();
     }
@@ -16609,6 +17349,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getSecrets(int index) {
       return secrets_.get(index);
     }
@@ -16619,6 +17360,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder getSecretsOrBuilder(
         int index) {
       return secrets_.get(index);
@@ -16638,16 +17380,16 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getRuntimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(runtime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, runtime_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
-      if (!getEntrypointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entrypoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, entrypoint_);
       }
       if (resources_ != null) {
@@ -16656,7 +17398,7 @@ public final class FunctionServiceOuterClass {
       if (executionTimeout_ != null) {
         output.writeMessage(6, getExecutionTimeout());
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, serviceAccountId_);
       }
       if (packageSourceCase_ == 9) {
@@ -16699,16 +17441,16 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getRuntimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(runtime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, runtime_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
-      if (!getEntrypointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entrypoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, entrypoint_);
       }
       if (resources_ != null) {
@@ -16719,7 +17461,7 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getExecutionTimeout());
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, serviceAccountId_);
       }
       if (packageSourceCase_ == 9) {
@@ -16785,61 +17527,58 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getRuntime()
-          .equals(other.getRuntime());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getEntrypoint()
-          .equals(other.getEntrypoint());
-      result = result && (hasResources() == other.hasResources());
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getRuntime()
+          .equals(other.getRuntime())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getEntrypoint()
+          .equals(other.getEntrypoint())) return false;
+      if (hasResources() != other.hasResources()) return false;
       if (hasResources()) {
-        result = result && getResources()
-            .equals(other.getResources());
+        if (!getResources()
+            .equals(other.getResources())) return false;
       }
-      result = result && (hasExecutionTimeout() == other.hasExecutionTimeout());
+      if (hasExecutionTimeout() != other.hasExecutionTimeout()) return false;
       if (hasExecutionTimeout()) {
-        result = result && getExecutionTimeout()
-            .equals(other.getExecutionTimeout());
+        if (!getExecutionTimeout()
+            .equals(other.getExecutionTimeout())) return false;
       }
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
-      result = result && internalGetEnvironment().equals(
-          other.internalGetEnvironment());
-      result = result && getTagList()
-          .equals(other.getTagList());
-      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!internalGetEnvironment().equals(
+          other.internalGetEnvironment())) return false;
+      if (!getTagList()
+          .equals(other.getTagList())) return false;
+      if (hasConnectivity() != other.hasConnectivity()) return false;
       if (hasConnectivity()) {
-        result = result && getConnectivity()
-            .equals(other.getConnectivity());
+        if (!getConnectivity()
+            .equals(other.getConnectivity())) return false;
       }
-      result = result && internalGetNamedServiceAccounts().equals(
-          other.internalGetNamedServiceAccounts());
-      result = result && getSecretsList()
-          .equals(other.getSecretsList());
-      result = result && getPackageSourceCase().equals(
-          other.getPackageSourceCase());
-      if (!result) return false;
+      if (!internalGetNamedServiceAccounts().equals(
+          other.internalGetNamedServiceAccounts())) return false;
+      if (!getSecretsList()
+          .equals(other.getSecretsList())) return false;
+      if (!getPackageSourceCase().equals(other.getPackageSourceCase())) return false;
       switch (packageSourceCase_) {
         case 9:
-          result = result && getPackage()
-              .equals(other.getPackage());
+          if (!getPackage()
+              .equals(other.getPackage())) return false;
           break;
         case 10:
-          result = result && getContent()
-              .equals(other.getContent());
+          if (!getContent()
+              .equals(other.getContent())) return false;
           break;
         case 11:
-          result = result && getVersionId()
-              .equals(other.getVersionId());
+          if (!getVersionId()
+              .equals(other.getVersionId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17087,7 +17826,7 @@ public final class FunctionServiceOuterClass {
 
         internalGetMutableEnvironment().clear();
         tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (connectivityBuilder_ == null) {
           connectivity_ = null;
         } else {
@@ -17097,7 +17836,7 @@ public final class FunctionServiceOuterClass {
         internalGetMutableNamedServiceAccounts().clear();
         if (secretsBuilder_ == null) {
           secrets_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           secretsBuilder_.clear();
         }
@@ -17130,7 +17869,6 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.functionId_ = functionId_;
         result.runtime_ = runtime_;
         result.description_ = description_;
@@ -17161,9 +17899,9 @@ public final class FunctionServiceOuterClass {
         }
         result.environment_ = internalGetEnvironment();
         result.environment_.makeImmutable();
-        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           tag_ = tag_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tag_ = tag_;
         if (connectivityBuilder_ == null) {
@@ -17174,15 +17912,14 @@ public final class FunctionServiceOuterClass {
         result.namedServiceAccounts_ = internalGetNamedServiceAccounts();
         result.namedServiceAccounts_.makeImmutable();
         if (secretsBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             secrets_ = java.util.Collections.unmodifiableList(secrets_);
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.secrets_ = secrets_;
         } else {
           result.secrets_ = secretsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         result.packageSourceCase_ = packageSourceCase_;
         onBuilt();
         return result;
@@ -17190,35 +17927,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17263,7 +18000,7 @@ public final class FunctionServiceOuterClass {
         if (!other.tag_.isEmpty()) {
           if (tag_.isEmpty()) {
             tag_ = other.tag_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTagIsMutable();
             tag_.addAll(other.tag_);
@@ -17279,7 +18016,7 @@ public final class FunctionServiceOuterClass {
           if (!other.secrets_.isEmpty()) {
             if (secrets_.isEmpty()) {
               secrets_ = other.secrets_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureSecretsIsMutable();
               secrets_.addAll(other.secrets_);
@@ -17292,7 +18029,7 @@ public final class FunctionServiceOuterClass {
               secretsBuilder_.dispose();
               secretsBuilder_ = null;
               secrets_ = other.secrets_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00000008);
               secretsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSecretsFieldBuilder() : null;
@@ -17373,6 +18110,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -17393,6 +18131,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -17414,6 +18153,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -17432,6 +18173,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -17446,6 +18188,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17466,6 +18210,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The runtime.
        */
       public java.lang.String getRuntime() {
         java.lang.Object ref = runtime_;
@@ -17485,6 +18230,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for runtime.
        */
       public com.google.protobuf.ByteString
           getRuntimeBytes() {
@@ -17505,6 +18251,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The runtime to set.
+       * @return This builder for chaining.
        */
       public Builder setRuntime(
           java.lang.String value) {
@@ -17522,6 +18270,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRuntime() {
         
@@ -17535,6 +18284,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for runtime to set.
+       * @return This builder for chaining.
        */
       public Builder setRuntimeBytes(
           com.google.protobuf.ByteString value) {
@@ -17555,6 +18306,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -17574,6 +18326,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -17594,6 +18347,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -17611,6 +18366,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -17624,6 +18380,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -17644,6 +18402,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The entrypoint.
        */
       public java.lang.String getEntrypoint() {
         java.lang.Object ref = entrypoint_;
@@ -17663,6 +18422,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for entrypoint.
        */
       public com.google.protobuf.ByteString
           getEntrypointBytes() {
@@ -17683,6 +18443,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The entrypoint to set.
+       * @return This builder for chaining.
        */
       public Builder setEntrypoint(
           java.lang.String value) {
@@ -17700,6 +18462,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearEntrypoint() {
         
@@ -17713,6 +18476,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for entrypoint to set.
+       * @return This builder for chaining.
        */
       public Builder setEntrypointBytes(
           com.google.protobuf.ByteString value) {
@@ -17726,7 +18491,7 @@ public final class FunctionServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources resources_ = null;
+      private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
@@ -17735,6 +18500,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the resources field is set.
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
@@ -17745,6 +18511,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The resources.
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources() {
         if (resourcesBuilder_ == null) {
@@ -17879,7 +18646,7 @@ public final class FunctionServiceOuterClass {
         return resourcesBuilder_;
       }
 
-      private com.google.protobuf.Duration executionTimeout_ = null;
+      private com.google.protobuf.Duration executionTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> executionTimeoutBuilder_;
       /**
@@ -17889,6 +18656,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the executionTimeout field is set.
        */
       public boolean hasExecutionTimeout() {
         return executionTimeoutBuilder_ != null || executionTimeout_ != null;
@@ -17900,6 +18668,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The executionTimeout.
        */
       public com.google.protobuf.Duration getExecutionTimeout() {
         if (executionTimeoutBuilder_ == null) {
@@ -18048,6 +18817,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
+       * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
         java.lang.Object ref = serviceAccountId_;
@@ -18067,6 +18837,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
+       * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
           getServiceAccountIdBytes() {
@@ -18087,6 +18858,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountId(
           java.lang.String value) {
@@ -18104,6 +18877,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
         
@@ -18117,6 +18891,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceAccountIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18138,7 +18914,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
+       * @return Whether the package field is set.
        */
+      @java.lang.Override
       public boolean hasPackage() {
         return packageSourceCase_ == 9;
       }
@@ -18148,7 +18926,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
+       * @return The package.
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package getPackage() {
         if (packageBuilder_ == null) {
           if (packageSourceCase_ == 9) {
@@ -18266,6 +19046,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.PackageOrBuilder getPackageOrBuilder() {
         if ((packageSourceCase_ == 9) && (packageBuilder_ != null)) {
           return packageBuilder_.getMessageOrBuilder();
@@ -18308,6 +19089,18 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return packageSourceCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Content of the deployment package.
+       * </pre>
+       *
+       * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+       * @return The content.
        */
       public com.google.protobuf.ByteString getContent() {
         if (packageSourceCase_ == 10) {
@@ -18321,6 +19114,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -18337,6 +19132,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearContent() {
         if (packageSourceCase_ == 10) {
@@ -18354,7 +19150,22 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 11;</code>
+       * @return Whether the versionId field is set.
        */
+      @java.lang.Override
+      public boolean hasVersionId() {
+        return packageSourceCase_ == 11;
+      }
+      /**
+       * <pre>
+       * ID of the version to be copied from. Source version must belong to the same folder as the created version
+       * and the user must have read permissions to the source version.
+       * </pre>
+       *
+       * <code>string version_id = 11;</code>
+       * @return The versionId.
+       */
+      @java.lang.Override
       public java.lang.String getVersionId() {
         java.lang.Object ref = "";
         if (packageSourceCase_ == 11) {
@@ -18379,7 +19190,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 11;</code>
+       * @return The bytes for versionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionIdBytes() {
         java.lang.Object ref = "";
@@ -18405,6 +19218,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 11;</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionId(
           java.lang.String value) {
@@ -18423,6 +19238,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersionId() {
         if (packageSourceCase_ == 11) {
@@ -18439,6 +19255,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string version_id = 11;</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18486,14 +19304,16 @@ public final class FunctionServiceOuterClass {
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsEnvironment(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetEnvironment().getMap().containsKey(key);
       }
       /**
        * Use {@link #getEnvironmentMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getEnvironment() {
         return getEnvironmentMap();
@@ -18505,6 +19325,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getEnvironmentMap() {
         return internalGetEnvironment().getMap();
@@ -18516,11 +19337,12 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getEnvironmentOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetEnvironment().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18532,10 +19354,11 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getEnvironmentOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetEnvironment().getMap();
         if (!map.containsKey(key)) {
@@ -18559,7 +19382,7 @@ public final class FunctionServiceOuterClass {
 
       public Builder removeEnvironment(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableEnvironment().getMutableMap()
             .remove(key);
         return this;
@@ -18582,8 +19405,11 @@ public final class FunctionServiceOuterClass {
       public Builder putEnvironment(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableEnvironment().getMutableMap()
             .put(key, value);
         return this;
@@ -18605,9 +19431,9 @@ public final class FunctionServiceOuterClass {
 
       private com.google.protobuf.LazyStringList tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tag_ = new com.google.protobuf.LazyStringArrayList(tag_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -18616,6 +19442,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return A list containing the tag.
        */
       public com.google.protobuf.ProtocolStringList
           getTagList() {
@@ -18627,6 +19454,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return The count of tag.
        */
       public int getTagCount() {
         return tag_.size();
@@ -18637,6 +19465,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param index The index of the element to return.
+       * @return The tag at the given index.
        */
       public java.lang.String getTag(int index) {
         return tag_.get(index);
@@ -18647,6 +19477,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tag at the given index.
        */
       public com.google.protobuf.ByteString
           getTagBytes(int index) {
@@ -18658,6 +19490,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param index The index to set the value at.
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           int index, java.lang.String value) {
@@ -18675,6 +19510,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param value The tag to add.
+       * @return This builder for chaining.
        */
       public Builder addTag(
           java.lang.String value) {
@@ -18692,6 +19529,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param values The tag to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTag(
           java.lang.Iterable<java.lang.String> values) {
@@ -18707,10 +19546,11 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -18720,6 +19560,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param value The bytes of the tag to add.
+       * @return This builder for chaining.
        */
       public Builder addTagBytes(
           com.google.protobuf.ByteString value) {
@@ -18733,7 +19575,7 @@ public final class FunctionServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity connectivity_ = null;
+      private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity connectivity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ConnectivityOrBuilder> connectivityBuilder_;
       /**
@@ -18742,6 +19584,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
+       * @return Whether the connectivity field is set.
        */
       public boolean hasConnectivity() {
         return connectivityBuilder_ != null || connectivity_ != null;
@@ -18752,6 +19595,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
+       * @return The connectivity.
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity getConnectivity() {
         if (connectivityBuilder_ == null) {
@@ -18920,14 +19764,16 @@ public final class FunctionServiceOuterClass {
        * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
        */
 
+      @java.lang.Override
       public boolean containsNamedServiceAccounts(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetNamedServiceAccounts().getMap().containsKey(key);
       }
       /**
        * Use {@link #getNamedServiceAccountsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccounts() {
         return getNamedServiceAccountsMap();
@@ -18939,6 +19785,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccountsMap() {
         return internalGetNamedServiceAccounts().getMap();
@@ -18950,11 +19797,12 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getNamedServiceAccountsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetNamedServiceAccounts().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18966,10 +19814,11 @@ public final class FunctionServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getNamedServiceAccountsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetNamedServiceAccounts().getMap();
         if (!map.containsKey(key)) {
@@ -18993,7 +19842,7 @@ public final class FunctionServiceOuterClass {
 
       public Builder removeNamedServiceAccounts(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableNamedServiceAccounts().getMutableMap()
             .remove(key);
         return this;
@@ -19016,8 +19865,11 @@ public final class FunctionServiceOuterClass {
       public Builder putNamedServiceAccounts(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableNamedServiceAccounts().getMutableMap()
             .put(key, value);
         return this;
@@ -19040,9 +19892,9 @@ public final class FunctionServiceOuterClass {
       private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> secrets_ =
         java.util.Collections.emptyList();
       private void ensureSecretsIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           secrets_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret>(secrets_);
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -19236,7 +20088,7 @@ public final class FunctionServiceOuterClass {
       public Builder clearSecrets() {
         if (secretsBuilder_ == null) {
           secrets_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           secretsBuilder_.clear();
@@ -19341,7 +20193,7 @@ public final class FunctionServiceOuterClass {
           secretsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder>(
                   secrets_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           secrets_ = null;
@@ -19351,7 +20203,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19411,6 +20263,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The functionVersionId.
      */
     java.lang.String getFunctionVersionId();
     /**
@@ -19419,6 +20272,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The bytes for functionVersionId.
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
@@ -19426,7 +20280,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.CreateFunctionVersionMetadata}
    */
-  public  static final class CreateFunctionVersionMetadata extends
+  public static final class CreateFunctionVersionMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.CreateFunctionVersionMetadata)
       CreateFunctionVersionMetadataOrBuilder {
@@ -19437,6 +20291,13 @@ public final class FunctionServiceOuterClass {
     }
     private CreateFunctionVersionMetadata() {
       functionVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFunctionVersionMetadata();
     }
 
     @java.lang.Override
@@ -19452,7 +20313,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19470,7 +20330,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19509,7 +20369,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The functionVersionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionVersionId() {
       java.lang.Object ref = functionVersionId_;
       if (ref instanceof java.lang.String) {
@@ -19528,7 +20390,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The bytes for functionVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionVersionIdBytes() {
       java.lang.Object ref = functionVersionId_;
@@ -19557,7 +20421,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionVersionId_);
       }
       unknownFields.writeTo(output);
@@ -19569,7 +20433,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionVersionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -19587,11 +20451,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionVersionId()
-          .equals(other.getFunctionVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19771,35 +20634,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19853,6 +20716,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return The functionVersionId.
        */
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
@@ -19872,6 +20736,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return The bytes for functionVersionId.
        */
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
@@ -19892,6 +20757,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionId(
           java.lang.String value) {
@@ -19909,6 +20776,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionVersionId() {
         
@@ -19922,6 +20790,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -19937,7 +20807,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19998,6 +20868,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
      */
     java.lang.String getFunctionVersionId();
     /**
@@ -20007,6 +20878,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
@@ -20017,6 +20889,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
@@ -20025,6 +20898,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -20032,7 +20906,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.SetFunctionTagRequest}
    */
-  public  static final class SetFunctionTagRequest extends
+  public static final class SetFunctionTagRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.SetFunctionTagRequest)
       SetFunctionTagRequestOrBuilder {
@@ -20044,6 +20918,13 @@ public final class FunctionServiceOuterClass {
     private SetFunctionTagRequest() {
       functionVersionId_ = "";
       tag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetFunctionTagRequest();
     }
 
     @java.lang.Override
@@ -20059,7 +20940,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20083,7 +20963,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20123,7 +21003,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionVersionId() {
       java.lang.Object ref = functionVersionId_;
       if (ref instanceof java.lang.String) {
@@ -20143,7 +21025,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionVersionIdBytes() {
       java.lang.Object ref = functionVersionId_;
@@ -20166,7 +21050,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The tag.
      */
+    @java.lang.Override
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
@@ -20185,7 +21071,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The bytes for tag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagBytes() {
       java.lang.Object ref = tag_;
@@ -20214,10 +21102,10 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionVersionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
       }
       unknownFields.writeTo(output);
@@ -20229,10 +21117,10 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionVersionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
       }
       size += unknownFields.getSerializedSize();
@@ -20250,13 +21138,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionVersionId()
-          .equals(other.getFunctionVersionId());
-      result = result && getTag()
-          .equals(other.getTag());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20441,35 +21328,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20528,6 +21415,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionVersionId.
        */
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
@@ -20548,6 +21436,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionVersionId.
        */
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
@@ -20569,6 +21458,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionId(
           java.lang.String value) {
@@ -20587,6 +21478,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionVersionId() {
         
@@ -20601,6 +21493,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20621,6 +21515,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return The tag.
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -20640,6 +21535,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -20660,6 +21556,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -20677,6 +21575,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         
@@ -20690,6 +21589,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -20705,7 +21606,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20766,6 +21667,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
      */
     java.lang.String getFunctionVersionId();
     /**
@@ -20775,6 +21677,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
@@ -20785,6 +21688,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
@@ -20793,6 +21697,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -20800,7 +21705,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.RemoveFunctionTagRequest}
    */
-  public  static final class RemoveFunctionTagRequest extends
+  public static final class RemoveFunctionTagRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.RemoveFunctionTagRequest)
       RemoveFunctionTagRequestOrBuilder {
@@ -20812,6 +21717,13 @@ public final class FunctionServiceOuterClass {
     private RemoveFunctionTagRequest() {
       functionVersionId_ = "";
       tag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveFunctionTagRequest();
     }
 
     @java.lang.Override
@@ -20827,7 +21739,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20851,7 +21762,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20891,7 +21802,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionVersionId() {
       java.lang.Object ref = functionVersionId_;
       if (ref instanceof java.lang.String) {
@@ -20911,7 +21824,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionVersionIdBytes() {
       java.lang.Object ref = functionVersionId_;
@@ -20934,7 +21849,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The tag.
      */
+    @java.lang.Override
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
@@ -20953,7 +21870,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * @return The bytes for tag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagBytes() {
       java.lang.Object ref = tag_;
@@ -20982,10 +21901,10 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionVersionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
       }
       unknownFields.writeTo(output);
@@ -20997,10 +21916,10 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionVersionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
       }
       size += unknownFields.getSerializedSize();
@@ -21018,13 +21937,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionVersionId()
-          .equals(other.getFunctionVersionId());
-      result = result && getTag()
-          .equals(other.getTag());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21209,35 +22127,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21296,6 +22214,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionVersionId.
        */
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
@@ -21316,6 +22235,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionVersionId.
        */
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
@@ -21337,6 +22257,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionId(
           java.lang.String value) {
@@ -21355,6 +22277,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionVersionId() {
         
@@ -21369,6 +22292,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -21389,6 +22314,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return The tag.
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -21408,6 +22334,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -21428,6 +22355,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -21445,6 +22374,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         
@@ -21458,6 +22388,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -21473,7 +22405,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21533,6 +22465,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The functionVersionId.
      */
     java.lang.String getFunctionVersionId();
     /**
@@ -21541,6 +22474,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The bytes for functionVersionId.
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
@@ -21548,7 +22482,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.SetFunctionTagMetadata}
    */
-  public  static final class SetFunctionTagMetadata extends
+  public static final class SetFunctionTagMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.SetFunctionTagMetadata)
       SetFunctionTagMetadataOrBuilder {
@@ -21559,6 +22493,13 @@ public final class FunctionServiceOuterClass {
     }
     private SetFunctionTagMetadata() {
       functionVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetFunctionTagMetadata();
     }
 
     @java.lang.Override
@@ -21574,7 +22515,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21592,7 +22532,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21631,7 +22571,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The functionVersionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionVersionId() {
       java.lang.Object ref = functionVersionId_;
       if (ref instanceof java.lang.String) {
@@ -21650,7 +22592,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The bytes for functionVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionVersionIdBytes() {
       java.lang.Object ref = functionVersionId_;
@@ -21679,7 +22623,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionVersionId_);
       }
       unknownFields.writeTo(output);
@@ -21691,7 +22635,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionVersionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -21709,11 +22653,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionVersionId()
-          .equals(other.getFunctionVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21893,35 +22836,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21975,6 +22918,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return The functionVersionId.
        */
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
@@ -21994,6 +22938,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return The bytes for functionVersionId.
        */
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
@@ -22014,6 +22959,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionId(
           java.lang.String value) {
@@ -22031,6 +22978,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionVersionId() {
         
@@ -22044,6 +22992,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -22059,7 +23009,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22119,6 +23069,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The functionVersionId.
      */
     java.lang.String getFunctionVersionId();
     /**
@@ -22127,6 +23078,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The bytes for functionVersionId.
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
@@ -22134,7 +23086,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.RemoveFunctionTagMetadata}
    */
-  public  static final class RemoveFunctionTagMetadata extends
+  public static final class RemoveFunctionTagMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.RemoveFunctionTagMetadata)
       RemoveFunctionTagMetadataOrBuilder {
@@ -22145,6 +23097,13 @@ public final class FunctionServiceOuterClass {
     }
     private RemoveFunctionTagMetadata() {
       functionVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveFunctionTagMetadata();
     }
 
     @java.lang.Override
@@ -22160,7 +23119,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -22178,7 +23136,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22217,7 +23175,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The functionVersionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionVersionId() {
       java.lang.Object ref = functionVersionId_;
       if (ref instanceof java.lang.String) {
@@ -22236,7 +23196,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_version_id = 1;</code>
+     * @return The bytes for functionVersionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionVersionIdBytes() {
       java.lang.Object ref = functionVersionId_;
@@ -22265,7 +23227,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionVersionId_);
       }
       unknownFields.writeTo(output);
@@ -22277,7 +23239,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionVersionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionVersionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -22295,11 +23257,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionVersionId()
-          .equals(other.getFunctionVersionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22479,35 +23440,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22561,6 +23522,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return The functionVersionId.
        */
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
@@ -22580,6 +23542,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return The bytes for functionVersionId.
        */
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
@@ -22600,6 +23563,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionId(
           java.lang.String value) {
@@ -22617,6 +23582,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionVersionId() {
         
@@ -22630,6 +23596,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 1;</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -22645,7 +23613,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22706,6 +23674,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -22715,6 +23684,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -22725,6 +23695,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
@@ -22733,6 +23704,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -22746,6 +23718,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -22756,6 +23729,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -22765,6 +23739,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -22780,6 +23755,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -22793,6 +23769,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -22800,7 +23777,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryRequest}
    */
-  public  static final class ListFunctionTagHistoryRequest extends
+  public static final class ListFunctionTagHistoryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryRequest)
       ListFunctionTagHistoryRequestOrBuilder {
@@ -22812,9 +23789,15 @@ public final class FunctionServiceOuterClass {
     private ListFunctionTagHistoryRequest() {
       functionId_ = "";
       tag_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionTagHistoryRequest();
     }
 
     @java.lang.Override
@@ -22830,7 +23813,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -22871,7 +23853,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22911,7 +23893,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -22931,7 +23915,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -22954,7 +23940,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
+    @java.lang.Override
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
@@ -22973,7 +23961,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagBytes() {
       java.lang.Object ref = tag_;
@@ -22999,7 +23989,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -23013,7 +24005,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -23033,7 +24027,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -23061,7 +24057,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -23085,7 +24083,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -23114,19 +24114,19 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filter_);
       }
       unknownFields.writeTo(output);
@@ -23138,20 +24138,20 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -23169,19 +24169,18 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getTag()
-          .equals(other.getTag());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23382,35 +24381,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23480,6 +24479,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -23500,6 +24500,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -23521,6 +24522,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -23539,6 +24542,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -23553,6 +24557,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23573,6 +24579,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The tag.
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -23592,6 +24599,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -23612,6 +24620,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -23629,6 +24639,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         
@@ -23642,6 +24653,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -23665,7 +24678,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -23678,6 +24693,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -23694,6 +24711,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -23710,6 +24728,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -23730,6 +24749,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -23751,6 +24771,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -23769,6 +24791,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -23783,6 +24806,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -23808,6 +24833,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -23832,6 +24858,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -23857,6 +24884,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -23879,6 +24908,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -23897,6 +24927,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -23912,7 +24944,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -24019,6 +25051,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -24030,6 +25063,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -24037,7 +25071,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse}
    */
-  public  static final class ListFunctionTagHistoryResponse extends
+  public static final class ListFunctionTagHistoryResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse)
       ListFunctionTagHistoryResponseOrBuilder {
@@ -24049,6 +25083,13 @@ public final class FunctionServiceOuterClass {
     private ListFunctionTagHistoryResponse() {
       functionTagHistoryRecord_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFunctionTagHistoryResponse();
     }
 
     @java.lang.Override
@@ -24076,7 +25117,7 @@ public final class FunctionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 functionTagHistoryRecord_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -24091,7 +25132,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24105,7 +25146,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           functionTagHistoryRecord_ = java.util.Collections.unmodifiableList(functionTagHistoryRecord_);
         }
         this.unknownFields = unknownFields.build();
@@ -24135,6 +25176,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
       java.lang.String getFunctionId();
       /**
@@ -24143,6 +25185,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
       com.google.protobuf.ByteString
           getFunctionIdBytes();
@@ -24153,6 +25196,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 3;</code>
+       * @return The functionVersionId.
        */
       java.lang.String getFunctionVersionId();
       /**
@@ -24161,6 +25205,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 3;</code>
+       * @return The bytes for functionVersionId.
        */
       com.google.protobuf.ByteString
           getFunctionVersionIdBytes();
@@ -24171,6 +25216,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2;</code>
+       * @return The tag.
        */
       java.lang.String getTag();
       /**
@@ -24179,6 +25225,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2;</code>
+       * @return The bytes for tag.
        */
       com.google.protobuf.ByteString
           getTagBytes();
@@ -24189,6 +25236,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
+       * @return Whether the effectiveFrom field is set.
        */
       boolean hasEffectiveFrom();
       /**
@@ -24197,6 +25245,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
+       * @return The effectiveFrom.
        */
       com.google.protobuf.Timestamp getEffectiveFrom();
       /**
@@ -24214,6 +25263,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
+       * @return Whether the effectiveTo field is set.
        */
       boolean hasEffectiveTo();
       /**
@@ -24222,6 +25272,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
+       * @return The effectiveTo.
        */
       com.google.protobuf.Timestamp getEffectiveTo();
       /**
@@ -24240,7 +25291,7 @@ public final class FunctionServiceOuterClass {
      *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord}
      */
-    public  static final class FunctionTagHistoryRecord extends
+    public static final class FunctionTagHistoryRecord extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord)
         FunctionTagHistoryRecordOrBuilder {
@@ -24256,6 +25307,13 @@ public final class FunctionServiceOuterClass {
       }
 
       @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FunctionTagHistoryRecord();
+      }
+
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
@@ -24268,7 +25326,6 @@ public final class FunctionServiceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -24324,7 +25381,7 @@ public final class FunctionServiceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -24363,7 +25420,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
+      @java.lang.Override
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
         if (ref instanceof java.lang.String) {
@@ -24382,7 +25441,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
         java.lang.Object ref = functionId_;
@@ -24405,7 +25466,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 3;</code>
+       * @return The functionVersionId.
        */
+      @java.lang.Override
       public java.lang.String getFunctionVersionId() {
         java.lang.Object ref = functionVersionId_;
         if (ref instanceof java.lang.String) {
@@ -24424,7 +25487,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_version_id = 3;</code>
+       * @return The bytes for functionVersionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFunctionVersionIdBytes() {
         java.lang.Object ref = functionVersionId_;
@@ -24447,7 +25512,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2;</code>
+       * @return The tag.
        */
+      @java.lang.Override
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
         if (ref instanceof java.lang.String) {
@@ -24466,7 +25533,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2;</code>
+       * @return The bytes for tag.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagBytes() {
         java.lang.Object ref = tag_;
@@ -24489,7 +25558,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
+       * @return Whether the effectiveFrom field is set.
        */
+      @java.lang.Override
       public boolean hasEffectiveFrom() {
         return effectiveFrom_ != null;
       }
@@ -24499,7 +25570,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
+       * @return The effectiveFrom.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getEffectiveFrom() {
         return effectiveFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveFrom_;
       }
@@ -24510,6 +25583,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.TimestampOrBuilder getEffectiveFromOrBuilder() {
         return getEffectiveFrom();
       }
@@ -24522,7 +25596,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
+       * @return Whether the effectiveTo field is set.
        */
+      @java.lang.Override
       public boolean hasEffectiveTo() {
         return effectiveTo_ != null;
       }
@@ -24532,7 +25608,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
+       * @return The effectiveTo.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getEffectiveTo() {
         return effectiveTo_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTo_;
       }
@@ -24543,6 +25621,7 @@ public final class FunctionServiceOuterClass {
        *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.TimestampOrBuilder getEffectiveToOrBuilder() {
         return getEffectiveTo();
       }
@@ -24561,13 +25640,13 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getFunctionIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
         }
-        if (!getTagBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
         }
-        if (!getFunctionVersionIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, functionVersionId_);
         }
         if (effectiveFrom_ != null) {
@@ -24585,13 +25664,13 @@ public final class FunctionServiceOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getFunctionIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
         }
-        if (!getTagBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
         }
-        if (!getFunctionVersionIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, functionVersionId_);
         }
         if (effectiveFrom_ != null) {
@@ -24617,25 +25696,24 @@ public final class FunctionServiceOuterClass {
         }
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord) obj;
 
-        boolean result = true;
-        result = result && getFunctionId()
-            .equals(other.getFunctionId());
-        result = result && getFunctionVersionId()
-            .equals(other.getFunctionVersionId());
-        result = result && getTag()
-            .equals(other.getTag());
-        result = result && (hasEffectiveFrom() == other.hasEffectiveFrom());
+        if (!getFunctionId()
+            .equals(other.getFunctionId())) return false;
+        if (!getFunctionVersionId()
+            .equals(other.getFunctionVersionId())) return false;
+        if (!getTag()
+            .equals(other.getTag())) return false;
+        if (hasEffectiveFrom() != other.hasEffectiveFrom()) return false;
         if (hasEffectiveFrom()) {
-          result = result && getEffectiveFrom()
-              .equals(other.getEffectiveFrom());
+          if (!getEffectiveFrom()
+              .equals(other.getEffectiveFrom())) return false;
         }
-        result = result && (hasEffectiveTo() == other.hasEffectiveTo());
+        if (hasEffectiveTo() != other.hasEffectiveTo()) return false;
         if (hasEffectiveTo()) {
-          result = result && getEffectiveTo()
-              .equals(other.getEffectiveTo());
+          if (!getEffectiveTo()
+              .equals(other.getEffectiveTo())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -24859,35 +25937,35 @@ public final class FunctionServiceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24955,6 +26033,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_id = 1;</code>
+         * @return The functionId.
          */
         public java.lang.String getFunctionId() {
           java.lang.Object ref = functionId_;
@@ -24974,6 +26053,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_id = 1;</code>
+         * @return The bytes for functionId.
          */
         public com.google.protobuf.ByteString
             getFunctionIdBytes() {
@@ -24994,6 +26074,8 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_id = 1;</code>
+         * @param value The functionId to set.
+         * @return This builder for chaining.
          */
         public Builder setFunctionId(
             java.lang.String value) {
@@ -25011,6 +26093,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_id = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearFunctionId() {
           
@@ -25024,6 +26107,8 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_id = 1;</code>
+         * @param value The bytes for functionId to set.
+         * @return This builder for chaining.
          */
         public Builder setFunctionIdBytes(
             com.google.protobuf.ByteString value) {
@@ -25044,6 +26129,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_version_id = 3;</code>
+         * @return The functionVersionId.
          */
         public java.lang.String getFunctionVersionId() {
           java.lang.Object ref = functionVersionId_;
@@ -25063,6 +26149,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_version_id = 3;</code>
+         * @return The bytes for functionVersionId.
          */
         public com.google.protobuf.ByteString
             getFunctionVersionIdBytes() {
@@ -25083,6 +26170,8 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_version_id = 3;</code>
+         * @param value The functionVersionId to set.
+         * @return This builder for chaining.
          */
         public Builder setFunctionVersionId(
             java.lang.String value) {
@@ -25100,6 +26189,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_version_id = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearFunctionVersionId() {
           
@@ -25113,6 +26203,8 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string function_version_id = 3;</code>
+         * @param value The bytes for functionVersionId to set.
+         * @return This builder for chaining.
          */
         public Builder setFunctionVersionIdBytes(
             com.google.protobuf.ByteString value) {
@@ -25133,6 +26225,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string tag = 2;</code>
+         * @return The tag.
          */
         public java.lang.String getTag() {
           java.lang.Object ref = tag_;
@@ -25152,6 +26245,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string tag = 2;</code>
+         * @return The bytes for tag.
          */
         public com.google.protobuf.ByteString
             getTagBytes() {
@@ -25172,6 +26266,8 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string tag = 2;</code>
+         * @param value The tag to set.
+         * @return This builder for chaining.
          */
         public Builder setTag(
             java.lang.String value) {
@@ -25189,6 +26285,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string tag = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTag() {
           
@@ -25202,6 +26299,8 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>string tag = 2;</code>
+         * @param value The bytes for tag to set.
+         * @return This builder for chaining.
          */
         public Builder setTagBytes(
             com.google.protobuf.ByteString value) {
@@ -25215,7 +26314,7 @@ public final class FunctionServiceOuterClass {
           return this;
         }
 
-        private com.google.protobuf.Timestamp effectiveFrom_ = null;
+        private com.google.protobuf.Timestamp effectiveFrom_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveFromBuilder_;
         /**
@@ -25224,6 +26323,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
+         * @return Whether the effectiveFrom field is set.
          */
         public boolean hasEffectiveFrom() {
           return effectiveFromBuilder_ != null || effectiveFrom_ != null;
@@ -25234,6 +26334,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
+         * @return The effectiveFrom.
          */
         public com.google.protobuf.Timestamp getEffectiveFrom() {
           if (effectiveFromBuilder_ == null) {
@@ -25368,7 +26469,7 @@ public final class FunctionServiceOuterClass {
           return effectiveFromBuilder_;
         }
 
-        private com.google.protobuf.Timestamp effectiveTo_ = null;
+        private com.google.protobuf.Timestamp effectiveTo_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveToBuilder_;
         /**
@@ -25377,6 +26478,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
+         * @return Whether the effectiveTo field is set.
          */
         public boolean hasEffectiveTo() {
           return effectiveToBuilder_ != null || effectiveTo_ != null;
@@ -25387,6 +26489,7 @@ public final class FunctionServiceOuterClass {
          * </pre>
          *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
+         * @return The effectiveTo.
          */
         public com.google.protobuf.Timestamp getEffectiveTo() {
           if (effectiveToBuilder_ == null) {
@@ -25523,7 +26626,7 @@ public final class FunctionServiceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -25573,7 +26676,6 @@ public final class FunctionServiceOuterClass {
 
     }
 
-    private int bitField0_;
     public static final int FUNCTION_TAG_HISTORY_RECORD_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> functionTagHistoryRecord_;
     /**
@@ -25583,6 +26685,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> getFunctionTagHistoryRecordList() {
       return functionTagHistoryRecord_;
     }
@@ -25593,6 +26696,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder> 
         getFunctionTagHistoryRecordOrBuilderList() {
       return functionTagHistoryRecord_;
@@ -25604,6 +26708,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
+    @java.lang.Override
     public int getFunctionTagHistoryRecordCount() {
       return functionTagHistoryRecord_.size();
     }
@@ -25614,6 +26719,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord getFunctionTagHistoryRecord(int index) {
       return functionTagHistoryRecord_.get(index);
     }
@@ -25624,6 +26730,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder getFunctionTagHistoryRecordOrBuilder(
         int index) {
       return functionTagHistoryRecord_.get(index);
@@ -25640,7 +26747,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -25662,7 +26771,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -25694,7 +26805,7 @@ public final class FunctionServiceOuterClass {
       for (int i = 0; i < functionTagHistoryRecord_.size(); i++) {
         output.writeMessage(1, functionTagHistoryRecord_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -25710,7 +26821,7 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, functionTagHistoryRecord_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -25728,13 +26839,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse) obj;
 
-      boolean result = true;
-      result = result && getFunctionTagHistoryRecordList()
-          .equals(other.getFunctionTagHistoryRecordList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionTagHistoryRecordList()
+          .equals(other.getFunctionTagHistoryRecordList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25919,9 +27029,8 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (functionTagHistoryRecordBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             functionTagHistoryRecord_ = java.util.Collections.unmodifiableList(functionTagHistoryRecord_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -25930,42 +27039,41 @@ public final class FunctionServiceOuterClass {
           result.functionTagHistoryRecord_ = functionTagHistoryRecordBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26042,7 +27150,7 @@ public final class FunctionServiceOuterClass {
       private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> functionTagHistoryRecord_ =
         java.util.Collections.emptyList();
       private void ensureFunctionTagHistoryRecordIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           functionTagHistoryRecord_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord>(functionTagHistoryRecord_);
           bitField0_ |= 0x00000001;
          }
@@ -26343,7 +27451,7 @@ public final class FunctionServiceOuterClass {
           functionTagHistoryRecordBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.Builder, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder>(
                   functionTagHistoryRecord_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           functionTagHistoryRecord_ = null;
@@ -26361,6 +27469,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -26383,6 +27492,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -26406,6 +27516,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -26426,6 +27538,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -26442,6 +27555,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -26457,7 +27572,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26518,6 +27633,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -26527,6 +27643,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -26540,6 +27657,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -26550,6 +27668,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -26559,6 +27678,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -26566,7 +27686,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListScalingPoliciesRequest}
    */
-  public  static final class ListScalingPoliciesRequest extends
+  public static final class ListScalingPoliciesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListScalingPoliciesRequest)
       ListScalingPoliciesRequestOrBuilder {
@@ -26577,8 +27697,14 @@ public final class FunctionServiceOuterClass {
     }
     private ListScalingPoliciesRequest() {
       functionId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListScalingPoliciesRequest();
     }
 
     @java.lang.Override
@@ -26594,7 +27720,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -26623,7 +27748,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26663,7 +27788,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -26683,7 +27810,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -26709,7 +27838,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -26723,7 +27854,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -26743,7 +27876,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -26772,13 +27907,13 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -26790,14 +27925,14 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -26815,15 +27950,14 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27014,35 +28148,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27104,6 +28238,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -27124,6 +28259,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -27145,6 +28281,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -27163,6 +28301,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -27177,6 +28316,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27200,7 +28341,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -27213,6 +28356,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -27229,6 +28374,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -27245,6 +28391,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -27265,6 +28412,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -27286,6 +28434,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -27304,6 +28454,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -27318,6 +28469,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -27333,7 +28486,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27440,6 +28593,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -27451,6 +28605,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -27458,7 +28613,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListScalingPoliciesResponse}
    */
-  public  static final class ListScalingPoliciesResponse extends
+  public static final class ListScalingPoliciesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ListScalingPoliciesResponse)
       ListScalingPoliciesResponseOrBuilder {
@@ -27470,6 +28625,13 @@ public final class FunctionServiceOuterClass {
     private ListScalingPoliciesResponse() {
       scalingPolicies_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListScalingPoliciesResponse();
     }
 
     @java.lang.Override
@@ -27497,7 +28659,7 @@ public final class FunctionServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 scalingPolicies_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -27512,7 +28674,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -27526,7 +28688,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           scalingPolicies_ = java.util.Collections.unmodifiableList(scalingPolicies_);
         }
         this.unknownFields = unknownFields.build();
@@ -27546,7 +28708,6 @@ public final class FunctionServiceOuterClass {
               yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCALING_POLICIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy> scalingPolicies_;
     /**
@@ -27556,6 +28717,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ScalingPolicy scaling_policies = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy> getScalingPoliciesList() {
       return scalingPolicies_;
     }
@@ -27566,6 +28728,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ScalingPolicy scaling_policies = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicyOrBuilder> 
         getScalingPoliciesOrBuilderList() {
       return scalingPolicies_;
@@ -27577,6 +28740,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ScalingPolicy scaling_policies = 1;</code>
      */
+    @java.lang.Override
     public int getScalingPoliciesCount() {
       return scalingPolicies_.size();
     }
@@ -27587,6 +28751,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ScalingPolicy scaling_policies = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy getScalingPolicies(int index) {
       return scalingPolicies_.get(index);
     }
@@ -27597,6 +28762,7 @@ public final class FunctionServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ScalingPolicy scaling_policies = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicyOrBuilder getScalingPoliciesOrBuilder(
         int index) {
       return scalingPolicies_.get(index);
@@ -27613,7 +28779,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -27635,7 +28803,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -27667,7 +28837,7 @@ public final class FunctionServiceOuterClass {
       for (int i = 0; i < scalingPolicies_.size(); i++) {
         output.writeMessage(1, scalingPolicies_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -27683,7 +28853,7 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, scalingPolicies_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -27701,13 +28871,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse) obj;
 
-      boolean result = true;
-      result = result && getScalingPoliciesList()
-          .equals(other.getScalingPoliciesList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScalingPoliciesList()
+          .equals(other.getScalingPoliciesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27892,9 +29061,8 @@ public final class FunctionServiceOuterClass {
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse buildPartial() {
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (scalingPoliciesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             scalingPolicies_ = java.util.Collections.unmodifiableList(scalingPolicies_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -27903,42 +29071,41 @@ public final class FunctionServiceOuterClass {
           result.scalingPolicies_ = scalingPoliciesBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -28015,7 +29182,7 @@ public final class FunctionServiceOuterClass {
       private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy> scalingPolicies_ =
         java.util.Collections.emptyList();
       private void ensureScalingPoliciesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           scalingPolicies_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy>(scalingPolicies_);
           bitField0_ |= 0x00000001;
          }
@@ -28316,7 +29483,7 @@ public final class FunctionServiceOuterClass {
           scalingPoliciesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicyOrBuilder>(
                   scalingPolicies_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           scalingPolicies_ = null;
@@ -28334,6 +29501,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -28356,6 +29524,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -28379,6 +29548,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -28399,6 +29570,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -28415,6 +29587,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -28430,7 +29604,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -28491,6 +29665,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -28500,6 +29675,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -28511,6 +29687,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
@@ -28520,6 +29697,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -28531,6 +29709,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 provisioned_instances_count = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The provisionedInstancesCount.
      */
     long getProvisionedInstancesCount();
 
@@ -28541,6 +29720,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 zone_instances_limit = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The zoneInstancesLimit.
      */
     long getZoneInstancesLimit();
 
@@ -28551,13 +29731,14 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 zone_requests_limit = 6 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The zoneRequestsLimit.
      */
     long getZoneRequestsLimit();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.SetScalingPolicyRequest}
    */
-  public  static final class SetScalingPolicyRequest extends
+  public static final class SetScalingPolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.SetScalingPolicyRequest)
       SetScalingPolicyRequestOrBuilder {
@@ -28569,9 +29750,13 @@ public final class FunctionServiceOuterClass {
     private SetScalingPolicyRequest() {
       functionId_ = "";
       tag_ = "";
-      provisionedInstancesCount_ = 0L;
-      zoneInstancesLimit_ = 0L;
-      zoneRequestsLimit_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetScalingPolicyRequest();
     }
 
     @java.lang.Override
@@ -28587,7 +29772,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -28626,7 +29810,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -28666,7 +29850,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -28686,7 +29872,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -28710,7 +29898,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
+    @java.lang.Override
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
@@ -28730,7 +29920,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagBytes() {
       java.lang.Object ref = tag_;
@@ -28754,7 +29946,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 provisioned_instances_count = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The provisionedInstancesCount.
      */
+    @java.lang.Override
     public long getProvisionedInstancesCount() {
       return provisionedInstancesCount_;
     }
@@ -28768,7 +29962,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 zone_instances_limit = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The zoneInstancesLimit.
      */
+    @java.lang.Override
     public long getZoneInstancesLimit() {
       return zoneInstancesLimit_;
     }
@@ -28782,7 +29978,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>int64 zone_requests_limit = 6 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The zoneRequestsLimit.
      */
+    @java.lang.Override
     public long getZoneRequestsLimit() {
       return zoneRequestsLimit_;
     }
@@ -28801,10 +29999,10 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
       }
       if (provisionedInstancesCount_ != 0L) {
@@ -28825,10 +30023,10 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
       }
       if (provisionedInstancesCount_ != 0L) {
@@ -28858,19 +30056,18 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getTag()
-          .equals(other.getTag());
-      result = result && (getProvisionedInstancesCount()
-          == other.getProvisionedInstancesCount());
-      result = result && (getZoneInstancesLimit()
-          == other.getZoneInstancesLimit());
-      result = result && (getZoneRequestsLimit()
-          == other.getZoneRequestsLimit());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (getProvisionedInstancesCount()
+          != other.getProvisionedInstancesCount()) return false;
+      if (getZoneInstancesLimit()
+          != other.getZoneInstancesLimit()) return false;
+      if (getZoneRequestsLimit()
+          != other.getZoneRequestsLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29073,35 +30270,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -29169,6 +30366,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -29189,6 +30387,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -29210,6 +30409,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -29228,6 +30429,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -29242,6 +30444,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29263,6 +30467,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The tag.
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -29283,6 +30488,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -29304,6 +30510,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -29322,6 +30530,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         
@@ -29336,6 +30545,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -29357,7 +30568,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 provisioned_instances_count = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The provisionedInstancesCount.
        */
+      @java.lang.Override
       public long getProvisionedInstancesCount() {
         return provisionedInstancesCount_;
       }
@@ -29368,6 +30581,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 provisioned_instances_count = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The provisionedInstancesCount to set.
+       * @return This builder for chaining.
        */
       public Builder setProvisionedInstancesCount(long value) {
         
@@ -29382,6 +30597,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 provisioned_instances_count = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearProvisionedInstancesCount() {
         
@@ -29398,7 +30614,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 zone_instances_limit = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The zoneInstancesLimit.
        */
+      @java.lang.Override
       public long getZoneInstancesLimit() {
         return zoneInstancesLimit_;
       }
@@ -29409,6 +30627,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 zone_instances_limit = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The zoneInstancesLimit to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneInstancesLimit(long value) {
         
@@ -29423,6 +30643,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 zone_instances_limit = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneInstancesLimit() {
         
@@ -29439,7 +30660,9 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 zone_requests_limit = 6 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The zoneRequestsLimit.
        */
+      @java.lang.Override
       public long getZoneRequestsLimit() {
         return zoneRequestsLimit_;
       }
@@ -29450,6 +30673,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 zone_requests_limit = 6 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The zoneRequestsLimit to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneRequestsLimit(long value) {
         
@@ -29464,6 +30689,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>int64 zone_requests_limit = 6 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneRequestsLimit() {
         
@@ -29474,7 +30700,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -29534,6 +30760,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -29542,6 +30769,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -29549,7 +30777,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.SetScalingPolicyMetadata}
    */
-  public  static final class SetScalingPolicyMetadata extends
+  public static final class SetScalingPolicyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.SetScalingPolicyMetadata)
       SetScalingPolicyMetadataOrBuilder {
@@ -29560,6 +30788,13 @@ public final class FunctionServiceOuterClass {
     }
     private SetScalingPolicyMetadata() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetScalingPolicyMetadata();
     }
 
     @java.lang.Override
@@ -29575,7 +30810,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -29593,7 +30827,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -29632,7 +30866,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -29651,7 +30887,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -29680,7 +30918,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -29692,7 +30930,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -29710,11 +30948,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29894,35 +31131,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -29976,6 +31213,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -29995,6 +31233,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -30015,6 +31254,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -30032,6 +31273,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -30045,6 +31287,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -30060,7 +31304,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -30121,6 +31365,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -30130,6 +31375,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -30141,6 +31387,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
@@ -30150,6 +31397,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -30157,7 +31405,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.RemoveScalingPolicyRequest}
    */
-  public  static final class RemoveScalingPolicyRequest extends
+  public static final class RemoveScalingPolicyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.RemoveScalingPolicyRequest)
       RemoveScalingPolicyRequestOrBuilder {
@@ -30169,6 +31417,13 @@ public final class FunctionServiceOuterClass {
     private RemoveScalingPolicyRequest() {
       functionId_ = "";
       tag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveScalingPolicyRequest();
     }
 
     @java.lang.Override
@@ -30184,7 +31439,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -30208,7 +31462,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -30248,7 +31502,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -30268,7 +31524,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -30292,7 +31550,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The tag.
      */
+    @java.lang.Override
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
@@ -30312,7 +31572,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+     * @return The bytes for tag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagBytes() {
       java.lang.Object ref = tag_;
@@ -30341,10 +31603,10 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
       }
       unknownFields.writeTo(output);
@@ -30356,10 +31618,10 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
-      if (!getTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
       }
       size += unknownFields.getSerializedSize();
@@ -30377,13 +31639,12 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && getTag()
-          .equals(other.getTag());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -30568,35 +31829,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -30655,6 +31916,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -30675,6 +31937,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -30696,6 +31959,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -30714,6 +31979,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -30728,6 +31994,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -30749,6 +32017,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The tag.
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -30769,6 +32038,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -30790,6 +32060,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -30808,6 +32080,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         
@@ -30822,6 +32095,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -30837,7 +32112,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -30897,6 +32172,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
     java.lang.String getFunctionId();
     /**
@@ -30905,6 +32181,7 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
@@ -30912,7 +32189,7 @@ public final class FunctionServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.RemoveScalingPolicyMetadata}
    */
-  public  static final class RemoveScalingPolicyMetadata extends
+  public static final class RemoveScalingPolicyMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.RemoveScalingPolicyMetadata)
       RemoveScalingPolicyMetadataOrBuilder {
@@ -30923,6 +32200,13 @@ public final class FunctionServiceOuterClass {
     }
     private RemoveScalingPolicyMetadata() {
       functionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveScalingPolicyMetadata();
     }
 
     @java.lang.Override
@@ -30938,7 +32222,6 @@ public final class FunctionServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -30956,7 +32239,7 @@ public final class FunctionServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -30995,7 +32278,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The functionId.
      */
+    @java.lang.Override
     public java.lang.String getFunctionId() {
       java.lang.Object ref = functionId_;
       if (ref instanceof java.lang.String) {
@@ -31014,7 +32299,9 @@ public final class FunctionServiceOuterClass {
      * </pre>
      *
      * <code>string function_id = 1;</code>
+     * @return The bytes for functionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFunctionIdBytes() {
       java.lang.Object ref = functionId_;
@@ -31043,7 +32330,7 @@ public final class FunctionServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
       }
       unknownFields.writeTo(output);
@@ -31055,7 +32342,7 @@ public final class FunctionServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFunctionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -31073,11 +32360,10 @@ public final class FunctionServiceOuterClass {
       }
       yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyMetadata) obj;
 
-      boolean result = true;
-      result = result && getFunctionId()
-          .equals(other.getFunctionId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFunctionId()
+          .equals(other.getFunctionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -31257,35 +32543,35 @@ public final class FunctionServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -31339,6 +32625,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The functionId.
        */
       public java.lang.String getFunctionId() {
         java.lang.Object ref = functionId_;
@@ -31358,6 +32645,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return The bytes for functionId.
        */
       public com.google.protobuf.ByteString
           getFunctionIdBytes() {
@@ -31378,6 +32666,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionId(
           java.lang.String value) {
@@ -31395,6 +32685,7 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFunctionId() {
         
@@ -31408,6 +32699,8 @@ public final class FunctionServiceOuterClass {
        * </pre>
        *
        * <code>string function_id = 1;</code>
+       * @param value The bytes for functionId to set.
+       * @return This builder for chaining.
        */
       public Builder setFunctionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -31423,7 +32716,7 @@ public final class FunctionServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -31895,15 +33188,7 @@ public final class FunctionServiceOuterClass {
       "oto/yandex/cloud/serverless/functions/v1" +
       ";functionsb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -31915,7 +33200,7 @@ public final class FunctionServiceOuterClass {
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_serverless_functions_v1_GetFunctionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_GetFunctionRequest_fieldAccessorTable = new

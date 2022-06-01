@@ -24,6 +24,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+     * @return The enum numeric value on the wire for logLevel.
      */
     int getLogLevelValue();
     /**
@@ -32,6 +33,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+     * @return The logLevel.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getLogLevel();
 
@@ -42,6 +44,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
+     * @return Whether the mergeTree field is set.
      */
     boolean hasMergeTree();
     /**
@@ -51,6 +54,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
+     * @return The mergeTree.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree getMergeTree();
     /**
@@ -212,10 +216,12 @@ public final class Clickhouse {
 
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
+     * @return Whether the kafka field is set.
      */
     boolean hasKafka();
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
+     * @return The kafka.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getKafka();
     /**
@@ -249,10 +255,12 @@ public final class Clickhouse {
 
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     * @return Whether the rabbitmq field is set.
      */
     boolean hasRabbitmq();
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     * @return The rabbitmq.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getRabbitmq();
     /**
@@ -266,6 +274,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
     /**
@@ -274,6 +283,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
@@ -291,6 +301,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return Whether the maxConcurrentQueries field is set.
      */
     boolean hasMaxConcurrentQueries();
     /**
@@ -299,6 +310,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return The maxConcurrentQueries.
      */
     com.google.protobuf.Int64Value getMaxConcurrentQueries();
     /**
@@ -316,6 +328,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
+     * @return Whether the keepAliveTimeout field is set.
      */
     boolean hasKeepAliveTimeout();
     /**
@@ -324,6 +337,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
+     * @return The keepAliveTimeout.
      */
     com.google.protobuf.Int64Value getKeepAliveTimeout();
     /**
@@ -341,6 +355,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
+     * @return Whether the uncompressedCacheSize field is set.
      */
     boolean hasUncompressedCacheSize();
     /**
@@ -349,6 +364,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
+     * @return The uncompressedCacheSize.
      */
     com.google.protobuf.Int64Value getUncompressedCacheSize();
     /**
@@ -366,6 +382,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the markCacheSize field is set.
      */
     boolean hasMarkCacheSize();
     /**
@@ -374,6 +391,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The markCacheSize.
      */
     com.google.protobuf.Int64Value getMarkCacheSize();
     /**
@@ -391,6 +409,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
+     * @return Whether the maxTableSizeToDrop field is set.
      */
     boolean hasMaxTableSizeToDrop();
     /**
@@ -399,6 +418,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
+     * @return The maxTableSizeToDrop.
      */
     com.google.protobuf.Int64Value getMaxTableSizeToDrop();
     /**
@@ -416,6 +436,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
+     * @return Whether the maxPartitionSizeToDrop field is set.
      */
     boolean hasMaxPartitionSizeToDrop();
     /**
@@ -424,6 +445,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
+     * @return The maxPartitionSizeToDrop.
      */
     com.google.protobuf.Int64Value getMaxPartitionSizeToDrop();
     /**
@@ -441,6 +463,8 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the builtinDictionariesReloadInterval field is set.
      */
     @java.lang.Deprecated boolean hasBuiltinDictionariesReloadInterval();
     /**
@@ -449,6 +473,8 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
+     * @deprecated
+     * @return The builtinDictionariesReloadInterval.
      */
     @java.lang.Deprecated com.google.protobuf.Int64Value getBuiltinDictionariesReloadInterval();
     /**
@@ -466,6 +492,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string timezone = 14;</code>
+     * @return The timezone.
      */
     java.lang.String getTimezone();
     /**
@@ -474,6 +501,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string timezone = 14;</code>
+     * @return The bytes for timezone.
      */
     com.google.protobuf.ByteString
         getTimezoneBytes();
@@ -484,6 +512,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string geobase_uri = 15;</code>
+     * @return The geobaseUri.
      */
     java.lang.String getGeobaseUri();
     /**
@@ -492,6 +521,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string geobase_uri = 15;</code>
+     * @return The bytes for geobaseUri.
      */
     com.google.protobuf.ByteString
         getGeobaseUriBytes();
@@ -503,6 +533,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
+     * @return Whether the queryLogRetentionSize field is set.
      */
     boolean hasQueryLogRetentionSize();
     /**
@@ -512,6 +543,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
+     * @return The queryLogRetentionSize.
      */
     com.google.protobuf.Int64Value getQueryLogRetentionSize();
     /**
@@ -531,6 +563,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
+     * @return Whether the queryLogRetentionTime field is set.
      */
     boolean hasQueryLogRetentionTime();
     /**
@@ -540,6 +573,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
+     * @return The queryLogRetentionTime.
      */
     com.google.protobuf.Int64Value getQueryLogRetentionTime();
     /**
@@ -558,6 +592,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
+     * @return Whether the queryThreadLogEnabled field is set.
      */
     boolean hasQueryThreadLogEnabled();
     /**
@@ -566,6 +601,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
+     * @return The queryThreadLogEnabled.
      */
     com.google.protobuf.BoolValue getQueryThreadLogEnabled();
     /**
@@ -584,6 +620,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
+     * @return Whether the queryThreadLogRetentionSize field is set.
      */
     boolean hasQueryThreadLogRetentionSize();
     /**
@@ -593,6 +630,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
+     * @return The queryThreadLogRetentionSize.
      */
     com.google.protobuf.Int64Value getQueryThreadLogRetentionSize();
     /**
@@ -612,6 +650,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
+     * @return Whether the queryThreadLogRetentionTime field is set.
      */
     boolean hasQueryThreadLogRetentionTime();
     /**
@@ -621,6 +660,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
+     * @return The queryThreadLogRetentionTime.
      */
     com.google.protobuf.Int64Value getQueryThreadLogRetentionTime();
     /**
@@ -640,6 +680,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
+     * @return Whether the partLogRetentionSize field is set.
      */
     boolean hasPartLogRetentionSize();
     /**
@@ -649,6 +690,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
+     * @return The partLogRetentionSize.
      */
     com.google.protobuf.Int64Value getPartLogRetentionSize();
     /**
@@ -668,6 +710,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
+     * @return Whether the partLogRetentionTime field is set.
      */
     boolean hasPartLogRetentionTime();
     /**
@@ -677,6 +720,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
+     * @return The partLogRetentionTime.
      */
     com.google.protobuf.Int64Value getPartLogRetentionTime();
     /**
@@ -695,6 +739,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
+     * @return Whether the metricLogEnabled field is set.
      */
     boolean hasMetricLogEnabled();
     /**
@@ -703,6 +748,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
+     * @return The metricLogEnabled.
      */
     com.google.protobuf.BoolValue getMetricLogEnabled();
     /**
@@ -721,6 +767,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
+     * @return Whether the metricLogRetentionSize field is set.
      */
     boolean hasMetricLogRetentionSize();
     /**
@@ -730,6 +777,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
+     * @return The metricLogRetentionSize.
      */
     com.google.protobuf.Int64Value getMetricLogRetentionSize();
     /**
@@ -749,6 +797,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
+     * @return Whether the metricLogRetentionTime field is set.
      */
     boolean hasMetricLogRetentionTime();
     /**
@@ -758,6 +807,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
+     * @return The metricLogRetentionTime.
      */
     com.google.protobuf.Int64Value getMetricLogRetentionTime();
     /**
@@ -776,6 +826,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
+     * @return Whether the traceLogEnabled field is set.
      */
     boolean hasTraceLogEnabled();
     /**
@@ -784,6 +835,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
+     * @return The traceLogEnabled.
      */
     com.google.protobuf.BoolValue getTraceLogEnabled();
     /**
@@ -802,6 +854,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
+     * @return Whether the traceLogRetentionSize field is set.
      */
     boolean hasTraceLogRetentionSize();
     /**
@@ -811,6 +864,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
+     * @return The traceLogRetentionSize.
      */
     com.google.protobuf.Int64Value getTraceLogRetentionSize();
     /**
@@ -830,6 +884,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
+     * @return Whether the traceLogRetentionTime field is set.
      */
     boolean hasTraceLogRetentionTime();
     /**
@@ -839,6 +894,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
+     * @return The traceLogRetentionTime.
      */
     com.google.protobuf.Int64Value getTraceLogRetentionTime();
     /**
@@ -857,6 +913,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
+     * @return Whether the textLogEnabled field is set.
      */
     boolean hasTextLogEnabled();
     /**
@@ -865,6 +922,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
+     * @return The textLogEnabled.
      */
     com.google.protobuf.BoolValue getTextLogEnabled();
     /**
@@ -883,6 +941,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
+     * @return Whether the textLogRetentionSize field is set.
      */
     boolean hasTextLogRetentionSize();
     /**
@@ -892,6 +951,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
+     * @return The textLogRetentionSize.
      */
     com.google.protobuf.Int64Value getTextLogRetentionSize();
     /**
@@ -911,6 +971,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
+     * @return Whether the textLogRetentionTime field is set.
      */
     boolean hasTextLogRetentionTime();
     /**
@@ -920,6 +981,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
+     * @return The textLogRetentionTime.
      */
     com.google.protobuf.Int64Value getTextLogRetentionTime();
     /**
@@ -938,6 +1000,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+     * @return The enum numeric value on the wire for textLogLevel.
      */
     int getTextLogLevelValue();
     /**
@@ -946,15 +1009,18 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+     * @return The textLogLevel.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getTextLogLevel();
 
     /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundPoolSize field is set.
      */
     boolean hasBackgroundPoolSize();
     /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundPoolSize.
      */
     com.google.protobuf.Int64Value getBackgroundPoolSize();
     /**
@@ -964,10 +1030,12 @@ public final class Clickhouse {
 
     /**
      * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundSchedulePoolSize field is set.
      */
     boolean hasBackgroundSchedulePoolSize();
     /**
      * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundSchedulePoolSize.
      */
     com.google.protobuf.Int64Value getBackgroundSchedulePoolSize();
     /**
@@ -984,7 +1052,7 @@ public final class Clickhouse {
    *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig}
    */
-  public  static final class ClickhouseConfig extends
+  public static final class ClickhouseConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig)
       ClickhouseConfigOrBuilder {
@@ -1005,6 +1073,13 @@ public final class Clickhouse {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClickhouseConfig();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1018,7 +1093,6 @@ public final class Clickhouse {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
-      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1049,27 +1123,27 @@ public final class Clickhouse {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 compression_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               compression_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.parser(), extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 dictionaries_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000002;
               }
               dictionaries_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.parser(), extensionRegistry));
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 graphiteRollup_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000004;
               }
               graphiteRollup_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.parser(), extensionRegistry));
@@ -1445,9 +1519,9 @@ public final class Clickhouse {
               break;
             }
             case 290: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 kafkaTopics_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000008;
               }
               kafkaTopics_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.parser(), extensionRegistry));
@@ -1467,7 +1541,7 @@ public final class Clickhouse {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1481,16 +1555,16 @@ public final class Clickhouse {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           compression_ = java.util.Collections.unmodifiableList(compression_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           dictionaries_ = java.util.Collections.unmodifiableList(dictionaries_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           graphiteRollup_ = java.util.Collections.unmodifiableList(graphiteRollup_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           kafkaTopics_ = java.util.Collections.unmodifiableList(kafkaTopics_);
         }
         this.unknownFields = unknownFields.build();
@@ -1577,6 +1651,8 @@ public final class Clickhouse {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1584,6 +1660,10 @@ public final class Clickhouse {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LogLevel forNumber(int value) {
         switch (value) {
           case 0: return LOG_LEVEL_UNSPECIFIED;
@@ -1610,6 +1690,10 @@ public final class Clickhouse {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1654,6 +1738,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
+       * @return Whether the replicatedDeduplicationWindow field is set.
        */
       boolean hasReplicatedDeduplicationWindow();
       /**
@@ -1662,6 +1747,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
+       * @return The replicatedDeduplicationWindow.
        */
       com.google.protobuf.Int64Value getReplicatedDeduplicationWindow();
       /**
@@ -1679,6 +1765,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
+       * @return Whether the replicatedDeduplicationWindowSeconds field is set.
        */
       boolean hasReplicatedDeduplicationWindowSeconds();
       /**
@@ -1687,6 +1774,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
+       * @return The replicatedDeduplicationWindowSeconds.
        */
       com.google.protobuf.Int64Value getReplicatedDeduplicationWindowSeconds();
       /**
@@ -1704,6 +1792,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
+       * @return Whether the partsToDelayInsert field is set.
        */
       boolean hasPartsToDelayInsert();
       /**
@@ -1712,6 +1801,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
+       * @return The partsToDelayInsert.
        */
       com.google.protobuf.Int64Value getPartsToDelayInsert();
       /**
@@ -1729,6 +1819,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
+       * @return Whether the partsToThrowInsert field is set.
        */
       boolean hasPartsToThrowInsert();
       /**
@@ -1737,6 +1828,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
+       * @return The partsToThrowInsert.
        */
       com.google.protobuf.Int64Value getPartsToThrowInsert();
       /**
@@ -1754,6 +1846,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
+       * @return Whether the maxReplicatedMergesInQueue field is set.
        */
       boolean hasMaxReplicatedMergesInQueue();
       /**
@@ -1762,6 +1855,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
+       * @return The maxReplicatedMergesInQueue.
        */
       com.google.protobuf.Int64Value getMaxReplicatedMergesInQueue();
       /**
@@ -1780,6 +1874,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
+       * @return Whether the numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge field is set.
        */
       boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       /**
@@ -1789,6 +1884,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
+       * @return The numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge.
        */
       com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       /**
@@ -1808,6 +1904,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
+       * @return Whether the maxBytesToMergeAtMinSpaceInPool field is set.
        */
       boolean hasMaxBytesToMergeAtMinSpaceInPool();
       /**
@@ -1817,6 +1914,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
+       * @return The maxBytesToMergeAtMinSpaceInPool.
        */
       com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool();
       /**
@@ -1831,10 +1929,12 @@ public final class Clickhouse {
 
       /**
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       * @return Whether the maxBytesToMergeAtMaxSpaceInPool field is set.
        */
       boolean hasMaxBytesToMergeAtMaxSpaceInPool();
       /**
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       * @return The maxBytesToMergeAtMaxSpaceInPool.
        */
       com.google.protobuf.Int64Value getMaxBytesToMergeAtMaxSpaceInPool();
       /**
@@ -1849,7 +1949,7 @@ public final class Clickhouse {
      *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree}
      */
-    public  static final class MergeTree extends
+    public static final class MergeTree extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree)
         MergeTreeOrBuilder {
@@ -1859,6 +1959,13 @@ public final class Clickhouse {
         super(builder);
       }
       private MergeTree() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MergeTree();
       }
 
       @java.lang.Override
@@ -1874,7 +1981,6 @@ public final class Clickhouse {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1990,7 +2096,7 @@ public final class Clickhouse {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -2029,7 +2135,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
+       * @return Whether the replicatedDeduplicationWindow field is set.
        */
+      @java.lang.Override
       public boolean hasReplicatedDeduplicationWindow() {
         return replicatedDeduplicationWindow_ != null;
       }
@@ -2039,7 +2147,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
+       * @return The replicatedDeduplicationWindow.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getReplicatedDeduplicationWindow() {
         return replicatedDeduplicationWindow_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicatedDeduplicationWindow_;
       }
@@ -2050,6 +2160,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getReplicatedDeduplicationWindowOrBuilder() {
         return getReplicatedDeduplicationWindow();
       }
@@ -2062,7 +2173,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
+       * @return Whether the replicatedDeduplicationWindowSeconds field is set.
        */
+      @java.lang.Override
       public boolean hasReplicatedDeduplicationWindowSeconds() {
         return replicatedDeduplicationWindowSeconds_ != null;
       }
@@ -2072,7 +2185,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
+       * @return The replicatedDeduplicationWindowSeconds.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getReplicatedDeduplicationWindowSeconds() {
         return replicatedDeduplicationWindowSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicatedDeduplicationWindowSeconds_;
       }
@@ -2083,6 +2198,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getReplicatedDeduplicationWindowSecondsOrBuilder() {
         return getReplicatedDeduplicationWindowSeconds();
       }
@@ -2095,7 +2211,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
+       * @return Whether the partsToDelayInsert field is set.
        */
+      @java.lang.Override
       public boolean hasPartsToDelayInsert() {
         return partsToDelayInsert_ != null;
       }
@@ -2105,7 +2223,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
+       * @return The partsToDelayInsert.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getPartsToDelayInsert() {
         return partsToDelayInsert_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partsToDelayInsert_;
       }
@@ -2116,6 +2236,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getPartsToDelayInsertOrBuilder() {
         return getPartsToDelayInsert();
       }
@@ -2128,7 +2249,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
+       * @return Whether the partsToThrowInsert field is set.
        */
+      @java.lang.Override
       public boolean hasPartsToThrowInsert() {
         return partsToThrowInsert_ != null;
       }
@@ -2138,7 +2261,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
+       * @return The partsToThrowInsert.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getPartsToThrowInsert() {
         return partsToThrowInsert_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partsToThrowInsert_;
       }
@@ -2149,6 +2274,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getPartsToThrowInsertOrBuilder() {
         return getPartsToThrowInsert();
       }
@@ -2161,7 +2287,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
+       * @return Whether the maxReplicatedMergesInQueue field is set.
        */
+      @java.lang.Override
       public boolean hasMaxReplicatedMergesInQueue() {
         return maxReplicatedMergesInQueue_ != null;
       }
@@ -2171,7 +2299,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
+       * @return The maxReplicatedMergesInQueue.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getMaxReplicatedMergesInQueue() {
         return maxReplicatedMergesInQueue_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxReplicatedMergesInQueue_;
       }
@@ -2182,6 +2312,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxReplicatedMergesInQueueOrBuilder() {
         return getMaxReplicatedMergesInQueue();
       }
@@ -2195,7 +2326,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
+       * @return Whether the numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge field is set.
        */
+      @java.lang.Override
       public boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
         return numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ != null;
       }
@@ -2206,7 +2339,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
+       * @return The numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
         return numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_;
       }
@@ -2218,6 +2353,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMergeOrBuilder() {
         return getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       }
@@ -2231,7 +2367,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
+       * @return Whether the maxBytesToMergeAtMinSpaceInPool field is set.
        */
+      @java.lang.Override
       public boolean hasMaxBytesToMergeAtMinSpaceInPool() {
         return maxBytesToMergeAtMinSpaceInPool_ != null;
       }
@@ -2242,7 +2380,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
+       * @return The maxBytesToMergeAtMinSpaceInPool.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool() {
         return maxBytesToMergeAtMinSpaceInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToMergeAtMinSpaceInPool_;
       }
@@ -2254,6 +2394,7 @@ public final class Clickhouse {
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMinSpaceInPoolOrBuilder() {
         return getMaxBytesToMergeAtMinSpaceInPool();
       }
@@ -2262,19 +2403,24 @@ public final class Clickhouse {
       private com.google.protobuf.Int64Value maxBytesToMergeAtMaxSpaceInPool_;
       /**
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       * @return Whether the maxBytesToMergeAtMaxSpaceInPool field is set.
        */
+      @java.lang.Override
       public boolean hasMaxBytesToMergeAtMaxSpaceInPool() {
         return maxBytesToMergeAtMaxSpaceInPool_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       * @return The maxBytesToMergeAtMaxSpaceInPool.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getMaxBytesToMergeAtMaxSpaceInPool() {
         return maxBytesToMergeAtMaxSpaceInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToMergeAtMaxSpaceInPool_;
       }
       /**
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMaxSpaceInPoolOrBuilder() {
         return getMaxBytesToMergeAtMaxSpaceInPool();
       }
@@ -2373,49 +2519,48 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree) obj;
 
-        boolean result = true;
-        result = result && (hasReplicatedDeduplicationWindow() == other.hasReplicatedDeduplicationWindow());
+        if (hasReplicatedDeduplicationWindow() != other.hasReplicatedDeduplicationWindow()) return false;
         if (hasReplicatedDeduplicationWindow()) {
-          result = result && getReplicatedDeduplicationWindow()
-              .equals(other.getReplicatedDeduplicationWindow());
+          if (!getReplicatedDeduplicationWindow()
+              .equals(other.getReplicatedDeduplicationWindow())) return false;
         }
-        result = result && (hasReplicatedDeduplicationWindowSeconds() == other.hasReplicatedDeduplicationWindowSeconds());
+        if (hasReplicatedDeduplicationWindowSeconds() != other.hasReplicatedDeduplicationWindowSeconds()) return false;
         if (hasReplicatedDeduplicationWindowSeconds()) {
-          result = result && getReplicatedDeduplicationWindowSeconds()
-              .equals(other.getReplicatedDeduplicationWindowSeconds());
+          if (!getReplicatedDeduplicationWindowSeconds()
+              .equals(other.getReplicatedDeduplicationWindowSeconds())) return false;
         }
-        result = result && (hasPartsToDelayInsert() == other.hasPartsToDelayInsert());
+        if (hasPartsToDelayInsert() != other.hasPartsToDelayInsert()) return false;
         if (hasPartsToDelayInsert()) {
-          result = result && getPartsToDelayInsert()
-              .equals(other.getPartsToDelayInsert());
+          if (!getPartsToDelayInsert()
+              .equals(other.getPartsToDelayInsert())) return false;
         }
-        result = result && (hasPartsToThrowInsert() == other.hasPartsToThrowInsert());
+        if (hasPartsToThrowInsert() != other.hasPartsToThrowInsert()) return false;
         if (hasPartsToThrowInsert()) {
-          result = result && getPartsToThrowInsert()
-              .equals(other.getPartsToThrowInsert());
+          if (!getPartsToThrowInsert()
+              .equals(other.getPartsToThrowInsert())) return false;
         }
-        result = result && (hasMaxReplicatedMergesInQueue() == other.hasMaxReplicatedMergesInQueue());
+        if (hasMaxReplicatedMergesInQueue() != other.hasMaxReplicatedMergesInQueue()) return false;
         if (hasMaxReplicatedMergesInQueue()) {
-          result = result && getMaxReplicatedMergesInQueue()
-              .equals(other.getMaxReplicatedMergesInQueue());
+          if (!getMaxReplicatedMergesInQueue()
+              .equals(other.getMaxReplicatedMergesInQueue())) return false;
         }
-        result = result && (hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() == other.hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge());
+        if (hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() != other.hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge()) return false;
         if (hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge()) {
-          result = result && getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge()
-              .equals(other.getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge());
+          if (!getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge()
+              .equals(other.getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge())) return false;
         }
-        result = result && (hasMaxBytesToMergeAtMinSpaceInPool() == other.hasMaxBytesToMergeAtMinSpaceInPool());
+        if (hasMaxBytesToMergeAtMinSpaceInPool() != other.hasMaxBytesToMergeAtMinSpaceInPool()) return false;
         if (hasMaxBytesToMergeAtMinSpaceInPool()) {
-          result = result && getMaxBytesToMergeAtMinSpaceInPool()
-              .equals(other.getMaxBytesToMergeAtMinSpaceInPool());
+          if (!getMaxBytesToMergeAtMinSpaceInPool()
+              .equals(other.getMaxBytesToMergeAtMinSpaceInPool())) return false;
         }
-        result = result && (hasMaxBytesToMergeAtMaxSpaceInPool() == other.hasMaxBytesToMergeAtMaxSpaceInPool());
+        if (hasMaxBytesToMergeAtMaxSpaceInPool() != other.hasMaxBytesToMergeAtMaxSpaceInPool()) return false;
         if (hasMaxBytesToMergeAtMaxSpaceInPool()) {
-          result = result && getMaxBytesToMergeAtMaxSpaceInPool()
-              .equals(other.getMaxBytesToMergeAtMaxSpaceInPool());
+          if (!getMaxBytesToMergeAtMaxSpaceInPool()
+              .equals(other.getMaxBytesToMergeAtMaxSpaceInPool())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -2714,35 +2859,35 @@ public final class Clickhouse {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2809,7 +2954,7 @@ public final class Clickhouse {
           return this;
         }
 
-        private com.google.protobuf.Int64Value replicatedDeduplicationWindow_ = null;
+        private com.google.protobuf.Int64Value replicatedDeduplicationWindow_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicatedDeduplicationWindowBuilder_;
         /**
@@ -2818,6 +2963,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
+         * @return Whether the replicatedDeduplicationWindow field is set.
          */
         public boolean hasReplicatedDeduplicationWindow() {
           return replicatedDeduplicationWindowBuilder_ != null || replicatedDeduplicationWindow_ != null;
@@ -2828,6 +2974,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
+         * @return The replicatedDeduplicationWindow.
          */
         public com.google.protobuf.Int64Value getReplicatedDeduplicationWindow() {
           if (replicatedDeduplicationWindowBuilder_ == null) {
@@ -2962,7 +3109,7 @@ public final class Clickhouse {
           return replicatedDeduplicationWindowBuilder_;
         }
 
-        private com.google.protobuf.Int64Value replicatedDeduplicationWindowSeconds_ = null;
+        private com.google.protobuf.Int64Value replicatedDeduplicationWindowSeconds_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicatedDeduplicationWindowSecondsBuilder_;
         /**
@@ -2971,6 +3118,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
+         * @return Whether the replicatedDeduplicationWindowSeconds field is set.
          */
         public boolean hasReplicatedDeduplicationWindowSeconds() {
           return replicatedDeduplicationWindowSecondsBuilder_ != null || replicatedDeduplicationWindowSeconds_ != null;
@@ -2981,6 +3129,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
+         * @return The replicatedDeduplicationWindowSeconds.
          */
         public com.google.protobuf.Int64Value getReplicatedDeduplicationWindowSeconds() {
           if (replicatedDeduplicationWindowSecondsBuilder_ == null) {
@@ -3115,7 +3264,7 @@ public final class Clickhouse {
           return replicatedDeduplicationWindowSecondsBuilder_;
         }
 
-        private com.google.protobuf.Int64Value partsToDelayInsert_ = null;
+        private com.google.protobuf.Int64Value partsToDelayInsert_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partsToDelayInsertBuilder_;
         /**
@@ -3124,6 +3273,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
+         * @return Whether the partsToDelayInsert field is set.
          */
         public boolean hasPartsToDelayInsert() {
           return partsToDelayInsertBuilder_ != null || partsToDelayInsert_ != null;
@@ -3134,6 +3284,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
+         * @return The partsToDelayInsert.
          */
         public com.google.protobuf.Int64Value getPartsToDelayInsert() {
           if (partsToDelayInsertBuilder_ == null) {
@@ -3268,7 +3419,7 @@ public final class Clickhouse {
           return partsToDelayInsertBuilder_;
         }
 
-        private com.google.protobuf.Int64Value partsToThrowInsert_ = null;
+        private com.google.protobuf.Int64Value partsToThrowInsert_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partsToThrowInsertBuilder_;
         /**
@@ -3277,6 +3428,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
+         * @return Whether the partsToThrowInsert field is set.
          */
         public boolean hasPartsToThrowInsert() {
           return partsToThrowInsertBuilder_ != null || partsToThrowInsert_ != null;
@@ -3287,6 +3439,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
+         * @return The partsToThrowInsert.
          */
         public com.google.protobuf.Int64Value getPartsToThrowInsert() {
           if (partsToThrowInsertBuilder_ == null) {
@@ -3421,7 +3574,7 @@ public final class Clickhouse {
           return partsToThrowInsertBuilder_;
         }
 
-        private com.google.protobuf.Int64Value maxReplicatedMergesInQueue_ = null;
+        private com.google.protobuf.Int64Value maxReplicatedMergesInQueue_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxReplicatedMergesInQueueBuilder_;
         /**
@@ -3430,6 +3583,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
+         * @return Whether the maxReplicatedMergesInQueue field is set.
          */
         public boolean hasMaxReplicatedMergesInQueue() {
           return maxReplicatedMergesInQueueBuilder_ != null || maxReplicatedMergesInQueue_ != null;
@@ -3440,6 +3594,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
+         * @return The maxReplicatedMergesInQueue.
          */
         public com.google.protobuf.Int64Value getMaxReplicatedMergesInQueue() {
           if (maxReplicatedMergesInQueueBuilder_ == null) {
@@ -3574,7 +3729,7 @@ public final class Clickhouse {
           return maxReplicatedMergesInQueueBuilder_;
         }
 
-        private com.google.protobuf.Int64Value numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ = null;
+        private com.google.protobuf.Int64Value numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_;
         /**
@@ -3584,6 +3739,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
+         * @return Whether the numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge field is set.
          */
         public boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
           return numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_ != null || numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ != null;
@@ -3595,6 +3751,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
+         * @return The numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge.
          */
         public com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
           if (numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_ == null) {
@@ -3736,7 +3893,7 @@ public final class Clickhouse {
           return numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_;
         }
 
-        private com.google.protobuf.Int64Value maxBytesToMergeAtMinSpaceInPool_ = null;
+        private com.google.protobuf.Int64Value maxBytesToMergeAtMinSpaceInPool_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToMergeAtMinSpaceInPoolBuilder_;
         /**
@@ -3746,6 +3903,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
+         * @return Whether the maxBytesToMergeAtMinSpaceInPool field is set.
          */
         public boolean hasMaxBytesToMergeAtMinSpaceInPool() {
           return maxBytesToMergeAtMinSpaceInPoolBuilder_ != null || maxBytesToMergeAtMinSpaceInPool_ != null;
@@ -3757,6 +3915,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
+         * @return The maxBytesToMergeAtMinSpaceInPool.
          */
         public com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool() {
           if (maxBytesToMergeAtMinSpaceInPoolBuilder_ == null) {
@@ -3898,17 +4057,19 @@ public final class Clickhouse {
           return maxBytesToMergeAtMinSpaceInPoolBuilder_;
         }
 
-        private com.google.protobuf.Int64Value maxBytesToMergeAtMaxSpaceInPool_ = null;
+        private com.google.protobuf.Int64Value maxBytesToMergeAtMaxSpaceInPool_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToMergeAtMaxSpaceInPoolBuilder_;
         /**
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         * @return Whether the maxBytesToMergeAtMaxSpaceInPool field is set.
          */
         public boolean hasMaxBytesToMergeAtMaxSpaceInPool() {
           return maxBytesToMergeAtMaxSpaceInPoolBuilder_ != null || maxBytesToMergeAtMaxSpaceInPool_ != null;
         }
         /**
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         * @return The maxBytesToMergeAtMaxSpaceInPool.
          */
         public com.google.protobuf.Int64Value getMaxBytesToMergeAtMaxSpaceInPool() {
           if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
@@ -4017,7 +4178,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -4073,38 +4234,46 @@ public final class Clickhouse {
 
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+       * @return The enum numeric value on the wire for securityProtocol.
        */
       int getSecurityProtocolValue();
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+       * @return The securityProtocol.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol getSecurityProtocol();
 
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+       * @return The enum numeric value on the wire for saslMechanism.
        */
       int getSaslMechanismValue();
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+       * @return The saslMechanism.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism getSaslMechanism();
 
       /**
        * <code>string sasl_username = 3;</code>
+       * @return The saslUsername.
        */
       java.lang.String getSaslUsername();
       /**
        * <code>string sasl_username = 3;</code>
+       * @return The bytes for saslUsername.
        */
       com.google.protobuf.ByteString
           getSaslUsernameBytes();
 
       /**
        * <code>string sasl_password = 4;</code>
+       * @return The saslPassword.
        */
       java.lang.String getSaslPassword();
       /**
        * <code>string sasl_password = 4;</code>
+       * @return The bytes for saslPassword.
        */
       com.google.protobuf.ByteString
           getSaslPasswordBytes();
@@ -4112,7 +4281,7 @@ public final class Clickhouse {
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka}
      */
-    public  static final class Kafka extends
+    public static final class Kafka extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka)
         KafkaOrBuilder {
@@ -4129,6 +4298,13 @@ public final class Clickhouse {
       }
 
       @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Kafka();
+      }
+
+      @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
@@ -4141,7 +4317,6 @@ public final class Clickhouse {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -4177,7 +4352,7 @@ public final class Clickhouse {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4267,6 +4442,8 @@ public final class Clickhouse {
         }
 
         /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -4274,6 +4451,10 @@ public final class Clickhouse {
           return forNumber(value);
         }
 
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
         public static SecurityProtocol forNumber(int value) {
           switch (value) {
             case 0: return SECURITY_PROTOCOL_UNSPECIFIED;
@@ -4299,6 +4480,10 @@ public final class Clickhouse {
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
           return getDescriptor().getValues().get(ordinal());
         }
         public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -4392,6 +4577,8 @@ public final class Clickhouse {
         }
 
         /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -4399,6 +4586,10 @@ public final class Clickhouse {
           return forNumber(value);
         }
 
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
         public static SaslMechanism forNumber(int value) {
           switch (value) {
             case 0: return SASL_MECHANISM_UNSPECIFIED;
@@ -4424,6 +4615,10 @@ public final class Clickhouse {
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
           return getDescriptor().getValues().get(ordinal());
         }
         public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -4462,14 +4657,16 @@ public final class Clickhouse {
       private int securityProtocol_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+       * @return The enum numeric value on the wire for securityProtocol.
        */
-      public int getSecurityProtocolValue() {
+      @java.lang.Override public int getSecurityProtocolValue() {
         return securityProtocol_;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+       * @return The securityProtocol.
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol getSecurityProtocol() {
+      @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol getSecurityProtocol() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol.valueOf(securityProtocol_);
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol.UNRECOGNIZED : result;
@@ -4479,14 +4676,16 @@ public final class Clickhouse {
       private int saslMechanism_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+       * @return The enum numeric value on the wire for saslMechanism.
        */
-      public int getSaslMechanismValue() {
+      @java.lang.Override public int getSaslMechanismValue() {
         return saslMechanism_;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+       * @return The saslMechanism.
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism getSaslMechanism() {
+      @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism getSaslMechanism() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism.valueOf(saslMechanism_);
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism.UNRECOGNIZED : result;
@@ -4496,7 +4695,9 @@ public final class Clickhouse {
       private volatile java.lang.Object saslUsername_;
       /**
        * <code>string sasl_username = 3;</code>
+       * @return The saslUsername.
        */
+      @java.lang.Override
       public java.lang.String getSaslUsername() {
         java.lang.Object ref = saslUsername_;
         if (ref instanceof java.lang.String) {
@@ -4511,7 +4712,9 @@ public final class Clickhouse {
       }
       /**
        * <code>string sasl_username = 3;</code>
+       * @return The bytes for saslUsername.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSaslUsernameBytes() {
         java.lang.Object ref = saslUsername_;
@@ -4530,7 +4733,9 @@ public final class Clickhouse {
       private volatile java.lang.Object saslPassword_;
       /**
        * <code>string sasl_password = 4;</code>
+       * @return The saslPassword.
        */
+      @java.lang.Override
       public java.lang.String getSaslPassword() {
         java.lang.Object ref = saslPassword_;
         if (ref instanceof java.lang.String) {
@@ -4545,7 +4750,9 @@ public final class Clickhouse {
       }
       /**
        * <code>string sasl_password = 4;</code>
+       * @return The bytes for saslPassword.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSaslPasswordBytes() {
         java.lang.Object ref = saslPassword_;
@@ -4580,10 +4787,10 @@ public final class Clickhouse {
         if (saslMechanism_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism.SASL_MECHANISM_UNSPECIFIED.getNumber()) {
           output.writeEnum(2, saslMechanism_);
         }
-        if (!getSaslUsernameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslUsername_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, saslUsername_);
         }
-        if (!getSaslPasswordBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslPassword_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, saslPassword_);
         }
         unknownFields.writeTo(output);
@@ -4603,10 +4810,10 @@ public final class Clickhouse {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(2, saslMechanism_);
         }
-        if (!getSaslUsernameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslUsername_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, saslUsername_);
         }
-        if (!getSaslPasswordBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslPassword_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, saslPassword_);
         }
         size += unknownFields.getSerializedSize();
@@ -4624,15 +4831,14 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka) obj;
 
-        boolean result = true;
-        result = result && securityProtocol_ == other.securityProtocol_;
-        result = result && saslMechanism_ == other.saslMechanism_;
-        result = result && getSaslUsername()
-            .equals(other.getSaslUsername());
-        result = result && getSaslPassword()
-            .equals(other.getSaslPassword());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (securityProtocol_ != other.securityProtocol_) return false;
+        if (saslMechanism_ != other.saslMechanism_) return false;
+        if (!getSaslUsername()
+            .equals(other.getSaslUsername())) return false;
+        if (!getSaslPassword()
+            .equals(other.getSaslPassword())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4827,35 +5033,35 @@ public final class Clickhouse {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4915,21 +5121,27 @@ public final class Clickhouse {
         private int securityProtocol_ = 0;
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+         * @return The enum numeric value on the wire for securityProtocol.
          */
-        public int getSecurityProtocolValue() {
+        @java.lang.Override public int getSecurityProtocolValue() {
           return securityProtocol_;
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+         * @param value The enum numeric value on the wire for securityProtocol to set.
+         * @return This builder for chaining.
          */
         public Builder setSecurityProtocolValue(int value) {
+          
           securityProtocol_ = value;
           onChanged();
           return this;
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+         * @return The securityProtocol.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol getSecurityProtocol() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol.valueOf(securityProtocol_);
@@ -4937,6 +5149,8 @@ public final class Clickhouse {
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+         * @param value The securityProtocol to set.
+         * @return This builder for chaining.
          */
         public Builder setSecurityProtocol(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SecurityProtocol value) {
           if (value == null) {
@@ -4949,6 +5163,7 @@ public final class Clickhouse {
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SecurityProtocol security_protocol = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSecurityProtocol() {
           
@@ -4960,21 +5175,27 @@ public final class Clickhouse {
         private int saslMechanism_ = 0;
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+         * @return The enum numeric value on the wire for saslMechanism.
          */
-        public int getSaslMechanismValue() {
+        @java.lang.Override public int getSaslMechanismValue() {
           return saslMechanism_;
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+         * @param value The enum numeric value on the wire for saslMechanism to set.
+         * @return This builder for chaining.
          */
         public Builder setSaslMechanismValue(int value) {
+          
           saslMechanism_ = value;
           onChanged();
           return this;
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+         * @return The saslMechanism.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism getSaslMechanism() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism.valueOf(saslMechanism_);
@@ -4982,6 +5203,8 @@ public final class Clickhouse {
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+         * @param value The saslMechanism to set.
+         * @return This builder for chaining.
          */
         public Builder setSaslMechanism(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.SaslMechanism value) {
           if (value == null) {
@@ -4994,6 +5217,7 @@ public final class Clickhouse {
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka.SaslMechanism sasl_mechanism = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSaslMechanism() {
           
@@ -5005,6 +5229,7 @@ public final class Clickhouse {
         private java.lang.Object saslUsername_ = "";
         /**
          * <code>string sasl_username = 3;</code>
+         * @return The saslUsername.
          */
         public java.lang.String getSaslUsername() {
           java.lang.Object ref = saslUsername_;
@@ -5020,6 +5245,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_username = 3;</code>
+         * @return The bytes for saslUsername.
          */
         public com.google.protobuf.ByteString
             getSaslUsernameBytes() {
@@ -5036,6 +5262,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_username = 3;</code>
+         * @param value The saslUsername to set.
+         * @return This builder for chaining.
          */
         public Builder setSaslUsername(
             java.lang.String value) {
@@ -5049,6 +5277,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_username = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSaslUsername() {
           
@@ -5058,6 +5287,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_username = 3;</code>
+         * @param value The bytes for saslUsername to set.
+         * @return This builder for chaining.
          */
         public Builder setSaslUsernameBytes(
             com.google.protobuf.ByteString value) {
@@ -5074,6 +5305,7 @@ public final class Clickhouse {
         private java.lang.Object saslPassword_ = "";
         /**
          * <code>string sasl_password = 4;</code>
+         * @return The saslPassword.
          */
         public java.lang.String getSaslPassword() {
           java.lang.Object ref = saslPassword_;
@@ -5089,6 +5321,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_password = 4;</code>
+         * @return The bytes for saslPassword.
          */
         public com.google.protobuf.ByteString
             getSaslPasswordBytes() {
@@ -5105,6 +5338,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_password = 4;</code>
+         * @param value The saslPassword to set.
+         * @return This builder for chaining.
          */
         public Builder setSaslPassword(
             java.lang.String value) {
@@ -5118,6 +5353,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_password = 4;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSaslPassword() {
           
@@ -5127,6 +5363,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string sasl_password = 4;</code>
+         * @param value The bytes for saslPassword to set.
+         * @return This builder for chaining.
          */
         public Builder setSaslPasswordBytes(
             com.google.protobuf.ByteString value) {
@@ -5142,7 +5380,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5198,20 +5436,24 @@ public final class Clickhouse {
 
       /**
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       java.lang.String getName();
       /**
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the settings field is set.
        */
       boolean hasSettings();
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The settings.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getSettings();
       /**
@@ -5222,7 +5464,7 @@ public final class Clickhouse {
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic}
      */
-    public  static final class KafkaTopic extends
+    public static final class KafkaTopic extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic)
         KafkaTopicOrBuilder {
@@ -5233,6 +5475,13 @@ public final class Clickhouse {
       }
       private KafkaTopic() {
         name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new KafkaTopic();
       }
 
       @java.lang.Override
@@ -5248,7 +5497,6 @@ public final class Clickhouse {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -5279,7 +5527,7 @@ public final class Clickhouse {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5314,7 +5562,9 @@ public final class Clickhouse {
       private volatile java.lang.Object name_;
       /**
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
@@ -5329,7 +5579,9 @@ public final class Clickhouse {
       }
       /**
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
@@ -5348,19 +5600,24 @@ public final class Clickhouse {
       private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka settings_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the settings field is set.
        */
+      @java.lang.Override
       public boolean hasSettings() {
         return settings_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The settings.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getSettings() {
         return settings_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.getDefaultInstance() : settings_;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getSettingsOrBuilder() {
         return getSettings();
       }
@@ -5379,7 +5636,7 @@ public final class Clickhouse {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         if (settings_ != null) {
@@ -5394,7 +5651,7 @@ public final class Clickhouse {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         if (settings_ != null) {
@@ -5416,16 +5673,15 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic) obj;
 
-        boolean result = true;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && (hasSettings() == other.hasSettings());
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (hasSettings() != other.hasSettings()) return false;
         if (hasSettings()) {
-          result = result && getSettings()
-              .equals(other.getSettings());
+          if (!getSettings()
+              .equals(other.getSettings())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5620,35 +5876,35 @@ public final class Clickhouse {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5701,6 +5957,7 @@ public final class Clickhouse {
         private java.lang.Object name_ = "";
         /**
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The name.
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -5716,6 +5973,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -5732,6 +5990,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
          */
         public Builder setName(
             java.lang.String value) {
@@ -5745,6 +6005,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearName() {
           
@@ -5754,6 +6015,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
@@ -5767,17 +6030,19 @@ public final class Clickhouse {
           return this;
         }
 
-        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka settings_ = null;
+        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka settings_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder> settingsBuilder_;
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the settings field is set.
          */
         public boolean hasSettings() {
           return settingsBuilder_ != null || settings_ != null;
         }
         /**
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The settings.
          */
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getSettings() {
           if (settingsBuilder_ == null) {
@@ -5886,7 +6151,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5942,20 +6207,24 @@ public final class Clickhouse {
 
       /**
        * <code>string username = 1;</code>
+       * @return The username.
        */
       java.lang.String getUsername();
       /**
        * <code>string username = 1;</code>
+       * @return The bytes for username.
        */
       com.google.protobuf.ByteString
           getUsernameBytes();
 
       /**
        * <code>string password = 2;</code>
+       * @return The password.
        */
       java.lang.String getPassword();
       /**
        * <code>string password = 2;</code>
+       * @return The bytes for password.
        */
       com.google.protobuf.ByteString
           getPasswordBytes();
@@ -5963,7 +6232,7 @@ public final class Clickhouse {
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq}
      */
-    public  static final class Rabbitmq extends
+    public static final class Rabbitmq extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq)
         RabbitmqOrBuilder {
@@ -5975,6 +6244,13 @@ public final class Clickhouse {
       private Rabbitmq() {
         username_ = "";
         password_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Rabbitmq();
       }
 
       @java.lang.Override
@@ -5990,7 +6266,6 @@ public final class Clickhouse {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -6014,7 +6289,7 @@ public final class Clickhouse {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6049,7 +6324,9 @@ public final class Clickhouse {
       private volatile java.lang.Object username_;
       /**
        * <code>string username = 1;</code>
+       * @return The username.
        */
+      @java.lang.Override
       public java.lang.String getUsername() {
         java.lang.Object ref = username_;
         if (ref instanceof java.lang.String) {
@@ -6064,7 +6341,9 @@ public final class Clickhouse {
       }
       /**
        * <code>string username = 1;</code>
+       * @return The bytes for username.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUsernameBytes() {
         java.lang.Object ref = username_;
@@ -6083,7 +6362,9 @@ public final class Clickhouse {
       private volatile java.lang.Object password_;
       /**
        * <code>string password = 2;</code>
+       * @return The password.
        */
+      @java.lang.Override
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
         if (ref instanceof java.lang.String) {
@@ -6098,7 +6379,9 @@ public final class Clickhouse {
       }
       /**
        * <code>string password = 2;</code>
+       * @return The bytes for password.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPasswordBytes() {
         java.lang.Object ref = password_;
@@ -6127,10 +6410,10 @@ public final class Clickhouse {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getUsernameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
         }
-        if (!getPasswordBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
         }
         unknownFields.writeTo(output);
@@ -6142,10 +6425,10 @@ public final class Clickhouse {
         if (size != -1) return size;
 
         size = 0;
-        if (!getUsernameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
         }
-        if (!getPasswordBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
         }
         size += unknownFields.getSerializedSize();
@@ -6163,13 +6446,12 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq) obj;
 
-        boolean result = true;
-        result = result && getUsername()
-            .equals(other.getUsername());
-        result = result && getPassword()
-            .equals(other.getPassword());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getUsername()
+            .equals(other.getUsername())) return false;
+        if (!getPassword()
+            .equals(other.getPassword())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -6354,35 +6636,35 @@ public final class Clickhouse {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6436,6 +6718,7 @@ public final class Clickhouse {
         private java.lang.Object username_ = "";
         /**
          * <code>string username = 1;</code>
+         * @return The username.
          */
         public java.lang.String getUsername() {
           java.lang.Object ref = username_;
@@ -6451,6 +6734,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string username = 1;</code>
+         * @return The bytes for username.
          */
         public com.google.protobuf.ByteString
             getUsernameBytes() {
@@ -6467,6 +6751,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string username = 1;</code>
+         * @param value The username to set.
+         * @return This builder for chaining.
          */
         public Builder setUsername(
             java.lang.String value) {
@@ -6480,6 +6766,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string username = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearUsername() {
           
@@ -6489,6 +6776,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string username = 1;</code>
+         * @param value The bytes for username to set.
+         * @return This builder for chaining.
          */
         public Builder setUsernameBytes(
             com.google.protobuf.ByteString value) {
@@ -6505,6 +6794,7 @@ public final class Clickhouse {
         private java.lang.Object password_ = "";
         /**
          * <code>string password = 2;</code>
+         * @return The password.
          */
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
@@ -6520,6 +6810,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string password = 2;</code>
+         * @return The bytes for password.
          */
         public com.google.protobuf.ByteString
             getPasswordBytes() {
@@ -6536,6 +6827,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string password = 2;</code>
+         * @param value The password to set.
+         * @return This builder for chaining.
          */
         public Builder setPassword(
             java.lang.String value) {
@@ -6549,6 +6842,7 @@ public final class Clickhouse {
         }
         /**
          * <code>string password = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearPassword() {
           
@@ -6558,6 +6852,8 @@ public final class Clickhouse {
         }
         /**
          * <code>string password = 2;</code>
+         * @param value The bytes for password to set.
+         * @return This builder for chaining.
          */
         public Builder setPasswordBytes(
             com.google.protobuf.ByteString value) {
@@ -6573,7 +6869,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6633,6 +6929,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+       * @return The enum numeric value on the wire for method.
        */
       int getMethodValue();
       /**
@@ -6641,6 +6938,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+       * @return The method.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method getMethod();
 
@@ -6650,6 +6948,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>int64 min_part_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The minPartSize.
        */
       long getMinPartSize();
 
@@ -6659,13 +6958,14 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>double min_part_size_ratio = 3;</code>
+       * @return The minPartSizeRatio.
        */
       double getMinPartSizeRatio();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression}
      */
-    public  static final class Compression extends
+    public static final class Compression extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression)
         CompressionOrBuilder {
@@ -6676,8 +6976,13 @@ public final class Clickhouse {
       }
       private Compression() {
         method_ = 0;
-        minPartSize_ = 0L;
-        minPartSizeRatio_ = 0D;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Compression();
       }
 
       @java.lang.Override
@@ -6693,7 +6998,6 @@ public final class Clickhouse {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -6721,7 +7025,7 @@ public final class Clickhouse {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6811,6 +7115,8 @@ public final class Clickhouse {
         }
 
         /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -6818,6 +7124,10 @@ public final class Clickhouse {
           return forNumber(value);
         }
 
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
         public static Method forNumber(int value) {
           switch (value) {
             case 0: return METHOD_UNSPECIFIED;
@@ -6841,6 +7151,10 @@ public final class Clickhouse {
 
         public final com.google.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
           return getDescriptor().getValues().get(ordinal());
         }
         public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -6883,8 +7197,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+       * @return The enum numeric value on the wire for method.
        */
-      public int getMethodValue() {
+      @java.lang.Override public int getMethodValue() {
         return method_;
       }
       /**
@@ -6893,8 +7208,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+       * @return The method.
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method getMethod() {
+      @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method getMethod() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method.valueOf(method_);
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method.UNRECOGNIZED : result;
@@ -6908,7 +7224,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>int64 min_part_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The minPartSize.
        */
+      @java.lang.Override
       public long getMinPartSize() {
         return minPartSize_;
       }
@@ -6921,7 +7239,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>double min_part_size_ratio = 3;</code>
+       * @return The minPartSizeRatio.
        */
+      @java.lang.Override
       public double getMinPartSizeRatio() {
         return minPartSizeRatio_;
       }
@@ -6946,7 +7266,7 @@ public final class Clickhouse {
         if (minPartSize_ != 0L) {
           output.writeInt64(2, minPartSize_);
         }
-        if (minPartSizeRatio_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(minPartSizeRatio_) != 0) {
           output.writeDouble(3, minPartSizeRatio_);
         }
         unknownFields.writeTo(output);
@@ -6966,7 +7286,7 @@ public final class Clickhouse {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(2, minPartSize_);
         }
-        if (minPartSizeRatio_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(minPartSizeRatio_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(3, minPartSizeRatio_);
         }
@@ -6985,16 +7305,14 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression) obj;
 
-        boolean result = true;
-        result = result && method_ == other.method_;
-        result = result && (getMinPartSize()
-            == other.getMinPartSize());
-        result = result && (
-            java.lang.Double.doubleToLongBits(getMinPartSizeRatio())
-            == java.lang.Double.doubleToLongBits(
-                other.getMinPartSizeRatio()));
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (method_ != other.method_) return false;
+        if (getMinPartSize()
+            != other.getMinPartSize()) return false;
+        if (java.lang.Double.doubleToLongBits(getMinPartSizeRatio())
+            != java.lang.Double.doubleToLongBits(
+                other.getMinPartSizeRatio())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7186,35 +7504,35 @@ public final class Clickhouse {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7273,8 +7591,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+         * @return The enum numeric value on the wire for method.
          */
-        public int getMethodValue() {
+        @java.lang.Override public int getMethodValue() {
           return method_;
         }
         /**
@@ -7283,8 +7602,11 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+         * @param value The enum numeric value on the wire for method to set.
+         * @return This builder for chaining.
          */
         public Builder setMethodValue(int value) {
+          
           method_ = value;
           onChanged();
           return this;
@@ -7295,7 +7617,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+         * @return The method.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method getMethod() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method.valueOf(method_);
@@ -7307,6 +7631,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+         * @param value The method to set.
+         * @return This builder for chaining.
          */
         public Builder setMethod(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Method value) {
           if (value == null) {
@@ -7323,6 +7649,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMethod() {
           
@@ -7338,7 +7665,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 min_part_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return The minPartSize.
          */
+        @java.lang.Override
         public long getMinPartSize() {
           return minPartSize_;
         }
@@ -7348,6 +7677,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 min_part_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @param value The minPartSize to set.
+         * @return This builder for chaining.
          */
         public Builder setMinPartSize(long value) {
           
@@ -7361,6 +7692,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 min_part_size = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearMinPartSize() {
           
@@ -7376,7 +7708,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>double min_part_size_ratio = 3;</code>
+         * @return The minPartSizeRatio.
          */
+        @java.lang.Override
         public double getMinPartSizeRatio() {
           return minPartSizeRatio_;
         }
@@ -7386,6 +7720,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>double min_part_size_ratio = 3;</code>
+         * @param value The minPartSizeRatio to set.
+         * @return This builder for chaining.
          */
         public Builder setMinPartSizeRatio(double value) {
           
@@ -7399,6 +7735,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>double min_part_size_ratio = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMinPartSizeRatio() {
           
@@ -7409,7 +7746,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -7469,6 +7806,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       java.lang.String getName();
       /**
@@ -7477,6 +7815,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
@@ -7488,6 +7827,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the structure field is set.
        */
       boolean hasStructure();
       /**
@@ -7497,6 +7837,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The structure.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure getStructure();
       /**
@@ -7516,6 +7857,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the layout field is set.
        */
       boolean hasLayout();
       /**
@@ -7525,6 +7867,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The layout.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout getLayout();
       /**
@@ -7543,6 +7886,16 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>int64 fixed_lifetime = 4;</code>
+       * @return Whether the fixedLifetime field is set.
+       */
+      boolean hasFixedLifetime();
+      /**
+       * <pre>
+       * Fixed interval between dictionary updates.
+       * </pre>
+       *
+       * <code>int64 fixed_lifetime = 4;</code>
+       * @return The fixedLifetime.
        */
       long getFixedLifetime();
 
@@ -7552,6 +7905,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
+       * @return Whether the lifetimeRange field is set.
        */
       boolean hasLifetimeRange();
       /**
@@ -7560,6 +7914,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
+       * @return The lifetimeRange.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range getLifetimeRange();
       /**
@@ -7577,6 +7932,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
+       * @return Whether the httpSource field is set.
        */
       boolean hasHttpSource();
       /**
@@ -7585,6 +7941,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
+       * @return The httpSource.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource getHttpSource();
       /**
@@ -7602,6 +7959,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
+       * @return Whether the mysqlSource field is set.
        */
       boolean hasMysqlSource();
       /**
@@ -7610,6 +7968,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
+       * @return The mysqlSource.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource getMysqlSource();
       /**
@@ -7627,6 +7986,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
+       * @return Whether the clickhouseSource field is set.
        */
       boolean hasClickhouseSource();
       /**
@@ -7635,6 +7995,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
+       * @return The clickhouseSource.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource getClickhouseSource();
       /**
@@ -7652,6 +8013,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
+       * @return Whether the mongodbSource field is set.
        */
       boolean hasMongodbSource();
       /**
@@ -7660,6 +8022,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
+       * @return The mongodbSource.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource getMongodbSource();
       /**
@@ -7677,6 +8040,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
+       * @return Whether the postgresqlSource field is set.
        */
       boolean hasPostgresqlSource();
       /**
@@ -7685,6 +8049,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
+       * @return The postgresqlSource.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource getPostgresqlSource();
       /**
@@ -7703,7 +8068,7 @@ public final class Clickhouse {
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary}
      */
-    public  static final class ExternalDictionary extends
+    public static final class ExternalDictionary extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary)
         ExternalDictionaryOrBuilder {
@@ -7714,6 +8079,13 @@ public final class Clickhouse {
       }
       private ExternalDictionary() {
         name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ExternalDictionary();
       }
 
       @java.lang.Override
@@ -7729,7 +8101,6 @@ public final class Clickhouse {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -7773,8 +8144,8 @@ public final class Clickhouse {
                 break;
               }
               case 32: {
-                lifetimeCase_ = 4;
                 lifetime_ = input.readInt64();
+                lifetimeCase_ = 4;
                 break;
               }
               case 42: {
@@ -7862,7 +8233,7 @@ public final class Clickhouse {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -7903,6 +8274,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The url.
          */
         java.lang.String getUrl();
         /**
@@ -7911,6 +8283,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for url.
          */
         com.google.protobuf.ByteString
             getUrlBytes();
@@ -7921,6 +8294,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The format.
          */
         java.lang.String getFormat();
         /**
@@ -7929,6 +8303,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for format.
          */
         com.google.protobuf.ByteString
             getFormatBytes();
@@ -7936,7 +8311,7 @@ public final class Clickhouse {
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource}
        */
-      public  static final class HttpSource extends
+      public static final class HttpSource extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource)
           HttpSourceOrBuilder {
@@ -7948,6 +8323,13 @@ public final class Clickhouse {
         private HttpSource() {
           url_ = "";
           format_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new HttpSource();
         }
 
         @java.lang.Override
@@ -7963,7 +8345,6 @@ public final class Clickhouse {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -7987,7 +8368,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -8026,7 +8407,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The url.
          */
+        @java.lang.Override
         public java.lang.String getUrl() {
           java.lang.Object ref = url_;
           if (ref instanceof java.lang.String) {
@@ -8045,7 +8428,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for url.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getUrlBytes() {
           java.lang.Object ref = url_;
@@ -8068,7 +8453,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The format.
          */
+        @java.lang.Override
         public java.lang.String getFormat() {
           java.lang.Object ref = format_;
           if (ref instanceof java.lang.String) {
@@ -8087,7 +8474,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for format.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getFormatBytes() {
           java.lang.Object ref = format_;
@@ -8116,10 +8505,10 @@ public final class Clickhouse {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
           }
-          if (!getFormatBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, format_);
           }
           unknownFields.writeTo(output);
@@ -8131,10 +8520,10 @@ public final class Clickhouse {
           if (size != -1) return size;
 
           size = 0;
-          if (!getUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
           }
-          if (!getFormatBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, format_);
           }
           size += unknownFields.getSerializedSize();
@@ -8152,13 +8541,12 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource) obj;
 
-          boolean result = true;
-          result = result && getUrl()
-              .equals(other.getUrl());
-          result = result && getFormat()
-              .equals(other.getFormat());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getUrl()
+              .equals(other.getUrl())) return false;
+          if (!getFormat()
+              .equals(other.getFormat())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -8343,35 +8731,35 @@ public final class Clickhouse {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8429,6 +8817,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The url.
            */
           public java.lang.String getUrl() {
             java.lang.Object ref = url_;
@@ -8448,6 +8837,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for url.
            */
           public com.google.protobuf.ByteString
               getUrlBytes() {
@@ -8468,6 +8858,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The url to set.
+           * @return This builder for chaining.
            */
           public Builder setUrl(
               java.lang.String value) {
@@ -8485,6 +8877,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearUrl() {
             
@@ -8498,6 +8891,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string url = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for url to set.
+           * @return This builder for chaining.
            */
           public Builder setUrlBytes(
               com.google.protobuf.ByteString value) {
@@ -8518,6 +8913,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The format.
            */
           public java.lang.String getFormat() {
             java.lang.Object ref = format_;
@@ -8537,6 +8933,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for format.
            */
           public com.google.protobuf.ByteString
               getFormatBytes() {
@@ -8557,6 +8954,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The format to set.
+           * @return This builder for chaining.
            */
           public Builder setFormat(
               java.lang.String value) {
@@ -8574,6 +8973,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearFormat() {
             
@@ -8587,6 +8987,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string format = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for format to set.
+           * @return This builder for chaining.
            */
           public Builder setFormatBytes(
               com.google.protobuf.ByteString value) {
@@ -8602,7 +9004,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -8662,6 +9064,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
         java.lang.String getDb();
         /**
@@ -8670,6 +9073,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
         com.google.protobuf.ByteString
             getDbBytes();
@@ -8680,6 +9084,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The table.
          */
         java.lang.String getTable();
         /**
@@ -8688,6 +9093,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for table.
          */
         com.google.protobuf.ByteString
             getTableBytes();
@@ -8698,6 +9104,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
         long getPort();
 
@@ -8707,6 +9114,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 4;</code>
+         * @return The user.
          */
         java.lang.String getUser();
         /**
@@ -8715,6 +9123,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 4;</code>
+         * @return The bytes for user.
          */
         com.google.protobuf.ByteString
             getUserBytes();
@@ -8725,6 +9134,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 5;</code>
+         * @return The password.
          */
         java.lang.String getPassword();
         /**
@@ -8733,6 +9143,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 5;</code>
+         * @return The bytes for password.
          */
         com.google.protobuf.ByteString
             getPasswordBytes();
@@ -8787,6 +9198,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The where.
          */
         java.lang.String getWhere();
         /**
@@ -8795,6 +9207,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The bytes for where.
          */
         com.google.protobuf.ByteString
             getWhereBytes();
@@ -8806,6 +9219,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
+         * @return The invalidateQuery.
          */
         java.lang.String getInvalidateQuery();
         /**
@@ -8815,6 +9229,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
+         * @return The bytes for invalidateQuery.
          */
         com.google.protobuf.ByteString
             getInvalidateQueryBytes();
@@ -8822,7 +9237,7 @@ public final class Clickhouse {
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource}
        */
-      public  static final class MysqlSource extends
+      public static final class MysqlSource extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource)
           MysqlSourceOrBuilder {
@@ -8834,12 +9249,18 @@ public final class Clickhouse {
         private MysqlSource() {
           db_ = "";
           table_ = "";
-          port_ = 0L;
           user_ = "";
           password_ = "";
           replicas_ = java.util.Collections.emptyList();
           where_ = "";
           invalidateQuery_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new MysqlSource();
         }
 
         @java.lang.Override
@@ -8896,9 +9317,9 @@ public final class Clickhouse {
                   break;
                 }
                 case 50: {
-                  if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     replicas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica>();
-                    mutable_bitField0_ |= 0x00000020;
+                    mutable_bitField0_ |= 0x00000001;
                   }
                   replicas_.add(
                       input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica.parser(), extensionRegistry));
@@ -8917,7 +9338,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -8931,7 +9352,7 @@ public final class Clickhouse {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
               replicas_ = java.util.Collections.unmodifiableList(replicas_);
             }
             this.unknownFields = unknownFields.build();
@@ -8961,6 +9382,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The host.
            */
           java.lang.String getHost();
           /**
@@ -8969,6 +9391,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The bytes for host.
            */
           com.google.protobuf.ByteString
               getHostBytes();
@@ -8980,6 +9403,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 priority = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;0"];</code>
+           * @return The priority.
            */
           long getPriority();
 
@@ -8990,6 +9414,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return The port.
            */
           long getPort();
 
@@ -8999,6 +9424,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return The user.
            */
           java.lang.String getUser();
           /**
@@ -9007,6 +9433,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return The bytes for user.
            */
           com.google.protobuf.ByteString
               getUserBytes();
@@ -9017,6 +9444,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return The password.
            */
           java.lang.String getPassword();
           /**
@@ -9025,6 +9453,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return The bytes for password.
            */
           com.google.protobuf.ByteString
               getPasswordBytes();
@@ -9032,7 +9461,7 @@ public final class Clickhouse {
         /**
          * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica}
          */
-        public  static final class Replica extends
+        public static final class Replica extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica)
             ReplicaOrBuilder {
@@ -9043,10 +9472,15 @@ public final class Clickhouse {
           }
           private Replica() {
             host_ = "";
-            priority_ = 0L;
-            port_ = 0L;
             user_ = "";
             password_ = "";
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new Replica();
           }
 
           @java.lang.Override
@@ -9062,7 +9496,6 @@ public final class Clickhouse {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -9102,7 +9535,7 @@ public final class Clickhouse {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -9141,7 +9574,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The host.
            */
+          @java.lang.Override
           public java.lang.String getHost() {
             java.lang.Object ref = host_;
             if (ref instanceof java.lang.String) {
@@ -9160,7 +9595,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The bytes for host.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getHostBytes() {
             java.lang.Object ref = host_;
@@ -9184,7 +9621,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 priority = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;0"];</code>
+           * @return The priority.
            */
+          @java.lang.Override
           public long getPriority() {
             return priority_;
           }
@@ -9198,7 +9637,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return The port.
            */
+          @java.lang.Override
           public long getPort() {
             return port_;
           }
@@ -9211,7 +9652,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return The user.
            */
+          @java.lang.Override
           public java.lang.String getUser() {
             java.lang.Object ref = user_;
             if (ref instanceof java.lang.String) {
@@ -9230,7 +9673,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return The bytes for user.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getUserBytes() {
             java.lang.Object ref = user_;
@@ -9253,7 +9698,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return The password.
            */
+          @java.lang.Override
           public java.lang.String getPassword() {
             java.lang.Object ref = password_;
             if (ref instanceof java.lang.String) {
@@ -9272,7 +9719,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return The bytes for password.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getPasswordBytes() {
             java.lang.Object ref = password_;
@@ -9301,7 +9750,7 @@ public final class Clickhouse {
           @java.lang.Override
           public void writeTo(com.google.protobuf.CodedOutputStream output)
                               throws java.io.IOException {
-            if (!getHostBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 1, host_);
             }
             if (priority_ != 0L) {
@@ -9310,10 +9759,10 @@ public final class Clickhouse {
             if (port_ != 0L) {
               output.writeInt64(3, port_);
             }
-            if (!getUserBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 4, user_);
             }
-            if (!getPasswordBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 5, password_);
             }
             unknownFields.writeTo(output);
@@ -9325,7 +9774,7 @@ public final class Clickhouse {
             if (size != -1) return size;
 
             size = 0;
-            if (!getHostBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, host_);
             }
             if (priority_ != 0L) {
@@ -9336,10 +9785,10 @@ public final class Clickhouse {
               size += com.google.protobuf.CodedOutputStream
                 .computeInt64Size(3, port_);
             }
-            if (!getUserBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, user_);
             }
-            if (!getPasswordBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, password_);
             }
             size += unknownFields.getSerializedSize();
@@ -9357,19 +9806,18 @@ public final class Clickhouse {
             }
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica) obj;
 
-            boolean result = true;
-            result = result && getHost()
-                .equals(other.getHost());
-            result = result && (getPriority()
-                == other.getPriority());
-            result = result && (getPort()
-                == other.getPort());
-            result = result && getUser()
-                .equals(other.getUser());
-            result = result && getPassword()
-                .equals(other.getPassword());
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!getHost()
+                .equals(other.getHost())) return false;
+            if (getPriority()
+                != other.getPriority()) return false;
+            if (getPort()
+                != other.getPort()) return false;
+            if (!getUser()
+                .equals(other.getUser())) return false;
+            if (!getPassword()
+                .equals(other.getPassword())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -9571,35 +10019,35 @@ public final class Clickhouse {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9667,6 +10115,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+             * @return The host.
              */
             public java.lang.String getHost() {
               java.lang.Object ref = host_;
@@ -9686,6 +10135,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+             * @return The bytes for host.
              */
             public com.google.protobuf.ByteString
                 getHostBytes() {
@@ -9706,6 +10156,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+             * @param value The host to set.
+             * @return This builder for chaining.
              */
             public Builder setHost(
                 java.lang.String value) {
@@ -9723,6 +10175,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+             * @return This builder for chaining.
              */
             public Builder clearHost() {
               
@@ -9736,6 +10189,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string host = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+             * @param value The bytes for host to set.
+             * @return This builder for chaining.
              */
             public Builder setHostBytes(
                 com.google.protobuf.ByteString value) {
@@ -9757,7 +10212,9 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 priority = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;0"];</code>
+             * @return The priority.
              */
+            @java.lang.Override
             public long getPriority() {
               return priority_;
             }
@@ -9768,6 +10225,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 priority = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;0"];</code>
+             * @param value The priority to set.
+             * @return This builder for chaining.
              */
             public Builder setPriority(long value) {
               
@@ -9782,6 +10241,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 priority = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;0"];</code>
+             * @return This builder for chaining.
              */
             public Builder clearPriority() {
               
@@ -9798,7 +10258,9 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+             * @return The port.
              */
+            @java.lang.Override
             public long getPort() {
               return port_;
             }
@@ -9809,6 +10271,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+             * @param value The port to set.
+             * @return This builder for chaining.
              */
             public Builder setPort(long value) {
               
@@ -9823,6 +10287,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+             * @return This builder for chaining.
              */
             public Builder clearPort() {
               
@@ -9838,6 +10303,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string user = 4;</code>
+             * @return The user.
              */
             public java.lang.String getUser() {
               java.lang.Object ref = user_;
@@ -9857,6 +10323,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string user = 4;</code>
+             * @return The bytes for user.
              */
             public com.google.protobuf.ByteString
                 getUserBytes() {
@@ -9877,6 +10344,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string user = 4;</code>
+             * @param value The user to set.
+             * @return This builder for chaining.
              */
             public Builder setUser(
                 java.lang.String value) {
@@ -9894,6 +10363,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string user = 4;</code>
+             * @return This builder for chaining.
              */
             public Builder clearUser() {
               
@@ -9907,6 +10377,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string user = 4;</code>
+             * @param value The bytes for user to set.
+             * @return This builder for chaining.
              */
             public Builder setUserBytes(
                 com.google.protobuf.ByteString value) {
@@ -9927,6 +10399,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string password = 5;</code>
+             * @return The password.
              */
             public java.lang.String getPassword() {
               java.lang.Object ref = password_;
@@ -9946,6 +10419,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string password = 5;</code>
+             * @return The bytes for password.
              */
             public com.google.protobuf.ByteString
                 getPasswordBytes() {
@@ -9966,6 +10440,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string password = 5;</code>
+             * @param value The password to set.
+             * @return This builder for chaining.
              */
             public Builder setPassword(
                 java.lang.String value) {
@@ -9983,6 +10459,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string password = 5;</code>
+             * @return This builder for chaining.
              */
             public Builder clearPassword() {
               
@@ -9996,6 +10473,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string password = 5;</code>
+             * @param value The bytes for password to set.
+             * @return This builder for chaining.
              */
             public Builder setPasswordBytes(
                 com.google.protobuf.ByteString value) {
@@ -10011,7 +10490,7 @@ public final class Clickhouse {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -10061,7 +10540,6 @@ public final class Clickhouse {
 
         }
 
-        private int bitField0_;
         public static final int DB_FIELD_NUMBER = 1;
         private volatile java.lang.Object db_;
         /**
@@ -10070,7 +10548,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
+        @java.lang.Override
         public java.lang.String getDb() {
           java.lang.Object ref = db_;
           if (ref instanceof java.lang.String) {
@@ -10089,7 +10569,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getDbBytes() {
           java.lang.Object ref = db_;
@@ -10112,7 +10594,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The table.
          */
+        @java.lang.Override
         public java.lang.String getTable() {
           java.lang.Object ref = table_;
           if (ref instanceof java.lang.String) {
@@ -10131,7 +10615,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for table.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getTableBytes() {
           java.lang.Object ref = table_;
@@ -10154,7 +10640,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
+        @java.lang.Override
         public long getPort() {
           return port_;
         }
@@ -10167,7 +10655,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 4;</code>
+         * @return The user.
          */
+        @java.lang.Override
         public java.lang.String getUser() {
           java.lang.Object ref = user_;
           if (ref instanceof java.lang.String) {
@@ -10186,7 +10676,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 4;</code>
+         * @return The bytes for user.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getUserBytes() {
           java.lang.Object ref = user_;
@@ -10209,7 +10701,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 5;</code>
+         * @return The password.
          */
+        @java.lang.Override
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
           if (ref instanceof java.lang.String) {
@@ -10228,7 +10722,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 5;</code>
+         * @return The bytes for password.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getPasswordBytes() {
           java.lang.Object ref = password_;
@@ -10252,6 +10748,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica replicas = 6 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica> getReplicasList() {
           return replicas_;
         }
@@ -10262,6 +10759,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica replicas = 6 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.ReplicaOrBuilder> 
             getReplicasOrBuilderList() {
           return replicas_;
@@ -10273,6 +10771,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica replicas = 6 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public int getReplicasCount() {
           return replicas_.size();
         }
@@ -10283,6 +10782,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica replicas = 6 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica getReplicas(int index) {
           return replicas_.get(index);
         }
@@ -10293,6 +10793,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica replicas = 6 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.ReplicaOrBuilder getReplicasOrBuilder(
             int index) {
           return replicas_.get(index);
@@ -10306,7 +10807,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The where.
          */
+        @java.lang.Override
         public java.lang.String getWhere() {
           java.lang.Object ref = where_;
           if (ref instanceof java.lang.String) {
@@ -10325,7 +10828,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The bytes for where.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getWhereBytes() {
           java.lang.Object ref = where_;
@@ -10349,7 +10854,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
+         * @return The invalidateQuery.
          */
+        @java.lang.Override
         public java.lang.String getInvalidateQuery() {
           java.lang.Object ref = invalidateQuery_;
           if (ref instanceof java.lang.String) {
@@ -10369,7 +10876,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
+         * @return The bytes for invalidateQuery.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getInvalidateQueryBytes() {
           java.lang.Object ref = invalidateQuery_;
@@ -10398,28 +10907,28 @@ public final class Clickhouse {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, db_);
           }
-          if (!getTableBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, table_);
           }
           if (port_ != 0L) {
             output.writeInt64(3, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 4, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 5, password_);
           }
           for (int i = 0; i < replicas_.size(); i++) {
             output.writeMessage(6, replicas_.get(i));
           }
-          if (!getWhereBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(where_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 7, where_);
           }
-          if (!getInvalidateQueryBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidateQuery_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 8, invalidateQuery_);
           }
           unknownFields.writeTo(output);
@@ -10431,30 +10940,30 @@ public final class Clickhouse {
           if (size != -1) return size;
 
           size = 0;
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, db_);
           }
-          if (!getTableBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, table_);
           }
           if (port_ != 0L) {
             size += com.google.protobuf.CodedOutputStream
               .computeInt64Size(3, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, password_);
           }
           for (int i = 0; i < replicas_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(6, replicas_.get(i));
           }
-          if (!getWhereBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(where_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, where_);
           }
-          if (!getInvalidateQueryBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidateQuery_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, invalidateQuery_);
           }
           size += unknownFields.getSerializedSize();
@@ -10472,25 +10981,24 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource) obj;
 
-          boolean result = true;
-          result = result && getDb()
-              .equals(other.getDb());
-          result = result && getTable()
-              .equals(other.getTable());
-          result = result && (getPort()
-              == other.getPort());
-          result = result && getUser()
-              .equals(other.getUser());
-          result = result && getPassword()
-              .equals(other.getPassword());
-          result = result && getReplicasList()
-              .equals(other.getReplicasList());
-          result = result && getWhere()
-              .equals(other.getWhere());
-          result = result && getInvalidateQuery()
-              .equals(other.getInvalidateQuery());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getDb()
+              .equals(other.getDb())) return false;
+          if (!getTable()
+              .equals(other.getTable())) return false;
+          if (getPort()
+              != other.getPort()) return false;
+          if (!getUser()
+              .equals(other.getUser())) return false;
+          if (!getPassword()
+              .equals(other.getPassword())) return false;
+          if (!getReplicasList()
+              .equals(other.getReplicasList())) return false;
+          if (!getWhere()
+              .equals(other.getWhere())) return false;
+          if (!getInvalidateQuery()
+              .equals(other.getInvalidateQuery())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -10665,7 +11173,7 @@ public final class Clickhouse {
 
             if (replicasBuilder_ == null) {
               replicas_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               replicasBuilder_.clear();
             }
@@ -10700,16 +11208,15 @@ public final class Clickhouse {
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource buildPartial() {
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource(this);
             int from_bitField0_ = bitField0_;
-            int to_bitField0_ = 0;
             result.db_ = db_;
             result.table_ = table_;
             result.port_ = port_;
             result.user_ = user_;
             result.password_ = password_;
             if (replicasBuilder_ == null) {
-              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              if (((bitField0_ & 0x00000001) != 0)) {
                 replicas_ = java.util.Collections.unmodifiableList(replicas_);
-                bitField0_ = (bitField0_ & ~0x00000020);
+                bitField0_ = (bitField0_ & ~0x00000001);
               }
               result.replicas_ = replicas_;
             } else {
@@ -10717,42 +11224,41 @@ public final class Clickhouse {
             }
             result.where_ = where_;
             result.invalidateQuery_ = invalidateQuery_;
-            result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
           }
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10789,7 +11295,7 @@ public final class Clickhouse {
               if (!other.replicas_.isEmpty()) {
                 if (replicas_.isEmpty()) {
                   replicas_ = other.replicas_;
-                  bitField0_ = (bitField0_ & ~0x00000020);
+                  bitField0_ = (bitField0_ & ~0x00000001);
                 } else {
                   ensureReplicasIsMutable();
                   replicas_.addAll(other.replicas_);
@@ -10802,7 +11308,7 @@ public final class Clickhouse {
                   replicasBuilder_.dispose();
                   replicasBuilder_ = null;
                   replicas_ = other.replicas_;
-                  bitField0_ = (bitField0_ & ~0x00000020);
+                  bitField0_ = (bitField0_ & ~0x00000001);
                   replicasBuilder_ = 
                     com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                        getReplicasFieldBuilder() : null;
@@ -10856,6 +11362,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The db.
            */
           public java.lang.String getDb() {
             java.lang.Object ref = db_;
@@ -10875,6 +11382,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for db.
            */
           public com.google.protobuf.ByteString
               getDbBytes() {
@@ -10895,6 +11403,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The db to set.
+           * @return This builder for chaining.
            */
           public Builder setDb(
               java.lang.String value) {
@@ -10912,6 +11422,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearDb() {
             
@@ -10925,6 +11436,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for db to set.
+           * @return This builder for chaining.
            */
           public Builder setDbBytes(
               com.google.protobuf.ByteString value) {
@@ -10945,6 +11458,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The table.
            */
           public java.lang.String getTable() {
             java.lang.Object ref = table_;
@@ -10964,6 +11478,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for table.
            */
           public com.google.protobuf.ByteString
               getTableBytes() {
@@ -10984,6 +11499,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The table to set.
+           * @return This builder for chaining.
            */
           public Builder setTable(
               java.lang.String value) {
@@ -11001,6 +11518,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearTable() {
             
@@ -11014,6 +11532,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for table to set.
+           * @return This builder for chaining.
            */
           public Builder setTableBytes(
               com.google.protobuf.ByteString value) {
@@ -11034,7 +11554,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return The port.
            */
+          @java.lang.Override
           public long getPort() {
             return port_;
           }
@@ -11044,6 +11566,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @param value The port to set.
+           * @return This builder for chaining.
            */
           public Builder setPort(long value) {
             
@@ -11057,6 +11581,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 3 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearPort() {
             
@@ -11072,6 +11597,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return The user.
            */
           public java.lang.String getUser() {
             java.lang.Object ref = user_;
@@ -11091,6 +11617,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return The bytes for user.
            */
           public com.google.protobuf.ByteString
               getUserBytes() {
@@ -11111,6 +11638,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @param value The user to set.
+           * @return This builder for chaining.
            */
           public Builder setUser(
               java.lang.String value) {
@@ -11128,6 +11657,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @return This builder for chaining.
            */
           public Builder clearUser() {
             
@@ -11141,6 +11671,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 4;</code>
+           * @param value The bytes for user to set.
+           * @return This builder for chaining.
            */
           public Builder setUserBytes(
               com.google.protobuf.ByteString value) {
@@ -11161,6 +11693,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return The password.
            */
           public java.lang.String getPassword() {
             java.lang.Object ref = password_;
@@ -11180,6 +11713,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return The bytes for password.
            */
           public com.google.protobuf.ByteString
               getPasswordBytes() {
@@ -11200,6 +11734,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @param value The password to set.
+           * @return This builder for chaining.
            */
           public Builder setPassword(
               java.lang.String value) {
@@ -11217,6 +11753,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @return This builder for chaining.
            */
           public Builder clearPassword() {
             
@@ -11230,6 +11767,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 5;</code>
+           * @param value The bytes for password to set.
+           * @return This builder for chaining.
            */
           public Builder setPasswordBytes(
               com.google.protobuf.ByteString value) {
@@ -11246,9 +11785,9 @@ public final class Clickhouse {
           private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica> replicas_ =
             java.util.Collections.emptyList();
           private void ensureReplicasIsMutable() {
-            if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+            if (!((bitField0_ & 0x00000001) != 0)) {
               replicas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica>(replicas_);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000001;
              }
           }
 
@@ -11442,7 +11981,7 @@ public final class Clickhouse {
           public Builder clearReplicas() {
             if (replicasBuilder_ == null) {
               replicas_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               onChanged();
             } else {
               replicasBuilder_.clear();
@@ -11547,7 +12086,7 @@ public final class Clickhouse {
               replicasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.Replica.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource.ReplicaOrBuilder>(
                       replicas_,
-                      ((bitField0_ & 0x00000020) == 0x00000020),
+                      ((bitField0_ & 0x00000001) != 0),
                       getParentForChildren(),
                       isClean());
               replicas_ = null;
@@ -11562,6 +12101,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @return The where.
            */
           public java.lang.String getWhere() {
             java.lang.Object ref = where_;
@@ -11581,6 +12121,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @return The bytes for where.
            */
           public com.google.protobuf.ByteString
               getWhereBytes() {
@@ -11601,6 +12142,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @param value The where to set.
+           * @return This builder for chaining.
            */
           public Builder setWhere(
               java.lang.String value) {
@@ -11618,6 +12161,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @return This builder for chaining.
            */
           public Builder clearWhere() {
             
@@ -11631,6 +12175,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @param value The bytes for where to set.
+           * @return This builder for chaining.
            */
           public Builder setWhereBytes(
               com.google.protobuf.ByteString value) {
@@ -11652,6 +12198,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
+           * @return The invalidateQuery.
            */
           public java.lang.String getInvalidateQuery() {
             java.lang.Object ref = invalidateQuery_;
@@ -11672,6 +12219,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
+           * @return The bytes for invalidateQuery.
            */
           public com.google.protobuf.ByteString
               getInvalidateQueryBytes() {
@@ -11693,6 +12241,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
+           * @param value The invalidateQuery to set.
+           * @return This builder for chaining.
            */
           public Builder setInvalidateQuery(
               java.lang.String value) {
@@ -11711,6 +12261,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
+           * @return This builder for chaining.
            */
           public Builder clearInvalidateQuery() {
             
@@ -11725,6 +12276,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
+           * @param value The bytes for invalidateQuery to set.
+           * @return This builder for chaining.
            */
           public Builder setInvalidateQueryBytes(
               com.google.protobuf.ByteString value) {
@@ -11740,7 +12293,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -11800,6 +12353,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
         java.lang.String getDb();
         /**
@@ -11808,6 +12362,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
         com.google.protobuf.ByteString
             getDbBytes();
@@ -11818,6 +12373,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The table.
          */
         java.lang.String getTable();
         /**
@@ -11826,6 +12382,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for table.
          */
         com.google.protobuf.ByteString
             getTableBytes();
@@ -11836,6 +12393,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The host.
          */
         java.lang.String getHost();
         /**
@@ -11844,6 +12402,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The bytes for host.
          */
         com.google.protobuf.ByteString
             getHostBytes();
@@ -11854,6 +12413,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
         long getPort();
 
@@ -11863,6 +12423,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The user.
          */
         java.lang.String getUser();
         /**
@@ -11871,6 +12432,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for user.
          */
         com.google.protobuf.ByteString
             getUserBytes();
@@ -11881,6 +12443,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The password.
          */
         java.lang.String getPassword();
         /**
@@ -11889,6 +12452,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The bytes for password.
          */
         com.google.protobuf.ByteString
             getPasswordBytes();
@@ -11899,6 +12463,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The where.
          */
         java.lang.String getWhere();
         /**
@@ -11907,6 +12472,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The bytes for where.
          */
         com.google.protobuf.ByteString
             getWhereBytes();
@@ -11914,7 +12480,7 @@ public final class Clickhouse {
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource}
        */
-      public  static final class ClickhouseSource extends
+      public static final class ClickhouseSource extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource)
           ClickhouseSourceOrBuilder {
@@ -11927,10 +12493,16 @@ public final class Clickhouse {
           db_ = "";
           table_ = "";
           host_ = "";
-          port_ = 0L;
           user_ = "";
           password_ = "";
           where_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new ClickhouseSource();
         }
 
         @java.lang.Override
@@ -11946,7 +12518,6 @@ public final class Clickhouse {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -11999,7 +12570,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -12038,7 +12609,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
+        @java.lang.Override
         public java.lang.String getDb() {
           java.lang.Object ref = db_;
           if (ref instanceof java.lang.String) {
@@ -12057,7 +12630,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getDbBytes() {
           java.lang.Object ref = db_;
@@ -12080,7 +12655,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The table.
          */
+        @java.lang.Override
         public java.lang.String getTable() {
           java.lang.Object ref = table_;
           if (ref instanceof java.lang.String) {
@@ -12099,7 +12676,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for table.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getTableBytes() {
           java.lang.Object ref = table_;
@@ -12122,7 +12701,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The host.
          */
+        @java.lang.Override
         public java.lang.String getHost() {
           java.lang.Object ref = host_;
           if (ref instanceof java.lang.String) {
@@ -12141,7 +12722,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The bytes for host.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getHostBytes() {
           java.lang.Object ref = host_;
@@ -12164,7 +12747,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
+        @java.lang.Override
         public long getPort() {
           return port_;
         }
@@ -12177,7 +12762,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The user.
          */
+        @java.lang.Override
         public java.lang.String getUser() {
           java.lang.Object ref = user_;
           if (ref instanceof java.lang.String) {
@@ -12196,7 +12783,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for user.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getUserBytes() {
           java.lang.Object ref = user_;
@@ -12219,7 +12808,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The password.
          */
+        @java.lang.Override
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
           if (ref instanceof java.lang.String) {
@@ -12238,7 +12829,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The bytes for password.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getPasswordBytes() {
           java.lang.Object ref = password_;
@@ -12261,7 +12854,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The where.
          */
+        @java.lang.Override
         public java.lang.String getWhere() {
           java.lang.Object ref = where_;
           if (ref instanceof java.lang.String) {
@@ -12280,7 +12875,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string where = 7;</code>
+         * @return The bytes for where.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getWhereBytes() {
           java.lang.Object ref = where_;
@@ -12309,25 +12906,25 @@ public final class Clickhouse {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, db_);
           }
-          if (!getTableBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, table_);
           }
-          if (!getHostBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 3, host_);
           }
           if (port_ != 0L) {
             output.writeInt64(4, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 5, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
           }
-          if (!getWhereBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(where_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 7, where_);
           }
           unknownFields.writeTo(output);
@@ -12339,26 +12936,26 @@ public final class Clickhouse {
           if (size != -1) return size;
 
           size = 0;
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, db_);
           }
-          if (!getTableBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, table_);
           }
-          if (!getHostBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, host_);
           }
           if (port_ != 0L) {
             size += com.google.protobuf.CodedOutputStream
               .computeInt64Size(4, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
           }
-          if (!getWhereBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(where_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, where_);
           }
           size += unknownFields.getSerializedSize();
@@ -12376,23 +12973,22 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource) obj;
 
-          boolean result = true;
-          result = result && getDb()
-              .equals(other.getDb());
-          result = result && getTable()
-              .equals(other.getTable());
-          result = result && getHost()
-              .equals(other.getHost());
-          result = result && (getPort()
-              == other.getPort());
-          result = result && getUser()
-              .equals(other.getUser());
-          result = result && getPassword()
-              .equals(other.getPassword());
-          result = result && getWhere()
-              .equals(other.getWhere());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getDb()
+              .equals(other.getDb())) return false;
+          if (!getTable()
+              .equals(other.getTable())) return false;
+          if (!getHost()
+              .equals(other.getHost())) return false;
+          if (getPort()
+              != other.getPort()) return false;
+          if (!getUser()
+              .equals(other.getUser())) return false;
+          if (!getPassword()
+              .equals(other.getPassword())) return false;
+          if (!getWhere()
+              .equals(other.getWhere())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -12603,35 +13199,35 @@ public final class Clickhouse {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12708,6 +13304,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The db.
            */
           public java.lang.String getDb() {
             java.lang.Object ref = db_;
@@ -12727,6 +13324,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for db.
            */
           public com.google.protobuf.ByteString
               getDbBytes() {
@@ -12747,6 +13345,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The db to set.
+           * @return This builder for chaining.
            */
           public Builder setDb(
               java.lang.String value) {
@@ -12764,6 +13364,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearDb() {
             
@@ -12777,6 +13378,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for db to set.
+           * @return This builder for chaining.
            */
           public Builder setDbBytes(
               com.google.protobuf.ByteString value) {
@@ -12797,6 +13400,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The table.
            */
           public java.lang.String getTable() {
             java.lang.Object ref = table_;
@@ -12816,6 +13420,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for table.
            */
           public com.google.protobuf.ByteString
               getTableBytes() {
@@ -12836,6 +13441,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The table to set.
+           * @return This builder for chaining.
            */
           public Builder setTable(
               java.lang.String value) {
@@ -12853,6 +13460,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearTable() {
             
@@ -12866,6 +13474,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for table to set.
+           * @return This builder for chaining.
            */
           public Builder setTableBytes(
               com.google.protobuf.ByteString value) {
@@ -12886,6 +13496,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The host.
            */
           public java.lang.String getHost() {
             java.lang.Object ref = host_;
@@ -12905,6 +13516,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The bytes for host.
            */
           public com.google.protobuf.ByteString
               getHostBytes() {
@@ -12925,6 +13537,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @param value The host to set.
+           * @return This builder for chaining.
            */
           public Builder setHost(
               java.lang.String value) {
@@ -12942,6 +13556,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearHost() {
             
@@ -12955,6 +13570,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @param value The bytes for host to set.
+           * @return This builder for chaining.
            */
           public Builder setHostBytes(
               com.google.protobuf.ByteString value) {
@@ -12975,7 +13592,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return The port.
            */
+          @java.lang.Override
           public long getPort() {
             return port_;
           }
@@ -12985,6 +13604,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @param value The port to set.
+           * @return This builder for chaining.
            */
           public Builder setPort(long value) {
             
@@ -12998,6 +13619,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearPort() {
             
@@ -13013,6 +13635,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return The user.
            */
           public java.lang.String getUser() {
             java.lang.Object ref = user_;
@@ -13032,6 +13655,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for user.
            */
           public com.google.protobuf.ByteString
               getUserBytes() {
@@ -13052,6 +13676,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @param value The user to set.
+           * @return This builder for chaining.
            */
           public Builder setUser(
               java.lang.String value) {
@@ -13069,6 +13695,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearUser() {
             
@@ -13082,6 +13709,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for user to set.
+           * @return This builder for chaining.
            */
           public Builder setUserBytes(
               com.google.protobuf.ByteString value) {
@@ -13102,6 +13731,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return The password.
            */
           public java.lang.String getPassword() {
             java.lang.Object ref = password_;
@@ -13121,6 +13751,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return The bytes for password.
            */
           public com.google.protobuf.ByteString
               getPasswordBytes() {
@@ -13141,6 +13772,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @param value The password to set.
+           * @return This builder for chaining.
            */
           public Builder setPassword(
               java.lang.String value) {
@@ -13158,6 +13791,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return This builder for chaining.
            */
           public Builder clearPassword() {
             
@@ -13171,6 +13805,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @param value The bytes for password to set.
+           * @return This builder for chaining.
            */
           public Builder setPasswordBytes(
               com.google.protobuf.ByteString value) {
@@ -13191,6 +13827,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @return The where.
            */
           public java.lang.String getWhere() {
             java.lang.Object ref = where_;
@@ -13210,6 +13847,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @return The bytes for where.
            */
           public com.google.protobuf.ByteString
               getWhereBytes() {
@@ -13230,6 +13868,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @param value The where to set.
+           * @return This builder for chaining.
            */
           public Builder setWhere(
               java.lang.String value) {
@@ -13247,6 +13887,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @return This builder for chaining.
            */
           public Builder clearWhere() {
             
@@ -13260,6 +13901,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string where = 7;</code>
+           * @param value The bytes for where to set.
+           * @return This builder for chaining.
            */
           public Builder setWhereBytes(
               com.google.protobuf.ByteString value) {
@@ -13275,7 +13918,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -13335,6 +13978,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
         java.lang.String getDb();
         /**
@@ -13343,6 +13987,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
         com.google.protobuf.ByteString
             getDbBytes();
@@ -13353,6 +13998,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The collection.
          */
         java.lang.String getCollection();
         /**
@@ -13361,6 +14007,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for collection.
          */
         com.google.protobuf.ByteString
             getCollectionBytes();
@@ -13371,6 +14018,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The host.
          */
         java.lang.String getHost();
         /**
@@ -13379,6 +14027,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The bytes for host.
          */
         com.google.protobuf.ByteString
             getHostBytes();
@@ -13389,6 +14038,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
         long getPort();
 
@@ -13398,6 +14048,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The user.
          */
         java.lang.String getUser();
         /**
@@ -13406,6 +14057,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for user.
          */
         com.google.protobuf.ByteString
             getUserBytes();
@@ -13416,6 +14068,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The password.
          */
         java.lang.String getPassword();
         /**
@@ -13424,6 +14077,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The bytes for password.
          */
         com.google.protobuf.ByteString
             getPasswordBytes();
@@ -13431,7 +14085,7 @@ public final class Clickhouse {
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource}
        */
-      public  static final class MongodbSource extends
+      public static final class MongodbSource extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource)
           MongodbSourceOrBuilder {
@@ -13444,9 +14098,15 @@ public final class Clickhouse {
           db_ = "";
           collection_ = "";
           host_ = "";
-          port_ = 0L;
           user_ = "";
           password_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new MongodbSource();
         }
 
         @java.lang.Override
@@ -13462,7 +14122,6 @@ public final class Clickhouse {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -13509,7 +14168,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -13548,7 +14207,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
+        @java.lang.Override
         public java.lang.String getDb() {
           java.lang.Object ref = db_;
           if (ref instanceof java.lang.String) {
@@ -13567,7 +14228,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getDbBytes() {
           java.lang.Object ref = db_;
@@ -13590,7 +14253,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The collection.
          */
+        @java.lang.Override
         public java.lang.String getCollection() {
           java.lang.Object ref = collection_;
           if (ref instanceof java.lang.String) {
@@ -13609,7 +14274,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for collection.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getCollectionBytes() {
           java.lang.Object ref = collection_;
@@ -13632,7 +14299,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The host.
          */
+        @java.lang.Override
         public java.lang.String getHost() {
           java.lang.Object ref = host_;
           if (ref instanceof java.lang.String) {
@@ -13651,7 +14320,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+         * @return The bytes for host.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getHostBytes() {
           java.lang.Object ref = host_;
@@ -13674,7 +14345,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
+        @java.lang.Override
         public long getPort() {
           return port_;
         }
@@ -13687,7 +14360,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The user.
          */
+        @java.lang.Override
         public java.lang.String getUser() {
           java.lang.Object ref = user_;
           if (ref instanceof java.lang.String) {
@@ -13706,7 +14381,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for user.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getUserBytes() {
           java.lang.Object ref = user_;
@@ -13729,7 +14406,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The password.
          */
+        @java.lang.Override
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
           if (ref instanceof java.lang.String) {
@@ -13748,7 +14427,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The bytes for password.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getPasswordBytes() {
           java.lang.Object ref = password_;
@@ -13777,22 +14458,22 @@ public final class Clickhouse {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, db_);
           }
-          if (!getCollectionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collection_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collection_);
           }
-          if (!getHostBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 3, host_);
           }
           if (port_ != 0L) {
             output.writeInt64(4, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 5, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
           }
           unknownFields.writeTo(output);
@@ -13804,23 +14485,23 @@ public final class Clickhouse {
           if (size != -1) return size;
 
           size = 0;
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, db_);
           }
-          if (!getCollectionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collection_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collection_);
           }
-          if (!getHostBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, host_);
           }
           if (port_ != 0L) {
             size += com.google.protobuf.CodedOutputStream
               .computeInt64Size(4, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
           }
           size += unknownFields.getSerializedSize();
@@ -13838,21 +14519,20 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource) obj;
 
-          boolean result = true;
-          result = result && getDb()
-              .equals(other.getDb());
-          result = result && getCollection()
-              .equals(other.getCollection());
-          result = result && getHost()
-              .equals(other.getHost());
-          result = result && (getPort()
-              == other.getPort());
-          result = result && getUser()
-              .equals(other.getUser());
-          result = result && getPassword()
-              .equals(other.getPassword());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getDb()
+              .equals(other.getDb())) return false;
+          if (!getCollection()
+              .equals(other.getCollection())) return false;
+          if (!getHost()
+              .equals(other.getHost())) return false;
+          if (getPort()
+              != other.getPort()) return false;
+          if (!getUser()
+              .equals(other.getUser())) return false;
+          if (!getPassword()
+              .equals(other.getPassword())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -14058,35 +14738,35 @@ public final class Clickhouse {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14159,6 +14839,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The db.
            */
           public java.lang.String getDb() {
             java.lang.Object ref = db_;
@@ -14178,6 +14859,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for db.
            */
           public com.google.protobuf.ByteString
               getDbBytes() {
@@ -14198,6 +14880,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The db to set.
+           * @return This builder for chaining.
            */
           public Builder setDb(
               java.lang.String value) {
@@ -14215,6 +14899,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearDb() {
             
@@ -14228,6 +14913,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for db to set.
+           * @return This builder for chaining.
            */
           public Builder setDbBytes(
               com.google.protobuf.ByteString value) {
@@ -14248,6 +14935,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The collection.
            */
           public java.lang.String getCollection() {
             java.lang.Object ref = collection_;
@@ -14267,6 +14955,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for collection.
            */
           public com.google.protobuf.ByteString
               getCollectionBytes() {
@@ -14287,6 +14976,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The collection to set.
+           * @return This builder for chaining.
            */
           public Builder setCollection(
               java.lang.String value) {
@@ -14304,6 +14995,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearCollection() {
             
@@ -14317,6 +15009,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string collection = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for collection to set.
+           * @return This builder for chaining.
            */
           public Builder setCollectionBytes(
               com.google.protobuf.ByteString value) {
@@ -14337,6 +15031,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The host.
            */
           public java.lang.String getHost() {
             java.lang.Object ref = host_;
@@ -14356,6 +15051,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return The bytes for host.
            */
           public com.google.protobuf.ByteString
               getHostBytes() {
@@ -14376,6 +15072,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @param value The host to set.
+           * @return This builder for chaining.
            */
           public Builder setHost(
               java.lang.String value) {
@@ -14393,6 +15091,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearHost() {
             
@@ -14406,6 +15105,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string host = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=253"];</code>
+           * @param value The bytes for host to set.
+           * @return This builder for chaining.
            */
           public Builder setHostBytes(
               com.google.protobuf.ByteString value) {
@@ -14426,7 +15127,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return The port.
            */
+          @java.lang.Override
           public long getPort() {
             return port_;
           }
@@ -14436,6 +15139,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @param value The port to set.
+           * @return This builder for chaining.
            */
           public Builder setPort(long value) {
             
@@ -14449,6 +15154,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearPort() {
             
@@ -14464,6 +15170,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return The user.
            */
           public java.lang.String getUser() {
             java.lang.Object ref = user_;
@@ -14483,6 +15190,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for user.
            */
           public com.google.protobuf.ByteString
               getUserBytes() {
@@ -14503,6 +15211,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @param value The user to set.
+           * @return This builder for chaining.
            */
           public Builder setUser(
               java.lang.String value) {
@@ -14520,6 +15230,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearUser() {
             
@@ -14533,6 +15244,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for user to set.
+           * @return This builder for chaining.
            */
           public Builder setUserBytes(
               com.google.protobuf.ByteString value) {
@@ -14553,6 +15266,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return The password.
            */
           public java.lang.String getPassword() {
             java.lang.Object ref = password_;
@@ -14572,6 +15286,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return The bytes for password.
            */
           public com.google.protobuf.ByteString
               getPasswordBytes() {
@@ -14592,6 +15307,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @param value The password to set.
+           * @return This builder for chaining.
            */
           public Builder setPassword(
               java.lang.String value) {
@@ -14609,6 +15326,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return This builder for chaining.
            */
           public Builder clearPassword() {
             
@@ -14622,6 +15340,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @param value The bytes for password to set.
+           * @return This builder for chaining.
            */
           public Builder setPasswordBytes(
               com.google.protobuf.ByteString value) {
@@ -14637,7 +15357,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -14697,6 +15417,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
         java.lang.String getDb();
         /**
@@ -14705,6 +15426,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
         com.google.protobuf.ByteString
             getDbBytes();
@@ -14715,6 +15437,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The table.
          */
         java.lang.String getTable();
         /**
@@ -14723,6 +15446,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for table.
          */
         com.google.protobuf.ByteString
             getTableBytes();
@@ -14733,6 +15457,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return A list containing the hosts.
          */
         java.util.List<java.lang.String>
             getHostsList();
@@ -14742,6 +15467,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return The count of hosts.
          */
         int getHostsCount();
         /**
@@ -14750,6 +15476,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the element to return.
+         * @return The hosts at the given index.
          */
         java.lang.String getHosts(int index);
         /**
@@ -14758,6 +15486,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the hosts at the given index.
          */
         com.google.protobuf.ByteString
             getHostsBytes(int index);
@@ -14768,6 +15498,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
         long getPort();
 
@@ -14777,6 +15508,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The user.
          */
         java.lang.String getUser();
         /**
@@ -14785,6 +15517,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for user.
          */
         com.google.protobuf.ByteString
             getUserBytes();
@@ -14795,6 +15528,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The password.
          */
         java.lang.String getPassword();
         /**
@@ -14803,6 +15537,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The bytes for password.
          */
         com.google.protobuf.ByteString
             getPasswordBytes();
@@ -14814,6 +15549,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
+         * @return The invalidateQuery.
          */
         java.lang.String getInvalidateQuery();
         /**
@@ -14823,6 +15559,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
+         * @return The bytes for invalidateQuery.
          */
         com.google.protobuf.ByteString
             getInvalidateQueryBytes();
@@ -14834,6 +15571,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+         * @return The enum numeric value on the wire for sslMode.
          */
         int getSslModeValue();
         /**
@@ -14843,13 +15581,14 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+         * @return The sslMode.
          */
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode getSslMode();
       }
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource}
        */
-      public  static final class PostgresqlSource extends
+      public static final class PostgresqlSource extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource)
           PostgresqlSourceOrBuilder {
@@ -14862,11 +15601,17 @@ public final class Clickhouse {
           db_ = "";
           table_ = "";
           hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          port_ = 0L;
           user_ = "";
           password_ = "";
           invalidateQuery_ = "";
           sslMode_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new PostgresqlSource();
         }
 
         @java.lang.Override
@@ -14907,9 +15652,9 @@ public final class Clickhouse {
                 }
                 case 26: {
                   java.lang.String s = input.readStringRequireUtf8();
-                  if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     hosts_ = new com.google.protobuf.LazyStringArrayList();
-                    mutable_bitField0_ |= 0x00000004;
+                    mutable_bitField0_ |= 0x00000001;
                   }
                   hosts_.add(s);
                   break;
@@ -14944,7 +15689,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -14958,7 +15703,7 @@ public final class Clickhouse {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
               hosts_ = hosts_.getUnmodifiableView();
             }
             this.unknownFields = unknownFields.build();
@@ -15085,6 +15830,8 @@ public final class Clickhouse {
           }
 
           /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
            * @deprecated Use {@link #forNumber(int)} instead.
            */
           @java.lang.Deprecated
@@ -15092,6 +15839,10 @@ public final class Clickhouse {
             return forNumber(value);
           }
 
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
           public static SslMode forNumber(int value) {
             switch (value) {
               case 0: return SSL_MODE_UNSPECIFIED;
@@ -15118,6 +15869,10 @@ public final class Clickhouse {
 
           public final com.google.protobuf.Descriptors.EnumValueDescriptor
               getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
             return getDescriptor().getValues().get(ordinal());
           }
           public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -15152,7 +15907,6 @@ public final class Clickhouse {
           // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode)
         }
 
-        private int bitField0_;
         public static final int DB_FIELD_NUMBER = 1;
         private volatile java.lang.Object db_;
         /**
@@ -15161,7 +15915,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The db.
          */
+        @java.lang.Override
         public java.lang.String getDb() {
           java.lang.Object ref = db_;
           if (ref instanceof java.lang.String) {
@@ -15180,7 +15936,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for db.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getDbBytes() {
           java.lang.Object ref = db_;
@@ -15203,7 +15961,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The table.
          */
+        @java.lang.Override
         public java.lang.String getTable() {
           java.lang.Object ref = table_;
           if (ref instanceof java.lang.String) {
@@ -15222,7 +15982,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for table.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getTableBytes() {
           java.lang.Object ref = table_;
@@ -15245,6 +16007,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return A list containing the hosts.
          */
         public com.google.protobuf.ProtocolStringList
             getHostsList() {
@@ -15256,6 +16019,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @return The count of hosts.
          */
         public int getHostsCount() {
           return hosts_.size();
@@ -15266,6 +16030,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the element to return.
+         * @return The hosts at the given index.
          */
         public java.lang.String getHosts(int index) {
           return hosts_.get(index);
@@ -15276,6 +16042,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the hosts at the given index.
          */
         public com.google.protobuf.ByteString
             getHostsBytes(int index) {
@@ -15290,7 +16058,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+         * @return The port.
          */
+        @java.lang.Override
         public long getPort() {
           return port_;
         }
@@ -15303,7 +16073,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The user.
          */
+        @java.lang.Override
         public java.lang.String getUser() {
           java.lang.Object ref = user_;
           if (ref instanceof java.lang.String) {
@@ -15322,7 +16094,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for user.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getUserBytes() {
           java.lang.Object ref = user_;
@@ -15345,7 +16119,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The password.
          */
+        @java.lang.Override
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
           if (ref instanceof java.lang.String) {
@@ -15364,7 +16140,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string password = 6;</code>
+         * @return The bytes for password.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getPasswordBytes() {
           java.lang.Object ref = password_;
@@ -15388,7 +16166,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
+         * @return The invalidateQuery.
          */
+        @java.lang.Override
         public java.lang.String getInvalidateQuery() {
           java.lang.Object ref = invalidateQuery_;
           if (ref instanceof java.lang.String) {
@@ -15408,7 +16188,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
+         * @return The bytes for invalidateQuery.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getInvalidateQueryBytes() {
           java.lang.Object ref = invalidateQuery_;
@@ -15432,8 +16214,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+         * @return The enum numeric value on the wire for sslMode.
          */
-        public int getSslModeValue() {
+        @java.lang.Override public int getSslModeValue() {
           return sslMode_;
         }
         /**
@@ -15443,8 +16226,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+         * @return The sslMode.
          */
-        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode getSslMode() {
+        @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode getSslMode() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode.valueOf(sslMode_);
           return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode.UNRECOGNIZED : result;
@@ -15464,10 +16248,10 @@ public final class Clickhouse {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, db_);
           }
-          if (!getTableBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, table_);
           }
           for (int i = 0; i < hosts_.size(); i++) {
@@ -15476,13 +16260,13 @@ public final class Clickhouse {
           if (port_ != 0L) {
             output.writeInt64(4, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 5, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
           }
-          if (!getInvalidateQueryBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidateQuery_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 7, invalidateQuery_);
           }
           if (sslMode_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode.SSL_MODE_UNSPECIFIED.getNumber()) {
@@ -15497,10 +16281,10 @@ public final class Clickhouse {
           if (size != -1) return size;
 
           size = 0;
-          if (!getDbBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(db_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, db_);
           }
-          if (!getTableBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(table_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, table_);
           }
           {
@@ -15515,13 +16299,13 @@ public final class Clickhouse {
             size += com.google.protobuf.CodedOutputStream
               .computeInt64Size(4, port_);
           }
-          if (!getUserBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, user_);
           }
-          if (!getPasswordBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
           }
-          if (!getInvalidateQueryBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidateQuery_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, invalidateQuery_);
           }
           if (sslMode_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode.SSL_MODE_UNSPECIFIED.getNumber()) {
@@ -15543,24 +16327,23 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource) obj;
 
-          boolean result = true;
-          result = result && getDb()
-              .equals(other.getDb());
-          result = result && getTable()
-              .equals(other.getTable());
-          result = result && getHostsList()
-              .equals(other.getHostsList());
-          result = result && (getPort()
-              == other.getPort());
-          result = result && getUser()
-              .equals(other.getUser());
-          result = result && getPassword()
-              .equals(other.getPassword());
-          result = result && getInvalidateQuery()
-              .equals(other.getInvalidateQuery());
-          result = result && sslMode_ == other.sslMode_;
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getDb()
+              .equals(other.getDb())) return false;
+          if (!getTable()
+              .equals(other.getTable())) return false;
+          if (!getHostsList()
+              .equals(other.getHostsList())) return false;
+          if (getPort()
+              != other.getPort()) return false;
+          if (!getUser()
+              .equals(other.getUser())) return false;
+          if (!getPassword()
+              .equals(other.getPassword())) return false;
+          if (!getInvalidateQuery()
+              .equals(other.getInvalidateQuery())) return false;
+          if (sslMode_ != other.sslMode_) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -15727,7 +16510,7 @@ public final class Clickhouse {
             table_ = "";
 
             hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             port_ = 0L;
 
             user_ = "";
@@ -15765,12 +16548,11 @@ public final class Clickhouse {
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource buildPartial() {
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource(this);
             int from_bitField0_ = bitField0_;
-            int to_bitField0_ = 0;
             result.db_ = db_;
             result.table_ = table_;
-            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            if (((bitField0_ & 0x00000001) != 0)) {
               hosts_ = hosts_.getUnmodifiableView();
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             }
             result.hosts_ = hosts_;
             result.port_ = port_;
@@ -15778,42 +16560,41 @@ public final class Clickhouse {
             result.password_ = password_;
             result.invalidateQuery_ = invalidateQuery_;
             result.sslMode_ = sslMode_;
-            result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
           }
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15838,7 +16619,7 @@ public final class Clickhouse {
             if (!other.hosts_.isEmpty()) {
               if (hosts_.isEmpty()) {
                 hosts_ = other.hosts_;
-                bitField0_ = (bitField0_ & ~0x00000004);
+                bitField0_ = (bitField0_ & ~0x00000001);
               } else {
                 ensureHostsIsMutable();
                 hosts_.addAll(other.hosts_);
@@ -15900,6 +16681,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The db.
            */
           public java.lang.String getDb() {
             java.lang.Object ref = db_;
@@ -15919,6 +16701,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for db.
            */
           public com.google.protobuf.ByteString
               getDbBytes() {
@@ -15939,6 +16722,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The db to set.
+           * @return This builder for chaining.
            */
           public Builder setDb(
               java.lang.String value) {
@@ -15956,6 +16741,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearDb() {
             
@@ -15969,6 +16755,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string db = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for db to set.
+           * @return This builder for chaining.
            */
           public Builder setDbBytes(
               com.google.protobuf.ByteString value) {
@@ -15989,6 +16777,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The table.
            */
           public java.lang.String getTable() {
             java.lang.Object ref = table_;
@@ -16008,6 +16797,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for table.
            */
           public com.google.protobuf.ByteString
               getTableBytes() {
@@ -16028,6 +16818,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The table to set.
+           * @return This builder for chaining.
            */
           public Builder setTable(
               java.lang.String value) {
@@ -16045,6 +16837,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearTable() {
             
@@ -16058,6 +16851,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string table = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for table to set.
+           * @return This builder for chaining.
            */
           public Builder setTableBytes(
               com.google.protobuf.ByteString value) {
@@ -16073,9 +16868,9 @@ public final class Clickhouse {
 
           private com.google.protobuf.LazyStringList hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           private void ensureHostsIsMutable() {
-            if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((bitField0_ & 0x00000001) != 0)) {
               hosts_ = new com.google.protobuf.LazyStringArrayList(hosts_);
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000001;
              }
           }
           /**
@@ -16084,6 +16879,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @return A list containing the hosts.
            */
           public com.google.protobuf.ProtocolStringList
               getHostsList() {
@@ -16095,6 +16891,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @return The count of hosts.
            */
           public int getHostsCount() {
             return hosts_.size();
@@ -16105,6 +16902,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @param index The index of the element to return.
+           * @return The hosts at the given index.
            */
           public java.lang.String getHosts(int index) {
             return hosts_.get(index);
@@ -16115,6 +16914,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @param index The index of the value to return.
+           * @return The bytes of the hosts at the given index.
            */
           public com.google.protobuf.ByteString
               getHostsBytes(int index) {
@@ -16126,6 +16927,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @param index The index to set the value at.
+           * @param value The hosts to set.
+           * @return This builder for chaining.
            */
           public Builder setHosts(
               int index, java.lang.String value) {
@@ -16143,6 +16947,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @param value The hosts to add.
+           * @return This builder for chaining.
            */
           public Builder addHosts(
               java.lang.String value) {
@@ -16160,6 +16966,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @param values The hosts to add.
+           * @return This builder for chaining.
            */
           public Builder addAllHosts(
               java.lang.Iterable<java.lang.String> values) {
@@ -16175,10 +16983,11 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearHosts() {
             hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             onChanged();
             return this;
           }
@@ -16188,6 +16997,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>repeated string hosts = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
+           * @param value The bytes of the hosts to add.
+           * @return This builder for chaining.
            */
           public Builder addHostsBytes(
               com.google.protobuf.ByteString value) {
@@ -16208,7 +17019,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return The port.
            */
+          @java.lang.Override
           public long getPort() {
             return port_;
           }
@@ -16218,6 +17031,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @param value The port to set.
+           * @return This builder for chaining.
            */
           public Builder setPort(long value) {
             
@@ -16231,6 +17046,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
+           * @return This builder for chaining.
            */
           public Builder clearPort() {
             
@@ -16246,6 +17062,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return The user.
            */
           public java.lang.String getUser() {
             java.lang.Object ref = user_;
@@ -16265,6 +17082,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for user.
            */
           public com.google.protobuf.ByteString
               getUserBytes() {
@@ -16285,6 +17103,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @param value The user to set.
+           * @return This builder for chaining.
            */
           public Builder setUser(
               java.lang.String value) {
@@ -16302,6 +17122,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearUser() {
             
@@ -16315,6 +17136,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string user = 5 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for user to set.
+           * @return This builder for chaining.
            */
           public Builder setUserBytes(
               com.google.protobuf.ByteString value) {
@@ -16335,6 +17158,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return The password.
            */
           public java.lang.String getPassword() {
             java.lang.Object ref = password_;
@@ -16354,6 +17178,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return The bytes for password.
            */
           public com.google.protobuf.ByteString
               getPasswordBytes() {
@@ -16374,6 +17199,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @param value The password to set.
+           * @return This builder for chaining.
            */
           public Builder setPassword(
               java.lang.String value) {
@@ -16391,6 +17218,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @return This builder for chaining.
            */
           public Builder clearPassword() {
             
@@ -16404,6 +17232,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string password = 6;</code>
+           * @param value The bytes for password to set.
+           * @return This builder for chaining.
            */
           public Builder setPasswordBytes(
               com.google.protobuf.ByteString value) {
@@ -16425,6 +17255,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
+           * @return The invalidateQuery.
            */
           public java.lang.String getInvalidateQuery() {
             java.lang.Object ref = invalidateQuery_;
@@ -16445,6 +17276,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
+           * @return The bytes for invalidateQuery.
            */
           public com.google.protobuf.ByteString
               getInvalidateQueryBytes() {
@@ -16466,6 +17298,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
+           * @param value The invalidateQuery to set.
+           * @return This builder for chaining.
            */
           public Builder setInvalidateQuery(
               java.lang.String value) {
@@ -16484,6 +17318,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
+           * @return This builder for chaining.
            */
           public Builder clearInvalidateQuery() {
             
@@ -16498,6 +17333,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
+           * @param value The bytes for invalidateQuery to set.
+           * @return This builder for chaining.
            */
           public Builder setInvalidateQueryBytes(
               com.google.protobuf.ByteString value) {
@@ -16519,8 +17356,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+           * @return The enum numeric value on the wire for sslMode.
            */
-          public int getSslModeValue() {
+          @java.lang.Override public int getSslModeValue() {
             return sslMode_;
           }
           /**
@@ -16530,8 +17368,11 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+           * @param value The enum numeric value on the wire for sslMode to set.
+           * @return This builder for chaining.
            */
           public Builder setSslModeValue(int value) {
+            
             sslMode_ = value;
             onChanged();
             return this;
@@ -16543,7 +17384,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+           * @return The sslMode.
            */
+          @java.lang.Override
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode getSslMode() {
             @SuppressWarnings("deprecation")
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode.valueOf(sslMode_);
@@ -16556,6 +17399,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+           * @param value The sslMode to set.
+           * @return This builder for chaining.
            */
           public Builder setSslMode(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode value) {
             if (value == null) {
@@ -16573,6 +17418,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
+           * @return This builder for chaining.
            */
           public Builder clearSslMode() {
             
@@ -16583,7 +17429,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -16643,6 +17489,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
+         * @return Whether the id field is set.
          */
         boolean hasId();
         /**
@@ -16651,6 +17498,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
+         * @return The id.
          */
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id getId();
         /**
@@ -16669,6 +17517,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
+         * @return Whether the key field is set.
          */
         boolean hasKey();
         /**
@@ -16678,6 +17527,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
+         * @return The key.
          */
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key getKey();
         /**
@@ -16697,6 +17547,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
+         * @return Whether the rangeMin field is set.
          */
         boolean hasRangeMin();
         /**
@@ -16706,6 +17557,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
+         * @return The rangeMin.
          */
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getRangeMin();
         /**
@@ -16725,6 +17577,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
+         * @return Whether the rangeMax field is set.
          */
         boolean hasRangeMax();
         /**
@@ -16734,6 +17587,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
+         * @return The rangeMax.
          */
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getRangeMax();
         /**
@@ -16798,7 +17652,7 @@ public final class Clickhouse {
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure}
        */
-      public  static final class Structure extends
+      public static final class Structure extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure)
           StructureOrBuilder {
@@ -16809,6 +17663,13 @@ public final class Clickhouse {
         }
         private Structure() {
           attributes_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Structure();
         }
 
         @java.lang.Override
@@ -16849,9 +17710,9 @@ public final class Clickhouse {
                   break;
                 }
                 case 18: {
-                  if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     attributes_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute>();
-                    mutable_bitField0_ |= 0x00000010;
+                    mutable_bitField0_ |= 0x00000001;
                   }
                   attributes_.add(
                       input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.parser(), extensionRegistry));
@@ -16897,7 +17758,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -16911,7 +17772,7 @@ public final class Clickhouse {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
               attributes_ = java.util.Collections.unmodifiableList(attributes_);
             }
             this.unknownFields = unknownFields.build();
@@ -16941,6 +17802,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The name.
            */
           java.lang.String getName();
           /**
@@ -16949,6 +17811,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for name.
            */
           com.google.protobuf.ByteString
               getNameBytes();
@@ -16959,6 +17822,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The type.
            */
           java.lang.String getType();
           /**
@@ -16967,6 +17831,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for type.
            */
           com.google.protobuf.ByteString
               getTypeBytes();
@@ -16977,6 +17842,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string null_value = 3;</code>
+           * @return The nullValue.
            */
           java.lang.String getNullValue();
           /**
@@ -16985,6 +17851,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string null_value = 3;</code>
+           * @return The bytes for nullValue.
            */
           com.google.protobuf.ByteString
               getNullValueBytes();
@@ -16995,6 +17862,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string expression = 4;</code>
+           * @return The expression.
            */
           java.lang.String getExpression();
           /**
@@ -17003,6 +17871,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string expression = 4;</code>
+           * @return The bytes for expression.
            */
           com.google.protobuf.ByteString
               getExpressionBytes();
@@ -17014,6 +17883,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>bool hierarchical = 5;</code>
+           * @return The hierarchical.
            */
           boolean getHierarchical();
 
@@ -17024,13 +17894,14 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>bool injective = 6;</code>
+           * @return The injective.
            */
           boolean getInjective();
         }
         /**
          * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute}
          */
-        public  static final class Attribute extends
+        public static final class Attribute extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute)
             AttributeOrBuilder {
@@ -17044,8 +17915,13 @@ public final class Clickhouse {
             type_ = "";
             nullValue_ = "";
             expression_ = "";
-            hierarchical_ = false;
-            injective_ = false;
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new Attribute();
           }
 
           @java.lang.Override
@@ -17061,7 +17937,6 @@ public final class Clickhouse {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -17107,7 +17982,7 @@ public final class Clickhouse {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -17146,7 +18021,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The name.
            */
+          @java.lang.Override
           public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -17165,7 +18042,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for name.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getNameBytes() {
             java.lang.Object ref = name_;
@@ -17188,7 +18067,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The type.
            */
+          @java.lang.Override
           public java.lang.String getType() {
             java.lang.Object ref = type_;
             if (ref instanceof java.lang.String) {
@@ -17207,7 +18088,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for type.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getTypeBytes() {
             java.lang.Object ref = type_;
@@ -17230,7 +18113,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string null_value = 3;</code>
+           * @return The nullValue.
            */
+          @java.lang.Override
           public java.lang.String getNullValue() {
             java.lang.Object ref = nullValue_;
             if (ref instanceof java.lang.String) {
@@ -17249,7 +18134,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string null_value = 3;</code>
+           * @return The bytes for nullValue.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getNullValueBytes() {
             java.lang.Object ref = nullValue_;
@@ -17272,7 +18159,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string expression = 4;</code>
+           * @return The expression.
            */
+          @java.lang.Override
           public java.lang.String getExpression() {
             java.lang.Object ref = expression_;
             if (ref instanceof java.lang.String) {
@@ -17291,7 +18180,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string expression = 4;</code>
+           * @return The bytes for expression.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getExpressionBytes() {
             java.lang.Object ref = expression_;
@@ -17315,7 +18206,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>bool hierarchical = 5;</code>
+           * @return The hierarchical.
            */
+          @java.lang.Override
           public boolean getHierarchical() {
             return hierarchical_;
           }
@@ -17329,7 +18222,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>bool injective = 6;</code>
+           * @return The injective.
            */
+          @java.lang.Override
           public boolean getInjective() {
             return injective_;
           }
@@ -17348,16 +18243,16 @@ public final class Clickhouse {
           @java.lang.Override
           public void writeTo(com.google.protobuf.CodedOutputStream output)
                               throws java.io.IOException {
-            if (!getNameBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
             }
-            if (!getTypeBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
             }
-            if (!getNullValueBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nullValue_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nullValue_);
             }
-            if (!getExpressionBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expression_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 4, expression_);
             }
             if (hierarchical_ != false) {
@@ -17375,16 +18270,16 @@ public final class Clickhouse {
             if (size != -1) return size;
 
             size = 0;
-            if (!getNameBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
             }
-            if (!getTypeBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
             }
-            if (!getNullValueBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nullValue_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nullValue_);
             }
-            if (!getExpressionBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expression_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, expression_);
             }
             if (hierarchical_ != false) {
@@ -17410,21 +18305,20 @@ public final class Clickhouse {
             }
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute) obj;
 
-            boolean result = true;
-            result = result && getName()
-                .equals(other.getName());
-            result = result && getType()
-                .equals(other.getType());
-            result = result && getNullValue()
-                .equals(other.getNullValue());
-            result = result && getExpression()
-                .equals(other.getExpression());
-            result = result && (getHierarchical()
-                == other.getHierarchical());
-            result = result && (getInjective()
-                == other.getInjective());
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!getName()
+                .equals(other.getName())) return false;
+            if (!getType()
+                .equals(other.getType())) return false;
+            if (!getNullValue()
+                .equals(other.getNullValue())) return false;
+            if (!getExpression()
+                .equals(other.getExpression())) return false;
+            if (getHierarchical()
+                != other.getHierarchical()) return false;
+            if (getInjective()
+                != other.getInjective()) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -17631,35 +18525,35 @@ public final class Clickhouse {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17731,6 +18625,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @return The name.
              */
             public java.lang.String getName() {
               java.lang.Object ref = name_;
@@ -17750,6 +18645,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @return The bytes for name.
              */
             public com.google.protobuf.ByteString
                 getNameBytes() {
@@ -17770,6 +18666,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @param value The name to set.
+             * @return This builder for chaining.
              */
             public Builder setName(
                 java.lang.String value) {
@@ -17787,6 +18685,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @return This builder for chaining.
              */
             public Builder clearName() {
               
@@ -17800,6 +18699,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @param value The bytes for name to set.
+             * @return This builder for chaining.
              */
             public Builder setNameBytes(
                 com.google.protobuf.ByteString value) {
@@ -17820,6 +18721,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+             * @return The type.
              */
             public java.lang.String getType() {
               java.lang.Object ref = type_;
@@ -17839,6 +18741,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+             * @return The bytes for type.
              */
             public com.google.protobuf.ByteString
                 getTypeBytes() {
@@ -17859,6 +18762,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+             * @param value The type to set.
+             * @return This builder for chaining.
              */
             public Builder setType(
                 java.lang.String value) {
@@ -17876,6 +18781,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+             * @return This builder for chaining.
              */
             public Builder clearType() {
               
@@ -17889,6 +18795,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string type = 2 [(.yandex.cloud.required) = true];</code>
+             * @param value The bytes for type to set.
+             * @return This builder for chaining.
              */
             public Builder setTypeBytes(
                 com.google.protobuf.ByteString value) {
@@ -17909,6 +18817,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string null_value = 3;</code>
+             * @return The nullValue.
              */
             public java.lang.String getNullValue() {
               java.lang.Object ref = nullValue_;
@@ -17928,6 +18837,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string null_value = 3;</code>
+             * @return The bytes for nullValue.
              */
             public com.google.protobuf.ByteString
                 getNullValueBytes() {
@@ -17948,6 +18858,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string null_value = 3;</code>
+             * @param value The nullValue to set.
+             * @return This builder for chaining.
              */
             public Builder setNullValue(
                 java.lang.String value) {
@@ -17965,6 +18877,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string null_value = 3;</code>
+             * @return This builder for chaining.
              */
             public Builder clearNullValue() {
               
@@ -17978,6 +18891,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string null_value = 3;</code>
+             * @param value The bytes for nullValue to set.
+             * @return This builder for chaining.
              */
             public Builder setNullValueBytes(
                 com.google.protobuf.ByteString value) {
@@ -17998,6 +18913,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string expression = 4;</code>
+             * @return The expression.
              */
             public java.lang.String getExpression() {
               java.lang.Object ref = expression_;
@@ -18017,6 +18933,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string expression = 4;</code>
+             * @return The bytes for expression.
              */
             public com.google.protobuf.ByteString
                 getExpressionBytes() {
@@ -18037,6 +18954,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string expression = 4;</code>
+             * @param value The expression to set.
+             * @return This builder for chaining.
              */
             public Builder setExpression(
                 java.lang.String value) {
@@ -18054,6 +18973,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string expression = 4;</code>
+             * @return This builder for chaining.
              */
             public Builder clearExpression() {
               
@@ -18067,6 +18987,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string expression = 4;</code>
+             * @param value The bytes for expression to set.
+             * @return This builder for chaining.
              */
             public Builder setExpressionBytes(
                 com.google.protobuf.ByteString value) {
@@ -18088,7 +19010,9 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>bool hierarchical = 5;</code>
+             * @return The hierarchical.
              */
+            @java.lang.Override
             public boolean getHierarchical() {
               return hierarchical_;
             }
@@ -18099,6 +19023,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>bool hierarchical = 5;</code>
+             * @param value The hierarchical to set.
+             * @return This builder for chaining.
              */
             public Builder setHierarchical(boolean value) {
               
@@ -18113,6 +19039,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>bool hierarchical = 5;</code>
+             * @return This builder for chaining.
              */
             public Builder clearHierarchical() {
               
@@ -18129,7 +19056,9 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>bool injective = 6;</code>
+             * @return The injective.
              */
+            @java.lang.Override
             public boolean getInjective() {
               return injective_;
             }
@@ -18140,6 +19069,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>bool injective = 6;</code>
+             * @param value The injective to set.
+             * @return This builder for chaining.
              */
             public Builder setInjective(boolean value) {
               
@@ -18154,6 +19085,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>bool injective = 6;</code>
+             * @return This builder for chaining.
              */
             public Builder clearInjective() {
               
@@ -18164,7 +19096,7 @@ public final class Clickhouse {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -18224,6 +19156,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The name.
            */
           java.lang.String getName();
           /**
@@ -18232,6 +19165,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for name.
            */
           com.google.protobuf.ByteString
               getNameBytes();
@@ -18243,7 +19177,7 @@ public final class Clickhouse {
          *
          * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id}
          */
-        public  static final class Id extends
+        public static final class Id extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id)
             IdOrBuilder {
@@ -18254,6 +19188,13 @@ public final class Clickhouse {
           }
           private Id() {
             name_ = "";
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new Id();
           }
 
           @java.lang.Override
@@ -18269,7 +19210,6 @@ public final class Clickhouse {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -18287,7 +19227,7 @@ public final class Clickhouse {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -18326,7 +19266,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The name.
            */
+          @java.lang.Override
           public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -18345,7 +19287,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for name.
            */
+          @java.lang.Override
           public com.google.protobuf.ByteString
               getNameBytes() {
             java.lang.Object ref = name_;
@@ -18374,7 +19318,7 @@ public final class Clickhouse {
           @java.lang.Override
           public void writeTo(com.google.protobuf.CodedOutputStream output)
                               throws java.io.IOException {
-            if (!getNameBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
               com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
             }
             unknownFields.writeTo(output);
@@ -18386,7 +19330,7 @@ public final class Clickhouse {
             if (size != -1) return size;
 
             size = 0;
-            if (!getNameBytes().isEmpty()) {
+            if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
               size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
             }
             size += unknownFields.getSerializedSize();
@@ -18404,11 +19348,10 @@ public final class Clickhouse {
             }
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id) obj;
 
-            boolean result = true;
-            result = result && getName()
-                .equals(other.getName());
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!getName()
+                .equals(other.getName())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -18592,35 +19535,35 @@ public final class Clickhouse {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18674,6 +19617,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @return The name.
              */
             public java.lang.String getName() {
               java.lang.Object ref = name_;
@@ -18693,6 +19637,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @return The bytes for name.
              */
             public com.google.protobuf.ByteString
                 getNameBytes() {
@@ -18713,6 +19658,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @param value The name to set.
+             * @return This builder for chaining.
              */
             public Builder setName(
                 java.lang.String value) {
@@ -18730,6 +19677,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @return This builder for chaining.
              */
             public Builder clearName() {
               
@@ -18743,6 +19691,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+             * @param value The bytes for name to set.
+             * @return This builder for chaining.
              */
             public Builder setNameBytes(
                 com.google.protobuf.ByteString value) {
@@ -18758,7 +19708,7 @@ public final class Clickhouse {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -18863,7 +19813,7 @@ public final class Clickhouse {
          *
          * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key}
          */
-        public  static final class Key extends
+        public static final class Key extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key)
             KeyOrBuilder {
@@ -18874,6 +19824,13 @@ public final class Clickhouse {
           }
           private Key() {
             attributes_ = java.util.Collections.emptyList();
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new Key();
           }
 
           @java.lang.Override
@@ -18901,7 +19858,7 @@ public final class Clickhouse {
                     done = true;
                     break;
                   case 10: {
-                    if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                    if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                       attributes_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute>();
                       mutable_bitField0_ |= 0x00000001;
                     }
@@ -18910,7 +19867,7 @@ public final class Clickhouse {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -18924,7 +19881,7 @@ public final class Clickhouse {
               throw new com.google.protobuf.InvalidProtocolBufferException(
                   e).setUnfinishedMessage(this);
             } finally {
-              if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (((mutable_bitField0_ & 0x00000001) != 0)) {
                 attributes_ = java.util.Collections.unmodifiableList(attributes_);
               }
               this.unknownFields = unknownFields.build();
@@ -18953,6 +19910,7 @@ public final class Clickhouse {
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
            */
+          @java.lang.Override
           public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute> getAttributesList() {
             return attributes_;
           }
@@ -18963,6 +19921,7 @@ public final class Clickhouse {
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
            */
+          @java.lang.Override
           public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder> 
               getAttributesOrBuilderList() {
             return attributes_;
@@ -18974,6 +19933,7 @@ public final class Clickhouse {
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
            */
+          @java.lang.Override
           public int getAttributesCount() {
             return attributes_.size();
           }
@@ -18984,6 +19944,7 @@ public final class Clickhouse {
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
            */
+          @java.lang.Override
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getAttributes(int index) {
             return attributes_.get(index);
           }
@@ -18994,6 +19955,7 @@ public final class Clickhouse {
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
            */
+          @java.lang.Override
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder getAttributesOrBuilder(
               int index) {
             return attributes_.get(index);
@@ -19044,11 +20006,10 @@ public final class Clickhouse {
             }
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key) obj;
 
-            boolean result = true;
-            result = result && getAttributesList()
-                .equals(other.getAttributesList());
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!getAttributesList()
+                .equals(other.getAttributesList())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -19234,7 +20195,7 @@ public final class Clickhouse {
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key(this);
               int from_bitField0_ = bitField0_;
               if (attributesBuilder_ == null) {
-                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                if (((bitField0_ & 0x00000001) != 0)) {
                   attributes_ = java.util.Collections.unmodifiableList(attributes_);
                   bitField0_ = (bitField0_ & ~0x00000001);
                 }
@@ -19248,35 +20209,35 @@ public final class Clickhouse {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19349,7 +20310,7 @@ public final class Clickhouse {
             private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute> attributes_ =
               java.util.Collections.emptyList();
             private void ensureAttributesIsMutable() {
-              if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((bitField0_ & 0x00000001) != 0)) {
                 attributes_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute>(attributes_);
                 bitField0_ |= 0x00000001;
                }
@@ -19650,7 +20611,7 @@ public final class Clickhouse {
                 attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder>(
                         attributes_,
-                        ((bitField0_ & 0x00000001) == 0x00000001),
+                        ((bitField0_ & 0x00000001) != 0),
                         getParentForChildren(),
                         isClean());
                 attributes_ = null;
@@ -19660,7 +20621,7 @@ public final class Clickhouse {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -19710,7 +20671,6 @@ public final class Clickhouse {
 
         }
 
-        private int bitField0_;
         public static final int ID_FIELD_NUMBER = 1;
         private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id id_;
         /**
@@ -19719,7 +20679,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
+         * @return Whether the id field is set.
          */
+        @java.lang.Override
         public boolean hasId() {
           return id_ != null;
         }
@@ -19729,7 +20691,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
+         * @return The id.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id getId() {
           return id_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id.getDefaultInstance() : id_;
         }
@@ -19740,6 +20704,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.IdOrBuilder getIdOrBuilder() {
           return getId();
         }
@@ -19753,7 +20718,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
+         * @return Whether the key field is set.
          */
+        @java.lang.Override
         public boolean hasKey() {
           return key_ != null;
         }
@@ -19764,7 +20731,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
+         * @return The key.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key getKey() {
           return key_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key.getDefaultInstance() : key_;
         }
@@ -19776,6 +20745,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.KeyOrBuilder getKeyOrBuilder() {
           return getKey();
         }
@@ -19789,7 +20759,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
+         * @return Whether the rangeMin field is set.
          */
+        @java.lang.Override
         public boolean hasRangeMin() {
           return rangeMin_ != null;
         }
@@ -19800,7 +20772,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
+         * @return The rangeMin.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getRangeMin() {
           return rangeMin_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.getDefaultInstance() : rangeMin_;
         }
@@ -19812,6 +20786,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder getRangeMinOrBuilder() {
           return getRangeMin();
         }
@@ -19825,7 +20800,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
+         * @return Whether the rangeMax field is set.
          */
+        @java.lang.Override
         public boolean hasRangeMax() {
           return rangeMax_ != null;
         }
@@ -19836,7 +20813,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
+         * @return The rangeMax.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getRangeMax() {
           return rangeMax_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.getDefaultInstance() : rangeMax_;
         }
@@ -19848,6 +20827,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder getRangeMaxOrBuilder() {
           return getRangeMax();
         }
@@ -19862,6 +20842,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute> getAttributesList() {
           return attributes_;
         }
@@ -19873,6 +20854,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder> 
             getAttributesOrBuilderList() {
           return attributes_;
@@ -19885,6 +20867,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public int getAttributesCount() {
           return attributes_.size();
         }
@@ -19896,6 +20879,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getAttributes(int index) {
           return attributes_.get(index);
         }
@@ -19907,6 +20891,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder getAttributesOrBuilder(
             int index) {
           return attributes_.get(index);
@@ -19985,31 +20970,30 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure) obj;
 
-          boolean result = true;
-          result = result && (hasId() == other.hasId());
+          if (hasId() != other.hasId()) return false;
           if (hasId()) {
-            result = result && getId()
-                .equals(other.getId());
+            if (!getId()
+                .equals(other.getId())) return false;
           }
-          result = result && (hasKey() == other.hasKey());
+          if (hasKey() != other.hasKey()) return false;
           if (hasKey()) {
-            result = result && getKey()
-                .equals(other.getKey());
+            if (!getKey()
+                .equals(other.getKey())) return false;
           }
-          result = result && (hasRangeMin() == other.hasRangeMin());
+          if (hasRangeMin() != other.hasRangeMin()) return false;
           if (hasRangeMin()) {
-            result = result && getRangeMin()
-                .equals(other.getRangeMin());
+            if (!getRangeMin()
+                .equals(other.getRangeMin())) return false;
           }
-          result = result && (hasRangeMax() == other.hasRangeMax());
+          if (hasRangeMax() != other.hasRangeMax()) return false;
           if (hasRangeMax()) {
-            result = result && getRangeMax()
-                .equals(other.getRangeMax());
+            if (!getRangeMax()
+                .equals(other.getRangeMax())) return false;
           }
-          result = result && getAttributesList()
-              .equals(other.getAttributesList());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getAttributesList()
+              .equals(other.getAttributesList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -20199,7 +21183,7 @@ public final class Clickhouse {
             }
             if (attributesBuilder_ == null) {
               attributes_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               attributesBuilder_.clear();
             }
@@ -20230,7 +21214,6 @@ public final class Clickhouse {
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure buildPartial() {
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure(this);
             int from_bitField0_ = bitField0_;
-            int to_bitField0_ = 0;
             if (idBuilder_ == null) {
               result.id_ = id_;
             } else {
@@ -20252,50 +21235,49 @@ public final class Clickhouse {
               result.rangeMax_ = rangeMaxBuilder_.build();
             }
             if (attributesBuilder_ == null) {
-              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              if (((bitField0_ & 0x00000001) != 0)) {
                 attributes_ = java.util.Collections.unmodifiableList(attributes_);
-                bitField0_ = (bitField0_ & ~0x00000010);
+                bitField0_ = (bitField0_ & ~0x00000001);
               }
               result.attributes_ = attributes_;
             } else {
               result.attributes_ = attributesBuilder_.build();
             }
-            result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
           }
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20325,7 +21307,7 @@ public final class Clickhouse {
               if (!other.attributes_.isEmpty()) {
                 if (attributes_.isEmpty()) {
                   attributes_ = other.attributes_;
-                  bitField0_ = (bitField0_ & ~0x00000010);
+                  bitField0_ = (bitField0_ & ~0x00000001);
                 } else {
                   ensureAttributesIsMutable();
                   attributes_.addAll(other.attributes_);
@@ -20338,7 +21320,7 @@ public final class Clickhouse {
                   attributesBuilder_.dispose();
                   attributesBuilder_ = null;
                   attributes_ = other.attributes_;
-                  bitField0_ = (bitField0_ & ~0x00000010);
+                  bitField0_ = (bitField0_ & ~0x00000001);
                   attributesBuilder_ = 
                     com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                        getAttributesFieldBuilder() : null;
@@ -20377,7 +21359,7 @@ public final class Clickhouse {
           }
           private int bitField0_;
 
-          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id id_ = null;
+          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id id_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.IdOrBuilder> idBuilder_;
           /**
@@ -20386,6 +21368,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
+           * @return Whether the id field is set.
            */
           public boolean hasId() {
             return idBuilder_ != null || id_ != null;
@@ -20396,6 +21379,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Id id = 1;</code>
+           * @return The id.
            */
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Id getId() {
             if (idBuilder_ == null) {
@@ -20530,7 +21514,7 @@ public final class Clickhouse {
             return idBuilder_;
           }
 
-          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key key_ = null;
+          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key key_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.KeyOrBuilder> keyBuilder_;
           /**
@@ -20540,6 +21524,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
+           * @return Whether the key field is set.
            */
           public boolean hasKey() {
             return keyBuilder_ != null || key_ != null;
@@ -20551,6 +21536,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
+           * @return The key.
            */
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Key getKey() {
             if (keyBuilder_ == null) {
@@ -20692,7 +21678,7 @@ public final class Clickhouse {
             return keyBuilder_;
           }
 
-          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute rangeMin_ = null;
+          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute rangeMin_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder> rangeMinBuilder_;
           /**
@@ -20702,6 +21688,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
+           * @return Whether the rangeMin field is set.
            */
           public boolean hasRangeMin() {
             return rangeMinBuilder_ != null || rangeMin_ != null;
@@ -20713,6 +21700,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
+           * @return The rangeMin.
            */
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getRangeMin() {
             if (rangeMinBuilder_ == null) {
@@ -20854,7 +21842,7 @@ public final class Clickhouse {
             return rangeMinBuilder_;
           }
 
-          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute rangeMax_ = null;
+          private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute rangeMax_;
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder> rangeMaxBuilder_;
           /**
@@ -20864,6 +21852,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
+           * @return Whether the rangeMax field is set.
            */
           public boolean hasRangeMax() {
             return rangeMaxBuilder_ != null || rangeMax_ != null;
@@ -20875,6 +21864,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
+           * @return The rangeMax.
            */
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute getRangeMax() {
             if (rangeMaxBuilder_ == null) {
@@ -21019,9 +22009,9 @@ public final class Clickhouse {
           private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute> attributes_ =
             java.util.Collections.emptyList();
           private void ensureAttributesIsMutable() {
-            if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((bitField0_ & 0x00000001) != 0)) {
               attributes_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute>(attributes_);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000001;
              }
           }
 
@@ -21226,7 +22216,7 @@ public final class Clickhouse {
           public Builder clearAttributes() {
             if (attributesBuilder_ == null) {
               attributes_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               onChanged();
             } else {
               attributesBuilder_.clear();
@@ -21338,7 +22328,7 @@ public final class Clickhouse {
               attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Attribute.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.AttributeOrBuilder>(
                       attributes_,
-                      ((bitField0_ & 0x00000010) == 0x00000010),
+                      ((bitField0_ & 0x00000001) != 0),
                       getParentForChildren(),
                       isClean());
               attributes_ = null;
@@ -21348,7 +22338,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -21408,6 +22398,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The enum numeric value on the wire for type.
          */
         int getTypeValue();
         /**
@@ -21416,6 +22407,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The type.
          */
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type getType();
 
@@ -21426,6 +22418,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 size_in_cells = 2;</code>
+         * @return The sizeInCells.
          */
         long getSizeInCells();
       }
@@ -21436,7 +22429,7 @@ public final class Clickhouse {
        *
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout}
        */
-      public  static final class Layout extends
+      public static final class Layout extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout)
           LayoutOrBuilder {
@@ -21447,7 +22440,13 @@ public final class Clickhouse {
         }
         private Layout() {
           type_ = 0;
-          sizeInCells_ = 0L;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Layout();
         }
 
         @java.lang.Override
@@ -21463,7 +22462,6 @@ public final class Clickhouse {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -21486,7 +22484,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -21654,6 +22652,8 @@ public final class Clickhouse {
           }
 
           /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
            * @deprecated Use {@link #forNumber(int)} instead.
            */
           @java.lang.Deprecated
@@ -21661,6 +22661,10 @@ public final class Clickhouse {
             return forNumber(value);
           }
 
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
           public static Type forNumber(int value) {
             switch (value) {
               case 0: return TYPE_UNSPECIFIED;
@@ -21688,6 +22692,10 @@ public final class Clickhouse {
 
           public final com.google.protobuf.Descriptors.EnumValueDescriptor
               getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
             return getDescriptor().getValues().get(ordinal());
           }
           public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -21730,8 +22738,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The enum numeric value on the wire for type.
          */
-        public int getTypeValue() {
+        @java.lang.Override public int getTypeValue() {
           return type_;
         }
         /**
@@ -21740,8 +22749,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The type.
          */
-        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type getType() {
+        @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type getType() {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type.valueOf(type_);
           return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type.UNRECOGNIZED : result;
@@ -21756,7 +22766,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 size_in_cells = 2;</code>
+         * @return The sizeInCells.
          */
+        @java.lang.Override
         public long getSizeInCells() {
           return sizeInCells_;
         }
@@ -21813,12 +22825,11 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout) obj;
 
-          boolean result = true;
-          result = result && type_ == other.type_;
-          result = result && (getSizeInCells()
-              == other.getSizeInCells());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (type_ != other.type_) return false;
+          if (getSizeInCells()
+              != other.getSizeInCells()) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -22008,35 +23019,35 @@ public final class Clickhouse {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22092,8 +23103,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The enum numeric value on the wire for type.
            */
-          public int getTypeValue() {
+          @java.lang.Override public int getTypeValue() {
             return type_;
           }
           /**
@@ -22102,8 +23114,11 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The enum numeric value on the wire for type to set.
+           * @return This builder for chaining.
            */
           public Builder setTypeValue(int value) {
+            
             type_ = value;
             onChanged();
             return this;
@@ -22114,7 +23129,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+           * @return The type.
            */
+          @java.lang.Override
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type getType() {
             @SuppressWarnings("deprecation")
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type.valueOf(type_);
@@ -22126,6 +23143,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+           * @param value The type to set.
+           * @return This builder for chaining.
            */
           public Builder setType(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Type value) {
             if (value == null) {
@@ -22142,6 +23161,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout.Type type = 1 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearType() {
             
@@ -22158,7 +23178,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 size_in_cells = 2;</code>
+           * @return The sizeInCells.
            */
+          @java.lang.Override
           public long getSizeInCells() {
             return sizeInCells_;
           }
@@ -22169,6 +23191,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 size_in_cells = 2;</code>
+           * @param value The sizeInCells to set.
+           * @return This builder for chaining.
            */
           public Builder setSizeInCells(long value) {
             
@@ -22183,6 +23207,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 size_in_cells = 2;</code>
+           * @return This builder for chaining.
            */
           public Builder clearSizeInCells() {
             
@@ -22193,7 +23218,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -22253,6 +23278,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 min = 1;</code>
+         * @return The min.
          */
         long getMin();
 
@@ -22262,13 +23288,14 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 max = 2;</code>
+         * @return The max.
          */
         long getMax();
       }
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range}
        */
-      public  static final class Range extends
+      public static final class Range extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range)
           RangeOrBuilder {
@@ -22278,8 +23305,13 @@ public final class Clickhouse {
           super(builder);
         }
         private Range() {
-          min_ = 0L;
-          max_ = 0L;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Range();
         }
 
         @java.lang.Override
@@ -22295,7 +23327,6 @@ public final class Clickhouse {
           if (extensionRegistry == null) {
             throw new java.lang.NullPointerException();
           }
-          int mutable_bitField0_ = 0;
           com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
           try {
@@ -22317,7 +23348,7 @@ public final class Clickhouse {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -22356,7 +23387,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 min = 1;</code>
+         * @return The min.
          */
+        @java.lang.Override
         public long getMin() {
           return min_;
         }
@@ -22369,7 +23402,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 max = 2;</code>
+         * @return The max.
          */
+        @java.lang.Override
         public long getMax() {
           return max_;
         }
@@ -22426,13 +23461,12 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range) obj;
 
-          boolean result = true;
-          result = result && (getMin()
-              == other.getMin());
-          result = result && (getMax()
-              == other.getMax());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (getMin()
+              != other.getMin()) return false;
+          if (getMax()
+              != other.getMax()) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -22619,35 +23653,35 @@ public final class Clickhouse {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22703,7 +23737,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 min = 1;</code>
+           * @return The min.
            */
+          @java.lang.Override
           public long getMin() {
             return min_;
           }
@@ -22713,6 +23749,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 min = 1;</code>
+           * @param value The min to set.
+           * @return This builder for chaining.
            */
           public Builder setMin(long value) {
             
@@ -22726,6 +23764,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 min = 1;</code>
+           * @return This builder for chaining.
            */
           public Builder clearMin() {
             
@@ -22741,7 +23780,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 max = 2;</code>
+           * @return The max.
            */
+          @java.lang.Override
           public long getMax() {
             return max_;
           }
@@ -22751,6 +23792,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 max = 2;</code>
+           * @param value The max to set.
+           * @return This builder for chaining.
            */
           public Builder setMax(long value) {
             
@@ -22764,6 +23807,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 max = 2;</code>
+           * @return This builder for chaining.
            */
           public Builder clearMax() {
             
@@ -22774,7 +23818,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -22827,7 +23871,8 @@ public final class Clickhouse {
       private int lifetimeCase_ = 0;
       private java.lang.Object lifetime_;
       public enum LifetimeCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         FIXED_LIFETIME(4),
         LIFETIME_RANGE(5),
         LIFETIME_NOT_SET(0);
@@ -22836,6 +23881,8 @@ public final class Clickhouse {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -22865,7 +23912,8 @@ public final class Clickhouse {
       private int sourceCase_ = 0;
       private java.lang.Object source_;
       public enum SourceCase
-          implements com.google.protobuf.Internal.EnumLite {
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         HTTP_SOURCE(6),
         MYSQL_SOURCE(7),
         CLICKHOUSE_SOURCE(8),
@@ -22877,6 +23925,8 @@ public final class Clickhouse {
           this.value = value;
         }
         /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
@@ -22914,7 +23964,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
@@ -22933,7 +23985,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
@@ -22957,7 +24011,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the structure field is set.
        */
+      @java.lang.Override
       public boolean hasStructure() {
         return structure_ != null;
       }
@@ -22968,7 +24024,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The structure.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure getStructure() {
         return structure_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.getDefaultInstance() : structure_;
       }
@@ -22980,6 +24038,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.StructureOrBuilder getStructureOrBuilder() {
         return getStructure();
       }
@@ -22993,7 +24052,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the layout field is set.
        */
+      @java.lang.Override
       public boolean hasLayout() {
         return layout_ != null;
       }
@@ -23004,7 +24065,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The layout.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout getLayout() {
         return layout_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.getDefaultInstance() : layout_;
       }
@@ -23016,6 +24079,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.LayoutOrBuilder getLayoutOrBuilder() {
         return getLayout();
       }
@@ -23027,7 +24091,21 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>int64 fixed_lifetime = 4;</code>
+       * @return Whether the fixedLifetime field is set.
        */
+      @java.lang.Override
+      public boolean hasFixedLifetime() {
+        return lifetimeCase_ == 4;
+      }
+      /**
+       * <pre>
+       * Fixed interval between dictionary updates.
+       * </pre>
+       *
+       * <code>int64 fixed_lifetime = 4;</code>
+       * @return The fixedLifetime.
+       */
+      @java.lang.Override
       public long getFixedLifetime() {
         if (lifetimeCase_ == 4) {
           return (java.lang.Long) lifetime_;
@@ -23042,7 +24120,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
+       * @return Whether the lifetimeRange field is set.
        */
+      @java.lang.Override
       public boolean hasLifetimeRange() {
         return lifetimeCase_ == 5;
       }
@@ -23052,7 +24132,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
+       * @return The lifetimeRange.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range getLifetimeRange() {
         if (lifetimeCase_ == 5) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range) lifetime_;
@@ -23066,6 +24148,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.RangeOrBuilder getLifetimeRangeOrBuilder() {
         if (lifetimeCase_ == 5) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range) lifetime_;
@@ -23080,7 +24163,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
+       * @return Whether the httpSource field is set.
        */
+      @java.lang.Override
       public boolean hasHttpSource() {
         return sourceCase_ == 6;
       }
@@ -23090,7 +24175,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
+       * @return The httpSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource getHttpSource() {
         if (sourceCase_ == 6) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource) source_;
@@ -23104,6 +24191,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSourceOrBuilder getHttpSourceOrBuilder() {
         if (sourceCase_ == 6) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource) source_;
@@ -23118,7 +24206,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
+       * @return Whether the mysqlSource field is set.
        */
+      @java.lang.Override
       public boolean hasMysqlSource() {
         return sourceCase_ == 7;
       }
@@ -23128,7 +24218,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
+       * @return The mysqlSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource getMysqlSource() {
         if (sourceCase_ == 7) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource) source_;
@@ -23142,6 +24234,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSourceOrBuilder getMysqlSourceOrBuilder() {
         if (sourceCase_ == 7) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource) source_;
@@ -23156,7 +24249,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
+       * @return Whether the clickhouseSource field is set.
        */
+      @java.lang.Override
       public boolean hasClickhouseSource() {
         return sourceCase_ == 8;
       }
@@ -23166,7 +24261,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
+       * @return The clickhouseSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource getClickhouseSource() {
         if (sourceCase_ == 8) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource) source_;
@@ -23180,6 +24277,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder() {
         if (sourceCase_ == 8) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource) source_;
@@ -23194,7 +24292,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
+       * @return Whether the mongodbSource field is set.
        */
+      @java.lang.Override
       public boolean hasMongodbSource() {
         return sourceCase_ == 9;
       }
@@ -23204,7 +24304,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
+       * @return The mongodbSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource getMongodbSource() {
         if (sourceCase_ == 9) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource) source_;
@@ -23218,6 +24320,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSourceOrBuilder getMongodbSourceOrBuilder() {
         if (sourceCase_ == 9) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource) source_;
@@ -23232,7 +24335,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
+       * @return Whether the postgresqlSource field is set.
        */
+      @java.lang.Override
       public boolean hasPostgresqlSource() {
         return sourceCase_ == 10;
       }
@@ -23242,7 +24347,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
+       * @return The postgresqlSource.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource getPostgresqlSource() {
         if (sourceCase_ == 10) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource) source_;
@@ -23256,6 +24363,7 @@ public final class Clickhouse {
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSourceOrBuilder getPostgresqlSourceOrBuilder() {
         if (sourceCase_ == 10) {
            return (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource) source_;
@@ -23277,7 +24385,7 @@ public final class Clickhouse {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         if (structure_ != null) {
@@ -23317,7 +24425,7 @@ public final class Clickhouse {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         if (structure_ != null) {
@@ -23372,63 +24480,58 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary) obj;
 
-        boolean result = true;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && (hasStructure() == other.hasStructure());
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (hasStructure() != other.hasStructure()) return false;
         if (hasStructure()) {
-          result = result && getStructure()
-              .equals(other.getStructure());
+          if (!getStructure()
+              .equals(other.getStructure())) return false;
         }
-        result = result && (hasLayout() == other.hasLayout());
+        if (hasLayout() != other.hasLayout()) return false;
         if (hasLayout()) {
-          result = result && getLayout()
-              .equals(other.getLayout());
+          if (!getLayout()
+              .equals(other.getLayout())) return false;
         }
-        result = result && getLifetimeCase().equals(
-            other.getLifetimeCase());
-        if (!result) return false;
+        if (!getLifetimeCase().equals(other.getLifetimeCase())) return false;
         switch (lifetimeCase_) {
           case 4:
-            result = result && (getFixedLifetime()
-                == other.getFixedLifetime());
+            if (getFixedLifetime()
+                != other.getFixedLifetime()) return false;
             break;
           case 5:
-            result = result && getLifetimeRange()
-                .equals(other.getLifetimeRange());
+            if (!getLifetimeRange()
+                .equals(other.getLifetimeRange())) return false;
             break;
           case 0:
           default:
         }
-        result = result && getSourceCase().equals(
-            other.getSourceCase());
-        if (!result) return false;
+        if (!getSourceCase().equals(other.getSourceCase())) return false;
         switch (sourceCase_) {
           case 6:
-            result = result && getHttpSource()
-                .equals(other.getHttpSource());
+            if (!getHttpSource()
+                .equals(other.getHttpSource())) return false;
             break;
           case 7:
-            result = result && getMysqlSource()
-                .equals(other.getMysqlSource());
+            if (!getMysqlSource()
+                .equals(other.getMysqlSource())) return false;
             break;
           case 8:
-            result = result && getClickhouseSource()
-                .equals(other.getClickhouseSource());
+            if (!getClickhouseSource()
+                .equals(other.getClickhouseSource())) return false;
             break;
           case 9:
-            result = result && getMongodbSource()
-                .equals(other.getMongodbSource());
+            if (!getMongodbSource()
+                .equals(other.getMongodbSource())) return false;
             break;
           case 10:
-            result = result && getPostgresqlSource()
-                .equals(other.getPostgresqlSource());
+            if (!getPostgresqlSource()
+                .equals(other.getPostgresqlSource())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -23726,35 +24829,35 @@ public final class Clickhouse {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23882,6 +24985,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The name.
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -23901,6 +25005,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -23921,6 +25026,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
          */
         public Builder setName(
             java.lang.String value) {
@@ -23938,6 +25045,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearName() {
           
@@ -23951,6 +25059,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
@@ -23964,7 +25074,7 @@ public final class Clickhouse {
           return this;
         }
 
-        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure structure_ = null;
+        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure structure_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.StructureOrBuilder> structureBuilder_;
         /**
@@ -23974,6 +25084,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the structure field is set.
          */
         public boolean hasStructure() {
           return structureBuilder_ != null || structure_ != null;
@@ -23985,6 +25096,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The structure.
          */
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Structure getStructure() {
           if (structureBuilder_ == null) {
@@ -24126,7 +25238,7 @@ public final class Clickhouse {
           return structureBuilder_;
         }
 
-        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout layout_ = null;
+        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout layout_;
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.LayoutOrBuilder> layoutBuilder_;
         /**
@@ -24136,6 +25248,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the layout field is set.
          */
         public boolean hasLayout() {
           return layoutBuilder_ != null || layout_ != null;
@@ -24147,6 +25260,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
+         * @return The layout.
          */
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Layout getLayout() {
           if (layoutBuilder_ == null) {
@@ -24294,6 +25408,18 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 fixed_lifetime = 4;</code>
+         * @return Whether the fixedLifetime field is set.
+         */
+        public boolean hasFixedLifetime() {
+          return lifetimeCase_ == 4;
+        }
+        /**
+         * <pre>
+         * Fixed interval between dictionary updates.
+         * </pre>
+         *
+         * <code>int64 fixed_lifetime = 4;</code>
+         * @return The fixedLifetime.
          */
         public long getFixedLifetime() {
           if (lifetimeCase_ == 4) {
@@ -24307,6 +25433,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 fixed_lifetime = 4;</code>
+         * @param value The fixedLifetime to set.
+         * @return This builder for chaining.
          */
         public Builder setFixedLifetime(long value) {
           lifetimeCase_ = 4;
@@ -24320,6 +25448,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>int64 fixed_lifetime = 4;</code>
+         * @return This builder for chaining.
          */
         public Builder clearFixedLifetime() {
           if (lifetimeCase_ == 4) {
@@ -24338,7 +25467,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
+         * @return Whether the lifetimeRange field is set.
          */
+        @java.lang.Override
         public boolean hasLifetimeRange() {
           return lifetimeCase_ == 5;
         }
@@ -24348,7 +25479,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
+         * @return The lifetimeRange.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Range getLifetimeRange() {
           if (lifetimeRangeBuilder_ == null) {
             if (lifetimeCase_ == 5) {
@@ -24466,6 +25599,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Range lifetime_range = 5;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.RangeOrBuilder getLifetimeRangeOrBuilder() {
           if ((lifetimeCase_ == 5) && (lifetimeRangeBuilder_ != null)) {
             return lifetimeRangeBuilder_.getMessageOrBuilder();
@@ -24510,7 +25644,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
+         * @return Whether the httpSource field is set.
          */
+        @java.lang.Override
         public boolean hasHttpSource() {
           return sourceCase_ == 6;
         }
@@ -24520,7 +25656,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
+         * @return The httpSource.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSource getHttpSource() {
           if (httpSourceBuilder_ == null) {
             if (sourceCase_ == 6) {
@@ -24638,6 +25776,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.HttpSource http_source = 6;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.HttpSourceOrBuilder getHttpSourceOrBuilder() {
           if ((sourceCase_ == 6) && (httpSourceBuilder_ != null)) {
             return httpSourceBuilder_.getMessageOrBuilder();
@@ -24682,7 +25821,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
+         * @return Whether the mysqlSource field is set.
          */
+        @java.lang.Override
         public boolean hasMysqlSource() {
           return sourceCase_ == 7;
         }
@@ -24692,7 +25833,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
+         * @return The mysqlSource.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSource getMysqlSource() {
           if (mysqlSourceBuilder_ == null) {
             if (sourceCase_ == 7) {
@@ -24810,6 +25953,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MysqlSource mysql_source = 7;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MysqlSourceOrBuilder getMysqlSourceOrBuilder() {
           if ((sourceCase_ == 7) && (mysqlSourceBuilder_ != null)) {
             return mysqlSourceBuilder_.getMessageOrBuilder();
@@ -24854,7 +25998,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
+         * @return Whether the clickhouseSource field is set.
          */
+        @java.lang.Override
         public boolean hasClickhouseSource() {
           return sourceCase_ == 8;
         }
@@ -24864,7 +26010,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
+         * @return The clickhouseSource.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSource getClickhouseSource() {
           if (clickhouseSourceBuilder_ == null) {
             if (sourceCase_ == 8) {
@@ -24982,6 +26130,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.ClickhouseSource clickhouse_source = 8;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder() {
           if ((sourceCase_ == 8) && (clickhouseSourceBuilder_ != null)) {
             return clickhouseSourceBuilder_.getMessageOrBuilder();
@@ -25026,7 +26175,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
+         * @return Whether the mongodbSource field is set.
          */
+        @java.lang.Override
         public boolean hasMongodbSource() {
           return sourceCase_ == 9;
         }
@@ -25036,7 +26187,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
+         * @return The mongodbSource.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSource getMongodbSource() {
           if (mongodbSourceBuilder_ == null) {
             if (sourceCase_ == 9) {
@@ -25154,6 +26307,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource mongodb_source = 9;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.MongodbSourceOrBuilder getMongodbSourceOrBuilder() {
           if ((sourceCase_ == 9) && (mongodbSourceBuilder_ != null)) {
             return mongodbSourceBuilder_.getMessageOrBuilder();
@@ -25198,7 +26352,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
+         * @return Whether the postgresqlSource field is set.
          */
+        @java.lang.Override
         public boolean hasPostgresqlSource() {
           return sourceCase_ == 10;
         }
@@ -25208,7 +26364,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
+         * @return The postgresqlSource.
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSource getPostgresqlSource() {
           if (postgresqlSourceBuilder_ == null) {
             if (sourceCase_ == 10) {
@@ -25326,6 +26484,7 @@ public final class Clickhouse {
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource postgresql_source = 10;</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.PostgresqlSourceOrBuilder getPostgresqlSourceOrBuilder() {
           if ((sourceCase_ == 10) && (postgresqlSourceBuilder_ != null)) {
             return postgresqlSourceBuilder_.getMessageOrBuilder();
@@ -25364,7 +26523,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -25424,6 +26583,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
       java.lang.String getName();
       /**
@@ -25432,6 +26592,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
       com.google.protobuf.ByteString
           getNameBytes();
@@ -25487,7 +26648,7 @@ public final class Clickhouse {
      *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup}
      */
-    public  static final class GraphiteRollup extends
+    public static final class GraphiteRollup extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup)
         GraphiteRollupOrBuilder {
@@ -25499,6 +26660,13 @@ public final class Clickhouse {
       private GraphiteRollup() {
         name_ = "";
         patterns_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GraphiteRollup();
       }
 
       @java.lang.Override
@@ -25532,16 +26700,16 @@ public final class Clickhouse {
                 break;
               }
               case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   patterns_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern>();
-                  mutable_bitField0_ |= 0x00000002;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 patterns_.add(
                     input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.parser(), extensionRegistry));
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -25555,7 +26723,7 @@ public final class Clickhouse {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             patterns_ = java.util.Collections.unmodifiableList(patterns_);
           }
           this.unknownFields = unknownFields.build();
@@ -25585,6 +26753,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string regexp = 1;</code>
+         * @return The regexp.
          */
         java.lang.String getRegexp();
         /**
@@ -25593,6 +26762,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string regexp = 1;</code>
+         * @return The bytes for regexp.
          */
         com.google.protobuf.ByteString
             getRegexpBytes();
@@ -25603,6 +26773,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The function.
          */
         java.lang.String getFunction();
         /**
@@ -25611,6 +26782,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for function.
          */
         com.google.protobuf.ByteString
             getFunctionBytes();
@@ -25662,7 +26834,7 @@ public final class Clickhouse {
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern}
        */
-      public  static final class Pattern extends
+      public static final class Pattern extends
           com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern)
           PatternOrBuilder {
@@ -25675,6 +26847,13 @@ public final class Clickhouse {
           regexp_ = "";
           function_ = "";
           retention_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Pattern();
         }
 
         @java.lang.Override
@@ -25714,16 +26893,16 @@ public final class Clickhouse {
                   break;
                 }
                 case 26: {
-                  if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     retention_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention>();
-                    mutable_bitField0_ |= 0x00000004;
+                    mutable_bitField0_ |= 0x00000001;
                   }
                   retention_.add(
                       input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention.parser(), extensionRegistry));
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -25737,7 +26916,7 @@ public final class Clickhouse {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
               retention_ = java.util.Collections.unmodifiableList(retention_);
             }
             this.unknownFields = unknownFields.build();
@@ -25767,6 +26946,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+           * @return The age.
            */
           long getAge();
 
@@ -25776,13 +26956,14 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 precision = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+           * @return The precision.
            */
           long getPrecision();
         }
         /**
          * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention}
          */
-        public  static final class Retention extends
+        public static final class Retention extends
             com.google.protobuf.GeneratedMessageV3 implements
             // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention)
             RetentionOrBuilder {
@@ -25792,8 +26973,13 @@ public final class Clickhouse {
             super(builder);
           }
           private Retention() {
-            age_ = 0L;
-            precision_ = 0L;
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new Retention();
           }
 
           @java.lang.Override
@@ -25809,7 +26995,6 @@ public final class Clickhouse {
             if (extensionRegistry == null) {
               throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                 com.google.protobuf.UnknownFieldSet.newBuilder();
             try {
@@ -25831,7 +27016,7 @@ public final class Clickhouse {
                     break;
                   }
                   default: {
-                    if (!parseUnknownFieldProto3(
+                    if (!parseUnknownField(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -25870,7 +27055,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+           * @return The age.
            */
+          @java.lang.Override
           public long getAge() {
             return age_;
           }
@@ -25883,7 +27070,9 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>int64 precision = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+           * @return The precision.
            */
+          @java.lang.Override
           public long getPrecision() {
             return precision_;
           }
@@ -25940,13 +27129,12 @@ public final class Clickhouse {
             }
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention) obj;
 
-            boolean result = true;
-            result = result && (getAge()
-                == other.getAge());
-            result = result && (getPrecision()
-                == other.getPrecision());
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (getAge()
+                != other.getAge()) return false;
+            if (getPrecision()
+                != other.getPrecision()) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
           }
 
           @java.lang.Override
@@ -26133,35 +27321,35 @@ public final class Clickhouse {
 
             @java.lang.Override
             public Builder clone() {
-              return (Builder) super.clone();
+              return super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.setField(field, value);
+              return super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return (Builder) super.clearField(field);
+              return super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return (Builder) super.clearOneof(oneof);
+              return super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return (Builder) super.setRepeatedField(field, index, value);
+              return super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return (Builder) super.addRepeatedField(field, value);
+              return super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26217,7 +27405,9 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * @return The age.
              */
+            @java.lang.Override
             public long getAge() {
               return age_;
             }
@@ -26227,6 +27417,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * @param value The age to set.
+             * @return This builder for chaining.
              */
             public Builder setAge(long value) {
               
@@ -26240,6 +27432,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * @return This builder for chaining.
              */
             public Builder clearAge() {
               
@@ -26255,7 +27448,9 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 precision = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * @return The precision.
              */
+            @java.lang.Override
             public long getPrecision() {
               return precision_;
             }
@@ -26265,6 +27460,8 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 precision = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * @param value The precision to set.
+             * @return This builder for chaining.
              */
             public Builder setPrecision(long value) {
               
@@ -26278,6 +27475,7 @@ public final class Clickhouse {
              * </pre>
              *
              * <code>int64 precision = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * @return This builder for chaining.
              */
             public Builder clearPrecision() {
               
@@ -26288,7 +27486,7 @@ public final class Clickhouse {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFieldsProto3(unknownFields);
+              return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -26338,7 +27536,6 @@ public final class Clickhouse {
 
         }
 
-        private int bitField0_;
         public static final int REGEXP_FIELD_NUMBER = 1;
         private volatile java.lang.Object regexp_;
         /**
@@ -26347,7 +27544,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string regexp = 1;</code>
+         * @return The regexp.
          */
+        @java.lang.Override
         public java.lang.String getRegexp() {
           java.lang.Object ref = regexp_;
           if (ref instanceof java.lang.String) {
@@ -26366,7 +27565,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string regexp = 1;</code>
+         * @return The bytes for regexp.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getRegexpBytes() {
           java.lang.Object ref = regexp_;
@@ -26389,7 +27590,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The function.
          */
+        @java.lang.Override
         public java.lang.String getFunction() {
           java.lang.Object ref = function_;
           if (ref instanceof java.lang.String) {
@@ -26408,7 +27611,9 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for function.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getFunctionBytes() {
           java.lang.Object ref = function_;
@@ -26432,6 +27637,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention retention = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention> getRetentionList() {
           return retention_;
         }
@@ -26442,6 +27648,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention retention = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.RetentionOrBuilder> 
             getRetentionOrBuilderList() {
           return retention_;
@@ -26453,6 +27660,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention retention = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public int getRetentionCount() {
           return retention_.size();
         }
@@ -26463,6 +27671,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention retention = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention getRetention(int index) {
           return retention_.get(index);
         }
@@ -26473,6 +27682,7 @@ public final class Clickhouse {
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern.Retention retention = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
          */
+        @java.lang.Override
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.RetentionOrBuilder getRetentionOrBuilder(
             int index) {
           return retention_.get(index);
@@ -26492,10 +27702,10 @@ public final class Clickhouse {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getRegexpBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regexp_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regexp_);
           }
-          if (!getFunctionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(function_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, function_);
           }
           for (int i = 0; i < retention_.size(); i++) {
@@ -26510,10 +27720,10 @@ public final class Clickhouse {
           if (size != -1) return size;
 
           size = 0;
-          if (!getRegexpBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regexp_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regexp_);
           }
-          if (!getFunctionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(function_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, function_);
           }
           for (int i = 0; i < retention_.size(); i++) {
@@ -26535,15 +27745,14 @@ public final class Clickhouse {
           }
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern) obj;
 
-          boolean result = true;
-          result = result && getRegexp()
-              .equals(other.getRegexp());
-          result = result && getFunction()
-              .equals(other.getFunction());
-          result = result && getRetentionList()
-              .equals(other.getRetentionList());
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!getRegexp()
+              .equals(other.getRegexp())) return false;
+          if (!getFunction()
+              .equals(other.getFunction())) return false;
+          if (!getRetentionList()
+              .equals(other.getRetentionList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -26701,7 +27910,7 @@ public final class Clickhouse {
 
             if (retentionBuilder_ == null) {
               retention_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               retentionBuilder_.clear();
             }
@@ -26732,54 +27941,52 @@ public final class Clickhouse {
           public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern buildPartial() {
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern(this);
             int from_bitField0_ = bitField0_;
-            int to_bitField0_ = 0;
             result.regexp_ = regexp_;
             result.function_ = function_;
             if (retentionBuilder_ == null) {
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              if (((bitField0_ & 0x00000001) != 0)) {
                 retention_ = java.util.Collections.unmodifiableList(retention_);
-                bitField0_ = (bitField0_ & ~0x00000004);
+                bitField0_ = (bitField0_ & ~0x00000001);
               }
               result.retention_ = retention_;
             } else {
               result.retention_ = retentionBuilder_.build();
             }
-            result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
           }
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26805,7 +28012,7 @@ public final class Clickhouse {
               if (!other.retention_.isEmpty()) {
                 if (retention_.isEmpty()) {
                   retention_ = other.retention_;
-                  bitField0_ = (bitField0_ & ~0x00000004);
+                  bitField0_ = (bitField0_ & ~0x00000001);
                 } else {
                   ensureRetentionIsMutable();
                   retention_.addAll(other.retention_);
@@ -26818,7 +28025,7 @@ public final class Clickhouse {
                   retentionBuilder_.dispose();
                   retentionBuilder_ = null;
                   retention_ = other.retention_;
-                  bitField0_ = (bitField0_ & ~0x00000004);
+                  bitField0_ = (bitField0_ & ~0x00000001);
                   retentionBuilder_ = 
                     com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                        getRetentionFieldBuilder() : null;
@@ -26864,6 +28071,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string regexp = 1;</code>
+           * @return The regexp.
            */
           public java.lang.String getRegexp() {
             java.lang.Object ref = regexp_;
@@ -26883,6 +28091,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string regexp = 1;</code>
+           * @return The bytes for regexp.
            */
           public com.google.protobuf.ByteString
               getRegexpBytes() {
@@ -26903,6 +28112,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string regexp = 1;</code>
+           * @param value The regexp to set.
+           * @return This builder for chaining.
            */
           public Builder setRegexp(
               java.lang.String value) {
@@ -26920,6 +28131,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string regexp = 1;</code>
+           * @return This builder for chaining.
            */
           public Builder clearRegexp() {
             
@@ -26933,6 +28145,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string regexp = 1;</code>
+           * @param value The bytes for regexp to set.
+           * @return This builder for chaining.
            */
           public Builder setRegexpBytes(
               com.google.protobuf.ByteString value) {
@@ -26953,6 +28167,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The function.
            */
           public java.lang.String getFunction() {
             java.lang.Object ref = function_;
@@ -26972,6 +28187,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+           * @return The bytes for function.
            */
           public com.google.protobuf.ByteString
               getFunctionBytes() {
@@ -26992,6 +28208,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The function to set.
+           * @return This builder for chaining.
            */
           public Builder setFunction(
               java.lang.String value) {
@@ -27009,6 +28227,7 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+           * @return This builder for chaining.
            */
           public Builder clearFunction() {
             
@@ -27022,6 +28241,8 @@ public final class Clickhouse {
            * </pre>
            *
            * <code>string function = 2 [(.yandex.cloud.required) = true];</code>
+           * @param value The bytes for function to set.
+           * @return This builder for chaining.
            */
           public Builder setFunctionBytes(
               com.google.protobuf.ByteString value) {
@@ -27038,9 +28259,9 @@ public final class Clickhouse {
           private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention> retention_ =
             java.util.Collections.emptyList();
           private void ensureRetentionIsMutable() {
-            if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((bitField0_ & 0x00000001) != 0)) {
               retention_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention>(retention_);
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000001;
              }
           }
 
@@ -27234,7 +28455,7 @@ public final class Clickhouse {
           public Builder clearRetention() {
             if (retentionBuilder_ == null) {
               retention_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               onChanged();
             } else {
               retentionBuilder_.clear();
@@ -27339,7 +28560,7 @@ public final class Clickhouse {
               retentionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Retention.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.RetentionOrBuilder>(
                       retention_,
-                      ((bitField0_ & 0x00000004) == 0x00000004),
+                      ((bitField0_ & 0x00000001) != 0),
                       getParentForChildren(),
                       isClean());
               retention_ = null;
@@ -27349,7 +28570,7 @@ public final class Clickhouse {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -27399,7 +28620,6 @@ public final class Clickhouse {
 
       }
 
-      private int bitField0_;
       public static final int NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object name_;
       /**
@@ -27408,7 +28628,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
@@ -27427,7 +28649,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
@@ -27451,6 +28675,7 @@ public final class Clickhouse {
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern patterns = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern> getPatternsList() {
         return patterns_;
       }
@@ -27461,6 +28686,7 @@ public final class Clickhouse {
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern patterns = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.PatternOrBuilder> 
           getPatternsOrBuilderList() {
         return patterns_;
@@ -27472,6 +28698,7 @@ public final class Clickhouse {
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern patterns = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public int getPatternsCount() {
         return patterns_.size();
       }
@@ -27482,6 +28709,7 @@ public final class Clickhouse {
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern patterns = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern getPatterns(int index) {
         return patterns_.get(index);
       }
@@ -27492,6 +28720,7 @@ public final class Clickhouse {
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup.Pattern patterns = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.PatternOrBuilder getPatternsOrBuilder(
           int index) {
         return patterns_.get(index);
@@ -27511,7 +28740,7 @@ public final class Clickhouse {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         for (int i = 0; i < patterns_.size(); i++) {
@@ -27526,7 +28755,7 @@ public final class Clickhouse {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         for (int i = 0; i < patterns_.size(); i++) {
@@ -27548,13 +28777,12 @@ public final class Clickhouse {
         }
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup) obj;
 
-        boolean result = true;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && getPatternsList()
-            .equals(other.getPatternsList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getPatternsList()
+            .equals(other.getPatternsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -27712,7 +28940,7 @@ public final class Clickhouse {
 
           if (patternsBuilder_ == null) {
             patterns_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             patternsBuilder_.clear();
           }
@@ -27743,53 +28971,51 @@ public final class Clickhouse {
         public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup buildPartial() {
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup(this);
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           result.name_ = name_;
           if (patternsBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            if (((bitField0_ & 0x00000001) != 0)) {
               patterns_ = java.util.Collections.unmodifiableList(patterns_);
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             }
             result.patterns_ = patterns_;
           } else {
             result.patterns_ = patternsBuilder_.build();
           }
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27811,7 +29037,7 @@ public final class Clickhouse {
             if (!other.patterns_.isEmpty()) {
               if (patterns_.isEmpty()) {
                 patterns_ = other.patterns_;
-                bitField0_ = (bitField0_ & ~0x00000002);
+                bitField0_ = (bitField0_ & ~0x00000001);
               } else {
                 ensurePatternsIsMutable();
                 patterns_.addAll(other.patterns_);
@@ -27824,7 +29050,7 @@ public final class Clickhouse {
                 patternsBuilder_.dispose();
                 patternsBuilder_ = null;
                 patterns_ = other.patterns_;
-                bitField0_ = (bitField0_ & ~0x00000002);
+                bitField0_ = (bitField0_ & ~0x00000001);
                 patternsBuilder_ = 
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                      getPatternsFieldBuilder() : null;
@@ -27870,6 +29096,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The name.
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -27889,6 +29116,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -27909,6 +29137,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
          */
         public Builder setName(
             java.lang.String value) {
@@ -27926,6 +29156,7 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearName() {
           
@@ -27939,6 +29170,8 @@ public final class Clickhouse {
          * </pre>
          *
          * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
@@ -27955,9 +29188,9 @@ public final class Clickhouse {
         private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern> patterns_ =
           java.util.Collections.emptyList();
         private void ensurePatternsIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             patterns_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern>(patterns_);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
            }
         }
 
@@ -28151,7 +29384,7 @@ public final class Clickhouse {
         public Builder clearPatterns() {
           if (patternsBuilder_ == null) {
             patterns_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             onChanged();
           } else {
             patternsBuilder_.clear();
@@ -28256,7 +29489,7 @@ public final class Clickhouse {
             patternsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Pattern.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.PatternOrBuilder>(
                     patterns_,
-                    ((bitField0_ & 0x00000002) == 0x00000002),
+                    ((bitField0_ & 0x00000001) != 0),
                     getParentForChildren(),
                     isClean());
             patterns_ = null;
@@ -28266,7 +29499,7 @@ public final class Clickhouse {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -28316,8 +29549,6 @@ public final class Clickhouse {
 
     }
 
-    private int bitField0_;
-    private int bitField1_;
     public static final int LOG_LEVEL_FIELD_NUMBER = 1;
     private int logLevel_;
     /**
@@ -28326,8 +29557,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+     * @return The enum numeric value on the wire for logLevel.
      */
-    public int getLogLevelValue() {
+    @java.lang.Override public int getLogLevelValue() {
       return logLevel_;
     }
     /**
@@ -28336,8 +29568,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+     * @return The logLevel.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getLogLevel() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getLogLevel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.valueOf(logLevel_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.UNRECOGNIZED : result;
@@ -28352,7 +29585,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
+     * @return Whether the mergeTree field is set.
      */
+    @java.lang.Override
     public boolean hasMergeTree() {
       return mergeTree_ != null;
     }
@@ -28363,7 +29598,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
+     * @return The mergeTree.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree getMergeTree() {
       return mergeTree_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.getDefaultInstance() : mergeTree_;
     }
@@ -28375,6 +29612,7 @@ public final class Clickhouse {
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTreeOrBuilder getMergeTreeOrBuilder() {
       return getMergeTree();
     }
@@ -28389,6 +29627,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression> getCompressionList() {
       return compression_;
     }
@@ -28400,6 +29639,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.CompressionOrBuilder> 
         getCompressionOrBuilderList() {
       return compression_;
@@ -28412,6 +29652,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
      */
+    @java.lang.Override
     public int getCompressionCount() {
       return compression_.size();
     }
@@ -28423,6 +29664,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression getCompression(int index) {
       return compression_.get(index);
     }
@@ -28434,6 +29676,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.CompressionOrBuilder getCompressionOrBuilder(
         int index) {
       return compression_.get(index);
@@ -28449,6 +29692,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary> getDictionariesList() {
       return dictionaries_;
     }
@@ -28460,6 +29704,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionaryOrBuilder> 
         getDictionariesOrBuilderList() {
       return dictionaries_;
@@ -28472,6 +29717,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
      */
+    @java.lang.Override
     public int getDictionariesCount() {
       return dictionaries_.size();
     }
@@ -28483,6 +29729,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary getDictionaries(int index) {
       return dictionaries_.get(index);
     }
@@ -28494,6 +29741,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionaryOrBuilder getDictionariesOrBuilder(
         int index) {
       return dictionaries_.get(index);
@@ -28509,6 +29757,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup> getGraphiteRollupList() {
       return graphiteRollup_;
     }
@@ -28520,6 +29769,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollupOrBuilder> 
         getGraphiteRollupOrBuilderList() {
       return graphiteRollup_;
@@ -28532,6 +29782,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
      */
+    @java.lang.Override
     public int getGraphiteRollupCount() {
       return graphiteRollup_.size();
     }
@@ -28543,6 +29794,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup getGraphiteRollup(int index) {
       return graphiteRollup_.get(index);
     }
@@ -28554,6 +29806,7 @@ public final class Clickhouse {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollupOrBuilder getGraphiteRollupOrBuilder(
         int index) {
       return graphiteRollup_.get(index);
@@ -28563,19 +29816,24 @@ public final class Clickhouse {
     private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka kafka_;
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
+     * @return Whether the kafka field is set.
      */
+    @java.lang.Override
     public boolean hasKafka() {
       return kafka_ != null;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
+     * @return The kafka.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getKafka() {
       return kafka_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.getDefaultInstance() : kafka_;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getKafkaOrBuilder() {
       return getKafka();
     }
@@ -28585,12 +29843,14 @@ public final class Clickhouse {
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
       return kafkaTopics_;
     }
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
         getKafkaTopicsOrBuilderList() {
       return kafkaTopics_;
@@ -28598,18 +29858,21 @@ public final class Clickhouse {
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
      */
+    @java.lang.Override
     public int getKafkaTopicsCount() {
       return kafkaTopics_.size();
     }
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
       return kafkaTopics_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
         int index) {
       return kafkaTopics_.get(index);
@@ -28619,19 +29882,24 @@ public final class Clickhouse {
     private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq rabbitmq_;
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     * @return Whether the rabbitmq field is set.
      */
+    @java.lang.Override
     public boolean hasRabbitmq() {
       return rabbitmq_ != null;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     * @return The rabbitmq.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getRabbitmq() {
       return rabbitmq_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.getDefaultInstance() : rabbitmq_;
     }
     /**
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder getRabbitmqOrBuilder() {
       return getRabbitmq();
     }
@@ -28644,7 +29912,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return Whether the maxConnections field is set.
      */
+    @java.lang.Override
     public boolean hasMaxConnections() {
       return maxConnections_ != null;
     }
@@ -28654,7 +29924,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return The maxConnections.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxConnections() {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
     }
@@ -28665,6 +29937,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
       return getMaxConnections();
     }
@@ -28677,7 +29950,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return Whether the maxConcurrentQueries field is set.
      */
+    @java.lang.Override
     public boolean hasMaxConcurrentQueries() {
       return maxConcurrentQueries_ != null;
     }
@@ -28687,7 +29962,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * @return The maxConcurrentQueries.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxConcurrentQueries() {
       return maxConcurrentQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConcurrentQueries_;
     }
@@ -28698,6 +29975,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesOrBuilder() {
       return getMaxConcurrentQueries();
     }
@@ -28710,7 +29988,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
+     * @return Whether the keepAliveTimeout field is set.
      */
+    @java.lang.Override
     public boolean hasKeepAliveTimeout() {
       return keepAliveTimeout_ != null;
     }
@@ -28720,7 +30000,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
+     * @return The keepAliveTimeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getKeepAliveTimeout() {
       return keepAliveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : keepAliveTimeout_;
     }
@@ -28731,6 +30013,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getKeepAliveTimeoutOrBuilder() {
       return getKeepAliveTimeout();
     }
@@ -28743,7 +30026,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
+     * @return Whether the uncompressedCacheSize field is set.
      */
+    @java.lang.Override
     public boolean hasUncompressedCacheSize() {
       return uncompressedCacheSize_ != null;
     }
@@ -28753,7 +30038,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
+     * @return The uncompressedCacheSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getUncompressedCacheSize() {
       return uncompressedCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : uncompressedCacheSize_;
     }
@@ -28764,6 +30051,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getUncompressedCacheSizeOrBuilder() {
       return getUncompressedCacheSize();
     }
@@ -28776,7 +30064,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the markCacheSize field is set.
      */
+    @java.lang.Override
     public boolean hasMarkCacheSize() {
       return markCacheSize_ != null;
     }
@@ -28786,7 +30076,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The markCacheSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMarkCacheSize() {
       return markCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : markCacheSize_;
     }
@@ -28797,6 +30089,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMarkCacheSizeOrBuilder() {
       return getMarkCacheSize();
     }
@@ -28809,7 +30102,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
+     * @return Whether the maxTableSizeToDrop field is set.
      */
+    @java.lang.Override
     public boolean hasMaxTableSizeToDrop() {
       return maxTableSizeToDrop_ != null;
     }
@@ -28819,7 +30114,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
+     * @return The maxTableSizeToDrop.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxTableSizeToDrop() {
       return maxTableSizeToDrop_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTableSizeToDrop_;
     }
@@ -28830,6 +30127,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxTableSizeToDropOrBuilder() {
       return getMaxTableSizeToDrop();
     }
@@ -28842,7 +30140,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
+     * @return Whether the maxPartitionSizeToDrop field is set.
      */
+    @java.lang.Override
     public boolean hasMaxPartitionSizeToDrop() {
       return maxPartitionSizeToDrop_ != null;
     }
@@ -28852,7 +30152,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
+     * @return The maxPartitionSizeToDrop.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMaxPartitionSizeToDrop() {
       return maxPartitionSizeToDrop_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPartitionSizeToDrop_;
     }
@@ -28863,6 +30165,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxPartitionSizeToDropOrBuilder() {
       return getMaxPartitionSizeToDrop();
     }
@@ -28875,7 +30178,10 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the builtinDictionariesReloadInterval field is set.
      */
+    @java.lang.Override
     @java.lang.Deprecated public boolean hasBuiltinDictionariesReloadInterval() {
       return builtinDictionariesReloadInterval_ != null;
     }
@@ -28885,7 +30191,10 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
+     * @deprecated
+     * @return The builtinDictionariesReloadInterval.
      */
+    @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.Int64Value getBuiltinDictionariesReloadInterval() {
       return builtinDictionariesReloadInterval_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : builtinDictionariesReloadInterval_;
     }
@@ -28896,6 +30205,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
      */
+    @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getBuiltinDictionariesReloadIntervalOrBuilder() {
       return getBuiltinDictionariesReloadInterval();
     }
@@ -28908,7 +30218,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string timezone = 14;</code>
+     * @return The timezone.
      */
+    @java.lang.Override
     public java.lang.String getTimezone() {
       java.lang.Object ref = timezone_;
       if (ref instanceof java.lang.String) {
@@ -28927,7 +30239,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string timezone = 14;</code>
+     * @return The bytes for timezone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTimezoneBytes() {
       java.lang.Object ref = timezone_;
@@ -28950,7 +30264,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string geobase_uri = 15;</code>
+     * @return The geobaseUri.
      */
+    @java.lang.Override
     public java.lang.String getGeobaseUri() {
       java.lang.Object ref = geobaseUri_;
       if (ref instanceof java.lang.String) {
@@ -28969,7 +30285,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>string geobase_uri = 15;</code>
+     * @return The bytes for geobaseUri.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getGeobaseUriBytes() {
       java.lang.Object ref = geobaseUri_;
@@ -28993,7 +30311,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
+     * @return Whether the queryLogRetentionSize field is set.
      */
+    @java.lang.Override
     public boolean hasQueryLogRetentionSize() {
       return queryLogRetentionSize_ != null;
     }
@@ -29004,7 +30324,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
+     * @return The queryLogRetentionSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getQueryLogRetentionSize() {
       return queryLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryLogRetentionSize_;
     }
@@ -29016,6 +30338,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getQueryLogRetentionSizeOrBuilder() {
       return getQueryLogRetentionSize();
     }
@@ -29029,7 +30352,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
+     * @return Whether the queryLogRetentionTime field is set.
      */
+    @java.lang.Override
     public boolean hasQueryLogRetentionTime() {
       return queryLogRetentionTime_ != null;
     }
@@ -29040,7 +30365,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
+     * @return The queryLogRetentionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getQueryLogRetentionTime() {
       return queryLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryLogRetentionTime_;
     }
@@ -29052,6 +30379,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getQueryLogRetentionTimeOrBuilder() {
       return getQueryLogRetentionTime();
     }
@@ -29064,7 +30392,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
+     * @return Whether the queryThreadLogEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasQueryThreadLogEnabled() {
       return queryThreadLogEnabled_ != null;
     }
@@ -29074,7 +30404,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
+     * @return The queryThreadLogEnabled.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getQueryThreadLogEnabled() {
       return queryThreadLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryThreadLogEnabled_;
     }
@@ -29085,6 +30417,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getQueryThreadLogEnabledOrBuilder() {
       return getQueryThreadLogEnabled();
     }
@@ -29098,7 +30431,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
+     * @return Whether the queryThreadLogRetentionSize field is set.
      */
+    @java.lang.Override
     public boolean hasQueryThreadLogRetentionSize() {
       return queryThreadLogRetentionSize_ != null;
     }
@@ -29109,7 +30444,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
+     * @return The queryThreadLogRetentionSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getQueryThreadLogRetentionSize() {
       return queryThreadLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryThreadLogRetentionSize_;
     }
@@ -29121,6 +30458,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getQueryThreadLogRetentionSizeOrBuilder() {
       return getQueryThreadLogRetentionSize();
     }
@@ -29134,7 +30472,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
+     * @return Whether the queryThreadLogRetentionTime field is set.
      */
+    @java.lang.Override
     public boolean hasQueryThreadLogRetentionTime() {
       return queryThreadLogRetentionTime_ != null;
     }
@@ -29145,7 +30485,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
+     * @return The queryThreadLogRetentionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getQueryThreadLogRetentionTime() {
       return queryThreadLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryThreadLogRetentionTime_;
     }
@@ -29157,6 +30499,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getQueryThreadLogRetentionTimeOrBuilder() {
       return getQueryThreadLogRetentionTime();
     }
@@ -29170,7 +30513,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
+     * @return Whether the partLogRetentionSize field is set.
      */
+    @java.lang.Override
     public boolean hasPartLogRetentionSize() {
       return partLogRetentionSize_ != null;
     }
@@ -29181,7 +30526,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
+     * @return The partLogRetentionSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getPartLogRetentionSize() {
       return partLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partLogRetentionSize_;
     }
@@ -29193,6 +30540,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPartLogRetentionSizeOrBuilder() {
       return getPartLogRetentionSize();
     }
@@ -29206,7 +30554,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
+     * @return Whether the partLogRetentionTime field is set.
      */
+    @java.lang.Override
     public boolean hasPartLogRetentionTime() {
       return partLogRetentionTime_ != null;
     }
@@ -29217,7 +30567,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
+     * @return The partLogRetentionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getPartLogRetentionTime() {
       return partLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partLogRetentionTime_;
     }
@@ -29229,6 +30581,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPartLogRetentionTimeOrBuilder() {
       return getPartLogRetentionTime();
     }
@@ -29241,7 +30594,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
+     * @return Whether the metricLogEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasMetricLogEnabled() {
       return metricLogEnabled_ != null;
     }
@@ -29251,7 +30606,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
+     * @return The metricLogEnabled.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getMetricLogEnabled() {
       return metricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : metricLogEnabled_;
     }
@@ -29262,6 +30619,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getMetricLogEnabledOrBuilder() {
       return getMetricLogEnabled();
     }
@@ -29275,7 +30633,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
+     * @return Whether the metricLogRetentionSize field is set.
      */
+    @java.lang.Override
     public boolean hasMetricLogRetentionSize() {
       return metricLogRetentionSize_ != null;
     }
@@ -29286,7 +30646,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
+     * @return The metricLogRetentionSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMetricLogRetentionSize() {
       return metricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : metricLogRetentionSize_;
     }
@@ -29298,6 +30660,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMetricLogRetentionSizeOrBuilder() {
       return getMetricLogRetentionSize();
     }
@@ -29311,7 +30674,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
+     * @return Whether the metricLogRetentionTime field is set.
      */
+    @java.lang.Override
     public boolean hasMetricLogRetentionTime() {
       return metricLogRetentionTime_ != null;
     }
@@ -29322,7 +30687,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
+     * @return The metricLogRetentionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMetricLogRetentionTime() {
       return metricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : metricLogRetentionTime_;
     }
@@ -29334,6 +30701,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMetricLogRetentionTimeOrBuilder() {
       return getMetricLogRetentionTime();
     }
@@ -29346,7 +30714,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
+     * @return Whether the traceLogEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasTraceLogEnabled() {
       return traceLogEnabled_ != null;
     }
@@ -29356,7 +30726,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
+     * @return The traceLogEnabled.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTraceLogEnabled() {
       return traceLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : traceLogEnabled_;
     }
@@ -29367,6 +30739,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTraceLogEnabledOrBuilder() {
       return getTraceLogEnabled();
     }
@@ -29380,7 +30753,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
+     * @return Whether the traceLogRetentionSize field is set.
      */
+    @java.lang.Override
     public boolean hasTraceLogRetentionSize() {
       return traceLogRetentionSize_ != null;
     }
@@ -29391,7 +30766,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
+     * @return The traceLogRetentionSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTraceLogRetentionSize() {
       return traceLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : traceLogRetentionSize_;
     }
@@ -29403,6 +30780,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTraceLogRetentionSizeOrBuilder() {
       return getTraceLogRetentionSize();
     }
@@ -29416,7 +30794,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
+     * @return Whether the traceLogRetentionTime field is set.
      */
+    @java.lang.Override
     public boolean hasTraceLogRetentionTime() {
       return traceLogRetentionTime_ != null;
     }
@@ -29427,7 +30807,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
+     * @return The traceLogRetentionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTraceLogRetentionTime() {
       return traceLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : traceLogRetentionTime_;
     }
@@ -29439,6 +30821,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTraceLogRetentionTimeOrBuilder() {
       return getTraceLogRetentionTime();
     }
@@ -29451,7 +30834,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
+     * @return Whether the textLogEnabled field is set.
      */
+    @java.lang.Override
     public boolean hasTextLogEnabled() {
       return textLogEnabled_ != null;
     }
@@ -29461,7 +30846,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
+     * @return The textLogEnabled.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTextLogEnabled() {
       return textLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : textLogEnabled_;
     }
@@ -29472,6 +30859,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTextLogEnabledOrBuilder() {
       return getTextLogEnabled();
     }
@@ -29485,7 +30873,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
+     * @return Whether the textLogRetentionSize field is set.
      */
+    @java.lang.Override
     public boolean hasTextLogRetentionSize() {
       return textLogRetentionSize_ != null;
     }
@@ -29496,7 +30886,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
+     * @return The textLogRetentionSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTextLogRetentionSize() {
       return textLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : textLogRetentionSize_;
     }
@@ -29508,6 +30900,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTextLogRetentionSizeOrBuilder() {
       return getTextLogRetentionSize();
     }
@@ -29521,7 +30914,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
+     * @return Whether the textLogRetentionTime field is set.
      */
+    @java.lang.Override
     public boolean hasTextLogRetentionTime() {
       return textLogRetentionTime_ != null;
     }
@@ -29532,7 +30927,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
+     * @return The textLogRetentionTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTextLogRetentionTime() {
       return textLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : textLogRetentionTime_;
     }
@@ -29544,6 +30941,7 @@ public final class Clickhouse {
      *
      * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTextLogRetentionTimeOrBuilder() {
       return getTextLogRetentionTime();
     }
@@ -29556,8 +30954,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+     * @return The enum numeric value on the wire for textLogLevel.
      */
-    public int getTextLogLevelValue() {
+    @java.lang.Override public int getTextLogLevelValue() {
       return textLogLevel_;
     }
     /**
@@ -29566,8 +30965,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+     * @return The textLogLevel.
      */
-    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getTextLogLevel() {
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getTextLogLevel() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.valueOf(textLogLevel_);
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.UNRECOGNIZED : result;
@@ -29577,19 +30977,24 @@ public final class Clickhouse {
     private com.google.protobuf.Int64Value backgroundPoolSize_;
     /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundPoolSize field is set.
      */
+    @java.lang.Override
     public boolean hasBackgroundPoolSize() {
       return backgroundPoolSize_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundPoolSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackgroundPoolSize() {
       return backgroundPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundPoolSize_;
     }
     /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackgroundPoolSizeOrBuilder() {
       return getBackgroundPoolSize();
     }
@@ -29598,19 +31003,24 @@ public final class Clickhouse {
     private com.google.protobuf.Int64Value backgroundSchedulePoolSize_;
     /**
      * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundSchedulePoolSize field is set.
      */
+    @java.lang.Override
     public boolean hasBackgroundSchedulePoolSize() {
       return backgroundSchedulePoolSize_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundSchedulePoolSize.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBackgroundSchedulePoolSize() {
       return backgroundSchedulePoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundSchedulePoolSize_;
     }
     /**
      * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackgroundSchedulePoolSizeOrBuilder() {
       return getBackgroundSchedulePoolSize();
     }
@@ -29668,10 +31078,10 @@ public final class Clickhouse {
       if (maxPartitionSizeToDrop_ != null) {
         output.writeMessage(13, getMaxPartitionSizeToDrop());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, timezone_);
       }
-      if (!getGeobaseUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(geobaseUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, geobaseUri_);
       }
       if (queryLogRetentionSize_ != null) {
@@ -29801,10 +31211,10 @@ public final class Clickhouse {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getMaxPartitionSizeToDrop());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, timezone_);
       }
-      if (!getGeobaseUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(geobaseUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, geobaseUri_);
       }
       if (queryLogRetentionSize_ != null) {
@@ -29910,168 +31320,167 @@ public final class Clickhouse {
       }
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig) obj;
 
-      boolean result = true;
-      result = result && logLevel_ == other.logLevel_;
-      result = result && (hasMergeTree() == other.hasMergeTree());
+      if (logLevel_ != other.logLevel_) return false;
+      if (hasMergeTree() != other.hasMergeTree()) return false;
       if (hasMergeTree()) {
-        result = result && getMergeTree()
-            .equals(other.getMergeTree());
+        if (!getMergeTree()
+            .equals(other.getMergeTree())) return false;
       }
-      result = result && getCompressionList()
-          .equals(other.getCompressionList());
-      result = result && getDictionariesList()
-          .equals(other.getDictionariesList());
-      result = result && getGraphiteRollupList()
-          .equals(other.getGraphiteRollupList());
-      result = result && (hasKafka() == other.hasKafka());
+      if (!getCompressionList()
+          .equals(other.getCompressionList())) return false;
+      if (!getDictionariesList()
+          .equals(other.getDictionariesList())) return false;
+      if (!getGraphiteRollupList()
+          .equals(other.getGraphiteRollupList())) return false;
+      if (hasKafka() != other.hasKafka()) return false;
       if (hasKafka()) {
-        result = result && getKafka()
-            .equals(other.getKafka());
+        if (!getKafka()
+            .equals(other.getKafka())) return false;
       }
-      result = result && getKafkaTopicsList()
-          .equals(other.getKafkaTopicsList());
-      result = result && (hasRabbitmq() == other.hasRabbitmq());
+      if (!getKafkaTopicsList()
+          .equals(other.getKafkaTopicsList())) return false;
+      if (hasRabbitmq() != other.hasRabbitmq()) return false;
       if (hasRabbitmq()) {
-        result = result && getRabbitmq()
-            .equals(other.getRabbitmq());
+        if (!getRabbitmq()
+            .equals(other.getRabbitmq())) return false;
       }
-      result = result && (hasMaxConnections() == other.hasMaxConnections());
+      if (hasMaxConnections() != other.hasMaxConnections()) return false;
       if (hasMaxConnections()) {
-        result = result && getMaxConnections()
-            .equals(other.getMaxConnections());
+        if (!getMaxConnections()
+            .equals(other.getMaxConnections())) return false;
       }
-      result = result && (hasMaxConcurrentQueries() == other.hasMaxConcurrentQueries());
+      if (hasMaxConcurrentQueries() != other.hasMaxConcurrentQueries()) return false;
       if (hasMaxConcurrentQueries()) {
-        result = result && getMaxConcurrentQueries()
-            .equals(other.getMaxConcurrentQueries());
+        if (!getMaxConcurrentQueries()
+            .equals(other.getMaxConcurrentQueries())) return false;
       }
-      result = result && (hasKeepAliveTimeout() == other.hasKeepAliveTimeout());
+      if (hasKeepAliveTimeout() != other.hasKeepAliveTimeout()) return false;
       if (hasKeepAliveTimeout()) {
-        result = result && getKeepAliveTimeout()
-            .equals(other.getKeepAliveTimeout());
+        if (!getKeepAliveTimeout()
+            .equals(other.getKeepAliveTimeout())) return false;
       }
-      result = result && (hasUncompressedCacheSize() == other.hasUncompressedCacheSize());
+      if (hasUncompressedCacheSize() != other.hasUncompressedCacheSize()) return false;
       if (hasUncompressedCacheSize()) {
-        result = result && getUncompressedCacheSize()
-            .equals(other.getUncompressedCacheSize());
+        if (!getUncompressedCacheSize()
+            .equals(other.getUncompressedCacheSize())) return false;
       }
-      result = result && (hasMarkCacheSize() == other.hasMarkCacheSize());
+      if (hasMarkCacheSize() != other.hasMarkCacheSize()) return false;
       if (hasMarkCacheSize()) {
-        result = result && getMarkCacheSize()
-            .equals(other.getMarkCacheSize());
+        if (!getMarkCacheSize()
+            .equals(other.getMarkCacheSize())) return false;
       }
-      result = result && (hasMaxTableSizeToDrop() == other.hasMaxTableSizeToDrop());
+      if (hasMaxTableSizeToDrop() != other.hasMaxTableSizeToDrop()) return false;
       if (hasMaxTableSizeToDrop()) {
-        result = result && getMaxTableSizeToDrop()
-            .equals(other.getMaxTableSizeToDrop());
+        if (!getMaxTableSizeToDrop()
+            .equals(other.getMaxTableSizeToDrop())) return false;
       }
-      result = result && (hasMaxPartitionSizeToDrop() == other.hasMaxPartitionSizeToDrop());
+      if (hasMaxPartitionSizeToDrop() != other.hasMaxPartitionSizeToDrop()) return false;
       if (hasMaxPartitionSizeToDrop()) {
-        result = result && getMaxPartitionSizeToDrop()
-            .equals(other.getMaxPartitionSizeToDrop());
+        if (!getMaxPartitionSizeToDrop()
+            .equals(other.getMaxPartitionSizeToDrop())) return false;
       }
-      result = result && (hasBuiltinDictionariesReloadInterval() == other.hasBuiltinDictionariesReloadInterval());
+      if (hasBuiltinDictionariesReloadInterval() != other.hasBuiltinDictionariesReloadInterval()) return false;
       if (hasBuiltinDictionariesReloadInterval()) {
-        result = result && getBuiltinDictionariesReloadInterval()
-            .equals(other.getBuiltinDictionariesReloadInterval());
+        if (!getBuiltinDictionariesReloadInterval()
+            .equals(other.getBuiltinDictionariesReloadInterval())) return false;
       }
-      result = result && getTimezone()
-          .equals(other.getTimezone());
-      result = result && getGeobaseUri()
-          .equals(other.getGeobaseUri());
-      result = result && (hasQueryLogRetentionSize() == other.hasQueryLogRetentionSize());
+      if (!getTimezone()
+          .equals(other.getTimezone())) return false;
+      if (!getGeobaseUri()
+          .equals(other.getGeobaseUri())) return false;
+      if (hasQueryLogRetentionSize() != other.hasQueryLogRetentionSize()) return false;
       if (hasQueryLogRetentionSize()) {
-        result = result && getQueryLogRetentionSize()
-            .equals(other.getQueryLogRetentionSize());
+        if (!getQueryLogRetentionSize()
+            .equals(other.getQueryLogRetentionSize())) return false;
       }
-      result = result && (hasQueryLogRetentionTime() == other.hasQueryLogRetentionTime());
+      if (hasQueryLogRetentionTime() != other.hasQueryLogRetentionTime()) return false;
       if (hasQueryLogRetentionTime()) {
-        result = result && getQueryLogRetentionTime()
-            .equals(other.getQueryLogRetentionTime());
+        if (!getQueryLogRetentionTime()
+            .equals(other.getQueryLogRetentionTime())) return false;
       }
-      result = result && (hasQueryThreadLogEnabled() == other.hasQueryThreadLogEnabled());
+      if (hasQueryThreadLogEnabled() != other.hasQueryThreadLogEnabled()) return false;
       if (hasQueryThreadLogEnabled()) {
-        result = result && getQueryThreadLogEnabled()
-            .equals(other.getQueryThreadLogEnabled());
+        if (!getQueryThreadLogEnabled()
+            .equals(other.getQueryThreadLogEnabled())) return false;
       }
-      result = result && (hasQueryThreadLogRetentionSize() == other.hasQueryThreadLogRetentionSize());
+      if (hasQueryThreadLogRetentionSize() != other.hasQueryThreadLogRetentionSize()) return false;
       if (hasQueryThreadLogRetentionSize()) {
-        result = result && getQueryThreadLogRetentionSize()
-            .equals(other.getQueryThreadLogRetentionSize());
+        if (!getQueryThreadLogRetentionSize()
+            .equals(other.getQueryThreadLogRetentionSize())) return false;
       }
-      result = result && (hasQueryThreadLogRetentionTime() == other.hasQueryThreadLogRetentionTime());
+      if (hasQueryThreadLogRetentionTime() != other.hasQueryThreadLogRetentionTime()) return false;
       if (hasQueryThreadLogRetentionTime()) {
-        result = result && getQueryThreadLogRetentionTime()
-            .equals(other.getQueryThreadLogRetentionTime());
+        if (!getQueryThreadLogRetentionTime()
+            .equals(other.getQueryThreadLogRetentionTime())) return false;
       }
-      result = result && (hasPartLogRetentionSize() == other.hasPartLogRetentionSize());
+      if (hasPartLogRetentionSize() != other.hasPartLogRetentionSize()) return false;
       if (hasPartLogRetentionSize()) {
-        result = result && getPartLogRetentionSize()
-            .equals(other.getPartLogRetentionSize());
+        if (!getPartLogRetentionSize()
+            .equals(other.getPartLogRetentionSize())) return false;
       }
-      result = result && (hasPartLogRetentionTime() == other.hasPartLogRetentionTime());
+      if (hasPartLogRetentionTime() != other.hasPartLogRetentionTime()) return false;
       if (hasPartLogRetentionTime()) {
-        result = result && getPartLogRetentionTime()
-            .equals(other.getPartLogRetentionTime());
+        if (!getPartLogRetentionTime()
+            .equals(other.getPartLogRetentionTime())) return false;
       }
-      result = result && (hasMetricLogEnabled() == other.hasMetricLogEnabled());
+      if (hasMetricLogEnabled() != other.hasMetricLogEnabled()) return false;
       if (hasMetricLogEnabled()) {
-        result = result && getMetricLogEnabled()
-            .equals(other.getMetricLogEnabled());
+        if (!getMetricLogEnabled()
+            .equals(other.getMetricLogEnabled())) return false;
       }
-      result = result && (hasMetricLogRetentionSize() == other.hasMetricLogRetentionSize());
+      if (hasMetricLogRetentionSize() != other.hasMetricLogRetentionSize()) return false;
       if (hasMetricLogRetentionSize()) {
-        result = result && getMetricLogRetentionSize()
-            .equals(other.getMetricLogRetentionSize());
+        if (!getMetricLogRetentionSize()
+            .equals(other.getMetricLogRetentionSize())) return false;
       }
-      result = result && (hasMetricLogRetentionTime() == other.hasMetricLogRetentionTime());
+      if (hasMetricLogRetentionTime() != other.hasMetricLogRetentionTime()) return false;
       if (hasMetricLogRetentionTime()) {
-        result = result && getMetricLogRetentionTime()
-            .equals(other.getMetricLogRetentionTime());
+        if (!getMetricLogRetentionTime()
+            .equals(other.getMetricLogRetentionTime())) return false;
       }
-      result = result && (hasTraceLogEnabled() == other.hasTraceLogEnabled());
+      if (hasTraceLogEnabled() != other.hasTraceLogEnabled()) return false;
       if (hasTraceLogEnabled()) {
-        result = result && getTraceLogEnabled()
-            .equals(other.getTraceLogEnabled());
+        if (!getTraceLogEnabled()
+            .equals(other.getTraceLogEnabled())) return false;
       }
-      result = result && (hasTraceLogRetentionSize() == other.hasTraceLogRetentionSize());
+      if (hasTraceLogRetentionSize() != other.hasTraceLogRetentionSize()) return false;
       if (hasTraceLogRetentionSize()) {
-        result = result && getTraceLogRetentionSize()
-            .equals(other.getTraceLogRetentionSize());
+        if (!getTraceLogRetentionSize()
+            .equals(other.getTraceLogRetentionSize())) return false;
       }
-      result = result && (hasTraceLogRetentionTime() == other.hasTraceLogRetentionTime());
+      if (hasTraceLogRetentionTime() != other.hasTraceLogRetentionTime()) return false;
       if (hasTraceLogRetentionTime()) {
-        result = result && getTraceLogRetentionTime()
-            .equals(other.getTraceLogRetentionTime());
+        if (!getTraceLogRetentionTime()
+            .equals(other.getTraceLogRetentionTime())) return false;
       }
-      result = result && (hasTextLogEnabled() == other.hasTextLogEnabled());
+      if (hasTextLogEnabled() != other.hasTextLogEnabled()) return false;
       if (hasTextLogEnabled()) {
-        result = result && getTextLogEnabled()
-            .equals(other.getTextLogEnabled());
+        if (!getTextLogEnabled()
+            .equals(other.getTextLogEnabled())) return false;
       }
-      result = result && (hasTextLogRetentionSize() == other.hasTextLogRetentionSize());
+      if (hasTextLogRetentionSize() != other.hasTextLogRetentionSize()) return false;
       if (hasTextLogRetentionSize()) {
-        result = result && getTextLogRetentionSize()
-            .equals(other.getTextLogRetentionSize());
+        if (!getTextLogRetentionSize()
+            .equals(other.getTextLogRetentionSize())) return false;
       }
-      result = result && (hasTextLogRetentionTime() == other.hasTextLogRetentionTime());
+      if (hasTextLogRetentionTime() != other.hasTextLogRetentionTime()) return false;
       if (hasTextLogRetentionTime()) {
-        result = result && getTextLogRetentionTime()
-            .equals(other.getTextLogRetentionTime());
+        if (!getTextLogRetentionTime()
+            .equals(other.getTextLogRetentionTime())) return false;
       }
-      result = result && textLogLevel_ == other.textLogLevel_;
-      result = result && (hasBackgroundPoolSize() == other.hasBackgroundPoolSize());
+      if (textLogLevel_ != other.textLogLevel_) return false;
+      if (hasBackgroundPoolSize() != other.hasBackgroundPoolSize()) return false;
       if (hasBackgroundPoolSize()) {
-        result = result && getBackgroundPoolSize()
-            .equals(other.getBackgroundPoolSize());
+        if (!getBackgroundPoolSize()
+            .equals(other.getBackgroundPoolSize())) return false;
       }
-      result = result && (hasBackgroundSchedulePoolSize() == other.hasBackgroundSchedulePoolSize());
+      if (hasBackgroundSchedulePoolSize() != other.hasBackgroundSchedulePoolSize()) return false;
       if (hasBackgroundSchedulePoolSize()) {
-        result = result && getBackgroundSchedulePoolSize()
-            .equals(other.getBackgroundSchedulePoolSize());
+        if (!getBackgroundSchedulePoolSize()
+            .equals(other.getBackgroundSchedulePoolSize())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -30374,19 +31783,19 @@ public final class Clickhouse {
         }
         if (compressionBuilder_ == null) {
           compression_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           compressionBuilder_.clear();
         }
         if (dictionariesBuilder_ == null) {
           dictionaries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           dictionariesBuilder_.clear();
         }
         if (graphiteRollupBuilder_ == null) {
           graphiteRollup_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           graphiteRollupBuilder_.clear();
         }
@@ -30398,7 +31807,7 @@ public final class Clickhouse {
         }
         if (kafkaTopicsBuilder_ == null) {
           kafkaTopics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           kafkaTopicsBuilder_.clear();
         }
@@ -30597,9 +32006,6 @@ public final class Clickhouse {
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig(this);
         int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
-        int to_bitField0_ = 0;
-        int to_bitField1_ = 0;
         result.logLevel_ = logLevel_;
         if (mergeTreeBuilder_ == null) {
           result.mergeTree_ = mergeTree_;
@@ -30607,27 +32013,27 @@ public final class Clickhouse {
           result.mergeTree_ = mergeTreeBuilder_.build();
         }
         if (compressionBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             compression_ = java.util.Collections.unmodifiableList(compression_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.compression_ = compression_;
         } else {
           result.compression_ = compressionBuilder_.build();
         }
         if (dictionariesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             dictionaries_ = java.util.Collections.unmodifiableList(dictionaries_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.dictionaries_ = dictionaries_;
         } else {
           result.dictionaries_ = dictionariesBuilder_.build();
         }
         if (graphiteRollupBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             graphiteRollup_ = java.util.Collections.unmodifiableList(graphiteRollup_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.graphiteRollup_ = graphiteRollup_;
         } else {
@@ -30639,9 +32045,9 @@ public final class Clickhouse {
           result.kafka_ = kafkaBuilder_.build();
         }
         if (kafkaTopicsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             kafkaTopics_ = java.util.Collections.unmodifiableList(kafkaTopics_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.kafkaTopics_ = kafkaTopics_;
         } else {
@@ -30785,43 +32191,41 @@ public final class Clickhouse {
         } else {
           result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSizeBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
-        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -30845,7 +32249,7 @@ public final class Clickhouse {
           if (!other.compression_.isEmpty()) {
             if (compression_.isEmpty()) {
               compression_ = other.compression_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureCompressionIsMutable();
               compression_.addAll(other.compression_);
@@ -30858,7 +32262,7 @@ public final class Clickhouse {
               compressionBuilder_.dispose();
               compressionBuilder_ = null;
               compression_ = other.compression_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               compressionBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCompressionFieldBuilder() : null;
@@ -30871,7 +32275,7 @@ public final class Clickhouse {
           if (!other.dictionaries_.isEmpty()) {
             if (dictionaries_.isEmpty()) {
               dictionaries_ = other.dictionaries_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDictionariesIsMutable();
               dictionaries_.addAll(other.dictionaries_);
@@ -30884,7 +32288,7 @@ public final class Clickhouse {
               dictionariesBuilder_.dispose();
               dictionariesBuilder_ = null;
               dictionaries_ = other.dictionaries_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
               dictionariesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDictionariesFieldBuilder() : null;
@@ -30897,7 +32301,7 @@ public final class Clickhouse {
           if (!other.graphiteRollup_.isEmpty()) {
             if (graphiteRollup_.isEmpty()) {
               graphiteRollup_ = other.graphiteRollup_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureGraphiteRollupIsMutable();
               graphiteRollup_.addAll(other.graphiteRollup_);
@@ -30910,7 +32314,7 @@ public final class Clickhouse {
               graphiteRollupBuilder_.dispose();
               graphiteRollupBuilder_ = null;
               graphiteRollup_ = other.graphiteRollup_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000004);
               graphiteRollupBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getGraphiteRollupFieldBuilder() : null;
@@ -30926,7 +32330,7 @@ public final class Clickhouse {
           if (!other.kafkaTopics_.isEmpty()) {
             if (kafkaTopics_.isEmpty()) {
               kafkaTopics_ = other.kafkaTopics_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureKafkaTopicsIsMutable();
               kafkaTopics_.addAll(other.kafkaTopics_);
@@ -30939,7 +32343,7 @@ public final class Clickhouse {
               kafkaTopicsBuilder_.dispose();
               kafkaTopicsBuilder_ = null;
               kafkaTopics_ = other.kafkaTopics_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000008);
               kafkaTopicsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getKafkaTopicsFieldBuilder() : null;
@@ -31069,7 +32473,6 @@ public final class Clickhouse {
         return this;
       }
       private int bitField0_;
-      private int bitField1_;
 
       private int logLevel_ = 0;
       /**
@@ -31078,8 +32481,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+       * @return The enum numeric value on the wire for logLevel.
        */
-      public int getLogLevelValue() {
+      @java.lang.Override public int getLogLevelValue() {
         return logLevel_;
       }
       /**
@@ -31088,8 +32492,11 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+       * @param value The enum numeric value on the wire for logLevel to set.
+       * @return This builder for chaining.
        */
       public Builder setLogLevelValue(int value) {
+        
         logLevel_ = value;
         onChanged();
         return this;
@@ -31100,7 +32507,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+       * @return The logLevel.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getLogLevel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.valueOf(logLevel_);
@@ -31112,6 +32521,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+       * @param value The logLevel to set.
+       * @return This builder for chaining.
        */
       public Builder setLogLevel(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel value) {
         if (value == null) {
@@ -31128,6 +32539,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogLevel() {
         
@@ -31136,7 +32548,7 @@ public final class Clickhouse {
         return this;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree mergeTree_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree mergeTree_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTreeOrBuilder> mergeTreeBuilder_;
       /**
@@ -31146,6 +32558,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
+       * @return Whether the mergeTree field is set.
        */
       public boolean hasMergeTree() {
         return mergeTreeBuilder_ != null || mergeTree_ != null;
@@ -31157,6 +32570,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
+       * @return The mergeTree.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree getMergeTree() {
         if (mergeTreeBuilder_ == null) {
@@ -31301,9 +32715,9 @@ public final class Clickhouse {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression> compression_ =
         java.util.Collections.emptyList();
       private void ensureCompressionIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           compression_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression>(compression_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -31508,7 +32922,7 @@ public final class Clickhouse {
       public Builder clearCompression() {
         if (compressionBuilder_ == null) {
           compression_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           compressionBuilder_.clear();
@@ -31620,7 +33034,7 @@ public final class Clickhouse {
           compressionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Compression.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.CompressionOrBuilder>(
                   compression_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           compression_ = null;
@@ -31631,9 +33045,9 @@ public final class Clickhouse {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary> dictionaries_ =
         java.util.Collections.emptyList();
       private void ensureDictionariesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           dictionaries_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary>(dictionaries_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -31838,7 +33252,7 @@ public final class Clickhouse {
       public Builder clearDictionaries() {
         if (dictionariesBuilder_ == null) {
           dictionaries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           dictionariesBuilder_.clear();
@@ -31950,7 +33364,7 @@ public final class Clickhouse {
           dictionariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionary.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.ExternalDictionaryOrBuilder>(
                   dictionaries_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           dictionaries_ = null;
@@ -31961,9 +33375,9 @@ public final class Clickhouse {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup> graphiteRollup_ =
         java.util.Collections.emptyList();
       private void ensureGraphiteRollupIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           graphiteRollup_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup>(graphiteRollup_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -32168,7 +33582,7 @@ public final class Clickhouse {
       public Builder clearGraphiteRollup() {
         if (graphiteRollupBuilder_ == null) {
           graphiteRollup_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           graphiteRollupBuilder_.clear();
@@ -32280,7 +33694,7 @@ public final class Clickhouse {
           graphiteRollupBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollup.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.GraphiteRollupOrBuilder>(
                   graphiteRollup_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           graphiteRollup_ = null;
@@ -32288,17 +33702,19 @@ public final class Clickhouse {
         return graphiteRollupBuilder_;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka kafka_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka kafka_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder> kafkaBuilder_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
+       * @return Whether the kafka field is set.
        */
       public boolean hasKafka() {
         return kafkaBuilder_ != null || kafka_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka kafka = 35;</code>
+       * @return The kafka.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getKafka() {
         if (kafkaBuilder_ == null) {
@@ -32408,9 +33824,9 @@ public final class Clickhouse {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> kafkaTopics_ =
         java.util.Collections.emptyList();
       private void ensureKafkaTopicsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           kafkaTopics_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic>(kafkaTopics_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -32560,7 +33976,7 @@ public final class Clickhouse {
       public Builder clearKafkaTopics() {
         if (kafkaTopicsBuilder_ == null) {
           kafkaTopics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           kafkaTopicsBuilder_.clear();
@@ -32637,7 +34053,7 @@ public final class Clickhouse {
           kafkaTopicsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder>(
                   kafkaTopics_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           kafkaTopics_ = null;
@@ -32645,17 +34061,19 @@ public final class Clickhouse {
         return kafkaTopicsBuilder_;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq rabbitmq_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq rabbitmq_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder> rabbitmqBuilder_;
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       * @return Whether the rabbitmq field is set.
        */
       public boolean hasRabbitmq() {
         return rabbitmqBuilder_ != null || rabbitmq_ != null;
       }
       /**
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       * @return The rabbitmq.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getRabbitmq() {
         if (rabbitmqBuilder_ == null) {
@@ -32762,7 +34180,7 @@ public final class Clickhouse {
         return rabbitmqBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.Int64Value maxConnections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
@@ -32771,6 +34189,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
@@ -32781,6 +34200,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -32915,7 +34335,7 @@ public final class Clickhouse {
         return maxConnectionsBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxConcurrentQueries_ = null;
+      private com.google.protobuf.Int64Value maxConcurrentQueries_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConcurrentQueriesBuilder_;
       /**
@@ -32924,6 +34344,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * @return Whether the maxConcurrentQueries field is set.
        */
       public boolean hasMaxConcurrentQueries() {
         return maxConcurrentQueriesBuilder_ != null || maxConcurrentQueries_ != null;
@@ -32934,6 +34355,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * @return The maxConcurrentQueries.
        */
       public com.google.protobuf.Int64Value getMaxConcurrentQueries() {
         if (maxConcurrentQueriesBuilder_ == null) {
@@ -33068,7 +34490,7 @@ public final class Clickhouse {
         return maxConcurrentQueriesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value keepAliveTimeout_ = null;
+      private com.google.protobuf.Int64Value keepAliveTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> keepAliveTimeoutBuilder_;
       /**
@@ -33077,6 +34499,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
+       * @return Whether the keepAliveTimeout field is set.
        */
       public boolean hasKeepAliveTimeout() {
         return keepAliveTimeoutBuilder_ != null || keepAliveTimeout_ != null;
@@ -33087,6 +34510,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value keep_alive_timeout = 8;</code>
+       * @return The keepAliveTimeout.
        */
       public com.google.protobuf.Int64Value getKeepAliveTimeout() {
         if (keepAliveTimeoutBuilder_ == null) {
@@ -33221,7 +34645,7 @@ public final class Clickhouse {
         return keepAliveTimeoutBuilder_;
       }
 
-      private com.google.protobuf.Int64Value uncompressedCacheSize_ = null;
+      private com.google.protobuf.Int64Value uncompressedCacheSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> uncompressedCacheSizeBuilder_;
       /**
@@ -33230,6 +34654,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
+       * @return Whether the uncompressedCacheSize field is set.
        */
       public boolean hasUncompressedCacheSize() {
         return uncompressedCacheSizeBuilder_ != null || uncompressedCacheSize_ != null;
@@ -33240,6 +34665,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
+       * @return The uncompressedCacheSize.
        */
       public com.google.protobuf.Int64Value getUncompressedCacheSize() {
         if (uncompressedCacheSizeBuilder_ == null) {
@@ -33374,7 +34800,7 @@ public final class Clickhouse {
         return uncompressedCacheSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value markCacheSize_ = null;
+      private com.google.protobuf.Int64Value markCacheSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> markCacheSizeBuilder_;
       /**
@@ -33383,6 +34809,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the markCacheSize field is set.
        */
       public boolean hasMarkCacheSize() {
         return markCacheSizeBuilder_ != null || markCacheSize_ != null;
@@ -33393,6 +34820,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The markCacheSize.
        */
       public com.google.protobuf.Int64Value getMarkCacheSize() {
         if (markCacheSizeBuilder_ == null) {
@@ -33527,7 +34955,7 @@ public final class Clickhouse {
         return markCacheSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxTableSizeToDrop_ = null;
+      private com.google.protobuf.Int64Value maxTableSizeToDrop_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTableSizeToDropBuilder_;
       /**
@@ -33536,6 +34964,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
+       * @return Whether the maxTableSizeToDrop field is set.
        */
       public boolean hasMaxTableSizeToDrop() {
         return maxTableSizeToDropBuilder_ != null || maxTableSizeToDrop_ != null;
@@ -33546,6 +34975,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
+       * @return The maxTableSizeToDrop.
        */
       public com.google.protobuf.Int64Value getMaxTableSizeToDrop() {
         if (maxTableSizeToDropBuilder_ == null) {
@@ -33680,7 +35110,7 @@ public final class Clickhouse {
         return maxTableSizeToDropBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxPartitionSizeToDrop_ = null;
+      private com.google.protobuf.Int64Value maxPartitionSizeToDrop_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPartitionSizeToDropBuilder_;
       /**
@@ -33689,6 +35119,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
+       * @return Whether the maxPartitionSizeToDrop field is set.
        */
       public boolean hasMaxPartitionSizeToDrop() {
         return maxPartitionSizeToDropBuilder_ != null || maxPartitionSizeToDrop_ != null;
@@ -33699,6 +35130,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
+       * @return The maxPartitionSizeToDrop.
        */
       public com.google.protobuf.Int64Value getMaxPartitionSizeToDrop() {
         if (maxPartitionSizeToDropBuilder_ == null) {
@@ -33833,7 +35265,7 @@ public final class Clickhouse {
         return maxPartitionSizeToDropBuilder_;
       }
 
-      private com.google.protobuf.Int64Value builtinDictionariesReloadInterval_ = null;
+      private com.google.protobuf.Int64Value builtinDictionariesReloadInterval_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> builtinDictionariesReloadIntervalBuilder_;
       /**
@@ -33842,6 +35274,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
+       * @deprecated
+       * @return Whether the builtinDictionariesReloadInterval field is set.
        */
       @java.lang.Deprecated public boolean hasBuiltinDictionariesReloadInterval() {
         return builtinDictionariesReloadIntervalBuilder_ != null || builtinDictionariesReloadInterval_ != null;
@@ -33852,6 +35286,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value builtin_dictionaries_reload_interval = 12 [deprecated = true];</code>
+       * @deprecated
+       * @return The builtinDictionariesReloadInterval.
        */
       @java.lang.Deprecated public com.google.protobuf.Int64Value getBuiltinDictionariesReloadInterval() {
         if (builtinDictionariesReloadIntervalBuilder_ == null) {
@@ -33993,6 +35429,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string timezone = 14;</code>
+       * @return The timezone.
        */
       public java.lang.String getTimezone() {
         java.lang.Object ref = timezone_;
@@ -34012,6 +35449,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string timezone = 14;</code>
+       * @return The bytes for timezone.
        */
       public com.google.protobuf.ByteString
           getTimezoneBytes() {
@@ -34032,6 +35470,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string timezone = 14;</code>
+       * @param value The timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezone(
           java.lang.String value) {
@@ -34049,6 +35489,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string timezone = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTimezone() {
         
@@ -34062,6 +35503,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string timezone = 14;</code>
+       * @param value The bytes for timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
@@ -34082,6 +35525,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string geobase_uri = 15;</code>
+       * @return The geobaseUri.
        */
       public java.lang.String getGeobaseUri() {
         java.lang.Object ref = geobaseUri_;
@@ -34101,6 +35545,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string geobase_uri = 15;</code>
+       * @return The bytes for geobaseUri.
        */
       public com.google.protobuf.ByteString
           getGeobaseUriBytes() {
@@ -34121,6 +35566,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string geobase_uri = 15;</code>
+       * @param value The geobaseUri to set.
+       * @return This builder for chaining.
        */
       public Builder setGeobaseUri(
           java.lang.String value) {
@@ -34138,6 +35585,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string geobase_uri = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGeobaseUri() {
         
@@ -34151,6 +35599,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>string geobase_uri = 15;</code>
+       * @param value The bytes for geobaseUri to set.
+       * @return This builder for chaining.
        */
       public Builder setGeobaseUriBytes(
           com.google.protobuf.ByteString value) {
@@ -34164,7 +35614,7 @@ public final class Clickhouse {
         return this;
       }
 
-      private com.google.protobuf.Int64Value queryLogRetentionSize_ = null;
+      private com.google.protobuf.Int64Value queryLogRetentionSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryLogRetentionSizeBuilder_;
       /**
@@ -34174,6 +35624,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
+       * @return Whether the queryLogRetentionSize field is set.
        */
       public boolean hasQueryLogRetentionSize() {
         return queryLogRetentionSizeBuilder_ != null || queryLogRetentionSize_ != null;
@@ -34185,6 +35636,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_log_retention_size = 16;</code>
+       * @return The queryLogRetentionSize.
        */
       public com.google.protobuf.Int64Value getQueryLogRetentionSize() {
         if (queryLogRetentionSizeBuilder_ == null) {
@@ -34326,7 +35778,7 @@ public final class Clickhouse {
         return queryLogRetentionSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value queryLogRetentionTime_ = null;
+      private com.google.protobuf.Int64Value queryLogRetentionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryLogRetentionTimeBuilder_;
       /**
@@ -34336,6 +35788,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
+       * @return Whether the queryLogRetentionTime field is set.
        */
       public boolean hasQueryLogRetentionTime() {
         return queryLogRetentionTimeBuilder_ != null || queryLogRetentionTime_ != null;
@@ -34347,6 +35800,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_log_retention_time = 17;</code>
+       * @return The queryLogRetentionTime.
        */
       public com.google.protobuf.Int64Value getQueryLogRetentionTime() {
         if (queryLogRetentionTimeBuilder_ == null) {
@@ -34488,7 +35942,7 @@ public final class Clickhouse {
         return queryLogRetentionTimeBuilder_;
       }
 
-      private com.google.protobuf.BoolValue queryThreadLogEnabled_ = null;
+      private com.google.protobuf.BoolValue queryThreadLogEnabled_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> queryThreadLogEnabledBuilder_;
       /**
@@ -34497,6 +35951,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
+       * @return Whether the queryThreadLogEnabled field is set.
        */
       public boolean hasQueryThreadLogEnabled() {
         return queryThreadLogEnabledBuilder_ != null || queryThreadLogEnabled_ != null;
@@ -34507,6 +35962,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue query_thread_log_enabled = 18;</code>
+       * @return The queryThreadLogEnabled.
        */
       public com.google.protobuf.BoolValue getQueryThreadLogEnabled() {
         if (queryThreadLogEnabledBuilder_ == null) {
@@ -34641,7 +36097,7 @@ public final class Clickhouse {
         return queryThreadLogEnabledBuilder_;
       }
 
-      private com.google.protobuf.Int64Value queryThreadLogRetentionSize_ = null;
+      private com.google.protobuf.Int64Value queryThreadLogRetentionSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryThreadLogRetentionSizeBuilder_;
       /**
@@ -34651,6 +36107,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
+       * @return Whether the queryThreadLogRetentionSize field is set.
        */
       public boolean hasQueryThreadLogRetentionSize() {
         return queryThreadLogRetentionSizeBuilder_ != null || queryThreadLogRetentionSize_ != null;
@@ -34662,6 +36119,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_thread_log_retention_size = 19;</code>
+       * @return The queryThreadLogRetentionSize.
        */
       public com.google.protobuf.Int64Value getQueryThreadLogRetentionSize() {
         if (queryThreadLogRetentionSizeBuilder_ == null) {
@@ -34803,7 +36261,7 @@ public final class Clickhouse {
         return queryThreadLogRetentionSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value queryThreadLogRetentionTime_ = null;
+      private com.google.protobuf.Int64Value queryThreadLogRetentionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryThreadLogRetentionTimeBuilder_;
       /**
@@ -34813,6 +36271,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
+       * @return Whether the queryThreadLogRetentionTime field is set.
        */
       public boolean hasQueryThreadLogRetentionTime() {
         return queryThreadLogRetentionTimeBuilder_ != null || queryThreadLogRetentionTime_ != null;
@@ -34824,6 +36283,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value query_thread_log_retention_time = 20;</code>
+       * @return The queryThreadLogRetentionTime.
        */
       public com.google.protobuf.Int64Value getQueryThreadLogRetentionTime() {
         if (queryThreadLogRetentionTimeBuilder_ == null) {
@@ -34965,7 +36425,7 @@ public final class Clickhouse {
         return queryThreadLogRetentionTimeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value partLogRetentionSize_ = null;
+      private com.google.protobuf.Int64Value partLogRetentionSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partLogRetentionSizeBuilder_;
       /**
@@ -34975,6 +36435,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
+       * @return Whether the partLogRetentionSize field is set.
        */
       public boolean hasPartLogRetentionSize() {
         return partLogRetentionSizeBuilder_ != null || partLogRetentionSize_ != null;
@@ -34986,6 +36447,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value part_log_retention_size = 21;</code>
+       * @return The partLogRetentionSize.
        */
       public com.google.protobuf.Int64Value getPartLogRetentionSize() {
         if (partLogRetentionSizeBuilder_ == null) {
@@ -35127,7 +36589,7 @@ public final class Clickhouse {
         return partLogRetentionSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value partLogRetentionTime_ = null;
+      private com.google.protobuf.Int64Value partLogRetentionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partLogRetentionTimeBuilder_;
       /**
@@ -35137,6 +36599,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
+       * @return Whether the partLogRetentionTime field is set.
        */
       public boolean hasPartLogRetentionTime() {
         return partLogRetentionTimeBuilder_ != null || partLogRetentionTime_ != null;
@@ -35148,6 +36611,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value part_log_retention_time = 22;</code>
+       * @return The partLogRetentionTime.
        */
       public com.google.protobuf.Int64Value getPartLogRetentionTime() {
         if (partLogRetentionTimeBuilder_ == null) {
@@ -35289,7 +36753,7 @@ public final class Clickhouse {
         return partLogRetentionTimeBuilder_;
       }
 
-      private com.google.protobuf.BoolValue metricLogEnabled_ = null;
+      private com.google.protobuf.BoolValue metricLogEnabled_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> metricLogEnabledBuilder_;
       /**
@@ -35298,6 +36762,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
+       * @return Whether the metricLogEnabled field is set.
        */
       public boolean hasMetricLogEnabled() {
         return metricLogEnabledBuilder_ != null || metricLogEnabled_ != null;
@@ -35308,6 +36773,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue metric_log_enabled = 23;</code>
+       * @return The metricLogEnabled.
        */
       public com.google.protobuf.BoolValue getMetricLogEnabled() {
         if (metricLogEnabledBuilder_ == null) {
@@ -35442,7 +36908,7 @@ public final class Clickhouse {
         return metricLogEnabledBuilder_;
       }
 
-      private com.google.protobuf.Int64Value metricLogRetentionSize_ = null;
+      private com.google.protobuf.Int64Value metricLogRetentionSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> metricLogRetentionSizeBuilder_;
       /**
@@ -35452,6 +36918,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
+       * @return Whether the metricLogRetentionSize field is set.
        */
       public boolean hasMetricLogRetentionSize() {
         return metricLogRetentionSizeBuilder_ != null || metricLogRetentionSize_ != null;
@@ -35463,6 +36930,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value metric_log_retention_size = 24;</code>
+       * @return The metricLogRetentionSize.
        */
       public com.google.protobuf.Int64Value getMetricLogRetentionSize() {
         if (metricLogRetentionSizeBuilder_ == null) {
@@ -35604,7 +37072,7 @@ public final class Clickhouse {
         return metricLogRetentionSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value metricLogRetentionTime_ = null;
+      private com.google.protobuf.Int64Value metricLogRetentionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> metricLogRetentionTimeBuilder_;
       /**
@@ -35614,6 +37082,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
+       * @return Whether the metricLogRetentionTime field is set.
        */
       public boolean hasMetricLogRetentionTime() {
         return metricLogRetentionTimeBuilder_ != null || metricLogRetentionTime_ != null;
@@ -35625,6 +37094,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value metric_log_retention_time = 25;</code>
+       * @return The metricLogRetentionTime.
        */
       public com.google.protobuf.Int64Value getMetricLogRetentionTime() {
         if (metricLogRetentionTimeBuilder_ == null) {
@@ -35766,7 +37236,7 @@ public final class Clickhouse {
         return metricLogRetentionTimeBuilder_;
       }
 
-      private com.google.protobuf.BoolValue traceLogEnabled_ = null;
+      private com.google.protobuf.BoolValue traceLogEnabled_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> traceLogEnabledBuilder_;
       /**
@@ -35775,6 +37245,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
+       * @return Whether the traceLogEnabled field is set.
        */
       public boolean hasTraceLogEnabled() {
         return traceLogEnabledBuilder_ != null || traceLogEnabled_ != null;
@@ -35785,6 +37256,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue trace_log_enabled = 26;</code>
+       * @return The traceLogEnabled.
        */
       public com.google.protobuf.BoolValue getTraceLogEnabled() {
         if (traceLogEnabledBuilder_ == null) {
@@ -35919,7 +37391,7 @@ public final class Clickhouse {
         return traceLogEnabledBuilder_;
       }
 
-      private com.google.protobuf.Int64Value traceLogRetentionSize_ = null;
+      private com.google.protobuf.Int64Value traceLogRetentionSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> traceLogRetentionSizeBuilder_;
       /**
@@ -35929,6 +37401,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
+       * @return Whether the traceLogRetentionSize field is set.
        */
       public boolean hasTraceLogRetentionSize() {
         return traceLogRetentionSizeBuilder_ != null || traceLogRetentionSize_ != null;
@@ -35940,6 +37413,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value trace_log_retention_size = 27;</code>
+       * @return The traceLogRetentionSize.
        */
       public com.google.protobuf.Int64Value getTraceLogRetentionSize() {
         if (traceLogRetentionSizeBuilder_ == null) {
@@ -36081,7 +37555,7 @@ public final class Clickhouse {
         return traceLogRetentionSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value traceLogRetentionTime_ = null;
+      private com.google.protobuf.Int64Value traceLogRetentionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> traceLogRetentionTimeBuilder_;
       /**
@@ -36091,6 +37565,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
+       * @return Whether the traceLogRetentionTime field is set.
        */
       public boolean hasTraceLogRetentionTime() {
         return traceLogRetentionTimeBuilder_ != null || traceLogRetentionTime_ != null;
@@ -36102,6 +37577,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value trace_log_retention_time = 28;</code>
+       * @return The traceLogRetentionTime.
        */
       public com.google.protobuf.Int64Value getTraceLogRetentionTime() {
         if (traceLogRetentionTimeBuilder_ == null) {
@@ -36243,7 +37719,7 @@ public final class Clickhouse {
         return traceLogRetentionTimeBuilder_;
       }
 
-      private com.google.protobuf.BoolValue textLogEnabled_ = null;
+      private com.google.protobuf.BoolValue textLogEnabled_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> textLogEnabledBuilder_;
       /**
@@ -36252,6 +37728,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
+       * @return Whether the textLogEnabled field is set.
        */
       public boolean hasTextLogEnabled() {
         return textLogEnabledBuilder_ != null || textLogEnabled_ != null;
@@ -36262,6 +37739,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.BoolValue text_log_enabled = 29;</code>
+       * @return The textLogEnabled.
        */
       public com.google.protobuf.BoolValue getTextLogEnabled() {
         if (textLogEnabledBuilder_ == null) {
@@ -36396,7 +37874,7 @@ public final class Clickhouse {
         return textLogEnabledBuilder_;
       }
 
-      private com.google.protobuf.Int64Value textLogRetentionSize_ = null;
+      private com.google.protobuf.Int64Value textLogRetentionSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> textLogRetentionSizeBuilder_;
       /**
@@ -36406,6 +37884,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
+       * @return Whether the textLogRetentionSize field is set.
        */
       public boolean hasTextLogRetentionSize() {
         return textLogRetentionSizeBuilder_ != null || textLogRetentionSize_ != null;
@@ -36417,6 +37896,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value text_log_retention_size = 30;</code>
+       * @return The textLogRetentionSize.
        */
       public com.google.protobuf.Int64Value getTextLogRetentionSize() {
         if (textLogRetentionSizeBuilder_ == null) {
@@ -36558,7 +38038,7 @@ public final class Clickhouse {
         return textLogRetentionSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value textLogRetentionTime_ = null;
+      private com.google.protobuf.Int64Value textLogRetentionTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> textLogRetentionTimeBuilder_;
       /**
@@ -36568,6 +38048,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
+       * @return Whether the textLogRetentionTime field is set.
        */
       public boolean hasTextLogRetentionTime() {
         return textLogRetentionTimeBuilder_ != null || textLogRetentionTime_ != null;
@@ -36579,6 +38060,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value text_log_retention_time = 31;</code>
+       * @return The textLogRetentionTime.
        */
       public com.google.protobuf.Int64Value getTextLogRetentionTime() {
         if (textLogRetentionTimeBuilder_ == null) {
@@ -36727,8 +38209,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+       * @return The enum numeric value on the wire for textLogLevel.
        */
-      public int getTextLogLevelValue() {
+      @java.lang.Override public int getTextLogLevelValue() {
         return textLogLevel_;
       }
       /**
@@ -36737,8 +38220,11 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+       * @param value The enum numeric value on the wire for textLogLevel to set.
+       * @return This builder for chaining.
        */
       public Builder setTextLogLevelValue(int value) {
+        
         textLogLevel_ = value;
         onChanged();
         return this;
@@ -36749,7 +38235,9 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+       * @return The textLogLevel.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getTextLogLevel() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel result = yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.valueOf(textLogLevel_);
@@ -36761,6 +38249,8 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+       * @param value The textLogLevel to set.
+       * @return This builder for chaining.
        */
       public Builder setTextLogLevel(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel value) {
         if (value == null) {
@@ -36777,6 +38267,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTextLogLevel() {
         
@@ -36785,17 +38276,19 @@ public final class Clickhouse {
         return this;
       }
 
-      private com.google.protobuf.Int64Value backgroundPoolSize_ = null;
+      private com.google.protobuf.Int64Value backgroundPoolSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundPoolSizeBuilder_;
       /**
        * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundPoolSize field is set.
        */
       public boolean hasBackgroundPoolSize() {
         return backgroundPoolSizeBuilder_ != null || backgroundPoolSize_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundPoolSize.
        */
       public com.google.protobuf.Int64Value getBackgroundPoolSize() {
         if (backgroundPoolSizeBuilder_ == null) {
@@ -36902,17 +38395,19 @@ public final class Clickhouse {
         return backgroundPoolSizeBuilder_;
       }
 
-      private com.google.protobuf.Int64Value backgroundSchedulePoolSize_ = null;
+      private com.google.protobuf.Int64Value backgroundSchedulePoolSize_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundSchedulePoolSizeBuilder_;
       /**
        * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundSchedulePoolSize field is set.
        */
       public boolean hasBackgroundSchedulePoolSize() {
         return backgroundSchedulePoolSizeBuilder_ != null || backgroundSchedulePoolSize_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundSchedulePoolSize.
        */
       public com.google.protobuf.Int64Value getBackgroundSchedulePoolSize() {
         if (backgroundSchedulePoolSizeBuilder_ == null) {
@@ -37021,7 +38516,7 @@ public final class Clickhouse {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -37082,6 +38577,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -37091,6 +38587,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getEffectiveConfig();
     /**
@@ -37109,6 +38606,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -37117,6 +38615,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getUserConfig();
     /**
@@ -37134,6 +38633,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -37142,6 +38642,7 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getDefaultConfig();
     /**
@@ -37156,7 +38657,7 @@ public final class Clickhouse {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfigSet}
    */
-  public  static final class ClickhouseConfigSet extends
+  public static final class ClickhouseConfigSet extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfigSet)
       ClickhouseConfigSetOrBuilder {
@@ -37166,6 +38667,13 @@ public final class Clickhouse {
       super(builder);
     }
     private ClickhouseConfigSet() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClickhouseConfigSet();
     }
 
     @java.lang.Override
@@ -37181,7 +38689,6 @@ public final class Clickhouse {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -37232,7 +38739,7 @@ public final class Clickhouse {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -37272,7 +38779,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -37283,7 +38792,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.getDefaultInstance() : effectiveConfig_;
     }
@@ -37295,6 +38806,7 @@ public final class Clickhouse {
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigOrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -37307,7 +38819,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -37317,7 +38831,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.getDefaultInstance() : userConfig_;
     }
@@ -37328,6 +38844,7 @@ public final class Clickhouse {
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigOrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -37340,7 +38857,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -37350,7 +38869,9 @@ public final class Clickhouse {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.getDefaultInstance() : defaultConfig_;
     }
@@ -37361,6 +38882,7 @@ public final class Clickhouse {
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigOrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -37424,24 +38946,23 @@ public final class Clickhouse {
       }
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigSet other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigSet) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -37661,35 +39182,35 @@ public final class Clickhouse {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -37741,7 +39262,7 @@ public final class Clickhouse {
         return this;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigOrBuilder> effectiveConfigBuilder_;
       /**
@@ -37751,6 +39272,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -37762,6 +39284,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -37903,7 +39426,7 @@ public final class Clickhouse {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig userConfig_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigOrBuilder> userConfigBuilder_;
       /**
@@ -37912,6 +39435,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -37922,6 +39446,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -38056,7 +39581,7 @@ public final class Clickhouse {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig defaultConfig_ = null;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfigOrBuilder> defaultConfigBuilder_;
       /**
@@ -38065,6 +39590,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -38075,6 +39601,7 @@ public final class Clickhouse {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -38211,7 +39738,7 @@ public final class Clickhouse {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -38600,20 +40127,12 @@ public final class Clickhouse {
       "nproto/yandex/cloud/mdb/clickhouse/v1/co" +
       "nfig;clickhouseb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new

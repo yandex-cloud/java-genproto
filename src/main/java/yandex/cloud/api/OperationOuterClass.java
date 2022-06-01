@@ -26,6 +26,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string metadata = 1;</code>
+     * @return The metadata.
      */
     java.lang.String getMetadata();
     /**
@@ -35,6 +36,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string metadata = 1;</code>
+     * @return The bytes for metadata.
      */
     com.google.protobuf.ByteString
         getMetadataBytes();
@@ -46,6 +48,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string response = 2;</code>
+     * @return The response.
      */
     java.lang.String getResponse();
     /**
@@ -55,6 +58,7 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string response = 2;</code>
+     * @return The bytes for response.
      */
     com.google.protobuf.ByteString
         getResponseBytes();
@@ -68,7 +72,7 @@ public final class OperationOuterClass {
    *
    * Protobuf type {@code yandex.cloud.api.Operation}
    */
-  public  static final class Operation extends
+  public static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.api.Operation)
       OperationOrBuilder {
@@ -80,6 +84,13 @@ public final class OperationOuterClass {
     private Operation() {
       metadata_ = "";
       response_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Operation();
     }
 
     @java.lang.Override
@@ -95,7 +106,6 @@ public final class OperationOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -119,7 +129,7 @@ public final class OperationOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -159,7 +169,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string metadata = 1;</code>
+     * @return The metadata.
      */
+    @java.lang.Override
     public java.lang.String getMetadata() {
       java.lang.Object ref = metadata_;
       if (ref instanceof java.lang.String) {
@@ -179,7 +191,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string metadata = 1;</code>
+     * @return The bytes for metadata.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMetadataBytes() {
       java.lang.Object ref = metadata_;
@@ -203,7 +217,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string response = 2;</code>
+     * @return The response.
      */
+    @java.lang.Override
     public java.lang.String getResponse() {
       java.lang.Object ref = response_;
       if (ref instanceof java.lang.String) {
@@ -223,7 +239,9 @@ public final class OperationOuterClass {
      * </pre>
      *
      * <code>string response = 2;</code>
+     * @return The bytes for response.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResponseBytes() {
       java.lang.Object ref = response_;
@@ -252,10 +270,10 @@ public final class OperationOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getMetadataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, metadata_);
       }
-      if (!getResponseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(response_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, response_);
       }
       unknownFields.writeTo(output);
@@ -267,10 +285,10 @@ public final class OperationOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getMetadataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, metadata_);
       }
-      if (!getResponseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(response_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, response_);
       }
       size += unknownFields.getSerializedSize();
@@ -288,13 +306,12 @@ public final class OperationOuterClass {
       }
       yandex.cloud.api.OperationOuterClass.Operation other = (yandex.cloud.api.OperationOuterClass.Operation) obj;
 
-      boolean result = true;
-      result = result && getMetadata()
-          .equals(other.getMetadata());
-      result = result && getResponse()
-          .equals(other.getResponse());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (!getResponse()
+          .equals(other.getResponse())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -485,35 +502,35 @@ public final class OperationOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -572,6 +589,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string metadata = 1;</code>
+       * @return The metadata.
        */
       public java.lang.String getMetadata() {
         java.lang.Object ref = metadata_;
@@ -592,6 +610,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string metadata = 1;</code>
+       * @return The bytes for metadata.
        */
       public com.google.protobuf.ByteString
           getMetadataBytes() {
@@ -613,6 +632,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string metadata = 1;</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
        */
       public Builder setMetadata(
           java.lang.String value) {
@@ -631,6 +652,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string metadata = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMetadata() {
         
@@ -645,6 +667,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string metadata = 1;</code>
+       * @param value The bytes for metadata to set.
+       * @return This builder for chaining.
        */
       public Builder setMetadataBytes(
           com.google.protobuf.ByteString value) {
@@ -666,6 +690,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string response = 2;</code>
+       * @return The response.
        */
       public java.lang.String getResponse() {
         java.lang.Object ref = response_;
@@ -686,6 +711,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string response = 2;</code>
+       * @return The bytes for response.
        */
       public com.google.protobuf.ByteString
           getResponseBytes() {
@@ -707,6 +733,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string response = 2;</code>
+       * @param value The response to set.
+       * @return This builder for chaining.
        */
       public Builder setResponse(
           java.lang.String value) {
@@ -725,6 +753,7 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string response = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResponse() {
         
@@ -739,6 +768,8 @@ public final class OperationOuterClass {
        * </pre>
        *
        * <code>string response = 2;</code>
+       * @param value The bytes for response to set.
+       * @return This builder for chaining.
        */
       public Builder setResponseBytes(
           com.google.protobuf.ByteString value) {
@@ -754,7 +785,7 @@ public final class OperationOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -838,19 +869,11 @@ public final class OperationOuterClass {
       "loud/go-genproto/yandex/cloud/api;apib\006p" +
       "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_api_Operation_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_api_Operation_fieldAccessorTable = new

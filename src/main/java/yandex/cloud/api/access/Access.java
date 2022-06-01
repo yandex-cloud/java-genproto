@@ -73,6 +73,8 @@ public final class Access {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -80,6 +82,10 @@ public final class Access {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static AccessBindingAction forNumber(int value) {
       switch (value) {
         case 0: return ACCESS_BINDING_ACTION_UNSPECIFIED;
@@ -103,6 +109,10 @@ public final class Access {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -154,6 +164,7 @@ public final class Access {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -169,6 +180,7 @@ public final class Access {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -185,6 +197,7 @@ public final class Access {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -199,6 +212,7 @@ public final class Access {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -206,7 +220,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.Subject}
    */
-  public  static final class Subject extends
+  public static final class Subject extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.Subject)
       SubjectOrBuilder {
@@ -218,6 +232,13 @@ public final class Access {
     private Subject() {
       id_ = "";
       type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Subject();
     }
 
     @java.lang.Override
@@ -233,7 +254,6 @@ public final class Access {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -257,7 +277,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -303,7 +323,9 @@ public final class Access {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -329,7 +351,9 @@ public final class Access {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -358,7 +382,9 @@ public final class Access {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -383,7 +409,9 @@ public final class Access {
      * </pre>
      *
      * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -412,10 +440,10 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
       unknownFields.writeTo(output);
@@ -427,10 +455,10 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
       size += unknownFields.getSerializedSize();
@@ -448,13 +476,12 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.Subject other = (yandex.cloud.api.access.Access.Subject) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -639,35 +666,35 @@ public final class Access {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -732,6 +759,7 @@ public final class Access {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -758,6 +786,7 @@ public final class Access {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -785,6 +814,8 @@ public final class Access {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -809,6 +840,7 @@ public final class Access {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -829,6 +861,8 @@ public final class Access {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -855,6 +889,7 @@ public final class Access {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -880,6 +915,7 @@ public final class Access {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -906,6 +942,8 @@ public final class Access {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -929,6 +967,7 @@ public final class Access {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -948,6 +987,8 @@ public final class Access {
        * </pre>
        *
        * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -963,7 +1004,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1023,6 +1064,7 @@ public final class Access {
      * </pre>
      *
      * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The roleId.
      */
     java.lang.String getRoleId();
     /**
@@ -1031,6 +1073,7 @@ public final class Access {
      * </pre>
      *
      * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for roleId.
      */
     com.google.protobuf.ByteString
         getRoleIdBytes();
@@ -1042,6 +1085,7 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the subject field is set.
      */
     boolean hasSubject();
     /**
@@ -1051,6 +1095,7 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The subject.
      */
     yandex.cloud.api.access.Access.Subject getSubject();
     /**
@@ -1066,7 +1111,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.AccessBinding}
    */
-  public  static final class AccessBinding extends
+  public static final class AccessBinding extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.AccessBinding)
       AccessBindingOrBuilder {
@@ -1077,6 +1122,13 @@ public final class Access {
     }
     private AccessBinding() {
       roleId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessBinding();
     }
 
     @java.lang.Override
@@ -1092,7 +1144,6 @@ public final class Access {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1123,7 +1174,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1162,7 +1213,9 @@ public final class Access {
      * </pre>
      *
      * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The roleId.
      */
+    @java.lang.Override
     public java.lang.String getRoleId() {
       java.lang.Object ref = roleId_;
       if (ref instanceof java.lang.String) {
@@ -1181,7 +1234,9 @@ public final class Access {
      * </pre>
      *
      * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for roleId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRoleIdBytes() {
       java.lang.Object ref = roleId_;
@@ -1205,7 +1260,9 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the subject field is set.
      */
+    @java.lang.Override
     public boolean hasSubject() {
       return subject_ != null;
     }
@@ -1216,7 +1273,9 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The subject.
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.Subject getSubject() {
       return subject_ == null ? yandex.cloud.api.access.Access.Subject.getDefaultInstance() : subject_;
     }
@@ -1228,6 +1287,7 @@ public final class Access {
      *
      * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.SubjectOrBuilder getSubjectOrBuilder() {
       return getSubject();
     }
@@ -1246,7 +1306,7 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRoleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, roleId_);
       }
       if (subject_ != null) {
@@ -1261,7 +1321,7 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRoleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, roleId_);
       }
       if (subject_ != null) {
@@ -1283,16 +1343,15 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.AccessBinding other = (yandex.cloud.api.access.Access.AccessBinding) obj;
 
-      boolean result = true;
-      result = result && getRoleId()
-          .equals(other.getRoleId());
-      result = result && (hasSubject() == other.hasSubject());
+      if (!getRoleId()
+          .equals(other.getRoleId())) return false;
+      if (hasSubject() != other.hasSubject()) return false;
       if (hasSubject()) {
-        result = result && getSubject()
-            .equals(other.getSubject());
+        if (!getSubject()
+            .equals(other.getSubject())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1487,35 +1546,35 @@ public final class Access {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1572,6 +1631,7 @@ public final class Access {
        * </pre>
        *
        * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The roleId.
        */
       public java.lang.String getRoleId() {
         java.lang.Object ref = roleId_;
@@ -1591,6 +1651,7 @@ public final class Access {
        * </pre>
        *
        * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for roleId.
        */
       public com.google.protobuf.ByteString
           getRoleIdBytes() {
@@ -1611,6 +1672,8 @@ public final class Access {
        * </pre>
        *
        * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The roleId to set.
+       * @return This builder for chaining.
        */
       public Builder setRoleId(
           java.lang.String value) {
@@ -1628,6 +1691,7 @@ public final class Access {
        * </pre>
        *
        * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRoleId() {
         
@@ -1641,6 +1705,8 @@ public final class Access {
        * </pre>
        *
        * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for roleId to set.
+       * @return This builder for chaining.
        */
       public Builder setRoleIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1654,7 +1720,7 @@ public final class Access {
         return this;
       }
 
-      private yandex.cloud.api.access.Access.Subject subject_ = null;
+      private yandex.cloud.api.access.Access.Subject subject_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.access.Access.Subject, yandex.cloud.api.access.Access.Subject.Builder, yandex.cloud.api.access.Access.SubjectOrBuilder> subjectBuilder_;
       /**
@@ -1664,6 +1730,7 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the subject field is set.
        */
       public boolean hasSubject() {
         return subjectBuilder_ != null || subject_ != null;
@@ -1675,6 +1742,7 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.Subject subject = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The subject.
        */
       public yandex.cloud.api.access.Access.Subject getSubject() {
         if (subjectBuilder_ == null) {
@@ -1818,7 +1886,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1880,6 +1948,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -1890,6 +1959,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -1904,6 +1974,7 @@ public final class Access {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -1915,6 +1986,7 @@ public final class Access {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -1925,6 +1997,7 @@ public final class Access {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -1932,7 +2005,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.ListAccessBindingsRequest}
    */
-  public  static final class ListAccessBindingsRequest extends
+  public static final class ListAccessBindingsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.ListAccessBindingsRequest)
       ListAccessBindingsRequestOrBuilder {
@@ -1943,8 +2016,14 @@ public final class Access {
     }
     private ListAccessBindingsRequest() {
       resourceId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessBindingsRequest();
     }
 
     @java.lang.Override
@@ -1960,7 +2039,6 @@ public final class Access {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1989,7 +2067,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2030,7 +2108,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -2051,7 +2131,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -2078,7 +2160,9 @@ public final class Access {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -2093,7 +2177,9 @@ public final class Access {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -2114,7 +2200,9 @@ public final class Access {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -2143,13 +2231,13 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -2161,14 +2249,14 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2186,15 +2274,14 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.ListAccessBindingsRequest other = (yandex.cloud.api.access.Access.ListAccessBindingsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2385,35 +2472,35 @@ public final class Access {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2476,6 +2563,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -2497,6 +2585,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -2519,6 +2608,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -2538,6 +2629,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -2553,6 +2645,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2577,7 +2671,9 @@ public final class Access {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -2591,6 +2687,8 @@ public final class Access {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -2608,6 +2706,7 @@ public final class Access {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -2625,6 +2724,7 @@ public final class Access {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -2646,6 +2746,7 @@ public final class Access {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -2668,6 +2769,8 @@ public final class Access {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -2687,6 +2790,7 @@ public final class Access {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -2702,6 +2806,8 @@ public final class Access {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2717,7 +2823,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2826,6 +2932,7 @@ public final class Access {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -2839,6 +2946,7 @@ public final class Access {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -2846,7 +2954,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.ListAccessBindingsResponse}
    */
-  public  static final class ListAccessBindingsResponse extends
+  public static final class ListAccessBindingsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.ListAccessBindingsResponse)
       ListAccessBindingsResponseOrBuilder {
@@ -2858,6 +2966,13 @@ public final class Access {
     private ListAccessBindingsResponse() {
       accessBindings_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessBindingsResponse();
     }
 
     @java.lang.Override
@@ -2885,7 +3000,7 @@ public final class Access {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 accessBindings_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBinding>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2900,7 +3015,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2914,7 +3029,7 @@ public final class Access {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           accessBindings_ = java.util.Collections.unmodifiableList(accessBindings_);
         }
         this.unknownFields = unknownFields.build();
@@ -2934,7 +3049,6 @@ public final class Access {
               yandex.cloud.api.access.Access.ListAccessBindingsResponse.class, yandex.cloud.api.access.Access.ListAccessBindingsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACCESS_BINDINGS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.access.Access.AccessBinding> accessBindings_;
     /**
@@ -2944,6 +3058,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.access.Access.AccessBinding> getAccessBindingsList() {
       return accessBindings_;
     }
@@ -2954,6 +3069,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingOrBuilder> 
         getAccessBindingsOrBuilderList() {
       return accessBindings_;
@@ -2965,6 +3081,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 1;</code>
      */
+    @java.lang.Override
     public int getAccessBindingsCount() {
       return accessBindings_.size();
     }
@@ -2975,6 +3092,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBinding getAccessBindings(int index) {
       return accessBindings_.get(index);
     }
@@ -2985,6 +3103,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBindingOrBuilder getAccessBindingsOrBuilder(
         int index) {
       return accessBindings_.get(index);
@@ -3003,7 +3122,9 @@ public final class Access {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -3027,7 +3148,9 @@ public final class Access {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -3059,7 +3182,7 @@ public final class Access {
       for (int i = 0; i < accessBindings_.size(); i++) {
         output.writeMessage(1, accessBindings_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -3075,7 +3198,7 @@ public final class Access {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, accessBindings_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -3093,13 +3216,12 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.ListAccessBindingsResponse other = (yandex.cloud.api.access.Access.ListAccessBindingsResponse) obj;
 
-      boolean result = true;
-      result = result && getAccessBindingsList()
-          .equals(other.getAccessBindingsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAccessBindingsList()
+          .equals(other.getAccessBindingsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3284,9 +3406,8 @@ public final class Access {
       public yandex.cloud.api.access.Access.ListAccessBindingsResponse buildPartial() {
         yandex.cloud.api.access.Access.ListAccessBindingsResponse result = new yandex.cloud.api.access.Access.ListAccessBindingsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (accessBindingsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             accessBindings_ = java.util.Collections.unmodifiableList(accessBindings_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3295,42 +3416,41 @@ public final class Access {
           result.accessBindings_ = accessBindingsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3407,7 +3527,7 @@ public final class Access {
       private java.util.List<yandex.cloud.api.access.Access.AccessBinding> accessBindings_ =
         java.util.Collections.emptyList();
       private void ensureAccessBindingsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           accessBindings_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBinding>(accessBindings_);
           bitField0_ |= 0x00000001;
          }
@@ -3708,7 +3828,7 @@ public final class Access {
           accessBindingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.access.Access.AccessBinding, yandex.cloud.api.access.Access.AccessBinding.Builder, yandex.cloud.api.access.Access.AccessBindingOrBuilder>(
                   accessBindings_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           accessBindings_ = null;
@@ -3728,6 +3848,7 @@ public final class Access {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -3752,6 +3873,7 @@ public final class Access {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -3777,6 +3899,8 @@ public final class Access {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -3799,6 +3923,7 @@ public final class Access {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -3817,6 +3942,8 @@ public final class Access {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -3832,7 +3959,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3893,6 +4020,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -3902,6 +4030,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -3953,7 +4082,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.SetAccessBindingsRequest}
    */
-  public  static final class SetAccessBindingsRequest extends
+  public static final class SetAccessBindingsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.SetAccessBindingsRequest)
       SetAccessBindingsRequestOrBuilder {
@@ -3965,6 +4094,13 @@ public final class Access {
     private SetAccessBindingsRequest() {
       resourceId_ = "";
       accessBindings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetAccessBindingsRequest();
     }
 
     @java.lang.Override
@@ -3998,16 +4134,16 @@ public final class Access {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 accessBindings_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBinding>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               accessBindings_.add(
                   input.readMessage(yandex.cloud.api.access.Access.AccessBinding.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4021,7 +4157,7 @@ public final class Access {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           accessBindings_ = java.util.Collections.unmodifiableList(accessBindings_);
         }
         this.unknownFields = unknownFields.build();
@@ -4041,7 +4177,6 @@ public final class Access {
               yandex.cloud.api.access.Access.SetAccessBindingsRequest.class, yandex.cloud.api.access.Access.SetAccessBindingsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RESOURCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object resourceId_;
     /**
@@ -4051,7 +4186,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -4071,7 +4208,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -4095,6 +4234,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.access.Access.AccessBinding> getAccessBindingsList() {
       return accessBindings_;
     }
@@ -4105,6 +4245,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingOrBuilder> 
         getAccessBindingsOrBuilderList() {
       return accessBindings_;
@@ -4116,6 +4257,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public int getAccessBindingsCount() {
       return accessBindings_.size();
     }
@@ -4126,6 +4268,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBinding getAccessBindings(int index) {
       return accessBindings_.get(index);
     }
@@ -4136,6 +4279,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBindingOrBuilder getAccessBindingsOrBuilder(
         int index) {
       return accessBindings_.get(index);
@@ -4155,7 +4299,7 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       for (int i = 0; i < accessBindings_.size(); i++) {
@@ -4170,7 +4314,7 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       for (int i = 0; i < accessBindings_.size(); i++) {
@@ -4192,13 +4336,12 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.SetAccessBindingsRequest other = (yandex.cloud.api.access.Access.SetAccessBindingsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && getAccessBindingsList()
-          .equals(other.getAccessBindingsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getAccessBindingsList()
+          .equals(other.getAccessBindingsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4352,7 +4495,7 @@ public final class Access {
 
         if (accessBindingsBuilder_ == null) {
           accessBindings_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           accessBindingsBuilder_.clear();
         }
@@ -4383,53 +4526,51 @@ public final class Access {
       public yandex.cloud.api.access.Access.SetAccessBindingsRequest buildPartial() {
         yandex.cloud.api.access.Access.SetAccessBindingsRequest result = new yandex.cloud.api.access.Access.SetAccessBindingsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.resourceId_ = resourceId_;
         if (accessBindingsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             accessBindings_ = java.util.Collections.unmodifiableList(accessBindings_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.accessBindings_ = accessBindings_;
         } else {
           result.accessBindings_ = accessBindingsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4451,7 +4592,7 @@ public final class Access {
           if (!other.accessBindings_.isEmpty()) {
             if (accessBindings_.isEmpty()) {
               accessBindings_ = other.accessBindings_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureAccessBindingsIsMutable();
               accessBindings_.addAll(other.accessBindings_);
@@ -4464,7 +4605,7 @@ public final class Access {
               accessBindingsBuilder_.dispose();
               accessBindingsBuilder_ = null;
               accessBindings_ = other.accessBindings_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               accessBindingsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAccessBindingsFieldBuilder() : null;
@@ -4511,6 +4652,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -4531,6 +4673,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -4552,6 +4695,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -4570,6 +4715,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -4584,6 +4730,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4600,9 +4748,9 @@ public final class Access {
       private java.util.List<yandex.cloud.api.access.Access.AccessBinding> accessBindings_ =
         java.util.Collections.emptyList();
       private void ensureAccessBindingsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           accessBindings_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBinding>(accessBindings_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4796,7 +4944,7 @@ public final class Access {
       public Builder clearAccessBindings() {
         if (accessBindingsBuilder_ == null) {
           accessBindings_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           accessBindingsBuilder_.clear();
@@ -4901,7 +5049,7 @@ public final class Access {
           accessBindingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.access.Access.AccessBinding, yandex.cloud.api.access.Access.AccessBinding.Builder, yandex.cloud.api.access.Access.AccessBindingOrBuilder>(
                   accessBindings_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           accessBindings_ = null;
@@ -4911,7 +5059,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4971,6 +5119,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -4979,6 +5128,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -4986,7 +5136,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.SetAccessBindingsMetadata}
    */
-  public  static final class SetAccessBindingsMetadata extends
+  public static final class SetAccessBindingsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.SetAccessBindingsMetadata)
       SetAccessBindingsMetadataOrBuilder {
@@ -4997,6 +5147,13 @@ public final class Access {
     }
     private SetAccessBindingsMetadata() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetAccessBindingsMetadata();
     }
 
     @java.lang.Override
@@ -5012,7 +5169,6 @@ public final class Access {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5030,7 +5186,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5069,7 +5225,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -5088,7 +5246,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -5117,7 +5277,7 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -5129,7 +5289,7 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5147,11 +5307,10 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.SetAccessBindingsMetadata other = (yandex.cloud.api.access.Access.SetAccessBindingsMetadata) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5331,35 +5490,35 @@ public final class Access {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5413,6 +5572,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -5432,6 +5592,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -5452,6 +5613,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -5469,6 +5632,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -5482,6 +5646,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5497,7 +5663,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5557,6 +5723,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -5565,6 +5732,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -5616,7 +5784,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.UpdateAccessBindingsRequest}
    */
-  public  static final class UpdateAccessBindingsRequest extends
+  public static final class UpdateAccessBindingsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.UpdateAccessBindingsRequest)
       UpdateAccessBindingsRequestOrBuilder {
@@ -5628,6 +5796,13 @@ public final class Access {
     private UpdateAccessBindingsRequest() {
       resourceId_ = "";
       accessBindingDeltas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessBindingsRequest();
     }
 
     @java.lang.Override
@@ -5661,16 +5836,16 @@ public final class Access {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 accessBindingDeltas_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBindingDelta>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               accessBindingDeltas_.add(
                   input.readMessage(yandex.cloud.api.access.Access.AccessBindingDelta.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5684,7 +5859,7 @@ public final class Access {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           accessBindingDeltas_ = java.util.Collections.unmodifiableList(accessBindingDeltas_);
         }
         this.unknownFields = unknownFields.build();
@@ -5704,7 +5879,6 @@ public final class Access {
               yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.class, yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RESOURCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object resourceId_;
     /**
@@ -5713,7 +5887,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -5732,7 +5908,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -5756,6 +5934,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getAccessBindingDeltasList() {
       return accessBindingDeltas_;
     }
@@ -5766,6 +5945,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
         getAccessBindingDeltasOrBuilderList() {
       return accessBindingDeltas_;
@@ -5777,6 +5957,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
+    @java.lang.Override
     public int getAccessBindingDeltasCount() {
       return accessBindingDeltas_.size();
     }
@@ -5787,6 +5968,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index) {
       return accessBindingDeltas_.get(index);
     }
@@ -5797,6 +5979,7 @@ public final class Access {
      *
      * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
         int index) {
       return accessBindingDeltas_.get(index);
@@ -5816,7 +5999,7 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       for (int i = 0; i < accessBindingDeltas_.size(); i++) {
@@ -5831,7 +6014,7 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       for (int i = 0; i < accessBindingDeltas_.size(); i++) {
@@ -5853,13 +6036,12 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.UpdateAccessBindingsRequest other = (yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && getAccessBindingDeltasList()
-          .equals(other.getAccessBindingDeltasList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getAccessBindingDeltasList()
+          .equals(other.getAccessBindingDeltasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6013,7 +6195,7 @@ public final class Access {
 
         if (accessBindingDeltasBuilder_ == null) {
           accessBindingDeltas_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           accessBindingDeltasBuilder_.clear();
         }
@@ -6044,53 +6226,51 @@ public final class Access {
       public yandex.cloud.api.access.Access.UpdateAccessBindingsRequest buildPartial() {
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest result = new yandex.cloud.api.access.Access.UpdateAccessBindingsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.resourceId_ = resourceId_;
         if (accessBindingDeltasBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             accessBindingDeltas_ = java.util.Collections.unmodifiableList(accessBindingDeltas_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.accessBindingDeltas_ = accessBindingDeltas_;
         } else {
           result.accessBindingDeltas_ = accessBindingDeltasBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6112,7 +6292,7 @@ public final class Access {
           if (!other.accessBindingDeltas_.isEmpty()) {
             if (accessBindingDeltas_.isEmpty()) {
               accessBindingDeltas_ = other.accessBindingDeltas_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureAccessBindingDeltasIsMutable();
               accessBindingDeltas_.addAll(other.accessBindingDeltas_);
@@ -6125,7 +6305,7 @@ public final class Access {
               accessBindingDeltasBuilder_.dispose();
               accessBindingDeltasBuilder_ = null;
               accessBindingDeltas_ = other.accessBindingDeltas_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               accessBindingDeltasBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAccessBindingDeltasFieldBuilder() : null;
@@ -6171,6 +6351,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -6190,6 +6371,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -6210,6 +6392,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -6227,6 +6411,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -6240,6 +6425,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6256,9 +6443,9 @@ public final class Access {
       private java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> accessBindingDeltas_ =
         java.util.Collections.emptyList();
       private void ensureAccessBindingDeltasIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           accessBindingDeltas_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBindingDelta>(accessBindingDeltas_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -6452,7 +6639,7 @@ public final class Access {
       public Builder clearAccessBindingDeltas() {
         if (accessBindingDeltasBuilder_ == null) {
           accessBindingDeltas_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           accessBindingDeltasBuilder_.clear();
@@ -6557,7 +6744,7 @@ public final class Access {
           accessBindingDeltasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.access.Access.AccessBindingDelta, yandex.cloud.api.access.Access.AccessBindingDelta.Builder, yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder>(
                   accessBindingDeltas_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           accessBindingDeltas_ = null;
@@ -6567,7 +6754,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6627,6 +6814,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
@@ -6635,6 +6823,7 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -6642,7 +6831,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.UpdateAccessBindingsMetadata}
    */
-  public  static final class UpdateAccessBindingsMetadata extends
+  public static final class UpdateAccessBindingsMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.UpdateAccessBindingsMetadata)
       UpdateAccessBindingsMetadataOrBuilder {
@@ -6653,6 +6842,13 @@ public final class Access {
     }
     private UpdateAccessBindingsMetadata() {
       resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessBindingsMetadata();
     }
 
     @java.lang.Override
@@ -6668,7 +6864,6 @@ public final class Access {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6686,7 +6881,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6725,7 +6920,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The resourceId.
      */
+    @java.lang.Override
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
       if (ref instanceof java.lang.String) {
@@ -6744,7 +6941,9 @@ public final class Access {
      * </pre>
      *
      * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
       java.lang.Object ref = resourceId_;
@@ -6773,7 +6972,7 @@ public final class Access {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
       unknownFields.writeTo(output);
@@ -6785,7 +6984,7 @@ public final class Access {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6803,11 +7002,10 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.UpdateAccessBindingsMetadata other = (yandex.cloud.api.access.Access.UpdateAccessBindingsMetadata) obj;
 
-      boolean result = true;
-      result = result && getResourceId()
-          .equals(other.getResourceId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6987,35 +7185,35 @@ public final class Access {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7069,6 +7267,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The resourceId.
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -7088,6 +7287,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -7108,6 +7308,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -7125,6 +7327,7 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResourceId() {
         
@@ -7138,6 +7341,8 @@ public final class Access {
        * </pre>
        *
        * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7153,7 +7358,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7213,6 +7418,7 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for action.
      */
     int getActionValue();
     /**
@@ -7221,6 +7427,7 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The action.
      */
     yandex.cloud.api.access.Access.AccessBindingAction getAction();
 
@@ -7230,6 +7437,7 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the accessBinding field is set.
      */
     boolean hasAccessBinding();
     /**
@@ -7238,6 +7446,7 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessBinding.
      */
     yandex.cloud.api.access.Access.AccessBinding getAccessBinding();
     /**
@@ -7252,7 +7461,7 @@ public final class Access {
   /**
    * Protobuf type {@code yandex.cloud.access.AccessBindingDelta}
    */
-  public  static final class AccessBindingDelta extends
+  public static final class AccessBindingDelta extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.access.AccessBindingDelta)
       AccessBindingDeltaOrBuilder {
@@ -7263,6 +7472,13 @@ public final class Access {
     }
     private AccessBindingDelta() {
       action_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessBindingDelta();
     }
 
     @java.lang.Override
@@ -7278,7 +7494,6 @@ public final class Access {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7309,7 +7524,7 @@ public final class Access {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7348,8 +7563,9 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for action.
      */
-    public int getActionValue() {
+    @java.lang.Override public int getActionValue() {
       return action_;
     }
     /**
@@ -7358,8 +7574,9 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The action.
      */
-    public yandex.cloud.api.access.Access.AccessBindingAction getAction() {
+    @java.lang.Override public yandex.cloud.api.access.Access.AccessBindingAction getAction() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.access.Access.AccessBindingAction result = yandex.cloud.api.access.Access.AccessBindingAction.valueOf(action_);
       return result == null ? yandex.cloud.api.access.Access.AccessBindingAction.UNRECOGNIZED : result;
@@ -7373,7 +7590,9 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the accessBinding field is set.
      */
+    @java.lang.Override
     public boolean hasAccessBinding() {
       return accessBinding_ != null;
     }
@@ -7383,7 +7602,9 @@ public final class Access {
      * </pre>
      *
      * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessBinding.
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBinding getAccessBinding() {
       return accessBinding_ == null ? yandex.cloud.api.access.Access.AccessBinding.getDefaultInstance() : accessBinding_;
     }
@@ -7394,6 +7615,7 @@ public final class Access {
      *
      * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.access.Access.AccessBindingOrBuilder getAccessBindingOrBuilder() {
       return getAccessBinding();
     }
@@ -7450,15 +7672,14 @@ public final class Access {
       }
       yandex.cloud.api.access.Access.AccessBindingDelta other = (yandex.cloud.api.access.Access.AccessBindingDelta) obj;
 
-      boolean result = true;
-      result = result && action_ == other.action_;
-      result = result && (hasAccessBinding() == other.hasAccessBinding());
+      if (action_ != other.action_) return false;
+      if (hasAccessBinding() != other.hasAccessBinding()) return false;
       if (hasAccessBinding()) {
-        result = result && getAccessBinding()
-            .equals(other.getAccessBinding());
+        if (!getAccessBinding()
+            .equals(other.getAccessBinding())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7653,35 +7874,35 @@ public final class Access {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7737,8 +7958,9 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for action.
        */
-      public int getActionValue() {
+      @java.lang.Override public int getActionValue() {
         return action_;
       }
       /**
@@ -7747,8 +7969,11 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
        */
       public Builder setActionValue(int value) {
+        
         action_ = value;
         onChanged();
         return this;
@@ -7759,7 +7984,9 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The action.
        */
+      @java.lang.Override
       public yandex.cloud.api.access.Access.AccessBindingAction getAction() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.access.Access.AccessBindingAction result = yandex.cloud.api.access.Access.AccessBindingAction.valueOf(action_);
@@ -7771,6 +7998,8 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
        */
       public Builder setAction(yandex.cloud.api.access.Access.AccessBindingAction value) {
         if (value == null) {
@@ -7787,6 +8016,7 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBindingAction action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAction() {
         
@@ -7795,7 +8025,7 @@ public final class Access {
         return this;
       }
 
-      private yandex.cloud.api.access.Access.AccessBinding accessBinding_ = null;
+      private yandex.cloud.api.access.Access.AccessBinding accessBinding_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.access.Access.AccessBinding, yandex.cloud.api.access.Access.AccessBinding.Builder, yandex.cloud.api.access.Access.AccessBindingOrBuilder> accessBindingBuilder_;
       /**
@@ -7804,6 +8034,7 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the accessBinding field is set.
        */
       public boolean hasAccessBinding() {
         return accessBindingBuilder_ != null || accessBinding_ != null;
@@ -7814,6 +8045,7 @@ public final class Access {
        * </pre>
        *
        * <code>.yandex.cloud.access.AccessBinding access_binding = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The accessBinding.
        */
       public yandex.cloud.api.access.Access.AccessBinding getAccessBinding() {
         if (accessBindingBuilder_ == null) {
@@ -7950,7 +8182,7 @@ public final class Access {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8086,19 +8318,11 @@ public final class Access {
       "m/yandex-cloud/go-genproto/yandex/cloud/" +
       "access;accessb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_access_Subject_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_access_Subject_fieldAccessorTable = new

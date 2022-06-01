@@ -1,19 +1,6 @@
 package yandex.cloud.api.datasphere.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/datasphere/v1/node_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class NodeServiceGrpc {
 
   private NodeServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class NodeServiceGrpc {
     if ((getExecuteMethod = NodeServiceGrpc.getExecuteMethod) == null) {
       synchronized (NodeServiceGrpc.class) {
         if ((getExecuteMethod = NodeServiceGrpc.getExecuteMethod) == null) {
-          NodeServiceGrpc.getExecuteMethod = getExecuteMethod = 
+          NodeServiceGrpc.getExecuteMethod = getExecuteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest, yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.datasphere.v1.NodeService", "Execute"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Execute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new NodeServiceMethodDescriptorSupplier("Execute"))
-                  .build();
-          }
+              .setSchemaDescriptor(new NodeServiceMethodDescriptorSupplier("Execute"))
+              .build();
         }
-     }
-     return getExecuteMethod;
+      }
+    }
+    return getExecuteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static NodeServiceStub newStub(io.grpc.Channel channel) {
-    return new NodeServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodeServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodeServiceStub>() {
+        @java.lang.Override
+        public NodeServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodeServiceStub(channel, callOptions);
+        }
+      };
+    return NodeServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class NodeServiceGrpc {
    */
   public static NodeServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new NodeServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodeServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodeServiceBlockingStub>() {
+        @java.lang.Override
+        public NodeServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodeServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return NodeServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class NodeServiceGrpc {
    */
   public static NodeServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new NodeServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodeServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodeServiceFutureStub>() {
+        @java.lang.Override
+        public NodeServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodeServiceFutureStub(channel, callOptions);
+        }
+      };
+    return NodeServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class NodeServiceGrpc {
      */
     public void execute(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getExecuteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExecuteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getExecuteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest,
                 yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse>(
@@ -120,19 +128,15 @@ public final class NodeServiceGrpc {
    * A set of methods for managing Node resources.
    * </pre>
    */
-  public static final class NodeServiceStub extends io.grpc.stub.AbstractStub<NodeServiceStub> {
-    private NodeServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodeServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodeServiceStub extends io.grpc.stub.AbstractAsyncStub<NodeServiceStub> {
+    private NodeServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodeServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodeServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodeServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class NodeServiceGrpc {
      */
     public void execute(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExecuteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class NodeServiceGrpc {
    * A set of methods for managing Node resources.
    * </pre>
    */
-  public static final class NodeServiceBlockingStub extends io.grpc.stub.AbstractStub<NodeServiceBlockingStub> {
-    private NodeServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodeServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodeServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<NodeServiceBlockingStub> {
+    private NodeServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodeServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodeServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodeServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class NodeServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse execute(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExecuteMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class NodeServiceGrpc {
    * A set of methods for managing Node resources.
    * </pre>
    */
-  public static final class NodeServiceFutureStub extends io.grpc.stub.AbstractStub<NodeServiceFutureStub> {
-    private NodeServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodeServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodeServiceFutureStub extends io.grpc.stub.AbstractFutureStub<NodeServiceFutureStub> {
+    private NodeServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodeServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodeServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodeServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class NodeServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse> execute(
         yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExecuteMethod(), getCallOptions()), request);
     }
   }

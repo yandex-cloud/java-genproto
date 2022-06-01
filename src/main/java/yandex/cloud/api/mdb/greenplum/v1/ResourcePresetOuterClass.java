@@ -24,6 +24,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
      */
     java.util.List<java.lang.String>
         getZoneIdsList();
@@ -51,6 +54,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
      */
     int getZoneIdsCount();
     /**
@@ -59,6 +63,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
      */
     java.lang.String getZoneIds(int index);
     /**
@@ -67,6 +73,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
      */
     com.google.protobuf.ByteString
         getZoneIdsBytes(int index);
@@ -77,6 +85,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @return A list containing the diskTypeIds.
      */
     java.util.List<java.lang.String>
         getDiskTypeIdsList();
@@ -86,6 +95,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @return The count of diskTypeIds.
      */
     int getDiskTypeIdsCount();
     /**
@@ -94,6 +104,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @param index The index of the element to return.
+     * @return The diskTypeIds at the given index.
      */
     java.lang.String getDiskTypeIds(int index);
     /**
@@ -102,6 +114,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the diskTypeIds at the given index.
      */
     com.google.protobuf.ByteString
         getDiskTypeIdsBytes(int index);
@@ -112,6 +126,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 cores = 3;</code>
+     * @return The cores.
      */
     long getCores();
 
@@ -121,6 +136,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 memory = 4;</code>
+     * @return The memory.
      */
     long getMemory();
 
@@ -130,6 +146,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -138,6 +155,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType();
 
@@ -147,6 +165,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 host_count_divider = 8;</code>
+     * @return The hostCountDivider.
      */
     long getHostCountDivider();
 
@@ -156,6 +175,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 max_segment_in_host_count = 9;</code>
+     * @return The maxSegmentInHostCount.
      */
     long getMaxSegmentInHostCount();
   }
@@ -166,7 +186,7 @@ public final class ResourcePresetOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ResourcePreset}
    */
-  public  static final class ResourcePreset extends
+  public static final class ResourcePreset extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.ResourcePreset)
       ResourcePresetOrBuilder {
@@ -179,11 +199,14 @@ public final class ResourcePresetOuterClass {
       id_ = "";
       zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      cores_ = 0L;
-      memory_ = 0L;
       type_ = 0;
-      hostCountDivider_ = 0L;
-      maxSegmentInHostCount_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourcePreset();
     }
 
     @java.lang.Override
@@ -218,9 +241,9 @@ public final class ResourcePresetOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 zoneIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               zoneIds_.add(s);
               break;
@@ -253,15 +276,15 @@ public final class ResourcePresetOuterClass {
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 diskTypeIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               diskTypeIds_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -275,10 +298,10 @@ public final class ResourcePresetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           zoneIds_ = zoneIds_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           diskTypeIds_ = diskTypeIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -357,6 +380,8 @@ public final class ResourcePresetOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -364,6 +389,10 @@ public final class ResourcePresetOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -387,6 +416,10 @@ public final class ResourcePresetOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -421,7 +454,6 @@ public final class ResourcePresetOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -430,7 +462,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -449,7 +483,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -472,6 +508,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
      */
     public com.google.protobuf.ProtocolStringList
         getZoneIdsList() {
@@ -483,6 +520,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
      */
     public int getZoneIdsCount() {
       return zoneIds_.size();
@@ -493,6 +531,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
      */
     public java.lang.String getZoneIds(int index) {
       return zoneIds_.get(index);
@@ -503,6 +543,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
      */
     public com.google.protobuf.ByteString
         getZoneIdsBytes(int index) {
@@ -517,6 +559,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @return A list containing the diskTypeIds.
      */
     public com.google.protobuf.ProtocolStringList
         getDiskTypeIdsList() {
@@ -528,6 +571,7 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @return The count of diskTypeIds.
      */
     public int getDiskTypeIdsCount() {
       return diskTypeIds_.size();
@@ -538,6 +582,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @param index The index of the element to return.
+     * @return The diskTypeIds at the given index.
      */
     public java.lang.String getDiskTypeIds(int index) {
       return diskTypeIds_.get(index);
@@ -548,6 +594,8 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>repeated string disk_type_ids = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the diskTypeIds at the given index.
      */
     public com.google.protobuf.ByteString
         getDiskTypeIdsBytes(int index) {
@@ -562,7 +610,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 cores = 3;</code>
+     * @return The cores.
      */
+    @java.lang.Override
     public long getCores() {
       return cores_;
     }
@@ -575,7 +625,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 memory = 4;</code>
+     * @return The memory.
      */
+    @java.lang.Override
     public long getMemory() {
       return memory_;
     }
@@ -588,8 +640,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -598,8 +651,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type result = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.UNRECOGNIZED : result;
@@ -613,7 +667,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 host_count_divider = 8;</code>
+     * @return The hostCountDivider.
      */
+    @java.lang.Override
     public long getHostCountDivider() {
       return hostCountDivider_;
     }
@@ -626,7 +682,9 @@ public final class ResourcePresetOuterClass {
      * </pre>
      *
      * <code>int64 max_segment_in_host_count = 9;</code>
+     * @return The maxSegmentInHostCount.
      */
+    @java.lang.Override
     public long getMaxSegmentInHostCount() {
       return maxSegmentInHostCount_;
     }
@@ -645,7 +703,7 @@ public final class ResourcePresetOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       for (int i = 0; i < zoneIds_.size(); i++) {
@@ -678,7 +736,7 @@ public final class ResourcePresetOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       {
@@ -732,24 +790,23 @@ public final class ResourcePresetOuterClass {
       }
       yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset other = (yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getZoneIdsList()
-          .equals(other.getZoneIdsList());
-      result = result && getDiskTypeIdsList()
-          .equals(other.getDiskTypeIdsList());
-      result = result && (getCores()
-          == other.getCores());
-      result = result && (getMemory()
-          == other.getMemory());
-      result = result && type_ == other.type_;
-      result = result && (getHostCountDivider()
-          == other.getHostCountDivider());
-      result = result && (getMaxSegmentInHostCount()
-          == other.getMaxSegmentInHostCount());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!getDiskTypeIdsList()
+          .equals(other.getDiskTypeIdsList())) return false;
+      if (getCores()
+          != other.getCores()) return false;
+      if (getMemory()
+          != other.getMemory()) return false;
+      if (type_ != other.type_) return false;
+      if (getHostCountDivider()
+          != other.getHostCountDivider()) return false;
+      if (getMaxSegmentInHostCount()
+          != other.getMaxSegmentInHostCount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -923,9 +980,9 @@ public final class ResourcePresetOuterClass {
         id_ = "";
 
         zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         cores_ = 0L;
 
         memory_ = 0L;
@@ -963,16 +1020,15 @@ public final class ResourcePresetOuterClass {
       public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset buildPartial() {
         yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset result = new yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           zoneIds_ = zoneIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.zoneIds_ = zoneIds_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           diskTypeIds_ = diskTypeIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.diskTypeIds_ = diskTypeIds_;
         result.cores_ = cores_;
@@ -980,42 +1036,41 @@ public final class ResourcePresetOuterClass {
         result.type_ = type_;
         result.hostCountDivider_ = hostCountDivider_;
         result.maxSegmentInHostCount_ = maxSegmentInHostCount_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1036,7 +1091,7 @@ public final class ResourcePresetOuterClass {
         if (!other.zoneIds_.isEmpty()) {
           if (zoneIds_.isEmpty()) {
             zoneIds_ = other.zoneIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureZoneIdsIsMutable();
             zoneIds_.addAll(other.zoneIds_);
@@ -1046,7 +1101,7 @@ public final class ResourcePresetOuterClass {
         if (!other.diskTypeIds_.isEmpty()) {
           if (diskTypeIds_.isEmpty()) {
             diskTypeIds_ = other.diskTypeIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureDiskTypeIdsIsMutable();
             diskTypeIds_.addAll(other.diskTypeIds_);
@@ -1105,6 +1160,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1124,6 +1180,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1144,6 +1201,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1161,6 +1220,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1174,6 +1234,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1189,9 +1251,9 @@ public final class ResourcePresetOuterClass {
 
       private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureZoneIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -1200,6 +1262,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @return A list containing the zoneIds.
        */
       public com.google.protobuf.ProtocolStringList
           getZoneIdsList() {
@@ -1211,6 +1274,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @return The count of zoneIds.
        */
       public int getZoneIdsCount() {
         return zoneIds_.size();
@@ -1221,6 +1285,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
        */
       public java.lang.String getZoneIds(int index) {
         return zoneIds_.get(index);
@@ -1231,6 +1297,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
        */
       public com.google.protobuf.ByteString
           getZoneIdsBytes(int index) {
@@ -1242,6 +1310,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIds(
           int index, java.lang.String value) {
@@ -1259,6 +1330,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
        */
       public Builder addZoneIds(
           java.lang.String value) {
@@ -1276,6 +1349,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllZoneIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -1291,10 +1366,11 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneIds() {
         zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1304,6 +1380,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string zone_ids = 2;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
        */
       public Builder addZoneIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -1319,9 +1397,9 @@ public final class ResourcePresetOuterClass {
 
       private com.google.protobuf.LazyStringList diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureDiskTypeIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           diskTypeIds_ = new com.google.protobuf.LazyStringArrayList(diskTypeIds_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -1330,6 +1408,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @return A list containing the diskTypeIds.
        */
       public com.google.protobuf.ProtocolStringList
           getDiskTypeIdsList() {
@@ -1341,6 +1420,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @return The count of diskTypeIds.
        */
       public int getDiskTypeIdsCount() {
         return diskTypeIds_.size();
@@ -1351,6 +1431,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @param index The index of the element to return.
+       * @return The diskTypeIds at the given index.
        */
       public java.lang.String getDiskTypeIds(int index) {
         return diskTypeIds_.get(index);
@@ -1361,6 +1443,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the diskTypeIds at the given index.
        */
       public com.google.protobuf.ByteString
           getDiskTypeIdsBytes(int index) {
@@ -1372,6 +1456,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The diskTypeIds to set.
+       * @return This builder for chaining.
        */
       public Builder setDiskTypeIds(
           int index, java.lang.String value) {
@@ -1389,6 +1476,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @param value The diskTypeIds to add.
+       * @return This builder for chaining.
        */
       public Builder addDiskTypeIds(
           java.lang.String value) {
@@ -1406,6 +1495,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @param values The diskTypeIds to add.
+       * @return This builder for chaining.
        */
       public Builder addAllDiskTypeIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -1421,10 +1512,11 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiskTypeIds() {
         diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1434,6 +1526,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>repeated string disk_type_ids = 10;</code>
+       * @param value The bytes of the diskTypeIds to add.
+       * @return This builder for chaining.
        */
       public Builder addDiskTypeIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -1454,7 +1548,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 cores = 3;</code>
+       * @return The cores.
        */
+      @java.lang.Override
       public long getCores() {
         return cores_;
       }
@@ -1464,6 +1560,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 cores = 3;</code>
+       * @param value The cores to set.
+       * @return This builder for chaining.
        */
       public Builder setCores(long value) {
         
@@ -1477,6 +1575,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 cores = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCores() {
         
@@ -1492,7 +1591,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 memory = 4;</code>
+       * @return The memory.
        */
+      @java.lang.Override
       public long getMemory() {
         return memory_;
       }
@@ -1502,6 +1603,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 memory = 4;</code>
+       * @param value The memory to set.
+       * @return This builder for chaining.
        */
       public Builder setMemory(long value) {
         
@@ -1515,6 +1618,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 memory = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMemory() {
         
@@ -1530,8 +1634,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1540,8 +1645,11 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -1552,7 +1660,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type result = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.valueOf(type_);
@@ -1564,6 +1674,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type value) {
         if (value == null) {
@@ -1580,6 +1692,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1595,7 +1708,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 host_count_divider = 8;</code>
+       * @return The hostCountDivider.
        */
+      @java.lang.Override
       public long getHostCountDivider() {
         return hostCountDivider_;
       }
@@ -1605,6 +1720,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 host_count_divider = 8;</code>
+       * @param value The hostCountDivider to set.
+       * @return This builder for chaining.
        */
       public Builder setHostCountDivider(long value) {
         
@@ -1618,6 +1735,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 host_count_divider = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHostCountDivider() {
         
@@ -1633,7 +1751,9 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 max_segment_in_host_count = 9;</code>
+       * @return The maxSegmentInHostCount.
        */
+      @java.lang.Override
       public long getMaxSegmentInHostCount() {
         return maxSegmentInHostCount_;
       }
@@ -1643,6 +1763,8 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 max_segment_in_host_count = 9;</code>
+       * @param value The maxSegmentInHostCount to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxSegmentInHostCount(long value) {
         
@@ -1656,6 +1778,7 @@ public final class ResourcePresetOuterClass {
        * </pre>
        *
        * <code>int64 max_segment_in_host_count = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxSegmentInHostCount() {
         
@@ -1666,7 +1789,7 @@ public final class ResourcePresetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1744,18 +1867,10 @@ public final class ResourcePresetOuterClass {
       "proto/yandex/cloud/mdb/greenplum/v1;gree" +
       "nplumb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_greenplum_v1_ResourcePreset_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_ResourcePreset_fieldAccessorTable = new

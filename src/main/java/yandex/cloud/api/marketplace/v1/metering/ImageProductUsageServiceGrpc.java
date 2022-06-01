@@ -1,19 +1,6 @@
 package yandex.cloud.api.marketplace.v1.metering;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/marketplace/v1/metering/image_product_usage_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ImageProductUsageServiceGrpc {
 
   private ImageProductUsageServiceGrpc() {}
@@ -44,29 +32,35 @@ public final class ImageProductUsageServiceGrpc {
     if ((getWriteMethod = ImageProductUsageServiceGrpc.getWriteMethod) == null) {
       synchronized (ImageProductUsageServiceGrpc.class) {
         if ((getWriteMethod = ImageProductUsageServiceGrpc.getWriteMethod) == null) {
-          ImageProductUsageServiceGrpc.getWriteMethod = getWriteMethod = 
+          ImageProductUsageServiceGrpc.getWriteMethod = getWriteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest, yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.marketplace.v1.metering.ImageProductUsageService", "Write"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Write"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImageProductUsageServiceMethodDescriptorSupplier("Write"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImageProductUsageServiceMethodDescriptorSupplier("Write"))
+              .build();
         }
-     }
-     return getWriteMethod;
+      }
+    }
+    return getWriteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ImageProductUsageServiceStub newStub(io.grpc.Channel channel) {
-    return new ImageProductUsageServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageProductUsageServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageProductUsageServiceStub>() {
+        @java.lang.Override
+        public ImageProductUsageServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageProductUsageServiceStub(channel, callOptions);
+        }
+      };
+    return ImageProductUsageServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -74,7 +68,14 @@ public final class ImageProductUsageServiceGrpc {
    */
   public static ImageProductUsageServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ImageProductUsageServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageProductUsageServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageProductUsageServiceBlockingStub>() {
+        @java.lang.Override
+        public ImageProductUsageServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageProductUsageServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ImageProductUsageServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -82,7 +83,14 @@ public final class ImageProductUsageServiceGrpc {
    */
   public static ImageProductUsageServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ImageProductUsageServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImageProductUsageServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImageProductUsageServiceFutureStub>() {
+        @java.lang.Override
+        public ImageProductUsageServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImageProductUsageServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ImageProductUsageServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -99,14 +107,14 @@ public final class ImageProductUsageServiceGrpc {
      */
     public void write(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getWriteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWriteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getWriteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest,
                 yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse>(
@@ -120,19 +128,15 @@ public final class ImageProductUsageServiceGrpc {
    * A set of methods for managing image product's usage.
    * </pre>
    */
-  public static final class ImageProductUsageServiceStub extends io.grpc.stub.AbstractStub<ImageProductUsageServiceStub> {
-    private ImageProductUsageServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageProductUsageServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageProductUsageServiceStub extends io.grpc.stub.AbstractAsyncStub<ImageProductUsageServiceStub> {
+    private ImageProductUsageServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageProductUsageServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageProductUsageServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageProductUsageServiceStub(channel, callOptions);
     }
 
@@ -143,7 +147,7 @@ public final class ImageProductUsageServiceGrpc {
      */
     public void write(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getWriteMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -153,19 +157,15 @@ public final class ImageProductUsageServiceGrpc {
    * A set of methods for managing image product's usage.
    * </pre>
    */
-  public static final class ImageProductUsageServiceBlockingStub extends io.grpc.stub.AbstractStub<ImageProductUsageServiceBlockingStub> {
-    private ImageProductUsageServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageProductUsageServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageProductUsageServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ImageProductUsageServiceBlockingStub> {
+    private ImageProductUsageServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageProductUsageServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageProductUsageServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageProductUsageServiceBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class ImageProductUsageServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse write(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getWriteMethod(), getCallOptions(), request);
     }
   }
@@ -185,19 +185,15 @@ public final class ImageProductUsageServiceGrpc {
    * A set of methods for managing image product's usage.
    * </pre>
    */
-  public static final class ImageProductUsageServiceFutureStub extends io.grpc.stub.AbstractStub<ImageProductUsageServiceFutureStub> {
-    private ImageProductUsageServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImageProductUsageServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImageProductUsageServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ImageProductUsageServiceFutureStub> {
+    private ImageProductUsageServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImageProductUsageServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImageProductUsageServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImageProductUsageServiceFutureStub(channel, callOptions);
     }
 
@@ -208,7 +204,7 @@ public final class ImageProductUsageServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse> write(
         yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getWriteMethod(), getCallOptions()), request);
     }
   }

@@ -27,6 +27,7 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -37,6 +38,7 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -46,6 +48,7 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -53,7 +56,7 @@ public final class VersionsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListVersionsRequest}
    */
-  public  static final class ListVersionsRequest extends
+  public static final class ListVersionsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListVersionsRequest)
       ListVersionsRequestOrBuilder {
@@ -63,8 +66,14 @@ public final class VersionsServiceOuterClass {
       super(builder);
     }
     private ListVersionsRequest() {
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVersionsRequest();
     }
 
     @java.lang.Override
@@ -80,7 +89,6 @@ public final class VersionsServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -103,7 +111,7 @@ public final class VersionsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -145,7 +153,9 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -159,7 +169,9 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -179,7 +191,9 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -211,7 +225,7 @@ public final class VersionsServiceOuterClass {
       if (pageSize_ != 0L) {
         output.writeInt64(1, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -227,7 +241,7 @@ public final class VersionsServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -245,13 +259,12 @@ public final class VersionsServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsRequest other = (yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsRequest) obj;
 
-      boolean result = true;
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -437,35 +450,35 @@ public final class VersionsServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -525,7 +538,9 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -538,6 +553,8 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -554,6 +571,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -570,6 +588,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -590,6 +609,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -611,6 +631,8 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -629,6 +651,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -643,6 +666,8 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -658,7 +683,7 @@ public final class VersionsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -766,6 +791,7 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -778,6 +804,7 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -785,7 +812,7 @@ public final class VersionsServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListVersionsResponse}
    */
-  public  static final class ListVersionsResponse extends
+  public static final class ListVersionsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListVersionsResponse)
       ListVersionsResponseOrBuilder {
@@ -797,6 +824,13 @@ public final class VersionsServiceOuterClass {
     private ListVersionsResponse() {
       version_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListVersionsResponse();
     }
 
     @java.lang.Override
@@ -824,7 +858,7 @@ public final class VersionsServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 version_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -839,7 +873,7 @@ public final class VersionsServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -853,7 +887,7 @@ public final class VersionsServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           version_ = java.util.Collections.unmodifiableList(version_);
         }
         this.unknownFields = unknownFields.build();
@@ -873,7 +907,6 @@ public final class VersionsServiceOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse.class, yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version> version_;
     /**
@@ -883,6 +916,7 @@ public final class VersionsServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Version version = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version> getVersionList() {
       return version_;
     }
@@ -893,6 +927,7 @@ public final class VersionsServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Version version = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.VersionOrBuilder> 
         getVersionOrBuilderList() {
       return version_;
@@ -904,6 +939,7 @@ public final class VersionsServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Version version = 1;</code>
      */
+    @java.lang.Override
     public int getVersionCount() {
       return version_.size();
     }
@@ -914,6 +950,7 @@ public final class VersionsServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Version version = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version getVersion(int index) {
       return version_.get(index);
     }
@@ -924,6 +961,7 @@ public final class VersionsServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Version version = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.VersionOrBuilder getVersionOrBuilder(
         int index) {
       return version_.get(index);
@@ -941,7 +979,9 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -964,7 +1004,9 @@ public final class VersionsServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -996,7 +1038,7 @@ public final class VersionsServiceOuterClass {
       for (int i = 0; i < version_.size(); i++) {
         output.writeMessage(1, version_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -1012,7 +1054,7 @@ public final class VersionsServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, version_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -1030,13 +1072,12 @@ public final class VersionsServiceOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse other = (yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse) obj;
 
-      boolean result = true;
-      result = result && getVersionList()
-          .equals(other.getVersionList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVersionList()
+          .equals(other.getVersionList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1221,9 +1262,8 @@ public final class VersionsServiceOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse result = new yandex.cloud.api.mdb.clickhouse.v1.VersionsServiceOuterClass.ListVersionsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (versionBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             version_ = java.util.Collections.unmodifiableList(version_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1232,42 +1272,41 @@ public final class VersionsServiceOuterClass {
           result.version_ = versionBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1344,7 +1383,7 @@ public final class VersionsServiceOuterClass {
       private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version> version_ =
         java.util.Collections.emptyList();
       private void ensureVersionIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           version_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version>(version_);
           bitField0_ |= 0x00000001;
          }
@@ -1645,7 +1684,7 @@ public final class VersionsServiceOuterClass {
           versionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version, yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version.Builder, yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.VersionOrBuilder>(
                   version_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           version_ = null;
@@ -1664,6 +1703,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -1687,6 +1727,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -1711,6 +1752,8 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -1732,6 +1775,7 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -1749,6 +1793,8 @@ public final class VersionsServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1764,7 +1810,7 @@ public final class VersionsServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1852,21 +1898,13 @@ public final class VersionsServiceOuterClass {
       "andex/cloud/mdb/clickhouse/v1;clickhouse" +
       "b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListVersionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ListVersionsRequest_fieldAccessorTable = new

@@ -24,6 +24,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -50,6 +53,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -60,6 +64,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>bool deprecated = 3;</code>
+     * @return The deprecated.
      */
     boolean getDeprecated();
 
@@ -69,6 +74,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @return A list containing the updatableTo.
      */
     java.util.List<java.lang.String>
         getUpdatableToList();
@@ -78,6 +84,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @return The count of updatableTo.
      */
     int getUpdatableToCount();
     /**
@@ -86,6 +93,8 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @param index The index of the element to return.
+     * @return The updatableTo at the given index.
      */
     java.lang.String getUpdatableTo(int index);
     /**
@@ -94,6 +103,8 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the updatableTo at the given index.
      */
     com.google.protobuf.ByteString
         getUpdatableToBytes(int index);
@@ -101,7 +112,7 @@ public final class VersionOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Version}
    */
-  public  static final class Version extends
+  public static final class Version extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.Version)
       VersionOrBuilder {
@@ -113,8 +124,14 @@ public final class VersionOuterClass {
     private Version() {
       id_ = "";
       name_ = "";
-      deprecated_ = false;
       updatableTo_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Version();
     }
 
     @java.lang.Override
@@ -160,15 +177,15 @@ public final class VersionOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 updatableTo_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               updatableTo_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -182,7 +199,7 @@ public final class VersionOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           updatableTo_ = updatableTo_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -202,7 +219,6 @@ public final class VersionOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version.class, yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -211,7 +227,9 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -230,7 +248,9 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -253,7 +273,9 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -272,7 +294,9 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -295,7 +319,9 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>bool deprecated = 3;</code>
+     * @return The deprecated.
      */
+    @java.lang.Override
     public boolean getDeprecated() {
       return deprecated_;
     }
@@ -308,6 +334,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @return A list containing the updatableTo.
      */
     public com.google.protobuf.ProtocolStringList
         getUpdatableToList() {
@@ -319,6 +346,7 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @return The count of updatableTo.
      */
     public int getUpdatableToCount() {
       return updatableTo_.size();
@@ -329,6 +357,8 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @param index The index of the element to return.
+     * @return The updatableTo at the given index.
      */
     public java.lang.String getUpdatableTo(int index) {
       return updatableTo_.get(index);
@@ -339,6 +369,8 @@ public final class VersionOuterClass {
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the updatableTo at the given index.
      */
     public com.google.protobuf.ByteString
         getUpdatableToBytes(int index) {
@@ -359,10 +391,10 @@ public final class VersionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (deprecated_ != false) {
@@ -380,10 +412,10 @@ public final class VersionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (deprecated_ != false) {
@@ -413,17 +445,16 @@ public final class VersionOuterClass {
       }
       yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version other = (yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getDeprecated()
-          == other.getDeprecated());
-      result = result && getUpdatableToList()
-          .equals(other.getUpdatableToList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getDeprecated()
+          != other.getDeprecated()) return false;
+      if (!getUpdatableToList()
+          .equals(other.getUpdatableToList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -584,7 +615,7 @@ public final class VersionOuterClass {
         deprecated_ = false;
 
         updatableTo_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -612,51 +643,49 @@ public final class VersionOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version result = new yandex.cloud.api.mdb.clickhouse.v1.VersionOuterClass.Version(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.name_ = name_;
         result.deprecated_ = deprecated_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           updatableTo_ = updatableTo_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.updatableTo_ = updatableTo_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -684,7 +713,7 @@ public final class VersionOuterClass {
         if (!other.updatableTo_.isEmpty()) {
           if (updatableTo_.isEmpty()) {
             updatableTo_ = other.updatableTo_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureUpdatableToIsMutable();
             updatableTo_.addAll(other.updatableTo_);
@@ -728,6 +757,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -747,6 +777,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -767,6 +798,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -784,6 +817,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -797,6 +831,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -817,6 +853,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -836,6 +873,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -856,6 +894,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -873,6 +913,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -886,6 +927,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -906,7 +949,9 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>bool deprecated = 3;</code>
+       * @return The deprecated.
        */
+      @java.lang.Override
       public boolean getDeprecated() {
         return deprecated_;
       }
@@ -916,6 +961,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>bool deprecated = 3;</code>
+       * @param value The deprecated to set.
+       * @return This builder for chaining.
        */
       public Builder setDeprecated(boolean value) {
         
@@ -929,6 +976,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>bool deprecated = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeprecated() {
         
@@ -939,9 +987,9 @@ public final class VersionOuterClass {
 
       private com.google.protobuf.LazyStringList updatableTo_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureUpdatableToIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           updatableTo_ = new com.google.protobuf.LazyStringArrayList(updatableTo_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -950,6 +998,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @return A list containing the updatableTo.
        */
       public com.google.protobuf.ProtocolStringList
           getUpdatableToList() {
@@ -961,6 +1010,7 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @return The count of updatableTo.
        */
       public int getUpdatableToCount() {
         return updatableTo_.size();
@@ -971,6 +1021,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @param index The index of the element to return.
+       * @return The updatableTo at the given index.
        */
       public java.lang.String getUpdatableTo(int index) {
         return updatableTo_.get(index);
@@ -981,6 +1033,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the updatableTo at the given index.
        */
       public com.google.protobuf.ByteString
           getUpdatableToBytes(int index) {
@@ -992,6 +1046,9 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The updatableTo to set.
+       * @return This builder for chaining.
        */
       public Builder setUpdatableTo(
           int index, java.lang.String value) {
@@ -1009,6 +1066,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @param value The updatableTo to add.
+       * @return This builder for chaining.
        */
       public Builder addUpdatableTo(
           java.lang.String value) {
@@ -1026,6 +1085,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @param values The updatableTo to add.
+       * @return This builder for chaining.
        */
       public Builder addAllUpdatableTo(
           java.lang.Iterable<java.lang.String> values) {
@@ -1041,10 +1102,11 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUpdatableTo() {
         updatableTo_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1054,6 +1116,8 @@ public final class VersionOuterClass {
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
+       * @param value The bytes of the updatableTo to add.
+       * @return This builder for chaining.
        */
       public Builder addUpdatableToBytes(
           com.google.protobuf.ByteString value) {
@@ -1069,7 +1133,7 @@ public final class VersionOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1142,18 +1206,10 @@ public final class VersionOuterClass {
       "cloud/mdb/clickhouse/v1;clickhouseb\006prot" +
       "o3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_clickhouse_v1_Version_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Version_fieldAccessorTable = new

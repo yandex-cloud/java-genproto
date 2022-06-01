@@ -20,40 +20,48 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string source_id = 1;</code>
+     * @return The sourceId.
      */
     java.lang.String getSourceId();
     /**
      * <code>string source_id = 1;</code>
+     * @return The bytes for sourceId.
      */
     com.google.protobuf.ByteString
         getSourceIdBytes();
 
     /**
      * <code>string target_id = 2;</code>
+     * @return The targetId.
      */
     java.lang.String getTargetId();
     /**
      * <code>string target_id = 2;</code>
+     * @return The bytes for targetId.
      */
     com.google.protobuf.ByteString
         getTargetIdBytes();
 
     /**
      * <code>string name = 7;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 7;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string description = 3;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -94,27 +102,31 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string folder_id = 4;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
      * <code>string folder_id = 4;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+     * @return The type.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.CreateTransferRequest}
    */
-  public  static final class CreateTransferRequest extends
+  public static final class CreateTransferRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.CreateTransferRequest)
       CreateTransferRequestOrBuilder {
@@ -130,6 +142,13 @@ public final class TransferServiceOuterClass {
       description_ = "";
       folderId_ = "";
       type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateTransferRequest();
     }
 
     @java.lang.Override
@@ -193,10 +212,10 @@ public final class TransferServiceOuterClass {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -206,7 +225,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -249,12 +268,13 @@ public final class TransferServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SOURCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object sourceId_;
     /**
      * <code>string source_id = 1;</code>
+     * @return The sourceId.
      */
+    @java.lang.Override
     public java.lang.String getSourceId() {
       java.lang.Object ref = sourceId_;
       if (ref instanceof java.lang.String) {
@@ -269,7 +289,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string source_id = 1;</code>
+     * @return The bytes for sourceId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceIdBytes() {
       java.lang.Object ref = sourceId_;
@@ -288,7 +310,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object targetId_;
     /**
      * <code>string target_id = 2;</code>
+     * @return The targetId.
      */
+    @java.lang.Override
     public java.lang.String getTargetId() {
       java.lang.Object ref = targetId_;
       if (ref instanceof java.lang.String) {
@@ -303,7 +327,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string target_id = 2;</code>
+     * @return The bytes for targetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTargetIdBytes() {
       java.lang.Object ref = targetId_;
@@ -322,7 +348,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 7;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -337,7 +365,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string name = 7;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -356,7 +386,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <code>string description = 3;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -371,7 +403,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string description = 3;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -416,14 +450,16 @@ public final class TransferServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 8;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -431,6 +467,7 @@ public final class TransferServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 8;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -438,11 +475,12 @@ public final class TransferServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 8;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -450,10 +488,11 @@ public final class TransferServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 8;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -466,7 +505,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <code>string folder_id = 4;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -481,7 +522,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string folder_id = 4;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -500,14 +543,16 @@ public final class TransferServiceOuterClass {
     private int type_;
     /**
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType getType() {
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType result = yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType.valueOf(type_);
       return result == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType.UNRECOGNIZED : result;
@@ -527,22 +572,22 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sourceId_);
       }
-      if (!getTargetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, folderId_);
       }
       if (type_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType.TRANSFER_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, type_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, name_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -560,23 +605,23 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSourceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sourceId_);
       }
-      if (!getTargetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, targetId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, folderId_);
       }
       if (type_ != yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType.TRANSFER_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, type_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, name_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -604,22 +649,21 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest) obj;
 
-      boolean result = true;
-      result = result && getSourceId()
-          .equals(other.getSourceId());
-      result = result && getTargetId()
-          .equals(other.getTargetId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && type_ == other.type_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSourceId()
+          .equals(other.getSourceId())) return false;
+      if (!getTargetId()
+          .equals(other.getTargetId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -840,7 +884,6 @@ public final class TransferServiceOuterClass {
       public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.sourceId_ = sourceId_;
         result.targetId_ = targetId_;
         result.name_ = name_;
@@ -849,42 +892,41 @@ public final class TransferServiceOuterClass {
         result.labels_.makeImmutable();
         result.folderId_ = folderId_;
         result.type_ = type_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -956,6 +998,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object sourceId_ = "";
       /**
        * <code>string source_id = 1;</code>
+       * @return The sourceId.
        */
       public java.lang.String getSourceId() {
         java.lang.Object ref = sourceId_;
@@ -971,6 +1014,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string source_id = 1;</code>
+       * @return The bytes for sourceId.
        */
       public com.google.protobuf.ByteString
           getSourceIdBytes() {
@@ -987,6 +1031,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string source_id = 1;</code>
+       * @param value The sourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceId(
           java.lang.String value) {
@@ -1000,6 +1046,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string source_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceId() {
         
@@ -1009,6 +1056,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string source_id = 1;</code>
+       * @param value The bytes for sourceId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1025,6 +1074,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object targetId_ = "";
       /**
        * <code>string target_id = 2;</code>
+       * @return The targetId.
        */
       public java.lang.String getTargetId() {
         java.lang.Object ref = targetId_;
@@ -1040,6 +1090,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string target_id = 2;</code>
+       * @return The bytes for targetId.
        */
       public com.google.protobuf.ByteString
           getTargetIdBytes() {
@@ -1056,6 +1107,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string target_id = 2;</code>
+       * @param value The targetId to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetId(
           java.lang.String value) {
@@ -1069,6 +1122,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string target_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargetId() {
         
@@ -1078,6 +1132,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string target_id = 2;</code>
+       * @param value The bytes for targetId to set.
+       * @return This builder for chaining.
        */
       public Builder setTargetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1094,6 +1150,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 7;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1109,6 +1166,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string name = 7;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1125,6 +1183,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string name = 7;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1138,6 +1198,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string name = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1147,6 +1208,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string name = 7;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1163,6 +1226,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <code>string description = 3;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1178,6 +1242,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1194,6 +1259,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1207,6 +1274,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -1216,6 +1284,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1259,14 +1329,16 @@ public final class TransferServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 8;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -1274,6 +1346,7 @@ public final class TransferServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 8;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -1281,11 +1354,12 @@ public final class TransferServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 8;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1293,10 +1367,11 @@ public final class TransferServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 8;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -1316,7 +1391,7 @@ public final class TransferServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -1335,8 +1410,11 @@ public final class TransferServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -1355,6 +1433,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <code>string folder_id = 4;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1370,6 +1449,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string folder_id = 4;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1386,6 +1466,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string folder_id = 4;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1399,6 +1481,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string folder_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1408,6 +1491,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string folder_id = 4;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1424,21 +1509,27 @@ public final class TransferServiceOuterClass {
       private int type_ = 0;
       /**
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType result = yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType.valueOf(type_);
@@ -1446,6 +1537,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType value) {
         if (value == null) {
@@ -1458,6 +1551,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1468,7 +1562,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1524,10 +1618,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -1535,7 +1631,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.CreateTransferMetadata}
    */
-  public  static final class CreateTransferMetadata extends
+  public static final class CreateTransferMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.CreateTransferMetadata)
       CreateTransferMetadataOrBuilder {
@@ -1546,6 +1642,13 @@ public final class TransferServiceOuterClass {
     }
     private CreateTransferMetadata() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateTransferMetadata();
     }
 
     @java.lang.Override
@@ -1561,7 +1664,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1579,7 +1681,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1614,7 +1716,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -1629,7 +1733,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -1658,7 +1764,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -1670,7 +1776,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1688,11 +1794,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferMetadata other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferMetadata) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1872,35 +1977,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1950,6 +2055,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -1965,6 +2071,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -1981,6 +2088,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -1994,6 +2103,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -2003,6 +2113,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2018,7 +2130,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2078,6 +2190,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
@@ -2086,6 +2199,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -2096,6 +2210,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2104,6 +2219,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2148,6 +2264,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2156,6 +2273,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2170,6 +2288,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -2182,6 +2301,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -2200,7 +2320,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.UpdateTransferRequest}
    */
-  public  static final class UpdateTransferRequest extends
+  public static final class UpdateTransferRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.UpdateTransferRequest)
       UpdateTransferRequestOrBuilder {
@@ -2213,6 +2333,13 @@ public final class TransferServiceOuterClass {
       transferId_ = "";
       description_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateTransferRequest();
     }
 
     @java.lang.Override
@@ -2271,10 +2398,10 @@ public final class TransferServiceOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -2284,7 +2411,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2327,7 +2454,6 @@ public final class TransferServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TRANSFER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object transferId_;
     /**
@@ -2336,7 +2462,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -2355,7 +2483,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -2378,7 +2508,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -2397,7 +2529,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string description = 2;</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -2442,14 +2576,16 @@ public final class TransferServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -2457,6 +2593,7 @@ public final class TransferServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -2464,11 +2601,12 @@ public final class TransferServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2476,10 +2614,11 @@ public final class TransferServiceOuterClass {
     /**
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -2496,7 +2635,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2515,7 +2656,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string name = 4;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2542,7 +2685,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -2556,7 +2701,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -2571,6 +2718,7 @@ public final class TransferServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -2589,13 +2737,13 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
       if (updateMask_ != null) {
@@ -2616,13 +2764,13 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
       if (updateMask_ != null) {
@@ -2654,22 +2802,21 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2888,7 +3035,6 @@ public final class TransferServiceOuterClass {
       public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.transferId_ = transferId_;
         result.description_ = description_;
         result.labels_ = internalGetLabels();
@@ -2899,42 +3045,41 @@ public final class TransferServiceOuterClass {
         } else {
           result.updateMask_ = updateMaskBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3002,6 +3147,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -3021,6 +3167,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -3041,6 +3188,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -3058,6 +3207,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -3071,6 +3221,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3091,6 +3243,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -3110,6 +3263,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -3130,6 +3284,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3147,6 +3303,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -3160,6 +3317,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3203,14 +3362,16 @@ public final class TransferServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -3218,6 +3379,7 @@ public final class TransferServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -3225,11 +3387,12 @@ public final class TransferServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3237,10 +3400,11 @@ public final class TransferServiceOuterClass {
       /**
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -3260,7 +3424,7 @@ public final class TransferServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -3279,8 +3443,11 @@ public final class TransferServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -3303,6 +3470,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3322,6 +3490,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3342,6 +3511,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3359,6 +3530,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3372,6 +3544,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3385,7 +3559,7 @@ public final class TransferServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -3398,6 +3572,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -3412,6 +3587,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -3576,7 +3752,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3632,10 +3808,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -3643,7 +3821,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.UpdateTransferMetadata}
    */
-  public  static final class UpdateTransferMetadata extends
+  public static final class UpdateTransferMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.UpdateTransferMetadata)
       UpdateTransferMetadataOrBuilder {
@@ -3654,6 +3832,13 @@ public final class TransferServiceOuterClass {
     }
     private UpdateTransferMetadata() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateTransferMetadata();
     }
 
     @java.lang.Override
@@ -3669,7 +3854,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3687,7 +3871,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3722,7 +3906,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -3737,7 +3923,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -3766,7 +3954,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -3778,7 +3966,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3796,11 +3984,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferMetadata other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferMetadata) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3980,35 +4167,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4058,6 +4245,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -4073,6 +4261,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -4089,6 +4278,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -4102,6 +4293,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -4111,6 +4303,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4126,7 +4320,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4182,10 +4376,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -4193,7 +4389,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.DeleteTransferRequest}
    */
-  public  static final class DeleteTransferRequest extends
+  public static final class DeleteTransferRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.DeleteTransferRequest)
       DeleteTransferRequestOrBuilder {
@@ -4204,6 +4400,13 @@ public final class TransferServiceOuterClass {
     }
     private DeleteTransferRequest() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteTransferRequest();
     }
 
     @java.lang.Override
@@ -4219,7 +4422,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4237,7 +4439,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4272,7 +4474,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -4287,7 +4491,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -4316,7 +4522,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -4328,7 +4534,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4346,11 +4552,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4530,35 +4735,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4608,6 +4813,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -4623,6 +4829,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -4639,6 +4846,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -4652,6 +4861,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -4661,6 +4871,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4676,7 +4888,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4732,10 +4944,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -4743,7 +4957,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.DeleteTransferMetadata}
    */
-  public  static final class DeleteTransferMetadata extends
+  public static final class DeleteTransferMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.DeleteTransferMetadata)
       DeleteTransferMetadataOrBuilder {
@@ -4754,6 +4968,13 @@ public final class TransferServiceOuterClass {
     }
     private DeleteTransferMetadata() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteTransferMetadata();
     }
 
     @java.lang.Override
@@ -4769,7 +4990,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4787,7 +5007,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4822,7 +5042,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -4837,7 +5059,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -4866,7 +5090,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -4878,7 +5102,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4896,11 +5120,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferMetadata other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferMetadata) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5080,35 +5303,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5158,6 +5381,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -5173,6 +5397,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -5189,6 +5414,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -5202,6 +5429,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -5211,6 +5439,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5226,7 +5456,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5286,6 +5516,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -5294,6 +5525,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -5308,6 +5540,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3;</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -5319,6 +5552,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4;</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -5329,6 +5563,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4;</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -5336,7 +5571,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.ListTransfersRequest}
    */
-  public  static final class ListTransfersRequest extends
+  public static final class ListTransfersRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ListTransfersRequest)
       ListTransfersRequestOrBuilder {
@@ -5347,8 +5582,14 @@ public final class TransferServiceOuterClass {
     }
     private ListTransfersRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTransfersRequest();
     }
 
     @java.lang.Override
@@ -5364,7 +5605,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5393,7 +5633,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5432,7 +5672,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -5451,7 +5693,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -5478,7 +5722,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 3;</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -5493,7 +5739,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4;</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -5514,7 +5762,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 4;</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -5543,13 +5793,13 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -5561,14 +5811,14 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -5586,15 +5836,14 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5785,35 +6034,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5874,6 +6123,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -5893,6 +6143,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -5913,6 +6164,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -5930,6 +6183,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -5943,6 +6197,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5967,7 +6223,9 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -5981,6 +6239,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -5998,6 +6258,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -6015,6 +6276,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4;</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -6036,6 +6298,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4;</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -6058,6 +6321,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -6077,6 +6342,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -6092,6 +6358,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 4;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -6107,7 +6375,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6224,6 +6492,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -6235,6 +6504,7 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -6242,7 +6512,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.ListTransfersResponse}
    */
-  public  static final class ListTransfersResponse extends
+  public static final class ListTransfersResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ListTransfersResponse)
       ListTransfersResponseOrBuilder {
@@ -6254,6 +6524,13 @@ public final class TransferServiceOuterClass {
     private ListTransfersResponse() {
       transfers_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTransfersResponse();
     }
 
     @java.lang.Override
@@ -6281,7 +6558,7 @@ public final class TransferServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 transfers_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -6296,7 +6573,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6310,7 +6587,7 @@ public final class TransferServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           transfers_ = java.util.Collections.unmodifiableList(transfers_);
         }
         this.unknownFields = unknownFields.build();
@@ -6330,7 +6607,6 @@ public final class TransferServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TRANSFERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> transfers_;
     /**
@@ -6342,6 +6618,7 @@ public final class TransferServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> getTransfersList() {
       return transfers_;
     }
@@ -6354,6 +6631,7 @@ public final class TransferServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder> 
         getTransfersOrBuilderList() {
       return transfers_;
@@ -6367,6 +6645,7 @@ public final class TransferServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
      */
+    @java.lang.Override
     public int getTransfersCount() {
       return transfers_.size();
     }
@@ -6379,6 +6658,7 @@ public final class TransferServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer getTransfers(int index) {
       return transfers_.get(index);
     }
@@ -6391,6 +6671,7 @@ public final class TransferServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder getTransfersOrBuilder(
         int index) {
       return transfers_.get(index);
@@ -6407,7 +6688,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -6429,7 +6712,9 @@ public final class TransferServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -6461,7 +6746,7 @@ public final class TransferServiceOuterClass {
       for (int i = 0; i < transfers_.size(); i++) {
         output.writeMessage(1, transfers_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -6477,7 +6762,7 @@ public final class TransferServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, transfers_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -6495,13 +6780,12 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse) obj;
 
-      boolean result = true;
-      result = result && getTransfersList()
-          .equals(other.getTransfersList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransfersList()
+          .equals(other.getTransfersList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6686,9 +6970,8 @@ public final class TransferServiceOuterClass {
       public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (transfersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             transfers_ = java.util.Collections.unmodifiableList(transfers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -6697,42 +6980,41 @@ public final class TransferServiceOuterClass {
           result.transfers_ = transfersBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6809,7 +7091,7 @@ public final class TransferServiceOuterClass {
       private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> transfers_ =
         java.util.Collections.emptyList();
       private void ensureTransfersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           transfers_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer>(transfers_);
           bitField0_ |= 0x00000001;
          }
@@ -7146,7 +7428,7 @@ public final class TransferServiceOuterClass {
           transfersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder>(
                   transfers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           transfers_ = null;
@@ -7164,6 +7446,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -7186,6 +7469,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -7209,6 +7493,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -7229,6 +7515,7 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -7245,6 +7532,8 @@ public final class TransferServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -7260,7 +7549,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7316,10 +7605,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -7327,7 +7618,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.GetTransferRequest}
    */
-  public  static final class GetTransferRequest extends
+  public static final class GetTransferRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.GetTransferRequest)
       GetTransferRequestOrBuilder {
@@ -7338,6 +7629,13 @@ public final class TransferServiceOuterClass {
     }
     private GetTransferRequest() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTransferRequest();
     }
 
     @java.lang.Override
@@ -7353,7 +7651,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7371,7 +7668,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7406,7 +7703,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -7421,7 +7720,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -7450,7 +7751,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -7462,7 +7763,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7480,11 +7781,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7664,35 +7964,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7742,6 +8042,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -7757,6 +8058,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -7773,6 +8075,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -7786,6 +8090,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -7795,6 +8100,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7810,7 +8117,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7866,10 +8173,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -7877,7 +8186,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.DeactivateTransferRequest}
    */
-  public  static final class DeactivateTransferRequest extends
+  public static final class DeactivateTransferRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.DeactivateTransferRequest)
       DeactivateTransferRequestOrBuilder {
@@ -7888,6 +8197,13 @@ public final class TransferServiceOuterClass {
     }
     private DeactivateTransferRequest() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeactivateTransferRequest();
     }
 
     @java.lang.Override
@@ -7903,7 +8219,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7921,7 +8236,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7956,7 +8271,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -7971,7 +8288,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -8000,7 +8319,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -8012,7 +8331,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8030,11 +8349,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferRequest) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8214,35 +8532,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8292,6 +8610,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -8307,6 +8626,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -8323,6 +8643,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -8336,6 +8658,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -8345,6 +8668,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8360,7 +8685,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8416,10 +8741,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -8427,7 +8754,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.DeactivateTransferMetadata}
    */
-  public  static final class DeactivateTransferMetadata extends
+  public static final class DeactivateTransferMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.DeactivateTransferMetadata)
       DeactivateTransferMetadataOrBuilder {
@@ -8438,6 +8765,13 @@ public final class TransferServiceOuterClass {
     }
     private DeactivateTransferMetadata() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeactivateTransferMetadata();
     }
 
     @java.lang.Override
@@ -8453,7 +8787,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8471,7 +8804,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8506,7 +8839,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -8521,7 +8856,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -8550,7 +8887,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -8562,7 +8899,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8580,11 +8917,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferMetadata other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeactivateTransferMetadata) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8764,35 +9100,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8842,6 +9178,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -8857,6 +9194,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -8873,6 +9211,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -8886,6 +9226,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -8895,6 +9236,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8910,7 +9253,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8966,10 +9309,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -8977,7 +9322,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.ActivateTransferRequest}
    */
-  public  static final class ActivateTransferRequest extends
+  public static final class ActivateTransferRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ActivateTransferRequest)
       ActivateTransferRequestOrBuilder {
@@ -8988,6 +9333,13 @@ public final class TransferServiceOuterClass {
     }
     private ActivateTransferRequest() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateTransferRequest();
     }
 
     @java.lang.Override
@@ -9003,7 +9355,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9021,7 +9372,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9056,7 +9407,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -9071,7 +9424,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -9100,7 +9455,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -9112,7 +9467,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9130,11 +9485,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferRequest) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9314,35 +9668,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9392,6 +9746,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -9407,6 +9762,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -9423,6 +9779,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -9436,6 +9794,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -9445,6 +9804,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9460,7 +9821,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9516,10 +9877,12 @@ public final class TransferServiceOuterClass {
 
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
     java.lang.String getTransferId();
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
@@ -9527,7 +9890,7 @@ public final class TransferServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.ActivateTransferMetadata}
    */
-  public  static final class ActivateTransferMetadata extends
+  public static final class ActivateTransferMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ActivateTransferMetadata)
       ActivateTransferMetadataOrBuilder {
@@ -9538,6 +9901,13 @@ public final class TransferServiceOuterClass {
     }
     private ActivateTransferMetadata() {
       transferId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateTransferMetadata();
     }
 
     @java.lang.Override
@@ -9553,7 +9923,6 @@ public final class TransferServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9571,7 +9940,7 @@ public final class TransferServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9606,7 +9975,9 @@ public final class TransferServiceOuterClass {
     private volatile java.lang.Object transferId_;
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The transferId.
      */
+    @java.lang.Override
     public java.lang.String getTransferId() {
       java.lang.Object ref = transferId_;
       if (ref instanceof java.lang.String) {
@@ -9621,7 +9992,9 @@ public final class TransferServiceOuterClass {
     }
     /**
      * <code>string transfer_id = 1;</code>
+     * @return The bytes for transferId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransferIdBytes() {
       java.lang.Object ref = transferId_;
@@ -9650,7 +10023,7 @@ public final class TransferServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferId_);
       }
       unknownFields.writeTo(output);
@@ -9662,7 +10035,7 @@ public final class TransferServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTransferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferId_);
       }
       size += unknownFields.getSerializedSize();
@@ -9680,11 +10053,10 @@ public final class TransferServiceOuterClass {
       }
       yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferMetadata other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ActivateTransferMetadata) obj;
 
-      boolean result = true;
-      result = result && getTransferId()
-          .equals(other.getTransferId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTransferId()
+          .equals(other.getTransferId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9864,35 +10236,35 @@ public final class TransferServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9942,6 +10314,7 @@ public final class TransferServiceOuterClass {
       private java.lang.Object transferId_ = "";
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The transferId.
        */
       public java.lang.String getTransferId() {
         java.lang.Object ref = transferId_;
@@ -9957,6 +10330,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return The bytes for transferId.
        */
       public com.google.protobuf.ByteString
           getTransferIdBytes() {
@@ -9973,6 +10347,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferId(
           java.lang.String value) {
@@ -9986,6 +10362,7 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransferId() {
         
@@ -9995,6 +10372,8 @@ public final class TransferServiceOuterClass {
       }
       /**
        * <code>string transfer_id = 1;</code>
+       * @param value The bytes for transferId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransferIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10010,7 +10389,7 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10216,15 +10595,7 @@ public final class TransferServiceOuterClass {
       "-genproto/yandex/cloud/datatransfer/v1;d" +
       "atatransferb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -10232,7 +10603,7 @@ public final class TransferServiceOuterClass {
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_fieldAccessorTable = new

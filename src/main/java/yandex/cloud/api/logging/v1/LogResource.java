@@ -24,6 +24,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -32,6 +33,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -42,6 +44,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -50,6 +53,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -62,7 +66,7 @@ public final class LogResource {
    *
    * Protobuf type {@code yandex.cloud.logging.v1.LogEntryResource}
    */
-  public  static final class LogEntryResource extends
+  public static final class LogEntryResource extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogEntryResource)
       LogEntryResourceOrBuilder {
@@ -74,6 +78,13 @@ public final class LogResource {
     private LogEntryResource() {
       type_ = "";
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogEntryResource();
     }
 
     @java.lang.Override
@@ -89,7 +100,6 @@ public final class LogResource {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -113,7 +123,7 @@ public final class LogResource {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -152,7 +162,9 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -171,7 +183,9 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -194,7 +208,9 @@ public final class LogResource {
      * </pre>
      *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -213,7 +229,9 @@ public final class LogResource {
      * </pre>
      *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -242,10 +260,10 @@ public final class LogResource {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -257,10 +275,10 @@ public final class LogResource {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -278,13 +296,12 @@ public final class LogResource {
       }
       yandex.cloud.api.logging.v1.LogResource.LogEntryResource other = (yandex.cloud.api.logging.v1.LogResource.LogEntryResource) obj;
 
-      boolean result = true;
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -474,35 +491,35 @@ public final class LogResource {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -560,6 +577,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -579,6 +597,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -599,6 +618,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -616,6 +637,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -629,6 +651,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -649,6 +673,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -668,6 +693,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -688,6 +714,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -705,6 +733,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -718,6 +747,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -733,7 +764,7 @@ public final class LogResource {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -794,6 +825,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -803,6 +835,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -813,6 +846,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @return A list containing the ids.
      */
     java.util.List<java.lang.String>
         getIdsList();
@@ -822,6 +856,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @return The count of ids.
      */
     int getIdsCount();
     /**
@@ -830,6 +865,8 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
      */
     java.lang.String getIds(int index);
     /**
@@ -838,6 +875,8 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ids at the given index.
      */
     com.google.protobuf.ByteString
         getIdsBytes(int index);
@@ -849,7 +888,7 @@ public final class LogResource {
    *
    * Protobuf type {@code yandex.cloud.logging.v1.LogGroupResource}
    */
-  public  static final class LogGroupResource extends
+  public static final class LogGroupResource extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogGroupResource)
       LogGroupResourceOrBuilder {
@@ -861,6 +900,13 @@ public final class LogResource {
     private LogGroupResource() {
       type_ = "";
       ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogGroupResource();
     }
 
     @java.lang.Override
@@ -895,15 +941,15 @@ public final class LogResource {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 ids_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               ids_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -917,7 +963,7 @@ public final class LogResource {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           ids_ = ids_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -937,7 +983,6 @@ public final class LogResource {
               yandex.cloud.api.logging.v1.LogResource.LogGroupResource.class, yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object type_;
     /**
@@ -947,7 +992,9 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -967,7 +1014,9 @@ public final class LogResource {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -990,6 +1039,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @return A list containing the ids.
      */
     public com.google.protobuf.ProtocolStringList
         getIdsList() {
@@ -1001,6 +1051,7 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @return The count of ids.
      */
     public int getIdsCount() {
       return ids_.size();
@@ -1011,6 +1062,8 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
      */
     public java.lang.String getIds(int index) {
       return ids_.get(index);
@@ -1021,6 +1074,8 @@ public final class LogResource {
      * </pre>
      *
      * <code>repeated string ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ids at the given index.
      */
     public com.google.protobuf.ByteString
         getIdsBytes(int index) {
@@ -1041,7 +1096,7 @@ public final class LogResource {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
       }
       for (int i = 0; i < ids_.size(); i++) {
@@ -1056,7 +1111,7 @@ public final class LogResource {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
       }
       {
@@ -1082,13 +1137,12 @@ public final class LogResource {
       }
       yandex.cloud.api.logging.v1.LogResource.LogGroupResource other = (yandex.cloud.api.logging.v1.LogResource.LogGroupResource) obj;
 
-      boolean result = true;
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getIdsList()
-          .equals(other.getIdsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getIdsList()
+          .equals(other.getIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1244,7 +1298,7 @@ public final class LogResource {
         type_ = "";
 
         ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1272,49 +1326,47 @@ public final class LogResource {
       public yandex.cloud.api.logging.v1.LogResource.LogGroupResource buildPartial() {
         yandex.cloud.api.logging.v1.LogResource.LogGroupResource result = new yandex.cloud.api.logging.v1.LogResource.LogGroupResource(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.type_ = type_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           ids_ = ids_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.ids_ = ids_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1335,7 +1387,7 @@ public final class LogResource {
         if (!other.ids_.isEmpty()) {
           if (ids_.isEmpty()) {
             ids_ = other.ids_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIdsIsMutable();
             ids_.addAll(other.ids_);
@@ -1380,6 +1432,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -1400,6 +1453,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -1421,6 +1475,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -1439,6 +1495,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1453,6 +1510,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1468,9 +1527,9 @@ public final class LogResource {
 
       private com.google.protobuf.LazyStringList ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           ids_ = new com.google.protobuf.LazyStringArrayList(ids_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -1479,6 +1538,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @return A list containing the ids.
        */
       public com.google.protobuf.ProtocolStringList
           getIdsList() {
@@ -1490,6 +1550,7 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @return The count of ids.
        */
       public int getIdsCount() {
         return ids_.size();
@@ -1500,6 +1561,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The ids at the given index.
        */
       public java.lang.String getIds(int index) {
         return ids_.get(index);
@@ -1510,6 +1573,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ids at the given index.
        */
       public com.google.protobuf.ByteString
           getIdsBytes(int index) {
@@ -1521,6 +1586,9 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The ids to set.
+       * @return This builder for chaining.
        */
       public Builder setIds(
           int index, java.lang.String value) {
@@ -1538,6 +1606,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @param value The ids to add.
+       * @return This builder for chaining.
        */
       public Builder addIds(
           java.lang.String value) {
@@ -1555,6 +1625,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @param values The ids to add.
+       * @return This builder for chaining.
        */
       public Builder addAllIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -1570,10 +1642,11 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIds() {
         ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1583,6 +1656,8 @@ public final class LogResource {
        * </pre>
        *
        * <code>repeated string ids = 2;</code>
+       * @param value The bytes of the ids to add.
+       * @return This builder for chaining.
        */
       public Builder addIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -1598,7 +1673,7 @@ public final class LogResource {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1678,19 +1753,11 @@ public final class LogResource {
       "-cloud/go-genproto/yandex/cloud/logging/" +
       "v1;loggingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_logging_v1_LogEntryResource_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_logging_v1_LogEntryResource_fieldAccessorTable = new

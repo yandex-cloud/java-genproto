@@ -20,19 +20,25 @@ public final class Mysql {
 
     /**
      * <code>repeated string hosts = 5;</code>
+     * @return A list containing the hosts.
      */
     java.util.List<java.lang.String>
         getHostsList();
     /**
      * <code>repeated string hosts = 5;</code>
+     * @return The count of hosts.
      */
     int getHostsCount();
     /**
      * <code>repeated string hosts = 5;</code>
+     * @param index The index of the element to return.
+     * @return The hosts at the given index.
      */
     java.lang.String getHosts(int index);
     /**
      * <code>repeated string hosts = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hosts at the given index.
      */
     com.google.protobuf.ByteString
         getHostsBytes(int index);
@@ -45,6 +51,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>int64 port = 2;</code>
+     * @return The port.
      */
     long getPort();
 
@@ -56,6 +63,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return Whether the tlsMode field is set.
      */
     boolean hasTlsMode();
     /**
@@ -66,6 +74,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return The tlsMode.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode();
     /**
@@ -87,6 +96,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
+     * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
@@ -97,6 +107,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
+     * @return The bytes for subnetId.
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
@@ -104,7 +115,7 @@ public final class Mysql {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql}
    */
-  public  static final class OnPremiseMysql extends
+  public static final class OnPremiseMysql extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql)
       OnPremiseMysqlOrBuilder {
@@ -115,8 +126,14 @@ public final class Mysql {
     }
     private OnPremiseMysql() {
       hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      port_ = 0L;
       subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OnPremiseMysql();
     }
 
     @java.lang.Override
@@ -156,7 +173,7 @@ public final class Mysql {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 hosts_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -177,7 +194,7 @@ public final class Mysql {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -191,7 +208,7 @@ public final class Mysql {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           hosts_ = hosts_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -211,11 +228,11 @@ public final class Mysql {
               yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.class, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HOSTS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList hosts_;
     /**
      * <code>repeated string hosts = 5;</code>
+     * @return A list containing the hosts.
      */
     public com.google.protobuf.ProtocolStringList
         getHostsList() {
@@ -223,18 +240,23 @@ public final class Mysql {
     }
     /**
      * <code>repeated string hosts = 5;</code>
+     * @return The count of hosts.
      */
     public int getHostsCount() {
       return hosts_.size();
     }
     /**
      * <code>repeated string hosts = 5;</code>
+     * @param index The index of the element to return.
+     * @return The hosts at the given index.
      */
     public java.lang.String getHosts(int index) {
       return hosts_.get(index);
     }
     /**
      * <code>repeated string hosts = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hosts at the given index.
      */
     public com.google.protobuf.ByteString
         getHostsBytes(int index) {
@@ -251,7 +273,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>int64 port = 2;</code>
+     * @return The port.
      */
+    @java.lang.Override
     public long getPort() {
       return port_;
     }
@@ -266,7 +290,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return Whether the tlsMode field is set.
      */
+    @java.lang.Override
     public boolean hasTlsMode() {
       return tlsMode_ != null;
     }
@@ -278,7 +304,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return The tlsMode.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
       return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
     }
@@ -291,6 +319,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
       return getTlsMode();
     }
@@ -305,7 +334,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
+     * @return The subnetId.
      */
+    @java.lang.Override
     public java.lang.String getSubnetId() {
       java.lang.Object ref = subnetId_;
       if (ref instanceof java.lang.String) {
@@ -326,7 +357,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
+     * @return The bytes for subnetId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubnetIdBytes() {
       java.lang.Object ref = subnetId_;
@@ -358,7 +391,7 @@ public final class Mysql {
       if (port_ != 0L) {
         output.writeInt64(2, port_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subnetId_);
       }
       for (int i = 0; i < hosts_.size(); i++) {
@@ -380,7 +413,7 @@ public final class Mysql {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, port_);
       }
-      if (!getSubnetIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subnetId_);
       }
       {
@@ -410,20 +443,19 @@ public final class Mysql {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql other = (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql) obj;
 
-      boolean result = true;
-      result = result && getHostsList()
-          .equals(other.getHostsList());
-      result = result && (getPort()
-          == other.getPort());
-      result = result && (hasTlsMode() == other.hasTlsMode());
+      if (!getHostsList()
+          .equals(other.getHostsList())) return false;
+      if (getPort()
+          != other.getPort()) return false;
+      if (hasTlsMode() != other.hasTlsMode()) return false;
       if (hasTlsMode()) {
-        result = result && getTlsMode()
-            .equals(other.getTlsMode());
+        if (!getTlsMode()
+            .equals(other.getTlsMode())) return false;
       }
-      result = result && getSubnetId()
-          .equals(other.getSubnetId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -618,8 +650,7 @@ public final class Mysql {
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql result = new yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           hosts_ = hosts_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -631,42 +662,41 @@ public final class Mysql {
           result.tlsMode_ = tlsModeBuilder_.build();
         }
         result.subnetId_ = subnetId_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -732,13 +762,14 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureHostsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           hosts_ = new com.google.protobuf.LazyStringArrayList(hosts_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @return A list containing the hosts.
        */
       public com.google.protobuf.ProtocolStringList
           getHostsList() {
@@ -746,18 +777,23 @@ public final class Mysql {
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @return The count of hosts.
        */
       public int getHostsCount() {
         return hosts_.size();
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @param index The index of the element to return.
+       * @return The hosts at the given index.
        */
       public java.lang.String getHosts(int index) {
         return hosts_.get(index);
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the hosts at the given index.
        */
       public com.google.protobuf.ByteString
           getHostsBytes(int index) {
@@ -765,6 +801,9 @@ public final class Mysql {
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The hosts to set.
+       * @return This builder for chaining.
        */
       public Builder setHosts(
           int index, java.lang.String value) {
@@ -778,6 +817,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @param value The hosts to add.
+       * @return This builder for chaining.
        */
       public Builder addHosts(
           java.lang.String value) {
@@ -791,6 +832,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @param values The hosts to add.
+       * @return This builder for chaining.
        */
       public Builder addAllHosts(
           java.lang.Iterable<java.lang.String> values) {
@@ -802,6 +845,7 @@ public final class Mysql {
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHosts() {
         hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -811,6 +855,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string hosts = 5;</code>
+       * @param value The bytes of the hosts to add.
+       * @return This builder for chaining.
        */
       public Builder addHostsBytes(
           com.google.protobuf.ByteString value) {
@@ -833,7 +879,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>int64 port = 2;</code>
+       * @return The port.
        */
+      @java.lang.Override
       public long getPort() {
         return port_;
       }
@@ -845,6 +893,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>int64 port = 2;</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
        */
       public Builder setPort(long value) {
         
@@ -860,6 +910,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>int64 port = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPort() {
         
@@ -868,7 +919,7 @@ public final class Mysql {
         return this;
       }
 
-      private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_ = null;
+      private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
       /**
@@ -879,6 +930,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+       * @return Whether the tlsMode field is set.
        */
       public boolean hasTlsMode() {
         return tlsModeBuilder_ != null || tlsMode_ != null;
@@ -891,6 +943,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+       * @return The tlsMode.
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
         if (tlsModeBuilder_ == null) {
@@ -1048,6 +1101,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
+       * @return The subnetId.
        */
       public java.lang.String getSubnetId() {
         java.lang.Object ref = subnetId_;
@@ -1069,6 +1123,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
+       * @return The bytes for subnetId.
        */
       public com.google.protobuf.ByteString
           getSubnetIdBytes() {
@@ -1091,6 +1146,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetId(
           java.lang.String value) {
@@ -1110,6 +1167,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
         
@@ -1125,6 +1183,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
        */
       public Builder setSubnetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1140,7 +1200,7 @@ public final class Mysql {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1202,6 +1262,18 @@ public final class Mysql {
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
+     * @return Whether the mdbClusterId field is set.
+     */
+    boolean hasMdbClusterId();
+    /**
+     * <pre>
+     * Managed cluster
+     * 
+     * Yandex.Cloud Managed MySQL cluster ID
+     * </pre>
+     *
+     * <code>string mdb_cluster_id = 1;</code>
+     * @return The mdbClusterId.
      */
     java.lang.String getMdbClusterId();
     /**
@@ -1212,6 +1284,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
+     * @return The bytes for mdbClusterId.
      */
     com.google.protobuf.ByteString
         getMdbClusterIdBytes();
@@ -1224,6 +1297,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
+     * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
@@ -1234,6 +1308,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
+     * @return The onPremise.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql getOnPremise();
     /**
@@ -1252,7 +1327,7 @@ public final class Mysql {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlConnection}
    */
-  public  static final class MysqlConnection extends
+  public static final class MysqlConnection extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.MysqlConnection)
       MysqlConnectionOrBuilder {
@@ -1262,6 +1337,13 @@ public final class Mysql {
       super(builder);
     }
     private MysqlConnection() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConnection();
     }
 
     @java.lang.Override
@@ -1277,7 +1359,6 @@ public final class Mysql {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1309,7 +1390,7 @@ public final class Mysql {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1343,7 +1424,8 @@ public final class Mysql {
     private int connectionCase_ = 0;
     private java.lang.Object connection_;
     public enum ConnectionCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MDB_CLUSTER_ID(1),
       ON_PREMISE(2),
       CONNECTION_NOT_SET(0);
@@ -1352,6 +1434,8 @@ public final class Mysql {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1387,6 +1471,20 @@ public final class Mysql {
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
+     * @return Whether the mdbClusterId field is set.
+     */
+    public boolean hasMdbClusterId() {
+      return connectionCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Managed cluster
+     * 
+     * Yandex.Cloud Managed MySQL cluster ID
+     * </pre>
+     *
+     * <code>string mdb_cluster_id = 1;</code>
+     * @return The mdbClusterId.
      */
     public java.lang.String getMdbClusterId() {
       java.lang.Object ref = "";
@@ -1413,6 +1511,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
+     * @return The bytes for mdbClusterId.
      */
     public com.google.protobuf.ByteString
         getMdbClusterIdBytes() {
@@ -1442,7 +1541,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
+     * @return Whether the onPremise field is set.
      */
+    @java.lang.Override
     public boolean hasOnPremise() {
       return connectionCase_ == 2;
     }
@@ -1454,7 +1555,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
+     * @return The onPremise.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql getOnPremise() {
       if (connectionCase_ == 2) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql) connection_;
@@ -1470,6 +1573,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysqlOrBuilder getOnPremiseOrBuilder() {
       if (connectionCase_ == 2) {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql) connection_;
@@ -1528,24 +1632,21 @@ public final class Mysql {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection other = (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection) obj;
 
-      boolean result = true;
-      result = result && getConnectionCase().equals(
-          other.getConnectionCase());
-      if (!result) return false;
+      if (!getConnectionCase().equals(other.getConnectionCase())) return false;
       switch (connectionCase_) {
         case 1:
-          result = result && getMdbClusterId()
-              .equals(other.getMdbClusterId());
+          if (!getMdbClusterId()
+              .equals(other.getMdbClusterId())) return false;
           break;
         case 2:
-          result = result && getOnPremise()
-              .equals(other.getOnPremise());
+          if (!getOnPremise()
+              .equals(other.getOnPremise())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1745,35 +1846,35 @@ public final class Mysql {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1854,7 +1955,23 @@ public final class Mysql {
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
+       * @return Whether the mdbClusterId field is set.
        */
+      @java.lang.Override
+      public boolean hasMdbClusterId() {
+        return connectionCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Managed cluster
+       * 
+       * Yandex.Cloud Managed MySQL cluster ID
+       * </pre>
+       *
+       * <code>string mdb_cluster_id = 1;</code>
+       * @return The mdbClusterId.
+       */
+      @java.lang.Override
       public java.lang.String getMdbClusterId() {
         java.lang.Object ref = "";
         if (connectionCase_ == 1) {
@@ -1880,7 +1997,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
+       * @return The bytes for mdbClusterId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMdbClusterIdBytes() {
         java.lang.Object ref = "";
@@ -1907,6 +2026,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
+       * @param value The mdbClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setMdbClusterId(
           java.lang.String value) {
@@ -1926,6 +2047,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMdbClusterId() {
         if (connectionCase_ == 1) {
@@ -1943,6 +2065,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
+       * @param value The bytes for mdbClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setMdbClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1966,7 +2090,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
+       * @return Whether the onPremise field is set.
        */
+      @java.lang.Override
       public boolean hasOnPremise() {
         return connectionCase_ == 2;
       }
@@ -1978,7 +2104,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
+       * @return The onPremise.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql getOnPremise() {
         if (onPremiseBuilder_ == null) {
           if (connectionCase_ == 2) {
@@ -2108,6 +2236,7 @@ public final class Mysql {
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql on_premise = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysqlOrBuilder getOnPremiseOrBuilder() {
         if ((connectionCase_ == 2) && (onPremiseBuilder_ != null)) {
           return onPremiseBuilder_.getMessageOrBuilder();
@@ -2148,7 +2277,7 @@ public final class Mysql {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2210,6 +2339,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+     * @return The enum numeric value on the wire for view.
      */
     int getViewValue();
     /**
@@ -2220,6 +2350,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+     * @return The view.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getView();
 
@@ -2231,6 +2362,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+     * @return The enum numeric value on the wire for routine.
      */
     int getRoutineValue();
     /**
@@ -2241,6 +2373,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+     * @return The routine.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getRoutine();
 
@@ -2252,6 +2385,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+     * @return The enum numeric value on the wire for trigger.
      */
     int getTriggerValue();
     /**
@@ -2262,13 +2396,14 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+     * @return The trigger.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTrigger();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings}
    */
-  public  static final class MysqlObjectTransferSettings extends
+  public static final class MysqlObjectTransferSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings)
       MysqlObjectTransferSettingsOrBuilder {
@@ -2284,6 +2419,13 @@ public final class Mysql {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlObjectTransferSettings();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2296,7 +2438,6 @@ public final class Mysql {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2326,7 +2467,7 @@ public final class Mysql {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2367,8 +2508,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+     * @return The enum numeric value on the wire for view.
      */
-    public int getViewValue() {
+    @java.lang.Override public int getViewValue() {
       return view_;
     }
     /**
@@ -2379,8 +2521,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+     * @return The view.
      */
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getView() {
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getView() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(view_);
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
@@ -2396,8 +2539,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+     * @return The enum numeric value on the wire for routine.
      */
-    public int getRoutineValue() {
+    @java.lang.Override public int getRoutineValue() {
       return routine_;
     }
     /**
@@ -2408,8 +2552,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+     * @return The routine.
      */
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getRoutine() {
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getRoutine() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(routine_);
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
@@ -2425,8 +2570,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+     * @return The enum numeric value on the wire for trigger.
      */
-    public int getTriggerValue() {
+    @java.lang.Override public int getTriggerValue() {
       return trigger_;
     }
     /**
@@ -2437,8 +2583,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+     * @return The trigger.
      */
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTrigger() {
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTrigger() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(trigger_);
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
@@ -2503,12 +2650,11 @@ public final class Mysql {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings other = (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings) obj;
 
-      boolean result = true;
-      result = result && view_ == other.view_;
-      result = result && routine_ == other.routine_;
-      result = result && trigger_ == other.trigger_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (view_ != other.view_) return false;
+      if (routine_ != other.routine_) return false;
+      if (trigger_ != other.trigger_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2698,35 +2844,35 @@ public final class Mysql {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2787,8 +2933,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+       * @return The enum numeric value on the wire for view.
        */
-      public int getViewValue() {
+      @java.lang.Override public int getViewValue() {
         return view_;
       }
       /**
@@ -2799,8 +2946,11 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+       * @param value The enum numeric value on the wire for view to set.
+       * @return This builder for chaining.
        */
       public Builder setViewValue(int value) {
+        
         view_ = value;
         onChanged();
         return this;
@@ -2813,7 +2963,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+       * @return The view.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getView() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(view_);
@@ -2827,6 +2979,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+       * @param value The view to set.
+       * @return This builder for chaining.
        */
       public Builder setView(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
         if (value == null) {
@@ -2845,6 +2999,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage view = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearView() {
         
@@ -2862,8 +3017,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+       * @return The enum numeric value on the wire for routine.
        */
-      public int getRoutineValue() {
+      @java.lang.Override public int getRoutineValue() {
         return routine_;
       }
       /**
@@ -2874,8 +3030,11 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+       * @param value The enum numeric value on the wire for routine to set.
+       * @return This builder for chaining.
        */
       public Builder setRoutineValue(int value) {
+        
         routine_ = value;
         onChanged();
         return this;
@@ -2888,7 +3047,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+       * @return The routine.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getRoutine() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(routine_);
@@ -2902,6 +3063,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+       * @param value The routine to set.
+       * @return This builder for chaining.
        */
       public Builder setRoutine(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
         if (value == null) {
@@ -2920,6 +3083,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage routine = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRoutine() {
         
@@ -2937,8 +3101,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+       * @return The enum numeric value on the wire for trigger.
        */
-      public int getTriggerValue() {
+      @java.lang.Override public int getTriggerValue() {
         return trigger_;
       }
       /**
@@ -2949,8 +3114,11 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+       * @param value The enum numeric value on the wire for trigger to set.
+       * @return This builder for chaining.
        */
       public Builder setTriggerValue(int value) {
+        
         trigger_ = value;
         onChanged();
         return this;
@@ -2963,7 +3131,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+       * @return The trigger.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTrigger() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(trigger_);
@@ -2977,6 +3147,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+       * @param value The trigger to set.
+       * @return This builder for chaining.
        */
       public Builder setTrigger(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
         if (value == null) {
@@ -2995,6 +3167,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage trigger = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTrigger() {
         
@@ -3005,7 +3178,7 @@ public final class Mysql {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3067,6 +3240,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
@@ -3077,6 +3251,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return The connection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection();
     /**
@@ -3096,6 +3271,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @return A list containing the securityGroups.
      */
     java.util.List<java.lang.String>
         getSecurityGroupsList();
@@ -3105,6 +3281,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @return The count of securityGroups.
      */
     int getSecurityGroupsCount();
     /**
@@ -3113,6 +3290,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
      */
     java.lang.String getSecurityGroups(int index);
     /**
@@ -3121,6 +3300,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index);
@@ -3134,6 +3315,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The database.
      */
     java.lang.String getDatabase();
     /**
@@ -3145,6 +3327,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The bytes for database.
      */
     com.google.protobuf.ByteString
         getDatabaseBytes();
@@ -3158,6 +3341,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The serviceDatabase.
      */
     java.lang.String getServiceDatabase();
     /**
@@ -3169,6 +3353,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The bytes for serviceDatabase.
      */
     com.google.protobuf.ByteString
         getServiceDatabaseBytes();
@@ -3181,6 +3366,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The user.
      */
     java.lang.String getUser();
     /**
@@ -3191,6 +3377,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The bytes for user.
      */
     com.google.protobuf.ByteString
         getUserBytes();
@@ -3203,6 +3390,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return Whether the password field is set.
      */
     boolean hasPassword();
     /**
@@ -3213,6 +3401,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return The password.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
@@ -3228,38 +3417,50 @@ public final class Mysql {
 
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @return A list containing the includeTablesRegex.
      */
     java.util.List<java.lang.String>
         getIncludeTablesRegexList();
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @return The count of includeTablesRegex.
      */
     int getIncludeTablesRegexCount();
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the element to return.
+     * @return The includeTablesRegex at the given index.
      */
     java.lang.String getIncludeTablesRegex(int index);
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the includeTablesRegex at the given index.
      */
     com.google.protobuf.ByteString
         getIncludeTablesRegexBytes(int index);
 
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return A list containing the excludeTablesRegex.
      */
     java.util.List<java.lang.String>
         getExcludeTablesRegexList();
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return The count of excludeTablesRegex.
      */
     int getExcludeTablesRegexCount();
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the element to return.
+     * @return The excludeTablesRegex at the given index.
      */
     java.lang.String getExcludeTablesRegex(int index);
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludeTablesRegex at the given index.
      */
     com.google.protobuf.ByteString
         getExcludeTablesRegexBytes(int index);
@@ -3273,6 +3474,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 8;</code>
+     * @return The timezone.
      */
     java.lang.String getTimezone();
     /**
@@ -3284,6 +3486,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 8;</code>
+     * @return The bytes for timezone.
      */
     com.google.protobuf.ByteString
         getTimezoneBytes();
@@ -3296,6 +3499,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
+     * @return Whether the objectTransferSettings field is set.
      */
     boolean hasObjectTransferSettings();
     /**
@@ -3306,6 +3510,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
+     * @return The objectTransferSettings.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings getObjectTransferSettings();
     /**
@@ -3322,7 +3527,7 @@ public final class Mysql {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlSource}
    */
-  public  static final class MysqlSource extends
+  public static final class MysqlSource extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.MysqlSource)
       MysqlSourceOrBuilder {
@@ -3339,6 +3544,13 @@ public final class Mysql {
       includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       timezone_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlSource();
     }
 
     @java.lang.Override
@@ -3424,27 +3636,27 @@ public final class Mysql {
             }
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000002;
               }
               includeTablesRegex_.add(s);
               break;
             }
             case 106: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000004;
               }
               excludeTablesRegex_.add(s);
               break;
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               securityGroups_.add(s);
               break;
@@ -3456,7 +3668,7 @@ public final class Mysql {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3470,13 +3682,13 @@ public final class Mysql {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -3496,7 +3708,6 @@ public final class Mysql {
               yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource.class, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
     /**
@@ -3507,7 +3718,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return Whether the connection field is set.
      */
+    @java.lang.Override
     public boolean hasConnection() {
       return connection_ != null;
     }
@@ -3519,7 +3732,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return The connection.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection() {
       return connection_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.getDefaultInstance() : connection_;
     }
@@ -3532,6 +3747,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
     }
@@ -3544,6 +3760,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @return A list containing the securityGroups.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupsList() {
@@ -3555,6 +3772,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @return The count of securityGroups.
      */
     public int getSecurityGroupsCount() {
       return securityGroups_.size();
@@ -3565,6 +3783,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
      */
     public java.lang.String getSecurityGroups(int index) {
       return securityGroups_.get(index);
@@ -3575,6 +3795,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index) {
@@ -3592,7 +3814,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The database.
      */
+    @java.lang.Override
     public java.lang.String getDatabase() {
       java.lang.Object ref = database_;
       if (ref instanceof java.lang.String) {
@@ -3614,7 +3838,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The bytes for database.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseBytes() {
       java.lang.Object ref = database_;
@@ -3640,7 +3866,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The serviceDatabase.
      */
+    @java.lang.Override
     public java.lang.String getServiceDatabase() {
       java.lang.Object ref = serviceDatabase_;
       if (ref instanceof java.lang.String) {
@@ -3662,7 +3890,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The bytes for serviceDatabase.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceDatabaseBytes() {
       java.lang.Object ref = serviceDatabase_;
@@ -3687,7 +3917,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The user.
      */
+    @java.lang.Override
     public java.lang.String getUser() {
       java.lang.Object ref = user_;
       if (ref instanceof java.lang.String) {
@@ -3708,7 +3940,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The bytes for user.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserBytes() {
       java.lang.Object ref = user_;
@@ -3733,7 +3967,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return Whether the password field is set.
      */
+    @java.lang.Override
     public boolean hasPassword() {
       return password_ != null;
     }
@@ -3745,7 +3981,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return The password.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword() {
       return password_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.getDefaultInstance() : password_;
     }
@@ -3758,6 +3996,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
       return getPassword();
     }
@@ -3766,6 +4005,7 @@ public final class Mysql {
     private com.google.protobuf.LazyStringList includeTablesRegex_;
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @return A list containing the includeTablesRegex.
      */
     public com.google.protobuf.ProtocolStringList
         getIncludeTablesRegexList() {
@@ -3773,18 +4013,23 @@ public final class Mysql {
     }
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @return The count of includeTablesRegex.
      */
     public int getIncludeTablesRegexCount() {
       return includeTablesRegex_.size();
     }
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the element to return.
+     * @return The includeTablesRegex at the given index.
      */
     public java.lang.String getIncludeTablesRegex(int index) {
       return includeTablesRegex_.get(index);
     }
     /**
      * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the includeTablesRegex at the given index.
      */
     public com.google.protobuf.ByteString
         getIncludeTablesRegexBytes(int index) {
@@ -3795,6 +4040,7 @@ public final class Mysql {
     private com.google.protobuf.LazyStringList excludeTablesRegex_;
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return A list containing the excludeTablesRegex.
      */
     public com.google.protobuf.ProtocolStringList
         getExcludeTablesRegexList() {
@@ -3802,18 +4048,23 @@ public final class Mysql {
     }
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return The count of excludeTablesRegex.
      */
     public int getExcludeTablesRegexCount() {
       return excludeTablesRegex_.size();
     }
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the element to return.
+     * @return The excludeTablesRegex at the given index.
      */
     public java.lang.String getExcludeTablesRegex(int index) {
       return excludeTablesRegex_.get(index);
     }
     /**
      * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludeTablesRegex at the given index.
      */
     public com.google.protobuf.ByteString
         getExcludeTablesRegexBytes(int index) {
@@ -3831,7 +4082,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 8;</code>
+     * @return The timezone.
      */
+    @java.lang.Override
     public java.lang.String getTimezone() {
       java.lang.Object ref = timezone_;
       if (ref instanceof java.lang.String) {
@@ -3853,7 +4106,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 8;</code>
+     * @return The bytes for timezone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTimezoneBytes() {
       java.lang.Object ref = timezone_;
@@ -3878,7 +4133,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
+     * @return Whether the objectTransferSettings field is set.
      */
+    @java.lang.Override
     public boolean hasObjectTransferSettings() {
       return objectTransferSettings_ != null;
     }
@@ -3890,7 +4147,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
+     * @return The objectTransferSettings.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings getObjectTransferSettings() {
       return objectTransferSettings_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings.getDefaultInstance() : objectTransferSettings_;
     }
@@ -3903,6 +4162,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettingsOrBuilder getObjectTransferSettingsOrBuilder() {
       return getObjectTransferSettings();
     }
@@ -3924,16 +4184,16 @@ public final class Mysql {
       if (connection_ != null) {
         output.writeMessage(1, getConnection());
       }
-      if (!getDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, database_);
       }
-      if (!getUserBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, user_);
       }
       if (password_ != null) {
         output.writeMessage(4, getPassword());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, timezone_);
       }
       if (objectTransferSettings_ != null) {
@@ -3948,7 +4208,7 @@ public final class Mysql {
       for (int i = 0; i < securityGroups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, securityGroups_.getRaw(i));
       }
-      if (!getServiceDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceDatabase_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceDatabase_);
       }
       unknownFields.writeTo(output);
@@ -3964,17 +4224,17 @@ public final class Mysql {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConnection());
       }
-      if (!getDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, database_);
       }
-      if (!getUserBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, user_);
       }
       if (password_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPassword());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, timezone_);
       }
       if (objectTransferSettings_ != null) {
@@ -4005,7 +4265,7 @@ public final class Mysql {
         size += dataSize;
         size += 1 * getSecurityGroupsList().size();
       }
-      if (!getServiceDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceDatabase_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceDatabase_);
       }
       size += unknownFields.getSerializedSize();
@@ -4023,38 +4283,37 @@ public final class Mysql {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource other = (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource) obj;
 
-      boolean result = true;
-      result = result && (hasConnection() == other.hasConnection());
+      if (hasConnection() != other.hasConnection()) return false;
       if (hasConnection()) {
-        result = result && getConnection()
-            .equals(other.getConnection());
+        if (!getConnection()
+            .equals(other.getConnection())) return false;
       }
-      result = result && getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList());
-      result = result && getDatabase()
-          .equals(other.getDatabase());
-      result = result && getServiceDatabase()
-          .equals(other.getServiceDatabase());
-      result = result && getUser()
-          .equals(other.getUser());
-      result = result && (hasPassword() == other.hasPassword());
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
+      if (!getServiceDatabase()
+          .equals(other.getServiceDatabase())) return false;
+      if (!getUser()
+          .equals(other.getUser())) return false;
+      if (hasPassword() != other.hasPassword()) return false;
       if (hasPassword()) {
-        result = result && getPassword()
-            .equals(other.getPassword());
+        if (!getPassword()
+            .equals(other.getPassword())) return false;
       }
-      result = result && getIncludeTablesRegexList()
-          .equals(other.getIncludeTablesRegexList());
-      result = result && getExcludeTablesRegexList()
-          .equals(other.getExcludeTablesRegexList());
-      result = result && getTimezone()
-          .equals(other.getTimezone());
-      result = result && (hasObjectTransferSettings() == other.hasObjectTransferSettings());
+      if (!getIncludeTablesRegexList()
+          .equals(other.getIncludeTablesRegexList())) return false;
+      if (!getExcludeTablesRegexList()
+          .equals(other.getExcludeTablesRegexList())) return false;
+      if (!getTimezone()
+          .equals(other.getTimezone())) return false;
+      if (hasObjectTransferSettings() != other.hasObjectTransferSettings()) return false;
       if (hasObjectTransferSettings()) {
-        result = result && getObjectTransferSettings()
-            .equals(other.getObjectTransferSettings());
+        if (!getObjectTransferSettings()
+            .equals(other.getObjectTransferSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4236,7 +4495,7 @@ public final class Mysql {
           connectionBuilder_ = null;
         }
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
 
         serviceDatabase_ = "";
@@ -4250,9 +4509,9 @@ public final class Mysql {
           passwordBuilder_ = null;
         }
         includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000004);
         timezone_ = "";
 
         if (objectTransferSettingsBuilder_ == null) {
@@ -4288,15 +4547,14 @@ public final class Mysql {
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource result = new yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlSource(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (connectionBuilder_ == null) {
           result.connection_ = connection_;
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroups_ = securityGroups_;
         result.database_ = database_;
@@ -4307,14 +4565,14 @@ public final class Mysql {
         } else {
           result.password_ = passwordBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.includeTablesRegex_ = includeTablesRegex_;
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.excludeTablesRegex_ = excludeTablesRegex_;
         result.timezone_ = timezone_;
@@ -4323,42 +4581,41 @@ public final class Mysql {
         } else {
           result.objectTransferSettings_ = objectTransferSettingsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4378,7 +4635,7 @@ public final class Mysql {
         if (!other.securityGroups_.isEmpty()) {
           if (securityGroups_.isEmpty()) {
             securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSecurityGroupsIsMutable();
             securityGroups_.addAll(other.securityGroups_);
@@ -4403,7 +4660,7 @@ public final class Mysql {
         if (!other.includeTablesRegex_.isEmpty()) {
           if (includeTablesRegex_.isEmpty()) {
             includeTablesRegex_ = other.includeTablesRegex_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureIncludeTablesRegexIsMutable();
             includeTablesRegex_.addAll(other.includeTablesRegex_);
@@ -4413,7 +4670,7 @@ public final class Mysql {
         if (!other.excludeTablesRegex_.isEmpty()) {
           if (excludeTablesRegex_.isEmpty()) {
             excludeTablesRegex_ = other.excludeTablesRegex_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureExcludeTablesRegexIsMutable();
             excludeTablesRegex_.addAll(other.excludeTablesRegex_);
@@ -4457,7 +4714,7 @@ public final class Mysql {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_ = null;
+      private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder> connectionBuilder_;
       /**
@@ -4468,6 +4725,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+       * @return Whether the connection field is set.
        */
       public boolean hasConnection() {
         return connectionBuilder_ != null || connection_ != null;
@@ -4480,6 +4738,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+       * @return The connection.
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection() {
         if (connectionBuilder_ == null) {
@@ -4630,9 +4889,9 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -4641,6 +4900,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @return A list containing the securityGroups.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupsList() {
@@ -4652,6 +4912,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @return The count of securityGroups.
        */
       public int getSecurityGroupsCount() {
         return securityGroups_.size();
@@ -4662,6 +4923,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
        */
       public java.lang.String getSecurityGroups(int index) {
         return securityGroups_.get(index);
@@ -4672,6 +4935,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupsBytes(int index) {
@@ -4683,6 +4948,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroups(
           int index, java.lang.String value) {
@@ -4700,6 +4968,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroups(
           java.lang.String value) {
@@ -4717,6 +4987,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroups(
           java.lang.Iterable<java.lang.String> values) {
@@ -4732,10 +5004,11 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroups() {
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4745,6 +5018,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupsBytes(
           com.google.protobuf.ByteString value) {
@@ -4768,6 +5043,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return The database.
        */
       public java.lang.String getDatabase() {
         java.lang.Object ref = database_;
@@ -4790,6 +5066,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return The bytes for database.
        */
       public com.google.protobuf.ByteString
           getDatabaseBytes() {
@@ -4813,6 +5090,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabase(
           java.lang.String value) {
@@ -4833,6 +5112,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabase() {
         
@@ -4849,6 +5129,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseBytes(
           com.google.protobuf.ByteString value) {
@@ -4872,6 +5154,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @return The serviceDatabase.
        */
       public java.lang.String getServiceDatabase() {
         java.lang.Object ref = serviceDatabase_;
@@ -4894,6 +5177,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @return The bytes for serviceDatabase.
        */
       public com.google.protobuf.ByteString
           getServiceDatabaseBytes() {
@@ -4917,6 +5201,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @param value The serviceDatabase to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceDatabase(
           java.lang.String value) {
@@ -4937,6 +5223,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceDatabase() {
         
@@ -4953,6 +5240,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @param value The bytes for serviceDatabase to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceDatabaseBytes(
           com.google.protobuf.ByteString value) {
@@ -4975,6 +5264,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @return The user.
        */
       public java.lang.String getUser() {
         java.lang.Object ref = user_;
@@ -4996,6 +5286,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @return The bytes for user.
        */
       public com.google.protobuf.ByteString
           getUserBytes() {
@@ -5018,6 +5309,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @param value The user to set.
+       * @return This builder for chaining.
        */
       public Builder setUser(
           java.lang.String value) {
@@ -5037,6 +5330,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUser() {
         
@@ -5052,6 +5346,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @param value The bytes for user to set.
+       * @return This builder for chaining.
        */
       public Builder setUserBytes(
           com.google.protobuf.ByteString value) {
@@ -5065,7 +5361,7 @@ public final class Mysql {
         return this;
       }
 
-      private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_ = null;
+      private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
@@ -5076,6 +5372,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+       * @return Whether the password field is set.
        */
       public boolean hasPassword() {
         return passwordBuilder_ != null || password_ != null;
@@ -5088,6 +5385,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+       * @return The password.
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword() {
         if (passwordBuilder_ == null) {
@@ -5238,13 +5536,14 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIncludeTablesRegexIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(includeTablesRegex_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @return A list containing the includeTablesRegex.
        */
       public com.google.protobuf.ProtocolStringList
           getIncludeTablesRegexList() {
@@ -5252,18 +5551,23 @@ public final class Mysql {
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @return The count of includeTablesRegex.
        */
       public int getIncludeTablesRegexCount() {
         return includeTablesRegex_.size();
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @param index The index of the element to return.
+       * @return The includeTablesRegex at the given index.
        */
       public java.lang.String getIncludeTablesRegex(int index) {
         return includeTablesRegex_.get(index);
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the includeTablesRegex at the given index.
        */
       public com.google.protobuf.ByteString
           getIncludeTablesRegexBytes(int index) {
@@ -5271,6 +5575,9 @@ public final class Mysql {
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @param index The index to set the value at.
+       * @param value The includeTablesRegex to set.
+       * @return This builder for chaining.
        */
       public Builder setIncludeTablesRegex(
           int index, java.lang.String value) {
@@ -5284,6 +5591,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @param value The includeTablesRegex to add.
+       * @return This builder for chaining.
        */
       public Builder addIncludeTablesRegex(
           java.lang.String value) {
@@ -5297,6 +5606,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @param values The includeTablesRegex to add.
+       * @return This builder for chaining.
        */
       public Builder addAllIncludeTablesRegex(
           java.lang.Iterable<java.lang.String> values) {
@@ -5308,15 +5619,18 @@ public final class Mysql {
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIncludeTablesRegex() {
         includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string include_tables_regex = 12;</code>
+       * @param value The bytes of the includeTablesRegex to add.
+       * @return This builder for chaining.
        */
       public Builder addIncludeTablesRegexBytes(
           com.google.protobuf.ByteString value) {
@@ -5332,13 +5646,14 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludeTablesRegexIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(excludeTablesRegex_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @return A list containing the excludeTablesRegex.
        */
       public com.google.protobuf.ProtocolStringList
           getExcludeTablesRegexList() {
@@ -5346,18 +5661,23 @@ public final class Mysql {
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @return The count of excludeTablesRegex.
        */
       public int getExcludeTablesRegexCount() {
         return excludeTablesRegex_.size();
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param index The index of the element to return.
+       * @return The excludeTablesRegex at the given index.
        */
       public java.lang.String getExcludeTablesRegex(int index) {
         return excludeTablesRegex_.get(index);
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the excludeTablesRegex at the given index.
        */
       public com.google.protobuf.ByteString
           getExcludeTablesRegexBytes(int index) {
@@ -5365,6 +5685,9 @@ public final class Mysql {
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The excludeTablesRegex to set.
+       * @return This builder for chaining.
        */
       public Builder setExcludeTablesRegex(
           int index, java.lang.String value) {
@@ -5378,6 +5701,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param value The excludeTablesRegex to add.
+       * @return This builder for chaining.
        */
       public Builder addExcludeTablesRegex(
           java.lang.String value) {
@@ -5391,6 +5716,8 @@ public final class Mysql {
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param values The excludeTablesRegex to add.
+       * @return This builder for chaining.
        */
       public Builder addAllExcludeTablesRegex(
           java.lang.Iterable<java.lang.String> values) {
@@ -5402,15 +5729,18 @@ public final class Mysql {
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @return This builder for chaining.
        */
       public Builder clearExcludeTablesRegex() {
         excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param value The bytes of the excludeTablesRegex to add.
+       * @return This builder for chaining.
        */
       public Builder addExcludeTablesRegexBytes(
           com.google.protobuf.ByteString value) {
@@ -5434,6 +5764,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 8;</code>
+       * @return The timezone.
        */
       public java.lang.String getTimezone() {
         java.lang.Object ref = timezone_;
@@ -5456,6 +5787,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 8;</code>
+       * @return The bytes for timezone.
        */
       public com.google.protobuf.ByteString
           getTimezoneBytes() {
@@ -5479,6 +5811,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 8;</code>
+       * @param value The timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezone(
           java.lang.String value) {
@@ -5499,6 +5833,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTimezone() {
         
@@ -5515,6 +5850,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 8;</code>
+       * @param value The bytes for timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
@@ -5528,7 +5865,7 @@ public final class Mysql {
         return this;
       }
 
-      private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings objectTransferSettings_ = null;
+      private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings objectTransferSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettingsOrBuilder> objectTransferSettingsBuilder_;
       /**
@@ -5539,6 +5876,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
+       * @return Whether the objectTransferSettings field is set.
        */
       public boolean hasObjectTransferSettings() {
         return objectTransferSettingsBuilder_ != null || objectTransferSettings_ != null;
@@ -5551,6 +5889,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
+       * @return The objectTransferSettings.
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettings getObjectTransferSettings() {
         if (objectTransferSettingsBuilder_ == null) {
@@ -5701,7 +6040,7 @@ public final class Mysql {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5763,6 +6102,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
@@ -5773,6 +6113,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return The connection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection();
     /**
@@ -5792,6 +6133,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @return A list containing the securityGroups.
      */
     java.util.List<java.lang.String>
         getSecurityGroupsList();
@@ -5801,6 +6143,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @return The count of securityGroups.
      */
     int getSecurityGroupsCount();
     /**
@@ -5809,6 +6152,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
      */
     java.lang.String getSecurityGroups(int index);
     /**
@@ -5817,6 +6162,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
      */
     com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index);
@@ -5831,6 +6178,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The database.
      */
     java.lang.String getDatabase();
     /**
@@ -5843,6 +6191,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The bytes for database.
      */
     com.google.protobuf.ByteString
         getDatabaseBytes();
@@ -5855,6 +6204,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The user.
      */
     java.lang.String getUser();
     /**
@@ -5865,6 +6215,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The bytes for user.
      */
     com.google.protobuf.ByteString
         getUserBytes();
@@ -5877,6 +6228,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return Whether the password field is set.
      */
     boolean hasPassword();
     /**
@@ -5887,6 +6239,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return The password.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
@@ -5908,6 +6261,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
+     * @return The sqlMode.
      */
     java.lang.String getSqlMode();
     /**
@@ -5918,6 +6272,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
+     * @return The bytes for sqlMode.
      */
     com.google.protobuf.ByteString
         getSqlModeBytes();
@@ -5932,6 +6287,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>bool skip_constraint_checks = 6;</code>
+     * @return The skipConstraintChecks.
      */
     boolean getSkipConstraintChecks();
 
@@ -5944,6 +6300,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 7;</code>
+     * @return The timezone.
      */
     java.lang.String getTimezone();
     /**
@@ -5955,6 +6312,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 7;</code>
+     * @return The bytes for timezone.
      */
     com.google.protobuf.ByteString
         getTimezoneBytes();
@@ -5968,6 +6326,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
     int getCleanupPolicyValue();
     /**
@@ -5979,6 +6338,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     * @return The cleanupPolicy.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
 
@@ -5990,6 +6350,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The serviceDatabase.
      */
     java.lang.String getServiceDatabase();
     /**
@@ -6000,6 +6361,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The bytes for serviceDatabase.
      */
     com.google.protobuf.ByteString
         getServiceDatabaseBytes();
@@ -6007,7 +6369,7 @@ public final class Mysql {
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlTarget}
    */
-  public  static final class MysqlTarget extends
+  public static final class MysqlTarget extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.MysqlTarget)
       MysqlTargetOrBuilder {
@@ -6021,10 +6383,16 @@ public final class Mysql {
       database_ = "";
       user_ = "";
       sqlMode_ = "";
-      skipConstraintChecks_ = false;
       timezone_ = "";
       cleanupPolicy_ = 0;
       serviceDatabase_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlTarget();
     }
 
     @java.lang.Override
@@ -6120,15 +6488,15 @@ public final class Mysql {
             }
             case 130: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               securityGroups_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6142,7 +6510,7 @@ public final class Mysql {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -6162,7 +6530,6 @@ public final class Mysql {
               yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.class, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
     /**
@@ -6173,7 +6540,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return Whether the connection field is set.
      */
+    @java.lang.Override
     public boolean hasConnection() {
       return connection_ != null;
     }
@@ -6185,7 +6554,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+     * @return The connection.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection() {
       return connection_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.getDefaultInstance() : connection_;
     }
@@ -6198,6 +6569,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
     }
@@ -6210,6 +6582,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @return A list containing the securityGroups.
      */
     public com.google.protobuf.ProtocolStringList
         getSecurityGroupsList() {
@@ -6221,6 +6594,7 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @return The count of securityGroups.
      */
     public int getSecurityGroupsCount() {
       return securityGroups_.size();
@@ -6231,6 +6605,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
      */
     public java.lang.String getSecurityGroups(int index) {
       return securityGroups_.get(index);
@@ -6241,6 +6617,8 @@ public final class Mysql {
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
      */
     public com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index) {
@@ -6259,7 +6637,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The database.
      */
+    @java.lang.Override
     public java.lang.String getDatabase() {
       java.lang.Object ref = database_;
       if (ref instanceof java.lang.String) {
@@ -6282,7 +6662,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string database = 2;</code>
+     * @return The bytes for database.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatabaseBytes() {
       java.lang.Object ref = database_;
@@ -6307,7 +6689,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The user.
      */
+    @java.lang.Override
     public java.lang.String getUser() {
       java.lang.Object ref = user_;
       if (ref instanceof java.lang.String) {
@@ -6328,7 +6712,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string user = 3;</code>
+     * @return The bytes for user.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserBytes() {
       java.lang.Object ref = user_;
@@ -6353,7 +6739,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return Whether the password field is set.
      */
+    @java.lang.Override
     public boolean hasPassword() {
       return password_ != null;
     }
@@ -6365,7 +6753,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+     * @return The password.
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword() {
       return password_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.getDefaultInstance() : password_;
     }
@@ -6378,6 +6768,7 @@ public final class Mysql {
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
       return getPassword();
     }
@@ -6392,7 +6783,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
+     * @return The sqlMode.
      */
+    @java.lang.Override
     public java.lang.String getSqlMode() {
       java.lang.Object ref = sqlMode_;
       if (ref instanceof java.lang.String) {
@@ -6413,7 +6806,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
+     * @return The bytes for sqlMode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSqlModeBytes() {
       java.lang.Object ref = sqlMode_;
@@ -6440,7 +6835,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>bool skip_constraint_checks = 6;</code>
+     * @return The skipConstraintChecks.
      */
+    @java.lang.Override
     public boolean getSkipConstraintChecks() {
       return skipConstraintChecks_;
     }
@@ -6456,7 +6853,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 7;</code>
+     * @return The timezone.
      */
+    @java.lang.Override
     public java.lang.String getTimezone() {
       java.lang.Object ref = timezone_;
       if (ref instanceof java.lang.String) {
@@ -6478,7 +6877,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string timezone = 7;</code>
+     * @return The bytes for timezone.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTimezoneBytes() {
       java.lang.Object ref = timezone_;
@@ -6504,8 +6905,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
      */
-    public int getCleanupPolicyValue() {
+    @java.lang.Override public int getCleanupPolicyValue() {
       return cleanupPolicy_;
     }
     /**
@@ -6517,8 +6919,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     * @return The cleanupPolicy.
      */
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
@@ -6534,7 +6937,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The serviceDatabase.
      */
+    @java.lang.Override
     public java.lang.String getServiceDatabase() {
       java.lang.Object ref = serviceDatabase_;
       if (ref instanceof java.lang.String) {
@@ -6555,7 +6960,9 @@ public final class Mysql {
      * </pre>
      *
      * <code>string service_database = 15;</code>
+     * @return The bytes for serviceDatabase.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceDatabaseBytes() {
       java.lang.Object ref = serviceDatabase_;
@@ -6587,28 +6994,28 @@ public final class Mysql {
       if (connection_ != null) {
         output.writeMessage(1, getConnection());
       }
-      if (!getDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, database_);
       }
-      if (!getUserBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, user_);
       }
       if (password_ != null) {
         output.writeMessage(4, getPassword());
       }
-      if (!getSqlModeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sqlMode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sqlMode_);
       }
       if (skipConstraintChecks_ != false) {
         output.writeBool(6, skipConstraintChecks_);
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, timezone_);
       }
       if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, cleanupPolicy_);
       }
-      if (!getServiceDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceDatabase_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceDatabase_);
       }
       for (int i = 0; i < securityGroups_.size(); i++) {
@@ -6627,31 +7034,31 @@ public final class Mysql {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConnection());
       }
-      if (!getDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, database_);
       }
-      if (!getUserBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, user_);
       }
       if (password_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPassword());
       }
-      if (!getSqlModeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sqlMode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sqlMode_);
       }
       if (skipConstraintChecks_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, skipConstraintChecks_);
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, timezone_);
       }
       if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, cleanupPolicy_);
       }
-      if (!getServiceDatabaseBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceDatabase_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceDatabase_);
       }
       {
@@ -6677,34 +7084,33 @@ public final class Mysql {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget other = (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget) obj;
 
-      boolean result = true;
-      result = result && (hasConnection() == other.hasConnection());
+      if (hasConnection() != other.hasConnection()) return false;
       if (hasConnection()) {
-        result = result && getConnection()
-            .equals(other.getConnection());
+        if (!getConnection()
+            .equals(other.getConnection())) return false;
       }
-      result = result && getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList());
-      result = result && getDatabase()
-          .equals(other.getDatabase());
-      result = result && getUser()
-          .equals(other.getUser());
-      result = result && (hasPassword() == other.hasPassword());
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
+      if (!getUser()
+          .equals(other.getUser())) return false;
+      if (hasPassword() != other.hasPassword()) return false;
       if (hasPassword()) {
-        result = result && getPassword()
-            .equals(other.getPassword());
+        if (!getPassword()
+            .equals(other.getPassword())) return false;
       }
-      result = result && getSqlMode()
-          .equals(other.getSqlMode());
-      result = result && (getSkipConstraintChecks()
-          == other.getSkipConstraintChecks());
-      result = result && getTimezone()
-          .equals(other.getTimezone());
-      result = result && cleanupPolicy_ == other.cleanupPolicy_;
-      result = result && getServiceDatabase()
-          .equals(other.getServiceDatabase());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSqlMode()
+          .equals(other.getSqlMode())) return false;
+      if (getSkipConstraintChecks()
+          != other.getSkipConstraintChecks()) return false;
+      if (!getTimezone()
+          .equals(other.getTimezone())) return false;
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (!getServiceDatabase()
+          .equals(other.getServiceDatabase())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6881,7 +7287,7 @@ public final class Mysql {
           connectionBuilder_ = null;
         }
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
 
         user_ = "";
@@ -6929,15 +7335,14 @@ public final class Mysql {
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget result = new yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (connectionBuilder_ == null) {
           result.connection_ = connection_;
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroups_ = securityGroups_;
         result.database_ = database_;
@@ -6952,42 +7357,41 @@ public final class Mysql {
         result.timezone_ = timezone_;
         result.cleanupPolicy_ = cleanupPolicy_;
         result.serviceDatabase_ = serviceDatabase_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7007,7 +7411,7 @@ public final class Mysql {
         if (!other.securityGroups_.isEmpty()) {
           if (securityGroups_.isEmpty()) {
             securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSecurityGroupsIsMutable();
             securityGroups_.addAll(other.securityGroups_);
@@ -7073,7 +7477,7 @@ public final class Mysql {
       }
       private int bitField0_;
 
-      private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_ = null;
+      private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder> connectionBuilder_;
       /**
@@ -7084,6 +7488,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+       * @return Whether the connection field is set.
        */
       public boolean hasConnection() {
         return connectionBuilder_ != null || connection_ != null;
@@ -7096,6 +7501,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
+       * @return The connection.
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection() {
         if (connectionBuilder_ == null) {
@@ -7246,9 +7652,9 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -7257,6 +7663,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @return A list containing the securityGroups.
        */
       public com.google.protobuf.ProtocolStringList
           getSecurityGroupsList() {
@@ -7268,6 +7675,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @return The count of securityGroups.
        */
       public int getSecurityGroupsCount() {
         return securityGroups_.size();
@@ -7278,6 +7686,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
        */
       public java.lang.String getSecurityGroups(int index) {
         return securityGroups_.get(index);
@@ -7288,6 +7698,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
        */
       public com.google.protobuf.ByteString
           getSecurityGroupsBytes(int index) {
@@ -7299,6 +7711,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
        */
       public Builder setSecurityGroups(
           int index, java.lang.String value) {
@@ -7316,6 +7731,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroups(
           java.lang.String value) {
@@ -7333,6 +7750,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSecurityGroups(
           java.lang.Iterable<java.lang.String> values) {
@@ -7348,10 +7767,11 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSecurityGroups() {
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7361,6 +7781,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
        */
       public Builder addSecurityGroupsBytes(
           com.google.protobuf.ByteString value) {
@@ -7385,6 +7807,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return The database.
        */
       public java.lang.String getDatabase() {
         java.lang.Object ref = database_;
@@ -7408,6 +7831,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return The bytes for database.
        */
       public com.google.protobuf.ByteString
           getDatabaseBytes() {
@@ -7432,6 +7856,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabase(
           java.lang.String value) {
@@ -7453,6 +7879,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDatabase() {
         
@@ -7470,6 +7897,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string database = 2;</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
        */
       public Builder setDatabaseBytes(
           com.google.protobuf.ByteString value) {
@@ -7492,6 +7921,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @return The user.
        */
       public java.lang.String getUser() {
         java.lang.Object ref = user_;
@@ -7513,6 +7943,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @return The bytes for user.
        */
       public com.google.protobuf.ByteString
           getUserBytes() {
@@ -7535,6 +7966,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @param value The user to set.
+       * @return This builder for chaining.
        */
       public Builder setUser(
           java.lang.String value) {
@@ -7554,6 +7987,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUser() {
         
@@ -7569,6 +8003,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string user = 3;</code>
+       * @param value The bytes for user to set.
+       * @return This builder for chaining.
        */
       public Builder setUserBytes(
           com.google.protobuf.ByteString value) {
@@ -7582,7 +8018,7 @@ public final class Mysql {
         return this;
       }
 
-      private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_ = null;
+      private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
@@ -7593,6 +8029,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+       * @return Whether the password field is set.
        */
       public boolean hasPassword() {
         return passwordBuilder_ != null || password_ != null;
@@ -7605,6 +8042,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
+       * @return The password.
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword() {
         if (passwordBuilder_ == null) {
@@ -7762,6 +8200,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
+       * @return The sqlMode.
        */
       public java.lang.String getSqlMode() {
         java.lang.Object ref = sqlMode_;
@@ -7783,6 +8222,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
+       * @return The bytes for sqlMode.
        */
       public com.google.protobuf.ByteString
           getSqlModeBytes() {
@@ -7805,6 +8245,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
+       * @param value The sqlMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSqlMode(
           java.lang.String value) {
@@ -7824,6 +8266,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSqlMode() {
         
@@ -7839,6 +8282,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
+       * @param value The bytes for sqlMode to set.
+       * @return This builder for chaining.
        */
       public Builder setSqlModeBytes(
           com.google.protobuf.ByteString value) {
@@ -7863,7 +8308,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>bool skip_constraint_checks = 6;</code>
+       * @return The skipConstraintChecks.
        */
+      @java.lang.Override
       public boolean getSkipConstraintChecks() {
         return skipConstraintChecks_;
       }
@@ -7877,6 +8324,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>bool skip_constraint_checks = 6;</code>
+       * @param value The skipConstraintChecks to set.
+       * @return This builder for chaining.
        */
       public Builder setSkipConstraintChecks(boolean value) {
         
@@ -7894,6 +8343,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>bool skip_constraint_checks = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSkipConstraintChecks() {
         
@@ -7912,6 +8362,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 7;</code>
+       * @return The timezone.
        */
       public java.lang.String getTimezone() {
         java.lang.Object ref = timezone_;
@@ -7934,6 +8385,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 7;</code>
+       * @return The bytes for timezone.
        */
       public com.google.protobuf.ByteString
           getTimezoneBytes() {
@@ -7957,6 +8409,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 7;</code>
+       * @param value The timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezone(
           java.lang.String value) {
@@ -7977,6 +8431,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTimezone() {
         
@@ -7993,6 +8448,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string timezone = 7;</code>
+       * @param value The bytes for timezone to set.
+       * @return This builder for chaining.
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
@@ -8016,8 +8473,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
        */
-      public int getCleanupPolicyValue() {
+      @java.lang.Override public int getCleanupPolicyValue() {
         return cleanupPolicy_;
       }
       /**
@@ -8029,8 +8487,11 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicyValue(int value) {
+        
         cleanupPolicy_ = value;
         onChanged();
         return this;
@@ -8044,7 +8505,9 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       * @return The cleanupPolicy.
        */
+      @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
@@ -8059,6 +8522,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy value) {
         if (value == null) {
@@ -8078,6 +8543,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCleanupPolicy() {
         
@@ -8095,6 +8561,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @return The serviceDatabase.
        */
       public java.lang.String getServiceDatabase() {
         java.lang.Object ref = serviceDatabase_;
@@ -8116,6 +8583,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @return The bytes for serviceDatabase.
        */
       public com.google.protobuf.ByteString
           getServiceDatabaseBytes() {
@@ -8138,6 +8606,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @param value The serviceDatabase to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceDatabase(
           java.lang.String value) {
@@ -8157,6 +8627,7 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearServiceDatabase() {
         
@@ -8172,6 +8643,8 @@ public final class Mysql {
        * </pre>
        *
        * <code>string service_database = 15;</code>
+       * @param value The bytes for serviceDatabase to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceDatabaseBytes(
           com.google.protobuf.ByteString value) {
@@ -8187,7 +8660,7 @@ public final class Mysql {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8314,19 +8787,11 @@ public final class Mysql {
       "endpoint\252\002%Yandex.Cloud.Datatransfer.V1." +
       "EndPointb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMysql_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMysql_fieldAccessorTable = new

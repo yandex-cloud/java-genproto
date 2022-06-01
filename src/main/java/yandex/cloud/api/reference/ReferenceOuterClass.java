@@ -20,10 +20,12 @@ public final class ReferenceOuterClass {
 
     /**
      * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
+     * @return Whether the referrer field is set.
      */
     boolean hasReferrer();
     /**
      * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
+     * @return The referrer.
      */
     yandex.cloud.api.reference.ReferenceOuterClass.Referrer getReferrer();
     /**
@@ -33,17 +35,19 @@ public final class ReferenceOuterClass {
 
     /**
      * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
      * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+     * @return The type.
      */
     yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.reference.Reference}
    */
-  public  static final class Reference extends
+  public static final class Reference extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.reference.Reference)
       ReferenceOrBuilder {
@@ -54,6 +58,13 @@ public final class ReferenceOuterClass {
     }
     private Reference() {
       type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Reference();
     }
 
     @java.lang.Override
@@ -69,7 +80,6 @@ public final class ReferenceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -100,7 +110,7 @@ public final class ReferenceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -174,6 +184,8 @@ public final class ReferenceOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -181,6 +193,10 @@ public final class ReferenceOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
@@ -204,6 +220,10 @@ public final class ReferenceOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -242,19 +262,24 @@ public final class ReferenceOuterClass {
     private yandex.cloud.api.reference.ReferenceOuterClass.Referrer referrer_;
     /**
      * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
+     * @return Whether the referrer field is set.
      */
+    @java.lang.Override
     public boolean hasReferrer() {
       return referrer_ != null;
     }
     /**
      * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
+     * @return The referrer.
      */
+    @java.lang.Override
     public yandex.cloud.api.reference.ReferenceOuterClass.Referrer getReferrer() {
       return referrer_ == null ? yandex.cloud.api.reference.ReferenceOuterClass.Referrer.getDefaultInstance() : referrer_;
     }
     /**
      * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.reference.ReferenceOuterClass.ReferrerOrBuilder getReferrerOrBuilder() {
       return getReferrer();
     }
@@ -263,14 +288,16 @@ public final class ReferenceOuterClass {
     private int type_;
     /**
      * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type getType() {
+    @java.lang.Override public yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type result = yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type.valueOf(type_);
       return result == null ? yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type.UNRECOGNIZED : result;
@@ -328,15 +355,14 @@ public final class ReferenceOuterClass {
       }
       yandex.cloud.api.reference.ReferenceOuterClass.Reference other = (yandex.cloud.api.reference.ReferenceOuterClass.Reference) obj;
 
-      boolean result = true;
-      result = result && (hasReferrer() == other.hasReferrer());
+      if (hasReferrer() != other.hasReferrer()) return false;
       if (hasReferrer()) {
-        result = result && getReferrer()
-            .equals(other.getReferrer());
+        if (!getReferrer()
+            .equals(other.getReferrer())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -531,35 +557,35 @@ public final class ReferenceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -608,17 +634,19 @@ public final class ReferenceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.reference.ReferenceOuterClass.Referrer referrer_ = null;
+      private yandex.cloud.api.reference.ReferenceOuterClass.Referrer referrer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.reference.ReferenceOuterClass.Referrer, yandex.cloud.api.reference.ReferenceOuterClass.Referrer.Builder, yandex.cloud.api.reference.ReferenceOuterClass.ReferrerOrBuilder> referrerBuilder_;
       /**
        * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
+       * @return Whether the referrer field is set.
        */
       public boolean hasReferrer() {
         return referrerBuilder_ != null || referrer_ != null;
       }
       /**
        * <code>.yandex.cloud.reference.Referrer referrer = 1;</code>
+       * @return The referrer.
        */
       public yandex.cloud.api.reference.ReferenceOuterClass.Referrer getReferrer() {
         if (referrerBuilder_ == null) {
@@ -728,21 +756,27 @@ public final class ReferenceOuterClass {
       private int type_ = 0;
       /**
        * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
        * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type result = yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type.valueOf(type_);
@@ -750,6 +784,8 @@ public final class ReferenceOuterClass {
       }
       /**
        * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.reference.ReferenceOuterClass.Reference.Type value) {
         if (value == null) {
@@ -762,6 +798,7 @@ public final class ReferenceOuterClass {
       }
       /**
        * <code>.yandex.cloud.reference.Reference.Type type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -772,7 +809,7 @@ public final class ReferenceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -836,6 +873,7 @@ public final class ReferenceOuterClass {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -848,16 +886,19 @@ public final class ReferenceOuterClass {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>string id = 2;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -865,7 +906,7 @@ public final class ReferenceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.reference.Referrer}
    */
-  public  static final class Referrer extends
+  public static final class Referrer extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.reference.Referrer)
       ReferrerOrBuilder {
@@ -877,6 +918,13 @@ public final class ReferenceOuterClass {
     private Referrer() {
       type_ = "";
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Referrer();
     }
 
     @java.lang.Override
@@ -892,7 +940,6 @@ public final class ReferenceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -916,7 +963,7 @@ public final class ReferenceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -959,7 +1006,9 @@ public final class ReferenceOuterClass {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -982,7 +1031,9 @@ public final class ReferenceOuterClass {
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -1001,7 +1052,9 @@ public final class ReferenceOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 2;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1016,7 +1069,9 @@ public final class ReferenceOuterClass {
     }
     /**
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1045,10 +1100,10 @@ public final class ReferenceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -1060,10 +1115,10 @@ public final class ReferenceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -1081,13 +1136,12 @@ public final class ReferenceOuterClass {
       }
       yandex.cloud.api.reference.ReferenceOuterClass.Referrer other = (yandex.cloud.api.reference.ReferenceOuterClass.Referrer) obj;
 
-      boolean result = true;
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1272,35 +1326,35 @@ public final class ReferenceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1362,6 +1416,7 @@ public final class ReferenceOuterClass {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -1385,6 +1440,7 @@ public final class ReferenceOuterClass {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -1409,6 +1465,8 @@ public final class ReferenceOuterClass {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -1430,6 +1488,7 @@ public final class ReferenceOuterClass {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1447,6 +1506,8 @@ public final class ReferenceOuterClass {
        * </pre>
        *
        * <code>string type = 1;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1463,6 +1524,7 @@ public final class ReferenceOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 2;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1478,6 +1540,7 @@ public final class ReferenceOuterClass {
       }
       /**
        * <code>string id = 2;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1494,6 +1557,8 @@ public final class ReferenceOuterClass {
       }
       /**
        * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1507,6 +1572,7 @@ public final class ReferenceOuterClass {
       }
       /**
        * <code>string id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1516,6 +1582,8 @@ public final class ReferenceOuterClass {
       }
       /**
        * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1531,7 +1599,7 @@ public final class ReferenceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1611,18 +1679,10 @@ public final class ReferenceOuterClass {
       "com/yandex-cloud/go-genproto/yandex/clou" +
       "d/reference;referenceb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_yandex_cloud_reference_Reference_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_reference_Reference_fieldAccessorTable = new

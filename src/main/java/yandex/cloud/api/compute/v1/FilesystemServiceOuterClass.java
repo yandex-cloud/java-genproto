@@ -25,6 +25,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -34,6 +35,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -41,7 +43,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.GetFilesystemRequest}
    */
-  public  static final class GetFilesystemRequest extends
+  public static final class GetFilesystemRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GetFilesystemRequest)
       GetFilesystemRequestOrBuilder {
@@ -52,6 +54,13 @@ public final class FilesystemServiceOuterClass {
     }
     private GetFilesystemRequest() {
       filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetFilesystemRequest();
     }
 
     @java.lang.Override
@@ -67,7 +76,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -85,7 +93,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -125,7 +133,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -145,7 +155,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -174,7 +186,7 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       unknownFields.writeTo(output);
@@ -186,7 +198,7 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -204,11 +216,10 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -388,35 +399,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -471,6 +482,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -491,6 +503,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -512,6 +525,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -530,6 +545,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -544,6 +560,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -559,7 +577,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -620,6 +638,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -629,6 +648,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -642,6 +662,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -652,6 +673,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -661,6 +683,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -676,6 +699,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -689,6 +713,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -696,7 +721,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListFilesystemsRequest}
    */
-  public  static final class ListFilesystemsRequest extends
+  public static final class ListFilesystemsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListFilesystemsRequest)
       ListFilesystemsRequestOrBuilder {
@@ -707,9 +732,15 @@ public final class FilesystemServiceOuterClass {
     }
     private ListFilesystemsRequest() {
       folderId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFilesystemsRequest();
     }
 
     @java.lang.Override
@@ -725,7 +756,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -760,7 +790,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -800,7 +830,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -820,7 +852,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -846,7 +880,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -860,7 +896,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -880,7 +918,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -908,7 +948,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The filter.
      */
+    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -932,7 +974,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filter = 4;</code>
+     * @return The bytes for filter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -961,16 +1005,16 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
@@ -982,17 +1026,17 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -1010,17 +1054,16 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1216,35 +1259,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1310,6 +1353,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1330,6 +1374,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1351,6 +1396,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1369,6 +1416,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1383,6 +1431,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1406,7 +1456,9 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -1419,6 +1471,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -1435,6 +1489,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -1451,6 +1506,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1471,6 +1527,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1492,6 +1549,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1510,6 +1569,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -1524,6 +1584,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1549,6 +1611,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -1573,6 +1636,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -1598,6 +1662,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -1620,6 +1686,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -1638,6 +1705,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -1653,7 +1722,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1760,6 +1829,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -1771,6 +1841,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -1778,7 +1849,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListFilesystemsResponse}
    */
-  public  static final class ListFilesystemsResponse extends
+  public static final class ListFilesystemsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListFilesystemsResponse)
       ListFilesystemsResponseOrBuilder {
@@ -1790,6 +1861,13 @@ public final class FilesystemServiceOuterClass {
     private ListFilesystemsResponse() {
       filesystems_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFilesystemsResponse();
     }
 
     @java.lang.Override
@@ -1817,7 +1895,7 @@ public final class FilesystemServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 filesystems_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1832,7 +1910,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1846,7 +1924,7 @@ public final class FilesystemServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           filesystems_ = java.util.Collections.unmodifiableList(filesystems_);
         }
         this.unknownFields = unknownFields.build();
@@ -1866,7 +1944,6 @@ public final class FilesystemServiceOuterClass {
               yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse.class, yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILESYSTEMS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> filesystems_;
     /**
@@ -1876,6 +1953,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> getFilesystemsList() {
       return filesystems_;
     }
@@ -1886,6 +1964,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.FilesystemOuterClass.FilesystemOrBuilder> 
         getFilesystemsOrBuilderList() {
       return filesystems_;
@@ -1897,6 +1976,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
      */
+    @java.lang.Override
     public int getFilesystemsCount() {
       return filesystems_.size();
     }
@@ -1907,6 +1987,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem getFilesystems(int index) {
       return filesystems_.get(index);
     }
@@ -1917,6 +1998,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.compute.v1.FilesystemOuterClass.FilesystemOrBuilder getFilesystemsOrBuilder(
         int index) {
       return filesystems_.get(index);
@@ -1933,7 +2015,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -1955,7 +2039,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -1987,7 +2073,7 @@ public final class FilesystemServiceOuterClass {
       for (int i = 0; i < filesystems_.size(); i++) {
         output.writeMessage(1, filesystems_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -2003,7 +2089,7 @@ public final class FilesystemServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, filesystems_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -2021,13 +2107,12 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse) obj;
 
-      boolean result = true;
-      result = result && getFilesystemsList()
-          .equals(other.getFilesystemsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemsList()
+          .equals(other.getFilesystemsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2212,9 +2297,8 @@ public final class FilesystemServiceOuterClass {
       public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse buildPartial() {
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse result = new yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (filesystemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             filesystems_ = java.util.Collections.unmodifiableList(filesystems_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2223,42 +2307,41 @@ public final class FilesystemServiceOuterClass {
           result.filesystems_ = filesystemsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2335,7 +2418,7 @@ public final class FilesystemServiceOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> filesystems_ =
         java.util.Collections.emptyList();
       private void ensureFilesystemsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           filesystems_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem>(filesystems_);
           bitField0_ |= 0x00000001;
          }
@@ -2636,7 +2719,7 @@ public final class FilesystemServiceOuterClass {
           filesystemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem, yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem.Builder, yandex.cloud.api.compute.v1.FilesystemOuterClass.FilesystemOrBuilder>(
                   filesystems_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           filesystems_ = null;
@@ -2654,6 +2737,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -2676,6 +2760,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -2699,6 +2784,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -2719,6 +2806,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -2735,6 +2823,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2750,7 +2840,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2811,6 +2901,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -2820,6 +2911,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -2830,6 +2922,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2838,6 +2931,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2848,6 +2942,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -2856,6 +2951,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -2927,6 +3023,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The typeId.
      */
     java.lang.String getTypeId();
     /**
@@ -2937,6 +3034,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for typeId.
      */
     com.google.protobuf.ByteString
         getTypeIdBytes();
@@ -2950,6 +3048,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The zoneId.
      */
     java.lang.String getZoneId();
     /**
@@ -2961,6 +3060,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for zoneId.
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -2972,6 +3072,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
+     * @return The size.
      */
     long getSize();
 
@@ -2983,13 +3084,14 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 block_size = 8;</code>
+     * @return The blockSize.
      */
     long getBlockSize();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateFilesystemRequest}
    */
-  public  static final class CreateFilesystemRequest extends
+  public static final class CreateFilesystemRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateFilesystemRequest)
       CreateFilesystemRequestOrBuilder {
@@ -3004,8 +3106,13 @@ public final class FilesystemServiceOuterClass {
       description_ = "";
       typeId_ = "";
       zoneId_ = "";
-      size_ = 0L;
-      blockSize_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFilesystemRequest();
     }
 
     @java.lang.Override
@@ -3051,10 +3158,10 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3086,7 +3193,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3129,7 +3236,6 @@ public final class FilesystemServiceOuterClass {
               yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest.class, yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -3139,7 +3245,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -3159,7 +3267,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -3182,7 +3292,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3201,7 +3313,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3224,7 +3338,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -3243,7 +3359,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -3293,14 +3411,16 @@ public final class FilesystemServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -3313,6 +3433,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -3325,11 +3446,12 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3342,10 +3464,11 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -3364,7 +3487,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The typeId.
      */
+    @java.lang.Override
     public java.lang.String getTypeId() {
       java.lang.Object ref = typeId_;
       if (ref instanceof java.lang.String) {
@@ -3385,7 +3510,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for typeId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeIdBytes() {
       java.lang.Object ref = typeId_;
@@ -3411,7 +3538,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The zoneId.
      */
+    @java.lang.Override
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
       if (ref instanceof java.lang.String) {
@@ -3433,7 +3562,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for zoneId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
       java.lang.Object ref = zoneId_;
@@ -3457,7 +3588,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -3472,7 +3605,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 block_size = 8;</code>
+     * @return The blockSize.
      */
+    @java.lang.Override
     public long getBlockSize() {
       return blockSize_;
     }
@@ -3491,13 +3626,13 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3506,10 +3641,10 @@ public final class FilesystemServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
-      if (!getTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, typeId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zoneId_);
       }
       if (size_ != 0L) {
@@ -3527,13 +3662,13 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -3546,10 +3681,10 @@ public final class FilesystemServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
-      if (!getTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, typeId_);
       }
-      if (!getZoneIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, zoneId_);
       }
       if (size_ != 0L) {
@@ -3575,25 +3710,24 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest) obj;
 
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && getTypeId()
-          .equals(other.getTypeId());
-      result = result && getZoneId()
-          .equals(other.getZoneId());
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (getBlockSize()
-          == other.getBlockSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getTypeId()
+          .equals(other.getTypeId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (getBlockSize()
+          != other.getBlockSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3820,7 +3954,6 @@ public final class FilesystemServiceOuterClass {
       public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest buildPartial() {
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest result = new yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3830,42 +3963,41 @@ public final class FilesystemServiceOuterClass {
         result.zoneId_ = zoneId_;
         result.size_ = size_;
         result.blockSize_ = blockSize_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3945,6 +4077,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3965,6 +4098,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3986,6 +4120,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -4004,6 +4140,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -4018,6 +4155,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4038,6 +4177,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4057,6 +4197,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4077,6 +4218,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4094,6 +4237,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4107,6 +4251,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4127,6 +4273,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4146,6 +4293,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4166,6 +4314,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4183,6 +4333,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -4196,6 +4347,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4244,14 +4397,16 @@ public final class FilesystemServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -4264,6 +4419,7 @@ public final class FilesystemServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -4276,11 +4432,12 @@ public final class FilesystemServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4293,10 +4450,11 @@ public final class FilesystemServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -4321,7 +4479,7 @@ public final class FilesystemServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -4345,8 +4503,11 @@ public final class FilesystemServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -4376,6 +4537,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The typeId.
        */
       public java.lang.String getTypeId() {
         java.lang.Object ref = typeId_;
@@ -4397,6 +4559,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for typeId.
        */
       public com.google.protobuf.ByteString
           getTypeIdBytes() {
@@ -4419,6 +4582,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The typeId to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeId(
           java.lang.String value) {
@@ -4438,6 +4603,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTypeId() {
         
@@ -4453,6 +4619,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for typeId to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4476,6 +4644,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The zoneId.
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -4498,6 +4667,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for zoneId.
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -4521,6 +4691,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -4541,6 +4713,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneId() {
         
@@ -4557,6 +4730,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4578,7 +4753,9 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -4589,6 +4766,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -4603,6 +4782,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -4620,7 +4800,9 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 block_size = 8;</code>
+       * @return The blockSize.
        */
+      @java.lang.Override
       public long getBlockSize() {
         return blockSize_;
       }
@@ -4632,6 +4814,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 block_size = 8;</code>
+       * @param value The blockSize to set.
+       * @return This builder for chaining.
        */
       public Builder setBlockSize(long value) {
         
@@ -4647,6 +4831,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 block_size = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBlockSize() {
         
@@ -4657,7 +4842,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4717,6 +4902,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -4725,6 +4911,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -4732,7 +4919,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateFilesystemMetadata}
    */
-  public  static final class CreateFilesystemMetadata extends
+  public static final class CreateFilesystemMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.CreateFilesystemMetadata)
       CreateFilesystemMetadataOrBuilder {
@@ -4743,6 +4930,13 @@ public final class FilesystemServiceOuterClass {
     }
     private CreateFilesystemMetadata() {
       filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateFilesystemMetadata();
     }
 
     @java.lang.Override
@@ -4758,7 +4952,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4776,7 +4969,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4815,7 +5008,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -4834,7 +5029,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -4863,7 +5060,7 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       unknownFields.writeTo(output);
@@ -4875,7 +5072,7 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4893,11 +5090,10 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemMetadata other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemMetadata) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5077,35 +5273,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5159,6 +5355,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -5178,6 +5375,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -5198,6 +5396,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -5215,6 +5415,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -5228,6 +5429,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5243,7 +5446,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5304,6 +5507,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -5313,6 +5517,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -5323,6 +5528,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
@@ -5331,6 +5537,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
@@ -5348,6 +5555,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -5356,6 +5564,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5366,6 +5575,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -5374,6 +5584,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -5468,13 +5679,14 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 size = 6;</code>
+     * @return The size.
      */
     long getSize();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateFilesystemRequest}
    */
-  public  static final class UpdateFilesystemRequest extends
+  public static final class UpdateFilesystemRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateFilesystemRequest)
       UpdateFilesystemRequestOrBuilder {
@@ -5487,7 +5699,13 @@ public final class FilesystemServiceOuterClass {
       filesystemId_ = "";
       name_ = "";
       description_ = "";
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFilesystemRequest();
     }
 
     @java.lang.Override
@@ -5546,10 +5764,10 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -5564,7 +5782,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5607,7 +5825,6 @@ public final class FilesystemServiceOuterClass {
               yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest.class, yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILESYSTEM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object filesystemId_;
     /**
@@ -5617,7 +5834,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -5637,7 +5856,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -5660,7 +5881,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
+    @java.lang.Override
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
@@ -5670,7 +5893,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
@@ -5681,6 +5906,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       return getUpdateMask();
     }
@@ -5693,7 +5919,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5712,7 +5940,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5735,7 +5965,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5754,7 +5986,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5809,14 +6043,16 @@ public final class FilesystemServiceOuterClass {
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
+    @java.lang.Override
     public boolean containsLabels(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLabels().getMap().containsKey(key);
     }
     /**
      * Use {@link #getLabelsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
@@ -5834,6 +6070,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
@@ -5851,11 +6088,12 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5873,10 +6111,11 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
+    @java.lang.Override
 
     public java.lang.String getLabelsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -5893,7 +6132,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 size = 6;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -5912,16 +6153,16 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -5942,17 +6183,17 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -5984,24 +6225,23 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
-        result = result && getUpdateMask()
-            .equals(other.getUpdateMask());
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && internalGetLabels().equals(
-          other.internalGetLabels());
-      result = result && (getSize()
-          == other.getSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6225,7 +6465,6 @@ public final class FilesystemServiceOuterClass {
       public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest buildPartial() {
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest result = new yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.filesystemId_ = filesystemId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6237,42 +6476,41 @@ public final class FilesystemServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.size_ = size_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6344,6 +6582,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -6364,6 +6603,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -6385,6 +6625,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -6403,6 +6645,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -6417,6 +6660,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6430,7 +6675,7 @@ public final class FilesystemServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
@@ -6439,6 +6684,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
@@ -6449,6 +6695,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
         if (updateMaskBuilder_ == null) {
@@ -6590,6 +6837,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6609,6 +6857,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6629,6 +6878,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6646,6 +6897,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6659,6 +6911,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6679,6 +6933,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6698,6 +6953,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6718,6 +6974,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6735,6 +6993,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6748,6 +7007,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6801,14 +7062,16 @@ public final class FilesystemServiceOuterClass {
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
+      @java.lang.Override
       public boolean containsLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetLabels().getMap().containsKey(key);
       }
       /**
        * Use {@link #getLabelsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
@@ -6826,6 +7089,7 @@ public final class FilesystemServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
@@ -6843,11 +7107,12 @@ public final class FilesystemServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6865,10 +7130,11 @@ public final class FilesystemServiceOuterClass {
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
+      @java.lang.Override
 
       public java.lang.String getLabelsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -6898,7 +7164,7 @@ public final class FilesystemServiceOuterClass {
 
       public Builder removeLabels(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableLabels().getMutableMap()
             .remove(key);
         return this;
@@ -6927,8 +7193,11 @@ public final class FilesystemServiceOuterClass {
       public Builder putLabels(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLabels().getMutableMap()
             .put(key, value);
         return this;
@@ -6961,7 +7230,9 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 size = 6;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -6971,6 +7242,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 size = 6;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -6984,6 +7257,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 size = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -6994,7 +7268,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7054,6 +7328,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -7062,6 +7337,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -7069,7 +7345,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateFilesystemMetadata}
    */
-  public  static final class UpdateFilesystemMetadata extends
+  public static final class UpdateFilesystemMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateFilesystemMetadata)
       UpdateFilesystemMetadataOrBuilder {
@@ -7080,6 +7356,13 @@ public final class FilesystemServiceOuterClass {
     }
     private UpdateFilesystemMetadata() {
       filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFilesystemMetadata();
     }
 
     @java.lang.Override
@@ -7095,7 +7378,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7113,7 +7395,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7152,7 +7434,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -7171,7 +7455,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -7200,7 +7486,7 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       unknownFields.writeTo(output);
@@ -7212,7 +7498,7 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7230,11 +7516,10 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemMetadata other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.UpdateFilesystemMetadata) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7414,35 +7699,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7496,6 +7781,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -7515,6 +7801,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -7535,6 +7822,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -7552,6 +7841,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -7565,6 +7855,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7580,7 +7872,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7641,6 +7933,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -7650,6 +7943,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -7657,7 +7951,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteFilesystemRequest}
    */
-  public  static final class DeleteFilesystemRequest extends
+  public static final class DeleteFilesystemRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteFilesystemRequest)
       DeleteFilesystemRequestOrBuilder {
@@ -7668,6 +7962,13 @@ public final class FilesystemServiceOuterClass {
     }
     private DeleteFilesystemRequest() {
       filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFilesystemRequest();
     }
 
     @java.lang.Override
@@ -7683,7 +7984,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7701,7 +8001,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7741,7 +8041,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -7761,7 +8063,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -7790,7 +8094,7 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       unknownFields.writeTo(output);
@@ -7802,7 +8106,7 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7820,11 +8124,10 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemRequest) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8004,35 +8307,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8087,6 +8390,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -8107,6 +8411,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -8128,6 +8433,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -8146,6 +8453,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -8160,6 +8468,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8175,7 +8485,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8235,6 +8545,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -8243,6 +8554,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -8250,7 +8562,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DeleteFilesystemMetadata}
    */
-  public  static final class DeleteFilesystemMetadata extends
+  public static final class DeleteFilesystemMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DeleteFilesystemMetadata)
       DeleteFilesystemMetadataOrBuilder {
@@ -8261,6 +8573,13 @@ public final class FilesystemServiceOuterClass {
     }
     private DeleteFilesystemMetadata() {
       filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFilesystemMetadata();
     }
 
     @java.lang.Override
@@ -8276,7 +8595,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8294,7 +8612,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8333,7 +8651,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -8352,7 +8672,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -8381,7 +8703,7 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       unknownFields.writeTo(output);
@@ -8393,7 +8715,7 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8411,11 +8733,10 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemMetadata other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.DeleteFilesystemMetadata) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8595,35 +8916,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8677,6 +8998,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -8696,6 +9018,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -8716,6 +9039,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -8733,6 +9058,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -8746,6 +9072,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8761,7 +9089,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8822,6 +9150,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
     java.lang.String getFilesystemId();
     /**
@@ -8831,6 +9160,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
     com.google.protobuf.ByteString
         getFilesystemIdBytes();
@@ -8843,6 +9173,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
     long getPageSize();
 
@@ -8853,6 +9184,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
@@ -8862,6 +9194,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -8869,7 +9202,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListFilesystemOperationsRequest}
    */
-  public  static final class ListFilesystemOperationsRequest extends
+  public static final class ListFilesystemOperationsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListFilesystemOperationsRequest)
       ListFilesystemOperationsRequestOrBuilder {
@@ -8880,8 +9213,14 @@ public final class FilesystemServiceOuterClass {
     }
     private ListFilesystemOperationsRequest() {
       filesystemId_ = "";
-      pageSize_ = 0L;
       pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFilesystemOperationsRequest();
     }
 
     @java.lang.Override
@@ -8897,7 +9236,6 @@ public final class FilesystemServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8926,7 +9264,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8966,7 +9304,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The filesystemId.
      */
+    @java.lang.Override
     public java.lang.String getFilesystemId() {
       java.lang.Object ref = filesystemId_;
       if (ref instanceof java.lang.String) {
@@ -8986,7 +9326,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for filesystemId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilesystemIdBytes() {
       java.lang.Object ref = filesystemId_;
@@ -9011,7 +9353,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
      */
+    @java.lang.Override
     public long getPageSize() {
       return pageSize_;
     }
@@ -9025,7 +9369,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
      */
+    @java.lang.Override
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
@@ -9045,7 +9391,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
@@ -9074,13 +9422,13 @@ public final class FilesystemServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filesystemId_);
       }
       if (pageSize_ != 0L) {
         output.writeInt64(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
       unknownFields.writeTo(output);
@@ -9092,14 +9440,14 @@ public final class FilesystemServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilesystemIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filesystemId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filesystemId_);
       }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, pageSize_);
       }
-      if (!getPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -9117,15 +9465,14 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsRequest) obj;
 
-      boolean result = true;
-      result = result && getFilesystemId()
-          .equals(other.getFilesystemId());
-      result = result && (getPageSize()
-          == other.getPageSize());
-      result = result && getPageToken()
-          .equals(other.getPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilesystemId()
+          .equals(other.getFilesystemId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9316,35 +9663,35 @@ public final class FilesystemServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9406,6 +9753,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The filesystemId.
        */
       public java.lang.String getFilesystemId() {
         java.lang.Object ref = filesystemId_;
@@ -9426,6 +9774,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for filesystemId.
        */
       public com.google.protobuf.ByteString
           getFilesystemIdBytes() {
@@ -9447,6 +9796,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemId(
           java.lang.String value) {
@@ -9465,6 +9816,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilesystemId() {
         
@@ -9479,6 +9831,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for filesystemId to set.
+       * @return This builder for chaining.
        */
       public Builder setFilesystemIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9501,7 +9855,9 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
        */
+      @java.lang.Override
       public long getPageSize() {
         return pageSize_;
       }
@@ -9513,6 +9869,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
        */
       public Builder setPageSize(long value) {
         
@@ -9528,6 +9886,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageSize() {
         
@@ -9544,6 +9903,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -9564,6 +9924,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -9585,6 +9946,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -9603,6 +9966,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPageToken() {
         
@@ -9617,6 +9981,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -9632,7 +9998,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9739,6 +10105,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
@@ -9750,6 +10117,7 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -9757,7 +10125,7 @@ public final class FilesystemServiceOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListFilesystemOperationsResponse}
    */
-  public  static final class ListFilesystemOperationsResponse extends
+  public static final class ListFilesystemOperationsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListFilesystemOperationsResponse)
       ListFilesystemOperationsResponseOrBuilder {
@@ -9769,6 +10137,13 @@ public final class FilesystemServiceOuterClass {
     private ListFilesystemOperationsResponse() {
       operations_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListFilesystemOperationsResponse();
     }
 
     @java.lang.Override
@@ -9796,7 +10171,7 @@ public final class FilesystemServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -9811,7 +10186,7 @@ public final class FilesystemServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9825,7 +10200,7 @@ public final class FilesystemServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
         }
         this.unknownFields = unknownFields.build();
@@ -9845,7 +10220,6 @@ public final class FilesystemServiceOuterClass {
               yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse.class, yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
@@ -9855,6 +10229,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
@@ -9865,6 +10240,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList() {
       return operations_;
@@ -9876,6 +10252,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public int getOperationsCount() {
       return operations_.size();
     }
@@ -9886,6 +10263,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
@@ -9896,6 +10274,7 @@ public final class FilesystemServiceOuterClass {
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index) {
       return operations_.get(index);
@@ -9912,7 +10291,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
+    @java.lang.Override
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
@@ -9934,7 +10315,9 @@ public final class FilesystemServiceOuterClass {
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
@@ -9966,7 +10349,7 @@ public final class FilesystemServiceOuterClass {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
@@ -9982,7 +10365,7 @@ public final class FilesystemServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, operations_.get(i));
       }
-      if (!getNextPageTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
@@ -10000,13 +10383,12 @@ public final class FilesystemServiceOuterClass {
       }
       yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse other = (yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse) obj;
 
-      boolean result = true;
-      result = result && getOperationsList()
-          .equals(other.getOperationsList());
-      result = result && getNextPageToken()
-          .equals(other.getNextPageToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10191,9 +10573,8 @@ public final class FilesystemServiceOuterClass {
       public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse buildPartial() {
         yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse result = new yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemOperationsResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (operationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             operations_ = java.util.Collections.unmodifiableList(operations_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -10202,42 +10583,41 @@ public final class FilesystemServiceOuterClass {
           result.operations_ = operationsBuilder_.build();
         }
         result.nextPageToken_ = nextPageToken_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10314,7 +10694,7 @@ public final class FilesystemServiceOuterClass {
       private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
         java.util.Collections.emptyList();
       private void ensureOperationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
           bitField0_ |= 0x00000001;
          }
@@ -10615,7 +10995,7 @@ public final class FilesystemServiceOuterClass {
           operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
                   operations_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           operations_ = null;
@@ -10633,6 +11013,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -10655,6 +11036,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -10678,6 +11060,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -10698,6 +11082,7 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextPageToken() {
         
@@ -10714,6 +11099,8 @@ public final class FilesystemServiceOuterClass {
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -10729,7 +11116,7 @@ public final class FilesystemServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10932,15 +11319,7 @@ public final class FilesystemServiceOuterClass {
       "nproto/yandex/cloud/compute/v1;computeb\006" +
       "proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -10949,7 +11328,7 @@ public final class FilesystemServiceOuterClass {
           yandex.cloud.api.compute.v1.FilesystemOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_compute_v1_GetFilesystemRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_GetFilesystemRequest_fieldAccessorTable = new

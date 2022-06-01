@@ -24,6 +24,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The sub.
      */
     java.lang.String getSub();
     /**
@@ -32,6 +33,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for sub.
      */
     com.google.protobuf.ByteString
         getSubBytes();
@@ -42,6 +44,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -50,6 +53,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -60,6 +64,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string given_name = 3;</code>
+     * @return The givenName.
      */
     java.lang.String getGivenName();
     /**
@@ -68,6 +73,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string given_name = 3;</code>
+     * @return The bytes for givenName.
      */
     com.google.protobuf.ByteString
         getGivenNameBytes();
@@ -78,6 +84,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string family_name = 4;</code>
+     * @return The familyName.
      */
     java.lang.String getFamilyName();
     /**
@@ -86,6 +93,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string family_name = 4;</code>
+     * @return The bytes for familyName.
      */
     com.google.protobuf.ByteString
         getFamilyNameBytes();
@@ -97,6 +105,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string preferred_username = 7;</code>
+     * @return The preferredUsername.
      */
     java.lang.String getPreferredUsername();
     /**
@@ -106,6 +115,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string preferred_username = 7;</code>
+     * @return The bytes for preferredUsername.
      */
     com.google.protobuf.ByteString
         getPreferredUsernameBytes();
@@ -117,6 +127,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string picture = 9;</code>
+     * @return The picture.
      */
     java.lang.String getPicture();
     /**
@@ -126,6 +137,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string picture = 9;</code>
+     * @return The bytes for picture.
      */
     com.google.protobuf.ByteString
         getPictureBytes();
@@ -137,6 +149,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string email = 11;</code>
+     * @return The email.
      */
     java.lang.String getEmail();
     /**
@@ -146,6 +159,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string email = 11;</code>
+     * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
@@ -156,6 +170,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string zoneinfo = 15;</code>
+     * @return The zoneinfo.
      */
     java.lang.String getZoneinfo();
     /**
@@ -164,6 +179,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string zoneinfo = 15;</code>
+     * @return The bytes for zoneinfo.
      */
     com.google.protobuf.ByteString
         getZoneinfoBytes();
@@ -175,6 +191,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string locale = 16;</code>
+     * @return The locale.
      */
     java.lang.String getLocale();
     /**
@@ -184,6 +201,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string locale = 16;</code>
+     * @return The bytes for locale.
      */
     com.google.protobuf.ByteString
         getLocaleBytes();
@@ -195,6 +213,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string phone_number = 17;</code>
+     * @return The phoneNumber.
      */
     java.lang.String getPhoneNumber();
     /**
@@ -204,6 +223,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string phone_number = 17;</code>
+     * @return The bytes for phoneNumber.
      */
     com.google.protobuf.ByteString
         getPhoneNumberBytes();
@@ -214,6 +234,7 @@ public final class Claims {
      * </pre>
      *
      * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
+     * @return Whether the federation field is set.
      */
     boolean hasFederation();
     /**
@@ -222,6 +243,7 @@ public final class Claims {
      * </pre>
      *
      * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
+     * @return The federation.
      */
     yandex.cloud.api.oauth.v1.Claims.Federation getFederation();
     /**
@@ -240,7 +262,7 @@ public final class Claims {
    *
    * Protobuf type {@code yandex.cloud.oauth.SubjectClaims}
    */
-  public  static final class SubjectClaims extends
+  public static final class SubjectClaims extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.oauth.SubjectClaims)
       SubjectClaimsOrBuilder {
@@ -263,6 +285,13 @@ public final class Claims {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SubjectClaims();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -275,7 +304,6 @@ public final class Claims {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -360,7 +388,7 @@ public final class Claims {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -399,7 +427,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The sub.
      */
+    @java.lang.Override
     public java.lang.String getSub() {
       java.lang.Object ref = sub_;
       if (ref instanceof java.lang.String) {
@@ -418,7 +448,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for sub.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubBytes() {
       java.lang.Object ref = sub_;
@@ -441,7 +473,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -460,7 +494,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -483,7 +519,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string given_name = 3;</code>
+     * @return The givenName.
      */
+    @java.lang.Override
     public java.lang.String getGivenName() {
       java.lang.Object ref = givenName_;
       if (ref instanceof java.lang.String) {
@@ -502,7 +540,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string given_name = 3;</code>
+     * @return The bytes for givenName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getGivenNameBytes() {
       java.lang.Object ref = givenName_;
@@ -525,7 +565,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string family_name = 4;</code>
+     * @return The familyName.
      */
+    @java.lang.Override
     public java.lang.String getFamilyName() {
       java.lang.Object ref = familyName_;
       if (ref instanceof java.lang.String) {
@@ -544,7 +586,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string family_name = 4;</code>
+     * @return The bytes for familyName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFamilyNameBytes() {
       java.lang.Object ref = familyName_;
@@ -568,7 +612,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string preferred_username = 7;</code>
+     * @return The preferredUsername.
      */
+    @java.lang.Override
     public java.lang.String getPreferredUsername() {
       java.lang.Object ref = preferredUsername_;
       if (ref instanceof java.lang.String) {
@@ -588,7 +634,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string preferred_username = 7;</code>
+     * @return The bytes for preferredUsername.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPreferredUsernameBytes() {
       java.lang.Object ref = preferredUsername_;
@@ -612,7 +660,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string picture = 9;</code>
+     * @return The picture.
      */
+    @java.lang.Override
     public java.lang.String getPicture() {
       java.lang.Object ref = picture_;
       if (ref instanceof java.lang.String) {
@@ -632,7 +682,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string picture = 9;</code>
+     * @return The bytes for picture.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPictureBytes() {
       java.lang.Object ref = picture_;
@@ -656,7 +708,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string email = 11;</code>
+     * @return The email.
      */
+    @java.lang.Override
     public java.lang.String getEmail() {
       java.lang.Object ref = email_;
       if (ref instanceof java.lang.String) {
@@ -676,7 +730,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string email = 11;</code>
+     * @return The bytes for email.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEmailBytes() {
       java.lang.Object ref = email_;
@@ -699,7 +755,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string zoneinfo = 15;</code>
+     * @return The zoneinfo.
      */
+    @java.lang.Override
     public java.lang.String getZoneinfo() {
       java.lang.Object ref = zoneinfo_;
       if (ref instanceof java.lang.String) {
@@ -718,7 +776,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string zoneinfo = 15;</code>
+     * @return The bytes for zoneinfo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getZoneinfoBytes() {
       java.lang.Object ref = zoneinfo_;
@@ -742,7 +802,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string locale = 16;</code>
+     * @return The locale.
      */
+    @java.lang.Override
     public java.lang.String getLocale() {
       java.lang.Object ref = locale_;
       if (ref instanceof java.lang.String) {
@@ -762,7 +824,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string locale = 16;</code>
+     * @return The bytes for locale.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLocaleBytes() {
       java.lang.Object ref = locale_;
@@ -786,7 +850,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string phone_number = 17;</code>
+     * @return The phoneNumber.
      */
+    @java.lang.Override
     public java.lang.String getPhoneNumber() {
       java.lang.Object ref = phoneNumber_;
       if (ref instanceof java.lang.String) {
@@ -806,7 +872,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string phone_number = 17;</code>
+     * @return The bytes for phoneNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPhoneNumberBytes() {
       java.lang.Object ref = phoneNumber_;
@@ -829,7 +897,9 @@ public final class Claims {
      * </pre>
      *
      * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
+     * @return Whether the federation field is set.
      */
+    @java.lang.Override
     public boolean hasFederation() {
       return federation_ != null;
     }
@@ -839,7 +909,9 @@ public final class Claims {
      * </pre>
      *
      * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
+     * @return The federation.
      */
+    @java.lang.Override
     public yandex.cloud.api.oauth.v1.Claims.Federation getFederation() {
       return federation_ == null ? yandex.cloud.api.oauth.v1.Claims.Federation.getDefaultInstance() : federation_;
     }
@@ -850,6 +922,7 @@ public final class Claims {
      *
      * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.oauth.v1.Claims.FederationOrBuilder getFederationOrBuilder() {
       return getFederation();
     }
@@ -868,34 +941,34 @@ public final class Claims {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sub_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sub_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getGivenNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(givenName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, givenName_);
       }
-      if (!getFamilyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(familyName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, familyName_);
       }
-      if (!getPreferredUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preferredUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, preferredUsername_);
       }
-      if (!getPictureBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(picture_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, picture_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, email_);
       }
-      if (!getZoneinfoBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneinfo_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, zoneinfo_);
       }
-      if (!getLocaleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, locale_);
       }
-      if (!getPhoneNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, phoneNumber_);
       }
       if (federation_ != null) {
@@ -910,34 +983,34 @@ public final class Claims {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sub_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sub_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getGivenNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(givenName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, givenName_);
       }
-      if (!getFamilyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(familyName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, familyName_);
       }
-      if (!getPreferredUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preferredUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, preferredUsername_);
       }
-      if (!getPictureBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(picture_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, picture_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, email_);
       }
-      if (!getZoneinfoBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneinfo_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, zoneinfo_);
       }
-      if (!getLocaleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, locale_);
       }
-      if (!getPhoneNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, phoneNumber_);
       }
       if (federation_ != null) {
@@ -959,34 +1032,33 @@ public final class Claims {
       }
       yandex.cloud.api.oauth.v1.Claims.SubjectClaims other = (yandex.cloud.api.oauth.v1.Claims.SubjectClaims) obj;
 
-      boolean result = true;
-      result = result && getSub()
-          .equals(other.getSub());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getGivenName()
-          .equals(other.getGivenName());
-      result = result && getFamilyName()
-          .equals(other.getFamilyName());
-      result = result && getPreferredUsername()
-          .equals(other.getPreferredUsername());
-      result = result && getPicture()
-          .equals(other.getPicture());
-      result = result && getEmail()
-          .equals(other.getEmail());
-      result = result && getZoneinfo()
-          .equals(other.getZoneinfo());
-      result = result && getLocale()
-          .equals(other.getLocale());
-      result = result && getPhoneNumber()
-          .equals(other.getPhoneNumber());
-      result = result && (hasFederation() == other.hasFederation());
+      if (!getSub()
+          .equals(other.getSub())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getGivenName()
+          .equals(other.getGivenName())) return false;
+      if (!getFamilyName()
+          .equals(other.getFamilyName())) return false;
+      if (!getPreferredUsername()
+          .equals(other.getPreferredUsername())) return false;
+      if (!getPicture()
+          .equals(other.getPicture())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (!getZoneinfo()
+          .equals(other.getZoneinfo())) return false;
+      if (!getLocale()
+          .equals(other.getLocale())) return false;
+      if (!getPhoneNumber()
+          .equals(other.getPhoneNumber())) return false;
+      if (hasFederation() != other.hasFederation()) return false;
       if (hasFederation()) {
-        result = result && getFederation()
-            .equals(other.getFederation());
+        if (!getFederation()
+            .equals(other.getFederation())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1230,35 +1302,35 @@ public final class Claims {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1351,6 +1423,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The sub.
        */
       public java.lang.String getSub() {
         java.lang.Object ref = sub_;
@@ -1370,6 +1443,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for sub.
        */
       public com.google.protobuf.ByteString
           getSubBytes() {
@@ -1390,6 +1464,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The sub to set.
+       * @return This builder for chaining.
        */
       public Builder setSub(
           java.lang.String value) {
@@ -1407,6 +1483,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSub() {
         
@@ -1420,6 +1497,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string sub = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for sub to set.
+       * @return This builder for chaining.
        */
       public Builder setSubBytes(
           com.google.protobuf.ByteString value) {
@@ -1440,6 +1519,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1459,6 +1539,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1479,6 +1560,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1496,6 +1579,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1509,6 +1593,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1529,6 +1615,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string given_name = 3;</code>
+       * @return The givenName.
        */
       public java.lang.String getGivenName() {
         java.lang.Object ref = givenName_;
@@ -1548,6 +1635,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string given_name = 3;</code>
+       * @return The bytes for givenName.
        */
       public com.google.protobuf.ByteString
           getGivenNameBytes() {
@@ -1568,6 +1656,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string given_name = 3;</code>
+       * @param value The givenName to set.
+       * @return This builder for chaining.
        */
       public Builder setGivenName(
           java.lang.String value) {
@@ -1585,6 +1675,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string given_name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGivenName() {
         
@@ -1598,6 +1689,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string given_name = 3;</code>
+       * @param value The bytes for givenName to set.
+       * @return This builder for chaining.
        */
       public Builder setGivenNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1618,6 +1711,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string family_name = 4;</code>
+       * @return The familyName.
        */
       public java.lang.String getFamilyName() {
         java.lang.Object ref = familyName_;
@@ -1637,6 +1731,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string family_name = 4;</code>
+       * @return The bytes for familyName.
        */
       public com.google.protobuf.ByteString
           getFamilyNameBytes() {
@@ -1657,6 +1752,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string family_name = 4;</code>
+       * @param value The familyName to set.
+       * @return This builder for chaining.
        */
       public Builder setFamilyName(
           java.lang.String value) {
@@ -1674,6 +1771,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string family_name = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFamilyName() {
         
@@ -1687,6 +1785,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string family_name = 4;</code>
+       * @param value The bytes for familyName to set.
+       * @return This builder for chaining.
        */
       public Builder setFamilyNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1708,6 +1808,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string preferred_username = 7;</code>
+       * @return The preferredUsername.
        */
       public java.lang.String getPreferredUsername() {
         java.lang.Object ref = preferredUsername_;
@@ -1728,6 +1829,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string preferred_username = 7;</code>
+       * @return The bytes for preferredUsername.
        */
       public com.google.protobuf.ByteString
           getPreferredUsernameBytes() {
@@ -1749,6 +1851,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string preferred_username = 7;</code>
+       * @param value The preferredUsername to set.
+       * @return This builder for chaining.
        */
       public Builder setPreferredUsername(
           java.lang.String value) {
@@ -1767,6 +1871,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string preferred_username = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPreferredUsername() {
         
@@ -1781,6 +1886,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string preferred_username = 7;</code>
+       * @param value The bytes for preferredUsername to set.
+       * @return This builder for chaining.
        */
       public Builder setPreferredUsernameBytes(
           com.google.protobuf.ByteString value) {
@@ -1802,6 +1909,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string picture = 9;</code>
+       * @return The picture.
        */
       public java.lang.String getPicture() {
         java.lang.Object ref = picture_;
@@ -1822,6 +1930,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string picture = 9;</code>
+       * @return The bytes for picture.
        */
       public com.google.protobuf.ByteString
           getPictureBytes() {
@@ -1843,6 +1952,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string picture = 9;</code>
+       * @param value The picture to set.
+       * @return This builder for chaining.
        */
       public Builder setPicture(
           java.lang.String value) {
@@ -1861,6 +1972,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string picture = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPicture() {
         
@@ -1875,6 +1987,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string picture = 9;</code>
+       * @param value The bytes for picture to set.
+       * @return This builder for chaining.
        */
       public Builder setPictureBytes(
           com.google.protobuf.ByteString value) {
@@ -1896,6 +2010,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string email = 11;</code>
+       * @return The email.
        */
       public java.lang.String getEmail() {
         java.lang.Object ref = email_;
@@ -1916,6 +2031,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string email = 11;</code>
+       * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
           getEmailBytes() {
@@ -1937,6 +2053,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string email = 11;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmail(
           java.lang.String value) {
@@ -1955,6 +2073,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string email = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEmail() {
         
@@ -1969,6 +2088,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string email = 11;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -1989,6 +2110,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string zoneinfo = 15;</code>
+       * @return The zoneinfo.
        */
       public java.lang.String getZoneinfo() {
         java.lang.Object ref = zoneinfo_;
@@ -2008,6 +2130,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string zoneinfo = 15;</code>
+       * @return The bytes for zoneinfo.
        */
       public com.google.protobuf.ByteString
           getZoneinfoBytes() {
@@ -2028,6 +2151,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string zoneinfo = 15;</code>
+       * @param value The zoneinfo to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneinfo(
           java.lang.String value) {
@@ -2045,6 +2170,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string zoneinfo = 15;</code>
+       * @return This builder for chaining.
        */
       public Builder clearZoneinfo() {
         
@@ -2058,6 +2184,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string zoneinfo = 15;</code>
+       * @param value The bytes for zoneinfo to set.
+       * @return This builder for chaining.
        */
       public Builder setZoneinfoBytes(
           com.google.protobuf.ByteString value) {
@@ -2079,6 +2207,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string locale = 16;</code>
+       * @return The locale.
        */
       public java.lang.String getLocale() {
         java.lang.Object ref = locale_;
@@ -2099,6 +2228,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string locale = 16;</code>
+       * @return The bytes for locale.
        */
       public com.google.protobuf.ByteString
           getLocaleBytes() {
@@ -2120,6 +2250,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string locale = 16;</code>
+       * @param value The locale to set.
+       * @return This builder for chaining.
        */
       public Builder setLocale(
           java.lang.String value) {
@@ -2138,6 +2270,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string locale = 16;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLocale() {
         
@@ -2152,6 +2285,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string locale = 16;</code>
+       * @param value The bytes for locale to set.
+       * @return This builder for chaining.
        */
       public Builder setLocaleBytes(
           com.google.protobuf.ByteString value) {
@@ -2173,6 +2308,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string phone_number = 17;</code>
+       * @return The phoneNumber.
        */
       public java.lang.String getPhoneNumber() {
         java.lang.Object ref = phoneNumber_;
@@ -2193,6 +2329,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string phone_number = 17;</code>
+       * @return The bytes for phoneNumber.
        */
       public com.google.protobuf.ByteString
           getPhoneNumberBytes() {
@@ -2214,6 +2351,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string phone_number = 17;</code>
+       * @param value The phoneNumber to set.
+       * @return This builder for chaining.
        */
       public Builder setPhoneNumber(
           java.lang.String value) {
@@ -2232,6 +2371,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string phone_number = 17;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPhoneNumber() {
         
@@ -2246,6 +2386,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string phone_number = 17;</code>
+       * @param value The bytes for phoneNumber to set.
+       * @return This builder for chaining.
        */
       public Builder setPhoneNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -2259,7 +2401,7 @@ public final class Claims {
         return this;
       }
 
-      private yandex.cloud.api.oauth.v1.Claims.Federation federation_ = null;
+      private yandex.cloud.api.oauth.v1.Claims.Federation federation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.oauth.v1.Claims.Federation, yandex.cloud.api.oauth.v1.Claims.Federation.Builder, yandex.cloud.api.oauth.v1.Claims.FederationOrBuilder> federationBuilder_;
       /**
@@ -2268,6 +2410,7 @@ public final class Claims {
        * </pre>
        *
        * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
+       * @return Whether the federation field is set.
        */
       public boolean hasFederation() {
         return federationBuilder_ != null || federation_ != null;
@@ -2278,6 +2421,7 @@ public final class Claims {
        * </pre>
        *
        * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
+       * @return The federation.
        */
       public yandex.cloud.api.oauth.v1.Claims.Federation getFederation() {
         if (federationBuilder_ == null) {
@@ -2414,7 +2558,7 @@ public final class Claims {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2474,6 +2618,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -2482,6 +2627,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -2492,6 +2638,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -2500,6 +2647,7 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2511,7 +2659,7 @@ public final class Claims {
    *
    * Protobuf type {@code yandex.cloud.oauth.Federation}
    */
-  public  static final class Federation extends
+  public static final class Federation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.oauth.Federation)
       FederationOrBuilder {
@@ -2523,6 +2671,13 @@ public final class Claims {
     private Federation() {
       id_ = "";
       name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Federation();
     }
 
     @java.lang.Override
@@ -2538,7 +2693,6 @@ public final class Claims {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2562,7 +2716,7 @@ public final class Claims {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2601,7 +2755,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -2620,7 +2776,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -2643,7 +2801,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2662,7 +2822,9 @@ public final class Claims {
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2691,10 +2853,10 @@ public final class Claims {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       unknownFields.writeTo(output);
@@ -2706,10 +2868,10 @@ public final class Claims {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -2727,13 +2889,12 @@ public final class Claims {
       }
       yandex.cloud.api.oauth.v1.Claims.Federation other = (yandex.cloud.api.oauth.v1.Claims.Federation) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2922,35 +3083,35 @@ public final class Claims {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3008,6 +3169,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -3027,6 +3189,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -3047,6 +3210,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -3064,6 +3229,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -3077,6 +3243,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3097,6 +3265,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3116,6 +3285,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3136,6 +3306,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3153,6 +3325,7 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3166,6 +3339,8 @@ public final class Claims {
        * </pre>
        *
        * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3181,7 +3356,7 @@ public final class Claims {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3264,19 +3439,11 @@ public final class Claims {
       "hub.com/yandex-cloud/go-genproto/yandex/" +
       "cloud/oauth;oauthb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_oauth_SubjectClaims_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_oauth_SubjectClaims_fieldAccessorTable = new

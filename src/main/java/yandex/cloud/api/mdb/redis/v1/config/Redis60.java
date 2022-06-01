@@ -27,6 +27,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+     * @return The enum numeric value on the wire for maxmemoryPolicy.
      */
     int getMaxmemoryPolicyValue();
     /**
@@ -38,6 +39,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+     * @return The maxmemoryPolicy.
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy getMaxmemoryPolicy();
 
@@ -48,6 +50,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout = 2;</code>
+     * @return Whether the timeout field is set.
      */
     boolean hasTimeout();
     /**
@@ -57,6 +60,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout = 2;</code>
+     * @return The timeout.
      */
     com.google.protobuf.Int64Value getTimeout();
     /**
@@ -75,6 +79,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+     * @return The password.
      */
     java.lang.String getPassword();
     /**
@@ -83,6 +88,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+     * @return The bytes for password.
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -93,6 +99,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the databases field is set.
      */
     boolean hasDatabases();
     /**
@@ -101,6 +108,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The databases.
      */
     com.google.protobuf.Int64Value getDatabases();
     /**
@@ -118,6 +126,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the slowlogLogSlowerThan field is set.
      */
     boolean hasSlowlogLogSlowerThan();
     /**
@@ -126,6 +135,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The slowlogLogSlowerThan.
      */
     com.google.protobuf.Int64Value getSlowlogLogSlowerThan();
     /**
@@ -143,6 +153,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the slowlogMaxLen field is set.
      */
     boolean hasSlowlogMaxLen();
     /**
@@ -151,6 +162,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The slowlogMaxLen.
      */
     com.google.protobuf.Int64Value getSlowlogMaxLen();
     /**
@@ -168,6 +180,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+     * @return The notifyKeyspaceEvents.
      */
     java.lang.String getNotifyKeyspaceEvents();
     /**
@@ -176,6 +189,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+     * @return The bytes for notifyKeyspaceEvents.
      */
     com.google.protobuf.ByteString
         getNotifyKeyspaceEventsBytes();
@@ -186,6 +200,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     * @return Whether the clientOutputBufferLimitPubsub field is set.
      */
     boolean hasClientOutputBufferLimitPubsub();
     /**
@@ -194,6 +209,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     * @return The clientOutputBufferLimitPubsub.
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit getClientOutputBufferLimitPubsub();
     /**
@@ -211,6 +227,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     * @return Whether the clientOutputBufferLimitNormal field is set.
      */
     boolean hasClientOutputBufferLimitNormal();
     /**
@@ -219,6 +236,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     * @return The clientOutputBufferLimitNormal.
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit getClientOutputBufferLimitNormal();
     /**
@@ -238,7 +256,7 @@ public final class Redis60 {
    *
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.config.RedisConfig6_0}
    */
-  public  static final class RedisConfig6_0 extends
+  public static final class RedisConfig6_0 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.config.RedisConfig6_0)
       RedisConfig6_0OrBuilder {
@@ -254,6 +272,13 @@ public final class Redis60 {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RedisConfig6_0();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -266,7 +291,6 @@ public final class Redis60 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -374,7 +398,7 @@ public final class Redis60 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -564,6 +588,8 @@ public final class Redis60 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -571,6 +597,10 @@ public final class Redis60 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static MaxmemoryPolicy forNumber(int value) {
         switch (value) {
           case 0: return MAXMEMORY_POLICY_UNSPECIFIED;
@@ -600,6 +630,10 @@ public final class Redis60 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -644,6 +678,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the hardLimit field is set.
        */
       boolean hasHardLimit();
       /**
@@ -652,6 +687,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The hardLimit.
        */
       com.google.protobuf.Int64Value getHardLimit();
       /**
@@ -669,6 +705,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the softLimit field is set.
        */
       boolean hasSoftLimit();
       /**
@@ -677,6 +714,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The softLimit.
        */
       com.google.protobuf.Int64Value getSoftLimit();
       /**
@@ -694,6 +732,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the softSeconds field is set.
        */
       boolean hasSoftSeconds();
       /**
@@ -702,6 +741,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The softSeconds.
        */
       com.google.protobuf.Int64Value getSoftSeconds();
       /**
@@ -716,7 +756,7 @@ public final class Redis60 {
     /**
      * Protobuf type {@code yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit}
      */
-    public  static final class ClientOutputBufferLimit extends
+    public static final class ClientOutputBufferLimit extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit)
         ClientOutputBufferLimitOrBuilder {
@@ -726,6 +766,13 @@ public final class Redis60 {
         super(builder);
       }
       private ClientOutputBufferLimit() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ClientOutputBufferLimit();
       }
 
       @java.lang.Override
@@ -741,7 +788,6 @@ public final class Redis60 {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -792,7 +838,7 @@ public final class Redis60 {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -831,7 +877,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the hardLimit field is set.
        */
+      @java.lang.Override
       public boolean hasHardLimit() {
         return hardLimit_ != null;
       }
@@ -841,7 +889,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The hardLimit.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getHardLimit() {
         return hardLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hardLimit_;
       }
@@ -852,6 +902,7 @@ public final class Redis60 {
        *
        * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getHardLimitOrBuilder() {
         return getHardLimit();
       }
@@ -864,7 +915,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the softLimit field is set.
        */
+      @java.lang.Override
       public boolean hasSoftLimit() {
         return softLimit_ != null;
       }
@@ -874,7 +927,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The softLimit.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getSoftLimit() {
         return softLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : softLimit_;
       }
@@ -885,6 +940,7 @@ public final class Redis60 {
        *
        * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getSoftLimitOrBuilder() {
         return getSoftLimit();
       }
@@ -897,7 +953,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the softSeconds field is set.
        */
+      @java.lang.Override
       public boolean hasSoftSeconds() {
         return softSeconds_ != null;
       }
@@ -907,7 +965,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The softSeconds.
        */
+      @java.lang.Override
       public com.google.protobuf.Int64Value getSoftSeconds() {
         return softSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : softSeconds_;
       }
@@ -918,6 +978,7 @@ public final class Redis60 {
        *
        * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
+      @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getSoftSecondsOrBuilder() {
         return getSoftSeconds();
       }
@@ -981,24 +1042,23 @@ public final class Redis60 {
         }
         yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit other = (yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit) obj;
 
-        boolean result = true;
-        result = result && (hasHardLimit() == other.hasHardLimit());
+        if (hasHardLimit() != other.hasHardLimit()) return false;
         if (hasHardLimit()) {
-          result = result && getHardLimit()
-              .equals(other.getHardLimit());
+          if (!getHardLimit()
+              .equals(other.getHardLimit())) return false;
         }
-        result = result && (hasSoftLimit() == other.hasSoftLimit());
+        if (hasSoftLimit() != other.hasSoftLimit()) return false;
         if (hasSoftLimit()) {
-          result = result && getSoftLimit()
-              .equals(other.getSoftLimit());
+          if (!getSoftLimit()
+              .equals(other.getSoftLimit())) return false;
         }
-        result = result && (hasSoftSeconds() == other.hasSoftSeconds());
+        if (hasSoftSeconds() != other.hasSoftSeconds()) return false;
         if (hasSoftSeconds()) {
-          result = result && getSoftSeconds()
-              .equals(other.getSoftSeconds());
+          if (!getSoftSeconds()
+              .equals(other.getSoftSeconds())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1218,35 +1278,35 @@ public final class Redis60 {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1298,7 +1358,7 @@ public final class Redis60 {
           return this;
         }
 
-        private com.google.protobuf.Int64Value hardLimit_ = null;
+        private com.google.protobuf.Int64Value hardLimit_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hardLimitBuilder_;
         /**
@@ -1307,6 +1367,7 @@ public final class Redis60 {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the hardLimit field is set.
          */
         public boolean hasHardLimit() {
           return hardLimitBuilder_ != null || hardLimit_ != null;
@@ -1317,6 +1378,7 @@ public final class Redis60 {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The hardLimit.
          */
         public com.google.protobuf.Int64Value getHardLimit() {
           if (hardLimitBuilder_ == null) {
@@ -1451,7 +1513,7 @@ public final class Redis60 {
           return hardLimitBuilder_;
         }
 
-        private com.google.protobuf.Int64Value softLimit_ = null;
+        private com.google.protobuf.Int64Value softLimit_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> softLimitBuilder_;
         /**
@@ -1460,6 +1522,7 @@ public final class Redis60 {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the softLimit field is set.
          */
         public boolean hasSoftLimit() {
           return softLimitBuilder_ != null || softLimit_ != null;
@@ -1470,6 +1533,7 @@ public final class Redis60 {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The softLimit.
          */
         public com.google.protobuf.Int64Value getSoftLimit() {
           if (softLimitBuilder_ == null) {
@@ -1604,7 +1668,7 @@ public final class Redis60 {
           return softLimitBuilder_;
         }
 
-        private com.google.protobuf.Int64Value softSeconds_ = null;
+        private com.google.protobuf.Int64Value softSeconds_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> softSecondsBuilder_;
         /**
@@ -1613,6 +1677,7 @@ public final class Redis60 {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the softSeconds field is set.
          */
         public boolean hasSoftSeconds() {
           return softSecondsBuilder_ != null || softSeconds_ != null;
@@ -1623,6 +1688,7 @@ public final class Redis60 {
          * </pre>
          *
          * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The softSeconds.
          */
         public com.google.protobuf.Int64Value getSoftSeconds() {
           if (softSecondsBuilder_ == null) {
@@ -1759,7 +1825,7 @@ public final class Redis60 {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1820,8 +1886,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+     * @return The enum numeric value on the wire for maxmemoryPolicy.
      */
-    public int getMaxmemoryPolicyValue() {
+    @java.lang.Override public int getMaxmemoryPolicyValue() {
       return maxmemoryPolicy_;
     }
     /**
@@ -1833,8 +1900,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+     * @return The maxmemoryPolicy.
      */
-    public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy getMaxmemoryPolicy() {
+    @java.lang.Override public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy getMaxmemoryPolicy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy result = yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy.valueOf(maxmemoryPolicy_);
       return result == null ? yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy.UNRECOGNIZED : result;
@@ -1849,7 +1917,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout = 2;</code>
+     * @return Whether the timeout field is set.
      */
+    @java.lang.Override
     public boolean hasTimeout() {
       return timeout_ != null;
     }
@@ -1860,7 +1930,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout = 2;</code>
+     * @return The timeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTimeout() {
       return timeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : timeout_;
     }
@@ -1872,6 +1944,7 @@ public final class Redis60 {
      *
      * <code>.google.protobuf.Int64Value timeout = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTimeoutOrBuilder() {
       return getTimeout();
     }
@@ -1884,7 +1957,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+     * @return The password.
      */
+    @java.lang.Override
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
       if (ref instanceof java.lang.String) {
@@ -1903,7 +1978,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+     * @return The bytes for password.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
       java.lang.Object ref = password_;
@@ -1926,7 +2003,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the databases field is set.
      */
+    @java.lang.Override
     public boolean hasDatabases() {
       return databases_ != null;
     }
@@ -1936,7 +2015,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The databases.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getDatabases() {
       return databases_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : databases_;
     }
@@ -1947,6 +2028,7 @@ public final class Redis60 {
      *
      * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDatabasesOrBuilder() {
       return getDatabases();
     }
@@ -1959,7 +2041,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the slowlogLogSlowerThan field is set.
      */
+    @java.lang.Override
     public boolean hasSlowlogLogSlowerThan() {
       return slowlogLogSlowerThan_ != null;
     }
@@ -1969,7 +2053,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The slowlogLogSlowerThan.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSlowlogLogSlowerThan() {
       return slowlogLogSlowerThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowlogLogSlowerThan_;
     }
@@ -1980,6 +2066,7 @@ public final class Redis60 {
      *
      * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSlowlogLogSlowerThanOrBuilder() {
       return getSlowlogLogSlowerThan();
     }
@@ -1992,7 +2079,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the slowlogMaxLen field is set.
      */
+    @java.lang.Override
     public boolean hasSlowlogMaxLen() {
       return slowlogMaxLen_ != null;
     }
@@ -2002,7 +2091,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The slowlogMaxLen.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getSlowlogMaxLen() {
       return slowlogMaxLen_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowlogMaxLen_;
     }
@@ -2013,6 +2104,7 @@ public final class Redis60 {
      *
      * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getSlowlogMaxLenOrBuilder() {
       return getSlowlogMaxLen();
     }
@@ -2025,7 +2117,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+     * @return The notifyKeyspaceEvents.
      */
+    @java.lang.Override
     public java.lang.String getNotifyKeyspaceEvents() {
       java.lang.Object ref = notifyKeyspaceEvents_;
       if (ref instanceof java.lang.String) {
@@ -2044,7 +2138,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+     * @return The bytes for notifyKeyspaceEvents.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNotifyKeyspaceEventsBytes() {
       java.lang.Object ref = notifyKeyspaceEvents_;
@@ -2067,7 +2163,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     * @return Whether the clientOutputBufferLimitPubsub field is set.
      */
+    @java.lang.Override
     public boolean hasClientOutputBufferLimitPubsub() {
       return clientOutputBufferLimitPubsub_ != null;
     }
@@ -2077,7 +2175,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     * @return The clientOutputBufferLimitPubsub.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit getClientOutputBufferLimitPubsub() {
       return clientOutputBufferLimitPubsub_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitPubsub_;
     }
@@ -2088,6 +2188,7 @@ public final class Redis60 {
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitPubsubOrBuilder() {
       return getClientOutputBufferLimitPubsub();
     }
@@ -2100,7 +2201,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     * @return Whether the clientOutputBufferLimitNormal field is set.
      */
+    @java.lang.Override
     public boolean hasClientOutputBufferLimitNormal() {
       return clientOutputBufferLimitNormal_ != null;
     }
@@ -2110,7 +2213,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     * @return The clientOutputBufferLimitNormal.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit getClientOutputBufferLimitNormal() {
       return clientOutputBufferLimitNormal_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitNormal_;
     }
@@ -2121,6 +2226,7 @@ public final class Redis60 {
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitNormalOrBuilder() {
       return getClientOutputBufferLimitNormal();
     }
@@ -2145,7 +2251,7 @@ public final class Redis60 {
       if (timeout_ != null) {
         output.writeMessage(2, getTimeout());
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
       }
       if (databases_ != null) {
@@ -2157,7 +2263,7 @@ public final class Redis60 {
       if (slowlogMaxLen_ != null) {
         output.writeMessage(6, getSlowlogMaxLen());
       }
-      if (!getNotifyKeyspaceEventsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notifyKeyspaceEvents_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, notifyKeyspaceEvents_);
       }
       if (clientOutputBufferLimitPubsub_ != null) {
@@ -2183,7 +2289,7 @@ public final class Redis60 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTimeout());
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
       }
       if (databases_ != null) {
@@ -2198,7 +2304,7 @@ public final class Redis60 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSlowlogMaxLen());
       }
-      if (!getNotifyKeyspaceEventsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notifyKeyspaceEvents_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, notifyKeyspaceEvents_);
       }
       if (clientOutputBufferLimitPubsub_ != null) {
@@ -2224,44 +2330,43 @@ public final class Redis60 {
       }
       yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 other = (yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0) obj;
 
-      boolean result = true;
-      result = result && maxmemoryPolicy_ == other.maxmemoryPolicy_;
-      result = result && (hasTimeout() == other.hasTimeout());
+      if (maxmemoryPolicy_ != other.maxmemoryPolicy_) return false;
+      if (hasTimeout() != other.hasTimeout()) return false;
       if (hasTimeout()) {
-        result = result && getTimeout()
-            .equals(other.getTimeout());
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
       }
-      result = result && getPassword()
-          .equals(other.getPassword());
-      result = result && (hasDatabases() == other.hasDatabases());
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (hasDatabases() != other.hasDatabases()) return false;
       if (hasDatabases()) {
-        result = result && getDatabases()
-            .equals(other.getDatabases());
+        if (!getDatabases()
+            .equals(other.getDatabases())) return false;
       }
-      result = result && (hasSlowlogLogSlowerThan() == other.hasSlowlogLogSlowerThan());
+      if (hasSlowlogLogSlowerThan() != other.hasSlowlogLogSlowerThan()) return false;
       if (hasSlowlogLogSlowerThan()) {
-        result = result && getSlowlogLogSlowerThan()
-            .equals(other.getSlowlogLogSlowerThan());
+        if (!getSlowlogLogSlowerThan()
+            .equals(other.getSlowlogLogSlowerThan())) return false;
       }
-      result = result && (hasSlowlogMaxLen() == other.hasSlowlogMaxLen());
+      if (hasSlowlogMaxLen() != other.hasSlowlogMaxLen()) return false;
       if (hasSlowlogMaxLen()) {
-        result = result && getSlowlogMaxLen()
-            .equals(other.getSlowlogMaxLen());
+        if (!getSlowlogMaxLen()
+            .equals(other.getSlowlogMaxLen())) return false;
       }
-      result = result && getNotifyKeyspaceEvents()
-          .equals(other.getNotifyKeyspaceEvents());
-      result = result && (hasClientOutputBufferLimitPubsub() == other.hasClientOutputBufferLimitPubsub());
+      if (!getNotifyKeyspaceEvents()
+          .equals(other.getNotifyKeyspaceEvents())) return false;
+      if (hasClientOutputBufferLimitPubsub() != other.hasClientOutputBufferLimitPubsub()) return false;
       if (hasClientOutputBufferLimitPubsub()) {
-        result = result && getClientOutputBufferLimitPubsub()
-            .equals(other.getClientOutputBufferLimitPubsub());
+        if (!getClientOutputBufferLimitPubsub()
+            .equals(other.getClientOutputBufferLimitPubsub())) return false;
       }
-      result = result && (hasClientOutputBufferLimitNormal() == other.hasClientOutputBufferLimitNormal());
+      if (hasClientOutputBufferLimitNormal() != other.hasClientOutputBufferLimitNormal()) return false;
       if (hasClientOutputBufferLimitNormal()) {
-        result = result && getClientOutputBufferLimitNormal()
-            .equals(other.getClientOutputBufferLimitNormal());
+        if (!getClientOutputBufferLimitNormal()
+            .equals(other.getClientOutputBufferLimitNormal())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2546,35 +2651,35 @@ public final class Redis60 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2656,8 +2761,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+       * @return The enum numeric value on the wire for maxmemoryPolicy.
        */
-      public int getMaxmemoryPolicyValue() {
+      @java.lang.Override public int getMaxmemoryPolicyValue() {
         return maxmemoryPolicy_;
       }
       /**
@@ -2669,8 +2775,11 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+       * @param value The enum numeric value on the wire for maxmemoryPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxmemoryPolicyValue(int value) {
+        
         maxmemoryPolicy_ = value;
         onChanged();
         return this;
@@ -2684,7 +2793,9 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+       * @return The maxmemoryPolicy.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy getMaxmemoryPolicy() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy result = yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy.valueOf(maxmemoryPolicy_);
@@ -2699,6 +2810,8 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+       * @param value The maxmemoryPolicy to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxmemoryPolicy(yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.MaxmemoryPolicy value) {
         if (value == null) {
@@ -2718,6 +2831,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.MaxmemoryPolicy maxmemory_policy = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxmemoryPolicy() {
         
@@ -2726,7 +2840,7 @@ public final class Redis60 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value timeout_ = null;
+      private com.google.protobuf.Int64Value timeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> timeoutBuilder_;
       /**
@@ -2736,6 +2850,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout = 2;</code>
+       * @return Whether the timeout field is set.
        */
       public boolean hasTimeout() {
         return timeoutBuilder_ != null || timeout_ != null;
@@ -2747,6 +2862,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout = 2;</code>
+       * @return The timeout.
        */
       public com.google.protobuf.Int64Value getTimeout() {
         if (timeoutBuilder_ == null) {
@@ -2895,6 +3011,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+       * @return The password.
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -2914,6 +3031,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+       * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -2934,6 +3052,8 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -2951,6 +3071,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPassword() {
         
@@ -2964,6 +3085,8 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string password = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#64;=+?*.,!&amp;#$^&lt;&gt;_-]{8,128}"];</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -2977,7 +3100,7 @@ public final class Redis60 {
         return this;
       }
 
-      private com.google.protobuf.Int64Value databases_ = null;
+      private com.google.protobuf.Int64Value databases_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> databasesBuilder_;
       /**
@@ -2986,6 +3109,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the databases field is set.
        */
       public boolean hasDatabases() {
         return databasesBuilder_ != null || databases_ != null;
@@ -2996,6 +3120,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The databases.
        */
       public com.google.protobuf.Int64Value getDatabases() {
         if (databasesBuilder_ == null) {
@@ -3130,7 +3255,7 @@ public final class Redis60 {
         return databasesBuilder_;
       }
 
-      private com.google.protobuf.Int64Value slowlogLogSlowerThan_ = null;
+      private com.google.protobuf.Int64Value slowlogLogSlowerThan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slowlogLogSlowerThanBuilder_;
       /**
@@ -3139,6 +3264,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the slowlogLogSlowerThan field is set.
        */
       public boolean hasSlowlogLogSlowerThan() {
         return slowlogLogSlowerThanBuilder_ != null || slowlogLogSlowerThan_ != null;
@@ -3149,6 +3275,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The slowlogLogSlowerThan.
        */
       public com.google.protobuf.Int64Value getSlowlogLogSlowerThan() {
         if (slowlogLogSlowerThanBuilder_ == null) {
@@ -3283,7 +3410,7 @@ public final class Redis60 {
         return slowlogLogSlowerThanBuilder_;
       }
 
-      private com.google.protobuf.Int64Value slowlogMaxLen_ = null;
+      private com.google.protobuf.Int64Value slowlogMaxLen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slowlogMaxLenBuilder_;
       /**
@@ -3292,6 +3419,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the slowlogMaxLen field is set.
        */
       public boolean hasSlowlogMaxLen() {
         return slowlogMaxLenBuilder_ != null || slowlogMaxLen_ != null;
@@ -3302,6 +3430,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The slowlogMaxLen.
        */
       public com.google.protobuf.Int64Value getSlowlogMaxLen() {
         if (slowlogMaxLenBuilder_ == null) {
@@ -3443,6 +3572,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+       * @return The notifyKeyspaceEvents.
        */
       public java.lang.String getNotifyKeyspaceEvents() {
         java.lang.Object ref = notifyKeyspaceEvents_;
@@ -3462,6 +3592,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+       * @return The bytes for notifyKeyspaceEvents.
        */
       public com.google.protobuf.ByteString
           getNotifyKeyspaceEventsBytes() {
@@ -3482,6 +3613,8 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+       * @param value The notifyKeyspaceEvents to set.
+       * @return This builder for chaining.
        */
       public Builder setNotifyKeyspaceEvents(
           java.lang.String value) {
@@ -3499,6 +3632,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearNotifyKeyspaceEvents() {
         
@@ -3512,6 +3646,8 @@ public final class Redis60 {
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
+       * @param value The bytes for notifyKeyspaceEvents to set.
+       * @return This builder for chaining.
        */
       public Builder setNotifyKeyspaceEventsBytes(
           com.google.protobuf.ByteString value) {
@@ -3525,7 +3661,7 @@ public final class Redis60 {
         return this;
       }
 
-      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit clientOutputBufferLimitPubsub_ = null;
+      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit clientOutputBufferLimitPubsub_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimitOrBuilder> clientOutputBufferLimitPubsubBuilder_;
       /**
@@ -3534,6 +3670,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       * @return Whether the clientOutputBufferLimitPubsub field is set.
        */
       public boolean hasClientOutputBufferLimitPubsub() {
         return clientOutputBufferLimitPubsubBuilder_ != null || clientOutputBufferLimitPubsub_ != null;
@@ -3544,6 +3681,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       * @return The clientOutputBufferLimitPubsub.
        */
       public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit getClientOutputBufferLimitPubsub() {
         if (clientOutputBufferLimitPubsubBuilder_ == null) {
@@ -3678,7 +3816,7 @@ public final class Redis60 {
         return clientOutputBufferLimitPubsubBuilder_;
       }
 
-      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit clientOutputBufferLimitNormal_ = null;
+      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit clientOutputBufferLimitNormal_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimitOrBuilder> clientOutputBufferLimitNormalBuilder_;
       /**
@@ -3687,6 +3825,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       * @return Whether the clientOutputBufferLimitNormal field is set.
        */
       public boolean hasClientOutputBufferLimitNormal() {
         return clientOutputBufferLimitNormalBuilder_ != null || clientOutputBufferLimitNormal_ != null;
@@ -3697,6 +3836,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       * @return The clientOutputBufferLimitNormal.
        */
       public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.ClientOutputBufferLimit getClientOutputBufferLimitNormal() {
         if (clientOutputBufferLimitNormalBuilder_ == null) {
@@ -3833,7 +3973,7 @@ public final class Redis60 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3894,6 +4034,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
@@ -3903,6 +4044,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getEffectiveConfig();
     /**
@@ -3921,6 +4063,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
@@ -3929,6 +4072,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
+     * @return The userConfig.
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getUserConfig();
     /**
@@ -3946,6 +4090,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
@@ -3954,6 +4099,7 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
+     * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getDefaultConfig();
     /**
@@ -3968,7 +4114,7 @@ public final class Redis60 {
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.config.RedisConfigSet6_0}
    */
-  public  static final class RedisConfigSet6_0 extends
+  public static final class RedisConfigSet6_0 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.config.RedisConfigSet6_0)
       RedisConfigSet6_0OrBuilder {
@@ -3978,6 +4124,13 @@ public final class Redis60 {
       super(builder);
     }
     private RedisConfigSet6_0() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RedisConfigSet6_0();
     }
 
     @java.lang.Override
@@ -3993,7 +4146,6 @@ public final class Redis60 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4044,7 +4196,7 @@ public final class Redis60 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4084,7 +4236,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
+     * @return Whether the effectiveConfig field is set.
      */
+    @java.lang.Override
     public boolean hasEffectiveConfig() {
       return effectiveConfig_ != null;
     }
@@ -4095,7 +4249,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
+     * @return The effectiveConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getEffectiveConfig() {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.getDefaultInstance() : effectiveConfig_;
     }
@@ -4107,6 +4263,7 @@ public final class Redis60 {
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0OrBuilder getEffectiveConfigOrBuilder() {
       return getEffectiveConfig();
     }
@@ -4119,7 +4276,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
      */
+    @java.lang.Override
     public boolean hasUserConfig() {
       return userConfig_ != null;
     }
@@ -4129,7 +4288,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
+     * @return The userConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getUserConfig() {
       return userConfig_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.getDefaultInstance() : userConfig_;
     }
@@ -4140,6 +4301,7 @@ public final class Redis60 {
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0OrBuilder getUserConfigOrBuilder() {
       return getUserConfig();
     }
@@ -4152,7 +4314,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultConfig() {
       return defaultConfig_ != null;
     }
@@ -4162,7 +4326,9 @@ public final class Redis60 {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
+     * @return The defaultConfig.
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getDefaultConfig() {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.getDefaultInstance() : defaultConfig_;
     }
@@ -4173,6 +4339,7 @@ public final class Redis60 {
      *
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0OrBuilder getDefaultConfigOrBuilder() {
       return getDefaultConfig();
     }
@@ -4236,24 +4403,23 @@ public final class Redis60 {
       }
       yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfigSet6_0 other = (yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfigSet6_0) obj;
 
-      boolean result = true;
-      result = result && (hasEffectiveConfig() == other.hasEffectiveConfig());
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
       if (hasEffectiveConfig()) {
-        result = result && getEffectiveConfig()
-            .equals(other.getEffectiveConfig());
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
       }
-      result = result && (hasUserConfig() == other.hasUserConfig());
+      if (hasUserConfig() != other.hasUserConfig()) return false;
       if (hasUserConfig()) {
-        result = result && getUserConfig()
-            .equals(other.getUserConfig());
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
       }
-      result = result && (hasDefaultConfig() == other.hasDefaultConfig());
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
       if (hasDefaultConfig()) {
-        result = result && getDefaultConfig()
-            .equals(other.getDefaultConfig());
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4473,35 +4639,35 @@ public final class Redis60 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4553,7 +4719,7 @@ public final class Redis60 {
         return this;
       }
 
-      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 effectiveConfig_ = null;
+      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 effectiveConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0OrBuilder> effectiveConfigBuilder_;
       /**
@@ -4563,6 +4729,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
+       * @return Whether the effectiveConfig field is set.
        */
       public boolean hasEffectiveConfig() {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
@@ -4574,6 +4741,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 effective_config = 1;</code>
+       * @return The effectiveConfig.
        */
       public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getEffectiveConfig() {
         if (effectiveConfigBuilder_ == null) {
@@ -4715,7 +4883,7 @@ public final class Redis60 {
         return effectiveConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 userConfig_ = null;
+      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 userConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0OrBuilder> userConfigBuilder_;
       /**
@@ -4724,6 +4892,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
        */
       public boolean hasUserConfig() {
         return userConfigBuilder_ != null || userConfig_ != null;
@@ -4734,6 +4903,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 user_config = 2;</code>
+       * @return The userConfig.
        */
       public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getUserConfig() {
         if (userConfigBuilder_ == null) {
@@ -4868,7 +5038,7 @@ public final class Redis60 {
         return userConfigBuilder_;
       }
 
-      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 defaultConfig_ = null;
+      private yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 defaultConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0OrBuilder> defaultConfigBuilder_;
       /**
@@ -4877,6 +5047,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
        */
       public boolean hasDefaultConfig() {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
@@ -4887,6 +5058,7 @@ public final class Redis60 {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig6_0 default_config = 3;</code>
+       * @return The defaultConfig.
        */
       public yandex.cloud.api.mdb.redis.v1.config.Redis60.RedisConfig6_0 getDefaultConfig() {
         if (defaultConfigBuilder_ == null) {
@@ -5023,7 +5195,7 @@ public final class Redis60 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5139,20 +5311,12 @@ public final class Redis60 {
       "enproto/yandex/cloud/mdb/redis/v1/config" +
       ";redisb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig6_0_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig6_0_fieldAccessorTable = new

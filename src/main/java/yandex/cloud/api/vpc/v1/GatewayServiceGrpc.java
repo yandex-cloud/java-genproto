@@ -1,25 +1,13 @@
 package yandex.cloud.api.vpc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/vpc/v1/gateway_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class GatewayServiceGrpc {
 
   private GatewayServiceGrpc() {}
@@ -41,22 +29,21 @@ public final class GatewayServiceGrpc {
     if ((getGetMethod = GatewayServiceGrpc.getGetMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getGetMethod = GatewayServiceGrpc.getGetMethod) == null) {
-          GatewayServiceGrpc.getGetMethod = getGetMethod = 
+          GatewayServiceGrpc.getGetMethod = getGetMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest, yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "Get"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Get"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Get"))
+              .build();
         }
-     }
-     return getGetMethod;
+      }
+    }
+    return getGetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest,
@@ -73,22 +60,21 @@ public final class GatewayServiceGrpc {
     if ((getListMethod = GatewayServiceGrpc.getListMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getListMethod = GatewayServiceGrpc.getListMethod) == null) {
-          GatewayServiceGrpc.getListMethod = getListMethod = 
+          GatewayServiceGrpc.getListMethod = getListMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest, yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "List"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("List"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("List"))
+              .build();
         }
-     }
-     return getListMethod;
+      }
+    }
+    return getListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest,
@@ -105,22 +91,21 @@ public final class GatewayServiceGrpc {
     if ((getCreateMethod = GatewayServiceGrpc.getCreateMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getCreateMethod = GatewayServiceGrpc.getCreateMethod) == null) {
-          GatewayServiceGrpc.getCreateMethod = getCreateMethod = 
+          GatewayServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest,
@@ -137,22 +122,21 @@ public final class GatewayServiceGrpc {
     if ((getUpdateMethod = GatewayServiceGrpc.getUpdateMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getUpdateMethod = GatewayServiceGrpc.getUpdateMethod) == null) {
-          GatewayServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          GatewayServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest,
@@ -169,22 +153,21 @@ public final class GatewayServiceGrpc {
     if ((getDeleteMethod = GatewayServiceGrpc.getDeleteMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getDeleteMethod = GatewayServiceGrpc.getDeleteMethod) == null) {
-          GatewayServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          GatewayServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest,
@@ -201,22 +184,21 @@ public final class GatewayServiceGrpc {
     if ((getListOperationsMethod = GatewayServiceGrpc.getListOperationsMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getListOperationsMethod = GatewayServiceGrpc.getListOperationsMethod) == null) {
-          GatewayServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+          GatewayServiceGrpc.getListOperationsMethod = getListOperationsMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest, yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "ListOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("ListOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
         }
-     }
-     return getListOperationsMethod;
+      }
+    }
+    return getListOperationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest,
@@ -233,29 +215,35 @@ public final class GatewayServiceGrpc {
     if ((getMoveMethod = GatewayServiceGrpc.getMoveMethod) == null) {
       synchronized (GatewayServiceGrpc.class) {
         if ((getMoveMethod = GatewayServiceGrpc.getMoveMethod) == null) {
-          GatewayServiceGrpc.getMoveMethod = getMoveMethod = 
+          GatewayServiceGrpc.getMoveMethod = getMoveMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.vpc.v1.GatewayService", "Move"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Move"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GatewayServiceMethodDescriptorSupplier("Move"))
+              .build();
         }
-     }
-     return getMoveMethod;
+      }
+    }
+    return getMoveMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GatewayServiceStub newStub(io.grpc.Channel channel) {
-    return new GatewayServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GatewayServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GatewayServiceStub>() {
+        @java.lang.Override
+        public GatewayServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GatewayServiceStub(channel, callOptions);
+        }
+      };
+    return GatewayServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -263,7 +251,14 @@ public final class GatewayServiceGrpc {
    */
   public static GatewayServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GatewayServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GatewayServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GatewayServiceBlockingStub>() {
+        @java.lang.Override
+        public GatewayServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GatewayServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return GatewayServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -271,7 +266,14 @@ public final class GatewayServiceGrpc {
    */
   public static GatewayServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GatewayServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GatewayServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GatewayServiceFutureStub>() {
+        @java.lang.Override
+        public GatewayServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GatewayServiceFutureStub(channel, callOptions);
+        }
+      };
+    return GatewayServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -286,7 +288,7 @@ public final class GatewayServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -296,7 +298,7 @@ public final class GatewayServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -306,7 +308,7 @@ public final class GatewayServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -316,7 +318,7 @@ public final class GatewayServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -326,7 +328,7 @@ public final class GatewayServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -336,7 +338,7 @@ public final class GatewayServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     /**
@@ -346,56 +348,56 @@ public final class GatewayServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest,
                 yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest,
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest,
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getMoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -406,19 +408,15 @@ public final class GatewayServiceGrpc {
 
   /**
    */
-  public static final class GatewayServiceStub extends io.grpc.stub.AbstractStub<GatewayServiceStub> {
-    private GatewayServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GatewayServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GatewayServiceStub extends io.grpc.stub.AbstractAsyncStub<GatewayServiceStub> {
+    private GatewayServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GatewayServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GatewayServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GatewayServiceStub(channel, callOptions);
     }
 
@@ -430,7 +428,7 @@ public final class GatewayServiceGrpc {
      */
     public void get(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -441,7 +439,7 @@ public final class GatewayServiceGrpc {
      */
     public void list(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -452,7 +450,7 @@ public final class GatewayServiceGrpc {
      */
     public void create(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -463,7 +461,7 @@ public final class GatewayServiceGrpc {
      */
     public void update(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -474,7 +472,7 @@ public final class GatewayServiceGrpc {
      */
     public void delete(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -485,7 +483,7 @@ public final class GatewayServiceGrpc {
      */
     public void listOperations(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -496,26 +494,22 @@ public final class GatewayServiceGrpc {
      */
     public void move(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class GatewayServiceBlockingStub extends io.grpc.stub.AbstractStub<GatewayServiceBlockingStub> {
-    private GatewayServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GatewayServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GatewayServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GatewayServiceBlockingStub> {
+    private GatewayServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GatewayServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GatewayServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GatewayServiceBlockingStub(channel, callOptions);
     }
 
@@ -526,7 +520,7 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway get(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -536,7 +530,7 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse list(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
@@ -546,7 +540,7 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -556,7 +550,7 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -566,7 +560,7 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -576,7 +570,7 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse listOperations(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
@@ -586,26 +580,22 @@ public final class GatewayServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class GatewayServiceFutureStub extends io.grpc.stub.AbstractStub<GatewayServiceFutureStub> {
-    private GatewayServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GatewayServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GatewayServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GatewayServiceFutureStub> {
+    private GatewayServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GatewayServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GatewayServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GatewayServiceFutureStub(channel, callOptions);
     }
 
@@ -617,7 +607,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.GatewayOuterClass.Gateway> get(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.GetGatewayRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -628,7 +618,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysResponse> list(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewaysRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
@@ -639,7 +629,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.CreateGatewayRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -650,7 +640,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.UpdateGatewayRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -661,7 +651,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.DeleteGatewayRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -672,7 +662,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.ListGatewayOperationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
@@ -683,7 +673,7 @@ public final class GatewayServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.vpc.v1.GatewayServiceOuterClass.MoveGatewayRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
   }

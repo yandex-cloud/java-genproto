@@ -1,19 +1,6 @@
 package yandex.cloud.api.ai.translate.v2;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/ai/translate/v2/translation_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class TranslationServiceGrpc {
 
   private TranslationServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class TranslationServiceGrpc {
     if ((getTranslateMethod = TranslationServiceGrpc.getTranslateMethod) == null) {
       synchronized (TranslationServiceGrpc.class) {
         if ((getTranslateMethod = TranslationServiceGrpc.getTranslateMethod) == null) {
-          TranslationServiceGrpc.getTranslateMethod = getTranslateMethod = 
+          TranslationServiceGrpc.getTranslateMethod = getTranslateMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.translate.v2.TranslationService", "Translate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Translate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("Translate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("Translate"))
+              .build();
         }
-     }
-     return getTranslateMethod;
+      }
+    }
+    return getTranslateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest,
@@ -76,22 +63,21 @@ public final class TranslationServiceGrpc {
     if ((getDetectLanguageMethod = TranslationServiceGrpc.getDetectLanguageMethod) == null) {
       synchronized (TranslationServiceGrpc.class) {
         if ((getDetectLanguageMethod = TranslationServiceGrpc.getDetectLanguageMethod) == null) {
-          TranslationServiceGrpc.getDetectLanguageMethod = getDetectLanguageMethod = 
+          TranslationServiceGrpc.getDetectLanguageMethod = getDetectLanguageMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.translate.v2.TranslationService", "DetectLanguage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DetectLanguage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("DetectLanguage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("DetectLanguage"))
+              .build();
         }
-     }
-     return getDetectLanguageMethod;
+      }
+    }
+    return getDetectLanguageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest,
@@ -108,29 +94,35 @@ public final class TranslationServiceGrpc {
     if ((getListLanguagesMethod = TranslationServiceGrpc.getListLanguagesMethod) == null) {
       synchronized (TranslationServiceGrpc.class) {
         if ((getListLanguagesMethod = TranslationServiceGrpc.getListLanguagesMethod) == null) {
-          TranslationServiceGrpc.getListLanguagesMethod = getListLanguagesMethod = 
+          TranslationServiceGrpc.getListLanguagesMethod = getListLanguagesMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest, yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.ai.translate.v2.TranslationService", "ListLanguages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLanguages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("ListLanguages"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("ListLanguages"))
+              .build();
         }
-     }
-     return getListLanguagesMethod;
+      }
+    }
+    return getListLanguagesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TranslationServiceStub newStub(io.grpc.Channel channel) {
-    return new TranslationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceStub>() {
+        @java.lang.Override
+        public TranslationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TranslationServiceStub(channel, callOptions);
+        }
+      };
+    return TranslationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -138,7 +130,14 @@ public final class TranslationServiceGrpc {
    */
   public static TranslationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TranslationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceBlockingStub>() {
+        @java.lang.Override
+        public TranslationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TranslationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return TranslationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -146,7 +145,14 @@ public final class TranslationServiceGrpc {
    */
   public static TranslationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TranslationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceFutureStub>() {
+        @java.lang.Override
+        public TranslationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TranslationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return TranslationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -163,7 +169,7 @@ public final class TranslationServiceGrpc {
      */
     public void translate(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getTranslateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTranslateMethod(), responseObserver);
     }
 
     /**
@@ -173,7 +179,7 @@ public final class TranslationServiceGrpc {
      */
     public void detectLanguage(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDetectLanguageMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDetectLanguageMethod(), responseObserver);
     }
 
     /**
@@ -183,28 +189,28 @@ public final class TranslationServiceGrpc {
      */
     public void listLanguages(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListLanguagesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLanguagesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getTranslateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest,
                 yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse>(
                   this, METHODID_TRANSLATE)))
           .addMethod(
             getDetectLanguageMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest,
                 yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse>(
                   this, METHODID_DETECT_LANGUAGE)))
           .addMethod(
             getListLanguagesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest,
                 yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse>(
@@ -218,19 +224,15 @@ public final class TranslationServiceGrpc {
    * A set of methods for the Yandex Translate service.
    * </pre>
    */
-  public static final class TranslationServiceStub extends io.grpc.stub.AbstractStub<TranslationServiceStub> {
-    private TranslationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TranslationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TranslationServiceStub extends io.grpc.stub.AbstractAsyncStub<TranslationServiceStub> {
+    private TranslationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TranslationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TranslationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TranslationServiceStub(channel, callOptions);
     }
 
@@ -241,7 +243,7 @@ public final class TranslationServiceGrpc {
      */
     public void translate(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTranslateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -252,7 +254,7 @@ public final class TranslationServiceGrpc {
      */
     public void detectLanguage(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDetectLanguageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -263,7 +265,7 @@ public final class TranslationServiceGrpc {
      */
     public void listLanguages(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListLanguagesMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -273,19 +275,15 @@ public final class TranslationServiceGrpc {
    * A set of methods for the Yandex Translate service.
    * </pre>
    */
-  public static final class TranslationServiceBlockingStub extends io.grpc.stub.AbstractStub<TranslationServiceBlockingStub> {
-    private TranslationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TranslationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TranslationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TranslationServiceBlockingStub> {
+    private TranslationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TranslationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TranslationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TranslationServiceBlockingStub(channel, callOptions);
     }
 
@@ -295,7 +293,7 @@ public final class TranslationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse translate(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTranslateMethod(), getCallOptions(), request);
     }
 
@@ -305,7 +303,7 @@ public final class TranslationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse detectLanguage(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDetectLanguageMethod(), getCallOptions(), request);
     }
 
@@ -315,7 +313,7 @@ public final class TranslationServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse listLanguages(yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListLanguagesMethod(), getCallOptions(), request);
     }
   }
@@ -325,19 +323,15 @@ public final class TranslationServiceGrpc {
    * A set of methods for the Yandex Translate service.
    * </pre>
    */
-  public static final class TranslationServiceFutureStub extends io.grpc.stub.AbstractStub<TranslationServiceFutureStub> {
-    private TranslationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TranslationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TranslationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TranslationServiceFutureStub> {
+    private TranslationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TranslationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TranslationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TranslationServiceFutureStub(channel, callOptions);
     }
 
@@ -348,7 +342,7 @@ public final class TranslationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateResponse> translate(
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTranslateMethod(), getCallOptions()), request);
     }
 
@@ -359,7 +353,7 @@ public final class TranslationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageResponse> detectLanguage(
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.DetectLanguageRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDetectLanguageMethod(), getCallOptions()), request);
     }
 
@@ -370,7 +364,7 @@ public final class TranslationServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesResponse> listLanguages(
         yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.ListLanguagesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListLanguagesMethod(), getCallOptions()), request);
     }
   }

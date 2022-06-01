@@ -24,6 +24,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -50,6 +53,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -60,6 +64,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -68,6 +73,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -85,6 +91,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string country_code = 4;</code>
+     * @return The countryCode.
      */
     java.lang.String getCountryCode();
     /**
@@ -93,6 +100,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string country_code = 4;</code>
+     * @return The bytes for countryCode.
      */
     com.google.protobuf.ByteString
         getCountryCodeBytes();
@@ -107,6 +115,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string currency = 5;</code>
+     * @return The currency.
      */
     java.lang.String getCurrency();
     /**
@@ -119,6 +128,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string currency = 5;</code>
+     * @return The bytes for currency.
      */
     com.google.protobuf.ByteString
         getCurrencyBytes();
@@ -129,6 +139,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>bool active = 6;</code>
+     * @return The active.
      */
     boolean getActive();
 
@@ -138,6 +149,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string balance = 7;</code>
+     * @return The balance.
      */
     java.lang.String getBalance();
     /**
@@ -146,6 +158,7 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string balance = 7;</code>
+     * @return The bytes for balance.
      */
     com.google.protobuf.ByteString
         getBalanceBytes();
@@ -157,7 +170,7 @@ public final class BillingAccountOuterClass {
    *
    * Protobuf type {@code yandex.cloud.billing.v1.BillingAccount}
    */
-  public  static final class BillingAccount extends
+  public static final class BillingAccount extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.BillingAccount)
       BillingAccountOrBuilder {
@@ -171,8 +184,14 @@ public final class BillingAccountOuterClass {
       name_ = "";
       countryCode_ = "";
       currency_ = "";
-      active_ = false;
       balance_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BillingAccount();
     }
 
     @java.lang.Override
@@ -188,7 +207,6 @@ public final class BillingAccountOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -248,7 +266,7 @@ public final class BillingAccountOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -287,7 +305,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -306,7 +326,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -329,7 +351,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -348,7 +372,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -371,7 +397,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -381,7 +409,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -392,6 +422,7 @@ public final class BillingAccountOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -404,7 +435,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string country_code = 4;</code>
+     * @return The countryCode.
      */
+    @java.lang.Override
     public java.lang.String getCountryCode() {
       java.lang.Object ref = countryCode_;
       if (ref instanceof java.lang.String) {
@@ -423,7 +456,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string country_code = 4;</code>
+     * @return The bytes for countryCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCountryCodeBytes() {
       java.lang.Object ref = countryCode_;
@@ -450,7 +485,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string currency = 5;</code>
+     * @return The currency.
      */
+    @java.lang.Override
     public java.lang.String getCurrency() {
       java.lang.Object ref = currency_;
       if (ref instanceof java.lang.String) {
@@ -473,7 +510,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string currency = 5;</code>
+     * @return The bytes for currency.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCurrencyBytes() {
       java.lang.Object ref = currency_;
@@ -496,7 +535,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>bool active = 6;</code>
+     * @return The active.
      */
+    @java.lang.Override
     public boolean getActive() {
       return active_;
     }
@@ -509,7 +550,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string balance = 7;</code>
+     * @return The balance.
      */
+    @java.lang.Override
     public java.lang.String getBalance() {
       java.lang.Object ref = balance_;
       if (ref instanceof java.lang.String) {
@@ -528,7 +571,9 @@ public final class BillingAccountOuterClass {
      * </pre>
      *
      * <code>string balance = 7;</code>
+     * @return The bytes for balance.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBalanceBytes() {
       java.lang.Object ref = balance_;
@@ -557,25 +602,25 @@ public final class BillingAccountOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, countryCode_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, currency_);
       }
       if (active_ != false) {
         output.writeBool(6, active_);
       }
-      if (!getBalanceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balance_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, balance_);
       }
       unknownFields.writeTo(output);
@@ -587,27 +632,27 @@ public final class BillingAccountOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, countryCode_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, currency_);
       }
       if (active_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, active_);
       }
-      if (!getBalanceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balance_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, balance_);
       }
       size += unknownFields.getSerializedSize();
@@ -625,26 +670,25 @@ public final class BillingAccountOuterClass {
       }
       yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount other = (yandex.cloud.api.billing.v1.BillingAccountOuterClass.BillingAccount) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getCountryCode()
-          .equals(other.getCountryCode());
-      result = result && getCurrency()
-          .equals(other.getCurrency());
-      result = result && (getActive()
-          == other.getActive());
-      result = result && getBalance()
-          .equals(other.getBalance());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCountryCode()
+          .equals(other.getCountryCode())) return false;
+      if (!getCurrency()
+          .equals(other.getCurrency())) return false;
+      if (getActive()
+          != other.getActive()) return false;
+      if (!getBalance()
+          .equals(other.getBalance())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -869,35 +913,35 @@ public final class BillingAccountOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -973,6 +1017,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -992,6 +1037,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1012,6 +1058,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1029,6 +1077,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1042,6 +1091,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1062,6 +1113,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1081,6 +1133,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1101,6 +1154,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1118,6 +1173,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1131,6 +1187,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1144,7 +1202,7 @@ public final class BillingAccountOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1153,6 +1211,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1163,6 +1222,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1304,6 +1364,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string country_code = 4;</code>
+       * @return The countryCode.
        */
       public java.lang.String getCountryCode() {
         java.lang.Object ref = countryCode_;
@@ -1323,6 +1384,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string country_code = 4;</code>
+       * @return The bytes for countryCode.
        */
       public com.google.protobuf.ByteString
           getCountryCodeBytes() {
@@ -1343,6 +1405,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string country_code = 4;</code>
+       * @param value The countryCode to set.
+       * @return This builder for chaining.
        */
       public Builder setCountryCode(
           java.lang.String value) {
@@ -1360,6 +1424,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string country_code = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCountryCode() {
         
@@ -1373,6 +1438,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string country_code = 4;</code>
+       * @param value The bytes for countryCode to set.
+       * @return This builder for chaining.
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1397,6 +1464,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string currency = 5;</code>
+       * @return The currency.
        */
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
@@ -1420,6 +1488,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string currency = 5;</code>
+       * @return The bytes for currency.
        */
       public com.google.protobuf.ByteString
           getCurrencyBytes() {
@@ -1444,6 +1513,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string currency = 5;</code>
+       * @param value The currency to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrency(
           java.lang.String value) {
@@ -1465,6 +1536,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string currency = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCurrency() {
         
@@ -1482,6 +1554,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string currency = 5;</code>
+       * @param value The bytes for currency to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrencyBytes(
           com.google.protobuf.ByteString value) {
@@ -1502,7 +1576,9 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>bool active = 6;</code>
+       * @return The active.
        */
+      @java.lang.Override
       public boolean getActive() {
         return active_;
       }
@@ -1512,6 +1588,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>bool active = 6;</code>
+       * @param value The active to set.
+       * @return This builder for chaining.
        */
       public Builder setActive(boolean value) {
         
@@ -1525,6 +1603,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>bool active = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearActive() {
         
@@ -1540,6 +1619,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string balance = 7;</code>
+       * @return The balance.
        */
       public java.lang.String getBalance() {
         java.lang.Object ref = balance_;
@@ -1559,6 +1639,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string balance = 7;</code>
+       * @return The bytes for balance.
        */
       public com.google.protobuf.ByteString
           getBalanceBytes() {
@@ -1579,6 +1660,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string balance = 7;</code>
+       * @param value The balance to set.
+       * @return This builder for chaining.
        */
       public Builder setBalance(
           java.lang.String value) {
@@ -1596,6 +1679,7 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string balance = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBalance() {
         
@@ -1609,6 +1693,8 @@ public final class BillingAccountOuterClass {
        * </pre>
        *
        * <code>string balance = 7;</code>
+       * @param value The bytes for balance to set.
+       * @return This builder for chaining.
        */
       public Builder setBalanceBytes(
           com.google.protobuf.ByteString value) {
@@ -1624,7 +1710,7 @@ public final class BillingAccountOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1699,19 +1785,11 @@ public final class BillingAccountOuterClass {
       "x-cloud/go-genproto/yandex/cloud/billing" +
       "/v1;billingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_billing_v1_BillingAccount_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_billing_v1_BillingAccount_fieldAccessorTable = new

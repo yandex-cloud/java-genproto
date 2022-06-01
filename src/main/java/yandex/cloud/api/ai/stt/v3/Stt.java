@@ -89,6 +89,8 @@ public final class Stt {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -96,6 +98,10 @@ public final class Stt {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CodeType forNumber(int value) {
       switch (value) {
         case 0: return CODE_TYPE_UNSPECIFIED;
@@ -120,6 +126,10 @@ public final class Stt {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -160,10 +170,12 @@ public final class Stt {
 
     /**
      * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+     * @return The enum numeric value on the wire for textNormalization.
      */
     int getTextNormalizationValue();
     /**
      * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+     * @return The textNormalization.
      */
     yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization getTextNormalization();
 
@@ -173,6 +185,7 @@ public final class Stt {
      * </pre>
      *
      * <code>bool profanity_filter = 2;</code>
+     * @return The profanityFilter.
      */
     boolean getProfanityFilter();
 
@@ -182,6 +195,7 @@ public final class Stt {
      * </pre>
      *
      * <code>bool literature_text = 3;</code>
+     * @return The literatureText.
      */
     boolean getLiteratureText();
   }
@@ -192,7 +206,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.TextNormalizationOptions}
    */
-  public  static final class TextNormalizationOptions extends
+  public static final class TextNormalizationOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.TextNormalizationOptions)
       TextNormalizationOptionsOrBuilder {
@@ -203,8 +217,13 @@ public final class Stt {
     }
     private TextNormalizationOptions() {
       textNormalization_ = 0;
-      profanityFilter_ = false;
-      literatureText_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextNormalizationOptions();
     }
 
     @java.lang.Override
@@ -220,7 +239,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -248,7 +266,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -342,6 +360,8 @@ public final class Stt {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -349,6 +369,10 @@ public final class Stt {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static TextNormalization forNumber(int value) {
         switch (value) {
           case 0: return TEXT_NORMALIZATION_UNSPECIFIED;
@@ -372,6 +396,10 @@ public final class Stt {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -410,14 +438,16 @@ public final class Stt {
     private int textNormalization_;
     /**
      * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+     * @return The enum numeric value on the wire for textNormalization.
      */
-    public int getTextNormalizationValue() {
+    @java.lang.Override public int getTextNormalizationValue() {
       return textNormalization_;
     }
     /**
      * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+     * @return The textNormalization.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization getTextNormalization() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization getTextNormalization() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization result = yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization.valueOf(textNormalization_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization.UNRECOGNIZED : result;
@@ -431,7 +461,9 @@ public final class Stt {
      * </pre>
      *
      * <code>bool profanity_filter = 2;</code>
+     * @return The profanityFilter.
      */
+    @java.lang.Override
     public boolean getProfanityFilter() {
       return profanityFilter_;
     }
@@ -444,7 +476,9 @@ public final class Stt {
      * </pre>
      *
      * <code>bool literature_text = 3;</code>
+     * @return The literatureText.
      */
+    @java.lang.Override
     public boolean getLiteratureText() {
       return literatureText_;
     }
@@ -508,14 +542,13 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions other = (yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions) obj;
 
-      boolean result = true;
-      result = result && textNormalization_ == other.textNormalization_;
-      result = result && (getProfanityFilter()
-          == other.getProfanityFilter());
-      result = result && (getLiteratureText()
-          == other.getLiteratureText());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (textNormalization_ != other.textNormalization_) return false;
+      if (getProfanityFilter()
+          != other.getProfanityFilter()) return false;
+      if (getLiteratureText()
+          != other.getLiteratureText()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -711,35 +744,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -794,21 +827,27 @@ public final class Stt {
       private int textNormalization_ = 0;
       /**
        * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+       * @return The enum numeric value on the wire for textNormalization.
        */
-      public int getTextNormalizationValue() {
+      @java.lang.Override public int getTextNormalizationValue() {
         return textNormalization_;
       }
       /**
        * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+       * @param value The enum numeric value on the wire for textNormalization to set.
+       * @return This builder for chaining.
        */
       public Builder setTextNormalizationValue(int value) {
+        
         textNormalization_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+       * @return The textNormalization.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization getTextNormalization() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization result = yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization.valueOf(textNormalization_);
@@ -816,6 +855,8 @@ public final class Stt {
       }
       /**
        * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+       * @param value The textNormalization to set.
+       * @return This builder for chaining.
        */
       public Builder setTextNormalization(yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.TextNormalization value) {
         if (value == null) {
@@ -828,6 +869,7 @@ public final class Stt {
       }
       /**
        * <code>.speechkit.stt.v3.TextNormalizationOptions.TextNormalization text_normalization = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTextNormalization() {
         
@@ -843,7 +885,9 @@ public final class Stt {
        * </pre>
        *
        * <code>bool profanity_filter = 2;</code>
+       * @return The profanityFilter.
        */
+      @java.lang.Override
       public boolean getProfanityFilter() {
         return profanityFilter_;
       }
@@ -853,6 +897,8 @@ public final class Stt {
        * </pre>
        *
        * <code>bool profanity_filter = 2;</code>
+       * @param value The profanityFilter to set.
+       * @return This builder for chaining.
        */
       public Builder setProfanityFilter(boolean value) {
         
@@ -866,6 +912,7 @@ public final class Stt {
        * </pre>
        *
        * <code>bool profanity_filter = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProfanityFilter() {
         
@@ -881,7 +928,9 @@ public final class Stt {
        * </pre>
        *
        * <code>bool literature_text = 3;</code>
+       * @return The literatureText.
        */
+      @java.lang.Override
       public boolean getLiteratureText() {
         return literatureText_;
       }
@@ -891,6 +940,8 @@ public final class Stt {
        * </pre>
        *
        * <code>bool literature_text = 3;</code>
+       * @param value The literatureText to set.
+       * @return This builder for chaining.
        */
       public Builder setLiteratureText(boolean value) {
         
@@ -904,6 +955,7 @@ public final class Stt {
        * </pre>
        *
        * <code>bool literature_text = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLiteratureText() {
         
@@ -914,7 +966,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -974,6 +1026,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -982,6 +1035,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+     * @return The type.
      */
     yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity getType();
 
@@ -991,13 +1045,14 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 max_pause_between_words_hint_ms = 2;</code>
+     * @return The maxPauseBetweenWordsHintMs.
      */
     long getMaxPauseBetweenWordsHintMs();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.DefaultEouClassifier}
    */
-  public  static final class DefaultEouClassifier extends
+  public static final class DefaultEouClassifier extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.DefaultEouClassifier)
       DefaultEouClassifierOrBuilder {
@@ -1008,7 +1063,13 @@ public final class Stt {
     }
     private DefaultEouClassifier() {
       type_ = 0;
-      maxPauseBetweenWordsHintMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DefaultEouClassifier();
     }
 
     @java.lang.Override
@@ -1024,7 +1085,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1047,7 +1107,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1121,6 +1181,8 @@ public final class Stt {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1128,6 +1190,10 @@ public final class Stt {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static EouSensitivity forNumber(int value) {
         switch (value) {
           case 0: return EOU_SENSITIVITY_UNSPECIFIED;
@@ -1151,6 +1217,10 @@ public final class Stt {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1193,8 +1263,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1203,8 +1274,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity getType() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity result = yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity.valueOf(type_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity.UNRECOGNIZED : result;
@@ -1218,7 +1290,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 max_pause_between_words_hint_ms = 2;</code>
+     * @return The maxPauseBetweenWordsHintMs.
      */
+    @java.lang.Override
     public long getMaxPauseBetweenWordsHintMs() {
       return maxPauseBetweenWordsHintMs_;
     }
@@ -1275,12 +1349,11 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier other = (yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (getMaxPauseBetweenWordsHintMs()
-          == other.getMaxPauseBetweenWordsHintMs());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (getMaxPauseBetweenWordsHintMs()
+          != other.getMaxPauseBetweenWordsHintMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1466,35 +1539,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1550,8 +1623,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1560,8 +1634,11 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -1572,7 +1649,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity result = yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity.valueOf(type_);
@@ -1584,6 +1663,8 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier.EouSensitivity value) {
         if (value == null) {
@@ -1600,6 +1681,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier.EouSensitivity type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1615,7 +1697,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 max_pause_between_words_hint_ms = 2;</code>
+       * @return The maxPauseBetweenWordsHintMs.
        */
+      @java.lang.Override
       public long getMaxPauseBetweenWordsHintMs() {
         return maxPauseBetweenWordsHintMs_;
       }
@@ -1625,6 +1709,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 max_pause_between_words_hint_ms = 2;</code>
+       * @param value The maxPauseBetweenWordsHintMs to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxPauseBetweenWordsHintMs(long value) {
         
@@ -1638,6 +1724,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 max_pause_between_words_hint_ms = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxPauseBetweenWordsHintMs() {
         
@@ -1648,7 +1735,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1709,7 +1796,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.ExternalEouClassifier}
    */
-  public  static final class ExternalEouClassifier extends
+  public static final class ExternalEouClassifier extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.ExternalEouClassifier)
       ExternalEouClassifierOrBuilder {
@@ -1719,6 +1806,13 @@ public final class Stt {
       super(builder);
     }
     private ExternalEouClassifier() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalEouClassifier();
     }
 
     @java.lang.Override
@@ -1745,7 +1839,7 @@ public final class Stt {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1814,9 +1908,8 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier other = (yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1995,35 +2088,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2068,7 +2161,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2128,6 +2221,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
+     * @return Whether the defaultClassifier field is set.
      */
     boolean hasDefaultClassifier();
     /**
@@ -2136,6 +2230,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
+     * @return The defaultClassifier.
      */
     yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier getDefaultClassifier();
     /**
@@ -2153,6 +2248,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
+     * @return Whether the externalClassifier field is set.
      */
     boolean hasExternalClassifier();
     /**
@@ -2161,6 +2257,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
+     * @return The externalClassifier.
      */
     yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier getExternalClassifier();
     /**
@@ -2177,7 +2274,7 @@ public final class Stt {
   /**
    * Protobuf type {@code speechkit.stt.v3.EouClassifierOptions}
    */
-  public  static final class EouClassifierOptions extends
+  public static final class EouClassifierOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.EouClassifierOptions)
       EouClassifierOptionsOrBuilder {
@@ -2187,6 +2284,13 @@ public final class Stt {
       super(builder);
     }
     private EouClassifierOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EouClassifierOptions();
     }
 
     @java.lang.Override
@@ -2202,7 +2306,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2242,7 +2345,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2276,7 +2379,8 @@ public final class Stt {
     private int classifierCase_ = 0;
     private java.lang.Object classifier_;
     public enum ClassifierCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       DEFAULT_CLASSIFIER(1),
       EXTERNAL_CLASSIFIER(2),
       CLASSIFIER_NOT_SET(0);
@@ -2285,6 +2389,8 @@ public final class Stt {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2318,7 +2424,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
+     * @return Whether the defaultClassifier field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultClassifier() {
       return classifierCase_ == 1;
     }
@@ -2328,7 +2436,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
+     * @return The defaultClassifier.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier getDefaultClassifier() {
       if (classifierCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier) classifier_;
@@ -2342,6 +2452,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifierOrBuilder getDefaultClassifierOrBuilder() {
       if (classifierCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier) classifier_;
@@ -2356,7 +2467,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
+     * @return Whether the externalClassifier field is set.
      */
+    @java.lang.Override
     public boolean hasExternalClassifier() {
       return classifierCase_ == 2;
     }
@@ -2366,7 +2479,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
+     * @return The externalClassifier.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier getExternalClassifier() {
       if (classifierCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier) classifier_;
@@ -2380,6 +2495,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifierOrBuilder getExternalClassifierOrBuilder() {
       if (classifierCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier) classifier_;
@@ -2439,24 +2555,21 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions other = (yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions) obj;
 
-      boolean result = true;
-      result = result && getClassifierCase().equals(
-          other.getClassifierCase());
-      if (!result) return false;
+      if (!getClassifierCase().equals(other.getClassifierCase())) return false;
       switch (classifierCase_) {
         case 1:
-          result = result && getDefaultClassifier()
-              .equals(other.getDefaultClassifier());
+          if (!getDefaultClassifier()
+              .equals(other.getDefaultClassifier())) return false;
           break;
         case 2:
-          result = result && getExternalClassifier()
-              .equals(other.getExternalClassifier());
+          if (!getExternalClassifier()
+              .equals(other.getExternalClassifier())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2660,35 +2773,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2767,7 +2880,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
+       * @return Whether the defaultClassifier field is set.
        */
+      @java.lang.Override
       public boolean hasDefaultClassifier() {
         return classifierCase_ == 1;
       }
@@ -2777,7 +2892,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
+       * @return The defaultClassifier.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifier getDefaultClassifier() {
         if (defaultClassifierBuilder_ == null) {
           if (classifierCase_ == 1) {
@@ -2895,6 +3012,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.DefaultEouClassifier default_classifier = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.DefaultEouClassifierOrBuilder getDefaultClassifierOrBuilder() {
         if ((classifierCase_ == 1) && (defaultClassifierBuilder_ != null)) {
           return defaultClassifierBuilder_.getMessageOrBuilder();
@@ -2939,7 +3057,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
+       * @return Whether the externalClassifier field is set.
        */
+      @java.lang.Override
       public boolean hasExternalClassifier() {
         return classifierCase_ == 2;
       }
@@ -2949,7 +3069,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
+       * @return The externalClassifier.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier getExternalClassifier() {
         if (externalClassifierBuilder_ == null) {
           if (classifierCase_ == 2) {
@@ -3067,6 +3189,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifierOrBuilder getExternalClassifierOrBuilder() {
         if ((classifierCase_ == 2) && (externalClassifierBuilder_ != null)) {
           return externalClassifierBuilder_.getMessageOrBuilder();
@@ -3105,7 +3228,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3165,6 +3288,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The enum numeric value on the wire for audioEncoding.
      */
     int getAudioEncodingValue();
     /**
@@ -3173,6 +3297,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The audioEncoding.
      */
     yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding getAudioEncoding();
 
@@ -3182,6 +3307,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
+     * @return The sampleRateHertz.
      */
     long getSampleRateHertz();
 
@@ -3191,6 +3317,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 audio_channel_count = 3;</code>
+     * @return The audioChannelCount.
      */
     long getAudioChannelCount();
   }
@@ -3201,7 +3328,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.RawAudio}
    */
-  public  static final class RawAudio extends
+  public static final class RawAudio extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RawAudio)
       RawAudioOrBuilder {
@@ -3212,8 +3339,13 @@ public final class Stt {
     }
     private RawAudio() {
       audioEncoding_ = 0;
-      sampleRateHertz_ = 0L;
-      audioChannelCount_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RawAudio();
     }
 
     @java.lang.Override
@@ -3229,7 +3361,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3257,7 +3388,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3323,6 +3454,8 @@ public final class Stt {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3330,6 +3463,10 @@ public final class Stt {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static AudioEncoding forNumber(int value) {
         switch (value) {
           case 0: return AUDIO_ENCODING_UNSPECIFIED;
@@ -3352,6 +3489,10 @@ public final class Stt {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -3394,8 +3535,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The enum numeric value on the wire for audioEncoding.
      */
-    public int getAudioEncodingValue() {
+    @java.lang.Override public int getAudioEncodingValue() {
       return audioEncoding_;
     }
     /**
@@ -3404,8 +3546,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+     * @return The audioEncoding.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding getAudioEncoding() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding getAudioEncoding() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding result = yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding.valueOf(audioEncoding_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding.UNRECOGNIZED : result;
@@ -3419,7 +3562,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
+     * @return The sampleRateHertz.
      */
+    @java.lang.Override
     public long getSampleRateHertz() {
       return sampleRateHertz_;
     }
@@ -3432,7 +3577,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 audio_channel_count = 3;</code>
+     * @return The audioChannelCount.
      */
+    @java.lang.Override
     public long getAudioChannelCount() {
       return audioChannelCount_;
     }
@@ -3496,14 +3643,13 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.RawAudio other = (yandex.cloud.api.ai.stt.v3.Stt.RawAudio) obj;
 
-      boolean result = true;
-      result = result && audioEncoding_ == other.audioEncoding_;
-      result = result && (getSampleRateHertz()
-          == other.getSampleRateHertz());
-      result = result && (getAudioChannelCount()
-          == other.getAudioChannelCount());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (audioEncoding_ != other.audioEncoding_) return false;
+      if (getSampleRateHertz()
+          != other.getSampleRateHertz()) return false;
+      if (getAudioChannelCount()
+          != other.getAudioChannelCount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3699,35 +3845,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3786,8 +3932,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @return The enum numeric value on the wire for audioEncoding.
        */
-      public int getAudioEncodingValue() {
+      @java.lang.Override public int getAudioEncodingValue() {
         return audioEncoding_;
       }
       /**
@@ -3796,8 +3943,11 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @param value The enum numeric value on the wire for audioEncoding to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioEncodingValue(int value) {
+        
         audioEncoding_ = value;
         onChanged();
         return this;
@@ -3808,7 +3958,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @return The audioEncoding.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding getAudioEncoding() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding result = yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding.valueOf(audioEncoding_);
@@ -3820,6 +3972,8 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @param value The audioEncoding to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioEncoding(yandex.cloud.api.ai.stt.v3.Stt.RawAudio.AudioEncoding value) {
         if (value == null) {
@@ -3836,6 +3990,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioEncoding() {
         
@@ -3851,7 +4006,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @return The sampleRateHertz.
        */
+      @java.lang.Override
       public long getSampleRateHertz() {
         return sampleRateHertz_;
       }
@@ -3861,6 +4018,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @param value The sampleRateHertz to set.
+       * @return This builder for chaining.
        */
       public Builder setSampleRateHertz(long value) {
         
@@ -3874,6 +4033,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSampleRateHertz() {
         
@@ -3889,7 +4049,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 audio_channel_count = 3;</code>
+       * @return The audioChannelCount.
        */
+      @java.lang.Override
       public long getAudioChannelCount() {
         return audioChannelCount_;
       }
@@ -3899,6 +4061,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 audio_channel_count = 3;</code>
+       * @param value The audioChannelCount to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioChannelCount(long value) {
         
@@ -3912,6 +4076,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 audio_channel_count = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioChannelCount() {
         
@@ -3922,7 +4087,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3982,6 +4147,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The enum numeric value on the wire for containerAudioType.
      */
     int getContainerAudioTypeValue();
     /**
@@ -3990,6 +4156,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The containerAudioType.
      */
     yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType getContainerAudioType();
   }
@@ -4000,7 +4167,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.ContainerAudio}
    */
-  public  static final class ContainerAudio extends
+  public static final class ContainerAudio extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.ContainerAudio)
       ContainerAudioOrBuilder {
@@ -4011,6 +4178,13 @@ public final class Stt {
     }
     private ContainerAudio() {
       containerAudioType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContainerAudio();
     }
 
     @java.lang.Override
@@ -4026,7 +4200,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4044,7 +4217,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4126,6 +4299,8 @@ public final class Stt {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4133,6 +4308,10 @@ public final class Stt {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static ContainerAudioType forNumber(int value) {
         switch (value) {
           case 0: return CONTAINER_AUDIO_TYPE_UNSPECIFIED;
@@ -4157,6 +4336,10 @@ public final class Stt {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -4199,8 +4382,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The enum numeric value on the wire for containerAudioType.
      */
-    public int getContainerAudioTypeValue() {
+    @java.lang.Override public int getContainerAudioTypeValue() {
       return containerAudioType_;
     }
     /**
@@ -4209,8 +4393,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+     * @return The containerAudioType.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType getContainerAudioType() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType getContainerAudioType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType result = yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType.valueOf(containerAudioType_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType.UNRECOGNIZED : result;
@@ -4261,10 +4446,9 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio other = (yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio) obj;
 
-      boolean result = true;
-      result = result && containerAudioType_ == other.containerAudioType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (containerAudioType_ != other.containerAudioType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4448,35 +4632,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4529,8 +4713,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @return The enum numeric value on the wire for containerAudioType.
        */
-      public int getContainerAudioTypeValue() {
+      @java.lang.Override public int getContainerAudioTypeValue() {
         return containerAudioType_;
       }
       /**
@@ -4539,8 +4724,11 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @param value The enum numeric value on the wire for containerAudioType to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerAudioTypeValue(int value) {
+        
         containerAudioType_ = value;
         onChanged();
         return this;
@@ -4551,7 +4739,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @return The containerAudioType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType getContainerAudioType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType result = yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType.valueOf(containerAudioType_);
@@ -4563,6 +4753,8 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @param value The containerAudioType to set.
+       * @return This builder for chaining.
        */
       public Builder setContainerAudioType(yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio.ContainerAudioType value) {
         if (value == null) {
@@ -4579,6 +4771,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearContainerAudioType() {
         
@@ -4589,7 +4782,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4649,6 +4842,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
+     * @return Whether the rawAudio field is set.
      */
     boolean hasRawAudio();
     /**
@@ -4657,6 +4851,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
+     * @return The rawAudio.
      */
     yandex.cloud.api.ai.stt.v3.Stt.RawAudio getRawAudio();
     /**
@@ -4674,6 +4869,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
+     * @return Whether the containerAudio field is set.
      */
     boolean hasContainerAudio();
     /**
@@ -4682,6 +4878,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
+     * @return The containerAudio.
      */
     yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio getContainerAudio();
     /**
@@ -4702,7 +4899,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.AudioFormatOptions}
    */
-  public  static final class AudioFormatOptions extends
+  public static final class AudioFormatOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.AudioFormatOptions)
       AudioFormatOptionsOrBuilder {
@@ -4712,6 +4909,13 @@ public final class Stt {
       super(builder);
     }
     private AudioFormatOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioFormatOptions();
     }
 
     @java.lang.Override
@@ -4727,7 +4931,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4767,7 +4970,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4801,7 +5004,8 @@ public final class Stt {
     private int audioFormatCase_ = 0;
     private java.lang.Object audioFormat_;
     public enum AudioFormatCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RAW_AUDIO(1),
       CONTAINER_AUDIO(2),
       AUDIOFORMAT_NOT_SET(0);
@@ -4810,6 +5014,8 @@ public final class Stt {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4843,7 +5049,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
+     * @return Whether the rawAudio field is set.
      */
+    @java.lang.Override
     public boolean hasRawAudio() {
       return audioFormatCase_ == 1;
     }
@@ -4853,7 +5061,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
+     * @return The rawAudio.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.RawAudio getRawAudio() {
       if (audioFormatCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v3.Stt.RawAudio) audioFormat_;
@@ -4867,6 +5077,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.RawAudioOrBuilder getRawAudioOrBuilder() {
       if (audioFormatCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v3.Stt.RawAudio) audioFormat_;
@@ -4881,7 +5092,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
+     * @return Whether the containerAudio field is set.
      */
+    @java.lang.Override
     public boolean hasContainerAudio() {
       return audioFormatCase_ == 2;
     }
@@ -4891,7 +5104,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
+     * @return The containerAudio.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio getContainerAudio() {
       if (audioFormatCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio) audioFormat_;
@@ -4905,6 +5120,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudioOrBuilder getContainerAudioOrBuilder() {
       if (audioFormatCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio) audioFormat_;
@@ -4964,24 +5180,21 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions other = (yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions) obj;
 
-      boolean result = true;
-      result = result && getAudioFormatCase().equals(
-          other.getAudioFormatCase());
-      if (!result) return false;
+      if (!getAudioFormatCase().equals(other.getAudioFormatCase())) return false;
       switch (audioFormatCase_) {
         case 1:
-          result = result && getRawAudio()
-              .equals(other.getRawAudio());
+          if (!getRawAudio()
+              .equals(other.getRawAudio())) return false;
           break;
         case 2:
-          result = result && getContainerAudio()
-              .equals(other.getContainerAudio());
+          if (!getContainerAudio()
+              .equals(other.getContainerAudio())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5189,35 +5402,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5296,7 +5509,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
+       * @return Whether the rawAudio field is set.
        */
+      @java.lang.Override
       public boolean hasRawAudio() {
         return audioFormatCase_ == 1;
       }
@@ -5306,7 +5521,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
+       * @return The rawAudio.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.RawAudio getRawAudio() {
         if (rawAudioBuilder_ == null) {
           if (audioFormatCase_ == 1) {
@@ -5424,6 +5641,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.RawAudio raw_audio = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.RawAudioOrBuilder getRawAudioOrBuilder() {
         if ((audioFormatCase_ == 1) && (rawAudioBuilder_ != null)) {
           return rawAudioBuilder_.getMessageOrBuilder();
@@ -5468,7 +5686,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
+       * @return Whether the containerAudio field is set.
        */
+      @java.lang.Override
       public boolean hasContainerAudio() {
         return audioFormatCase_ == 2;
       }
@@ -5478,7 +5698,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
+       * @return The containerAudio.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudio getContainerAudio() {
         if (containerAudioBuilder_ == null) {
           if (audioFormatCase_ == 2) {
@@ -5596,6 +5818,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.ContainerAudio container_audio = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.ContainerAudioOrBuilder getContainerAudioOrBuilder() {
         if ((audioFormatCase_ == 2) && (containerAudioBuilder_ != null)) {
           return containerAudioBuilder_.getMessageOrBuilder();
@@ -5634,7 +5857,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5690,28 +5913,36 @@ public final class Stt {
 
     /**
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+     * @return The enum numeric value on the wire for restrictionType.
      */
     int getRestrictionTypeValue();
     /**
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+     * @return The restrictionType.
      */
     yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType getRestrictionType();
 
     /**
      * <code>repeated string language_code = 2;</code>
+     * @return A list containing the languageCode.
      */
     java.util.List<java.lang.String>
         getLanguageCodeList();
     /**
      * <code>repeated string language_code = 2;</code>
+     * @return The count of languageCode.
      */
     int getLanguageCodeCount();
     /**
      * <code>repeated string language_code = 2;</code>
+     * @param index The index of the element to return.
+     * @return The languageCode at the given index.
      */
     java.lang.String getLanguageCode(int index);
     /**
      * <code>repeated string language_code = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the languageCode at the given index.
      */
     com.google.protobuf.ByteString
         getLanguageCodeBytes(int index);
@@ -5719,7 +5950,7 @@ public final class Stt {
   /**
    * Protobuf type {@code speechkit.stt.v3.LanguageRestrictionOptions}
    */
-  public  static final class LanguageRestrictionOptions extends
+  public static final class LanguageRestrictionOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.LanguageRestrictionOptions)
       LanguageRestrictionOptionsOrBuilder {
@@ -5731,6 +5962,13 @@ public final class Stt {
     private LanguageRestrictionOptions() {
       restrictionType_ = 0;
       languageCode_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LanguageRestrictionOptions();
     }
 
     @java.lang.Override
@@ -5765,15 +6003,15 @@ public final class Stt {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 languageCode_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               languageCode_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5787,7 +6025,7 @@ public final class Stt {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           languageCode_ = languageCode_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -5850,6 +6088,8 @@ public final class Stt {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5857,6 +6097,10 @@ public final class Stt {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static LanguageRestrictionType forNumber(int value) {
         switch (value) {
           case 0: return LANGUAGE_RESTRICTION_TYPE_UNSPECIFIED;
@@ -5880,6 +6124,10 @@ public final class Stt {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -5914,19 +6162,20 @@ public final class Stt {
       // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType)
     }
 
-    private int bitField0_;
     public static final int RESTRICTION_TYPE_FIELD_NUMBER = 1;
     private int restrictionType_;
     /**
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+     * @return The enum numeric value on the wire for restrictionType.
      */
-    public int getRestrictionTypeValue() {
+    @java.lang.Override public int getRestrictionTypeValue() {
       return restrictionType_;
     }
     /**
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+     * @return The restrictionType.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType getRestrictionType() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType getRestrictionType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType result = yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType.valueOf(restrictionType_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType.UNRECOGNIZED : result;
@@ -5936,6 +6185,7 @@ public final class Stt {
     private com.google.protobuf.LazyStringList languageCode_;
     /**
      * <code>repeated string language_code = 2;</code>
+     * @return A list containing the languageCode.
      */
     public com.google.protobuf.ProtocolStringList
         getLanguageCodeList() {
@@ -5943,18 +6193,23 @@ public final class Stt {
     }
     /**
      * <code>repeated string language_code = 2;</code>
+     * @return The count of languageCode.
      */
     public int getLanguageCodeCount() {
       return languageCode_.size();
     }
     /**
      * <code>repeated string language_code = 2;</code>
+     * @param index The index of the element to return.
+     * @return The languageCode at the given index.
      */
     public java.lang.String getLanguageCode(int index) {
       return languageCode_.get(index);
     }
     /**
      * <code>repeated string language_code = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the languageCode at the given index.
      */
     public com.google.protobuf.ByteString
         getLanguageCodeBytes(int index) {
@@ -6017,12 +6272,11 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions other = (yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions) obj;
 
-      boolean result = true;
-      result = result && restrictionType_ == other.restrictionType_;
-      result = result && getLanguageCodeList()
-          .equals(other.getLanguageCodeList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (restrictionType_ != other.restrictionType_) return false;
+      if (!getLanguageCodeList()
+          .equals(other.getLanguageCodeList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6174,7 +6428,7 @@ public final class Stt {
         restrictionType_ = 0;
 
         languageCode_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -6202,49 +6456,47 @@ public final class Stt {
       public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions buildPartial() {
         yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions result = new yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.restrictionType_ = restrictionType_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           languageCode_ = languageCode_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.languageCode_ = languageCode_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6264,7 +6516,7 @@ public final class Stt {
         if (!other.languageCode_.isEmpty()) {
           if (languageCode_.isEmpty()) {
             languageCode_ = other.languageCode_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureLanguageCodeIsMutable();
             languageCode_.addAll(other.languageCode_);
@@ -6304,21 +6556,27 @@ public final class Stt {
       private int restrictionType_ = 0;
       /**
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+       * @return The enum numeric value on the wire for restrictionType.
        */
-      public int getRestrictionTypeValue() {
+      @java.lang.Override public int getRestrictionTypeValue() {
         return restrictionType_;
       }
       /**
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+       * @param value The enum numeric value on the wire for restrictionType to set.
+       * @return This builder for chaining.
        */
       public Builder setRestrictionTypeValue(int value) {
+        
         restrictionType_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+       * @return The restrictionType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType getRestrictionType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType result = yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType.valueOf(restrictionType_);
@@ -6326,6 +6584,8 @@ public final class Stt {
       }
       /**
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+       * @param value The restrictionType to set.
+       * @return This builder for chaining.
        */
       public Builder setRestrictionType(yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType value) {
         if (value == null) {
@@ -6338,6 +6598,7 @@ public final class Stt {
       }
       /**
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRestrictionType() {
         
@@ -6348,13 +6609,14 @@ public final class Stt {
 
       private com.google.protobuf.LazyStringList languageCode_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureLanguageCodeIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           languageCode_ = new com.google.protobuf.LazyStringArrayList(languageCode_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @return A list containing the languageCode.
        */
       public com.google.protobuf.ProtocolStringList
           getLanguageCodeList() {
@@ -6362,18 +6624,23 @@ public final class Stt {
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @return The count of languageCode.
        */
       public int getLanguageCodeCount() {
         return languageCode_.size();
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @param index The index of the element to return.
+       * @return The languageCode at the given index.
        */
       public java.lang.String getLanguageCode(int index) {
         return languageCode_.get(index);
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the languageCode at the given index.
        */
       public com.google.protobuf.ByteString
           getLanguageCodeBytes(int index) {
@@ -6381,6 +6648,9 @@ public final class Stt {
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The languageCode to set.
+       * @return This builder for chaining.
        */
       public Builder setLanguageCode(
           int index, java.lang.String value) {
@@ -6394,6 +6664,8 @@ public final class Stt {
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @param value The languageCode to add.
+       * @return This builder for chaining.
        */
       public Builder addLanguageCode(
           java.lang.String value) {
@@ -6407,6 +6679,8 @@ public final class Stt {
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @param values The languageCode to add.
+       * @return This builder for chaining.
        */
       public Builder addAllLanguageCode(
           java.lang.Iterable<java.lang.String> values) {
@@ -6418,15 +6692,18 @@ public final class Stt {
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLanguageCode() {
         languageCode_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string language_code = 2;</code>
+       * @param value The bytes of the languageCode to add.
+       * @return This builder for chaining.
        */
       public Builder addLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -6442,7 +6719,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6502,6 +6779,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The model.
      */
     java.lang.String getModel();
     /**
@@ -6510,6 +6788,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
@@ -6520,6 +6799,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
+     * @return Whether the audioFormat field is set.
      */
     boolean hasAudioFormat();
     /**
@@ -6528,6 +6808,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
+     * @return The audioFormat.
      */
     yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions getAudioFormat();
     /**
@@ -6545,6 +6826,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
+     * @return Whether the textNormalization field is set.
      */
     boolean hasTextNormalization();
     /**
@@ -6553,6 +6835,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
+     * @return The textNormalization.
      */
     yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions getTextNormalization();
     /**
@@ -6570,6 +6853,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
+     * @return Whether the languageRestriction field is set.
      */
     boolean hasLanguageRestriction();
     /**
@@ -6578,6 +6862,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
+     * @return The languageRestriction.
      */
     yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions getLanguageRestriction();
     /**
@@ -6595,6 +6880,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+     * @return The enum numeric value on the wire for audioProcessingType.
      */
     int getAudioProcessingTypeValue();
     /**
@@ -6603,13 +6889,14 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+     * @return The audioProcessingType.
      */
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType getAudioProcessingType();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.RecognitionModelOptions}
    */
-  public  static final class RecognitionModelOptions extends
+  public static final class RecognitionModelOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognitionModelOptions)
       RecognitionModelOptionsOrBuilder {
@@ -6621,6 +6908,13 @@ public final class Stt {
     private RecognitionModelOptions() {
       model_ = "";
       audioProcessingType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionModelOptions();
     }
 
     @java.lang.Override
@@ -6636,7 +6930,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6699,7 +6992,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6773,6 +7066,8 @@ public final class Stt {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -6780,6 +7075,10 @@ public final class Stt {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static AudioProcessingType forNumber(int value) {
         switch (value) {
           case 0: return AUDIO_PROCESSING_TYPE_UNSPECIFIED;
@@ -6803,6 +7102,10 @@ public final class Stt {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -6845,7 +7148,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The model.
      */
+    @java.lang.Override
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
       if (ref instanceof java.lang.String) {
@@ -6864,7 +7169,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string model = 1;</code>
+     * @return The bytes for model.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
       java.lang.Object ref = model_;
@@ -6887,7 +7194,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
+     * @return Whether the audioFormat field is set.
      */
+    @java.lang.Override
     public boolean hasAudioFormat() {
       return audioFormat_ != null;
     }
@@ -6897,7 +7206,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
+     * @return The audioFormat.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions getAudioFormat() {
       return audioFormat_ == null ? yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions.getDefaultInstance() : audioFormat_;
     }
@@ -6908,6 +7219,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptionsOrBuilder getAudioFormatOrBuilder() {
       return getAudioFormat();
     }
@@ -6920,7 +7232,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
+     * @return Whether the textNormalization field is set.
      */
+    @java.lang.Override
     public boolean hasTextNormalization() {
       return textNormalization_ != null;
     }
@@ -6930,7 +7244,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
+     * @return The textNormalization.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions getTextNormalization() {
       return textNormalization_ == null ? yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.getDefaultInstance() : textNormalization_;
     }
@@ -6941,6 +7257,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptionsOrBuilder getTextNormalizationOrBuilder() {
       return getTextNormalization();
     }
@@ -6953,7 +7270,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
+     * @return Whether the languageRestriction field is set.
      */
+    @java.lang.Override
     public boolean hasLanguageRestriction() {
       return languageRestriction_ != null;
     }
@@ -6963,7 +7282,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
+     * @return The languageRestriction.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions getLanguageRestriction() {
       return languageRestriction_ == null ? yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.getDefaultInstance() : languageRestriction_;
     }
@@ -6974,6 +7295,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptionsOrBuilder getLanguageRestrictionOrBuilder() {
       return getLanguageRestriction();
     }
@@ -6986,8 +7308,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+     * @return The enum numeric value on the wire for audioProcessingType.
      */
-    public int getAudioProcessingTypeValue() {
+    @java.lang.Override public int getAudioProcessingTypeValue() {
       return audioProcessingType_;
     }
     /**
@@ -6996,8 +7319,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+     * @return The audioProcessingType.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType getAudioProcessingType() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType getAudioProcessingType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType result = yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType.valueOf(audioProcessingType_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType.UNRECOGNIZED : result;
@@ -7017,7 +7341,7 @@ public final class Stt {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, model_);
       }
       if (audioFormat_ != null) {
@@ -7041,7 +7365,7 @@ public final class Stt {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, model_);
       }
       if (audioFormat_ != null) {
@@ -7075,27 +7399,26 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions other = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions) obj;
 
-      boolean result = true;
-      result = result && getModel()
-          .equals(other.getModel());
-      result = result && (hasAudioFormat() == other.hasAudioFormat());
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (hasAudioFormat() != other.hasAudioFormat()) return false;
       if (hasAudioFormat()) {
-        result = result && getAudioFormat()
-            .equals(other.getAudioFormat());
+        if (!getAudioFormat()
+            .equals(other.getAudioFormat())) return false;
       }
-      result = result && (hasTextNormalization() == other.hasTextNormalization());
+      if (hasTextNormalization() != other.hasTextNormalization()) return false;
       if (hasTextNormalization()) {
-        result = result && getTextNormalization()
-            .equals(other.getTextNormalization());
+        if (!getTextNormalization()
+            .equals(other.getTextNormalization())) return false;
       }
-      result = result && (hasLanguageRestriction() == other.hasLanguageRestriction());
+      if (hasLanguageRestriction() != other.hasLanguageRestriction()) return false;
       if (hasLanguageRestriction()) {
-        result = result && getLanguageRestriction()
-            .equals(other.getLanguageRestriction());
+        if (!getLanguageRestriction()
+            .equals(other.getLanguageRestriction())) return false;
       }
-      result = result && audioProcessingType_ == other.audioProcessingType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (audioProcessingType_ != other.audioProcessingType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7325,35 +7648,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7419,6 +7742,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @return The model.
        */
       public java.lang.String getModel() {
         java.lang.Object ref = model_;
@@ -7438,6 +7762,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
           getModelBytes() {
@@ -7458,6 +7783,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
        */
       public Builder setModel(
           java.lang.String value) {
@@ -7475,6 +7802,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModel() {
         
@@ -7488,6 +7816,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string model = 1;</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
@@ -7501,7 +7831,7 @@ public final class Stt {
         return this;
       }
 
-      private yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions audioFormat_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions audioFormat_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions, yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptionsOrBuilder> audioFormatBuilder_;
       /**
@@ -7510,6 +7840,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
+       * @return Whether the audioFormat field is set.
        */
       public boolean hasAudioFormat() {
         return audioFormatBuilder_ != null || audioFormat_ != null;
@@ -7520,6 +7851,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
+       * @return The audioFormat.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions getAudioFormat() {
         if (audioFormatBuilder_ == null) {
@@ -7654,7 +7986,7 @@ public final class Stt {
         return audioFormatBuilder_;
       }
 
-      private yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions textNormalization_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions textNormalization_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions, yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptionsOrBuilder> textNormalizationBuilder_;
       /**
@@ -7663,6 +7995,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
+       * @return Whether the textNormalization field is set.
        */
       public boolean hasTextNormalization() {
         return textNormalizationBuilder_ != null || textNormalization_ != null;
@@ -7673,6 +8006,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
+       * @return The textNormalization.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions getTextNormalization() {
         if (textNormalizationBuilder_ == null) {
@@ -7807,7 +8141,7 @@ public final class Stt {
         return textNormalizationBuilder_;
       }
 
-      private yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions languageRestriction_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions languageRestriction_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions, yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptionsOrBuilder> languageRestrictionBuilder_;
       /**
@@ -7816,6 +8150,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
+       * @return Whether the languageRestriction field is set.
        */
       public boolean hasLanguageRestriction() {
         return languageRestrictionBuilder_ != null || languageRestriction_ != null;
@@ -7826,6 +8161,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions language_restriction = 4;</code>
+       * @return The languageRestriction.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions getLanguageRestriction() {
         if (languageRestrictionBuilder_ == null) {
@@ -7967,8 +8303,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+       * @return The enum numeric value on the wire for audioProcessingType.
        */
-      public int getAudioProcessingTypeValue() {
+      @java.lang.Override public int getAudioProcessingTypeValue() {
         return audioProcessingType_;
       }
       /**
@@ -7977,8 +8314,11 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+       * @param value The enum numeric value on the wire for audioProcessingType to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioProcessingTypeValue(int value) {
+        
         audioProcessingType_ = value;
         onChanged();
         return this;
@@ -7989,7 +8329,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+       * @return The audioProcessingType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType getAudioProcessingType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType result = yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType.valueOf(audioProcessingType_);
@@ -8001,6 +8343,8 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+       * @param value The audioProcessingType to set.
+       * @return This builder for chaining.
        */
       public Builder setAudioProcessingType(yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.AudioProcessingType value) {
         if (value == null) {
@@ -8017,6 +8361,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions.AudioProcessingType audio_processing_type = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAudioProcessingType() {
         
@@ -8027,7 +8372,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8087,6 +8432,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
+     * @return Whether the recognitionModel field is set.
      */
     boolean hasRecognitionModel();
     /**
@@ -8095,6 +8441,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
+     * @return The recognitionModel.
      */
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel();
     /**
@@ -8112,6 +8459,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
+     * @return Whether the eouClassifier field is set.
      */
     boolean hasEouClassifier();
     /**
@@ -8120,6 +8468,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
+     * @return The eouClassifier.
      */
     yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions getEouClassifier();
     /**
@@ -8134,7 +8483,7 @@ public final class Stt {
   /**
    * Protobuf type {@code speechkit.stt.v3.StreamingOptions}
    */
-  public  static final class StreamingOptions extends
+  public static final class StreamingOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.StreamingOptions)
       StreamingOptionsOrBuilder {
@@ -8144,6 +8493,13 @@ public final class Stt {
       super(builder);
     }
     private StreamingOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamingOptions();
     }
 
     @java.lang.Override
@@ -8159,7 +8515,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8197,7 +8552,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8236,7 +8591,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
+     * @return Whether the recognitionModel field is set.
      */
+    @java.lang.Override
     public boolean hasRecognitionModel() {
       return recognitionModel_ != null;
     }
@@ -8246,7 +8603,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
+     * @return The recognitionModel.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel() {
       return recognitionModel_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.getDefaultInstance() : recognitionModel_;
     }
@@ -8257,6 +8616,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder getRecognitionModelOrBuilder() {
       return getRecognitionModel();
     }
@@ -8269,7 +8629,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
+     * @return Whether the eouClassifier field is set.
      */
+    @java.lang.Override
     public boolean hasEouClassifier() {
       return eouClassifier_ != null;
     }
@@ -8279,7 +8641,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
+     * @return The eouClassifier.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions getEouClassifier() {
       return eouClassifier_ == null ? yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions.getDefaultInstance() : eouClassifier_;
     }
@@ -8290,6 +8654,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptionsOrBuilder getEouClassifierOrBuilder() {
       return getEouClassifier();
     }
@@ -8346,19 +8711,18 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions other = (yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions) obj;
 
-      boolean result = true;
-      result = result && (hasRecognitionModel() == other.hasRecognitionModel());
+      if (hasRecognitionModel() != other.hasRecognitionModel()) return false;
       if (hasRecognitionModel()) {
-        result = result && getRecognitionModel()
-            .equals(other.getRecognitionModel());
+        if (!getRecognitionModel()
+            .equals(other.getRecognitionModel())) return false;
       }
-      result = result && (hasEouClassifier() == other.hasEouClassifier());
+      if (hasEouClassifier() != other.hasEouClassifier()) return false;
       if (hasEouClassifier()) {
-        result = result && getEouClassifier()
-            .equals(other.getEouClassifier());
+        if (!getEouClassifier()
+            .equals(other.getEouClassifier())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8563,35 +8927,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8640,7 +9004,7 @@ public final class Stt {
         return this;
       }
 
-      private yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions recognitionModel_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions recognitionModel_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder> recognitionModelBuilder_;
       /**
@@ -8649,6 +9013,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
+       * @return Whether the recognitionModel field is set.
        */
       public boolean hasRecognitionModel() {
         return recognitionModelBuilder_ != null || recognitionModel_ != null;
@@ -8659,6 +9024,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
+       * @return The recognitionModel.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel() {
         if (recognitionModelBuilder_ == null) {
@@ -8793,7 +9159,7 @@ public final class Stt {
         return recognitionModelBuilder_;
       }
 
-      private yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions eouClassifier_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions eouClassifier_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptionsOrBuilder> eouClassifierBuilder_;
       /**
@@ -8802,6 +9168,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
+       * @return Whether the eouClassifier field is set.
        */
       public boolean hasEouClassifier() {
         return eouClassifierBuilder_ != null || eouClassifier_ != null;
@@ -8812,6 +9179,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
+       * @return The eouClassifier.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions getEouClassifier() {
         if (eouClassifierBuilder_ == null) {
@@ -8948,7 +9316,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9008,6 +9376,7 @@ public final class Stt {
      * </pre>
      *
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
     com.google.protobuf.ByteString getData();
   }
@@ -9018,7 +9387,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.AudioChunk}
    */
-  public  static final class AudioChunk extends
+  public static final class AudioChunk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.AudioChunk)
       AudioChunkOrBuilder {
@@ -9029,6 +9398,13 @@ public final class Stt {
     }
     private AudioChunk() {
       data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioChunk();
     }
 
     @java.lang.Override
@@ -9044,7 +9420,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9061,7 +9436,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9100,7 +9475,9 @@ public final class Stt {
      * </pre>
      *
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -9150,11 +9527,10 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.AudioChunk other = (yandex.cloud.api.ai.stt.v3.Stt.AudioChunk) obj;
 
-      boolean result = true;
-      result = result && getData()
-          .equals(other.getData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9338,35 +9714,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9419,7 +9795,9 @@ public final class Stt {
        * </pre>
        *
        * <code>bytes data = 1;</code>
+       * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -9429,6 +9807,8 @@ public final class Stt {
        * </pre>
        *
        * <code>bytes data = 1;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -9445,6 +9825,7 @@ public final class Stt {
        * </pre>
        *
        * <code>bytes data = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearData() {
         
@@ -9455,7 +9836,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9515,13 +9896,14 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 duration_ms = 1;</code>
+     * @return The durationMs.
      */
     long getDurationMs();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.SilenceChunk}
    */
-  public  static final class SilenceChunk extends
+  public static final class SilenceChunk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SilenceChunk)
       SilenceChunkOrBuilder {
@@ -9531,7 +9913,13 @@ public final class Stt {
       super(builder);
     }
     private SilenceChunk() {
-      durationMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SilenceChunk();
     }
 
     @java.lang.Override
@@ -9547,7 +9935,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9564,7 +9951,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9603,7 +9990,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 duration_ms = 1;</code>
+     * @return The durationMs.
      */
+    @java.lang.Override
     public long getDurationMs() {
       return durationMs_;
     }
@@ -9653,11 +10042,10 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk other = (yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk) obj;
 
-      boolean result = true;
-      result = result && (getDurationMs()
-          == other.getDurationMs());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDurationMs()
+          != other.getDurationMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9838,35 +10226,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9919,7 +10307,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 duration_ms = 1;</code>
+       * @return The durationMs.
        */
+      @java.lang.Override
       public long getDurationMs() {
         return durationMs_;
       }
@@ -9929,6 +10319,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 duration_ms = 1;</code>
+       * @param value The durationMs to set.
+       * @return This builder for chaining.
        */
       public Builder setDurationMs(long value) {
         
@@ -9942,6 +10334,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 duration_ms = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDurationMs() {
         
@@ -9952,7 +10345,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10013,7 +10406,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.Eou}
    */
-  public  static final class Eou extends
+  public static final class Eou extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.Eou)
       EouOrBuilder {
@@ -10023,6 +10416,13 @@ public final class Stt {
       super(builder);
     }
     private Eou() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Eou();
     }
 
     @java.lang.Override
@@ -10049,7 +10449,7 @@ public final class Stt {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10118,9 +10518,8 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.Eou other = (yandex.cloud.api.ai.stt.v3.Stt.Eou) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10299,35 +10698,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10372,7 +10771,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10432,6 +10831,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
+     * @return Whether the sessionOptions field is set.
      */
     boolean hasSessionOptions();
     /**
@@ -10440,6 +10840,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
+     * @return The sessionOptions.
      */
     yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions getSessionOptions();
     /**
@@ -10457,6 +10858,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
+     * @return Whether the chunk field is set.
      */
     boolean hasChunk();
     /**
@@ -10465,6 +10867,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
+     * @return The chunk.
      */
     yandex.cloud.api.ai.stt.v3.Stt.AudioChunk getChunk();
     /**
@@ -10482,6 +10885,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
+     * @return Whether the silenceChunk field is set.
      */
     boolean hasSilenceChunk();
     /**
@@ -10490,6 +10894,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
+     * @return The silenceChunk.
      */
     yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk getSilenceChunk();
     /**
@@ -10507,6 +10912,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
+     * @return Whether the eou field is set.
      */
     boolean hasEou();
     /**
@@ -10515,6 +10921,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
+     * @return The eou.
      */
     yandex.cloud.api.ai.stt.v3.Stt.Eou getEou();
     /**
@@ -10538,7 +10945,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.StreamingRequest}
    */
-  public  static final class StreamingRequest extends
+  public static final class StreamingRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.StreamingRequest)
       StreamingRequestOrBuilder {
@@ -10548,6 +10955,13 @@ public final class Stt {
       super(builder);
     }
     private StreamingRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamingRequest();
     }
 
     @java.lang.Override
@@ -10563,7 +10977,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10631,7 +11044,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10665,7 +11078,8 @@ public final class Stt {
     private int eventCase_ = 0;
     private java.lang.Object event_;
     public enum EventCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SESSION_OPTIONS(1),
       CHUNK(2),
       SILENCE_CHUNK(3),
@@ -10676,6 +11090,8 @@ public final class Stt {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10711,7 +11127,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
+     * @return Whether the sessionOptions field is set.
      */
+    @java.lang.Override
     public boolean hasSessionOptions() {
       return eventCase_ == 1;
     }
@@ -10721,7 +11139,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
+     * @return The sessionOptions.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions getSessionOptions() {
       if (eventCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions) event_;
@@ -10735,6 +11155,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.StreamingOptionsOrBuilder getSessionOptionsOrBuilder() {
       if (eventCase_ == 1) {
          return (yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions) event_;
@@ -10749,7 +11170,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
+     * @return Whether the chunk field is set.
      */
+    @java.lang.Override
     public boolean hasChunk() {
       return eventCase_ == 2;
     }
@@ -10759,7 +11182,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
+     * @return The chunk.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AudioChunk getChunk() {
       if (eventCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AudioChunk) event_;
@@ -10773,6 +11198,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AudioChunkOrBuilder getChunkOrBuilder() {
       if (eventCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AudioChunk) event_;
@@ -10787,7 +11213,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
+     * @return Whether the silenceChunk field is set.
      */
+    @java.lang.Override
     public boolean hasSilenceChunk() {
       return eventCase_ == 3;
     }
@@ -10797,7 +11225,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
+     * @return The silenceChunk.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk getSilenceChunk() {
       if (eventCase_ == 3) {
          return (yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk) event_;
@@ -10811,6 +11241,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.SilenceChunkOrBuilder getSilenceChunkOrBuilder() {
       if (eventCase_ == 3) {
          return (yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk) event_;
@@ -10825,7 +11256,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
+     * @return Whether the eou field is set.
      */
+    @java.lang.Override
     public boolean hasEou() {
       return eventCase_ == 4;
     }
@@ -10835,7 +11268,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
+     * @return The eou.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.Eou getEou() {
       if (eventCase_ == 4) {
          return (yandex.cloud.api.ai.stt.v3.Stt.Eou) event_;
@@ -10849,6 +11284,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.EouOrBuilder getEouOrBuilder() {
       if (eventCase_ == 4) {
          return (yandex.cloud.api.ai.stt.v3.Stt.Eou) event_;
@@ -10922,32 +11358,29 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest other = (yandex.cloud.api.ai.stt.v3.Stt.StreamingRequest) obj;
 
-      boolean result = true;
-      result = result && getEventCase().equals(
-          other.getEventCase());
-      if (!result) return false;
+      if (!getEventCase().equals(other.getEventCase())) return false;
       switch (eventCase_) {
         case 1:
-          result = result && getSessionOptions()
-              .equals(other.getSessionOptions());
+          if (!getSessionOptions()
+              .equals(other.getSessionOptions())) return false;
           break;
         case 2:
-          result = result && getChunk()
-              .equals(other.getChunk());
+          if (!getChunk()
+              .equals(other.getChunk())) return false;
           break;
         case 3:
-          result = result && getSilenceChunk()
-              .equals(other.getSilenceChunk());
+          if (!getSilenceChunk()
+              .equals(other.getSilenceChunk())) return false;
           break;
         case 4:
-          result = result && getEou()
-              .equals(other.getEou());
+          if (!getEou()
+              .equals(other.getEou())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11180,35 +11613,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11295,7 +11728,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
+       * @return Whether the sessionOptions field is set.
        */
+      @java.lang.Override
       public boolean hasSessionOptions() {
         return eventCase_ == 1;
       }
@@ -11305,7 +11740,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
+       * @return The sessionOptions.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions getSessionOptions() {
         if (sessionOptionsBuilder_ == null) {
           if (eventCase_ == 1) {
@@ -11423,6 +11860,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.StreamingOptionsOrBuilder getSessionOptionsOrBuilder() {
         if ((eventCase_ == 1) && (sessionOptionsBuilder_ != null)) {
           return sessionOptionsBuilder_.getMessageOrBuilder();
@@ -11467,7 +11905,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
+       * @return Whether the chunk field is set.
        */
+      @java.lang.Override
       public boolean hasChunk() {
         return eventCase_ == 2;
       }
@@ -11477,7 +11917,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
+       * @return The chunk.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AudioChunk getChunk() {
         if (chunkBuilder_ == null) {
           if (eventCase_ == 2) {
@@ -11595,6 +12037,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.AudioChunk chunk = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AudioChunkOrBuilder getChunkOrBuilder() {
         if ((eventCase_ == 2) && (chunkBuilder_ != null)) {
           return chunkBuilder_.getMessageOrBuilder();
@@ -11639,7 +12082,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
+       * @return Whether the silenceChunk field is set.
        */
+      @java.lang.Override
       public boolean hasSilenceChunk() {
         return eventCase_ == 3;
       }
@@ -11649,7 +12094,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
+       * @return The silenceChunk.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.SilenceChunk getSilenceChunk() {
         if (silenceChunkBuilder_ == null) {
           if (eventCase_ == 3) {
@@ -11767,6 +12214,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.SilenceChunk silence_chunk = 3;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.SilenceChunkOrBuilder getSilenceChunkOrBuilder() {
         if ((eventCase_ == 3) && (silenceChunkBuilder_ != null)) {
           return silenceChunkBuilder_.getMessageOrBuilder();
@@ -11811,7 +12259,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
+       * @return Whether the eou field is set.
        */
+      @java.lang.Override
       public boolean hasEou() {
         return eventCase_ == 4;
       }
@@ -11821,7 +12271,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
+       * @return The eou.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.Eou getEou() {
         if (eouBuilder_ == null) {
           if (eventCase_ == 4) {
@@ -11939,6 +12391,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.EouOrBuilder getEouOrBuilder() {
         if ((eventCase_ == 4) && (eouBuilder_ != null)) {
           return eouBuilder_.getMessageOrBuilder();
@@ -11977,7 +12430,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12037,6 +12490,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -12045,6 +12499,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -12055,6 +12510,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 start_time_ms = 2;</code>
+     * @return The startTimeMs.
      */
     long getStartTimeMs();
 
@@ -12064,6 +12520,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 end_time_ms = 3;</code>
+     * @return The endTimeMs.
      */
     long getEndTimeMs();
   }
@@ -12074,7 +12531,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.Word}
    */
-  public  static final class Word extends
+  public static final class Word extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.Word)
       WordOrBuilder {
@@ -12085,8 +12542,13 @@ public final class Stt {
     }
     private Word() {
       text_ = "";
-      startTimeMs_ = 0L;
-      endTimeMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Word();
     }
 
     @java.lang.Override
@@ -12102,7 +12564,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12130,7 +12591,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12169,7 +12630,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -12188,7 +12651,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -12211,7 +12676,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 start_time_ms = 2;</code>
+     * @return The startTimeMs.
      */
+    @java.lang.Override
     public long getStartTimeMs() {
       return startTimeMs_;
     }
@@ -12224,7 +12691,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 end_time_ms = 3;</code>
+     * @return The endTimeMs.
      */
+    @java.lang.Override
     public long getEndTimeMs() {
       return endTimeMs_;
     }
@@ -12243,7 +12712,7 @@ public final class Stt {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
       if (startTimeMs_ != 0L) {
@@ -12261,7 +12730,7 @@ public final class Stt {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
       if (startTimeMs_ != 0L) {
@@ -12287,15 +12756,14 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.Word other = (yandex.cloud.api.ai.stt.v3.Stt.Word) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (getStartTimeMs()
-          == other.getStartTimeMs());
-      result = result && (getEndTimeMs()
-          == other.getEndTimeMs());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (getStartTimeMs()
+          != other.getStartTimeMs()) return false;
+      if (getEndTimeMs()
+          != other.getEndTimeMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12491,35 +12959,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12579,6 +13047,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -12598,6 +13067,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -12618,6 +13088,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -12635,6 +13107,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -12648,6 +13121,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -12668,7 +13143,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
+       * @return The startTimeMs.
        */
+      @java.lang.Override
       public long getStartTimeMs() {
         return startTimeMs_;
       }
@@ -12678,6 +13155,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
+       * @param value The startTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTimeMs(long value) {
         
@@ -12691,6 +13170,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartTimeMs() {
         
@@ -12706,7 +13186,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
+       * @return The endTimeMs.
        */
+      @java.lang.Override
       public long getEndTimeMs() {
         return endTimeMs_;
       }
@@ -12716,6 +13198,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
+       * @param value The endTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTimeMs(long value) {
         
@@ -12729,6 +13213,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndTimeMs() {
         
@@ -12739,7 +13224,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12843,6 +13328,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
@@ -12851,6 +13337,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
@@ -12861,6 +13348,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 start_time_ms = 3;</code>
+     * @return The startTimeMs.
      */
     long getStartTimeMs();
 
@@ -12870,6 +13358,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 end_time_ms = 4;</code>
+     * @return The endTimeMs.
      */
     long getEndTimeMs();
 
@@ -12879,6 +13368,7 @@ public final class Stt {
      * </pre>
      *
      * <code>double confidence = 5;</code>
+     * @return The confidence.
      */
     double getConfidence();
   }
@@ -12889,7 +13379,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.Alternative}
    */
-  public  static final class Alternative extends
+  public static final class Alternative extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.Alternative)
       AlternativeOrBuilder {
@@ -12901,9 +13391,13 @@ public final class Stt {
     private Alternative() {
       words_ = java.util.Collections.emptyList();
       text_ = "";
-      startTimeMs_ = 0L;
-      endTimeMs_ = 0L;
-      confidence_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Alternative();
     }
 
     @java.lang.Override
@@ -12931,7 +13425,7 @@ public final class Stt {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 words_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.Word>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -12961,7 +13455,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12975,7 +13469,7 @@ public final class Stt {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           words_ = java.util.Collections.unmodifiableList(words_);
         }
         this.unknownFields = unknownFields.build();
@@ -12995,7 +13489,6 @@ public final class Stt {
               yandex.cloud.api.ai.stt.v3.Stt.Alternative.class, yandex.cloud.api.ai.stt.v3.Stt.Alternative.Builder.class);
     }
 
-    private int bitField0_;
     public static final int WORDS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Word> words_;
     /**
@@ -13005,6 +13498,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Word> getWordsList() {
       return words_;
     }
@@ -13015,6 +13509,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.WordOrBuilder> 
         getWordsOrBuilderList() {
       return words_;
@@ -13026,6 +13521,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
      */
+    @java.lang.Override
     public int getWordsCount() {
       return words_.size();
     }
@@ -13036,6 +13532,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.Word getWords(int index) {
       return words_.get(index);
     }
@@ -13046,6 +13543,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.WordOrBuilder getWordsOrBuilder(
         int index) {
       return words_.get(index);
@@ -13059,7 +13557,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -13078,7 +13578,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -13101,7 +13603,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 start_time_ms = 3;</code>
+     * @return The startTimeMs.
      */
+    @java.lang.Override
     public long getStartTimeMs() {
       return startTimeMs_;
     }
@@ -13114,7 +13618,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 end_time_ms = 4;</code>
+     * @return The endTimeMs.
      */
+    @java.lang.Override
     public long getEndTimeMs() {
       return endTimeMs_;
     }
@@ -13127,7 +13633,9 @@ public final class Stt {
      * </pre>
      *
      * <code>double confidence = 5;</code>
+     * @return The confidence.
      */
+    @java.lang.Override
     public double getConfidence() {
       return confidence_;
     }
@@ -13149,7 +13657,7 @@ public final class Stt {
       for (int i = 0; i < words_.size(); i++) {
         output.writeMessage(1, words_.get(i));
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
       if (startTimeMs_ != 0L) {
@@ -13158,7 +13666,7 @@ public final class Stt {
       if (endTimeMs_ != 0L) {
         output.writeInt64(4, endTimeMs_);
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         output.writeDouble(5, confidence_);
       }
       unknownFields.writeTo(output);
@@ -13174,7 +13682,7 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, words_.get(i));
       }
-      if (!getTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
       }
       if (startTimeMs_ != 0L) {
@@ -13185,7 +13693,7 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, endTimeMs_);
       }
-      if (confidence_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, confidence_);
       }
@@ -13204,21 +13712,19 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.Alternative other = (yandex.cloud.api.ai.stt.v3.Stt.Alternative) obj;
 
-      boolean result = true;
-      result = result && getWordsList()
-          .equals(other.getWordsList());
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (getStartTimeMs()
-          == other.getStartTimeMs());
-      result = result && (getEndTimeMs()
-          == other.getEndTimeMs());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getConfidence())
-          == java.lang.Double.doubleToLongBits(
-              other.getConfidence()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getWordsList()
+          .equals(other.getWordsList())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (getStartTimeMs()
+          != other.getStartTimeMs()) return false;
+      if (getEndTimeMs()
+          != other.getEndTimeMs()) return false;
+      if (java.lang.Double.doubleToLongBits(getConfidence())
+          != java.lang.Double.doubleToLongBits(
+              other.getConfidence())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13422,9 +13928,8 @@ public final class Stt {
       public yandex.cloud.api.ai.stt.v3.Stt.Alternative buildPartial() {
         yandex.cloud.api.ai.stt.v3.Stt.Alternative result = new yandex.cloud.api.ai.stt.v3.Stt.Alternative(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (wordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             words_ = java.util.Collections.unmodifiableList(words_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -13436,42 +13941,41 @@ public final class Stt {
         result.startTimeMs_ = startTimeMs_;
         result.endTimeMs_ = endTimeMs_;
         result.confidence_ = confidence_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13557,7 +14061,7 @@ public final class Stt {
       private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Word> words_ =
         java.util.Collections.emptyList();
       private void ensureWordsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           words_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.Word>(words_);
           bitField0_ |= 0x00000001;
          }
@@ -13858,7 +14362,7 @@ public final class Stt {
           wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v3.Stt.Word, yandex.cloud.api.ai.stt.v3.Stt.Word.Builder, yandex.cloud.api.ai.stt.v3.Stt.WordOrBuilder>(
                   words_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           words_ = null;
@@ -13873,6 +14377,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -13892,6 +14397,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -13912,6 +14418,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -13929,6 +14437,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -13942,6 +14451,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -13962,7 +14473,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 start_time_ms = 3;</code>
+       * @return The startTimeMs.
        */
+      @java.lang.Override
       public long getStartTimeMs() {
         return startTimeMs_;
       }
@@ -13972,6 +14485,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 start_time_ms = 3;</code>
+       * @param value The startTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setStartTimeMs(long value) {
         
@@ -13985,6 +14500,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 start_time_ms = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStartTimeMs() {
         
@@ -14000,7 +14516,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 end_time_ms = 4;</code>
+       * @return The endTimeMs.
        */
+      @java.lang.Override
       public long getEndTimeMs() {
         return endTimeMs_;
       }
@@ -14010,6 +14528,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 end_time_ms = 4;</code>
+       * @param value The endTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setEndTimeMs(long value) {
         
@@ -14023,6 +14543,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 end_time_ms = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEndTimeMs() {
         
@@ -14038,7 +14559,9 @@ public final class Stt {
        * </pre>
        *
        * <code>double confidence = 5;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public double getConfidence() {
         return confidence_;
       }
@@ -14048,6 +14571,8 @@ public final class Stt {
        * </pre>
        *
        * <code>double confidence = 5;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
        */
       public Builder setConfidence(double value) {
         
@@ -14061,6 +14586,7 @@ public final class Stt {
        * </pre>
        *
        * <code>double confidence = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConfidence() {
         
@@ -14071,7 +14597,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14131,6 +14657,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 time_ms = 2;</code>
+     * @return The timeMs.
      */
     long getTimeMs();
   }
@@ -14141,7 +14668,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.EouUpdate}
    */
-  public  static final class EouUpdate extends
+  public static final class EouUpdate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.EouUpdate)
       EouUpdateOrBuilder {
@@ -14151,7 +14678,13 @@ public final class Stt {
       super(builder);
     }
     private EouUpdate() {
-      timeMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EouUpdate();
     }
 
     @java.lang.Override
@@ -14167,7 +14700,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14184,7 +14716,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14223,7 +14755,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 time_ms = 2;</code>
+     * @return The timeMs.
      */
+    @java.lang.Override
     public long getTimeMs() {
       return timeMs_;
     }
@@ -14273,11 +14807,10 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.EouUpdate other = (yandex.cloud.api.ai.stt.v3.Stt.EouUpdate) obj;
 
-      boolean result = true;
-      result = result && (getTimeMs()
-          == other.getTimeMs());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getTimeMs()
+          != other.getTimeMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14462,35 +14995,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14543,7 +15076,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 time_ms = 2;</code>
+       * @return The timeMs.
        */
+      @java.lang.Override
       public long getTimeMs() {
         return timeMs_;
       }
@@ -14553,6 +15088,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 time_ms = 2;</code>
+       * @param value The timeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setTimeMs(long value) {
         
@@ -14566,6 +15103,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 time_ms = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTimeMs() {
         
@@ -14576,7 +15114,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14680,6 +15218,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string channel_tag = 2;</code>
+     * @return The channelTag.
      */
     java.lang.String getChannelTag();
     /**
@@ -14688,6 +15227,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string channel_tag = 2;</code>
+     * @return The bytes for channelTag.
      */
     com.google.protobuf.ByteString
         getChannelTagBytes();
@@ -14699,7 +15239,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.AlternativeUpdate}
    */
-  public  static final class AlternativeUpdate extends
+  public static final class AlternativeUpdate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.AlternativeUpdate)
       AlternativeUpdateOrBuilder {
@@ -14711,6 +15251,13 @@ public final class Stt {
     private AlternativeUpdate() {
       alternatives_ = java.util.Collections.emptyList();
       channelTag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AlternativeUpdate();
     }
 
     @java.lang.Override
@@ -14738,7 +15285,7 @@ public final class Stt {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.Alternative>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -14753,7 +15300,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14767,7 +15314,7 @@ public final class Stt {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
         }
         this.unknownFields = unknownFields.build();
@@ -14787,7 +15334,6 @@ public final class Stt {
               yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate.class, yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ALTERNATIVES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Alternative> alternatives_;
     /**
@@ -14797,6 +15343,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Alternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Alternative> getAlternativesList() {
       return alternatives_;
     }
@@ -14807,6 +15354,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Alternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.AlternativeOrBuilder> 
         getAlternativesOrBuilderList() {
       return alternatives_;
@@ -14818,6 +15366,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Alternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public int getAlternativesCount() {
       return alternatives_.size();
     }
@@ -14828,6 +15377,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Alternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.Alternative getAlternatives(int index) {
       return alternatives_.get(index);
     }
@@ -14838,6 +15388,7 @@ public final class Stt {
      *
      * <code>repeated .speechkit.stt.v3.Alternative alternatives = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeOrBuilder getAlternativesOrBuilder(
         int index) {
       return alternatives_.get(index);
@@ -14851,7 +15402,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string channel_tag = 2;</code>
+     * @return The channelTag.
      */
+    @java.lang.Override
     public java.lang.String getChannelTag() {
       java.lang.Object ref = channelTag_;
       if (ref instanceof java.lang.String) {
@@ -14870,7 +15423,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string channel_tag = 2;</code>
+     * @return The bytes for channelTag.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getChannelTagBytes() {
       java.lang.Object ref = channelTag_;
@@ -14902,7 +15457,7 @@ public final class Stt {
       for (int i = 0; i < alternatives_.size(); i++) {
         output.writeMessage(1, alternatives_.get(i));
       }
-      if (!getChannelTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelTag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, channelTag_);
       }
       unknownFields.writeTo(output);
@@ -14918,7 +15473,7 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, alternatives_.get(i));
       }
-      if (!getChannelTagBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelTag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, channelTag_);
       }
       size += unknownFields.getSerializedSize();
@@ -14936,13 +15491,12 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate other = (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) obj;
 
-      boolean result = true;
-      result = result && getAlternativesList()
-          .equals(other.getAlternativesList());
-      result = result && getChannelTag()
-          .equals(other.getChannelTag());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getAlternativesList()
+          .equals(other.getAlternativesList())) return false;
+      if (!getChannelTag()
+          .equals(other.getChannelTag())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15131,9 +15685,8 @@ public final class Stt {
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate buildPartial() {
         yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate result = new yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (alternativesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -15142,42 +15695,41 @@ public final class Stt {
           result.alternatives_ = alternativesBuilder_.build();
         }
         result.channelTag_ = channelTag_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15254,7 +15806,7 @@ public final class Stt {
       private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Alternative> alternatives_ =
         java.util.Collections.emptyList();
       private void ensureAlternativesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.Alternative>(alternatives_);
           bitField0_ |= 0x00000001;
          }
@@ -15555,7 +16107,7 @@ public final class Stt {
           alternativesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.stt.v3.Stt.Alternative, yandex.cloud.api.ai.stt.v3.Stt.Alternative.Builder, yandex.cloud.api.ai.stt.v3.Stt.AlternativeOrBuilder>(
                   alternatives_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           alternatives_ = null;
@@ -15570,6 +16122,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string channel_tag = 2;</code>
+       * @return The channelTag.
        */
       public java.lang.String getChannelTag() {
         java.lang.Object ref = channelTag_;
@@ -15589,6 +16142,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string channel_tag = 2;</code>
+       * @return The bytes for channelTag.
        */
       public com.google.protobuf.ByteString
           getChannelTagBytes() {
@@ -15609,6 +16163,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string channel_tag = 2;</code>
+       * @param value The channelTag to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelTag(
           java.lang.String value) {
@@ -15626,6 +16182,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string channel_tag = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannelTag() {
         
@@ -15639,6 +16196,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string channel_tag = 2;</code>
+       * @param value The bytes for channelTag to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelTagBytes(
           com.google.protobuf.ByteString value) {
@@ -15654,7 +16213,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15714,6 +16273,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 received_data_ms = 1;</code>
+     * @return The receivedDataMs.
      */
     long getReceivedDataMs();
 
@@ -15723,6 +16283,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 reset_time_ms = 2;</code>
+     * @return The resetTimeMs.
      */
     long getResetTimeMs();
 
@@ -15733,6 +16294,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 partial_time_ms = 3;</code>
+     * @return The partialTimeMs.
      */
     long getPartialTimeMs();
 
@@ -15743,6 +16305,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 final_time_ms = 4;</code>
+     * @return The finalTimeMs.
      */
     long getFinalTimeMs();
 
@@ -15752,6 +16315,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 final_index = 5;</code>
+     * @return The finalIndex.
      */
     long getFinalIndex();
 
@@ -15763,6 +16327,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 eou_time_ms = 6;</code>
+     * @return The eouTimeMs.
      */
     long getEouTimeMs();
   }
@@ -15773,7 +16338,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.AudioCursors}
    */
-  public  static final class AudioCursors extends
+  public static final class AudioCursors extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.AudioCursors)
       AudioCursorsOrBuilder {
@@ -15783,12 +16348,13 @@ public final class Stt {
       super(builder);
     }
     private AudioCursors() {
-      receivedDataMs_ = 0L;
-      resetTimeMs_ = 0L;
-      partialTimeMs_ = 0L;
-      finalTimeMs_ = 0L;
-      finalIndex_ = 0L;
-      eouTimeMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioCursors();
     }
 
     @java.lang.Override
@@ -15804,7 +16370,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15846,7 +16411,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15885,7 +16450,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 received_data_ms = 1;</code>
+     * @return The receivedDataMs.
      */
+    @java.lang.Override
     public long getReceivedDataMs() {
       return receivedDataMs_;
     }
@@ -15898,7 +16465,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 reset_time_ms = 2;</code>
+     * @return The resetTimeMs.
      */
+    @java.lang.Override
     public long getResetTimeMs() {
       return resetTimeMs_;
     }
@@ -15912,7 +16481,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 partial_time_ms = 3;</code>
+     * @return The partialTimeMs.
      */
+    @java.lang.Override
     public long getPartialTimeMs() {
       return partialTimeMs_;
     }
@@ -15926,7 +16497,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 final_time_ms = 4;</code>
+     * @return The finalTimeMs.
      */
+    @java.lang.Override
     public long getFinalTimeMs() {
       return finalTimeMs_;
     }
@@ -15939,7 +16512,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 final_index = 5;</code>
+     * @return The finalIndex.
      */
+    @java.lang.Override
     public long getFinalIndex() {
       return finalIndex_;
     }
@@ -15954,7 +16529,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 eou_time_ms = 6;</code>
+     * @return The eouTimeMs.
      */
+    @java.lang.Override
     public long getEouTimeMs() {
       return eouTimeMs_;
     }
@@ -16039,21 +16616,20 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.AudioCursors other = (yandex.cloud.api.ai.stt.v3.Stt.AudioCursors) obj;
 
-      boolean result = true;
-      result = result && (getReceivedDataMs()
-          == other.getReceivedDataMs());
-      result = result && (getResetTimeMs()
-          == other.getResetTimeMs());
-      result = result && (getPartialTimeMs()
-          == other.getPartialTimeMs());
-      result = result && (getFinalTimeMs()
-          == other.getFinalTimeMs());
-      result = result && (getFinalIndex()
-          == other.getFinalIndex());
-      result = result && (getEouTimeMs()
-          == other.getEouTimeMs());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getReceivedDataMs()
+          != other.getReceivedDataMs()) return false;
+      if (getResetTimeMs()
+          != other.getResetTimeMs()) return false;
+      if (getPartialTimeMs()
+          != other.getPartialTimeMs()) return false;
+      if (getFinalTimeMs()
+          != other.getFinalTimeMs()) return false;
+      if (getFinalIndex()
+          != other.getFinalIndex()) return false;
+      if (getEouTimeMs()
+          != other.getEouTimeMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16268,35 +16844,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16364,7 +16940,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 received_data_ms = 1;</code>
+       * @return The receivedDataMs.
        */
+      @java.lang.Override
       public long getReceivedDataMs() {
         return receivedDataMs_;
       }
@@ -16374,6 +16952,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 received_data_ms = 1;</code>
+       * @param value The receivedDataMs to set.
+       * @return This builder for chaining.
        */
       public Builder setReceivedDataMs(long value) {
         
@@ -16387,6 +16967,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 received_data_ms = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearReceivedDataMs() {
         
@@ -16402,7 +16983,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 reset_time_ms = 2;</code>
+       * @return The resetTimeMs.
        */
+      @java.lang.Override
       public long getResetTimeMs() {
         return resetTimeMs_;
       }
@@ -16412,6 +16995,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 reset_time_ms = 2;</code>
+       * @param value The resetTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setResetTimeMs(long value) {
         
@@ -16425,6 +17010,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 reset_time_ms = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResetTimeMs() {
         
@@ -16441,7 +17027,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 partial_time_ms = 3;</code>
+       * @return The partialTimeMs.
        */
+      @java.lang.Override
       public long getPartialTimeMs() {
         return partialTimeMs_;
       }
@@ -16452,6 +17040,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 partial_time_ms = 3;</code>
+       * @param value The partialTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setPartialTimeMs(long value) {
         
@@ -16466,6 +17056,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 partial_time_ms = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPartialTimeMs() {
         
@@ -16482,7 +17073,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_time_ms = 4;</code>
+       * @return The finalTimeMs.
        */
+      @java.lang.Override
       public long getFinalTimeMs() {
         return finalTimeMs_;
       }
@@ -16493,6 +17086,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_time_ms = 4;</code>
+       * @param value The finalTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setFinalTimeMs(long value) {
         
@@ -16507,6 +17102,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_time_ms = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFinalTimeMs() {
         
@@ -16522,7 +17118,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_index = 5;</code>
+       * @return The finalIndex.
        */
+      @java.lang.Override
       public long getFinalIndex() {
         return finalIndex_;
       }
@@ -16532,6 +17130,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_index = 5;</code>
+       * @param value The finalIndex to set.
+       * @return This builder for chaining.
        */
       public Builder setFinalIndex(long value) {
         
@@ -16545,6 +17145,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_index = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFinalIndex() {
         
@@ -16562,7 +17163,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 eou_time_ms = 6;</code>
+       * @return The eouTimeMs.
        */
+      @java.lang.Override
       public long getEouTimeMs() {
         return eouTimeMs_;
       }
@@ -16574,6 +17177,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 eou_time_ms = 6;</code>
+       * @param value The eouTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setEouTimeMs(long value) {
         
@@ -16589,6 +17194,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 eou_time_ms = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEouTimeMs() {
         
@@ -16599,7 +17205,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16659,6 +17265,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 final_index = 1;</code>
+     * @return The finalIndex.
      */
     long getFinalIndex();
 
@@ -16668,6 +17275,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
+     * @return Whether the normalizedText field is set.
      */
     boolean hasNormalizedText();
     /**
@@ -16676,6 +17284,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
+     * @return The normalizedText.
      */
     yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getNormalizedText();
     /**
@@ -16696,7 +17305,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.FinalRefinement}
    */
-  public  static final class FinalRefinement extends
+  public static final class FinalRefinement extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.FinalRefinement)
       FinalRefinementOrBuilder {
@@ -16706,7 +17315,13 @@ public final class Stt {
       super(builder);
     }
     private FinalRefinement() {
-      finalIndex_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FinalRefinement();
     }
 
     @java.lang.Override
@@ -16722,7 +17337,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16753,7 +17367,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16787,7 +17401,8 @@ public final class Stt {
     private int typeCase_ = 0;
     private java.lang.Object type_;
     public enum TypeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       NORMALIZED_TEXT(2),
       TYPE_NOT_SET(0);
       private final int value;
@@ -16795,6 +17410,8 @@ public final class Stt {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -16828,7 +17445,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 final_index = 1;</code>
+     * @return The finalIndex.
      */
+    @java.lang.Override
     public long getFinalIndex() {
       return finalIndex_;
     }
@@ -16840,7 +17459,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
+     * @return Whether the normalizedText field is set.
      */
+    @java.lang.Override
     public boolean hasNormalizedText() {
       return typeCase_ == 2;
     }
@@ -16850,7 +17471,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
+     * @return The normalizedText.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getNormalizedText() {
       if (typeCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) type_;
@@ -16864,6 +17487,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder getNormalizedTextOrBuilder() {
       if (typeCase_ == 2) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) type_;
@@ -16923,22 +17547,19 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement other = (yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement) obj;
 
-      boolean result = true;
-      result = result && (getFinalIndex()
-          == other.getFinalIndex());
-      result = result && getTypeCase().equals(
-          other.getTypeCase());
-      if (!result) return false;
+      if (getFinalIndex()
+          != other.getFinalIndex()) return false;
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
       switch (typeCase_) {
         case 2:
-          result = result && getNormalizedText()
-              .equals(other.getNormalizedText());
+          if (!getNormalizedText()
+              .equals(other.getNormalizedText())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17141,35 +17762,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17246,7 +17867,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_index = 1;</code>
+       * @return The finalIndex.
        */
+      @java.lang.Override
       public long getFinalIndex() {
         return finalIndex_;
       }
@@ -17256,6 +17879,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_index = 1;</code>
+       * @param value The finalIndex to set.
+       * @return This builder for chaining.
        */
       public Builder setFinalIndex(long value) {
         
@@ -17269,6 +17894,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 final_index = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFinalIndex() {
         
@@ -17285,7 +17911,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
+       * @return Whether the normalizedText field is set.
        */
+      @java.lang.Override
       public boolean hasNormalizedText() {
         return typeCase_ == 2;
       }
@@ -17295,7 +17923,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
+       * @return The normalizedText.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getNormalizedText() {
         if (normalizedTextBuilder_ == null) {
           if (typeCase_ == 2) {
@@ -17413,6 +18043,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate normalized_text = 2;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder getNormalizedTextOrBuilder() {
         if ((typeCase_ == 2) && (normalizedTextBuilder_ != null)) {
           return normalizedTextBuilder_.getMessageOrBuilder();
@@ -17451,7 +18082,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17511,6 +18142,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+     * @return The enum numeric value on the wire for codeType.
      */
     int getCodeTypeValue();
     /**
@@ -17519,6 +18151,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+     * @return The codeType.
      */
     yandex.cloud.api.ai.stt.v3.Stt.CodeType getCodeType();
 
@@ -17528,6 +18161,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return The message.
      */
     java.lang.String getMessage();
     /**
@@ -17536,6 +18170,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return The bytes for message.
      */
     com.google.protobuf.ByteString
         getMessageBytes();
@@ -17547,7 +18182,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.StatusCode}
    */
-  public  static final class StatusCode extends
+  public static final class StatusCode extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.StatusCode)
       StatusCodeOrBuilder {
@@ -17559,6 +18194,13 @@ public final class Stt {
     private StatusCode() {
       codeType_ = 0;
       message_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StatusCode();
     }
 
     @java.lang.Override
@@ -17574,7 +18216,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17598,7 +18239,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17637,8 +18278,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+     * @return The enum numeric value on the wire for codeType.
      */
-    public int getCodeTypeValue() {
+    @java.lang.Override public int getCodeTypeValue() {
       return codeType_;
     }
     /**
@@ -17647,8 +18289,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+     * @return The codeType.
      */
-    public yandex.cloud.api.ai.stt.v3.Stt.CodeType getCodeType() {
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.CodeType getCodeType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.ai.stt.v3.Stt.CodeType result = yandex.cloud.api.ai.stt.v3.Stt.CodeType.valueOf(codeType_);
       return result == null ? yandex.cloud.api.ai.stt.v3.Stt.CodeType.UNRECOGNIZED : result;
@@ -17662,7 +18305,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return The message.
      */
+    @java.lang.Override
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
@@ -17681,7 +18326,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string message = 2;</code>
+     * @return The bytes for message.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMessageBytes() {
       java.lang.Object ref = message_;
@@ -17713,7 +18360,7 @@ public final class Stt {
       if (codeType_ != yandex.cloud.api.ai.stt.v3.Stt.CodeType.CODE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, codeType_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
       }
       unknownFields.writeTo(output);
@@ -17729,7 +18376,7 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, codeType_);
       }
-      if (!getMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       size += unknownFields.getSerializedSize();
@@ -17747,12 +18394,11 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.StatusCode other = (yandex.cloud.api.ai.stt.v3.Stt.StatusCode) obj;
 
-      boolean result = true;
-      result = result && codeType_ == other.codeType_;
-      result = result && getMessage()
-          .equals(other.getMessage());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (codeType_ != other.codeType_) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17941,35 +18587,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18026,8 +18672,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+       * @return The enum numeric value on the wire for codeType.
        */
-      public int getCodeTypeValue() {
+      @java.lang.Override public int getCodeTypeValue() {
         return codeType_;
       }
       /**
@@ -18036,8 +18683,11 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+       * @param value The enum numeric value on the wire for codeType to set.
+       * @return This builder for chaining.
        */
       public Builder setCodeTypeValue(int value) {
+        
         codeType_ = value;
         onChanged();
         return this;
@@ -18048,7 +18698,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+       * @return The codeType.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.CodeType getCodeType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.ai.stt.v3.Stt.CodeType result = yandex.cloud.api.ai.stt.v3.Stt.CodeType.valueOf(codeType_);
@@ -18060,6 +18712,8 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+       * @param value The codeType to set.
+       * @return This builder for chaining.
        */
       public Builder setCodeType(yandex.cloud.api.ai.stt.v3.Stt.CodeType value) {
         if (value == null) {
@@ -18076,6 +18730,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.CodeType code_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCodeType() {
         
@@ -18091,6 +18746,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string message = 2;</code>
+       * @return The message.
        */
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
@@ -18110,6 +18766,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string message = 2;</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
           getMessageBytes() {
@@ -18130,6 +18787,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessage(
           java.lang.String value) {
@@ -18147,6 +18806,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string message = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMessage() {
         
@@ -18160,6 +18820,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -18175,7 +18837,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18235,6 +18897,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The uuid.
      */
     java.lang.String getUuid();
     /**
@@ -18243,6 +18906,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The bytes for uuid.
      */
     com.google.protobuf.ByteString
         getUuidBytes();
@@ -18253,6 +18917,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string user_request_id = 2;</code>
+     * @return The userRequestId.
      */
     java.lang.String getUserRequestId();
     /**
@@ -18261,6 +18926,7 @@ public final class Stt {
      * </pre>
      *
      * <code>string user_request_id = 2;</code>
+     * @return The bytes for userRequestId.
      */
     com.google.protobuf.ByteString
         getUserRequestIdBytes();
@@ -18272,7 +18938,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.SessionUuid}
    */
-  public  static final class SessionUuid extends
+  public static final class SessionUuid extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SessionUuid)
       SessionUuidOrBuilder {
@@ -18284,6 +18950,13 @@ public final class Stt {
     private SessionUuid() {
       uuid_ = "";
       userRequestId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SessionUuid();
     }
 
     @java.lang.Override
@@ -18299,7 +18972,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -18323,7 +18995,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18362,7 +19034,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The uuid.
      */
+    @java.lang.Override
     public java.lang.String getUuid() {
       java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
@@ -18381,7 +19055,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string uuid = 1;</code>
+     * @return The bytes for uuid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
       java.lang.Object ref = uuid_;
@@ -18404,7 +19080,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string user_request_id = 2;</code>
+     * @return The userRequestId.
      */
+    @java.lang.Override
     public java.lang.String getUserRequestId() {
       java.lang.Object ref = userRequestId_;
       if (ref instanceof java.lang.String) {
@@ -18423,7 +19101,9 @@ public final class Stt {
      * </pre>
      *
      * <code>string user_request_id = 2;</code>
+     * @return The bytes for userRequestId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUserRequestIdBytes() {
       java.lang.Object ref = userRequestId_;
@@ -18452,10 +19132,10 @@ public final class Stt {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
       }
-      if (!getUserRequestIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userRequestId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userRequestId_);
       }
       unknownFields.writeTo(output);
@@ -18467,10 +19147,10 @@ public final class Stt {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
       }
-      if (!getUserRequestIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userRequestId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userRequestId_);
       }
       size += unknownFields.getSerializedSize();
@@ -18488,13 +19168,12 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.SessionUuid other = (yandex.cloud.api.ai.stt.v3.Stt.SessionUuid) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && getUserRequestId()
-          .equals(other.getUserRequestId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getUserRequestId()
+          .equals(other.getUserRequestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18683,35 +19362,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18769,6 +19448,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return The uuid.
        */
       public java.lang.String getUuid() {
         java.lang.Object ref = uuid_;
@@ -18788,6 +19468,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return The bytes for uuid.
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
@@ -18808,6 +19489,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuid(
           java.lang.String value) {
@@ -18825,6 +19508,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUuid() {
         
@@ -18838,6 +19522,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string uuid = 1;</code>
+       * @param value The bytes for uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -18858,6 +19544,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string user_request_id = 2;</code>
+       * @return The userRequestId.
        */
       public java.lang.String getUserRequestId() {
         java.lang.Object ref = userRequestId_;
@@ -18877,6 +19564,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string user_request_id = 2;</code>
+       * @return The bytes for userRequestId.
        */
       public com.google.protobuf.ByteString
           getUserRequestIdBytes() {
@@ -18897,6 +19585,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string user_request_id = 2;</code>
+       * @param value The userRequestId to set.
+       * @return This builder for chaining.
        */
       public Builder setUserRequestId(
           java.lang.String value) {
@@ -18914,6 +19604,7 @@ public final class Stt {
        * </pre>
        *
        * <code>string user_request_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUserRequestId() {
         
@@ -18927,6 +19618,8 @@ public final class Stt {
        * </pre>
        *
        * <code>string user_request_id = 2;</code>
+       * @param value The bytes for userRequestId to set.
+       * @return This builder for chaining.
        */
       public Builder setUserRequestIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18942,7 +19635,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19002,6 +19695,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
+     * @return Whether the sessionUuid field is set.
      */
     boolean hasSessionUuid();
     /**
@@ -19010,6 +19704,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
+     * @return The sessionUuid.
      */
     yandex.cloud.api.ai.stt.v3.Stt.SessionUuid getSessionUuid();
     /**
@@ -19027,6 +19722,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
+     * @return Whether the audioCursors field is set.
      */
     boolean hasAudioCursors();
     /**
@@ -19035,6 +19731,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
+     * @return The audioCursors.
      */
     yandex.cloud.api.ai.stt.v3.Stt.AudioCursors getAudioCursors();
     /**
@@ -19052,6 +19749,7 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 response_wall_time_ms = 3;</code>
+     * @return The responseWallTimeMs.
      */
     long getResponseWallTimeMs();
 
@@ -19062,6 +19760,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
+     * @return Whether the partial field is set.
      */
     boolean hasPartial();
     /**
@@ -19071,6 +19770,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
+     * @return The partial.
      */
     yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getPartial();
     /**
@@ -19089,6 +19789,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
+     * @return Whether the final field is set.
      */
     boolean hasFinal();
     /**
@@ -19097,6 +19798,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
+     * @return The final.
      */
     yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getFinal();
     /**
@@ -19115,6 +19817,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
+     * @return Whether the eouUpdate field is set.
      */
     boolean hasEouUpdate();
     /**
@@ -19124,6 +19827,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
+     * @return The eouUpdate.
      */
     yandex.cloud.api.ai.stt.v3.Stt.EouUpdate getEouUpdate();
     /**
@@ -19143,6 +19847,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
+     * @return Whether the finalRefinement field is set.
      */
     boolean hasFinalRefinement();
     /**
@@ -19152,6 +19857,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
+     * @return The finalRefinement.
      */
     yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement getFinalRefinement();
     /**
@@ -19170,6 +19876,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
+     * @return Whether the statusCode field is set.
      */
     boolean hasStatusCode();
     /**
@@ -19178,6 +19885,7 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
+     * @return The statusCode.
      */
     yandex.cloud.api.ai.stt.v3.Stt.StatusCode getStatusCode();
     /**
@@ -19201,7 +19909,7 @@ public final class Stt {
    *
    * Protobuf type {@code speechkit.stt.v3.StreamingResponse}
    */
-  public  static final class StreamingResponse extends
+  public static final class StreamingResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:speechkit.stt.v3.StreamingResponse)
       StreamingResponseOrBuilder {
@@ -19211,7 +19919,13 @@ public final class Stt {
       super(builder);
     }
     private StreamingResponse() {
-      responseWallTimeMs_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamingResponse();
     }
 
     @java.lang.Override
@@ -19227,7 +19941,6 @@ public final class Stt {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -19340,7 +20053,7 @@ public final class Stt {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19374,7 +20087,8 @@ public final class Stt {
     private int eventCase_ = 0;
     private java.lang.Object event_;
     public enum EventCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PARTIAL(4),
       FINAL(5),
       EOU_UPDATE(6),
@@ -19386,6 +20100,8 @@ public final class Stt {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -19423,7 +20139,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
+     * @return Whether the sessionUuid field is set.
      */
+    @java.lang.Override
     public boolean hasSessionUuid() {
       return sessionUuid_ != null;
     }
@@ -19433,7 +20151,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
+     * @return The sessionUuid.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.SessionUuid getSessionUuid() {
       return sessionUuid_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SessionUuid.getDefaultInstance() : sessionUuid_;
     }
@@ -19444,6 +20164,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.SessionUuidOrBuilder getSessionUuidOrBuilder() {
       return getSessionUuid();
     }
@@ -19456,7 +20177,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
+     * @return Whether the audioCursors field is set.
      */
+    @java.lang.Override
     public boolean hasAudioCursors() {
       return audioCursors_ != null;
     }
@@ -19466,7 +20189,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
+     * @return The audioCursors.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AudioCursors getAudioCursors() {
       return audioCursors_ == null ? yandex.cloud.api.ai.stt.v3.Stt.AudioCursors.getDefaultInstance() : audioCursors_;
     }
@@ -19477,6 +20202,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AudioCursorsOrBuilder getAudioCursorsOrBuilder() {
       return getAudioCursors();
     }
@@ -19489,7 +20215,9 @@ public final class Stt {
      * </pre>
      *
      * <code>int64 response_wall_time_ms = 3;</code>
+     * @return The responseWallTimeMs.
      */
+    @java.lang.Override
     public long getResponseWallTimeMs() {
       return responseWallTimeMs_;
     }
@@ -19502,7 +20230,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
+     * @return Whether the partial field is set.
      */
+    @java.lang.Override
     public boolean hasPartial() {
       return eventCase_ == 4;
     }
@@ -19513,7 +20243,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
+     * @return The partial.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getPartial() {
       if (eventCase_ == 4) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) event_;
@@ -19528,6 +20260,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder getPartialOrBuilder() {
       if (eventCase_ == 4) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) event_;
@@ -19542,7 +20275,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
+     * @return Whether the final field is set.
      */
+    @java.lang.Override
     public boolean hasFinal() {
       return eventCase_ == 5;
     }
@@ -19552,7 +20287,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
+     * @return The final.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getFinal() {
       if (eventCase_ == 5) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) event_;
@@ -19566,6 +20303,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder getFinalOrBuilder() {
       if (eventCase_ == 5) {
          return (yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate) event_;
@@ -19581,7 +20319,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
+     * @return Whether the eouUpdate field is set.
      */
+    @java.lang.Override
     public boolean hasEouUpdate() {
       return eventCase_ == 6;
     }
@@ -19592,7 +20332,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
+     * @return The eouUpdate.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.EouUpdate getEouUpdate() {
       if (eventCase_ == 6) {
          return (yandex.cloud.api.ai.stt.v3.Stt.EouUpdate) event_;
@@ -19607,6 +20349,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.EouUpdateOrBuilder getEouUpdateOrBuilder() {
       if (eventCase_ == 6) {
          return (yandex.cloud.api.ai.stt.v3.Stt.EouUpdate) event_;
@@ -19622,7 +20365,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
+     * @return Whether the finalRefinement field is set.
      */
+    @java.lang.Override
     public boolean hasFinalRefinement() {
       return eventCase_ == 7;
     }
@@ -19633,7 +20378,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
+     * @return The finalRefinement.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement getFinalRefinement() {
       if (eventCase_ == 7) {
          return (yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement) event_;
@@ -19648,6 +20395,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.FinalRefinementOrBuilder getFinalRefinementOrBuilder() {
       if (eventCase_ == 7) {
          return (yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement) event_;
@@ -19662,7 +20410,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
+     * @return Whether the statusCode field is set.
      */
+    @java.lang.Override
     public boolean hasStatusCode() {
       return eventCase_ == 8;
     }
@@ -19672,7 +20422,9 @@ public final class Stt {
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
+     * @return The statusCode.
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.StatusCode getStatusCode() {
       if (eventCase_ == 8) {
          return (yandex.cloud.api.ai.stt.v3.Stt.StatusCode) event_;
@@ -19686,6 +20438,7 @@ public final class Stt {
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.StatusCodeOrBuilder getStatusCodeOrBuilder() {
       if (eventCase_ == 8) {
          return (yandex.cloud.api.ai.stt.v3.Stt.StatusCode) event_;
@@ -19787,48 +20540,45 @@ public final class Stt {
       }
       yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse other = (yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse) obj;
 
-      boolean result = true;
-      result = result && (hasSessionUuid() == other.hasSessionUuid());
+      if (hasSessionUuid() != other.hasSessionUuid()) return false;
       if (hasSessionUuid()) {
-        result = result && getSessionUuid()
-            .equals(other.getSessionUuid());
+        if (!getSessionUuid()
+            .equals(other.getSessionUuid())) return false;
       }
-      result = result && (hasAudioCursors() == other.hasAudioCursors());
+      if (hasAudioCursors() != other.hasAudioCursors()) return false;
       if (hasAudioCursors()) {
-        result = result && getAudioCursors()
-            .equals(other.getAudioCursors());
+        if (!getAudioCursors()
+            .equals(other.getAudioCursors())) return false;
       }
-      result = result && (getResponseWallTimeMs()
-          == other.getResponseWallTimeMs());
-      result = result && getEventCase().equals(
-          other.getEventCase());
-      if (!result) return false;
+      if (getResponseWallTimeMs()
+          != other.getResponseWallTimeMs()) return false;
+      if (!getEventCase().equals(other.getEventCase())) return false;
       switch (eventCase_) {
         case 4:
-          result = result && getPartial()
-              .equals(other.getPartial());
+          if (!getPartial()
+              .equals(other.getPartial())) return false;
           break;
         case 5:
-          result = result && getFinal()
-              .equals(other.getFinal());
+          if (!getFinal()
+              .equals(other.getFinal())) return false;
           break;
         case 6:
-          result = result && getEouUpdate()
-              .equals(other.getEouUpdate());
+          if (!getEouUpdate()
+              .equals(other.getEouUpdate())) return false;
           break;
         case 7:
-          result = result && getFinalRefinement()
-              .equals(other.getFinalRefinement());
+          if (!getFinalRefinement()
+              .equals(other.getFinalRefinement())) return false;
           break;
         case 8:
-          result = result && getStatusCode()
-              .equals(other.getStatusCode());
+          if (!getStatusCode()
+              .equals(other.getStatusCode())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20108,35 +20858,35 @@ public final class Stt {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20228,7 +20978,7 @@ public final class Stt {
       }
 
 
-      private yandex.cloud.api.ai.stt.v3.Stt.SessionUuid sessionUuid_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.SessionUuid sessionUuid_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.SessionUuid, yandex.cloud.api.ai.stt.v3.Stt.SessionUuid.Builder, yandex.cloud.api.ai.stt.v3.Stt.SessionUuidOrBuilder> sessionUuidBuilder_;
       /**
@@ -20237,6 +20987,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
+       * @return Whether the sessionUuid field is set.
        */
       public boolean hasSessionUuid() {
         return sessionUuidBuilder_ != null || sessionUuid_ != null;
@@ -20247,6 +20998,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.SessionUuid session_uuid = 1;</code>
+       * @return The sessionUuid.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.SessionUuid getSessionUuid() {
         if (sessionUuidBuilder_ == null) {
@@ -20381,7 +21133,7 @@ public final class Stt {
         return sessionUuidBuilder_;
       }
 
-      private yandex.cloud.api.ai.stt.v3.Stt.AudioCursors audioCursors_ = null;
+      private yandex.cloud.api.ai.stt.v3.Stt.AudioCursors audioCursors_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.stt.v3.Stt.AudioCursors, yandex.cloud.api.ai.stt.v3.Stt.AudioCursors.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioCursorsOrBuilder> audioCursorsBuilder_;
       /**
@@ -20390,6 +21142,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
+       * @return Whether the audioCursors field is set.
        */
       public boolean hasAudioCursors() {
         return audioCursorsBuilder_ != null || audioCursors_ != null;
@@ -20400,6 +21153,7 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioCursors audio_cursors = 2;</code>
+       * @return The audioCursors.
        */
       public yandex.cloud.api.ai.stt.v3.Stt.AudioCursors getAudioCursors() {
         if (audioCursorsBuilder_ == null) {
@@ -20541,7 +21295,9 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 response_wall_time_ms = 3;</code>
+       * @return The responseWallTimeMs.
        */
+      @java.lang.Override
       public long getResponseWallTimeMs() {
         return responseWallTimeMs_;
       }
@@ -20551,6 +21307,8 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 response_wall_time_ms = 3;</code>
+       * @param value The responseWallTimeMs to set.
+       * @return This builder for chaining.
        */
       public Builder setResponseWallTimeMs(long value) {
         
@@ -20564,6 +21322,7 @@ public final class Stt {
        * </pre>
        *
        * <code>int64 response_wall_time_ms = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResponseWallTimeMs() {
         
@@ -20581,7 +21340,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
+       * @return Whether the partial field is set.
        */
+      @java.lang.Override
       public boolean hasPartial() {
         return eventCase_ == 4;
       }
@@ -20592,7 +21353,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
+       * @return The partial.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getPartial() {
         if (partialBuilder_ == null) {
           if (eventCase_ == 4) {
@@ -20716,6 +21479,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder getPartialOrBuilder() {
         if ((eventCase_ == 4) && (partialBuilder_ != null)) {
           return partialBuilder_.getMessageOrBuilder();
@@ -20761,7 +21525,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
+       * @return Whether the final field is set.
        */
+      @java.lang.Override
       public boolean hasFinal() {
         return eventCase_ == 5;
       }
@@ -20771,7 +21537,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
+       * @return The final.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getFinal() {
         if (finalBuilder_ == null) {
           if (eventCase_ == 5) {
@@ -20889,6 +21657,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder getFinalOrBuilder() {
         if ((eventCase_ == 5) && (finalBuilder_ != null)) {
           return finalBuilder_.getMessageOrBuilder();
@@ -20934,7 +21703,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
+       * @return Whether the eouUpdate field is set.
        */
+      @java.lang.Override
       public boolean hasEouUpdate() {
         return eventCase_ == 6;
       }
@@ -20945,7 +21716,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
+       * @return The eouUpdate.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.EouUpdate getEouUpdate() {
         if (eouUpdateBuilder_ == null) {
           if (eventCase_ == 6) {
@@ -21069,6 +21842,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.EouUpdateOrBuilder getEouUpdateOrBuilder() {
         if ((eventCase_ == 6) && (eouUpdateBuilder_ != null)) {
           return eouUpdateBuilder_.getMessageOrBuilder();
@@ -21115,7 +21889,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
+       * @return Whether the finalRefinement field is set.
        */
+      @java.lang.Override
       public boolean hasFinalRefinement() {
         return eventCase_ == 7;
       }
@@ -21126,7 +21902,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
+       * @return The finalRefinement.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement getFinalRefinement() {
         if (finalRefinementBuilder_ == null) {
           if (eventCase_ == 7) {
@@ -21250,6 +22028,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.FinalRefinementOrBuilder getFinalRefinementOrBuilder() {
         if ((eventCase_ == 7) && (finalRefinementBuilder_ != null)) {
           return finalRefinementBuilder_.getMessageOrBuilder();
@@ -21295,7 +22074,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
+       * @return Whether the statusCode field is set.
        */
+      @java.lang.Override
       public boolean hasStatusCode() {
         return eventCase_ == 8;
       }
@@ -21305,7 +22086,9 @@ public final class Stt {
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
+       * @return The statusCode.
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.StatusCode getStatusCode() {
         if (statusCodeBuilder_ == null) {
           if (eventCase_ == 8) {
@@ -21423,6 +22206,7 @@ public final class Stt {
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
        */
+      @java.lang.Override
       public yandex.cloud.api.ai.stt.v3.Stt.StatusCodeOrBuilder getStatusCodeOrBuilder() {
         if ((eventCase_ == 8) && (statusCodeBuilder_ != null)) {
           return statusCodeBuilder_.getMessageOrBuilder();
@@ -21461,7 +22245,7 @@ public final class Stt {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21732,18 +22516,10 @@ public final class Stt {
       "enproto/yandex/cloud/ai/stt/v3;sttb\006prot" +
       "o3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_speechkit_stt_v3_TextNormalizationOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_speechkit_stt_v3_TextNormalizationOptions_fieldAccessorTable = new

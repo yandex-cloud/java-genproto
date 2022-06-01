@@ -24,6 +24,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -42,6 +44,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
@@ -50,6 +53,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -61,6 +65,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -70,6 +75,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -88,6 +94,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
+     * @return The sourceClusterId.
      */
     java.lang.String getSourceClusterId();
     /**
@@ -96,6 +103,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
+     * @return The bytes for sourceClusterId.
      */
     com.google.protobuf.ByteString
         getSourceClusterIdBytes();
@@ -106,6 +114,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return Whether the startedAt field is set.
      */
     boolean hasStartedAt();
     /**
@@ -114,6 +123,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return The startedAt.
      */
     com.google.protobuf.Timestamp getStartedAt();
     /**
@@ -131,6 +141,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 size = 6;</code>
+     * @return The size.
      */
     long getSize();
 
@@ -140,6 +151,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -148,6 +160,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The type.
      */
     yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType();
 
@@ -157,6 +170,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     * @return The enum numeric value on the wire for method.
      */
     int getMethodValue();
     /**
@@ -165,6 +179,7 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     * @return The method.
      */
     yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod();
   }
@@ -176,7 +191,7 @@ public final class BackupOuterClass {
    *
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.Backup}
    */
-  public  static final class Backup extends
+  public static final class Backup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.Backup)
       BackupOrBuilder {
@@ -189,9 +204,15 @@ public final class BackupOuterClass {
       id_ = "";
       folderId_ = "";
       sourceClusterId_ = "";
-      size_ = 0L;
       type_ = 0;
       method_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Backup();
     }
 
     @java.lang.Override
@@ -207,7 +228,6 @@ public final class BackupOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -280,7 +300,7 @@ public final class BackupOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -370,6 +390,8 @@ public final class BackupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -377,6 +399,10 @@ public final class BackupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static BackupMethod forNumber(int value) {
         switch (value) {
           case 0: return BACKUP_METHOD_UNSPECIFIED;
@@ -400,6 +426,10 @@ public final class BackupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -493,6 +523,8 @@ public final class BackupOuterClass {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -500,6 +532,10 @@ public final class BackupOuterClass {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static BackupCreationType forNumber(int value) {
         switch (value) {
           case 0: return BACKUP_CREATION_TYPE_UNSPECIFIED;
@@ -523,6 +559,10 @@ public final class BackupOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -565,7 +605,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -584,7 +626,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -607,7 +651,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The folderId.
      */
+    @java.lang.Override
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
       if (ref instanceof java.lang.String) {
@@ -626,7 +672,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
       java.lang.Object ref = folderId_;
@@ -650,7 +698,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -661,7 +711,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -673,6 +725,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -685,7 +738,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
+     * @return The sourceClusterId.
      */
+    @java.lang.Override
     public java.lang.String getSourceClusterId() {
       java.lang.Object ref = sourceClusterId_;
       if (ref instanceof java.lang.String) {
@@ -704,7 +759,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
+     * @return The bytes for sourceClusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceClusterIdBytes() {
       java.lang.Object ref = sourceClusterId_;
@@ -727,7 +784,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return Whether the startedAt field is set.
      */
+    @java.lang.Override
     public boolean hasStartedAt() {
       return startedAt_ != null;
     }
@@ -737,7 +796,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
+     * @return The startedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartedAt() {
       return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
@@ -748,6 +809,7 @@ public final class BackupOuterClass {
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
       return getStartedAt();
     }
@@ -760,7 +822,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>int64 size = 6;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -773,8 +837,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -783,8 +848,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The type.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.valueOf(type_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.UNRECOGNIZED : result;
@@ -798,8 +864,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     * @return The enum numeric value on the wire for method.
      */
-    public int getMethodValue() {
+    @java.lang.Override public int getMethodValue() {
       return method_;
     }
     /**
@@ -808,8 +875,9 @@ public final class BackupOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     * @return The method.
      */
-    public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.valueOf(method_);
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.UNRECOGNIZED : result;
@@ -829,16 +897,16 @@ public final class BackupOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
       }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (!getSourceClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceClusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceClusterId_);
       }
       if (startedAt_ != null) {
@@ -862,17 +930,17 @@ public final class BackupOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getFolderIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (!getSourceClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceClusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sourceClusterId_);
       }
       if (startedAt_ != null) {
@@ -906,29 +974,28 @@ public final class BackupOuterClass {
       }
       yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup other = (yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && getSourceClusterId()
-          .equals(other.getSourceClusterId());
-      result = result && (hasStartedAt() == other.hasStartedAt());
+      if (!getSourceClusterId()
+          .equals(other.getSourceClusterId())) return false;
+      if (hasStartedAt() != other.hasStartedAt()) return false;
       if (hasStartedAt()) {
-        result = result && getStartedAt()
-            .equals(other.getStartedAt());
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
       }
-      result = result && (getSize()
-          == other.getSize());
-      result = result && type_ == other.type_;
-      result = result && method_ == other.method_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSize()
+          != other.getSize()) return false;
+      if (type_ != other.type_) return false;
+      if (method_ != other.method_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1169,35 +1236,35 @@ public final class BackupOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1274,6 +1341,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1293,6 +1361,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1313,6 +1382,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1330,6 +1401,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1343,6 +1415,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1363,6 +1437,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The folderId.
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1382,6 +1457,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1402,6 +1478,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1419,6 +1497,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFolderId() {
         
@@ -1432,6 +1511,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1445,7 +1526,7 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -1455,6 +1536,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -1466,6 +1548,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1614,6 +1697,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
+       * @return The sourceClusterId.
        */
       public java.lang.String getSourceClusterId() {
         java.lang.Object ref = sourceClusterId_;
@@ -1633,6 +1717,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
+       * @return The bytes for sourceClusterId.
        */
       public com.google.protobuf.ByteString
           getSourceClusterIdBytes() {
@@ -1653,6 +1738,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
+       * @param value The sourceClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceClusterId(
           java.lang.String value) {
@@ -1670,6 +1757,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSourceClusterId() {
         
@@ -1683,6 +1771,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
+       * @param value The bytes for sourceClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setSourceClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1696,7 +1786,7 @@ public final class BackupOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp startedAt_ = null;
+      private com.google.protobuf.Timestamp startedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
@@ -1705,6 +1795,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       * @return Whether the startedAt field is set.
        */
       public boolean hasStartedAt() {
         return startedAtBuilder_ != null || startedAt_ != null;
@@ -1715,6 +1806,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
+       * @return The startedAt.
        */
       public com.google.protobuf.Timestamp getStartedAt() {
         if (startedAtBuilder_ == null) {
@@ -1856,7 +1948,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size = 6;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -1866,6 +1960,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size = 6;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -1879,6 +1975,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>int64 size = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -1894,8 +1991,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -1904,8 +2002,11 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -1916,7 +2017,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       * @return The type.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.valueOf(type_);
@@ -1928,6 +2031,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType value) {
         if (value == null) {
@@ -1944,6 +2049,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1959,8 +2065,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       * @return The enum numeric value on the wire for method.
        */
-      public int getMethodValue() {
+      @java.lang.Override public int getMethodValue() {
         return method_;
       }
       /**
@@ -1969,8 +2076,11 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       * @param value The enum numeric value on the wire for method to set.
+       * @return This builder for chaining.
        */
       public Builder setMethodValue(int value) {
+        
         method_ = value;
         onChanged();
         return this;
@@ -1981,7 +2091,9 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       * @return The method.
        */
+      @java.lang.Override
       public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
         @SuppressWarnings("deprecation")
         yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.valueOf(method_);
@@ -1993,6 +2105,8 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
        */
       public Builder setMethod(yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod value) {
         if (value == null) {
@@ -2009,6 +2123,7 @@ public final class BackupOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMethod() {
         
@@ -2019,7 +2134,7 @@ public final class BackupOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2102,19 +2217,11 @@ public final class BackupOuterClass {
       "om/yandex-cloud/go-genproto/yandex/cloud" +
       "/mdb/postgresql/v1;postgresqlb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_mdb_postgresql_v1_Backup_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_Backup_fieldAccessorTable = new

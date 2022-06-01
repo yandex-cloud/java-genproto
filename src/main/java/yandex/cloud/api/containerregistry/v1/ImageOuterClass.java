@@ -24,6 +24,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -32,6 +33,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -43,6 +45,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -52,6 +55,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -62,6 +66,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string digest = 3;</code>
+     * @return The digest.
      */
     java.lang.String getDigest();
     /**
@@ -70,6 +75,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string digest = 3;</code>
+     * @return The bytes for digest.
      */
     com.google.protobuf.ByteString
         getDigestBytes();
@@ -80,6 +86,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>int64 compressed_size = 4;</code>
+     * @return The compressedSize.
      */
     long getCompressedSize();
 
@@ -89,6 +96,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
+     * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
@@ -97,6 +105,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
+     * @return The config.
      */
     yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob getConfig();
     /**
@@ -159,6 +168,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
@@ -169,6 +179,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
@@ -178,6 +189,8 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
@@ -187,6 +200,8 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -197,6 +212,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 8;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
@@ -205,6 +221,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 8;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -223,7 +240,7 @@ public final class ImageOuterClass {
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.Image}
    */
-  public  static final class Image extends
+  public static final class Image extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.Image)
       ImageOrBuilder {
@@ -236,9 +253,15 @@ public final class ImageOuterClass {
       id_ = "";
       name_ = "";
       digest_ = "";
-      compressedSize_ = 0L;
       layers_ = java.util.Collections.emptyList();
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Image();
     }
 
     @java.lang.Override
@@ -302,9 +325,9 @@ public final class ImageOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 layers_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000001;
               }
               layers_.add(
                   input.readMessage(yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob.parser(), extensionRegistry));
@@ -312,9 +335,9 @@ public final class ImageOuterClass {
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000002;
               }
               tags_.add(s);
               break;
@@ -333,7 +356,7 @@ public final class ImageOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -347,10 +370,10 @@ public final class ImageOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           layers_ = java.util.Collections.unmodifiableList(layers_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -370,7 +393,6 @@ public final class ImageOuterClass {
               yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.class, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -379,7 +401,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -398,7 +422,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -422,7 +448,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -442,7 +470,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -465,7 +495,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string digest = 3;</code>
+     * @return The digest.
      */
+    @java.lang.Override
     public java.lang.String getDigest() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
@@ -484,7 +516,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>string digest = 3;</code>
+     * @return The bytes for digest.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDigestBytes() {
       java.lang.Object ref = digest_;
@@ -507,7 +541,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>int64 compressed_size = 4;</code>
+     * @return The compressedSize.
      */
+    @java.lang.Override
     public long getCompressedSize() {
       return compressedSize_;
     }
@@ -520,7 +556,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
+     * @return Whether the config field is set.
      */
+    @java.lang.Override
     public boolean hasConfig() {
       return config_ != null;
     }
@@ -530,7 +568,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
+     * @return The config.
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob getConfig() {
       return config_ == null ? yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob.getDefaultInstance() : config_;
     }
@@ -541,6 +581,7 @@ public final class ImageOuterClass {
      *
      * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.BlobOuterClass.BlobOrBuilder getConfigOrBuilder() {
       return getConfig();
     }
@@ -554,6 +595,7 @@ public final class ImageOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Blob layers = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob> getLayersList() {
       return layers_;
     }
@@ -564,6 +606,7 @@ public final class ImageOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Blob layers = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.BlobOuterClass.BlobOrBuilder> 
         getLayersOrBuilderList() {
       return layers_;
@@ -575,6 +618,7 @@ public final class ImageOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Blob layers = 6;</code>
      */
+    @java.lang.Override
     public int getLayersCount() {
       return layers_.size();
     }
@@ -585,6 +629,7 @@ public final class ImageOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Blob layers = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob getLayers(int index) {
       return layers_.get(index);
     }
@@ -595,6 +640,7 @@ public final class ImageOuterClass {
      *
      * <code>repeated .yandex.cloud.containerregistry.v1.Blob layers = 6;</code>
      */
+    @java.lang.Override
     public yandex.cloud.api.containerregistry.v1.BlobOuterClass.BlobOrBuilder getLayersOrBuilder(
         int index) {
       return layers_.get(index);
@@ -609,6 +655,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -621,6 +668,7 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
@@ -632,6 +680,8 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
@@ -643,6 +693,8 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>repeated string tags = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -657,7 +709,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 8;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
@@ -667,7 +721,9 @@ public final class ImageOuterClass {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 8;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
@@ -678,6 +734,7 @@ public final class ImageOuterClass {
      *
      * <code>.google.protobuf.Timestamp created_at = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -696,13 +753,13 @@ public final class ImageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDigestBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(digest_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, digest_);
       }
       if (compressedSize_ != 0L) {
@@ -729,13 +786,13 @@ public final class ImageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDigestBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(digest_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, digest_);
       }
       if (compressedSize_ != 0L) {
@@ -777,31 +834,30 @@ public final class ImageOuterClass {
       }
       yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image other = (yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDigest()
-          .equals(other.getDigest());
-      result = result && (getCompressedSize()
-          == other.getCompressedSize());
-      result = result && (hasConfig() == other.hasConfig());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDigest()
+          .equals(other.getDigest())) return false;
+      if (getCompressedSize()
+          != other.getCompressedSize()) return false;
+      if (hasConfig() != other.hasConfig()) return false;
       if (hasConfig()) {
-        result = result && getConfig()
-            .equals(other.getConfig());
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
       }
-      result = result && getLayersList()
-          .equals(other.getLayersList());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getLayersList()
+          .equals(other.getLayersList())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -990,12 +1046,12 @@ public final class ImageOuterClass {
         }
         if (layersBuilder_ == null) {
           layers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           layersBuilder_.clear();
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1029,7 +1085,6 @@ public final class ImageOuterClass {
       public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image buildPartial() {
         yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image result = new yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.name_ = name_;
         result.digest_ = digest_;
@@ -1040,17 +1095,17 @@ public final class ImageOuterClass {
           result.config_ = configBuilder_.build();
         }
         if (layersBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             layers_ = java.util.Collections.unmodifiableList(layers_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.layers_ = layers_;
         } else {
           result.layers_ = layersBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
         if (createdAtBuilder_ == null) {
@@ -1058,42 +1113,41 @@ public final class ImageOuterClass {
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1129,7 +1183,7 @@ public final class ImageOuterClass {
           if (!other.layers_.isEmpty()) {
             if (layers_.isEmpty()) {
               layers_ = other.layers_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLayersIsMutable();
               layers_.addAll(other.layers_);
@@ -1142,7 +1196,7 @@ public final class ImageOuterClass {
               layersBuilder_.dispose();
               layersBuilder_ = null;
               layers_ = other.layers_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000001);
               layersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLayersFieldBuilder() : null;
@@ -1154,7 +1208,7 @@ public final class ImageOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1201,6 +1255,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1220,6 +1275,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1240,6 +1296,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1257,6 +1315,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1270,6 +1329,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1291,6 +1352,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1311,6 +1373,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1332,6 +1395,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1350,6 +1415,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1364,6 +1430,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1384,6 +1452,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string digest = 3;</code>
+       * @return The digest.
        */
       public java.lang.String getDigest() {
         java.lang.Object ref = digest_;
@@ -1403,6 +1472,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string digest = 3;</code>
+       * @return The bytes for digest.
        */
       public com.google.protobuf.ByteString
           getDigestBytes() {
@@ -1423,6 +1493,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string digest = 3;</code>
+       * @param value The digest to set.
+       * @return This builder for chaining.
        */
       public Builder setDigest(
           java.lang.String value) {
@@ -1440,6 +1512,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string digest = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDigest() {
         
@@ -1453,6 +1526,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>string digest = 3;</code>
+       * @param value The bytes for digest to set.
+       * @return This builder for chaining.
        */
       public Builder setDigestBytes(
           com.google.protobuf.ByteString value) {
@@ -1473,7 +1548,9 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>int64 compressed_size = 4;</code>
+       * @return The compressedSize.
        */
+      @java.lang.Override
       public long getCompressedSize() {
         return compressedSize_;
       }
@@ -1483,6 +1560,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>int64 compressed_size = 4;</code>
+       * @param value The compressedSize to set.
+       * @return This builder for chaining.
        */
       public Builder setCompressedSize(long value) {
         
@@ -1496,6 +1575,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>int64 compressed_size = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCompressedSize() {
         
@@ -1504,7 +1584,7 @@ public final class ImageOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob config_ = null;
+      private yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob config_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob, yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob.Builder, yandex.cloud.api.containerregistry.v1.BlobOuterClass.BlobOrBuilder> configBuilder_;
       /**
@@ -1513,6 +1593,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
+       * @return Whether the config field is set.
        */
       public boolean hasConfig() {
         return configBuilder_ != null || config_ != null;
@@ -1523,6 +1604,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.yandex.cloud.containerregistry.v1.Blob config = 5;</code>
+       * @return The config.
        */
       public yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob getConfig() {
         if (configBuilder_ == null) {
@@ -1660,9 +1742,9 @@ public final class ImageOuterClass {
       private java.util.List<yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob> layers_ =
         java.util.Collections.emptyList();
       private void ensureLayersIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           layers_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob>(layers_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1856,7 +1938,7 @@ public final class ImageOuterClass {
       public Builder clearLayers() {
         if (layersBuilder_ == null) {
           layers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           layersBuilder_.clear();
@@ -1961,7 +2043,7 @@ public final class ImageOuterClass {
           layersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob, yandex.cloud.api.containerregistry.v1.BlobOuterClass.Blob.Builder, yandex.cloud.api.containerregistry.v1.BlobOuterClass.BlobOrBuilder>(
                   layers_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           layers_ = null;
@@ -1971,9 +2053,9 @@ public final class ImageOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -1983,6 +2065,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -1995,6 +2078,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
@@ -2006,6 +2090,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
@@ -2017,6 +2103,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -2029,6 +2117,9 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -2047,6 +2138,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -2065,6 +2158,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -2081,10 +2176,11 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2095,6 +2191,8 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>repeated string tags = 7;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -2108,7 +2206,7 @@ public final class ImageOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
@@ -2117,6 +2215,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -2127,6 +2226,7 @@ public final class ImageOuterClass {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -2263,7 +2363,7 @@ public final class ImageOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2342,20 +2442,12 @@ public final class ImageOuterClass {
       "d/go-genproto/yandex/cloud/containerregi" +
       "stry/v1;containerregistryb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.containerregistry.v1.BlobOuterClass.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_yandex_cloud_containerregistry_v1_Image_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_Image_fieldAccessorTable = new

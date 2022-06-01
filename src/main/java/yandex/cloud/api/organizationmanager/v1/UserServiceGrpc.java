@@ -1,19 +1,6 @@
 package yandex.cloud.api.organizationmanager.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.22.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: yandex/cloud/organizationmanager/v1/user_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class UserServiceGrpc {
 
   private UserServiceGrpc() {}
@@ -44,22 +32,21 @@ public final class UserServiceGrpc {
     if ((getListMembersMethod = UserServiceGrpc.getListMembersMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getListMembersMethod = UserServiceGrpc.getListMembersMethod) == null) {
-          UserServiceGrpc.getListMembersMethod = getListMembersMethod = 
+          UserServiceGrpc.getListMembersMethod = getListMembersMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest, yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.UserService", "ListMembers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMembers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("ListMembers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("ListMembers"))
+              .build();
         }
-     }
-     return getListMembersMethod;
+      }
+    }
+    return getListMembersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest,
@@ -76,29 +63,35 @@ public final class UserServiceGrpc {
     if ((getDeleteMembershipMethod = UserServiceGrpc.getDeleteMembershipMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getDeleteMembershipMethod = UserServiceGrpc.getDeleteMembershipMethod) == null) {
-          UserServiceGrpc.getDeleteMembershipMethod = getDeleteMembershipMethod = 
+          UserServiceGrpc.getDeleteMembershipMethod = getDeleteMembershipMethod =
               io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.organizationmanager.v1.UserService", "DeleteMembership"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteMembership"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("DeleteMembership"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("DeleteMembership"))
+              .build();
         }
-     }
-     return getDeleteMembershipMethod;
+      }
+    }
+    return getDeleteMembershipMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UserServiceStub newStub(io.grpc.Channel channel) {
-    return new UserServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserServiceStub>() {
+        @java.lang.Override
+        public UserServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserServiceStub(channel, callOptions);
+        }
+      };
+    return UserServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -106,7 +99,14 @@ public final class UserServiceGrpc {
    */
   public static UserServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UserServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserServiceBlockingStub>() {
+        @java.lang.Override
+        public UserServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return UserServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -114,7 +114,14 @@ public final class UserServiceGrpc {
    */
   public static UserServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UserServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserServiceFutureStub>() {
+        @java.lang.Override
+        public UserServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserServiceFutureStub(channel, callOptions);
+        }
+      };
+    return UserServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -131,7 +138,7 @@ public final class UserServiceGrpc {
      */
     public void listMembers(yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMembersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMembersMethod(), responseObserver);
     }
 
     /**
@@ -141,21 +148,21 @@ public final class UserServiceGrpc {
      */
     public void deleteMembership(yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMembershipMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMembershipMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListMembersMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest,
                 yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse>(
                   this, METHODID_LIST_MEMBERS)))
           .addMethod(
             getDeleteMembershipMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
@@ -169,19 +176,15 @@ public final class UserServiceGrpc {
    * A set of methods for managing Organization users.
    * </pre>
    */
-  public static final class UserServiceStub extends io.grpc.stub.AbstractStub<UserServiceStub> {
-    private UserServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserServiceStub extends io.grpc.stub.AbstractAsyncStub<UserServiceStub> {
+    private UserServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserServiceStub(channel, callOptions);
     }
 
@@ -192,7 +195,7 @@ public final class UserServiceGrpc {
      */
     public void listMembers(yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMembersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -203,7 +206,7 @@ public final class UserServiceGrpc {
      */
     public void deleteMembership(yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMembershipMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -213,19 +216,15 @@ public final class UserServiceGrpc {
    * A set of methods for managing Organization users.
    * </pre>
    */
-  public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractStub<UserServiceBlockingStub> {
-    private UserServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserServiceBlockingStub> {
+    private UserServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserServiceBlockingStub(channel, callOptions);
     }
 
@@ -235,7 +234,7 @@ public final class UserServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse listMembers(yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMembersMethod(), getCallOptions(), request);
     }
 
@@ -245,7 +244,7 @@ public final class UserServiceGrpc {
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteMembership(yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMembershipMethod(), getCallOptions(), request);
     }
   }
@@ -255,19 +254,15 @@ public final class UserServiceGrpc {
    * A set of methods for managing Organization users.
    * </pre>
    */
-  public static final class UserServiceFutureStub extends io.grpc.stub.AbstractStub<UserServiceFutureStub> {
-    private UserServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserServiceFutureStub> {
+    private UserServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserServiceFutureStub(channel, callOptions);
     }
 
@@ -278,7 +273,7 @@ public final class UserServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersResponse> listMembers(
         yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.ListMembersRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMembersMethod(), getCallOptions()), request);
     }
 
@@ -289,7 +284,7 @@ public final class UserServiceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteMembership(
         yandex.cloud.api.organizationmanager.v1.UserServiceOuterClass.DeleteMembershipRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMembershipMethod(), getCallOptions()), request);
     }
   }
